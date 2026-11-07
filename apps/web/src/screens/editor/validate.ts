@@ -28,6 +28,9 @@ export interface CardForm {
   promptValue: string;
   ratio: string;
   lang: string;
+  imageAlt: string;
+  credit: string;
+  creditUrl: string;
   tags: string;
   chapter: string;
   source: string;
@@ -107,6 +110,9 @@ export function cardToForm(card: EditableCard): CardForm {
     promptValue: card.prompt.value,
     ratio: card.prompt.ratio ?? '',
     lang: card.prompt.lang ?? '',
+    imageAlt: card.prompt.alt ?? '',
+    credit: card.prompt.credit ?? '',
+    creditUrl: card.prompt.creditUrl ?? '',
     tags: card.tags.join(', '),
     chapter: card.chapter ?? '',
     source: card.source,
@@ -125,6 +131,9 @@ export const emptyCardForm = (): CardForm => ({
   promptValue: '',
   ratio: '',
   lang: '',
+  imageAlt: '',
+  credit: '',
+  creditUrl: '',
   tags: '',
   chapter: '',
   source: '',
@@ -146,6 +155,9 @@ export function formToCard(form: CardForm): EditableCard {
       value: form.promptValue.trim(),
       ...(form.ratio.trim() && { ratio: form.ratio.trim() }),
       ...(form.lang.trim() && { lang: form.lang.trim() }),
+      ...(form.imageAlt.trim() && { alt: form.imageAlt.trim() }),
+      ...(form.credit.trim() && { credit: form.credit.trim() }),
+      ...(form.creditUrl.trim() && { creditUrl: form.creditUrl.trim() }),
     },
     tags: splitList(form.tags),
     ...(form.chapter.trim() && { chapter: form.chapter.trim() }),

@@ -4,7 +4,7 @@ Metabook runs without Supabase (local mode). Follow this only to enable accounts
 
 1. **Create a project** at https://supabase.com/dashboard and note the project ref and database password.
 2. **Apply the schema**, either:
-   - SQL editor: paste `supabase/migrations/0001_init.sql` and run it, or
+   - SQL editor: paste each file in `supabase/migrations/` in order (`0001_init.sql`, then `0002_successes.sql`) and run it, or
    - CLI: `npx supabase login`, `npx supabase link --project-ref <ref>`, `npx supabase db push`.
 3. **Seed the pool** (service role only): `node supabase/seed-pool.mjs > seed.sql`, then paste `seed.sql` into the SQL editor and run it.
 4. **Enable email sign-in**: Authentication > Providers > Email (magic link). Add the app URL (and `http://localhost:5173` for development) under Authentication > URL Configuration > Redirect URLs.

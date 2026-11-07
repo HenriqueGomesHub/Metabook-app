@@ -1,41 +1,48 @@
-import { matchesAnswer, normalizeAnswer, pickTip } from '@metabook/core';
-import type { Card, CardType, PickedTip, SessionItem } from '@metabook/core';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import type { ComponentType } from 'react';
+import {
+  createPractice,
+  matchesAnswer,
+  modeFor,
+  nextPracticeItem,
+  normalizeAnswer,
+  pickTip,
+  recordPracticeAnswer,
+} from '@metabook/core';
+import type { Card, CardState, CardType, PickedTip, PracticeState, SessionItem } from '@metabook/core';
+import { useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
 import { label, scopeOf } from '../app/labels';
 import { todaySession } from '../app/stats';
-import { ArrowIcon, LinkButton } from '../components/Button';
+import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
+import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
-import { AreaCodeCard } from './session/AreaCodeCard';
-import { FlagCard } from './session/FlagCard';
-import { LookalikeCard } from './session/LookalikeCard';
-import { MetaCard } from './session/MetaCard';
 import { optionsFor } from './session/options';
-import { RegionCard } from './session/RegionCard';
-import { Reveal } from './session/Reveal';
+import { preloadPrompt } from './session/Prompt';
+import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
-import { ScriptCard } from './session/ScriptCard';
-import type { CardProps, Outcome } from './session/types';
+import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
-
-const CARD_VIEWS: Record<CardType, ComponentType<CardProps>> = {
-  flag: FlagCard,
-  script: ScriptCard,
-  meta: MetaCard,
-  plate: MetaCard,
-  region: RegionCard,
-  areacode: AreaCodeCard,
-  lookalike: LookalikeCard,
-};
+import { verdictFor } from './session/verdict';
+import { CARD_VIEWS } from './session/views';
+import { LookalikeCard } from './session/LookalikeCard';
 
 const CONTRAST_DOTS = 5;
 
+interface Scope {
+  type?: CardType;
+  country?: string;
+  chapter?: string;
+}
+
+/**
+ * `/session` alone runs today's finite, due-based session. Any of `type`, `country` or `chapter`
+ * starts endless practice over the cards in that scope instead.
+ */
 export function Session() {
   const { data, error } = useAppData();
   const [params] = useSearchParams();
@@ -43,125 +50,290 @@ export function Session() {
   const type = param && param in CARD_TYPES ? (param as CardType) : undefined;
   const country = params.get('country')?.toUpperCase() || undefined;
   const chapter = params.get('chapter') || undefined;
-  return data ? (
-    <Runner
-      key={`${type}|${country}|${chapter}`}
-      data={data}
-      type={type}
-      scope={{ country, chapter }}
-    />
+  if (!data) return <Status error={error} />;
+  const key = `${type}|${country}|${chapter}`;
+  return type || country || chapter ? (
+    <PracticeRunner key={key} data={data} scope={{ type, country, chapter }} />
   ) : (
-    <Status error={error} />
+    <DueRunner data={data} />
+  );
+}
+
+function inScope(cards: Card[], { type, country, chapter }: Scope): Card[] {
+  return cards.filter(
+    (card) =>
+      (!type || card.type === type) &&
+      (!country || card.country === country) &&
+      (!chapter || card.chapter === chapter),
+  );
+}
+
+/** Where closing practice leads back to. */
+function backTo(data: AppSnapshot, scope: Scope): string {
+  const country =
+    scope.country ?? data.content.chapters.find((c) => c.id === scope.chapter)?.country;
+  return scope.type || !country ? '/drills' : `/atlas/${country}`;
+}
+
+function DueRunner({ data }: { data: AppSnapshot }) {
+  const [queue] = useState(() => todaySession(data, new Date()).queue);
+  const [index, setIndex] = useState(0);
+  const [results, setResults] = useState<boolean[]>([]);
+  const cards = data.content.cards;
+
+  useEffect(() => {
+    const upcoming = queue[index + 1];
+    preloadPrompt(cards.find((c) => c.id === upcoming?.cardId)?.prompt);
+  }, [queue, index, cards]);
+
+  const item = queue[index];
+  if (!item || !cards.some((c) => c.id === item.cardId)) {
+    return queue.length === 0 ? (
+      <CaughtUp />
+    ) : (
+      <Summary
+        kicker="Session done"
+        results={results}
+        spaceTo="/"
+        actions={
+          <LinkButton to="/">
+            Back to Today
+            <ArrowIcon />
+          </LinkButton>
+        }
+      />
+    );
+  }
+
+  return (
+    <CardRunner
+      key={index}
+      data={data}
+      item={item}
+      onAnswered={(correct) => setResults([...results, correct])}
+      onNext={() => setIndex(index + 1)}
+      bar={({ card, options, outcome }) =>
+        item.contrastPair ? (
+          <ContrastBar
+            data={data}
+            item={item}
+            options={options}
+            outcome={outcome}
+            scope={scopeOf(card.type)}
+          />
+        ) : (
+          <div className="session-bar rise">
+            <CloseButton to="/" label="Leave session" />
+            <ProgressBar
+              value={index + 1}
+              max={queue.length}
+              label={`Card ${index + 1} of ${queue.length}`}
+            />
+            <span className="session-count">
+              {index + 1} / {queue.length}
+            </span>
+          </div>
+        )
+      }
+    />
+  );
+}
+
+interface PracticeFlow {
+  practice: PracticeState;
+  item: SessionItem;
+  step: number;
+  /** drawn once the current item is answered, so its image can preload during the reveal */
+  upcoming?: { item: SessionItem; practice: PracticeState };
+}
+
+function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
+  const [pool] = useState(() => inScope(data.content.cards, scope));
+  const [flow, setFlow] = useState<PracticeFlow | null>(() => {
+    if (pool.length === 0) return null;
+    const now = new Date();
+    const practice = createPractice({
+      cards: pool,
+      states: data.states,
+      confusions: data.confusions,
+      now,
+      rng: Math.random,
+    });
+    return { ...nextPracticeItem(practice, data.states, now), step: 0 };
+  });
+  const [results, setResults] = useState<boolean[]>([]);
+  const [ended, setEnded] = useState(false);
+  const back = backTo(data, scope);
+
+  if (!flow) {
+    return (
+      <EmptyState
+        size="fill"
+        title="No cards here yet"
+        text="Add some in the editor, or practise something else."
+        actions={[
+          { label: 'Open editor', to: '/editor' },
+          { label: 'Back', to: back },
+        ]}
+      />
+    );
+  }
+
+  if (ended) {
+    return (
+      <Summary
+        kicker="Practice done"
+        results={results}
+        actions={
+          <>
+            <Button onClick={() => setEnded(false)}>
+              Keep going
+              <ArrowIcon />
+            </Button>
+            <LinkButton to={back} variant="ghost">
+              Done
+            </LinkButton>
+          </>
+        }
+      />
+    );
+  }
+
+  const right = results.filter(Boolean).length;
+
+  function onAnswered(correct: boolean, state?: CardState) {
+    if (!flow) return;
+    setResults([...results, correct]);
+    const practice = recordPracticeAnswer(flow.practice, flow.item.cardId, correct);
+    const upcoming = nextPracticeItem(
+      practice,
+      state ? { ...data.states, [state.cardId]: state } : data.states,
+      new Date(),
+    );
+    preloadPrompt(pool.find((c) => c.id === upcoming.item.cardId)?.prompt);
+    setFlow({ ...flow, practice, upcoming });
+  }
+
+  function advance() {
+    if (!flow?.upcoming) return;
+    const { item, practice } = flow.upcoming;
+    const card = pool.find((c) => c.id === item.cardId);
+    // The answer just recorded may have moved this card past multiple choice.
+    const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
+    setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
+  }
+
+  /** Ending while an answered card is showing moves on, so Keep going never re-serves it. */
+  function endPractice() {
+    advance();
+    setEnded(true);
+  }
+
+  return (
+    <CardRunner
+      key={flow.step}
+      data={data}
+      item={flow.item}
+      onAnswered={onAnswered}
+      onNext={advance}
+      bar={() => (
+        <div className="session-bar rise">
+          <button
+            type="button"
+            className="chip"
+            aria-label="End practice"
+            onClick={endPractice}
+          >
+            <CloseIcon />
+          </button>
+          <span className="practice-count" aria-live="polite">
+            {results.length} answered
+            {results.length > 0 && ` · ${Math.round((right / results.length) * 100)}% right`}
+          </span>
+        </div>
+      )}
+    />
   );
 }
 
 interface Shown {
-  asideKey: string | undefined;
   tip: PickedTip | null;
   aside: RevealProps['aside'];
 }
 
-interface Scope {
-  country?: string;
-  chapter?: string;
-}
-
-function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; scope: Scope }) {
+/** One card from prompt to reveal; the parent decides what comes next. */
+function CardRunner({
+  data,
+  item,
+  onAnswered,
+  onNext,
+  bar,
+}: {
+  data: AppSnapshot;
+  item: SessionItem;
+  onAnswered(correct: boolean, state?: CardState): void;
+  onNext(): void;
+  bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
+}) {
   const { answer, recordTipView } = useAppData();
-  const navigate = useNavigate();
-  const [queue] = useState(() => {
-    const { country, chapter } = scope;
-    const inScope = data.content.cards.filter(
-      (card) =>
-        (!type || card.type === type) &&
-        (!country || card.country === country) &&
-        (!chapter || card.chapter === chapter),
-    );
-    const scoped = { ...data, content: { ...data.content, cards: inScope } };
-    // Contrast rounds only drill pairs whose cards fall inside the filter.
-    const ids = new Set(inScope.map((card) => card.id));
-    return todaySession(scoped, new Date(), type).queue.filter(
-      (item) => !item.contrastPair || ids.has(item.cardId),
-    );
-  });
-  const [index, setIndex] = useState(0);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [shown, setShown] = useState<Shown | null>(null);
-  const [results, setResults] = useState<boolean[]>([]);
-  const shownAt = useRef(0);
-
+  const shownAt = useRef(performance.now());
   const cards = data.content.cards;
-  const item = queue[index];
-  const card = useMemo(() => cards.find((c) => c.id === item?.cardId), [cards, item]);
-  const options = useMemo(
-    () => (item && card ? optionsFor(item, card, cards, Math.random) : []),
-    // Options are drawn once per item; later content changes must not reshuffle them.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [index],
-  );
+  const card = cards.find((c) => c.id === item.cardId) as Card;
+  // Options are drawn once per item; later content changes must not reshuffle them.
+  const [options] = useState(() => optionsFor(item, card, cards, Math.random));
 
-  useEffect(() => {
-    shownAt.current = performance.now();
-  }, [index]);
-
-  const finished = index >= queue.length;
   useKeys((event) => {
-    if (event.key !== ' ') return;
+    if (event.key !== ' ' || !outcome) return;
     event.preventDefault();
-    if (finished) navigate('/');
-    else if (outcome) next();
+    onNext();
   });
 
-  if (finished || !item || !card) {
-    return <Summary total={queue.length} results={results} />;
-  }
-
   const otherSide = item.mode === 'binary' ? options.find((o) => o !== card.answer) : undefined;
+  const scope = scopeOf(card.type);
 
   /** The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards. */
-  function mainTip(current: Card): PickedTip | null {
+  function mainTip(): PickedTip | null {
     const { tips } = data.content;
     return (
-      pickTip(tips, current.answer, current.type, data.tipViews) ??
-      (current.type === 'areacode'
-        ? pickTip(tips, current.id.replace(/:[^:]*$/, ':pattern'), current.type, data.tipViews)
+      pickTip(tips, card.answer, card.type, data.tipViews) ??
+      (card.type === 'areacode'
+        ? pickTip(tips, card.id.replace(/:[^:]*$/, ':pattern'), card.type, data.tipViews)
         : null)
     );
   }
 
   function showTips(asideKey: string | undefined) {
-    if (!card) return;
-    const tip = mainTip(card);
+    const tip = mainTip();
     const asideTip = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
       : null;
-    const name = asideKey && label(asideKey, scopeOf(card.type));
+    const name = asideKey && label(asideKey, scope);
     const aside: Shown['aside'] = asideTip
-      ? otherSide
-        ? { label: `And for ${name}`, tip: asideTip, variant: 'aside' }
-        : { label: `Spotting ${name}`, tip: asideTip, variant: 'warn' }
+      ? { label: otherSide ? `And for ${name}` : `Spotting ${name}`, tip: asideTip }
       : undefined;
-    setShown({ asideKey, tip, aside });
+    setShown({ tip, aside });
     for (const picked of [tip, asideTip]) if (picked) recordTipView(picked.tip.id);
   }
 
-  /** Steps the answer's tip through its rotation; the aside box keeps its own tip. */
+  /** Steps the answer's tip through its rotation; the aside keeps its own tip. */
   function anotherTip() {
-    if (!card || !shown) return;
-    const tip = mainTip(card);
+    if (!shown) return;
+    const tip = mainTip();
     if (tip) recordTipView(tip.tip.id);
     setShown({ ...shown, tip });
   }
 
   function onAnswer(given: string) {
-    if (outcome || !card || !item) return;
+    if (outcome) return;
     const correct = isCorrect(item, card, given, cards);
     const picked = correct
       ? undefined
       : item.mode === 'recall'
         ? matchedOther(card, given, cards)
         : given || undefined;
-    answer({
+    const state = answer({
       card,
       given,
       correct,
@@ -170,61 +342,35 @@ function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; sco
       contrastPair: item.contrastPair,
     });
     setOutcome({ given, correct });
-    setResults([...results, correct]);
     showTips(otherSide ?? picked);
-  }
-
-  function next() {
-    setOutcome(null);
-    setShown(null);
-    setIndex(index + 1);
+    onAnswered(correct, state);
   }
 
   const View = item.mode === 'binary' ? LookalikeCard : CARD_VIEWS[card.type];
-  const withHeadline = item.mode === 'recall' || card.type === 'meta' || card.type === 'plate';
-  const reveal = outcome && shown && (
+  const verdict = outcome && verdictFor(card, item, outcome);
+  const reveal = verdict && shown && (
     <Reveal
-      {...verdictFor(card, item, outcome, withHeadline)}
-      headline={withHeadline ? label(card.answer, scopeOf(card.type)) : undefined}
+      {...verdict}
       tip={shown.tip}
       aside={shown.aside}
-      onNext={next}
+      onNext={onNext}
       onAnotherTip={anotherTip}
     />
   );
 
   return (
     <div className="session">
-      {item.contrastPair ? (
-        <ContrastBar
-          data={data}
-          item={item}
-          options={options}
-          outcome={outcome}
-          scope={scopeOf(card.type)}
-        />
-      ) : (
-        <div className="session-bar rise">
-          <CloseButton to="/" label="Leave session" />
-          <ProgressBar
-            value={index + 1}
-            max={queue.length}
-            label={`Card ${index + 1} of ${queue.length}`}
-          />
-          <span className="session-count">
-            {index + 1} / {queue.length}
-          </span>
-        </div>
-      )}
+      {bar({ card, options, outcome })}
       <View
-        key={index}
         card={card}
+        cards={cards}
         mode={item.mode}
         options={options}
         outcome={outcome}
         onAnswer={onAnswer}
         reveal={reveal}
       />
+      <VerdictAnnouncer text={verdict ? verdict.verdict : ''} />
     </div>
   );
 }
@@ -248,19 +394,13 @@ function matchedOther(card: Card, given: string, cards: Card[]): string | undefi
   )?.answer;
 }
 
-function verdictFor(
-  card: Card,
-  item: SessionItem,
-  outcome: Outcome,
-  withHeadline: boolean,
-): Pick<RevealProps, 'verdict' | 'tone'> {
-  if (outcome.correct)
-    return { verdict: withHeadline ? 'Right' : 'Right. Here’s why', tone: 'right' };
-  if (!outcome.given) return { verdict: 'Now you know', tone: 'neutral' };
-  const scope = scopeOf(card.type);
-  if (withHeadline) return { verdict: `You said ${label(outcome.given, scope)}`, tone: 'wrong' };
-  const reset = item.contrastPair ? '. Streak reset' : '';
-  return { verdict: `It’s ${label(card.answer, scope)}${reset}`, tone: 'wrong' };
+function CloseIcon() {
+  return (
+    <svg className="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M6 6l12 12" />
+      <path d="M18 6 6 18" />
+    </svg>
+  );
 }
 
 function ContrastBar({
@@ -309,35 +449,47 @@ function ContrastBar({
   );
 }
 
-function Summary({ total, results }: { total: number; results: boolean[] }) {
-  const right = results.filter(Boolean).length;
-  if (total === 0) {
-    return (
-      <main className="stage stage-narrow summary">
-        <div className="rise">
-          <p className="kicker">Nothing due</p>
-          <h1 className="headline">All caught up</h1>
-          <p className="summary-sub">Come back later, or keep practising with a drill or a game.</p>
-        </div>
-        <div className="summary-actions rise d1">
-          <LinkButton to="/drills">
-            Drills
-            <ArrowIcon />
-          </LinkButton>
-          <LinkButton to="/games" variant="ghost">
-            Mini-games
-          </LinkButton>
-          <LinkButton to="/" variant="ghost">
-            Back to Today
-          </LinkButton>
-        </div>
-      </main>
-    );
-  }
+function CaughtUp() {
   return (
-    <main className="stage stage-narrow summary">
+    <div className="session">
+      <div className="session-bar rise">
+        <CloseButton to="/" label="Leave session" />
+      </div>
+      <EmptyState
+        title="All caught up"
+        text="Nothing is due. Keep practising with a drill or a game."
+        actions={[
+          { label: 'Drills', to: '/drills' },
+          { label: 'Mini-games', to: '/games' },
+        ]}
+      />
+    </div>
+  );
+}
+
+function Summary({
+  kicker,
+  results,
+  actions,
+  spaceTo,
+}: {
+  kicker: string;
+  results: boolean[];
+  actions: ReactNode;
+  /** where Space leads, if anywhere */
+  spaceTo?: string;
+}) {
+  const navigate = useNavigate();
+  const right = results.filter(Boolean).length;
+  useKeys((event) => {
+    if (event.key !== ' ' || !spaceTo) return;
+    event.preventDefault();
+    navigate(spaceTo);
+  });
+  return (
+    <main className="stage stage-narrow summary summary-full">
       <div className="rise">
-        <p className="kicker">Session done</p>
+        <p className="kicker">{kicker}</p>
         <h1 className="headline">
           {results.length} {results.length === 1 ? 'card' : 'cards'}
         </h1>
@@ -345,10 +497,7 @@ function Summary({ total, results }: { total: number; results: boolean[] }) {
           <p className="summary-sub">{Math.round((right / results.length) * 100)}% right</p>
         )}
       </div>
-      <LinkButton to="/" className="rise d1">
-        Back to Today
-        <ArrowIcon />
-      </LinkButton>
+      <div className="summary-actions rise d1">{actions}</div>
     </main>
   );
 }

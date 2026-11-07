@@ -9,6 +9,8 @@ export interface Outcome {
 
 export interface CardProps {
   card: Card;
+  /** all cards in the content, for lookups such as the area-code digit groups */
+  cards: Card[];
   mode: SessionMode;
   /** choices for mcq and binary modes, in display order */
   options: string[];

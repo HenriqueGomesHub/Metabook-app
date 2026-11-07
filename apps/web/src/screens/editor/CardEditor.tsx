@@ -91,6 +91,15 @@ export function CardEditor({
         <Field label="Language">
           <input {...text('lang')} placeholder="ka" />
         </Field>
+        <Field label="Image alt text">
+          <input {...text('imageAlt')} />
+        </Field>
+        <Field label="Image credit">
+          <input {...text('credit')} placeholder="Author · Licence" />
+        </Field>
+        <Field label="Image credit URL">
+          <input {...text('creditUrl')} />
+        </Field>
         <Field label="Tags (comma separated)" wide>
           <input {...text('tags')} />
         </Field>

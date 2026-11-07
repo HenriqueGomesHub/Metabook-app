@@ -5,6 +5,7 @@ export * from './confusions';
 export * from './geo';
 export * from './mastery';
 export * from './placement';
+export * from './practice';
 export * from './random';
 export * from './rounds';
 export * from './scheduler';

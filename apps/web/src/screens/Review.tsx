@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { Button } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Status } from '../components/Status';
 import { Page } from './manage/Page';
 import { ImportRounds } from './review/ImportRounds';
@@ -56,12 +57,16 @@ function ReviewView({ data }: { data: AppSnapshot }) {
           }}
         />
       )}
-      {data.rounds.length === 0 ? (
-        <p className="muted rise d2">
-          No games yet. Log one by hand, import a Round Analyzer file, or pair the extension.
-        </p>
-      ) : (
+      {data.rounds.length > 0 ? (
         <RoundList data={data} />
+      ) : (
+        !logging && (
+          <EmptyState
+            title="No games yet"
+            text="Log one by hand, import a Round Analyzer file, or pair the extension."
+            actions={[{ label: 'Pair the extension', to: '/settings' }]}
+          />
+        )
       )}
     </Page>
   );

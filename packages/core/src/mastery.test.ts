@@ -13,18 +13,40 @@ describe('mastery', () => {
     const known = knownCardState('a', now, 0.9);
     const later = new Date('2026-03-03T12:00:00Z');
     const states = { a: known, b: newCardState('b', now) };
-    // Reviewed on Mar 1, measured at Mar 10: 9 days on a 90%-at-S-days curve.
-    expect(mastery(['a', 'b', 'c'], states, later)).toBeCloseTo(0.9 ** (9 / known.stability) / 3);
+    // Reviewed on Mar 1, measured at Mar 10: 9 days on a 90%-at-S-days curve, one success of three.
+    expect(mastery(['a', 'b', 'c'], states, later)).toBeCloseTo(
+      (0.9 ** (9 / known.stability) * (1 / 3)) / 3,
+    );
   });
 
   it('rates a card due in exactly a week at 90%', () => {
-    const state = { ...knownCardState('a', now, 0.9), stability: 7 };
+    const state = { ...knownCardState('a', now, 0.9), stability: 7, successes: 3 };
     expect(mastery(['a'], { a: state }, now)).toBeCloseTo(0.9);
   });
 
   it('scores a card answered wrong once below bronze, right after the review', () => {
     const lapsed = applyReview(newCardState('a', now), 'again', now, 0.9);
     expect(mastery(['a'], { a: lapsed }, now)).toBeLessThan(0.25);
+  });
+
+  it('keeps a single fast correct answer well below silver', () => {
+    const once = applyReview(newCardState('a', now), 'easy', now, 0.9);
+    expect(mastery(['a'], { a: once }, now)).toBeLessThan(0.35);
+  });
+
+  it('lets three Good reviews spaced days apart count for most of the card', () => {
+    let state = newCardState('a', now);
+    for (const day of [0, 2, 5]) {
+      state = applyReview(state, 'good', new Date(now.getTime() + day * 86_400_000), 0.9);
+    }
+    const at = new Date(now.getTime() + 5 * 86_400_000);
+    expect(mastery(['a'], { a: state }, at)).toBeGreaterThan(0.6);
+  });
+
+  it('derives successes from reps and lapses for data saved without the field', () => {
+    const legacy = { ...knownCardState('a', now, 0.9), stability: 7, reps: 4, lapses: 1 };
+    expect(mastery(['a'], { a: legacy }, now)).toBeCloseTo(0.9);
+    expect(mastery(['a'], { a: { ...legacy, reps: 1, lapses: 3 } }, now)).toBe(0);
   });
 
   it('scores a card reviewed Good several times over weeks as gold', () => {

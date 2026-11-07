@@ -1,15 +1,15 @@
 import { haversineKm, mastery, medalFor, pickTip, roundScore } from '@metabook/core';
 import type { PickedTip, Tip } from '@metabook/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { KeyboardEvent } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { BrazilMap, digitGroups, groupOf, stateByCode } from '../components/BrazilMap';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Medal } from '../components/Medal';
 import { CloseButton } from '../components/Chip';
 import { Status } from '../components/Status';
 import { TipBox } from '../components/TipBox';
-import { brStates } from '../data/content';
 import { pct } from './atlas/format';
 import './games/games.css';
 
@@ -17,18 +17,6 @@ const ROUND_SIZE = 12;
 /** GeoGuessr-style score decay for Brazil, in km. */
 const SCALE_KM = 700;
 const PATTERN_TIP = 'ddd:br:pattern';
-
-/** Small states get their label outside the map, joined by a leader line. */
-const CALLOUTS: Record<string, [number, number]> = {
-  RN: [600, 152],
-  PB: [600, 174],
-  PE: [600, 196],
-  AL: [600, 218],
-  SE: [600, 240],
-  ES: [512, 360],
-  RJ: [474, 420],
-  DF: [410, 284],
-};
 
 const fmt = (n: number) => n.toLocaleString('en-US');
 
@@ -64,24 +52,15 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
   const { answer, recordTipView } = useAppData();
   const now = useMemo(() => new Date(), []);
   const touch = useMemo(() => window.matchMedia?.('(hover: none)').matches ?? false, []);
-  const byCode = useMemo(() => new Map(brStates.states.map((s) => [s.code, s])), []);
   const cards = useMemo(
     () =>
       data.content.cards.filter(
-        (card) => card.type === 'areacode' && card.country === 'BR' && byCode.has(card.answer),
+        (card) => card.type === 'areacode' && card.country === 'BR' && stateByCode.has(card.answer),
       ),
-    [data.content.cards, byCode],
+    [data.content.cards],
   );
   /** First digits of each state's area codes, so the reveal can tint the whole group. */
-  const digits = useMemo(() => {
-    const map = new Map<string, Set<string>>();
-    for (const card of cards) {
-      const set = map.get(card.answer) ?? new Set<string>();
-      set.add(card.prompt.value.charAt(0));
-      map.set(card.answer, set);
-    }
-    return map;
-  }, [cards]);
+  const digits = useMemo(() => digitGroups(cards), [cards]);
   const [queue] = useState(() => shuffled(cards).slice(0, ROUND_SIZE));
   const medalValue = useMemo(
     () =>
@@ -144,10 +123,11 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
     return (
       <div className="page">
         {header}
-        <main className="stage stage-narrow summary">
-          <p className="muted">There are no area-code cards yet.</p>
-          <LinkButton to="/games">Back to games</LinkButton>
-        </main>
+        <EmptyState
+          title="No area codes yet"
+          text="Area-code cards haven’t been added for this map."
+          actions={[{ label: 'Back to games', to: '/games' }]}
+        />
       </div>
     );
   }
@@ -180,12 +160,12 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
     );
   }
 
-  const answerState = byCode.get(card.answer);
-  const pickedState = picked ? byCode.get(picked) : undefined;
+  const answerState = stateByCode.get(card.answer);
+  const pickedState = picked ? stateByCode.get(picked) : undefined;
   const result = picked ? results[index] : undefined;
   const right = result?.correct ?? false;
-  const hovered = hover ? byCode.get(hover) : undefined;
-  const answerDigits = digits.get(card.answer) ?? new Set<string>();
+  const hovered = hover ? stateByCode.get(hover) : undefined;
+  const group = groupOf(card.answer, digits);
 
   function showTip(digit?: string) {
     const prefer = digit ? mentionsGroup(digit) : undefined;
@@ -195,7 +175,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
   }
 
   function pick(code: string) {
-    const guess = byCode.get(code);
+    const guess = stateByCode.get(code);
     if (picked || !guess || !card || !answerState) return;
     const correct = code === card.answer;
     const km = correct
@@ -223,20 +203,6 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
     setTip(null);
     setIndex(index + 1);
   }
-
-  function onKey(event: KeyboardEvent, code: string) {
-    if (event.key !== 'Enter' && event.key !== ' ') return;
-    event.preventDefault();
-    pick(code);
-  }
-
-  const stateClass = (code: string) => {
-    if (!picked) return 'ddd-state';
-    if (code === card.answer) return 'ddd-state lock ans';
-    if (code === picked) return 'ddd-state lock pick';
-    const shared = [...(digits.get(code) ?? [])].some((d) => answerDigits.has(d));
-    return `ddd-state lock ${shared ? 'grp' : 'dim'}`;
-  };
 
   return (
     <div className="page">
@@ -298,110 +264,11 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
                   ? 'Tap a state to answer'
                   : 'Hover a state to see its name'}
           </div>
-          <svg
-            className="ddd-map"
-            role="group"
-            aria-label="Map of Brazil with state borders"
-            viewBox={brStates.viewBox}
-          >
-            {brStates.states.map((state) => (
-              <path
-                key={state.code}
-                className={stateClass(state.code)}
-                d={state.path}
-                role="button"
-                tabIndex={picked ? -1 : 0}
-                aria-label={state.name}
-                aria-disabled={picked ? true : undefined}
-                onClick={() => pick(state.code)}
-                onKeyDown={(event) => onKey(event, state.code)}
-                onMouseEnter={() => setHover(state.code)}
-                onMouseLeave={() => setHover(null)}
-                onFocus={() => setHover(state.code)}
-                onBlur={() => setHover(null)}
-              />
-            ))}
-            {brStates.states.map((state) => {
-              const callout = CALLOUTS[state.code];
-              if (!callout) return null;
-              const [x, y] = state.label.length >= 2 ? [state.label[0], state.label[1]] : [0, 0];
-              return (
-                <path
-                  key={state.code}
-                  className="ddd-lead"
-                  d={`M${x} ${y}L${(callout[0] ?? 0) - 16} ${(callout[1] ?? 0) - 4}`}
-                />
-              );
-            })}
-            {brStates.states.map((state) => {
-              const callout = CALLOUTS[state.code];
-              const onAnswer = Boolean(picked) && state.code === card.answer;
-              const classes = ['ddd-label', callout && 'callout', onAnswer && 'on']
-                .filter(Boolean)
-                .join(' ');
-              return (
-                <text
-                  key={state.code}
-                  className={classes}
-                  aria-hidden="true"
-                  x={callout ? callout[0] : state.label[0]}
-                  y={callout ? callout[1] : (state.label[1] ?? 0) + 4}
-                >
-                  {state.code}
-                </text>
-              );
-            })}
-            {brStates.states.map((state) => {
-              const callout = CALLOUTS[state.code];
-              if (!callout) return null;
-              // the label itself ignores the pointer; this invisible box makes it pickable
-              return (
-                <rect
-                  key={state.code}
-                  className={picked ? 'ddd-hit lock' : 'ddd-hit'}
-                  aria-hidden="true"
-                  x={callout[0] - 4}
-                  y={callout[1] - 12}
-                  width={26}
-                  height={16}
-                  onClick={() => pick(state.code)}
-                  onMouseEnter={() => setHover(state.code)}
-                  onMouseLeave={() => setHover(null)}
-                />
-              );
-            })}
-            {picked && pickedState && answerState && (
-              <>
-                {!right && (
-                  <>
-                    <path
-                      className="ddd-trail"
-                      pathLength={1}
-                      d={`M${pickedState.capital.xy[0]} ${pickedState.capital.xy[1]}L${answerState.capital.xy[0]} ${answerState.capital.xy[1]}`}
-                    />
-                    <circle
-                      className="ddd-pin"
-                      cx={pickedState.capital.xy[0]}
-                      cy={pickedState.capital.xy[1]}
-                      r="5"
-                      fill="var(--ink)"
-                      stroke="var(--bg)"
-                      strokeWidth="2"
-                    />
-                  </>
-                )}
-                <circle
-                  className="ddd-pin late"
-                  cx={answerState.capital.xy[0]}
-                  cy={answerState.capital.xy[1]}
-                  r="6"
-                  fill="var(--bg)"
-                  stroke="var(--ink)"
-                  strokeWidth="2"
-                />
-              </>
-            )}
-          </svg>
+          <BrazilMap
+            reveal={picked ? { answer: card.answer, picked, group } : undefined}
+            onPick={pick}
+            onHover={setHover}
+          />
         </div>
       </main>
     </div>

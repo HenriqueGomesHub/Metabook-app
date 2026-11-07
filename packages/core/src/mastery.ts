@@ -1,4 +1,4 @@
-import { retrievability } from './scheduler';
+import { retrievability, successCount } from './scheduler';
 import type { CardState, Medal } from './types';
 
 const THRESHOLDS: { medal: Exclude<Medal, null>; at: number }[] = [
@@ -10,6 +10,8 @@ const THRESHOLDS: { medal: Exclude<Medal, null>; at: number }[] = [
 const DAY_MS = 24 * 60 * 60 * 1000;
 /** Mastery asks "will you still know it in a week?", so a fresh lapse scores low. */
 const HORIZON_MS = 7 * DAY_MS;
+/** Successful reviews a card needs before it can count fully: one lucky answer is not mastery. */
+const FULL_CONFIDENCE_AT = 3;
 
 /**
  * Recall odds at `at` on the exponential curve FSRS anchors stability to (90% after S days).
@@ -23,13 +25,19 @@ function recallAt(state: CardState, at: Date): number {
   return 0.9 ** (days / state.stability);
 }
 
-/** Mean recall odds a week from now; cards never seen count 0. */
+/** Recall odds a week out, scaled down until the card has FULL_CONFIDENCE_AT successful reviews. */
+function cardMastery(state: CardState, horizon: Date): number {
+  const confidence = Math.min(1, successCount(state) / FULL_CONFIDENCE_AT);
+  return recallAt(state, horizon) * confidence;
+}
+
+/** Mean of per-card mastery a week from now; cards never seen count 0. */
 export function mastery(cardIds: string[], states: Record<string, CardState>, now: Date): number {
   if (cardIds.length === 0) return 0;
   const horizon = new Date(now.getTime() + HORIZON_MS);
   const total = cardIds.reduce((sum, id) => {
     const state = states[id];
-    return sum + (state ? recallAt(state, horizon) : 0);
+    return sum + (state ? cardMastery(state, horizon) : 0);
   }, 0);
   return total / cardIds.length;
 }

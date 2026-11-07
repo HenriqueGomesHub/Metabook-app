@@ -1,23 +1,22 @@
 import { applyPlacement, buildPlacement, matchesAnswer } from '@metabook/core';
-import type { Card } from '@metabook/core';
+import type { Card, SessionMode } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
-import { label, scopeOf } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { CloseButton } from '../components/Chip';
+import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { countryName } from './manage/countries';
 import './manage/manage.css';
-import { Options } from './session/Options';
 import { optionsFor } from './session/options';
-import { Prompt } from './session/Prompt';
-import { Reveal } from './session/Reveal';
+import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
-import { TypedAnswer } from './session/TypedAnswer';
+import { verdictFor } from './session/verdict';
+import { CARD_VIEWS } from './session/views';
 
 const TEST_SIZE = 12;
 
@@ -40,11 +39,11 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const card = cards[results.length];
+  const mode: SessionMode =
+    card?.type === 'flag' ? 'recall' : card?.type === 'lookalike' ? 'binary' : 'mcq';
   const options = useMemo(
     () =>
-      card && card.type !== 'flag'
-        ? optionsFor({ cardId: card.id, mode: 'mcq' }, card, data.content.cards, Math.random)
-        : [],
+      card ? optionsFor({ cardId: card.id, mode }, card, data.content.cards, Math.random) : [],
     // Choices are drawn once per card; later content changes must not reshuffle them.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [card?.id],
@@ -74,32 +73,22 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     data.content.cards.some((c) => c.country === code);
   if (!known) {
     return (
-      <main className="placement">
-        <div className="placement-result rise">
-          <h1 className="headline">Unknown country</h1>
-          <p className="muted">There is no country “{code}” in Metabook.</p>
-        </div>
-        <LinkButton to="/atlas" className="rise d1">
-          Back to Atlas
-          <ArrowIcon />
-        </LinkButton>
-      </main>
+      <EmptyState
+        size="fill"
+        title="Unknown country"
+        text={`There is no country “${code}” in Metabook.`}
+        actions={[{ label: 'Back to Atlas', to: '/atlas' }]}
+      />
     );
   }
   if (cards.length === 0) {
     return (
-      <main className="placement">
-        <div className="placement-result rise">
-          <h1 className="headline">Nothing to place</h1>
-          <p className="muted">
-            Every card for {name} is already in your schedule, or there are none yet.
-          </p>
-        </div>
-        <LinkButton to={back} className="rise d1">
-          Back to {name}
-          <ArrowIcon />
-        </LinkButton>
-      </main>
+      <EmptyState
+        size="fill"
+        title="Nothing to place"
+        text={`Every card for ${name} is already in your schedule, or there are none yet.`}
+        actions={[{ label: `Back to ${name}`, to: back }]}
+      />
     );
   }
 
@@ -122,6 +111,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     );
   }
 
+  const View = CARD_VIEWS[card.type];
   return (
     <div className="session">
       <div className="session-bar rise">
@@ -135,46 +125,34 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           {results.length + 1} / {cards.length}
         </span>
       </div>
-      <main className="placement" key={card.id}>
-        <figure className="flag-figure unfurl">
-          <Prompt prompt={card.prompt} alt="Item to identify" />
-        </figure>
-        {card.type === 'flag' ? (
-          !outcome && (
-            <TypedAnswer
-              label="Which country?"
-              placeholder="Type a country"
-              onAnswer={(given) =>
-                setOutcome({ given, correct: isRight(card, given, data.content.cards) })
-              }
+      <View
+        key={card.id}
+        card={card}
+        cards={data.content.cards}
+        mode={mode}
+        options={options}
+        outcome={outcome}
+        onAnswer={(given) =>
+          setOutcome({ given, correct: isRight(card, mode, given, data.content.cards) })
+        }
+        reveal={
+          outcome && (
+            <Reveal
+              {...verdictFor(card, { mode }, outcome)}
+              tip={null}
+              nextLabel={results.length + 1 === cards.length ? 'See result' : 'Continue'}
+              onNext={next}
             />
           )
-        ) : (
-          <Options
-            options={options}
-            answer={card.answer}
-            scope={scopeOf(card.type)}
-            outcome={outcome}
-            onPick={(given) => setOutcome({ given, correct: given === card.answer })}
-            className="options options-grid rise d2"
-          />
-        )}
-        {outcome && (
-          <Reveal
-            verdict={outcome.correct ? 'Right' : outcome.given ? 'Not quite' : 'Now you know'}
-            tone={outcome.correct ? 'right' : outcome.given ? 'wrong' : 'neutral'}
-            headline={label(card.answer, scopeOf(card.type))}
-            tip={null}
-            nextLabel={results.length + 1 === cards.length ? 'See result' : 'Next'}
-            onNext={next}
-          />
-        )}
-      </main>
+        }
+      />
+      <VerdictAnnouncer text={outcome ? verdictFor(card, { mode }, outcome).verdict : ''} />
     </div>
   );
 }
 
-function isRight(card: Card, given: string, cards: Card[]): boolean {
+function isRight(card: Card, mode: SessionMode, given: string, cards: Card[]): boolean {
+  if (mode !== 'recall') return given === card.answer;
   const others = cards
     .filter((c) => c.type === card.type && c.answer !== card.answer)
     .map((c) => c.answer);

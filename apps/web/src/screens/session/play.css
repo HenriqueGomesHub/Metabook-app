@@ -1,0 +1,517 @@
+/* Card layout: one viewport high, prompt in .play-main, answer controls in .play-side. */
+
+.session {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.session > .session-bar {
+  flex: none;
+}
+
+.play {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 32px 40px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  gap: 56px;
+}
+
+.play-main {
+  min-width: 0;
+  min-height: 0;
+  container-type: size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-side {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.play-side-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: opacity 0.3s ease 0.55s;
+}
+
+.play-side.revealed > .play-side-inner {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-q h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.play-q .kicker {
+  margin-bottom: 4px;
+}
+
+/* Prompts sized to the space they have */
+
+.play-main .scene {
+  width: min(100cqw, 100cqh * var(--ar, 1.6));
+  aspect-ratio: var(--ar, 1.6);
+  flex: none;
+}
+
+.play-main .flag-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.play-main .flag-figure .flag-image {
+  width: min(100cqw, 560px, (100cqh - 32px) * var(--ar, 1.5));
+  max-width: none;
+  max-height: none;
+}
+
+.play-main .flag-figure figcaption {
+  font-size: 12px;
+  color: var(--faint);
+  letter-spacing: 0.08em;
+}
+
+.play-main .sign {
+  max-height: 100cqh;
+  overflow: hidden;
+}
+
+.play-main .ddd-map {
+  width: min(100cqw, 100cqh * 640 / 580);
+}
+
+.play-main .clue {
+  max-height: 100cqh;
+  overflow: auto;
+}
+
+/* Photo prompts: shimmer while loading, then fade in; credit pill over the corner */
+
+.photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.photo .scene-media {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo.loaded .scene-media {
+  opacity: 1;
+}
+
+.photo.loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(238, 234, 226, 0.06) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+.credit {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  max-width: calc(100% - 20px);
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(18, 17, 15, 0.62);
+  color: #d6d1c6;
+  font-size: 11px;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+a.credit:hover {
+  color: #ffffff;
+  background: rgba(18, 17, 15, 0.8);
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+/* Area-code card: the map is the prompt and the answer */
+
+.code-prompt .kicker {
+  margin: 0;
+}
+
+.code-prompt .areacode {
+  font-size: clamp(96px, 11vw, 160px);
+  line-height: 0.95;
+}
+
+.code-hover {
+  margin: 12px 0 0;
+  min-height: 24px;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.code-hover.idle {
+  color: var(--faint);
+}
+
+/* Verdict: the answer glows with a drawn check, a wrong pick shakes with a cross */
+
+.opt.ok,
+.pick.ok,
+.typed.ok input {
+  border-color: var(--accent);
+  background: rgba(163, 196, 154, 0.12);
+}
+
+.opt.ok.mine,
+.pick.ok.mine,
+.typed.ok input {
+  animation: glow 0.6s ease-out both;
+}
+
+.opt.bad,
+.pick.bad,
+.typed.bad input {
+  border-color: var(--warn);
+  background: rgba(217, 163, 94, 0.1);
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.typed.dim input {
+  opacity: 0.5;
+}
+
+.mark {
+  display: flex;
+  margin-left: auto;
+  flex: none;
+}
+
+.pick .mark {
+  margin-left: 0;
+}
+
+.mark-ok {
+  color: var(--accent);
+}
+
+.mark-bad {
+  color: var(--warn);
+}
+
+.mark path {
+  stroke-width: 2.2;
+  stroke-dasharray: 1;
+  animation: stroke 0.35s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.mark path + path {
+  animation-delay: 0.22s;
+}
+
+.typed-row .mark {
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes stroke {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(163, 196, 154, 0.45);
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(163, 196, 154, 0);
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+/* Reveal: a panel over the answer column on desktop, a bottom sheet on phones */
+
+.reveal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transform: translateY(-50%);
+  animation: panel-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s both;
+  z-index: 2;
+}
+
+.reveal-body {
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reveal-head h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.reveal-right .reveal-head h2 {
+  color: var(--accent);
+}
+
+.reveal-wrong .reveal-head h2 {
+  color: var(--warn);
+}
+
+.reveal-head p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.reveal-tip p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.reveal-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.reveal-meta .link {
+  margin-left: auto;
+  padding: 4px 0;
+  font-size: 12px;
+}
+
+.reveal-aside {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.reveal-aside p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d6d1c6;
+}
+
+.reveal-aside .reveal-aside-label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--warn);
+}
+
+.reveal-next {
+  flex: none;
+  width: 100%;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translate(32px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* Endless practice counter */
+
+.practice-count {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 899.98px) {
+  .play {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    padding: 16px 16px 20px;
+    gap: 20px;
+  }
+
+  .play-side-inner {
+    gap: 14px;
+  }
+
+  .play-q h1 {
+    font-size: 26px;
+  }
+
+  /* phones fill the prompt area; photos crop to it */
+  .play-main .scene {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .options .opt {
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 14px;
+    font-size: 16px;
+  }
+
+  .picks {
+    flex-wrap: nowrap;
+  }
+
+  .pick {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 64px;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .reveal {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    max-height: 60dvh;
+    padding: 24px 20px calc(20px + env(safe-area-inset-bottom));
+    border-radius: 24px 24px 0 0;
+    border-width: 1px 0 0;
+    background: var(--raise);
+    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45);
+    transform: none;
+    gap: 16px;
+    animation-name: sheet-in;
+    z-index: 20;
+  }
+
+  .reveal-head h2 {
+    font-size: 24px;
+  }
+
+  /* Map card: code row first, map below */
+  .play-map {
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .play-map .play-side {
+    order: -1;
+  }
+
+  .play-map .play-main {
+    align-items: flex-start;
+  }
+
+  .code-prompt {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: end;
+    column-gap: 16px;
+  }
+
+  .code-prompt .kicker {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .code-prompt .areacode {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    font-size: 80px;
+  }
+
+  .code-hover {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 0 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .session-bar {
+    padding: 16px 16px 0;
+  }
+}

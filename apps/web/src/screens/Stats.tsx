@@ -4,6 +4,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { label, pairLabel } from '../app/labels';
 import { pairScope } from '../app/stats';
+import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { dailyAccuracy, niceAxis, TREND_DAYS } from './stats/trend';
@@ -114,7 +115,12 @@ function StatsView({ data }: { data: AppSnapshot }) {
               )}
             </div>
             {points.length === 0 ? (
-              <p className="muted">Answer a few cards and your accuracy curve shows up here.</p>
+              <EmptyState
+                size="compact"
+                title="No answers yet"
+                text="Answer a few cards and your accuracy curve shows up here."
+                actions={[{ label: 'Start a drill', to: '/drills' }]}
+              />
             ) : (
               <svg
                 className="trend-svg"
@@ -157,7 +163,11 @@ function StatsView({ data }: { data: AppSnapshot }) {
           <section className="stat-panel stat-list" style={{ '--i': 5 } as React.CSSProperties}>
             <h2>Top confusions</h2>
             {confusions.length === 0 ? (
-              <p className="muted">No confusions yet.</p>
+              <EmptyState
+                size="compact"
+                title="No confusions yet"
+                text="Mix-ups between answers will rank here."
+              />
             ) : (
               <ol className="confusions">
                 {confusions.map((c, i) => {

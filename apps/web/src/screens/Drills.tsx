@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
-import { todaySession } from '../app/stats';
 import { ArrowIcon, LinkButton } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 
@@ -23,13 +23,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       TYPE_ORDER.flatMap((type) => {
         const ids = data.content.cards.filter((card) => card.type === type).map((card) => card.id);
         if (ids.length === 0) return [];
-        return [
-          {
-            type,
-            due: todaySession(data, now, type).queue.length,
-            mastery: mastery(ids, data.states, now),
-          },
-        ];
+        return [{ type, mastery: mastery(ids, data.states, now) }];
       }),
     [data, now],
   );
@@ -51,18 +45,32 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           )}
         </div>
         {tiles.length === 0 && (
-          <p className="muted rise d1">
-            No cards yet. Add some in the <Link to="/editor">editor</Link>.
-          </p>
+          <EmptyState
+            title="No cards yet"
+            text="Add some in the editor, then drill them here."
+            actions={[{ label: 'Open the editor', to: '/editor' }]}
+          />
         )}
         <div className="tiles">
-          {tiles.map(({ type, due, mastery: pct }) => (
+          {tiles.map(({ type, mastery: pct }) => (
             <Link key={type} className="tile" to={`/session?type=${type}`}>
               <div className="tile-top">
                 <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
                   {CARD_TYPES[type].icon}
                 </svg>
-                <span className="muted small">{due} due</span>
+                <span className="tile-link">
+                  Practice
+                  <svg
+                    className="icon"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </span>
               </div>
               <div>
                 <div className="tile-name headline">{CARD_TYPES[type].label}</div>

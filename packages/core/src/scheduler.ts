@@ -74,7 +74,13 @@ export function applyReview(
   desiredRetention: number,
 ): CardState {
   const scheduler = fsrs({ request_retention: desiredRetention });
-  return fromFsrs(state.cardId, scheduler.next(toFsrs(state), now, RATINGS[grade]).card);
+  const next = fromFsrs(state.cardId, scheduler.next(toFsrs(state), now, RATINGS[grade]).card);
+  return { ...next, successes: successCount(state) + (grade === 'again' ? 0 : 1) };
+}
+
+/** Reviews answered right so far; older data without the field derives it from reps and lapses. */
+export function successCount(state: CardState): number {
+  return state.successes ?? Math.max(0, state.reps - state.lapses);
 }
 
 /** A card the learner already knows: one Good review that skips the learning steps. */

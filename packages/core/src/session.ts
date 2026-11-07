@@ -35,7 +35,7 @@ const RECALL_MODES: Partial<Record<CardType, SessionMode>> = {
   areacode: 'map',
 };
 
-function modeFor(card: Card, state: CardState | undefined): SessionMode {
+export function modeFor(card: Card, state: CardState | undefined): SessionMode {
   if (card.type === 'lookalike') return 'binary';
   if ((state?.reps ?? 0) < MCQ_REVIEWS) return 'mcq';
   return RECALL_MODES[card.type] ?? 'mcq';

@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { Button } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Status } from '../components/Status';
 import { bundled } from '../data/content';
 import { CardEditor } from './editor/CardEditor';
@@ -163,7 +164,22 @@ function EditorView({ data }: { data: AppSnapshot }) {
                 </small>
               </button>
             ))}
-            {items.length === 0 && <p className="note">Nothing matches.</p>}
+            {items.length === 0 && (
+              <EmptyState
+                size="compact"
+                title="Nothing matches"
+                text="Try another search or type."
+                actions={[
+                  {
+                    label: 'Clear filters',
+                    onClick: () => {
+                      setQuery('');
+                      setFilter('all');
+                    },
+                  },
+                ]}
+              />
+            )}
             {items.length > SHOWN && (
               <p className="note">
                 Showing {SHOWN} of {items.length}. Narrow the search to see the rest.
@@ -197,7 +213,12 @@ function EditorView({ data }: { data: AppSnapshot }) {
               {tip && revertButton(tip.id)}
             </TipEditor>
           )}
-          {!selection && <p className="muted">Pick a card or tip to edit, or create a new one.</p>}
+          {!selection && (
+            <EmptyState
+              title="Nothing selected"
+              text="Pick a card or tip to edit, or create a new one."
+            />
+          )}
         </div>
       </div>
     </Page>

@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Medal } from '../components/Medal';
 import { Status } from '../components/Status';
@@ -111,7 +112,13 @@ function AtlasView({ data }: { data: AppSnapshot }) {
           )}
         </div>
 
-        {tiles.length === 0 && <p className="muted rise d1">No countries in the pool yet.</p>}
+        {tiles.length === 0 && (
+          <EmptyState
+            title="No countries yet"
+            text="The competitive pool is empty. Check back after the next content update."
+            actions={[{ label: 'Drills', to: '/drills' }]}
+          />
+        )}
         <div className="atlas-tiles" role="tabpanel" aria-label="Countries">
           {shown.map((tile, i) => {
             const label = tile.cardCount > 0 ? `${pct(tile.value)}%` : '—';

@@ -1,33 +1,39 @@
 import { Options } from './Options';
 import { Prompt } from './Prompt';
+import { Question, Stage } from './Stage';
 import { TypedAnswer } from './TypedAnswer';
 import type { CardProps } from './types';
 
 export function ScriptCard({ card, mode, options, outcome, onAnswer, reveal }: CardProps) {
   return (
-    <main className="stage stage-medium">
-      <figure className="script-figure">
+    <Stage
+      main={
         <div className="pop-in">
-          <Prompt prompt={card.prompt} alt="A sign written in an unknown script" />
+          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="A sign written in an unknown script" />
         </div>
-        <figcaption className="rise d1">
-          {mode === 'recall' ? 'Recall · type it' : 'Early review · pick one'}
-        </figcaption>
-      </figure>
-      {mode === 'recall' ? (
-        !outcome && (
-          <TypedAnswer label="Which country?" placeholder="Type a country" onAnswer={onAnswer} />
-        )
-      ) : (
-        <Options
-          options={options}
-          answer={card.answer}
-          outcome={outcome}
-          onPick={onAnswer}
-          className="options options-grid rise d2"
-        />
-      )}
-      {reveal}
-    </main>
+      }
+      side={
+        <>
+          <Question>Which country?</Question>
+          {mode === 'recall' ? (
+            <TypedAnswer
+              label="Which country?"
+              placeholder="Type a country"
+              outcome={outcome}
+              onAnswer={onAnswer}
+            />
+          ) : (
+            <Options
+              options={options}
+              answer={card.answer}
+              outcome={outcome}
+              onPick={onAnswer}
+              className="options rise d2"
+            />
+          )}
+        </>
+      }
+      reveal={reveal}
+    />
   );
 }

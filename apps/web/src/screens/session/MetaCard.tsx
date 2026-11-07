@@ -1,24 +1,29 @@
 import { Options } from './Options';
 import { Prompt } from './Prompt';
+import { Question, Stage } from './Stage';
 import type { CardProps } from './types';
 
 export function MetaCard({ card, options, outcome, onAnswer, reveal }: CardProps) {
   return (
-    <main className="stage stage-split stage-center">
-      <figure className="scene scene-4x3 settle">
-        <Prompt prompt={card.prompt} alt="Clue to place" />
-      </figure>
-      <section className="stage-side">
-        <h1 className="headline question rise d1">Where is this?</h1>
-        <Options
-          options={options}
-          answer={card.answer}
-          outcome={outcome}
-          onPick={onAnswer}
-          className="options options-compact rise d2"
-        />
-        {reveal}
-      </section>
-    </main>
+    <Stage
+      main={
+        <figure className="scene settle" style={{ '--ar': 4 / 3 } as React.CSSProperties}>
+          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="Clue to place" />
+        </figure>
+      }
+      side={
+        <>
+          <Question>Where is this?</Question>
+          <Options
+            options={options}
+            answer={card.answer}
+            outcome={outcome}
+            onPick={onAnswer}
+            className="options options-compact rise d2"
+          />
+        </>
+      }
+      reveal={reveal}
+    />
   );
 }

@@ -260,123 +260,6 @@ a.game-chip:hover {
   color: #6f6b62;
 }
 
-.ddd-map {
-  width: 100%;
-  height: auto;
-  display: block;
-  animation: map-in 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
-}
-
-.ddd-state {
-  fill: #1e1d19;
-  stroke: #55524a;
-  stroke-width: 1;
-  stroke-linejoin: round;
-  cursor: pointer;
-  transition:
-    fill 0.2s ease,
-    opacity 0.4s ease;
-}
-
-.ddd-state:hover,
-.ddd-state:focus-visible {
-  fill: #33312b;
-}
-
-.ddd-state:focus-visible {
-  outline: none;
-  stroke: var(--ink);
-  stroke-width: 2;
-}
-
-.ddd-state.lock {
-  cursor: default;
-}
-
-.ddd-state.lock:hover {
-  fill: #1e1d19;
-}
-
-.ddd-state.ans,
-.ddd-state.ans:hover {
-  fill: var(--accent);
-  stroke: var(--accent);
-}
-
-.ddd-state.pick,
-.ddd-state.pick:hover {
-  fill: #5a4527;
-  stroke: var(--warn);
-}
-
-.ddd-state.grp,
-.ddd-state.grp:hover {
-  fill: #33402f;
-}
-
-.ddd-state.dim,
-.ddd-state.dim:hover {
-  fill: #171613;
-  stroke: #3a3832;
-}
-
-.ddd-label {
-  font:
-    600 11px var(--font-text),
-    sans-serif;
-  fill: var(--muted);
-  pointer-events: none;
-  text-anchor: middle;
-  letter-spacing: 0.03em;
-}
-
-.ddd-label.callout {
-  text-anchor: start;
-}
-
-.ddd-label.on {
-  fill: var(--bg);
-}
-
-.ddd-label.callout.on {
-  fill: var(--accent);
-}
-
-.ddd-lead {
-  stroke: #4a473f;
-  stroke-width: 1;
-  fill: none;
-  pointer-events: none;
-}
-
-.ddd-hit {
-  fill: transparent;
-  cursor: pointer;
-}
-
-.ddd-hit.lock {
-  cursor: default;
-}
-
-.ddd-trail {
-  fill: none;
-  stroke: var(--ink);
-  stroke-width: 1.6;
-  stroke-linecap: round;
-  stroke-dasharray: 1;
-  animation: draw 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
-}
-
-.ddd-pin {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: pop 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both;
-}
-
-.ddd-pin.late {
-  animation-delay: 0.9s;
-}
-
 @keyframes code-in {
   from {
     opacity: 0;
@@ -387,26 +270,6 @@ a.game-chip:hover {
     opacity: 1;
     transform: none;
     filter: none;
-  }
-}
-
-@keyframes map-in {
-  from {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes draw {
-  from {
-    stroke-dashoffset: 1;
-  }
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
@@ -426,10 +289,7 @@ a.game-chip:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ddd-trail,
-  .ddd-pin,
-  .ddd-code,
-  .ddd-map {
+  .ddd-code {
     animation: none;
   }
 }
