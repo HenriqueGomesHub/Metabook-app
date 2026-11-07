@@ -47,6 +47,8 @@ export interface CardState {
   scheduledDays: number;
   reps: number;
   lapses: number;
+  /** position in the FSRS (re)learning steps */
+  learningSteps?: number;
   state: 'new' | 'learning' | 'review' | 'relearning';
   lastReview?: string;
 }
@@ -104,7 +106,9 @@ export interface BlockTarget {
 
 export interface Snapshot {
   takenAt: string;
+  /** `rounds` counts data points: game rounds, or drill reviews for countries without rounds */
   perCountry: Record<string, { accuracy: number; avgDistanceKm?: number; rounds: number }>;
+  avgDistanceKm?: number;
   topConfusions: { picked: string; truth: string; count: number }[];
 }
 
