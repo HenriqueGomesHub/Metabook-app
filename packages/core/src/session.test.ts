@@ -75,6 +75,41 @@ describe('buildSession', () => {
     expect(session).toMatchObject({ catchUp: false, remaining: 0 });
   });
 
+  it('takes new cards round-robin across types, stable within a type', () => {
+    const cards = [
+      ...['a1', 'a2', 'a3', 'a4', 'a5', 'a6'].map((id) => card(id, 'flag')),
+      ...['b1', 'b2', 'b3'].map((id) => card(id, 'script')),
+      ...['c1', 'c2', 'c3'].map((id) => card(id, 'meta')),
+    ];
+    const queue = buildSession({
+      cards,
+      states: {},
+      confusions: [],
+      settings: { ...settings, newPerDay: 6 },
+      now,
+      rng: rng(),
+    }).queue;
+    const ids = queue.map((i) => i.cardId);
+    expect(ids.filter((id) => id.startsWith('a')).sort()).toEqual(['a1', 'a2']);
+    expect(ids.filter((id) => id.startsWith('b')).sort()).toEqual(['b1', 'b2']);
+    expect(ids.filter((id) => id.startsWith('c')).sort()).toEqual(['c1', 'c2']);
+  });
+
+  it('lowers the caps by what was already done today', () => {
+    const { cards, states } = deck(12, 8);
+    const queue = buildSession({
+      cards,
+      states,
+      confusions: [],
+      settings,
+      doneToday: { reviews: 4, newCards: 3 },
+      now,
+      rng: rng(),
+    }).queue.map((i) => i.cardId);
+    expect(queue.filter((id) => id.startsWith('due'))).toHaveLength(6);
+    expect(queue.filter((id) => id.startsWith('new'))).toHaveLength(2);
+  });
+
   it('keeps the oldest reviews when over the cap', () => {
     const { cards, states } = deck(25, 0);
     const session = buildSession({ cards, states, confusions: [], settings, now, rng: rng() });
@@ -285,14 +320,36 @@ describe('buildSession', () => {
         (i) => i.contrastPair,
       );
 
-    it('injects back-to-back binary rounds alternating the two answers', () => {
+    it('injects back-to-back binary rounds using both answers', () => {
       const items = contrast(confusion(3));
       expect(items).toHaveLength(5);
       expect(items.every((i) => i.mode === 'binary')).toBe(true);
       expect(items[0]?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
       const ids = items.map((i) => i.cardId);
       expect(new Set(ids)).toEqual(new Set(['flag:rs', 'flag:bg']));
-      ids.slice(1).forEach((id, i) => expect(id).not.toBe(ids[i]));
+    });
+
+    it('orders sides randomly, never more than 2 in a row, both sides present', () => {
+      const orders = new Set<string>();
+      for (let seed = 1; seed <= 50; seed++) {
+        const ids = buildSession({
+          cards,
+          states: {},
+          confusions: [confusion(3)],
+          settings,
+          now,
+          rng: mulberry32(seed),
+        })
+          .queue.filter((i) => i.contrastPair)
+          .map((i) => i.cardId);
+        orders.add(ids.join());
+        expect(new Set(ids).size).toBe(2);
+        for (let i = 2; i < ids.length; i++) {
+          expect(ids[i] === ids[i - 1] && ids[i] === ids[i - 2]).toBe(false);
+        }
+      }
+      expect(orders.size).toBeGreaterThan(1);
+      expect(orders.has('flag:rs,flag:bg,flag:rs,flag:bg,flag:rs')).toBe(true);
     });
 
     it('only adds the rounds still needed to reach a streak of 5', () => {

@@ -87,6 +87,27 @@ describe('ingestRounds', () => {
   });
 });
 
+describe('ingestRounds confusion keys', () => {
+  it('keys by flag-card answer so round and drill confusions merge', () => {
+    const byCountry = {
+      LV: [card('flag:lv', 'LV', 'Latvia')],
+      LT: [card('flag:lt', 'LT', 'Lithuania')],
+    };
+    const drill = [
+      {
+        picked: 'Latvia',
+        truth: 'Lithuania',
+        count: 2,
+        lastSeen: '2026-03-10T00:00:00.000Z',
+        contrastStreak: 0,
+      },
+    ];
+    const result = ingestRounds([round('LT', 'LV')], drill, {}, byCountry, now);
+    expect(result.confusions).toHaveLength(1);
+    expect(result.confusions[0]).toMatchObject({ picked: 'Latvia', truth: 'Lithuania', count: 3 });
+  });
+});
+
 describe('ingestRounds ordering and duplicates', () => {
   const day = (d: number) => `2026-03-0${d}T00:00:00Z`;
   const rounds = [
@@ -169,9 +190,21 @@ describe('snapshot', () => {
     });
     expect(snap.avgDistanceKm).toBe(200);
     expect(snap.topConfusions).toEqual([
-      { picked: 'BG', truth: 'RS', count: 2 },
+      { picked: 'BG', truth: 'Serbia', count: 2 },
       { picked: 'bolivia', truth: 'Peru', count: 1 },
     ]);
+  });
+
+  it('merges a round confusion (LV to LT) with the drill confusion (Latvia to Lithuania)', () => {
+    const named = [card('flag:lv', 'LV', 'Latvia'), card('flag:lt', 'LT', 'Lithuania')];
+    const snap = snapshot(
+      [round('LT', 'LV')],
+      [review('flag:lt', false, 'Latvia')],
+      named,
+      since,
+      now,
+    );
+    expect(snap.topConfusions).toEqual([{ picked: 'Latvia', truth: 'Lithuania', count: 2 }]);
   });
 
   it('is empty without data', () => {

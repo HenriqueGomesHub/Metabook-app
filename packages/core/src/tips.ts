@@ -7,7 +7,8 @@ export interface PickedTip {
 }
 
 /**
- * Least-recently-seen tip for an answer (never-seen first, ties by id). `skip` steps through the
+ * Least-recently-seen tip for an answer (never-seen first, ties by id). `index` is the tip's
+ * stable position when the tips are sorted by id. `skip` steps through the
  * rotation for "Another tip" and wraps around.
  */
 export function pickTip(
@@ -25,7 +26,8 @@ export function pickTip(
         (lastShown.get(a.id) ?? '').localeCompare(lastShown.get(b.id) ?? '') ||
         a.id.localeCompare(b.id),
     );
-  const index = skip % candidates.length;
-  const tip = candidates[index];
-  return tip ? { tip, index, total: candidates.length } : null;
+  const tip = candidates[skip % candidates.length];
+  if (!tip) return null;
+  const stable = candidates.map((t) => t.id).sort((a, b) => a.localeCompare(b));
+  return { tip, index: stable.indexOf(tip.id), total: candidates.length };
 }

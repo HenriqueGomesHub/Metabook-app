@@ -37,19 +37,12 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     data.reviews.filter((r) => Date.parse(r.reviewedAt) >= dayStart).map((r) => r.cardId),
   );
   const introduced = [...reviewedToday].filter((id) => (firstReview.get(id) ?? 0) >= dayStart);
-  const { settings } = data;
   return buildSession({
     cards: type ? data.content.cards.filter((card) => card.type === type) : data.content.cards,
     states: data.states,
     confusions: data.confusions,
-    settings: {
-      ...settings,
-      maxReviewsPerDay: Math.max(
-        0,
-        settings.maxReviewsPerDay - (reviewedToday.size - introduced.length),
-      ),
-      newPerDay: Math.max(0, settings.newPerDay - introduced.length),
-    },
+    settings: data.settings,
+    doneToday: { reviews: reviewedToday.size - introduced.length, newCards: introduced.length },
     now,
   });
 }

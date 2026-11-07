@@ -44,6 +44,17 @@ describe('pickTip', () => {
     expect(visited).toEqual(['a', 'b', 'c']);
   });
 
+  it('reports a stable index by id order as views advance', () => {
+    const rotation = [tip('c'), tip('a'), tip('b')];
+    const views: TipView[] = [];
+    const indexes = ['01', '02', '03'].map((day) => {
+      const picked = pickTip(rotation, 'Brazil', 'flag', views);
+      views.push(view(picked?.tip.id ?? '', `2026-03-${day}T00:00:00Z`));
+      return picked?.index;
+    });
+    expect(indexes).toEqual([0, 1, 2]);
+  });
+
   it('steps through with skip for "Another tip" and wraps', () => {
     expect([0, 1, 2].map((skip) => pickTip(tips, 'Brazil', 'flag', [], skip)?.tip.id)).toEqual([
       'a',

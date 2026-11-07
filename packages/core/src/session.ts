@@ -25,6 +25,7 @@ const CATCH_UP_FACTOR = 3;
 const NEW_SHARE = 0.3;
 const BLOCK_SHARE = 0.4;
 const MAX_RUN = 3;
+const MAX_SIDE_RUN = 2;
 
 /** How each type is answered once past multiple choice; area codes are recalled on the map. */
 const RECALL_MODES: Partial<Record<CardType, SessionMode>> = {
@@ -98,13 +99,40 @@ function contrastItems(confusion: Confusion, cards: Card[], rng: Rng): SessionIt
     .find((pair): pair is [Card, Card] => pair[1] !== undefined);
   if (!sides) return [];
 
-  const first = rng() < 0.5 ? 0 : 1;
   const contrastPair: [string, string] = [confusion.picked, confusion.truth];
-  return Array.from({ length: CONTRAST_STREAK_TO_RESOLVE - confusion.contrastStreak }, (_, i) => ({
-    cardId: (sides[(first + i) % 2] as Card).id,
+  const count = CONTRAST_STREAK_TO_RESOLVE - confusion.contrastStreak;
+  return sideOrder(count, rng).map((side) => ({
+    cardId: (sides[side] as Card).id,
     mode: 'binary' as const,
     contrastPair,
   }));
+}
+
+/** Random side order with at most MAX_SIDE_RUN in a row and both sides present (when count > 1). */
+function sideOrder(count: number, rng: Rng): (0 | 1)[] {
+  const order: (0 | 1)[] = [];
+  for (let i = 0; i < count; i++) {
+    const last = order.at(-1);
+    const runs =
+      order.length >= MAX_SIDE_RUN && order.slice(-MAX_SIDE_RUN).every((s) => s === last);
+    const missing = i === count - 1 && count > 1 && order.every((s) => s === last);
+    if (runs) order.push(last === 0 ? 1 : 0);
+    else if (missing) order.push(last === 0 ? 1 : 0);
+    else order.push(rng() < 0.5 ? 0 : 1);
+  }
+  return order;
+}
+
+/** Takes cards round-robin across types (stable within a type), with the type order shuffled. */
+function roundRobinByType(cards: Card[], rng: Rng): Card[] {
+  const byType = new Map<CardType, Card[]>();
+  for (const card of cards) byType.set(card.type, [...(byType.get(card.type) ?? []), card]);
+  const queues = shuffle([...byType.values()], rng);
+  const out: Card[] = [];
+  for (let round = 0; out.length < cards.length; round++) {
+    for (const queue of queues) if (queue[round]) out.push(queue[round] as Card);
+  }
+  return out;
 }
 
 /**
@@ -119,8 +147,16 @@ export function buildSession(input: {
   block?: TrainingBlock;
   now: Date;
   rng?: Rng;
+  /** already done today; lowers the daily caps so repeat sessions don't hand out a fresh batch */
+  doneToday?: { reviews: number; newCards: number };
 }): Session {
-  const { cards, states, confusions, settings, block, now } = input;
+  const { cards, states, confusions, block, now } = input;
+  const done = input.doneToday ?? { reviews: 0, newCards: 0 };
+  const settings = {
+    ...input.settings,
+    maxReviewsPerDay: Math.max(0, input.settings.maxReviewsPerDay - done.reviews),
+    newPerDay: Math.max(0, input.settings.newPerDay - done.newCards),
+  };
   const rng = input.rng ?? mulberry32(now.getTime());
   const isTarget = (card: Card) => block?.targets.some((t) => matchesTarget(card, t)) ?? false;
   const stateOf = (card: Card) => states[card.id];
@@ -137,8 +173,14 @@ export function buildSession(input: {
   const fresh = catchUp
     ? []
     : [
-        ...cards.filter((card) => !isSeen(card) && isTarget(card)),
-        ...cards.filter((card) => !isSeen(card) && !isTarget(card)),
+        ...roundRobinByType(
+          cards.filter((card) => !isSeen(card) && isTarget(card)),
+          rng,
+        ),
+        ...roundRobinByType(
+          cards.filter((card) => !isSeen(card) && !isTarget(card)),
+          rng,
+        ),
       ].slice(0, settings.newPerDay);
 
   const picked = new Set([...reviews, ...fresh]);

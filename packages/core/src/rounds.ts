@@ -6,6 +6,17 @@ import type { Card, CardState, Confusion, Review, Round, Snapshot } from './type
 const PULL_FORWARD_MAX = 5;
 const TOP_CONFUSIONS = 5;
 
+/** Confusions are keyed by answer string (as drills do): the country's flag-card answer, else its code. */
+function nameOf(country: string, flagAnswers: ReadonlyMap<string, string>): string {
+  return flagAnswers.get(country) ?? country;
+}
+
+function flagAnswersOf(cards: Iterable<Card>): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const c of cards) if (c.type === 'flag' && !out.has(c.country)) out.set(c.country, c.answer);
+  return out;
+}
+
 export interface IngestResult {
   confusions: Confusion[];
   states: Record<string, CardState>;
@@ -33,8 +44,16 @@ export function ingestRounds(
       return true;
     });
   const misses = ingested.filter((r) => r.guess.country !== r.truth.country);
+  const names = flagAnswersOf(Object.values(cardsByCountry).flat());
   const nextConfusions = misses.reduce(
-    (acc, r) => recordAnswer(acc, r.guess.country, r.truth.country, false, new Date(r.playedAt)),
+    (acc, r) =>
+      recordAnswer(
+        acc,
+        nameOf(r.guess.country, names),
+        nameOf(r.truth.country, names),
+        false,
+        new Date(r.playedAt),
+      ),
     confusions,
   );
 
@@ -113,8 +132,11 @@ export function snapshot(
     const key = pairKey({ picked, truth });
     pairCounts.set(key, (pairCounts.get(key) ?? 0) + 1);
   };
+  const names = flagAnswersOf(cards);
   for (const r of recentRounds) {
-    if (r.guess.country !== r.truth.country) countPair(r.guess.country, r.truth.country);
+    if (r.guess.country !== r.truth.country) {
+      countPair(nameOf(r.guess.country, names), nameOf(r.truth.country, names));
+    }
   }
   const answerByNormalized = new Map(cards.map((c) => [normalizeAnswer(c.answer), c.answer]));
   for (const { review, card } of recentReviews) {
