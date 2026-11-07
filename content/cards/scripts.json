@@ -104,7 +104,7 @@
     ],
     "prompt": {
       "kind": "text",
-      "value": "Врање",
+      "value": "Ћуприја",
       "lang": "sr-Cyrl"
     },
     "tags": [
@@ -167,13 +167,13 @@
     "answer": "Kyrgyzstan",
     "options": [
       "Kyrgyzstan",
-      "Kazakhstan",
-      "Mongolia",
-      "Russia"
+      "Russia",
+      "Ukraine",
+      "Bulgaria"
     ],
     "prompt": {
       "kind": "text",
-      "value": "Кыргызстан",
+      "value": "көчөсү",
       "lang": "ky"
     },
     "tags": [
@@ -357,7 +357,7 @@
     ],
     "prompt": {
       "kind": "text",
-      "value": "台北市",
+      "value": "臺灣",
       "lang": "zh-Hant"
     },
     "tags": [
@@ -380,7 +380,7 @@
     ],
     "prompt": {
       "kind": "text",
-      "value": "عمّان",
+      "value": "Place name on a sign: عمّان",
       "lang": "ar"
     },
     "tags": [
@@ -388,6 +388,52 @@
       "asia"
     ],
     "source": "https://en.wikipedia.org/wiki/Arabic_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:bengali",
+    "type": "script",
+    "country": "BD",
+    "answer": "Bangladesh",
+    "options": [
+      "Bangladesh",
+      "India",
+      "Sri Lanka",
+      "Thailand"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "ঢাকা",
+      "lang": "bn"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Bengali_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:lao",
+    "type": "script",
+    "country": "LA",
+    "answer": "Laos",
+    "options": [
+      "Laos",
+      "Thailand",
+      "Cambodia",
+      "Sri Lanka"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "ວຽງຈັນ",
+      "lang": "lo"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Lao_alphabet",
     "verified": false
   }
 ]

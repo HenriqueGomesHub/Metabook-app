@@ -11,10 +11,19 @@ cannot be confirmed. `node content/validate.mjs` requires a boolean `verified` o
 Flag `prompt.ratio` values (official height:width) especially need checking. Tip `answer` must equal a card
 `answer` (country name, region id, UF code) or `ddd:br:pattern`.
 
-Skipped for lack of confidence in official coverage: Georgia, Armenia, Laos, Bangladesh, India, Vietnam,
-Nepal, Rwanda, Madagascar, Namibia, Egypt, Gulf states other than UAE/Qatar. Add them to `pool.json`
-(and write cards) once confirmed. Cambodia, Sri Lanka, Kazakhstan, Kyrgyzstan and Cyprus are included but
-deserve a coverage check.
+Skipped for lack of confidence in official coverage: Georgia, Armenia, Vietnam, Nepal, Namibia, Egypt, Gulf
+states other than UAE/Qatar. Add them to `pool.json` (and write cards) once confirmed.
+
+Check coverage (included, but unsure they are in the official competitive pool): Cambodia, Sri Lanka,
+Kazakhstan, Kyrgyzstan, Cyprus, Tanzania. Also confirm Nepal, Namibia and Oman before adding them.
+
+Territories added to the pool without a flag card (they officially use a parent flag, or the own-flag ratio
+was not confidently known): Réunion (uses the French flag), US Virgin Islands (flag ratio not confirmed).
+Add a card once confirmed.
+
+Flag ratios to check first: Dominican Republic (`do`) and Paraguay (`py`) (Paraguay's reverse side differs
+from its obverse; DO's ratio is also unsure). Also double-check the territory ratios (fo 8:11, ax 17:26,
+gu 5:9, je 3:5, li 3:5).
 
 ## Files
 - `pool.json` - competitive pool: `{code, name, continent, in_pool}`. Editable config: GeoGuessr

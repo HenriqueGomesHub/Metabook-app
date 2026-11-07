@@ -75,7 +75,8 @@
     "answer": "Bosnia and Herzegovina",
     "aliases": [
       "Bosnia",
-      "BiH"
+      "BiH",
+      "Bosnia-Herzegovina"
     ],
     "prompt": {
       "kind": "flag",
@@ -306,6 +307,9 @@
     "type": "flag",
     "country": "IE",
     "answer": "Ireland",
+    "aliases": [
+      "Republic of Ireland"
+    ],
     "prompt": {
       "kind": "flag",
       "value": "ie",
@@ -730,6 +734,102 @@
     "verified": false
   },
   {
+    "id": "flag:li",
+    "type": "flag",
+    "country": "LI",
+    "answer": "Liechtenstein",
+    "prompt": {
+      "kind": "flag",
+      "value": "li",
+      "ratio": "3:5"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Liechtenstein",
+    "verified": false
+  },
+  {
+    "id": "flag:fo",
+    "type": "flag",
+    "country": "FO",
+    "answer": "Faroe Islands",
+    "prompt": {
+      "kind": "flag",
+      "value": "fo",
+      "ratio": "8:11"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Faroe_Islands",
+    "verified": false
+  },
+  {
+    "id": "flag:gi",
+    "type": "flag",
+    "country": "GI",
+    "answer": "Gibraltar",
+    "prompt": {
+      "kind": "flag",
+      "value": "gi",
+      "ratio": "1:2"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Gibraltar",
+    "verified": false
+  },
+  {
+    "id": "flag:im",
+    "type": "flag",
+    "country": "IM",
+    "answer": "Isle of Man",
+    "prompt": {
+      "kind": "flag",
+      "value": "im",
+      "ratio": "1:2"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Isle_of_Man",
+    "verified": false
+  },
+  {
+    "id": "flag:je",
+    "type": "flag",
+    "country": "JE",
+    "answer": "Jersey",
+    "prompt": {
+      "kind": "flag",
+      "value": "je",
+      "ratio": "3:5"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Jersey",
+    "verified": false
+  },
+  {
+    "id": "flag:ax",
+    "type": "flag",
+    "country": "AX",
+    "answer": "Åland",
+    "prompt": {
+      "kind": "flag",
+      "value": "ax",
+      "ratio": "17:26"
+    },
+    "tags": [
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Åland",
+    "verified": false
+  },
+  {
     "id": "flag:jp",
     "type": "flag",
     "country": "JP",
@@ -791,7 +891,7 @@
     "prompt": {
       "kind": "flag",
       "value": "kh",
-      "ratio": "2:3"
+      "ratio": "16:25"
     },
     "tags": [
       "asia"
@@ -806,7 +906,8 @@
     "answer": "Taiwan",
     "aliases": [
       "Republic of China",
-      "ROC"
+      "ROC",
+      "Chinese Taipei"
     ],
     "prompt": {
       "kind": "flag",
@@ -1066,6 +1167,102 @@
     "verified": false
   },
   {
+    "id": "flag:in",
+    "type": "flag",
+    "country": "IN",
+    "answer": "India",
+    "prompt": {
+      "kind": "flag",
+      "value": "in",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_India",
+    "verified": false
+  },
+  {
+    "id": "flag:bd",
+    "type": "flag",
+    "country": "BD",
+    "answer": "Bangladesh",
+    "prompt": {
+      "kind": "flag",
+      "value": "bd",
+      "ratio": "3:5"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Bangladesh",
+    "verified": false
+  },
+  {
+    "id": "flag:la",
+    "type": "flag",
+    "country": "LA",
+    "answer": "Laos",
+    "prompt": {
+      "kind": "flag",
+      "value": "la",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Laos",
+    "verified": false
+  },
+  {
+    "id": "flag:lb",
+    "type": "flag",
+    "country": "LB",
+    "answer": "Lebanon",
+    "prompt": {
+      "kind": "flag",
+      "value": "lb",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Lebanon",
+    "verified": false
+  },
+  {
+    "id": "flag:hk",
+    "type": "flag",
+    "country": "HK",
+    "answer": "Hong Kong",
+    "prompt": {
+      "kind": "flag",
+      "value": "hk",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Hong_Kong",
+    "verified": false
+  },
+  {
+    "id": "flag:mo",
+    "type": "flag",
+    "country": "MO",
+    "answer": "Macau",
+    "prompt": {
+      "kind": "flag",
+      "value": "mo",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Macau",
+    "verified": false
+  },
+  {
     "id": "flag:za",
     "type": "flag",
     "country": "ZA",
@@ -1246,6 +1443,38 @@
       "crescent"
     ],
     "source": "https://en.wikipedia.org/wiki/Flag_of_Tunisia",
+    "verified": false
+  },
+  {
+    "id": "flag:rw",
+    "type": "flag",
+    "country": "RW",
+    "answer": "Rwanda",
+    "prompt": {
+      "kind": "flag",
+      "value": "rw",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "africa"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Rwanda",
+    "verified": false
+  },
+  {
+    "id": "flag:mg",
+    "type": "flag",
+    "country": "MG",
+    "answer": "Madagascar",
+    "prompt": {
+      "kind": "flag",
+      "value": "mg",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "africa"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Madagascar",
     "verified": false
   },
   {
@@ -1509,6 +1738,9 @@
     "type": "flag",
     "country": "DO",
     "answer": "Dominican Republic",
+    "aliases": [
+      "Dominican Rep."
+    ],
     "prompt": {
       "kind": "flag",
       "value": "do",
@@ -1518,6 +1750,54 @@
       "americas"
     ],
     "source": "https://en.wikipedia.org/wiki/Flag_of_the_Dominican_Republic",
+    "verified": false
+  },
+  {
+    "id": "flag:pr",
+    "type": "flag",
+    "country": "PR",
+    "answer": "Puerto Rico",
+    "prompt": {
+      "kind": "flag",
+      "value": "pr",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "americas"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Puerto_Rico",
+    "verified": false
+  },
+  {
+    "id": "flag:cw",
+    "type": "flag",
+    "country": "CW",
+    "answer": "Curaçao",
+    "prompt": {
+      "kind": "flag",
+      "value": "cw",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "americas"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Curaçao",
+    "verified": false
+  },
+  {
+    "id": "flag:gl",
+    "type": "flag",
+    "country": "GL",
+    "answer": "Greenland",
+    "prompt": {
+      "kind": "flag",
+      "value": "gl",
+      "ratio": "2:3"
+    },
+    "tags": [
+      "americas"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Greenland",
     "verified": false
   },
   {
@@ -1554,6 +1834,54 @@
       "southern-cross"
     ],
     "source": "https://en.wikipedia.org/wiki/Flag_of_New_Zealand",
+    "verified": false
+  },
+  {
+    "id": "flag:gu",
+    "type": "flag",
+    "country": "GU",
+    "answer": "Guam",
+    "prompt": {
+      "kind": "flag",
+      "value": "gu",
+      "ratio": "5:9"
+    },
+    "tags": [
+      "oceania"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Guam",
+    "verified": false
+  },
+  {
+    "id": "flag:mp",
+    "type": "flag",
+    "country": "MP",
+    "answer": "Northern Mariana Islands",
+    "prompt": {
+      "kind": "flag",
+      "value": "mp",
+      "ratio": "1:2"
+    },
+    "tags": [
+      "oceania"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Northern_Mariana_Islands",
+    "verified": false
+  },
+  {
+    "id": "flag:as",
+    "type": "flag",
+    "country": "AS",
+    "answer": "American Samoa",
+    "prompt": {
+      "kind": "flag",
+      "value": "as",
+      "ratio": "1:2"
+    },
+    "tags": [
+      "oceania"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Flag_of_American_Samoa",
     "verified": false
   }
 ]
