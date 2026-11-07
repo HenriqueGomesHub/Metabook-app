@@ -4,17 +4,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wxt",
-    "build": "wxt build",
-    "zip": "wxt zip",
+    "dev": "node scripts/build.mjs --watch",
+    "build": "node scripts/build.mjs && node scripts/check-bundle.mjs",
     "test": "vitest run",
-    "typecheck": "wxt prepare && tsc -p tsconfig.json",
-    "postinstall": "wxt prepare"
+    "typecheck": "tsc -p tsconfig.json"
   },
   "devDependencies": {
+    "@types/chrome": "^0.3.7",
     "@types/node": "^22.20.5",
+    "esbuild": "^0.28.2",
     "jsdom": "^26.1.0",
-    "vitest": "^3.2.0",
-    "wxt": "^0.20.0"
+    "vitest": "^3.2.0"
   }
 }

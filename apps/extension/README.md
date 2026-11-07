@@ -1,6 +1,6 @@
 # Metabook companion extension (prototype, do not publish)
 
-Chrome MV3 extension (WXT). After you finish a round of GeoGuessr it reads the visible result screen, and sends `truth.country`, `guess.country`, distance and score to your own Metabook (`ingest-rounds` edge function) so mistakes feed your drills. Spec: `docs/spec.md` section 9.
+Chrome MV3 extension, bundled with plain esbuild (no WXT, no framework runtime). After you finish a round of GeoGuessr it reads the visible result screen, and sends `truth.country`, `guess.country`, distance and score to your own Metabook (`ingest-rounds` edge function) so mistakes feed your drills. Spec: `docs/spec.md` section 9.
 
 ## Security rules (checklist)
 
@@ -9,6 +9,7 @@ Chrome MV3 extension (WXT). After you finish a round of GeoGuessr it reads the v
 - [x] One content script, `matches: ["https://www.geoguessr.com/game/*"]`, isolated world, `document_idle`.
 - [x] No `web_accessible_resources`, no page-world scripts, no `<script>` injection.
 - [x] No patching of fetch/XHR/WebSocket/history; SPA navigation is detected by polling `location.pathname` every 2 s.
+- [x] No framework runtime in the content script (no WXT, no wrapper that dispatches events or posts messages to the page). `scripts/check-bundle.mjs` runs after every build and fails it if `dist/content.js` contains postMessage, dispatchEvent, CustomEvent, fetch(, XMLHttpRequest, WebSocket, createElement, innerHTML, insertAdjacent, appendChild, setAttribute, classList, .style, console., eval( or new Function, or if the manifest has `web_accessible_resources`, `externally_connectable` or permissions other than `storage`.
 - [x] No DOM writes, styles or UI on GeoGuessr. The popup is the only UI.
 - [x] Runtime guard: if the path does not start with `/game/`, observers are disconnected.
 - [x] Reads only after a result screen appears (read-only MutationObserver, 500 ms debounce).
@@ -29,10 +30,16 @@ The author had no access to geoguessr.com. Every selector and regex in `src/pars
 
 ```
 cp .env.example .env.local     # set VITE_METABOOK_INGEST_URL=https://<ref>.supabase.co/functions/v1/ingest-rounds
-npm run build -w @metabook/extension   # from repo root; output in apps/extension/.output/chrome-mv3
+npm run build -w @metabook/extension   # from repo root; builds apps/extension/dist and runs the bundle check
 ```
 
-Chrome: `chrome://extensions` > Developer mode > Load unpacked > select `apps/extension/.output/chrome-mv3`. Other scripts: `dev` (WXT dev mode, adds dev-only permissions, do not use for real play), `zip`, `test`, `typecheck`.
+Chrome: `chrome://extensions` > Developer mode > Load unpacked > select `apps/extension/dist`. Other scripts: `dev` (esbuild watch), `test`, `typecheck`. The env var is read from the process environment or `.env.local`.
+
+## Behaviour to know
+
+- Capture only starts on a **full page load** of a `/game/` URL. Content scripts are not injected on in-app (SPA) navigation, so if you reach a game from another GeoGuessr page, reload it once.
+- On `no-country` (result screen has no country names), capture stops for that **whole game**, not just that round.
+- A 403 from the server can mean the **kill switch** is on OR the request **origin is wrong** (the function rejects unexpected origins). Check both before assuming capture was disabled on purpose.
 
 ## Pair
 

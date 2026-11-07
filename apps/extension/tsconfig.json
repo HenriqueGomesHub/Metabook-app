@@ -1,14 +1,18 @@
 {
-  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "types": ["node"]
+    "types": ["node", "chrome"]
   },
-  "include": ["src", "entrypoints", "wxt.config.ts", "vitest.config.ts", ".wxt/wxt.d.ts"]
+  "include": ["src", "entrypoints", "scripts", "vitest.config.ts", "globals.d.ts"]
 }

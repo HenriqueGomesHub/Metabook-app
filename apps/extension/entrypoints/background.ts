@@ -1,4 +1,3 @@
-import { browser } from 'wxt/browser';
 import type { ContentMessage, ExtensionRound, Message } from '../src/messages';
 import {
   getConfig,
@@ -78,14 +77,12 @@ async function recheck() {
   }
 }
 
-export default defineBackground(() => {
-  browser.runtime.onMessage.addListener((raw: unknown, sender) => {
-    if (sender.id !== browser.runtime.id) return;
-    const message = raw as Message;
-    if (message.type === 'recheck') return recheck().then(() => ({ ok: true }));
-    if (message.type === 'capture' || message.type === 'parse-failed') {
-      return onContent(message).then(() => ({ ok: true }));
-    }
-    return;
-  });
+chrome.runtime.onMessage.addListener((raw: unknown, sender) => {
+  if (sender.id !== chrome.runtime.id) return;
+  const message = raw as Message;
+  if (message.type === 'recheck') return recheck().then(() => ({ ok: true }));
+  if (message.type === 'capture' || message.type === 'parse-failed') {
+    return onContent(message).then(() => ({ ok: true }));
+  }
+  return;
 });

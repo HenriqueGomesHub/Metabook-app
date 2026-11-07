@@ -1,6 +1,5 @@
-import { browser } from 'wxt/browser';
-import type { PopupMessage } from '../../src/messages';
-import { getConfig, getStatus, setConfig } from '../../src/storage';
+import type { PopupMessage } from '../src/messages';
+import { getConfig, getStatus, setConfig } from '../src/storage';
 
 const $ = <T extends HTMLElement>(id: string) => document.getElementById(id) as T;
 const yesNo = (v: boolean | undefined, yes: string, no: string) =>
@@ -19,7 +18,7 @@ async function render() {
 
 async function init() {
   const config = await getConfig();
-  const envUrl = import.meta.env.VITE_METABOOK_INGEST_URL as string | undefined;
+  const envUrl = __INGEST_URL__ || undefined;
   $<HTMLInputElement>('url').value = config?.url ?? envUrl ?? '';
   $<HTMLInputElement>('token').value = config?.token ?? '';
   await render();
@@ -35,7 +34,7 @@ $('form').addEventListener('submit', (event) => {
 
 $('check').addEventListener('click', () => {
   const message: PopupMessage = { type: 'recheck' };
-  void browser.runtime.sendMessage(message).then(render, render);
+  void chrome.runtime.sendMessage(message).then(render, render);
 });
 
 void init();
