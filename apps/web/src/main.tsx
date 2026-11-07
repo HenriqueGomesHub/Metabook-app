@@ -1,11 +1,17 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
+import { AppDataProvider } from './app/AppData';
 import { router } from './app/routes';
+import { auth, repo } from './data';
 import './styles/tokens.css';
+import './components/components.css';
+import './screens/screens.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AppDataProvider repo={repo} auth={auth}>
+      <RouterProvider router={router} />
+    </AppDataProvider>
   </StrictMode>,
 );
