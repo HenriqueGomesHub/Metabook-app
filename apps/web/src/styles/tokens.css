@@ -1,0 +1,122 @@
+:root {
+  --bg: #12110f;
+  --surface: #1a1916;
+  --raise: #22211d;
+  --line: #2e2c27;
+  --line-soft: #24231f;
+  --ink: #eeeae2;
+  --muted: #a39e92;
+  --faint: #8a857b;
+  --accent: #a3c49a;
+  --accent-hover: #b4d3ab;
+  --warn: #d9a35e;
+  --gold: #d4b25e;
+  --silver: #bfc3c7;
+  --bronze: #b9805a;
+  --font-headline: 'Stack Sans Headline', system-ui, sans-serif;
+  --font-text: 'Stack Sans Text', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--ink);
+}
+
+.headline {
+  font-family: var(--font-headline);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 10;
+}
+
+.nav {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  z-index: 5;
+  animation: nav-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+}
+
+.nav a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--muted);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--ink);
+  background: var(--raise);
+}
+
+.nav a.on {
+  color: var(--bg);
+  background: var(--ink);
+}
+
+@keyframes nav-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 18px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

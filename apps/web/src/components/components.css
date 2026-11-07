@@ -1,0 +1,408 @@
+a:hover {
+  color: #ffffff;
+}
+
+kbd {
+  font:
+    500 12px var(--font-text),
+    sans-serif;
+  padding: 2px 7px;
+  border: 1px solid #3a3832;
+  border-radius: 6px;
+  color: var(--ink);
+}
+
+.status {
+  padding: 96px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Buttons */
+
+.cta,
+.ghost,
+.chip,
+.opt,
+.pick {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.35s ease;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 52px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font:
+    600 16px var(--font-text),
+    sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: var(--accent-hover);
+  color: var(--bg);
+}
+
+.cta kbd {
+  border: 0;
+  background: rgba(18, 17, 15, 0.14);
+  color: inherit;
+}
+
+.cta .arrow {
+  stroke-width: 2;
+  transition: transform 0.25s ease;
+}
+
+.cta:hover .arrow {
+  transform: translateX(3px);
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font:
+    500 15px var(--font-text),
+    sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ghost:hover {
+  background: var(--surface);
+}
+
+.link {
+  background: none;
+  border: 0;
+  padding: 6px;
+  color: var(--muted);
+  font:
+    400 13px var(--font-text),
+    sans-serif;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: var(--ink);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a.chip:hover {
+  background: var(--raise);
+}
+
+.chip-label {
+  gap: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.cta:active,
+.ghost:active,
+.chip:active,
+.opt:active:not(:disabled),
+.pick:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* Progress */
+
+.progress {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+}
+
+.progress > div {
+  height: 100%;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: width 0.6s ease;
+}
+
+/* Tips */
+
+.tipbox {
+  border-radius: 18px;
+  padding: 20px 22px;
+}
+
+.tipbox p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.tipbox-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.tipbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.tipbox-count {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.tipbox-main {
+  background: rgba(163, 196, 154, 0.08);
+  border: 1px solid rgba(163, 196, 154, 0.28);
+}
+
+.tipbox-main .tipbox-label {
+  color: var(--accent);
+}
+
+.tipbox-warn,
+.tipbox-aside {
+  padding: 18px 22px;
+}
+
+.tipbox-warn {
+  border: 1px solid rgba(217, 163, 94, 0.35);
+}
+
+.tipbox-warn .tipbox-label {
+  color: var(--warn);
+}
+
+.tipbox-aside {
+  border: 1px solid var(--line);
+}
+
+.tipbox-aside .tipbox-label {
+  color: var(--muted);
+}
+
+.tipbox-warn p,
+.tipbox-aside p {
+  font-size: 15px;
+  color: #d6d1c6;
+}
+
+/* Medal */
+
+.medal {
+  animation: medal-in 0.6s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+
+.medal-ribbon {
+  fill: none;
+  stroke: #6f6b62;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.medal-ring {
+  fill: none;
+  stroke: var(--bg);
+  stroke-opacity: 0.35;
+  stroke-width: 1.2;
+}
+
+/* Flags */
+
+.flag-image {
+  display: block;
+  width: min(400px, 80vw);
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  outline: 1px solid rgba(238, 234, 226, 0.08);
+}
+
+.flag-missing {
+  color: var(--muted);
+}
+
+/* Header */
+
+.topbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px 56px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.topbar-end {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-date {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--raise);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Motion: staggered rise-in, settle, cross-fade */
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.d1 {
+  animation-delay: 0.08s;
+}
+
+.d2 {
+  animation-delay: 0.16s;
+}
+
+.d3 {
+  animation-delay: 0.24s;
+}
+
+.settle {
+  animation: settle 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.swap {
+  animation: swap 0.45s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes swap {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes medal-in {
+  0% {
+    transform: scale(0) rotate(-30deg);
+  }
+  70% {
+    transform: scale(1.2) rotate(6deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 20px 16px;
+  }
+}

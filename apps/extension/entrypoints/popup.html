@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metabook</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Metabook</h1>
+    <form id="form">
+      <label>Supabase functions URL
+        <input id="url" type="url" placeholder="https://&lt;ref&gt;.supabase.co/functions/v1/ingest-rounds" autocomplete="off" />
+      </label>
+      <label>Pairing token
+        <input id="token" type="password" autocomplete="off" />
+      </label>
+      <button type="submit">Save</button>
+    </form>
+    <dl>
+      <dt>Paired</dt><dd id="paired"></dd>
+      <dt>Capture</dt><dd id="enabled"></dd>
+      <dt>Last capture</dt><dd id="last"></dd>
+      <dt>Last parse</dt><dd id="parse"></dd>
+      <dt>Last error</dt><dd id="error"></dd>
+    </dl>
+    <button id="check" type="button">Check status</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
