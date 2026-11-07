@@ -38,6 +38,7 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
         <div className="scene settle" style={{ '--ar': 16 / 9 } as React.CSSProperties}>
           <Prompt
             prompt={card.prompt}
+            revealed={outcome !== null}
             alt={`Is this ${label(left, scope)} or ${label(right, scope)}?`}
           />
         </div>

@@ -11,7 +11,7 @@ export function RegionCard({ card, mode, options, outcome, onAnswer, reveal }: C
     <Stage
       main={
         <div className="scene settle" style={{ '--ar': 16 / 10 } as React.CSSProperties}>
-          <Prompt prompt={card.prompt} alt="Street scene to place" />
+          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="Street scene to place" />
         </div>
       }
       side={

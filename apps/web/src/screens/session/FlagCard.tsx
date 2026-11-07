@@ -10,7 +10,7 @@ export function FlagCard({ card, mode, options, outcome, onAnswer, reveal }: Car
     <Stage
       main={
         <figure className="flag-figure unfurl">
-          <Prompt prompt={card.prompt} alt="Flag to identify" />
+          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="Flag to identify" />
           {ratio && <figcaption>{ratio.join(' : ')}</figcaption>}
         </figure>
       }

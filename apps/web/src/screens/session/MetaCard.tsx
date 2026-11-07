@@ -8,7 +8,7 @@ export function MetaCard({ card, options, outcome, onAnswer, reveal }: CardProps
     <Stage
       main={
         <figure className="scene settle" style={{ '--ar': 4 / 3 } as React.CSSProperties}>
-          <Prompt prompt={card.prompt} alt="Clue to place" />
+          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="Clue to place" />
         </figure>
       }
       side={

@@ -66,7 +66,8 @@ interface AppDataValue {
   auth: Auth;
   /** undefined until the session has been looked up */
   user: AuthUser | null | undefined;
-  answer(input: AnswerInput): void;
+  /** returns the card's new schedule state, when the answer produced one */
+  answer(input: AnswerInput): CardState | undefined;
   recordTipView(tipId: string): void;
   logRounds(rounds: Round[]): IngestSummary;
   startBlock(block: TrainingBlock): void;
@@ -179,7 +180,7 @@ export function AppDataProvider({
 
   const answer = useCallback(
     (input: AnswerInput) => {
-      if (!data) return;
+      if (!data) return undefined;
       const now = new Date();
       const { card, contrastPair } = input;
       /** Applies the answer's changes together with its time on the active training block. */
@@ -194,7 +195,7 @@ export function AppDataProvider({
         const confusions = contrastResult(data.confusions, { picked, truth }, input.correct);
         const changed = confusions.filter((c) => c.picked === picked && c.truth === truth);
         commit({ ...data, confusions }, [repo.upsertConfusions(changed)]);
-        return;
+        return undefined;
       }
 
       const grade = gradeAnswer({
@@ -234,6 +235,7 @@ export function AppDataProvider({
         },
         [repo.upsertCardStates([state]), repo.addReview(review), repo.upsertConfusions(changed)],
       );
+      return state;
     },
     [data, repo, persist],
   );

@@ -7,6 +7,8 @@ export function useKeys(handler: (event: KeyboardEvent) => void, enabled = true)
   useEffect(() => {
     if (!enabled) return;
     const onKey = (event: KeyboardEvent) => {
+      // A keydown a component already handled (or a held key) must not trigger a second action.
+      if (event.defaultPrevented || event.repeat) return;
       if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) {
         return;
       }

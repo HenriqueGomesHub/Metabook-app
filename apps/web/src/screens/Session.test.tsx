@@ -133,6 +133,17 @@ describe('Practice', () => {
     expect(screen.getByRole('link', { name: 'Done' }).getAttribute('href')).toBe('/drills');
   });
 
+  it('does not re-serve an answered card after ending and keeping going', async () => {
+    const repo = repoWith(0);
+    renderApp('/session?type=flag', repo);
+    fireEvent.click((await screen.findAllByRole('button', { name: /^\d/ }))[0] as HTMLElement);
+    fireEvent.click(screen.getByRole('button', { name: 'End practice' }));
+    fireEvent.click(screen.getByRole('button', { name: /Keep going/ }));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    expect((await screen.findAllByRole('button', { name: /^\d/ })).length).toBeGreaterThan(0);
+    await waitFor(() => expect(repo.reviews).toHaveLength(1));
+  });
+
   it('shows an empty state for a scope without cards', async () => {
     renderApp('/session?country=ZZ', repoWith(0));
     expect(await screen.findByRole('region', { name: 'No cards here yet' })).toBeTruthy();

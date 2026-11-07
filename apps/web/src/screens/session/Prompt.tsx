@@ -6,7 +6,16 @@ import { FlagImage } from '../../components/FlagImage';
  * Renders a card's prompt; `alt` must describe it without giving the answer away. Text with a
  * language is shown as a sign, plain text as a written clue.
  */
-export function Prompt({ prompt, alt }: { prompt: CardPrompt; alt: string }) {
+export function Prompt({
+  prompt,
+  alt,
+  revealed = false,
+}: {
+  prompt: CardPrompt;
+  alt: string;
+  /** the card is answered; image credits can name the place, so they wait until then */
+  revealed?: boolean;
+}) {
   switch (prompt.kind) {
     case 'flag':
       return <FlagImage code={prompt.value} ratio={prompt.ratio} alt={alt} />;
@@ -19,7 +28,7 @@ export function Prompt({ prompt, alt }: { prompt: CardPrompt; alt: string }) {
         <p className="clue">{prompt.value}</p>
       );
     case 'image':
-      return <PromptImage key={prompt.value} prompt={prompt} alt={prompt.alt ?? alt} />;
+      return <PromptImage key={prompt.value} prompt={prompt} alt={prompt.alt ?? alt} revealed={revealed} />;
     case 'svg':
       return (
         <img
@@ -33,8 +42,16 @@ export function Prompt({ prompt, alt }: { prompt: CardPrompt; alt: string }) {
   }
 }
 
-/** A photo filling its frame: shimmer while loading, fade in, credit pill; text if it fails. */
-function PromptImage({ prompt, alt }: { prompt: CardPrompt; alt: string }) {
+/** A photo filling its frame: shimmer while loading, fade in, credit pill once revealed; text if it fails. */
+function PromptImage({
+  prompt,
+  alt,
+  revealed,
+}: {
+  prompt: CardPrompt;
+  alt: string;
+  revealed: boolean;
+}) {
   const [status, setStatus] = useState<'loading' | 'loaded' | 'failed'>('loading');
   if (status === 'failed') {
     return <p className="clue">{prompt.alt ?? 'Image unavailable'}</p>;
@@ -50,7 +67,8 @@ function PromptImage({ prompt, alt }: { prompt: CardPrompt; alt: string }) {
         onLoad={() => setStatus('loaded')}
         onError={() => setStatus('failed')}
       />
-      {prompt.credit &&
+      {revealed &&
+        prompt.credit &&
         (prompt.creditUrl ? (
           <a className="credit" href={prompt.creditUrl} target="_blank" rel="noreferrer">
             {prompt.credit}

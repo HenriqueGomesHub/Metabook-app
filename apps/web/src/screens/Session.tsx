@@ -7,7 +7,7 @@ import {
   pickTip,
   recordPracticeAnswer,
 } from '@metabook/core';
-import type { Card, CardType, PickedTip, PracticeState, SessionItem } from '@metabook/core';
+import type { Card, CardState, CardType, PickedTip, PracticeState, SessionItem } from '@metabook/core';
 import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -201,16 +201,20 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
 
   const right = results.filter(Boolean).length;
 
-  function onAnswered(correct: boolean) {
+  function onAnswered(correct: boolean, state?: CardState) {
     if (!flow) return;
     setResults([...results, correct]);
     const practice = recordPracticeAnswer(flow.practice, flow.item.cardId, correct);
-    const upcoming = nextPracticeItem(practice, data.states, new Date());
+    const upcoming = nextPracticeItem(
+      practice,
+      state ? { ...data.states, [state.cardId]: state } : data.states,
+      new Date(),
+    );
     preloadPrompt(pool.find((c) => c.id === upcoming.item.cardId)?.prompt);
     setFlow({ ...flow, practice, upcoming });
   }
 
-  function onNext() {
+  function advance() {
     if (!flow?.upcoming) return;
     const { item, practice } = flow.upcoming;
     const card = pool.find((c) => c.id === item.cardId);
@@ -219,20 +223,26 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
   }
 
+  /** Ending while an answered card is showing moves on, so Keep going never re-serves it. */
+  function endPractice() {
+    advance();
+    setEnded(true);
+  }
+
   return (
     <CardRunner
       key={flow.step}
       data={data}
       item={flow.item}
       onAnswered={onAnswered}
-      onNext={onNext}
+      onNext={advance}
       bar={() => (
         <div className="session-bar rise">
           <button
             type="button"
             className="chip"
             aria-label="End practice"
-            onClick={() => setEnded(true)}
+            onClick={endPractice}
           >
             <CloseIcon />
           </button>
@@ -261,7 +271,7 @@ function CardRunner({
 }: {
   data: AppSnapshot;
   item: SessionItem;
-  onAnswered(correct: boolean): void;
+  onAnswered(correct: boolean, state?: CardState): void;
   onNext(): void;
   bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
 }) {
@@ -323,7 +333,7 @@ function CardRunner({
       : item.mode === 'recall'
         ? matchedOther(card, given, cards)
         : given || undefined;
-    answer({
+    const state = answer({
       card,
       given,
       correct,
@@ -333,7 +343,7 @@ function CardRunner({
     });
     setOutcome({ given, correct });
     showTips(otherSide ?? picked);
-    onAnswered(correct);
+    onAnswered(correct, state);
   }
 
   const View = item.mode === 'binary' ? LookalikeCard : CARD_VIEWS[card.type];
