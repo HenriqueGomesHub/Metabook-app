@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Atlas</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .seg {
+            height: 40px;
+            padding: 0 18px;
+            border-radius: 999px;
+            border: 0;
+            background: none;
+            color: #a39e92;
+            font:
+              500 14px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+          }
+          .seg:hover {
+            color: #eeeae2;
+          }
+          .seg.on {
+            background: #eeeae2;
+            color: #12110f;
+          }
+          .tile {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 20px;
+            border-radius: 18px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .tile:hover {
+            border-color: #3a3832;
+            background: #1f1e1a;
+            color: #eeeae2;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(14px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          @keyframes grow {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .tile {
+            animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s both;
+            transition:
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+          }
+          .tile:nth-child(1) {
+            animation-delay: 0.1s;
+          }
+          .tile:nth-child(2) {
+            animation-delay: 0.13s;
+          }
+          .tile:nth-child(3) {
+            animation-delay: 0.16s;
+          }
+          .tile:nth-child(4) {
+            animation-delay: 0.19s;
+          }
+          .tile:nth-child(5) {
+            animation-delay: 0.22s;
+          }
+          .tile:nth-child(6) {
+            animation-delay: 0.25s;
+          }
+          .tile:nth-child(7) {
+            animation-delay: 0.28s;
+          }
+          .tile:nth-child(8) {
+            animation-delay: 0.31s;
+          }
+          .tile:nth-child(9) {
+            animation-delay: 0.34s;
+          }
+          .tile:nth-child(10) {
+            animation-delay: 0.37s;
+          }
+          .tile:nth-child(11) {
+            animation-delay: 0.4s;
+          }
+          .tile:nth-child(12) {
+            animation-delay: 0.43s;
+          }
+          .tile:hover {
+            transform: translateY(-2px);
+          }
+          .tile > div:last-child > div {
+            transform-origin: left;
+            animation: grow 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.7s both;
+          }
+          .nav a,
+          .seg {
+            transition:
+              background-color 0.25s ease,
+              color 0.25s ease;
+          }
+          @keyframes medalIn {
+            0% {
+              transform: scale(0) rotate(-30deg);
+            }
+            70% {
+              transform: scale(1.2) rotate(6deg);
+            }
+            100% {
+              transform: none;
+            }
+          }
+          .medal {
+            animation: medalIn 0.6s cubic-bezier(0.3, 1.4, 0.5, 1) 1.1s both;
+          }
+          .tile:hover .medal {
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-atlas">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-atlas)"></rect>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            <span
+              style="
+                font-family: 'Stack Sans Headline', system-ui, sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+              "
+              >Metabook</span
+            >
+          </div>
+          <button
+            aria-label="Profile and settings"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              background: #22211d;
+              border: 1px solid #2e2c27;
+              color: #eeeae2;
+              font:
+                500 13px 'Stack Sans Text',
+                sans-serif;
+              cursor: pointer;
+            "
+          >
+            TR
+          </button>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 24px 56px 160px;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="r"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 24px;
+              flex-wrap: wrap;
+              margin-bottom: 32px;
+            "
+          >
+            <div>
+              <h1
+                style="
+                  margin: 0;
+                  font-family: 'Stack Sans Headline', sans-serif;
+                  font-size: 48px;
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                "
+              >
+                Atlas
+              </h1>
+              <p
+                style="
+                  margin: 8px 0 0;
+                  font-size: 16px;
+                  color: #a39e92;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                  <path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6z"></path>
+                  <path d="m9 12 2 2 4-4"></path></svg
+                >Competitive pool only · follows the current ranked maps
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 18px;
+                  margin-top: 14px;
+                  font-size: 13px;
+                  color: #a39e92;
+                  flex-wrap: wrap;
+                "
+              >
+                <span style="display: flex; align-items: center; gap: 6px"
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #d4b25e"
+                  ></span
+                  >{{goldCount}} gold · 80%+</span
+                ><span style="display: flex; align-items: center; gap: 6px"
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #bfc3c7"
+                  ></span
+                  >{{silverCount}} silver · 50%+</span
+                ><span style="display: flex; align-items: center; gap: 6px"
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #b9805a"
+                  ></span
+                  >{{bronzeCount}} bronze · 25%+</span
+                >
+              </div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+              <div
+                role="tablist"
+                aria-label="Continent"
+                style="
+                  display: flex;
+                  gap: 2px;
+                  padding: 4px;
+                  border-radius: 999px;
+                  background: #1a1916;
+                  border: 1px solid #2e2c27;
+                  flex-wrap: wrap;
+                "
+              >
+                <button class="seg on" role="tab" aria-selected="true">Europe</button
+                ><button class="seg" role="tab" aria-selected="false">Asia</button
+                ><button class="seg" role="tab" aria-selected="false">Americas</button
+                ><button class="seg" role="tab" aria-selected="false">Africa</button
+                ><button class="seg" role="tab" aria-selected="false">Oceania</button>
+              </div>
+              <button
+                aria-label="Search countries"
+                style="
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 999px;
+                  background: #1a1916;
+                  border: 1px solid #2e2c27;
+                  color: #eeeae2;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                "
+              >
+                <svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <circle cx="11" cy="11" r="6.5"></circle>
+                  <path d="m16 16 4 4"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr));
+              gap: 12px;
+            "
+          >
+            <sc-for list="{{countries}}" as="c" hint-placeholder-count="24">
+              <a class="tile" href="Country.dc.html">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 8px;
+                  "
+                >
+                  <span style="font-size: 16px; font-weight: 500">{{c.name}}</span
+                  ><span
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 6px;
+                      font-size: 13px;
+                      color: #a39e92;
+                      font-variant-numeric: tabular-nums;
+                    "
+                    ><sc-if value="{{c.hasMedal}}" hint-placeholder-val="{{ true }}"
+                      ><svg
+                        class="medal"
+                        role="img"
+                        aria-label="{{c.medalName}} medal"
+                        viewBox="0 0 24 24"
+                        width="18"
+                        height="18"
+                      >
+                        <path
+                          d="M8 2.5 10.5 9M16 2.5 13.5 9"
+                          style="
+                            fill: none;
+                            stroke: #6f6b62;
+                            stroke-width: 2;
+                            stroke-linecap: round;
+                          "
+                        ></path>
+                        <circle cx="12" cy="15" r="6.5" style="{{c.medalFill}}"></circle>
+                        <circle
+                          cx="12"
+                          cy="15"
+                          r="4"
+                          style="
+                            fill: none;
+                            stroke: #12110f;
+                            stroke-opacity: 0.35;
+                            stroke-width: 1.2;
+                          "
+                        ></circle></svg></sc-if
+                    >{{c.label}}</span
+                  >
+                </div>
+                <div style="height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div style="{{c.bar}}"></div>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a class="on" href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      const raw = [['Albania',22],['Austria',88],['Belgium',91],['Bulgaria',38],['Croatia',76],['Czechia',83],['Denmark',90],['Estonia',69],['Finland',87],['France',94],['Germany',92],['Greece',81],['Hungary',72],['Italy',89],['Latvia',61],['Lithuania',66],['Netherlands',93],['Norway',90],['Poland',85],['Portugal',88],['Romania',74],['Serbia',44],['Slovakia',63],['Spain',95]];
+      const tier = (p) => p >= 80 ? ['Gold', '#D4B25E'] : p >= 50 ? ['Silver', '#BFC3C7'] : p >= 25 ? ['Bronze', '#B9805A'] : null;
+      const countries = raw.map(([name, p]) => {
+      const t = tier(p);
+      return {
+      name,
+      label: p + '%',
+      hasMedal: !!t,
+      medalName: t ? t[0] : '',
+      medalFill: 'fill: ' + (t ? t[1] : 'none'),
+      bar: 'width: ' + p + '%; height: 100%; border-radius: 2px; background: ' + (p < 50 ? '#D9A35E' : '#EEEAE2')
+      };
+      });
+      const count = (n) => countries.filter((c) => c.medalName === n).length;
+      return { countries, goldCount: count('Gold'), silverCount: count('Silver'), bronzeCount: count('Bronze') };
+      }
+      }
+    </script>
+  </body>
+</html>

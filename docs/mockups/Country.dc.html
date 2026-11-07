@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Brazil chapter</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 26px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font:
+              600 16px 'Stack Sans Text',
+              sans-serif;
+            text-decoration: none;
+            border: 0;
+            cursor: pointer;
+            transition:
+              background-color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          .cta:active {
+            transform: scale(0.97);
+          }
+          .tog {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 20px;
+            border-radius: 999px;
+            border: 1px solid #2e2c27;
+            background: none;
+            color: #eeeae2;
+            font:
+              500 15px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+            transition:
+              background-color 0.25s ease,
+              border-color 0.25s ease;
+          }
+          .tog:hover {
+            background: #1a1916;
+          }
+          .tog.on {
+            border-color: rgba(163, 196, 154, 0.5);
+            background: rgba(163, 196, 154, 0.08);
+          }
+          .md {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: -1px;
+          }
+          .ch {
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr) 120px 72px 24px;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 8px;
+            border-bottom: 1px solid #24231f;
+            text-decoration: none;
+            color: #eeeae2;
+            transition:
+              background-color 0.2s ease,
+              padding 0.25s ease;
+          }
+          .ch:hover {
+            background: #17161400;
+            padding-left: 14px;
+            color: #eeeae2;
+          }
+          .ch .n {
+            font:
+              500 13px 'Stack Sans Text',
+              sans-serif;
+            color: #8a857b;
+            font-variant-numeric: tabular-nums;
+          }
+          .bar {
+            height: 4px;
+            border-radius: 2px;
+            background: #2e2c27;
+          }
+          .bar > div {
+            height: 100%;
+            border-radius: 2px;
+            transform-origin: left;
+            animation: grow 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s both;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          @keyframes grow {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+          @keyframes ring {
+            from {
+              stroke-dashoffset: 176;
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .d1 {
+            animation-delay: 0.08s;
+          }
+          .d2 {
+            animation-delay: 0.16s;
+          }
+          .d3 {
+            animation-delay: 0.24s;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .ch {
+            animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .ch:nth-child(1) {
+            animation-delay: 0.2s;
+          }
+          .ch:nth-child(2) {
+            animation-delay: 0.25s;
+          }
+          .ch:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+          .ch:nth-child(4) {
+            animation-delay: 0.35s;
+          }
+          .ch:nth-child(5) {
+            animation-delay: 0.4s;
+          }
+          .ch:nth-child(6) {
+            animation-delay: 0.45s;
+          }
+          .ringfill {
+            animation: ring 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s both;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-country">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-country)"></rect>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <a
+            href="Atlas.dc.html"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 14px;
+              color: #a39e92;
+              text-decoration: none;
+            "
+            ><svg class="i" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="m15 6-6 6 6 6"></path></svg
+            >Atlas</a
+          >
+          <button
+            aria-label="Profile and settings"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              background: #22211d;
+              border: 1px solid #2e2c27;
+              color: #eeeae2;
+              font:
+                500 13px 'Stack Sans Text',
+                sans-serif;
+              cursor: pointer;
+            "
+          >
+            TR
+          </button>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 8px 56px 160px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 72px;
+          "
+        >
+          <section style="flex: 999 1 560px; min-width: 0">
+            <div
+              class="r d1"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 28px;
+                margin-bottom: 32px;
+                flex-wrap: wrap;
+              "
+            >
+              <svg
+                role="img"
+                aria-label="Brazil mastery 61%"
+                viewBox="0 0 64 64"
+                width="88"
+                height="88"
+              >
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="28"
+                  style="fill: none; stroke: #2e2c27; stroke-width: 5"
+                ></circle>
+                <circle
+                  class="ringfill"
+                  cx="32"
+                  cy="32"
+                  r="28"
+                  transform="rotate(-90 32 32)"
+                  style="
+                    fill: none;
+                    stroke: #a3c49a;
+                    stroke-width: 5;
+                    stroke-linecap: round;
+                    stroke-dasharray: 176;
+                    stroke-dashoffset: 69;
+                  "
+                ></circle>
+                <text
+                  x="32"
+                  y="37"
+                  style="
+                    font:
+                      600 15px 'Stack Sans Headline',
+                      sans-serif;
+                    fill: #eeeae2;
+                    text-anchor: middle;
+                  "
+                >
+                  61%
+                </text>
+              </svg>
+              <div>
+                <h1
+                  style="
+                    margin: 0;
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 64px;
+                    font-weight: 600;
+                    letter-spacing: -0.04em;
+                    line-height: 1;
+                  "
+                >
+                  Brazil
+                </h1>
+                <p style="margin: 8px 0 12px; font-size: 15px; color: #a39e92">
+                  6 chapters · 142 cards · 23 due
+                </p>
+                <span
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    height: 34px;
+                    padding: 0 14px 0 8px;
+                    border-radius: 999px;
+                    border: 1px solid #2e2c27;
+                    font-size: 13px;
+                  "
+                  ><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <path
+                      d="M8 2.5 10.5 9M16 2.5 13.5 9"
+                      style="fill: none; stroke: #6f6b62; stroke-width: 2; stroke-linecap: round"
+                    ></path>
+                    <circle cx="12" cy="15" r="6.5" style="fill: #bfc3c7"></circle>
+                    <circle
+                      cx="12"
+                      cy="15"
+                      r="4"
+                      style="fill: none; stroke: #12110f; stroke-opacity: 0.35; stroke-width: 1.2"
+                    ></circle></svg
+                  >Silver<span style="color: #a39e92">· gold at 80%</span></span
+                >
+              </div>
+            </div>
+            <div
+              class="r d2"
+              style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px"
+            >
+              <a class="cta" href="Region.dc.html"
+                >Study Brazil<svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                  style="stroke-width: 2"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m13 6 6 6-6 6"></path></svg
+              ></a>
+              <button class="{{togCls}}" onClick="{{toggle}}" aria-pressed="{{focusOn}}">
+                <svg class="i" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <circle cx="12" cy="12" r="3"></circle></svg
+                >{{togLabel}}
+              </button>
+            </div>
+
+            <nav aria-label="Brazil chapters">
+              <a class="ch" href="Card.dc.html"
+                ><span class="n">01</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Spotting Brazil</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >Versus Argentina, Uruguay, Colombia</span
+                  ></span
+                ><span class="bar"><div style="width: 86%; background: #eeeae2"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #d4b25e"></span>86%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+              <a class="ch" href="Region.dc.html"
+                ><span class="n">02</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Regions by landscape</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >Soil, trees, houses, climate</span
+                  ></span
+                ><span class="bar"><div style="width: 49%; background: #d9a35e"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #b9805a"></span>49%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+              <a class="ch" href="AreaCode.dc.html"
+                ><span class="n">03</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Area codes</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >67 codes, first digit is the region</span
+                  ></span
+                ><span class="bar"><div style="width: 31%; background: #d9a35e"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #b9805a"></span>31%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+              <a class="ch" href="Card.dc.html"
+                ><span class="n">04</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Plates</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >Old grey plates name the city and state</span
+                  ></span
+                ><span class="bar"><div style="width: 72%; background: #eeeae2"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #bfc3c7"></span>72%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+              <a class="ch" href="Card.dc.html"
+                ><span class="n">05</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Poles and bollards</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >What changes from state to state</span
+                  ></span
+                ><span class="bar"><div style="width: 64%; background: #eeeae2"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #bfc3c7"></span>64%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+              <a class="ch" href="Card.dc.html"
+                ><span class="n">06</span
+                ><span
+                  ><span style="display: block; font-size: 17px">Roads and signs</span
+                  ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                    >Highway shields and state road codes</span
+                  ></span
+                ><span class="bar"><div style="width: 58%; background: #d9a35e"></div></span
+                ><span
+                  style="
+                    font-size: 13px;
+                    color: #a39e92;
+                    text-align: right;
+                    font-variant-numeric: tabular-nums;
+                  "
+                  ><span class="md" style="background: #bfc3c7"></span>58%</span
+                ><svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  aria-hidden="true"
+                  style="color: #6f6b62"
+                >
+                  <path d="m9 6 6 6-6 6"></path></svg
+              ></a>
+            </nav>
+          </section>
+
+          <aside
+            class="r d3"
+            style="
+              flex: 1 1 320px;
+              min-width: 0;
+              max-width: 420px;
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+            "
+          >
+            <div
+              style="
+                background: #1a1916;
+                border: 1px solid #2e2c27;
+                border-radius: 22px;
+                padding: 26px;
+              "
+            >
+              <h2 style="margin: 0 0 18px; font-size: 15px; font-weight: 500">
+                How it feeds your mixed sessions
+              </h2>
+              <ol
+                style="
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 18px;
+                "
+              >
+                <li style="display: flex; gap: 14px">
+                  <span
+                    style="
+                      width: 28px;
+                      height: 28px;
+                      flex: none;
+                      border-radius: 50%;
+                      border: 1px solid #3a3832;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 13px;
+                    "
+                    >1</span
+                  ><span
+                    ><span style="display: block; font-size: 15px">Learn</span
+                    ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                      >Study a chapter here, in order</span
+                    ></span
+                  >
+                </li>
+                <li style="display: flex; gap: 14px">
+                  <span
+                    style="
+                      width: 28px;
+                      height: 28px;
+                      flex: none;
+                      border-radius: 50%;
+                      border: 1px solid #3a3832;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 13px;
+                    "
+                    >2</span
+                  ><span
+                    ><span style="display: block; font-size: 15px">Drill</span
+                    ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                      >Every card you learn joins your deck</span
+                    ></span
+                  >
+                </li>
+                <li style="display: flex; gap: 14px">
+                  <span
+                    style="
+                      width: 28px;
+                      height: 28px;
+                      flex: none;
+                      border-radius: 50%;
+                      background: #a3c49a;
+                      color: #12110f;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 13px;
+                      font-weight: 600;
+                    "
+                    >3</span
+                  ><span
+                    ><span style="display: block; font-size: 15px">Mix</span
+                    ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                      >It comes back inside Today, mixed with everything else</span
+                    ></span
+                  >
+                </li>
+              </ol>
+            </div>
+            <div
+              style="
+                background: #1a1916;
+                border: 1px solid #2e2c27;
+                border-radius: 22px;
+                padding: 26px;
+              "
+            >
+              <h2 style="margin: 0 0 14px; font-size: 15px; font-weight: 500">
+                Where you miss in Brazil
+              </h2>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 10px 0;
+                  border-bottom: 1px solid #24231f;
+                  font-size: 15px;
+                "
+              >
+                <span>Northeast <span style="color: #a39e92">/</span> North</span
+                ><span style="color: #d9a35e">6</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 10px 0;
+                  border-bottom: 1px solid #24231f;
+                  font-size: 15px;
+                "
+              >
+                <span>Paraná <span style="color: #a39e92">/</span> Santa Catarina</span
+                ><span style="color: #d9a35e">4</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  padding: 10px 0;
+                  font-size: 15px;
+                "
+              >
+                <span>Goiás <span style="color: #a39e92">/</span> Mato Grosso</span
+                ><span style="color: #a39e92">3</span>
+              </div>
+            </div>
+          </aside>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a class="on" href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      state = { focus: true };
+      renderVals() {
+      const on = this.state.focus;
+      return {
+      focusOn: on,
+      togCls: on ? 'tog on' : 'tog',
+      togLabel: on ? 'In this week’s focus' : 'Add to focus',
+      toggle: () => this.setState({ focus: !this.state.focus })
+      };
+      }
+      }
+    </script>
+  </body>
+</html>

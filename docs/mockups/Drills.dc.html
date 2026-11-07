@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Drills</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .tile {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            padding: 28px;
+            border-radius: 22px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            text-decoration: none;
+            color: #eeeae2;
+          }
+          .tile:hover {
+            background: #1f1e1a;
+            border-color: #3a3832;
+            color: #eeeae2;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 26px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          @keyframes grow {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .tile {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+            transition:
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+          }
+          .tile:nth-child(1) {
+            animation-delay: 0.12s;
+          }
+          .tile:nth-child(2) {
+            animation-delay: 0.18s;
+          }
+          .tile:nth-child(3) {
+            animation-delay: 0.24s;
+          }
+          .tile:nth-child(4) {
+            animation-delay: 0.3s;
+          }
+          .tile:nth-child(5) {
+            animation-delay: 0.36s;
+          }
+          .tile:nth-child(6) {
+            animation-delay: 0.42s;
+          }
+          .tile:hover {
+            transform: translateY(-3px);
+          }
+          .tile > div:last-child > div > div {
+            transform-origin: left;
+            animation: grow 1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s both;
+          }
+          .tile svg {
+            transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+          }
+          .tile:hover svg {
+            transform: scale(1.08);
+          }
+          .nav a,
+          .cta {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-drills">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-drills)"></rect>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            <span
+              style="
+                font-family: 'Stack Sans Headline', system-ui, sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+              "
+              >Metabook</span
+            >
+          </div>
+          <button
+            aria-label="Profile and settings"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              background: #22211d;
+              border: 1px solid #2e2c27;
+              color: #eeeae2;
+              font:
+                500 13px 'Stack Sans Text',
+                sans-serif;
+              cursor: pointer;
+            "
+          >
+            TR
+          </button>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 24px 56px 160px;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="r"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 24px;
+              flex-wrap: wrap;
+              margin-bottom: 40px;
+            "
+          >
+            <div>
+              <h1
+                style="
+                  margin: 0;
+                  font-family: 'Stack Sans Headline', sans-serif;
+                  font-size: 48px;
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                "
+              >
+                Drills
+              </h1>
+              <p style="margin: 8px 0 0; font-size: 16px; color: #a39e92">
+                Mixed is best. Single drills are for focus days.
+              </p>
+            </div>
+            <a class="cta" href="Card.dc.html"
+              >Mixed session<svg
+                class="i"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                style="stroke-width: 2"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path></svg
+            ></a>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+              gap: 16px;
+            "
+          >
+            <a class="tile" href="Card.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <rect x="9" y="3.5" width="6" height="17" rx="1.5"></rect>
+                  <path d="M9 8h6"></path>
+                  <path d="M9 10.5h6"></path></svg
+                ><span style="font-size: 14px; color: #a39e92">14 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Metas
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Bollards, poles, plates, lines, cars
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 71%; height: 100%; border-radius: 2px; background: #eeeae2"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >71%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Round.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+                ><span style="font-size: 14px; color: #a39e92">10 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Street View
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Full rounds, scored by distance
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 64%; height: 100%; border-radius: 2px; background: #eeeae2"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >64%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Flags.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M5 21V4"></path>
+                  <path d="M5 4.5h12.5l-2.5 4 2.5 4H5"></path></svg
+                ><span style="font-size: 14px; color: #a39e92">8 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Flags
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  197 flags, lookalikes first
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 92%; height: 100%; border-radius: 2px; background: #eeeae2"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >92%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Scripts.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M3.5 19 8.5 5l5 14"></path>
+                  <path d="M5.6 13.5h5.8"></path>
+                  <circle cx="17.5" cy="15.5" r="3"></circle>
+                  <path d="M20.5 12v7"></path></svg
+                ><span style="font-size: 14px; color: #a39e92">6 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Scripts
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Alphabets and languages on signs
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 85%; height: 100%; border-radius: 2px; background: #eeeae2"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >85%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Lookalike.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <circle cx="9" cy="12" r="5.5"></circle>
+                  <circle cx="15" cy="12" r="5.5"></circle></svg
+                ><span style="font-size: 14px; color: #a39e92">5 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Lookalikes
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Pairs you must never confuse
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 58%; height: 100%; border-radius: 2px; background: #d9a35e"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >58%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Region.dc.html">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path
+                    d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"
+                  ></path>
+                  <circle cx="12" cy="10.5" r="2.2"></circle></svg
+                ><span style="font-size: 14px; color: #a39e92">5 due</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Regions
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Inside one country, by landscape
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px">
+                <div style="flex: 1; height: 4px; border-radius: 2px; background: #2e2c27">
+                  <div
+                    style="width: 49%; height: 100%; border-radius: 2px; background: #d9a35e"
+                  ></div>
+                </div>
+                <span style="font-size: 13px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >49%</span
+                >
+              </div>
+            </a>
+
+            <a class="tile" href="Games.dc.html" style="border-style: dashed">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <rect x="3" y="3" width="7.5" height="7.5" rx="2"></rect>
+                  <rect x="13.5" y="3" width="7.5" height="7.5" rx="2"></rect>
+                  <rect x="3" y="13.5" width="7.5" height="7.5" rx="2"></rect>
+                  <circle cx="17.25" cy="17.25" r="3.75"></circle></svg
+                ><span style="font-size: 14px; color: #a39e92">6 games</span>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 24px;
+                    font-weight: 600;
+                  "
+                >
+                  Mini-games
+                </div>
+                <div style="font-size: 14px; color: #a39e92; margin-top: 4px">
+                  Area codes, plates, scripts by state
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  font-size: 13px;
+                  color: #a3c49a;
+                "
+              >
+                Country patterns<svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m13 6 6 6-6 6"></path>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a class="on" href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      return {};
+      }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Mini-games</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .game {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            padding: 28px;
+            border-radius: 22px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            transition:
+              border-color 0.25s ease,
+              transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+          }
+          .game:hover {
+            border-color: #3a3832;
+            transform: translateY(-2px);
+          }
+          .c {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 36px;
+            padding: 0 14px;
+            border-radius: 999px;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font-size: 14px;
+            text-decoration: none;
+            transition:
+              background-color 0.2s ease,
+              border-color 0.2s ease;
+          }
+          .c:hover {
+            background: #24231f;
+            border-color: #5a574f;
+            color: #ffffff;
+          }
+          .c.hot {
+            border-color: rgba(163, 196, 154, 0.5);
+          }
+          .c .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #a3c49a;
+          }
+          .more {
+            font-size: 13px;
+            color: #a39e92;
+            align-self: center;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .game {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .game:nth-child(1) {
+            animation-delay: 0.12s;
+          }
+          .game:nth-child(2) {
+            animation-delay: 0.18s;
+          }
+          .game:nth-child(3) {
+            animation-delay: 0.24s;
+          }
+          .game:nth-child(4) {
+            animation-delay: 0.3s;
+          }
+          .game:nth-child(5) {
+            animation-delay: 0.36s;
+          }
+          .game:nth-child(6) {
+            animation-delay: 0.42s;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-games">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-games)"></rect>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <a
+            href="Drills.dc.html"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              font-size: 14px;
+              color: #a39e92;
+              text-decoration: none;
+            "
+            ><svg class="i" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="m15 6-6 6 6 6"></path></svg
+            >Drills</a
+          >
+          <button
+            aria-label="Profile and settings"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              background: #22211d;
+              border: 1px solid #2e2c27;
+              color: #eeeae2;
+              font:
+                500 13px 'Stack Sans Text',
+                sans-serif;
+              cursor: pointer;
+            "
+          >
+            TR
+          </button>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 8px 56px 160px;
+            box-sizing: border-box;
+          "
+        >
+          <div class="r" style="margin-bottom: 36px">
+            <h1
+              style="
+                margin: 0;
+                font-family: 'Stack Sans Headline', sans-serif;
+                font-size: 48px;
+                font-weight: 600;
+                letter-spacing: -0.03em;
+              "
+            >
+              Mini-games
+            </h1>
+            <p style="margin: 8px 0 0; font-size: 16px; color: #a39e92">
+              Patterns inside one country. Green dot means the pattern is strong.
+            </p>
+          </div>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+              gap: 16px;
+            "
+          >
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path
+                    d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                  ></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    Area codes
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    See a code, click the state
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Brazil</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>France</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Australia</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Japan</a
+                ><a class="c" href="AreaCode.dc.html">Italy</a
+                ><a class="c" href="AreaCode.dc.html">Spain</a
+                ><a class="c" href="AreaCode.dc.html">Argentina</a
+                ><a class="c" href="AreaCode.dc.html">Mexico</a><span class="more">+28</span>
+              </div>
+            </section>
+
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <rect x="3" y="7" width="18" height="10" rx="2"></rect>
+                  <path d="M7 12h2"></path>
+                  <path d="M12 12h5"></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    Plate codes
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    Letters or numbers that name a region
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Indonesia</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Russia</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Turkey</a
+                ><a class="c" href="AreaCode.dc.html">Poland</a
+                ><a class="c" href="AreaCode.dc.html">Austria</a>
+              </div>
+            </section>
+
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M3.5 19 8.5 5l5 14"></path>
+                  <path d="M5.6 13.5h5.8"></path>
+                  <circle cx="17.5" cy="15.5" r="3"></circle>
+                  <path d="M20.5 12v7"></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    Scripts by state
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    The alphabet tells you the state
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>India</a>
+              </div>
+            </section>
+
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M12 3v18"></path>
+                  <path d="M6 6h12"></path>
+                  <path d="M7 9h10"></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    State metas
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    Poles, plates and signs that change by state
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Australia</a
+                ><a class="c" href="AreaCode.dc.html">United States</a
+                ><a class="c" href="AreaCode.dc.html">Canada</a>
+              </div>
+            </section>
+
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M3 16c2-2 4-2 6 0s4 2 6 0 4-2 6 0"></path>
+                  <path d="M7 11c1.5-3 3.5-4 5-4s3.5 1 5 4"></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    Islands
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    Which island are you on
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Indonesia</a
+                ><a class="c" href="AreaCode.dc.html">Philippines</a
+                ><a class="c" href="AreaCode.dc.html">Japan</a>
+              </div>
+            </section>
+
+            <section class="game">
+              <div style="display: flex; gap: 14px; align-items: center">
+                <svg class="i" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                  <path d="M4 5h9v7H8l-4 3z"></path>
+                  <path d="M13 9h7v7l-3-2h-4z"></path>
+                </svg>
+                <div>
+                  <h2
+                    style="
+                      margin: 0;
+                      font-family: 'Stack Sans Headline', sans-serif;
+                      font-size: 22px;
+                      font-weight: 600;
+                    "
+                  >
+                    Languages by region
+                  </h2>
+                  <p style="margin: 2px 0 0; font-size: 14px; color: #a39e92">
+                    Which language is on the sign
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                <a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Spain</a
+                ><a class="c hot" href="AreaCode.dc.html"><span class="dot"></span>Switzerland</a
+                ><a class="c" href="AreaCode.dc.html">Belgium</a>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a class="on" href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      return {};
+      }
+      }
+    </script>
+  </body>
+</html>

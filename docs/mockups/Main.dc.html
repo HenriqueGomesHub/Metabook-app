@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Today</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 28px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          @keyframes grow {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+          @keyframes drift {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+          @keyframes pop {
+            0% {
+              transform: scale(0);
+            }
+            70% {
+              transform: scale(1.25);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .d1 {
+            animation-delay: 0.08s;
+          }
+          .d2 {
+            animation-delay: 0.18s;
+          }
+          .d3 {
+            animation-delay: 0.28s;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .contour {
+            animation: drift 240s linear infinite;
+            transform-origin: 50% 50%;
+          }
+          .mix > div {
+            transform-origin: left;
+            animation: grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .mix > div:nth-child(1) {
+            animation-delay: 0.45s;
+          }
+          .mix > div:nth-child(2) {
+            animation-delay: 0.52s;
+          }
+          .mix > div:nth-child(3) {
+            animation-delay: 0.59s;
+          }
+          .mix > div:nth-child(4) {
+            animation-delay: 0.66s;
+          }
+          .mix > div:nth-child(5) {
+            animation-delay: 0.73s;
+          }
+          .mix > div:nth-child(6) {
+            animation-delay: 0.8s;
+          }
+          .streak > span {
+            animation: pop 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+          }
+          .streak > span:nth-child(n + 3) {
+            animation-delay: 0.6s;
+          }
+          .streak > span:last-child {
+            animation-delay: 0.9s;
+          }
+          .nav a,
+          .cta {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:hover {
+            transform: translateY(-1px);
+          }
+          .cta:active {
+            transform: scale(0.97);
+          }
+          .cta svg {
+            transition: transform 0.25s ease;
+          }
+          .cta:hover svg {
+            transform: translateX(3px);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-today">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-today)"></rect>
+        </svg>
+        <svg
+          class="contour"
+          aria-hidden="true"
+          viewBox="0 0 800 800"
+          style="
+            position: absolute;
+            right: -160px;
+            top: -80px;
+            width: 900px;
+            height: 900px;
+            pointer-events: none;
+            fill: none;
+            stroke: #eeeae2;
+            stroke-width: 1;
+            opacity: 0.07;
+          "
+        >
+          <path
+            d="M400 120c120 10 230 80 260 190s-20 230-130 280-250 40-330-40-110-200-60-300 140-140 260-130z"
+          ></path>
+          <path
+            d="M400 170c100 8 190 70 214 160s-18 190-108 232-206 32-272-34-90-166-50-248 116-118 216-110z"
+          ></path>
+          <path
+            d="M402 222c80 6 150 56 168 128s-14 150-86 184-162 26-214-28-70-130-38-194 90-96 170-90z"
+          ></path>
+          <path
+            d="M404 276c58 4 108 40 122 92s-10 108-62 132-118 18-156-20-50-94-28-140 66-68 124-64z"
+          ></path>
+          <path
+            d="M406 330c36 3 66 26 75 58s-7 66-39 80-72 12-95-12-30-56-17-84 40-44 76-42z"
+          ></path>
+          <path d="M408 380c16 2 30 12 34 26s-3 30-17 36-32 6-43-6-14-26-8-38 18-20 34-18z"></path>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            <span
+              style="
+                font-family: 'Stack Sans Headline', system-ui, sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+              "
+              >Metabook</span
+            >
+          </div>
+          <div style="display: flex; align-items: center; gap: 16px">
+            <span style="font-size: 14px; color: #a39e92">Saturday, 7 November</span>
+            <button
+              aria-label="Profile and settings"
+              style="
+                width: 40px;
+                height: 40px;
+                border-radius: 999px;
+                background: #22211d;
+                border: 1px solid #2e2c27;
+                color: #eeeae2;
+                font:
+                  500 13px 'Stack Sans Text',
+                  sans-serif;
+                cursor: pointer;
+              "
+            >
+              TR
+            </button>
+          </div>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 64px 56px 160px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+            gap: 96px;
+            align-items: end;
+            box-sizing: border-box;
+          "
+        >
+          <section class="r d1">
+            <p style="margin: 0 0 8px; font-size: 15px; color: #a39e92">Due today</p>
+            <div
+              style="
+                font-family: 'Stack Sans Headline', system-ui, sans-serif;
+                font-size: 220px;
+                line-height: 0.82;
+                font-weight: 600;
+                letter-spacing: -0.06em;
+              "
+            >
+              48
+            </div>
+            <p style="margin: 28px 0 40px; font-size: 19px; color: #a39e92">
+              cards · about 15 minutes
+            </p>
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
+              <a class="cta" href="Card.dc.html"
+                >Start session<svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                  style="stroke-width: 2"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m13 6 6 6-6 6"></path></svg
+              ></a>
+              <span style="font-size: 13px; color: #a39e92"
+                >or press
+                <kbd
+                  style="
+                    font:
+                      500 12px 'Stack Sans Text',
+                      sans-serif;
+                    padding: 3px 8px;
+                    border: 1px solid #3a3832;
+                    border-radius: 6px;
+                    color: #eeeae2;
+                  "
+                  >Space</kbd
+                ></span
+              >
+            </div>
+          </section>
+
+          <section
+            class="r d2"
+            style="
+              background: #1a1916;
+              border: 1px solid #2e2c27;
+              border-radius: 24px;
+              padding: 32px;
+              display: flex;
+              flex-direction: column;
+              gap: 28px;
+            "
+          >
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: baseline;
+                  margin-bottom: 16px;
+                "
+              >
+                <span style="font-size: 15px; font-weight: 500">Today's mix</span>
+                <span style="font-size: 13px; color: #a39e92">34 review · 14 new</span>
+              </div>
+              <div class="mix" style="display: flex; gap: 3px; height: 10px">
+                <div style="flex: 14; border-radius: 5px; background: #eeeae2"></div>
+                <div style="flex: 10; border-radius: 5px; background: #a3c49a"></div>
+                <div style="flex: 8; border-radius: 5px; background: #bdb8ad"></div>
+                <div style="flex: 6; border-radius: 5px; background: #8e897f"></div>
+                <div style="flex: 5; border-radius: 5px; background: #66625a"></div>
+                <div style="flex: 5; border-radius: 5px; background: #46433d"></div>
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, minmax(0, 1fr));
+                  gap: 14px 20px;
+                  margin-top: 20px;
+                  font-size: 14px;
+                "
+              >
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #eeeae2"
+                  ></span
+                  >Metas<span style="margin-left: auto; color: #a39e92">14</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #a3c49a"
+                  ></span
+                  >Street View<span style="margin-left: auto; color: #a39e92">10</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #bdb8ad"
+                  ></span
+                  >Flags<span style="margin-left: auto; color: #a39e92">8</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #8e897f"
+                  ></span
+                  >Scripts<span style="margin-left: auto; color: #a39e92">6</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #66625a"
+                  ></span
+                  >Lookalikes<span style="margin-left: auto; color: #a39e92">5</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 2px; background: #46433d"
+                  ></span
+                  >Regions<span style="margin-left: auto; color: #a39e92">5</span>
+                </div>
+              </div>
+            </div>
+            <div style="height: 1px; background: #2e2c27"></div>
+            <div style="display: flex; flex-direction: column; gap: 18px; font-size: 15px">
+              <div style="display: flex; justify-content: space-between; gap: 16px">
+                <span style="color: #a39e92">Weakest</span><span>Balkan bollards</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; gap: 16px">
+                <span style="color: #a39e92">Top confusion</span
+                ><span>Serbia <span style="color: #a39e92">/</span> Bulgaria</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 16px;
+                "
+              >
+                <span style="color: #a39e92">12-day streak</span>
+                <span
+                  class="streak"
+                  aria-label="Practised 12 of the last 14 days"
+                  role="img"
+                  style="display: flex; gap: 5px"
+                >
+                  <span
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 50%;
+                      border: 1px solid #46433d;
+                      box-sizing: border-box;
+                    "
+                  ></span
+                  ><span
+                    style="
+                      width: 10px;
+                      height: 10px;
+                      border-radius: 50%;
+                      border: 1px solid #46433d;
+                      box-sizing: border-box;
+                    "
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #eeeae2"
+                  ></span
+                  ><span
+                    style="width: 10px; height: 10px; border-radius: 50%; background: #a3c49a"
+                  ></span>
+                </span>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a class="on" href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      return {};
+      }
+      }
+    </script>
+  </body>
+</html>

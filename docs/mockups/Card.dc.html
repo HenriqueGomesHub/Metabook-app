@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Meta card, reveal</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            min-width: 44px;
+            box-sizing: border-box;
+            border-radius: 999px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .chip:hover {
+            background: #22211d;
+            color: #ffffff;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 28px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          .ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 52px;
+            padding: 0 20px;
+            border-radius: 999px;
+            background: none;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font:
+              500 15px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+          }
+          .ghost:hover {
+            background: #1a1916;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(14px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes settle {
+            from {
+              opacity: 0;
+              transform: scale(1.03);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes swap {
+            from {
+              opacity: 0;
+              transform: translateY(6px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          .r {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .d1 {
+            animation-delay: 0.1s;
+          }
+          .d2 {
+            animation-delay: 0.2s;
+          }
+          .d3 {
+            animation-delay: 0.3s;
+          }
+          .scene {
+            animation: settle 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .swap {
+            animation: swap 0.45s ease both;
+          }
+          .cta,
+          .chip,
+          .ghost {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:active,
+          .chip:active,
+          .ghost:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-card">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-card)"></rect>
+        </svg>
+
+        <div
+          style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 28px 28px 0;
+          "
+        >
+          <a class="chip" href="Main.dc.html" aria-label="Leave session"
+            ><svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12"></path>
+              <path d="M18 6 6 18"></path></svg
+          ></a>
+          <div
+            role="img"
+            aria-label="Card 12 of 48"
+            style="flex: 1; height: 3px; border-radius: 2px; background: #2e2c27"
+          >
+            <div style="width: 25%; height: 100%; border-radius: 2px; background: #eeeae2"></div>
+          </div>
+          <span style="font-size: 14px; color: #a39e92; font-variant-numeric: tabular-nums"
+            >12 / 48</span
+          >
+        </div>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 56px 40px 120px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 64px;
+            align-items: center;
+            box-sizing: border-box;
+          "
+        >
+          <figure class="scene" style="flex: 999 1 520px; min-width: 0; margin: 0">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 13px;
+                color: #a39e92;
+                margin-bottom: 14px;
+              "
+            >
+              <svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M12 3v18"></path>
+                <path d="M6 6h12"></path>
+                <path d="M7 9h10"></path></svg
+              >Utility pole
+            </div>
+            <div
+              style="
+                border-radius: 22px;
+                overflow: hidden;
+                border: 1px solid #2e2c27;
+                aspect-ratio: 4 / 3;
+              "
+            >
+              <svg
+                role="img"
+                aria-label="Concrete utility pole with a yellow and black striped cover on its support wire"
+                viewBox="0 0 640 480"
+                preserveAspectRatio="xMidYMid slice"
+                style="width: 100%; height: 100%; display: block"
+              >
+                <rect width="640" height="480" fill="#8E9A9C"></rect>
+                <rect y="300" width="640" height="180" fill="#6E7056"></rect>
+                <rect y="300" width="640" height="14" fill="#5D6047"></rect>
+                <path d="M0 360 L640 330 L640 400 L0 440Z" fill="#4A4945"></path>
+                <rect x="268" y="28" width="26" height="300" rx="4" fill="#B7B3A8"></rect>
+                <rect x="268" y="28" width="9" height="300" fill="#C9C5BB"></rect>
+                <rect x="214" y="70" width="134" height="10" rx="3" fill="#5A5850"></rect>
+                <rect x="228" y="110" width="106" height="8" rx="3" fill="#5A5850"></rect>
+                <g style="stroke: #2e2d29; stroke-width: 1.6; fill: none">
+                  <path d="M0 82 Q110 96 220 74"></path>
+                  <path d="M346 74 Q500 92 640 70"></path>
+                  <path d="M0 118 Q120 132 232 112"></path>
+                  <path d="M332 112 Q490 130 640 108"></path>
+                  <path d="M0 150 Q140 170 270 150"></path>
+                  <path d="M292 150 Q470 172 640 146"></path>
+                </g>
+                <path
+                  d="M284 92 L470 318"
+                  style="stroke: #3a3934; stroke-width: 3; fill: none"
+                ></path>
+                <g transform="rotate(50.6 440 282)">
+                  <rect x="398" y="274" width="84" height="16" rx="5" fill="#E2B43C"></rect>
+                  <rect x="408" y="274" width="10" height="16" fill="#1E1D1A"></rect>
+                  <rect x="428" y="274" width="10" height="16" fill="#1E1D1A"></rect>
+                  <rect x="448" y="274" width="10" height="16" fill="#1E1D1A"></rect>
+                  <rect x="468" y="274" width="10" height="16" fill="#1E1D1A"></rect>
+                </g>
+                <rect x="462" y="314" width="18" height="8" rx="2" fill="#3A3934"></rect>
+              </svg>
+            </div>
+          </figure>
+
+          <section
+            style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 28px"
+          >
+            <div class="r d1">
+              <p style="margin: 0 0 6px; font-size: 14px; color: #d9a35e">You said South Korea</p>
+              <h1
+                style="
+                  margin: 0;
+                  font-family: 'Stack Sans Headline', sans-serif;
+                  font-size: 64px;
+                  font-weight: 600;
+                  letter-spacing: -0.035em;
+                  line-height: 1;
+                "
+              >
+                Japan
+              </h1>
+            </div>
+            <div
+              class="r d2"
+              style="
+                border-radius: 18px;
+                padding: 22px;
+                background: rgba(163, 196, 154, 0.08);
+                border: 1px solid rgba(163, 196, 154, 0.28);
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 13px;
+                    color: #a3c49a;
+                  "
+                  ><svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6.5"></circle>
+                    <path d="m16 16 4 4"></path></svg
+                  >{{tipLabel}}</span
+                ><span style="font-size: 12px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >{{tipCount}}</span
+                >
+              </div>
+              <sc-for list="{{tipNow}}" as="t" hint-placeholder-count="1"
+                ><p class="swap" style="margin: 0; font-size: 18px; line-height: 1.5">
+                  {{t.text}}
+                </p></sc-for
+              >
+            </div>
+            <a
+              class="r d3"
+              href="Lookalike.dc.html"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 14px;
+                border-radius: 16px;
+                border: 1px solid #2e2c27;
+                text-decoration: none;
+                color: #eeeae2;
+              "
+            >
+              <span
+                aria-hidden="true"
+                style="
+                  width: 64px;
+                  height: 48px;
+                  border-radius: 10px;
+                  background: #2a2925;
+                  flex: none;
+                "
+              ></span>
+              <span style="flex: 1"
+                ><span style="display: block; font-size: 15px">Compare with South Korea</span
+                ><span style="display: block; font-size: 13px; color: #a39e92; margin-top: 2px"
+                  >Side by side, 3 examples each</span
+                ></span
+              >
+              <svg
+                class="i"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                style="color: #a39e92"
+              >
+                <path d="m9 6 6 6-6 6"></path>
+              </svg>
+            </a>
+            <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px">
+              <a class="cta" href="Flags.dc.html"
+                >Next<kbd
+                  style="
+                    font:
+                      500 12px 'Stack Sans Text',
+                      sans-serif;
+                    padding: 2px 7px;
+                    border-radius: 6px;
+                    background: rgba(18, 17, 15, 0.14);
+                  "
+                  >Space</kbd
+                ></a
+              >
+              <button class="ghost" onClick="{{more}}">Another tip</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      state = { round: 0 };
+      renderVals() {
+      const tips = [
+      ['The tell', 'Yellow-and-black striped cover on the pole’s support wire.'],
+      ['Also Japan', 'Japan drives on the left, on narrow roads under dense overhead wires.'],
+      ['Also Japan', 'Plates are small and white, or yellow on kei cars, with Japanese characters.']
+      ];
+      const idx = this.state.round % tips.length;
+      return {
+      tipLabel: tips[idx][0],
+      tipCount: 'Tip ' + (idx + 1) + ' of ' + tips.length,
+      tipNow: [{ key: idx, text: tips[idx][1] }],
+      more: () => this.setState({ round: this.state.round + 1 })
+      };
+      }
+      }
+    </script>
+  </body>
+</html>

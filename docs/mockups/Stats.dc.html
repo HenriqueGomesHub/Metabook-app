@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Stats</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .nav {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            padding: 6px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 999px;
+            z-index: 5;
+          }
+          .nav a {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            color: #a39e92;
+            text-decoration: none;
+          }
+          .nav a:hover {
+            color: #eeeae2;
+            background: #22211d;
+          }
+          .nav a.on {
+            color: #12110f;
+            background: #eeeae2;
+          }
+          .panel {
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            border-radius: 22px;
+            padding: 28px;
+          }
+          .big {
+            font-family: 'Stack Sans Headline', sans-serif;
+            font-size: 44px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
+          }
+          .lab {
+            font-size: 14px;
+            color: #a39e92;
+            margin-top: 4px;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(14px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes navIn {
+            from {
+              opacity: 0;
+              transform: translate(-50%, 18px);
+            }
+            to {
+              opacity: 1;
+              transform: translate(-50%, 0);
+            }
+          }
+          @keyframes draw {
+            to {
+              stroke-dashoffset: 0;
+            }
+          }
+          @keyframes pop {
+            0% {
+              transform: scale(0);
+            }
+            70% {
+              transform: scale(1.4);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .nav {
+            animation: navIn 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.35s both;
+          }
+          .panel {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .kpis > .panel:nth-child(1) {
+            animation-delay: 0.1s;
+          }
+          .kpis > .panel:nth-child(2) {
+            animation-delay: 0.16s;
+          }
+          .kpis > .panel:nth-child(3) {
+            animation-delay: 0.22s;
+          }
+          .kpis > .panel:nth-child(4) {
+            animation-delay: 0.28s;
+          }
+          .rows > .panel:nth-child(1) {
+            animation-delay: 0.36s;
+          }
+          .rows > .panel:nth-child(2) {
+            animation-delay: 0.44s;
+          }
+          .trend {
+            stroke-dasharray: 800;
+            stroke-dashoffset: 800;
+            animation: draw 1.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+          }
+          .end {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) 2.3s both;
+          }
+          ol a {
+            transition:
+              padding 0.25s ease,
+              color 0.2s ease;
+          }
+          ol a:hover {
+            padding-left: 6px;
+          }
+          .nav a {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+            .trend {
+              stroke-dashoffset: 0;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-stats">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-stats)"></rect>
+        </svg>
+
+        <header
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 56px;
+            flex-wrap: wrap;
+            gap: 16px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 10px">
+            <svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+              <path d="M3 12h18"></path>
+            </svg>
+            <span
+              style="
+                font-family: 'Stack Sans Headline', system-ui, sans-serif;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+              "
+              >Metabook</span
+            >
+          </div>
+          <button
+            aria-label="Profile and settings"
+            style="
+              width: 40px;
+              height: 40px;
+              border-radius: 999px;
+              background: #22211d;
+              border: 1px solid #2e2c27;
+              color: #eeeae2;
+              font:
+                500 13px 'Stack Sans Text',
+                sans-serif;
+              cursor: pointer;
+            "
+          >
+            TR
+          </button>
+        </header>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1328px;
+            margin: 0 auto;
+            padding: 24px 56px 160px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          "
+        >
+          <div
+            class="r"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-end;
+              gap: 24px;
+              flex-wrap: wrap;
+              margin-bottom: 16px;
+            "
+          >
+            <h1
+              style="
+                margin: 0;
+                font-family: 'Stack Sans Headline', sans-serif;
+                font-size: 48px;
+                font-weight: 600;
+                letter-spacing: -0.03em;
+              "
+            >
+              Stats
+            </h1>
+            <span style="font-size: 14px; color: #a39e92">Last 30 days</span>
+          </div>
+
+          <div
+            class="kpis"
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+              gap: 16px;
+            "
+          >
+            <div class="panel">
+              <div class="big">82%</div>
+              <div class="lab">Retention</div>
+            </div>
+            <div class="panel">
+              <div class="big">3,640</div>
+              <div class="lab">Avg round score</div>
+            </div>
+            <div class="panel">
+              <div class="big">1,214</div>
+              <div class="lab">Cards learned</div>
+            </div>
+            <div class="panel">
+              <div class="big">9.4<span style="font-size: 20px; color: #a39e92"> h</span></div>
+              <div class="lab">Time trained</div>
+            </div>
+          </div>
+
+          <div class="rows" style="display: flex; flex-wrap: wrap; gap: 16px">
+            <section class="panel" style="flex: 999 1 520px; min-width: 0">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: baseline;
+                  margin-bottom: 24px;
+                "
+              >
+                <h2 style="margin: 0; font-size: 16px; font-weight: 500">Retention</h2>
+                <span style="font-size: 14px; color: #a3c49a">+11 pts</span>
+              </div>
+              <svg
+                role="img"
+                aria-label="Retention rose from 71% to 82% over 30 days"
+                viewBox="-36 -8 648 230"
+                style="width: 100%; height: auto; display: block"
+              >
+                <g style="stroke: #2a2925; stroke-width: 1">
+                  <path d="M0 50H600M0 100H600M0 150H600"></path>
+                </g>
+                <g
+                  style="
+                    fill: #a39e92;
+                    font:
+                      400 12px 'Stack Sans Text',
+                      sans-serif;
+                    text-anchor: end;
+                  "
+                >
+                  <text x="-10" y="54">90%</text>
+                  <text x="-10" y="104">80%</text>
+                  <text x="-10" y="154">70%</text>
+                </g>
+                <polyline
+                  class="trend"
+                  points="0,145 21,140 41,150 62,135 83,130 103,135 124,125 145,120 166,125 186,115 207,120 228,110 248,115 269,105 290,110 310,100 331,105 352,105 372,95 393,100 414,95 434,90 455,100 476,90 497,85 517,90 538,95 559,85 579,90 600,90"
+                  style="
+                    fill: none;
+                    stroke: #a3c49a;
+                    stroke-width: 2.4;
+                    stroke-linejoin: round;
+                    stroke-linecap: round;
+                  "
+                ></polyline>
+                <circle
+                  class="end"
+                  cx="600"
+                  cy="90"
+                  r="5"
+                  style="fill: #a3c49a; stroke: #1a1916; stroke-width: 3"
+                ></circle>
+                <g
+                  style="
+                    fill: #a39e92;
+                    font:
+                      400 12px 'Stack Sans Text',
+                      sans-serif;
+                  "
+                >
+                  <text x="0" y="218">8 Oct</text>
+                  <text x="600" y="218" style="text-anchor: end">Today</text>
+                </g>
+              </svg>
+            </section>
+
+            <section class="panel" style="flex: 1 1 340px; min-width: 0">
+              <h2 style="margin: 0 0 20px; font-size: 16px; font-weight: 500">Top confusions</h2>
+              <ol
+                style="
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 4px;
+                "
+              >
+                <li>
+                  <a
+                    href="Lookalike.dc.html"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding: 12px 0;
+                      border-bottom: 1px solid #2a2925;
+                      text-decoration: none;
+                      color: #eeeae2;
+                      font-size: 15px;
+                    "
+                    ><span>Serbia <span style="color: #a39e92">/</span> Bulgaria</span
+                    ><span style="color: #d9a35e; font-variant-numeric: tabular-nums">9</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Lookalike.dc.html"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding: 12px 0;
+                      border-bottom: 1px solid #2a2925;
+                      text-decoration: none;
+                      color: #eeeae2;
+                      font-size: 15px;
+                    "
+                    ><span>Russia <span style="color: #a39e92">/</span> Ukraine</span
+                    ><span style="color: #d9a35e; font-variant-numeric: tabular-nums">7</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Lookalike.dc.html"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding: 12px 0;
+                      border-bottom: 1px solid #2a2925;
+                      text-decoration: none;
+                      color: #eeeae2;
+                      font-size: 15px;
+                    "
+                    ><span>Australia <span style="color: #a39e92">/</span> South Africa</span
+                    ><span style="color: #a39e92; font-variant-numeric: tabular-nums">5</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Lookalike.dc.html"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding: 12px 0;
+                      border-bottom: 1px solid #2a2925;
+                      text-decoration: none;
+                      color: #eeeae2;
+                      font-size: 15px;
+                    "
+                    ><span>Latvia <span style="color: #a39e92">/</span> Lithuania</span
+                    ><span style="color: #a39e92; font-variant-numeric: tabular-nums">4</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Lookalike.dc.html"
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding: 12px 0;
+                      text-decoration: none;
+                      color: #eeeae2;
+                      font-size: 15px;
+                    "
+                    ><span>Australia <span style="color: #a39e92">/</span> New Zealand</span
+                    ><span style="color: #a39e92; font-variant-numeric: tabular-nums">3</span></a
+                  >
+                </li>
+              </ol>
+            </section>
+          </div>
+        </main>
+
+        <nav class="nav" aria-label="Main">
+          <a href="Main.dc.html" aria-label="Today"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M3 18h18"></path>
+              <path d="M6.5 18a5.5 5.5 0 0 1 11 0"></path>
+              <path d="M12 5v3"></path>
+              <path d="m5.3 9.3 1.6 1.6"></path>
+              <path d="m18.7 9.3-1.6 1.6"></path></svg
+          ></a>
+          <a href="Drills.dc.html" aria-label="Drills"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <rect x="3.5" y="7.5" width="13" height="13" rx="2.5"></rect>
+              <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10"></path></svg
+          ></a>
+          <a href="Round.dc.html" aria-label="Street View round"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z"></path></svg
+          ></a>
+          <a href="Atlas.dc.html" aria-label="Atlas"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"></path>
+              <path d="M9 4.5v13"></path>
+              <path d="M15 6.5v13"></path></svg
+          ></a>
+          <a class="on" href="Stats.dc.html" aria-label="Stats"
+            ><svg class="i" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M5 20v-6"></path>
+              <path d="M12 20V5"></path>
+              <path d="M19 20v-10"></path></svg
+          ></a>
+        </nav>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      return {};
+      }
+      }
+    </script>
+  </body>
+</html>

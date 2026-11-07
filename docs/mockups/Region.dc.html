@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Region drill</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            min-width: 44px;
+            box-sizing: border-box;
+            border-radius: 999px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .chip:hover {
+            background: #22211d;
+            color: #ffffff;
+          }
+          .opt {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            height: 56px;
+            padding: 0 20px;
+            border-radius: 16px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font:
+              400 17px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+          }
+          .opt:hover:not(:disabled) {
+            border-color: #5a574f;
+            background: #1f1e1a;
+          }
+          .opt:disabled {
+            cursor: default;
+          }
+          .opt kbd {
+            font:
+              500 12px 'Stack Sans Text',
+              sans-serif;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #3a3832;
+            border-radius: 6px;
+            color: #a39e92;
+          }
+          .opt.ok {
+            border-color: #a3c49a;
+            background: rgba(163, 196, 154, 0.1);
+          }
+          .opt.bad {
+            border-color: #d9a35e;
+            background: rgba(217, 163, 94, 0.08);
+          }
+          .opt.dim {
+            opacity: 0.4;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 28px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font:
+              600 16px 'Stack Sans Text',
+              sans-serif;
+            border: 0;
+            cursor: pointer;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+          }
+          .ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 52px;
+            padding: 0 20px;
+            border-radius: 999px;
+            background: none;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font:
+              500 15px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+          }
+          .ghost:hover {
+            background: #1a1916;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(14px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes settle {
+            from {
+              opacity: 0;
+              transform: scale(1.03);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          .r {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .d1 {
+            animation-delay: 0.08s;
+          }
+          .d2 {
+            animation-delay: 0.16s;
+          }
+          .d3 {
+            animation-delay: 0.24s;
+          }
+          .scene {
+            animation: settle 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .nav a,
+          .cta,
+          .chip,
+          .opt,
+          .ghost {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease,
+              opacity 0.35s ease;
+          }
+          .cta:active,
+          .opt:active:not(:disabled),
+          .chip:active,
+          .ghost:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-region">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-region)"></rect>
+        </svg>
+
+        <div
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 28px 28px 0;
+          "
+        >
+          <a class="chip" href="Main.dc.html" aria-label="Leave session"
+            ><svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12"></path>
+              <path d="M18 6 6 18"></path></svg
+          ></a>
+          <div
+            role="img"
+            aria-label="Card 21 of 48"
+            style="flex: 1; height: 3px; border-radius: 2px; background: #2e2c27"
+          >
+            <div
+              style="
+                width: 44%;
+                height: 100%;
+                border-radius: 2px;
+                background: #eeeae2;
+                transition: width 0.6s ease;
+              "
+            ></div>
+          </div>
+          <span style="font-size: 14px; color: #a39e92; font-variant-numeric: tabular-nums"
+            >21 / 48</span
+          >
+        </div>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 56px 40px 96px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 56px;
+            align-items: flex-start;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="scene"
+            style="
+              flex: 999 1 560px;
+              min-width: 0;
+              border-radius: 24px;
+              overflow: hidden;
+              border: 1px solid #2e2c27;
+              aspect-ratio: 16 / 10;
+            "
+          >
+            <svg
+              role="img"
+              aria-label="Rolling green hills with tall flat-topped pine trees and a red dirt road"
+              viewBox="0 0 800 500"
+              preserveAspectRatio="xMidYMid slice"
+              style="width: 100%; height: 100%; display: block"
+            >
+              <rect width="800" height="500" fill="#A7B3B4"></rect>
+              <path
+                d="M0 250 C120 220 220 240 320 228 C430 214 520 236 620 222 C700 212 760 226 800 220 V320 H0Z"
+                fill="#6F806A"
+              ></path>
+              <path
+                d="M0 290 C140 260 260 290 400 270 C540 250 660 280 800 262 V500 H0Z"
+                fill="#5E7650"
+              ></path>
+              <path
+                d="M0 360 C160 330 300 360 460 340 C600 322 700 345 800 336 V500 H0Z"
+                fill="#6D8656"
+              ></path>
+              <path
+                d="M330 500 C360 440 390 390 420 352 C434 336 446 330 456 330 C450 344 444 380 470 420 C500 466 560 490 600 500Z"
+                fill="#A4543A"
+              ></path>
+              <path
+                d="M420 352 C434 336 446 330 456 330 C452 340 448 352 452 366 C440 360 430 356 420 352Z"
+                fill="#8E4630"
+              ></path>
+              <g style="fill: #2c3a28">
+                <rect x="146" y="150" width="6" height="150"></rect>
+                <path d="M98 158 Q149 128 200 158 Q149 148 98 158Z"></path>
+                <path d="M106 172 Q149 150 192 172 Q149 164 106 172Z"></path>
+                <ellipse cx="149" cy="152" rx="50" ry="9"></ellipse>
+                <rect x="246" y="190" width="4" height="96"></rect>
+                <ellipse cx="248" cy="192" rx="32" ry="6"></ellipse>
+                <ellipse cx="248" cy="200" rx="26" ry="5"></ellipse>
+                <rect x="608" y="120" width="7" height="170"></rect>
+                <path d="M550 130 Q611 96 672 130 Q611 118 550 130Z"></path>
+                <path d="M560 146 Q611 122 662 146 Q611 136 560 146Z"></path>
+                <ellipse cx="611" cy="124" rx="60" ry="10"></ellipse>
+                <rect x="700" y="196" width="4" height="80"></rect>
+                <ellipse cx="702" cy="198" rx="28" ry="5"></ellipse>
+              </g>
+            </svg>
+          </div>
+
+          <section
+            style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 22px"
+          >
+            <div class="r d1">
+              <p style="margin: 0 0 6px; font-size: 14px; color: #a39e92">Brazil</p>
+              <h1
+                style="
+                  margin: 0;
+                  font-family: 'Stack Sans Headline', sans-serif;
+                  font-size: 40px;
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                "
+              >
+                Which region?
+              </h1>
+            </div>
+            <div class="r d2" style="display: flex; flex-direction: column; gap: 8px">
+              <sc-for list="{{options}}" as="o" hint-placeholder-count="5">
+                <button class="{{o.cls}}" onClick="{{o.pick}}" disabled="{{o.disabled}}">
+                  <kbd>{{o.key}}</kbd>{{o.name}}<sc-if
+                    value="{{o.mark}}"
+                    hint-placeholder-val="{{ false }}"
+                    ><span style="margin-left: auto; font-size: 13px; color: #a39e92"
+                      >{{o.markText}}</span
+                    ></sc-if
+                  >
+                </button>
+              </sc-for>
+            </div>
+
+            <sc-if value="{{revealed}}" hint-placeholder-val="{{ false }}">
+              <div class="r" style="display: flex; flex-direction: column; gap: 16px">
+                <div
+                  style="
+                    border-radius: 18px;
+                    padding: 20px 22px;
+                    background: rgba(163, 196, 154, 0.08);
+                    border: 1px solid rgba(163, 196, 154, 0.28);
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <span
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 13px;
+                        color: #a3c49a;
+                      "
+                      ><svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                        <circle cx="11" cy="11" r="6.5"></circle>
+                        <path d="m16 16 4 4"></path></svg
+                      >{{verdict}}</span
+                    >
+                    <span
+                      style="font-size: 12px; color: #a39e92; font-variant-numeric: tabular-nums"
+                      >{{tipCount}}</span
+                    >
+                  </div>
+                  <p style="margin: 0; font-size: 16px; line-height: 1.55">{{answerTip}}</p>
+                </div>
+                <sc-if value="{{wrong}}" hint-placeholder-val="{{ false }}">
+                  <div
+                    style="
+                      border-radius: 18px;
+                      padding: 18px 22px;
+                      border: 1px solid rgba(217, 163, 94, 0.35);
+                    "
+                  >
+                    <div style="font-size: 13px; color: #d9a35e; margin-bottom: 8px">
+                      {{pickedLabel}}
+                    </div>
+                    <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d6d1c6">
+                      {{pickedTip}}
+                    </p>
+                  </div>
+                </sc-if>
+                <div style="display: flex; gap: 10px">
+                  <button class="cta" onClick="{{next}}">
+                    Next<svg
+                      class="i"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      aria-hidden="true"
+                      style="stroke-width: 2"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m13 6 6 6-6 6"></path>
+                    </svg>
+                  </button>
+                  <button class="ghost" onClick="{{more}}">Another tip</button>
+                </div>
+              </div>
+            </sc-if>
+          </section>
+        </main>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      state = { picked: null, round: 0 };
+      renderVals() {
+      const answer = 'South';
+      const names = ['North', 'Northeast', 'Centre-West', 'Southeast', 'South'];
+      const tips = {
+      'South': [
+      'Araucaria pines, tall with flat candelabra-shaped tops, grow on the southern highlands. One in view is close to a giveaway for the South.',
+      'Phone numbers: area codes starting with 4 or 5 (41 to 55) belong to Paraná, Santa Catarina and Rio Grande do Sul.',
+      'Cooler, greener, more European: German- and Italian-style houses, and open pampa grassland in the far south.'
+      ],
+      'North': [
+      'Dense rainforest right up to the road and very flat ground usually mean the Amazon.',
+      'Area codes starting with 9 are mostly the North (91 Belém, 92 Manaus). 98 and 99 are Maranhão, which is Northeast.',
+      'Wooden houses on stilts beside wide brown rivers are typical of the North.'
+      ],
+      'Northeast': [
+      'Caatinga: dry, thorny scrub and mandacaru cactus across the interior sertão.',
+      'Coconut palms along a flat, bright coast point to the Northeast.',
+      'Area codes in the 7x and 8x ranges cover Bahia, Sergipe and the rest of the Northeast.'
+      ],
+      'Centre-West': [
+      'Cerrado savanna: short, twisted trees spread over flat plateaus.',
+      'Huge flat soy and corn fields running to the horizon are classic Centre-West.',
+      'Area codes 61 to 67 cover Brasília, Goiás, Mato Grosso and Mato Grosso do Sul. 63 is Tocantins, in the North.'
+      ],
+      'Southeast': [
+      'Steep green hills with Atlantic Forest near the coast are typical of the Southeast.',
+      'Sugarcane and eucalyptus on red soil fill the São Paulo interior.',
+      'Area codes 1x, 2x and 3x are São Paulo, Rio de Janeiro with Espírito Santo, and Minas Gerais.'
+      ]
+      };
+      const { picked, round } = this.state;
+      const revealed = picked !== null;
+      const n = tips[answer].length;
+      const idx = round % n;
+      const options = names.map((name, i) => {
+      let cls = 'opt';
+      let markText = '';
+      if (revealed) {
+      if (name === answer) { cls = 'opt ok'; markText = 'Answer'; }
+      else if (name === picked) { cls = 'opt bad'; markText = 'Your pick'; }
+      else cls = 'opt dim';
+      }
+      return { name, key: String(i + 1), cls, disabled: revealed, mark: markText !== '', markText, pick: () => this.setState({ picked: name }) };
+      });
+      const wrong = revealed && picked !== answer;
+      return {
+      options,
+      revealed,
+      wrong,
+      verdict: wrong ? 'It’s the South' : 'Right. Here’s why',
+      tipCount: 'Tip ' + (idx + 1) + ' of ' + n,
+      answerTip: tips[answer][idx],
+      pickedLabel: wrong ? 'Spotting the ' + picked : '',
+      pickedTip: wrong ? tips[picked][idx] : '',
+      next: () => this.setState({ picked: null, round: round + 1 }),
+      more: () => this.setState({ round: round + 1 })
+      };
+      }
+      }
+    </script>
+  </body>
+</html>

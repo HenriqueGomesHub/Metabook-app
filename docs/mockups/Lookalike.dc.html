@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Lookalike pair</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            min-width: 44px;
+            box-sizing: border-box;
+            border-radius: 999px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .chip:hover {
+            background: #22211d;
+            color: #ffffff;
+          }
+          .pick {
+            flex: 1 1 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            height: 84px;
+            border-radius: 999px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font:
+              600 24px 'Stack Sans Headline',
+              sans-serif;
+            letter-spacing: -0.01em;
+            cursor: pointer;
+          }
+          .pick:hover:not(:disabled) {
+            border-color: #a3c49a;
+            background: #1c1f1a;
+          }
+          .pick:disabled {
+            cursor: default;
+          }
+          .pick kbd {
+            font:
+              500 13px 'Stack Sans Text',
+              sans-serif;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #3a3832;
+            border-radius: 8px;
+            color: #a39e92;
+          }
+          .pick.ok {
+            border-color: #a3c49a;
+            background: rgba(163, 196, 154, 0.1);
+          }
+          .pick.bad {
+            border-color: #d9a35e;
+            background: rgba(217, 163, 94, 0.08);
+          }
+          .pick.dim {
+            opacity: 0.4;
+          }
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 1px solid #46433d;
+            transition:
+              background-color 0.4s ease,
+              border-color 0.4s ease,
+              transform 0.4s cubic-bezier(0.3, 1.6, 0.5, 1);
+          }
+          .dot.on {
+            background: #a3c49a;
+            border-color: #a3c49a;
+          }
+          .dot.new {
+            transform: scale(1.35);
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 28px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font:
+              600 16px 'Stack Sans Text',
+              sans-serif;
+            border: 0;
+            cursor: pointer;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+          }
+          .ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            height: 52px;
+            padding: 0 20px;
+            border-radius: 999px;
+            background: none;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            font:
+              500 15px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+          }
+          .ghost:hover {
+            background: #1a1916;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(14px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes settle {
+            from {
+              opacity: 0;
+              transform: scale(1.03);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          .r {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .d1 {
+            animation-delay: 0.08s;
+          }
+          .d2 {
+            animation-delay: 0.16s;
+          }
+          .scene {
+            animation: settle 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .cta,
+          .chip,
+          .pick,
+          .ghost {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease,
+              opacity 0.35s ease;
+          }
+          .cta:active,
+          .pick:active:not(:disabled),
+          .chip:active,
+          .ghost:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-pair">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-pair)"></rect>
+        </svg>
+
+        <div
+          class="r"
+          style="
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 28px 28px 0;
+          "
+        >
+          <a class="chip" href="Main.dc.html" aria-label="Leave session"
+            ><svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12"></path>
+              <path d="M18 6 6 18"></path></svg
+          ></a>
+          <div
+            style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #a39e92"
+          >
+            <svg class="i" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <circle cx="9" cy="12" r="5.5"></circle>
+              <circle cx="15" cy="12" r="5.5"></circle></svg
+            >Russia vs Ukraine
+          </div>
+          <div
+            role="img"
+            aria-label="{{streakLabel}}"
+            style="display: flex; gap: 6px; padding: 0 8px"
+          >
+            <sc-for list="{{dots}}" as="d" hint-placeholder-count="5"
+              ><span class="{{d.cls}}"></span
+            ></sc-for>
+          </div>
+        </div>
+
+        <main
+          style="
+            position: relative;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 56px 24px 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 36px;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="scene"
+            style="
+              width: 100%;
+              border-radius: 24px;
+              overflow: hidden;
+              border: 1px solid #2e2c27;
+              aspect-ratio: 16 / 7;
+              position: relative;
+            "
+          >
+            <svg
+              role="img"
+              aria-label="A building wall with a street name plate in Cyrillic"
+              viewBox="0 0 960 420"
+              preserveAspectRatio="xMidYMid slice"
+              style="width: 100%; height: 100%; display: block"
+            >
+              <rect width="960" height="420" fill="#B9A98E"></rect>
+              <g style="fill: #a9987c">
+                <rect y="60" width="960" height="2"></rect>
+                <rect y="140" width="960" height="2"></rect>
+                <rect y="220" width="960" height="2"></rect>
+                <rect y="300" width="960" height="2"></rect>
+                <rect y="380" width="960" height="2"></rect>
+              </g>
+              <rect x="80" y="40" width="150" height="220" fill="#3B4447"></rect>
+              <rect x="88" y="48" width="134" height="204" fill="#566266"></rect>
+              <rect x="153" y="48" width="4" height="204" fill="#3B4447"></rect>
+              <rect x="760" y="40" width="150" height="220" fill="#3B4447"></rect>
+              <rect x="768" y="48" width="134" height="204" fill="#566266"></rect>
+              <rect x="833" y="48" width="4" height="204" fill="#3B4447"></rect>
+              <rect x="290" y="120" width="400" height="120" rx="8" fill="#1F3E73"></rect>
+              <rect
+                x="298"
+                y="128"
+                width="384"
+                height="104"
+                rx="5"
+                style="fill: none; stroke: #e9e5da; stroke-width: 3"
+              ></rect>
+              <text
+                x="490"
+                y="196"
+                lang="uk"
+                style="
+                  font:
+                    600 44px 'Stack Sans Text',
+                    sans-serif;
+                  fill: #f2efe7;
+                  text-anchor: middle;
+                "
+              >
+                вул. Шевченка
+              </text>
+            </svg>
+          </div>
+
+          <div class="r d1" style="width: 100%; display: flex; gap: 16px; flex-wrap: wrap">
+            <button class="{{ru.cls}}" onClick="{{ru.pick}}" disabled="{{revealed}}">
+              <kbd>←</kbd>Russia
+            </button>
+            <button class="{{ua.cls}}" onClick="{{ua.pick}}" disabled="{{revealed}}">
+              Ukraine<kbd>→</kbd>
+            </button>
+          </div>
+
+          <sc-if value="{{revealed}}" hint-placeholder-val="{{ false }}">
+            <div class="r" style="width: 100%; display: flex; flex-direction: column; gap: 14px">
+              <div
+                style="
+                  border-radius: 18px;
+                  padding: 20px 22px;
+                  background: rgba(163, 196, 154, 0.08);
+                  border: 1px solid rgba(163, 196, 154, 0.28);
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  "
+                >
+                  <span
+                    style="
+                      display: flex;
+                      align-items: center;
+                      gap: 8px;
+                      font-size: 13px;
+                      color: #a3c49a;
+                    "
+                    ><svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                      <circle cx="11" cy="11" r="6.5"></circle>
+                      <path d="m16 16 4 4"></path></svg
+                    >{{verdict}}</span
+                  >
+                  <span style="font-size: 12px; color: #a39e92; font-variant-numeric: tabular-nums"
+                    >{{tipCount}}</span
+                  >
+                </div>
+                <p style="margin: 0; font-size: 17px; line-height: 1.55">{{answerTip}}</p>
+              </div>
+              <div style="border-radius: 18px; padding: 18px 22px; border: 1px solid #2e2c27">
+                <div style="font-size: 13px; color: #a39e92; margin-bottom: 8px">
+                  And for Russia
+                </div>
+                <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d6d1c6">
+                  {{otherTip}}
+                </p>
+              </div>
+              <div style="display: flex; gap: 10px; justify-content: center">
+                <button class="cta" onClick="{{next}}">
+                  Next<svg
+                    class="i"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    style="stroke-width: 2"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="m13 6 6 6-6 6"></path>
+                  </svg>
+                </button>
+                <button class="ghost" onClick="{{more}}">Another tip</button>
+              </div>
+            </div>
+          </sc-if>
+        </main>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      state = { picked: null, round: 0, streak: 3 };
+      renderVals() {
+      const answer = 'Ukraine';
+      const tips = {
+      'Ukraine': [
+      'і, ї, є and ґ exist only in Ukrainian. One of them on a sign settles it.',
+      'вул. is short for вулиця, Ukrainian for “street”. Russian writes ул.',
+      'Ukrainian plates have a blue strip on the left with the flag and UA.'
+      ],
+      'Russia': [
+      'ы, э and ъ appear in Russian but never in Ukrainian.',
+      'ул. means улица, Russian for “street”.',
+      'Russian plates put the region number in a box on the right, with RUS under it.'
+      ]
+      };
+      const { picked, round, streak } = this.state;
+      const revealed = picked !== null;
+      const n = tips[answer].length;
+      const idx = round % n;
+      const cls = (name) => {
+      if (!revealed) return 'pick';
+      if (name === answer) return 'pick ok';
+      if (name === picked) return 'pick bad';
+      return 'pick dim';
+      };
+      const right = revealed && picked === answer;
+      const dots = [0, 1, 2, 3, 4].map((i) => ({ cls: 'dot' + (i < streak ? ' on' : '') + (right && i === streak - 1 ? ' new' : '') }));
+      const choose = (name) => () => {
+      if (this.state.picked !== null) return;
+      const ok = name === answer;
+      this.setState({ picked: name, streak: ok ? Math.min(5, this.state.streak + 1) : 0 });
+      };
+      return {
+      revealed,
+      ru: { cls: cls('Russia'), pick: choose('Russia') },
+      ua: { cls: cls('Ukraine'), pick: choose('Ukraine') },
+      dots,
+      streakLabel: streak + ' of 5 correct in a row',
+      verdict: right ? 'Right. Here’s why' : 'It’s Ukraine. Streak reset',
+      tipCount: 'Tip ' + (idx + 1) + ' of ' + n,
+      answerTip: tips[answer][idx],
+      otherTip: tips['Russia'][idx],
+      next: () => this.setState({ picked: null, round: round + 1 }),
+      more: () => this.setState({ round: round + 1 })
+      };
+      }
+      }
+    </script>
+  </body>
+</html>

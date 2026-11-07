@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Round result</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            min-width: 44px;
+            box-sizing: border-box;
+            border-radius: 999px;
+            background: #1a1916;
+            border: 1px solid #2e2c27;
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .chip:hover {
+            background: #22211d;
+            color: #ffffff;
+          }
+          .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            padding: 0 28px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          .ghost {
+            background: none;
+            border: 0;
+            padding: 4px 0;
+            color: #a39e92;
+            font:
+              500 13px 'Stack Sans Text',
+              sans-serif;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+          .ghost:hover {
+            color: #eeeae2;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes fade {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+          @keyframes draw {
+            from {
+              transform: scale(0);
+            }
+            to {
+              transform: scale(1);
+            }
+          }
+          @keyframes pop {
+            0% {
+              transform: scale(0);
+            }
+            70% {
+              transform: scale(1.3);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          @keyframes drop {
+            0% {
+              transform: translateY(-40px);
+              opacity: 0;
+            }
+            60% {
+              opacity: 1;
+            }
+            80% {
+              transform: translateY(3px);
+            }
+            100% {
+              transform: none;
+            }
+          }
+          @keyframes pulse {
+            0% {
+              transform: scale(0.6);
+              opacity: 0.9;
+            }
+            100% {
+              transform: scale(1.9);
+              opacity: 0;
+            }
+          }
+          @keyframes swap {
+            from {
+              opacity: 0;
+              transform: translateY(6px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          .map {
+            animation: fade 0.8s ease both;
+          }
+          .guess {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) 0.3s both;
+          }
+          .line {
+            transform-box: view-box;
+            transform-origin: 372px 248px;
+            animation: draw 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+          }
+          .truth {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: drop 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 1.4s both;
+          }
+          .ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pulse 2s ease-out 2s infinite;
+            opacity: 0;
+          }
+          .stagger > * {
+            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .stagger > *:nth-child(1) {
+            animation-delay: 1.5s;
+          }
+          .stagger > *:nth-child(2) {
+            animation-delay: 1.62s;
+          }
+          .stagger > *:nth-child(3) {
+            animation-delay: 1.74s;
+          }
+          .stagger > *:nth-child(4) {
+            animation-delay: 1.86s;
+          }
+          .stagger > *:nth-child(5) {
+            animation-delay: 1.98s;
+          }
+          .swap {
+            animation: swap 0.45s ease both;
+          }
+          .chip,
+          .cta {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:active,
+          .chip:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+            .ring {
+              opacity: 0;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          aria-hidden="true"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.08;
+          "
+        >
+          <filter id="grain-result">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.85"
+              numOctaves="2"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#grain-result)"></rect>
+        </svg>
+
+        <div
+          style="
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 28px 28px 0;
+          "
+        >
+          <a class="chip" href="Main.dc.html" aria-label="Leave session"
+            ><svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12"></path>
+              <path d="M18 6 6 18"></path></svg
+          ></a>
+          <div role="img" aria-label="Round 3 of 5" style="display: flex; gap: 6px">
+            <span style="width: 28px; height: 4px; border-radius: 2px; background: #eeeae2"></span
+            ><span style="width: 28px; height: 4px; border-radius: 2px; background: #eeeae2"></span
+            ><span style="width: 28px; height: 4px; border-radius: 2px; background: #a3c49a"></span
+            ><span style="width: 28px; height: 4px; border-radius: 2px; background: #2e2c27"></span
+            ><span style="width: 28px; height: 4px; border-radius: 2px; background: #2e2c27"></span>
+          </div>
+          <span style="width: 44px"></span>
+        </div>
+
+        <main
+          style="
+            position: relative;
+            max-width: 1384px;
+            margin: 0 auto;
+            padding: 28px 28px 48px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            box-sizing: border-box;
+          "
+        >
+          <div
+            class="map"
+            style="
+              flex: 999 1 560px;
+              min-width: 0;
+              min-height: 560px;
+              border-radius: 24px;
+              overflow: hidden;
+              background: #1a1916;
+              border: 1px solid #2e2c27;
+              position: relative;
+            "
+          >
+            <svg
+              role="img"
+              aria-label="Map: your guess in Serbia, the answer in Bulgaria, 312 km apart"
+              viewBox="0 0 900 640"
+              preserveAspectRatio="xMidYMid slice"
+              style="position: absolute; inset: 0; width: 100%; height: 100%"
+            >
+              <g style="stroke: #24231e; stroke-width: 1; fill: none">
+                <path
+                  d="M0 128h900M0 256h900M0 384h900M0 512h900M150 0v640M300 0v640M450 0v640M600 0v640M750 0v640"
+                ></path>
+              </g>
+              <path d="M0 0 H900 V640 H0Z" fill="none"></path>
+              <path
+                d="M60 40 C160 20 300 60 380 40 C470 20 560 50 640 30 C720 14 820 40 900 30 V420 C840 440 800 400 760 430 C720 460 700 520 650 540 C600 560 560 520 520 560 C480 600 420 590 380 560 C340 530 300 560 250 540 C200 520 220 470 170 450 C120 430 80 470 40 450 C10 436 0 420 0 400 V60 C20 50 40 44 60 40Z"
+                style="fill: #24231f"
+              ></path>
+              <g style="fill: none; stroke: #3a3832; stroke-width: 1.2; stroke-dasharray: 2 5">
+                <path d="M230 120 C280 160 300 220 290 300 C285 360 320 400 300 470"></path>
+                <path d="M430 90 C470 160 460 230 500 300 C530 350 520 420 560 480"></path>
+                <path d="M290 300 C360 290 420 310 500 300 C580 290 640 310 720 290"></path>
+              </g>
+              <g style="fill: none; stroke: #2e2c27; stroke-width: 1">
+                <path d="M520 520 C560 500 620 520 680 500"></path>
+                <path d="M700 380 C740 360 790 380 840 350"></path>
+              </g>
+              <path
+                class="line"
+                d="M372 248 L612 352"
+                style="stroke: #eeeae2; stroke-width: 1.6; stroke-dasharray: 6 7; fill: none"
+              ></path>
+              <circle
+                class="guess"
+                cx="372"
+                cy="248"
+                r="9"
+                style="fill: #eeeae2; stroke: #12110f; stroke-width: 3"
+              ></circle>
+              <circle
+                class="ring"
+                cx="612"
+                cy="352"
+                r="24"
+                style="fill: #a3c49a; fill-opacity: 0.3"
+              ></circle>
+              <circle
+                class="truth"
+                cx="612"
+                cy="352"
+                r="10"
+                style="fill: #a3c49a; stroke: #12110f; stroke-width: 3"
+              ></circle>
+            </svg>
+            <div
+              style="
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                display: flex;
+                gap: 18px;
+                font-size: 13px;
+                padding: 10px 14px;
+                border-radius: 999px;
+                background: rgba(18, 17, 15, 0.82);
+                border: 1px solid #2e2c27;
+              "
+            >
+              <span style="display: flex; align-items: center; gap: 8px"
+                ><span
+                  style="width: 9px; height: 9px; border-radius: 50%; background: #eeeae2"
+                ></span
+                >Your guess</span
+              >
+              <span style="display: flex; align-items: center; gap: 8px"
+                ><span
+                  style="width: 9px; height: 9px; border-radius: 50%; background: #a3c49a"
+                ></span
+                >Location</span
+              >
+            </div>
+          </div>
+
+          <aside
+            class="stagger"
+            style="
+              flex: 1 1 360px;
+              min-width: 0;
+              max-width: 460px;
+              display: flex;
+              flex-direction: column;
+              gap: 32px;
+              padding: 12px 8px;
+            "
+          >
+            <div>
+              <p style="margin: 0 0 6px; font-size: 14px; color: #d9a35e">You said Serbia</p>
+              <h1
+                style="
+                  margin: 0;
+                  font-family: 'Stack Sans Headline', sans-serif;
+                  font-size: 56px;
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                  line-height: 1;
+                "
+              >
+                Bulgaria
+              </h1>
+            </div>
+            <div style="display: flex; gap: 40px">
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 40px;
+                    font-weight: 600;
+                    letter-spacing: -0.02em;
+                    font-variant-numeric: tabular-nums;
+                  "
+                >
+                  312<span style="font-size: 18px; color: #a39e92; font-weight: 500"> km</span>
+                </div>
+                <div style="font-size: 13px; color: #a39e92; margin-top: 4px">distance</div>
+              </div>
+              <div>
+                <div
+                  style="
+                    font-family: 'Stack Sans Headline', sans-serif;
+                    font-size: 40px;
+                    font-weight: 600;
+                    letter-spacing: -0.02em;
+                    font-variant-numeric: tabular-nums;
+                  "
+                >
+                  4,056
+                </div>
+                <div style="font-size: 13px; color: #a39e92; margin-top: 4px">points</div>
+              </div>
+            </div>
+            <div
+              style="
+                border-radius: 18px;
+                padding: 22px;
+                background: rgba(163, 196, 154, 0.08);
+                border: 1px solid rgba(163, 196, 154, 0.28);
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 10px;
+                "
+              >
+                <span
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 13px;
+                    color: #a3c49a;
+                  "
+                  ><svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6.5"></circle>
+                    <path d="m16 16 4 4"></path></svg
+                  >The tell</span
+                ><span style="font-size: 12px; color: #a39e92; font-variant-numeric: tabular-nums"
+                  >{{tipCount}}</span
+                >
+              </div>
+              <sc-for list="{{tipNow}}" as="t" hint-placeholder-count="1"
+                ><p class="swap" style="margin: 0 0 12px; font-size: 17px; line-height: 1.5">
+                  {{t.text}}
+                </p></sc-for
+              >
+              <button class="ghost" onClick="{{more}}">Another tip</button>
+            </div>
+            <p style="margin: 0; font-size: 14px; color: #a39e92; line-height: 1.5">
+              Serbia / Bulgaria added to your confusions. A contrast round comes next.
+            </p>
+            <div style="display: flex; gap: 12px; align-items: center; margin-top: auto">
+              <a class="cta" href="Lookalike.dc.html" style="flex: 1"
+                >Next<svg
+                  class="i"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  aria-hidden="true"
+                  style="stroke-width: 2"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m13 6 6 6-6 6"></path></svg
+              ></a>
+              <button
+                aria-label="Open this spot in Google Maps"
+                class="chip"
+                style="width: 52px; height: 52px; cursor: pointer"
+              >
+                <svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M14 4h6v6"></path>
+                  <path d="M20 4l-9 9"></path>
+                  <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"></path>
+                </svg>
+              </button>
+            </div>
+          </aside>
+        </main>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      state = { round: 0 };
+      renderVals() {
+      const tips = [
+      'Cyrillic signs and EU stars on the plates. Serbia uses Cyrillic too, but it isn’t in the EU.',
+      'Serbian Cyrillic has letters Bulgarian lacks: ђ, ћ, џ, љ, њ and ј. Spot one and it’s Serbia.',
+      'Bulgarian uses ъ as a full vowel, often mid-word, as in България. Serbian never uses it.'
+      ];
+      const idx = this.state.round % tips.length;
+      return {
+      tipCount: 'Tip ' + (idx + 1) + ' of ' + tips.length,
+      tipNow: [{ key: idx, text: tips[idx] }],
+      more: () => this.setState({ round: this.state.round + 1 })
+      };
+      }
+      }
+    </script>
+  </body>
+</html>

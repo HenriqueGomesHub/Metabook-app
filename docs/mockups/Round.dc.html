@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Metabook · Street View round</title>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&amp;family=Stack+Sans+Text:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: #12110f;
+          }
+          a {
+            color: #eeeae2;
+          }
+          a:hover {
+            color: #ffffff;
+          }
+          .i {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+          }
+          .chip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 44px;
+            min-width: 44px;
+            padding: 0 16px;
+            box-sizing: border-box;
+            border-radius: 999px;
+            background: rgba(18, 17, 15, 0.82);
+            border: 1px solid rgba(238, 234, 226, 0.12);
+            color: #eeeae2;
+            text-decoration: none;
+          }
+          .chip:hover {
+            background: #12110f;
+            color: #ffffff;
+          }
+          .cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 52px;
+            border-radius: 999px;
+            background: #a3c49a;
+            color: #12110f;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          .cta:hover {
+            background: #b4d3ab;
+            color: #12110f;
+          }
+          @keyframes rise {
+            from {
+              opacity: 0;
+              transform: translateY(16px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes drop {
+            from {
+              opacity: 0;
+              transform: translateY(-12px);
+            }
+            to {
+              opacity: 1;
+              transform: none;
+            }
+          }
+          @keyframes reveal {
+            from {
+              opacity: 0;
+              transform: scale(1.06);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          @keyframes pulse {
+            0% {
+              transform: scale(0.6);
+              opacity: 0.9;
+            }
+            100% {
+              transform: scale(1.8);
+              opacity: 0;
+            }
+          }
+          .pano {
+            animation: reveal 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+          }
+          .top {
+            animation: drop 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s both;
+          }
+          .r {
+            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.7s both;
+          }
+          .ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pulse 1.8s ease-out infinite;
+          }
+          .chip,
+          .cta {
+            transition:
+              background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+          }
+          .cta:active,
+          .chip:active {
+            transform: scale(0.97);
+          }
+          @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+              animation: none !important;
+              transition: none !important;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        style="
+          position: relative;
+          min-height: 900px;
+          height: 100vh;
+          background: #12110f;
+          color: #eeeae2;
+          font-family: 'Stack Sans Text', system-ui, sans-serif;
+          overflow: hidden;
+        "
+      >
+        <svg
+          class="pano"
+          role="img"
+          aria-label="Street View panorama (placeholder for the live embed)"
+          viewBox="0 0 1440 900"
+          preserveAspectRatio="xMidYMid slice"
+          style="position: absolute; inset: 0; width: 100%; height: 100%"
+        >
+          <rect width="1440" height="900" fill="#7A878C"></rect>
+          <rect y="330" width="1440" height="150" fill="#8C9693"></rect>
+          <path
+            d="M0 450 C160 400 300 420 430 405 C560 390 640 430 760 420 C900 408 1010 380 1150 398 C1270 412 1360 395 1440 405 L1440 480 L0 480Z"
+            fill="#5C6860"
+          ></path>
+          <path
+            d="M0 468 q30-26 60-6 q24-30 58-4 q30-22 56 2 q34-28 70 0 q26-18 52 2 q40-30 80 0 l40 6 L520 480 L0 480Z"
+            fill="#3F4A3E"
+          ></path>
+          <path
+            d="M880 472 q30-20 60 0 q30-26 64 0 q28-18 56 2 q36-24 70 0 q30-16 60 2 q36-22 74 0 q30-14 60 4 q40-20 80-2 q30-12 56 4 L1440 486 L860 486Z"
+            fill="#435042"
+          ></path>
+          <rect y="476" width="1440" height="424" fill="#77724F"></rect>
+          <path d="M0 476 L690 476 L120 900 L0 900Z" fill="#6B6A48"></path>
+          <path d="M752 476 L1440 476 L1440 900 L1320 900Z" fill="#7F7953"></path>
+          <polygon points="702,476 742,476 1290,900 150,900" fill="#8A8574"></polygon>
+          <polygon points="707,476 737,476 1220,900 220,900" fill="#3D3D3A"></polygon>
+          <path d="M709 478 L262 900" style="stroke: #dad5c9; stroke-width: 4; fill: none"></path>
+          <path d="M735 478 L1180 900" style="stroke: #dad5c9; stroke-width: 4; fill: none"></path>
+          <path
+            d="M722 478 L722 900"
+            style="stroke: #e2dccb; stroke-width: 5; stroke-dasharray: 30 34; fill: none"
+          ></path>
+          <g style="fill: #3a3833">
+            <rect x="784" y="452" width="3" height="28"></rect>
+            <rect x="842" y="420" width="4" height="72"></rect>
+            <rect x="944" y="360" width="7" height="160"></rect>
+            <rect x="1110" y="250" width="12" height="320"></rect>
+            <rect x="1360" y="80" width="22" height="600"></rect>
+          </g>
+          <g style="stroke: #2f2e2a; stroke-width: 1.4; fill: none">
+            <path
+              d="M785 455 Q813 462 844 424 Q895 410 947 364 Q1030 330 1115 256 Q1240 190 1370 86"
+            ></path>
+            <path
+              d="M785 460 Q813 470 844 432 Q895 422 947 378 Q1030 350 1115 278 Q1240 220 1370 120"
+            ></path>
+          </g>
+          <g style="fill: #3a3833">
+            <rect x="1336" y="92" width="70" height="8" rx="2"></rect>
+            <rect x="1100" y="262" width="34" height="5" rx="1.5"></rect>
+          </g>
+          <g style="fill: #2f3a2c">
+            <circle cx="140" cy="430" r="46"></circle>
+            <circle cx="196" cy="444" r="34"></circle>
+            <circle cx="90" cy="452" r="30"></circle>
+            <rect x="136" y="450" width="8" height="40" fill="#2A2A24"></rect>
+            <circle cx="520" cy="452" r="22"></circle>
+            <circle cx="548" cy="458" r="16"></circle>
+          </g>
+          <g>
+            <rect x="318" y="700" width="22" height="92" rx="4" fill="#ECE8DD"></rect>
+            <rect x="318" y="712" width="22" height="16" fill="#26241F"></rect>
+            <rect x="324" y="716" width="10" height="8" rx="2" fill="#C9883C"></rect>
+            <rect x="1006" y="610" width="14" height="58" rx="3" fill="#ECE8DD"></rect>
+            <rect x="1006" y="618" width="14" height="10" fill="#26241F"></rect>
+          </g>
+        </svg>
+
+        <div
+          class="top"
+          style="
+            position: absolute;
+            top: 28px;
+            left: 28px;
+            right: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+          "
+        >
+          <a class="chip" href="Main.dc.html" aria-label="Leave session" style="padding: 0"
+            ><svg class="i" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M6 6l12 12"></path>
+              <path d="M18 6 6 18"></path></svg
+          ></a>
+          <div class="chip" style="gap: 14px; font-size: 14px">
+            <span style="font-family: 'Stack Sans Headline', sans-serif; font-weight: 600">3</span
+            ><span style="color: #a39e92">/ 5</span>
+            <span style="width: 1px; height: 16px; background: rgba(238, 234, 226, 0.18)"></span>
+            <span style="font-variant-numeric: tabular-nums">1:42</span>
+          </div>
+          <div
+            class="chip"
+            role="img"
+            aria-label="Heading north-east"
+            style="padding: 0; width: 44px"
+          >
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M12 4l3 8h-6z" style="fill: #a3c49a"></path>
+              <path d="M12 20l-3-8h6z" style="fill: #6f6b62"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="r"
+          style="
+            position: absolute;
+            right: 28px;
+            bottom: 28px;
+            width: min(360px, calc(100% - 56px));
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          "
+        >
+          <div
+            style="
+              position: relative;
+              height: 230px;
+              border-radius: 18px;
+              overflow: hidden;
+              background: #1a1916;
+              border: 1px solid rgba(238, 234, 226, 0.12);
+            "
+          >
+            <svg
+              role="img"
+              aria-label="Guess map with a pin dropped in south-east Europe"
+              viewBox="0 0 360 230"
+              preserveAspectRatio="xMidYMid slice"
+              style="width: 100%; height: 100%; display: block"
+            >
+              <g style="stroke: #26251f; stroke-width: 1; fill: none">
+                <path
+                  d="M0 46h360M0 92h360M0 138h360M0 184h360M60 0v230M120 0v230M180 0v230M240 0v230M300 0v230"
+                ></path>
+              </g>
+              <g style="fill: #2c2b26">
+                <path
+                  d="M150 40 c18-10 40-8 58 2 c10 8 4 18 -6 22 c-8 4 -4 14 -14 16 c-12 2 -20 -6 -30 -2 c-10 4 -18 -4 -16 -14 c2 -10 -2 -18 8 -24z"
+                ></path>
+                <path
+                  d="M210 30 c40-8 90-4 120 14 c10 10 -4 30 -20 36 c-20 8 -30 30 -50 28 c-18 -2 -24 -18 -40 -22 c-14 -4 -20 -18 -16 -30 c2 -14 0 -22 6 -26z"
+                ></path>
+                <path
+                  d="M160 100 c16-4 34 2 42 14 c8 16 2 40 -6 58 c-6 14 -16 20 -24 12 c-8 -10 -6 -30 -12 -44 c-6 -14 -14 -26 0 -40z"
+                ></path>
+                <path
+                  d="M30 30 c20-6 44-2 58 10 c8 10 -2 22 -14 30 c-10 8 -6 20 -16 24 c-14 4 -24 -8 -30 -20 c-8 -16 -14 -36 2 -44z"
+                ></path>
+                <path
+                  d="M76 116 c10-2 20 4 22 14 c2 16 -6 34 -12 50 c-4 10 -12 10 -14 0 c-4 -18 -10 -32 -6 -48 c2 -10 4 -14 10 -16z"
+                ></path>
+                <path
+                  d="M290 150 c14-4 30 0 36 10 c4 10 -6 18 -20 18 c-14 0 -24 -6 -24 -14 c0 -6 2 -12 8 -14z"
+                ></path>
+              </g>
+              <circle
+                class="ring"
+                cx="196"
+                cy="62"
+                r="14"
+                style="fill: #a3c49a; fill-opacity: 0.25"
+              ></circle>
+              <circle
+                cx="196"
+                cy="62"
+                r="5"
+                style="fill: #a3c49a; stroke: #12110f; stroke-width: 2"
+              ></circle>
+            </svg>
+            <button
+              aria-label="Enlarge map"
+              style="
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 36px;
+                height: 36px;
+                border-radius: 999px;
+                border: 1px solid rgba(238, 234, 226, 0.12);
+                background: rgba(18, 17, 15, 0.82);
+                color: #eeeae2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+            >
+              <svg class="i" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M14 4h6v6"></path>
+                <path d="M10 20H4v-6"></path>
+                <path d="M20 4l-7 7"></path>
+                <path d="M4 20l7-7"></path>
+              </svg>
+            </button>
+          </div>
+          <a class="cta" href="Result.dc.html"
+            >Guess<kbd
+              style="
+                font:
+                  500 12px 'Stack Sans Text',
+                  sans-serif;
+                padding: 2px 7px;
+                border-radius: 6px;
+                background: rgba(18, 17, 15, 0.14);
+              "
+              >Space</kbd
+            ></a
+          >
+        </div>
+      </div>
+    </x-dc>
+    <script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+      class Component extends DCLogic {
+      renderVals() {
+      return {};
+      }
+      }
+    </script>
+  </body>
+</html>
