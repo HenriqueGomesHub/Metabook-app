@@ -1,0 +1,20 @@
+:root { color-scheme: dark; }
+body {
+  width: 320px; margin: 0; padding: 16px;
+  background: #12110f; color: #eeeae2;
+  font: 14px/1.4 "Stack Sans Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+h1 { font-size: 16px; margin: 0 0 12px; color: #a3c49a; }
+label { display: block; margin-bottom: 10px; font-size: 12px; opacity: 0.8; }
+input {
+  display: block; width: 100%; box-sizing: border-box; margin-top: 4px; padding: 6px 8px;
+  background: #1c1a17; color: inherit; border: 1px solid #3a3731; border-radius: 6px;
+}
+button {
+  background: #a3c49a; color: #12110f; border: 0; border-radius: 6px;
+  padding: 6px 12px; font: inherit; font-weight: 600; cursor: pointer;
+}
+#check { background: transparent; color: #a3c49a; border: 1px solid #a3c49a; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 14px 0; font-size: 12px; }
+dt { opacity: 0.6; }
+dd { margin: 0; word-break: break-word; }
