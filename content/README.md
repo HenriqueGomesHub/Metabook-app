@@ -1,23 +1,35 @@
 # Metabook content
 
-STATUS: skeleton only. pool.json, cards/*.json and tips/*.json are empty arrays because the
-authoring session could not open any source page (WebFetch permission was never granted and
-direct network access was blocked), and the policy below forbids unverified facts.
+STATUS: seed content, ALL items are `verified: false`. It was written from memory without web access
+(WebFetch and curl were blocked), so every card and tip must be reviewed by the owner before it is trusted.
+Anything the author was not highly confident about was left out. Each item's `source` is the page where
+it can be checked.
+
+## Reviewing
+Open the item's `source`, check the fact, fix it if wrong, then set `"verified": true`. Delete items that
+cannot be confirmed. `node content/validate.mjs` requires a boolean `verified` on every card and tip.
+Flag `prompt.ratio` values (official height:width) especially need checking. Tip `answer` must equal a card
+`answer` (country name, region id, UF code) or `ddd:br:pattern`.
+
+Skipped for lack of confidence in official coverage: Georgia, Armenia, Laos, Bangladesh, India, Vietnam,
+Nepal, Rwanda, Madagascar, Namibia, Egypt, Gulf states other than UAE/Qatar. Add them to `pool.json`
+(and write cards) once confirmed. Cambodia, Sri Lanka, Kazakhstan, Kyrgyzstan and Cyprus are included but
+deserve a coverage check.
 
 ## Files
 - `pool.json` - competitive pool: `{code, name, continent, in_pool}`. Editable config: GeoGuessr
   rotates competitive maps every 4 weeks, so set `in_pool` or add/remove entries as needed.
   Logic must read this file, never hard-code countries.
 - `cards/flags.json`, `scripts.json`, `lookalikes.json`, `brazil.json` - Card objects (docs/spec.md section 4).
-- `tips/*.json` - Tip objects `{id, answer, scope, text, source}`.
+- `tips/*.json` - Tip objects `{id, answer, scope, text, source, verified}`.
 - `chapters.json` - Brazil chapter definitions.
 - `maps/br-states.json` - provided, do not modify.
 - `validate.mjs` - `node content/validate.mjs` checks unique ids, required fields, http(s) sources,
   card.country in pool, options include answer, 2-digit area codes, known chapters.
 
 ## Sources policy
-Every card and tip carries a `source` URL of a page that was actually opened and checked.
-Anything unverifiable is omitted.
+Every card and tip carries a `source` URL of the page where it can be checked, and `verified` says whether
+that has been done (currently never). Anything the author was unsure of is omitted.
 
 ## Flag package decision
 Candidate checked: `svg-country-flags@1.2.10` (renders from Wikipedia, 256 SVGs in `svg/<iso2 lowercase>.svg`,

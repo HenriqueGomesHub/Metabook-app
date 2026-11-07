@@ -30,6 +30,7 @@ for (const f of cardFiles) {
     const w = `cards/${f} ${c.id}`;
     for (const k of ['id', 'type', 'country', 'answer', 'prompt', 'tags', 'source']) if (c[k] == null) err(`${w}: missing ${k}`);
     if (!isUrl(c.source)) err(`${w}: source must be http(s) URL`);
+    if (typeof c.verified !== 'boolean') err(`${w}: verified must be boolean`);
     if (c.country && !codes.has(c.country)) err(`${w}: country ${c.country} not in pool.json`);
     if (c.prompt && !['flag', 'text', 'image', 'embed', 'svg'].includes(c.prompt.kind)) err(`${w}: bad prompt.kind`);
     if (c.options && !c.options.includes(c.answer)) err(`${w}: options do not include answer`);
@@ -46,10 +47,13 @@ for (const f of readdirSync(join(root, 'tips')).filter((f) => f.endsWith('.json'
     const w = `tips/${f} ${t.id}`;
     for (const k of ['id', 'answer', 'scope', 'text', 'source']) if (!t[k]) err(`${w}: missing ${k}`);
     if (!isUrl(t.source)) err(`${w}: source must be http(s) URL`);
+    if (typeof t.verified !== 'boolean') err(`${w}: verified must be boolean`);
     allTips.push(t);
   }
 }
 uniq(allTips, 'tips');
+const answers = new Set(allCards.map((c) => c.answer));
+for (const t of allTips) if (t.answer !== 'ddd:br:pattern' && !answers.has(t.answer)) err(`tip ${t.id}: answer "${t.answer}" matches no card`);
 
 const chapters = load('chapters.json');
 uniq(chapters, 'chapters');

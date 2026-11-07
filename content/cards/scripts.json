@@ -1,1 +1,393 @@
-[]
+[
+  {
+    "id": "script:greek",
+    "type": "script",
+    "country": "GR",
+    "answer": "Greece",
+    "options": [
+      "Greece",
+      "Bulgaria",
+      "Georgia",
+      "Russia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Αθήνα",
+      "lang": "el"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Greek_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:russian",
+    "type": "script",
+    "country": "RU",
+    "answer": "Russia",
+    "options": [
+      "Russia",
+      "Ukraine",
+      "Bulgaria",
+      "Kazakhstan"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Новосибирск",
+      "lang": "ru"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Russian_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:ukrainian",
+    "type": "script",
+    "country": "UA",
+    "answer": "Ukraine",
+    "options": [
+      "Ukraine",
+      "Russia",
+      "Bulgaria",
+      "Serbia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Київ",
+      "lang": "uk"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Ukrainian_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:bulgarian",
+    "type": "script",
+    "country": "BG",
+    "answer": "Bulgaria",
+    "options": [
+      "Bulgaria",
+      "Russia",
+      "Serbia",
+      "North Macedonia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "България",
+      "lang": "bg"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Bulgarian_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:serbian",
+    "type": "script",
+    "country": "RS",
+    "answer": "Serbia",
+    "options": [
+      "Serbia",
+      "Bulgaria",
+      "Russia",
+      "North Macedonia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Врање",
+      "lang": "sr-Cyrl"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Serbian_Cyrillic_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:macedonian",
+    "type": "script",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "North Macedonia",
+      "Serbia",
+      "Bulgaria",
+      "Russia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Скопје",
+      "lang": "mk"
+    },
+    "tags": [
+      "script",
+      "europe"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Macedonian_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:mongolian",
+    "type": "script",
+    "country": "MN",
+    "answer": "Mongolia",
+    "options": [
+      "Mongolia",
+      "Kazakhstan",
+      "Kyrgyzstan",
+      "Russia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Улаанбаатар",
+      "lang": "mn"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Mongolian_language",
+    "verified": false
+  },
+  {
+    "id": "script:kyrgyz",
+    "type": "script",
+    "country": "KG",
+    "answer": "Kyrgyzstan",
+    "options": [
+      "Kyrgyzstan",
+      "Kazakhstan",
+      "Mongolia",
+      "Russia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Кыргызстан",
+      "lang": "ky"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Kyrgyz_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:kazakh",
+    "type": "script",
+    "country": "KZ",
+    "answer": "Kazakhstan",
+    "options": [
+      "Kazakhstan",
+      "Kyrgyzstan",
+      "Mongolia",
+      "Russia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Қазақстан",
+      "lang": "kk"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Kazakh_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:thai",
+    "type": "script",
+    "country": "TH",
+    "answer": "Thailand",
+    "options": [
+      "Thailand",
+      "Cambodia",
+      "Laos",
+      "Myanmar"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "กรุงเทพมหานคร",
+      "lang": "th"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Thai_script",
+    "verified": false
+  },
+  {
+    "id": "script:khmer",
+    "type": "script",
+    "country": "KH",
+    "answer": "Cambodia",
+    "options": [
+      "Cambodia",
+      "Thailand",
+      "Laos",
+      "Myanmar"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "ភ្នំពេញ",
+      "lang": "km"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Khmer_script",
+    "verified": false
+  },
+  {
+    "id": "script:sinhala",
+    "type": "script",
+    "country": "LK",
+    "answer": "Sri Lanka",
+    "options": [
+      "Sri Lanka",
+      "India",
+      "Thailand",
+      "Bangladesh"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "කොළඹ",
+      "lang": "si"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Sinhala_script",
+    "verified": false
+  },
+  {
+    "id": "script:hebrew",
+    "type": "script",
+    "country": "IL",
+    "answer": "Israel",
+    "options": [
+      "Israel",
+      "Jordan",
+      "Lebanon",
+      "Turkey"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "ירושלים",
+      "lang": "he"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Hebrew_alphabet",
+    "verified": false
+  },
+  {
+    "id": "script:hangul",
+    "type": "script",
+    "country": "KR",
+    "answer": "South Korea",
+    "options": [
+      "South Korea",
+      "Japan",
+      "Taiwan",
+      "Mongolia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "서울",
+      "lang": "ko"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Hangul",
+    "verified": false
+  },
+  {
+    "id": "script:kana",
+    "type": "script",
+    "country": "JP",
+    "answer": "Japan",
+    "options": [
+      "Japan",
+      "Taiwan",
+      "South Korea",
+      "Mongolia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "ラーメン",
+      "lang": "ja"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Kana",
+    "verified": false
+  },
+  {
+    "id": "script:trad-chinese",
+    "type": "script",
+    "country": "TW",
+    "answer": "Taiwan",
+    "options": [
+      "Taiwan",
+      "Japan",
+      "South Korea",
+      "Mongolia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "台北市",
+      "lang": "zh-Hant"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Traditional_Chinese_characters",
+    "verified": false
+  },
+  {
+    "id": "script:arabic",
+    "type": "script",
+    "country": "JO",
+    "answer": "Jordan",
+    "options": [
+      "Jordan",
+      "Israel",
+      "United Arab Emirates",
+      "Tunisia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "عمّان",
+      "lang": "ar"
+    },
+    "tags": [
+      "script",
+      "asia"
+    ],
+    "source": "https://en.wikipedia.org/wiki/Arabic_alphabet",
+    "verified": false
+  }
+]
