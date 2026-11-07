@@ -106,7 +106,8 @@ export class LocalRepository implements Repository {
   }
 
   async listBlocks(): Promise<TrainingBlock[]> {
-    return (await this.db).getAll('blocks');
+    const blocks = await (await this.db).getAll('blocks');
+    return blocks.sort((a, b) => a.startsOn.localeCompare(b.startsOn));
   }
 
   async saveBlock(block: TrainingBlock): Promise<void> {

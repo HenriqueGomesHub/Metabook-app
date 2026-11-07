@@ -22,6 +22,9 @@ export interface Auth {
 
 const url: string | undefined = import.meta.env.VITE_SUPABASE_URL;
 const anonKey: string | undefined = import.meta.env.VITE_SUPABASE_ANON_KEY;
+if (Boolean(url) !== Boolean(anonKey)) {
+  console.warn('Only one of VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY is set; falling back to local mode.');
+}
 const client = url && anonKey ? createClient(url, anonKey) : null;
 
 const LOCAL_USER: AuthUser = { id: 'local', name: 'Tom Reyes' };

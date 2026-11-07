@@ -2,11 +2,14 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const MAX_ROUNDS = 50;
 const MIN_INTERVAL_MS = 5000;
+const MAX_BODY_BYTES = 64 * 1024;
+const ISO_8601 = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2})$/;
 const MODES = ['move', 'nm', 'nmpz'];
 
 const admin = createClient(
   Deno.env.get('SUPABASE_URL') ?? '',
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
+  { auth: { persistSession: false } },
 );
 
 type Obj = Record<string, unknown>;
@@ -60,6 +63,7 @@ function isRound(value: unknown): value is Obj {
     isString(value.id, 64) &&
     value.source === 'extension' &&
     typeof value.playedAt === 'string' &&
+    ISO_8601.test(value.playedAt) &&
     !Number.isNaN(Date.parse(value.playedAt)) &&
     optional(value.map, (v) => isString(v, 100)) &&
     optional(value.mode, (v) => typeof v === 'string' && MODES.includes(v)) &&
@@ -109,6 +113,28 @@ Deno.serve(async (req) => {
   if (lookupError) return respond(500, { error: 'lookup failed' }, cors);
   if (!row) return respond(401, { error: 'invalid token' }, cors);
 
+  const { data: flags, error: flagError } = await admin
+    .from('app_flags')
+    .select('capture_enabled')
+    .maybeSingle();
+  if (flagError) return respond(500, { error: 'flag lookup failed' }, cors);
+  if (!flags?.capture_enabled) return respond(403, { error: 'capture disabled' }, cors);
+
+  const declared = Number(req.headers.get('content-length') ?? 0);
+  if (declared > MAX_BODY_BYTES) return respond(413, { error: 'body too large' }, cors);
+  const text = await req.text();
+  if (text.length > MAX_BODY_BYTES) return respond(413, { error: 'body too large' }, cors);
+  let body: unknown;
+  try {
+    body = JSON.parse(text);
+  } catch {
+    return respond(400, { error: 'invalid json' }, cors);
+  }
+  if (!Array.isArray(body) || body.length === 0 || body.length > MAX_ROUNDS) {
+    return respond(400, { error: `expected 1-${MAX_ROUNDS} rounds` }, cors);
+  }
+  if (!body.every(isRound)) return respond(400, { error: 'invalid round' }, cors);
+
   const now = new Date();
   const { data: claimed, error: claimError } = await admin
     .from('extension_tokens')
@@ -120,24 +146,6 @@ Deno.serve(async (req) => {
     .select('token_hash');
   if (claimError) return respond(500, { error: 'rate limit check failed' }, cors);
   if (claimed.length === 0) return respond(429, { error: 'too many requests' }, cors);
-
-  const { data: flags, error: flagError } = await admin
-    .from('app_flags')
-    .select('capture_enabled')
-    .maybeSingle();
-  if (flagError) return respond(500, { error: 'flag lookup failed' }, cors);
-  if (!flags?.capture_enabled) return respond(403, { error: 'capture disabled' }, cors);
-
-  let body: unknown;
-  try {
-    body = await req.json();
-  } catch {
-    return respond(400, { error: 'invalid json' }, cors);
-  }
-  if (!Array.isArray(body) || body.length === 0 || body.length > MAX_ROUNDS) {
-    return respond(400, { error: `expected 1-${MAX_ROUNDS} rounds` }, cors);
-  }
-  if (!body.every(isRound)) return respond(400, { error: 'invalid round' }, cors);
 
   const rows = body.map((r) => ({
     user_id: row.user_id,

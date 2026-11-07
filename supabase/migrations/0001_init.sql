@@ -10,6 +10,7 @@ create table card_state (
   lapses integer not null,
   state text not null check (state in ('new', 'learning', 'review', 'relearning')),
   last_review timestamptz,
+  learning_steps integer,
   primary key (user_id, card_id)
 );
 create index card_state_due_idx on card_state (user_id, due);

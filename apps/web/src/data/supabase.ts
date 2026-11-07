@@ -28,7 +28,26 @@ function mapKeys(source: object, rename: (key: string) => string, dropNull: bool
 }
 
 const toRow = (item: object): Row => mapKeys(item, toSnake, false);
-const fromRow = <T>(row: Row): T => mapKeys(row, toCamel, true) as T;
+const TIMESTAMPS = new Set([
+  'due',
+  'lastReview',
+  'reviewedAt',
+  'lastSeen',
+  'lastShown',
+  'playedAt',
+  'createdAt',
+  'lastUsedAt',
+]);
+
+function fromRow<T>(row: Row): T {
+  const out = mapKeys(row, toCamel, true);
+  delete out.userId;
+  for (const key of TIMESTAMPS) {
+    const value = out[key];
+    if (typeof value === 'string') out[key] = new Date(value).toISOString();
+  }
+  return out as T;
+}
 
 function check(error: { message: string } | null): void {
   if (error) throw new Error(error.message);
