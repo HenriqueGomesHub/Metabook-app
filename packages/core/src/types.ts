@@ -47,6 +47,8 @@ export interface CardState {
   scheduledDays: number;
   reps: number;
   lapses: number;
+  /** reviews graded hard/good/easy; absent on older data, where it is derived as reps - lapses */
+  successes?: number;
   /** position in the FSRS (re)learning steps */
   learningSteps?: number;
   state: 'new' | 'learning' | 'review' | 'relearning';

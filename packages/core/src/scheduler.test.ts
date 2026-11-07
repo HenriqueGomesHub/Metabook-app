@@ -27,6 +27,21 @@ describe('newCardState', () => {
   });
 });
 
+describe('applyReview successes', () => {
+  it('counts hard, good and easy but not again', () => {
+    let state = newCardState('a', now);
+    for (const grade of ['again', 'hard', 'good', 'easy', 'again'] as const) {
+      state = applyReview(state, grade, now, 0.9);
+    }
+    expect(state.successes).toBe(3);
+  });
+
+  it('continues from reps - lapses when the field is missing', () => {
+    const legacy = { ...knownCardState('a', now, 0.9), reps: 5, lapses: 2 };
+    expect(applyReview(legacy, 'good', now, 0.9).successes).toBe(4);
+  });
+});
+
 describe('applyReview', () => {
   it('moves a new card into learning on Good', () => {
     const next = applyReview(newCardState('a', now), 'good', now, 0.9);

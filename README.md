@@ -23,10 +23,8 @@ With no environment variables the app runs in **local mode**: no login, all prog
 
 ## Deploy the web app (Vercel)
 
-- Import the repo in Vercel and set **Root Directory** to `apps/web`.
-- Framework preset: Vite. Build command: `npm run build`. Output: `dist`.
+- Import the repo in Vercel and leave **Root Directory** at the repo root; the root `vercel.json` sets the install, build and output settings and the SPA rewrite.
 - Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables (or leave them out for a local-mode deploy).
-- Client-side routes already work on refresh via `apps/web/vercel.json`.
 - Add the Vercel URL to Supabase → Authentication → URL Configuration → Redirect URLs.
 
 ## Companion extension (prototype)
@@ -35,7 +33,7 @@ With no environment variables the app runs in **local mode**: no login, all prog
 
 ## Content
 
-All seed content in `content/` was written without web access and is marked `"verified": false`. Review it (especially the flags whose ratios are flagged in [`content/README.md`](content/README.md)) and use the in-app **Editor** or edit the JSON. `node content/validate.mjs` checks it.
+Flags, the country pool, Brazil area codes and Brazil metas were checked against Wikipedia and Plonkit (notes in [`content/sources/`](content/sources)) and are marked `"verified": true`; lookalike cards and most non-Brazil tips are still `"verified": false`. Brazil region photos come from Wikimedia Commons, each credited with author and licence on the card. Edit in the in-app **Editor** or the JSON; `node content/validate.mjs` checks it.
 
 ## Workspace
 
