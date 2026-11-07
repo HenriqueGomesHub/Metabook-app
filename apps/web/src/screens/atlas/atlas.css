@@ -301,6 +301,21 @@
   color: var(--ink);
 }
 
+.chapter-empty,
+.chapter-empty:hover {
+  padding-left: 8px;
+  background: none;
+}
+
+.chapter-empty .chapter-title {
+  color: var(--muted);
+}
+
+.chapter-soon {
+  grid-column: 3 / -1;
+  white-space: nowrap;
+}
+
 .chapter-n {
   font-size: 13px;
   font-weight: 500;
@@ -420,6 +435,23 @@
 @media (max-width: 640px) {
   .atlas-head h1 {
     font-size: 40px;
+  }
+
+  /* one scrollable row instead of wrapping onto two */
+  .segments {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .segments::-webkit-scrollbar {
+    display: none;
+  }
+
+  .seg {
+    flex: none;
+    padding: 0 14px;
   }
 
   .country-main {

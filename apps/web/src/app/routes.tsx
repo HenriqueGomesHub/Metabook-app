@@ -7,6 +7,7 @@ import { Drills } from '../screens/Drills';
 import { Editor } from '../screens/Editor';
 import { Games } from '../screens/Games';
 import { Login } from '../screens/Login';
+import { NotFound } from '../screens/NotFound';
 import { Placement } from '../screens/Placement';
 import { Review } from '../screens/Review';
 import { Session } from '../screens/Session';
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
           { path: '/settings', element: <Settings /> },
           { path: '/editor', element: <Editor /> },
           { path: '/placement/:country', element: <Placement /> },
+          { path: '*', element: <NotFound /> },
         ],
       },
     ],

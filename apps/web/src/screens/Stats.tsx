@@ -1,10 +1,11 @@
-import { retrievability } from '@metabook/core';
+import { mastery } from '@metabook/core';
 import { useMemo } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { label, pairLabel } from '../app/labels';
+import { pairScope } from '../app/stats';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
-import { answerLabel } from './atlas/format';
 import { dailyAccuracy, niceAxis, TREND_DAYS } from './stats/trend';
 import './stats/stats.css';
 
@@ -29,17 +30,20 @@ function StatsView({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
 
   const kpis = useMemo(() => {
-    const states = Object.values(data.states);
-    const seen = states.filter((s) => s.state !== 'new' && s.reps > 0);
-    const retention = seen.length
-      ? seen.reduce((sum, s) => sum + retrievability(s, now), 0) / seen.length
+    const seen = Object.values(data.states).filter((s) => s.state !== 'new' && s.reps > 0);
+    const recall = seen.length
+      ? mastery(
+          seen.map((s) => s.cardId),
+          data.states,
+          now,
+        )
       : null;
     const scored = data.rounds.filter((r) => r.score !== undefined);
     const avgScore = scored.length
       ? scored.reduce((sum, r) => sum + (r.score ?? 0), 0) / scored.length
       : null;
     const ms = data.reviews.reduce((sum, r) => sum + r.msTaken, 0);
-    return { retention, avgScore, learned: seen.length, time: trained(ms) };
+    return { recall, avgScore, learned: seen.length, time: trained(ms) };
   }, [data, now]);
 
   const points = useMemo(() => dailyAccuracy(data.reviews, now), [data.reviews, now]);
@@ -62,8 +66,8 @@ function StatsView({ data }: { data: AppSnapshot }) {
 
   const cells: { value: string; unit?: string; label: string }[] = [
     {
-      value: kpis.retention === null ? '—' : `${Math.round(kpis.retention * 100)}%`,
-      label: 'Retention',
+      value: kpis.recall === null ? '—' : `${Math.round(kpis.recall * 100)}%`,
+      label: 'Recall in a week',
     },
     {
       value: kpis.avgScore === null ? '—' : fmt(Math.round(kpis.avgScore)),
@@ -101,7 +105,7 @@ function StatsView({ data }: { data: AppSnapshot }) {
         <div className="stats-rows">
           <section className="stat-panel stat-chart" style={{ '--i': 4 } as React.CSSProperties}>
             <div className="stat-panel-head">
-              <h2>Retention</h2>
+              <h2>Daily accuracy</h2>
               {delta !== null && (
                 <span className={delta < 0 ? 'trend-delta down' : 'trend-delta'}>
                   {delta < 0 ? '−' : '+'}
@@ -110,7 +114,7 @@ function StatsView({ data }: { data: AppSnapshot }) {
               )}
             </div>
             {points.length === 0 ? (
-              <p className="muted">Answer a few cards and your retention curve shows up here.</p>
+              <p className="muted">Answer a few cards and your accuracy curve shows up here.</p>
             ) : (
               <svg
                 className="trend-svg"
@@ -156,15 +160,18 @@ function StatsView({ data }: { data: AppSnapshot }) {
               <p className="muted">No confusions yet.</p>
             ) : (
               <ol className="confusions">
-                {confusions.map((c, i) => (
-                  <li key={`${c.picked}|${c.truth}`} title={`Said ${c.picked} for ${c.truth}`}>
-                    <span>
-                      {answerLabel(c.picked)} <span className="muted">/</span>{' '}
-                      {answerLabel(c.truth)}
-                    </span>
-                    <span className={i < HOT_CONFUSIONS ? 'count hot' : 'count'}>{c.count}</span>
-                  </li>
-                ))}
+                {confusions.map((c, i) => {
+                  const scope = pairScope(data.content.cards, c.picked, c.truth);
+                  return (
+                    <li
+                      key={`${c.picked}|${c.truth}`}
+                      title={`Said ${label(c.picked, scope)} for ${label(c.truth, scope)}`}
+                    >
+                      <span>{pairLabel(c.picked, c.truth, scope)}</span>
+                      <span className={i < HOT_CONFUSIONS ? 'count hot' : 'count'}>{c.count}</span>
+                    </li>
+                  );
+                })}
               </ol>
             )}
           </section>

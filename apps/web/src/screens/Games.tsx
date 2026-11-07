@@ -147,8 +147,9 @@ function GamesView({ data }: { data: AppSnapshot }) {
                     const to = playable[name];
                     if (!to) {
                       return (
-                        <span key={name} className="game-chip soon" title="Soon">
+                        <span key={name} className="game-chip soon">
                           {name}
+                          {open && <span className="chip-soon">Soon</span>}
                         </span>
                       );
                     }

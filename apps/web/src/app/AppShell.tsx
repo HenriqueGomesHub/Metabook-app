@@ -68,9 +68,9 @@ export function AppShell() {
 
   return (
     <>
-      <main>
+      <div>
         <Outlet />
-      </main>
+      </div>
       {showNav && (
         <nav className="nav" aria-label="Main">
           {NAV_ITEMS.map(({ to, label, icon }) => (

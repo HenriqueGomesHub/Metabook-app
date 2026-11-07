@@ -8,7 +8,7 @@ function renderAt(path: string) {
     <MemoryRouter initialEntries={[path]}>
       <Routes>
         <Route element={<AppShell />}>
-          <Route path="*" element={null} />
+          <Route path="*" element={<main>screen</main>} />
         </Route>
       </Routes>
     </MemoryRouter>,
@@ -21,6 +21,11 @@ describe('AppShell', () => {
     for (const label of ['Today', 'Drills', 'Game review', 'Atlas', 'Stats']) {
       expect(screen.getByRole('link', { name: label })).toBeTruthy();
     }
+  });
+
+  it('leaves the main landmark to the screen', () => {
+    renderAt('/');
+    expect(screen.getAllByRole('main')).toHaveLength(1);
   });
 
   it('hides the navigation inside sessions', () => {

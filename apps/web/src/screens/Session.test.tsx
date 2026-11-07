@@ -5,9 +5,9 @@ import { dueState } from '../test/content';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderApp } from '../test/render';
 
-vi.mock('../data/content', async () => {
+vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { loadContent: async () => content };
+  return { ...(await importOriginal<object>()), loadContent: async () => content };
 });
 
 function repoWith(newPerDay: number, seed: ConstructorParameters<typeof MemoryRepository>[0] = {}) {

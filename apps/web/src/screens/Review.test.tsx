@@ -58,4 +58,23 @@ describe('Review', () => {
     ).toBeTruthy();
     await waitFor(() => expect(repo.rounds).toHaveLength(1));
   });
+
+  it('lists misses before correct rounds within a day', async () => {
+    const repo = new MemoryRepository();
+    const round = (id: string, playedAt: string, guess: string) => ({
+      id,
+      source: 'manual' as const,
+      playedAt,
+      truth: { country: 'LT' },
+      guess: { country: guess },
+    });
+    repo.rounds = [
+      round('a', '2026-03-02T20:00:00Z', 'LT'),
+      round('b', '2026-03-02T19:00:00Z', 'LV'),
+    ];
+    renderScreens('/review', repo);
+    const items = await screen.findAllByRole('listitem');
+    expect(items[0]?.className).toContain('round-miss');
+    expect(items[1]?.className).not.toContain('round-miss');
+  });
 });

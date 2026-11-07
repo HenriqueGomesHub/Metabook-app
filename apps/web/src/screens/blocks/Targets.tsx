@@ -1,7 +1,6 @@
-import { suggestMaps } from '@metabook/core';
 import type { BlockTarget } from '@metabook/core';
 import type { Content } from '../../data/content';
-import { suggestionText, targetLabel } from './targets';
+import { suggestions, targetLabel } from './targets';
 
 export function Targets({ targets, content }: { targets: BlockTarget[]; content: Content }) {
   if (targets.length === 0) {
@@ -21,8 +20,8 @@ export function Targets({ targets, content }: { targets: BlockTarget[]; content:
         ))}
       </ul>
       <ul className="suggest">
-        {suggestMaps(targets).map((line) => (
-          <li key={line}>{suggestionText(line, content)}</li>
+        {suggestions(targets, content).map((line) => (
+          <li key={line}>{line}</li>
         ))}
       </ul>
     </>

@@ -79,7 +79,7 @@ create table block_days (
   user_id uuid not null default auth.uid() references auth.users on delete cascade,
   block_id text not null,
   day date not null,
-  minutes_done integer not null,
+  minutes_done double precision not null,
   cards_done integer not null,
   primary key (user_id, block_id, day),
   foreign key (user_id, block_id) references training_blocks (user_id, id) on delete cascade

@@ -20,7 +20,7 @@ export function Page({
   return (
     <div className="page">
       <Header user={user} />
-      <div className="page-main">
+      <main className="page-main">
         <div className="page-title rise">
           <div>
             <h1 className="headline">{title}</h1>
@@ -29,7 +29,7 @@ export function Page({
           {actions && <div className="page-actions">{actions}</div>}
         </div>
         <div className="manage">{children}</div>
-      </div>
+      </main>
     </div>
   );
 }

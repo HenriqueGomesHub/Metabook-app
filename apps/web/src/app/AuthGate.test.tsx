@@ -3,9 +3,9 @@ import { describe, expect, it, vi } from 'vitest';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { fakeAuth, renderScreens } from '../test/renderScreens';
 
-vi.mock('../data/content', async () => {
+vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { loadContent: async () => content };
+  return { ...(await importOriginal<object>()), loadContent: async () => content };
 });
 
 describe('AuthGate', () => {

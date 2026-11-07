@@ -3,9 +3,9 @@ import { describe, expect, it, vi } from 'vitest';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
 
-vi.mock('../data/content', async () => {
+vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { loadContent: async () => content };
+  return { ...(await importOriginal<object>()), loadContent: async () => content };
 });
 
 describe('Placement', () => {
@@ -16,6 +16,8 @@ describe('Placement', () => {
       target: { value: 'Lithuania' },
     });
     fireEvent.click(screen.getByRole('button', { name: 'Check answer' }));
+    expect(await screen.findByText('Right')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 1 of 1 as known')).toBeTruthy();
     await waitFor(() => expect(repo.cardStates.map((s) => s.cardId)).toEqual(['flag:lt']));
     expect(repo.cardStates[0]?.state).toBe('review');
@@ -25,7 +27,16 @@ describe('Placement', () => {
     const repo = new MemoryRepository();
     renderScreens('/placement/LT', repo);
     fireEvent.click(await screen.findByRole('button', { name: 'I don’t know' }));
+    expect(await screen.findByText('Now you know')).toBeTruthy();
+    expect(screen.queryByLabelText(/Which country/)).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 0 of 1 as known')).toBeTruthy();
     expect(repo.cardStates).toHaveLength(0);
+  });
+
+  it('names an unknown country instead of an empty test', async () => {
+    renderScreens('/placement/ZZ', new MemoryRepository());
+    expect(await screen.findByText('Unknown country')).toBeTruthy();
+    expect(screen.getByRole('link', { name: /Back to Atlas/ }).getAttribute('href')).toBe('/atlas');
   });
 });

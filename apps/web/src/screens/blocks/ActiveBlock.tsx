@@ -1,5 +1,6 @@
 import { blockProgress } from '@metabook/core';
 import type { TrainingBlock } from '@metabook/core';
+import { useState } from 'react';
 import type { AppSnapshot } from '../../app/AppData';
 import { Button } from '../../components/Button';
 import { ProgressBar } from '../../components/ProgressBar';
@@ -18,6 +19,7 @@ export function ActiveBlock({
 }) {
   const progress = blockProgress(block, data.blockDays, now);
   const minutes = Math.round(progress.todayMinutes);
+  const [confirming, setConfirming] = useState(false);
   return (
     <section className="sheet" aria-label="Active block">
       <div className="sheet-head">
@@ -42,9 +44,21 @@ export function ActiveBlock({
       />
       <Targets targets={block.targets} content={data.content} />
       <div className="actions">
-        <Button variant="ghost" onClick={onEnd}>
-          End early
-        </Button>
+        {confirming ? (
+          <>
+            <span className="note" role="alert">
+              End this block now? Your progress is saved.
+            </span>
+            <Button onClick={onEnd}>End block</Button>
+            <Button variant="ghost" onClick={() => setConfirming(false)}>
+              Keep going
+            </Button>
+          </>
+        ) : (
+          <Button variant="ghost" onClick={() => setConfirming(true)}>
+            End early
+          </Button>
+        )}
       </div>
     </section>
   );

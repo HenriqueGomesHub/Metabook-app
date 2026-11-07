@@ -115,7 +115,8 @@ export function blockStudyChange(data: AppSnapshot, msTaken: number, now: Date):
     blockId: block.id,
     day,
     cardsDone: (before?.cardsDone ?? 0) + 1,
-    minutesDone: Math.round(((before?.minutesDone ?? 0) + msTaken / 60000) * 10) / 10,
+    // exact minutes: rounding each answer would drop every quick one to 0
+    minutesDone: (before?.minutesDone ?? 0) + msTaken / 60000,
   };
   return {
     data: {

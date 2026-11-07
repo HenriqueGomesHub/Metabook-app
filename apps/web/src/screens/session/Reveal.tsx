@@ -10,10 +10,21 @@ export interface RevealProps {
   tip: PickedTip | null;
   aside?: { label: string; tip: PickedTip; variant: 'warn' | 'aside' };
   onNext(): void;
-  onAnotherTip(): void;
+  /** omit to hide the "Another tip" button */
+  onAnotherTip?(): void;
+  nextLabel?: string;
 }
 
-export function Reveal({ verdict, tone, headline, tip, aside, onNext, onAnotherTip }: RevealProps) {
+export function Reveal({
+  verdict,
+  tone,
+  headline,
+  tip,
+  aside,
+  onNext,
+  onAnotherTip,
+  nextLabel = 'Next',
+}: RevealProps) {
   return (
     <div className="reveal rise">
       {headline !== undefined && (
@@ -27,10 +38,10 @@ export function Reveal({ verdict, tone, headline, tip, aside, onNext, onAnotherT
       {aside && <TipBox label={aside.label} picked={aside.tip} variant={aside.variant} />}
       <div className="reveal-actions">
         <Button onClick={onNext} autoFocus>
-          Next
+          {nextLabel}
           <kbd>Space</kbd>
         </Button>
-        {(tip?.total ?? 0) + (aside?.tip.total ?? 0) > 1 && (
+        {onAnotherTip && (tip?.total ?? 0) > 1 && (
           <Button variant="ghost" onClick={onAnotherTip}>
             Another tip
           </Button>

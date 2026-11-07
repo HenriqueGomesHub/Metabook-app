@@ -1,3 +1,4 @@
+import { label } from '../../app/labels';
 import type { Outcome } from './types';
 import { useKeys } from './useKeys';
 
@@ -7,12 +8,15 @@ export function Options({
   answer,
   outcome,
   onPick,
+  scope,
   className = 'options',
 }: {
   options: string[];
   answer: string;
   outcome: Outcome | null;
   onPick(option: string): void;
+  /** pass `'br'` when options are Brazilian state codes */
+  scope?: 'br';
   className?: string;
 }) {
   useKeys((event) => {
@@ -39,7 +43,7 @@ export function Options({
             onClick={() => onPick(option)}
           >
             <kbd>{i + 1}</kbd>
-            {option}
+            {label(option, scope)}
             {mark && <span className="opt-mark">{mark}</span>}
           </button>
         );

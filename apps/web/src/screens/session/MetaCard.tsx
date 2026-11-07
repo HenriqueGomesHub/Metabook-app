@@ -9,20 +9,15 @@ export function MetaCard({ card, options, outcome, onAnswer, reveal }: CardProps
         <Prompt prompt={card.prompt} alt="Clue to place" />
       </figure>
       <section className="stage-side">
-        {outcome ? (
-          reveal
-        ) : (
-          <>
-            <h1 className="headline question rise d1">Where is this?</h1>
-            <Options
-              options={options}
-              answer={card.answer}
-              outcome={outcome}
-              onPick={onAnswer}
-              className="options options-compact rise d2"
-            />
-          </>
-        )}
+        <h1 className="headline question rise d1">Where is this?</h1>
+        <Options
+          options={options}
+          answer={card.answer}
+          outcome={outcome}
+          onPick={onAnswer}
+          className="options options-compact rise d2"
+        />
+        {reveal}
       </section>
     </main>
   );

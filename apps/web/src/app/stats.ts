@@ -1,6 +1,7 @@
 import { buildSession, mastery } from '@metabook/core';
 import type { Card, CardType, Review, Session } from '@metabook/core';
 import type { AppSnapshot } from './AppData';
+import { tagLabel } from './labels';
 
 const FALLBACK_MEDIAN_MS = 6000;
 const STREAK_DAYS = 14;
@@ -78,5 +79,14 @@ export function weakestGroup(data: AppSnapshot, now: Date): string | null {
   }
   if (!weakest) return null;
   const key = weakest.key;
-  return data.content.chapters.find((chapter) => chapter.id === key)?.title ?? key;
+  return data.content.chapters.find((chapter) => chapter.id === key)?.title ?? tagLabel(key);
+}
+
+/**
+ * Scope for labelling a confusion pair: `'br'` when both sides are answers of area-code cards, so
+ * "SP|MG" reads São Paulo / Minas Gerais rather than Madagascar.
+ */
+export function pairScope(cards: Card[], picked: string, truth: string): 'br' | undefined {
+  const areaCodes = new Set(cards.filter((c) => c.type === 'areacode').map((c) => c.answer));
+  return areaCodes.has(picked) && areaCodes.has(truth) ? 'br' : undefined;
 }

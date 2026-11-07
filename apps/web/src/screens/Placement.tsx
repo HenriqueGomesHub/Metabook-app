@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { label, scopeOf } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { CloseButton } from '../components/Chip';
 import { ProgressBar } from '../components/ProgressBar';
@@ -13,6 +14,9 @@ import './manage/manage.css';
 import { Options } from './session/Options';
 import { optionsFor } from './session/options';
 import { Prompt } from './session/Prompt';
+import { Reveal } from './session/Reveal';
+import type { Outcome } from './session/types';
+import { useKeys } from './session/useKeys';
 import { TypedAnswer } from './session/TypedAnswer';
 
 const TEST_SIZE = 12;
@@ -34,6 +38,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     return buildPlacement(untouched, code, Math.random, TEST_SIZE);
   });
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
+  const [outcome, setOutcome] = useState<Outcome | null>(null);
   const card = cards[results.length];
   const options = useMemo(
     () =>
@@ -45,16 +50,42 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     [card?.id],
   );
 
-  function answer(correct: boolean) {
-    if (!card) return;
-    const next = [...results, { cardId: card.id, correct }];
-    setResults(next);
-    if (next.length === cards.length) {
-      addCardStates(applyPlacement(next, new Date(), data.settings.desiredRetention));
+  // Answering shows the verdict first; the next card only appears on Next, so the answering
+  // keypress can't carry into the following card's input.
+  useKeys((event) => {
+    if (event.key !== ' ' || !outcome) return;
+    event.preventDefault();
+    next();
+  });
+
+  function next() {
+    if (!card || !outcome) return;
+    const done = [...results, { cardId: card.id, correct: outcome.correct }];
+    setOutcome(null);
+    setResults(done);
+    if (done.length === cards.length) {
+      addCardStates(applyPlacement(done, new Date(), data.settings.desiredRetention));
     }
   }
 
   const back = `/atlas/${code}`;
+  const known =
+    data.content.pool.some((c) => c.code === code) ||
+    data.content.cards.some((c) => c.country === code);
+  if (!known) {
+    return (
+      <main className="placement">
+        <div className="placement-result rise">
+          <h1 className="headline">Unknown country</h1>
+          <p className="muted">There is no country “{code}” in Metabook.</p>
+        </div>
+        <LinkButton to="/atlas" className="rise d1">
+          Back to Atlas
+          <ArrowIcon />
+        </LinkButton>
+      </main>
+    );
+  }
   if (cards.length === 0) {
     return (
       <main className="placement">
@@ -73,13 +104,13 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   }
 
   if (!card) {
-    const known = results.filter((r) => r.correct).length;
+    const marked = results.filter((r) => r.correct).length;
     return (
       <main className="placement">
         <div className="placement-result rise">
           <p className="kicker">Placement test · {name}</p>
           <h1 className="headline">
-            Marked {known} of {cards.length} as known
+            Marked {marked} of {cards.length} as known
           </h1>
           <p className="muted">The rest start from scratch in your normal sessions.</p>
         </div>
@@ -104,25 +135,38 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           {results.length + 1} / {cards.length}
         </span>
       </div>
-      <main className="placement">
-        <figure className="flag-figure unfurl" key={card.id}>
+      <main className="placement" key={card.id}>
+        <figure className="flag-figure unfurl">
           <Prompt prompt={card.prompt} alt="Item to identify" />
         </figure>
         {card.type === 'flag' ? (
-          <TypedAnswer
-            key={card.id}
-            label="Which country?"
-            placeholder="Type a country"
-            onAnswer={(given) => answer(isRight(card, given, data.content.cards))}
-          />
+          !outcome && (
+            <TypedAnswer
+              label="Which country?"
+              placeholder="Type a country"
+              onAnswer={(given) =>
+                setOutcome({ given, correct: isRight(card, given, data.content.cards) })
+              }
+            />
+          )
         ) : (
           <Options
-            key={card.id}
             options={options}
             answer={card.answer}
-            outcome={null}
-            onPick={(given) => answer(given === card.answer)}
+            scope={scopeOf(card.type)}
+            outcome={outcome}
+            onPick={(given) => setOutcome({ given, correct: given === card.answer })}
             className="options options-grid rise d2"
+          />
+        )}
+        {outcome && (
+          <Reveal
+            verdict={outcome.correct ? 'Right' : outcome.given ? 'Not quite' : 'Now you know'}
+            tone={outcome.correct ? 'right' : outcome.given ? 'wrong' : 'neutral'}
+            headline={label(card.answer, scopeOf(card.type))}
+            tip={null}
+            nextLabel={results.length + 1 === cards.length ? 'See result' : 'Next'}
+            onNext={next}
           />
         )}
       </main>

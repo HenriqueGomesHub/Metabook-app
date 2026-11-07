@@ -19,19 +19,29 @@ const TYPE_NAMES: Record<CardType, string> = {
   plate: 'Plates',
 };
 
-const STATE_NAMES = new Map(brStates.states.map((state) => [state.code, state.name]));
-const COUNTRY_NAMES = new Map(bundled.pool.map((country) => [country.code, country.name]));
+type Scope = 'br' | undefined;
+
+let names: { states: Map<string, string>; countries: Map<string, string> } | undefined;
+
+function lookup() {
+  names ??= {
+    states: new Map((brStates?.states ?? []).map((state) => [state.code, state.name])),
+    countries: new Map((bundled?.pool ?? []).map((country) => [country.code, country.name])),
+  };
+  return names;
+}
 
 /**
  * Human label for any answer or confusion key: region ids, Brazilian state codes,
  * ISO country codes and plain answers (country names) all read naturally.
  * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country.
  */
-export function label(key: string, scope?: 'br'): string {
+export function label(key: string, scope?: Scope): string {
   const region = REGION_NAMES[key];
   if (region) return region;
-  if (scope === 'br') return STATE_NAMES.get(key) ?? COUNTRY_NAMES.get(key) ?? key;
-  return COUNTRY_NAMES.get(key) ?? STATE_NAMES.get(key) ?? key;
+  const { states, countries } = lookup();
+  if (scope === 'br') return states.get(key) ?? countries.get(key) ?? key;
+  return countries.get(key) ?? states.get(key) ?? key;
 }
 
 /** Card-type and tag names for headings like "Weakest". */
@@ -40,9 +50,9 @@ export function tagLabel(tag: string): string {
 }
 
 /** Confusion pairs always read "picked / truth" in that order. */
-export function pairLabel(picked: string, truth: string, scope?: 'br'): string {
+export function pairLabel(picked: string, truth: string, scope?: Scope): string {
   return `${label(picked, scope)} / ${label(truth, scope)}`;
 }
 
 /** Area-code answers are Brazilian state codes; everything else is a country name or region id. */
-export const scopeOf = (type: CardType | undefined) => (type === 'areacode' ? 'br' : undefined);
+export const scopeOf = (type: CardType | undefined): Scope => (type === 'areacode' ? 'br' : undefined);

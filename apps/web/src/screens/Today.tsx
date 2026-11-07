@@ -6,7 +6,8 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { activeBlock } from '../app/dataActions';
-import { practisedDays, streakLength, todaySession, weakestGroup } from '../app/stats';
+import { pairLabel } from '../app/labels';
+import { pairScope, practisedDays, streakLength, todaySession, weakestGroup } from '../app/stats';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
@@ -52,6 +53,7 @@ function TodayView({ data }: { data: AppSnapshot }) {
     .map((type) => ({ type, count: counts.get(type) as number }))
     .sort((a, b) => b.count - a.count);
 
+  const minutes = Math.max(1, Math.round((queue.length * SECONDS_PER_CARD) / 60));
   const days = practisedDays(data.reviews, now);
   const streak = streakLength(days);
   const confusion = activePairs(data.confusions, now)[0];
@@ -92,8 +94,8 @@ function TodayView({ data }: { data: AppSnapshot }) {
             <p className="today-kicker">Due today</p>
             <div className="today-count headline">{queue.length}</div>
             <p className="today-sub">
-              {queue.length === 1 ? 'card' : 'cards'} · about{' '}
-              {Math.max(1, Math.round((queue.length * SECONDS_PER_CARD) / 60))} minutes
+              {queue.length === 1 ? 'card' : 'cards'} · about {minutes}{' '}
+              {minutes === 1 ? 'minute' : 'minutes'}
             </p>
             {queue.length > 0 ? (
               <div className="today-start">
@@ -145,7 +147,11 @@ function TodayView({ data }: { data: AppSnapshot }) {
                   <dd>
                     {confusion ? (
                       <>
-                        {confusion.truth} <span className="muted">/</span> {confusion.picked}
+                        {pairLabel(
+                          confusion.picked,
+                          confusion.truth,
+                          pairScope(data.content.cards, confusion.picked, confusion.truth),
+                        )}
                       </>
                     ) : (
                       <span className="muted">None right now</span>
@@ -153,7 +159,7 @@ function TodayView({ data }: { data: AppSnapshot }) {
                   </dd>
                 </div>
                 <div>
-                  <dt>{streak}-day streak</dt>
+                  <dt>{streak > 0 ? `${streak}-day streak` : 'No streak yet'}</dt>
                   <dd
                     className="streak"
                     role="img"

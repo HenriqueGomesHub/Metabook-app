@@ -1,6 +1,7 @@
 import { compareBlocks } from '@metabook/core';
 import type { TargetDelta, TrainingBlock } from '@metabook/core';
 import type { AppSnapshot } from '../../app/AppData';
+import { formatDayRange } from './dates';
 import { targetLabel } from './targets';
 
 const percent = (value: number) => `${Math.round(value * 100)}%`;
@@ -39,9 +40,7 @@ export function FinishedBlock({ data, block }: { data: AppSnapshot; block: Train
   return (
     <li>
       <div className="sheet-head">
-        <h3 className="headline">
-          {block.startsOn} to {block.endsOn}
-        </h3>
+        <h3 className="headline">{formatDayRange(block.startsOn, block.endsOn)}</h3>
         <span className="note">
           {block.status === 'ended-early' ? 'Ended early' : 'Finished'} · {practised}{' '}
           {practised === 1 ? 'day' : 'days'} practised

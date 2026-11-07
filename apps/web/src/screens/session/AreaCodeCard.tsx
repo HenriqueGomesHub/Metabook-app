@@ -12,6 +12,7 @@ export function AreaCodeCard({ card, options, outcome, onAnswer, reveal }: CardP
       <Options
         options={options}
         answer={card.answer}
+        scope="br"
         outcome={outcome}
         onPick={onAnswer}
         className="options options-grid rise d2"

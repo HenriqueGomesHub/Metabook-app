@@ -4,9 +4,9 @@ import { dueState } from '../test/content';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderApp } from '../test/render';
 
-vi.mock('../data/content', async () => {
+vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { loadContent: async () => content };
+  return { ...(await importOriginal<object>()), loadContent: async () => content };
 });
 
 describe('Today', () => {
@@ -20,5 +20,11 @@ describe('Today', () => {
     expect(screen.getByRole('link', { name: /Start session/ }).getAttribute('href')).toBe(
       '/session',
     );
+  });
+
+  it('says no streak yet and pluralises the time estimate', async () => {
+    renderApp('/', new MemoryRepository());
+    expect(await screen.findByText('No streak yet')).toBeTruthy();
+    expect(screen.getByText(/about 1 minute$/)).toBeTruthy();
   });
 });

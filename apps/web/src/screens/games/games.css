@@ -90,6 +90,13 @@ a.game-chip:hover {
   border-style: dashed;
 }
 
+.chip-soon {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
 .game-chip .dot {
   width: 6px;
   height: 6px;
@@ -339,6 +346,16 @@ a.game-chip:hover {
   stroke: #4a473f;
   stroke-width: 1;
   fill: none;
+  pointer-events: none;
+}
+
+.ddd-hit {
+  fill: transparent;
+  cursor: pointer;
+}
+
+.ddd-hit.lock {
+  cursor: default;
 }
 
 .ddd-trail {

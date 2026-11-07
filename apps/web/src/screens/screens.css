@@ -302,8 +302,9 @@
 
 .stage-narrow {
   max-width: 640px;
-  padding-top: 96px;
-  gap: 48px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 28px;
 }
 
 .stage-medium {
@@ -353,6 +354,12 @@ figure {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+
+.flag-figure .flag-image {
+  width: auto;
+  max-width: min(400px, 80vw);
+  max-height: 24vh;
 }
 
 .flag-figure figcaption {
@@ -659,7 +666,11 @@ figure {
 .reveal {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+}
+
+.reveal .tipbox {
+  padding: 16px 20px;
 }
 
 .reveal-head {
@@ -710,7 +721,6 @@ figure {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin-top: 8px;
 }
 
 .stage-split .reveal-actions {
@@ -737,6 +747,13 @@ figure {
 
 .summary > .cta {
   width: auto;
+}
+
+.summary-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 /* Drills */

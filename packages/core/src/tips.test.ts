@@ -18,6 +18,17 @@ describe('pickTip', () => {
     expect(pickTip(tips, 'Brazil', 'flag', [])).toEqual({ tip: tips[1], index: 0, total: 2 });
   });
 
+  it('puts preferred tips first, then keeps the rotation', () => {
+    const views = [view('c', '2026-03-01T00:00:00Z')];
+    const prefer = (t: Tip) => t.id === 'c';
+    expect(pickTip(tips, 'Brazil', 'script', views, 0, prefer)).toEqual({
+      tip: tips[2],
+      index: 1,
+      total: 2,
+    });
+    expect(pickTip(tips, 'Brazil', 'script', views, 1, prefer)?.tip.id).toBe('b');
+  });
+
   it('picks the least recently seen tip', () => {
     const views = [view('a', '2026-03-02T00:00:00Z'), view('b', '2026-03-01T00:00:00Z')];
     expect(pickTip(tips, 'Brazil', 'flag', views)?.tip.id).toBe('b');

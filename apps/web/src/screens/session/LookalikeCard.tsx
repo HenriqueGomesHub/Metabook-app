@@ -1,3 +1,4 @@
+import { label, scopeOf } from '../../app/labels';
 import { Prompt } from './Prompt';
 import type { CardProps } from './types';
 import { useKeys } from './useKeys';
@@ -5,6 +6,7 @@ import { useKeys } from './useKeys';
 /** Binary choice between two lookalikes; arrow keys pick left or right. */
 export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: CardProps) {
   const [left, right] = options as [string, string];
+  const scope = scopeOf(card.type);
   useKeys((event) => {
     if (event.key === 'ArrowLeft') onAnswer(left);
     if (event.key === 'ArrowRight') onAnswer(right);
@@ -19,7 +21,10 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
   return (
     <main className="stage stage-wide">
       <div className="scene scene-16x7 settle">
-        <Prompt prompt={card.prompt} alt={`Is this ${left} or ${right}?`} />
+        <Prompt
+          prompt={card.prompt}
+          alt={`Is this ${label(left, scope)} or ${label(right, scope)}?`}
+        />
       </div>
       <div className="picks rise d1">
         <button
@@ -29,7 +34,7 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
           onClick={() => onAnswer(left)}
         >
           <kbd aria-label="Left arrow">←</kbd>
-          {left}
+          {label(left, scope)}
         </button>
         <button
           type="button"
@@ -37,7 +42,7 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
           disabled={outcome !== null}
           onClick={() => onAnswer(right)}
         >
-          {right}
+          {label(right, scope)}
           <kbd aria-label="Right arrow">→</kbd>
         </button>
       </div>

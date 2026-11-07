@@ -40,6 +40,7 @@ const content: Content = {
   ],
   chapters: [
     { id: 'br:areacodes', country: 'BR', order: 1, title: 'Area codes', subtitle: 'DDD codes' },
+    { id: 'br:poles', country: 'BR', order: 2, title: 'Poles', subtitle: 'Utility poles' },
   ],
   cards,
   tips,
@@ -112,9 +113,16 @@ describe('Country', () => {
     expect(screen.getByRole('link', { name: /Study Brazil/ }).getAttribute('href')).toBe(
       '/session?country=BR',
     );
-    const toggle = screen.getByRole('button', { name: 'Add to focus' });
-    fireEvent.click(toggle);
+    expect(screen.queryByRole('link', { name: /Poles/ })).toBeNull();
+    expect(screen.getByText('No cards yet')).toBeTruthy();
+  });
+
+  it('persists the focus toggle in settings', async () => {
+    const repo = mount('/atlas/BR');
+    fireEvent.click(await screen.findByRole('button', { name: 'Add to focus' }));
+    const toggle = await screen.findByRole('button', { name: 'In this week’s focus' });
     expect(toggle.getAttribute('aria-pressed')).toBe('true');
+    expect((await repo.getSettings()).focusCountries).toEqual(['BR']);
   });
 });
 
@@ -145,6 +153,22 @@ describe('AreaCodeGame', () => {
     expect(repo.tipViews.map((v) => v.tipId)).toEqual(['tip-1']);
   });
 
+  it('says "No medal yet" in sentence case before any review', async () => {
+    mount('/games/areacode/br');
+    const pill = await screen.findByTitle('Area-code mastery');
+    expect(pill.textContent).toMatch(/^No medal yet · 0%$/);
+    expect(pill.querySelector('.cap')).toBeNull();
+  });
+
+  it('lets a callout label pick its state', async () => {
+    mount('/games/areacode/br');
+    await screen.findByText(/^(11|21|31)$/);
+    const hit = document.querySelectorAll('.ddd-hit');
+    const df = [...hit].find((el) => el.getAttribute('x') === String(410 - 4)) as Element;
+    fireEvent.click(df);
+    expect(await screen.findByText('You picked Distrito Federal')).toBeTruthy();
+  });
+
   it('records a miss with a distance penalty', async () => {
     const repo = mount('/games/areacode/br');
     const code = (await screen.findByText(/^(11|21|31)$/)).textContent as string;
@@ -162,7 +186,7 @@ describe('Stats', () => {
   it('renders KPIs with empty data', async () => {
     mount('/stats');
     expect(await screen.findByRole('heading', { name: 'Stats' })).toBeTruthy();
-    expect(screen.getByText('Retention', { selector: '.kpi-label' })).toBeTruthy();
+    expect(screen.getByText('Recall in a week', { selector: '.kpi-label' })).toBeTruthy();
     expect(screen.getAllByText('—')).toHaveLength(2);
     expect(screen.getByText('Cards learned').previousElementSibling?.textContent).toBe('0');
     expect(screen.getByText('No confusions yet.')).toBeTruthy();

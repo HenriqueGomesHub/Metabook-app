@@ -1,22 +1,31 @@
 import { parsePairKey } from '@metabook/core';
 import type { BlockTarget } from '@metabook/core';
+import { label, pairLabel } from '../../app/labels';
+import { pairScope } from '../../app/stats';
 import type { Content } from '../../data/content';
-import { countryName } from '../manage/countries';
 
 export function targetLabel(target: BlockTarget, content: Content): string {
   switch (target.kind) {
     case 'country':
-      return countryName(content.pool, target.key);
+      return label(target.key);
     case 'pair': {
       const { picked, truth } = parsePairKey(target.key);
-      return `${countryName(content.pool, truth)} / ${countryName(content.pool, picked)}`;
+      return pairLabel(picked, truth, pairScope(content.cards, picked, truth));
     }
     case 'chapter':
       return content.chapters.find((c) => c.id === target.key)?.title ?? target.key;
   }
 }
 
-/** suggestMaps names countries by their code; swap in the pool's names. */
-export function suggestionText(line: string, content: Content): string {
-  return line.replace(/\b[A-Z]{2}\b/g, (code) => countryName(content.pool, code));
+/** Map suggestions per target, named with the same labels as the targets themselves. */
+export function suggestions(targets: BlockTarget[], content: Content): string[] {
+  return targets.flatMap((target) => {
+    if (target.kind === 'country') return [`Play a map focused on ${label(target.key)}`];
+    if (target.kind === 'pair') {
+      const { picked, truth } = parsePairKey(target.key);
+      const scope = pairScope(content.cards, picked, truth);
+      return [`Play a map focused on ${label(truth, scope)} and ${label(picked, scope)}`];
+    }
+    return [];
+  });
 }

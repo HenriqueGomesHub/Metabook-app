@@ -1,5 +1,5 @@
 import { haversineKm, mastery, medalFor, pickTip, roundScore } from '@metabook/core';
-import type { PickedTip } from '@metabook/core';
+import type { PickedTip, Tip } from '@metabook/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
 import { useAppData } from '../app/AppData';
@@ -32,6 +32,9 @@ const CALLOUTS: Record<string, [number, number]> = {
 
 const fmt = (n: number) => n.toLocaleString('en-US');
 
+/** Pattern tips name digit groups like "4x"; prefer the one for the code being revealed. */
+const mentionsGroup = (digit: string) => (tip: Tip) => new RegExp(`\\b${digit}x\\b`).test(tip.text);
+
 function shuffled<T>(items: T[]): T[] {
   const copy = [...items];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -60,6 +63,7 @@ interface Result {
 function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
   const { answer, recordTipView } = useAppData();
   const now = useMemo(() => new Date(), []);
+  const touch = useMemo(() => window.matchMedia?.('(hover: none)').matches ?? false, []);
   const byCode = useMemo(() => new Map(brStates.states.map((s) => [s.code, s])), []);
   const cards = useMemo(
     () =>
@@ -121,7 +125,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
         {cards.length > 0 && (
           <span className="medal-pill" title="Area-code mastery">
             {medal && <Medal medal={medal} size={20} />}
-            <span className="cap">{medal ?? 'No medal yet'}</span> · {pct(medalValue)}%
+            {medal ? <span className="cap">{medal}</span> : 'No medal yet'} · {pct(medalValue)}%
           </span>
         )}
       </div>
@@ -183,8 +187,9 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
   const hovered = hover ? byCode.get(hover) : undefined;
   const answerDigits = digits.get(card.answer) ?? new Set<string>();
 
-  function showTip() {
-    const next = pickTip(data.content.tips, PATTERN_TIP, 'areacode', data.tipViews);
+  function showTip(digit?: string) {
+    const prefer = digit ? mentionsGroup(digit) : undefined;
+    const next = pickTip(data.content.tips, PATTERN_TIP, 'areacode', data.tipViews, 0, prefer);
     setTip(next);
     if (next) recordTipView(next.tip.id);
   }
@@ -209,7 +214,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
     });
     setPicked(code);
     setResults([...results, { correct, km, points }]);
-    showTip();
+    showTip(card.prompt.value.charAt(0));
   }
 
   function next() {
@@ -243,7 +248,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
             <div key={index} className="ddd-code headline">
               {card.prompt.value}
             </div>
-            <p>Click the state. Closer is better.</p>
+            <p>{touch ? 'Tap' : 'Click'} the state. Closer is better.</p>
           </div>
           {picked && result && answerState && (
             <div className="ddd-result rise">
@@ -267,7 +272,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
                 <div>
                   <TipBox label="The pattern" picked={tip} />
                   <div className="ddd-tip-actions">
-                    <button type="button" className="link" onClick={showTip}>
+                    <button type="button" className="link" onClick={() => showTip()}>
                       Another tip
                     </button>
                   </div>
@@ -285,7 +290,13 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
 
         <div className="ddd-map-wrap rise d2">
           <div className={hovered || picked ? 'ddd-hover' : 'ddd-hover idle'} aria-live="polite">
-            {hovered ? hovered.name : picked ? '' : 'Hover a state to see its name'}
+            {hovered
+              ? hovered.name
+              : picked
+                ? ''
+                : touch
+                  ? 'Tap a state to answer'
+                  : 'Hover a state to see its name'}
           </div>
           <svg
             className="ddd-map"
@@ -338,6 +349,25 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
                 >
                   {state.code}
                 </text>
+              );
+            })}
+            {brStates.states.map((state) => {
+              const callout = CALLOUTS[state.code];
+              if (!callout) return null;
+              // the label itself ignores the pointer; this invisible box makes it pickable
+              return (
+                <rect
+                  key={state.code}
+                  className={picked ? 'ddd-hit lock' : 'ddd-hit'}
+                  aria-hidden="true"
+                  x={callout[0] - 4}
+                  y={callout[1] - 12}
+                  width={26}
+                  height={16}
+                  onClick={() => pick(state.code)}
+                  onMouseEnter={() => setHover(state.code)}
+                  onMouseLeave={() => setHover(null)}
+                />
               );
             })}
             {picked && pickedState && answerState && (

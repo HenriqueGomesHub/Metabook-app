@@ -137,6 +137,8 @@ export interface Settings {
   blockDays: number;
   blockMinutes: number;
   formats: ('move' | 'nm' | 'nmpz')[];
+  /** country ids the learner picked to focus on */
+  focusCountries?: string[];
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -146,6 +148,7 @@ export const DEFAULT_SETTINGS: Settings = {
   blockDays: 14,
   blockMinutes: 20,
   formats: ['move', 'nm', 'nmpz'],
+  focusCountries: [],
 };
 
 export type Medal = 'gold' | 'silver' | 'bronze' | null;

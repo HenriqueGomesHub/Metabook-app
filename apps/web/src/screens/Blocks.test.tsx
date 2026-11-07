@@ -4,9 +4,9 @@ import { describe, expect, it, vi } from 'vitest';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
 
-vi.mock('../data/content', async () => {
+vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { loadContent: async () => content };
+  return { ...(await importOriginal<object>()), loadContent: async () => content };
 });
 
 describe('Blocks', () => {
@@ -31,6 +31,8 @@ describe('Blocks', () => {
     renderScreens('/blocks', repo);
     fireEvent.click(await screen.findByRole('button', { name: /Start block/ }));
     fireEvent.click(await screen.findByRole('button', { name: 'End early' }));
+    expect(repo.blocks[0]?.status).toBe('active');
+    fireEvent.click(await screen.findByRole('button', { name: 'End block' }));
     await waitFor(() => expect(repo.blocks[0]?.status).toBe('ended-early'));
     expect(repo.blocks[0]?.final).toBeTruthy();
     expect(await screen.findByRole('region', { name: 'Finished blocks' })).toBeTruthy();

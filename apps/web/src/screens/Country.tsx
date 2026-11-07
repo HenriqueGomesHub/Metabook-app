@@ -4,10 +4,11 @@ import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { pairLabel, scopeOf } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
-import { answerLabel, pct, WEAK } from './atlas/format';
+import { pct, WEAK } from './atlas/format';
 import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
 
@@ -21,9 +22,13 @@ const STEPS = [
 ];
 
 export function Country() {
-  const { data, error } = useAppData();
+  const { data, error, saveSettings } = useAppData();
   const { country = '' } = useParams();
-  return data ? <CountryView data={data} code={country.toUpperCase()} /> : <Status error={error} />;
+  return data ? (
+    <CountryView data={data} code={country.toUpperCase()} saveSettings={saveSettings} />
+  ) : (
+    <Status error={error} />
+  );
 }
 
 function chapterLink(id: string): string {
@@ -32,9 +37,19 @@ function chapterLink(id: string): string {
     : `/session?chapter=${encodeURIComponent(id)}`;
 }
 
-function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
+function CountryView({
+  data,
+  code,
+  saveSettings,
+}: {
+  data: AppSnapshot;
+  code: string;
+  saveSettings: (settings: AppSnapshot['settings']) => Promise<void>;
+}) {
   const now = useMemo(() => new Date(), []);
-  const [focus, setFocus] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const focusCountries = data.settings.focusCountries ?? [];
+  const focus = focusCountries.includes(code);
   const country = data.content.pool.find((c) => c.code === code);
 
   const view = useMemo(() => {
@@ -52,11 +67,12 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
           value: mastery(chapterIds, data.states, now),
         };
       });
-    const answers = new Set(cards.map((card) => card.answer));
+    const typeByAnswer = new Map(cards.map((card) => [card.answer, card.type]));
     const misses = data.confusions
-      .filter((c) => answers.has(c.truth) && c.count > 0)
+      .filter((c) => typeByAnswer.has(c.truth) && c.count > 0)
       .sort((a, b) => b.count - a.count)
-      .slice(0, TOP_MISSES);
+      .slice(0, TOP_MISSES)
+      .map((c) => ({ ...c, type: typeByAnswer.get(c.truth) }));
     const due = ids.filter((id) => {
       const state = data.states[id];
       return state && state.state !== 'new' && Date.parse(state.due) <= now.getTime();
@@ -78,6 +94,20 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
   }
 
   const { cards, chapters, misses, due, value } = view;
+
+  async function toggleFocus() {
+    setSaving(true);
+    try {
+      await saveSettings({
+        ...data.settings,
+        focusCountries: focus
+          ? focusCountries.filter((c) => c !== code)
+          : [...focusCountries, code],
+      });
+    } finally {
+      setSaving(false);
+    }
+  }
   const percent = pct(value);
   const medal = cards.length > 0 ? medalFor(value) : null;
 
@@ -141,7 +171,8 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
               type="button"
               className="tog"
               aria-pressed={focus}
-              onClick={() => setFocus(!focus)}
+              disabled={saving}
+              onClick={toggleFocus}
             >
               <svg className="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
                 <circle cx="12" cy="12" r="8" />
@@ -154,27 +185,38 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
           {chapters.length > 0 && (
             <nav aria-label={`${country.name} chapters`}>
               {chapters.map((chapter, i) => {
-                const chapterMedal = chapter.cardCount > 0 ? medalFor(chapter.value) : null;
+                const style = { '--i': i } as React.CSSProperties;
+                if (chapter.cardCount === 0) {
+                  return (
+                    <div key={chapter.id} className="chapter-row chapter-empty" style={style}>
+                      <span className="chapter-n">{String(chapter.order).padStart(2, '0')}</span>
+                      <span>
+                        <span className="chapter-title">{chapter.title}</span>
+                        <span className="chapter-sub">{chapter.subtitle}</span>
+                      </span>
+                      <span className="chapter-pct chapter-soon">No cards yet</span>
+                    </div>
+                  );
+                }
+                const chapterMedal = medalFor(chapter.value);
                 return (
                   <Link
                     key={chapter.id}
                     className="chapter-row"
                     to={chapterLink(chapter.id)}
-                    style={{ '--i': i } as React.CSSProperties}
+                    style={style}
                   >
                     <span className="chapter-n">{String(chapter.order).padStart(2, '0')}</span>
                     <span>
                       <span className="chapter-title">{chapter.title}</span>
                       <span className="chapter-sub">{chapter.subtitle}</span>
                     </span>
-                    <span className="bar" aria-hidden="true">
-                      {chapter.cardCount > 0 && (
-                        <div
-                          className={chapter.value < WEAK ? 'weak' : undefined}
-                          style={{ width: `${pct(chapter.value)}%` }}
-                        />
-                      )}
-                    </span>
+                    <div className="bar" aria-hidden="true">
+                      <div
+                        className={chapter.value < WEAK ? 'weak' : undefined}
+                        style={{ width: `${pct(chapter.value)}%` }}
+                      />
+                    </div>
                     <span className="chapter-pct">
                       {chapterMedal && (
                         <i
@@ -184,7 +226,7 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
                           style={{ background: `var(--${chapterMedal})` }}
                         />
                       )}
-                      {chapter.cardCount > 0 ? `${pct(chapter.value)}%` : '—'}
+                      {pct(chapter.value)}%
                     </span>
                     <svg
                       className="icon"
@@ -224,10 +266,7 @@ function CountryView({ data, code }: { data: AppSnapshot; code: string }) {
             ) : (
               misses.map((miss) => (
                 <div key={`${miss.picked}|${miss.truth}`} className="miss-row">
-                  <span>
-                    {answerLabel(miss.picked)} <span className="muted">/</span>{' '}
-                    {answerLabel(miss.truth)}
-                  </span>
+                  <span>{pairLabel(miss.picked, miss.truth, scopeOf(miss.type))}</span>
                   <span className="count">{miss.count}</span>
                 </div>
               ))

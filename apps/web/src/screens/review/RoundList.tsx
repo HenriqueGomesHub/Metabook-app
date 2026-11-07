@@ -9,6 +9,9 @@ const MODE_LABELS = { move: 'Move', nm: 'NM', nmpz: 'NMPZ' } as const;
 const dayLabel = (iso: string) =>
   new Date(iso).toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
 
+const isMiss = (round: Round) => round.guess.country !== round.truth.country;
+
+/** Newest day first; within a day misses come before correct rounds (each newest first). */
 function groupByDay(rounds: Round[]): { label: string; rounds: Round[] }[] {
   const groups: { label: string; rounds: Round[] }[] = [];
   for (const round of rounds) {
@@ -16,6 +19,9 @@ function groupByDay(rounds: Round[]): { label: string; rounds: Round[] }[] {
     const last = groups.at(-1);
     if (last?.label === label) last.rounds.push(round);
     else groups.push({ label, rounds: [round] });
+  }
+  for (const group of groups) {
+    group.rounds = [...group.rounds.filter(isMiss), ...group.rounds.filter((r) => !isMiss(r))];
   }
   return groups;
 }
@@ -32,7 +38,7 @@ export function RoundList({ data }: { data: AppSnapshot }) {
           <h2 className="headline">{label}</h2>
           <ul className="list">
             {rounds.map((round) => {
-              const miss = round.guess.country !== round.truth.country;
+              const miss = isMiss(round);
               const truthName = name(round.truth.country);
               const answer =
                 cards.find((c) => c.type === 'flag' && c.country === round.truth.country)?.answer ??

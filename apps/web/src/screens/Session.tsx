@@ -6,6 +6,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
+import { label, scopeOf } from '../app/labels';
 import { todaySession } from '../app/stats';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
@@ -70,20 +71,18 @@ function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; sco
   const navigate = useNavigate();
   const [queue] = useState(() => {
     const { country, chapter } = scope;
-    const scoped =
-      country || chapter
-        ? {
-            ...data,
-            content: {
-              ...data.content,
-              cards: data.content.cards.filter(
-                (card) =>
-                  (!country || card.country === country) && (!chapter || card.chapter === chapter),
-              ),
-            },
-          }
-        : data;
-    return todaySession(scoped, new Date(), type).queue;
+    const inScope = data.content.cards.filter(
+      (card) =>
+        (!type || card.type === type) &&
+        (!country || card.country === country) &&
+        (!chapter || card.chapter === chapter),
+    );
+    const scoped = { ...data, content: { ...data.content, cards: inScope } };
+    // Contrast rounds only drill pairs whose cards fall inside the filter.
+    const ids = new Set(inScope.map((card) => card.id));
+    return todaySession(scoped, new Date(), type).queue.filter(
+      (item) => !item.contrastPair || ids.has(item.cardId),
+    );
   });
   const [index, setIndex] = useState(0);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
@@ -119,19 +118,39 @@ function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; sco
 
   const otherSide = item.mode === 'binary' ? options.find((o) => o !== card.answer) : undefined;
 
+  /** The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards. */
+  function mainTip(current: Card): PickedTip | null {
+    const { tips } = data.content;
+    return (
+      pickTip(tips, current.answer, current.type, data.tipViews) ??
+      (current.type === 'areacode'
+        ? pickTip(tips, current.id.replace(/:[^:]*$/, ':pattern'), current.type, data.tipViews)
+        : null)
+    );
+  }
+
   function showTips(asideKey: string | undefined) {
     if (!card) return;
-    const tip = pickTip(data.content.tips, card.answer, card.type, data.tipViews);
+    const tip = mainTip(card);
     const asideTip = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
       : null;
+    const name = asideKey && label(asideKey, scopeOf(card.type));
     const aside: Shown['aside'] = asideTip
       ? otherSide
-        ? { label: `And for ${asideKey}`, tip: asideTip, variant: 'aside' }
-        : { label: `Spotting ${asideKey}`, tip: asideTip, variant: 'warn' }
+        ? { label: `And for ${name}`, tip: asideTip, variant: 'aside' }
+        : { label: `Spotting ${name}`, tip: asideTip, variant: 'warn' }
       : undefined;
     setShown({ asideKey, tip, aside });
     for (const picked of [tip, asideTip]) if (picked) recordTipView(picked.tip.id);
+  }
+
+  /** Steps the answer's tip through its rotation; the aside box keeps its own tip. */
+  function anotherTip() {
+    if (!card || !shown) return;
+    const tip = mainTip(card);
+    if (tip) recordTipView(tip.tip.id);
+    setShown({ ...shown, tip });
   }
 
   function onAnswer(given: string) {
@@ -166,18 +185,24 @@ function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; sco
   const reveal = outcome && shown && (
     <Reveal
       {...verdictFor(card, item, outcome, withHeadline)}
-      headline={withHeadline ? card.answer : undefined}
+      headline={withHeadline ? label(card.answer, scopeOf(card.type)) : undefined}
       tip={shown.tip}
       aside={shown.aside}
       onNext={next}
-      onAnotherTip={() => showTips(shown.asideKey)}
+      onAnotherTip={anotherTip}
     />
   );
 
   return (
     <div className="session">
       {item.contrastPair ? (
-        <ContrastBar data={data} item={item} options={options} outcome={outcome} />
+        <ContrastBar
+          data={data}
+          item={item}
+          options={options}
+          outcome={outcome}
+          scope={scopeOf(card.type)}
+        />
       ) : (
         <div className="session-bar rise">
           <CloseButton to="/" label="Leave session" />
@@ -232,9 +257,10 @@ function verdictFor(
   if (outcome.correct)
     return { verdict: withHeadline ? 'Right' : 'Right. Here’s why', tone: 'right' };
   if (!outcome.given) return { verdict: 'Now you know', tone: 'neutral' };
-  if (withHeadline) return { verdict: `You said ${outcome.given}`, tone: 'wrong' };
+  const scope = scopeOf(card.type);
+  if (withHeadline) return { verdict: `You said ${label(outcome.given, scope)}`, tone: 'wrong' };
   const reset = item.contrastPair ? '. Streak reset' : '';
-  return { verdict: `It’s ${card.answer}${reset}`, tone: 'wrong' };
+  return { verdict: `It’s ${label(card.answer, scope)}${reset}`, tone: 'wrong' };
 }
 
 function ContrastBar({
@@ -242,11 +268,13 @@ function ContrastBar({
   item,
   options,
   outcome,
+  scope,
 }: {
   data: AppSnapshot;
   item: SessionItem;
   options: string[];
   outcome: Outcome | null;
+  scope?: 'br';
 }) {
   const [picked, truth] = item.contrastPair as [string, string];
   const streak =
@@ -262,7 +290,7 @@ function ContrastBar({
             <circle cx="9" cy="12" r="5.5" />
             <circle cx="15" cy="12" r="5.5" />
           </svg>
-          {options[0]} vs {options[1]}
+          {label(options[0] as string, scope)} vs {label(options[1] as string, scope)}
         </span>
       </div>
       <div
@@ -283,10 +311,33 @@ function ContrastBar({
 
 function Summary({ total, results }: { total: number; results: boolean[] }) {
   const right = results.filter(Boolean).length;
+  if (total === 0) {
+    return (
+      <main className="stage stage-narrow summary">
+        <div className="rise">
+          <p className="kicker">Nothing due</p>
+          <h1 className="headline">All caught up</h1>
+          <p className="summary-sub">Come back later, or keep practising with a drill or a game.</p>
+        </div>
+        <div className="summary-actions rise d1">
+          <LinkButton to="/drills">
+            Drills
+            <ArrowIcon />
+          </LinkButton>
+          <LinkButton to="/games" variant="ghost">
+            Mini-games
+          </LinkButton>
+          <LinkButton to="/" variant="ghost">
+            Back to Today
+          </LinkButton>
+        </div>
+      </main>
+    );
+  }
   return (
     <main className="stage stage-narrow summary">
       <div className="rise">
-        <p className="kicker">{total === 0 ? 'Nothing due' : 'Session done'}</p>
+        <p className="kicker">Session done</p>
         <h1 className="headline">
           {results.length} {results.length === 1 ? 'card' : 'cards'}
         </h1>
