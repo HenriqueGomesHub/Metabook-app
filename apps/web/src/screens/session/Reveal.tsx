@@ -1,52 +1,91 @@
 import type { PickedTip } from '@metabook/core';
+import { useId } from 'react';
 import { Button } from '../../components/Button';
-import { TipBox } from '../../components/TipBox';
+
+export type Tone = 'right' | 'wrong' | 'neutral';
 
 export interface RevealProps {
   verdict: string;
-  tone: 'right' | 'wrong' | 'neutral';
-  /** the answer as a headline; when omitted the verdict labels the tip box instead */
-  headline?: string;
+  tone: Tone;
+  /** one short line under the verdict, e.g. what was typed */
+  detail?: string;
   tip: PickedTip | null;
-  aside?: { label: string; tip: PickedTip; variant: 'warn' | 'aside' };
+  /** a tip about another option: the wrong pick, or the other lookalike */
+  aside?: { label: string; tip: PickedTip };
   onNext(): void;
   /** omit to hide the "Another tip" button */
   onAnotherTip?(): void;
   nextLabel?: string;
 }
 
+/**
+ * The explanation shown after an answer. It enters once the verdict animation on the options has
+ * played: a bottom sheet on phones, a panel over the answer column on desktop. Continue takes
+ * focus; Space or Enter advances.
+ */
 export function Reveal({
   verdict,
   tone,
-  headline,
+  detail,
   tip,
   aside,
   onNext,
   onAnotherTip,
-  nextLabel = 'Next',
+  nextLabel = 'Continue',
 }: RevealProps) {
+  const id = useId();
+  const rotates = onAnotherTip && (tip?.total ?? 0) > 1;
   return (
-    <div className="reveal rise">
-      {headline !== undefined && (
+    <section
+      className={`reveal reveal-${tone}`}
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby={id}
+    >
+      <div className="reveal-body">
         <div className="reveal-head">
-          <p className={`verdict verdict-${tone}`}>{verdict}</p>
-          <h1 className="headline">{headline}</h1>
+          <h2 id={id} className="headline">
+            {verdict}
+          </h2>
+          {detail && <p>{detail}</p>}
         </div>
-      )}
-      {headline === undefined && !tip && <p className={`verdict verdict-${tone}`}>{verdict}</p>}
-      {tip && <TipBox label={headline === undefined ? verdict : 'Remember'} picked={tip} />}
-      {aside && <TipBox label={aside.label} picked={aside.tip} variant={aside.variant} />}
-      <div className="reveal-actions">
-        <Button onClick={onNext} autoFocus>
-          {nextLabel}
-          <kbd>Space</kbd>
-        </Button>
-        {onAnotherTip && (tip?.total ?? 0) > 1 && (
-          <Button variant="ghost" onClick={onAnotherTip}>
-            Another tip
-          </Button>
+        {tip && (
+          <div className="reveal-tip">
+            <p key={tip.tip.id} className="swap">
+              {tip.tip.text}
+            </p>
+            <div className="reveal-meta">
+              <span>
+                Tip {tip.index + 1} of {tip.total}
+              </span>
+              {rotates && (
+                <button type="button" className="link" onClick={onAnotherTip}>
+                  Another tip
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+        {aside && (
+          <div className="reveal-aside">
+            <p className="reveal-aside-label">{aside.label}</p>
+            <p>{aside.tip.tip.text}</p>
+          </div>
         )}
       </div>
-    </div>
+      <Button className="reveal-next" onClick={onNext} autoFocus>
+        {nextLabel}
+        <kbd>Space</kbd>
+      </Button>
+    </section>
+  );
+}
+
+/** Polite live region announcing the verdict; keep it mounted across cards. */
+export function VerdictAnnouncer({ text }: { text: string }) {
+  return (
+    <p className="sr-only" aria-live="polite">
+      {text}
+    </p>
   );
 }

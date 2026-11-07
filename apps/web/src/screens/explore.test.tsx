@@ -189,6 +189,6 @@ describe('Stats', () => {
     expect(screen.getByText('Recall in a week', { selector: '.kpi-label' })).toBeTruthy();
     expect(screen.getAllByText('—')).toHaveLength(2);
     expect(screen.getByText('Cards learned').previousElementSibling?.textContent).toBe('0');
-    expect(screen.getByText('No confusions yet.')).toBeTruthy();
+    expect(screen.getByRole('region', { name: 'No confusions yet' })).toBeTruthy();
   });
 });

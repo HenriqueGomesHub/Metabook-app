@@ -7,6 +7,11 @@ export interface CardPrompt {
   value: string;
   ratio?: string;
   lang?: string;
+  /** image prompts: description used as alt text, and as a text fallback if the image fails */
+  alt?: string;
+  /** image prompts: attribution shown over the image, e.g. "Author · Licence" */
+  credit?: string;
+  creditUrl?: string;
 }
 
 export interface Card {

@@ -9,6 +9,7 @@ import { activeBlock } from '../app/dataActions';
 import { pairLabel } from '../app/labels';
 import { pairScope, practisedDays, streakLength, todaySession, weakestGroup } from '../app/stats';
 import { ArrowIcon, LinkButton } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 
@@ -78,16 +79,11 @@ function TodayView({ data }: { data: AppSnapshot }) {
       <Header user={data.user} date={now} />
 
       {empty ? (
-        <section className="today-empty rise d1">
-          <h1 className="headline">No cards yet</h1>
-          <p>
-            Metabook has nothing to study until some cards exist. Add your first ones in the editor.
-          </p>
-          <LinkButton to="/editor">
-            Open the editor
-            <ArrowIcon />
-          </LinkButton>
-        </section>
+        <EmptyState
+          title="No cards yet"
+          text="Add your first cards in the editor to start studying."
+          actions={[{ label: 'Open the editor', to: '/editor' }]}
+        />
       ) : (
         <div className="today-grid">
           <section className="rise d1">

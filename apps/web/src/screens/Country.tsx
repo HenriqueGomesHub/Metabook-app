@@ -6,6 +6,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { pairLabel, scopeOf } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
+import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { pct, WEAK } from './atlas/format';
@@ -84,11 +85,11 @@ function CountryView({
     return (
       <div className="page">
         <Header user={data.user} />
-        <main className="page-main">
-          <p className="muted">
-            That country isn’t in the pool. <Link to="/atlas">Back to the atlas</Link>
-          </p>
-        </main>
+        <EmptyState
+          title="Not in the pool"
+          text="That country isn’t part of the competitive pool."
+          actions={[{ label: 'Back to Atlas', to: '/atlas' }]}
+        />
       </div>
     );
   }
@@ -164,9 +165,7 @@ function CountryView({
                 Study {country.name}
                 <ArrowIcon />
               </LinkButton>
-            ) : (
-              <p className="muted">No cards for {country.name} yet.</p>
-            )}
+            ) : null}
             <button
               type="button"
               className="tog"
@@ -182,7 +181,15 @@ function CountryView({
             </button>
           </div>
 
-          {chapters.length > 0 && (
+          {cards.length === 0 && (
+            <EmptyState
+              size="compact"
+              title={`No cards for ${country.name} yet`}
+              text="Its chapters fill in as cards are added."
+              actions={[{ label: 'Open the editor', to: '/editor' }]}
+            />
+          )}
+          {cards.length > 0 && chapters.length > 0 && (
             <nav aria-label={`${country.name} chapters`}>
               {chapters.map((chapter, i) => {
                 const style = { '--i': i } as React.CSSProperties;
@@ -262,7 +269,11 @@ function CountryView({
           <div className="card-box">
             <h2>Where you miss in {country.name}</h2>
             {misses.length === 0 ? (
-              <p className="muted small">No misses logged yet.</p>
+              <EmptyState
+                size="compact"
+                title="No misses yet"
+                text={`Missed rounds in ${country.name} show up here.`}
+              />
             ) : (
               misses.map((miss) => (
                 <div key={`${miss.picked}|${miss.truth}`} className="miss-row">

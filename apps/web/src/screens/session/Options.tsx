@@ -1,4 +1,5 @@
 import { label } from '../../app/labels';
+import { Mark, optionState } from './Mark';
 import type { Outcome } from './types';
 import { useKeys } from './useKeys';
 
@@ -27,13 +28,7 @@ export function Options({
   return (
     <div className={className}>
       {options.map((option, i) => {
-        let state = '';
-        let mark = '';
-        if (outcome) {
-          if (option === answer) [state, mark] = ['ok', 'Answer'];
-          else if (option === outcome.given) [state, mark] = ['bad', 'Your pick'];
-          else state = 'dim';
-        }
+        const { state, mark } = optionState(option, answer, outcome?.given);
         return (
           <button
             key={option}
@@ -44,7 +39,7 @@ export function Options({
           >
             <kbd>{i + 1}</kbd>
             {label(option, scope)}
-            {mark && <span className="opt-mark">{mark}</span>}
+            {mark && <Mark kind={mark} />}
           </button>
         );
       })}

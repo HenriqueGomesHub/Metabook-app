@@ -1,13 +1,16 @@
 import type { BlockTarget } from '@metabook/core';
+import { EmptyState } from '../../components/EmptyState';
 import type { Content } from '../../data/content';
 import { suggestions, targetLabel } from './targets';
 
 export function Targets({ targets, content }: { targets: BlockTarget[]; content: Content }) {
   if (targets.length === 0) {
     return (
-      <p className="note">
-        No weak spots yet. Play a few games or drills first; the block still tracks your time.
-      </p>
+      <EmptyState
+        size="compact"
+        title="No weak spots yet"
+        text="Play a few games or drills first; the block still tracks your time."
+      />
     );
   }
   return (

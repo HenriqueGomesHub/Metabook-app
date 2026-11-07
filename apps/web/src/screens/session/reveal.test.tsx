@@ -1,6 +1,6 @@
 import type { Card, Tip } from '@metabook/core';
 import { DEFAULT_SETTINGS } from '@metabook/core';
-import { fireEvent, screen } from '@testing-library/react';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { MemoryRepository } from '../../test/MemoryRepository';
 import { renderApp } from '../../test/render';
@@ -56,12 +56,32 @@ const repo = (newPerDay = 1) => {
 };
 
 describe('Session reveal', () => {
-  it('shows area-code states by name and falls back to the pattern tip', async () => {
-    renderApp('/session?type=areacode', repo());
-    expect((await screen.findAllByRole('button', { name: /São Paulo/ })).length).toBe(1);
-    fireEvent.click(screen.getAllByRole('button', { name: /^\d/ })[0] as HTMLElement);
-    expect(await screen.findByText('Tip p1')).toBeTruthy();
+  it('answers area codes on the map and falls back to the pattern tip', async () => {
+    const r = repo();
+    renderApp('/session?type=areacode', r);
+    await screen.findByRole('group', { name: 'Map of Brazil with state borders' });
+    const code = document.querySelector('.areacode')?.textContent;
+    const answer = cards.find((c) => c.type === 'areacode' && c.prompt.value === code) as Card;
+    const name = { SP: 'São Paulo', MG: 'Minas Gerais', BA: 'Bahia', RJ: 'Rio de Janeiro' }[
+      answer.answer
+    ] as string;
+    fireEvent.click(screen.getByRole('button', { name }));
+    expect(screen.getByRole('dialog', { name: 'Got it' })).toBeTruthy();
+    expect(screen.getByText('Tip p1')).toBeTruthy();
     expect(screen.queryByRole('button', { name: 'Another tip' })).toBeNull();
+    // the map locks once answered
+    expect(screen.getByRole('button', { name }).getAttribute('aria-disabled')).toBe('true');
+    await waitFor(() => expect(r.reviews[0]).toMatchObject({ cardId: answer.id, correct: true }));
+  });
+
+  it('names the right state when the map pick is wrong', async () => {
+    const r = repo();
+    renderApp('/session?type=areacode', r);
+    await screen.findByRole('group', { name: 'Map of Brazil with state borders' });
+    fireEvent.click(screen.getByRole('button', { name: 'Amazonas' }));
+    const dialog = screen.getByRole('dialog', { name: /^Not quite — it’s / });
+    expect(within(dialog).getByText('You said Amazonas')).toBeTruthy();
+    await waitFor(() => expect(r.confusions[0]).toMatchObject({ picked: 'AM' }));
   });
 
   it('labels regions in options and verdicts, and offers another tip only for the main tip', async () => {
@@ -79,7 +99,7 @@ describe('Session reveal', () => {
 
   it('shows an all-caught-up state with links when nothing is due', async () => {
     renderApp('/session', repo(0));
-    expect(await screen.findByText('All caught up')).toBeTruthy();
+    expect(await screen.findByRole('region', { name: 'All caught up' })).toBeTruthy();
     expect(screen.getByRole('link', { name: /Drills/ }).getAttribute('href')).toBe('/drills');
     expect(screen.getByRole('link', { name: 'Mini-games' }).getAttribute('href')).toBe('/games');
   });

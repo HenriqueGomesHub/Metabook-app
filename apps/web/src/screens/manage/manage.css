@@ -12,6 +12,11 @@
   max-width: 920px;
 }
 
+/* an empty page centres its empty state on the page, not in the form column */
+.manage:has(> .empty-area) {
+  max-width: none;
+}
+
 .sheet {
   display: flex;
   flex-direction: column;

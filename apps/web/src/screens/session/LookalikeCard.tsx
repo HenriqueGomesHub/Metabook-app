@@ -1,5 +1,7 @@
 import { label, scopeOf } from '../../app/labels';
+import { Mark, optionState } from './Mark';
 import { Prompt } from './Prompt';
+import { Question, Stage } from './Stage';
 import type { CardProps } from './types';
 import { useKeys } from './useKeys';
 
@@ -12,41 +14,44 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
     if (event.key === 'ArrowRight') onAnswer(right);
   }, outcome === null);
 
-  const state = (option: string) => {
-    if (!outcome) return '';
-    if (option === card.answer) return 'ok';
-    return option === outcome.given ? 'bad' : 'dim';
+  const pick = (option: string, key: 'left' | 'right') => {
+    const { state, mark } = optionState(option, card.answer, outcome?.given);
+    return (
+      <button
+        type="button"
+        className={`pick ${state}`}
+        disabled={outcome !== null}
+        onClick={() => onAnswer(option)}
+      >
+        <kbd aria-label={key === 'left' ? 'Left arrow' : 'Right arrow'}>
+          {key === 'left' ? '←' : '→'}
+        </kbd>
+        {label(option, scope)}
+        {mark && <Mark kind={mark} />}
+      </button>
+    );
   };
 
   return (
-    <main className="stage stage-wide">
-      <div className="scene scene-16x7 settle">
-        <Prompt
-          prompt={card.prompt}
-          alt={`Is this ${label(left, scope)} or ${label(right, scope)}?`}
-        />
-      </div>
-      <div className="picks rise d1">
-        <button
-          type="button"
-          className={`pick ${state(left)}`}
-          disabled={outcome !== null}
-          onClick={() => onAnswer(left)}
-        >
-          <kbd aria-label="Left arrow">←</kbd>
-          {label(left, scope)}
-        </button>
-        <button
-          type="button"
-          className={`pick ${state(right)}`}
-          disabled={outcome !== null}
-          onClick={() => onAnswer(right)}
-        >
-          {label(right, scope)}
-          <kbd aria-label="Right arrow">→</kbd>
-        </button>
-      </div>
-      {reveal}
-    </main>
+    <Stage
+      main={
+        <div className="scene settle" style={{ '--ar': 16 / 9 } as React.CSSProperties}>
+          <Prompt
+            prompt={card.prompt}
+            alt={`Is this ${label(left, scope)} or ${label(right, scope)}?`}
+          />
+        </div>
+      }
+      side={
+        <>
+          <Question>Which one?</Question>
+          <div className="picks rise d2">
+            {pick(left, 'left')}
+            {pick(right, 'right')}
+          </div>
+        </>
+      }
+      reveal={reveal}
+    />
   );
 }
