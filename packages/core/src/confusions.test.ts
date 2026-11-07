@@ -24,6 +24,13 @@ describe('recordAnswer', () => {
     expect(recordAnswer(confusions, 'BG', 'BG', true, now)).toBe(confusions);
   });
 
+  it('never moves lastSeen backwards when called out of order', () => {
+    const later = recordAnswer([], 'BG', 'RS', false, now);
+    const result = recordAnswer(later, 'BG', 'RS', false, daysAgo(2));
+    expect(result[0]?.lastSeen).toBe(now.toISOString());
+    expect(result[0]?.count).toBe(2);
+  });
+
   it('inserts then increments a directed pair', () => {
     const confusions = recordAnswer(missTimes(2), 'BG', 'RS', false, now);
     expect(confusions).toEqual([

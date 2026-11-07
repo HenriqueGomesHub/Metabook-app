@@ -126,20 +126,28 @@ export function buildSession(input: {
   const stateOf = (card: Card) => states[card.id];
   const isSeen = (card: Card) => (stateOf(card)?.state ?? 'new') !== 'new';
 
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
   const due = cards
     .filter((card) => isSeen(card) && Date.parse(stateOf(card)?.due ?? '') <= now.getTime())
     .sort((a, b) => (stateOf(a)?.due ?? '').localeCompare(stateOf(b)?.due ?? ''));
   const cap = settings.maxReviewsPerDay;
+  const overdue = due.filter((card) => Date.parse(stateOf(card)?.due ?? '') < startOfToday);
+  const catchUp = overdue.length > CATCH_UP_FACTOR * cap;
   const reviews = due.slice(0, cap);
-  const fresh = [
-    ...cards.filter((card) => !isSeen(card) && isTarget(card)),
-    ...cards.filter((card) => !isSeen(card) && !isTarget(card)),
-  ].slice(0, settings.newPerDay);
+  const fresh = catchUp
+    ? []
+    : [
+        ...cards.filter((card) => !isSeen(card) && isTarget(card)),
+        ...cards.filter((card) => !isSeen(card) && !isTarget(card)),
+      ].slice(0, settings.newPerDay);
 
   const picked = new Set([...reviews, ...fresh]);
   const total = picked.size;
   const onTarget = [...picked].filter(isTarget).length;
-  const missing = Math.max(0, Math.ceil((BLOCK_SHARE * total - onTarget) / (1 - BLOCK_SHARE)));
+  const missing = Math.min(
+    Math.max(0, cap - reviews.length),
+    Math.max(0, Math.ceil((BLOCK_SHARE * total - onTarget) / (1 - BLOCK_SHARE))),
+  );
   const blockExtras = cards
     .filter((card) => isTarget(card) && isSeen(card) && !picked.has(card))
     .map((card) => ({ card, r: retrievability(stateOf(card) as CardState, now) }))
@@ -147,13 +155,21 @@ export function buildSession(input: {
     .slice(0, missing)
     .map(({ card }) => card);
 
-  const ordered = interleave(mix(shuffle([...reviews, ...blockExtras], rng), shuffle(fresh, rng)));
+  const contrast = activePairs(confusions, now).flatMap((c) => contrastItems(c, cards, rng));
+  const contrastIds = new Set(contrast.map((item) => item.cardId));
+  const notContrast = (card: Card) => !contrastIds.has(card.id);
+  const ordered = interleave(
+    mix(
+      shuffle([...reviews, ...blockExtras].filter(notContrast), rng),
+      shuffle(fresh.filter(notContrast), rng),
+    ),
+  );
   return {
     queue: [
-      ...activePairs(confusions, now).flatMap((c) => contrastItems(c, cards, rng)),
+      ...contrast,
       ...ordered.map((card) => ({ cardId: card.id, mode: modeFor(card, stateOf(card)) })),
     ],
-    catchUp: due.length > CATCH_UP_FACTOR * cap,
+    catchUp,
     remaining: due.length - reviews.length,
   };
 }

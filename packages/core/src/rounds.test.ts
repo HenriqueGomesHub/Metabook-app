@@ -87,6 +87,33 @@ describe('ingestRounds', () => {
   });
 });
 
+describe('ingestRounds ordering and duplicates', () => {
+  const day = (d: number) => `2026-03-0${d}T00:00:00Z`;
+  const rounds = [
+    round('RS', 'BG', 1, day(1)),
+    round('RS', 'BG', 1, day(5)),
+    round('RS', 'BG', 1, day(3)),
+  ];
+
+  it('gives the same result for newest-first input as chronological input', () => {
+    const chronological = [...rounds].sort((a, b) => a.playedAt.localeCompare(b.playedAt));
+    const newestFirst = [...chronological].reverse();
+    expect(ingestRounds(newestFirst, [], {}, {}, now)).toEqual(
+      ingestRounds(chronological, [], {}, {}, now),
+    );
+    expect(ingestRounds(newestFirst, [], {}, {}, now).confusions[0]?.lastSeen).toBe(
+      '2026-03-05T00:00:00.000Z',
+    );
+  });
+
+  it('ignores round ids already ingested and repeated within the batch', () => {
+    const seenIds = new Set([rounds[0]?.id ?? '']);
+    const result = ingestRounds([...rounds, ...rounds], [], {}, {}, now, seenIds);
+    expect(result.summary).toMatchObject({ rounds: 2, misses: 2 });
+    expect(result.confusions[0]?.count).toBe(2);
+  });
+});
+
 describe('snapshot', () => {
   const cards = [card('flag:rs', 'RS', 'Serbia'), card('flag:pe', 'PE', 'Peru')];
   const review = (
@@ -103,6 +130,22 @@ describe('snapshot', () => {
     usedHint: false,
     msTaken: 4000,
     reviewedAt,
+  });
+
+  it('normalizes drill confusion keys so typos in case do not split pairs', () => {
+    const reviews = [
+      review('flag:pe', false, 'Bolivia'),
+      review('flag:pe', false, ' bolivia ', '2026-03-11T00:00:00Z'),
+      review('flag:pe', false, 'BOLÍVIA', '2026-03-12T00:00:00Z'),
+    ];
+    const snap = snapshot([], reviews, cards, since, now);
+    expect(snap.topConfusions).toEqual([{ picked: 'bolivia', truth: 'Peru', count: 3 }]);
+  });
+
+  it('maps a drill answer to the matching card answer', () => {
+    const reviews = [review('flag:pe', false, 'serbia'), review('flag:pe', false, 'SERBIA')];
+    const snap = snapshot([], reviews, cards, since, now);
+    expect(snap.topConfusions).toEqual([{ picked: 'Serbia', truth: 'Peru', count: 2 }]);
   });
 
   it('uses rounds per country where present, else reviews, within the window', () => {
@@ -127,7 +170,7 @@ describe('snapshot', () => {
     expect(snap.avgDistanceKm).toBe(200);
     expect(snap.topConfusions).toEqual([
       { picked: 'BG', truth: 'RS', count: 2 },
-      { picked: 'Bolivia', truth: 'Peru', count: 1 },
+      { picked: 'bolivia', truth: 'Peru', count: 1 },
     ]);
   });
 

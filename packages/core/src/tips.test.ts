@@ -33,6 +33,17 @@ describe('pickTip', () => {
     expect(seen).toEqual(['a', 'b', 'a']);
   });
 
+  it('visits A, B, C in order when a view is recorded on show and "Another tip" calls pickTip with skip=0', () => {
+    const rotation = [tip('a'), tip('b'), tip('c')];
+    const views: TipView[] = [];
+    const visited = ['01', '02', '03'].map((day) => {
+      const picked = pickTip(rotation, 'Brazil', 'flag', views, 0);
+      views.push(view(picked?.tip.id ?? '', `2026-03-${day}T00:00:00Z`));
+      return picked?.tip.id;
+    });
+    expect(visited).toEqual(['a', 'b', 'c']);
+  });
+
   it('steps through with skip for "Another tip" and wraps', () => {
     expect([0, 1, 2].map((skip) => pickTip(tips, 'Brazil', 'flag', [], skip)?.tip.id)).toEqual([
       'a',

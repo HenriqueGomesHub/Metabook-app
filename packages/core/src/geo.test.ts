@@ -18,6 +18,15 @@ describe('haversineKm', () => {
   });
 });
 
+describe('haversineKm antipodes', () => {
+  it('returns about half the circumference, never NaN', () => {
+    const d = haversineKm({ lat: 0, lon: 0 }, { lat: 0, lon: 180 });
+    expect(Number.isNaN(d)).toBe(false);
+    expect(d).toBeCloseTo(20015, -1);
+    expect(haversineKm({ lat: 90, lon: 0 }, { lat: -90, lon: 0 })).toBeCloseTo(20015, -1);
+  });
+});
+
 describe('roundScore', () => {
   it('gives 5000 at 0 km', () => {
     expect(roundScore(0, 700)).toBe(5000);

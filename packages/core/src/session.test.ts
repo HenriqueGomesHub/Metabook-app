@@ -206,7 +206,7 @@ describe('buildSession', () => {
     };
 
     it('tops block targets up to about 40% with the weakest matching cards', () => {
-      const { cards, states } = deck(12, 0);
+      const { cards, states } = deck(10, 0);
       for (let i = 0; i < 20; i++) {
         const c = card(`rs${i}`, 'flag', 'RS');
         cards.push(c);
@@ -219,7 +219,7 @@ describe('buildSession', () => {
         cards,
         states,
         confusions: [],
-        settings,
+        settings: { ...settings, maxReviewsPerDay: 17 },
         block,
         now,
         rng: rng(),
@@ -251,7 +251,14 @@ describe('buildSession', () => {
       cards.push(card('rs0', 'flag', 'RS'));
       states.rs0 = seen('rs0', '2026-03-30T00:00:00Z');
       expect(
-        buildSession({ cards, states, confusions: [], settings, block, now }).queue,
+        buildSession({
+          cards,
+          states,
+          confusions: [],
+          settings: { ...settings, maxReviewsPerDay: 11 },
+          block,
+          now,
+        }).queue,
       ).toHaveLength(11);
     });
   });
@@ -302,5 +309,84 @@ describe('buildSession', () => {
       expect(contrast({ ...confusion(3), picked: 'RS', truth: 'BG' })).toHaveLength(5);
       expect(contrast({ ...confusion(3), picked: 'RS', truth: 'XX' })).toEqual([]);
     });
+  });
+});
+
+describe('buildSession catch-up and dedup', () => {
+  const localNow = new Date(2026, 2, 15, 12, 0);
+  const yesterday = new Date(2026, 2, 14, 23, 0).toISOString();
+  const earlierToday = new Date(2026, 2, 15, 8, 0).toISOString();
+  const dueDeck = (count: number, due: string) => {
+    const cards = Array.from({ length: count }, (_, i) => card(`due${i}`));
+    const states = Object.fromEntries(cards.map((c) => [c.id, seen(c.id, due)]));
+    return { cards, states };
+  };
+
+  it('treats only cards due before the start of today as overdue for catch-up', () => {
+    const today = dueDeck(31, earlierToday);
+    const session = buildSession({ ...today, confusions: [], settings, now: localNow });
+    expect(session.catchUp).toBe(false);
+    const past = dueDeck(31, yesterday);
+    expect(buildSession({ ...past, confusions: [], settings, now: localNow }).catchUp).toBe(true);
+  });
+
+  it('adds no new cards in catch-up', () => {
+    const { cards, states } = dueDeck(31, yesterday);
+    cards.push(card('new0'), card('new1'));
+    const session = buildSession({ cards, states, confusions: [], settings, now: localNow });
+    expect(session.catchUp).toBe(true);
+    expect(session.queue.some((i) => i.cardId.startsWith('new'))).toBe(false);
+  });
+
+  it('counts block extras against the daily review cap', () => {
+    const { cards, states } = dueDeck(8, earlierToday);
+    for (let i = 0; i < 20; i++) {
+      const c = card(`rs${i}`, 'flag', 'RS');
+      cards.push(c);
+      states[c.id] = seen(c.id, '2026-03-30T00:00:00Z');
+    }
+    const block: TrainingBlock = {
+      id: 'b',
+      startsOn: '2026-03-10',
+      endsOn: '2026-03-23',
+      minutesPerDay: 20,
+      targets: [{ kind: 'country', key: 'RS' }],
+      baseline: { takenAt: '2026-03-10T00:00:00Z', perCountry: {}, topConfusions: [] },
+      status: 'active',
+    };
+    const queue = buildSession({
+      cards,
+      states,
+      confusions: [],
+      settings,
+      block,
+      now: localNow,
+    }).queue;
+    expect(queue).toHaveLength(10);
+  });
+
+  it('does not repeat a contrast-round card in the regular list', () => {
+    const cards = [
+      card('flag:rs', 'flag', 'RS', 'Serbia'),
+      card('flag:bg', 'flag', 'BG', 'Bulgaria'),
+    ];
+    const states = {
+      'flag:rs': seen('flag:rs', yesterday),
+      'flag:bg': seen('flag:bg', yesterday),
+    };
+    const confusions: Confusion[] = [
+      {
+        picked: 'Serbia',
+        truth: 'Bulgaria',
+        count: 3,
+        lastSeen: localNow.toISOString(),
+        contrastStreak: 4,
+      },
+    ];
+    const queue = buildSession({ cards, states, confusions, settings, now: localNow }).queue;
+    const contrastItem = queue.find((i) => i.contrastPair);
+    expect(contrastItem?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
+    expect(queue.filter((i) => i.cardId === contrastItem?.cardId)).toHaveLength(1);
+    expect(queue).toHaveLength(2);
   });
 });

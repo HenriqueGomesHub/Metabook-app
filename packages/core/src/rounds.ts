@@ -1,3 +1,4 @@
+import { normalizeAnswer } from './answers';
 import { pairKey, parsePairKey, recordAnswer } from './confusions';
 import { retrievability } from './scheduler';
 import type { Card, CardState, Confusion, Review, Round, Snapshot } from './types';
@@ -21,8 +22,17 @@ export function ingestRounds(
   states: Record<string, CardState>,
   cardsByCountry: Record<string, Card[]>,
   now: Date,
+  seenRoundIds: ReadonlySet<string> = new Set(),
 ): IngestResult {
-  const misses = rounds.filter((r) => r.guess.country !== r.truth.country);
+  const fresh = new Set<string>();
+  const ingested = [...rounds]
+    .sort((a, b) => Date.parse(a.playedAt) - Date.parse(b.playedAt))
+    .filter((r) => {
+      if (seenRoundIds.has(r.id) || fresh.has(r.id)) return false;
+      fresh.add(r.id);
+      return true;
+    });
+  const misses = ingested.filter((r) => r.guess.country !== r.truth.country);
   const nextConfusions = misses.reduce(
     (acc, r) => recordAnswer(acc, r.guess.country, r.truth.country, false, new Date(r.playedAt)),
     confusions,
@@ -47,7 +57,7 @@ export function ingestRounds(
   return {
     confusions: nextConfusions,
     states: nextStates,
-    summary: { rounds: rounds.length, misses: misses.length, pulledForward },
+    summary: { rounds: ingested.length, misses: misses.length, pulledForward },
   };
 }
 
@@ -106,8 +116,11 @@ export function snapshot(
   for (const r of recentRounds) {
     if (r.guess.country !== r.truth.country) countPair(r.guess.country, r.truth.country);
   }
+  const answerByNormalized = new Map(cards.map((c) => [normalizeAnswer(c.answer), c.answer]));
   for (const { review, card } of recentReviews) {
-    if (!review.correct) countPair(review.answerGiven, card.answer);
+    if (review.correct) continue;
+    const given = normalizeAnswer(review.answerGiven);
+    countPair(answerByNormalized.get(given) ?? given, card.answer);
   }
   const topConfusions = [...pairCounts]
     .sort(([ka, a], [kb, b]) => b - a || ka.localeCompare(kb))

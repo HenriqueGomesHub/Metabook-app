@@ -14,7 +14,7 @@ export function haversineKm(a: LatLon, b: LatLon): number {
   const h =
     Math.sin(dLat / 2) ** 2 +
     Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLon / 2) ** 2;
-  return 2 * EARTH_RADIUS_KM * Math.asin(Math.sqrt(h));
+  return 2 * EARTH_RADIUS_KM * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
 /** GeoGuessr-style decay: 5000 at 0 km, falling with scale `k` km (700 for Brazil). */

@@ -35,8 +35,11 @@ export function recordAnswer(
   if (correct) return confusions;
   const pair = { picked, truth };
   const existing = confusions.find((c) => isPair(c, pair));
-  const lastSeen = now.toISOString();
-  if (!existing) return [...confusions, { picked, truth, count: 1, lastSeen, contrastStreak: 0 }];
+  const nowIso = now.toISOString();
+  if (!existing) {
+    return [...confusions, { picked, truth, count: 1, lastSeen: nowIso, contrastStreak: 0 }];
+  }
+  const lastSeen = existing.lastSeen > nowIso ? existing.lastSeen : nowIso;
   const count = isRecent(existing, now) ? existing.count + 1 : 1;
   return confusions.map((c) => (c === existing ? { ...c, count, lastSeen, contrastStreak: 0 } : c));
 }

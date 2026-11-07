@@ -121,6 +121,16 @@ describe('compareBlocks', () => {
   });
 });
 
+describe('compareBlocks pair absent from final', () => {
+  it('treats a pair missing from the final snapshot as 0 misses', () => {
+    const final: Snapshot = { takenAt: now.toISOString(), perCountry: {}, topConfusions: [] };
+    const target = { kind: 'pair', key: 'BG|RS' } as const;
+    expect(compareBlocks([target], baseline, final)).toEqual([
+      { target, before: 4, after: 0, delta: -4 },
+    ]);
+  });
+});
+
 describe('suggestMaps', () => {
   it('names countries from ISO codes and keeps other keys as given', () => {
     expect(

@@ -30,13 +30,19 @@ function editDistance(a: string, b: string): number {
   return at(a.length, b.length);
 }
 
-export function matchesAnswer(input: string, card: Pick<Card, 'answer' | 'aliases'>): boolean {
+export function matchesAnswer(
+  input: string,
+  card: Pick<Card, 'answer' | 'aliases'>,
+  others: readonly string[] = [],
+): boolean {
   const guess = normalizeAnswer(input);
   if (!guess) return false;
+  const isOtherAnswer = others.some((other) => normalizeAnswer(other) === guess);
   return [card.answer, ...(card.aliases ?? [])].some((candidate) => {
     const target = normalizeAnswer(candidate);
     return (
-      guess === target || (target.length >= TYPO_MIN_LENGTH && editDistance(guess, target) <= 1)
+      guess === target ||
+      (!isOtherAnswer && target.length >= TYPO_MIN_LENGTH && editDistance(guess, target) <= 1)
     );
   });
 }

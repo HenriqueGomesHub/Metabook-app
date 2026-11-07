@@ -9,6 +9,14 @@ describe('normalizeAnswer', () => {
 });
 
 describe('matchesAnswer', () => {
+  it('refuses a fuzzy match when the input is another answer in the deck', () => {
+    const gambia = { answer: 'Gambia' };
+    expect(matchesAnswer('Zambia', gambia)).toBe(true);
+    expect(matchesAnswer('Zambia', gambia, ['Zambia'])).toBe(false);
+    expect(matchesAnswer('Gambia', gambia, ['Zambia'])).toBe(true);
+    expect(matchesAnswer('gambai', gambia, ['Zambia'])).toBe(true);
+  });
+
   const card = { answer: 'Lithuania', aliases: ['Lietuva'] };
 
   it('accepts the answer and aliases case- and accent-insensitively', () => {

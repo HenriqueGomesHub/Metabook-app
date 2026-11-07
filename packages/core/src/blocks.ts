@@ -136,7 +136,8 @@ export function compareBlocks(
 ): TargetDelta[] {
   return targets.map((target) => {
     const before = targetValue(target, baseline);
-    const after = targetValue(target, final);
+    const after =
+      target.kind === 'pair' ? (targetValue(target, final) ?? 0) : targetValue(target, final);
     return {
       target,
       before,
