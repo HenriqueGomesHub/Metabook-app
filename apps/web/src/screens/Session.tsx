@@ -40,7 +40,18 @@ export function Session() {
   const [params] = useSearchParams();
   const param = params.get('type');
   const type = param && param in CARD_TYPES ? (param as CardType) : undefined;
-  return data ? <Runner key={type} data={data} type={type} /> : <Status error={error} />;
+  const country = params.get('country')?.toUpperCase() || undefined;
+  const chapter = params.get('chapter') || undefined;
+  return data ? (
+    <Runner
+      key={`${type}|${country}|${chapter}`}
+      data={data}
+      type={type}
+      scope={{ country, chapter }}
+    />
+  ) : (
+    <Status error={error} />
+  );
 }
 
 interface Shown {
@@ -49,10 +60,31 @@ interface Shown {
   aside: RevealProps['aside'];
 }
 
-function Runner({ data, type }: { data: AppSnapshot; type?: CardType }) {
+interface Scope {
+  country?: string;
+  chapter?: string;
+}
+
+function Runner({ data, type, scope }: { data: AppSnapshot; type?: CardType; scope: Scope }) {
   const { answer, recordTipView } = useAppData();
   const navigate = useNavigate();
-  const [queue] = useState(() => todaySession(data, new Date(), type).queue);
+  const [queue] = useState(() => {
+    const { country, chapter } = scope;
+    const scoped =
+      country || chapter
+        ? {
+            ...data,
+            content: {
+              ...data.content,
+              cards: data.content.cards.filter(
+                (card) =>
+                  (!country || card.country === country) && (!chapter || card.chapter === chapter),
+              ),
+            },
+          }
+        : data;
+    return todaySession(scoped, new Date(), type).queue;
+  });
   const [index, setIndex] = useState(0);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const [shown, setShown] = useState<Shown | null>(null);

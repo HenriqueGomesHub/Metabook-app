@@ -8,6 +8,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
+      workbox: { globPatterns: ['**/*.{js,css,html,svg}'] },
       manifest: {
         name: 'Metabook',
         short_name: 'Metabook',

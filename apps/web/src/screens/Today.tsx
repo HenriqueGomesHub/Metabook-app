@@ -1,10 +1,11 @@
-import { activePairs } from '@metabook/core';
+import { activePairs, blockProgress } from '@metabook/core';
 import type { CardType } from '@metabook/core';
 import { useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
+import { activeBlock } from '../app/dataActions';
 import { practisedDays, streakLength, todaySession, weakestGroup } from '../app/stats';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { Header } from '../components/Header';
@@ -55,6 +56,12 @@ function TodayView({ data }: { data: AppSnapshot }) {
   const streak = streakLength(days);
   const confusion = activePairs(data.confusions, now)[0];
   const weakest = weakestGroup(data, now);
+  const activeBlockLine = activeBlock(data);
+  const progress = activeBlockLine && blockProgress(activeBlockLine, data.blockDays, now);
+  const block =
+    activeBlockLine && progress && !progress.finished
+      ? { ...progress, minutes: activeBlockLine.minutesPerDay }
+      : null;
 
   return (
     <div className="today">
@@ -103,64 +110,74 @@ function TodayView({ data }: { data: AppSnapshot }) {
             )}
           </section>
 
-          <section className="panel rise d2">
-            <div>
-              <div className="panel-row panel-title">
-                <span>Today’s mix</span>
-                <span className="muted small">
-                  {queue.length - fresh} review · {fresh} new
-                </span>
-              </div>
-              <div className="mix">
-                {mix.map(({ type, count }, i) => (
-                  <div key={type} style={{ flex: count, background: MIX_COLOURS[i] }} />
-                ))}
-              </div>
-              <ul className="mix-legend">
-                {mix.map(({ type, count }, i) => (
-                  <li key={type}>
-                    <span className="swatch" style={{ background: MIX_COLOURS[i] }} />
-                    {CARD_TYPES[type].label}
-                    <span className="muted">{count}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="rule" />
-            <dl className="facts">
+          <div className="today-side rise d2">
+            <section className="panel">
               <div>
-                <dt>Weakest</dt>
-                <dd>{weakest ?? <span className="muted">Nothing yet</span>}</dd>
-              </div>
-              <div>
-                <dt>Top confusion</dt>
-                <dd>
-                  {confusion ? (
-                    <>
-                      {confusion.truth} <span className="muted">/</span> {confusion.picked}
-                    </>
-                  ) : (
-                    <span className="muted">None right now</span>
-                  )}
-                </dd>
-              </div>
-              <div>
-                <dt>{streak}-day streak</dt>
-                <dd
-                  className="streak"
-                  role="img"
-                  aria-label={`Practised ${days.filter(Boolean).length} of the last 14 days`}
-                >
-                  {days.map((done, i) => (
-                    <span
-                      key={i}
-                      className={done ? (i === days.length - 1 ? 'today-dot' : 'done') : undefined}
-                    />
+                <div className="panel-row panel-title">
+                  <span>Today’s mix</span>
+                  <span className="muted small">
+                    {queue.length - fresh} review · {fresh} new
+                  </span>
+                </div>
+                <div className="mix">
+                  {mix.map(({ type, count }, i) => (
+                    <div key={type} style={{ flex: count, background: MIX_COLOURS[i] }} />
                   ))}
-                </dd>
+                </div>
+                <ul className="mix-legend">
+                  {mix.map(({ type, count }, i) => (
+                    <li key={type}>
+                      <span className="swatch" style={{ background: MIX_COLOURS[i] }} />
+                      {CARD_TYPES[type].label}
+                      <span className="muted">{count}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </dl>
-          </section>
+              <div className="rule" />
+              <dl className="facts">
+                <div>
+                  <dt>Weakest</dt>
+                  <dd>{weakest ?? <span className="muted">Nothing yet</span>}</dd>
+                </div>
+                <div>
+                  <dt>Top confusion</dt>
+                  <dd>
+                    {confusion ? (
+                      <>
+                        {confusion.truth} <span className="muted">/</span> {confusion.picked}
+                      </>
+                    ) : (
+                      <span className="muted">None right now</span>
+                    )}
+                  </dd>
+                </div>
+                <div>
+                  <dt>{streak}-day streak</dt>
+                  <dd
+                    className="streak"
+                    role="img"
+                    aria-label={`Practised ${days.filter(Boolean).length} of the last 14 days`}
+                  >
+                    {days.map((done, i) => (
+                      <span
+                        key={i}
+                        className={
+                          done ? (i === days.length - 1 ? 'today-dot' : 'done') : undefined
+                        }
+                      />
+                    ))}
+                  </dd>
+                </div>
+              </dl>
+            </section>
+            {block && (
+              <Link to="/blocks" className="block-line">
+                Training block · day {block.dayIndex + 1} of {block.totalDays} ·{' '}
+                {Math.round(block.todayMinutes)} of {block.minutes} min today
+              </Link>
+            )}
+          </div>
         </div>
       )}
     </div>

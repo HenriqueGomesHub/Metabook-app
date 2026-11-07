@@ -14,25 +14,31 @@ import { Settings } from '../screens/Settings';
 import { Stats } from '../screens/Stats';
 import { Today } from '../screens/Today';
 import { AppShell } from './AppShell';
+import { AuthGate } from './AuthGate';
 
 export const router = createBrowserRouter([
   {
-    element: <AppShell />,
+    element: <AuthGate />,
     children: [
-      { path: '/', element: <Today /> },
-      { path: '/session', element: <Session /> },
-      { path: '/drills', element: <Drills /> },
-      { path: '/games', element: <Games /> },
-      { path: '/games/areacode/br', element: <AreaCodeGame /> },
-      { path: '/atlas', element: <Atlas /> },
-      { path: '/atlas/:country', element: <Country /> },
-      { path: '/review', element: <Review /> },
-      { path: '/blocks', element: <Blocks /> },
-      { path: '/stats', element: <Stats /> },
-      { path: '/settings', element: <Settings /> },
-      { path: '/editor', element: <Editor /> },
-      { path: '/placement/:country', element: <Placement /> },
       { path: '/login', element: <Login /> },
+      {
+        element: <AppShell />,
+        children: [
+          { path: '/', element: <Today /> },
+          { path: '/session', element: <Session /> },
+          { path: '/drills', element: <Drills /> },
+          { path: '/games', element: <Games /> },
+          { path: '/games/areacode/br', element: <AreaCodeGame /> },
+          { path: '/atlas', element: <Atlas /> },
+          { path: '/atlas/:country', element: <Country /> },
+          { path: '/review', element: <Review /> },
+          { path: '/blocks', element: <Blocks /> },
+          { path: '/stats', element: <Stats /> },
+          { path: '/settings', element: <Settings /> },
+          { path: '/editor', element: <Editor /> },
+          { path: '/placement/:country', element: <Placement /> },
+        ],
+      },
     ],
   },
 ]);
