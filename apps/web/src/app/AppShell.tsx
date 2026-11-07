@@ -79,6 +79,7 @@ export function AppShell() {
               to={to}
               end={to === '/'}
               aria-label={label}
+              title={label}
               className={({ isActive }) => (isActive ? 'on' : undefined)}
             >
               <svg className="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
