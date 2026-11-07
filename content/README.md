@@ -1,29 +1,35 @@
 # Metabook content
 
-STATUS: seed content, ALL items are `verified: false`. It was written from memory without web access
-(WebFetch and curl were blocked), so every card and tip must be reviewed by the owner before it is trusted.
-Anything the author was not highly confident about was left out. Each item's `source` is the page where
-it can be checked.
+## Verification status (November 2026)
+Source notes: `sources/verification-2026-11.md` (checked in a browser against Wikipedia and plonkit.net;
+the script prompts were checked against the matching-language Wikipedia article).
+
+Verified (`verified: true`):
+- Flag cards: every `prompt.ratio` was checked against the Wikipedia "Flag of ..." infobox; six were
+  corrected (cy 2:3, ar 5:8, py 11:20, do 2:3, gu 22:41, mp 20:39). Flag tips are `false`: only the ratios
+  were checked, not the tip wording. The 10 new flags (ge, xk, na, np, om, bm, cx, cc, st, pm) have verified cards.
+  Nepal is non-rectangular, ratio `"1.219:1"` (height:width).
+- Pool: coverage checked against Wikipedia "Google Street View coverage" (2026-11). Every pool country is in the
+  official-coverage table. Tanzania removed; Georgia, Kosovo, Namibia, Nepal, Oman, Bermuda, Christmas Island,
+  Cocos (Keeling) Islands, Sao Tome and Principe, Saint Pierre and Miquelon added. `pool.json` has no verified field.
+  Still out (limited/landmark-only): Afghanistan, Belarus, China, Egypt, Iraq, Mali, Pakistan, Vietnam, Martinique;
+  Armenia not assessed.
+- Brazil area codes (DDD): all 67 mappings match pt.wikipedia. The pattern tips match the cards.
+- Brazil chapter: region and meta cards and their tips were rebuilt from the Plonkit notes
+  (`https://www.plonkit.net/brazil`). Exception: the Pantanal card and the Centre-West composition tip stay `false`.
+- Script cards: every prompt is checked against its own-language Wikipedia article (the card `source`).
+  Script tips stay `false`. Arabic was removed (it cannot separate Jordan from Oman/UAE/Qatar/Lebanon/Tunisia).
+
+Still unverified (`verified: false`): all flag tips, script tips, all lookalike cards and tips, the Pantanal card,
+and the Centre-West tips about Brasília and the region's states.
+
+Missing flag cards: Reunion (uses the French flag), US Virgin Islands (ratio not checked). Add once confirmed.
+All new flag SVGs exist in `node_modules/svg-country-flags/svg/` (xk, ge, na, np, om, bm, cx, cc, st, pm).
 
 ## Reviewing
 Open the item's `source`, check the fact, fix it if wrong, then set `"verified": true`. Delete items that
 cannot be confirmed. `node content/validate.mjs` requires a boolean `verified` on every card and tip.
-Flag `prompt.ratio` values (official height:width) especially need checking. Tip `answer` must equal a card
-`answer` (country name, region id, UF code) or `ddd:br:pattern`.
-
-Skipped for lack of confidence in official coverage: Georgia, Armenia, Vietnam, Nepal, Namibia, Egypt, Gulf
-states other than UAE/Qatar. Add them to `pool.json` (and write cards) once confirmed.
-
-Check coverage (included, but unsure they are in the official competitive pool): Cambodia, Sri Lanka,
-Kazakhstan, Kyrgyzstan, Cyprus, Tanzania. Also confirm Nepal, Namibia and Oman before adding them.
-
-Territories added to the pool without a flag card (they officially use a parent flag, or the own-flag ratio
-was not confidently known): Réunion (uses the French flag), US Virgin Islands (flag ratio not confirmed).
-Add a card once confirmed.
-
-Flag ratios to check first: Dominican Republic (`do`) and Paraguay (`py`) (Paraguay's reverse side differs
-from its obverse; DO's ratio is also unsure). Also double-check the territory ratios (fo 8:11, ax 17:26,
-gu 5:9, je 3:5, li 3:5).
+Tip `answer` must equal a card `answer` (country name, region id, UF code) or `ddd:br:pattern`.
 
 ## Files
 - `pool.json` - competitive pool: `{code, name, continent, in_pool}`. Editable config: GeoGuessr
