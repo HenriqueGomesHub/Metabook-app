@@ -86,3 +86,28 @@ describe('supabaseCuration', () => {
     await expect(api.decide('a', { ...pending, status: 'approved' })).resolves.toBeUndefined();
   });
 });
+
+describe('listPending', () => {
+  it('pages past the 1000-row PostgREST limit', async () => {
+    const total = 2345;
+    const ranges: [number, number][] = [];
+    const query = {
+      select: () => query,
+      eq: () => query,
+      order: () => query,
+      range: async (from: number, to: number) => {
+        ranges.push([from, to]);
+        const n = Math.max(0, Math.min(to, total - 1) - from + 1);
+        return { data: Array.from({ length: n }, (_, i) => ({ id: `r${from + i}`, giveaways: null })), error: null };
+      },
+    };
+    const client = { from: () => query } as unknown as SupabaseClient;
+    const rows = await supabaseCuration(client).listPending();
+    expect(rows).toHaveLength(total);
+    expect(ranges).toEqual([
+      [0, 999],
+      [1000, 1999],
+      [2000, 2999],
+    ]);
+  });
+});

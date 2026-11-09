@@ -80,16 +80,23 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
       return !error && (data?.length ?? 0) > 0;
     },
     async listPending() {
-      const { data, error } = await client
-        .from('media_candidates')
-        .select(
-          'id,country,subject,source,source_url,storage_path,preview,credit,licence,title,description,caption,giveaways',
-        )
-        .eq('status', 'pending')
-        .order('created_at')
-        .limit(PAGE);
-      if (error) throw error;
-      return (data as Row[]).map((row) => ({
+      // PostgREST returns at most 1000 rows per request, so page through the whole queue
+      const rows: Row[] = [];
+      for (let from = 0; ; from += PAGE) {
+        const { data, error } = await client
+          .from('media_candidates')
+          .select(
+            'id,country,subject,source,source_url,storage_path,preview,credit,licence,title,description,caption,giveaways',
+          )
+          .eq('status', 'pending')
+          .order('created_at')
+          .order('id')
+          .range(from, from + PAGE - 1);
+        if (error) throw error;
+        rows.push(...(data as Row[]));
+        if ((data?.length ?? 0) < PAGE) break;
+      }
+      return rows.map((row) => ({
         id: row.id,
         country: row.country,
         subject: row.subject,
