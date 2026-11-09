@@ -69,7 +69,7 @@ const regionCode = (props) =>
   props.postal ||
   props.adm1_code;
 
-const norm = (s = '') => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+const norm = (s) => (s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
 /** Admin-1 features (and capitals from populated places) → the regions map for one country. */
 export function buildRegionMap(code, admin1, places = []) {
