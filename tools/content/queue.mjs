@@ -74,20 +74,33 @@ export function createQueue({
       });
     },
 
-    async listApproved() {
-      return call('?select=*&status=eq.approved&collected_at=is.null&order=created_at.asc');
+    /**
+     * Every approved row, collected or not: collect skips the ones already in content/media, so a
+     * run whose push failed after an earlier run marked nothing is simply retried.
+     */
+    async listApproved({ uncollected = false } = {}) {
+      const rows = [];
+      const filter = uncollected ? '&collected_at=is.null' : '';
+      for (let offset = 0; ; offset += PAGE) {
+        const page = await call(`?select=*&status=eq.approved${filter}&order=created_at.asc,id.asc&limit=${PAGE}&offset=${offset}`);
+        rows.push(...page);
+        if (page.length < PAGE) return rows;
+      }
     },
 
-    async markCollected(id, at = new Date().toISOString()) {
-      await call(`?id=eq.${id}`, {
-        method: 'PATCH',
-        headers: { Prefer: 'return=minimal' },
-        body: JSON.stringify({ collected_at: at }),
-      });
+    /** Sets collected_at on the rows, 100 ids per request. */
+    async markCollected(ids, at = new Date().toISOString()) {
+      for (let i = 0; i < ids.length; i += 100) {
+        await call(`?id=in.(${ids.slice(i, i + 100).join(',')})`, {
+          method: 'PATCH',
+          headers: { Prefer: 'return=minimal' },
+          body: JSON.stringify({ collected_at: at }),
+        });
+      }
     },
   };
 }
 
 if (isMain(import.meta)) {
-  if (parseArgs().approved) console.log(JSON.stringify(await createQueue().listApproved(), null, 2));
+  if (parseArgs().approved) console.log(JSON.stringify(await createQueue().listApproved({ uncollected: true }), null, 2));
 }

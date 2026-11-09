@@ -1,5 +1,6 @@
 # Turns photos approved in /curate into cards: moves them to approved/, adds them to
-# content/media, regenerates the cards and commits to main (Vercel then deploys).
+# content/media, regenerates the cards and commits to main (Vercel then deploys); rows are marked
+# collected only once that commit is on main.
 # Runs every 3 hours and on demand; does nothing when there is nothing new.
 name: collect
 
@@ -42,12 +43,15 @@ jobs:
       - name: Validate content
         run: npm run validate:content
 
+      # Validation failing stops the job here: nothing is committed and no row is marked, so the
+      # next run retries. collect.mjs skips (and reports) a photo whose caption names the country.
       - name: Commit when anything changed
         run: |
           git config user.name "metabook-content-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # only new photos and cards are worth a deploy; the result file alone is not
-          if git diff --quiet -- content/media content/cards; then
+          # only new photos and cards are worth a deploy; the result file alone is not.
+          # --porcelain also lists untracked files, such as a country's first content/media file
+          if [ -z "$(git status --porcelain -- content/media content/cards)" ]; then
             echo "Nothing new"
             exit 0
           fi
@@ -59,3 +63,11 @@ jobs:
             sleep $((attempt * 10))
           done
           exit 1
+
+      # Only after the push (or when everything was already on main): mark the rows whose photos
+      # are in content/media, so a failed push never loses an approval.
+      - name: Mark collected rows
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node tools/content/mark-collected.mjs
