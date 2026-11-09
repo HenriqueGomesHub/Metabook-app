@@ -7,7 +7,7 @@ import { ingest } from './lib/ingest.mjs';
 
 const GRAPH = 'https://graph.mapillary.com';
 /** degrees per side; the API rejects boxes of 0.01 deg² or more */
-export const BOX_SIDE = 0.05;
+export const BOX_SIDE = 0.02;
 const MIN_SPACING_KM = 10;
 const MAX_PER_BOX = 3;
 const IMAGE_FIELDS = 'id,thumb_2048_url,computed_geometry,geometry,creator,captured_at,width,height,is_pano';
@@ -136,7 +136,7 @@ export async function findCandidates(code, subject, limit = 30, { graph = create
 }
 
 export async function runMapillary(code, subject, { storage, queue, cap = 30, graph, deadline }) {
-  const found = await findCandidates(code, subject, cap * 2, { graph, deadline });
+  const found = await findCandidates(code, subject, cap, { graph, deadline });
   const result = await ingest(found.candidates, { storage, queue, cap });
   const bySubject = {};
   for (const c of found.candidates) bySubject[c.subject] = (bySubject[c.subject] ?? 0) + 1;

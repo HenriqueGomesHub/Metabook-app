@@ -1,5 +1,6 @@
 # Runs content jobs (tools/content/run-job.mjs) and commits what they produce back to the branch.
-# Push a content/jobs/<name>.json to start one; read content/jobs/<name>.result.json for the outcome.
+# Push one or more content/jobs/<name>.json to start them; each job file runs as its own parallel
+# runner. Read content/jobs/<name>.result.json for the outcome.
 name: content
 
 on:
@@ -18,23 +19,15 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: content-${{ github.ref }}
-  cancel-in-progress: false
-
 jobs:
-  run:
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    outputs:
+      files: ${{ steps.jobs.outputs.files }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
 
       - name: Find job files
         id: jobs
@@ -53,34 +46,50 @@ jobs:
             files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'content/jobs/*.json')
           fi
           files=$(printf '%s\n' $files | grep -v '\.result\.json$' || true)
-          echo "files=$(echo $files)" >> "$GITHUB_OUTPUT"
-          echo "Jobs: ${files:-none}"
+          json=$(printf '%s\n' $files | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.stringify(s.split(/\s+/).filter(Boolean))))")
+          echo "files=$json" >> "$GITHUB_OUTPUT"
+          echo "Jobs: $json"
+
+  run:
+    needs: plan
+    if: needs.plan.outputs.files != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        file: ${{ fromJson(needs.plan.outputs.files) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Job name
+        id: name
+        env:
+          JOB_FILE: ${{ matrix.file }}
+        run: |
+          name=$(node tools/content/run-job.mjs --name "$JOB_FILE")
+          echo "name=$name" >> "$GITHUB_OUTPUT"
           # an old committed result must not stand in for this run's
-          for file in $files; do
-            rm -f "content/jobs/$(node tools/content/run-job.mjs --name "$file").result.json"
-          done
+          rm -f "content/jobs/$name.result.json"
 
       - run: npm ci
-        if: steps.jobs.outputs.files != ''
 
-      - name: Run jobs
+      - name: Run job
         id: run
-        if: steps.jobs.outputs.files != ''
         env:
+          JOB_FILE: ${{ matrix.file }}
           MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          JOB_FILES: ${{ steps.jobs.outputs.files }}
-        run: |
-          names=""
-          for file in $JOB_FILES; do
-            # run-job.mjs writes a result file even when it crashes, and then exits 0
-            node tools/content/run-job.mjs "$file"
-            names="$names $(node tools/content/run-job.mjs --name "$file")"
-          done
-          echo "names=$(echo $names)" >> "$GITHUB_OUTPUT"
+        # run-job.mjs writes a result file even when it crashes, and then exits 0
+        run: node tools/content/run-job.mjs "$JOB_FILE"
 
-      # the result file already records validation; this step only flags it in the run list
       - name: Validate content
         if: steps.run.outcome == 'success'
         continue-on-error: true
@@ -88,20 +97,14 @@ jobs:
 
       # commit even when a job crashed, so the result file (or partial output) is visible from outside Actions
       - name: Commit results
-        if: always() && steps.jobs.outputs.files != ''
+        if: always()
         env:
-          NAMES: ${{ steps.run.outputs.names }}
+          NAME: ${{ steps.name.outputs.name }}
           BRANCH: ${{ github.ref_name }}
-          JOB_FILES: ${{ steps.jobs.outputs.files }}
         run: |
-          # a job whose runner died before run-job wrote anything still gets a result to read
-          for file in $JOB_FILES; do
-            name=$(node tools/content/run-job.mjs --name "$file")
-            if [ ! -f "content/jobs/$name.result.json" ]; then
-              NAME="$name" node -e "require('fs').writeFileSync('content/jobs/' + process.env.NAME + '.result.json', JSON.stringify({ name: process.env.NAME, fatal: 'runner failed before run-job wrote a result; see the Actions log' }, null, 2) + '\\n')"
-              NAMES="$NAMES $name"
-            fi
-          done
+          if [ -n "$NAME" ] && [ ! -f "content/jobs/$NAME.result.json" ]; then
+            node -e "require('fs').writeFileSync('content/jobs/' + process.env.NAME + '.result.json', JSON.stringify({ name: process.env.NAME, fatal: 'runner failed before run-job wrote a result; see the Actions log' }, null, 2) + '\\n')"
+          fi
           git config user.name "metabook-content-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content/
@@ -109,6 +112,11 @@ jobs:
             echo "Nothing to commit"
             exit 0
           fi
-          git commit -m "content: $NAMES [skip ci]"
-          git pull --rebase origin "$BRANCH"
-          git push origin "HEAD:$BRANCH"
+          git commit -m "content: $NAME [skip ci]"
+          # parallel runners push to the same branch: rebase and retry
+          for attempt in 1 2 3 4 5 6 7 8; do
+            git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH" && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 7))
+          done
+          exit 1
