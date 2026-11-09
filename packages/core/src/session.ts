@@ -36,6 +36,8 @@ const RECALL_MODES: Partial<Record<CardType, SessionMode>> = {
 };
 
 export function modeFor(card: Card, state: CardState | undefined): SessionMode {
+  // a regions-map card has no options: it is always answered by clicking the map
+  if (card.map) return 'map';
   if (card.type === 'lookalike') return 'binary';
   if ((state?.reps ?? 0) < MCQ_REVIEWS) return 'mcq';
   return RECALL_MODES[card.type] ?? 'mcq';
@@ -90,7 +92,9 @@ function interleave(cards: Card[]): Card[] {
 
 function contrastItems(confusion: Confusion, cards: Card[], rng: Rng): SessionItem[] {
   const isSide = (card: Card, side: string) => card.answer === side || card.country === side;
+  // regions-map cards are drilled on their map, not as a binary pick between two state codes
   const sides = cards
+    .filter((card) => !card.map)
     .filter((card) => isSide(card, confusion.truth))
     .map((truth) => [
       truth,

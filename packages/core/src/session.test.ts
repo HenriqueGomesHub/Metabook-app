@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { mulberry32 } from './random';
-import { buildSession, type SessionItem } from './session';
+import { buildSession, modeFor, type SessionItem } from './session';
 import {
   DEFAULT_SETTINGS,
   type Card,
@@ -362,6 +362,23 @@ describe('buildSession', () => {
       expect(contrast(confusion(3, 5))).toEqual([]);
     });
 
+    it('leaves regions-map cards out of contrast rounds', () => {
+      const where = (id: string, answer: string) => ({
+        ...card(id, 'region', 'US', answer),
+        map: 'us',
+      });
+      const items = buildSession({
+        cards: [where('w:tx', 'TX'), where('w:ok', 'OK')],
+        states: {},
+        confusions: [{ ...confusion(3), picked: 'OK', truth: 'TX' }],
+        settings,
+        now,
+        rng: rng(),
+      }).queue;
+      expect(items.some((i) => i.contrastPair)).toBe(false);
+      expect(items.every((i) => i.mode === 'map')).toBe(true);
+    });
+
     it('matches by country code too, and skips pairs without cards of a shared type', () => {
       expect(contrast({ ...confusion(3), picked: 'RS', truth: 'BG' })).toHaveLength(5);
       expect(contrast({ ...confusion(3), picked: 'RS', truth: 'XX' })).toEqual([]);
@@ -445,5 +462,15 @@ describe('buildSession catch-up and dedup', () => {
     expect(contrastItem?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
     expect(queue.filter((i) => i.cardId === contrastItem?.cardId)).toHaveLength(1);
     expect(queue).toHaveLength(2);
+  });
+});
+
+describe('modeFor', () => {
+  it('answers regions-map cards on the map from the first review', () => {
+    const where = { ...card('w', 'region', 'US', 'TX'), map: 'us' };
+    expect(modeFor(where, undefined)).toBe('map');
+    expect(modeFor(where, seen('w', minutesAgo(1), 5))).toBe('map');
+    expect(modeFor(card('r', 'region'), undefined)).toBe('mcq');
+    expect(modeFor(card('r', 'region'), seen('r', minutesAgo(1), 5))).toBe('recall');
   });
 });
