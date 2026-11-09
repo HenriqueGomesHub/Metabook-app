@@ -4,6 +4,8 @@ name: content
 
 on:
   push:
+    branches-ignore:
+      - main
     paths:
       - 'content/jobs/*.json'
       - '!content/jobs/*.result.json'
@@ -77,8 +79,9 @@ jobs:
         continue-on-error: true
         run: npm run validate:content
 
+      # commit even when a job crashed, so the result file (or partial output) is visible from outside Actions
       - name: Commit results
-        if: steps.run.outcome == 'success'
+        if: always() && steps.jobs.outputs.files != ''
         env:
           NAMES: ${{ steps.run.outputs.names }}
           BRANCH: ${{ github.ref_name }}
