@@ -64,10 +64,36 @@ export function rewind(geometry) {
   return geometry;
 }
 
-const regionCode = (props) =>
+export const regionCode = (props) =>
   (props.iso_3166_2 && !props.iso_3166_2.includes('~') ? props.iso_3166_2.split('-').pop() : null) ||
   props.postal ||
   props.adm1_code;
+
+/**
+ * Every state gets a unique, non-empty name: one shape split in two (same code and name) becomes
+ * one state; an unnamed state is called by its code; states sharing a name are told apart by
+ * Natural Earth's `type` ("Cork (County)" vs "Cork (City)") when theirs is unique among them,
+ * else by code ("Sofia (22)"). `type` is dropped from the result.
+ */
+export function uniqueStateNames(states) {
+  const merged = [];
+  for (const { type, ...state } of states) {
+    const name = state.name?.trim() || state.code;
+    const twin = merged.find((m) => m.code === state.code && m.name === name);
+    if (twin) {
+      twin.path += state.path;
+      twin.capital ??= state.capital;
+      twin.type ||= type;
+    } else merged.push({ ...state, name, type });
+  }
+  const byName = Map.groupBy(merged, (s) => s.name);
+  return merged.map(({ type, ...state }) => {
+    const group = byName.get(state.name);
+    if (group.length === 1) return state;
+    const typeUnique = type && group.filter((s) => s.type === type).length === 1;
+    return { ...state, name: `${state.name} (${typeUnique ? type : state.code})` };
+  });
+}
 
 const norm = (s) => (s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
@@ -90,7 +116,7 @@ export function buildRegionMap(code, admin1, places = []) {
   const capitals = places.filter(
     (p) => isoOf(p.properties) === iso && /capital/i.test(p.properties.featurecla ?? ''),
   );
-  const states = features
+  const states = uniqueStateNames(features
     .map((feature) => {
       const props = feature.properties;
       const name = props.name_en || props.name;
@@ -100,6 +126,7 @@ export function buildRegionMap(code, admin1, places = []) {
       return {
         code: regionCode(props),
         name,
+        type: props.type_en,
         path: pathOf(feature.geometry, projection),
         label: [Math.round(lx), Math.round(ly)],
         ...(lonLat && {
@@ -107,7 +134,7 @@ export function buildRegionMap(code, admin1, places = []) {
         }),
       };
     })
-    .filter((state) => state.path)
+    .filter((state) => state.path))
     .sort((a, b) => a.code.localeCompare(b.code));
   return {
     country: iso,

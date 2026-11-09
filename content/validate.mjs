@@ -105,6 +105,18 @@ for (const f of jsonFiles('media')) {
   }
 }
 
+// maps/*.json: every state has a non-empty name, unique within its map (labels and reveals use it)
+for (const f of jsonFiles('maps')) {
+  const states = load(`maps/${f}`).states ?? [];
+  const seen = new Set();
+  for (const s of states) {
+    const name = typeof s.name === 'string' ? s.name.trim() : '';
+    if (!name) err(`maps/${f} ${s.code}: state has no name`);
+    else if (seen.has(name)) err(`maps/${f} ${s.code}: state name "${name}" is not unique`);
+    seen.add(name);
+  }
+}
+
 // cards with `map` are answered on content/maps/<map>-regions.json (br-states.json for Brazil)
 const mapCache = new Map();
 const mapStates = (map) => {
