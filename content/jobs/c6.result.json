@@ -1,0 +1,338 @@
+{
+  "name": "c6",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole"
+    ],
+    "perSubject": 4,
+    "name": "c6",
+    "countries": [
+      "kr",
+      "kh",
+      "tw",
+      "sg",
+      "lk",
+      "mn",
+      "kz",
+      "kg"
+    ],
+    "steps": [
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 3
+  },
+  "startedAt": "2026-11-09T21:58:14.404Z",
+  "finishedAt": "2026-11-09T22:18:46.045Z",
+  "commit": "83dd7b246baf1a764545f34c95b8887667d9bc8d",
+  "countries": [
+    "kr",
+    "kh",
+    "tw",
+    "sg",
+    "lk",
+    "mn",
+    "kz",
+    "kg"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 1222069,
+      "countries": {
+        "kr": {
+          "ok": true,
+          "ms": 136989,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "kh": {
+          "ok": true,
+          "ms": 122707,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "pole": 3
+              }
+            }
+          },
+          "errors": []
+        },
+        "tw": {
+          "ok": true,
+          "ms": 122756,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "pole": 3,
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "sg": {
+          "ok": true,
+          "ms": 184560,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "pole": 2
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "lk": {
+          "ok": true,
+          "ms": 193044,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "pole": 1,
+                "bollard": 1
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "mn": {
+          "ok": true,
+          "ms": 158822,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "kz": {
+          "ok": true,
+          "ms": 131891,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "kg": {
+          "ok": true,
+          "ms": 171266,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 9570,
+      "countries": {
+        "kr": {
+          "ok": true,
+          "ms": 5362,
+          "counts": {
+            "regions": 17,
+            "capitals": 5,
+            "bytes": 27721
+          }
+        },
+        "kh": {
+          "ok": true,
+          "ms": 594,
+          "counts": {
+            "regions": 24,
+            "capitals": 15,
+            "bytes": 21281
+          }
+        },
+        "tw": {
+          "ok": true,
+          "ms": 656,
+          "counts": {
+            "regions": 21,
+            "capitals": 20,
+            "bytes": 15490
+          }
+        },
+        "sg": {
+          "ok": true,
+          "ms": 551,
+          "counts": {
+            "regions": 5,
+            "capitals": 0,
+            "bytes": 2396
+          }
+        },
+        "lk": {
+          "ok": true,
+          "ms": 642,
+          "counts": {
+            "regions": 25,
+            "capitals": 3,
+            "bytes": 27566
+          }
+        },
+        "mn": {
+          "ok": true,
+          "ms": 565,
+          "counts": {
+            "regions": 22,
+            "capitals": 20,
+            "bytes": 16579
+          }
+        },
+        "kz": {
+          "ok": true,
+          "ms": 635,
+          "counts": {
+            "regions": 16,
+            "capitals": 14,
+            "bytes": 20901
+          }
+        },
+        "kg": {
+          "ok": true,
+          "ms": 558,
+          "counts": {
+            "regions": 8,
+            "capitals": 6,
+            "bytes": 12255
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 115 facts files, 0 photos"
+    ]
+  }
+}
