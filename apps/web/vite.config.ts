@@ -8,7 +8,11 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
-      workbox: { globPatterns: ['**/*.{js,css,html,svg}'] },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg}'],
+        // the content bundle outgrew the 2 MiB default
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+      },
       manifest: {
         name: 'Metabook',
         short_name: 'Metabook',
