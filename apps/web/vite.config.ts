@@ -10,8 +10,6 @@ export default defineConfig({
       includeAssets: ['icon.svg'],
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg}'],
-        // the content bundle outgrew the 2 MiB default
-        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
       },
       manifest: {
         name: 'Metabook',
@@ -27,6 +25,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    setupFiles: ['src/test/setup.ts'],
     include: ['src/**/*.test.{ts,tsx}'],
   },
 });

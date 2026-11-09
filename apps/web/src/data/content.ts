@@ -1,6 +1,5 @@
 import type { Card, PoolCountry, Tip } from '@metabook/core';
-import brStatesJson from '../../../../content/maps/br-states.json';
-import { mediaUrl } from './media';
+import { loadMedia, mediaUrl } from './media';
 import type { CardOverride, Repository } from './repository';
 
 export interface Chapter {
@@ -34,38 +33,42 @@ export interface RegionMap {
   states: MapRegion[];
 }
 
-/** Brazil's hand-made map has a capital for every state. */
-export const brStates: Omit<RegionMap, 'states'> & { states: Required<MapRegion>[] } = brStatesJson;
+type BrStates = Omit<RegionMap, 'states'> & { states: Required<MapRegion>[] };
 
+/** Brazil's hand-made map has a capital for every state. Filled in place by `loadBundled`. */
+export const brStates: BrStates = { country: 'BR', viewBox: '', states: [] };
+
+/** Brazilian states by UF code. Filled in place by `loadBundled`. */
+export const brStatesByCode = new Map<string, Required<MapRegion>>();
+
+// Non-eager globs: every JSON file becomes its own lazy, cacheable chunk.
+const brStatesFile = import.meta.glob<BrStates>('../../../../content/maps/br-states.json', {
+  import: 'default',
+});
 const regionFiles = import.meta.glob<RegionMap>('../../../../content/maps/*-regions.json', {
-  eager: true,
   import: 'default',
 });
 
-/** Region maps by upper-case country code; Brazil's hand-made map wins. */
-export const regionMaps: ReadonlyMap<string, RegionMap> = new Map([
-  ...Object.values(regionFiles).map((map): [string, RegionMap] => [map.country.toUpperCase(), map]),
-  ['BR', brStates],
-]);
+/** One country's region map, fetched on demand; undefined when there is none. */
+export async function loadRegionMap(country: string): Promise<RegionMap | undefined> {
+  const code = country.toUpperCase();
+  if (code === 'BR') {
+    await loadBundled();
+    return brStates;
+  }
+  const load = regionFiles[`../../../../content/maps/${code.toLowerCase()}-regions.json`];
+  return load?.();
+}
 
-const flatten = <T>(files: Record<string, T[]>): T[] => Object.values(files).flat();
-
-const pool = import.meta.glob<PoolCountry[]>('../../../../content/pool.json', {
-  eager: true,
-  import: 'default',
-});
+const pool = import.meta.glob<PoolCountry[]>('../../../../content/pool.json', { import: 'default' });
 const chapters = import.meta.glob<Chapter[]>('../../../../content/chapters.json', {
-  eager: true,
   import: 'default',
 });
-const cards = import.meta.glob<Card[]>('../../../../content/cards/*.json', {
-  eager: true,
-  import: 'default',
-});
-const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', {
-  eager: true,
-  import: 'default',
-});
+const cards = import.meta.glob<Card[]>('../../../../content/cards/*.json', { import: 'default' });
+const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', { import: 'default' });
+
+const loadAll = async <T>(files: Record<string, () => Promise<T[]>>): Promise<T[]> =>
+  (await Promise.all(Object.values(files).map((load) => load()))).flat();
 
 /** Generated photo cards store bucket paths; resolve them against the media base. */
 const withMediaUrls = (card: Card): Card =>
@@ -73,12 +76,34 @@ const withMediaUrls = (card: Card): Card =>
     ? { ...card, prompt: { ...card.prompt, value: mediaUrl(card.prompt.value) } }
     : card;
 
-export const bundled: Content = {
-  pool: flatten(pool),
-  chapters: flatten(chapters),
-  cards: flatten(cards).map(withMediaUrls),
-  tips: flatten(tips),
-};
+/** The shipped content. Empty until `loadBundled` resolves, which happens before the app renders. */
+export const bundled: Content = { pool: [], chapters: [], cards: [], tips: [] };
+
+let loading: Promise<void> | undefined;
+
+/** Fetches the content chunks once and fills `bundled` and `brStates` in place. */
+export function loadBundled(): Promise<void> {
+  loading ??= (async () => {
+    const [poolItems, chapterItems, cardItems, tipItems, br] = await Promise.all([
+      loadAll(pool),
+      loadAll(chapters),
+      loadAll(cards),
+      loadAll(tips),
+      Object.values(brStatesFile)[0]!(),
+    ]);
+    Object.assign(brStates, br);
+    brStatesByCode.clear();
+    for (const state of br.states) brStatesByCode.set(state.code, state);
+    bundled.pool = poolItems;
+    bundled.chapters = chapterItems;
+    bundled.cards = cardItems.map(withMediaUrls);
+    bundled.tips = tipItems;
+  })().catch((error: unknown) => {
+    loading = undefined; // let a retry fetch again
+    throw error;
+  });
+  return loading;
+}
 
 function applyOverrides<T extends { id: string }>(items: T[], overrides: T[]): T[] {
   const byId = new Map(overrides.map((item) => [item.id, item]));
@@ -103,5 +128,6 @@ export function mergeOverrides(base: Content, overrides: CardOverride[]): Conten
 }
 
 export async function loadContent(repo: Repository): Promise<Content> {
+  await Promise.all([loadBundled(), loadMedia()]);
   return mergeOverrides(bundled, await repo.listCardOverrides());
 }

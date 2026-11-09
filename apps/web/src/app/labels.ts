@@ -1,5 +1,5 @@
 import type { CardType, MetaSubject } from '@metabook/core';
-import { brStates, bundled } from '../data/content';
+import { brStatesByCode, bundled } from '../data/content';
 
 const REGION_NAMES: Record<string, string> = {
   north: 'North',
@@ -39,14 +39,14 @@ export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
 type Scope = 'br' | undefined;
 
-let names: { states: Map<string, string>; countries: Map<string, string> } | undefined;
+let countries: Map<string, string> | undefined;
 
 function lookup() {
-  names ??= {
-    states: new Map((brStates?.states ?? []).map((state) => [state.code, state.name])),
-    countries: new Map((bundled?.pool ?? []).map((country) => [country.code, country.name])),
-  };
-  return names;
+  // built once the pool has loaded; before that, labels fall back to the raw key
+  if (!countries && bundled.pool.length) {
+    countries = new Map(bundled.pool.map((country) => [country.code, country.name]));
+  }
+  return { states: brStatesByCode, countries: countries ?? new Map<string, string>() };
 }
 
 /**
@@ -58,8 +58,8 @@ export function label(key: string, scope?: Scope): string {
   const region = REGION_NAMES[key];
   if (region) return region;
   const { states, countries } = lookup();
-  if (scope === 'br') return states.get(key) ?? countries.get(key) ?? key;
-  return countries.get(key) ?? states.get(key) ?? key;
+  if (scope === 'br') return states.get(key)?.name ?? countries.get(key) ?? key;
+  return countries.get(key) ?? states.get(key)?.name ?? key;
 }
 
 /** Card-type and tag names for headings like "Weakest". */
