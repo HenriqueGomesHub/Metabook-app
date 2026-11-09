@@ -49,22 +49,38 @@ const regionFiles = import.meta.glob<RegionMap>('../../../../content/maps/*-regi
   import: 'default',
 });
 
+/** Region maps fetched so far, by lower-case code, for synchronous lookups such as labels. */
+const loadedMaps = new Map<string, RegionMap>();
+
 /** One country's region map, fetched on demand; undefined when there is none. */
 export async function loadRegionMap(country: string): Promise<RegionMap | undefined> {
-  const code = country.toUpperCase();
-  if (code === 'BR') {
+  const code = country.toLowerCase();
+  if (code === 'br') {
     await loadBundled();
     return brStates;
   }
-  const load = regionFiles[`../../../../content/maps/${code.toLowerCase()}-regions.json`];
-  return load?.();
+  const map = await regionFiles[`../../../../content/maps/${code}-regions.json`]?.();
+  if (map) loadedMaps.set(code, map);
+  return map;
+}
+
+/** A region map `loadRegionMap` has already fetched (Brazil's once content is loaded). */
+export function loadedRegionMap(country: string): RegionMap | undefined {
+  const code = country.toLowerCase();
+  if (code === 'br') return brStates.states.length > 0 ? brStates : undefined;
+  return loadedMaps.get(code);
 }
 
 const pool = import.meta.glob<PoolCountry[]>('../../../../content/pool.json', { import: 'default' });
 const chapters = import.meta.glob<Chapter[]>('../../../../content/chapters.json', {
   import: 'default',
 });
-const cards = import.meta.glob<Card[]>('../../../../content/cards/*.json', { import: 'default' });
+// Hand-written card files are a chunk each; the generated ones come as one chunk (generatedCards.ts).
+const cards = import.meta.glob<Card[]>(
+  ['../../../../content/cards/*.json', '!../../../../content/cards/generated-*.json'],
+  { import: 'default' },
+);
+const loadGenerated = async () => (await import('./generatedCards')).generatedCards;
 const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', { import: 'default' });
 
 const loadAll = async <T>(files: Record<string, () => Promise<T[]>>): Promise<T[]> =>
@@ -84,10 +100,11 @@ let loading: Promise<void> | undefined;
 /** Fetches the content chunks once and fills `bundled` and `brStates` in place. */
 export function loadBundled(): Promise<void> {
   loading ??= (async () => {
-    const [poolItems, chapterItems, cardItems, tipItems, br] = await Promise.all([
+    const [poolItems, chapterItems, cardItems, generated, tipItems, br] = await Promise.all([
       loadAll(pool),
       loadAll(chapters),
       loadAll(cards),
+      loadGenerated(),
       loadAll(tips),
       Object.values(brStatesFile)[0]!(),
     ]);
@@ -96,7 +113,7 @@ export function loadBundled(): Promise<void> {
     for (const state of br.states) brStatesByCode.set(state.code, state);
     bundled.pool = poolItems;
     bundled.chapters = chapterItems;
-    bundled.cards = cardItems.map(withMediaUrls);
+    bundled.cards = [...cardItems, ...generated].map(withMediaUrls);
     bundled.tips = tipItems;
   })().catch((error: unknown) => {
     loading = undefined; // let a retry fetch again
