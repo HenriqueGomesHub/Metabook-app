@@ -1,0 +1,326 @@
+{
+  "name": "a1",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign",
+      "guardrail"
+    ],
+    "perSubject": 12,
+    "name": "a1",
+    "countries": [
+      "us",
+      "ru",
+      "ca"
+    ],
+    "steps": [
+      "commons",
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-09T21:30:52.014Z",
+  "finishedAt": "2026-11-09T21:55:48.742Z",
+  "commit": "8d2e27b8cfaa1477f62d0679245790ecf1f5f650",
+  "countries": [
+    "us",
+    "ru",
+    "ca"
+  ],
+  "errorCount": 3,
+  "steps": [
+    {
+      "step": "commons",
+      "ms": 374870,
+      "countries": {
+        "us": {
+          "ok": true,
+          "ms": 128673,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "licence": 1,
+                "too": 1,
+                "type": 3
+              }
+            },
+            "plate": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 9,
+                "type": 8
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 25,
+                "type": 2
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "ru": {
+          "ok": true,
+          "ms": 180022,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 138,
+                "type": 5
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 56
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "ca": {
+          "ok": true,
+          "ms": 66154,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 4,
+                "licence": 1
+              }
+            },
+            "plate": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 7
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 36,
+              "alreadyQueued": 0,
+              "queued": 12,
+              "failed": 0,
+              "dropped": {
+                "too": 9
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    {
+      "step": "mapillary",
+      "ms": 1120094,
+      "countries": {
+        "us": {
+          "ok": true,
+          "ms": 364743,
+          "counts": {
+            "bollard": {
+              "boxes": 48,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 48,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "ru": {
+          "ok": true,
+          "ms": 374428,
+          "counts": {
+            "bollard": {
+              "boxes": 48,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 48,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "ca": {
+          "ok": true,
+          "ms": 380922,
+          "counts": {
+            "bollard": {
+              "boxes": 48,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 48,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 1764,
+      "countries": {
+        "us": {
+          "ok": true,
+          "ms": 812,
+          "counts": {
+            "regions": 51,
+            "capitals": 51,
+            "bytes": 40344
+          }
+        },
+        "ru": {
+          "ok": false,
+          "ms": 558,
+          "errors": [
+            "Cannot read properties of null (reading 'normalize')"
+          ]
+        },
+        "ca": {
+          "ok": true,
+          "ms": 390,
+          "counts": {
+            "regions": 13,
+            "capitals": 13,
+            "bytes": 103698
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 1 facts files, 0 photos"
+    ]
+  }
+}
