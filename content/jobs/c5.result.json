@@ -1,0 +1,335 @@
+{
+  "name": "c5",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole"
+    ],
+    "perSubject": 4,
+    "name": "c5",
+    "countries": [
+      "ch",
+      "ua",
+      "li",
+      "fo",
+      "gi",
+      "im",
+      "je",
+      "ax"
+    ],
+    "steps": [
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 3
+  },
+  "startedAt": "2026-11-09T21:58:14.075Z",
+  "finishedAt": "2026-11-09T22:17:07.058Z",
+  "commit": "83dd7b246baf1a764545f34c95b8887667d9bc8d",
+  "countries": [
+    "ch",
+    "ua",
+    "li",
+    "fo",
+    "gi",
+    "im",
+    "je",
+    "ax"
+  ],
+  "errorCount": 4,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 1127388,
+      "countries": {
+        "ch": {
+          "ok": true,
+          "ms": 194911,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2,
+                "pole": 1
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "ua": {
+          "ok": true,
+          "ms": 169672,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "li": {
+          "ok": true,
+          "ms": 187996,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=9.48546%2C47.07144%2C9.50546%2C47.09144&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "fo": {
+          "ok": true,
+          "ms": 139569,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            }
+          },
+          "errors": []
+        },
+        "gi": {
+          "ok": true,
+          "ms": 98,
+          "counts": {},
+          "errors": [
+            "bollard: gi not found in Natural Earth admin-0 (50m)",
+            "pole: gi not found in Natural Earth admin-0 (50m)"
+          ]
+        },
+        "im": {
+          "ok": true,
+          "ms": 143261,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "pole": 3,
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "je": {
+          "ok": true,
+          "ms": 101353,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "pole": 1,
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "ax": {
+          "ok": true,
+          "ms": 190493,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2,
+                "pole": 2
+              }
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 5593,
+      "countries": {
+        "ch": {
+          "ok": true,
+          "ms": 1474,
+          "counts": {
+            "regions": 26,
+            "capitals": 26,
+            "bytes": 25444
+          }
+        },
+        "ua": {
+          "ok": true,
+          "ms": 621,
+          "counts": {
+            "regions": 25,
+            "capitals": 23,
+            "bytes": 37866
+          }
+        },
+        "li": {
+          "ok": true,
+          "ms": 651,
+          "counts": {
+            "regions": 11,
+            "capitals": 0,
+            "bytes": 3520
+          }
+        },
+        "fo": {
+          "ok": true,
+          "ms": 539,
+          "counts": {
+            "regions": 1,
+            "capitals": 1,
+            "bytes": 5377
+          }
+        },
+        "gi": {
+          "ok": true,
+          "ms": 611,
+          "counts": {
+            "regions": 1,
+            "capitals": 1,
+            "bytes": 340
+          }
+        },
+        "im": {
+          "ok": true,
+          "ms": 546,
+          "counts": {
+            "regions": 1,
+            "capitals": 0,
+            "bytes": 1110
+          }
+        },
+        "je": {
+          "ok": true,
+          "ms": 607,
+          "counts": {
+            "regions": 1,
+            "capitals": 0,
+            "bytes": 730
+          }
+        },
+        "ax": {
+          "ok": true,
+          "ms": 539,
+          "counts": {
+            "regions": 11,
+            "capitals": 0,
+            "bytes": 4308
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 115 facts files, 0 photos"
+    ]
+  }
+}
