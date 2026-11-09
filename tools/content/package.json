@@ -1,0 +1,14 @@
+{
+  "name": "@metabook/content-tools",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Fetches facts, photos and region maps into content/ (run by .github/workflows/content.yml)",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "d3-geo": "^3.1.1",
+    "sharp": "^0.34.4"
+  }
+}
