@@ -349,12 +349,14 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
     }
     if (where.length >= MIN_WHERE_CARDS) {
       for (const { note, state } of where) {
+        const prompt = hideRegionName(note.text, state.name);
+        if (!prompt) continue;
         cards.push({
           id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
           type: 'region',
           country: code,
           answer: state.code,
-          prompt: { kind: 'text', value: note.text },
+          prompt: { kind: 'text', value: prompt },
           tags: [...tags(note.subject), 'where'],
           subject: note.subject,
           explain: `${note.text} (${state.name})`,
@@ -366,6 +368,28 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
     }
   }
   return cards;
+}
+
+const REGION_WORDS = /\s+(voivodeship|province|state|region|prefecture|oblast|krai|county|department|district|governorate|territory)$/i;
+
+/**
+ * A `where` prompt must not name its answer: the state's name (and its short form without
+ * "Province", "Voivodeship"…) becomes "this area". Returns undefined when a spelling the mask
+ * can't reach (another accent form) would still give the answer away, so the card is skipped.
+ */
+export function hideRegionName(text: string, stateName: string): string | undefined {
+  const names = [stateName, stateName.replace(REGION_WORDS, '')]
+    .map((n) => n.trim())
+    .filter((n, i, all) => n.length > 2 && all.indexOf(n) === i)
+    .sort((a, b) => b.length - a.length);
+  let out = text;
+  for (const name of names) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    out = out.replace(new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'giu'), 'this area');
+  }
+  const folded = fold(out);
+  if (names.some((n) => folded.includes(fold(n)))) return undefined;
+  return out.charAt(0).toUpperCase() + out.slice(1);
 }
 
 /** Note ids are often prefixed with the country ("pl:bollard-red"); card ids drop it. */

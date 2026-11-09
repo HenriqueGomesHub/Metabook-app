@@ -327,3 +327,17 @@ describe('where cards', () => {
     expect(where([...notes].reverse())).toEqual(where(notes));
   });
 });
+
+describe('hideRegionName', () => {
+  it('masks the state name, its short form and accented spellings', async () => {
+    const { hideRegionName } = await import('./generate');
+    expect(hideRegionName('Sugarcane is most common in Tucumán.', 'Tucumán')).toBe('Sugarcane is most common in this area.');
+    expect(hideRegionName('Łódź has red tiles.', 'Łódź Voivodeship')).toBe('This area has red tiles.');
+    expect(hideRegionName('Masovian roads are wide.', 'Masovian Voivodeship')).toBe('This area roads are wide.');
+    expect(hideRegionName('Yellow poles here.', 'Texas')).toBe('Yellow poles here.');
+  });
+  it('drops the card when another spelling still names the answer', async () => {
+    const { hideRegionName } = await import('./generate');
+    expect(hideRegionName('In Tucuman the cane grows.', 'Tucumán')).toBeUndefined();
+  });
+});
