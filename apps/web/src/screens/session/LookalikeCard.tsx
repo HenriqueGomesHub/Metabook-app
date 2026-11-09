@@ -8,7 +8,7 @@ import { useKeys } from './useKeys';
 /** Binary choice between two lookalikes; arrow keys pick left or right. */
 export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: CardProps) {
   const [left, right] = options as [string, string];
-  const scope = scopeOf(card.type);
+  const scope = scopeOf(card);
   useKeys((event) => {
     if (event.key === 'ArrowLeft') onAnswer(left);
     if (event.key === 'ArrowRight') onAnswer(right);

@@ -191,6 +191,36 @@ a.credit:hover {
   color: var(--faint);
 }
 
+/* Regions-map card: any country's map (its own aspect ratio), the clue beside it */
+
+.play-main .region-map {
+  display: contents;
+}
+
+.play-main .region-map .ddd-map {
+  width: min(100cqw, 100cqh * var(--map-ar, 1));
+}
+
+.map-prompt .kicker {
+  margin: 0;
+}
+
+.map-clue {
+  margin: 10px 0 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.map-status {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+}
+
 /* Verdict: the answer glows with a drawn check, a wrong pick shakes with a cross */
 
 .opt.ok,
@@ -507,6 +537,14 @@ a.credit:hover {
     grid-column: 2;
     grid-row: 2;
     margin: 0 0 10px;
+  }
+
+  .map-clue {
+    font-size: 16px;
+  }
+
+  .map-prompt .code-hover {
+    margin: 6px 0 10px;
   }
 }
 

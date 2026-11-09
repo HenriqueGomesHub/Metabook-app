@@ -23,6 +23,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
 import { label, scopeOf, SUBJECTS } from '../app/labels';
+import type { Scope as LabelScope } from '../app/labels';
 import { todaySession } from '../app/stats';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
@@ -36,7 +37,7 @@ import type { RevealProps } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
 import { verdictFor } from './session/verdict';
-import { CARD_VIEWS } from './session/views';
+import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
 
 const CONTRAST_DOTS = 5;
@@ -46,11 +47,13 @@ interface Scope {
   subject?: MetaSubject;
   country?: string;
   chapter?: string;
+  /** only cards answered on a regions map (`map=1`) */
+  map?: boolean;
 }
 
 /**
- * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`
- * or `chapter` starts endless practice over the cards in that scope instead.
+ * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
+ * `chapter` or `map` starts endless practice over the cards in that scope instead.
  */
 export function Session() {
   const { data, error } = useAppData();
@@ -62,18 +65,21 @@ export function Session() {
     subjectParam && subjectParam in SUBJECTS ? (subjectParam as MetaSubject) : undefined;
   const country = params.get('country')?.toUpperCase() || undefined;
   const chapter = params.get('chapter') || undefined;
+  const map = params.get('map') === '1' || undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}`;
-  return type || subject || country || chapter ? (
-    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter }} />
+  const key = `${type}|${subject}|${country}|${chapter}|${map}`;
+  return type || subject || country || chapter || map ? (
+    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map }} />
   ) : (
     <DueRunner data={data} />
   );
 }
 
-function inScope(cards: Card[], { type, subject, country, chapter }: Scope): Card[] {
+function inScope(cards: Card[], { type, subject, country, chapter, map }: Scope): Card[] {
   return cards.filter(
     (card) =>
+      // regions-map cards only come up in map drills, not with their subject's "which country?"
+      (map ? Boolean(card.map) : !subject || !card.map) &&
       (!type || card.type === type) &&
       (!subject || card.subject === subject) &&
       (!country || card.country === country) &&
@@ -132,7 +138,7 @@ function DueRunner({ data }: { data: AppSnapshot }) {
             item={item}
             options={options}
             outcome={outcome}
-            scope={scopeOf(card.type)}
+            scope={scopeOf(card)}
           />
         ) : (
           <div className="session-bar rise">
@@ -304,7 +310,7 @@ function CardRunner({
   });
 
   const otherSide = item.mode === 'binary' ? options.find((o) => o !== card.answer) : undefined;
-  const scope = scopeOf(card.type);
+  const scope = scopeOf(card);
 
   /**
    * The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards,
@@ -365,7 +371,7 @@ function CardRunner({
     onAnswered(correct, state);
   }
 
-  const View = item.mode === 'binary' ? LookalikeCard : CARD_VIEWS[card.type];
+  const View = item.mode === 'binary' ? LookalikeCard : viewFor(card);
   const verdict = outcome && verdictFor(card, item, outcome);
   const reveal = verdict && shown && (
     <Reveal
@@ -433,7 +439,7 @@ function ContrastBar({
   item: SessionItem;
   options: string[];
   outcome: Outcome | null;
-  scope?: 'br';
+  scope?: LabelScope;
 }) {
   const [picked, truth] = item.contrastPair as [string, string];
   const streak =

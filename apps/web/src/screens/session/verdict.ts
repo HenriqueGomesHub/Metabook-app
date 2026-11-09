@@ -20,7 +20,7 @@ function baseVerdict(
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   if (card.type === 'photo-choice') return photoVerdict(card, outcome);
-  const scope = scopeOf(card.type);
+  const scope = scopeOf(card);
   const answer = label(card.answer, scope);
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: answer };
   if (!outcome.given) return { verdict: `It’s ${answer}`, tone: 'neutral' };

@@ -1,6 +1,6 @@
 import { mastery, medalFor } from '@metabook/core';
 import type { Card } from '@metabook/core';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
@@ -9,6 +9,7 @@ import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
+import { loadRegionMap } from '../data/content';
 import { pct, WEAK } from './atlas/format';
 import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
@@ -65,20 +66,33 @@ function CountryView({
         to: chapterLink(chapter.id),
         cards: byChapter(chapter.id),
       }));
-    // countries without hand-written chapters get one per meta subject their cards cover
+    // countries without hand-written chapters get one per meta subject their cards cover; cards
+    // answered on the regions map have their own chapter instead
+    const subjectCards = cards.filter((card) => !card.map);
     const chapterList =
       written.length > 0
         ? written
-        : SUBJECT_ORDER.filter((subject) => cards.some((card) => card.subject === subject)).map(
-            (subject, i) => ({
-              id: `auto:${code}:${subject}`,
-              order: i + 1,
-              title: SUBJECTS[subject].label,
-              subtitle: SUBJECTS[subject].blurb,
-              to: `/session?country=${code}&subject=${subject}`,
-              cards: cards.filter((card) => card.subject === subject),
-            }),
-          );
+        : SUBJECT_ORDER.filter((subject) =>
+            subjectCards.some((card) => card.subject === subject),
+          ).map((subject, i) => ({
+            id: `auto:${code}:${subject}`,
+            order: i + 1,
+            title: SUBJECTS[subject].label,
+            subtitle: SUBJECTS[subject].blurb,
+            to: `/session?country=${code}&subject=${subject}`,
+            cards: subjectCards.filter((card) => card.subject === subject),
+          }));
+    const mapCards = cards.filter((card) => card.map);
+    if (mapCards.length > 0) {
+      chapterList.push({
+        id: `auto:${code}:where`,
+        order: chapterList.length + 1,
+        title: `Where in ${country?.name ?? code}`,
+        subtitle: 'Place each clue on the regions map',
+        to: `/session?country=${code}&map=1`,
+        cards: mapCards,
+      });
+    }
     const chapters = chapterList.map(({ cards: chapterCards, ...chapter }) => {
       const chapterIds = chapterCards.map((card) => card.id);
       return {
@@ -87,18 +101,33 @@ function CountryView({
         value: mastery(chapterIds, data.states, now),
       };
     });
-    const typeByAnswer = new Map(cards.map((card) => [card.answer, card.type]));
+    const cardByAnswer = new Map(cards.map((card) => [card.answer, card]));
     const misses = data.confusions
-      .filter((c) => typeByAnswer.has(c.truth) && c.count > 0)
+      .filter((c) => cardByAnswer.has(c.truth) && c.count > 0)
       .sort((a, b) => b.count - a.count)
       .slice(0, TOP_MISSES)
-      .map((c) => ({ ...c, type: typeByAnswer.get(c.truth) }));
+      .map((c) => ({ ...c, card: cardByAnswer.get(c.truth) }));
     const due = ids.filter((id) => {
       const state = data.states[id];
       return state && state.state !== 'new' && Date.parse(state.due) <= now.getTime();
     }).length;
     return { cards, chapters, misses, due, value: mastery(ids, data.states, now) };
-  }, [data, code, now]);
+  }, [data, code, now, country?.name]);
+
+  // misses on regions-map cards are state codes, named from the map once it has loaded
+  const [, setMapLoaded] = useState(false);
+  const needsMap = view.misses.some((miss) => miss.card?.map);
+  useEffect(() => {
+    if (!needsMap) return;
+    let live = true;
+    loadRegionMap(code).then(
+      () => live && setMapLoaded(true),
+      () => undefined, // labels fall back to the codes
+    );
+    return () => {
+      live = false;
+    };
+  }, [needsMap, code]);
 
   if (!country) {
     return (
@@ -291,7 +320,7 @@ function CountryView({
             ) : (
               misses.map((miss) => (
                 <div key={`${miss.picked}|${miss.truth}`} className="miss-row">
-                  <span>{pairLabel(miss.picked, miss.truth, scopeOf(miss.type))}</span>
+                  <span>{pairLabel(miss.picked, miss.truth, scopeOf(miss.card))}</span>
                   <span className="count">{miss.count}</span>
                 </div>
               ))

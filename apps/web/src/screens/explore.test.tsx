@@ -34,7 +34,22 @@ const meta = (id: string, subject: Card['subject']): Card => ({
   source: 'https://example.com',
 });
 
+/** a clue answered on Colombia's real regions map (content/maps/co-regions.json) */
+const where = (id: string, answer: string): Card => ({
+  id: `gen:co:where:${id}`,
+  type: 'region',
+  country: 'CO',
+  answer,
+  prompt: { kind: 'text', value: id },
+  tags: ['generated', 'where'],
+  subject: 'pole',
+  map: 'co',
+  source: 'https://example.com',
+});
+
 const cards: Card[] = [
+  where('a', 'ANT'),
+  where('b', 'BOY'),
   ddd('11', 'SP'),
   ddd('21', 'RJ'),
   ddd('31', 'MG'),
@@ -56,6 +71,7 @@ const content: Content = {
     { code: 'AR', name: 'Argentina', continent: 'americas', in_pool: true },
     { code: 'CL', name: 'Chile', continent: 'americas', in_pool: true },
     { code: 'LT', name: 'Lithuania', continent: 'europe', in_pool: true },
+    { code: 'CO', name: 'Colombia', continent: 'americas', in_pool: true },
   ],
   chapters: [
     { id: 'br:areacodes', country: 'BR', order: 1, title: 'Area codes', subtitle: 'DDD codes' },
@@ -144,7 +160,11 @@ describe('Subjects', () => {
     expect(screen.getByText('Signs').closest('a')?.getAttribute('href')).toBe(
       '/session?subject=sign',
     );
+    // regions-map cards have their own tile, not their subject's
     expect(screen.queryByText('Poles')).toBeNull();
+    expect(screen.getByText('Where in the country').closest('a')?.getAttribute('href')).toBe(
+      '/session?map=1',
+    );
   });
 });
 
@@ -159,6 +179,24 @@ describe('Country', () => {
     );
     expect(screen.queryByRole('link', { name: /Poles/ })).toBeNull();
     expect(screen.getByText('No cards yet')).toBeTruthy();
+  });
+
+  it('gives regions-map cards a chapter and names their misses from the map', async () => {
+    const confusion = {
+      picked: 'BOY',
+      truth: 'ANT',
+      count: 2,
+      lastSeen: new Date().toISOString(),
+      contrastStreak: 0,
+    };
+    mount('/atlas/CO', new MemoryRepository({ confusions: [confusion] }));
+    const nav = await screen.findByRole('navigation', { name: 'Colombia chapters' });
+    const links = within(nav).getAllByRole('link');
+    expect(links.map((l) => l.querySelector('.chapter-title')?.textContent)).toEqual([
+      'Where in Colombia',
+    ]);
+    expect(links[0]?.getAttribute('href')).toBe('/session?country=CO&map=1');
+    expect(await screen.findByText('Boyacá / Antioquia')).toBeTruthy();
   });
 
   it('persists the focus toggle in settings', async () => {

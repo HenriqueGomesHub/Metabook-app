@@ -1,5 +1,5 @@
-import type { CardType, MetaSubject } from '@metabook/core';
-import { brStatesByCode, bundled } from '../data/content';
+import type { Card, CardType, MetaSubject } from '@metabook/core';
+import { brStatesByCode, bundled, loadedRegionMap } from '../data/content';
 
 const REGION_NAMES: Record<string, string> = {
   north: 'North',
@@ -37,7 +37,8 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
 
 export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
-type Scope = 'br' | undefined;
+/** Lower-case code of the regions map whose state codes the keys are ('br': Brazil's states). */
+export type Scope = string | undefined;
 
 let countries: Map<string, string> | undefined;
 
@@ -52,13 +53,15 @@ function lookup() {
 /**
  * Human label for any answer or confusion key: region ids, Brazilian state codes,
  * ISO country codes and plain answers (country names) all read naturally.
- * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country.
+ * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country,
+ * or another map's code ('us') for its state codes; those names come from the map once loaded.
  */
 export function label(key: string, scope?: Scope): string {
   const region = REGION_NAMES[key];
   if (region) return region;
   const { states, countries } = lookup();
   if (scope === 'br') return states.get(key)?.name ?? countries.get(key) ?? key;
+  if (scope) return loadedRegionMap(scope)?.states.find((s) => s.code === key)?.name ?? key;
   return countries.get(key) ?? states.get(key)?.name ?? key;
 }
 
@@ -72,5 +75,9 @@ export function pairLabel(picked: string, truth: string, scope?: Scope): string 
   return `${label(picked, scope)} / ${label(truth, scope)}`;
 }
 
-/** Area-code answers are Brazilian state codes; everything else is a country name or region id. */
-export const scopeOf = (type: CardType | undefined): Scope => (type === 'areacode' ? 'br' : undefined);
+/**
+ * Regions-map cards answer with their map's state codes, area codes with Brazilian state codes;
+ * everything else is a country name or region id.
+ */
+export const scopeOf = (card: Pick<Card, 'type' | 'map'> | undefined): Scope =>
+  card?.map ?? (card?.type === 'areacode' ? 'br' : undefined);
