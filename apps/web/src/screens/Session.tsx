@@ -47,13 +47,14 @@ interface Scope {
   subject?: MetaSubject;
   country?: string;
   chapter?: string;
-  /** only cards answered on a regions map (`map=1`) */
+  /** `map=1`: only cards answered on a regions map; `map=0`: none of them */
   map?: boolean;
 }
 
 /**
  * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
- * `chapter` or `map` starts endless practice over the cards in that scope instead.
+ * `chapter` or `map` starts endless practice over the cards in that scope instead; a scope of
+ * one card shows the summary after each answer rather than looping on it.
  */
 export function Session() {
   const { data, error } = useAppData();
@@ -65,10 +66,11 @@ export function Session() {
     subjectParam && subjectParam in SUBJECTS ? (subjectParam as MetaSubject) : undefined;
   const country = params.get('country')?.toUpperCase() || undefined;
   const chapter = params.get('chapter') || undefined;
-  const map = params.get('map') === '1' || undefined;
+  const mapParam = params.get('map');
+  const map = mapParam === '1' ? true : mapParam === '0' ? false : undefined;
   if (!data) return <Status error={error} />;
   const key = `${type}|${subject}|${country}|${chapter}|${map}`;
-  return type || subject || country || chapter || map ? (
+  return type || subject || country || chapter || map !== undefined ? (
     <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map }} />
   ) : (
     <DueRunner data={data} />
@@ -79,7 +81,7 @@ function inScope(cards: Card[], { type, subject, country, chapter, map }: Scope)
   return cards.filter(
     (card) =>
       // regions-map cards only come up in map drills, not with their subject's "which country?"
-      (map ? Boolean(card.map) : !subject || !card.map) &&
+      (map === undefined ? !subject || !card.map : map === Boolean(card.map)) &&
       (!type || card.type === type) &&
       (!subject || card.subject === subject) &&
       (!country || card.country === country) &&
@@ -240,6 +242,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     // The answer just recorded may have moved this card past multiple choice.
     const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
+    // one card has nothing else to draw: end at the summary instead of looping on it
+    if (pool.length === 1) setEnded(true);
   }
 
   /** Ending while an answered card is showing moves on, so Keep going never re-serves it. */

@@ -99,6 +99,12 @@ describe('RegionMapCard', () => {
     expect(screen.queryByRole('group', { name: MAP })).toBeNull();
   });
 
+  it('leaves map cards out of a country’s Basics practice (map=0)', async () => {
+    renderApp('/session?country=PL&map=0', repo());
+    expect(await screen.findByRole('heading', { name: 'Which country?' })).toBeTruthy();
+    expect(screen.queryByRole('group', { name: MAP })).toBeNull();
+  });
+
   it('names map-scoped confusions with the map’s states on Today, loading the map', async () => {
     const r = repo();
     r.confusions = [

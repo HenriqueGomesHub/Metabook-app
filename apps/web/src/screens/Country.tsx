@@ -1,5 +1,5 @@
 import { answerKey, mastery, medalFor } from '@metabook/core';
-import type { Card } from '@metabook/core';
+import type { Card, MetaSubject } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
@@ -17,6 +17,8 @@ import './atlas/atlas.css';
 
 const RING_LENGTH = 176;
 const TOP_MISSES = 3;
+/** an auto chapter per subject needs this many cards; fewer go to the Basics chapter */
+const MIN_CHAPTER_CARDS = 3;
 
 const STEPS = [
   { title: 'Learn', sub: 'Study a chapter here, in order' },
@@ -67,15 +69,18 @@ function CountryView({
         to: chapterLink(chapter.id),
         cards: byChapter(chapter.id),
       }));
-    // countries without hand-written chapters get one per meta subject their cards cover; cards
+    // countries without hand-written chapters get one per meta subject with enough cards to drill;
+    // the rest share one Basics chapter, which practises all the country's non-map cards. Cards
     // answered on the regions map have their own chapter instead
     const subjectCards = cards.filter((card) => !card.map);
+    const ownChapter = (subject: MetaSubject) =>
+      subject !== 'other' &&
+      subjectCards.filter((card) => card.subject === subject).length >= MIN_CHAPTER_CARDS;
+    const leftovers = subjectCards.some((card) => !card.subject || !ownChapter(card.subject));
     const chapterList =
       written.length > 0
         ? written
-        : SUBJECT_ORDER.filter((subject) =>
-            subjectCards.some((card) => card.subject === subject),
-          ).map((subject, i) => ({
+        : SUBJECT_ORDER.filter(ownChapter).map((subject, i) => ({
             id: `auto:${code}:${subject}`,
             order: i + 1,
             title: SUBJECTS[subject].label,
@@ -83,6 +88,16 @@ function CountryView({
             to: `/session?country=${code}&subject=${subject}`,
             cards: subjectCards.filter((card) => card.subject === subject),
           }));
+    if (written.length === 0 && leftovers) {
+      chapterList.push({
+        id: `auto:${code}:basics`,
+        order: chapterList.length + 1,
+        title: SUBJECTS.other.label,
+        subtitle: `Every ${country?.name ?? code} card, mixed`,
+        to: `/session?country=${code}&map=0`,
+        cards: subjectCards,
+      });
+    }
     const mapCards = cards.filter((card) => card.map);
     if (mapCards.length > 0) {
       chapterList.push({

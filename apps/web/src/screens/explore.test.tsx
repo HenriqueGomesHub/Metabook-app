@@ -55,6 +55,9 @@ const cards: Card[] = [
   ddd('31', 'MG'),
   meta('gen:cl:sign', 'sign'),
   meta('gen:cl:bollard', 'bollard'),
+  meta('gen:cl:bollard:2', 'bollard'),
+  meta('gen:cl:bollard:3', 'bollard'),
+  meta('gen:cl:drive', 'other'),
 ];
 const tips: Tip[] = [
   {
@@ -142,15 +145,17 @@ describe('Atlas', () => {
 });
 
 describe('Subjects', () => {
-  it('gives a country without written chapters one chapter per subject', async () => {
+  it('gives a country without written chapters a chapter per subject with 3+ cards, then Basics', async () => {
     mount('/atlas/CL');
     const nav = await screen.findByRole('navigation', { name: 'Chile chapters' });
     const links = within(nav).getAllByRole('link');
     expect(links.map((l) => l.querySelector('.chapter-title')?.textContent)).toEqual([
       'Bollards',
-      'Signs',
+      'Basics',
     ]);
     expect(links[0]?.getAttribute('href')).toBe('/session?country=CL&subject=bollard');
+    // Basics practises every non-map card of the country
+    expect(links[1]?.getAttribute('href')).toBe('/session?country=CL&map=0');
   });
 
   it('adds a drill tile per subject that has cards', async () => {

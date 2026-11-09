@@ -70,6 +70,16 @@ describe('practice', () => {
     ids.forEach((id, i) => expect(ids.slice(Math.max(0, i - 3), i)).not.toContain(id));
   });
 
+  it('never serves the same card twice in a row in a small pool, unless it is the only one', () => {
+    for (const n of [2, 3, 4]) {
+      for (const seed of [1, 2, 3]) {
+        const ids = run(start(pool(n), {}, seed), {}, 200, (_, i) => i % 4 !== 0);
+        ids.slice(1).forEach((id, i) => expect(id).not.toBe(ids[i]));
+      }
+    }
+    expect(new Set(run(start(pool(1)), {}, 5))).toEqual(new Set(['c0']));
+  });
+
   it('brings a wrong card back within 5 steps and stops forcing it after two rights', () => {
     const cards = pool(20);
     let target = '';

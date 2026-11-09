@@ -10,7 +10,10 @@ const CONFUSION_BOOST = 2;
 const UNSEEN_BOOST = 3;
 const UNSEEN_SHARE = 0.3;
 const RECENT_WINDOW = 3;
-/** The no-repeat rule only applies to pools larger than this, so small pools can still be drilled. */
+/**
+ * Pools larger than this never repeat any of the last RECENT_WINDOW cards; smaller pools (of 2 or
+ * more) only never repeat the last one, so they can still be drilled.
+ */
 const RECENT_MIN_POOL = 4;
 const RELEARN_GAP_MIN = 2;
 const RELEARN_GAP_MAX = 4;
@@ -102,15 +105,17 @@ function choose(
   now: Date,
 ): { card: Card; relearn: Relearn[] } {
   const byId = new Map(practice.cards.map((card) => [card.id, card]));
-  const ready = practice.relearn.find((r) => r.wait <= 0 && byId.has(r.cardId));
+  const size = practice.cards.length;
+  const window = size > RECENT_MIN_POOL ? RECENT_WINDOW : size > 1 ? 1 : 0;
+  const blocked = new Set(practice.recent.slice(0, window));
+  const ready = practice.relearn.find(
+    (r) => r.wait <= 0 && byId.has(r.cardId) && !blocked.has(r.cardId),
+  );
   // Every other queued card counts this item toward its wait.
   const tick = (served: string) =>
     practice.relearn.map((r) => (r.cardId === served ? r : { ...r, wait: r.wait - 1 }));
   if (ready) return { card: byId.get(ready.cardId) as Card, relearn: tick(ready.cardId) };
 
-  const blocked = new Set(
-    practice.cards.length > RECENT_MIN_POOL ? practice.recent.slice(0, RECENT_WINDOW) : [],
-  );
   // Queued cards are served by the relearn rule, not by the weighted draw.
   const queued = new Set(practice.relearn.map((r) => r.cardId));
   let candidates = practice.cards.filter((c) => !blocked.has(c.id) && !queued.has(c.id));
