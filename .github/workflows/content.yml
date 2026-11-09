@@ -41,12 +41,14 @@ jobs:
         env:
           INPUT_JOB: ${{ github.event.inputs.job }}
           BEFORE: ${{ github.event.before }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           if [ -n "$INPUT_JOB" ]; then
             files="$INPUT_JOB"
           elif [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
-            # new branch or force push: the jobs touched by the pushed head commit
-            files=$(git diff-tree --no-commit-id --name-only --diff-filter=AM -r HEAD -- 'content/jobs/*.json')
+            # new branch or force push: every job added or changed since the default branch
+            base=$(git merge-base "origin/$DEFAULT_BRANCH" HEAD || git rev-list --max-parents=0 HEAD | tail -1)
+            files=$(git diff --name-only --diff-filter=AM "$base" HEAD -- 'content/jobs/*.json')
           else
             files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'content/jobs/*.json')
           fi
