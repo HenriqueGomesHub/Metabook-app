@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { activePairs, contrastResult, pairKey, parsePairKey, recordAnswer } from './confusions';
+import {
+  activePairs,
+  answerKey,
+  contrastResult,
+  isMapKey,
+  pairKey,
+  parseMapKey,
+  parsePairKey,
+  recordAnswer,
+} from './confusions';
 import type { Confusion } from './types';
 
 const now = new Date('2026-03-15T12:00:00Z');
@@ -15,6 +24,23 @@ const missTimes = (times: number, at = now): Confusion[] =>
 describe('pair keys', () => {
   it('round-trips', () => {
     expect(parsePairKey(pairKey(pair))).toEqual(pair);
+  });
+});
+
+describe('map-scoped keys', () => {
+  it('scopes regions-map answers to their map and leaves other answers alone', () => {
+    expect(answerKey({ map: 'ca' }, 'NL')).toBe('ca:NL');
+    expect(answerKey({}, 'Netherlands')).toBe('Netherlands');
+    expect(parseMapKey('ca:NL')).toEqual({ map: 'ca', code: 'NL' });
+    expect(parseMapKey('NL')).toBeUndefined();
+    expect(isMapKey('ca:NL')).toBe(true);
+    // old unscoped confusions and plain answers stay plain
+    expect(isMapKey('NL')).toBe(false);
+    expect(isMapKey('ddd:br:pattern')).toBe(false);
+    expect(parsePairKey(pairKey({ picked: 'ca:PE', truth: 'ca:NL' }))).toEqual({
+      picked: 'ca:PE',
+      truth: 'ca:NL',
+    });
   });
 });
 

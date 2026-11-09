@@ -1,4 +1,4 @@
-import { activePairs } from './confusions';
+import { activePairs, isMapKey } from './confusions';
 import type { Rng } from './random';
 import { retrievability } from './scheduler';
 import { modeFor, type SessionItem } from './session';
@@ -42,7 +42,12 @@ export function createPractice(input: {
   rng: Rng;
 }): PracticeState {
   const { cards, confusions, now, rng } = input;
-  const sides = new Set(activePairs(confusions, now).flatMap((c) => [c.picked, c.truth]));
+  // map-scoped keys ("ca:NL") are states, not the countries or answers cards are matched on
+  const sides = new Set(
+    activePairs(confusions, now)
+      .flatMap((c) => [c.picked, c.truth])
+      .filter((key) => !isMapKey(key)),
+  );
   const confused = cards
     .filter((card) => sides.has(card.answer) || sides.has(card.country))
     .map((card) => card.id);

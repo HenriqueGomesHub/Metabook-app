@@ -149,6 +149,18 @@ describe('practice', () => {
     expect(share('flag:a')).toBeGreaterThan(share('c0') * 1.4);
   });
 
+  it('ignores map-scoped confusions: state NL boosts neither the Netherlands nor any card', () => {
+    const cards = [card('flag:nl', 'flag', 'NL', 'Netherlands'), ...pool(4)];
+    const confusion: Confusion = {
+      picked: 'ca:PE',
+      truth: 'ca:NL',
+      count: 5,
+      lastSeen: now.toISOString(),
+      contrastStreak: 0,
+    };
+    expect(start(cards, {}, 1, [confusion]).confused).toEqual([]);
+  });
+
   it('chooses the mode like a session: mcq early, then the type recall mode', () => {
     const cards = [card('x', 'flag'), card('y', 'areacode'), card('z', 'lookalike')];
     const reviewed = (id: string): CardState => ({ ...strong(id), reps: 3 });

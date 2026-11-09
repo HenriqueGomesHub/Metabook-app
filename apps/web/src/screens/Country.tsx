@@ -1,15 +1,16 @@
-import { mastery, medalFor } from '@metabook/core';
+import { answerKey, mastery, medalFor } from '@metabook/core';
 import type { Card } from '@metabook/core';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { pairLabel, scopeOf, SUBJECT_ORDER, SUBJECTS } from '../app/labels';
+import { mapsOf } from '../app/stats';
+import { useRegionMaps } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
-import { loadRegionMap } from '../data/content';
 import { pct, WEAK } from './atlas/format';
 import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
@@ -101,7 +102,8 @@ function CountryView({
         value: mastery(chapterIds, data.states, now),
       };
     });
-    const cardByAnswer = new Map(cards.map((card) => [card.answer, card]));
+    // regions-map cards record map-scoped keys ("ca:NL"), so look cards up by those
+    const cardByAnswer = new Map(cards.map((card) => [answerKey(card, card.answer), card]));
     const misses = data.confusions
       .filter((c) => cardByAnswer.has(c.truth) && c.count > 0)
       .sort((a, b) => b.count - a.count)
@@ -115,19 +117,7 @@ function CountryView({
   }, [data, code, now, country?.name]);
 
   // misses on regions-map cards are state codes, named from the map once it has loaded
-  const [, setMapLoaded] = useState(false);
-  const needsMap = view.misses.some((miss) => miss.card?.map);
-  useEffect(() => {
-    if (!needsMap) return;
-    let live = true;
-    loadRegionMap(code).then(
-      () => live && setMapLoaded(true),
-      () => undefined, // labels fall back to the codes
-    );
-    return () => {
-      live = false;
-    };
-  }, [needsMap, code]);
+  useRegionMaps(mapsOf(view.misses.flatMap((miss) => [miss.picked, miss.truth])));
 
   if (!country) {
     return (

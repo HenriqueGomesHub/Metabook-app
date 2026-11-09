@@ -1,3 +1,4 @@
+import { parseMapKey } from '@metabook/core';
 import type { Card, CardType, MetaSubject } from '@metabook/core';
 import { brStatesByCode, bundled, loadedRegionMap } from '../data/content';
 
@@ -55,8 +56,13 @@ function lookup() {
  * ISO country codes and plain answers (country names) all read naturally.
  * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country,
  * or another map's code ('us') for its state codes; those names come from the map once loaded.
+ * Map-scoped keys ("ca:NL", what regions-map cards record) resolve on their own map, whatever the
+ * scope; until that map has loaded they read as the bare state code.
  */
 export function label(key: string, scope?: Scope): string {
+  // a map-scoped confusion key ("ca:NL") names its own map
+  const scoped = parseMapKey(key);
+  if (scoped) return label(scoped.code, scoped.map);
   const region = REGION_NAMES[key];
   if (region) return region;
   const { states, countries } = lookup();

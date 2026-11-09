@@ -1,5 +1,5 @@
 import { matchesTarget } from './blocks';
-import { activePairs, CONTRAST_STREAK_TO_RESOLVE } from './confusions';
+import { activePairs, CONTRAST_STREAK_TO_RESOLVE, isMapKey } from './confusions';
 import { mulberry32, shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
 import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } from './types';
@@ -91,6 +91,8 @@ function interleave(cards: Card[]): Card[] {
 }
 
 function contrastItems(confusion: Confusion, cards: Card[], rng: Rng): SessionItem[] {
+  // map-scoped pairs ("ca:NL") are states, drilled on their map: never a flag or country round
+  if (isMapKey(confusion.picked) || isMapKey(confusion.truth)) return [];
   const isSide = (card: Card, side: string) => card.answer === side || card.country === side;
   // regions-map cards are drilled on their map, not as a binary pick between two state codes
   const sides = cards

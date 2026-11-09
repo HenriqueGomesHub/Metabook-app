@@ -183,8 +183,8 @@ describe('Country', () => {
 
   it('gives regions-map cards a chapter and names their misses from the map', async () => {
     const confusion = {
-      picked: 'BOY',
-      truth: 'ANT',
+      picked: 'co:BOY',
+      truth: 'co:ANT',
       count: 2,
       lastSeen: new Date().toISOString(),
       contrastStreak: 0,

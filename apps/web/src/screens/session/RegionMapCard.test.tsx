@@ -73,10 +73,11 @@ describe('RegionMapCard', () => {
         .getByRole('button', { name: 'Masovian Voivodeship' })
         .getAttribute('aria-disabled'),
     ).toBe('true');
-    // confusions keep the state codes, and labels resolve them through the map
-    await waitFor(() => expect(r.confusions[0]).toMatchObject({ picked: 'OP', truth: 'MZ' }));
+    // confusions keep the state codes scoped to the map, and labels resolve them through it
+    await waitFor(() => expect(r.confusions[0]).toMatchObject({ picked: 'pl:OP', truth: 'pl:MZ' }));
     expect(r.reviews[0]).toMatchObject({ cardId: card.id, correct: false, answerGiven: 'OP' });
     expect(label('OP', 'pl')).toBe('Opole Voivodeship');
+    expect(label('pl:OP')).toBe('Opole Voivodeship');
   });
 
   it('answers from the keyboard', async () => {
@@ -96,5 +97,20 @@ describe('RegionMapCard', () => {
     renderApp('/session?subject=pole', repo());
     expect(await screen.findByRole('heading', { name: 'Which country?' })).toBeTruthy();
     expect(screen.queryByRole('group', { name: MAP })).toBeNull();
+  });
+
+  it('names map-scoped confusions with the map’s states on Today, loading the map', async () => {
+    const r = repo();
+    r.confusions = [
+      {
+        picked: 'pl:OP',
+        truth: 'pl:MZ',
+        count: 3,
+        lastSeen: new Date().toISOString(),
+        contrastStreak: 0,
+      },
+    ];
+    renderApp('/', r);
+    expect(await screen.findByText('Opole Voivodeship / Masovian Voivodeship')).toBeTruthy();
   });
 });

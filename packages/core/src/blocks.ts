@@ -1,4 +1,4 @@
-import { pairKey, parsePairKey } from './confusions';
+import { answerKey, pairKey, parsePairKey } from './confusions';
 import type { BlockDay, BlockTarget, Card, Settings, Snapshot, TrainingBlock } from './types';
 
 const DAYS_RANGE = [7, 30] as const;
@@ -39,7 +39,9 @@ export function matchesTarget(card: Card, target: BlockTarget): boolean {
       return card.chapter === target.key;
     case 'pair': {
       const { picked, truth } = parsePairKey(target.key);
-      return [picked, truth].some((key) => key === card.country || key === card.answer);
+      // a map card's side is its scoped answer ("ca:NL"), never its bare state code
+      const answer = answerKey(card, card.answer);
+      return [picked, truth].some((key) => (!card.map && key === card.country) || key === answer);
     }
   }
 }
