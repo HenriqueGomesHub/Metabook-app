@@ -3,6 +3,7 @@ import { AreaCodeGame } from '../screens/AreaCodeGame';
 import { Atlas } from '../screens/Atlas';
 import { Blocks } from '../screens/Blocks';
 import { Country } from '../screens/Country';
+import { Curate } from '../screens/Curate';
 import { Drills } from '../screens/Drills';
 import { Editor } from '../screens/Editor';
 import { Games } from '../screens/Games';
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
           { path: '/blocks', element: <Blocks /> },
           { path: '/stats', element: <Stats /> },
           { path: '/settings', element: <Settings /> },
+          { path: '/curate', element: <Curate /> },
           { path: '/editor', element: <Editor /> },
           { path: '/placement/:country', element: <Placement /> },
           { path: '*', element: <NotFound /> },

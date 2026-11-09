@@ -1,5 +1,6 @@
 import type { Card, PoolCountry, Tip } from '@metabook/core';
 import brStatesJson from '../../../../content/maps/br-states.json';
+import { mediaUrl } from './media';
 import type { CardOverride, Repository } from './repository';
 
 export interface Chapter {
@@ -17,21 +18,35 @@ export interface Content {
   tips: Tip[];
 }
 
-export interface BrazilState {
+/** One region of a country map; `capital` is optional for generated maps. */
+export interface MapRegion {
   code: string;
   name: string;
   path: string;
   label: number[];
-  capital: { xy: number[]; lat: number; lon: number };
+  capital?: { xy: number[]; lat: number; lon: number };
 }
 
-export interface BrazilMap {
+/** content/maps/br-states.json and the generated <code>-regions.json files share this shape. */
+export interface RegionMap {
   country: string;
   viewBox: string;
-  states: BrazilState[];
+  states: MapRegion[];
 }
 
-export const brStates: BrazilMap = brStatesJson;
+/** Brazil's hand-made map has a capital for every state. */
+export const brStates: Omit<RegionMap, 'states'> & { states: Required<MapRegion>[] } = brStatesJson;
+
+const regionFiles = import.meta.glob<RegionMap>('../../../../content/maps/*-regions.json', {
+  eager: true,
+  import: 'default',
+});
+
+/** Region maps by upper-case country code; Brazil's hand-made map wins. */
+export const regionMaps: ReadonlyMap<string, RegionMap> = new Map([
+  ...Object.values(regionFiles).map((map): [string, RegionMap] => [map.country.toUpperCase(), map]),
+  ['BR', brStates],
+]);
 
 const flatten = <T>(files: Record<string, T[]>): T[] => Object.values(files).flat();
 
@@ -52,10 +67,16 @@ const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', {
   import: 'default',
 });
 
+/** Generated photo cards store bucket paths; resolve them against the media base. */
+const withMediaUrls = (card: Card): Card =>
+  card.prompt.kind === 'image'
+    ? { ...card, prompt: { ...card.prompt, value: mediaUrl(card.prompt.value) } }
+    : card;
+
 export const bundled: Content = {
   pool: flatten(pool),
   chapters: flatten(chapters),
-  cards: flatten(cards),
+  cards: flatten(cards).map(withMediaUrls),
   tips: flatten(tips),
 };
 

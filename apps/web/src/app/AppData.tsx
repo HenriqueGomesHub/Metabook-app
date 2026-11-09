@@ -21,6 +21,7 @@ import type { ReactNode } from 'react';
 import { loadContent } from '../data/content';
 import type { Content } from '../data/content';
 import type { Auth, AuthUser, Mode } from '../data';
+import type { CurationApi } from '../data/curation';
 import type { CardOverride, Repository } from '../data/repository';
 import {
   blockStudyChange,
@@ -64,6 +65,8 @@ interface AppDataValue {
   repo: Repository;
   mode: Mode;
   auth: Auth;
+  /** photo curation; null in local mode */
+  curation: CurationApi | null;
   /** undefined until the session has been looked up */
   user: AuthUser | null | undefined;
   /** returns the card's new schedule state, when the answer produced one */
@@ -90,11 +93,13 @@ export function AppDataProvider({
   repo,
   auth,
   mode = 'local',
+  curation = null,
   children,
 }: {
   repo: Repository;
   auth: Auth;
   mode?: Mode;
+  curation?: CurationApi | null;
   children: ReactNode;
 }) {
   const [data, setData] = useState<AppSnapshot | null>(null);
@@ -333,6 +338,7 @@ export function AppDataProvider({
       repo,
       mode,
       auth,
+      curation,
       user,
       answer,
       recordTipView,
@@ -350,6 +356,7 @@ export function AppDataProvider({
       repo,
       mode,
       auth,
+      curation,
       user,
       answer,
       recordTipView,

@@ -1,4 +1,27 @@
-export type CardType = 'flag' | 'script' | 'meta' | 'lookalike' | 'region' | 'areacode' | 'plate';
+export type CardType =
+  | 'flag'
+  | 'script'
+  | 'meta'
+  | 'lookalike'
+  | 'region'
+  | 'areacode'
+  | 'plate'
+  /** reverse card: a text prompt ("Poland's bollard?"); `options` and `answer` are media ids */
+  | 'photo-choice';
+
+/** What a meta is about; drill tiles and auto chapters group cards by it. */
+export type MetaSubject =
+  | 'bollard'
+  | 'pole'
+  | 'plate'
+  | 'sign'
+  | 'line'
+  | 'guardrail'
+  | 'language'
+  | 'car'
+  | 'landscape'
+  | 'architecture'
+  | 'other';
 
 export type PromptKind = 'flag' | 'text' | 'image' | 'embed' | 'svg';
 
@@ -24,7 +47,69 @@ export interface Card {
   prompt: CardPrompt;
   tags: string[];
   chapter?: string;
+  /** the card's own reason, shown first in the reveal ("sugarcane: by far most common in São Paulo") */
+  explain?: string;
   source: string;
+  subject?: MetaSubject;
+  /** ids of the MediaItems the card shows */
+  media?: string[];
+  region?: string;
+}
+
+/** One fact about a country, written once and reused by generated cards. */
+export interface FactNote {
+  id: string;
+  subject: MetaSubject;
+  text: string;
+  region?: string;
+  distinctive?: boolean;
+  /** ISO codes (or names) of pool countries this is confused with */
+  lookalikes?: string[];
+  source: string;
+  /** YYYY-MM-DD the source was last checked */
+  checked: string;
+  verified: boolean;
+}
+
+/** content/facts/<code>.json; the codes are upper case like pool.json, the file name lower case. */
+export interface CountryFacts {
+  code: string;
+  name: string;
+  /** Wikidata item id, e.g. "Q36", for sourcing the fields below */
+  wikidata?: string;
+  drivingSide?: 'left' | 'right';
+  tld?: string[];
+  callingCode?: string[];
+  languages?: string[];
+  scripts?: string[];
+  /** capital city; captions and notes naming it are dropped as giveaways */
+  capital?: string;
+  /** adjectives and nouns for its people ("Polish", "Poles"); same use as `capital` */
+  demonym?: string[];
+  notes: FactNote[];
+}
+
+/** One approved photo, content/media/<code>.json. */
+export interface MediaItem {
+  id: string;
+  country: string;
+  subject: MetaSubject;
+  region?: string;
+  noteId?: string;
+  /** path inside the `media` storage bucket ("approved/<id>.webp"), or an absolute URL */
+  url: string;
+  width: number;
+  height: number;
+  /** tiny data URI shown while the photo loads */
+  preview?: string;
+  credit: string;
+  licence: string;
+  licenceUrl?: string;
+  sourceUrl: string;
+  /** subjects this photo is a clear giveaway for */
+  giveaways?: string[];
+  /** curator-written alt text; generation drops it when it names the country */
+  caption?: string;
 }
 
 export interface Tip {

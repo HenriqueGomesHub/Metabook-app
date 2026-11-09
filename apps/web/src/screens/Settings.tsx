@@ -2,6 +2,7 @@ import { useAppData } from '../app/AppData';
 import { Status } from '../components/Status';
 import { Page } from './manage/Page';
 import { Account } from './settings/Account';
+import { CurateLink } from './settings/CurateLink';
 import { Pairing } from './settings/Pairing';
 import { SettingsForm } from './settings/SettingsForm';
 
@@ -17,6 +18,7 @@ export function Settings() {
       <SettingsForm settings={data.settings} onSave={saveSettings} />
       <Pairing />
       <Account />
+      <CurateLink />
     </Page>
   );
 }

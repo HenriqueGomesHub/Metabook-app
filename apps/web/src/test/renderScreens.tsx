@@ -3,7 +3,9 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { AppDataProvider } from '../app/AppData';
 import { AuthGate } from '../app/AuthGate';
 import type { Auth, AuthUser, Mode } from '../data';
+import type { CurationApi } from '../data/curation';
 import { Blocks } from '../screens/Blocks';
+import { Curate } from '../screens/Curate';
 import { Editor } from '../screens/Editor';
 import { Login } from '../screens/Login';
 import { Placement } from '../screens/Placement';
@@ -27,10 +29,15 @@ export function fakeAuth(user: AuthUser | null = USER): Auth {
 export function renderScreens(
   path: string,
   repo: MemoryRepository,
-  options: { mode?: Mode; auth?: Auth } = {},
+  options: { mode?: Mode; auth?: Auth; curation?: CurationApi | null } = {},
 ) {
   return render(
-    <AppDataProvider repo={repo} auth={options.auth ?? fakeAuth()} mode={options.mode}>
+    <AppDataProvider
+      repo={repo}
+      auth={options.auth ?? fakeAuth()}
+      mode={options.mode}
+      curation={options.curation}
+    >
       <MemoryRouter initialEntries={[path]}>
         <Routes>
           <Route element={<AuthGate />}>
@@ -39,6 +46,7 @@ export function renderScreens(
             <Route path="/review" element={<Review />} />
             <Route path="/blocks" element={<Blocks />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/curate" element={<Curate />} />
             <Route path="/editor" element={<Editor />} />
             <Route path="/placement/:country" element={<Placement />} />
           </Route>

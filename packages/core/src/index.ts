@@ -2,6 +2,7 @@ export * from './types';
 export * from './answers';
 export * from './blocks';
 export * from './confusions';
+export * from './generate';
 export * from './geo';
 export * from './mastery';
 export * from './placement';
