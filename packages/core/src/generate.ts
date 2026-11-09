@@ -174,7 +174,8 @@ export function resolveRegion(
     if (hits.length > 0) return hits.length === 1 ? hits[0] : undefined;
   }
   const name = fold(region);
-  const hits = map.states.filter((s) => fold(s.name) === name);
+  // generated maps can hold an unnamed leftover shape (Natural Earth's "RUS+99?")
+  const hits = name ? map.states.filter((s) => s.name && fold(s.name) === name) : [];
   return hits.length === 1 ? hits[0] : undefined;
 }
 

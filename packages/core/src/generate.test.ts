@@ -235,6 +235,8 @@ const plMap: RegionMapNames = {
     // two states with one name: that name is ambiguous
     { code: 'X1', name: 'Twin' },
     { code: 'X2', name: 'Twin' },
+    // an unnamed leftover shape, as in some generated maps
+    { code: 'POL+99?', name: null as unknown as string },
   ],
 };
 
