@@ -10,6 +10,14 @@ export function verdictFor(
   card: Card,
   item: Pick<SessionItem, 'mode' | 'contrastPair'>,
   outcome: Outcome,
+): Pick<RevealProps, 'verdict' | 'tone' | 'detail' | 'why'> {
+  return { ...baseVerdict(card, item, outcome), why: card.explain };
+}
+
+function baseVerdict(
+  card: Card,
+  item: Pick<SessionItem, 'mode' | 'contrastPair'>,
+  outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   if (card.type === 'photo-choice') return photoVerdict(card, outcome);
   const scope = scopeOf(card.type);

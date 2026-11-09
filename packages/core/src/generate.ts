@@ -160,6 +160,11 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
   for (const item of own) {
     const id = `gen:${lc}:${item.subject}:${item.id}`;
     const note = item.noteId ? notes.find((n) => n.id === item.noteId) : undefined;
+    // the reason shown after answering: the photo's own note, else the country's main note on that subject
+    const reason =
+      note ??
+      notes.find((n) => n.subject === item.subject && n.distinctive && !n.region) ??
+      notes.find((n) => n.subject === item.subject && !n.region);
     cards.push({
       id,
       type: cardType(item.subject),
@@ -177,6 +182,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       subject: item.subject,
       media: [item.id],
       ...(item.region && { region: item.region }),
+      ...(reason && { explain: reason.text }),
       source: note?.source ?? item.sourceUrl,
       verified: true,
     });

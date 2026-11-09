@@ -9,6 +9,8 @@ export interface RevealProps {
   tone: Tone;
   /** one short line under the verdict, e.g. what was typed */
   detail?: string;
+  /** the card's own reason, shown before the rotating tip */
+  why?: string;
   tip: PickedTip | null;
   /** a tip about another option: the wrong pick, or the other lookalike */
   aside?: { label: string; tip: PickedTip };
@@ -27,6 +29,7 @@ export function Reveal({
   verdict,
   tone,
   detail,
+  why,
   tip,
   aside,
   onNext,
@@ -49,6 +52,7 @@ export function Reveal({
           </h2>
           {detail && <p>{detail}</p>}
         </div>
+        {why && <p className="reveal-why">{why}</p>}
         {tip && (
           <div className="reveal-tip">
             <p key={tip.tip.id} className="swap">

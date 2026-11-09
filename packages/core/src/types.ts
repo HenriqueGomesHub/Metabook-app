@@ -47,6 +47,8 @@ export interface Card {
   prompt: CardPrompt;
   tags: string[];
   chapter?: string;
+  /** the card's own reason, shown first in the reveal ("sugarcane: by far most common in São Paulo") */
+  explain?: string;
   source: string;
   subject?: MetaSubject;
   /** ids of the MediaItems the card shows */
