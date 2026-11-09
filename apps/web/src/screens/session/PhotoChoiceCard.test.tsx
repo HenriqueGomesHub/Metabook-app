@@ -70,7 +70,9 @@ describe('PhotoChoiceCard', () => {
     expect(screen.queryByText(/Wikimedia Commons/)).toBeNull();
 
     fireEvent.keyDown(window, { key: '1' });
-    const dialog = screen.getByRole('dialog', { name: 'Not quite — it’s the marked photo' });
+    const dialog = await screen.findByRole('dialog', {
+      name: 'Not quite — it’s the marked photo',
+    });
     expect(within(dialog).getByText('You picked Lithuania’s bollard')).toBeTruthy();
     // credits and countries appear once answered
     expect(screen.getByText('Ana Ruiz pl · Wikimedia Commons · CC BY-SA 4.0')).toBeTruthy();
@@ -87,6 +89,6 @@ describe('PhotoChoiceCard', () => {
   it('accepts the right photo', async () => {
     renderApp('/session?subject=bollard', repo());
     fireEvent.click(await screen.findByRole('button', { name: 'Photo 2' }));
-    expect(screen.getByRole('dialog', { name: 'Got it' })).toBeTruthy();
+    expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
   });
 });

@@ -36,6 +36,10 @@ const cards = [
   text('region:1', 'region', 'BR', 'north', 'a'),
   text('region:2', 'region', 'BR', 'northeast', 'b'),
   text('region:3', 'region', 'BR', 'south', 'c'),
+  // more than four cards, so practice never repeats one within three draws (a repeat could
+  // reach its recall reviews and drop the option buttons the region test clicks)
+  text('region:4', 'region', 'BR', 'southeast', 'd'),
+  text('region:5', 'region', 'BR', 'centre-west', 'e'),
 ];
 const tips = [
   tip('p1', 'ddd:br:pattern', 'areacode'),
@@ -66,7 +70,7 @@ describe('Session reveal', () => {
       answer.answer
     ] as string;
     fireEvent.click(screen.getByRole('button', { name }));
-    expect(screen.getByRole('dialog', { name: 'Got it' })).toBeTruthy();
+    expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
     expect(screen.getByText('Tip p1')).toBeTruthy();
     expect(screen.queryByRole('button', { name: 'Another tip' })).toBeNull();
     // the map locks once answered
@@ -79,7 +83,7 @@ describe('Session reveal', () => {
     renderApp('/session?type=areacode', r);
     await screen.findByRole('group', { name: 'Map of Brazil with state borders' });
     fireEvent.click(screen.getByRole('button', { name: 'Amazonas' }));
-    const dialog = screen.getByRole('dialog', { name: /^Not quite — it’s / });
+    const dialog = await screen.findByRole('dialog', { name: /^Not quite — it’s / });
     expect(within(dialog).getByText('You said Amazonas')).toBeTruthy();
     await waitFor(() => expect(r.confusions[0]).toMatchObject({ picked: 'AM' }));
   });
@@ -90,6 +94,7 @@ describe('Session reveal', () => {
       const buttons = await screen.findAllByRole('button', { name: /^\d/ });
       expect(buttons.map((b) => b.textContent).join()).not.toMatch(/northeast|\bnorth\b/);
       fireEvent.click(buttons[0] as HTMLElement);
+      await screen.findByRole('dialog');
       // Only the answer's own tip box counts toward "Another tip"; aside tips rotate separately.
       const rotates = screen.queryByText('Tip 1 of 2') ?? screen.queryByText('Tip 2 of 2');
       expect(!!screen.queryByRole('button', { name: 'Another tip' })).toBe(!!rotates);
