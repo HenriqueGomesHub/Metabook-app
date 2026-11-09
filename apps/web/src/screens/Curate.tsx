@@ -4,9 +4,22 @@ import { label, SUBJECT_ORDER, SUBJECTS } from '../app/labels';
 import { EmptyState } from '../components/EmptyState';
 import { Status } from '../components/Status';
 import type { Candidate, CurationApi, Decision } from '../data/curation';
+import { CandidateGrid } from './curate/CandidateGrid';
 import { CandidateReview } from './curate/CandidateReview';
 import { Page } from './manage/Page';
 import './curate/curate.css';
+
+const GRID_PAGE = 12;
+const VIEW_KEY = 'metabook.curate.view';
+type View = 'grid' | 'single';
+
+function savedView(): View {
+  try {
+    return localStorage.getItem(VIEW_KEY) === 'single' ? 'single' : 'grid';
+  } catch {
+    return 'grid';
+  }
+}
 
 const countryName = (code: string) => label(code.toUpperCase());
 
@@ -51,6 +64,9 @@ function CurateQueue({
 }) {
   const [pending, setPending] = useState<Candidate[] | null>(null);
   const [decided, setDecided] = useState<Candidate[]>([]);
+  /** grid pages already decided, newest last, for "Undo page" */
+  const [pages, setPages] = useState<Candidate[][]>([]);
+  const [view, setView] = useState<View>(savedView);
   const [country, setCountry] = useState('');
   const [subject, setSubject] = useState('');
   const [busy, setBusy] = useState(false);
@@ -77,6 +93,17 @@ function CurateQueue({
   const countries = [...new Set((pending ?? []).map((c) => c.country))].sort();
   const subjects = SUBJECT_ORDER.filter((s) => pending?.some((c) => c.subject === s));
   const current = shown[0];
+  const page = shown.slice(0, GRID_PAGE);
+  const decidedCount = decided.length + pages.reduce((n, p) => n + p.length, 0);
+
+  function chooseView(next: View) {
+    setView(next);
+    try {
+      localStorage.setItem(VIEW_KEY, next);
+    } catch {
+      // private mode or blocked storage: the choice just won't persist
+    }
+  }
 
   async function run(work: () => Promise<void>) {
     setBusy(true);
@@ -107,13 +134,37 @@ function CurateQueue({
       setPending((list) => [last, ...(list ?? [])]);
     });
 
+  // Two requests at most. Sequential, so a failure leaves the page on screen and retrying is safe
+  // (writing a status twice changes nothing).
+  const keepRest = (rejectedIds: string[]) =>
+    run(async () => {
+      const rejected = new Set(rejectedIds);
+      const approvedIds = page.filter((c) => !rejected.has(c.id)).map((c) => c.id);
+      await api.decideMany(approvedIds, 'approved');
+      await api.decideMany(rejectedIds, 'rejected');
+      setPending((list) => (list ?? []).filter((c) => !page.some((p) => p.id === c.id)));
+      setPages((list) => [...list, page]);
+    });
+
+  const undoPage = () =>
+    run(async () => {
+      const last = pages.at(-1);
+      if (!last) return;
+      await api.decideMany(
+        last.map((c) => c.id),
+        'pending',
+      );
+      setPages((list) => list.slice(0, -1));
+      setPending((list) => [...last, ...(list ?? [])]);
+    });
+
   return (
     <Page
       user={user}
       title="Curate photos"
       subtitle={
         pending
-          ? `${shown.length} pending${decided.length ? ` · ${decided.length} decided` : ''}`
+          ? `${shown.length} pending${decidedCount ? ` · ${decidedCount} decided` : ''}`
           : 'Loading the queue…'
       }
       actions={
@@ -148,14 +199,50 @@ function CurateQueue({
           {error}
         </p>
       )}
+      <div className="toggles curate-view" role="group" aria-label="View">
+        <button
+          type="button"
+          className="toggle"
+          aria-pressed={view === 'single'}
+          onClick={() => chooseView('single')}
+        >
+          One by one
+        </button>
+        <button
+          type="button"
+          className="toggle"
+          aria-pressed={view === 'grid'}
+          onClick={() => chooseView('grid')}
+        >
+          Grid
+        </button>
+      </div>
       {pending && !current && (
         <EmptyState
           title="Nothing to curate"
           text="Run a content job with the commons or mapillary step to queue photos."
-          actions={decided.length ? [{ label: 'Undo last', onClick: undo }] : []}
+          actions={
+            view === 'grid'
+              ? pages.length
+                ? [{ label: 'Undo page', onClick: undoPage }]
+                : []
+              : decided.length
+                ? [{ label: 'Undo last', onClick: undo }]
+                : []
+          }
         />
       )}
-      {current && (
+      {current && view === 'grid' && (
+        <CandidateGrid
+          key={page.map((c) => c.id).join()}
+          page={page}
+          busy={busy}
+          canUndo={pages.length > 0}
+          onKeepRest={keepRest}
+          onUndo={undoPage}
+        />
+      )}
+      {current && view === 'single' && (
         <CandidateReview
           key={current.id}
           candidate={current}

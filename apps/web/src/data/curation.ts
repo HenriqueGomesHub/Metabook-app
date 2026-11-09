@@ -36,6 +36,11 @@ export interface CurationApi {
   listPending(): Promise<Candidate[]>;
   /** writes a decision; back to 'pending' (undo) clears decided_at */
   decide(id: string, decision: Decision): Promise<void>;
+  /**
+   * Sets one status on many rows in a single request (an `in` filter). Writes only status and
+   * decided_at, so each row keeps its own subject, giveaways and caption; no-op for no ids.
+   */
+  decideMany(ids: string[], status: Decision['status']): Promise<void>;
 }
 
 interface Row {
@@ -101,6 +106,17 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
           decided_at: status === 'pending' ? null : new Date().toISOString(),
         })
         .eq('id', id);
+      if (error) throw error;
+    },
+    async decideMany(ids, status) {
+      if (!ids.length) return;
+      const { error } = await client
+        .from('media_candidates')
+        .update({
+          status,
+          decided_at: status === 'pending' ? null : new Date().toISOString(),
+        })
+        .in('id', ids);
       if (error) throw error;
     },
   };
