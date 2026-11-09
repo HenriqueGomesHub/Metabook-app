@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = dirname(fileURLToPath(import.meta.url));
@@ -22,6 +22,67 @@ for (const c of pool) {
   codes.add(c.code);
 }
 
+const SUBJECTS = ['bollard', 'pole', 'plate', 'sign', 'line', 'guardrail', 'language', 'car', 'landscape', 'architecture', 'other'];
+const jsonFiles = (dir) => (existsSync(join(root, dir)) ? readdirSync(join(root, dir)).filter((f) => f.endsWith('.json')) : []);
+const strings = (v) => Array.isArray(v) && v.every((x) => typeof x === 'string');
+const poolNames = new Set(pool.map((c) => c.name.toLowerCase()));
+
+// facts/<code>.json: one CountryFacts; codes compare case-insensitively ("pl" or "PL")
+const noteIds = new Map();
+for (const f of jsonFiles('facts')) {
+  const facts = load(`facts/${f}`);
+  const w = `facts/${f}`;
+  const code = String(facts.code ?? '').toUpperCase();
+  if (`${code.toLowerCase()}.json` !== f) err(`${w}: code ${facts.code} does not match the file name`);
+  if (!codes.has(code)) err(`${w}: code ${facts.code} not in pool.json`);
+  if (!facts.name) err(`${w}: missing name`);
+  if (facts.drivingSide != null && !['left', 'right'].includes(facts.drivingSide)) err(`${w}: bad drivingSide`);
+  for (const k of ['tld', 'callingCode', 'languages', 'scripts']) if (facts[k] != null && !strings(facts[k])) err(`${w}: ${k} must be an array of strings`);
+  if (!Array.isArray(facts.notes)) { err(`${w}: notes must be an array`); continue; }
+  const ids = new Set();
+  for (const n of facts.notes) {
+    const nw = `${w} note ${n.id}`;
+    for (const k of ['id', 'subject', 'text', 'source', 'checked']) if (!n[k]) err(`${nw}: missing ${k}`);
+    if (ids.has(n.id)) err(`${w}: duplicate note id ${n.id}`);
+    ids.add(n.id);
+    if (!SUBJECTS.includes(n.subject)) err(`${nw}: bad subject ${n.subject}`);
+    if (!isUrl(n.source)) err(`${nw}: source must be http(s) URL`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(n.checked ?? '')) err(`${nw}: checked must be YYYY-MM-DD`);
+    if (typeof n.verified !== 'boolean') err(`${nw}: verified must be boolean`);
+    if (n.region != null && typeof n.region !== 'string') err(`${nw}: region must be a string`);
+    if (n.lookalikes != null) {
+      if (!strings(n.lookalikes)) err(`${nw}: lookalikes must be an array of strings`);
+      else for (const l of n.lookalikes) if (!codes.has(l.toUpperCase()) && !poolNames.has(l.toLowerCase())) err(`${nw}: lookalike "${l}" is not a pool code or name`);
+    }
+  }
+  noteIds.set(code, ids);
+}
+
+// media/<code>.json: approved photos, each with a free licence and its credit
+const mediaIds = new Set();
+let mediaCount = 0;
+for (const f of jsonFiles('media')) {
+  const items = load(`media/${f}`);
+  if (!Array.isArray(items)) { err(`media/${f}: must be an array`); continue; }
+  for (const m of items) {
+    const w = `media/${f} ${m.id}`;
+    for (const k of ['id', 'country', 'subject', 'url', 'width', 'height', 'credit', 'licence', 'sourceUrl']) if (m[k] == null || m[k] === '') err(`${w}: missing ${k}`);
+    const code = String(m.country ?? '').toUpperCase();
+    if (`${code.toLowerCase()}.json` !== f) err(`${w}: country ${m.country} does not match the file name`);
+    if (!codes.has(code)) err(`${w}: country ${m.country} not in pool.json`);
+    if (!SUBJECTS.includes(m.subject)) err(`${w}: bad subject ${m.subject}`);
+    if (!isUrl(m.sourceUrl)) err(`${w}: sourceUrl must be http(s) URL`);
+    if (m.licenceUrl != null && !isUrl(m.licenceUrl)) err(`${w}: licenceUrl must be http(s) URL`);
+    if (typeof m.url === 'string' && !isUrl(m.url) && !/^approved\/[a-z]{2}\/[\w.-]+\.webp$/.test(m.url)) err(`${w}: url must be http(s) or approved/<code>/<id>.webp`);
+    if (!Number.isInteger(m.width) || !Number.isInteger(m.height)) err(`${w}: width and height must be integers`);
+    if (m.noteId != null && !noteIds.get(code)?.has(m.noteId)) err(`${w}: noteId ${m.noteId} not in facts/${code.toLowerCase()}.json`);
+    if (m.giveaways != null && !strings(m.giveaways)) err(`${w}: giveaways must be an array of strings`);
+    if (mediaIds.has(m.id)) err(`media: duplicate id ${m.id}`);
+    mediaIds.add(m.id);
+    mediaCount++;
+  }
+}
+
 const cardFiles = readdirSync(join(root, 'cards')).filter((f) => f.endsWith('.json'));
 const allCards = [];
 for (const f of cardFiles) {
@@ -33,6 +94,9 @@ for (const f of cardFiles) {
     if (typeof c.verified !== 'boolean') err(`${w}: verified must be boolean`);
     if (c.country && !codes.has(c.country)) err(`${w}: country ${c.country} not in pool.json`);
     if (c.prompt && !['flag', 'text', 'image', 'embed', 'svg'].includes(c.prompt.kind)) err(`${w}: bad prompt.kind`);
+    if (c.subject != null && !SUBJECTS.includes(c.subject)) err(`${w}: bad subject ${c.subject}`);
+    for (const id of c.media ?? []) if (!mediaIds.has(id)) err(`${w}: media ${id} not in content/media`);
+    if (c.type === 'photo-choice' && !(c.options ?? []).every((id) => mediaIds.has(id))) err(`${w}: photo-choice options must be media ids`);
     if (c.options && !c.options.includes(c.answer)) err(`${w}: options do not include answer`);
     if (c.type === 'areacode' && !/^\d{2}$/.test(c.prompt?.value ?? '')) err(`${w}: area code must be 2 digits`);
     if (!Array.isArray(c.tags)) err(`${w}: tags must be array`);
@@ -62,4 +126,4 @@ const chapterIds = new Set(chapters.map((c) => c.id));
 for (const c of allCards) if (c.chapter && !chapterIds.has(c.chapter)) err(`card ${c.id}: unknown chapter ${c.chapter}`);
 
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`OK: ${pool.length} pool, ${allCards.length} cards, ${allTips.length} tips, ${chapters.length} chapters`);
+console.log(`OK: ${pool.length} pool, ${allCards.length} cards, ${allTips.length} tips, ${chapters.length} chapters, ${noteIds.size} facts files, ${mediaCount} photos`);
