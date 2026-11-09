@@ -1,0 +1,61 @@
+# Turns photos approved in /curate into cards: moves them to approved/, adds them to
+# content/media, regenerates the cards and commits to main (Vercel then deploys).
+# Runs every 3 hours and on demand; does nothing when there is nothing new.
+name: collect
+
+on:
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Collect approvals and regenerate cards
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          echo '{"name":"collect","countries":"all","steps":["collect","generate"]}' > "$RUNNER_TEMP/collect.json"
+          node tools/content/run-job.mjs "$RUNNER_TEMP/collect.json"
+
+      - name: Validate content
+        run: npm run validate:content
+
+      - name: Commit when anything changed
+        run: |
+          git config user.name "metabook-content-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # only new photos and cards are worth a deploy; the result file alone is not
+          if git diff --quiet -- content/media content/cards; then
+            echo "Nothing new"
+            exit 0
+          fi
+          git add content/
+          git commit -m "content: collect approved photos"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 10))
+          done
+          exit 1
