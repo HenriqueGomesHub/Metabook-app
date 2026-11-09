@@ -1,0 +1,342 @@
+{
+  "name": "c10",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole"
+    ],
+    "perSubject": 4,
+    "name": "c10",
+    "countries": [
+      "py",
+      "gt",
+      "cr",
+      "pa",
+      "do",
+      "pr",
+      "vi",
+      "cw"
+    ],
+    "steps": [
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 3
+  },
+  "startedAt": "2026-11-09T21:58:10.617Z",
+  "finishedAt": "2026-11-09T22:08:21.086Z",
+  "commit": "83dd7b246baf1a764545f34c95b8887667d9bc8d",
+  "countries": [
+    "py",
+    "gt",
+    "cr",
+    "pa",
+    "do",
+    "pr",
+    "vi",
+    "cw"
+  ],
+  "errorCount": 1,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 606065,
+      "countries": {
+        "py": {
+          "ok": true,
+          "ms": 73051,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "gt": {
+          "ok": true,
+          "ms": 78734,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "pole": 2
+              }
+            }
+          },
+          "errors": [
+            "pole: HTTP 500 for https://graph.mapillary.com/images?bbox=-90.60511%2C14.62442%2C-90.58511%2C14.64442&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "cr": {
+          "ok": true,
+          "ms": 79151,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "pole": 2,
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "pa": {
+          "ok": true,
+          "ms": 69700,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "pole": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "do": {
+          "ok": true,
+          "ms": 61562,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": []
+        },
+        "pr": {
+          "ok": true,
+          "ms": 42783,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "pole": 2,
+                "bollard": 2
+              }
+            }
+          },
+          "errors": []
+        },
+        "vi": {
+          "ok": true,
+          "ms": 99522,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        },
+        "cw": {
+          "ok": true,
+          "ms": 101525,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 4401,
+      "countries": {
+        "py": {
+          "ok": true,
+          "ms": 1046,
+          "counts": {
+            "regions": 18,
+            "capitals": 13,
+            "bytes": 16865
+          }
+        },
+        "gt": {
+          "ok": true,
+          "ms": 575,
+          "counts": {
+            "regions": 22,
+            "capitals": 22,
+            "bytes": 18683
+          }
+        },
+        "cr": {
+          "ok": true,
+          "ms": 439,
+          "counts": {
+            "regions": 7,
+            "capitals": 7,
+            "bytes": 11017
+          }
+        },
+        "pa": {
+          "ok": true,
+          "ms": 496,
+          "counts": {
+            "regions": 12,
+            "capitals": 10,
+            "bytes": 18189
+          }
+        },
+        "do": {
+          "ok": true,
+          "ms": 430,
+          "counts": {
+            "regions": 32,
+            "capitals": 29,
+            "bytes": 18607
+          }
+        },
+        "pr": {
+          "ok": true,
+          "ms": 472,
+          "counts": {
+            "regions": 1,
+            "capitals": 0,
+            "bytes": 2509
+          }
+        },
+        "vi": {
+          "ok": true,
+          "ms": 453,
+          "counts": {
+            "regions": 3,
+            "capitals": 0,
+            "bytes": 1116
+          }
+        },
+        "cw": {
+          "ok": true,
+          "ms": 485,
+          "counts": {
+            "regions": 1,
+            "capitals": 0,
+            "bytes": 694
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 115 facts files, 0 photos"
+    ]
+  }
+}
