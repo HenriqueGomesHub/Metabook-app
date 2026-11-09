@@ -14,6 +14,27 @@ export function verdictFor(
   return { ...baseVerdict(card, item, outcome), why: card.explain };
 }
 
+/**
+ * The state name a where card's `explain` ends with ("… (Buenos Aires (B))" → "Buenos Aires (B)"),
+ * for when its map is not loaded; undefined when it has none.
+ */
+export function stateNameFrom(explain: string | undefined): string | undefined {
+  const text = explain?.trimEnd() ?? '';
+  if (!text.endsWith(')')) return undefined;
+  let depth = 0;
+  for (let i = text.length - 1; i >= 0; i--) {
+    if (text[i] === ')') depth++;
+    else if (text[i] === '(' && --depth === 0) return text.slice(i + 1, -1).trim() || undefined;
+  }
+  return undefined;
+}
+
+/** A card's answer as shown: a map card whose map is not loaded reads its state from `explain`. */
+export function answerLabel(card: Card): string {
+  const name = label(card.answer, scopeOf(card));
+  return card.map && name === card.answer ? (stateNameFrom(card.explain) ?? name) : name;
+}
+
 function baseVerdict(
   card: Card,
   item: Pick<SessionItem, 'mode' | 'contrastPair'>,
@@ -21,7 +42,7 @@ function baseVerdict(
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   if (card.type === 'photo-choice') return photoVerdict(card, outcome);
   const scope = scopeOf(card);
-  const answer = label(card.answer, scope);
+  const answer = answerLabel(card);
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: answer };
   if (!outcome.given) return { verdict: `It’s ${answer}`, tone: 'neutral' };
   const detail = item.contrastPair

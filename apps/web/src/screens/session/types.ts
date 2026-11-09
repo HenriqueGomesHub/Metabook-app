@@ -16,6 +16,11 @@ export interface CardProps {
   options: string[];
   outcome: Outcome | null;
   onAnswer(given: string): void;
+  /**
+   * Moves on without grading or recording anything; the card comes back later. Offered when a
+   * card cannot be answered (its map failed to load); without it such a card is answered blank.
+   */
+  onSkip?(): void;
   /** the reveal panel, rendered once answered */
   reveal: ReactNode;
 }

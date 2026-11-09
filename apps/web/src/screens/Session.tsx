@@ -97,7 +97,7 @@ function backTo(data: AppSnapshot, scope: Scope): string {
 }
 
 function DueRunner({ data }: { data: AppSnapshot }) {
-  const [queue] = useState(() => todaySession(data, new Date()).queue);
+  const [queue, setQueue] = useState(() => todaySession(data, new Date()).queue);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const cards = data.content.cards;
@@ -133,6 +133,11 @@ function DueRunner({ data }: { data: AppSnapshot }) {
       item={item}
       onAnswered={(correct) => setResults([...results, correct])}
       onNext={() => setIndex(index + 1)}
+      onSkip={() => {
+        // nothing graded: the card goes to the back of the queue
+        setQueue([...queue, item]);
+        setIndex(index + 1);
+      }}
       bar={({ card, options, outcome }) =>
         item.contrastPair ? (
           <ContrastBar
@@ -246,6 +251,13 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     if (pool.length === 1) setEnded(true);
   }
 
+  /** An unanswerable card is passed over ungraded; it stays in the pool and comes back. */
+  function skip() {
+    if (!flow) return;
+    const next = nextPracticeItem(flow.practice, data.states, new Date());
+    setFlow({ practice: next.practice, item: next.item, step: flow.step + 1 });
+  }
+
   /** Ending while an answered card is showing moves on, so Keep going never re-serves it. */
   function endPractice() {
     advance();
@@ -259,6 +271,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       item={flow.item}
       onAnswered={onAnswered}
       onNext={advance}
+      onSkip={skip}
       bar={() => (
         <div className="session-bar rise">
           <button
@@ -290,12 +303,15 @@ function CardRunner({
   item,
   onAnswered,
   onNext,
+  onSkip,
   bar,
 }: {
   data: AppSnapshot;
   item: SessionItem;
   onAnswered(correct: boolean, state?: CardState): void;
   onNext(): void;
+  /** passes over the card without grading it */
+  onSkip(): void;
   bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
 }) {
   const { answer, recordTipView } = useAppData();
@@ -397,6 +413,7 @@ function CardRunner({
         options={options}
         outcome={outcome}
         onAnswer={onAnswer}
+        onSkip={onSkip}
         reveal={reveal}
       />
       <VerdictAnnouncer text={verdict ? verdict.verdict : ''} />

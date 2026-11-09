@@ -6,6 +6,7 @@ import { CountryMap } from '../../components/CountryMap';
 import { loadedRegionMap, loadRegionMap } from '../../data/content';
 import type { RegionMap } from '../../data/content';
 import { Stage } from './Stage';
+import { stateNameFrom } from './verdict';
 import type { CardProps } from './types';
 
 /** The card's regions map: undefined while it loads, null when it could not be loaded. */
@@ -31,9 +32,10 @@ const NO_GROUP: ReadonlySet<string> = new Set();
  * A clue placed inside its country: click (or Tab to and press Enter on) the state it belongs to.
  * The reveal marks the pick and the true state and draws a line between them, as on area codes.
  */
-export function RegionMapCard({ card, outcome, onAnswer, reveal }: CardProps) {
+export function RegionMapCard({ card, outcome, onAnswer, onSkip, reveal }: CardProps) {
   const map = useRegionMap(card.country);
   const [hover, setHover] = useState<string | null>(null);
+  const [showAnswer, setShowAnswer] = useState(false);
   const country = label(card.country);
   const hovered = hover ? map?.states.find((s) => s.code === hover)?.name : undefined;
   const [, , width = 640, height = 580] = (map?.viewBox ?? '').split(' ').map(Number);
@@ -58,6 +60,27 @@ export function RegionMapCard({ card, outcome, onAnswer, reveal }: CardProps) {
       <p className="map-status" role="status">
         Loading the map…
       </p>
+    );
+  } else if (onSkip) {
+    // without the map the card can't be answered: show the state, grade nothing, bring it back later
+    const state = stateNameFrom(card.explain);
+    main = (
+      <div className="map-status" role="alert">
+        <p>The map of {country} could not be loaded.</p>
+        {showAnswer && (
+          <p className="map-answer">
+            {state ? `It’s ${state}.` : 'The answer needs the map.'} Nothing was recorded; this
+            card comes back later.
+          </p>
+        )}
+        {showAnswer ? (
+          <Button onClick={onSkip}>Skip for now</Button>
+        ) : (
+          <Button variant="ghost" onClick={() => setShowAnswer(true)}>
+            Show the answer
+          </Button>
+        )}
+      </div>
     );
   } else {
     main = (
