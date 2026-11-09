@@ -369,11 +369,40 @@ describe('hideRegionName', () => {
     const { hideRegionName } = await import('./generate');
     expect(hideRegionName('Sugarcane is most common in Tucumán.', 'Tucumán')).toBe('Sugarcane is most common in this area.');
     expect(hideRegionName('Łódź has red tiles.', 'Łódź Voivodeship')).toBe('This area has red tiles.');
-    expect(hideRegionName('Masovian roads are wide.', 'Masovian Voivodeship')).toBe('This area roads are wide.');
+    expect(hideRegionName('Masovian has wide poles.', 'Masovian Voivodeship')).toBe('This area has wide poles.');
     expect(hideRegionName('Yellow poles here.', 'Texas')).toBe('Yellow poles here.');
   });
   it('drops the card when another spelling still names the answer', async () => {
     const { hideRegionName } = await import('./generate');
     expect(hideRegionName('In Tucuman the cane grows.', 'Tucumán')).toBeUndefined();
+  });
+
+  it('masks the meaningful parts of multi-word names, never generic words', async () => {
+    const { hideRegionName, regionNameParts } = await import('./generate');
+    expect(regionNameParts('Buenos Aires (City)')).toEqual(['Buenos Aires', 'Buenos', 'Aires']);
+    expect(regionNameParts('Trinidad and Tobago')).toEqual(['Trinidad', 'Tobago']);
+    expect(regionNameParts('Kujawy-Pomerania')).toEqual(['Kujawy', 'Pomerania']);
+    expect(regionNameParts('Northern Territory')).toEqual([]);
+    expect(regionNameParts('New South Wales')).toEqual(['New South Wales', 'Wales']);
+    expect(hideRegionName('Wide verges all over Wales.', 'New South Wales')).toBe(
+      'Wide verges all over this area.',
+    );
+    expect(hideRegionName('Pampas grass west of Aires.', 'Buenos Aires (B)')).toBe(
+      'Pampas grass west of this area.',
+    );
+    // generic words stay: "north" is not a giveaway for Northern Territory
+    expect(hideRegionName('Red soil in the north.', 'Northern Territory')).toBe(
+      'Red soil in the north.',
+    );
+  });
+
+  it('drops prompts the mask leaves reading wrongly', async () => {
+    const { hideRegionName } = await import('./generate');
+    expect(hideRegionName('Only the Masovian plains are flat.', 'Masovian')).toBeUndefined();
+    expect(hideRegionName('Masovian’s poles are grey.', 'Masovian')).toBeUndefined();
+    for (const word of ['state', 'province', 'region', 'peninsula', 'coast', 'roads', 'island', 'poles']) {
+      expect(hideRegionName(`Texas ${word} has it.`, 'Texas')).toBeUndefined();
+    }
+    expect(hideRegionName('Texas has it.', 'Texas')).toBe('This area has it.');
   });
 });

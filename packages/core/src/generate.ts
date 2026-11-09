@@ -356,10 +356,16 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       type: cardType(note.subject),
       country: code,
       answer: country.name,
-      options: nameOptions(country, input.pool, resolveCodes(note.lookalikes ?? [], input.pool), id, {
-        prompt: note.text,
-        facts: input.facts,
-      }),
+      options: nameOptions(
+        country,
+        input.pool,
+        resolveCodes(note.lookalikes ?? [], input.pool),
+        id,
+        {
+          prompt: note.text,
+          facts: input.facts,
+        },
+      ),
       prompt: { kind: 'text', value: note.text },
       tags: tags(note.subject),
       subject: note.subject,
@@ -400,25 +406,93 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
   return cards;
 }
 
-const REGION_WORDS = /\s+(voivodeship|province|state|region|prefecture|oblast|krai|county|department|district|governorate|territory)$/i;
+const REGION_WORDS =
+  /\s+(voivodeship|province|state|region|prefecture|oblast|krai|county|department|district|governorate|territory)$/i;
 
 /**
- * A `where` prompt must not name its answer: the state's name (and its short form without
- * "Province", "Voivodeship"…) becomes "this area". Returns undefined when a spelling the mask
- * can't reach (another accent form) would still give the answer away, so the card is skipped.
+ * Words too generic to give a state away, never masked on their own: compass points, "new",
+ * saints, and the administrative types maps use in names and disambiguators ("Zagreb (City)").
+ */
+const GENERIC_WORDS = new Set([
+  'state',
+  'province',
+  'region',
+  'island',
+  'islands',
+  'city',
+  'territory',
+  'north',
+  'south',
+  'east',
+  'west',
+  'northern',
+  'southern',
+  'eastern',
+  'western',
+  'new',
+  'san',
+  'santa',
+  'saint',
+  'voivodeship',
+  'prefecture',
+  'oblast',
+  'krai',
+  'county',
+  'department',
+  'district',
+  'governorate',
+  'municipality',
+  'republic',
+  'republican',
+  'autonomous',
+  'federal',
+  'provincial',
+  'urban',
+  'metropolitan',
+  'borough',
+  'unitary',
+  'authority',
+]);
+
+/** "this area" used as a modifier or after "the" reads wrongly ("this area roads"). */
+const BROKEN_MASK =
+  /\bthe this area\b|\bthis area['’]s\b|\bthis area (state|province|region|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?)\b/i;
+
+/**
+ * The pieces of a state name that give it away: the parts between " and ", " y ", " of ", "-",
+ * "/" and parentheses, and the words inside them, when 4+ letters and not generic.
+ */
+export function regionNameParts(stateName: string): string[] {
+  const parts = stateName
+    .split(/\s+(?:and|y|of)\s+|[-/()]/i)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  const words = parts.flatMap((p) => p.split(/\s+/));
+  const meaningful = (piece: string) =>
+    piece.replace(/[^\p{L}]/gu, '').length >= 4 &&
+    !piece.split(/\s+/).every((w) => GENERIC_WORDS.has(fold(w)));
+  return [...new Set([...parts, ...words])].filter(meaningful);
+}
+
+/**
+ * A `where` prompt must not name its answer: the state's name, its short form without
+ * "Province", "Voivodeship"… and each meaningful part (regionNameParts) become "this area".
+ * Returns undefined, so the card is skipped, when the result reads wrongly ("the this area",
+ * "this area's", "this area roads") or a part is still there (another accent form).
  */
 export function hideRegionName(text: string, stateName: string): string | undefined {
-  const names = [stateName, stateName.replace(REGION_WORDS, '')]
+  const base = stateName.replace(/\s*\([^)]*\)\s*$/, '');
+  const parts = regionNameParts(stateName);
+  const masks = [stateName, base, base.replace(REGION_WORDS, ''), ...parts]
     .map((n) => n.trim())
     .filter((n, i, all) => n.length > 2 && all.indexOf(n) === i)
     .sort((a, b) => b.length - a.length);
   let out = text;
-  for (const name of names) {
-    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  for (const mask of masks) {
+    const escaped = mask.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     out = out.replace(new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'giu'), 'this area');
   }
-  const folded = fold(out);
-  if (names.some((n) => folded.includes(fold(n)))) return undefined;
+  if (BROKEN_MASK.test(out) || namedIn(out, masks)) return undefined;
   return out.charAt(0).toUpperCase() + out.slice(1);
 }
 

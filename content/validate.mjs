@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { namedIn, regionNameParts } from '../packages/core/src/generate.ts';
 import { licenceOk } from '../tools/content/lib/common.mjs';
 const root = dirname(fileURLToPath(import.meta.url));
 const load = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -30,20 +31,6 @@ const poolNames = new Set(pool.map((c) => c.name.toLowerCase()));
 // text shown before the answer must not contain the answer
 const countryName = (code) => pool.find((c) => c.code === String(code ?? '').toUpperCase())?.name;
 const names = (text, code) => Boolean(text && countryName(code) && text.toLowerCase().includes(countryName(code).toLowerCase()));
-
-/** Lower case without accents (Ł, Ø… spelled plainly), for whole-word name checks. */
-const PLAIN = { ł: 'l', ø: 'o', đ: 'd', ð: 'd', ı: 'i', ß: 'ss', æ: 'ae', œ: 'oe', þ: 'th' };
-const fold = (text) =>
-  String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[łøđðıßæœþ]/g, (c) => PLAIN[c] ?? c).trim();
-/** True when `text` contains any of `words` (3+ letters) as a whole word, ignoring case and accents. */
-const namedIn = (text, words) => {
-  const folded = fold(text ?? '');
-  return words.some((word) => {
-    const w = word ? fold(word) : '';
-    if (w.length < 3) return false;
-    return new RegExp(`(?<!\\p{L})${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!\\p{L})`, 'u').test(folded);
-  });
-};
 
 // facts/<code>.json: one CountryFacts; codes compare case-insensitively ("pl" or "PL")
 const noteIds = new Map();
@@ -122,7 +109,7 @@ const mapCache = new Map();
 const mapStates = (map) => {
   if (!mapCache.has(map)) {
     const file = map === 'br' ? 'maps/br-states.json' : `maps/${map}-regions.json`;
-    mapCache.set(map, /^[a-z]{2}$/.test(map) && existsSync(join(root, file)) ? new Set(load(file).states.map((s) => s.code)) : null);
+    mapCache.set(map, /^[a-z]{2}$/.test(map) && existsSync(join(root, file)) ? new Map(load(file).states.map((s) => [s.code, s.name])) : null);
   }
   return mapCache.get(map);
 };
@@ -158,7 +145,14 @@ for (const f of cardFiles) {
       const states = mapStates(c.map);
       if (!states) err(`${w}: no regions map for map "${c.map}"`);
       else if (!states.has(c.answer)) err(`${w}: answer ${c.answer} is not a state of the ${c.map} map`);
+      else if (c.prompt?.kind === 'text') {
+        // the prompt is shown before the answer: it must not name the state, nor read wrongly
+        const parts = regionNameParts(states.get(c.answer) ?? '');
+        if (namedIn(c.prompt.value, parts)) err(`${w}: where prompt names the answer state (${states.get(c.answer)})`);
+        if (/\bthe this area\b|\bthis area['’]s\b/i.test(c.prompt.value)) err(`${w}: where prompt reads "the this area" or "this area's"`);
+      }
     }
+    if (c.map != null && c.map !== String(c.country ?? '').toLowerCase()) err(`${w}: map "${c.map}" is not the card's country`);
     if (!Array.isArray(c.tags)) err(`${w}: tags must be array`);
     allCards.push(c);
   }
