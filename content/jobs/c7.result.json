@@ -1,0 +1,353 @@
+{
+  "name": "c7",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole"
+    ],
+    "perSubject": 4,
+    "name": "c7",
+    "countries": [
+      "il",
+      "jo",
+      "ae",
+      "qa",
+      "bt",
+      "bd",
+      "la",
+      "lb"
+    ],
+    "steps": [
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 3
+  },
+  "startedAt": "2026-11-09T21:58:10.415Z",
+  "finishedAt": "2026-11-09T22:24:27.883Z",
+  "commit": "83dd7b246baf1a764545f34c95b8887667d9bc8d",
+  "countries": [
+    "il",
+    "jo",
+    "ae",
+    "qa",
+    "bt",
+    "bd",
+    "la",
+    "lb"
+  ],
+  "errorCount": 6,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 1572238,
+      "countries": {
+        "il": {
+          "ok": true,
+          "ms": 201986,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "jo": {
+          "ok": true,
+          "ms": 198648,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "ae": {
+          "ok": true,
+          "ms": 202355,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "qa": {
+          "ok": true,
+          "ms": 183454,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 4,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 4
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=51.51401%2C25.13385%2C51.53401%2C25.15385&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "bt": {
+          "ok": true,
+          "ms": 208475,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "bd": {
+          "ok": true,
+          "ms": 205111,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "la": {
+          "ok": true,
+          "ms": 188997,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "lb": {
+          "ok": true,
+          "ms": 183178,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 2,
+              "alreadyQueued": 0,
+              "queued": 2,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 2
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "pole": 1
+              }
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 5228,
+      "countries": {
+        "il": {
+          "ok": true,
+          "ms": 1169,
+          "counts": {
+            "regions": 6,
+            "capitals": 6,
+            "bytes": 7859
+          }
+        },
+        "jo": {
+          "ok": true,
+          "ms": 564,
+          "counts": {
+            "regions": 12,
+            "capitals": 9,
+            "bytes": 7100
+          }
+        },
+        "ae": {
+          "ok": true,
+          "ms": 630,
+          "counts": {
+            "regions": 9,
+            "capitals": 6,
+            "bytes": 9238
+          }
+        },
+        "qa": {
+          "ok": true,
+          "ms": 531,
+          "counts": {
+            "regions": 7,
+            "capitals": 1,
+            "bytes": 4508
+          }
+        },
+        "bt": {
+          "ok": true,
+          "ms": 623,
+          "counts": {
+            "regions": 20,
+            "capitals": 3,
+            "bytes": 15587
+          }
+        },
+        "bd": {
+          "ok": true,
+          "ms": 547,
+          "counts": {
+            "regions": 7,
+            "capitals": 6,
+            "bytes": 20349
+          }
+        },
+        "la": {
+          "ok": true,
+          "ms": 621,
+          "counts": {
+            "regions": 17,
+            "capitals": 12,
+            "bytes": 20691
+          }
+        },
+        "lb": {
+          "ok": true,
+          "ms": 537,
+          "counts": {
+            "regions": 6,
+            "capitals": 5,
+            "bytes": 7620
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 115 facts files, 0 photos"
+    ]
+  }
+}
