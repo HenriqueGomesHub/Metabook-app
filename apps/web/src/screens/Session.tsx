@@ -7,14 +7,22 @@ import {
   pickTip,
   recordPracticeAnswer,
 } from '@metabook/core';
-import type { Card, CardState, CardType, PickedTip, PracticeState, SessionItem } from '@metabook/core';
+import type {
+  Card,
+  CardState,
+  CardType,
+  MetaSubject,
+  PickedTip,
+  PracticeState,
+  SessionItem,
+} from '@metabook/core';
 import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
-import { label, scopeOf } from '../app/labels';
+import { label, scopeOf, SUBJECTS } from '../app/labels';
 import { todaySession } from '../app/stats';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
@@ -35,34 +43,39 @@ const CONTRAST_DOTS = 5;
 
 interface Scope {
   type?: CardType;
+  subject?: MetaSubject;
   country?: string;
   chapter?: string;
 }
 
 /**
- * `/session` alone runs today's finite, due-based session. Any of `type`, `country` or `chapter`
- * starts endless practice over the cards in that scope instead.
+ * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`
+ * or `chapter` starts endless practice over the cards in that scope instead.
  */
 export function Session() {
   const { data, error } = useAppData();
   const [params] = useSearchParams();
   const param = params.get('type');
   const type = param && param in CARD_TYPES ? (param as CardType) : undefined;
+  const subjectParam = params.get('subject');
+  const subject =
+    subjectParam && subjectParam in SUBJECTS ? (subjectParam as MetaSubject) : undefined;
   const country = params.get('country')?.toUpperCase() || undefined;
   const chapter = params.get('chapter') || undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${country}|${chapter}`;
-  return type || country || chapter ? (
-    <PracticeRunner key={key} data={data} scope={{ type, country, chapter }} />
+  const key = `${type}|${subject}|${country}|${chapter}`;
+  return type || subject || country || chapter ? (
+    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter }} />
   ) : (
     <DueRunner data={data} />
   );
 }
 
-function inScope(cards: Card[], { type, country, chapter }: Scope): Card[] {
+function inScope(cards: Card[], { type, subject, country, chapter }: Scope): Card[] {
   return cards.filter(
     (card) =>
       (!type || card.type === type) &&
+      (!subject || card.subject === subject) &&
       (!country || card.country === country) &&
       (!chapter || card.chapter === chapter),
   );
@@ -293,11 +306,15 @@ function CardRunner({
   const otherSide = item.mode === 'binary' ? options.find((o) => o !== card.answer) : undefined;
   const scope = scopeOf(card.type);
 
-  /** The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards. */
+  /**
+   * The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards,
+   * and photo picks (whose answer is a photo id) use the country's tips.
+   */
   function mainTip(): PickedTip | null {
     const { tips } = data.content;
+    const key = card.type === 'photo-choice' ? label(card.country) : card.answer;
     return (
-      pickTip(tips, card.answer, card.type, data.tipViews) ??
+      pickTip(tips, key, card.type, data.tipViews) ??
       (card.type === 'areacode'
         ? pickTip(tips, card.id.replace(/:[^:]*$/, ':pattern'), card.type, data.tipViews)
         : null)
@@ -328,8 +345,10 @@ function CardRunner({
   function onAnswer(given: string) {
     if (outcome) return;
     const correct = isCorrect(item, card, given, cards);
-    const picked = correct
-      ? undefined
+    // a photo pick's options are photo ids, not answers a confusion could pair
+    const picked =
+      correct || card.type === 'photo-choice'
+        ? undefined
       : item.mode === 'recall'
         ? matchedOther(card, given, cards)
         : given || undefined;

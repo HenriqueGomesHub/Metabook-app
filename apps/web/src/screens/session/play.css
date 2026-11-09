@@ -515,3 +515,107 @@ a.credit:hover {
     padding: 16px 16px 0;
   }
 }
+
+/* Photo-choice cards: a 2×2 grid of photos to pick from */
+
+.play-main .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: min(100cqw, 100cqh * 1.33);
+}
+
+.photo-opt {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.photo-opt .photo {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  padding: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface) center / cover no-repeat;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.photo-opt .photo:hover:not(:disabled) {
+  border-color: #5a574f;
+}
+
+.photo-opt .photo:disabled {
+  cursor: default;
+}
+
+.photo-opt kbd {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(18, 17, 15, 0.62);
+  color: #d6d1c6;
+}
+
+.photo-opt .mark {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.photo-opt.ok .photo {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.photo-opt.bad .photo {
+  border-color: var(--warn);
+  box-shadow: 0 0 0 2px var(--warn);
+}
+
+.photo-opt.dim .photo {
+  opacity: 0.55;
+}
+
+.photo-missing {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.photo-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.photo-caption a {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .play-main .photo-grid {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .photo-caption {
+    flex-direction: column;
+    gap: 0;
+  }
+}

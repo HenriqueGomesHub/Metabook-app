@@ -42,7 +42,8 @@ Flags, the country pool, Brazil area codes and Brazil metas were checked against
 | `apps/web` | React + Vite PWA |
 | `apps/extension` | Chrome MV3 companion extension (esbuild) |
 | `packages/core` | Pure learning logic: FSRS, sessions, tips, medals, blocks |
-| `content` | Seed cards, tips, country pool, Brazil map |
+| `content` | Seed cards, tips, country pool, maps, country facts, approved photos, generated cards |
+| `tools/content` | Content pipeline run by GitHub Actions: Wikidata, Commons, Mapillary, region maps, card generator ([README](tools/content/README.md)) |
 | `supabase` | Schema with RLS, `ingest-rounds` edge function |
 
-Scripts from the repo root: `npm run dev`, `npm run build`, `npm test`, `npm run typecheck`, `npm run lint`.
+Scripts from the repo root: `npm run dev`, `npm run build`, `npm test`, `npm run typecheck`, `npm run lint`, `npm run validate:content`.

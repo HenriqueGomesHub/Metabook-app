@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
+import { SUBJECT_ORDER, SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
@@ -23,9 +24,38 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       TYPE_ORDER.flatMap((type) => {
         const ids = data.content.cards.filter((card) => card.type === type).map((card) => card.id);
         if (ids.length === 0) return [];
-        return [{ type, mastery: mastery(ids, data.states, now) }];
+        return [
+          {
+            key: type,
+            to: `/session?type=${type}`,
+            ...CARD_TYPES[type],
+            mastery: mastery(ids, data.states, now),
+          },
+        ];
       }),
     [data, now],
+  );
+  // one tile per meta subject that has cards, e.g. Bollards across every country; a subject
+  // named like a type tile (Plates) is already covered by it
+  const subjectTiles = useMemo(
+    () =>
+      SUBJECT_ORDER.flatMap((subject) => {
+        if (tiles.some((tile) => tile.label === SUBJECTS[subject].label)) return [];
+        const ids = data.content.cards
+          .filter((card) => card.subject === subject)
+          .map((card) => card.id);
+        if (ids.length === 0) return [];
+        return [
+          {
+            key: `subject-${subject}`,
+            to: `/session?subject=${subject}`,
+            ...SUBJECTS[subject],
+            icon: CARD_TYPES[subject === 'plate' ? 'plate' : 'meta'].icon,
+            mastery: mastery(ids, data.states, now),
+          },
+        ];
+      }),
+    [data, now, tiles],
   );
 
   return (
@@ -52,11 +82,11 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           />
         )}
         <div className="tiles">
-          {tiles.map(({ type, mastery: pct }) => (
-            <Link key={type} className="tile" to={`/session?type=${type}`}>
+          {[...tiles, ...subjectTiles].map(({ key, to, label, blurb, icon, mastery: pct }) => (
+            <Link key={key} className="tile" to={to}>
               <div className="tile-top">
                 <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-                  {CARD_TYPES[type].icon}
+                  {icon}
                 </svg>
                 <span className="tile-link">
                   Practice
@@ -73,8 +103,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
                 </span>
               </div>
               <div>
-                <div className="tile-name headline">{CARD_TYPES[type].label}</div>
-                <div className="tile-blurb">{CARD_TYPES[type].blurb}</div>
+                <div className="tile-name headline">{label}</div>
+                <div className="tile-blurb">{blurb}</div>
               </div>
               <div className="tile-bar">
                 <div className="bar" role="img" aria-label={`Mastery ${Math.round(pct * 100)}%`}>

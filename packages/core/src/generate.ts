@@ -240,7 +240,12 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       type: cardType(note.subject),
       country: code,
       answer: country.name,
-      options: nameOptions(country, input.pool, resolveCodes(note.lookalikes ?? [], input.pool), id),
+      options: nameOptions(
+        country,
+        input.pool,
+        resolveCodes(note.lookalikes ?? [], input.pool),
+        id,
+      ),
       prompt: { kind: 'text', value: note.text },
       tags: tags(note.subject),
       subject: note.subject,

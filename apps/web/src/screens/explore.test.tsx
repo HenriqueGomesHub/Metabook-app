@@ -8,6 +8,7 @@ import { MemoryRepository } from '../test/MemoryRepository';
 import { AreaCodeGame } from './AreaCodeGame';
 import { Atlas } from './Atlas';
 import { Country } from './Country';
+import { Drills } from './Drills';
 import { Games } from './Games';
 import { Stats } from './Stats';
 
@@ -22,7 +23,24 @@ const ddd = (code: string, answer: string): Card => ({
   source: 'https://example.com',
 });
 
-const cards: Card[] = [ddd('11', 'SP'), ddd('21', 'RJ'), ddd('31', 'MG')];
+const meta = (id: string, subject: Card['subject']): Card => ({
+  id,
+  type: 'meta',
+  country: 'CL',
+  answer: 'Chile',
+  prompt: { kind: 'text', value: id },
+  tags: ['generated'],
+  subject,
+  source: 'https://example.com',
+});
+
+const cards: Card[] = [
+  ddd('11', 'SP'),
+  ddd('21', 'RJ'),
+  ddd('31', 'MG'),
+  meta('gen:cl:sign', 'sign'),
+  meta('gen:cl:bollard', 'bollard'),
+];
 const tips: Tip[] = [
   {
     id: 'tip-1',
@@ -36,6 +54,7 @@ const content: Content = {
   pool: [
     { code: 'BR', name: 'Brazil', continent: 'americas', in_pool: true },
     { code: 'AR', name: 'Argentina', continent: 'americas', in_pool: true },
+    { code: 'CL', name: 'Chile', continent: 'americas', in_pool: true },
     { code: 'LT', name: 'Lithuania', continent: 'europe', in_pool: true },
   ],
   chapters: [
@@ -77,6 +96,7 @@ function mount(path: string, repo = new MemoryRepository()) {
         <Routes>
           <Route path="/atlas" element={<Atlas />} />
           <Route path="/atlas/:country" element={<Country />} />
+          <Route path="/drills" element={<Drills />} />
           <Route path="/games" element={<Games />} />
           <Route path="/games/areacode/br" element={<AreaCodeGame />} />
           <Route path="/stats" element={<Stats />} />
@@ -89,7 +109,8 @@ function mount(path: string, repo = new MemoryRepository()) {
 
 describe('Atlas', () => {
   it('shows a gold medal and the tally for a country at 80% or more', async () => {
-    mount('/atlas', new MemoryRepository({ cardStates: cards.map((c) => strong(c.id)) }));
+    const brazil = cards.filter((c) => c.country === 'BR');
+    mount('/atlas', new MemoryRepository({ cardStates: brazil.map((c) => strong(c.id)) }));
     const tile = await screen.findByRole('link', { name: /Brazil/ });
     expect(within(tile).getByRole('img', { name: 'Gold medal' })).toBeTruthy();
     expect(tile.getAttribute('href')).toBe('/atlas/BR');
@@ -101,6 +122,29 @@ describe('Atlas', () => {
     const tile = await screen.findByRole('link', { name: /Argentina/ });
     expect(within(tile).getByText('—')).toBeTruthy();
     expect(within(tile).queryByRole('img')).toBeNull();
+  });
+});
+
+describe('Subjects', () => {
+  it('gives a country without written chapters one chapter per subject', async () => {
+    mount('/atlas/CL');
+    const nav = await screen.findByRole('navigation', { name: 'Chile chapters' });
+    const links = within(nav).getAllByRole('link');
+    expect(links.map((l) => l.querySelector('.chapter-title')?.textContent)).toEqual([
+      'Bollards',
+      'Signs',
+    ]);
+    expect(links[0]?.getAttribute('href')).toBe('/session?country=CL&subject=bollard');
+  });
+
+  it('adds a drill tile per subject that has cards', async () => {
+    mount('/drills');
+    const tile = (await screen.findByText('Bollards')).closest('a');
+    expect(tile?.getAttribute('href')).toBe('/session?subject=bollard');
+    expect(screen.getByText('Signs').closest('a')?.getAttribute('href')).toBe(
+      '/session?subject=sign',
+    );
+    expect(screen.queryByText('Poles')).toBeNull();
   });
 });
 

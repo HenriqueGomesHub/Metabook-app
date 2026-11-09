@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
-import { pairLabel, scopeOf } from '../app/labels';
+import { pairLabel, scopeOf, SUBJECT_ORDER, SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
@@ -57,17 +57,36 @@ function CountryView({
     const cards = data.content.cards.filter((card) => card.country === code);
     const ids = cards.map((card) => card.id);
     const byChapter = (chapter: string): Card[] => cards.filter((card) => card.chapter === chapter);
-    const chapters = data.content.chapters
+    const written = data.content.chapters
       .filter((chapter) => chapter.country === code)
       .sort((a, b) => a.order - b.order)
-      .map((chapter) => {
-        const chapterIds = byChapter(chapter.id).map((card) => card.id);
-        return {
-          ...chapter,
-          cardCount: chapterIds.length,
-          value: mastery(chapterIds, data.states, now),
-        };
-      });
+      .map((chapter) => ({
+        ...chapter,
+        to: chapterLink(chapter.id),
+        cards: byChapter(chapter.id),
+      }));
+    // countries without hand-written chapters get one per meta subject their cards cover
+    const chapterList =
+      written.length > 0
+        ? written
+        : SUBJECT_ORDER.filter((subject) => cards.some((card) => card.subject === subject)).map(
+            (subject, i) => ({
+              id: `auto:${code}:${subject}`,
+              order: i + 1,
+              title: SUBJECTS[subject].label,
+              subtitle: SUBJECTS[subject].blurb,
+              to: `/session?country=${code}&subject=${subject}`,
+              cards: cards.filter((card) => card.subject === subject),
+            }),
+          );
+    const chapters = chapterList.map(({ cards: chapterCards, ...chapter }) => {
+      const chapterIds = chapterCards.map((card) => card.id);
+      return {
+        ...chapter,
+        cardCount: chapterIds.length,
+        value: mastery(chapterIds, data.states, now),
+      };
+    });
     const typeByAnswer = new Map(cards.map((card) => [card.answer, card.type]));
     const misses = data.confusions
       .filter((c) => typeByAnswer.has(c.truth) && c.count > 0)
@@ -207,12 +226,7 @@ function CountryView({
                 }
                 const chapterMedal = medalFor(chapter.value);
                 return (
-                  <Link
-                    key={chapter.id}
-                    className="chapter-row"
-                    to={chapterLink(chapter.id)}
-                    style={style}
-                  >
+                  <Link key={chapter.id} className="chapter-row" to={chapter.to} style={style}>
                     <span className="chapter-n">{String(chapter.order).padStart(2, '0')}</span>
                     <span>
                       <span className="chapter-title">{chapter.title}</span>

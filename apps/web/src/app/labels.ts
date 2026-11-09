@@ -1,4 +1,4 @@
-import type { CardType } from '@metabook/core';
+import type { CardType, MetaSubject } from '@metabook/core';
 import { brStates, bundled } from '../data/content';
 
 const REGION_NAMES: Record<string, string> = {
@@ -17,7 +17,25 @@ const TYPE_NAMES: Record<CardType, string> = {
   region: 'Regions',
   areacode: 'Area codes',
   plate: 'Plates',
+  'photo-choice': 'Photo picks',
 };
+
+/** Drill tiles and auto chapters per meta subject. */
+export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
+  bollard: { label: 'Bollards', blurb: 'Roadside posts and their reflectors' },
+  pole: { label: 'Poles', blurb: 'Utility poles, their shapes and markings' },
+  plate: { label: 'Plates', blurb: 'Licence plate formats and colours' },
+  sign: { label: 'Signs', blurb: 'Road sign colours, fonts and shapes' },
+  line: { label: 'Road lines', blurb: 'Centre and edge line patterns' },
+  guardrail: { label: 'Guardrails', blurb: 'Barriers and their reflectors' },
+  language: { label: 'Language', blurb: 'Letters and words on signs' },
+  car: { label: 'Google car', blurb: 'Car, camera and coverage clues' },
+  landscape: { label: 'Landscape', blurb: 'Terrain, vegetation and soil' },
+  architecture: { label: 'Architecture', blurb: 'Houses, roofs and pavements' },
+  other: { label: 'Basics', blurb: 'Driving side, domains, calling codes' },
+};
+
+export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
 type Scope = 'br' | undefined;
 
