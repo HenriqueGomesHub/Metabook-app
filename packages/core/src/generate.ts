@@ -1,7 +1,15 @@
 // Turns country facts and approved photos into cards. Pure and deterministic: the same input
 // always yields the same cards in the same order, so generated files diff cleanly.
 // Only type imports here: tools/content runs this file directly with Node's type stripping.
-import type { Card, CountryFacts, MediaItem, MetaSubject, PoolCountry } from './types';
+import type {
+  Card,
+  CountryFacts,
+  FactNote,
+  MediaItem,
+  MetaSubject,
+  PoolCountry,
+  RegionMapNames,
+} from './types';
 
 export type GeneratedCard = Card & { verified: boolean };
 
@@ -11,11 +19,15 @@ export interface GenerateInput {
   facts: CountryFacts[];
   /** every approved photo, all countries */
   media: MediaItem[];
+  /** regions maps by upper-case country code; a country without one gets no `where` cards */
+  maps?: Record<string, RegionMapNames>;
 }
 
 const CHOICES = 4;
 /** a reverse card needs this many other countries with photos of the subject */
 const MIN_OTHER_COUNTRIES = 3;
+/** `where` cards are only worth a drill when a country has at least this many */
+export const MIN_WHERE_CARDS = 4;
 
 export const SUBJECT_NOUNS: Record<MetaSubject, string> = {
   bollard: 'bollard',
@@ -120,6 +132,50 @@ function namesCountry(
   const names = [country.name, ...(facts?.demonym ?? []), ...(capital ? [facts?.capital] : [])];
   if (names.some((n) => n && n.trim() && lower.includes(n.trim().toLowerCase()))) return true;
   return code && new RegExp(`\\b${country.code}\\b`, 'i').test(text);
+}
+
+/** Letters NFD leaves whole (Ł in Łódź, Ø in Østfold) and their plain spellings. */
+const PLAIN: Record<string, string> = {
+  ł: 'l',
+  ø: 'o',
+  đ: 'd',
+  ð: 'd',
+  ı: 'i',
+  ß: 'ss',
+  æ: 'ae',
+  œ: 'oe',
+  þ: 'th',
+};
+
+/** Lower case without accents, for comparing region names. */
+const fold = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[łøđðıßæœþ]/g, (c) => PLAIN[c] ?? c)
+    .trim();
+
+const ISO_REGION = /^([A-Za-z]{2})-([A-Za-z0-9]+)$/;
+
+/**
+ * The one map state a note's `region` names: an ISO 3166-2 code ("US-TX") whose suffix matches a
+ * state code, else a state name (ignoring case and accents). Undefined when nothing or more than
+ * one state matches, or the ISO prefix is another country's.
+ */
+export function resolveRegion(
+  region: string,
+  code: string,
+  map: RegionMapNames,
+): RegionMapNames['states'][number] | undefined {
+  const iso = ISO_REGION.exec(region.trim());
+  if (iso && same(iso[1] as string, code)) {
+    const hits = map.states.filter((s) => same(s.code, iso[2] as string));
+    if (hits.length > 0) return hits.length === 1 ? hits[0] : undefined;
+  }
+  const name = fold(region);
+  const hits = map.states.filter((s) => fold(s.name) === name);
+  return hits.length === 1 ? hits[0] : undefined;
 }
 
 function cardType(subject: MetaSubject | undefined): Card['type'] {
@@ -261,9 +317,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
     if (!note.verified || !note.distinctive || photographed.has(note.id)) continue;
     // the note text is the question, so it must not name the answer
     if (namesCountry(note.text, country, facts, { capital: false, code: false })) continue;
-    // note ids are often prefixed with the country ("pl:bollard-red"); drop it from the card id
-    const key = note.id.startsWith(`${lc}:`) ? note.id.slice(lc.length + 1) : note.id;
-    const id = `gen:${lc}:note:${key}`;
+    const id = `gen:${lc}:note:${noteKey(note.id, lc)}`;
     cards.push({
       id,
       type: cardType(note.subject),
@@ -283,5 +337,37 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       verified: true,
     });
   }
+
+  // (d) where cards: click the note's state on the country's regions map
+  const map = input.maps?.[code];
+  if (map) {
+    const where: { note: FactNote; state: RegionMapNames['states'][number] }[] = [];
+    for (const note of [...notes].sort(byId)) {
+      const state = note.region ? resolveRegion(note.region, code, map) : undefined;
+      if (state) where.push({ note, state });
+    }
+    if (where.length >= MIN_WHERE_CARDS) {
+      for (const { note, state } of where) {
+        cards.push({
+          id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
+          type: 'region',
+          country: code,
+          answer: state.code,
+          prompt: { kind: 'text', value: note.text },
+          tags: [...tags(note.subject), 'where'],
+          subject: note.subject,
+          explain: `${note.text} (${state.name})`,
+          map: lc,
+          source: note.source,
+          verified: note.verified,
+        });
+      }
+    }
+  }
   return cards;
+}
+
+/** Note ids are often prefixed with the country ("pl:bollard-red"); card ids drop it. */
+function noteKey(id: string, lc: string): string {
+  return id.startsWith(`${lc}:`) ? id.slice(lc.length + 1) : id;
 }

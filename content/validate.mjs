@@ -89,6 +89,16 @@ for (const f of jsonFiles('media')) {
   }
 }
 
+// cards with `map` are answered on content/maps/<map>-regions.json (br-states.json for Brazil)
+const mapCache = new Map();
+const mapStates = (map) => {
+  if (!mapCache.has(map)) {
+    const file = map === 'br' ? 'maps/br-states.json' : `maps/${map}-regions.json`;
+    mapCache.set(map, /^[a-z]{2}$/.test(map) && existsSync(join(root, file)) ? new Set(load(file).states.map((s) => s.code)) : null);
+  }
+  return mapCache.get(map);
+};
+
 const cardFiles = readdirSync(join(root, 'cards')).filter((f) => f.endsWith('.json'));
 const allCards = [];
 for (const f of cardFiles) {
@@ -108,6 +118,11 @@ for (const f of cardFiles) {
     if (c.type === 'photo-choice' && !(c.options ?? []).every((id) => mediaIds.has(id))) err(`${w}: photo-choice options must be media ids`);
     if (c.options && !c.options.includes(c.answer)) err(`${w}: options do not include answer`);
     if (c.type === 'areacode' && !/^\d{2}$/.test(c.prompt?.value ?? '')) err(`${w}: area code must be 2 digits`);
+    if (c.map != null) {
+      const states = mapStates(c.map);
+      if (!states) err(`${w}: no regions map for map "${c.map}"`);
+      else if (!states.has(c.answer)) err(`${w}: answer ${c.answer} is not a state of the ${c.map} map`);
+    }
     if (!Array.isArray(c.tags)) err(`${w}: tags must be array`);
     allCards.push(c);
   }

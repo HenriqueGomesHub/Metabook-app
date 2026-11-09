@@ -68,6 +68,11 @@ run a job with `collect` and `generate`.
 - Fact cards: driving side (left-driving countries only), `.tld` and calling code (skipped when another
   country shares the value), and one text card per `verified` + `distinctive` note without a photo.
   Note text is shown as the question, so it should not name the country.
+- `where` cards (`gen:<code>:where:<noteId>`, type `region`, `map: '<code>'`): one per note whose `region`
+  names exactly one state of the country's regions map (`<code>-regions.json`, or `br-states.json`),
+  as an ISO 3166-2 code ("US-TX", suffix matched to the state code ignoring case) or else as a state name
+  (exact, ignoring case and accents). Plain labels like "north" and ambiguous names are skipped, and a
+  country gets these cards only once it has at least 4. The answer is the state code, clicked on the map.
 
 Captions become alt text, so they must not name the country either. The generator drops a caption (and
 falls back to "Photo of a <subject>") that contains the country's name, its ISO code as a word, or its

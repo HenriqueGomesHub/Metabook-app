@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { generateCards } from './generate';
-import type { CountryFacts, MediaItem, MetaSubject, PoolCountry } from './types';
+import { generateCards, resolveRegion } from './generate';
+import type {
+  CountryFacts,
+  FactNote,
+  MediaItem,
+  MetaSubject,
+  PoolCountry,
+  RegionMapNames,
+} from './types';
 
 const country = (code: string, name: string, continent: PoolCountry['continent'] = 'europe') => ({
   code,
@@ -214,5 +221,107 @@ describe('generateCards', () => {
 
   it('rejects a country outside the pool file', () => {
     expect(() => generateCards('ZZ', { pool, facts: [], media: [] })).toThrow(/pool/);
+  });
+});
+
+const plMap: RegionMapNames = {
+  country: 'PL',
+  states: [
+    { code: 'DS', name: 'Lower Silesian' },
+    { code: 'MZ', name: 'Masovian' },
+    { code: 'PM', name: 'Pomeranian' },
+    { code: 'SL', name: 'Silesian' },
+    { code: 'LD', name: 'Łódź' },
+    // two states with one name: that name is ambiguous
+    { code: 'X1', name: 'Twin' },
+    { code: 'X2', name: 'Twin' },
+  ],
+};
+
+const regionNote = (id: string, region: string | undefined, extra: Partial<FactNote> = {}) => ({
+  id,
+  subject: 'pole' as const,
+  text: `Note ${id}.`,
+  ...(region !== undefined && { region }),
+  source: 'https://www.plonkit.net/poland',
+  checked: '2026-11-01',
+  verified: true,
+  ...extra,
+});
+
+describe('resolveRegion', () => {
+  it('matches an ISO 3166-2 suffix against the state code, ignoring case', () => {
+    expect(resolveRegion('PL-MZ', 'PL', plMap)?.code).toBe('MZ');
+    expect(resolveRegion('pl-ds', 'PL', plMap)?.code).toBe('DS');
+  });
+
+  it('falls back to an exact, accent- and case-insensitive name match', () => {
+    expect(resolveRegion('masovian', 'PL', plMap)?.code).toBe('MZ');
+    expect(resolveRegion('Lodz', 'PL', plMap)?.code).toBe('LD');
+    // exact, not partial: "Silesian" is not "Lower Silesian"
+    expect(resolveRegion('Silesian', 'PL', plMap)?.code).toBe('SL');
+    expect(resolveRegion('Silesia', 'PL', plMap)).toBeUndefined();
+  });
+
+  it('skips plain labels, unknown codes, other countries’ codes and ambiguous names', () => {
+    for (const region of ['north', 'PL-ZZ', 'DE-MZ', 'Twin', '']) {
+      expect(resolveRegion(region, 'PL', plMap)).toBeUndefined();
+    }
+  });
+});
+
+describe('where cards', () => {
+  const notes = [
+    regionNote('pl:a', 'PL-MZ'),
+    regionNote('pl:b', 'pomeranian'),
+    regionNote('pl:c', 'PL-ds', { verified: false }),
+    regionNote('pl:d', 'Łódź', { subject: 'sign' }),
+    regionNote('pl:e', 'north'),
+    regionNote('pl:f', 'Twin'),
+    regionNote('pl:g', undefined),
+  ];
+  const input = (list: FactNote[]) => ({
+    pool,
+    facts: [facts('PL', 'Poland', { notes: list })],
+    media: [],
+    maps: { PL: plMap },
+  });
+  const where = (list: FactNote[], maps?: Record<string, RegionMapNames>) =>
+    generateCards('PL', { ...input(list), ...(maps && { maps }) }).filter((c) =>
+      c.id.includes(':where:'),
+    );
+
+  it('makes a map card for every note that resolves to one state', () => {
+    const cards = where(notes);
+    expect(cards.map((c) => c.id)).toEqual([
+      'gen:pl:where:a',
+      'gen:pl:where:b',
+      'gen:pl:where:c',
+      'gen:pl:where:d',
+    ]);
+    expect(cards[0]).toEqual({
+      id: 'gen:pl:where:a',
+      type: 'region',
+      country: 'PL',
+      answer: 'MZ',
+      prompt: { kind: 'text', value: 'Note pl:a.' },
+      tags: ['europe', 'pole', 'generated', 'where'],
+      subject: 'pole',
+      explain: 'Note pl:a. (Masovian)',
+      map: 'pl',
+      source: 'https://www.plonkit.net/poland',
+      verified: true,
+    });
+    expect(cards[2]).toMatchObject({ answer: 'DS', verified: false });
+    expect(cards[3]).toMatchObject({ answer: 'LD', subject: 'sign', explain: 'Note pl:d. (Łódź)' });
+  });
+
+  it('needs at least four resolvable notes and a map for the country', () => {
+    expect(where(notes.filter((n) => n.id !== 'pl:d'))).toEqual([]);
+    expect(where(notes, {})).toEqual([]);
+  });
+
+  it('is deterministic whatever the note order', () => {
+    expect(where([...notes].reverse())).toEqual(where(notes));
   });
 });
