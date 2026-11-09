@@ -103,19 +103,44 @@ function rankCountries(
   return [...new Set(first)].concat(seededShuffle(near, seed), seededShuffle(far, `${seed}:far`));
 }
 
-/** Country-name options with the answer, shuffled by `seed`; only same-continent fallbacks. */
+/**
+ * Country-name options with the answer, shuffled by `seed`; only same-continent fallbacks.
+ * A country the prompt names (`prompt`: the clue or alt text) is never a distractor: "Like
+ * Poland's, …" with Poland as an option has two right-looking answers.
+ */
 function nameOptions(
   self: PoolCountry,
   pool: PoolCountry[],
   preferred: string[],
   seed: string,
-  allowed?: (country: PoolCountry) => boolean,
+  { allowed = () => true, prompt = '', facts = [] }: NameOptionsExtra = {},
 ): string[] {
-  const ranked = rankCountries(self, pool, preferred, seed, allowed).filter(
+  const unnamed = (c: PoolCountry) =>
+    !namedIn(prompt, [c.name, ...(facts.find((f) => same(f.code, c.code))?.demonym ?? [])]);
+  const ok = (c: PoolCountry) => allowed(c) && unnamed(c);
+  const ranked = rankCountries(self, pool, preferred, seed, ok).filter(
     (c) => preferred.includes(c.code) || c.continent === self.continent,
   );
   const picks = ranked.slice(0, CHOICES - 1).map((c) => c.name);
   return seededShuffle([self.name, ...picks], `${seed}:order`);
+}
+
+interface NameOptionsExtra {
+  allowed?: (country: PoolCountry) => boolean;
+  prompt?: string;
+  /** every country's facts, for demonyms */
+  facts?: CountryFacts[];
+}
+
+/** True when `text` contains any of `words` as a whole word, ignoring case and accents. */
+export function namedIn(text: string, words: (string | undefined)[]): boolean {
+  const folded = fold(text);
+  return words.some((word) => {
+    const w = word ? fold(word) : '';
+    if (w.length < 3) return false;
+    const escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'u').test(folded);
+  });
 }
 
 /**
@@ -227,7 +252,10 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       type: cardType(item.subject),
       country: code,
       answer: country.name,
-      options: nameOptions(country, input.pool, lookalikesFor(item.subject, item.noteId), id),
+      options: nameOptions(country, input.pool, lookalikesFor(item.subject, item.noteId), id, {
+        prompt: altFor(item),
+        facts: input.facts,
+      }),
       prompt: {
         kind: 'image',
         value: item.url,
@@ -283,7 +311,11 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
   // (c) fact cards
   const factCard = (key: string, clue: string, allowed?: (c: PoolCountry) => boolean) => {
     const id = `gen:${lc}:${key}`;
-    const options = nameOptions(country, input.pool, [], id, allowed);
+    const options = nameOptions(country, input.pool, [], id, {
+      allowed,
+      prompt: clue,
+      facts: input.facts,
+    });
     if (options.length < 2) return;
     cards.push({
       id,
@@ -324,12 +356,10 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       type: cardType(note.subject),
       country: code,
       answer: country.name,
-      options: nameOptions(
-        country,
-        input.pool,
-        resolveCodes(note.lookalikes ?? [], input.pool),
-        id,
-      ),
+      options: nameOptions(country, input.pool, resolveCodes(note.lookalikes ?? [], input.pool), id, {
+        prompt: note.text,
+        facts: input.facts,
+      }),
       prompt: { kind: 'text', value: note.text },
       tags: tags(note.subject),
       subject: note.subject,

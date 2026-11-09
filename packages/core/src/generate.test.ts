@@ -219,6 +219,42 @@ describe('generateCards', () => {
     expect(ids).toEqual(['gen:pl:note:sign-yellow']);
   });
 
+  it('never offers a distractor the prompt names, by name or demonym, accents and case aside', () => {
+    const note = (id: string, text: string): FactNote => ({
+      id,
+      subject: 'sign',
+      text,
+      distinctive: true,
+      lookalikes: ['CZ', 'LT'],
+      source: 'https://www.plonkit.net/poland',
+      checked: '2026-11-01',
+      verified: true,
+    });
+    const cards = generateCards('PL', {
+      pool,
+      facts: [
+        facts('PL', 'Poland', {
+          notes: [
+            note('a', 'Signs like CZECHIA’s, with a yellow back.'),
+            note('b', 'Lithuanian-style chevrons and Slovakia-like posts.'),
+          ],
+        }),
+        facts('LT', 'Lithuania', { demonym: ['Lithuanian'] }),
+      ],
+      media: [],
+    });
+    const options = (id: string) => cards.find((c) => c.id === id)?.options ?? [];
+    expect(options('gen:pl:note:a')).not.toContain('Czechia');
+    expect(options('gen:pl:note:a')).toContain('Lithuania');
+    expect(options('gen:pl:note:b')).not.toContain('Lithuania');
+    expect(options('gen:pl:note:b')).not.toContain('Slovakia');
+    // the rest still come from the same continent
+    for (const id of ['gen:pl:note:a', 'gen:pl:note:b']) {
+      expect(options(id)).toHaveLength(4);
+      expect(options(id)).not.toContain('Japan');
+    }
+  });
+
   it('rejects a country outside the pool file', () => {
     expect(() => generateCards('ZZ', { pool, facts: [], media: [] })).toThrow(/pool/);
   });

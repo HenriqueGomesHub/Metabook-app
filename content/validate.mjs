@@ -31,8 +31,23 @@ const poolNames = new Set(pool.map((c) => c.name.toLowerCase()));
 const countryName = (code) => pool.find((c) => c.code === String(code ?? '').toUpperCase())?.name;
 const names = (text, code) => Boolean(text && countryName(code) && text.toLowerCase().includes(countryName(code).toLowerCase()));
 
+/** Lower case without accents (Ł, Ø… spelled plainly), for whole-word name checks. */
+const PLAIN = { ł: 'l', ø: 'o', đ: 'd', ð: 'd', ı: 'i', ß: 'ss', æ: 'ae', œ: 'oe', þ: 'th' };
+const fold = (text) =>
+  String(text).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[łøđðıßæœþ]/g, (c) => PLAIN[c] ?? c).trim();
+/** True when `text` contains any of `words` (3+ letters) as a whole word, ignoring case and accents. */
+const namedIn = (text, words) => {
+  const folded = fold(text ?? '');
+  return words.some((word) => {
+    const w = word ? fold(word) : '';
+    if (w.length < 3) return false;
+    return new RegExp(`(?<!\\p{L})${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?!\\p{L})`, 'u').test(folded);
+  });
+};
+
 // facts/<code>.json: one CountryFacts; codes compare case-insensitively ("pl" or "PL")
 const noteIds = new Map();
+const demonyms = new Map();
 for (const f of jsonFiles('facts')) {
   const facts = load(`facts/${f}`);
   const w = `facts/${f}`;
@@ -42,6 +57,7 @@ for (const f of jsonFiles('facts')) {
   if (!facts.name) err(`${w}: missing name`);
   if (facts.drivingSide != null && !['left', 'right'].includes(facts.drivingSide)) err(`${w}: bad drivingSide`);
   for (const k of ['tld', 'callingCode', 'languages', 'scripts']) if (facts[k] != null && !strings(facts[k])) err(`${w}: ${k} must be an array of strings`);
+  if (strings(facts.demonym)) demonyms.set(code, facts.demonym);
   if (!Array.isArray(facts.notes)) { err(`${w}: notes must be an array`); continue; }
   const ids = new Set();
   for (const n of facts.notes) {
@@ -117,6 +133,14 @@ for (const f of cardFiles) {
     for (const id of c.media ?? []) if (!mediaIds.has(id)) err(`${w}: media ${id} not in content/media`);
     if (c.type === 'photo-choice' && !(c.options ?? []).every((id) => mediaIds.has(id))) err(`${w}: photo-choice options must be media ids`);
     if (c.options && !c.options.includes(c.answer)) err(`${w}: options do not include answer`);
+    // a distractor the prompt names makes two options look right
+    if (c.options && c.prompt?.kind === 'text' && c.type !== 'photo-choice') {
+      for (const option of c.options) {
+        if (option === c.answer) continue;
+        const code = pool.find((p) => p.name === option)?.code;
+        if (namedIn(c.prompt.value, [option, ...(demonyms.get(code) ?? [])])) err(`${w}: option "${option}" is named in the prompt`);
+      }
+    }
     if (c.type === 'areacode' && !/^\d{2}$/.test(c.prompt?.value ?? '')) err(`${w}: area code must be 2 digits`);
     if (c.map != null) {
       const states = mapStates(c.map);
