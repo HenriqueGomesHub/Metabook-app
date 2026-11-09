@@ -35,8 +35,8 @@ describe('ingest', () => {
     };
     const c = (id, sourceUrl, downloadUrl = 'https://img/ok.jpg') => ({ id, country: 'pl', subject: 'pole', sourceUrl, downloadUrl });
     const result = await ingest([c('pl-c1', 'https://src/old'), c('pl-c2', 'https://src/new'), c('pl-c3', 'https://src/b', 'https://img/broken.jpg')], { storage, queue, cap: 5 });
-    assert.deepEqual(uploads, ['candidates/pl/pl-c2.webp']);
-    assert.deepEqual(inserted.map((r) => [r.storagePath, r.width, r.height]), [['candidates/pl/pl-c2.webp', 1280, 960]]);
+    assert.deepEqual(uploads, ['candidates/pl-c2.webp']);
+    assert.deepEqual(inserted.map((r) => [r.storagePath, r.width, r.height]), [['candidates/pl-c2.webp', 1280, 960]]);
     assert.deepEqual(result.counts, { found: 3, alreadyQueued: 1, queued: 1, failed: 1 });
     assert.match(result.errors[0], /https:\/\/src\/b: HTTP 404/);
   });

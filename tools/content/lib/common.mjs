@@ -1,4 +1,5 @@
 // Shared helpers: repo paths, JSON files, HTTP with retries, small geo maths.
+import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -156,6 +157,20 @@ export function parseArgs(argv = process.argv.slice(2)) {
 }
 
 export const isMain = (meta) => process.argv[1] && fileURLToPath(meta.url) === process.argv[1];
+
+/** CC0, public domain, CC BY and CC BY-SA, by Commons' LicenseShortName; the only licences photos may carry. */
+export const FREE_LICENCE = /^(cc0|cc[ -]by(-sa)?[ -]\d|public domain|pd\b|pd-)/i;
+export const licenceOk = (shortName) => FREE_LICENCE.test((shortName ?? '').trim());
+
+/** Photo id and storage name: 12 hex chars of sha1(source_url), so nothing in it hints at the country. */
+export const mediaId = (sourceUrl) => createHash('sha1').update(sourceUrl).digest('hex').slice(0, 12);
+
+/**
+ * Supabase auth headers. The new secret keys (`sb_secret_…`) are not JWTs, so they go in `apikey`
+ * only; legacy service_role JWTs also need `Authorization: Bearer`.
+ */
+export const supabaseHeaders = (key) =>
+  key.startsWith('sb_') ? { apikey: key } : { apikey: key, Authorization: `Bearer ${key}` };
 
 export function env(name) {
   const value = process.env[name];

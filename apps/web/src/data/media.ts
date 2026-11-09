@@ -26,7 +26,7 @@ export function mediaBase(env: { VITE_MEDIA_BASE?: string; VITE_SUPABASE_URL?: s
 
 const BASE = mediaBase(import.meta.env as Parameters<typeof mediaBase>[0]);
 
-/** Absolute URLs pass through; bucket paths ("approved/pl/x.webp") get the media base. */
+/** Absolute URLs pass through; bucket paths ("approved/<id>.webp") get the media base. */
 export function mediaUrl(path: string, base = BASE): string {
   return /^(https?:|data:)/.test(path) ? path : `${base}${path}`;
 }

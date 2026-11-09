@@ -10,12 +10,13 @@ const candidate = (id: string, country: string, subject: Candidate['subject']): 
   subject,
   source: 'commons',
   sourceUrl: `https://commons.wikimedia.org/wiki/File:${id}.jpg`,
-  storagePath: `candidates/${country}/${id}.webp`,
+  storagePath: `candidates/${id}.webp`,
   preview: null,
   credit: `Ana Ruiz · Wikimedia Commons · CC BY-SA 4.0 (${id})`,
   licence: 'CC BY-SA 4.0',
   title: null,
-  caption: 'Roadside post',
+  description: `Roadside post in ${country}`,
+  caption: null,
   giveaways: [],
 });
 
@@ -51,6 +52,13 @@ describe('Curate', () => {
     renderScreens('/settings', new MemoryRepository());
     await screen.findByText('Local mode — data stays in this browser.');
     expect(screen.queryByRole('link', { name: /Curate photos/ })).toBeNull();
+  });
+
+  it('shows the description as read-only context and starts the caption empty', async () => {
+    open(fakeApi());
+    expect(await screen.findByText(/Roadside post in pl/)).toBeTruthy();
+    expect((screen.getByLabelText(/Caption/) as HTMLTextAreaElement).value).toBe('');
+    expect(screen.queryByDisplayValue(/Roadside post in pl/)).toBeNull();
   });
 
   it('keeps with an edited subject and caption, then shows the next one', async () => {
@@ -92,7 +100,7 @@ describe('Curate', () => {
         status: 'rejected',
         subject: 'bollard',
         giveaways: ['bollard'],
-        caption: 'Roadside post',
+        caption: null,
       }),
     );
     await current('Lithuania');
@@ -103,7 +111,7 @@ describe('Curate', () => {
         status: 'pending',
         subject: 'bollard',
         giveaways: [],
-        caption: 'Roadside post',
+        caption: null,
       }),
     );
     expect(await current('Poland')).toBeTruthy();

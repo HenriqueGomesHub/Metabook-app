@@ -1,18 +1,35 @@
 // Runs a job file and writes content/jobs/<name>.result.json. Every step and country is isolated:
-// a failure is recorded with its message and the run carries on. Only an unreadable job file
-// makes it exit non-zero.
+// a failure is recorded with its message and the run carries on. The result file is rewritten after
+// every step, and any crash (bad job file, imports, ...) is written as { name, fatal, steps } and
+// exits 0, so the workflow's commit step still has something to commit. Only a missing argument
+// exits non-zero.
 // CLI: node tools/content/run-job.mjs content/jobs/pl-test.json
+//      node tools/content/run-job.mjs --name content/jobs/pl-test.json   (prints the job's name)
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
 export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate'];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
 
+const NAME = /^[\w-]+$/;
+
+/** The job's name for its result file; the file name when the job cannot be read or has no valid name. */
+export function jobName(path) {
+  try {
+    const { name } = JSON.parse(readFileSync(path, 'utf8'));
+    if (typeof name === 'string' && NAME.test(name)) return name;
+  } catch {
+    // unreadable job: fall through to the file name
+  }
+  return basename(path).replace(/\.json$/, '').replace(/[^\w-]/g, '_');
+}
+
 export function parseJob(text) {
   const job = JSON.parse(text);
-  if (!job.name || !/^[\w-]+$/.test(job.name)) throw new Error('job.name must be letters, digits, - or _');
+  if (!job.name || !NAME.test(job.name)) throw new Error('job.name must be letters, digits, - or _');
+  if (job.budgetMinutes != null && !(job.budgetMinutes > 0)) throw new Error('job.budgetMinutes must be a positive number');
   if (!job.countries) throw new Error('job.countries is required (array of codes or "all")');
   const steps = job.steps ?? [];
   const unknown = steps.filter((s) => !STEPS.includes(s));
@@ -41,9 +58,11 @@ async function eachCountry(countries, fn) {
 async function eachSubject(subjects, fn) {
   const counts = {};
   const errors = [];
+  let budgetHit = false;
   for (const subject of subjects) {
     try {
       const result = await fn(subject);
+      budgetHit ||= Boolean(result.budgetHit);
       counts[subject] = { ...result.counts, ...(result.dropped && { dropped: result.dropped }) };
       errors.push(...(result.errors ?? []).map((e) => `${subject}: ${e}`));
     } catch (error) {
@@ -51,7 +70,7 @@ async function eachSubject(subjects, fn) {
     }
   }
   // a queue error repeats for every subject; once is enough
-  return { counts, errors: [...new Set(errors)] };
+  return { counts, errors: [...new Set(errors)], ...(budgetHit && { budgetHit }) };
 }
 
 /** Lazily created clients so a job without photo steps needs no secrets. */
@@ -68,10 +87,10 @@ function clients() {
   };
 }
 
-export async function runJob(job) {
+/** Runs the steps, pushing each result onto `steps`; `onStep(countries)` follows every step. */
+export async function runJob(job, { steps = [], onStep } = {}) {
   const countries = resolveCountries(job.countries, loadPool());
   const getClients = clients();
-  const steps = [];
   for (const step of job.steps) {
     const start = Date.now();
     let result;
@@ -88,12 +107,15 @@ export async function runJob(job) {
         return eachSubject(job.subjects, (subject) => runCommons(code, subject, { storage, queue, cap: job.perSubject }));
       });
     } else if (step === 'mapillary') {
-      const { runMapillary } = await import('./mapillary.mjs');
+      const { DEFAULT_BUDGET_MINUTES, runMapillary } = await import('./mapillary.mjs');
+      const budgetMs = (job.budgetMinutes ?? DEFAULT_BUDGET_MINUTES) * 60_000;
       // Mapillary only tells poles apart; every other subject is the same roadside-scene search
       const subjects = [...new Set(job.subjects.map((s) => (s === 'pole' ? 'pole' : 'bollard')))];
       result = await eachCountry(countries, async (code) => {
         const { storage, queue } = await getClients();
-        return eachSubject(subjects, (subject) => runMapillary(code, subject, { storage, queue, cap: job.perSubject }));
+        // one budget per country and step, shared by its subjects
+        const deadline = Date.now() + budgetMs;
+        return eachSubject(subjects, (subject) => runMapillary(code, subject, { storage, queue, cap: job.perSubject, deadline }));
       });
     } else if (step === 'regions') {
       const { buildRegions } = await import('./regions.mjs');
@@ -108,6 +130,7 @@ export async function runJob(job) {
       result = await eachCountry(countries, async (code) => ({ counts: writeGenerated(code, input) }));
     }
     steps.push({ step, ms: Date.now() - start, countries: result });
+    onStep?.(countries);
   }
   return { countries, steps };
 }
@@ -117,31 +140,44 @@ function validateContent() {
   return { ok: run.status === 0, output: `${run.stdout}${run.stderr}`.trim().split('\n').slice(0, 50) };
 }
 
-async function main(path) {
-  const job = parseJob(readFileSync(path, 'utf8'));
+const errorCount = (steps) =>
+  steps.reduce((n, s) => n + Object.values(s.countries).reduce((m, c) => m + (c.errors?.length ?? 0), 0), 0);
+
+/** Runs one job file and writes its result (or fatal stub) into `outDir`. Never throws. */
+export async function runJobFile(path, outDir = join(ROOT, 'content', 'jobs')) {
   const startedAt = new Date().toISOString();
-  const { countries, steps } = await runJob(job);
-  const result = {
-    name: job.name,
-    job,
-    startedAt,
-    finishedAt: new Date().toISOString(),
-    commit: process.env.GITHUB_SHA,
-    countries,
-    errorCount: steps.reduce((n, s) => n + Object.values(s.countries).reduce((m, c) => m + (c.errors?.length ?? 0), 0), 0),
-    steps,
-    validation: validateContent(),
-  };
-  const out = join(ROOT, 'content', 'jobs', `${job.name}.result.json`);
-  writeJson(out, result);
-  console.log(`${job.name}: ${result.errorCount} errors, validation ${result.validation.ok ? 'ok' : 'FAILED'} → ${out}`);
+  const steps = [];
+  let name = jobName(path);
+  const out = () => join(outDir, `${name}.result.json`);
+  try {
+    const job = parseJob(readFileSync(path, 'utf8'));
+    name = job.name;
+    const snapshot = (countries) => ({
+      name,
+      job,
+      startedAt,
+      finishedAt: null,
+      commit: process.env.GITHUB_SHA,
+      countries,
+      errorCount: errorCount(steps),
+      steps,
+    });
+    const { countries } = await runJob(job, { steps, onStep: (done) => writeJson(out(), snapshot(done)) });
+    const result = { ...snapshot(countries), finishedAt: new Date().toISOString(), validation: validateContent() };
+    writeJson(out(), result);
+    console.log(`${name}: ${result.errorCount} errors, validation ${result.validation.ok ? 'ok' : 'FAILED'} → ${out()}`);
+  } catch (error) {
+    console.error(`${name}: fatal`, error);
+    writeJson(out(), { name, fatal: error.message, steps });
+    console.log(`${name}: fatal, see ${out()}`);
+  }
 }
 
 if (process.argv[1]?.endsWith('run-job.mjs')) {
-  const path = process.argv[2];
-  if (!path) {
+  const [first, second] = process.argv.slice(2);
+  if (first === '--name' && second) console.log(jobName(second));
+  else if (!first) {
     console.error('usage: node tools/content/run-job.mjs content/jobs/<name>.json');
     process.exit(1);
-  }
-  await main(path);
+  } else await runJobFile(first);
 }

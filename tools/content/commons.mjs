@@ -1,7 +1,7 @@
 // Wikimedia Commons photos for a country and subject: maps the subject to categories, walks their
 // subcategories to depth 2, keeps freely licensed photos, and queues them for curation.
 // CLI: node tools/content/commons.mjs --country pl --subject pole [--max 40] [--dry]
-import { getJson, isMain, parseArgs, poolCountry, stripHtml } from './lib/common.mjs';
+import { getJson, isMain, licenceOk, mediaId, parseArgs, poolCountry, stripHtml } from './lib/common.mjs';
 import { ingest } from './lib/ingest.mjs';
 
 const API = 'https://commons.wikimedia.org/w/api.php';
@@ -20,7 +20,6 @@ export const CATEGORY_PATTERNS = {
 /** Subjects where only photos are useful; road-sign SVG diagrams may still teach signs. */
 const PHOTO_SUBJECTS = new Set(['pole', 'plate', 'bollard', 'guardrail']);
 const RASTER = new Set(['image/jpeg', 'image/png', 'image/webp', 'image/tiff']);
-const FREE_LICENCE = /^(cc0|cc[ -]by(-sa)?[ -]\d|public domain|pd\b|pd-)/i;
 
 /** Commons names some countries differently or with "the". */
 const COMMONS_NAMES = { Czechia: ['the Czech Republic'], 'North Macedonia': ['North Macedonia'] };
@@ -43,9 +42,7 @@ const api = (params) =>
 export const existingTitles = (json) =>
   (json.query?.pages ?? []).filter((p) => !p.missing).map((p) => p.title);
 
-export function licenceOk(shortName) {
-  return FREE_LICENCE.test((shortName ?? '').trim());
-}
+export { licenceOk };
 
 /**
  * One file page (formatversion=2, prop=imageinfo with extmetadata) → candidate, or a reason
@@ -64,7 +61,7 @@ export function parseFilePage(page, { country, subject }) {
   const artist = stripHtml(meta.Artist?.value) || 'Unknown author';
   const description = stripHtml(meta.ImageDescription?.value);
   return {
-    id: `${country}-c${page.pageid}`,
+    id: mediaId(info.descriptionurl),
     country,
     subject,
     source: 'commons',
@@ -74,7 +71,8 @@ export function parseFilePage(page, { country, subject }) {
     licence,
     licenceUrl: stripHtml(meta.LicenseUrl?.value) || undefined,
     title: page.title.replace(/^File:/, ''),
-    caption: description ? description.slice(0, 200) : undefined,
+    // curator-only context: Commons descriptions often name the place, so never a caption
+    description: description ? description.slice(0, 200) : undefined,
   };
 }
 
@@ -138,7 +136,8 @@ export async function findCandidates(code, subject, limit = 40) {
       });
       for (const page of json.query?.pages ?? []) {
         if (seen.has(page.pageid)) continue;
-        seen.add(page.pageid);
+        // continuation responses can repeat a page without its imageinfo; wait for the full one
+        if (page.imageinfo) seen.add(page.pageid);
         const result = parseFilePage(page, { country: code, subject });
         if (typeof result === 'string') {
           const reason = result.split(' ')[0];

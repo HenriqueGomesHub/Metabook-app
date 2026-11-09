@@ -1,6 +1,6 @@
 // The curation queue: media_candidates rows via PostgREST with the service role key.
 // CLI: node tools/content/queue.mjs --approved   (lists approved rows not collected yet)
-import { env, HttpError, isMain, parseArgs, request } from './lib/common.mjs';
+import { env, HttpError, isMain, parseArgs, request, supabaseHeaders } from './lib/common.mjs';
 
 export const MISSING_TABLE =
   'media_candidates table not found: run supabase/migrations/0003_media.sql in the Supabase SQL editor';
@@ -29,16 +29,19 @@ export function toRow(candidate) {
     title: candidate.title ?? null,
     lat: candidate.lat ?? null,
     lon: candidate.lon ?? null,
-    caption: candidate.caption ?? null,
+    description: candidate.description ?? null,
   };
 }
+
+/** PostgREST caps a response (1000 rows by default), so lists are read a page at a time. */
+const PAGE = 1000;
 
 export function createQueue({
   url = env('SUPABASE_URL'),
   key = env('SUPABASE_SERVICE_ROLE_KEY'),
 } = {}) {
   const base = `${url.replace(/\/$/, '')}/rest/v1/media_candidates`;
-  const headers = { Authorization: `Bearer ${key}`, apikey: key, 'Content-Type': 'application/json' };
+  const headers = { ...supabaseHeaders(key), 'Content-Type': 'application/json' };
   async function call(query, init = {}) {
     try {
       const res = await request(`${base}${query}`, { ...init, headers: { ...headers, ...init.headers } }, { retries: 2 });
@@ -53,8 +56,12 @@ export function createQueue({
   return {
     /** source_url of every row for a country, whatever its status, so re-runs skip them. */
     async knownSourceUrls(country) {
-      const rows = await call(`?select=source_url&country=eq.${country}`);
-      return new Set(rows.map((r) => r.source_url));
+      const urls = new Set();
+      for (let offset = 0; ; offset += PAGE) {
+        const rows = await call(`?select=source_url&country=eq.${country}&order=id&limit=${PAGE}&offset=${offset}`);
+        for (const r of rows) urls.add(r.source_url);
+        if (rows.length < PAGE) return urls;
+      }
     },
 
     /** Inserts; a source_url already queued is left untouched (keeps its status). */

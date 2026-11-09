@@ -1,4 +1,4 @@
-// Approved candidates → content/media/<code>.json: moves each photo to approved/<code>/, appends
+// Approved candidates → content/media/<code>.json: moves each photo to approved/, appends
 // a MediaItem and marks the row collected. Rejected and pending rows are left alone.
 // CLI: node tools/content/collect.mjs [--countries pl,lt]
 import { basename, join } from 'node:path';
@@ -13,7 +13,7 @@ export function toMediaItem(row) {
     subject: row.subject,
     region: row.region,
     noteId: row.note_id,
-    url: `approved/${row.country}/${id}.webp`,
+    url: `approved/${id}.webp`,
     width: row.width,
     height: row.height,
     preview: row.preview,

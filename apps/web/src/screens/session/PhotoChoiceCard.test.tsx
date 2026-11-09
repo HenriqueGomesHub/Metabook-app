@@ -7,11 +7,12 @@ import { renderApp } from '../../test/render';
 
 // vi.mock factories are hoisted above imports, so the photos are too
 const media = vi.hoisted(() =>
-  ['pl', 'lt', 'cz', 'de'].map((country): MediaItem => ({
-    id: `${country}-c1`,
+  ['pl', 'lt', 'cz', 'de'].map((country, i): MediaItem => ({
+    id: `0a1b2c3d4e${i}f`,
     country,
     subject: 'bollard',
-    url: `approved/${country}/${country}-c1.webp`,
+    url: `approved/0a1b2c3d4e${i}f.webp`,
+    caption: 'Roadside post at dusk',
     width: 1280,
     height: 960,
     credit: `Ana Ruiz ${country} · Wikimedia Commons · CC BY-SA 4.0`,
@@ -24,12 +25,12 @@ const card: Card = {
   id: 'gen:pl:bollard:choice',
   type: 'photo-choice',
   country: 'PL',
-  answer: 'pl-c1',
-  options: ['lt-c1', 'pl-c1', 'cz-c1', 'de-c1'],
+  answer: '0a1b2c3d4e0f',
+  options: ['0a1b2c3d4e1f', '0a1b2c3d4e0f', '0a1b2c3d4e2f', '0a1b2c3d4e3f'],
   prompt: { kind: 'text', value: 'Poland’s bollard?' },
   tags: ['europe', 'bollard'],
   subject: 'bollard',
-  media: ['lt-c1', 'pl-c1', 'cz-c1', 'de-c1'],
+  media: ['0a1b2c3d4e1f', '0a1b2c3d4e0f', '0a1b2c3d4e2f', '0a1b2c3d4e3f'],
   source: 'https://example.com',
 };
 const other: Card = { ...card, id: 'flag:pl', type: 'flag', subject: undefined };
@@ -56,8 +57,15 @@ describe('PhotoChoiceCard', () => {
     expect(await screen.findByRole('heading', { name: 'Poland’s bollard?' })).toBeTruthy();
     const photos = screen.getAllByRole('button', { name: /^Photo \d/ });
     expect(photos).toHaveLength(4);
+    // captions can describe the place, so they stay out of the labels until the reveal
+    expect(photos.map((p) => p.getAttribute('aria-label'))).toEqual([
+      'Photo 1',
+      'Photo 2',
+      'Photo 3',
+      'Photo 4',
+    ]);
     expect(photos[0]?.querySelector('img')?.getAttribute('src')).toBe(
-      'https://media.example/approved/lt/lt-c1.webp',
+      'https://media.example/approved/0a1b2c3d4e1f.webp',
     );
     expect(screen.queryByText(/Wikimedia Commons/)).toBeNull();
 
@@ -71,7 +79,7 @@ describe('PhotoChoiceCard', () => {
       true,
     );
     await waitFor(() =>
-      expect(r.reviews[0]).toMatchObject({ cardId: card.id, correct: false, answerGiven: 'lt-c1' }),
+      expect(r.reviews[0]).toMatchObject({ cardId: card.id, correct: false, answerGiven: '0a1b2c3d4e1f' }),
     );
     expect(r.confusions).toEqual([]);
   });

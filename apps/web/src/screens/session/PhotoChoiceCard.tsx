@@ -63,7 +63,8 @@ function PhotoOption({
         className={`photo ${status}`}
         disabled={revealed}
         onClick={onPick}
-        aria-label={`Photo ${index + 1}${item?.caption ? `: ${item.caption}` : ''}`}
+        // a caption can describe the place, so it stays out of the label until the reveal
+        aria-label={`Photo ${index + 1}${revealed && item?.caption ? `: ${item.caption}` : ''}`}
         style={item?.preview ? { backgroundImage: `url(${item.preview})` } : undefined}
       >
         {item && status !== 'failed' ? (

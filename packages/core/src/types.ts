@@ -80,6 +80,10 @@ export interface CountryFacts {
   callingCode?: string[];
   languages?: string[];
   scripts?: string[];
+  /** capital city; captions and notes naming it are dropped as giveaways */
+  capital?: string;
+  /** adjectives and nouns for its people ("Polish", "Poles"); same use as `capital` */
+  demonym?: string[];
   notes: FactNote[];
 }
 
@@ -90,7 +94,7 @@ export interface MediaItem {
   subject: MetaSubject;
   region?: string;
   noteId?: string;
-  /** path inside the `media` storage bucket ("approved/pl/<id>.webp"), or an absolute URL */
+  /** path inside the `media` storage bucket ("approved/<id>.webp"), or an absolute URL */
   url: string;
   width: number;
   height: number;
@@ -102,7 +106,7 @@ export interface MediaItem {
   sourceUrl: string;
   /** subjects this photo is a clear giveaway for */
   giveaways?: string[];
-  /** curator's description; used as alt text, so it must not name the country */
+  /** curator-written alt text; generation drops it when it names the country */
   caption?: string;
 }
 

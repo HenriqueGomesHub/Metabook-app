@@ -9,12 +9,14 @@ export interface Candidate {
   subject: MetaSubject;
   source: 'commons' | 'mapillary';
   sourceUrl: string;
-  /** path in the `media` bucket, e.g. "candidates/pl/pl-c123.webp" */
+  /** path in the `media` bucket, e.g. "candidates/3f2a9c1b7d40.webp" */
   storagePath: string;
   preview: string | null;
   credit: string;
   licence: string;
   title: string | null;
+  /** curator-only context (Commons description); read-only, may name the country */
+  description: string | null;
   caption: string | null;
   giveaways: string[];
 }
@@ -47,6 +49,7 @@ interface Row {
   credit: string;
   licence: string;
   title: string | null;
+  description: string | null;
   caption: string | null;
   giveaways: string[] | null;
 }
@@ -64,7 +67,7 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
       const { data, error } = await client
         .from('media_candidates')
         .select(
-          'id,country,subject,source,source_url,storage_path,preview,credit,licence,title,caption,giveaways',
+          'id,country,subject,source,source_url,storage_path,preview,credit,licence,title,description,caption,giveaways',
         )
         .eq('status', 'pending')
         .order('created_at')
@@ -81,11 +84,13 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
         credit: row.credit,
         licence: row.licence,
         title: row.title,
+        description: row.description,
         caption: row.caption,
         giveaways: row.giveaways ?? [],
       }));
     },
     async decide(id, { status, subject, giveaways, caption }) {
+      // only the columns the migration grants UPDATE on (0003_media.sql)
       const { error } = await client
         .from('media_candidates')
         .update({

@@ -28,7 +28,7 @@ export function CandidateReview({
 }) {
   const [subject, setSubject] = useState<MetaSubject>(candidate.subject);
   const [giveaway, setGiveaway] = useState(candidate.giveaways.includes(candidate.subject));
-  const [caption, setCaption] = useState(candidate.caption ?? '');
+  const [caption, setCaption] = useState('');
 
   const decide = (status: Decision['status']) =>
     onDecide({
@@ -86,6 +86,12 @@ export function CandidateReview({
           </button>
         ))}
       </div>
+
+      {candidate.description && (
+        <p className="note">
+          <strong>Description (curators only, may name the country):</strong> {candidate.description}
+        </p>
+      )}
 
       <div className="field">
         <label>

@@ -36,8 +36,6 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
-
       - name: Find job files
         id: jobs
         env:
@@ -57,6 +55,13 @@ jobs:
           files=$(printf '%s\n' $files | grep -v '\.result\.json$' || true)
           echo "files=$(echo $files)" >> "$GITHUB_OUTPUT"
           echo "Jobs: ${files:-none}"
+          # an old committed result must not stand in for this run's
+          for file in $files; do
+            rm -f "content/jobs/$(node tools/content/run-job.mjs --name "$file").result.json"
+          done
+
+      - run: npm ci
+        if: steps.jobs.outputs.files != ''
 
       - name: Run jobs
         id: run
@@ -65,11 +70,13 @@ jobs:
           MAPILLARY_TOKEN: ${{ secrets.MAPILLARY_TOKEN }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          JOB_FILES: ${{ steps.jobs.outputs.files }}
         run: |
           names=""
-          for file in ${{ steps.jobs.outputs.files }}; do
+          for file in $JOB_FILES; do
+            # run-job.mjs writes a result file even when it crashes, and then exits 0
             node tools/content/run-job.mjs "$file"
-            names="$names $(node -p "JSON.parse(require('fs').readFileSync('$file','utf8')).name")"
+            names="$names $(node tools/content/run-job.mjs --name "$file")"
           done
           echo "names=$(echo $names)" >> "$GITHUB_OUTPUT"
 
@@ -85,7 +92,16 @@ jobs:
         env:
           NAMES: ${{ steps.run.outputs.names }}
           BRANCH: ${{ github.ref_name }}
+          JOB_FILES: ${{ steps.jobs.outputs.files }}
         run: |
+          # a job whose runner died before run-job wrote anything still gets a result to read
+          for file in $JOB_FILES; do
+            name=$(node tools/content/run-job.mjs --name "$file")
+            if [ ! -f "content/jobs/$name.result.json" ]; then
+              NAME="$name" node -e "require('fs').writeFileSync('content/jobs/' + process.env.NAME + '.result.json', JSON.stringify({ name: process.env.NAME, fatal: 'runner failed before run-job wrote a result; see the Actions log' }, null, 2) + '\\n')"
+              NAMES="$NAMES $name"
+            fi
+          done
           git config user.name "metabook-content-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content/

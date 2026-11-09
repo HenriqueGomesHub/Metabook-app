@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { licenceOk } from '../tools/content/lib/common.mjs';
 const root = dirname(fileURLToPath(import.meta.url));
 const load = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const errors = [];
@@ -26,6 +27,9 @@ const SUBJECTS = ['bollard', 'pole', 'plate', 'sign', 'line', 'guardrail', 'lang
 const jsonFiles = (dir) => (existsSync(join(root, dir)) ? readdirSync(join(root, dir)).filter((f) => f.endsWith('.json')) : []);
 const strings = (v) => Array.isArray(v) && v.every((x) => typeof x === 'string');
 const poolNames = new Set(pool.map((c) => c.name.toLowerCase()));
+// text shown before the answer must not contain the answer
+const countryName = (code) => pool.find((c) => c.code === String(code ?? '').toUpperCase())?.name;
+const names = (text, code) => Boolean(text && countryName(code) && text.toLowerCase().includes(countryName(code).toLowerCase()));
 
 // facts/<code>.json: one CountryFacts; codes compare case-insensitively ("pl" or "PL")
 const noteIds = new Map();
@@ -72,8 +76,10 @@ for (const f of jsonFiles('media')) {
     if (!codes.has(code)) err(`${w}: country ${m.country} not in pool.json`);
     if (!SUBJECTS.includes(m.subject)) err(`${w}: bad subject ${m.subject}`);
     if (!isUrl(m.sourceUrl)) err(`${w}: sourceUrl must be http(s) URL`);
+    if (typeof m.licence === 'string' && !licenceOk(m.licence)) err(`${w}: licence "${m.licence}" is not CC0, public domain, CC BY or CC BY-SA`);
+    if (names(m.caption, m.country)) err(`${w}: caption names the country`);
     if (m.licenceUrl != null && !isUrl(m.licenceUrl)) err(`${w}: licenceUrl must be http(s) URL`);
-    if (typeof m.url === 'string' && !isUrl(m.url) && !/^approved\/[a-z]{2}\/[\w.-]+\.webp$/.test(m.url)) err(`${w}: url must be http(s) or approved/<code>/<id>.webp`);
+    if (typeof m.url === 'string' && !isUrl(m.url) && !/^approved\/[\w.-]+\.webp$/.test(m.url)) err(`${w}: url must be http(s) or approved/<id>.webp`);
     if (!Number.isInteger(m.width) || !Number.isInteger(m.height)) err(`${w}: width and height must be integers`);
     if (m.noteId != null && !noteIds.get(code)?.has(m.noteId)) err(`${w}: noteId ${m.noteId} not in facts/${code.toLowerCase()}.json`);
     if (m.giveaways != null && !strings(m.giveaways)) err(`${w}: giveaways must be an array of strings`);
@@ -93,6 +99,9 @@ for (const f of cardFiles) {
     if (!isUrl(c.source)) err(`${w}: source must be http(s) URL`);
     if (typeof c.verified !== 'boolean') err(`${w}: verified must be boolean`);
     if (c.country && !codes.has(c.country)) err(`${w}: country ${c.country} not in pool.json`);
+    if (c.prompt?.kind === 'image') {
+      for (const text of [c.prompt.alt, /\s/.test(c.prompt.value ?? '') ? c.prompt.value : undefined]) if (names(text, c.country)) err(`${w}: image alt/prompt names the country`);
+    }
     if (c.prompt && !['flag', 'text', 'image', 'embed', 'svg'].includes(c.prompt.kind)) err(`${w}: bad prompt.kind`);
     if (c.subject != null && !SUBJECTS.includes(c.subject)) err(`${w}: bad subject ${c.subject}`);
     for (const id of c.media ?? []) if (!mediaIds.has(id)) err(`${w}: media ${id} not in content/media`);

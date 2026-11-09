@@ -15,11 +15,16 @@ import {
 
 const ENDPOINT = 'https://query.wikidata.org/sparql';
 
+/** sovereign state, dependent territory, political territory: what an ISO 3166-1 code can name */
+const KINDS = ['Q3624078', 'Q161243', 'Q1048835'];
+
 export function buildQuery(codes) {
   const values = codes.map((c) => `"${c.toUpperCase()}"`).join(' ');
   return `SELECT ?code ?item ?sideLabel ?tldLabel ?calling ?langLabel ?scriptLabel WHERE {
   VALUES ?code { ${values} }
   ?item wdt:P297 ?code .
+  ?item wdt:P31 ?kind .
+  VALUES ?kind { ${KINDS.map((k) => `wd:${k}`).join(' ')} }
   FILTER NOT EXISTS { ?item wdt:P576 ?dissolved . }
   OPTIONAL { ?item wdt:P1622 ?side . }
   OPTIONAL { ?item wdt:P78 ?tld . }
@@ -34,13 +39,36 @@ const add = (list, value) => {
 };
 
 /**
+ * Keeps the rows of one item per ISO code. Several items can share a code (a country and, say, a
+ * historical state); the one with a driving side (P1622) or a TLD (P78) wins, then the lowest Q number.
+ */
+function onePerCode(rows) {
+  const items = {};
+  for (const row of rows) {
+    const code = row.code?.value?.toLowerCase();
+    const id = row.item?.value?.split('/').pop();
+    if (!code || !id) continue;
+    const item = ((items[code] ??= {})[id] ??= { id, useful: false });
+    item.useful ||= Boolean(row.sideLabel || row.tldLabel);
+  }
+  const chosen = {};
+  for (const [code, candidates] of Object.entries(items)) {
+    const [best] = Object.values(candidates).sort(
+      (a, b) => Number(b.useful) - Number(a.useful) || Number(a.id.slice(1)) - Number(b.id.slice(1)),
+    );
+    chosen[code] = best.id;
+  }
+  return rows.filter((row) => chosen[row.code?.value?.toLowerCase()] === row.item?.value?.split('/').pop());
+}
+
+/**
  * SPARQL JSON results → { pl: { wikidata, drivingSide?, tld, callingCode, languages, scripts } }.
  * The driving side is left out when Wikidata lists both sides.
  */
 export function parseResults(json) {
   const byCode = {};
   const sides = {};
-  for (const row of json.results?.bindings ?? []) {
+  for (const row of onePerCode(json.results?.bindings ?? [])) {
     const code = row.code?.value?.toLowerCase();
     if (!code) continue;
     const entry = (byCode[code] ??= {

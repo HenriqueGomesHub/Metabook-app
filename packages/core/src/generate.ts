@@ -106,6 +106,22 @@ function nameOptions(
   return seededShuffle([self.name, ...picks], `${seed}:order`);
 }
 
+/**
+ * True when `text` names the country: its name, a demonym or (optionally) its capital anywhere in
+ * the text, or (optionally) its ISO code as a whole word; all case-insensitive.
+ */
+function namesCountry(
+  text: string,
+  country: PoolCountry,
+  facts: CountryFacts | undefined,
+  { capital = true, code = true } = {},
+): boolean {
+  const lower = text.toLowerCase();
+  const names = [country.name, ...(facts?.demonym ?? []), ...(capital ? [facts?.capital] : [])];
+  if (names.some((n) => n && n.trim() && lower.includes(n.trim().toLowerCase()))) return true;
+  return code && new RegExp(`\\b${country.code}\\b`, 'i').test(text);
+}
+
 function cardType(subject: MetaSubject | undefined): Card['type'] {
   return subject === 'plate' ? 'plate' : 'meta';
 }
@@ -134,6 +150,11 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       input.pool,
     );
   const cards: GeneratedCard[] = [];
+  /** a caption is only alt text when it does not give the answer away */
+  const altFor = (item: MediaItem) =>
+    item.caption && !namesCountry(item.caption, country, facts)
+      ? item.caption
+      : `Photo of a ${SUBJECT_NOUNS[item.subject]}`;
 
   // (a) forward photo cards: where is this?
   for (const item of own) {
@@ -148,7 +169,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       prompt: {
         kind: 'image',
         value: item.url,
-        alt: item.caption ?? `Photo of a ${SUBJECT_NOUNS[item.subject]}`,
+        alt: altFor(item),
         credit: item.credit,
         creditUrl: item.sourceUrl,
       },
@@ -232,6 +253,8 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
   const photographed = new Set(own.map((m) => m.noteId).filter(Boolean));
   for (const note of [...notes].sort(byId)) {
     if (!note.verified || !note.distinctive || photographed.has(note.id)) continue;
+    // the note text is the question, so it must not name the answer
+    if (namesCountry(note.text, country, facts, { capital: false, code: false })) continue;
     // note ids are often prefixed with the country ("pl:bollard-red"); drop it from the card id
     const key = note.id.startsWith(`${lc}:`) ? note.id.slice(lc.length + 1) : note.id;
     const id = `gen:${lc}:note:${key}`;

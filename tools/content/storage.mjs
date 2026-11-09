@@ -1,7 +1,7 @@
 // Supabase Storage REST with the service role key: a public `media` bucket holding
-// candidates/<code>/<id>.webp until approved, then approved/<code>/<id>.webp.
+// candidates/<id>.webp until approved, then approved/<id>.webp (ids are hashes: no country in any path).
 // CLI: node tools/content/storage.mjs --ensure
-import { env, HttpError, isMain, parseArgs, request } from './lib/common.mjs';
+import { env, HttpError, isMain, parseArgs, request, supabaseHeaders } from './lib/common.mjs';
 
 export const BUCKET = 'media';
 
@@ -10,7 +10,7 @@ export function createStorage({
   key = env('SUPABASE_SERVICE_ROLE_KEY'),
 } = {}) {
   const base = `${url.replace(/\/$/, '')}/storage/v1`;
-  const headers = { Authorization: `Bearer ${key}`, apikey: key };
+  const headers = supabaseHeaders(key);
   const json = (method, path, body) =>
     request(`${base}${path}`, {
       method,

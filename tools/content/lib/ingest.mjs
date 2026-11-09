@@ -15,7 +15,7 @@ export async function ingest(candidates, { storage, queue, cap }) {
   for (const candidate of fresh) {
     try {
       const image = await processImage(await download(candidate.downloadUrl));
-      const storagePath = `candidates/${candidate.country}/${candidate.id}.webp`;
+      const storagePath = `candidates/${candidate.id}.webp`;
       await storage.upload(storagePath, image.webp);
       ready.push({ ...candidate, storagePath, width: image.width, height: image.height, preview: image.preview });
     } catch (error) {

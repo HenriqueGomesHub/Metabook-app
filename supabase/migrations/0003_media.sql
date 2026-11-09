@@ -28,6 +28,9 @@ create table media_candidates (
   status text not null default 'pending' check (status in ('pending', 'approved', 'rejected')),
   giveaways text[] not null default '{}',
   note_id text,
+  -- curator-only context (the Commons description); never shown to learners, often names the place
+  description text,
+  -- alt text shown to learners; written by the curator, must not name the country
   caption text,
   decided_at timestamptz,
   collected_at timestamptz,
@@ -42,6 +45,10 @@ create policy admin_select on media_candidates for select to authenticated
 create policy admin_update on media_candidates for update to authenticated
   using (exists (select 1 from app_admins where user_id = auth.uid()))
   with check (exists (select 1 from app_admins where user_id = auth.uid()));
+
+-- admins may change only what curation edits, not the photo, its credit or its licence
+revoke update on media_candidates from authenticated;
+grant update (status, subject, giveaways, caption, region, note_id, decided_at) on media_candidates to authenticated;
 
 -- public bucket for candidate and approved photos; uploads only with the service role key
 insert into storage.buckets (id, name, public) values ('media', 'media', true)

@@ -2,7 +2,7 @@
 // Poles come from Mapillary's utility-pole detections; anything else (and poles where nothing is
 // detected) is a plain roadside scene filed under 'bollard' — Mapillary has no bollard class.
 // CLI: node tools/content/mapillary.mjs --country pl --subject pole [--max 30] [--dry]
-import { haversineKm, isMain, isoOf, naturalEarth, parseArgs, poolCountry, randomPointsIn, request } from './lib/common.mjs';
+import { haversineKm, isMain, isoOf, mediaId, naturalEarth, parseArgs, poolCountry, randomPointsIn, request } from './lib/common.mjs';
 import { ingest } from './lib/ingest.mjs';
 
 const GRAPH = 'https://graph.mapillary.com';
@@ -25,7 +25,7 @@ export function parseImage(image, { country, subject }) {
   const [lon, lat] = (image.computed_geometry ?? image.geometry)?.coordinates ?? [];
   const user = image.creator?.username ?? 'unknown';
   return {
-    id: `${country}-m${image.id}`,
+    id: mediaId(`https://www.mapillary.com/app/?pKey=${image.id}`),
     country,
     subject,
     source: 'mapillary',
@@ -58,9 +58,11 @@ export function spaceOut(candidates, kept = []) {
 export function createGraph(token = process.env.MAPILLARY_TOKEN) {
   if (!token) throw new Error('MAPILLARY_TOKEN is not set (repo secret)');
   const get = async (path, params) => {
-    const res = await request(`${GRAPH}/${path}?${new URLSearchParams(params)}`, {
-      headers: { Authorization: `OAuth ${token}` },
-    });
+    const res = await request(
+      `${GRAPH}/${path}?${new URLSearchParams(params)}`,
+      { headers: { Authorization: `OAuth ${token}` } },
+      { timeoutMs: 15_000, retries: 1 },
+    );
     return res.json();
   };
   return {
@@ -105,14 +107,24 @@ export async function boxCandidates(graph, bbox, country, subject) {
   return images.map((image) => parseImage(image, { country, subject: 'bollard' })).filter(Boolean).map((c) => ({ ...c, box }));
 }
 
-/** Samples boxes until `limit` spaced-out candidates are found or the attempts run out. */
-export async function findCandidates(code, subject, limit = 30, { graph = createGraph(), rng = Math.random } = {}) {
+export const DEFAULT_BUDGET_MINUTES = 12;
+
+/**
+ * Samples boxes until `limit` spaced-out candidates are found, the attempts run out, or `deadline`
+ * (epoch ms) passes; the last is reported as `budgetHit`.
+ */
+export async function findCandidates(code, subject, limit = 30, { graph = createGraph(), rng = Math.random, deadline = Infinity } = {}) {
   const geometry = await countryGeometry(code);
   const points = randomPointsIn(geometry, limit * 4, rng);
   const kept = [];
   const errors = [];
+  let budgetHit = false;
   for (const point of points) {
     if (kept.length >= limit) break;
+    if (Date.now() >= deadline) {
+      budgetHit = true;
+      break;
+    }
     try {
       kept.push(...spaceOut(await boxCandidates(graph, bboxAround(point), code, subject), kept));
     } catch (error) {
@@ -120,15 +132,15 @@ export async function findCandidates(code, subject, limit = 30, { graph = create
       if (errors.length >= 5) break; // a bad token or an outage: stop early, say why
     }
   }
-  return { candidates: kept.slice(0, limit), boxes: points.length, errors };
+  return { candidates: kept.slice(0, limit), boxes: points.length, errors, ...(budgetHit && { budgetHit }) };
 }
 
-export async function runMapillary(code, subject, { storage, queue, cap = 30, graph }) {
-  const found = await findCandidates(code, subject, cap * 2, { graph });
+export async function runMapillary(code, subject, { storage, queue, cap = 30, graph, deadline }) {
+  const found = await findCandidates(code, subject, cap * 2, { graph, deadline });
   const result = await ingest(found.candidates, { storage, queue, cap });
   const bySubject = {};
   for (const c of found.candidates) bySubject[c.subject] = (bySubject[c.subject] ?? 0) + 1;
-  return { counts: { boxes: found.boxes, ...result.counts, bySubject }, errors: [...found.errors, ...result.errors] };
+  return { counts: { boxes: found.boxes, ...result.counts, bySubject }, errors: [...found.errors, ...result.errors], ...(found.budgetHit && { budgetHit: true }) };
 }
 
 if (isMain(import.meta)) {
