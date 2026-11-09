@@ -1,0 +1,543 @@
+{
+  "name": "b7",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign",
+      "guardrail"
+    ],
+    "perSubject": 4,
+    "name": "b7",
+    "countries": [
+      "il",
+      "jo",
+      "ae",
+      "qa",
+      "bt",
+      "bd",
+      "la",
+      "lb"
+    ],
+    "steps": [
+      "commons",
+      "regions"
+    ]
+  },
+  "startedAt": "2026-11-09T21:40:37.356Z",
+  "finishedAt": "2026-11-09T21:44:17.344Z",
+  "commit": "8d2e27b8cfaa1477f62d0679245790ecf1f5f650",
+  "countries": [
+    "il",
+    "jo",
+    "ae",
+    "qa",
+    "bt",
+    "bd",
+    "la",
+    "lb"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "commons",
+      "ms": 212544,
+      "countries": {
+        "il": {
+          "ok": true,
+          "ms": 36107,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 2
+              }
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 4,
+                "type": 6,
+                "licence": 1
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 7
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "jo": {
+          "ok": true,
+          "ms": 50570,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 22
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 2
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "ae": {
+          "ok": true,
+          "ms": 5339,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 2,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 22,
+                "logo": 6
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {}
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "qa": {
+          "ok": true,
+          "ms": 7011,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 5
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 1
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "bt": {
+          "ok": true,
+          "ms": 46322,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 1
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {}
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "bd": {
+          "ok": true,
+          "ms": 5798,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 5,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {}
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 1,
+                "type": 2
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "la": {
+          "ok": true,
+          "ms": 52213,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 7,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 1
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 4
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        },
+        "lb": {
+          "ok": true,
+          "ms": 9157,
+          "counts": {
+            "bollard": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            },
+            "pole": {
+              "categories": 1,
+              "found": 9,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {}
+            },
+            "plate": {
+              "categories": 1,
+              "found": 12,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "too": 22,
+                "type": 1
+              }
+            },
+            "sign": {
+              "categories": 1,
+              "found": 10,
+              "alreadyQueued": 0,
+              "queued": 4,
+              "failed": 0,
+              "dropped": {
+                "licence": 20
+              }
+            },
+            "guardrail": {
+              "categories": 0,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "dropped": {}
+            }
+          },
+          "errors": []
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 7442,
+      "countries": {
+        "il": {
+          "ok": true,
+          "ms": 4124,
+          "counts": {
+            "regions": 6,
+            "capitals": 6,
+            "bytes": 7859
+          }
+        },
+        "jo": {
+          "ok": true,
+          "ms": 563,
+          "counts": {
+            "regions": 12,
+            "capitals": 9,
+            "bytes": 7100
+          }
+        },
+        "ae": {
+          "ok": true,
+          "ms": 436,
+          "counts": {
+            "regions": 9,
+            "capitals": 6,
+            "bytes": 9238
+          }
+        },
+        "qa": {
+          "ok": true,
+          "ms": 494,
+          "counts": {
+            "regions": 7,
+            "capitals": 1,
+            "bytes": 4508
+          }
+        },
+        "bt": {
+          "ok": true,
+          "ms": 437,
+          "counts": {
+            "regions": 20,
+            "capitals": 3,
+            "bytes": 15587
+          }
+        },
+        "bd": {
+          "ok": true,
+          "ms": 483,
+          "counts": {
+            "regions": 7,
+            "capitals": 6,
+            "bytes": 20349
+          }
+        },
+        "la": {
+          "ok": true,
+          "ms": 430,
+          "counts": {
+            "regions": 17,
+            "capitals": 12,
+            "bytes": 20691
+          }
+        },
+        "lb": {
+          "ok": true,
+          "ms": 469,
+          "counts": {
+            "regions": 6,
+            "capitals": 5,
+            "bytes": 7620
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 1 facts files, 0 photos"
+    ]
+  }
+}
