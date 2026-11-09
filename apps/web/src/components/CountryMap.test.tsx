@@ -51,6 +51,26 @@ describe('CountryMap', () => {
     expect(container.querySelector('.ddd-trail')?.getAttribute('d')).toBe('M260 250L360 140');
   });
 
+  it('frames inset islands without making the frames pickable', () => {
+    const { container } = render(
+      <CountryMap
+        map={{ ...map, insets: [{ x: 8, y: 300, w: 120, h: 80 }] }}
+        label="Map of Poland"
+        onPick={() => undefined}
+        onHover={() => undefined}
+      />,
+    );
+    const frames = container.querySelectorAll('rect.ddd-inset');
+    expect(frames).toHaveLength(1);
+    expect(['x', 'y', 'width', 'height'].map((a) => frames[0]?.getAttribute(a))).toEqual([
+      '8',
+      '300',
+      '120',
+      '80',
+    ]);
+    expect(screen.getAllByRole('button')).toHaveLength(2);
+  });
+
   it('keeps Brazil working through the BrazilMap wrapper, callouts included', () => {
     const onPick = vi.fn();
     const { container } = render(<BrazilMap onPick={onPick} onHover={() => undefined} />);
