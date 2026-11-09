@@ -1,5 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { AlreadyCollected } from '../data/curation';
 import type { Candidate, CurationApi } from '../data/curation';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
@@ -27,8 +28,8 @@ function fakeApi(
   return {
     isAdmin: vi.fn(async () => admin),
     listPending: vi.fn(async () => rows),
-    decide: vi.fn(async () => undefined),
-    decideMany: vi.fn(async () => undefined),
+    decide: vi.fn<CurationApi['decide']>(async () => undefined),
+    decideMany: vi.fn<CurationApi['decideMany']>(async (ids) => ids),
   } satisfies CurationApi;
 }
 
@@ -118,6 +119,25 @@ describe('Curate', () => {
       }),
     );
     expect(await current('Poland')).toBeTruthy();
+  });
+
+  it('refuses to undo a photo already collected into the cards', async () => {
+    const api = fakeApi();
+    open(api);
+    await current('Poland');
+    fireEvent.click(screen.getByRole('button', { name: /Keep/ }));
+    await current('Lithuania');
+    api.decide.mockRejectedValueOnce(new AlreadyCollected());
+    fireEvent.keyDown(window, { key: 'u' });
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'That photo is already in the cards, so it can’t be undone here.',
+    );
+    // it stays decided and off the queue; nothing left to undo
+    expect(await current('Lithuania')).toBeTruthy();
+    expect(screen.getByText('1 pending')).toBeTruthy();
+    expect((screen.getByRole('button', { name: /Undo last/ }) as HTMLButtonElement).disabled).toBe(
+      true,
+    );
   });
 
   it('filters by country and subject', async () => {
@@ -222,6 +242,22 @@ describe('Curate grid', () => {
       expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(12),
     );
     expect(screen.getByText('15 pending')).toBeTruthy();
+  });
+
+  it('undoes only the rows of a page not collected yet, and says so', async () => {
+    const api = fakeApi(true, many(15));
+    api.decideMany.mockImplementation(async (list, status) =>
+      status === 'pending' ? list.slice(2) : list,
+    );
+    open(api);
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.click(screen.getByRole('button', { name: /Keep the rest/ }));
+    await waitFor(() => expect(screen.getByText('3 pending · 12 decided')).toBeTruthy());
+    fireEvent.click(screen.getByRole('button', { name: 'Undo page' }));
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      '2 photos are already in the cards and can’t be undone here.',
+    );
+    expect(screen.getByText('13 pending')).toBeTruthy();
   });
 
   it('pages within the current filter', async () => {

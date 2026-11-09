@@ -3,6 +3,7 @@ import { useAppData } from '../app/AppData';
 import { label, SUBJECT_ORDER, SUBJECTS } from '../app/labels';
 import { EmptyState } from '../components/EmptyState';
 import { Status } from '../components/Status';
+import { AlreadyCollected } from '../data/curation';
 import type { Candidate, CurationApi, Decision } from '../data/curation';
 import { CandidateGrid } from './curate/CandidateGrid';
 import { CandidateReview } from './curate/CandidateReview';
@@ -129,7 +130,13 @@ function CurateQueue({
       const last = decided.at(-1);
       if (!last) return;
       const { subject: was, giveaways, caption } = last;
-      await api.decide(last.id, { status: 'pending', subject: was, giveaways, caption });
+      try {
+        await api.decide(last.id, { status: 'pending', subject: was, giveaways, caption });
+      } catch (reason) {
+        // already collected: it stays approved, and the next undo reaches the one before
+        if (reason instanceof AlreadyCollected) setDecided((list) => list.slice(0, -1));
+        throw reason;
+      }
       setDecided((list) => list.slice(0, -1));
       setPending((list) => [last, ...(list ?? [])]);
     });
@@ -150,12 +157,20 @@ function CurateQueue({
     run(async () => {
       const last = pages.at(-1);
       if (!last) return;
-      await api.decideMany(
-        last.map((c) => c.id),
-        'pending',
+      const reset = new Set(
+        await api.decideMany(
+          last.map((c) => c.id),
+          'pending',
+        ),
       );
       setPages((list) => list.slice(0, -1));
-      setPending((list) => [...last, ...(list ?? [])]);
+      setPending((list) => [...last.filter((c) => reset.has(c.id)), ...(list ?? [])]);
+      const kept = last.length - reset.size;
+      if (kept > 0) {
+        setError(
+          `${kept} ${kept === 1 ? 'photo is' : 'photos are'} already in the cards and can’t be undone here.`,
+        );
+      }
     });
 
   return (
