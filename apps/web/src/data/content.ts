@@ -30,6 +30,8 @@ export interface MapRegion {
 export interface RegionMap {
   country: string;
   viewBox: string;
+  /** frames round far islands drawn apart from the mainland (Azores, Hawaii…), in viewBox units */
+  insets?: { x: number; y: number; w: number; h: number }[];
   states: MapRegion[];
 }
 

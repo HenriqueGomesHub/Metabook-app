@@ -11,6 +11,7 @@ export interface MapReveal {
 
 /**
  * A country on real borders, from any regions file (br-states.json or <code>-regions.json).
+ * Far islands drawn apart from the mainland sit in thin inset frames.
  * Every region (and the callout label of a small one) is a keyboard-pickable button until
  * `reveal` is set; then the answer, the pick and the group are coloured and a trail runs from
  * the pick to the answer (capital to capital, or label to label where there is no capital).
@@ -56,6 +57,17 @@ export function CountryMap({
 
   return (
     <svg className={className} role="group" aria-label={label} viewBox={map.viewBox}>
+      {map.insets?.map((inset) => (
+        <rect
+          key={`${inset.x},${inset.y}`}
+          className="ddd-inset"
+          aria-hidden="true"
+          x={inset.x}
+          y={inset.y}
+          width={inset.w}
+          height={inset.h}
+        />
+      ))}
       {map.states.map((region) => (
         <path
           key={region.code}

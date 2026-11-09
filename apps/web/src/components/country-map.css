@@ -60,6 +60,13 @@
   stroke: #3a3832;
 }
 
+.ddd-inset {
+  fill: none;
+  stroke: #3a3832;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
 .ddd-label {
   font:
     600 11px var(--font-text),
