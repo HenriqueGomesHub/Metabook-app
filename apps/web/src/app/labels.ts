@@ -1,5 +1,6 @@
-import type { CardType, MetaSubject } from '@metabook/core';
-import { brStates, bundled } from '../data/content';
+import { parseMapKey } from '@metabook/core';
+import type { Card, CardType, MetaSubject } from '@metabook/core';
+import { brStatesByCode, bundled, loadedRegionMap } from '../data/content';
 
 const REGION_NAMES: Record<string, string> = {
   north: 'North',
@@ -37,29 +38,37 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
 
 export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
-type Scope = 'br' | undefined;
+/** Lower-case code of the regions map whose state codes the keys are ('br': Brazil's states). */
+export type Scope = string | undefined;
 
-let names: { states: Map<string, string>; countries: Map<string, string> } | undefined;
+let countries: Map<string, string> | undefined;
 
 function lookup() {
-  names ??= {
-    states: new Map((brStates?.states ?? []).map((state) => [state.code, state.name])),
-    countries: new Map((bundled?.pool ?? []).map((country) => [country.code, country.name])),
-  };
-  return names;
+  // built once the pool has loaded; before that, labels fall back to the raw key
+  if (!countries && bundled.pool.length) {
+    countries = new Map(bundled.pool.map((country) => [country.code, country.name]));
+  }
+  return { states: brStatesByCode, countries: countries ?? new Map<string, string>() };
 }
 
 /**
  * Human label for any answer or confusion key: region ids, Brazilian state codes,
  * ISO country codes and plain answers (country names) all read naturally.
- * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country.
+ * Pass `scope: 'br'` when a two-letter key is a Brazilian state (area codes) rather than a country,
+ * or another map's code ('us') for its state codes; those names come from the map once loaded.
+ * Map-scoped keys ("ca:NL", what regions-map cards record) resolve on their own map, whatever the
+ * scope; until that map has loaded they read as the bare state code.
  */
 export function label(key: string, scope?: Scope): string {
+  // a map-scoped confusion key ("ca:NL") names its own map
+  const scoped = parseMapKey(key);
+  if (scoped) return label(scoped.code, scoped.map);
   const region = REGION_NAMES[key];
   if (region) return region;
   const { states, countries } = lookup();
-  if (scope === 'br') return states.get(key) ?? countries.get(key) ?? key;
-  return countries.get(key) ?? states.get(key) ?? key;
+  if (scope === 'br') return states.get(key)?.name ?? countries.get(key) ?? key;
+  if (scope) return loadedRegionMap(scope)?.states.find((s) => s.code === key)?.name ?? key;
+  return countries.get(key) ?? states.get(key)?.name ?? key;
 }
 
 /** Card-type and tag names for headings like "Weakest". */
@@ -72,5 +81,9 @@ export function pairLabel(picked: string, truth: string, scope?: Scope): string 
   return `${label(picked, scope)} / ${label(truth, scope)}`;
 }
 
-/** Area-code answers are Brazilian state codes; everything else is a country name or region id. */
-export const scopeOf = (type: CardType | undefined): Scope => (type === 'areacode' ? 'br' : undefined);
+/**
+ * Regions-map cards answer with their map's state codes, area codes with Brazilian state codes;
+ * everything else is a country name or region id.
+ */
+export const scopeOf = (card: Pick<Card, 'type' | 'map'> | undefined): Scope =>
+  card?.map ?? (card?.type === 'areacode' ? 'br' : undefined);

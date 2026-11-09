@@ -1,4 +1,4 @@
-import { buildSession, mastery } from '@metabook/core';
+import { buildSession, mastery, parseMapKey } from '@metabook/core';
 import type { Card, CardType, Review, Session } from '@metabook/core';
 import type { AppSnapshot } from './AppData';
 import { tagLabel } from './labels';
@@ -84,9 +84,17 @@ export function weakestGroup(data: AppSnapshot, now: Date): string | null {
 
 /**
  * Scope for labelling a confusion pair: `'br'` when both sides are answers of area-code cards, so
- * "SP|MG" reads São Paulo / Minas Gerais rather than Madagascar.
+ * "SP|MG" reads São Paulo / Minas Gerais rather than Madagascar; the map's code when both sides
+ * are map-scoped keys of one regions map ("ca:PE|ca:NL"), so callers know which map to load.
  */
-export function pairScope(cards: Card[], picked: string, truth: string): 'br' | undefined {
+export function pairScope(cards: Card[], picked: string, truth: string): string | undefined {
+  const [a, b] = [parseMapKey(picked), parseMapKey(truth)];
+  if (a && b && a.map === b.map) return a.map;
   const areaCodes = new Set(cards.filter((c) => c.type === 'areacode').map((c) => c.answer));
   return areaCodes.has(picked) && areaCodes.has(truth) ? 'br' : undefined;
+}
+
+/** Lower-case codes of the regions maps that map-scoped confusion keys name. */
+export function mapsOf(keys: string[]): string[] {
+  return [...new Set(keys.flatMap((key) => parseMapKey(key)?.map ?? []))].sort();
 }

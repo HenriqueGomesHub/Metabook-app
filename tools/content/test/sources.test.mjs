@@ -287,6 +287,26 @@ describe('queue', () => {
     assert.ok(urls.every((u) => new URL(u).searchParams.get('limit') === '1000'));
   });
 
+  it('lists approved rows whether or not collected, a page at a time, and marks in batches', async (t) => {
+    const calls = [];
+    t.mock.method(globalThis, 'fetch', async (url, init) => {
+      calls.push({ url: new URL(url), init });
+      const offset = Number(new URL(url).searchParams.get('offset'));
+      return new Response(init?.method === 'PATCH' ? '' : JSON.stringify(Array.from({ length: offset ? 3 : 1000 }, (_, i) => ({ id: `r${offset + i}` }))));
+    });
+    const queue = createQueue({ url: 'https://example.supabase.co', key: 'k' });
+    assert.equal((await queue.listApproved()).length, 1003);
+    assert.ok(calls.every((c) => !c.url.searchParams.has('collected_at')));
+    calls.length = 0;
+    await queue.listApproved({ uncollected: true });
+    assert.equal(calls[0].url.searchParams.get('collected_at'), 'is.null');
+    calls.length = 0;
+    await queue.markCollected(Array.from({ length: 150 }, (_, i) => `id${i}`), '2026-11-09T00:00:00Z');
+    assert.equal(calls.length, 2);
+    assert.match(calls[0].url.searchParams.get('id'), /^in\.\(id0,id1,.*id99\)$/);
+    assert.deepEqual(JSON.parse(calls[1].init.body), { collected_at: '2026-11-09T00:00:00Z' });
+  });
+
   it('upserts on source_url, ignoring duplicates', async (t) => {
     const fetch = t.mock.method(globalThis, 'fetch', stubFetch(201, ''));
     await createQueue({ url: 'https://example.supabase.co/', key: 'service' }).insert([{ country: 'pl', sourceUrl: 'https://x' }]);

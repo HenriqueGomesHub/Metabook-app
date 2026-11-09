@@ -1,0 +1,326 @@
+{
+  "name": "c9",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole"
+    ],
+    "perSubject": 4,
+    "name": "c9",
+    "countries": [
+      "sn",
+      "tn",
+      "rw",
+      "mg",
+      "re",
+      "bo",
+      "ec",
+      "uy"
+    ],
+    "steps": [
+      "mapillary",
+      "regions"
+    ],
+    "budgetMinutes": 3
+  },
+  "startedAt": "2026-11-09T21:58:04.836Z",
+  "finishedAt": "2026-11-09T22:20:50.988Z",
+  "commit": "83dd7b246baf1a764545f34c95b8887667d9bc8d",
+  "countries": [
+    "sn",
+    "tn",
+    "rw",
+    "mg",
+    "re",
+    "bo",
+    "ec",
+    "uy"
+  ],
+  "errorCount": 9,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 1359555,
+      "countries": {
+        "sn": {
+          "ok": true,
+          "ms": 188008,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "tn": {
+          "ok": true,
+          "ms": 206069,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "rw": {
+          "ok": true,
+          "ms": 193838,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 3,
+              "alreadyQueued": 0,
+              "queued": 3,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 3
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "mg": {
+          "ok": true,
+          "ms": 159221,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ]
+        },
+        "re": {
+          "ok": true,
+          "ms": 78,
+          "counts": {},
+          "errors": [
+            "bollard: re not found in Natural Earth admin-0 (50m)",
+            "pole: re not found in Natural Earth admin-0 (50m)"
+          ]
+        },
+        "bo": {
+          "ok": true,
+          "ms": 205238,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [],
+          "budgetHit": true
+        },
+        "ec": {
+          "ok": true,
+          "ms": 198283,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=-78.53752%2C-0.28462%2C-78.51752%2C-0.26462&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=-78.55528%2C-0.33092%2C-78.53528%2C-0.31092&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        },
+        "uy": {
+          "ok": true,
+          "ms": 208799,
+          "counts": {
+            "bollard": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            },
+            "pole": {
+              "boxes": 16,
+              "found": 0,
+              "alreadyQueued": 0,
+              "queued": 0,
+              "failed": 0,
+              "bySubject": {}
+            }
+          },
+          "errors": [
+            "pole: The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ],
+          "budgetHit": true
+        }
+      }
+    },
+    {
+      "step": "regions",
+      "ms": 6595,
+      "countries": {
+        "sn": {
+          "ok": true,
+          "ms": 4010,
+          "counts": {
+            "regions": 14,
+            "capitals": 10,
+            "bytes": 15832
+          }
+        },
+        "tn": {
+          "ok": true,
+          "ms": 453,
+          "counts": {
+            "regions": 23,
+            "capitals": 19,
+            "bytes": 20490
+          }
+        },
+        "rw": {
+          "ok": true,
+          "ms": 321,
+          "counts": {
+            "regions": 5,
+            "capitals": 5,
+            "bytes": 6776
+          }
+        },
+        "mg": {
+          "ok": true,
+          "ms": 383,
+          "counts": {
+            "regions": 22,
+            "capitals": 0,
+            "bytes": 27010
+          }
+        },
+        "re": {
+          "ok": false,
+          "ms": 313,
+          "errors": [
+            "RE has no admin-1 regions in Natural Earth"
+          ]
+        },
+        "bo": {
+          "ok": true,
+          "ms": 393,
+          "counts": {
+            "regions": 9,
+            "capitals": 8,
+            "bytes": 13526
+          }
+        },
+        "ec": {
+          "ok": true,
+          "ms": 338,
+          "counts": {
+            "regions": 24,
+            "capitals": 20,
+            "bytes": 15152
+          }
+        },
+        "uy": {
+          "ok": true,
+          "ms": 379,
+          "counts": {
+            "regions": 19,
+            "capitals": 19,
+            "bytes": 19652
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 297 cards, 233 tips, 6 chapters, 115 facts files, 0 photos"
+    ]
+  }
+}

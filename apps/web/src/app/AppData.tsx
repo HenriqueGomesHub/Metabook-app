@@ -1,4 +1,5 @@
 import {
+  answerKey,
   applyReview,
   contrastResult,
   gradeAnswer,
@@ -228,7 +229,13 @@ export function AppDataProvider({
       const confusions =
         input.picked === undefined
           ? data.confusions
-          : recordAnswer(data.confusions, input.picked, card.answer, input.correct, now);
+          : recordAnswer(
+              data.confusions,
+              answerKey(card, input.picked),
+              answerKey(card, card.answer),
+              input.correct,
+              now,
+            );
       const changed = confusions.filter((c) => !data.confusions.includes(c));
 
       commit(

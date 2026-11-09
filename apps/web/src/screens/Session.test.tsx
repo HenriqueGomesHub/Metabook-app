@@ -144,6 +144,18 @@ describe('Practice', () => {
     await waitFor(() => expect(repo.reviews).toHaveLength(1));
   });
 
+  it('shows the summary after each answer when the scope has one card', async () => {
+    const repo = repoWith(0);
+    renderApp('/session?country=LT', repo);
+    fireEvent.click(await screen.findByRole('button', { name: /Lithuania/ }));
+    fireEvent.click(within(screen.getByRole('dialog')).getByRole('button', { name: /Continue/ }));
+    expect(screen.getByText('Practice done')).toBeTruthy();
+    expect(screen.getByText('1 card')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: /Keep going/ }));
+    expect(await screen.findByRole('button', { name: /Lithuania/ })).toBeTruthy();
+    await waitFor(() => expect(repo.reviews).toHaveLength(1));
+  });
+
   it('shows an empty state for a scope without cards', async () => {
     renderApp('/session?country=ZZ', repoWith(0));
     expect(await screen.findByRole('region', { name: 'No cards here yet' })).toBeTruthy();

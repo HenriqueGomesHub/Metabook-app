@@ -71,3 +71,7 @@ proportions (de 5:3, ch 1:1, be 450x390, mc 750x600, va 1:1, np non-rectangular)
   official source, so every flag's ratio must be verified before use and a per-card `prompt.ratio` override should win.
 Not evaluated (no true-ratio claim known): `flag-icons` (4x3/1x1 only), `country-flags-icons` (3x2).
 Recommendation: use svg-country-flags, render using `prompt.ratio` from the card, and spot-check against the override list.
+
+## Licence of country facts
+
+Country facts in `content/facts/` are paraphrased from the [Plonk It guide](https://www.plonkit.net/guide), which is licensed **CC BY-NC-SA 4.0**. Each note links its source page. Because the facts adapt that material, they and the cards generated from them are shared under the same licence: credit Plonk It, non-commercial use only, same licence for derivatives. If Metabook is ever sold or monetised, these notes must be replaced or permission obtained from Plonk It. A few notes (Paraguay, Bosnia and Herzegovina, Åland, Georgia, Kosovo) come from Wikipedia (CC BY-SA 4.0) and link their pages.

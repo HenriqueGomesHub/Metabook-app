@@ -18,6 +18,24 @@ export function parsePairKey(key: string): Pair {
   return { picked, truth };
 }
 
+const MAP_SCOPED = /^([a-z]{2}):(.+)$/;
+
+/**
+ * The key a confusion stores for one of a card's answers: `<map>:<STATE>` ("ca:NL") on
+ * regions-map cards, so a state code never reads as the country with the same code.
+ */
+export function answerKey(card: { map?: string }, answer: string): string {
+  return card.map ? `${card.map}:${answer}` : answer;
+}
+
+/** The map and state of a map-scoped key; undefined for plain (country or answer) keys. */
+export function parseMapKey(key: string): { map: string; code: string } | undefined {
+  const match = MAP_SCOPED.exec(key);
+  return match ? { map: match[1] as string, code: match[2] as string } : undefined;
+}
+
+export const isMapKey = (key: string): boolean => MAP_SCOPED.test(key);
+
 const isPair = (c: Confusion, pair: Pair) => c.picked === pair.picked && c.truth === pair.truth;
 const isRecent = (c: Confusion, now: Date) => now.getTime() - Date.parse(c.lastSeen) <= WINDOW_MS;
 

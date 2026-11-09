@@ -1,11 +1,11 @@
-// Downloads a photo and turns it into a 1280px-wide WebP plus a 16px-wide WebP preview data URI.
+// Downloads a photo and turns it into a 1024px-wide WebP plus a 16px-wide WebP preview data URI.
 // CLI: node tools/content/images.mjs --url <image url> --out photo.webp
 import { writeFileSync } from 'node:fs';
 import sharp from 'sharp';
 import { isMain, parseArgs, request } from './lib/common.mjs';
 
-export const WIDTH = 1280;
-const QUALITY = 78;
+export const WIDTH = 1024;
+const QUALITY = 72;
 const PREVIEW_WIDTH = 16;
 
 export async function download(url) {

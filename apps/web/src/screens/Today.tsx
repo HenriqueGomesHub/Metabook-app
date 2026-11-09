@@ -7,7 +7,15 @@ import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { activeBlock } from '../app/dataActions';
 import { pairLabel } from '../app/labels';
-import { pairScope, practisedDays, streakLength, todaySession, weakestGroup } from '../app/stats';
+import {
+  mapsOf,
+  pairScope,
+  practisedDays,
+  streakLength,
+  todaySession,
+  weakestGroup,
+} from '../app/stats';
+import { useRegionMaps } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
@@ -58,6 +66,7 @@ function TodayView({ data }: { data: AppSnapshot }) {
   const days = practisedDays(data.reviews, now);
   const streak = streakLength(days);
   const confusion = activePairs(data.confusions, now)[0];
+  useRegionMaps(mapsOf(confusion ? [confusion.picked, confusion.truth] : []));
   const weakest = weakestGroup(data, now);
   const activeBlockLine = activeBlock(data);
   const progress = activeBlockLine && blockProgress(activeBlockLine, data.blockDays, now);

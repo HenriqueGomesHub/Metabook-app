@@ -48,7 +48,7 @@ file path). Re-runs never duplicate photos: the queue skips anything it has seen
 | `commons` | Per subject, tries the Commons categories (`Utility poles in <Country>`, `License plates of` / `Vehicle registration plates of`, `Road signs in`, `Delineators in`, `Guard rails in`; also with "the" and Commons spellings such as "the Czech Republic"), walks subcategories to depth 2, keeps CC0 / public domain / CC BY / CC BY-SA files at least 800px wide, no logos, no SVGs except for signs. | Supabase secrets, migration 0003 |
 | `mapillary` | Random 0.05° boxes inside the country (Natural Earth admin-0). `pole`: images that saw a detected utility pole; every other subject, and poles where nothing is detected, become roadside scenes filed as `bollard` (Mapillary has no bollard class). Photos at least 10 km apart, at most 3 per box. CC BY-SA 4.0, credited to the uploader. | `MAPILLARY_TOKEN`, Supabase secrets, migration 0003 |
 | `regions` | `content/maps/<code>-regions.json` from Natural Earth admin-1, same shape as `br-states.json` (Mercator fitted to 640 wide, simplified, labels at centroids, capitals where Natural Earth names them). Brazil is skipped: `br-states.json` stays. | nothing |
-| `collect` | Approved rows not yet collected: moves `candidates/<id>.webp` to `approved/<id>.webp`, appends a `MediaItem` to `content/media/<code>.json`, marks the row collected. Pending and rejected rows are left alone. | Supabase secrets |
+| `collect` | Approved rows not yet in `content/media`: moves `candidates/<id>.webp` to `approved/<id>.webp` (unless it is already there), appends a `MediaItem` to `content/media/<code>.json`. Skips and reports a photo whose caption names its country. Never marks rows collected: `node tools/content/mark-collected.mjs` does that after the commit is pushed, so a failed run is retried. Pending and rejected rows are left alone. | Supabase secrets |
 | `generate` | Rewrites `content/cards/generated-<code>.json` from facts and media (logic in `packages/core/src/generate.ts`). Never touches hand-written card files. | nothing |
 
 `commons` and `mapillary` resize each photo to a 1280px-wide WebP (quality 78) with a 16px preview,
@@ -68,6 +68,11 @@ run a job with `collect` and `generate`.
 - Fact cards: driving side (left-driving countries only), `.tld` and calling code (skipped when another
   country shares the value), and one text card per `verified` + `distinctive` note without a photo.
   Note text is shown as the question, so it should not name the country.
+- `where` cards (`gen:<code>:where:<noteId>`, type `region`, `map: '<code>'`): one per note whose `region`
+  names exactly one state of the country's regions map (`<code>-regions.json`, or `br-states.json`),
+  as an ISO 3166-2 code ("US-TX", suffix matched to the state code ignoring case) or else as a state name
+  (exact, ignoring case and accents). Plain labels like "north" and ambiguous names are skipped, and a
+  country gets these cards only once it has at least 4. The answer is the state code, clicked on the map.
 
 Captions become alt text, so they must not name the country either. The generator drops a caption (and
 falls back to "Photo of a <subject>") that contains the country's name, its ISO code as a word, or its

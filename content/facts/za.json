@@ -1,0 +1,325 @@
+{
+  "code": "za",
+  "name": "South Africa",
+  "capital": "Pretoria",
+  "demonym": [
+    "South African",
+    "South Africans",
+    "Afrikaans",
+    "Zulu"
+  ],
+  "notes": [
+    {
+      "id": "za:other-drives-left",
+      "subject": "other",
+      "text": "Traffic drives on the left.",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:line-yellow-edge",
+      "subject": "line",
+      "text": "Single yellow edge lines with white centre lines on most roads; neighbouring southern African countries do this too.",
+      "lookalikes": [
+        "Botswana",
+        "Eswatini",
+        "Lesotho",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:line-triple-centre",
+      "subject": "line",
+      "text": "Rare triple centre lines: two solid white outside a dashed white, or two white with one yellow in the middle. Only the neighbours share these.",
+      "distinctive": true,
+      "lookalikes": [
+        "Botswana",
+        "Eswatini",
+        "Lesotho",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:car-gen2",
+      "subject": "car",
+      "text": "Generation 2 is common here: big round car blur and halo colour distortion in the sky. It is the only Generation 2 in Africa.",
+      "distinctive": true,
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:car-gen4-blue",
+      "subject": "car",
+      "text": "All Generation 4 coverage uses a blue car with a short antenna, sometimes hidden by the blur, plus some low-mounted smallcam coverage.",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:language-mixed",
+      "subject": "language",
+      "text": "Eleven official languages; the lingua franca dominates signs, and a Dutch-related language shows up in place names ending -fontein, -kraal, -kop, -dorp, -nek and -berg.",
+      "lookalikes": [
+        "Botswana",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:pole-bird",
+      "subject": "pole",
+      "text": "The most common pole has 1 to 5 horizontal bars with thin white insulators that look like rows of birds.",
+      "distinctive": true,
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:sign-green-direction",
+      "subject": "sign",
+      "text": "Green direction signs with yellow road numbers; N and R roads exist only here.",
+      "distinctive": true,
+      "lookalikes": [
+        "Botswana",
+        "Eswatini",
+        "Lesotho",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:sign-warning-triangle",
+      "subject": "sign",
+      "text": "Triangular warning signs with a red border and white background, shared with the neighbours.",
+      "lookalikes": [
+        "Botswana",
+        "Eswatini",
+        "Lesotho",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:sign-chevrons",
+      "subject": "sign",
+      "text": "White-and-red chevrons, plus small thin one-arrow chevrons next to roads.",
+      "lookalikes": [
+        "Botswana",
+        "Eswatini",
+        "Lesotho",
+        "Namibia"
+      ],
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:architecture-walled-suburbs",
+      "subject": "architecture",
+      "text": "Suburban houses in big cities are surrounded by high walls, fences and gates.",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-plates",
+      "subject": "plate",
+      "text": "Each province has its own plate design; Free State plates look slightly green and KwaZulu-Natal ones slightly blue.",
+      "region": "plates",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-phone-codes",
+      "subject": "other",
+      "text": "Phone numbers are 10 digits, and the 2nd and 3rd digits of the landline code give the area; mobile numbers start 06 to 08.",
+      "region": "area-codes",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pole-a-western-cape",
+      "subject": "pole",
+      "text": "Poles with three bars forming an A, the lower insulators on a horizontal bar, are almost only in the Western Cape.",
+      "region": "ZA-WC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pole-wide-a-eastern-cape",
+      "subject": "pole",
+      "text": "A wider A-shaped top with insulators attached directly to the A marks the Eastern Cape.",
+      "region": "ZA-EC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pole-trident-natal",
+      "subject": "pole",
+      "text": "Trident pole tops are almost unique to KwaZulu-Natal.",
+      "region": "ZA-NL",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pole-alternating-north",
+      "subject": "pole",
+      "text": "Poles with three alternating side insulators are mostly in Limpopo, Gauteng, North West and Mpumalanga.",
+      "region": "north",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pole-arms-mpumalanga",
+      "subject": "pole",
+      "text": "Poles with one or two metal arms holding insulators are most common in Mpumalanga.",
+      "region": "ZA-MP",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-red-stickers",
+      "subject": "sign",
+      "text": "Square red stickers on the back of ordinary signs are common in the Eastern Cape and nearby parts of the Northern Cape and Free State.",
+      "region": "ZA-EC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pavement-limpopo",
+      "subject": "other",
+      "text": "Grainy, Texas-like pavement with a pink hint is found in Limpopo.",
+      "region": "ZA-LP",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-nests",
+      "subject": "other",
+      "text": "Big bird nests on poles are common in the north of the Northern Cape.",
+      "region": "ZA-NC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-northeast-dry",
+      "subject": "landscape",
+      "text": "The northeast can look dry and barren with orange or red soil and shrub-covered hills, but very green in wet season.",
+      "region": "northeast",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-western-cape-mountains",
+      "subject": "landscape",
+      "text": "Rocky, treeless mountains with tall steep sides and sharp peaks are in the Western Cape; vineyards are mostly here too.",
+      "lookalikes": [
+        "Lesotho"
+      ],
+      "region": "ZA-WC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-northern-cape-red",
+      "subject": "landscape",
+      "text": "Dry landscape with red soil is typical of the Northern Cape; vineyards also grow near Upington.",
+      "region": "ZA-NC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-sugarcane",
+      "subject": "landscape",
+      "text": "Sugarcane is common in KwaZulu-Natal, mainly along the coast, and in Mpumalanga on the Mozambique border.",
+      "region": "ZA-NL",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-cook-pines",
+      "subject": "landscape",
+      "text": "Very tall Cook pines grow mostly along the southeast coast between East London and Durban.",
+      "region": "southeast",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-pine-plantations",
+      "subject": "landscape",
+      "text": "Pine plantations are common west of Eswatini and in the south of KwaZulu-Natal.",
+      "lookalikes": [
+        "Eswatini"
+      ],
+      "region": "east",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-kruger",
+      "subject": "landscape",
+      "text": "A flat savannah with dry grass, small trees, no farms and red soil under the grass surrounds the big wildlife park; a camouflage car appears there.",
+      "region": "ZA-MP",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-johannesburg-lights",
+      "subject": "sign",
+      "text": "Traffic lights and crossing poles in the biggest city are wrapped in three strips of reflective tape.",
+      "region": "ZA-GP",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-gauteng-ads",
+      "subject": "other",
+      "text": "Dodgy adverts for medical services and pills are plastered on poles in and around Gauteng.",
+      "region": "ZA-GP",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    },
+    {
+      "id": "za:region-table-mountain",
+      "subject": "landscape",
+      "text": "A prominent flat plateau about 3 km long, flanked by a pyramid-shaped peak, rises by the Western Cape coast.",
+      "region": "ZA-WC",
+      "source": "https://www.plonkit.net/south-africa",
+      "checked": "2026-11-09",
+      "verified": true
+    }
+  ]
+}

@@ -70,6 +70,16 @@ describe('practice', () => {
     ids.forEach((id, i) => expect(ids.slice(Math.max(0, i - 3), i)).not.toContain(id));
   });
 
+  it('never serves the same card twice in a row in a small pool, unless it is the only one', () => {
+    for (const n of [2, 3, 4]) {
+      for (const seed of [1, 2, 3]) {
+        const ids = run(start(pool(n), {}, seed), {}, 200, (_, i) => i % 4 !== 0);
+        ids.slice(1).forEach((id, i) => expect(id).not.toBe(ids[i]));
+      }
+    }
+    expect(new Set(run(start(pool(1)), {}, 5))).toEqual(new Set(['c0']));
+  });
+
   it('brings a wrong card back within 5 steps and stops forcing it after two rights', () => {
     const cards = pool(20);
     let target = '';
@@ -147,6 +157,18 @@ describe('practice', () => {
     const ids = run(start(cards, {}, 9, [confusion]), {}, 3000);
     const share = (id: string) => ids.filter((x) => x === id).length;
     expect(share('flag:a')).toBeGreaterThan(share('c0') * 1.4);
+  });
+
+  it('ignores map-scoped confusions: state NL boosts neither the Netherlands nor any card', () => {
+    const cards = [card('flag:nl', 'flag', 'NL', 'Netherlands'), ...pool(4)];
+    const confusion: Confusion = {
+      picked: 'ca:PE',
+      truth: 'ca:NL',
+      count: 5,
+      lastSeen: now.toISOString(),
+      contrastStreak: 0,
+    };
+    expect(start(cards, {}, 1, [confusion]).confused).toEqual([]);
   });
 
   it('chooses the mode like a session: mcq early, then the type recall mode', () => {

@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { namedIn, regionNameParts } from '../packages/core/src/generate.ts';
 import { licenceOk } from '../tools/content/lib/common.mjs';
 const root = dirname(fileURLToPath(import.meta.url));
 const load = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
@@ -33,6 +34,7 @@ const names = (text, code) => Boolean(text && countryName(code) && text.toLowerC
 
 // facts/<code>.json: one CountryFacts; codes compare case-insensitively ("pl" or "PL")
 const noteIds = new Map();
+const demonyms = new Map();
 for (const f of jsonFiles('facts')) {
   const facts = load(`facts/${f}`);
   const w = `facts/${f}`;
@@ -42,6 +44,7 @@ for (const f of jsonFiles('facts')) {
   if (!facts.name) err(`${w}: missing name`);
   if (facts.drivingSide != null && !['left', 'right'].includes(facts.drivingSide)) err(`${w}: bad drivingSide`);
   for (const k of ['tld', 'callingCode', 'languages', 'scripts']) if (facts[k] != null && !strings(facts[k])) err(`${w}: ${k} must be an array of strings`);
+  if (strings(facts.demonym)) demonyms.set(code, facts.demonym);
   if (!Array.isArray(facts.notes)) { err(`${w}: notes must be an array`); continue; }
   const ids = new Set();
   for (const n of facts.notes) {
@@ -89,6 +92,28 @@ for (const f of jsonFiles('media')) {
   }
 }
 
+// maps/*.json: every state has a non-empty name, unique within its map (labels and reveals use it)
+for (const f of jsonFiles('maps')) {
+  const states = load(`maps/${f}`).states ?? [];
+  const seen = new Set();
+  for (const s of states) {
+    const name = typeof s.name === 'string' ? s.name.trim() : '';
+    if (!name) err(`maps/${f} ${s.code}: state has no name`);
+    else if (seen.has(name)) err(`maps/${f} ${s.code}: state name "${name}" is not unique`);
+    seen.add(name);
+  }
+}
+
+// cards with `map` are answered on content/maps/<map>-regions.json (br-states.json for Brazil)
+const mapCache = new Map();
+const mapStates = (map) => {
+  if (!mapCache.has(map)) {
+    const file = map === 'br' ? 'maps/br-states.json' : `maps/${map}-regions.json`;
+    mapCache.set(map, /^[a-z]{2}$/.test(map) && existsSync(join(root, file)) ? new Map(load(file).states.map((s) => [s.code, s.name])) : null);
+  }
+  return mapCache.get(map);
+};
+
 const cardFiles = readdirSync(join(root, 'cards')).filter((f) => f.endsWith('.json'));
 const allCards = [];
 for (const f of cardFiles) {
@@ -107,7 +132,27 @@ for (const f of cardFiles) {
     for (const id of c.media ?? []) if (!mediaIds.has(id)) err(`${w}: media ${id} not in content/media`);
     if (c.type === 'photo-choice' && !(c.options ?? []).every((id) => mediaIds.has(id))) err(`${w}: photo-choice options must be media ids`);
     if (c.options && !c.options.includes(c.answer)) err(`${w}: options do not include answer`);
+    // a distractor the prompt names makes two options look right
+    if (c.options && c.prompt?.kind === 'text' && c.type !== 'photo-choice') {
+      for (const option of c.options) {
+        if (option === c.answer) continue;
+        const code = pool.find((p) => p.name === option)?.code;
+        if (namedIn(c.prompt.value, [option, ...(demonyms.get(code) ?? [])])) err(`${w}: option "${option}" is named in the prompt`);
+      }
+    }
     if (c.type === 'areacode' && !/^\d{2}$/.test(c.prompt?.value ?? '')) err(`${w}: area code must be 2 digits`);
+    if (c.map != null) {
+      const states = mapStates(c.map);
+      if (!states) err(`${w}: no regions map for map "${c.map}"`);
+      else if (!states.has(c.answer)) err(`${w}: answer ${c.answer} is not a state of the ${c.map} map`);
+      else if (c.prompt?.kind === 'text') {
+        // the prompt is shown before the answer: it must not name the state, nor read wrongly
+        const parts = regionNameParts(states.get(c.answer) ?? '');
+        if (namedIn(c.prompt.value, parts)) err(`${w}: where prompt names the answer state (${states.get(c.answer)})`);
+        if (/\bthe this area\b|\bthis area['’]s\b/i.test(c.prompt.value)) err(`${w}: where prompt reads "the this area" or "this area's"`);
+      }
+    }
+    if (c.map != null && c.map !== String(c.country ?? '').toLowerCase()) err(`${w}: map "${c.map}" is not the card's country`);
     if (!Array.isArray(c.tags)) err(`${w}: tags must be array`);
     allCards.push(c);
   }

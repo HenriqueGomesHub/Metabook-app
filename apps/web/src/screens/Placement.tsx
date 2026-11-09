@@ -16,7 +16,7 @@ import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
 import { verdictFor } from './session/verdict';
-import { CARD_VIEWS } from './session/views';
+import { viewFor } from './session/views';
 
 const TEST_SIZE = 12;
 
@@ -39,8 +39,13 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const card = cards[results.length];
-  const mode: SessionMode =
-    card?.type === 'flag' ? 'recall' : card?.type === 'lookalike' ? 'binary' : 'mcq';
+  const mode: SessionMode = card?.map
+    ? 'map'
+    : card?.type === 'flag'
+      ? 'recall'
+      : card?.type === 'lookalike'
+        ? 'binary'
+        : 'mcq';
   const options = useMemo(
     () =>
       card ? optionsFor({ cardId: card.id, mode }, card, data.content.cards, Math.random) : [],
@@ -111,7 +116,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     );
   }
 
-  const View = CARD_VIEWS[card.type];
+  const View = viewFor(card);
   return (
     <div className="session">
       <div className="session-bar rise">

@@ -23,6 +23,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
 import { label, scopeOf, SUBJECTS } from '../app/labels';
+import type { Scope as LabelScope } from '../app/labels';
 import { todaySession } from '../app/stats';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
@@ -36,7 +37,7 @@ import type { RevealProps } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
 import { verdictFor } from './session/verdict';
-import { CARD_VIEWS } from './session/views';
+import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
 
 const CONTRAST_DOTS = 5;
@@ -46,11 +47,14 @@ interface Scope {
   subject?: MetaSubject;
   country?: string;
   chapter?: string;
+  /** `map=1`: only cards answered on a regions map; `map=0`: none of them */
+  map?: boolean;
 }
 
 /**
- * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`
- * or `chapter` starts endless practice over the cards in that scope instead.
+ * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
+ * `chapter` or `map` starts endless practice over the cards in that scope instead; a scope of
+ * one card shows the summary after each answer rather than looping on it.
  */
 export function Session() {
   const { data, error } = useAppData();
@@ -62,18 +66,22 @@ export function Session() {
     subjectParam && subjectParam in SUBJECTS ? (subjectParam as MetaSubject) : undefined;
   const country = params.get('country')?.toUpperCase() || undefined;
   const chapter = params.get('chapter') || undefined;
+  const mapParam = params.get('map');
+  const map = mapParam === '1' ? true : mapParam === '0' ? false : undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}`;
-  return type || subject || country || chapter ? (
-    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter }} />
+  const key = `${type}|${subject}|${country}|${chapter}|${map}`;
+  return type || subject || country || chapter || map !== undefined ? (
+    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map }} />
   ) : (
     <DueRunner data={data} />
   );
 }
 
-function inScope(cards: Card[], { type, subject, country, chapter }: Scope): Card[] {
+function inScope(cards: Card[], { type, subject, country, chapter, map }: Scope): Card[] {
   return cards.filter(
     (card) =>
+      // regions-map cards only come up in map drills, not with their subject's "which country?"
+      (map === undefined ? !subject || !card.map : map === Boolean(card.map)) &&
       (!type || card.type === type) &&
       (!subject || card.subject === subject) &&
       (!country || card.country === country) &&
@@ -89,7 +97,7 @@ function backTo(data: AppSnapshot, scope: Scope): string {
 }
 
 function DueRunner({ data }: { data: AppSnapshot }) {
-  const [queue] = useState(() => todaySession(data, new Date()).queue);
+  const [queue, setQueue] = useState(() => todaySession(data, new Date()).queue);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const cards = data.content.cards;
@@ -125,6 +133,11 @@ function DueRunner({ data }: { data: AppSnapshot }) {
       item={item}
       onAnswered={(correct) => setResults([...results, correct])}
       onNext={() => setIndex(index + 1)}
+      onSkip={() => {
+        // nothing graded: the card goes to the back of the queue
+        setQueue([...queue, item]);
+        setIndex(index + 1);
+      }}
       bar={({ card, options, outcome }) =>
         item.contrastPair ? (
           <ContrastBar
@@ -132,7 +145,7 @@ function DueRunner({ data }: { data: AppSnapshot }) {
             item={item}
             options={options}
             outcome={outcome}
-            scope={scopeOf(card.type)}
+            scope={scopeOf(card)}
           />
         ) : (
           <div className="session-bar rise">
@@ -234,6 +247,15 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     // The answer just recorded may have moved this card past multiple choice.
     const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
+    // one card has nothing else to draw: end at the summary instead of looping on it
+    if (pool.length === 1) setEnded(true);
+  }
+
+  /** An unanswerable card is passed over ungraded; it stays in the pool and comes back. */
+  function skip() {
+    if (!flow) return;
+    const next = nextPracticeItem(flow.practice, data.states, new Date());
+    setFlow({ practice: next.practice, item: next.item, step: flow.step + 1 });
   }
 
   /** Ending while an answered card is showing moves on, so Keep going never re-serves it. */
@@ -249,6 +271,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       item={flow.item}
       onAnswered={onAnswered}
       onNext={advance}
+      onSkip={skip}
       bar={() => (
         <div className="session-bar rise">
           <button
@@ -280,12 +303,15 @@ function CardRunner({
   item,
   onAnswered,
   onNext,
+  onSkip,
   bar,
 }: {
   data: AppSnapshot;
   item: SessionItem;
   onAnswered(correct: boolean, state?: CardState): void;
   onNext(): void;
+  /** passes over the card without grading it */
+  onSkip(): void;
   bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
 }) {
   const { answer, recordTipView } = useAppData();
@@ -304,7 +330,7 @@ function CardRunner({
   });
 
   const otherSide = item.mode === 'binary' ? options.find((o) => o !== card.answer) : undefined;
-  const scope = scopeOf(card.type);
+  const scope = scopeOf(card);
 
   /**
    * The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards,
@@ -365,7 +391,7 @@ function CardRunner({
     onAnswered(correct, state);
   }
 
-  const View = item.mode === 'binary' ? LookalikeCard : CARD_VIEWS[card.type];
+  const View = item.mode === 'binary' ? LookalikeCard : viewFor(card);
   const verdict = outcome && verdictFor(card, item, outcome);
   const reveal = verdict && shown && (
     <Reveal
@@ -387,6 +413,7 @@ function CardRunner({
         options={options}
         outcome={outcome}
         onAnswer={onAnswer}
+        onSkip={onSkip}
         reveal={reveal}
       />
       <VerdictAnnouncer text={verdict ? verdict.verdict : ''} />
@@ -433,7 +460,7 @@ function ContrastBar({
   item: SessionItem;
   options: string[];
   outcome: Outcome | null;
-  scope?: 'br';
+  scope?: LabelScope;
 }) {
   const [picked, truth] = item.contrastPair as [string, string];
   const streak =

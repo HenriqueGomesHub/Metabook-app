@@ -18,6 +18,9 @@ export function createStorage({
       body: body && JSON.stringify(body),
     }, { retries: 2 });
 
+  /** True when a file is at `path` in the public bucket. */
+  const exists = async (path) => (await fetch(`${base}/object/public/${BUCKET}/${path}`, { method: 'HEAD' })).ok;
+
   return {
     publicUrl: (path) => `${base}/object/public/${BUCKET}/${path}`,
 
@@ -39,13 +42,14 @@ export function createStorage({
       });
     },
 
+    exists,
+
     /** Moves a file; a file already at `to` (an earlier, interrupted run) counts as moved. */
     async move(from, to) {
       try {
         await json('POST', '/object/move', { bucketId: BUCKET, sourceKey: from, destinationKey: to });
       } catch (error) {
-        const there = await fetch(`${base}/object/public/${BUCKET}/${to}`, { method: 'HEAD' });
-        if (!there.ok) throw error;
+        if (!(await exists(to))) throw error;
       }
     },
   };

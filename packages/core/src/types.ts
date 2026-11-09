@@ -54,6 +54,11 @@ export interface Card {
   /** ids of the MediaItems the card shows */
   media?: string[];
   region?: string;
+  /**
+   * Lower-case code of a country's regions map ("us"): the card is answered by clicking that
+   * map, and `answer` (and any confusion it records) is one of the map's state codes.
+   */
+  map?: string;
 }
 
 /** One fact about a country, written once and reused by generated cards. */
@@ -110,6 +115,12 @@ export interface MediaItem {
   giveaways?: string[];
   /** curator-written alt text; generation drops it when it names the country */
   caption?: string;
+}
+
+/** The parts of a regions map (content/maps) the generator needs. */
+export interface RegionMapNames {
+  country: string;
+  states: { code: string; name: string }[];
 }
 
 export interface Tip {

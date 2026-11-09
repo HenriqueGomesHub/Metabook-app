@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { describe, it } from 'node:test';
-import { buildRegionMap, rewind, simplify, WIDTH } from '../regions.mjs';
+import { buildRegionMap, rewind, simplify, uniqueStateNames, WIDTH } from '../regions.mjs';
 
 const fixture = (name) => JSON.parse(readFileSync(new URL(`fixtures/${name}`, import.meta.url), 'utf8'));
 
@@ -43,5 +43,37 @@ describe('regions', () => {
     const ccw = { type: 'Polygon', coordinates: [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]] };
     assert.deepEqual(rewind(ccw).coordinates[0][1], [0, 1]);
     assert.deepEqual(rewind(rewind(ccw)), rewind(ccw));
+  });
+
+  it('gives every state a unique, non-empty name', () => {
+    const state = (code, name, type, path = `M${code}Z`) => ({ code, name, type, path, label: [0, 0] });
+    const states = uniqueStateNames([
+      state('B', 'Buenos Aires', 'Province'),
+      state('C', 'Buenos Aires', 'City'),
+      state('22', 'Sofia', 'Province'),
+      state('23', 'Sofia', 'Province'),
+      state('VMR', 'Valmiera', 'Republican City'),
+      state('008', 'Valmiera', 'Municipality'),
+      state('009', 'Valmiera', 'Municipality'),
+      // one state in two shapes: merged, not renamed
+      state('A', 'Toamasina', 'Autonomous Province', 'M1Z'),
+      state('A', 'Toamasina', 'Autonomous Province', 'M2Z'),
+      state('RUS+99?', null, undefined),
+      state('X', '  ', undefined),
+    ]);
+    assert.deepEqual(states.map((s) => [s.code, s.name]), [
+      ['B', 'Buenos Aires (Province)'],
+      ['C', 'Buenos Aires (City)'],
+      ['22', 'Sofia (22)'],
+      ['23', 'Sofia (23)'],
+      ['VMR', 'Valmiera (Republican City)'],
+      ['008', 'Valmiera (008)'],
+      ['009', 'Valmiera (009)'],
+      ['A', 'Toamasina'],
+      ['RUS+99?', 'RUS+99?'],
+      ['X', 'X'],
+    ]);
+    assert.equal(states.find((s) => s.code === 'A').path, 'M1ZM2Z');
+    assert.ok(states.every((s) => !('type' in s)));
   });
 });

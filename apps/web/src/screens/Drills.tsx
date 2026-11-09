@@ -35,6 +35,21 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       }),
     [data, now],
   );
+  // regions-map cards across every country
+  const whereTile = useMemo(() => {
+    const ids = data.content.cards.filter((card) => card.map).map((card) => card.id);
+    if (ids.length === 0) return [];
+    return [
+      {
+        key: 'where',
+        to: '/session?map=1',
+        label: 'Where in the country',
+        blurb: 'Place clues on each country’s regions map',
+        icon: CARD_TYPES.region.icon,
+        mastery: mastery(ids, data.states, now),
+      },
+    ];
+  }, [data, now]);
   // one tile per meta subject that has cards, e.g. Bollards across every country; a subject
   // named like a type tile (Plates) is already covered by it
   const subjectTiles = useMemo(
@@ -42,7 +57,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       SUBJECT_ORDER.flatMap((subject) => {
         if (tiles.some((tile) => tile.label === SUBJECTS[subject].label)) return [];
         const ids = data.content.cards
-          .filter((card) => card.subject === subject)
+          .filter((card) => card.subject === subject && !card.map)
           .map((card) => card.id);
         if (ids.length === 0) return [];
         return [
@@ -57,6 +72,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       }),
     [data, now, tiles],
   );
+
+  const allTiles = [...tiles, ...whereTile, ...subjectTiles];
 
   return (
     <div className="page">
@@ -82,7 +99,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           />
         )}
         <div className="tiles">
-          {[...tiles, ...subjectTiles].map(({ key, to, label, blurb, icon, mastery: pct }) => (
+          {allTiles.map(({ key, to, label, blurb, icon, mastery: pct }) => (
             <Link key={key} className="tile" to={to}>
               <div className="tile-top">
                 <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">

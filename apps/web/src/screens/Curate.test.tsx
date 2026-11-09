@@ -1,5 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { AlreadyCollected } from '../data/curation';
 import type { Candidate, CurationApi } from '../data/curation';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
@@ -27,7 +28,8 @@ function fakeApi(
   return {
     isAdmin: vi.fn(async () => admin),
     listPending: vi.fn(async () => rows),
-    decide: vi.fn(async () => undefined),
+    decide: vi.fn<CurationApi['decide']>(async () => undefined),
+    decideMany: vi.fn<CurationApi['decideMany']>(async (ids) => ids),
   } satisfies CurationApi;
 }
 
@@ -38,6 +40,8 @@ const open = (api: CurationApi | null, path = '/curate') =>
   renderScreens(path, new MemoryRepository(), { mode: 'cloud', curation: api });
 
 describe('Curate', () => {
+  beforeEach(() => localStorage.setItem('metabook.curate.view', 'single'));
+
   it('is for admins only', async () => {
     open(fakeApi(false));
     expect(await screen.findByRole('region', { name: 'Admins only' })).toBeTruthy();
@@ -117,6 +121,25 @@ describe('Curate', () => {
     expect(await current('Poland')).toBeTruthy();
   });
 
+  it('refuses to undo a photo already collected into the cards', async () => {
+    const api = fakeApi();
+    open(api);
+    await current('Poland');
+    fireEvent.click(screen.getByRole('button', { name: /Keep/ }));
+    await current('Lithuania');
+    api.decide.mockRejectedValueOnce(new AlreadyCollected());
+    fireEvent.keyDown(window, { key: 'u' });
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'That photo is already in the cards, so it can’t be undone here.',
+    );
+    // it stays decided and off the queue; nothing left to undo
+    expect(await current('Lithuania')).toBeTruthy();
+    expect(screen.getByText('1 pending')).toBeTruthy();
+    expect((screen.getByRole('button', { name: /Undo last/ }) as HTMLButtonElement).disabled).toBe(
+      true,
+    );
+  });
+
   it('filters by country and subject', async () => {
     open(fakeApi());
     await current('Poland');
@@ -125,5 +148,123 @@ describe('Curate', () => {
     expect(screen.getByText('1 pending')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filter by country'), { target: { value: 'pl' } });
     expect(await screen.findByRole('region', { name: 'Nothing to curate' })).toBeTruthy();
+  });
+});
+
+const many = (n: number) =>
+  Array.from({ length: n }, (_, i) => candidate(`p${i + 1}`, i % 2 ? 'lt' : 'pl', 'bollard'));
+const ids = (from: number, to: number) =>
+  Array.from({ length: to - from + 1 }, (_, i) => `p${from + i}`);
+
+describe('Curate grid', () => {
+  beforeEach(() => localStorage.clear());
+
+  it('is the default view, shows 12 tiles, and remembers the toggle', async () => {
+    const api = fakeApi(true, many(15));
+    open(api);
+    expect(await screen.findByRole('region', { name: 'Photo grid' })).toBeTruthy();
+    expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(12);
+    expect(screen.getByText('15 pending')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: 'One by one' }));
+    expect(await screen.findByRole('region', { name: 'Candidate photo' })).toBeTruthy();
+    expect(localStorage.getItem('metabook.curate.view')).toBe('single');
+  });
+
+  it('marks tiles by tap and by key, and unmarks on a second tap', async () => {
+    open(fakeApi(true, many(12)));
+    const tile = (n: number) => screen.getByRole('button', { name: new RegExp(`^Photo ${n},`) });
+    await screen.findByRole('region', { name: 'Photo grid' });
+
+    fireEvent.click(tile(2));
+    expect(tile(2).getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(tile(2));
+    expect(tile(2).getAttribute('aria-pressed')).toBe('false');
+
+    fireEvent.keyDown(window, { key: '0' });
+    fireEvent.keyDown(window, { key: '=' });
+    expect(tile(10).getAttribute('aria-pressed')).toBe('true');
+    expect(tile(12).getAttribute('aria-pressed')).toBe('true');
+  });
+
+  it('opens a photo large on right-click, with description and credit', async () => {
+    open(fakeApi(true, many(12)));
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.contextMenu(screen.getByRole('button', { name: /^Photo 1,/ }));
+    const dialog = await screen.findByRole('dialog', { name: 'Photo' });
+    expect(dialog.textContent).toContain('Roadside post in pl');
+    expect(dialog.textContent).toContain('Ana Ruiz');
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('keeps the rest: approves unmarked, rejects marked, loads the next page', async () => {
+    const api = fakeApi(true, many(15));
+    open(api);
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.click(screen.getByRole('button', { name: /^Photo 1,/ }));
+    fireEvent.keyDown(window, { key: '3' });
+    fireEvent.keyDown(window, { key: 'Enter' });
+
+    await waitFor(() => expect(api.decideMany).toHaveBeenCalledTimes(2));
+    expect(api.decideMany).toHaveBeenNthCalledWith(
+      1,
+      ids(2, 12).filter((id) => id !== 'p3'),
+      'approved',
+    );
+    expect(api.decideMany).toHaveBeenNthCalledWith(2, ['p1', 'p3'], 'rejected');
+    expect(api.decide).not.toHaveBeenCalled();
+    // only 3 left, and the marks are gone
+    await waitFor(() =>
+      expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(3),
+    );
+    expect(screen.getByText('3 pending · 12 decided')).toBeTruthy();
+    expect(
+      screen
+        .getAllByRole('button', { name: /^Photo \d+,/ })
+        .every((b) => b.getAttribute('aria-pressed') === 'false'),
+    ).toBe(true);
+  });
+
+  it('undoes the last page back to pending', async () => {
+    const api = fakeApi(true, many(15));
+    open(api);
+    await screen.findByRole('region', { name: 'Photo grid' });
+    expect((screen.getByRole('button', { name: 'Undo page' }) as HTMLButtonElement).disabled).toBe(
+      true,
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Keep the rest/ }));
+    await waitFor(() => expect(screen.getByText('3 pending · 12 decided')).toBeTruthy());
+
+    fireEvent.click(screen.getByRole('button', { name: 'Undo page' }));
+    await waitFor(() => expect(api.decideMany).toHaveBeenLastCalledWith(ids(1, 12), 'pending'));
+    await waitFor(() =>
+      expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(12),
+    );
+    expect(screen.getByText('15 pending')).toBeTruthy();
+  });
+
+  it('undoes only the rows of a page not collected yet, and says so', async () => {
+    const api = fakeApi(true, many(15));
+    api.decideMany.mockImplementation(async (list, status) =>
+      status === 'pending' ? list.slice(2) : list,
+    );
+    open(api);
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.click(screen.getByRole('button', { name: /Keep the rest/ }));
+    await waitFor(() => expect(screen.getByText('3 pending · 12 decided')).toBeTruthy());
+    fireEvent.click(screen.getByRole('button', { name: 'Undo page' }));
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      '2 photos are already in the cards and can’t be undone here.',
+    );
+    expect(screen.getByText('13 pending')).toBeTruthy();
+  });
+
+  it('pages within the current filter', async () => {
+    open(fakeApi(true, many(30)));
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.change(screen.getByLabelText('Filter by country'), { target: { value: 'lt' } });
+    expect(await screen.findByText('15 pending')).toBeTruthy();
+    expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(12);
   });
 });

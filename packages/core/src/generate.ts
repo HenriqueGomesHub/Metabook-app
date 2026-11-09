@@ -1,7 +1,15 @@
 // Turns country facts and approved photos into cards. Pure and deterministic: the same input
 // always yields the same cards in the same order, so generated files diff cleanly.
 // Only type imports here: tools/content runs this file directly with Node's type stripping.
-import type { Card, CountryFacts, MediaItem, MetaSubject, PoolCountry } from './types';
+import type {
+  Card,
+  CountryFacts,
+  FactNote,
+  MediaItem,
+  MetaSubject,
+  PoolCountry,
+  RegionMapNames,
+} from './types';
 
 export type GeneratedCard = Card & { verified: boolean };
 
@@ -11,11 +19,15 @@ export interface GenerateInput {
   facts: CountryFacts[];
   /** every approved photo, all countries */
   media: MediaItem[];
+  /** regions maps by upper-case country code; a country without one gets no `where` cards */
+  maps?: Record<string, RegionMapNames>;
 }
 
 const CHOICES = 4;
 /** a reverse card needs this many other countries with photos of the subject */
 const MIN_OTHER_COUNTRIES = 3;
+/** `where` cards are only worth a drill when a country has at least this many */
+export const MIN_WHERE_CARDS = 4;
 
 export const SUBJECT_NOUNS: Record<MetaSubject, string> = {
   bollard: 'bollard',
@@ -91,19 +103,44 @@ function rankCountries(
   return [...new Set(first)].concat(seededShuffle(near, seed), seededShuffle(far, `${seed}:far`));
 }
 
-/** Country-name options with the answer, shuffled by `seed`; only same-continent fallbacks. */
+/**
+ * Country-name options with the answer, shuffled by `seed`; only same-continent fallbacks.
+ * A country the prompt names (`prompt`: the clue or alt text) is never a distractor: "Like
+ * Poland's, …" with Poland as an option has two right-looking answers.
+ */
 function nameOptions(
   self: PoolCountry,
   pool: PoolCountry[],
   preferred: string[],
   seed: string,
-  allowed?: (country: PoolCountry) => boolean,
+  { allowed = () => true, prompt = '', facts = [] }: NameOptionsExtra = {},
 ): string[] {
-  const ranked = rankCountries(self, pool, preferred, seed, allowed).filter(
+  const unnamed = (c: PoolCountry) =>
+    !namedIn(prompt, [c.name, ...(facts.find((f) => same(f.code, c.code))?.demonym ?? [])]);
+  const ok = (c: PoolCountry) => allowed(c) && unnamed(c);
+  const ranked = rankCountries(self, pool, preferred, seed, ok).filter(
     (c) => preferred.includes(c.code) || c.continent === self.continent,
   );
   const picks = ranked.slice(0, CHOICES - 1).map((c) => c.name);
   return seededShuffle([self.name, ...picks], `${seed}:order`);
+}
+
+interface NameOptionsExtra {
+  allowed?: (country: PoolCountry) => boolean;
+  prompt?: string;
+  /** every country's facts, for demonyms */
+  facts?: CountryFacts[];
+}
+
+/** True when `text` contains any of `words` as a whole word, ignoring case and accents. */
+export function namedIn(text: string, words: (string | undefined)[]): boolean {
+  const folded = fold(text);
+  return words.some((word) => {
+    const w = word ? fold(word) : '';
+    if (w.length < 3) return false;
+    const escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'u').test(folded);
+  });
 }
 
 /**
@@ -120,6 +157,51 @@ function namesCountry(
   const names = [country.name, ...(facts?.demonym ?? []), ...(capital ? [facts?.capital] : [])];
   if (names.some((n) => n && n.trim() && lower.includes(n.trim().toLowerCase()))) return true;
   return code && new RegExp(`\\b${country.code}\\b`, 'i').test(text);
+}
+
+/** Letters NFD leaves whole (Ł in Łódź, Ø in Østfold) and their plain spellings. */
+const PLAIN: Record<string, string> = {
+  ł: 'l',
+  ø: 'o',
+  đ: 'd',
+  ð: 'd',
+  ı: 'i',
+  ß: 'ss',
+  æ: 'ae',
+  œ: 'oe',
+  þ: 'th',
+};
+
+/** Lower case without accents, for comparing region names. */
+const fold = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[łøđðıßæœþ]/g, (c) => PLAIN[c] ?? c)
+    .trim();
+
+const ISO_REGION = /^([A-Za-z]{2})-([A-Za-z0-9]+)$/;
+
+/**
+ * The one map state a note's `region` names: an ISO 3166-2 code ("US-TX") whose suffix matches a
+ * state code, else a state name (ignoring case and accents). Undefined when nothing or more than
+ * one state matches, or the ISO prefix is another country's.
+ */
+export function resolveRegion(
+  region: string,
+  code: string,
+  map: RegionMapNames,
+): RegionMapNames['states'][number] | undefined {
+  const iso = ISO_REGION.exec(region.trim());
+  if (iso && same(iso[1] as string, code)) {
+    const hits = map.states.filter((s) => same(s.code, iso[2] as string));
+    if (hits.length > 0) return hits.length === 1 ? hits[0] : undefined;
+  }
+  const name = fold(region);
+  // generated maps can hold an unnamed leftover shape (Natural Earth's "RUS+99?")
+  const hits = name ? map.states.filter((s) => s.name && fold(s.name) === name) : [];
+  return hits.length === 1 ? hits[0] : undefined;
 }
 
 function cardType(subject: MetaSubject | undefined): Card['type'] {
@@ -170,7 +252,10 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       type: cardType(item.subject),
       country: code,
       answer: country.name,
-      options: nameOptions(country, input.pool, lookalikesFor(item.subject, item.noteId), id),
+      options: nameOptions(country, input.pool, lookalikesFor(item.subject, item.noteId), id, {
+        prompt: altFor(item),
+        facts: input.facts,
+      }),
       prompt: {
         kind: 'image',
         value: item.url,
@@ -226,7 +311,11 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
   // (c) fact cards
   const factCard = (key: string, clue: string, allowed?: (c: PoolCountry) => boolean) => {
     const id = `gen:${lc}:${key}`;
-    const options = nameOptions(country, input.pool, [], id, allowed);
+    const options = nameOptions(country, input.pool, [], id, {
+      allowed,
+      prompt: clue,
+      facts: input.facts,
+    });
     if (options.length < 2) return;
     cards.push({
       id,
@@ -261,9 +350,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
     if (!note.verified || !note.distinctive || photographed.has(note.id)) continue;
     // the note text is the question, so it must not name the answer
     if (namesCountry(note.text, country, facts, { capital: false, code: false })) continue;
-    // note ids are often prefixed with the country ("pl:bollard-red"); drop it from the card id
-    const key = note.id.startsWith(`${lc}:`) ? note.id.slice(lc.length + 1) : note.id;
-    const id = `gen:${lc}:note:${key}`;
+    const id = `gen:${lc}:note:${noteKey(note.id, lc)}`;
     cards.push({
       id,
       type: cardType(note.subject),
@@ -274,6 +361,10 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
         input.pool,
         resolveCodes(note.lookalikes ?? [], input.pool),
         id,
+        {
+          prompt: note.text,
+          facts: input.facts,
+        },
       ),
       prompt: { kind: 'text', value: note.text },
       tags: tags(note.subject),
@@ -283,5 +374,129 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       verified: true,
     });
   }
+
+  // (d) where cards: click the note's state on the country's regions map
+  const map = input.maps?.[code];
+  if (map) {
+    const where: { note: FactNote; state: RegionMapNames['states'][number] }[] = [];
+    for (const note of [...notes].sort(byId)) {
+      const state = note.region ? resolveRegion(note.region, code, map) : undefined;
+      if (state) where.push({ note, state });
+    }
+    if (where.length >= MIN_WHERE_CARDS) {
+      for (const { note, state } of where) {
+        const prompt = hideRegionName(note.text, state.name);
+        if (!prompt) continue;
+        cards.push({
+          id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
+          type: 'region',
+          country: code,
+          answer: state.code,
+          prompt: { kind: 'text', value: prompt },
+          tags: [...tags(note.subject), 'where'],
+          subject: note.subject,
+          explain: `${note.text} (${state.name})`,
+          map: lc,
+          source: note.source,
+          verified: note.verified,
+        });
+      }
+    }
+  }
   return cards;
+}
+
+const REGION_WORDS =
+  /\s+(voivodeship|province|state|region|prefecture|oblast|krai|county|department|district|governorate|territory)$/i;
+
+/**
+ * Words too generic to give a state away, never masked on their own: compass points, "new",
+ * saints, and the administrative types maps use in names and disambiguators ("Zagreb (City)").
+ */
+const GENERIC_WORDS = new Set([
+  'state',
+  'province',
+  'region',
+  'island',
+  'islands',
+  'city',
+  'territory',
+  'north',
+  'south',
+  'east',
+  'west',
+  'northern',
+  'southern',
+  'eastern',
+  'western',
+  'new',
+  'san',
+  'santa',
+  'saint',
+  'voivodeship',
+  'prefecture',
+  'oblast',
+  'krai',
+  'county',
+  'department',
+  'district',
+  'governorate',
+  'municipality',
+  'republic',
+  'republican',
+  'autonomous',
+  'federal',
+  'provincial',
+  'urban',
+  'metropolitan',
+  'borough',
+  'unitary',
+  'authority',
+]);
+
+/** "this area" used as a modifier or after "the" reads wrongly ("this area roads"). */
+const BROKEN_MASK =
+  /\bthe this area\b|\bthis area['’]s\b|\bthis area (state|province|region|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?)\b/i;
+
+/**
+ * The pieces of a state name that give it away: the parts between " and ", " y ", " of ", "-",
+ * "/" and parentheses, and the words inside them, when 4+ letters and not generic.
+ */
+export function regionNameParts(stateName: string): string[] {
+  const parts = stateName
+    .split(/\s+(?:and|y|of)\s+|[-/()]/i)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  const words = parts.flatMap((p) => p.split(/\s+/));
+  const meaningful = (piece: string) =>
+    piece.replace(/[^\p{L}]/gu, '').length >= 4 &&
+    !piece.split(/\s+/).every((w) => GENERIC_WORDS.has(fold(w)));
+  return [...new Set([...parts, ...words])].filter(meaningful);
+}
+
+/**
+ * A `where` prompt must not name its answer: the state's name, its short form without
+ * "Province", "Voivodeship"… and each meaningful part (regionNameParts) become "this area".
+ * Returns undefined, so the card is skipped, when the result reads wrongly ("the this area",
+ * "this area's", "this area roads") or a part is still there (another accent form).
+ */
+export function hideRegionName(text: string, stateName: string): string | undefined {
+  const base = stateName.replace(/\s*\([^)]*\)\s*$/, '');
+  const parts = regionNameParts(stateName);
+  const masks = [stateName, base, base.replace(REGION_WORDS, ''), ...parts]
+    .map((n) => n.trim())
+    .filter((n, i, all) => n.length > 2 && all.indexOf(n) === i)
+    .sort((a, b) => b.length - a.length);
+  let out = text;
+  for (const mask of masks) {
+    const escaped = mask.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    out = out.replace(new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'giu'), 'this area');
+  }
+  if (BROKEN_MASK.test(out) || namedIn(out, masks)) return undefined;
+  return out.charAt(0).toUpperCase() + out.slice(1);
+}
+
+/** Note ids are often prefixed with the country ("pl:bollard-red"); card ids drop it. */
+function noteKey(id: string, lc: string): string {
+  return id.startsWith(`${lc}:`) ? id.slice(lc.length + 1) : id;
 }

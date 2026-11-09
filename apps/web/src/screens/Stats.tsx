@@ -3,7 +3,8 @@ import { useMemo } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { label, pairLabel } from '../app/labels';
-import { pairScope } from '../app/stats';
+import { mapsOf, pairScope } from '../app/stats';
+import { useRegionMaps } from '../app/useRegionMaps';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
@@ -64,6 +65,7 @@ function StatsView({ data }: { data: AppSnapshot }) {
         .slice(0, TOP_CONFUSIONS),
     [data.confusions],
   );
+  useRegionMaps(mapsOf(confusions.flatMap((c) => [c.picked, c.truth])));
 
   const cells: { value: string; unit?: string; label: string }[] = [
     {

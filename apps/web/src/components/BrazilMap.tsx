@@ -1,5 +1,5 @@
 import type { Card } from '@metabook/core';
-import { brStates } from '../data/content';
+import { brStates, brStatesByCode } from '../data/content';
 import { CountryMap } from './CountryMap';
 import type { MapReveal } from './CountryMap';
 
@@ -17,7 +17,7 @@ const CALLOUTS: Record<string, [number, number]> = {
   DF: [410, 284],
 };
 
-export const stateByCode = new Map(brStates.states.map((s) => [s.code, s]));
+export const stateByCode = brStatesByCode;
 
 /** First digits of each state's area codes, from the area-code cards. */
 export function digitGroups(cards: Card[]): Map<string, Set<string>> {

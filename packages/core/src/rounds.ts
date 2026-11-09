@@ -1,5 +1,5 @@
 import { normalizeAnswer } from './answers';
-import { pairKey, parsePairKey, recordAnswer } from './confusions';
+import { answerKey, pairKey, parsePairKey, recordAnswer } from './confusions';
 import { retrievability } from './scheduler';
 import type { Card, CardState, Confusion, Review, Round, Snapshot } from './types';
 
@@ -142,7 +142,10 @@ export function snapshot(
   for (const { review, card } of recentReviews) {
     if (review.correct) continue;
     const given = normalizeAnswer(review.answerGiven);
-    countPair(answerByNormalized.get(given) ?? given, card.answer);
+    // map cards answer with state codes, scoped to their map like stored confusions
+    if (card.map && !review.answerGiven) continue;
+    const picked = card.map ? review.answerGiven : (answerByNormalized.get(given) ?? given);
+    countPair(answerKey(card, picked), answerKey(card, card.answer));
   }
   const topConfusions = [...pairCounts]
     .sort(([ka, a], [kb, b]) => b - a || ka.localeCompare(kb))

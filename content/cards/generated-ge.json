@@ -1,0 +1,74 @@
+[
+  {
+    "id": "gen:ge:note:language-script",
+    "type": "meta",
+    "country": "GE",
+    "answer": "Georgia",
+    "options": [
+      "Luxembourg",
+      "France",
+      "Åland",
+      "Georgia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "A unique script, written left to right; the modern alphabet has 33 letters and looks like no other writing system."
+    },
+    "tags": [
+      "europe",
+      "language",
+      "generated"
+    ],
+    "subject": "language",
+    "source": "https://en.wikipedia.org/wiki/Georgian_scripts",
+    "verified": true
+  },
+  {
+    "id": "gen:ge:note:other-tld",
+    "type": "meta",
+    "country": "GE",
+    "answer": "Georgia",
+    "options": [
+      "Georgia",
+      "Estonia",
+      "Iceland",
+      "Romania"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Web domains end in .ge or in the local script (.გე); the phone code is +995."
+    },
+    "tags": [
+      "europe",
+      "other",
+      "generated"
+    ],
+    "subject": "other",
+    "source": "https://en.wikipedia.org/wiki/Georgia_(country)",
+    "verified": true
+  },
+  {
+    "id": "gen:ge:note:plate-eu-style",
+    "type": "plate",
+    "country": "GE",
+    "answer": "Georgia",
+    "options": [
+      "Liechtenstein",
+      "Ukraine",
+      "Georgia",
+      "France"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "White plates with a blue strip on the left holding the flag and GE, in the format AA-123-CD (two letters, three digits, two letters). Latin letters only."
+    },
+    "tags": [
+      "europe",
+      "plate",
+      "generated"
+    ],
+    "subject": "plate",
+    "source": "https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Georgia_(country)",
+    "verified": true
+  }
+]

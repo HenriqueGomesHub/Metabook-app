@@ -168,4 +168,19 @@ describe('matchesTarget', () => {
     expect(matchesTarget(card, { kind: 'pair', key: 'Serbia|Bulgaria' })).toBe(true);
     expect(matchesTarget(card, { kind: 'pair', key: 'LV|EE' })).toBe(false);
   });
+
+  it('matches map-scoped pairs only to cards on that map', () => {
+    const where: Card = {
+      ...card,
+      id: 'gen:ca:where:x',
+      type: 'region',
+      country: 'CA',
+      answer: 'NL',
+      map: 'ca',
+    };
+    const flag: Card = { ...card, id: 'flag:nl', country: 'NL', answer: 'Netherlands' };
+    expect(matchesTarget(where, { kind: 'pair', key: 'ca:PE|ca:NL' })).toBe(true);
+    expect(matchesTarget(flag, { kind: 'pair', key: 'ca:PE|ca:NL' })).toBe(false);
+    expect(matchesTarget(where, { kind: 'pair', key: 'PE|NL' })).toBe(false);
+  });
 });

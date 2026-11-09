@@ -1,0 +1,227 @@
+[
+  {
+    "id": "gen:mk:note:car-no-antenna",
+    "type": "meta",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "Luxembourg",
+      "Portugal",
+      "Bosnia and Herzegovina",
+      "North Macedonia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Generation 3 cars never show an antenna, which is true almost nowhere else; Serbia is mostly antenna-free but sometimes has one."
+    },
+    "tags": [
+      "europe",
+      "car",
+      "generated"
+    ],
+    "subject": "car",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:note:language-letters",
+    "type": "meta",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "Bulgaria",
+      "Cyprus",
+      "North Macedonia",
+      "Finland"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Cyrillic script with Ѓ and Ќ unique to this language; Љ, Њ and Џ are shared only with Serbian. Most other signs are fully Cyrillic."
+    },
+    "tags": [
+      "europe",
+      "language",
+      "generated"
+    ],
+    "subject": "language",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:note:plate-red-block",
+    "type": "plate",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "Estonia",
+      "Slovenia",
+      "United Kingdom",
+      "North Macedonia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "White plates with a noticeable red block near the left side; the blue EU strip is only sometimes present. Serbian plates nearly always have the strip."
+    },
+    "tags": [
+      "europe",
+      "plate",
+      "generated"
+    ],
+    "subject": "plate",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:note:sign-yellow-direction",
+    "type": "meta",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "North Macedonia",
+      "Slovenia",
+      "Croatia",
+      "Montenegro"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Direction signs are typically yellow, with town names in both Latin and Cyrillic. Only Serbia also does both."
+    },
+    "tags": [
+      "europe",
+      "sign",
+      "generated"
+    ],
+    "subject": "sign",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:note:sign-yellow-warning",
+    "type": "meta",
+    "country": "MK",
+    "answer": "North Macedonia",
+    "options": [
+      "North Macedonia",
+      "San Marino",
+      "Russia",
+      "Slovenia"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Warning signs normally have a yellow fill, where most of Europe uses white. Greece does the same."
+    },
+    "tags": [
+      "europe",
+      "sign",
+      "generated"
+    ],
+    "subject": "sign",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:where:region-capital-blocks",
+    "type": "region",
+    "country": "MK",
+    "answer": "85",
+    "prompt": {
+      "kind": "text",
+      "value": "Large apartment blocks almost guarantee you are in the capital, by far the biggest city."
+    },
+    "tags": [
+      "europe",
+      "architecture",
+      "generated",
+      "where"
+    ],
+    "subject": "architecture",
+    "explain": "Large apartment blocks almost guarantee you are in the capital, by far the biggest city. (Skopje)",
+    "map": "mk",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:where:region-obits-kumanovo",
+    "type": "region",
+    "country": "MK",
+    "answer": "47",
+    "prompt": {
+      "kind": "text",
+      "value": "Poster obituaries on poles vary by city; those in this area are the only ones with a thick light blue border."
+    },
+    "tags": [
+      "europe",
+      "other",
+      "generated",
+      "where"
+    ],
+    "subject": "other",
+    "explain": "Poster obituaries on poles vary by city; those in Kumanovo are the only ones with a thick light blue border. (Kumanovo)",
+    "map": "mk",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:where:region-obits-prilep",
+    "type": "region",
+    "country": "MK",
+    "answer": "62",
+    "prompt": {
+      "kind": "text",
+      "value": "This area obituaries are vertical and black, with a border that does not go fully around."
+    },
+    "tags": [
+      "europe",
+      "other",
+      "generated",
+      "where"
+    ],
+    "subject": "other",
+    "explain": "Prilep obituaries are vertical and black, with a border that does not go fully around. (Prilep)",
+    "map": "mk",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:where:region-ohrid-lake",
+    "type": "region",
+    "country": "MK",
+    "answer": "58",
+    "prompt": {
+      "kind": "text",
+      "value": "The only large city lying right next to a lake."
+    },
+    "tags": [
+      "europe",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "The only large city lying right next to a lake. (Ohrid)",
+    "map": "mk",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  },
+  {
+    "id": "gen:mk:where:region-striped-kerbs",
+    "type": "region",
+    "country": "MK",
+    "answer": "73",
+    "prompt": {
+      "kind": "text",
+      "value": "Black and yellow striped kerbs suggest this area; around roundabouts they suggest Tetovo."
+    },
+    "tags": [
+      "europe",
+      "other",
+      "generated",
+      "where"
+    ],
+    "subject": "other",
+    "explain": "Black and yellow striped kerbs suggest Strumica; around roundabouts they suggest Tetovo. (Strumica)",
+    "map": "mk",
+    "source": "https://www.plonkit.net/north-macedonia",
+    "verified": true
+  }
+]

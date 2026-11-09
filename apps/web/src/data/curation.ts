@@ -34,8 +34,24 @@ export interface CurationApi {
   isAdmin(): Promise<boolean>;
   /** pending candidates, oldest first */
   listPending(): Promise<Candidate[]>;
-  /** writes a decision; back to 'pending' (undo) clears decided_at */
+  /**
+   * Writes a decision; back to 'pending' (undo) clears decided_at, and throws AlreadyCollected for
+   * a row the collect job has already turned into cards (collected_at set).
+   */
   decide(id: string, decision: Decision): Promise<void>;
+  /**
+   * Sets one status on many rows in a single request (an `in` filter). Writes only status and
+   * decided_at, so each row keeps its own subject, giveaways and caption; no-op for no ids.
+   * Back to 'pending' skips collected rows. Returns the ids it changed.
+   */
+  decideMany(ids: string[], status: Decision['status']): Promise<string[]>;
+}
+
+/** An undo refused because the photo is already in the cards. */
+export class AlreadyCollected extends Error {
+  constructor() {
+    super('That photo is already in the cards, so it can’t be undone here.');
+  }
 }
 
 interface Row {
@@ -91,7 +107,7 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
     },
     async decide(id, { status, subject, giveaways, caption }) {
       // only the columns the migration grants UPDATE on (0003_media.sql)
-      const { error } = await client
+      let query = client
         .from('media_candidates')
         .update({
           status,
@@ -101,7 +117,25 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
           decided_at: status === 'pending' ? null : new Date().toISOString(),
         })
         .eq('id', id);
+      // an undo must not pull a photo back out of the cards
+      if (status === 'pending') query = query.is('collected_at', null);
+      const { data, error } = await query.select('id');
       if (error) throw error;
+      if (status === 'pending' && !data?.length) throw new AlreadyCollected();
+    },
+    async decideMany(ids, status) {
+      if (!ids.length) return [];
+      let query = client
+        .from('media_candidates')
+        .update({
+          status,
+          decided_at: status === 'pending' ? null : new Date().toISOString(),
+        })
+        .in('id', ids);
+      if (status === 'pending') query = query.is('collected_at', null);
+      const { data, error } = await query.select('id');
+      if (error) throw error;
+      return (data as { id: string }[]).map((row) => row.id);
     },
   };
 }
