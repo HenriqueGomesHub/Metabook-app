@@ -29,15 +29,7 @@
         "The United States Virgin Islands are a group of islands that are US overseas territories. As such, it is counted as **the US** for country streaks purposes."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "48e8d334276d",
-          "src": "https://www.plonkit.net/images/us-virgin-islands/vi_location.png",
-          "path": "vi/48e8d334276d.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "US"
@@ -118,7 +110,8 @@
           },
           "path": "vi/ead792323bca.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example"
         }
       ],
       "locations": [
@@ -246,7 +239,16 @@
           },
           "path": "vi/eb8ee50bcc3f.webp",
           "width": 1000,
-          "height": 491
+          "height": 491,
+          "role": "example",
+          "caption": "A narrow road with a loose grid of streets",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.87,
+            "h": 1
+          }
         }
       ],
       "locations": [

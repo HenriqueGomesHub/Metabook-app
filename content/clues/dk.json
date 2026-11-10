@@ -93,7 +93,8 @@
           },
           "path": "dk/2cca8f440a6b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -531,7 +532,8 @@
           },
           "path": "dk/06b83d89c96e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -586,7 +588,8 @@
           },
           "path": "dk/e3fa431ffacf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "8189751dfa37",
@@ -642,7 +645,8 @@
           },
           "path": "dk/70085e6dd584.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1083,7 +1087,8 @@
           },
           "path": "dk/01dbc012bfe9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1137,7 +1142,9 @@
           },
           "path": "dk/3da7a5b76313.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A red Danish post box on a brick wall; the arrow points to the PostNord logo"
         }
       ],
       "locations": [
@@ -1187,7 +1194,9 @@
           },
           "path": "dk/97e07f3ecd81.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Four gas stations in a grid showing brands shared with neighbouring countries"
         }
       ],
       "locations": [
@@ -1314,7 +1323,15 @@
           },
           "path": "dk/9549d7463f61.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1347,15 +1364,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "4efcfea5f448",
-          "src": "https://www.plonkit.net/images/denmark/Denmark_Bus_Companies.png",
-          "path": "dk/4efcfea5f448.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1398,15 +1407,7 @@
         "_A separate Plonk It guide to Greenland can be found [here](https://www.plonkit.net/greenland)._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "8878b68b21a8",
-          "src": "https://www.plonkit.net/images/denmark/Denmark_Greenland_General.png",
-          "path": "dk/8878b68b21a8.webp",
-          "width": 800,
-          "height": 609
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "GL"
@@ -1429,15 +1430,7 @@
         "_A separate Plonk It guide to Faroe Islands can be found [here](https://www.plonkit.net/faroe-islands)._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "7e2bb7f19ca3",
-          "src": "https://www.plonkit.net/images/denmark/Denmark_Faroe_Islands_General.png",
-          "path": "dk/7e2bb7f19ca3.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "FO"
@@ -1474,7 +1467,15 @@
           },
           "path": "dk/3c1d22945377.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1586,7 +1587,16 @@
           },
           "path": "dk/3be49a7ca797.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Long house thatched with thick seaweed; the red circle magnifies the thatch",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1700,8 +1710,7 @@
           "src": "https://learnablemeta.com/images/103/iwpKtCKnSiABi8pJrDIiuqtjlaVEAwnzGI1d.avif",
           "path": "dk/86d0e3731110.webp",
           "width": 1000,
-          "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "height": 562
         }
       ],
       "locations": [],
@@ -1730,7 +1739,7 @@
           "path": "dk/f7a3aef2d1b0.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "dupeOf": "86d0e3731110"
         }
       ],
       "locations": [],
@@ -1759,7 +1768,7 @@
           "path": "dk/c8149692a8e6.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "dupeOf": "86d0e3731110"
         }
       ],
       "locations": [],
@@ -1788,7 +1797,7 @@
           "path": "dk/c637e17a1517.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "dupeOf": "86d0e3731110"
         }
       ],
       "locations": [],
@@ -1817,7 +1826,7 @@
           "path": "dk/d77e235f04f7.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "dupeOf": "86d0e3731110"
         }
       ],
       "locations": [],
@@ -1846,7 +1855,7 @@
           "path": "dk/ba5bab18e4e1.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "4efcfea5f448"
+          "dupeOf": "86d0e3731110"
         }
       ],
       "locations": [],

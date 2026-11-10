@@ -969,7 +969,8 @@
           },
           "path": "ro/1b9af024fc48.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         },
         {
           "id": "b7ffae05b940",
@@ -1024,7 +1025,8 @@
           },
           "path": "ro/3d0ce8d13c0a.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1071,7 +1073,9 @@
           },
           "path": "ro/c8f8a2fa79c4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Haystacks built around a stick standing straight through the middle"
         }
       ],
       "locations": [
@@ -1119,7 +1123,9 @@
           },
           "path": "ro/1ecffc40f2ec.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Dacia cars, the most common brand, parked side by side"
         }
       ],
       "locations": [
@@ -1151,16 +1157,7 @@
         "This is an **elevation map** of Romania. The tallest mountains are found in the middle and north of the country, while the south and west are particularly flat."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "c59db7cfdc3b",
-          "src": "https://www.plonkit.net/images/romania/ro_topography.png",
-          "giveaway": true,
-          "path": "ro/c59db7cfdc3b.webp",
-          "width": 600,
-          "height": 429
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1196,7 +1193,15 @@
           },
           "path": "ro/be9be9d495b5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1243,7 +1248,15 @@
           },
           "path": "ro/92690b7583d5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         },
         {
           "id": "4731490764ab",
@@ -1298,7 +1311,15 @@
           },
           "path": "ro/acbe9cfef259.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         },
         {
           "id": "ebc6af3791e2",
@@ -1353,7 +1374,15 @@
           },
           "path": "ro/f7cba5c4591e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1410,7 +1439,15 @@
           },
           "path": "ro/c440c30c7c28.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1515,7 +1552,16 @@
           },
           "path": "ro/8d6383869079.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Elaborately decorated wooden gate with a shingled roof",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1562,7 +1608,16 @@
           },
           "path": "ro/b32cf319b198.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A field of sunflowers",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1640,7 +1695,15 @@
           },
           "path": "ro/036d488e32f3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.58,
+            "w": 0.64,
+            "h": 0.42
+          }
         }
       ],
       "locations": [
@@ -1687,7 +1750,15 @@
           },
           "path": "ro/af6fa29fec3a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.35,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1734,7 +1805,16 @@
           },
           "path": "ro/806e0ab2ede9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Roof windows shaped like a squinting eye, circled in red at the top left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1781,7 +1861,15 @@
           },
           "path": "ro/dd703571ef04.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1828,7 +1916,15 @@
           },
           "path": "ro/7c514e5d8f33.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1957,7 +2053,9 @@
           "src": "https://learnablemeta.com/images/5/ZW1xxMhGgGCE0TyOOznHD14ToxGNm0eYHG3T.avif",
           "path": "ro/03907a01ad26.webp",
           "width": 1000,
-          "height": 301
+          "height": 301,
+          "role": "example",
+          "caption": "Blue street sign reading Str. Lipscani"
         }
       ],
       "locations": [],
@@ -2124,7 +2222,9 @@
           "src": "https://learnablemeta.com/images/4588/1777499717430-GNx.avif",
           "path": "ro/d0c33a089baf.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example",
+          "caption": "White taxi with a checkered band and a purple sticker"
         }
       ],
       "locations": [],
@@ -2152,7 +2252,9 @@
           "src": "https://learnablemeta.com/images/4588/1777497886212-1fE.avif",
           "path": "ro/ef351421bc67.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example",
+          "caption": "A green mountain with two towers rises behind a Lidl supermarket car park."
         }
       ],
       "locations": [],
@@ -2180,7 +2282,9 @@
           "src": "https://learnablemeta.com/images/4588/1777499347819-W18.avif",
           "path": "ro/0894a89ef666.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example",
+          "caption": "White and pink city bus on top and tram below"
         }
       ],
       "locations": [],

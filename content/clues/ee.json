@@ -581,7 +581,9 @@
           },
           "path": "ee/d1913de4bf60.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A blue km post by the road with the number 12; the circle zooms in, a road diagram at right"
         }
       ],
       "locations": [
@@ -1033,7 +1035,8 @@
           },
           "path": "ee/50dc60a1cb33.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1087,7 +1090,8 @@
           },
           "path": "ee/49d86a9a58ef.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1139,7 +1143,8 @@
           },
           "path": "ee/c106830787f1.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1357,16 +1362,7 @@
         "Still, the **hilly parts** can sometimes be recognizable. The hilliest areas are in the southeast, and the southern half of Lääne-Viru County. Note that the colours of this map are highly exaggerated to show the location of the hills more clearly."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "b581fa441838",
-          "src": "https://www.plonkit.net/images/estonia/img-2.png",
-          "giveaway": true,
-          "path": "ee/b581fa441838.webp",
-          "width": 800,
-          "height": 531
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1459,7 +1455,15 @@
           },
           "path": "ee/df2c4b1bc18f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [

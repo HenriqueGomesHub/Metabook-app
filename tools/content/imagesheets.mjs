@@ -28,7 +28,7 @@ const CONCURRENCY = 8;
 
 /**
  * The images to review, in sheet order: one row per image id (its first clue), skipping images
- * without `path`, with `dupeOf`, or of other families.
+ * without `path`, with `dupeOf`, already reviewed (`role` set), or of other families.
  */
 export function sheetRows(countries, families = SHEET_FAMILIES) {
   const rows = [];
@@ -37,7 +37,7 @@ export function sheetRows(countries, families = SHEET_FAMILIES) {
     for (const country of [...countries].sort((a, b) => a.country.localeCompare(b.country))) {
       for (const clue of country.clues.filter((c) => c.family === family)) {
         for (const image of clue.images) {
-          if (!image.path || image.dupeOf || seen.has(image.id)) continue;
+          if (!image.path || image.dupeOf || image.role || seen.has(image.id)) continue;
           seen.add(image.id);
           rows.push({ imageId: image.id, clueId: clue.id, country: country.country, family, title: clue.title, path: image.path, width: image.width, height: image.height });
         }

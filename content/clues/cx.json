@@ -30,16 +30,7 @@
         "NOTE: Do not get its location confused with the Cocos (Keeling) Islands, which are another Australian territory a little west of Christmas Island."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "3be8ed3fa597",
-          "src": "https://www.plonkit.net/images/christmas-island/Christmas_Island_in_its_region.png",
-          "giveaway": true,
-          "path": "cx/3be8ed3fa597.webp",
-          "width": 600,
-          "height": 338
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "AU",
@@ -132,7 +123,8 @@
           },
           "path": "cx/4651f7de5c48.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -313,7 +305,15 @@
           },
           "path": "cx/bcea89fb37f1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -526,7 +526,15 @@
           },
           "path": "cx/9907af97c47a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
