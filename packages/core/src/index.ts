@@ -1,4 +1,5 @@
 export * from './types';
+export * from './clues';
 export * from './answers';
 export * from './blocks';
 export * from './confusions';
