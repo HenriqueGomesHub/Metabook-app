@@ -18,10 +18,12 @@ const TYPE_NAMES: Record<CardType, string> = {
   region: 'Regions',
   areacode: 'Area codes',
   plate: 'Plates',
-  'photo-choice': 'Photo picks',
+  spot: 'Spot it',
+  which: 'Which clue',
+  live: 'Live view',
 };
 
-/** Drill tiles and auto chapters per meta subject. */
+/** Drill tiles and auto chapters per meta subject (the clue families). */
 export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
   bollard: { label: 'Bollards', blurb: 'Roadside posts and their reflectors' },
   pole: { label: 'Poles', blurb: 'Utility poles, their shapes and markings' },
@@ -30,8 +32,10 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
   line: { label: 'Road lines', blurb: 'Centre and edge line patterns' },
   guardrail: { label: 'Guardrails', blurb: 'Barriers and their reflectors' },
   language: { label: 'Language', blurb: 'Letters and words on signs' },
-  car: { label: 'Google car', blurb: 'Car, camera and coverage clues' },
-  landscape: { label: 'Landscape', blurb: 'Terrain, vegetation and soil' },
+  car: { label: 'Google car', blurb: 'Car, camera mount and antenna' },
+  coverage: { label: 'Coverage', blurb: 'Camera generation, blur and where coverage is' },
+  landscape: { label: 'Landscape', blurb: 'Terrain, soil and scenery' },
+  vegetation: { label: 'Vegetation', blurb: 'Trees, crops and plants' },
   architecture: { label: 'Architecture', blurb: 'Houses, roofs and pavements' },
   other: { label: 'Basics', blurb: 'Driving side, domains, calling codes' },
 };
@@ -73,7 +77,12 @@ export function label(key: string, scope?: Scope): string {
 
 /** Card-type and tag names for headings like "Weakest". */
 export function tagLabel(tag: string): string {
-  return TYPE_NAMES[tag as CardType] ?? label(tag).replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+  return (
+    TYPE_NAMES[tag as CardType] ??
+    label(tag)
+      .replace(/-/g, ' ')
+      .replace(/^\w/, (c) => c.toUpperCase())
+  );
 }
 
 /** Confusion pairs always read "picked / truth" in that order. */

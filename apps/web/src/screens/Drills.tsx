@@ -1,10 +1,10 @@
-import { isClueCard, mastery } from '@metabook/core';
+import { CLUE_FAMILIES, isClueCard, mastery } from '@metabook/core';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
-import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
-import { SUBJECT_ORDER, SUBJECTS } from '../app/labels';
+import { CARD_TYPES, CLUE_TYPES, TYPE_ORDER } from '../app/cardTypes';
+import { SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
@@ -24,6 +24,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
   const tiles = useMemo(
     () =>
       TYPE_ORDER.flatMap((type) => {
+        // clue catalogue cards get a tile per family instead (below)
+        if (CLUE_TYPES.includes(type)) return [];
         const ids = cards.filter((card) => card.type === type).map((card) => card.id);
         if (ids.length === 0) return [];
         return [
@@ -31,6 +33,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
             key: type,
             to: `/session?type=${type}`,
             ...CARD_TYPES[type],
+            count: ids.length,
             mastery: mastery(ids, data.states, now),
           },
         ];
@@ -48,6 +51,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         label: 'Where in the country',
         blurb: 'Place clues on each country’s regions map',
         icon: CARD_TYPES.region.icon,
+        count: ids.length,
         mastery: mastery(ids, data.states, now),
       },
     ];
@@ -63,34 +67,36 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         label: 'Clue quiz',
         blurb: 'Which country has this? Text questions on country facts',
         icon: CARD_TYPES.meta.icon,
+        count: ids.length,
         mastery: mastery(ids, data.states, now),
       },
     ];
   }, [data, now]);
-  // one tile per meta subject that has cards, e.g. Bollards across every country; a subject
-  // named like a type tile (Plates) is already covered by it
-  const subjectTiles = useMemo(
+  // one tile per clue family with cards from the clue catalogue (Spot it, Which clue, Live view),
+  // e.g. Bollards across every country
+  const familyTiles = useMemo(
     () =>
-      SUBJECT_ORDER.flatMap((subject) => {
-        if (tiles.some((tile) => tile.label === SUBJECTS[subject].label)) return [];
+      CLUE_FAMILIES.flatMap((family) => {
         const ids = cards
-          .filter((card) => card.subject === subject && !card.map)
+          .filter((card) => card.clue && card.subject === family && !card.map)
           .map((card) => card.id);
         if (ids.length === 0) return [];
         return [
           {
-            key: `subject-${subject}`,
-            to: `/session?subject=${subject}`,
-            ...SUBJECTS[subject],
-            icon: CARD_TYPES[subject === 'plate' ? 'plate' : 'meta'].icon,
+            key: `family-${family}`,
+            to: `/session?subject=${family}`,
+            label: family === 'other' ? 'Other clues' : SUBJECTS[family].label,
+            blurb: SUBJECTS[family].blurb,
+            icon: CARD_TYPES[family === 'plate' ? 'plate' : 'meta'].icon,
+            count: ids.length,
             mastery: mastery(ids, data.states, now),
           },
         ];
       }),
-    [data, cards, now, tiles],
+    [data, cards, now],
   );
 
-  const allTiles = [...tiles, ...whereTile, ...subjectTiles, ...clueTile];
+  const allTiles = [...familyTiles, ...tiles, ...whereTile, ...clueTile];
 
   return (
     <div className="page">
@@ -101,14 +107,14 @@ function DrillsView({ data }: { data: AppSnapshot }) {
             <h1 className="headline">Drills</h1>
             <p>Mixed is best. Single drills are for focus days.</p>
           </div>
-          {tiles.length > 0 && (
+          {allTiles.length > 0 && (
             <LinkButton to="/session">
               Mixed session
               <ArrowIcon />
             </LinkButton>
           )}
         </div>
-        {tiles.length === 0 && (
+        {allTiles.length === 0 && (
           <EmptyState
             title="No cards yet"
             text="Add some in the editor, then drill them here."
@@ -116,7 +122,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           />
         )}
         <div className="tiles">
-          {allTiles.map(({ key, to, label, blurb, icon, mastery: pct }) => (
+          {allTiles.map(({ key, to, label, blurb, icon, count, mastery: pct }) => (
             <Link key={key} className="tile" to={to}>
               <div className="tile-top">
                 <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
@@ -147,8 +153,9 @@ function DrillsView({ data }: { data: AppSnapshot }) {
                     style={{ width: `${Math.round(pct * 100)}%` }}
                   />
                 </div>
-                <span className="muted small" aria-hidden="true">
-                  {Math.round(pct * 100)}%
+                <span className="muted small">
+                  {count} {count === 1 ? 'card' : 'cards'}
+                  <span aria-hidden="true"> · {Math.round(pct * 100)}%</span>
                 </span>
               </div>
             </Link>

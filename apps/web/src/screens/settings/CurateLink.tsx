@@ -19,12 +19,12 @@ export function CurateLink() {
   }, [api]);
   if (!admin) return null;
   return (
-    <section className="sheet" aria-label="Photo curation">
-      <h2 className="headline">Photo curation</h2>
-      <p className="note">Keep or reject the photos content jobs have queued.</p>
+    <section className="sheet" aria-label="Clue image curation">
+      <h2 className="headline">Clue images</h2>
+      <p className="note">Hide clue images from drills, or crop away what gives them away.</p>
       <div className="actions">
         <LinkButton to="/curate">
-          Curate photos
+          Curate images
           <ArrowIcon />
         </LinkButton>
       </div>

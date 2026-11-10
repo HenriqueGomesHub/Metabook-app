@@ -8,7 +8,6 @@ export const CARD_TYPE_LIST: CardType[] = [
   'region',
   'areacode',
   'plate',
-  'photo-choice',
 ];
 export const PROMPT_KINDS: PromptKind[] = ['flag', 'text', 'image', 'embed', 'svg'];
 

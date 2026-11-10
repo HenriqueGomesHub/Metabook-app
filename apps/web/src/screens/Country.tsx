@@ -12,7 +12,8 @@ import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { pct, WEAK } from './atlas/format';
-import { LearnList } from './atlas/LearnList';
+import { clueIndex } from '../data/clueIndex';
+import { LearnClues } from './atlas/LearnClues';
 import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
 
@@ -60,7 +61,7 @@ function CountryView({
 
   const view = useMemo(() => {
     const all = data.content.cards.filter((card) => card.country === code);
-    // text-only clue cards are read in the Learn list (and quizzed in the Clue quiz), not drilled
+    // text-only clue cards are read in the Learn section (and quizzed in the Clue quiz), not drilled
     const cards = all.filter((card) => !isClueCard(card));
     const ids = cards.map((card) => card.id);
     const byChapter = (chapter: string): Card[] => cards.filter((card) => card.chapter === chapter);
@@ -131,7 +132,8 @@ function CountryView({
       const state = data.states[id];
       return state && state.state !== 'new' && Date.parse(state.due) <= now.getTime();
     }).length;
-    return { cards, chapters, misses, due, value: mastery(ids, data.states, now) };
+    const studyCount = cards.filter((card) => card.clue).length;
+    return { cards, chapters, misses, due, studyCount, value: mastery(ids, data.states, now) };
   }, [data, code, now, country?.name]);
 
   // misses on regions-map cards are state codes, named from the map once it has loaded
@@ -150,7 +152,7 @@ function CountryView({
     );
   }
 
-  const { cards, chapters, misses, due, value } = view;
+  const { cards, chapters, misses, due, studyCount, value } = view;
 
   async function toggleFocus() {
     setSaving(true);
@@ -300,7 +302,13 @@ function CountryView({
               })}
             </nav>
           )}
-          <LearnList code={code} name={country.name} />
+          <LearnClues
+            catalogue={clueIndex(data.content).byCountry.get(code)}
+            name={country.name}
+            code={code}
+            studyCount={studyCount}
+            signedIn={data.user !== null}
+          />
         </section>
 
         <aside className="country-side rise d3">

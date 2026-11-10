@@ -11,6 +11,7 @@ import type {
   Card,
   CardState,
   Confusion,
+  Grade,
   Review,
   Round,
   Settings,
@@ -58,6 +59,8 @@ export interface AnswerInput {
   picked?: string;
   msTaken: number;
   contrastPair?: [string, string];
+  /** a grade the learner chose (Saw it / Missed it after a round), instead of one from the answer */
+  grade?: Grade;
 }
 
 interface AppDataValue {
@@ -66,7 +69,7 @@ interface AppDataValue {
   repo: Repository;
   mode: Mode;
   auth: Auth;
-  /** photo curation; null in local mode */
+  /** clue image review; null in local mode */
   curation: CurationApi | null;
   /** undefined until the session has been looked up */
   user: AuthUser | null | undefined;
@@ -80,6 +83,8 @@ interface AppDataValue {
   saveOverride(override: CardOverride): Promise<void>;
   deleteOverride(id: string): Promise<void>;
   addCardStates(states: CardState[]): void;
+  /** Reloads content (and clue image overrides) after a change made elsewhere, such as /curate. */
+  refreshContent(): Promise<void>;
 }
 
 const AppDataContext = createContext<AppDataValue | null>(null);
@@ -204,12 +209,14 @@ export function AppDataProvider({
         return undefined;
       }
 
-      const grade = gradeAnswer({
-        correct: input.correct,
-        usedHint: false,
-        msTaken: input.msTaken,
-        medianMs: medianMs(data.reviews, data.content.cards, card.type),
-      });
+      const grade =
+        input.grade ??
+        gradeAnswer({
+          correct: input.correct,
+          usedHint: false,
+          msTaken: input.msTaken,
+          medianMs: medianMs(data.reviews, data.content.cards, card.type),
+        });
       const state = applyReview(
         data.states[card.id] ?? newCardState(card.id, now),
         grade,
@@ -314,6 +321,8 @@ export function AppDataProvider({
     [repo],
   );
 
+  const refreshContent = useCallback(() => reloadAfter(Promise.resolve()), [reloadAfter]);
+
   const saveOverride = useCallback(
     (override: CardOverride) => reloadAfter(repo.saveCardOverride(override)),
     [repo, reloadAfter],
@@ -356,6 +365,7 @@ export function AppDataProvider({
       saveOverride,
       deleteOverride,
       addCardStates,
+      refreshContent,
     }),
     [
       data,
@@ -374,6 +384,7 @@ export function AppDataProvider({
       saveOverride,
       deleteOverride,
       addCardStates,
+      refreshContent,
     ],
   );
   return <AppDataContext.Provider value={value}>{children}</AppDataContext.Provider>;

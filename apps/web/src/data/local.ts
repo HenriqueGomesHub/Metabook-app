@@ -2,6 +2,7 @@ import { DEFAULT_SETTINGS } from '@metabook/core';
 import type {
   BlockDay,
   CardState,
+  ClueImageOverride,
   Confusion,
   Review,
   Round,
@@ -11,7 +12,7 @@ import type {
 } from '@metabook/core';
 import { openDB } from 'idb';
 import type { DBSchema, IDBPDatabase, StoreNames, StoreValue } from 'idb';
-import type { CardOverride, Pairing, Repository } from './repository';
+import type { CardOverride, Pairing, Repository, SavedSpot } from './repository';
 
 interface MetabookDB extends DBSchema {
   settings: { key: string; value: Settings };
@@ -23,6 +24,7 @@ interface MetabookDB extends DBSchema {
   blocks: { key: string; value: TrainingBlock };
   blockDays: { key: [string, string]; value: BlockDay; indexes: { blockId: string } };
   cardOverrides: { key: string; value: CardOverride };
+  savedSpots: { key: string; value: SavedSpot & { id: string; createdAt: string } };
 }
 
 const SETTINGS_KEY = 'main';
@@ -31,7 +33,7 @@ export class LocalRepository implements Repository {
   private readonly db: Promise<IDBPDatabase<MetabookDB>>;
 
   constructor(name = 'metabook') {
-    this.db = openDB<MetabookDB>(name, 1, {
+    this.db = openDB<MetabookDB>(name, 2, {
       upgrade(db, oldVersion) {
         if (oldVersion < 1) {
           db.createObjectStore('settings');
@@ -50,6 +52,7 @@ export class LocalRepository implements Repository {
           );
           db.createObjectStore('cardOverrides', { keyPath: 'id' });
         }
+        if (oldVersion < 2) db.createObjectStore('savedSpots', { keyPath: 'id' });
       },
     });
   }
@@ -132,6 +135,21 @@ export class LocalRepository implements Repository {
 
   async deleteCardOverride(id: string): Promise<void> {
     await (await this.db).delete('cardOverrides', id);
+  }
+
+  /** Image corrections are made in /curate, which needs cloud mode. */
+  async listClueImageOverrides(): Promise<ClueImageOverride[]> {
+    return [];
+  }
+
+  /** No private bucket in local mode: images use their original URLs. */
+  async signClueImages(): Promise<Record<string, string>> {
+    return {};
+  }
+
+  async saveSpot(spot: SavedSpot): Promise<void> {
+    const id = crypto.randomUUID();
+    await (await this.db).put('savedSpots', { ...spot, id, createdAt: new Date().toISOString() });
   }
 
   async getPairing(): Promise<Pairing | null> {

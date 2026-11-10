@@ -32,6 +32,9 @@ import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { optionsFor } from './session/options';
+import { preloadClueImages } from '../data/clueImages';
+import type { Repository } from '../data/repository';
+import { ClueAnswer } from './session/ClueAnswer';
 import { preloadPrompt } from './session/Prompt';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
@@ -45,6 +48,8 @@ const CONTRAST_DOTS = 5;
 
 interface Scope {
   type?: CardType;
+  /** `src=clues`: only cards made from the clue catalogue (Spot it, Which clue, Live view) */
+  clues?: boolean;
   subject?: MetaSubject;
   country?: string;
   chapter?: string;
@@ -56,7 +61,7 @@ interface Scope {
 
 /**
  * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
- * `chapter`, `map` or `clue` starts endless practice over the cards in that scope instead; a scope
+ * `chapter`, `map`, `clue` or `src=clues` starts endless practice over the cards in that scope instead; a scope
  * of one card shows the summary after each answer rather than looping on it. Text-only clue cards
  * only come up in the Clue quiz (`clue=1`).
  */
@@ -73,19 +78,28 @@ export function Session() {
   const mapParam = params.get('map');
   const map = mapParam === '1' ? true : mapParam === '0' ? false : undefined;
   const clue = params.get('clue') === '1' || undefined;
+  const clues = params.get('src') === 'clues' || undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}`;
-  return type || subject || country || chapter || map !== undefined || clue ? (
-    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map, clue }} />
+  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}`;
+  return type || subject || country || chapter || map !== undefined || clue || clues ? (
+    <PracticeRunner
+      key={key}
+      data={data}
+      scope={{ type, subject, country, chapter, map, clue, clues }}
+    />
   ) : (
     <DueRunner data={data} />
   );
 }
 
-function inScope(cards: Card[], { type, subject, country, chapter, map, clue }: Scope): Card[] {
+function inScope(
+  cards: Card[],
+  { type, subject, country, chapter, map, clue, clues }: Scope,
+): Card[] {
   return cards.filter(
     (card) =>
       (clue ? isClueCard(card) : !isClueCard(card)) &&
+      (!clues || Boolean(card.clue)) &&
       // regions-map cards only come up in map drills, not with their subject's "which country?"
       (map === undefined ? !subject || !card.map : map === Boolean(card.map)) &&
       (!type || card.type === type) &&
@@ -102,7 +116,17 @@ function backTo(data: AppSnapshot, scope: Scope): string {
   return scope.type || !country ? '/drills' : `/atlas/${country}`;
 }
 
+/** Warms the cache for an upcoming card: clue images through their signed URLs, else the prompt. */
+function preload(repo: Repository, card: Card | undefined) {
+  if (!card) return;
+  const clue = card.clue;
+  if (!clue) return preloadPrompt(card.prompt);
+  const images = clue.choices?.map((c) => c.image) ?? (clue.image ? [clue.image] : []);
+  preloadClueImages(repo, images);
+}
+
 function DueRunner({ data }: { data: AppSnapshot }) {
+  const { repo } = useAppData();
   const [queue, setQueue] = useState(() => todaySession(data, new Date()).queue);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
@@ -110,8 +134,11 @@ function DueRunner({ data }: { data: AppSnapshot }) {
 
   useEffect(() => {
     const upcoming = queue[index + 1];
-    preloadPrompt(cards.find((c) => c.id === upcoming?.cardId)?.prompt);
-  }, [queue, index, cards]);
+    preload(
+      repo,
+      cards.find((c) => c.id === upcoming?.cardId),
+    );
+  }, [queue, index, cards, repo]);
 
   const item = queue[index];
   if (!item || !cards.some((c) => c.id === item.cardId)) {
@@ -180,6 +207,7 @@ interface PracticeFlow {
 }
 
 function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
+  const { repo } = useAppData();
   const [pool] = useState(() => inScope(data.content.cards, scope));
   const [flow, setFlow] = useState<PracticeFlow | null>(() => {
     if (pool.length === 0) return null;
@@ -242,7 +270,10 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       state ? { ...data.states, [state.cardId]: state } : data.states,
       new Date(),
     );
-    preloadPrompt(pool.find((c) => c.id === upcoming.item.cardId)?.prompt);
+    preload(
+      repo,
+      pool.find((c) => c.id === upcoming.item.cardId),
+    );
     setFlow({ ...flow, practice, upcoming });
   }
 
@@ -335,11 +366,11 @@ function CardRunner({
 
   /**
    * The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards,
-   * and photo picks (whose answer is a photo id) use the country's tips.
+   * and Which clue cards (whose answer is an image id) use the country's tips.
    */
   function mainTip(): PickedTip | null {
     const { tips } = data.content;
-    const key = card.type === 'photo-choice' ? label(card.country) : card.answer;
+    const key = card.type === 'which' ? label(card.country) : card.answer;
     return (
       pickTip(tips, key, card.type, data.tipViews) ??
       (card.type === 'areacode'
@@ -372,9 +403,9 @@ function CardRunner({
   function onAnswer(given: string) {
     if (outcome) return;
     const correct = isCorrect(item, card, given, cards);
-    // a photo pick's options are photo ids, not answers a confusion could pair
+    // a Which clue card's options are image ids, not answers a confusion could pair
     const picked =
-      correct || card.type === 'photo-choice'
+      correct || card.type === 'which'
         ? undefined
         : item.mode === 'recall'
           ? matchedOther(card, given, cards)
@@ -399,6 +430,7 @@ function CardRunner({
       {...verdict}
       tip={shown.tip}
       aside={shown.aside}
+      extra={card.clue && <ClueAnswer card={card} />}
       onNext={onNext}
       onAnotherTip={anotherTip}
     />

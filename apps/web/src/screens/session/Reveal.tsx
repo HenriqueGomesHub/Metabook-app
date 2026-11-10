@@ -1,5 +1,6 @@
 import type { PickedTip } from '@metabook/core';
 import { useId } from 'react';
+import type { ReactNode } from 'react';
 import { Button } from '../../components/Button';
 
 export type Tone = 'right' | 'wrong' | 'neutral';
@@ -11,6 +12,8 @@ export interface RevealProps {
   detail?: string;
   /** the card's own reason, shown before the rotating tip */
   why?: string;
+  /** more about the answer after the tips, e.g. the clue behind a clue card */
+  extra?: ReactNode;
   tip: PickedTip | null;
   /** a tip about another option: the wrong pick, or the other lookalike */
   aside?: { label: string; tip: PickedTip };
@@ -30,6 +33,7 @@ export function Reveal({
   tone,
   detail,
   why,
+  extra,
   tip,
   aside,
   onNext,
@@ -76,6 +80,7 @@ export function Reveal({
             <p>{aside.tip.tip.text}</p>
           </div>
         )}
+        {extra}
       </div>
       <Button className="reveal-next" onClick={onNext} autoFocus>
         {nextLabel}
