@@ -4,7 +4,7 @@ import { label, SUBJECT_ORDER, SUBJECTS } from '../app/labels';
 import { EmptyState } from '../components/EmptyState';
 import { Status } from '../components/Status';
 import { AlreadyCollected } from '../data/curation';
-import type { Candidate, CurationApi, Decision } from '../data/curation';
+import type { Candidate, Crop, CurationApi, Decision } from '../data/curation';
 import { CandidateGrid } from './curate/CandidateGrid';
 import { CandidateReview } from './curate/CandidateReview';
 import { Page } from './manage/Page';
@@ -106,13 +106,16 @@ function CurateQueue({
     }
   }
 
+  /** Runs one request at a time; resolves false (and shows why) when it failed. */
   async function run(work: () => Promise<void>) {
     setBusy(true);
     setError('');
     try {
       await work();
+      return true;
     } catch (reason) {
       setError(message(reason));
+      return false;
     } finally {
       setBusy(false);
     }
@@ -122,7 +125,15 @@ function CurateQueue({
     run(async () => {
       await api.decide(candidate.id, decision);
       setPending((list) => (list ?? []).filter((c) => c.id !== candidate.id));
-      setDecided((list) => [...list, candidate]);
+      const { crop = candidate.crop } = decision;
+      setDecided((list) => [...list, { ...candidate, crop }]);
+    });
+
+  // Grid: decideMany can't carry a crop per row, so it is saved now; "Keep the rest" approves it.
+  const cropOne = (candidate: Candidate, crop: Crop | null) =>
+    run(async () => {
+      await api.setCrop(candidate.id, crop);
+      setPending((list) => (list ?? []).map((c) => (c.id === candidate.id ? { ...c, crop } : c)));
     });
 
   const undo = () =>
@@ -131,14 +142,21 @@ function CurateQueue({
       if (!last) return;
       const { subject: was, giveaways, caption } = last;
       try {
-        await api.decide(last.id, { status: 'pending', subject: was, giveaways, caption });
+        await api.decide(last.id, {
+          status: 'pending',
+          subject: was,
+          giveaways,
+          caption,
+          // back in the queue uncropped
+          ...(last.crop ? { crop: null } : {}),
+        });
       } catch (reason) {
         // already collected: it stays approved, and the next undo reaches the one before
         if (reason instanceof AlreadyCollected) setDecided((list) => list.slice(0, -1));
         throw reason;
       }
       setDecided((list) => list.slice(0, -1));
-      setPending((list) => [last, ...(list ?? [])]);
+      setPending((list) => [{ ...last, crop: null }, ...(list ?? [])]);
     });
 
   // Two requests at most. Sequential, so a failure leaves the page on screen and retrying is safe
@@ -164,7 +182,11 @@ function CurateQueue({
         ),
       );
       setPages((list) => list.slice(0, -1));
-      setPending((list) => [...last.filter((c) => reset.has(c.id)), ...(list ?? [])]);
+      // decideMany cleared their crops too
+      setPending((list) => [
+        ...last.filter((c) => reset.has(c.id)).map((c) => ({ ...c, crop: null })),
+        ...(list ?? []),
+      ]);
       const kept = last.length - reset.size;
       if (kept > 0) {
         setError(
@@ -255,6 +277,7 @@ function CurateQueue({
           canUndo={pages.length > 0}
           onKeepRest={keepRest}
           onUndo={undoPage}
+          onCrop={cropOne}
         />
       )}
       {current && view === 'single' && (

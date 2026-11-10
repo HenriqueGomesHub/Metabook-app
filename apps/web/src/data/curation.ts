@@ -19,6 +19,19 @@ export interface Candidate {
   description: string | null;
   caption: string | null;
   giveaways: string[];
+  /** pixel size of the candidate file, when the pipeline recorded it */
+  width: number | null;
+  height: number | null;
+  /** the part of the photo to keep, set while curating (0004_crop.sql); null keeps it whole */
+  crop: Crop | null;
+}
+
+/** A crop as fractions 0..1 of the original image: left, top, width, height. */
+export interface Crop {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
 }
 
 export interface Decision {
@@ -26,6 +39,8 @@ export interface Decision {
   subject: MetaSubject;
   giveaways: string[];
   caption: string | null;
+  /** written only when present: a crop, or null to clear one; left out, the row keeps its crop */
+  crop?: Crop | null;
 }
 
 /** Admin-only access to the photo queue; RLS enforces it on the server. */
@@ -42,9 +57,11 @@ export interface CurationApi {
   /**
    * Sets one status on many rows in a single request (an `in` filter). Writes only status and
    * decided_at, so each row keeps its own subject, giveaways and caption; no-op for no ids.
-   * Back to 'pending' skips collected rows. Returns the ids it changed.
+   * Back to 'pending' skips collected rows and also clears their crop. Returns the ids it changed.
    */
   decideMany(ids: string[], status: Decision['status']): Promise<string[]>;
+  /** Saves only the crop of one uncollected row (the grid approves it later with decideMany). */
+  setCrop(id: string, crop: Crop | null): Promise<void>;
 }
 
 /** An undo refused because the photo is already in the cards. */
@@ -52,6 +69,24 @@ export class AlreadyCollected extends Error {
   constructor() {
     super('That photo is already in the cards, so it can’t be undone here.');
   }
+}
+
+/** Saving a crop before supabase/migrations/0004_crop.sql has added the column. */
+export class CropUnavailable extends Error {
+  constructor() {
+    super('Run supabase/migrations/0004_crop.sql to enable cropping');
+  }
+}
+
+interface PostgrestError {
+  code?: string;
+  message?: string;
+}
+
+/** PostgREST: PGRST204 for an unknown column in a write, 42703 for one in a select. */
+export function isMissingCrop(error: unknown): boolean {
+  const { code, message = '' } = (error ?? {}) as PostgrestError;
+  return (code === 'PGRST204' || code === '42703') && /\bcrop\b/.test(message);
 }
 
 interface Row {
@@ -68,11 +103,31 @@ interface Row {
   description: string | null;
   caption: string | null;
   giveaways: string[] | null;
+  width?: number | null;
+  height?: number | null;
+  crop?: Crop | null;
 }
 
 const PAGE = 1000;
+const COLUMNS =
+  'id,country,subject,source,source_url,storage_path,width,height,preview,credit,licence,title,description,caption,giveaways';
 
 export function supabaseCuration(client: SupabaseClient): CurationApi {
+  /** false once the database has said media_candidates has no crop column yet */
+  let hasCrop = true;
+
+  /** Runs an update that writes crop; without the column, retries it once without crop. */
+  async function clearingCrop<R extends { error: unknown }>(
+    update: (withCrop: boolean) => PromiseLike<R>,
+  ): Promise<R> {
+    if (hasCrop) {
+      const result = await update(true);
+      if (!isMissingCrop(result.error)) return result;
+      hasCrop = false;
+    }
+    return update(false);
+  }
+
   return {
     async isAdmin() {
       // RLS only lets a user read their own app_admins row
@@ -83,17 +138,21 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
       // PostgREST returns at most 1000 rows per request, so page through the whole queue
       const rows: Row[] = [];
       for (let from = 0; ; from += PAGE) {
-        const { data, error } = await client
-          .from('media_candidates')
-          .select(
-            'id,country,subject,source,source_url,storage_path,preview,credit,licence,title,description,caption,giveaways',
-          )
-          .eq('status', 'pending')
-          .order('created_at')
-          .order('id')
-          .range(from, from + PAGE - 1);
+        const page = () =>
+          client
+            .from('media_candidates')
+            .select(hasCrop ? `${COLUMNS},crop` : COLUMNS)
+            .eq('status', 'pending')
+            .order('created_at')
+            .order('id')
+            .range(from, from + PAGE - 1);
+        let { data, error } = await page();
+        if (hasCrop && isMissingCrop(error)) {
+          hasCrop = false;
+          ({ data, error } = await page());
+        }
         if (error) throw error;
-        rows.push(...(data as Row[]));
+        rows.push(...(data as unknown as Row[]));
         if ((data?.length ?? 0) < PAGE) break;
       }
       return rows.map((row) => ({
@@ -110,39 +169,67 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
         description: row.description,
         caption: row.caption,
         giveaways: row.giveaways ?? [],
+        width: row.width ?? null,
+        height: row.height ?? null,
+        crop: row.crop ?? null,
       }));
     },
-    async decide(id, { status, subject, giveaways, caption }) {
-      // only the columns the migration grants UPDATE on (0003_media.sql)
-      let query = client
-        .from('media_candidates')
-        .update({
-          status,
-          subject,
-          giveaways,
-          caption,
-          decided_at: status === 'pending' ? null : new Date().toISOString(),
-        })
-        .eq('id', id);
-      // an undo must not pull a photo back out of the cards
-      if (status === 'pending') query = query.is('collected_at', null);
-      const { data, error } = await query.select('id');
+    async decide(id, { status, subject, giveaways, caption, crop }) {
+      // only the columns the migrations grant UPDATE on (0003_media.sql, 0004_crop.sql)
+      const run = (withCrop: boolean) => {
+        let query = client
+          .from('media_candidates')
+          .update({
+            status,
+            subject,
+            giveaways,
+            caption,
+            ...(withCrop && crop !== undefined ? { crop } : {}),
+            decided_at: status === 'pending' ? null : new Date().toISOString(),
+          })
+          .eq('id', id);
+        // an undo must not pull a photo back out of the cards
+        if (status === 'pending') query = query.is('collected_at', null);
+        return query.select('id');
+      };
+      // a crop being saved needs the column; clearing one (undo) can do without it
+      const { data, error } = crop ? await run(true) : await clearingCrop(run);
+      if (isMissingCrop(error)) throw new CropUnavailable();
       if (error) throw error;
       if (status === 'pending' && !data?.length) throw new AlreadyCollected();
     },
     async decideMany(ids, status) {
       if (!ids.length) return [];
-      let query = client
-        .from('media_candidates')
-        .update({
-          status,
-          decided_at: status === 'pending' ? null : new Date().toISOString(),
-        })
-        .in('id', ids);
-      if (status === 'pending') query = query.is('collected_at', null);
-      const { data, error } = await query.select('id');
+      const undo = status === 'pending';
+      const run = (withCrop: boolean) => {
+        let query = client
+          .from('media_candidates')
+          .update({
+            status,
+            // an undone row comes back uncropped
+            ...(undo && withCrop ? { crop: null } : {}),
+            decided_at: undo ? null : new Date().toISOString(),
+          })
+          .in('id', ids);
+        if (undo) query = query.is('collected_at', null);
+        return query.select('id');
+      };
+      const { data, error } = undo ? await clearingCrop(run) : await run(false);
       if (error) throw error;
       return (data as { id: string }[]).map((row) => row.id);
+    },
+    async setCrop(id, crop) {
+      const { error } = await client
+        .from('media_candidates')
+        .update({ crop })
+        .eq('id', id)
+        .is('collected_at', null)
+        .select('id');
+      if (isMissingCrop(error)) {
+        hasCrop = false;
+        throw new CropUnavailable();
+      }
+      if (error) throw error;
     },
   };
 }

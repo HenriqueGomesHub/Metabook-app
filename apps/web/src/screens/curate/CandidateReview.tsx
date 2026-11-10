@@ -3,12 +3,14 @@ import { useState } from 'react';
 import { SUBJECT_ORDER, SUBJECTS } from '../../app/labels';
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
-import type { Candidate, Decision } from '../../data/curation';
+import { CroppedImage } from '../../components/CroppedImage';
+import { CropBox } from '../../components/CropBox';
+import type { Candidate, Crop, Decision } from '../../data/curation';
 import { mediaUrl } from '../../data/media';
 import { useKeys } from '../session/useKeys';
 
 /**
- * One candidate, large, with its edits. Keys: K keep, R reject, G giveaway, U undo last,
+ * One candidate, large, with its edits. Keys: K keep, R reject, C crop, G giveaway, U undo last,
  * 1–9 subject. Typing in the caption never triggers them.
  */
 export function CandidateReview({
@@ -29,14 +31,16 @@ export function CandidateReview({
   const [subject, setSubject] = useState<MetaSubject>(candidate.subject);
   const [giveaway, setGiveaway] = useState(candidate.giveaways.includes(candidate.subject));
   const [caption, setCaption] = useState('');
+  const [cropping, setCropping] = useState(false);
 
-  const decide = (status: Decision['status']) =>
+  const decide = (status: Decision['status'], crop?: Crop | null) =>
     onDecide({
       status,
       subject,
       // the photo is a clear giveaway for its subject
       giveaways: giveaway ? [subject] : [],
       caption: caption.trim() || null,
+      ...(crop !== undefined ? { crop } : {}),
     });
 
   useKeys((event) => {
@@ -44,26 +48,43 @@ export function CandidateReview({
     if (event.metaKey || event.ctrlKey || event.altKey) return;
     if (key === 'k') decide('approved');
     else if (key === 'r') decide('rejected');
+    else if (key === 'c') setCropping(true);
     else if (key === 'g') setGiveaway((on) => !on);
     else if (key === 'u' && canUndo) onUndo();
     else {
       const picked = SUBJECT_ORDER[Number(key) - 1];
       if (picked && /^[1-9]$/.test(key)) setSubject(picked);
     }
-  }, !busy);
+  }, !busy && !cropping);
+
+  const alt = caption || candidate.title || 'Candidate photo';
 
   return (
     <section className="sheet curate" aria-label="Candidate photo">
-      <div
-        className="curate-photo"
-        style={candidate.preview ? { backgroundImage: `url(${candidate.preview})` } : undefined}
-      >
-        <img
+      {cropping ? (
+        <CropBox
           src={mediaUrl(candidate.storagePath)}
-          alt={caption || candidate.title || 'Candidate photo'}
-          decoding="async"
+          alt={alt}
+          initial={candidate.crop}
+          size={candidate}
+          busy={busy}
+          onCancel={() => setCropping(false)}
+          onConfirm={(crop) => decide('approved', crop)}
         />
-      </div>
+      ) : (
+        <div
+          className="curate-photo"
+          style={candidate.preview ? { backgroundImage: `url(${candidate.preview})` } : undefined}
+        >
+          <CroppedImage
+            src={mediaUrl(candidate.storagePath)}
+            crop={candidate.crop}
+            alt={alt}
+            fit="contain"
+            size={candidate}
+          />
+        </div>
+      )}
       <div className="curate-meta">
         <span className="curate-country headline">{country}</span>
         <Chip>{SUBJECTS[subject].label}</Chip>
@@ -89,7 +110,8 @@ export function CandidateReview({
 
       {candidate.description && (
         <p className="note">
-          <strong>Description (curators only, may name the country):</strong> {candidate.description}
+          <strong>Description (curators only, may name the country):</strong>{' '}
+          {candidate.description}
         </p>
       )}
 
@@ -100,29 +122,35 @@ export function CandidateReview({
         </label>
       </div>
 
-      <div className="curate-actions">
-        <button
-          type="button"
-          className="toggle"
-          aria-pressed={giveaway}
-          onClick={() => setGiveaway((on) => !on)}
-        >
-          <kbd>G</kbd>
-          Giveaway
-        </button>
-        <Button variant="ghost" disabled={busy || !canUndo} onClick={onUndo}>
-          <kbd>U</kbd>
-          Undo last
-        </Button>
-        <Button variant="ghost" disabled={busy} onClick={() => decide('rejected')}>
-          <kbd>R</kbd>
-          Reject
-        </Button>
-        <Button disabled={busy} onClick={() => decide('approved')}>
-          <kbd>K</kbd>
-          Keep
-        </Button>
-      </div>
+      {!cropping && (
+        <div className="curate-actions">
+          <button
+            type="button"
+            className="toggle"
+            aria-pressed={giveaway}
+            onClick={() => setGiveaway((on) => !on)}
+          >
+            <kbd>G</kbd>
+            Giveaway
+          </button>
+          <Button variant="ghost" disabled={busy || !canUndo} onClick={onUndo}>
+            <kbd>U</kbd>
+            Undo last
+          </Button>
+          <Button variant="ghost" disabled={busy} onClick={() => decide('rejected')}>
+            <kbd>R</kbd>
+            Reject
+          </Button>
+          <Button variant="ghost" disabled={busy} onClick={() => setCropping(true)}>
+            <kbd>C</kbd>
+            Crop
+          </Button>
+          <Button disabled={busy} onClick={() => decide('approved')}>
+            <kbd>K</kbd>
+            Keep
+          </Button>
+        </div>
+      )}
     </section>
   );
 }

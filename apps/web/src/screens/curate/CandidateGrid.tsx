@@ -1,7 +1,9 @@
 import { useRef, useState } from 'react';
 import { SUBJECTS } from '../../app/labels';
 import { Button } from '../../components/Button';
-import type { Candidate } from '../../data/curation';
+import { CroppedImage } from '../../components/CroppedImage';
+import { CropBox } from '../../components/CropBox';
+import type { Candidate, Crop } from '../../data/curation';
 import { mediaUrl } from '../../data/media';
 import { useKeys } from '../session/useKeys';
 
@@ -11,8 +13,9 @@ const LONG_PRESS_MS = 500;
 
 /**
  * One page of candidates as a grid. Tap a tile to mark it for rejection; "Keep the rest" approves
- * the unmarked ones. Long-press or right-click opens a photo large. Remount per page (key) to
- * clear the marks.
+ * the unmarked ones. Long-press or right-click opens a photo large, where C crops it: the crop is
+ * saved at once and the tile, unmarked, is kept with the rest. Remount per page (key) to clear the
+ * marks.
  */
 export function CandidateGrid({
   page,
@@ -20,15 +23,19 @@ export function CandidateGrid({
   canUndo,
   onKeepRest,
   onUndo,
+  onCrop,
 }: {
   page: Candidate[];
   busy: boolean;
   canUndo: boolean;
   onKeepRest(rejectedIds: string[]): void;
   onUndo(): void;
+  /** saves one photo's crop; resolves true when it was saved */
+  onCrop(candidate: Candidate, crop: Crop | null): Promise<boolean>;
 }) {
   const [marked, setMarked] = useState<ReadonlySet<string>>(new Set());
   const [viewing, setViewing] = useState<Candidate | null>(null);
+  const [cropping, setCropping] = useState(false);
   const timer = useRef<number>();
   const longPressed = useRef(false);
 
@@ -52,9 +59,36 @@ export function CandidateGrid({
     if (tile && event.key.length === 1) toggle(tile.id);
   }, !busy && !viewing);
 
-  useKeys((event) => {
-    if (event.key === 'Escape') setViewing(null);
-  }, !!viewing);
+  useKeys(
+    (event) => {
+      if (event.key === 'Escape') setViewing(null);
+      else if (
+        event.key.toLowerCase() === 'c' &&
+        !event.metaKey &&
+        !event.ctrlKey &&
+        !event.altKey
+      ) {
+        setCropping(true);
+      }
+    },
+    !!viewing && !cropping && !busy,
+  );
+
+  const close = () => {
+    setCropping(false);
+    setViewing(null);
+  };
+
+  const crop = async (candidate: Candidate, value: Crop | null) => {
+    close();
+    if (!(await onCrop(candidate, value))) return;
+    // a cropped photo is a keep
+    setMarked((set) => {
+      const next = new Set(set);
+      next.delete(candidate.id);
+      return next;
+    });
+  };
 
   const startPress = (candidate: Candidate) => {
     longPressed.current = false;
@@ -71,6 +105,7 @@ export function CandidateGrid({
       <div className="grid-photos">
         {page.map((candidate, i) => {
           const rejected = marked.has(candidate.id);
+          const cropped = !!candidate.crop;
           const subject = SUBJECTS[candidate.subject].label;
           return (
             <button
@@ -78,7 +113,7 @@ export function CandidateGrid({
               type="button"
               className="grid-tile"
               aria-pressed={rejected}
-              aria-label={`Photo ${i + 1}, ${subject}${rejected ? ', rejected' : ''}`}
+              aria-label={`Photo ${i + 1}, ${subject}${cropped ? ', cropped' : ''}${rejected ? ', rejected' : ''}`}
               style={
                 candidate.preview ? { backgroundImage: `url(${candidate.preview})` } : undefined
               }
@@ -98,10 +133,25 @@ export function CandidateGrid({
                 setViewing(candidate);
               }}
             >
-              <img src={mediaUrl(candidate.storagePath)} alt="" loading="lazy" decoding="async" />
+              <CroppedImage
+                src={mediaUrl(candidate.storagePath)}
+                crop={candidate.crop}
+                alt=""
+                fit="cover"
+                size={candidate}
+                loading="lazy"
+              />
               <span className="grid-key" aria-hidden="true">
                 {TILE_KEYS[i]}
               </span>
+              {cropped && (
+                <span className="grid-crop" data-testid="crop-badge" title="Cropped">
+                  <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                    <path d="M6 2v16h16" />
+                    <path d="M2 6h16v16" />
+                  </svg>
+                </span>
+              )}
               <span className="grid-label">{subject}</span>
               {rejected && (
                 <span className="grid-x" aria-hidden="true">
@@ -127,7 +177,13 @@ export function CandidateGrid({
       </div>
 
       {viewing && (
-        <div className="grid-overlay" role="presentation" onClick={() => setViewing(null)}>
+        <div
+          className="grid-overlay"
+          role="presentation"
+          onClick={() => {
+            if (!cropping) close();
+          }}
+        >
           <div
             className="grid-overlay-card sheet"
             role="dialog"
@@ -135,18 +191,40 @@ export function CandidateGrid({
             aria-label="Photo"
             onClick={(event) => event.stopPropagation()}
           >
-            <img
-              src={mediaUrl(viewing.storagePath)}
-              alt={viewing.title || 'Candidate photo'}
-              decoding="async"
-            />
+            {cropping ? (
+              <CropBox
+                src={mediaUrl(viewing.storagePath)}
+                alt={viewing.title || 'Candidate photo'}
+                initial={viewing.crop}
+                size={viewing}
+                busy={busy}
+                onCancel={() => setCropping(false)}
+                onConfirm={(value) => void crop(viewing, value)}
+              />
+            ) : (
+              <CroppedImage
+                src={mediaUrl(viewing.storagePath)}
+                crop={viewing.crop}
+                alt={viewing.title || 'Candidate photo'}
+                fit="contain"
+                size={viewing}
+              />
+            )}
             {viewing.description && <p className="note">{viewing.description}</p>}
             <a className="note" href={viewing.sourceUrl} target="_blank" rel="noreferrer">
               {viewing.credit}
             </a>
-            <Button variant="ghost" autoFocus onClick={() => setViewing(null)}>
-              Close
-            </Button>
+            {!cropping && (
+              <div className="curate-actions">
+                <Button variant="ghost" disabled={busy} onClick={() => setCropping(true)}>
+                  <kbd>C</kbd>
+                  Crop
+                </Button>
+                <Button variant="ghost" autoFocus onClick={close}>
+                  Close
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       )}
