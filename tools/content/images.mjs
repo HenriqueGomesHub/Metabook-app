@@ -13,14 +13,19 @@ export async function download(url) {
   return Buffer.from(await (await request(url, {}, { timeoutMs: 120_000 })).arrayBuffer());
 }
 
-/** → { webp: Buffer, width, height, preview: 'data:image/webp;base64,…' } */
-export async function processImage(input) {
+/** Any image sharp reads (png, jpg, avif…) → { webp: Buffer, width, height }, at most `width` wide. */
+export async function encodeWebp(input, { width = WIDTH, quality = QUALITY } = {}) {
   const { data, info } = await sharp(input)
     .rotate() // honour EXIF orientation
-    .resize({ width: WIDTH, withoutEnlargement: true })
-    .webp({ quality: QUALITY })
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality })
     .toBuffer({ resolveWithObject: true });
-  return { webp: data, width: info.width, height: info.height, preview: await previewOf(input) };
+  return { webp: data, width: info.width, height: info.height };
+}
+
+/** → { webp: Buffer, width, height, preview: 'data:image/webp;base64,…' } */
+export async function processImage(input) {
+  return { ...(await encodeWebp(input)), preview: await previewOf(input) };
 }
 
 /** The 16px-wide WebP preview data URI of an image. */

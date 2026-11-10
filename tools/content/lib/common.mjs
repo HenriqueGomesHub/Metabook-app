@@ -7,6 +7,9 @@ import { fileURLToPath } from 'node:url';
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../../..');
 export const CONTENT = join(ROOT, 'content');
 export const USER_AGENT = 'Metabook-content-bot/1.0 (https://github.com/HenriqueGomesHub/Metabook-app)';
+/** For sites behind Cloudflare that challenge bot user agents (Plonk It, Learnable Meta, Google short links). */
+export const BROWSER_USER_AGENT =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 export const NATURAL_EARTH =
   'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson';
 
@@ -45,7 +48,17 @@ export class HttpError extends Error {
   }
 }
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+export const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+/** → wait(): resolves once at least `ms` have passed since the previous wait() resolved. */
+export function pacer(ms, pause = sleep, now = Date.now) {
+  let last = -Infinity;
+  return async () => {
+    const left = last + ms - now();
+    if (left > 0) await pause(left);
+    last = now();
+  };
+}
 
 /** fetch with a User-Agent, a timeout and retries on 429/5xx and network errors. */
 export async function request(url, init = {}, { retries = 3, timeoutMs = 60_000 } = {}) {
