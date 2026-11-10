@@ -23,6 +23,15 @@ export interface GenerateInput {
   maps?: Record<string, RegionMapNames>;
 }
 
+/**
+ * Tag of text-only fact cards ("Websites end in .pl", a note's text): they are never quizzed as
+ * "Where is this?" in photo topics, chapters or the daily session, only in the Clue quiz drill.
+ */
+export const CLUE_TAG = 'clue-text';
+
+/** A text-only fact card, for the Clue quiz only. */
+export const isClueCard = (card: Pick<Card, 'tags'>): boolean => card.tags.includes(CLUE_TAG);
+
 const CHOICES = 4;
 /** a reverse card needs this many other countries with photos of the subject */
 const MIN_OTHER_COUNTRIES = 3;
@@ -308,7 +317,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
 
   if (!facts) return cards;
 
-  // (c) fact cards
+  // (c) fact cards: text-only clues, tagged for the Clue quiz (photo cards keep the facts as `explain`)
   const factCard = (key: string, clue: string, allowed?: (c: PoolCountry) => boolean) => {
     const id = `gen:${lc}:${key}`;
     const options = nameOptions(country, input.pool, [], id, {
@@ -324,7 +333,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
       answer: country.name,
       options,
       prompt: { kind: 'text', value: clue },
-      tags: tags('other'),
+      tags: [...tags('other'), CLUE_TAG],
       subject: 'other',
       source: factsSource(facts),
       verified: false,
@@ -367,7 +376,7 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
         },
       ),
       prompt: { kind: 'text', value: note.text },
-      tags: tags(note.subject),
+      tags: [...tags(note.subject), CLUE_TAG],
       subject: note.subject,
       ...(note.region && { region: note.region }),
       source: note.source,

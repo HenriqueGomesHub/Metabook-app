@@ -154,6 +154,8 @@ for (const f of cardFiles) {
     }
     if (c.map != null && c.map !== String(c.country ?? '').toLowerCase()) err(`${w}: map "${c.map}" is not the card's country`);
     if (!Array.isArray(c.tags)) err(`${w}: tags must be array`);
+    // a text-only fact must not be quizzed as "Where is this?": it is a Clue quiz card
+    if (['meta', 'plate'].includes(c.type) && c.prompt?.kind === 'text' && c.map == null && !c.tags?.includes('clue-text')) err(`${w}: text-only meta/plate card needs the clue-text tag`);
     allCards.push(c);
   }
 }

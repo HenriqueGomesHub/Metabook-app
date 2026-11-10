@@ -58,6 +58,8 @@ const cards: Card[] = [
   meta('gen:cl:bollard:2', 'bollard'),
   meta('gen:cl:bollard:3', 'bollard'),
   meta('gen:cl:drive', 'other'),
+  // a text-only fact: Learn list and Clue quiz only, never a subject tile or chapter
+  { ...meta('gen:cl:note:guardrail', 'guardrail'), tags: ['generated', 'clue-text'] },
 ];
 const tips: Tip[] = [
   {
@@ -170,6 +172,24 @@ describe('Subjects', () => {
     expect(screen.getByText('Where in the country').closest('a')?.getAttribute('href')).toBe(
       '/session?map=1',
     );
+  });
+
+  it('keeps clue-text cards out of subject tiles and gives them a Clue quiz tile', async () => {
+    mount('/drills');
+    expect((await screen.findByText('Clue quiz')).closest('a')?.getAttribute('href')).toBe(
+      '/session?clue=1',
+    );
+    expect(screen.queryByText('Guardrails')).toBeNull();
+  });
+
+  it('lists the country’s notes by subject in a Learn section', async () => {
+    mount('/atlas/CL');
+    const learn = await screen.findByRole('region', { name: 'Learn' });
+    expect(within(learn).getByRole('heading', { name: 'Road lines' })).toBeTruthy();
+    expect(within(learn).getAllByRole('listitem').length).toBeGreaterThan(3);
+    // the clue card makes no Guardrails chapter
+    const nav = screen.getByRole('navigation', { name: 'Chile chapters' });
+    expect(within(nav).queryByText('Guardrails')).toBeNull();
   });
 });
 

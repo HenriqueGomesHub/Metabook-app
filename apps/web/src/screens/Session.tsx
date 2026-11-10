@@ -1,5 +1,6 @@
 import {
   createPractice,
+  isClueCard,
   matchesAnswer,
   modeFor,
   nextPracticeItem,
@@ -49,12 +50,15 @@ interface Scope {
   chapter?: string;
   /** `map=1`: only cards answered on a regions map; `map=0`: none of them */
   map?: boolean;
+  /** `clue=1`: the Clue quiz, text-only fact cards; every other scope leaves them out */
+  clue?: boolean;
 }
 
 /**
  * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
- * `chapter` or `map` starts endless practice over the cards in that scope instead; a scope of
- * one card shows the summary after each answer rather than looping on it.
+ * `chapter`, `map` or `clue` starts endless practice over the cards in that scope instead; a scope
+ * of one card shows the summary after each answer rather than looping on it. Text-only clue cards
+ * only come up in the Clue quiz (`clue=1`).
  */
 export function Session() {
   const { data, error } = useAppData();
@@ -68,18 +72,20 @@ export function Session() {
   const chapter = params.get('chapter') || undefined;
   const mapParam = params.get('map');
   const map = mapParam === '1' ? true : mapParam === '0' ? false : undefined;
+  const clue = params.get('clue') === '1' || undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}|${map}`;
-  return type || subject || country || chapter || map !== undefined ? (
-    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map }} />
+  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}`;
+  return type || subject || country || chapter || map !== undefined || clue ? (
+    <PracticeRunner key={key} data={data} scope={{ type, subject, country, chapter, map, clue }} />
   ) : (
     <DueRunner data={data} />
   );
 }
 
-function inScope(cards: Card[], { type, subject, country, chapter, map }: Scope): Card[] {
+function inScope(cards: Card[], { type, subject, country, chapter, map, clue }: Scope): Card[] {
   return cards.filter(
     (card) =>
+      (clue ? isClueCard(card) : !isClueCard(card)) &&
       // regions-map cards only come up in map drills, not with their subject's "which country?"
       (map === undefined ? !subject || !card.map : map === Boolean(card.map)) &&
       (!type || card.type === type) &&
@@ -274,12 +280,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       onSkip={skip}
       bar={() => (
         <div className="session-bar rise">
-          <button
-            type="button"
-            className="chip"
-            aria-label="End practice"
-            onClick={endPractice}
-          >
+          <button type="button" className="chip" aria-label="End practice" onClick={endPractice}>
             <CloseIcon />
           </button>
           <span className="practice-count" aria-live="polite">
@@ -375,9 +376,9 @@ function CardRunner({
     const picked =
       correct || card.type === 'photo-choice'
         ? undefined
-      : item.mode === 'recall'
-        ? matchedOther(card, given, cards)
-        : given || undefined;
+        : item.mode === 'recall'
+          ? matchedOther(card, given, cards)
+          : given || undefined;
     const state = answer({
       card,
       given,

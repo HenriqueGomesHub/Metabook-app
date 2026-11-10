@@ -1,4 +1,4 @@
-import { buildSession, mastery, parseMapKey } from '@metabook/core';
+import { buildSession, isClueCard, mastery, parseMapKey } from '@metabook/core';
 import type { Card, CardType, Review, Session } from '@metabook/core';
 import type { AppSnapshot } from './AppData';
 import { tagLabel } from './labels';
@@ -38,8 +38,10 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     data.reviews.filter((r) => Date.parse(r.reviewedAt) >= dayStart).map((r) => r.cardId),
   );
   const introduced = [...reviewedToday].filter((id) => (firstReview.get(id) ?? 0) >= dayStart);
+  // text-only clue cards are for the Clue quiz, never the daily session
+  const cards = data.content.cards.filter((card) => !isClueCard(card));
   return buildSession({
-    cards: type ? data.content.cards.filter((card) => card.type === type) : data.content.cards,
+    cards: type ? cards.filter((card) => card.type === type) : cards,
     states: data.states,
     confusions: data.confusions,
     settings: data.settings,
