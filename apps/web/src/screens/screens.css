@@ -128,7 +128,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 128px), 1fr));
   gap: 8px;
 }
 
@@ -151,9 +151,8 @@
 
 .mix-name {
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .mix-count {
@@ -814,6 +813,25 @@ figure {
   .panel {
     padding: 20px 16px;
     gap: 20px;
+  }
+
+  .facts > div {
+    flex-wrap: wrap;
+  }
+
+  .mix-groups li {
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .streak {
+    gap: 4px;
+  }
+
+  .streak > span {
+    width: 8px;
+    height: 8px;
   }
 
   .session-bar {
