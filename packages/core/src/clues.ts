@@ -69,6 +69,18 @@ export interface ClueImage {
   giveaway?: boolean;
   /** the Street View spot the image was taken from, when its link carries one */
   location?: ClueLocation;
+  /**
+   * What the picture is, from the image review (content/review-images):
+   * 'example' = one real-world instance of this clue, fit for quizzes;
+   * 'comparison' = several countries or variants side by side (Learn and answer screens only);
+   * 'annotated' = drawn-on letters, arrows or labels (Learn and answer screens only, with caption).
+   * Absent = not reviewed yet, treated as 'example'.
+   */
+  role?: 'example' | 'comparison' | 'annotated';
+  /** one plain sentence saying what the picture shows, e.g. "Front (F) and back (B) of a German bollard" */
+  caption?: string;
+  /** id of an earlier image in the same clue (or another clue of the same country) that is the same picture */
+  dupeOf?: string;
 }
 
 export interface ClueCredit {
@@ -97,6 +109,15 @@ export interface Clue {
   locations: ClueLocation[];
   /** pool codes of countries the text names as similar or sharing the clue */
   lookalikes: string[];
+  /**
+   * From the text review (content/review-text): the plain-language version shown first.
+   * One or two short sentences, no jargon, says what to look for and how to use it.
+   */
+  summary?: string;
+  /** countries where this clue looks the same, so it can't tell them apart: never quiz them against each other */
+  sameAs?: string[];
+  /** countries that look similar but can be told apart, with the difference in a few words */
+  differs?: { country: string; how: string }[];
   credit: ClueCredit;
 }
 
