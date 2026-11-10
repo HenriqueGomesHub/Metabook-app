@@ -1,7 +1,7 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { AlreadyCollected, CropUnavailable } from '../data/curation';
-import type { Candidate, CurationApi } from '../data/curation';
+import { AlreadyCollected, CropUnavailable, UsesUnavailable } from '../data/curation';
+import type { Candidate, CurationApi, Use } from '../data/curation';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
 
@@ -52,8 +52,19 @@ const drawn = { x: 0.1, y: 0.1, w: 0.5, h: 0.4 };
 function fakeApi(
   admin = true,
   rows = [candidate('a', 'pl', 'bollard'), candidate('b', 'lt', 'pole')],
+  uses: Use[] = [],
 ) {
   return {
+    countUses: vi.fn<CurationApi['countUses']>(async () => {
+      const counts: Record<string, number> = {};
+      for (const u of uses) counts[u.subject] = (counts[u.subject] ?? 0) + 1;
+      return counts;
+    }),
+    listUses: vi.fn<CurationApi['listUses']>(async (subject) =>
+      uses.filter((u) => u.subject === subject),
+    ),
+    decideUses: vi.fn<CurationApi['decideUses']>(async (ids) => ids),
+    updateUse: vi.fn<CurationApi['updateUse']>(async () => undefined),
     isAdmin: vi.fn(async () => admin),
     listPending: vi.fn(async () => rows),
     decide: vi.fn<CurationApi['decide']>(async () => undefined),
@@ -405,5 +416,156 @@ describe('Curate grid', () => {
     fireEvent.change(screen.getByLabelText('Filter by country'), { target: { value: 'lt' } });
     expect(await screen.findByText('15 pending')).toBeTruthy();
     expect(screen.getAllByRole('button', { name: /^Photo \d+,/ })).toHaveLength(12);
+  });
+});
+
+const use = (n: number, subject: Use['subject'] = 'sign', country = n % 2 ? 'lt' : 'pl'): Use => ({
+  id: `u${n}`,
+  candidateId: `c${n}`,
+  subject,
+  crop: { x: 0.2, y: 0.2, w: 0.5, h: 0.5 },
+  note: `Note ${n}`,
+  country,
+  storagePath: `candidates/c${n}.webp`,
+  width: 1024,
+  height: 768,
+  preview: null,
+  credit: `Ana Ruiz (${n})`,
+  sourceUrl: `https://commons.wikimedia.org/wiki/File:c${n}.jpg`,
+  title: null,
+  description: `Sign near town ${n}`,
+});
+const signs = (n: number) => Array.from({ length: n }, (_, i) => use(i + 1));
+const useIds = (from: number, to: number) =>
+  Array.from({ length: to - from + 1 }, (_, i) => `u${from + i}`);
+const useTile = (n: number) => screen.getByRole('button', { name: new RegExp(`^Use ${n},`) });
+
+describe('Curate by topic', () => {
+  beforeEach(() => localStorage.setItem('metabook.curate.view', 'topic'));
+
+  async function openSigns(api: ReturnType<typeof fakeApi>) {
+    open(api);
+    fireEvent.click(await screen.findByRole('button', { name: /^Signs\s*\d+$/ }));
+    return screen.findByRole('region', { name: 'Suggestion grid' });
+  }
+
+  it('lists subjects with suggestion counts, and is a third view toggle', async () => {
+    localStorage.setItem('metabook.curate.view', 'grid');
+    open(fakeApi(true, many(3), [...signs(3), use(9, 'guardrail')]));
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.click(screen.getByRole('button', { name: 'By topic' }));
+    expect(await screen.findByRole('button', { name: /^Signs\s*3$/ })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /^Guardrails?\s*1$/ })).toBeTruthy();
+    expect(screen.queryByRole('button', { name: /^Bollards/ })).toBeNull();
+    expect(localStorage.getItem('metabook.curate.view')).toBe('topic');
+  });
+
+  it('shows 12 cropped uses at a time with their country; tap marks, Enter approves the rest', async () => {
+    const api = fakeApi(true, [], signs(15));
+    await openSigns(api);
+    expect(api.listUses).toHaveBeenCalledWith('sign');
+    expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(12);
+    expect(useTile(1).getAttribute('aria-label')).toBe('Use 1, Lithuania');
+    expect(useTile(1).textContent).toContain('Lithuania');
+
+    fireEvent.click(useTile(2));
+    expect(useTile(2).getAttribute('aria-pressed')).toBe('true');
+    fireEvent.keyDown(window, { key: '5' });
+    fireEvent.keyDown(window, { key: 'Enter' });
+
+    await waitFor(() => expect(api.decideUses).toHaveBeenCalledTimes(2));
+    expect(api.decideUses).toHaveBeenNthCalledWith(
+      1,
+      useIds(1, 12).filter((id) => id !== 'u2' && id !== 'u5'),
+      'approved',
+    );
+    expect(api.decideUses).toHaveBeenNthCalledWith(2, ['u2', 'u5'], 'rejected');
+    await waitFor(() =>
+      expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(3),
+    );
+    expect(screen.getByText('Signs · 3 suggested')).toBeTruthy();
+  });
+
+  it('undoes a page back to suggested', async () => {
+    const api = fakeApi(true, [], signs(13));
+    await openSigns(api);
+    fireEvent.click(screen.getByRole('button', { name: /Approve the rest/ }));
+    await waitFor(() =>
+      expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(1),
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Undo page' }));
+    await waitFor(() =>
+      expect(api.decideUses).toHaveBeenLastCalledWith(useIds(1, 12), 'suggested'),
+    );
+    await waitFor(() =>
+      expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(12),
+    );
+    expect(screen.getByText('Signs · 13 suggested')).toBeTruthy();
+  });
+
+  it('adjusts a crop from the large view, prefilled with the use’s crop', async () => {
+    const api = fakeApi(true, [], signs(3));
+    await openSigns(api);
+    fireEvent.click(useTile(1));
+    fireEvent.contextMenu(useTile(1));
+    const dialog = await screen.findByRole('dialog', { name: 'Suggestion' });
+    expect(dialog.textContent).toContain('Note 1');
+    expect(dialog.textContent).toContain('Sign near town 1');
+    fireEvent.keyDown(window, { key: 'c' });
+    expect(screen.getByText('Keeping 50% × 50% of the photo')).toBeTruthy();
+    dragCrop([10, 10], [60, 50]);
+    fireEvent.click(screen.getByRole('button', { name: /Save crop/ }));
+    await waitFor(() => expect(api.updateUse).toHaveBeenCalledWith('u1', { crop: drawn }));
+    // back to the large view; the adjusted use is a keep
+    expect(await screen.findByRole('dialog', { name: 'Suggestion' })).toBeTruthy();
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(useTile(1).getAttribute('aria-pressed')).toBe('false');
+    fireEvent.keyDown(window, { key: 'Enter' });
+    await waitFor(() => expect(api.decideUses).toHaveBeenCalledWith(useIds(1, 3), 'approved'));
+  });
+
+  it('moves a use to another subject and keeps the other marks', async () => {
+    const api = fakeApi(true, [], signs(3));
+    await openSigns(api);
+    fireEvent.click(useTile(3));
+    fireEvent.contextMenu(useTile(1));
+    await screen.findByRole('dialog', { name: 'Suggestion' });
+    fireEvent.change(screen.getByLabelText('Change subject'), { target: { value: 'guardrail' } });
+    await waitFor(() => expect(api.updateUse).toHaveBeenCalledWith('u1', { subject: 'guardrail' }));
+    await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
+    expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(2);
+    expect(screen.getByText('Signs · 2 suggested')).toBeTruthy();
+    // u3 (now tile 2) is still marked
+    expect(useTile(2).getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(screen.getByRole('button', { name: 'All subjects' }));
+    expect(await screen.findByRole('button', { name: /^Guardrails?\s*1$/ })).toBeTruthy();
+  });
+
+  it('shows why an update failed and leaves the use as it was', async () => {
+    const api = fakeApi(true, [], signs(2));
+    api.updateUse.mockRejectedValueOnce(
+      new Error('That photo already has a use with this subject and crop.'),
+    );
+    await openSigns(api);
+    fireEvent.contextMenu(useTile(1));
+    await screen.findByRole('dialog', { name: 'Suggestion' });
+    fireEvent.change(screen.getByLabelText('Change subject'), { target: { value: 'plate' } });
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'That photo already has a use with this subject and crop.',
+    );
+    expect(screen.getAllByRole('button', { name: /^Use \d+,/ })).toHaveLength(2);
+  });
+
+  it('says to run 0005 when the table is missing', async () => {
+    const api = fakeApi();
+    api.countUses.mockRejectedValueOnce(new UsesUnavailable());
+    open(api);
+    const region = await screen.findByRole('region', { name: 'Suggestions not set up' });
+    expect(region.textContent).toContain('supabase/migrations/0005_media_uses.sql');
+  });
+
+  it('says how to load suggestions when there are none', async () => {
+    open(fakeApi());
+    expect(await screen.findByRole('region', { name: 'No suggestions' })).toBeTruthy();
   });
 });

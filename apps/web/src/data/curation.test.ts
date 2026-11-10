@@ -1,6 +1,14 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
 import { describe, expect, it, vi } from 'vitest';
-import { AlreadyCollected, CropUnavailable, isMissingCrop, supabaseCuration } from './curation';
+import {
+  AlreadyCollected,
+  CropUnavailable,
+  DuplicateUse,
+  isMissingCrop,
+  isMissingUses,
+  supabaseCuration,
+  UsesUnavailable,
+} from './curation';
 import type { Decision } from './curation';
 
 /** PostgREST's answer to a write naming a column the table doesn't have. */
@@ -214,5 +222,144 @@ describe('listPending', () => {
       [1000, 1999],
       [2000, 2999],
     ]);
+  });
+});
+
+const NO_USES = {
+  code: 'PGRST205',
+  message: "Could not find the table 'public.media_uses' in the schema cache",
+};
+
+describe('media uses', () => {
+  /** A read query whose `range` answers with `page(from, to)`; records the table and filters. */
+  function readClient(page: (from: number, to: number) => { data: unknown; error: unknown }) {
+    const calls: unknown[][] = [];
+    const query = {
+      select: (...args: unknown[]) => (calls.push(['select', ...args]), query),
+      eq: (...args: unknown[]) => (calls.push(['eq', ...args]), query),
+      order: () => query,
+      range: async (from: number, to: number) => page(from, to),
+    };
+    const tables: string[] = [];
+    const client = {
+      from: (table: string) => (tables.push(table), query),
+    } as unknown as SupabaseClient;
+    return { client, calls, tables };
+  }
+
+  it('countUses counts suggested uses by subject, past the 1000-row limit', async () => {
+    const { client, calls, tables } = readClient((from) => ({
+      data: Array.from({ length: from ? 5 : 1000 }, (_, i) => ({
+        subject: i % 2 ? 'sign' : 'guardrail',
+      })),
+      error: null,
+    }));
+    expect(await supabaseCuration(client).countUses()).toEqual({ guardrail: 503, sign: 502 });
+    expect(tables).toEqual(['media_uses', 'media_uses']);
+    expect(calls).toContainEqual(['eq', 'status', 'suggested']);
+  });
+
+  it('listUses reads one subject with its candidate and maps it', async () => {
+    const { client, calls } = readClient(() => ({
+      data: [
+        {
+          id: 'u1',
+          candidate_id: 'c1',
+          subject: 'sign',
+          crop: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+          note: 'Yellow sign',
+          candidate: {
+            country: 'pl',
+            storage_path: 'candidates/abc.webp',
+            width: 1024,
+            height: 768,
+            preview: null,
+            credit: 'Ana',
+            source_url: 'https://x',
+            title: null,
+            description: 'Near a town',
+          },
+        },
+      ],
+      error: null,
+    }));
+    const rows = await supabaseCuration(client).listUses('sign');
+    expect(rows).toEqual([
+      {
+        id: 'u1',
+        candidateId: 'c1',
+        subject: 'sign',
+        crop: { x: 0.1, y: 0.1, w: 0.5, h: 0.5 },
+        note: 'Yellow sign',
+        country: 'pl',
+        storagePath: 'candidates/abc.webp',
+        width: 1024,
+        height: 768,
+        preview: null,
+        credit: 'Ana',
+        sourceUrl: 'https://x',
+        title: null,
+        description: 'Near a town',
+      },
+    ]);
+    expect(calls).toContainEqual(['eq', 'subject', 'sign']);
+    expect(calls).toContainEqual(['eq', 'status', 'suggested']);
+    expect(String(calls.find((c) => c[0] === 'select')?.[1])).toContain(
+      'candidate:media_candidates(',
+    );
+  });
+
+  it('says to run 0005 when media_uses is missing', async () => {
+    const { client } = readClient(() => ({ data: null, error: NO_USES }));
+    const api = supabaseCuration(client);
+    await expect(api.countUses()).rejects.toBeInstanceOf(UsesUnavailable);
+    await expect(api.listUses('sign')).rejects.toThrow('0005_media_uses.sql');
+    expect(isMissingUses(NO_USES)).toBe(true);
+    expect(isMissingUses({ code: 'PGRST205', message: 'media_candidates' })).toBe(false);
+  });
+
+  it('decideUses writes only status and decided_at; undo skips collected uses', async () => {
+    const { client, update, query, filters } = fakeClient((f) =>
+      uncollected(f) ? [{ id: 'a' }] : [{ id: 'a' }, { id: 'b' }],
+    );
+    const api = supabaseCuration(client);
+    expect(await api.decideUses(['a', 'b'], 'approved')).toEqual(['a', 'b']);
+    expect(query.in).toHaveBeenCalledWith('id', ['a', 'b']);
+    expect(Object.keys((update.mock.calls[0] as unknown[])[0] as object).sort()).toEqual([
+      'decided_at',
+      'status',
+    ]);
+    expect(await api.decideUses(['a', 'b'], 'suggested')).toEqual(['a']);
+    expect(filters).toContainEqual(['is', 'collected_at', null]);
+    expect((update.mock.calls[1] as unknown[])[0]).toEqual({
+      status: 'suggested',
+      decided_at: null,
+    });
+    expect(await api.decideUses([], 'rejected')).toEqual([]);
+    expect(update).toHaveBeenCalledTimes(2);
+  });
+
+  it('updateUse writes only crop and/or subject of an uncollected use', async () => {
+    const { client, update, filters } = fakeClient(() => [{ id: 'a' }]);
+    const api = supabaseCuration(client);
+    const crop = { x: 0, y: 0, w: 0.5, h: 0.5 };
+    await api.updateUse('a', { crop });
+    expect((update.mock.calls[0] as unknown[])[0]).toEqual({ crop });
+    await api.updateUse('a', { subject: 'guardrail' });
+    expect((update.mock.calls[1] as unknown[])[0]).toEqual({ subject: 'guardrail' });
+    expect(filters).toContainEqual(['eq', 'id', 'a']);
+    expect(filters).toContainEqual(['is', 'collected_at', null]);
+  });
+
+  it('updateUse reports a clash with another use of the same photo', async () => {
+    const query = {
+      eq: () => query,
+      is: () => query,
+      select: async () => ({ data: null, error: { code: '23505', message: 'duplicate key' } }),
+    };
+    const client = { from: () => ({ update: () => query }) } as unknown as SupabaseClient;
+    await expect(
+      supabaseCuration(client).updateUse('a', { subject: 'sign' }),
+    ).rejects.toBeInstanceOf(DuplicateUse);
   });
 });

@@ -10,7 +10,7 @@ import { readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
-export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate'];
+export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review'];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
 
 const NAME = /^[\w-]+$/;
@@ -123,6 +123,16 @@ export async function runJob(job, { steps = [], onStep } = {}) {
     } else if (step === 'collect') {
       const { collect } = await import('./collect.mjs');
       const all = await timed(async () => ({ report: await collect({ ...(await getClients()), countries }) }));
+      result = all.ok ? all.report : { all };
+    } else if (step === 'pack') {
+      const { pack } = await import('./pack.mjs');
+      const all = await timed(async () => ({ report: await pack({ ...(await getClients()), countries }) }));
+      result = all.ok ? all.report : { all };
+    } else if (step === 'review') {
+      // review files name candidates by id, so every country's entries apply
+      const { createQueue } = await import('./queue.mjs');
+      const { applyReviews } = await import('./review.mjs');
+      const all = await timed(async () => ({ report: await applyReviews({ queue: createQueue() }) }));
       result = all.ok ? all.report : { all };
     } else if (step === 'generate') {
       const { loadInput, writeGenerated } = await import('./generate.mjs');

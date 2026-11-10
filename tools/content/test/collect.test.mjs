@@ -61,6 +61,10 @@ function fakeQueue(rows) {
       marked.push(...ids);
       for (const r of rows) if (ids.includes(r.id)) r.collected_at = '2026-11-09T00:00:00Z';
     },
+    async listApprovedUses() {
+      return [];
+    },
+    async markUsesCollected() {},
   };
 }
 
@@ -135,13 +139,13 @@ describe('mark-collected', () => {
       row('c3'),
       row('d4', 'lt'),
     ]);
-    assert.deepEqual(await markCollected({ queue, contentDir: dir }), { marked: 2, waiting: 1 });
+    assert.deepEqual(await markCollected({ queue, contentDir: dir }), { marked: 2, waiting: 1, uses: { marked: 0, waiting: 0 } });
     assert.deepEqual(queue.marked, ['row-a1', 'row-d4']);
   });
 
   it('marks nothing before anything is in content/media', async () => {
     const queue = fakeQueue([row('a1')]);
-    assert.deepEqual(await markCollected({ queue, contentDir: tempContent() }), { marked: 0, waiting: 1 });
+    assert.deepEqual(await markCollected({ queue, contentDir: tempContent() }), { marked: 0, waiting: 1, uses: { marked: 0, waiting: 0 } });
     assert.deepEqual(queue.marked, []);
   });
 });

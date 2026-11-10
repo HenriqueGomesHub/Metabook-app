@@ -1,0 +1,67 @@
+# Builds the review pack for the vision agents (tools/content/pack.mjs): every pending photo at
+# 512px plus review-pack/manifest.json, force-pushed as the only content of the orphan branch
+# `review-pack` (the images are never committed anywhere else).
+# Push content/jobs/pack.json to any branch but main, or run it by hand.
+# Locally: git fetch origin review-pack && git worktree add ../review-pack review-pack
+name: review-pack
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - review-pack
+    paths:
+      - 'content/jobs/pack.json'
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: 'Country codes (pl,lt) or all'
+        required: false
+        default: 'all'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: review-pack
+  cancel-in-progress: true
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Pack pending photos
+        env:
+          COUNTRIES: ${{ github.event.inputs.countries }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -n "$COUNTRIES" ] || [ ! -f content/jobs/pack.json ]; then
+            node -e "const c=process.env.COUNTRIES||'all';console.log(JSON.stringify({name:'pack',countries:c==='all'?'all':c.split(','),steps:['pack']}))" > "$RUNNER_TEMP/pack.json"
+            job="$RUNNER_TEMP/pack.json"
+          else
+            job=content/jobs/pack.json
+          fi
+          node tools/content/run-job.mjs "$job"
+          test -f review-pack/manifest.json
+          cp "content/jobs/$(node tools/content/run-job.mjs --name "$job").result.json" review-pack/result.json
+
+      - name: Push the review-pack branch
+        run: |
+          git config user.name "metabook-content-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan review-pack-build
+          git rm -r -q --cached .
+          git add -f review-pack
+          git commit -q -m "review pack: $(node -e "console.log(require('./review-pack/manifest.json').length)") photos"
+          git push --force origin HEAD:refs/heads/review-pack
