@@ -4,9 +4,9 @@
  "prefix": "+1",
  "format": "(XXX) XXX-XXXX",
  "sources": [
-  "https://www.einvestigator.com/area-codes-by-state/"
+  "https://en.wikipedia.org/wiki/List_of_North_American_Numbering_Plan_area_codes"
  ],
- "notes": "Third-party aggregator page (Wikipedia/NANPA blocked in this environment); no overlays added after ~2023 (e.g. 2024-26 relief codes) are included.",
+ "notes": "Geographic area codes incl. overlays in service through Nov 2026 (e.g. 483 AL Feb 2026, 471 MS, 679 MI, 729 TN, 748 CO, 457 LA, 357/837 CA, 621 TX). Reserved/unimplemented codes (e.g. 465 NYC) excluded. 202/771 mapped to DC. Hyder, Alaska shares BC codes (not mapped). Non-geographic (5XX PCS, 8XX toll-free, 900, 700) and territories/Caribbean dropped.",
  "codes": [
   {
    "code": "201",
@@ -77,6 +77,10 @@
    "region": "IN"
   },
   {
+   "code": "220",
+   "region": "OH"
+  },
+  {
    "code": "223",
    "region": "PA"
   },
@@ -87,6 +91,10 @@
   {
    "code": "225",
    "region": "LA"
+  },
+  {
+   "code": "227",
+   "region": "MD"
   },
   {
    "code": "228",
@@ -103,6 +111,10 @@
   {
    "code": "234",
    "region": "OH"
+  },
+  {
+   "code": "235",
+   "region": "MO"
   },
   {
    "code": "239",
@@ -161,6 +173,10 @@
    "region": "PA"
   },
   {
+   "code": "274",
+   "region": "WI"
+  },
+  {
    "code": "276",
    "region": "VA"
   },
@@ -171,6 +187,10 @@
   {
    "code": "281",
    "region": "TX"
+  },
+  {
+   "code": "283",
+   "region": "OH"
   },
   {
    "code": "301",
@@ -253,12 +273,24 @@
    "region": "CA"
   },
   {
+   "code": "324",
+   "region": "FL"
+  },
+  {
    "code": "325",
    "region": "TX"
   },
   {
    "code": "326",
    "region": "OH"
+  },
+  {
+   "code": "327",
+   "region": "AR"
+  },
+  {
+   "code": "329",
+   "region": "NY"
   },
   {
    "code": "330",
@@ -289,12 +321,20 @@
    "region": "MA"
   },
   {
+   "code": "341",
+   "region": "CA"
+  },
+  {
    "code": "346",
    "region": "TX"
   },
   {
    "code": "347",
    "region": "NY"
+  },
+  {
+   "code": "350",
+   "region": "CA"
   },
   {
    "code": "351",
@@ -305,6 +345,14 @@
    "region": "FL"
   },
   {
+   "code": "353",
+   "region": "WI"
+  },
+  {
+   "code": "357",
+   "region": "CA"
+  },
+  {
    "code": "360",
    "region": "WA"
   },
@@ -313,8 +361,20 @@
    "region": "TX"
   },
   {
+   "code": "363",
+   "region": "NY"
+  },
+  {
    "code": "364",
    "region": "KY"
+  },
+  {
+   "code": "369",
+   "region": "CA"
+  },
+  {
+   "code": "380",
+   "region": "OH"
   },
   {
    "code": "385",
@@ -413,6 +473,10 @@
    "region": "UT"
   },
   {
+   "code": "436",
+   "region": "OH"
+  },
+  {
    "code": "440",
    "region": "OH"
   },
@@ -425,6 +489,22 @@
    "region": "MD"
   },
   {
+   "code": "445",
+   "region": "PA"
+  },
+  {
+   "code": "447",
+   "region": "IL"
+  },
+  {
+   "code": "448",
+   "region": "FL"
+  },
+  {
+   "code": "457",
+   "region": "LA"
+  },
+  {
    "code": "458",
    "region": "OR"
   },
@@ -433,12 +513,24 @@
    "region": "IN"
   },
   {
+   "code": "464",
+   "region": "IL"
+  },
+  {
    "code": "469",
    "region": "TX"
   },
   {
    "code": "470",
    "region": "GA"
+  },
+  {
+   "code": "471",
+   "region": "MS"
+  },
+  {
+   "code": "472",
+   "region": "NC"
   },
   {
    "code": "475",
@@ -455,6 +547,10 @@
   {
    "code": "480",
    "region": "AZ"
+  },
+  {
+   "code": "483",
+   "region": "AL"
   },
   {
    "code": "484",
@@ -589,6 +685,10 @@
    "region": "VA"
   },
   {
+   "code": "572",
+   "region": "OK"
+  },
+  {
    "code": "573",
    "region": "MO"
   },
@@ -603,6 +703,10 @@
   {
    "code": "580",
    "region": "OK"
+  },
+  {
+   "code": "582",
+   "region": "PA"
   },
   {
    "code": "585",
@@ -681,8 +785,16 @@
    "region": "KS"
   },
   {
+   "code": "621",
+   "region": "TX"
+  },
+  {
    "code": "623",
    "region": "AZ"
+  },
+  {
+   "code": "624",
+   "region": "NY"
   },
   {
    "code": "626",
@@ -709,8 +821,16 @@
    "region": "MO"
   },
   {
+   "code": "640",
+   "region": "NJ"
+  },
+  {
    "code": "641",
    "region": "IA"
+  },
+  {
+   "code": "645",
+   "region": "FL"
   },
   {
    "code": "646",
@@ -723,6 +843,10 @@
   {
    "code": "651",
    "region": "MN"
+  },
+  {
+   "code": "656",
+   "region": "FL"
   },
   {
    "code": "657",
@@ -757,6 +881,10 @@
    "region": "GA"
   },
   {
+   "code": "679",
+   "region": "MI"
+  },
+  {
    "code": "680",
    "region": "NY"
   },
@@ -767,6 +895,10 @@
   {
    "code": "682",
    "region": "TX"
+  },
+  {
+   "code": "686",
+   "region": "VA"
   },
   {
    "code": "689",
@@ -825,6 +957,18 @@
    "region": "PA"
   },
   {
+   "code": "718",
+   "region": "NY"
+  },
+  {
+   "code": "719",
+   "region": "CO"
+  },
+  {
+   "code": "720",
+   "region": "CO"
+  },
+  {
    "code": "724",
    "region": "PA"
   },
@@ -839,6 +983,18 @@
   {
    "code": "727",
    "region": "FL"
+  },
+  {
+   "code": "728",
+   "region": "FL"
+  },
+  {
+   "code": "729",
+   "region": "TN"
+  },
+  {
+   "code": "730",
+   "region": "IL"
   },
   {
    "code": "731",
@@ -857,6 +1013,10 @@
    "region": "TX"
   },
   {
+   "code": "738",
+   "region": "CA"
+  },
+  {
    "code": "740",
    "region": "OH"
   },
@@ -867,6 +1027,10 @@
   {
    "code": "747",
    "region": "CA"
+  },
+  {
+   "code": "748",
+   "region": "CO"
   },
   {
    "code": "754",
@@ -957,6 +1121,10 @@
    "region": "CA"
   },
   {
+   "code": "806",
+   "region": "TX"
+  },
+  {
    "code": "808",
    "region": "HI"
   },
@@ -997,6 +1165,14 @@
    "region": "CA"
   },
   {
+   "code": "821",
+   "region": "SC"
+  },
+  {
+   "code": "826",
+   "region": "VA"
+  },
+  {
    "code": "828",
    "region": "NC"
   },
@@ -1009,8 +1185,28 @@
    "region": "CA"
   },
   {
+   "code": "832",
+   "region": "TX"
+  },
+  {
+   "code": "835",
+   "region": "PA"
+  },
+  {
+   "code": "837",
+   "region": "CA"
+  },
+  {
    "code": "838",
    "region": "NY"
+  },
+  {
+   "code": "839",
+   "region": "SC"
+  },
+  {
+   "code": "840",
+   "region": "CA"
   },
   {
    "code": "843",
@@ -1055,6 +1251,10 @@
   {
    "code": "860",
    "region": "CT"
+  },
+  {
+   "code": "861",
+   "region": "IL"
   },
   {
    "code": "862",
@@ -1153,6 +1353,10 @@
    "region": "WI"
   },
   {
+   "code": "924",
+   "region": "MN"
+  },
+  {
    "code": "925",
    "region": "CA"
   },
@@ -1197,8 +1401,20 @@
    "region": "FL"
   },
   {
+   "code": "943",
+   "region": "GA"
+  },
+  {
+   "code": "945",
+   "region": "TX"
+  },
+  {
    "code": "947",
    "region": "MI"
+  },
+  {
+   "code": "948",
+   "region": "VA"
   },
   {
    "code": "949",
@@ -1239,6 +1455,10 @@
   {
    "code": "973",
    "region": "NJ"
+  },
+  {
+   "code": "975",
+   "region": "MO"
   },
   {
    "code": "978",

@@ -1012,9 +1012,42 @@
       "summary": "Portuguese writing most likely means a small town on the Mozambique border, where Portuguese is spoken."
     },
     {
-      "id": "sz-gh-sceneries",
+      "id": "sz-gh-utilitypoles",
       "step": 4,
       "order": 0,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 2 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "95f840ae811b",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_65.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "21f1a01716c1",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_314.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "sz-gh-sceneries",
+      "step": 4,
+      "order": 1,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -1053,7 +1086,7 @@
     {
       "id": "sz-gh-licenseplates",
       "step": 4,
-      "order": 1,
+      "order": 2,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -1080,7 +1113,7 @@
     {
       "id": "sz-gh-googlevehicles-cars",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -1107,7 +1140,7 @@
     {
       "id": "sz-gh-rifts",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "coverage",
       "title": "Coverage: rifts",
       "text": [
@@ -1135,7 +1168,7 @@
     {
       "id": "sz-gh-postboxes",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "other",
       "title": "Post boxes",
       "text": [
@@ -1168,7 +1201,7 @@
     {
       "id": "sz-gh-sidewalks",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -1195,7 +1228,7 @@
     {
       "id": "sz-gh-signs-stop",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -1229,7 +1262,7 @@
     {
       "id": "sz-gh-signs-yield",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -1257,7 +1290,7 @@
     {
       "id": "sz-gh-signs-chevrons",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -1285,7 +1318,7 @@
     {
       "id": "sz-gh-signs-pedestrian",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -1319,7 +1352,7 @@
     {
       "id": "sz-gh-signs-speed",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -1389,7 +1422,7 @@
     {
       "id": "sz-gh-signs-railwaycrossing",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: railway crossings",
@@ -1435,7 +1468,7 @@
     {
       "id": "sz-gh-signs-river",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: rivers",
@@ -1463,7 +1496,7 @@
     {
       "id": "sz-gh-signs-directions",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -1503,7 +1536,7 @@
     {
       "id": "sz-gh-signs-signposts",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -1537,7 +1570,7 @@
     {
       "id": "sz-gh-signs-roadnumbering",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -1565,7 +1598,7 @@
     {
       "id": "sz-gh-signs-streetnames",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -1599,7 +1632,7 @@
     {
       "id": "sz-gh-signs-busstop",
       "step": 4,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -1627,6 +1660,81 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "sz-gh-lines-yellow-white",
+      "step": 4,
+      "order": 19,
+      "family": "line",
+      "title": "Road lines: yellow edges, white centre",
+      "text": [
+        "The road markings here are yellow at the edges and white in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are yellow at the edges and white in the centre.",
+      "sameAs": [
+        "AE",
+        "AU",
+        "BW",
+        "CH",
+        "CL",
+        "ES",
+        "FR",
+        "GB",
+        "GI",
+        "HU",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "JE",
+        "JO",
+        "KZ",
+        "LK",
+        "LS",
+        "LT",
+        "ME",
+        "MX",
+        "MY",
+        "NA",
+        "NG",
+        "NP",
+        "NZ",
+        "OM",
+        "PT",
+        "RU",
+        "SG",
+        "TR",
+        "ZA"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "sz-gh-lines-yellow-white-and-yellow",
+      "step": 4,
+      "order": 20,
+      "family": "line",
+      "title": "Road lines: yellow edges, white and yellow centre",
+      "text": [
+        "The road markings here are yellow at the edges and white and yellow in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are yellow at the edges and white and yellow in the centre.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

@@ -4,124 +4,93 @@
  "prefix": "+1",
  "format": "(XXX) XXX-XXXX",
  "sources": [
-  "https://www.areacodehelp.com/canada/canada_area_codes.shtml"
+  "https://en.wikipedia.org/wiki/List_of_North_American_Numbering_Plan_area_codes"
  ],
- "notes": "36 geographic codes per source; newer overlays (e.g. 368, 382, 428, 584, 782) not on source, left out. 600 and toll-free dropped.",
+ "notes": "Geographic area codes incl. overlays in service through Nov 2026 (e.g. 257 BC, 942 ON, 382 ON). Reserved/unimplemented codes (568 AB, 851 NS, 387/460/537 ON) excluded. 867 serves Nunavut, NT and Yukon: mapped to NU (largest area) with NT and YT as spans. 902/782 serve Nova Scotia and PEI: mapped to NS with PE span. Non-geographic (600, 622, 633 etc.) dropped.",
  "codes": [
-  {
-   "code": "403",
-   "region": "AB"
-  },
-  {
-   "code": "587",
-   "region": "AB"
-  },
-  {
-   "code": "780",
-   "region": "AB"
-  },
-  {
-   "code": "236",
-   "region": "BC"
-  },
-  {
-   "code": "250",
-   "region": "BC"
-  },
-  {
-   "code": "604",
-   "region": "BC"
-  },
-  {
-   "code": "778",
-   "region": "BC"
-  },
   {
    "code": "204",
    "region": "MB"
-  },
-  {
-   "code": "431",
-   "region": "MB"
-  },
-  {
-   "code": "506",
-   "region": "NB"
-  },
-  {
-   "code": "709",
-   "region": "NL"
-  },
-  {
-   "code": "867",
-   "region": "YT",
-   "spans": [
-    "NT",
-    "NU"
-   ]
-  },
-  {
-   "code": "902",
-   "region": "NS",
-   "spans": [
-    "PE"
-   ]
   },
   {
    "code": "226",
    "region": "ON"
   },
   {
+   "code": "236",
+   "region": "BC"
+  },
+  {
    "code": "249",
    "region": "ON"
+  },
+  {
+   "code": "250",
+   "region": "BC"
+  },
+  {
+   "code": "257",
+   "region": "BC"
+  },
+  {
+   "code": "263",
+   "region": "QC"
   },
   {
    "code": "289",
    "region": "ON"
   },
   {
+   "code": "306",
+   "region": "SK"
+  },
+  {
    "code": "343",
    "region": "ON"
+  },
+  {
+   "code": "354",
+   "region": "QC"
   },
   {
    "code": "365",
    "region": "ON"
   },
   {
+   "code": "367",
+   "region": "QC"
+  },
+  {
+   "code": "368",
+   "region": "AB"
+  },
+  {
+   "code": "382",
+   "region": "ON"
+  },
+  {
+   "code": "403",
+   "region": "AB"
+  },
+  {
    "code": "416",
-   "region": "ON"
-  },
-  {
-   "code": "437",
-   "region": "ON"
-  },
-  {
-   "code": "519",
-   "region": "ON"
-  },
-  {
-   "code": "613",
-   "region": "ON"
-  },
-  {
-   "code": "647",
-   "region": "ON"
-  },
-  {
-   "code": "705",
-   "region": "ON"
-  },
-  {
-   "code": "807",
-   "region": "ON"
-  },
-  {
-   "code": "905",
    "region": "ON"
   },
   {
    "code": "418",
    "region": "QC"
+  },
+  {
+   "code": "428",
+   "region": "NB"
+  },
+  {
+   "code": "431",
+   "region": "MB"
+  },
+  {
+   "code": "437",
+   "region": "ON"
   },
   {
    "code": "438",
@@ -132,8 +101,28 @@
    "region": "QC"
   },
   {
+   "code": "468",
+   "region": "QC"
+  },
+  {
+   "code": "474",
+   "region": "SK"
+  },
+  {
+   "code": "506",
+   "region": "NB"
+  },
+  {
    "code": "514",
    "region": "QC"
+  },
+  {
+   "code": "519",
+   "region": "ON"
+  },
+  {
+   "code": "548",
+   "region": "ON"
   },
   {
    "code": "579",
@@ -144,20 +133,110 @@
    "region": "QC"
   },
   {
+   "code": "584",
+   "region": "MB"
+  },
+  {
+   "code": "587",
+   "region": "AB"
+  },
+  {
+   "code": "604",
+   "region": "BC"
+  },
+  {
+   "code": "613",
+   "region": "ON"
+  },
+  {
+   "code": "639",
+   "region": "SK"
+  },
+  {
+   "code": "647",
+   "region": "ON"
+  },
+  {
+   "code": "672",
+   "region": "BC"
+  },
+  {
+   "code": "683",
+   "region": "ON"
+  },
+  {
+   "code": "705",
+   "region": "ON"
+  },
+  {
+   "code": "709",
+   "region": "NL"
+  },
+  {
+   "code": "742",
+   "region": "ON"
+  },
+  {
+   "code": "753",
+   "region": "ON"
+  },
+  {
+   "code": "778",
+   "region": "BC"
+  },
+  {
+   "code": "780",
+   "region": "AB"
+  },
+  {
+   "code": "782",
+   "region": "NS",
+   "spans": [
+    "PE"
+   ]
+  },
+  {
+   "code": "807",
+   "region": "ON"
+  },
+  {
    "code": "819",
    "region": "QC"
+  },
+  {
+   "code": "825",
+   "region": "AB"
+  },
+  {
+   "code": "867",
+   "region": "NU",
+   "spans": [
+    "NT",
+    "YT"
+   ]
   },
   {
    "code": "873",
    "region": "QC"
   },
   {
-   "code": "306",
-   "region": "SK"
+   "code": "879",
+   "region": "NL"
   },
   {
-   "code": "639",
-   "region": "SK"
+   "code": "902",
+   "region": "NS",
+   "spans": [
+    "PE"
+   ]
+  },
+  {
+   "code": "905",
+   "region": "ON"
+  },
+  {
+   "code": "942",
+   "region": "ON"
   }
  ]
 }

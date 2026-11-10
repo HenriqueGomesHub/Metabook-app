@@ -2934,9 +2934,36 @@
       }
     },
     {
-      "id": "nl-gh-architecture",
+      "id": "nl-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 1 utility pole from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "af92a245f9c5",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_107.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "nl-gh-architecture",
+      "step": 4,
+      "order": 2,
       "family": "architecture",
       "title": "Architecture: more examples",
       "text": [
@@ -2969,7 +2996,7 @@
     {
       "id": "nl-gh-sceneries",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -3008,7 +3035,7 @@
     {
       "id": "nl-gh-licenseplates",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -3041,7 +3068,7 @@
     {
       "id": "nl-gh-googlevehicles-cars",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -3098,7 +3125,7 @@
     {
       "id": "nl-gh-googlevehicles-boats",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "car",
       "title": "Google car: boats",
       "text": [
@@ -3143,7 +3170,7 @@
     {
       "id": "nl-gh-rifts",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "coverage",
       "title": "Coverage: rifts",
       "text": [
@@ -3188,7 +3215,7 @@
     {
       "id": "nl-gh-housenumbers",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "other",
       "title": "House numbers",
       "text": [
@@ -3215,7 +3242,7 @@
     {
       "id": "nl-gh-postboxes",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "other",
       "title": "Post boxes",
       "text": [
@@ -3266,7 +3293,7 @@
     {
       "id": "nl-gh-sidewalks",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -3299,7 +3326,7 @@
     {
       "id": "nl-gh-signs-stop",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -3327,7 +3354,7 @@
     {
       "id": "nl-gh-signs-yield",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -3355,7 +3382,7 @@
     {
       "id": "nl-gh-signs-chevrons",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -3389,7 +3416,7 @@
     {
       "id": "nl-gh-signs-pedestrian",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -3423,7 +3450,7 @@
     {
       "id": "nl-gh-signs-speed",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -3703,7 +3730,7 @@
     {
       "id": "nl-gh-signs-railwaycrossing",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: railway crossings",
@@ -3767,7 +3794,7 @@
     {
       "id": "nl-gh-signs-river",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: rivers",
@@ -3819,7 +3846,7 @@
     {
       "id": "nl-gh-signs-backofsigns",
       "step": 4,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "back",
       "title": "Sign back: design",
@@ -3859,7 +3886,7 @@
     {
       "id": "nl-gh-signs-directions",
       "step": 4,
-      "order": 18,
+      "order": 19,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -3893,7 +3920,7 @@
     {
       "id": "nl-gh-signs-signposts",
       "step": 4,
-      "order": 19,
+      "order": 20,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -3957,7 +3984,7 @@
     {
       "id": "nl-gh-signs-roadnumbering",
       "step": 4,
-      "order": 20,
+      "order": 21,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -4057,7 +4084,7 @@
     {
       "id": "nl-gh-signs-streetnames",
       "step": 4,
-      "order": 21,
+      "order": 22,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -4163,7 +4190,7 @@
     {
       "id": "nl-gh-signs-citysigns",
       "step": 4,
-      "order": 22,
+      "order": 23,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: town names",
@@ -4197,7 +4224,7 @@
     {
       "id": "nl-gh-signs-busstop",
       "step": 4,
-      "order": 23,
+      "order": 24,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -4483,7 +4510,7 @@
     {
       "id": "nl-gh-signs-tramstop",
       "step": 4,
-      "order": 24,
+      "order": 25,
       "family": "sign",
       "kind": "other",
       "title": "Sign: tram stops",
@@ -4523,6 +4550,131 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/tramStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "nl-gh-lines-white-white",
+      "step": 4,
+      "order": 26,
+      "family": "line",
+      "title": "Road lines: white edges, white centre",
+      "text": [
+        "The road markings here are white at the edges and white in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and white in the centre.",
+      "sameAs": [
+        "AD",
+        "AL",
+        "AR",
+        "AT",
+        "AU",
+        "BA",
+        "BD",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "BT",
+        "CH",
+        "CL",
+        "CW",
+        "CX",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FO",
+        "FR",
+        "GB",
+        "GE",
+        "GH",
+        "GI",
+        "GL",
+        "GR",
+        "HR",
+        "HU",
+        "ID",
+        "IM",
+        "IN",
+        "IS",
+        "IT",
+        "JP",
+        "KE",
+        "KG",
+        "KR",
+        "KZ",
+        "LA",
+        "LI",
+        "LK",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "ME",
+        "MG",
+        "MK",
+        "MN",
+        "MT",
+        "MX",
+        "MY",
+        "NZ",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RE",
+        "RO",
+        "RS",
+        "RU",
+        "RW",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SM",
+        "SN",
+        "ST",
+        "TN",
+        "TR",
+        "UA",
+        "UG",
+        "UY",
+        "VN",
+        "XK"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "nl-gh-lines-white-white-and-green",
+      "step": 4,
+      "order": 27,
+      "family": "line",
+      "title": "Road lines: white edges, white and green centre",
+      "text": [
+        "The road markings here are white at the edges and white and green in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and white and green in the centre.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

@@ -2210,9 +2210,42 @@
       }
     },
     {
-      "id": "bw-gh-architecture",
+      "id": "bw-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 2 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b94246ccf8e1",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_1.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "0bf4ed2c4a23",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_2.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "bw-gh-architecture",
+      "step": 4,
+      "order": 2,
       "family": "architecture",
       "title": "Architecture: more examples",
       "text": [
@@ -2239,7 +2272,7 @@
     {
       "id": "bw-gh-nature",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "vegetation",
       "title": "Vegetation: plants and trees",
       "text": [
@@ -2266,7 +2299,7 @@
     {
       "id": "bw-gh-sceneries",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -2305,7 +2338,7 @@
     {
       "id": "bw-gh-licenseplates",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -2350,7 +2383,7 @@
     {
       "id": "bw-gh-googlevehicles-cars",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -2389,7 +2422,7 @@
     {
       "id": "bw-gh-followcars",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "car",
       "title": "Google car: follow cars",
       "text": [
@@ -2416,7 +2449,7 @@
     {
       "id": "bw-gh-rifts",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "coverage",
       "title": "Coverage: rifts",
       "text": [
@@ -2449,7 +2482,7 @@
     {
       "id": "bw-gh-sidewalks",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -2488,7 +2521,7 @@
     {
       "id": "bw-gh-signs-stop",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -2516,7 +2549,7 @@
     {
       "id": "bw-gh-signs-yield",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -2550,7 +2583,7 @@
     {
       "id": "bw-gh-signs-chevrons",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -2584,7 +2617,7 @@
     {
       "id": "bw-gh-signs-pedestrian",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -2630,7 +2663,7 @@
     {
       "id": "bw-gh-signs-speed",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -2712,7 +2745,7 @@
     {
       "id": "bw-gh-signs-animalwarning",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: animals",
@@ -2746,7 +2779,7 @@
     {
       "id": "bw-gh-signs-railwaycrossing",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: railway crossings",
@@ -2834,7 +2867,7 @@
     {
       "id": "bw-gh-signs-river",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: rivers",
@@ -2862,7 +2895,7 @@
     {
       "id": "bw-gh-signs-backofsigns",
       "step": 4,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "back",
       "title": "Sign back: design",
@@ -2890,7 +2923,7 @@
     {
       "id": "bw-gh-signs-directions",
       "step": 4,
-      "order": 18,
+      "order": 19,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -2936,7 +2969,7 @@
     {
       "id": "bw-gh-signs-signposts",
       "step": 4,
-      "order": 19,
+      "order": 20,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -2976,7 +3009,7 @@
     {
       "id": "bw-gh-signs-roadnumbering",
       "step": 4,
-      "order": 20,
+      "order": 21,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -3010,7 +3043,7 @@
     {
       "id": "bw-gh-signs-streetnames",
       "step": 4,
-      "order": 21,
+      "order": 22,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -3038,7 +3071,7 @@
     {
       "id": "bw-gh-signs-citysigns",
       "step": 4,
-      "order": 22,
+      "order": 23,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: town names",
@@ -3072,7 +3105,7 @@
     {
       "id": "bw-gh-signs-busstop",
       "step": 4,
-      "order": 23,
+      "order": 24,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -3118,6 +3151,61 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "bw-gh-lines-yellow-white",
+      "step": 4,
+      "order": 25,
+      "family": "line",
+      "title": "Road lines: yellow edges, white centre",
+      "text": [
+        "The road markings here are yellow at the edges and white in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are yellow at the edges and white in the centre.",
+      "sameAs": [
+        "AE",
+        "AU",
+        "CH",
+        "CL",
+        "ES",
+        "FR",
+        "GB",
+        "GI",
+        "HU",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "JE",
+        "JO",
+        "KZ",
+        "LK",
+        "LS",
+        "LT",
+        "ME",
+        "MX",
+        "MY",
+        "NA",
+        "NG",
+        "NP",
+        "NZ",
+        "OM",
+        "PT",
+        "RU",
+        "SG",
+        "SZ",
+        "TR",
+        "ZA"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }
