@@ -90,15 +90,19 @@ describe('Learn section', () => {
 });
 
 describe('Drills', () => {
-  it('has a tile per clue family with cards, with its count, opening that family', async () => {
+  it('has a tile per clue family with cards, counted in clues and countries', async () => {
     mount('/drills');
     const bollards = (await screen.findByText('Bollards')).closest('a')!;
     expect(bollards.getAttribute('href')).toBe('/session?subject=bollard');
-    // 5 Spot it + 5 Which clue (every bollard country has 3 others) + 1 Live view
-    expect(within(bollards).getByText(/11 cards/)).toBeTruthy();
+    // one bollard clue in each of five countries (10 cards made from them)
+    expect(within(bollards).getByText(/5 bollards · 5 countries/)).toBeTruthy();
     const poles = screen.getByText('Poles').closest('a')!;
-    // Poland: 2 Spot it; Brazil: 1 Spot it + 1 Live view
-    expect(within(poles).getByText(/4 cards/)).toBeTruthy();
+    expect(within(poles).getByText(/2 poles · 2 countries/)).toBeTruthy();
+    // Live view cards have their own tile, with a note on road labels
+    const streetView = screen.getByText('Street View').closest('a')!;
+    expect(streetView.getAttribute('href')).toBe('/session?type=live');
+    expect(within(streetView).getByText(/2 spots · 2 countries/)).toBeTruthy();
+    expect(within(streetView).getByText(/Road labels can show names/)).toBeTruthy();
     // language clues have no image: Clue quiz only
     expect(screen.queryByText('Language')).toBeNull();
     expect(screen.getByText('Clue quiz').closest('a')?.getAttribute('href')).toBe(
@@ -127,11 +131,20 @@ describe('Clue cards in practice', () => {
     const which = clueCards({ clues: CLUE_COUNTRIES, pool: CLUE_POOL }).find(
       (c) => c.id === clueCardIds.which('PL-vySo'),
     )!;
-    const wrong = which.clue!.choices!.findIndex((c) => c.country !== 'PL');
-    const picked = which.clue!.choices![wrong]!.country;
     const repo = mount('/session?type=which&country=PL');
     expect(await screen.findByText('Which is the Poland bollard?')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: `Image ${wrong + 1}` }));
+    // each showing draws its own images and order: find a shown image that is not Poland's
+    const images = await waitFor(() => {
+      const found = screen
+        .getAllByRole('button', { name: /^Image \d$/ })
+        .map((button) => ({ button, src: button.querySelector('img')?.getAttribute('src') }));
+      expect(found.every((f) => f.src)).toBe(true);
+      return found;
+    });
+    const all = [which.clue!.choices!, which.clue!.alternates!].flat();
+    const wrong = images.find((f) => f.src !== which.clue!.image!.src)!;
+    const picked = all.find((c) => c.image.src === wrong.src)!.country;
+    fireEvent.click(wrong.button);
     const dialog = await screen.findByRole('dialog', { name: 'Not quite — it’s the marked image' });
     const names: Record<string, string> = {
       CZ: 'Czechia',

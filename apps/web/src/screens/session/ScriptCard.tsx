@@ -9,7 +9,11 @@ export function ScriptCard({ card, mode, options, outcome, onAnswer, reveal }: C
     <Stage
       main={
         <div className="pop-in">
-          <Prompt prompt={card.prompt} revealed={outcome !== null} alt="A sign written in an unknown script" />
+          <Prompt
+            prompt={card.prompt}
+            revealed={outcome !== null}
+            alt="A sign written in an unknown script"
+          />
         </div>
       }
       side={

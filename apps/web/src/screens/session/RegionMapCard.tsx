@@ -69,8 +69,8 @@ export function RegionMapCard({ card, outcome, onAnswer, onSkip, reveal }: CardP
         <p>The map of {country} could not be loaded.</p>
         {showAnswer && (
           <p className="map-answer">
-            {state ? `It’s ${state}.` : 'The answer needs the map.'} Nothing was recorded; this
-            card comes back later.
+            {state ? `It’s ${state}.` : 'The answer needs the map.'} Nothing was recorded; this card
+            comes back later.
           </p>
         )}
         {showAnswer ? (

@@ -1,5 +1,6 @@
 import {
   cardForItem,
+  cardForShowing,
   createPractice,
   isClueCard,
   matchesAnswer,
@@ -8,6 +9,7 @@ import {
   normalizeAnswer,
   pickTip,
   recordPracticeAnswer,
+  showingSeed,
 } from '@metabook/core';
 import type {
   Card,
@@ -112,6 +114,8 @@ function inScope(
   return cards.filter(
     (card) =>
       (clue ? isClueCard(card) : !isClueCard(card)) &&
+      // Live view cards only in their own drill (type=live): Google paints road names on them
+      (card.type !== 'live' || type === 'live') &&
       (!clues || Boolean(card.clue)) &&
       // regions-map cards only come up in map drills, not with their subject's "which country?"
       (map === undefined ? !subject || !card.map : map === Boolean(card.map)) &&
@@ -377,8 +381,16 @@ function CardRunner({
   const [shown, setShown] = useState<Shown | null>(null);
   const shownAt = useRef(performance.now());
   const cards = data.content.cards;
+  // one showing: its options are drawn once, from the card, its review count and this moment, so
+  // a card that comes back offers other distractors in another order (re-renders keep them)
+  const [shownMs] = useState(() => Date.now());
+  const reps = data.states[item.cardId]?.reps ?? 0;
+  const [seed] = useState(() => showingSeed(item.cardId, reps, shownMs));
   // a practice repeat may show another image of the card's clue
-  const card = useMemo(() => cardForItem(item, cards) as Card, [item, cards]);
+  const card = useMemo(
+    () => cardForShowing(cardForItem(item, cards) as Card, seed),
+    [item, cards, seed],
+  );
   // Options are drawn once per item; later content changes must not reshuffle them.
   const [options] = useState(() => optionsFor(item, card, cards, Math.random));
 

@@ -14,7 +14,9 @@ export function inline(text: string): ReactNode[] {
     const at = match.index;
     if (at > last) out.push(text.slice(last, at));
     const [, label, href, bold, bold2, em, em2] = match;
-    if (label && href) {
+    if (href !== undefined && !label?.trim()) {
+      // a link without words (an image link, an empty anchor) shows nothing
+    } else if (label && href) {
       out.push(
         <a key={key++} href={href} target="_blank" rel="noreferrer noopener">
           {inline(label)}
@@ -31,13 +33,30 @@ export function inline(text: string): ReactNode[] {
   return out;
 }
 
-/** Clue paragraphs, each its own <p>. */
+/**
+ * A paragraph tidied for reading: image embeds and empty links gone, runs of spaces and stray
+ * spaces before punctuation collapsed. Empty when nothing readable is left.
+ */
+export function tidy(paragraph: string): string {
+  return paragraph
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+    .replace(/\[\s*\]\([^)]*\)/g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+([,.;:!?)])/g, '$1')
+    .replace(/\(\s*\)/g, '')
+    .trim();
+}
+
+/** Clue paragraphs, each its own <p>; notes ("NOTE: …") set apart. Empty paragraphs are dropped. */
 export function Markdown({ paragraphs }: { paragraphs: string[] }) {
+  const readable = paragraphs.map(tidy).filter((p) => /[\p{L}\p{N}]/u.test(p));
   return (
     <>
-      {paragraphs.map((paragraph, i) => (
+      {readable.map((paragraph, i) => (
         <Fragment key={i}>
-          <p>{inline(paragraph)}</p>
+          <p className={/^\s*(\*\*)?note\b/i.test(paragraph) ? 'clue-note' : undefined}>
+            {inline(paragraph)}
+          </p>
         </Fragment>
       ))}
     </>

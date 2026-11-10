@@ -46,9 +46,12 @@ function today(data: AppSnapshot, now: Date) {
   return { reviews: reviewedToday.size - introduced.length, introduced };
 }
 
-/** The cards the daily session draws from: text-only clue cards are for the Clue quiz. */
-const sessionCards = (data: AppSnapshot): Card[] =>
-  data.content.cards.filter((card) => !isClueCard(card));
+/**
+ * The cards the daily session draws from: text-only clue cards are for the Clue quiz, and Live
+ * view cards for the Street View drill (the keyless embed shows road names).
+ */
+export const sessionCards = (data: AppSnapshot): Card[] =>
+  data.content.cards.filter((card) => !isClueCard(card) && card.type !== 'live');
 
 /**
  * Today's session, with the daily caps reduced by what was already reviewed and introduced
