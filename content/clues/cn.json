@@ -21,7 +21,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: All official coverage in mainland China is taken with a…",
+      "title": "Coverage: tripods with motion blur",
       "text": [
         "All official coverage in mainland China is taken with a **tripod**. Objects in the image will usually have motion blur, and slightly saturated colours.",
         "NOTE: Hong Kong and Macau both have full Google Car coverage.",
@@ -65,14 +65,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All official mainland coverage is made on a tripod, so images show motion blur and slightly saturated colours. Hong Kong and Macau have full Google car coverage.",
+      "differs": [
+        {
+          "country": "HK",
+          "how": "Has full Google car coverage"
+        },
+        {
+          "country": "MO",
+          "how": "Has full Google car coverage"
+        }
+      ]
     },
     {
       "id": "cn-7ABL",
       "step": 0,
       "order": 2,
       "family": "other",
-      "title": "Chinese writing consists of often complicated symbols made…",
+      "title": "Language: simplified Chinese characters",
       "text": [
         "Chinese writing consists of often complicated symbols made up of several strokes. On mainland China, you’ll typically find [simplified Chinese](https://en.wikipedia.org/wiki/Simplified_Chinese_characters), where the number of strokes of many symbols have been greatly reduced compared to [traditional Chinese](https://en.wikipedia.org/wiki/Traditional_Chinese_characters).",
         "NOTE: Traditional Chinese is widely used in Taiwan, Hong Kong and Macau."
@@ -97,14 +108,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chinese characters are made of many strokes. Mainland signs use simplified characters, with far fewer strokes than the traditional ones used in Taiwan, Hong Kong and Macau.",
+      "differs": [
+        {
+          "country": "TW",
+          "how": "Uses traditional characters, with more strokes"
+        },
+        {
+          "country": "HK",
+          "how": "Uses traditional characters, with more strokes"
+        },
+        {
+          "country": "MO",
+          "how": "Uses traditional characters, with more strokes"
+        }
+      ]
     },
     {
       "id": "cn-CygQ",
       "step": 0,
       "order": 3,
       "family": "plate",
-      "title": "Plate: Chinese licence plates are blue with white text",
+      "title": "Plate: blue with white text",
       "text": [
         "Chinese licence plates are **blue** with white text."
       ],
@@ -124,14 +150,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Licence plates are blue with white text."
     },
     {
       "id": "cn-R4Q8",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in mainland China is limited to several small spots",
+      "title": "Coverage: small spots near east-coast cities",
       "text": [
         "Coverage in mainland China is limited to several small spots, mainly in or near major urban areas on the east coast. A significant portion of the coverage is considered **hidden**, which is also shown on this map. Hidden means it won’t show up on Google Maps, however you can still access it in the [Map Making App](https://map-making.app/)."
       ],
@@ -152,14 +179,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is a few small spots, mainly in or near big cities on the east coast. A lot of it is hidden, meaning it is not on Google Maps but can be reached via the Map Making App."
     },
     {
       "id": "cn-y76w",
       "step": 1,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: A significant portion of the coverage was taken inside…",
+      "title": "Coverage: inside museums",
       "text": [
         "A significant portion of the coverage was taken **inside museums** and can be found in many cities, however a majority of the covered museums are located in and around Beijing and Shanghai."
       ],
@@ -198,14 +226,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many coverage spots are inside museums in many cities, most of them around the two biggest eastern cities."
     },
     {
       "id": "cn-dosV",
       "step": 1,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: Ancient cities with coverage can be found along the east…",
+      "title": "Coverage: ancient towns on the east coast",
       "text": [
         "**Ancient cities** with coverage can be found along the east coast in [Zhoucun](https://goo.gl/maps/HtrBBDFAqr4kmpsi7), northeast of [Xuzhou](https://goo.gl/maps/ZBQ6DJwNq9GaX48v5), in [Yangzhou](https://goo.gl/maps/Jv38RED54kjAMofy9), west of [Jiaxing](https://goo.gl/maps/9ShXFknmEMANdcw67) and west of [Zhangzhou](https://goo.gl/maps/obaDwScAwCNoynGs5)."
       ],
@@ -244,14 +273,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Old town coverage is found along the east coast, for example northeast of Xuzhou, in Yangzhou, west of Jiaxing and west of Zhangzhou."
     },
     {
       "id": "cn-bsTm",
       "step": 1,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: Coverage taken outside in modern urban areas can be found…",
+      "title": "Coverage: modern urban streets outside",
       "text": [
         "Coverage taken outside in modern **urban areas** can be found in [Beijing](https://goo.gl/maps/6LT8nsRuT7ZzY3t57), [Yangzhou](https://goo.gl/maps/Dka3nyFnF2jdkMAh8), [Shanghai](https://goo.gl/maps/Q3GDwGHXSckc6M7z7), [Shenzhen](https://goo.gl/maps/M6rYq1LDtTUvphnMA) and [Chengdu](https://goo.gl/maps/u334vZ7Q9KAFmYvW9)."
       ],
@@ -290,14 +320,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Outdoor coverage in modern city areas exists in a handful of big cities, such as Beijing, Shanghai, Shenzhen, Chengdu and Yangzhou."
     },
     {
       "id": "cn-pTop",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "The Palace Museum",
+      "title": "Landmark: massive palace complex",
       "text": [
         "The Palace Museum (commonly referred to as the [Forbidden City](https://en.wikipedia.org/wiki/Forbidden_City)) is a **massive palace** in the centre of Beijing."
       ],
@@ -336,14 +367,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A huge palace in the centre of the capital, known as the Forbidden City."
     },
     {
       "id": "cn-2kV6",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "By the Today Art Museum in Beijing you can find this modern…",
+      "title": "Landmark: art museum, street with cafes",
       "text": [
         "By the Today Art Museum in Beijing you can find this modern urban street with several cafes and bars along the road. In front of the museum you can also find this [uncanny statue](https://goo.gl/maps/GE62dTna3EgiyzWv5)."
       ],
@@ -382,14 +414,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A modern city street with several cafes and bars next to an art museum in the capital. In front of the museum is an uncanny statue."
     },
     {
       "id": "cn-9s1q",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "The parking area outside Sichuan Museum in Chengdu has a…",
+      "title": "Landmark: museum car park with greenery",
       "text": [
         "The **parking area** outside Sichuan Museum in Chengdu has a lot of **greenery**."
       ],
@@ -428,14 +461,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The car park outside a big museum in Chengdu has a lot of greenery."
     },
     {
       "id": "cn-TjfT",
       "step": 2,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: The Hubei Museum in Wuhan can be recognised by its…",
+      "title": "Landmark: palace-like museum, grey roofs",
       "text": [
         "The Hubei Museum in Wuhan can be recognised by its **palace-like** architecture with **grey roofs**."
       ],
@@ -474,14 +508,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A museum in Wuhan with palace-like architecture and grey roofs."
     },
     {
       "id": "cn-ZSAE",
       "step": 2,
       "order": 5,
       "family": "other",
-      "title": "The Museum of silk production in Hangzhou can be recognised…",
+      "title": "Landmark: rounded glass front, fountain",
       "text": [
         "The Museum of silk production in Hangzhou can be recognised by the **rounded glass facade** and the **fountain** by the front."
       ],
@@ -520,14 +555,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A silk museum in Hangzhou with a rounded glass facade and a fountain at the front."
     },
     {
       "id": "cn-Fgo6",
       "step": 2,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Shanghai Long Museum can be recognised by the boxy concrete…",
+      "title": "Landmark: boxy concrete museum",
       "text": [
         "Shanghai Long Museum can be recognised by the **boxy concrete main building**."
       ],
@@ -566,14 +602,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A museum in Shanghai with a boxy concrete main building."
     },
     {
       "id": "cn-V4ba",
       "step": 2,
       "order": 7,
       "family": "architecture",
-      "title": "Architecture: Suzhou Museum can be recognised by the white and grey…",
+      "title": "Landmark: white and grey angular museum",
       "text": [
         "Suzhou Museum can be recognised by the white and grey **symmetric angular architecture**."
       ],
@@ -612,14 +649,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A museum in Suzhou with symmetric, angular white and grey architecture."
     },
     {
       "id": "cn-d3En",
       "step": 2,
       "order": 8,
       "family": "architecture",
-      "title": "Architecture: The Yangzhou Museum can be recognised by the beige rounded…",
+      "title": "Landmark: beige rounded stone museum",
       "text": [
         "The Yangzhou Museum can be recognised by the **beige rounded stone building**."
       ],
@@ -658,14 +696,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A museum in Yangzhou, a beige rounded stone building."
     },
     {
       "id": "cn-CodW",
       "step": 2,
       "order": 9,
       "family": "other",
-      "title": "The ancient city of Zhoucun is the only pinpointable…",
+      "title": "Landmark: ancient town, straight street",
       "text": [
         "The ancient city of Zhoucun is the only pinpointable ancient city in China, and can be recognised by the street going straight north to south."
       ],
@@ -704,7 +743,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/china",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only ancient town you can pinpoint, recognised by its street running straight north to south."
     }
   ]
 }

@@ -463,7 +463,8 @@
           },
           "path": "be/3db2032d8e5e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -581,7 +582,8 @@
           },
           "path": "be/d293c4e0a032.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -698,7 +700,8 @@
           },
           "path": "be/58c4487a3e1e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -745,7 +748,8 @@
           },
           "path": "be/b337e4384d3b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1159,7 +1163,9 @@
           },
           "path": "be/7c50a23daa90.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circle and arrow mark the roadside gutter with a drain grate"
         }
       ],
       "locations": [
@@ -1254,7 +1260,8 @@
           },
           "path": "be/3499767ed0cd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1416,7 +1423,9 @@
           },
           "path": "be/3190dd2b2f0b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Landscapes compared: flat in the northwest (left) and hilly in the southeast (right)"
         }
       ],
       "locations": [
@@ -1712,15 +1721,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "fad40ec1ee58",
-          "src": "https://www.plonkit.net/images/belgium/phonecodes.png",
-          "path": "be/fad40ec1ee58.webp",
-          "width": 800,
-          "height": 618
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1780,7 +1781,14 @@
           },
           "path": "be/723262fa7d1f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1846,7 +1854,15 @@
           },
           "path": "be/ea8cc93ba5f6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1902,7 +1918,15 @@
           },
           "path": "be/7f222ef06ef1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [

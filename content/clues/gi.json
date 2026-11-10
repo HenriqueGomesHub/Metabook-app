@@ -26,15 +26,7 @@
         "Gibraltar is a British Overseas Territory located at the southern tip of the Iberian Peninsula, bordering Spain. For country streak purposes, the territory is counted as **the United Kingdom**."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "dc9a0607db0c",
-          "src": "https://www.plonkit.net/images/gibraltar/e.png",
-          "path": "gi/dc9a0607db0c.webp",
-          "width": 600,
-          "height": 505
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "ES",
@@ -133,7 +125,9 @@
           },
           "path": "gi/7826117cc648.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "A tall white rock outcrop above a grassy slope and a few buildings"
         }
       ],
       "locations": [
@@ -233,7 +227,9 @@
           },
           "path": "gi/5aff642a2d65.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A Gibraltar road with traffic driving on the right; the added sign shows two-way traffic"
         }
       ],
       "locations": [
@@ -343,7 +339,9 @@
           },
           "path": "gi/eba0ba96d56c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Narrow street with pastel houses; the red circle magnifies green louvered shutters"
         }
       ],
       "locations": [
@@ -438,7 +436,8 @@
           },
           "path": "gi/412473119e4a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -485,7 +484,15 @@
           },
           "path": "gi/2bcaeacd4e53.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.84,
+            "h": 1
+          }
         }
       ],
       "locations": [
