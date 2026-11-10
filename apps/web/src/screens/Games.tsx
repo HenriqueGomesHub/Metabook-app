@@ -6,7 +6,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
-import { areaCodeCountries } from '../data/areaCodes';
+import { areaCodeSections } from '../data/areaCodes';
 import './games/games.css';
 
 const STRONG = 0.6;
@@ -101,10 +101,12 @@ function GamesView({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
   // area codes: every country with a content/areacodes file (Brazil's ship as cards) is playable
   const areaCodes = useMemo(() => {
-    const codes = areaCodeCountries(data.content.cards, data.content.pool);
+    const { pattern, memorise } = areaCodeSections(data.content.cards, data.content.pool);
+    const codes = [...pattern, ...memorise];
     const name = (code: string) => data.content.pool.find((c) => c.code === code)?.name ?? code;
+    // each country opens on its pattern page, which leads on to the game
     const playable = Object.fromEntries(
-      codes.map((code) => [name(code), `/games/areacode/${code.toLowerCase()}`]),
+      codes.map((code) => [name(code), `/areacodes/${code.toLowerCase()}`]),
     );
     const strong = new Set(
       codes
@@ -162,7 +164,13 @@ function GamesView({ data }: { data: AppSnapshot }) {
                     {game.icon}
                   </svg>
                   <div>
-                    <h2 className="headline">{game.title}</h2>
+                    <h2 className="headline">
+                      {game.title === 'Area codes' && open ? (
+                        <Link to="/areacodes">{game.title}</Link>
+                      ) : (
+                        game.title
+                      )}
+                    </h2>
                     <p>{game.blurb}</p>
                   </div>
                   {!open && <span className="soon-pill">Soon</span>}

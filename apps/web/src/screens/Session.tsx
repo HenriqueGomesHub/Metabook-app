@@ -30,6 +30,7 @@ import { label, scopeOf, SUBJECTS } from '../app/labels';
 import type { Scope as LabelScope } from '../app/labels';
 import { learnMore, practiseMore, todaySession } from '../app/stats';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
+import { PatternHint } from '../components/PatternHint';
 import { Chip, CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
@@ -469,7 +470,13 @@ function CardRunner({
       {...verdict}
       tip={shown.tip}
       aside={shown.aside}
-      extra={card.clue && <ClueAnswer card={card} />}
+      extra={
+        card.clue ? (
+          <ClueAnswer card={card} />
+        ) : (
+          card.type === 'areacode' && <PatternHint card={card} cards={cards} />
+        )
+      }
       onNext={onNext}
       onAnotherTip={anotherTip}
     />

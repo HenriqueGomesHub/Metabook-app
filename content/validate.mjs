@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { CLUE_FAMILIES, SIGN_KINDS } from '../packages/core/src/clues.ts';
 import { namedIn, regionNameParts } from '../packages/core/src/generate.ts';
 import { licenceOk } from '../tools/content/lib/common.mjs';
+import { checkAreaCodePatterns } from '../tools/content/areacode-patterns.mjs';
 const root = dirname(fileURLToPath(import.meta.url));
 const load = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 const errors = [];
@@ -267,6 +268,9 @@ if (existsSync(join(root, 'clues/index.json'))) {
   const index = load('clues/index.json');
   if (!Array.isArray(index) || !index.every((r) => codes.has(r.country) && Number.isInteger(r.clues))) err('clues/index.json: rows must be { country, clues, ... } for pool countries');
 }
+
+// area-code patterns (content/areacodes/patterns.json) against the codes they describe
+errors.push(...checkAreaCodePatterns());
 
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`OK: ${pool.length} pool, ${allCards.length} cards, ${allTips.length} tips, ${chapters.length} chapters, ${noteIds.size} facts files, ${mediaCount} photos, ${clueCount} clues`);
