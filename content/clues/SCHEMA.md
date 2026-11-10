@@ -13,7 +13,9 @@ from `packages/core/src/clues.ts`. Written by the content pipeline, never by han
   adds its images there; otherwise it becomes its own clue (`<code>-lm-<meta id>`).
 - `links` step: resolves each image's Google Maps link (goo.gl / maps.app.goo.gl short links included)
   into `location` (pano, lat, lng, heading, pitch = t - 90, fov from the `y` value).
-- `clues` step: writes this folder. Family from Plonk It tags, then keywords, else `other`.
+- `clues` step: writes this folder and `index.json`. Family from Plonk It tags, then keywords, else
+  `other`. Sub-territory pages (`US-AK`, `US-HI`, `PT-AZ`, `PT-MA`) join their parent country with
+  ids `<sub code>-<item id>` (e.g. `us-ak-x1y2`) and `region` set to the page title.
 - `clueimages` step: copies each image into the private `clues` bucket as webp and sets `path`.
 
 Licences: Plonk It content is CC BY-NC-SA 4.0. Metabook is a personal, non-commercial study app;
