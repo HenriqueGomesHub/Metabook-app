@@ -16,6 +16,8 @@ export const STEPS = [
   'links',
   'clues',
   'clueimages',
+  'imagedupes',
+  'imagesheets',
   'wipemedia',
   'facts',
   'regions',
@@ -139,6 +141,16 @@ export async function runJob(job, { steps = [], onStep } = {}) {
           return runClueImages({ storage, deadline, only });
         }),
       };
+    } else if (step === 'imagedupes' || step === 'imagesheets') {
+      const { createStorage } = await import('./storage.mjs');
+      const storage = createStorage({ bucket: 'clues', isPublic: false });
+      if (step === 'imagedupes') {
+        const { runImageDupes } = await import('./imagedupes.mjs');
+        result = { all: await timed(() => runImageDupes({ storage, deadline, only })) };
+      } else {
+        const { runImageSheets } = await import('./imagesheets.mjs');
+        result = { all: await timed(() => runImageSheets({ storage, only })) };
+      }
     } else if (step === 'wipemedia') {
       const { createStorage } = await import('./storage.mjs');
       const { wipeMedia } = await import('./wipemedia.mjs');

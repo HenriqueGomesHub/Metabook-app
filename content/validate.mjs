@@ -190,6 +190,10 @@ const badLocation = (l) =>
   !LOCATION_SOURCES.includes(l.source) || (l.pano != null && typeof l.pano !== 'string');
 const clueIds = new Set();
 let clueCount = 0;
+const IMAGE_ROLES = ['example', 'comparison', 'annotated'];
+const imagesByFile = new Map(); // file → Map(image id → src)
+const dupeRefs = []; // { file, where, id, dupeOf }
+const otherCodes = (v, code) => strings(v) && v.every((l) => codes.has(l) && l !== code);
 for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
   const file = load(`clues/${f}`);
   const w = `clues/${f}`;
@@ -201,6 +205,8 @@ for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
   if (typeof file.fetchedAt !== 'string') err(`${w}: fetchedAt must be a string`);
   if (!Array.isArray(file.steps) || !file.steps.every((s) => typeof s?.title === 'string')) err(`${w}: steps must be [{ title }]`);
   if (!Array.isArray(file.clues)) { err(`${w}: clues must be an array`); continue; }
+  const fileImages = new Map();
+  imagesByFile.set(f, fileImages);
   for (const c of file.clues) {
     const cw = `${w} ${c.id}`;
     if (typeof c.id !== 'string' || !c.id) { err(`${w}: clue without id`); continue; }
@@ -216,6 +222,9 @@ for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
     if (c.region != null && typeof c.region !== 'string') err(`${cw}: region must be a string`);
     if (!strings(c.lookalikes) || !c.lookalikes.every((l) => codes.has(l) && l !== code)) err(`${cw}: lookalikes must be other pool codes`);
     if (!['Plonk It', 'Learnable Meta'].includes(c.credit?.source) || !isUrl(c.credit?.url) || !c.credit?.licence) err(`${cw}: credit needs source, url and licence`);
+    if (c.summary != null && !(typeof c.summary === 'string' && c.summary.trim() && c.summary.length <= 300)) err(`${cw}: summary must be 1..300 characters`);
+    if (c.sameAs != null && !otherCodes(c.sameAs, code)) err(`${cw}: sameAs must be other pool codes`);
+    if (c.differs != null && !(Array.isArray(c.differs) && c.differs.every((d) => codes.has(d?.country) && d.country !== code && typeof d.how === 'string' && d.how.trim()))) err(`${cw}: differs must be [{ country: other pool code, how }]`);
     if (!Array.isArray(c.images) || !Array.isArray(c.locations)) { err(`${cw}: images and locations must be arrays`); continue; }
     const imageIds = new Set();
     for (const i of c.images) {
@@ -227,8 +236,31 @@ for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
       if (i.crop != null && !(finite(i.crop.x, i.crop.y, i.crop.w, i.crop.h) && [i.crop.x, i.crop.y, i.crop.w, i.crop.h].every((v) => v >= 0 && v <= 1))) err(`${cw} image ${i.id}: crop must be fractions 0..1`);
       if (i.giveaway != null && typeof i.giveaway !== 'boolean') err(`${cw} image ${i.id}: giveaway must be boolean`);
       if (i.location != null && badLocation(i.location)) err(`${cw} image ${i.id}: bad location`);
+      if (i.role != null && !IMAGE_ROLES.includes(i.role)) err(`${cw} image ${i.id}: role must be one of ${IMAGE_ROLES.join(', ')}`);
+      if (i.caption != null && !(typeof i.caption === 'string' && i.caption.trim() && i.caption.length <= 200)) err(`${cw} image ${i.id}: caption must be 1..200 characters`);
+      if (i.dupeOf != null) {
+        if (typeof i.dupeOf !== 'string' || !i.dupeOf) err(`${cw} image ${i.id}: dupeOf must be an image id`);
+        else dupeRefs.push({ file: f, where: `${cw} image ${i.id}`, id: i.id, clueId: c.id, dupeOf: i.dupeOf });
+      }
+      fileImages.set(i.id, i.src);
     }
     for (const l of c.locations) if (badLocation(l)) err(`${cw}: bad location ${JSON.stringify(l)}`);
+  }
+}
+// dupeOf names an image of the same country file (the same file in another clue counts); a
+// near-exact copy of another country's Plonk It image points at that country's image instead
+const clueOfImage = new Map(); // "<file> <image id>" → clue ids
+for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
+  for (const c of load(`clues/${f}`).clues ?? []) for (const i of c.images ?? []) {
+    const key = `${f} ${i.id}`;
+    clueOfImage.set(key, [...(clueOfImage.get(key) ?? []), c.id]);
+  }
+}
+for (const r of dupeRefs) {
+  if (r.dupeOf === r.id) {
+    if (!(clueOfImage.get(`${r.file} ${r.id}`) ?? []).some((id) => id !== r.clueId)) err(`${r.where}: dupeOf is itself and no other clue holds it`);
+  } else if (!imagesByFile.get(r.file)?.has(r.dupeOf) && ![...imagesByFile.values()].some((ids) => /^https:\/\/www\.plonkit\.net\//.test(ids.get(r.dupeOf) ?? ''))) {
+    err(`${r.where}: dupeOf ${r.dupeOf} is no image of the same file, nor a Plonk It image of another`);
   }
 }
 if (existsSync(join(root, 'clues/index.json'))) {

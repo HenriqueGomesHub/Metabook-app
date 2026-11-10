@@ -5,9 +5,11 @@
 import { existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { CONTENT, isMain, jsonFilesIn, loadPool, mediaId, parseArgs, readJson, stripHtml, writeJson } from './lib/common.mjs';
+import { markDupes } from './lib/phash.mjs';
 import { LEARNABLE_META } from './learnablemeta.mjs';
 import { isMapsLink, isShortLink, parseMapsUrl } from './links.mjs';
 import { PLONKIT } from './plonkit.mjs';
+import { REVIEW_IMAGES_DIR, REVIEW_TEXT_DIR, applyImageReviews, applyTextReviews, loadImageReviews, loadTextReviews, trimReport } from './reviews.mjs';
 
 export const SOURCES_DIR = join(CONTENT, 'sources');
 export const CLUES_DIR = join(CONTENT, 'clues');
@@ -16,6 +18,8 @@ const PLONKIT_LICENCE = 'CC BY-NC-SA 4.0';
 const LEARNABLE_META_LICENCE = 'Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)';
 /** Share of the smaller token set a meta's note must have in common with a clue's text to join it. */
 const MERGE_THRESHOLD = 0.4;
+/** Old Plonk It slugs Learnable Meta footers still link → the page's slug now. */
+const SLUG_ALIASES = { 'united-states-of-america': 'united-states' };
 
 const fold = (s) => s.normalize('NFD').replace(/\p{M}/gu, '');
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -377,7 +381,8 @@ function addMeta(country, { thing, meta, map }, { pool, slugs }) {
   const mapUrl = `${LEARNABLE_META}/maps/${map.geoguessrId}`;
   const text = noteToMarkdown(meta.note);
   const noteText = text.join('\n');
-  const linksPlonkit = [...meta.footer.matchAll(/plonkit\.net\/([\w-]+)/gi)].some((m) => slugs.has(m[1].toLowerCase()));
+  // only into a clue of the meta's own country, and only when the footer links that country's page
+  const linksPlonkit = [...meta.footer.matchAll(/plonkit\.net\/([\w-]+)/gi)].some((m) => slugs.has(SLUG_ALIASES[m[1].toLowerCase()] ?? m[1].toLowerCase()));
   const thingFamily = classify({ text: [thing] }).family;
   const images = meta.images.map((src) => clueImage(src, { text: noteText, source: 'learnablemeta' }));
 
@@ -471,17 +476,40 @@ export function indexRow(c) {
 /**
  * The `clues` step: writes <code>.json for every built country and rebuilds index.json from every
  * file in `outDir`. A full run (no `only`) also removes files of countries no longer built. Image
- * `path`, `width` and `height` set by `clueimages` are kept for images whose src is unchanged.
+ * `path`, `width` and `height` set by `clueimages` are kept for images whose src is unchanged. Then
+ * the reviews (reviews.mjs) are applied and `dupeOf` is set from the image hashes of `imagedupes`
+ * (lib/phash.mjs; across countries only among the countries built).
  */
-export function writeClues({ sourcesDir = SOURCES_DIR, outDir = CLUES_DIR, pool = loadPool(), mapsDir = MAPS_DIR, only } = {}) {
-  const { countries, unmatched, counts } = buildClues(loadSources(sourcesDir), { pool, mapsDir, only });
+export function writeClues({
+  sourcesDir = SOURCES_DIR,
+  outDir = CLUES_DIR,
+  pool = loadPool(),
+  mapsDir = MAPS_DIR,
+  only,
+  hashesFile = join(sourcesDir, 'imagehashes.json'),
+  reviewImagesDir = REVIEW_IMAGES_DIR,
+  reviewTextDir = REVIEW_TEXT_DIR,
+} = {}) {
+  const sources = loadSources(sourcesDir);
+  const { countries, unmatched, counts } = buildClues(sources, { pool, mapsDir, only });
   const built = new Set(countries.map((c) => `${c.country.toLowerCase()}.json`));
   if (!only) for (const f of jsonFilesIn(outDir)) if (f !== 'index.json' && !built.has(f)) rmSync(join(outDir, f));
-  for (const c of countries) {
-    const path = join(outDir, `${c.country.toLowerCase()}.json`);
-    keepCopies(c, readJson(path));
-    writeJson(path, c);
+  for (const c of countries) keepCopies(c, readJson(join(outDir, `${c.country.toLowerCase()}.json`)));
+
+  const codes = new Set(pool.map((c) => c.code));
+  const reviews = {
+    images: trimReport(applyImageReviews(countries, loadImageReviews(reviewImagesDir, codes))),
+    text: trimReport(applyTextReviews(countries, loadTextReviews(reviewTextDir, codes))),
+  };
+  const poolCodes = new Set(pool.map((c) => c.code));
+  const slugCountry = new Map();
+  for (const raw of sources.pages) {
+    const target = targetOf(raw.data.public.code, poolCodes);
+    if (target) slugCountry.set(raw.data.public.slug.toLowerCase(), target.country);
   }
+  const dupes = markDupes(countries, readJson(hashesFile, {}), slugCountry);
+
+  for (const c of countries) writeJson(join(outDir, `${c.country.toLowerCase()}.json`), c);
   const index = jsonFilesIn(outDir)
     .filter((f) => f !== 'index.json')
     .map((f) => indexRow(readJson(join(outDir, f))));
@@ -493,8 +521,11 @@ export function writeClues({ sourcesDir = SOURCES_DIR, outDir = CLUES_DIR, pool 
       images: index.reduce((n, r) => n + r.images, 0),
       located: countries.reduce((n, c) => n + c.clues.reduce((m, clue) => m + clue.images.filter((i) => i.location).length, 0), 0),
       ...counts,
+      dupes: dupes.within + dupes.sameFile + dupes.crossCountry.filter((p) => p.resolved).length,
     },
     unmatched,
+    reviews,
+    dupes: { ...dupes, crossCountry: dupes.crossCountry.slice(0, 300), crossCountryCount: dupes.crossCountry.length },
   };
 }
 
