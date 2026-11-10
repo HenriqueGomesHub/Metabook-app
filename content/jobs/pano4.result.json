@@ -1,0 +1,141 @@
+{
+  "name": "pano4",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano4",
+    "countries": [
+      "es",
+      "fi",
+      "fo",
+      "fr",
+      "gb",
+      "gr"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:12:59.138Z",
+  "finishedAt": "2026-11-10T02:18:06.748Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "es",
+    "fi",
+    "fo",
+    "fr",
+    "gb",
+    "gr"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 307607,
+      "countries": {
+        "es": {
+          "ok": true,
+          "ms": 34531,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 4,
+            "views": 14,
+            "viewsDropped": 2,
+            "alreadyQueued": 0,
+            "queued": 14,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fi": {
+          "ok": true,
+          "ms": 17382,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 2,
+            "views": 7,
+            "viewsDropped": 1,
+            "alreadyQueued": 0,
+            "queued": 7,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fo": {
+          "ok": true,
+          "ms": 59718,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 8,
+            "views": 30,
+            "viewsDropped": 2,
+            "alreadyQueued": 0,
+            "queued": 30,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fr": {
+          "ok": true,
+          "ms": 39853,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 3,
+            "views": 9,
+            "viewsDropped": 3,
+            "alreadyQueued": 0,
+            "queued": 9,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "gb": {
+          "ok": true,
+          "ms": 79269,
+          "counts": {
+            "boxes": 71,
+            "urbanSkipped": 1,
+            "panoramas": 7,
+            "views": 24,
+            "viewsDropped": 4,
+            "alreadyQueued": 0,
+            "queued": 24,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "gr": {
+          "ok": true,
+          "ms": 76819,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 8,
+            "views": 32,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 32,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
