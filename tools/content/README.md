@@ -43,6 +43,8 @@ Job files: `clues-fetch` (`plonkit`, `learnablemeta`, `links`, `clues`), then `c
 | `links` | Resolves every short Google Maps image link of the cached Plonk It pages (goo.gl/maps, maps.app.goo.gl) by following up to 5 redirects by hand, one request per second, into `content/sources/links.json` (`{ "<short url>": { url } \| { error } }`). Cached links are skipped; 429/5xx/network errors are retried on the next run, and 20 failures in a row stop the step. | nothing |
 | `clues` | Offline, from `content/sources`: writes `content/clues/<code>.json` (`ClueCountry`) for every pool country with a Plonk It page or a Learnable Meta meta, and `content/clues/index.json`. Deterministic, so re-runs give clean diffs; image `path`/`width`/`height` from `clueimages` are kept. Metas whose name prefix is no pool country are listed in the result as `unmatched`. Locally: `node tools/content/clues.mjs --sources <dir> --out <dir>`. | nothing |
 | `clueimages` | Copies every clue image without `path` into the private `clues` bucket as `<code>/<image id>.webp` (1280 px wide at most, WebP q78; sharp also reads Learnable Meta's AVIF) and records `path`, `width`, `height`. 0.5 s between downloads per host; failures are listed and retried next run. | Supabase secrets, migration 0006 |
+| `imagedupes` | Downloads every copied clue image from the private bucket (its `path`) and caches its perceptual hashes (dHash 9x8 and aHash 8x8, 16 hex chars each) in `content/sources/imagehashes.json` as `{ <image id>: { d, a } }`. Cached ids are skipped; the cache is saved every 200 hashes and when the budget runs out, so the next run carries on. Run `clues` after it in the same job: that step sets `dupeOf`. Job file: `{"name":"imagedupes","countries":"all","steps":["imagedupes","clues"],"budgetMinutes":80}`. | Supabase secrets |
+| `imagesheets` | Contact sheets for the image review of the families bollard, pole, sign, line, guardrail, plate, car, coverage, language: every copied image without `dupeOf`, by family then country, 3 x 3 per sheet (a family starts a new sheet), tiles ≤ 400 x 300 numbered 1-9, WebP q70, as `review-images/sheets/<n>.webp` plus `<n>.json` (`[{ n, imageId, clueId, country, family, title, width, height }]`), each image alone at ≤ 768 px as `review-images/img/<id>.webp`, and `manifest.json`. Run by `.github/workflows/review-images.yml` (push `content/jobs/imagesheets.json`), which force-pushes `review-images/` to the orphan branch `review-images`. | Supabase secrets |
 | `wipemedia` | Deletes every object of the old public `media` bucket (all folders), 100 per request, and reports the counts. | Supabase secrets |
 
 How a clue is built:
@@ -61,7 +63,19 @@ How a clue is built:
 - A Learnable Meta meta goes to the country its name starts with ("Germany - Bollard"). When its
   footer links that country's Plonk It page and the thing's family has a Plonk It clue whose text
   shares enough words with the note, its images join that clue; otherwise it becomes its own clue
-  `<code>-lm-<meta id>` in a "Learnable Meta" step. Metas repeated across maps count once.
+  `<code>-lm-<meta id>` in a "Learnable Meta" step. Metas repeated across maps count once. A meta never
+  joins another country's clue, whatever its text.
+- Reviews, applied on every build (`tools/content/reviews.mjs`): `content/review-images/*.json`
+  (`[{ imageId, role, caption?, giveaway?, crop?, reject?, country? }]`: sets role, caption, giveaway and
+  crop; `reject` drops the image; a `country` other than the clue's drops it from that clue) and
+  `content/review-text/<code>.json` (`{ <clue id>: { title?, summary?, sameAs?, differs?, hide? } }`;
+  `hide` drops the clue). The result's `reviews` lists counts, unknown ids and invalid entries.
+- `dupeOf` (`tools/content/lib/phash.mjs`), from `content/sources/imagehashes.json`: within a country,
+  an image with the same id as an earlier one, or with dHash ≤ 6 and aHash ≤ 10 bits from one, points
+  at the image kept (Plonk It file over a Learnable Meta copy, then the Plonk It clue, then the wider
+  file). Across countries, near-exact copies (both hashes ≤ 3) stay only in the country whose Plonk It
+  page folder the file is in and point at that image elsewhere; pairs with no Plonk It owner are listed
+  as unresolved in the result's `dupes.crossCountry`.
 
 ## Older steps
 
