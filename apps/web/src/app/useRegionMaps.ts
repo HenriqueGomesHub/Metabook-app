@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { loadedRegionMap, loadRegionMap } from '../data/content';
+import type { RegionMap } from '../data/content';
 
 /**
  * Fetches the regions maps (lower-case codes) whose state names labels need, re-rendering once
@@ -21,4 +22,23 @@ export function useRegionMaps(codes: string[]): void {
       live = false;
     };
   }, [missing]);
+}
+
+/** One country's regions map: undefined while it loads, null when it could not be loaded. */
+export function useRegionMap(country: string): RegionMap | null | undefined {
+  const [map, setMap] = useState<RegionMap | null | undefined>(() => loadedRegionMap(country));
+  useEffect(() => {
+    if (map && map.country.toLowerCase() === country.toLowerCase()) return;
+    let live = true;
+    setMap(loadedRegionMap(country));
+    loadRegionMap(country).then(
+      (loaded) => live && setMap(loaded ?? null),
+      () => live && setMap(null),
+    );
+    return () => {
+      live = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- reload only when the country changes
+  }, [country]);
+  return map;
 }

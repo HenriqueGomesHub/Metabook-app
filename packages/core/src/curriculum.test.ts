@@ -4,10 +4,11 @@ import {
   activeCountries,
   COUNTRY_PRIORITY,
   countryOrder,
+  MAX_FAMILY_SHARE,
   MAX_SIBLINGS_PER_DAY,
   pickNewCards,
 } from './curriculum';
-import { learnMoreSession, practiseMoreSession } from './session';
+import { interleave, learnMoreSession, practiseMoreSession } from './session';
 import type { Card, CardState, CardType, MetaSubject } from './types';
 
 const card = (id: string, type: CardType, country: string, extra: Partial<Card> = {}): Card => ({
@@ -92,13 +93,51 @@ describe('pickNewCards', () => {
     expect(picked.map((c) => c.country)).toEqual(['US', 'BR', 'RU', 'CA', 'US', 'BR', 'RU', 'CA']);
   });
 
-  it('introduces the early families first, in Plonk It order, before landscape', () => {
+  it('rotates through the families in FAMILY_ROTATION order, landscape late', () => {
     const us = catalogue.filter((c) => c.country === 'US');
     const picked = pickNewCards({ cards: us, states: {}, count: us.length });
     const clues = [...new Set(picked.map(clueId))];
-    expect(clues).toEqual(['US-bollard', 'US-plate', 'US-pole', 'US-land']);
+    expect(clues).toEqual(['US-bollard', 'US-pole', 'US-plate', 'US-land']);
+    // one card per family per turn: the four families before any second card
+    expect(picked.slice(0, 4).map((c) => c.subject)).toEqual([
+      'bollard',
+      'pole',
+      'plate',
+      'landscape',
+    ]);
     // a pair per clue first: Spot it then Which clue of the bollard, before its other cards
-    expect(ids(picked).slice(0, 2)).toEqual(['clue:US-bollard:spot:0', 'clue:US-bollard:which']);
+    expect(ids(picked.filter((c) => clueId(c) === 'US-bollard'))).toEqual([
+      'clue:US-bollard:spot:0',
+      'clue:US-bollard:which',
+    ]);
+  });
+
+  it(`gives no family more than ${MAX_FAMILY_SHARE * 100}% of a day while others have cards`, () => {
+    // every country with many bollard clues and a few of everything else
+    const big = COUNTRIES.flatMap((code) => [
+      ...Array.from({ length: 8 }, (_, i) =>
+        clue(code, `bollard${i}`, 'bollard', { images: 2 }),
+      ).flat(),
+      ...clue(code, 'pole', 'pole', { images: 2 }),
+      ...clue(code, 'sign', 'sign', { images: 2 }),
+      ...clue(code, 'line', 'line'),
+      ...clue(code, 'plate', 'plate'),
+      ...clue(code, 'car', 'car'),
+      ...clue(code, 'house', 'architecture'),
+    ]);
+    const picked = pickNewCards({ cards: big, states: {}, count: 20 });
+    expect(picked).toHaveLength(20);
+    const perFamily = new Map<string, number>();
+    for (const c of picked) perFamily.set(c.subject!, (perFamily.get(c.subject!) ?? 0) + 1);
+    expect(Math.max(...perFamily.values())).toBeLessThanOrEqual(Math.ceil(20 * MAX_FAMILY_SHARE));
+    expect(perFamily.size).toBeGreaterThanOrEqual(5);
+    // the countries start on different families
+    expect(new Set(picked.slice(0, 4).map((c) => c.subject)).size).toBe(4);
+  });
+
+  it('still fills the day from one family when nothing else is left', () => {
+    const only = Array.from({ length: 10 }, (_, i) => clue('US', `b${i}`, 'bollard')).flat();
+    expect(pickNewCards({ cards: only, states: {}, count: 8 })).toHaveLength(8);
   });
 
   it(`introduces at most ${MAX_SIBLINGS_PER_DAY} cards of a clue a day, the rest on later days`, () => {
@@ -156,6 +195,26 @@ describe('pickNewCards', () => {
     const pick = () => ids(pickNewCards({ cards: catalogue, states, count: 15 }));
     expect(pick()).toEqual(pick());
     expect(pick()).not.toContain(catalogue[3]!.id);
+  });
+});
+
+describe('interleave', () => {
+  it('keeps consecutive cards apart in family and country where it can', () => {
+    const reviews = COUNTRIES.flatMap((code) => [
+      ...clue(code, 'b', 'bollard'),
+      ...clue(code, 'p', 'pole'),
+      ...clue(code, 's', 'sign'),
+    ]);
+    // bunched by family on the way in
+    const bunched = [...reviews].sort((a, b) => a.subject!.localeCompare(b.subject!));
+    const out = interleave(bunched);
+    expect(out).toHaveLength(bunched.length);
+    out.forEach((c, i) => {
+      if (i === 0) return;
+      const prev = out[i - 1]!;
+      expect(c.subject === prev.subject && c.country === prev.country).toBe(false);
+      expect(c.subject).not.toBe(prev.subject);
+    });
   });
 });
 

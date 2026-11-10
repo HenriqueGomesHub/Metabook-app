@@ -1,0 +1,14 @@
+{
+  "country": "FR",
+  "label": "Indicatifs régionaux",
+  "prefix": "0",
+  "format": "0X XX XX XX XX",
+  "sources": ["https://example.org/fr-area-codes"],
+  "codes": [
+    { "code": "1", "region": "75", "spans": ["92", "93", "94"] },
+    { "code": "2", "region": "35", "spans": ["44"] },
+    { "code": "3", "region": "67" },
+    { "code": "4", "region": "13", "spans": ["06", "83"] },
+    { "code": "5", "region": "33" }
+  ]
+}

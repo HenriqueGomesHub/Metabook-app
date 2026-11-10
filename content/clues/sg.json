@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "other",
-      "title": "Singapore is a highly developed city-state",
+      "title": "Vibe: clean city-state, tall apartment blocks",
       "text": [
         "Singapore is a highly developed city-state, characterised by an overall **cleanliness and orderliness**.",
         "Main roads are often divided, and commonly feature black-and-white curbs and double yellow outside lines. You will often see tall apartment blocks nearby.",
@@ -65,7 +65,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very clean, orderly city. Divided main roads, black-and-white curbs, double yellow lines at the edge, and tall apartment blocks nearby. Often enough on its own."
     },
     {
       "id": "sg-oACN",
@@ -73,7 +74,7 @@
       "order": 2,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: All street name signs in Singapore follow this unique format",
+      "title": "Sign: green street name, rounded corners",
       "text": [
         "All street name signs in Singapore follow this **unique format**. They are green, with rounded edges and a distinct white font."
       ],
@@ -126,14 +127,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs are green with rounded corners and a distinctive white font. This format is unique to the country."
     },
     {
       "id": "sg-mfCc",
       "step": 0,
       "order": 3,
       "family": "plate",
-      "title": "Plate: Most Singaporean licence plates are black",
+      "title": "Plate: black with white text, not split",
       "text": [
         "Most Singaporean licence plates are **black, with white text**. Occasionally, you will be able to see the British style **white-and-yellow** plates and very rarely red plates.",
         "NOTE: Neighbouring Malaysia and Indonesia also use black plates with white text. However, the letters will usually be divided into two or three sections - this is not the case for Singaporean plates."
@@ -157,7 +159,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most plates are black with white text. Older ones can be white-and-yellow, and red is very rare. Malaysia and Indonesia look alike, but their letters are split into sections.",
+      "differs": [
+        {
+          "country": "MY",
+          "how": "Letters are split into two or three sections"
+        },
+        {
+          "country": "ID",
+          "how": "Letters are split into two or three sections"
+        }
+      ]
     },
     {
       "id": "sg-9Mue",
@@ -165,7 +178,7 @@
       "order": 4,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs are also green",
+      "title": "Sign: green direction sign, 3-letter expressway",
       "text": [
         "Directional signs are also **green**, with white letters and English writing.",
         "NOTE: Expressways each have a **three-letter code** (e.g. TPE), making them easy to spot on signs."
@@ -205,7 +218,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs are green with white English text. Each expressway has a three-letter code, such as TPE, which makes them easy to spot."
     },
     {
       "id": "sg-gJnM",
@@ -213,7 +227,7 @@
       "order": 5,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Road signs in Singapore are unique in that they are always…",
+      "title": "Sign: road signs on a white square",
       "text": [
         "Road signs in Singapore are unique in that they are always set on a **square white background**.",
         "NOTE: Road signs in almost all other countries will not have this square background."
@@ -241,7 +255,8 @@
           "src": "https://learnablemeta.com/images/681/u36NCqOXPqjIxfceTjU7VWtIjuJ76OS7NMXp.avif",
           "path": "sg/0d4eaa79bd41.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "d3e8e36a3c4a"
         }
       ],
       "locations": [
@@ -260,14 +275,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road signs sit on a square white background. Almost no other country does this."
     },
     {
       "id": "sg-U9vA",
       "step": 0,
       "order": 6,
       "family": "vegetation",
-      "title": "Vegetation: Rain trees are seen all around Singapore",
+      "title": "Plants: rain trees along main roads",
       "text": [
         "**Rain trees** are seen all around Singapore, and are often planted along main roads."
       ],
@@ -306,14 +322,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rain trees, wide trees with big spreading crowns, are common and often planted along main roads."
     },
     {
       "id": "sg-hevr",
       "step": 0,
       "order": 7,
       "family": "language",
-      "title": "Language: Warnings are often written on the road in large letters",
+      "title": "Road markings: big warning words, HUMP AHEAD",
       "text": [
         "Warnings are often written **on the road** in large letters, such as the famous “HUMP AHEAD”."
       ],
@@ -352,14 +369,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warnings are painted on the road in large letters, such as the well-known HUMP AHEAD."
     },
     {
       "id": "sg-NOTm",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "Singaporean buses are mostly lime-green",
+      "title": "Vehicles: lime-green buses",
       "text": [
         "Singaporean buses are mostly **lime-green**, making them easily recognisable. Other designs can also be found, for example the [white-and-purple SBS Transit variants](https://goo.gl/maps/SXeRNoTSsTqTmy5BA)."
       ],
@@ -398,14 +416,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Buses are mostly lime green. Other colours exist too, like the white-and-purple SBS Transit buses."
     },
     {
       "id": "sg-RNhX",
       "step": 0,
       "order": 9,
       "family": "bollard",
-      "title": "Bollard: Moreover, all bus stops are protected by concrete bollards…",
+      "title": "Bollard: concrete with black-yellow bands",
       "text": [
         "Moreover, all bus stops are protected by **concrete bollards** with unique black-and-yellow **warning bands**.",
         "NOTE: Similar, but not quite identical designs are found in some Malaysian cities."
@@ -447,14 +466,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stops are protected by concrete bollards with black-and-yellow warning bands. Some Malaysian cities have similar, but not identical, ones.",
+      "differs": [
+        {
+          "country": "MY",
+          "how": "Similar bollards in some cities, but the design is not identical"
+        }
+      ]
     },
     {
       "id": "sg-su01",
       "step": 0,
       "order": 10,
       "family": "bollard",
-      "title": "Bollard: In addition to the concrete bollards on bus stops",
+      "title": "Road markings: yellow bus-leaving box with arrow",
       "text": [
         "In addition to the concrete bollards on bus stops, Singapore sometimes has a unique and yellow **bus-leaving box** with an **arrow** on the street."
       ],
@@ -495,14 +521,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Besides the bollards, bus stops sometimes have a yellow box painted on the road with an arrow, where buses pull out."
     },
     {
       "id": "sg-hHxa",
       "step": 0,
       "order": 11,
       "family": "other",
-      "title": "Almost all Singaporean traffic lights follow this design…",
+      "title": "Traffic lights: curved metal sheet with holes",
       "text": [
         "Almost all Singaporean traffic lights follow this design and are supported by a curved **sheet of metal** containing several **holes**."
       ],
@@ -541,7 +568,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Almost all traffic lights are backed by a curved sheet of metal with several holes in it."
     },
     {
       "id": "sg-sB3c",
@@ -549,7 +577,7 @@
       "order": 0,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Many streets are named after the neighbourhood they are in",
+      "title": "Sign: street named after the neighbourhood",
       "text": [
         "Many streets are named after the neighbourhood they are in, especially in the suburbs.",
         "NOTE: These neighbourhood names appear very quickly on the map, so you can save yourself a lot of time scanning for 5k’s that way. For example, the sign in the image refers to Street 31 in the neighbourhood of Ang Mo Kio."
@@ -590,14 +618,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Suburban streets are often named after their neighbourhood, e.g. Street 31 in Ang Mo Kio. That lets you find the area on the map quickly."
     },
     {
       "id": "sg-nZF6",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "The Tuas planning area is an industrial area that is…",
+      "title": "Landscape: industrial area, cranes, containers",
       "text": [
         "The Tuas planning area is an **industrial area** that is characterised by straight roads, industrial complexes, cranes and shipping containers, making it recognisable."
       ],
@@ -636,7 +665,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A western industrial zone with straight roads, big factories, cranes and shipping containers."
     },
     {
       "id": "sg-KPH6",
@@ -644,7 +674,7 @@
       "order": 2,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: You can easily recognise the island of Sentosa thanks to…",
+      "title": "Area: resort island, green signs, winding roads",
       "text": [
         "You can easily recognise the **island of Sentosa** thanks to the green signposts, winding roads and general resort feel. Occasionally you might see a green lane like [this](https://goo.gl/maps/hrc9MLAc4F6GQihy5) as well."
       ],
@@ -683,14 +713,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A resort island with green signposts, winding roads and a holiday feel. You may spot a green lane marking too."
     },
     {
       "id": "sg-SP7M",
       "step": 2,
       "order": 0,
       "family": "car",
-      "title": "Google car: The Generation 3 trekker on Pulau Ubin can be identified by…",
+      "title": "Google car: Gen 3 walker, forest and camo hat",
       "text": [
         "The Generation 3 **trekker on Pulau Ubin** can be identified by the unusually rural forest coverage and the camouflage-type hat sometimes visible when looking down."
       ],
@@ -729,14 +760,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 3 backpack camera on a rural, forested island. Looking down, you may see the walker's camouflage-style hat."
     },
     {
       "id": "sg-TWrN",
       "step": 2,
       "order": 1,
       "family": "car",
-      "title": "Google car: You can recognise St John and Lazarus Islands thanks to the…",
+      "title": "Google car: Gen 3 walker, smooth roads, sea",
       "text": [
         "You can recognise **St John and Lazarus Islands** thanks to the Generation 3 trekker, the smooth asphalt roads and the sea almost always nearby."
       ],
@@ -775,14 +807,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two small islands filmed on foot with the Gen 3 camera. Smooth asphalt roads, and the sea is almost always close."
     },
     {
       "id": "sg-LCE7",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "The miniscule Kusu Island is easily identifiable because of…",
+      "title": "Paths: red paving stones everywhere",
       "text": [
         "The miniscule Kusu Island is easily identifiable because of the **red paving stones** used for the entire pathway."
       ],
@@ -821,61 +854,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/singapore",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "sg-lm-8831",
-      "step": 3,
-      "order": 0,
-      "family": "line",
-      "title": "Road line: Road marking: HUMP AHEAD",
-      "text": [
-        "Warnings are often written on the road in large letters, such as the famous “HUMP AHEAD”."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "78e1da524aca",
-          "src": "https://learnablemeta.com/images/311/paCSB0cbF9MGeRRj0fawltaPBSxv8ihWVOEu.avif",
-          "path": "sg/78e1da524aca.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-10172",
-      "step": 3,
-      "order": 1,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Main roads are often divided, and commonly feature black-and-white curbs and **double yellow outside lines.**"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "241bc70f1922",
-          "src": "https://learnablemeta.com/images/503/HwtvYASfYVbJZRkowhHNEkfVO4apwvToRJH0.avif",
-          "path": "sg/241bc70f1922.webp",
-          "width": 1000,
-          "height": 564
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67bcfa50de249626b4a3e177",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A tiny island where the whole walkway is paved with red stones."
     },
     {
       "id": "sg-lm-12982",
@@ -883,7 +863,7 @@
       "order": 2,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: White square",
+      "title": "Sign: stop sign with white square outline",
       "text": [
         "The edge of the stop signs in Singapore has a white square outline making it unique."
       ],
@@ -903,265 +883,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15814",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Vibes",
-      "text": [
-        "Singapore is a highly developed city-state, characterised by an overall cleanliness and orderliness.",
-        "Main roads are often divided, and commonly feature black-and-white curbs and double yellow outside lines.",
-        "You will often see tall apartment blocks nearby.",
-        "**--- NOTE:**",
-        "In many cases, this “general look” is all you need to easily identify Singapore."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c3ccd86ad4f0",
-          "src": "https://learnablemeta.com/images/681/sBvz1f0zx4SyIHLTEO5PW199oMRIiKvUCz87.avif",
-          "path": "sg/c3ccd86ad4f0.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15816",
-      "step": 3,
-      "order": 4,
-      "family": "other",
-      "title": "Buses",
-      "text": [
-        "Singaporean buses are mostly lime-green, making them easily recognisable.",
-        "Other designs can also be found, for example the white-and-purple SBS Transit variants."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "637a3e592f13",
-          "src": "https://learnablemeta.com/images/681/U8Q9Iq16yYyak5L5kDgUpFahWZsdBM8ivwkB.avif",
-          "path": "sg/637a3e592f13.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15818",
-      "step": 3,
-      "order": 5,
-      "family": "language",
-      "title": "Language: Warnings On Roads",
-      "text": [
-        "Warnings are often written on the road in large letters, such as the famous “HUMP AHEAD”."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96c3ce6ebbc4",
-          "src": "https://learnablemeta.com/images/681/HSbunDg9FguojG5B2HvCCgTC1nhz6ZKH8TUB.avif",
-          "path": "sg/96c3ce6ebbc4.webp",
-          "width": 1000,
-          "height": 571
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15965",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Vibes",
-      "text": [
-        "Singapore is a highly developed city-state, characterised by an overall cleanliness and orderliness.",
-        "Main roads are often divided, and commonly feature black-and-white curbs and double yellow outside lines.",
-        "You will often see tall apartment blocks nearby.",
-        "**--- NOTE:**",
-        "In many cases, this “general look” is all you need to easily identify Singapore."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c3ccd86ad4f0",
-          "src": "https://learnablemeta.com/images/681/sBvz1f0zx4SyIHLTEO5PW199oMRIiKvUCz87.avif",
-          "path": "sg/c3ccd86ad4f0.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15967",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Buses",
-      "text": [
-        "Singaporean buses are mostly lime-green, making them easily recognisable.",
-        "Other designs can also be found, for example the white-and-purple SBS Transit variants."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "637a3e592f13",
-          "src": "https://learnablemeta.com/images/681/U8Q9Iq16yYyak5L5kDgUpFahWZsdBM8ivwkB.avif",
-          "path": "sg/637a3e592f13.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-15969",
-      "step": 3,
-      "order": 8,
-      "family": "language",
-      "title": "Language: Warnings On Roads",
-      "text": [
-        "Warnings are often written on the road in large letters, such as the famous “HUMP AHEAD”."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96c3ce6ebbc4",
-          "src": "https://learnablemeta.com/images/681/HSbunDg9FguojG5B2HvCCgTC1nhz6ZKH8TUB.avif",
-          "path": "sg/96c3ce6ebbc4.webp",
-          "width": 1000,
-          "height": 571
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-51340",
-      "step": 3,
-      "order": 9,
-      "family": "language",
-      "title": "Language: Warnings On Roads",
-      "text": [
-        "Warnings are often written on the road in large letters, such as the famous “HUMP AHEAD”."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96c3ce6ebbc4",
-          "src": "https://learnablemeta.com/images/681/HSbunDg9FguojG5B2HvCCgTC1nhz6ZKH8TUB.avif",
-          "path": "sg/96c3ce6ebbc4.webp",
-          "width": 1000,
-          "height": 571
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-51424",
-      "step": 3,
-      "order": 10,
-      "family": "other",
-      "title": "Buses",
-      "text": [
-        "Singaporean buses are mostly lime-green, making them easily recognisable.",
-        "Other designs can also be found, for example the white-and-purple SBS Transit variants."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "637a3e592f13",
-          "src": "https://learnablemeta.com/images/681/U8Q9Iq16yYyak5L5kDgUpFahWZsdBM8ivwkB.avif",
-          "path": "sg/637a3e592f13.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sg-lm-51427",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Vibes",
-      "text": [
-        "Singapore is a highly developed city-state, characterised by an overall cleanliness and orderliness.",
-        "Main roads are often divided, and commonly feature black-and-white curbs and double yellow outside lines.",
-        "You will often see tall apartment blocks nearby.",
-        "**--- NOTE:**",
-        "In many cases, this “general look” is all you need to easily identify Singapore."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c3ccd86ad4f0",
-          "src": "https://learnablemeta.com/images/681/sBvz1f0zx4SyIHLTEO5PW199oMRIiKvUCz87.avif",
-          "path": "sg/c3ccd86ad4f0.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Stop signs have a white square outline around the red shape, which makes them unique."
     }
   ]
 }

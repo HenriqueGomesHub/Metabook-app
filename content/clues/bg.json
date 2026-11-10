@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Bulgarian licence plates have the typical European design",
+      "title": "Plate: standard EU, blue strip on left",
       "text": [
         "Bulgarian licence plates have the typical European design, with the blue strip on the left."
       ],
@@ -44,14 +44,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The typical European plate design with a blue strip on the left."
     },
     {
       "id": "bg-AxEF",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: Bulgaria mainly uses the Cyrillic alphabet",
+      "title": "Language: Cyrillic, often with Latin too",
       "text": [
         "Bulgaria mainly uses the **Cyrillic alphabet**. However, a lot of signs will also have the Latin alphabet.",
         "The letter “Ъ” is only found in Bulgarian and Russian, although it is fairly uncommon in Russian."
@@ -72,7 +73,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly Cyrillic script, though many signs also have Latin letters. The letter Ъ exists only in Bulgarian and Russian, and is rare in Russian."
     },
     {
       "id": "bg-D7we",
@@ -80,7 +82,7 @@
       "order": 3,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The Bulgarian word for street is улица",
+      "title": "Sign: street word улица or ул.",
       "text": [
         "The Bulgarian word for street is **улица** (ulitsa), sometimes abbreviated **ул.** (ul.).",
         "NOTE: In older street signs seeing only Cyrillic is more common.",
@@ -123,14 +125,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The word for street is улица (ulitsa), sometimes shortened to ул. Older signs are more often Cyrillic only. Russia uses the same word.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "bg-vKm1",
       "step": 0,
       "order": 4,
       "family": "car",
-      "title": "Google car: There are three types of Generation 4 cars that were used…",
+      "title": "Google car: blue, red or black Gen 4",
       "text": [
         "There are three types of Generation 4 cars that were used to cover Bulgaria:",
         "- A **blue** car, which can be found in most European countries.",
@@ -181,14 +187,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Three newer Gen 4 cars: blue (most of Europe), red (also Latvia, Lithuania, Russia, Slovakia, Sweden) and black (many countries). Each can have an antenna or not, and sometimes the car is fully hidden.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russia and Slovakia are easiest to confuse for the red car"
+        },
+        {
+          "country": "GR",
+          "how": "Greece and Croatia are easiest to confuse for the black car"
+        }
+      ]
     },
     {
       "id": "bg-4ipy",
       "step": 0,
       "order": 5,
       "family": "car",
-      "title": "Google car: The majority of Generation 3 coverage in Bulgaria was taken…",
+      "title": "Google car: dead winter look, March-April",
       "text": [
         "The majority of Generation 3 coverage in Bulgaria was taken during March and April, resulting in very distinct dead-looking “winter” coverage.",
         "NOTE: Hungary and Czechia also have a lot of similar dead-looking Generation 3 coverage. Furthermore, while not common, Bulgaria has some [summer Generation 3](https://www.google.com/maps/@42.6462065,24.980028,3a,90y,176.39h,83.7t/data=!3m6!1e1!3m4!1srReAyNGYfJcuvSNTXNt4tQ!2e0!7i13312!8i6656?entry=ttu)."
@@ -216,7 +233,8 @@
           "src": "https://learnablemeta.com/images/768/xkGeJljEUurAu9KHz5k4CSlYtfwcMOcbgzwy.avif",
           "path": "bg/811a9fba5e3c.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "36581cd5ff4c"
         }
       ],
       "locations": [
@@ -238,14 +256,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most older Gen 3 coverage was taken in March and April, so it looks grey and lifeless. Hungary and Czechia have lots of this too, and some summer Gen 3 exists.",
+      "sameAs": [
+        "CZ",
+        "HU"
+      ]
     },
     {
       "id": "bg-yVXY",
       "step": 0,
       "order": 6,
       "family": "car",
-      "title": "Google car: You can commonly see a small piece of grey tape at the top…",
+      "title": "Google car: grey tape on antenna tip",
       "text": [
         "You can commonly see a small piece of **grey tape **at the top of the car antenna in Generation 3 coverage. The community sometimes refers to it as “flag antenna”.",
         "Not all Gen 3 coverage has this tape.",
@@ -291,14 +314,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small piece of grey tape on top of the antenna in Gen 3 coverage (sometimes called a flag antenna). Not all Gen 3 has it. Czechia, Slovakia, Hungary and Romania have it too.",
+      "sameAs": [
+        "CZ",
+        "HU",
+        "RO",
+        "SK"
+      ]
     },
     {
       "id": "bg-hSvg",
       "step": 0,
       "order": 7,
       "family": "pole",
-      "title": "Pole: Most utility poles in Bulgaria are cylindrical and made of…",
+      "title": "Pole: round concrete, sometimes ladder or wood",
       "text": [
         "Most utility poles in Bulgaria are **cylindrical **and made of **concrete**.",
         "There is also a less common concrete ‘ladder pole’ variation. You can also sometimes see simple wooden poles."
@@ -340,14 +370,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most poles are round and concrete. A rarer concrete ladder pole exists, and simple wooden poles show up now and then."
     },
     {
       "id": "bg-dsZv",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Most poles have small",
+      "title": "Pole: small alternating hook insulators",
       "text": [
         "Most poles have small, alternating **hook-shaped** insulators."
       ],
@@ -376,14 +407,16 @@
           "src": "https://learnablemeta.com/images/768/SRyFxeUu2za5Llt3eNleZHQhmBlVTxHBxi7w.avif",
           "path": "bg/c46e792c8d88.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "8ddd25dc9eab"
         },
         {
           "id": "9a0fafefaa57",
           "src": "https://learnablemeta.com/images/1955/1750619676228-dKB.avif",
           "path": "bg/9a0fafefaa57.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "74c1a65b34f7"
         }
       ],
       "locations": [
@@ -402,14 +435,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most poles carry small insulators shaped like hooks, alternating from side to side. They also appear on wooden poles in some other countries, but on concrete poles it points to here.",
+      "sameAs": [
+        "LV",
+        "MK"
+      ]
     },
     {
       "id": "bg-5asz",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: This style of pole top",
+      "title": "Pole: three large hook insulators, alternating",
       "text": [
         "This style of pole top, with 3 large, alternating insulators that are shaped like **upward facing hooks**, is a good clue for Bulgaria. This pole top is probably unique to the country.",
         "NOTE: You can also find this pole top with the insulators facing [downwards](https://maps.app.goo.gl/srfTSgJK7kcGUUQNA)."
@@ -446,7 +484,8 @@
           "src": "https://learnablemeta.com/images/768/umcpCdHJiT79TSLBNuLEwgYbveIe5DAXzPCP.avif",
           "path": "bg/67f010af9b74.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "74c1a65b34f7"
         }
       ],
       "locations": [
@@ -465,7 +504,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A pole top with three large insulators shaped like upward hooks, alternating sides. Probably unique to this country. Some tops have them facing down."
     },
     {
       "id": "bg-rCxW",
@@ -473,7 +513,7 @@
       "order": 10,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Bulgarian chevrons are typically red on white",
+      "title": "Chevron: red on white",
       "text": [
         "Bulgarian chevrons are typically **red on white**.",
         "NOTE: Many other European countries have similar chevrons. Crucially, among neighbouring countries, Romania, Turkey, and North Macedonia use the same chevrons. Greece and Serbia use black and white chevrons however. [See this infographic](/images/bulgaria/eu_chevrons.png?) for an overview."
@@ -526,7 +566,23 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red arrows on white. Romania, Turkey and North Macedonia use the same chevrons, while Greece and Serbia use black and white ones.",
+      "sameAs": [
+        "MK",
+        "RO",
+        "TR"
+      ],
+      "differs": [
+        {
+          "country": "GR",
+          "how": "Greek chevrons are black and white"
+        },
+        {
+          "country": "RS",
+          "how": "Serbian chevrons are black and white"
+        }
+      ]
     },
     {
       "id": "bg-IGYS",
@@ -534,7 +590,7 @@
       "order": 11,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Bulgarian directional signs are blue",
+      "title": "Sign: blue arrow direction signs",
       "text": [
         "Bulgarian directional signs are blue, arrow-shaped, and use both the **Cyrillic and Latin** alphabet. Importantly, even if you are far away and cannot decipher the script, you can still see that the sign has two lines of text instead of one."
       ],
@@ -573,7 +629,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue arrow-shaped direction signs with Cyrillic and Latin text. Even from far away you can see two lines of text instead of one."
     },
     {
       "id": "bg-lskQ",
@@ -581,7 +638,7 @@
       "order": 12,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Town entry signs have a simple white design and also use…",
+      "title": "Sign: plain white town entry, two text lines",
       "text": [
         "Town entry signs have a simple white design and also use both the Cyrillic and Latin alphabet. Like with the directional signs, the two lines of text are obvious, even when seen from far away."
       ],
@@ -634,7 +691,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A simple white town entry sign with Cyrillic and Latin names. The two lines of text are visible even from afar."
     },
     {
       "id": "bg-ZCSx",
@@ -642,7 +700,7 @@
       "order": 13,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Bulgarian pedestrian signs have four stripes",
+      "title": "Sign: pedestrian crossing, four stripes, hat",
       "text": [
         "Bulgarian pedestrian signs have **four stripes**, and the person is wearing a hat.",
         "NOTE: No other eastern or central European pedestrian signs have four stripes."
@@ -682,14 +740,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A crossing sign with four stripes and a person wearing a hat. No other Eastern or Central European crossing sign has four stripes."
     },
     {
       "id": "bg-CLGi",
       "step": 0,
       "order": 14,
       "family": "bollard",
-      "title": "Bollard: Bollards are generally fairly rare in Bulgaria",
+      "title": "Bollard: generic, red front reflector, rare",
       "text": [
         "Bollards are generally **fairly rare** in Bulgaria.",
         "When you see them, they almost always have this somewhat generic design, which is relatively similar to the bollards found in Croatia and Hungary. They have a red reflector on the front, and a white one on the back. The design isn’t terribly consistent: sometimes they are [thinner](https://goo.gl/maps/cHocfsUNELC32ANF6), and the shape of the reflector varies."
@@ -719,7 +778,8 @@
           "src": "https://learnablemeta.com/images/739/4WNJLDrpgFAQdjObHMc1M9eczKFrO3vN8dQ1.avif",
           "path": "bg/6ae92ae159e7.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "cc60ef885398"
         }
       ],
       "locations": [
@@ -741,14 +801,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bollards are fairly rare. When seen, they are a generic design with a red reflector at the front and a white one at the back, and shape varies. Croatian and Hungarian bollards are fairly similar.",
+      "sameAs": [
+        "HR",
+        "HU"
+      ]
     },
     {
       "id": "bg-3Rlt",
       "step": 0,
       "order": 15,
       "family": "line",
-      "title": "Road line: Bulgaria usually has thin roadlines",
+      "title": "Road lines: thin",
       "text": [
         "Bulgaria usually has **thin** roadlines. This is particularly useful to tell Bulgaria apart from Romania, where roadlines are usually much [thicker](https://goo.gl/maps/QUeF5hDdv9HWUBz9A)."
       ],
@@ -775,14 +840,16 @@
           "src": "https://learnablemeta.com/images/505/gWupjjw9mK0lpc6WUAUQCuCzYcGGcCH3iLuy.avif",
           "path": "bg/3f121489f7da.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "3197246a5d38"
         },
         {
           "id": "e9092075ed7b",
           "src": "https://learnablemeta.com/images/768/H2AbmHNLBXiwMYFkG98VDwD7r5FLtRWG0eGW.avif",
           "path": "bg/e9092075ed7b.webp",
           "width": 1000,
-          "height": 558
+          "height": 558,
+          "dupeOf": "3197246a5d38"
         }
       ],
       "locations": [
@@ -803,14 +870,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road lines are usually thin. This helps tell it from Romania, where they are much thicker.",
+      "differs": [
+        {
+          "country": "RO",
+          "how": "Romanian road lines are much thicker"
+        }
+      ]
     },
     {
       "id": "bg-kOSE",
       "step": 0,
       "order": 16,
       "family": "other",
-      "title": "Bulgaria generally has fairly poor-quality roads",
+      "title": "Road: poor quality, small cracks, potholes",
       "text": [
         "Bulgaria generally has fairly **poor-quality roads**, with many small cracks and occasionally potholes."
       ],
@@ -849,14 +923,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads are generally poor, with many small cracks and the occasional pothole."
     },
     {
       "id": "bg-AKrj",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Most houses in Bulgaria have orange tiled roofs",
+      "title": "Houses: orange tiled roofs, mortar patches",
       "text": [
         "Most houses in Bulgaria have orange tiled roofs, with distinct **patches of **[**mortar**](https://en.wikipedia.org/wiki/Mortar_(masonry)) along the corner tiles.",
         "Famously, Bulgarian roofs often seem **poorly constructed**: the roof tiles and mortar tend to be uneven, especially when compared to other European countries."
@@ -896,14 +971,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most houses have orange tiled roofs with visible patches of mortar along the corner tiles. The roofs often look poorly built, with uneven tiles and mortar."
     },
     {
       "id": "bg-QHMB",
       "step": 0,
       "order": 18,
       "family": "other",
-      "title": "Metallic trash bins with this shape are very common in…",
+      "title": "Rubbish bin: metal bin of this shape",
       "text": [
         "Metallic trash bins with this shape are very common in Bulgaria.",
         "NOTE: This style of bin is also common in Turkey and other balkan countries such as Serbia, Albania and North Macedonia."
@@ -948,14 +1024,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Metal rubbish bins of this shape are very common. Turkey, Serbia, Albania and North Macedonia use this style too.",
+      "sameAs": [
+        "AL",
+        "MK",
+        "RS",
+        "TR"
+      ]
     },
     {
       "id": "bg-BcFd",
       "step": 1,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: The Balkan mountains cut across Bulgaria and divide the…",
+      "title": "Landscape: mountain ranges split flat and",
       "text": [
         "The Balkan mountains cut across Bulgaria and divide the country in two distinct halves. North of them, you will find a mostly flat area that goes all the way to the border with Romania.",
         "The Rhodope Mountains start close to Sofia and run South-East into Greece. In them you will find the highest peaks of Bulgaria.",
@@ -982,7 +1065,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mountain chain splits the country in two: flat land to its north up to Romania. A second range starting near the capital runs southeast to Greece and has the highest peaks. Between them is the second-largest flat area, and the far west is many small valleys among hills."
     },
     {
       "id": "bg-A9Bj",
@@ -990,7 +1074,7 @@
       "order": 1,
       "family": "sign",
       "kind": "giveway",
-      "title": "Give way sign: Area codes in Bulgaria are one of the best clues to…",
+      "title": "Phone numbers: area codes by first digit",
       "text": [
         "Area codes in Bulgaria are one of the best clues to regionguess urban rounds. Conveniently, they are ordered by first digit, so just learning the first digit can yield high results with little effort.",
         "Numbers between parentheses in the map are area codes from a neighbouring province that frequently spill into that one.",
@@ -1013,14 +1097,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes are one of the best ways to guess the region in city rounds. They are ordered by first digit, so learning those gets you far. Codes in brackets on the map spill over from a neighbouring province, and codes beside a dot belong to the province capital only."
     },
     {
       "id": "bg-yvT6",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The towering mountains of Pirin and Rila National Parks can…",
+      "title": "Landscape: tall pyramid-shaped peaks",
       "text": [
         "The towering mountains of Pirin and Rila National Parks can be recognised by the tall pyramid-shaped peaks, and can be seen from a few different vantage points in Blagoevgrad, Kyustendil and Sofia Provinces."
       ],
@@ -1060,14 +1145,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Towering mountains with tall pyramid-shaped peaks, seen from a few places in three provinces in the southwest."
     },
     {
       "id": "bg-LaoB",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Wind turbines are most common in Dobrich Province",
+      "title": "Landscape: wind turbines near the coast",
       "text": [
         "Wind turbines are most common in Dobrich Province, and usually towards the coast."
       ],
@@ -1107,14 +1193,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wind turbines are most common in the northeastern coastal province, usually towards the coast."
     },
     {
       "id": "bg-h4Uc",
       "step": 1,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: Buildings with features similar to Alpine architecture",
+      "title": "Houses: Alpine style, white walls, brown wood",
       "text": [
         "Buildings with features similar to Alpine architecture, such as **white walls** with **brown wooden details** are commonly found in and around the Smoljan region in the south."
       ],
@@ -1141,7 +1228,8 @@
           "src": "https://learnablemeta.com/images/1072/S4TIpprgUOFxYi9bzE3z4HW0BvK1yRbVVtoM.avif",
           "path": "bg/0b1239c1dfd7.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "aa4d52247f0b"
         }
       ],
       "locations": [
@@ -1160,14 +1248,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Alpine-looking buildings with white walls and brown wooden details, common around the southern mountain region."
     },
     {
       "id": "bg-GRh6",
       "step": 1,
       "order": 5,
       "family": "car",
-      "title": "Google car: Locations with an invisible Generation 4 Street View car…",
+      "title": "Google car: invisible Gen 4 car",
       "text": [
         "Locations with an invisible Generation 4 Street View car can be found along the North and West borders of Bulgaria, as well as the northern half of the coast."
       ],
@@ -1206,14 +1295,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage where the Gen 4 car is completely hidden is found along the north and west borders and the northern half of the coast."
     },
     {
       "id": "bg-BUpU",
       "step": 1,
       "order": 6,
       "family": "car",
-      "title": "Google car: A red Generation 4 Street View car is mostly found in…",
+      "title": "Google car: red Gen 4, with or without antenna",
       "text": [
         "A **red** Generation 4 Street View car is mostly found in central and southeastern Bulgaria.",
         "This car can be found with and [without](https://goo.gl/maps/JUqTZr8YLVTmX22U9) an antenna."
@@ -1253,14 +1343,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A red Gen 4 car, mostly in central and southeastern parts. It can have an antenna or not."
     },
     {
       "id": "bg-bVxa",
       "step": 1,
       "order": 7,
       "family": "car",
-      "title": "Google car: Generation 3 coverage with a piece of tape on a short…",
+      "title": "Google car: Gen 3, tape on a short antenna",
       "text": [
         "Generation 3 coverage with a piece of **tape** on a **short antenna** can be commonly found in the eastern part of Bulgaria.",
         "NOTE: Tape antennas can very rarely appear in other provinces, the only provinces where it’s never found are Vratsa, Montana, Pazardzhik and Smolyan."
@@ -1300,14 +1391,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Older Gen 3 coverage with a piece of tape on a short antenna is common in the east. It rarely appears elsewhere, and is never found in four provinces."
     },
     {
       "id": "bg-Ml2y",
       "step": 1,
       "order": 8,
       "family": "car",
-      "title": "Google car: Generation 3 locations with a taped long antenna and…",
+      "title": "Google car: white Gen 3, taped long antenna",
       "text": [
         "Generation 3 locations with a **taped long antenna **and visible white car can be found in Stara Zagora, and rarely a few small roads in Plovdiv and Burgas.",
         "NOTE: This combination of car and antenna can be found more commonly in other European countries as well. Make sure to use other clues."
@@ -1348,14 +1440,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage with a white car and a long antenna with tape, around one southern city and rarely on small roads elsewhere. This combination exists in other European countries too, so check other clues."
     },
     {
       "id": "bg-pclm",
       "step": 1,
       "order": 9,
       "family": "car",
-      "title": "Google car: This antenna with unpeeled tape at the top",
+      "title": "Google car: bulky antenna tip, unpeeled tape",
       "text": [
         "This antenna with unpeeled tape at the top, resulting in a bulkier antenna tip, can be found in the Varna Province. Coverage with this antenna is exclusively in March, resulting in a dead winter look."
       ],
@@ -1395,14 +1488,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An antenna with unpeeled tape on top makes the tip look bulkier. It is found in the northeastern province, always shot in March, so it looks dead and wintery."
     },
     {
       "id": "bg-mr8t",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: The mountains overlooking Vratsa from the southwest have a…",
+      "title": "Landscape: distinct bumpy mountains to the",
       "text": [
         "The mountains overlooking Vratsa from the southwest have a very distinct “bumpy” shape, and can be seen from afar in the province."
       ],
@@ -1441,14 +1535,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mountains to the southwest of one northwestern town have a very distinct bumpy shape and are visible from far away."
     },
     {
       "id": "bg-dPl7",
       "step": 2,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: The old town of Nessebar",
+      "title": "Houses: old stone, white walls, brown wood",
       "text": [
         "The old town of Nessebar, and to a lesser extent Sozopol, can be recognised by the well-preserved old buildings made of a combination of unpainted stone, white stone walls and brown wood. Most of the streets are paved with cobblestone."
       ],
@@ -1487,7 +1582,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Well-preserved old buildings of unpainted stone, white stone walls and brown wood, with cobblestone streets. Found in an old coastal town and to a lesser degree a nearby one."
     },
     {
       "id": "bg-7hxS",
@@ -1495,7 +1591,7 @@
       "order": 2,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: White street signs with two red strips",
+      "title": "Sign: white street name with two red strips",
       "text": [
         "White street signs with **two red strips**; one covering the bottom and one covering part of the top, can be found in Sofia.",
         "NOTE: You can also find [other types](https://maps.app.goo.gl/EUVuwa83zMGYrP398) of street signs in Sofia."
@@ -1535,7 +1631,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White street signs with two red strips, one along the bottom and one across part of the top. They appear in the capital, which also has other sign types."
     },
     {
       "id": "bg-sB8m",
@@ -1543,7 +1640,7 @@
       "order": 3,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Brown street signs with bright yellow text can be found in…",
+      "title": "Sign: brown street name, bright yellow text",
       "text": [
         "**Brown street signs** with bright yellow text can be found in Stara Zagora."
       ],
@@ -1570,7 +1667,8 @@
           "src": "https://learnablemeta.com/images/4588/1777394745752-AOM.avif",
           "path": "bg/248665470d05.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "f5051cd2ca91"
         }
       ],
       "locations": [
@@ -1589,209 +1687,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bulgaria",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "bg-lm-298",
-      "step": 3,
-      "order": 0,
-      "family": "pole",
-      "title": "Pole: Small alternating hooks",
-      "text": [
-        "Most poles in Bulgaria have small, alternating hook-shaped insulators, which can also be found in other countries (mostly on wooden poles, like Latvia, North Macedonia, and a few others). However, if you see them on a concrete pole, you're most likely in Bulgaria. Try using other clues to confirm."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ae4f7534001",
-          "src": "https://learnablemeta.com/images/fscTYKuWvyX9PscF7IIUhUDKpYcsyTg1k7Iu.avif",
-          "path": "bg/8ae4f7534001.webp",
-          "width": 898,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "MK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-2987",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "4 Stripes + Hat Bulgaria",
-      "text": [
-        "**Hat** - Austria, Bulgaria, Czechia, Slovakia. > those with **4 Zebra Stripes**: Bulgaria."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "efa64b813b58",
-          "src": "https://learnablemeta.com/images/90/KLNSNoWt6Rmem8L0m54gJPXVAxvy1AuvJ0Zz.avif",
-          "path": "bg/efa64b813b58.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AT",
-        "CZ",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-23760",
-      "step": 3,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Grey Tape",
-      "text": [
-        "You can commonly see a small piece of grey tape at the top of the car antenna in Generation 3 coverage.",
-        "Not all Gen 3 coverage has this tape.",
-        "**--- NOTE:**",
-        "This can also be seen in Czechia, Slovakia, Hungary, and Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3711ad32fca2",
-          "src": "https://learnablemeta.com/images/768/WxjV5x7YiQZBiuRCC9YS2EZxXj5c8yatNrfz.avif",
-          "path": "bg/3711ad32fca2.webp",
-          "width": 1000,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CZ",
-        "HU",
-        "RO",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-50356",
-      "step": 3,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: Grey Tape",
-      "text": [
-        "You can commonly see a small piece of grey tape at the top of the car antenna in Generation 3 coverage.",
-        "Not all Gen 3 coverage has this tape.",
-        "**--- NOTE:**",
-        "This can also be seen in Czechia, Slovakia, Hungary, and Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3711ad32fca2",
-          "src": "https://learnablemeta.com/images/768/WxjV5x7YiQZBiuRCC9YS2EZxXj5c8yatNrfz.avif",
-          "path": "bg/3711ad32fca2.webp",
-          "width": 1000,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CZ",
-        "HU",
-        "RO",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-51069",
-      "step": 3,
-      "order": 4,
-      "family": "car",
-      "title": "Google car: Grey Tape",
-      "text": [
-        "You can commonly see a small piece of grey tape at the top of the car antenna in Generation 3 coverage.",
-        "Not all Gen 3 coverage has this tape.",
-        "**--- NOTE:**",
-        "This can also be seen in Czechia, Slovakia, Hungary, and Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3711ad32fca2",
-          "src": "https://learnablemeta.com/images/768/WxjV5x7YiQZBiuRCC9YS2EZxXj5c8yatNrfz.avif",
-          "path": "bg/3711ad32fca2.webp",
-          "width": 1000,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CZ",
-        "HU",
-        "RO",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-104601",
-      "step": 3,
-      "order": 5,
-      "family": "architecture",
-      "title": "Architecture: Patches Of Mortar",
-      "text": [
-        "Most houses in Bulgaria have orange tiled roofs, with distinct patches of mortar along the corner tiles.",
-        "**Famously, Bulgarian roofs often seem poorly constructed:**",
-        "The roof tiles and mortar tend to be uneven, especially when compared to other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "73d8d072784c",
-          "src": "https://learnablemeta.com/images/1072/dgAbxb2Oug2GK0IEcONQrO08eU0HHaYJWyDZ.avif",
-          "path": "bg/73d8d072784c.webp",
-          "width": 1000,
-          "height": 559
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Brown street signs with bright yellow text, found in one southern city."
     },
     {
       "id": "bg-lm-104632",
       "step": 3,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Ghetto-Like Look",
+      "title": "Houses: small, dense, poor suburbs",
       "text": [
         "Suburbs in Bulgaria are generally among the poorest areas in Europe, with small, densely built houses and generally an almost ghetto-like look."
       ],
@@ -1811,124 +1715,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-128283",
-      "step": 3,
-      "order": 7,
-      "family": "architecture",
-      "title": "Architecture: Patches Of Mortar",
-      "text": [
-        "Most houses in Bulgaria have orange tiled roofs, with distinct patches of mortar along the corner tiles.",
-        "**Famously, Bulgarian roofs often seem poorly constructed:**",
-        "The roof tiles and mortar tend to be uneven, especially when compared to other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "73d8d072784c",
-          "src": "https://learnablemeta.com/images/1072/dgAbxb2Oug2GK0IEcONQrO08eU0HHaYJWyDZ.avif",
-          "path": "bg/73d8d072784c.webp",
-          "width": 1000,
-          "height": 559
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-395596",
-      "step": 3,
-      "order": 8,
-      "family": "sign",
-      "kind": "giveway",
-      "title": "Give way sign: Bulgaria",
-      "text": [
-        "Conveniently, they are ordered by first digit, so just learning the first digit can yield high results with little effort.",
-        "Numbers between parentheses in the map are area codes from a neighbouring province that frequently spill into that one.",
-        "Codes next to a small dot represent area codes unique to the province capital."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "39423aeeb614",
-          "src": "https://learnablemeta.com/images/1398/OjYUYeimZC0p61PiBRn8NIn33RwkRK5rEnR7.avif",
-          "giveaway": true,
-          "path": "bg/39423aeeb614.webp",
-          "width": 1000,
-          "height": 659
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-473868",
-      "step": 3,
-      "order": 9,
-      "family": "pole",
-      "title": "Pole: small alternating hooks",
-      "text": [
-        "This style of pole top, with 3 large, alternating insulators that are shaped like upward facing hooks, is a good clue for Bulgaria. This pole top is probably unique to the country.",
-        "NOTE: You can also find this pole top with the insulators facing downwards."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e183e98d42ae",
-          "src": "https://learnablemeta.com/images/1955/1750619695320-Foc.avif",
-          "path": "bg/e183e98d42ae.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-740400",
-      "step": 3,
-      "order": 10,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Sofia",
-      "text": [
-        "White street signs with two red strips; one covering the bottom and one covering part of the top, can be found in Sofia.",
-        "NOTE: You can also find other types of street signs in Sofia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "394b0bd05a6b",
-          "src": "https://learnablemeta.com/images/4588/1777394706790-MFk.avif",
-          "path": "bg/394b0bd05a6b.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Suburbs are among the poorest in Europe, with small, densely built houses and a rough look."
     },
     {
       "id": "bg-lm-740401",
@@ -1936,7 +1724,7 @@
       "order": 11,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Plovdiv",
+      "title": "Sign: two street sign styles, one more common",
       "text": [
         "These 2 street signs can be found in Plovdiv, the left one is more common."
       ],
@@ -1956,49 +1744,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bg-lm-783125",
-      "step": 3,
-      "order": 12,
-      "family": "language",
-      "title": "Language: Bulgarian",
-      "text": [
-        "Bulgarian is a South Slavic language, closely related to Macedonian. Bulgarian mainly uses the Cyrillic alphabet, but many signs are written in both Cyrillic and Latin scripts. The letter **Ъ** is only found in Bulgarian and Russian, although it is fairly uncommon in Russian, and is thus a good way to identify Bulgarian.",
-        "The Bulgarian word for street is **улица** (ulitsa), sometimes abbreviated **ул.** (ul.). This is the same as most Slavic languages (Russian, Serbian...)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8f5a18729c6d",
-          "src": "https://learnablemeta.com/images/9388/1785108320877-n7S.avif",
-          "path": "bg/8f5a18729c6d.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "f59b3754369c",
-          "src": "https://learnablemeta.com/images/9388/1785108334502-i2d.avif",
-          "path": "bg/f59b3754369c.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "17266c2f551a",
-          "src": "https://learnablemeta.com/images/9388/1785108344318-CkL.avif",
-          "path": "bg/17266c2f551a.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Two different street sign designs are found in one southern city; the left one is more common."
     }
   ]
 }

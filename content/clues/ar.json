@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Argentina uses two types of licence plates",
+      "title": "Plate: black with black dot, or white with blue bar",
       "text": [
         "Argentina uses two types of licence plates: a black one, which will be visible on street view with a **black dot** in the middle, and a white one with a **blue bar** at the top.",
         "NOTE: The black dot can only be found on Argentinian licence plates, while the blue bar can be found in Brazil as well."
@@ -43,14 +43,16 @@
           "src": "https://learnablemeta.com/images/6XDp8uEo4PkZlkcHgS94J9i8bekGNMAKNnHo.avif",
           "path": "ar/fcd634bc53c7.webp",
           "width": 1000,
-          "height": 398
+          "height": 398,
+          "dupeOf": "21254ae6f0dc"
         },
         {
           "id": "dcf4e0bf9dcf",
           "src": "https://learnablemeta.com/images/611/84ro8OVm6GiCfW1R7rtzSqxvjMXdDkv9OhNM.avif",
           "path": "ar/dcf4e0bf9dcf.webp",
           "width": 1000,
-          "height": 401
+          "height": 401,
+          "dupeOf": "21254ae6f0dc"
         }
       ],
       "locations": [],
@@ -61,14 +63,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two plate types: black with a black dot in the middle, or white with a blue bar on top. The black dot exists only here, but Brazil also has the blue bar.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Has the blue bar but never the black dot"
+        }
+      ]
     },
     {
       "id": "ar-eF4M",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: Argentina has a black Google car in Generation 3 coverage",
+      "title": "Google car: Gen 3 black car",
       "text": [
         "Argentina has a **black** Google car in Generation 3 coverage.",
         "NOTE: Within South America, only Argentina, Peru and Uruguay have a black Google car."
@@ -111,14 +120,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage shows a black car. In South America only Peru and Uruguay also have a black car.",
+      "sameAs": [
+        "PE",
+        "UY"
+      ]
     },
     {
       "id": "ar-jAh5",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: Argentina also has Generation 4 “smallcam” coverage",
+      "title": "Google car: Gen 4 smallcam, low with big blur",
       "text": [
         "Argentina also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front.",
         "NOTE: Peru, Brazil and Argentina are the only South American countries with smallcam."
@@ -161,14 +175,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 4 camera mounted lower than normal, with a big round blur and a small bump at the front. Only Peru, Brazil and one other South American country have it.",
+      "sameAs": [
+        "BR",
+        "PE"
+      ]
     },
     {
       "id": "ar-97t1",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Round concrete poles sustaining three electricity lines in…",
+      "title": "Pole: round concrete, 3 lines alternating, often doubled",
       "text": [
         "Round concrete poles sustaining three electricity lines in an **alternating pattern** are very common in Argentina.",
         "**Doubled up poles** like in the second image is also a good clue for Argentina.",
@@ -199,7 +218,8 @@
           "src": "https://learnablemeta.com/images/611/lVkIedmv7aInuXZbkwr10BQiU5Zl2jW1mbjx.avif",
           "path": "ar/7c6f7e07d38f.webp",
           "width": 1000,
-          "height": 555
+          "height": 555,
+          "dupeOf": "9175906956a6"
         }
       ],
       "locations": [
@@ -220,14 +240,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round concrete poles with three wires in an alternating pattern are very common. Doubled-up poles are a good clue. Bolivia occasionally has similar doubled concrete poles.",
+      "differs": [
+        {
+          "country": "BO",
+          "how": "Doubled concrete poles only occasionally"
+        }
+      ]
     },
     {
       "id": "ar-ouvs",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Wooden poles are somewhat common in Argentina",
+      "title": "Pole: wooden poles, A-frame only here in South America",
       "text": [
         "Wooden poles are somewhat common in Argentina, they can be found either with a crossbar or without.",
         "NOTE: Wooden A-frame poles in South America are only found in Argentina."
@@ -269,7 +296,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles are fairly common, with or without a crossbar. Wooden A-frame poles in South America exist only here."
     },
     {
       "id": "ar-GzEE",
@@ -277,7 +305,7 @@
       "order": 6,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Argentina typically uses white-and-red chevrons",
+      "title": "Chevron: white-and-red",
       "text": [
         "Argentina typically uses **white-and-red** chevrons.",
         "NOTE: Argentina is the only American country with these chevrons."
@@ -305,7 +333,8 @@
           "src": "https://learnablemeta.com/images/310/Wc5MptHceSr6rdrrc8pK5pj0nOQ0ZBogtV14.avif",
           "path": "ar/606809a0feff.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "fb02e3a4748d"
         },
         {
           "id": "9555b68b80d7",
@@ -319,7 +348,8 @@
           "src": "https://learnablemeta.com/images/914/ID7PB6i2QYubaZC4JCfyMH2fOt8phpPkneiw.avif",
           "path": "ar/6087684e7631.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "9555b68b80d7"
         }
       ],
       "locations": [
@@ -338,14 +368,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chevrons are usually white and red. No other American country uses them."
     },
     {
       "id": "ar-fKN6",
       "step": 0,
       "order": 7,
       "family": "line",
-      "title": "Road line: Road lines in Argentina are mainly dashed white",
+      "title": "Road lines: dashed white, double yellow or mixed",
       "text": [
         "Road lines in Argentina are mainly dashed** white**, double** yellow** or a mix in between."
       ],
@@ -379,14 +410,16 @@
           "src": "https://learnablemeta.com/images/611/O4jdnCnzdK6fVK4DUIg2y1KhYetsiue6zN1O.avif",
           "path": "ar/089ea68bf679.webp",
           "width": 1000,
-          "height": 598
+          "height": 598,
+          "dupeOf": "93bb75ad2c83"
         },
         {
           "id": "5d78ee86c6f6",
           "src": "https://learnablemeta.com/images/863/j2saEo9qt6844TWOmtbdxY1cBRXolLToi8Ix.avif",
           "path": "ar/5d78ee86c6f6.webp",
           "width": 1000,
-          "height": 597
+          "height": 597,
+          "dupeOf": "93bb75ad2c83"
         }
       ],
       "locations": [
@@ -405,7 +438,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road lines are mainly dashed white, double yellow, or a mix."
     },
     {
       "id": "ar-IHvK",
@@ -413,7 +447,7 @@
       "order": 8,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Argentinian kilometre markers are typically white with a…",
+      "title": "Marker: white km post with black strip on top",
       "text": [
         "Argentinian kilometre markers are typically white with a **black strip** displaying the road number at the top.",
         "NOTE: The markers on national highways are indicated with RN, while RP indicates a provincial highway. National highways will be labelled white on the map, while provincial highways will be labelled green."
@@ -454,14 +488,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White kilometre markers with a black strip showing the road number at the top. RN means national road (white on the map) and RP provincial (green on the map)."
     },
     {
       "id": "ar-bekw",
       "step": 0,
       "order": 9,
       "family": "guardrail",
-      "title": "Guardrail: Yellow and red rectangular reflectors can often be seen on…",
+      "title": "Guardrail: yellow and red rectangular reflectors",
       "text": [
         "**Yellow and red rectangular reflectors** can often be seen on Argentinian guardrails.",
         "NOTE: Within South America, they can also be found in Uruguay.** **However, Uruguayan guardrails can be differentiated from Argentinian guardrails by the shape of their [support](/images/argentina/argentinauruguay_guardrailsupport.jpg)."
@@ -505,14 +540,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails often carry yellow and red rectangular reflectors. Uruguay has them too, but its guardrail supports have a different shape.",
+      "sameAs": [
+        "UY"
+      ],
+      "differs": [
+        {
+          "country": "UY",
+          "how": "Different shape of guardrail support"
+        }
+      ]
     },
     {
       "id": "ar-Bb04",
       "step": 0,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: While Argentina features a plethora of different landscapes",
+      "title": "Landscape: flat, treeless, empty and wide open",
       "text": [
         "While Argentina features a plethora of different landscapes, most of the country is relatively flat, mostly treeless, and sparsely populated. In the absence of better clues, you should consider Argentina when you see landscapes like this with a very “wide open”, desolate feel."
       ],
@@ -551,14 +596,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the country is fairly flat, nearly treeless and thinly populated. With no better clue, a wide open, desolate landscape like this points here."
     },
     {
       "id": "ar-VRyU",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "These Argentinian cities have unique and recognisable taxis",
+      "title": "Vehicles: unique taxi designs in several cities",
       "text": [
         "These Argentinian cities have unique and recognisable taxis.",
         "_You can click on the image to enlarge it._"
@@ -580,14 +626,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Several big cities each have their own recognisable taxi design."
     },
     {
       "id": "ar-VfW1",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Far western Argentina typically features a mountainous…",
+      "title": "Landscape: mountains in the far west",
       "text": [
         "Far western Argentina typically features a **mountainous** landscape.",
         "NOTE: It is rare to find mountains in eastern Argentina."
@@ -627,14 +674,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The far west is mountainous. Mountains are rare in the east."
     },
     {
       "id": "ar-46I8",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Red soil is typically found in the Misiones province",
+      "title": "Landscape: red soil in the north-east tip",
       "text": [
         "**Red soil** is typically found in the Misiones province.",
         "NOTE: Brazil and Argentina can look similar in this region. Make sure to look for other clues first."
@@ -663,7 +711,8 @@
           "src": "https://learnablemeta.com/images/664/j8f2NymihPpCqw8kDMwQ307Nk6L3OAxPt9Ug.avif",
           "path": "ar/3b3da5dbaeca.webp",
           "width": 1000,
-          "height": 484
+          "height": 484,
+          "dupeOf": "21f682d6cb2c"
         }
       ],
       "locations": [
@@ -684,14 +733,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red soil is typical of the far north-east province. Brazil looks similar there, so look for other clues first.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Looks similar in this region, check other clues"
+        }
+      ]
     },
     {
       "id": "ar-fy4M",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: In the Chaco and Formosa provinces",
+      "title": "Landscape: sandy soil with low trees and bushes",
       "text": [
         "In the Chaco and Formosa provinces, you will often see **sandy soil** with an **abundance of vegetation**; mainly low trees and bushes."
       ],
@@ -731,14 +787,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north, sandy soil covered in low trees and bushes."
     },
     {
       "id": "ar-KkRF",
       "step": 1,
       "order": 4,
       "family": "vegetation",
-      "title": "Vegetation: Grassland with a few separated tree plantations is…",
+      "title": "Landscape: grassland with a few tree plantations",
       "text": [
         "**Grassland** with a few separated tree plantations is generally found in this area."
       ],
@@ -777,14 +834,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grassland with a few separate tree plantations is typical of this area."
     },
     {
       "id": "ar-KgOC",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "Small lakes near the road are occasionally seen in the…",
+      "title": "Landscape: small lakes next to the road",
       "text": [
         "**Small lakes** near the road are occasionally seen in the province of Buenos Aires."
       ],
@@ -824,14 +882,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small lakes beside the road show up now and then in the big central-east province."
     },
     {
       "id": "ar-xvu6",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Roads with reddish pavement lined with long Argentine…",
+      "title": "Road: reddish pavement lined with long tussock grass",
       "text": [
         "Roads with **reddish pavement **lined with **long **[**Argentine needle-grass**](https://en.wikipedia.org/wiki/Nassella_tenuissima)** **are common in San Luis."
       ],
@@ -871,14 +930,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads with reddish tarmac lined with long needle-grass are common in one central-west province."
     },
     {
       "id": "ar-BOTl",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Flat and barren landscapes like this are typically found in…",
+      "title": "Landscape: flat and barren, central south",
       "text": [
         "**Flat** and **barren** landscapes like this are typically found in central southern Argentina."
       ],
@@ -917,14 +977,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat, barren land like this is typical of the central south."
     },
     {
       "id": "ar-WFi2",
       "step": 1,
       "order": 8,
       "family": "vegetation",
-      "title": "Vegetation: If you see this kind of vegetation with flat grass and a…",
+      "title": "Plants: flat grass and few bushes in the far south",
       "text": [
         "If you see this kind of vegetation with **flat grass** and a low number of bushes, you are almost certainly in the state of Tierra del Fuego or southeastern Santa Cruz."
       ],
@@ -964,14 +1025,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat grass with few bushes means you are almost certainly in the far-south island province or the south-east of the next province up."
     },
     {
       "id": "ar-IrVr",
       "step": 1,
       "order": 9,
       "family": "vegetation",
-      "title": "Vegetation: The majority of tree plantations in Argentina are located…",
+      "title": "Plants: tree plantations in the north-east",
       "text": [
         "The majority of **tree plantations** in Argentina are located in the Entre Rios province.",
         "NOTE: Uruguay and southern Brazil have them as well. Make sure to look at other clues before guessing."
@@ -1015,14 +1077,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most tree plantations are in the north-east river province. Uruguay and southern Brazil have them too, so check other clues.",
+      "differs": [
+        {
+          "country": "UY",
+          "how": "Also has tree plantations, check other clues"
+        },
+        {
+          "country": "BR",
+          "how": "Southern Brazil also has them"
+        }
+      ]
     },
     {
       "id": "ar-HSWC",
       "step": 1,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: Beech forests are commonly found in the state of Tierra del…",
+      "title": "Plants: beech forests in the far south",
       "text": [
         "**Beech forests** are commonly found in the state of Tierra del Fuego."
       ],
@@ -1062,14 +1135,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Beech forests are common in the far-south island province."
     },
     {
       "id": "ar-BjEa",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: Coperinicia alba, also known as the Caranday Wax Palm, have…",
+      "title": "Plants: low-density forests of short fan-leaf palms",
       "text": [
         "[Coperinicia alba](https://en.wikipedia.org/wiki/Copernicia_alba), also known as the Caranday Wax Palm,** **have short, **fan-like leaves **that tend to grow in low-density, single-species forests. Most common in Formosa, they can also be found in Chaco, Corrientes and northern Santa Fe."
       ],
@@ -1108,14 +1182,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "These palms (Caranday wax palm) have short fan-like leaves and grow in thin, single-species forests. Most common in the north-east, also in nearby provinces."
     },
     {
       "id": "ar-6o3V",
       "step": 1,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: Trithrinax Campestris, or the caranday palm, not to be…",
+      "title": "Plants: compact fan palm with dead-leaf trunk coat",
       "text": [
         "[Trithrinax Campestris](https://en.wikipedia.org/wiki/Trithrinax_campestris), or the caranday palm, not to be confused with the Caranday Wax Palm, is a rustic palm native to the Sierras de Córdoba with a broader distribution in San Luis and northern mountainous Argentina. It can be identified by its compact fan-like leaves** **with a trunk hidden by a **coat of dead-leaves.**"
       ],
@@ -1155,14 +1230,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A hardy palm with compact fan-like leaves and a trunk hidden by a coat of dead leaves. Native to central hills, spreading to the west and north mountains."
     },
     {
       "id": "ar-ozI4",
       "step": 1,
       "order": 13,
       "family": "vegetation",
-      "title": "Vegetation: The Butia yatay palm has arching",
+      "title": "Plants: arching feathery palms, leaning, mixed heights",
       "text": [
         "The [Butia yatay palm](https://en.wikipedia.org/wiki/Butia_yatay)** **has arching, [pinnate leaves](https://en.wikipedia.org/wiki/Pinnation) and often grows at an incline with varying heights. It is most common in Corrientes and Parque Nacional El Palmar, Entre Rios."
       ],
@@ -1201,14 +1277,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A palm with arching, feather-like leaves that often leans and varies in height. Most common in the north-east and one national park in the east."
     },
     {
       "id": "ar-cc7y",
       "step": 1,
       "order": 14,
       "family": "vegetation",
-      "title": "Vegetation: The Totai Palm has small thin leaves with a visible spear…",
+      "title": "Plants: palm with thin leaves, spear top, smooth trunk",
       "text": [
         "The [Totai Palm](https://species.wikimedia.org/wiki/Acrocomia_totai) has **small** **thin leaves** with a visible **spear shaped** top, and a **smooth trunk**. It can be found as a decorational plant all across Argentina, however in the wild it is most common in Formosa, Chaco and Misiones."
       ],
@@ -1247,14 +1324,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A palm with small thin leaves, a spear-shaped top and a smooth trunk. Planted for decoration everywhere, but wild mostly in the north-east."
     },
     {
       "id": "ar-2ZIl",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Trichocereus atacamensis, or the cardón, is a cactus native…",
+      "title": "Plants: candelabra cactus with golden fuzzy spines",
       "text": [
         "[Trichocereus atacamensis](https://en.wikipedia.org/wiki/Leucostele_atacamensis), or the **cardón**, is a cactus native to the high elevation mountain ranges of Catamarca, Tucumán, Salta and Jujuy. It can be identified by its candelabra-like appearance and fuzzy golden brown spines."
       ],
@@ -1293,14 +1371,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The cardon is a candelabra-shaped cactus with fuzzy golden-brown spines, native to the high mountains of the north-west."
     },
     {
       "id": "ar-muxx",
       "step": 1,
       "order": 16,
       "family": "vegetation",
-      "title": "Vegetation: Stetsonia coryne, or the toothpick cactus, is a large…",
+      "title": "Plants: tall tree-like cactus with toothpick spines",
       "text": [
         "[Stetsonia coryne](https://en.wikipedia.org/wiki/Stetsonia_coryne), or the **toothpick cactus**, is a large tree-like cactus with many branches and spines resembling toothpicks. Its habitat includes a hotspot between Catamarca and Cordoba as well as the border area between Chaco, Salta and Formosa."
       ],
@@ -1339,14 +1418,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big tree-like cactus with many branches and spines like toothpicks. Found around a spot in the north-west centre and on the northern border area."
     },
     {
       "id": "ar-cqF0",
       "step": 1,
       "order": 17,
       "family": "other",
-      "title": "Wild sunflowers (Tithonia tubaeformis) are often found in…",
+      "title": "Plants: wild sunflowers in the north-west",
       "text": [
         "**Wild sunflowers** ([Tithonia tubaeformis](https://es.wikipedia.org/wiki/Tithonia_tubaeformis)) are often found in Salta, Jujuy and Tucumán."
       ],
@@ -1386,14 +1466,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wild sunflowers are often found in the three north-west provinces."
     },
     {
       "id": "ar-fwgj",
       "step": 1,
       "order": 18,
       "family": "vegetation",
-      "title": "Vegetation: Prosopis caldenia, known as the caldén, is a decently large…",
+      "title": "Plants: large deciduous tree with twisty branches",
       "text": [
         "[Prosopis caldenia](https://en.wikipedia.org/wiki/Prosopis_caldenia), known as the caldén, is a decently **large deciduous tree** with **small leaves** and **sinuous branches**. It is mainly found in La Pampa.",
         "NOTE: This tree can sometimes be confused with other trees such as the [White Carob](https://en.wikipedia.org/wiki/Prosopis_alba)."
@@ -1433,14 +1514,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A fairly large deciduous tree with small leaves and twisting branches, mostly in the central-south plains. It can be confused with other carob-type trees."
     },
     {
       "id": "ar-HidJ",
       "step": 1,
       "order": 19,
       "family": "other",
-      "title": "Pampas grass (Cortaderia selloana) is one of the most…",
+      "title": "Plants: pampas grass with white fluffy flowers",
       "text": [
         "Pampas grass ([Cortaderia selloana](https://en.wikipedia.org/wiki/Cortaderia_selloana)) is one of the most defining flora of the Pampas region. It is recognizable by its long bunched reeds and **white fluffy flowerheads.**"
       ],
@@ -1479,14 +1561,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pampas grass has long bunched reeds and white fluffy flowerheads. It is typical of the central plains."
     },
     {
       "id": "ar-uYP9",
       "step": 1,
       "order": 20,
       "family": "other",
-      "title": "Sugarcane plantations are most common in Tucumán",
+      "title": "Crops: sugarcane in the north-west",
       "text": [
         "**Sugarcane** plantations are most common in Tucumán, with hotspots appearing in Salta and Jujuy."
       ],
@@ -1526,14 +1609,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sugarcane plantations are most common in the north-west, with hotspots in two nearby provinces."
     },
     {
       "id": "ar-Z4q5",
       "step": 1,
       "order": 21,
       "family": "other",
-      "title": "Fields of sorghum can most commonly be seen in Santa Fe",
+      "title": "Crops: sorghum with dark red heads",
       "text": [
         "Fields of [**sorghum**](https://en.wikipedia.org/wiki/Sorghum) can most commonly be seen in Santa Fe, Córdoba and Buenos Aires. It can be identified by its dark red flowerheads."
       ],
@@ -1573,14 +1657,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sorghum fields, with dark red flowerheads, are most common in the central-east provinces."
     },
     {
       "id": "ar-DZIL",
       "step": 1,
       "order": 22,
       "family": "other",
-      "title": "Corn fields can be found in most of northern Argentina",
+      "title": "Crops: corn across the north",
       "text": [
         "**Corn fields** can be found in most of northern Argentina, however they are most common in Córdoba and Santiago del Estero."
       ],
@@ -1620,14 +1705,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Corn grows in most of the north, most commonly in the centre and north-centre."
     },
     {
       "id": "ar-r2iz",
       "step": 1,
       "order": 23,
       "family": "other",
-      "title": "Fields of sunflowers are mainly found in southern Chaco",
+      "title": "Crops: sunflower fields in the south of the north",
       "text": [
         "Fields of **sunflowers** are mainly found in southern Chaco, and less commonly in Buenos Aires and southern Córdoba."
       ],
@@ -1667,14 +1753,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sunflower fields are mainly in the south of the northern chaco region, and less often in the central east and south of the centre."
     },
     {
       "id": "ar-2AHH",
       "step": 1,
       "order": 24,
       "family": "vegetation",
-      "title": "Vegetation: Single rows of poplar trees",
+      "title": "Plants: rows of tall thin poplars on flat land",
       "text": [
         "Single **rows of poplar trees**, characterised by their thin and tall appearance, are very common around Neuquén. The area is also very flat."
       ],
@@ -1714,14 +1801,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Single rows of thin, tall poplar trees are very common around one Patagonian-edge region, and the area is very flat."
     },
     {
       "id": "ar-XFL6",
       "step": 1,
       "order": 25,
       "family": "pole",
-      "title": "Pole: Within Argentina, these Latvian style wooden hook poles are…",
+      "title": "Pole: wooden hook poles with alternating insulators",
       "text": [
         "Within Argentina, these Latvian style **wooden** hook poles are unique to La Rioja and Mendoza."
       ],
@@ -1751,7 +1839,8 @@
           "src": "https://learnablemeta.com/images/1822/1749330198750-aBC.avif",
           "path": "ar/180a0be8ba9e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "9e781b5698b8"
         }
       ],
       "locations": [
@@ -1770,14 +1859,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles with hook-shaped insulators, like those in Latvia. Within the country, only in two western provinces.",
+      "sameAs": [
+        "LV"
+      ]
     },
     {
       "id": "ar-NUPv",
       "step": 1,
       "order": 26,
       "family": "pole",
-      "title": "Pole: In Mendoza, poles with a single insulator attached to the…",
+      "title": "Pole: single insulator on the side",
       "text": [
         "In Mendoza, poles with a **single insulator **attached to the side of the pole can be found."
       ],
@@ -1819,14 +1912,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one western wine province, poles have a single insulator attached to the side."
     },
     {
       "id": "ar-i6k7",
       "step": 1,
       "order": 27,
       "family": "pole",
-      "title": "Pole: White vertical pole stickers with several digits can be…",
+      "title": "Pole: white vertical sticker with digits",
       "text": [
         "**White** **vertical pole stickers** with several **digits** can be found in Tucumán."
       ],
@@ -1868,14 +1962,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White vertical pole stickers with several digits are found in one north-west province."
     },
     {
       "id": "ar-jKU1",
       "step": 1,
       "order": 28,
       "family": "other",
-      "title": "You can find these unique markers on provincial roads in…",
+      "title": "Marker: unique markers on provincial roads",
       "text": [
         "You can find these unique markers on **provincial roads** in Cordoba."
       ],
@@ -1915,7 +2010,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Distinctive markers appear on the provincial roads of one central province."
     },
     {
       "id": "ar-06ge",
@@ -1923,7 +2019,7 @@
       "order": 29,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: T-Junctions in La Pampa sometimes have these yellow…",
+      "title": "Sign: yellow junction sign with chevrons at bottom",
       "text": [
         "T-Junctions in La Pampa sometimes have these **yellow rectangular signs**, with a chevron pattern on the bottom, and the Road Number(s) above, with an arrow on both sides."
       ],
@@ -1963,14 +2059,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "At T-junctions in one central-south province, a yellow rectangular sign with a chevron pattern at the bottom, road numbers above and an arrow on each side."
     },
     {
       "id": "ar-kujK",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "Red bricks, similar to what is common in Bolivia, can be…",
+      "title": "Houses: red bricks in the north-west, like Bolivia",
       "text": [
         "**Red bricks**, similar to what is common in Bolivia, can be found in the northwest of the country, especially in western Jujuy."
       ],
@@ -2011,14 +2108,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red bricks, like the common ones in Bolivia, appear in the north-west, especially the far west of the northern province.",
+      "sameAs": [
+        "BO"
+      ]
     },
     {
       "id": "ar-lP62",
       "step": 2,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: In Mar Del Plata and surrounding cities",
+      "title": "Houses: quartzite facades, orange tiles, vault porches",
       "text": [
         "In Mar Del Plata and surrounding cities (such as Miramar and Necochea), a unique style of architecture can be found. Its main features include **quartzite** **stoned facades**,** orange tiled roofs**, attached garages, and vault shaped porches."
       ],
@@ -2057,14 +2158,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In a coastal resort city and nearby towns: houses with quartzite stone facades, orange tiled roofs, attached garages and vault-shaped porches."
     },
     {
       "id": "ar-mwYE",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "Salt pans in Argentina are typically found in Jujuy",
+      "title": "Landscape: salt flats in the far north-west",
       "text": [
         "**Salt pans** in Argentina are typically found in Jujuy.",
         "NOTE: They can also be found in southwestern Bolivia and northeastern Chile."
@@ -2107,14 +2209,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Salt pans are typically in the far north-west province. They also appear in south-west Bolivia and north-east Chile.",
+      "sameAs": [
+        "BO",
+        "CL"
+      ]
     },
     {
       "id": "ar-knP3",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: These red mountains are unique to the RN68 valley in…",
+      "title": "Landscape: red mountains along a valley road",
       "text": [
         "These **red mountains** are unique to the RN68 valley in southern Salta."
       ],
@@ -2181,14 +2288,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "These red mountains are unique to the valley of the RN68 road in the south of a north-west province."
     },
     {
       "id": "ar-Gsxd",
       "step": 2,
       "order": 4,
       "family": "car",
-      "title": "Google car: These volcanic rocks in Generation 4 coverage can only be…",
+      "title": "Landscape: volcanic rocks in Gen 4, high plateau",
       "text": [
         "These **volcanic rocks** in Generation 4 coverage can only be found on the RP43 south of Antofagasta de la Sierra in northwestern Catamarca."
       ],
@@ -2227,14 +2335,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "These volcanic rocks in Gen 4 coverage appear only on RP43 south of a high-altitude village in the north-west."
     },
     {
       "id": "ar-9ggu",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The western part of the RN65 in western Tucumán can easily…",
+      "title": "Road: winding dirt road up in the clouds",
       "text": [
         "The western part of the RN65 in western Tucumán can easily be recognized by this **bendy unpaved road up in the mountains** with its western part [up in the clouds](https://maps.app.goo.gl/dq1L8WT13w2QBXpu5)."
       ],
@@ -2273,14 +2382,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The western part of RN65 in the north-west is a bendy unpaved mountain road, with its west end up in the clouds."
     },
     {
       "id": "ar-KCJo",
       "step": 2,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: Red soil with a barren landscape and mountain ranges",
+      "title": "Landscape: red soil, barren, mountain ranges",
       "text": [
         "Red soil** **with a barren landscape and mountain ranges, can often be seen on the RN76 in **Parque Nacional Talampaya** in western La Rioja."
       ],
@@ -2319,14 +2429,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red soil, barren land and mountain ranges, often seen on RN76 in a national park in the west."
     },
     {
       "id": "ar-Ipth",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: These mountains are typically found west of Córdoba",
+      "title": "Landscape: lower hills west of a central city",
       "text": [
         "These mountains are typically found west of Córdoba.",
         "NOTE: They are not as high as the mountains in the west."
@@ -2354,7 +2465,8 @@
           "src": "https://learnablemeta.com/images/664/RELFpm67rDzCWOcRPuWaFWKbyb4RYF719D5f.avif",
           "path": "ar/6e9ff4de25ba.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "21f4c7edcdf5"
         }
       ],
       "locations": [
@@ -2373,14 +2485,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "These mountains are typical west of a central city. They are not as high as the mountains along the western border."
     },
     {
       "id": "ar-63ID",
       "step": 2,
       "order": 8,
       "family": "coverage",
-      "title": "Coverage: This horse trekker can be found in southwestern San Juan",
+      "title": "Coverage: horse-mounted camera in the south-west",
       "text": [
         "This **horse trekker** can be found in southwestern San Juan.",
         "NOTE: A similar trekker can be found on the other side in Chile."
@@ -2422,14 +2535,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A camera carried on a horse is found in the south-west of a western province. A similar one exists on the Chilean side.",
+      "sameAs": [
+        "CL"
+      ]
     },
     {
       "id": "ar-BMCC",
       "step": 2,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: If you see vineyards with mountains in the west and…",
+      "title": "Landscape: vineyards, mountains west, flat east",
       "text": [
         "If you see** vineyards **with mountains in the west and flatness in the east, you are most likely in the outskirts of Mendoza.",
         "NOTE: There are multiple wine regions in Argentina, but the Mendoza wine region is the most recognisable one of them all."
@@ -2469,14 +2586,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards with mountains to the west and flat land to the east mean you are likely in the outskirts of the best-known wine region."
     },
     {
       "id": "ar-UvI1",
       "step": 2,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: Semi-coastal grass hills are seen in southern Buenos Aires",
+      "title": "Landscape: grassy hills near the coast",
       "text": [
         "**Semi-coastal grass hills** are seen in southern Buenos Aires, especially northeast of Bahía Blanca."
       ],
@@ -2522,14 +2640,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grassy semi-coastal hills in the south of the big central-east province, especially north-east of its southern port."
     },
     {
       "id": "ar-MNox",
       "step": 2,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: The monkey puzzle tree can be found in western Neuquen",
+      "title": "Plants: monkey puzzle trees in the west",
       "text": [
         "The **monkey puzzle** **tree** can be found in western Neuquen. The most specimens are seen on state road 23.",
         "NOTE: They are seen on the other side in Chile** **as well."
@@ -2571,14 +2690,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Monkey puzzle trees grow in the west of a Patagonian province, with the most along road 23. They also grow on the Chilean side.",
+      "sameAs": [
+        "CL"
+      ]
     },
     {
       "id": "ar-UzNb",
       "step": 2,
       "order": 12,
       "family": "other",
-      "title": "The “sawdust” car is found in centre-south Argentina and…",
+      "title": "Google car: black back covered in sandy dust",
       "text": [
         "The** “sawdust” **car is found in centre-south Argentina and has a unique sandy dust on its visible black back."
       ],
@@ -2617,14 +2740,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The sawdust car is in the central south and has a unique sandy dust on its visible black back."
     },
     {
       "id": "ar-vOS7",
       "step": 2,
       "order": 13,
       "family": "other",
-      "title": "Villa Dique Florentino Ameghino in northeastern Chubut is…",
+      "title": "Landscape: rock formations around a dam town",
       "text": [
         "Villa Dique Florentino Ameghino in northeastern Chubut is surrounded by these **rock formations**.",
         "NOTE: Sometimes you will be able to see this [dam](https://goo.gl/maps/C6e9Fto8HjVheSZp7) in the west."
@@ -2664,14 +2788,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A village in the north-east of a Patagonian province is surrounded by rock formations. Sometimes a dam is visible to the west."
     },
     {
       "id": "ar-wj6M",
       "step": 2,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: Comodoro Rivadavia is built on the slopes of Chenque hill",
+      "title": "Landscape: city built on hill slopes",
       "text": [
         "**Comodoro Rivadavia** is built on the slopes of Chenque hill, making the city recognisable."
       ],
@@ -2710,14 +2835,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A coastal city is built on the slopes of a hill, which makes it recognisable."
     },
     {
       "id": "ar-tuz2",
       "step": 2,
       "order": 15,
       "family": "coverage",
-      "title": "Coverage: Melting snow coverage is seen on the eastern RN293 close to…",
+      "title": "Coverage: melting snow near the western border",
       "text": [
         "**Melting snow coverage** is seen on the eastern RN293 close to the Chilean border in southwestern Santa Cruz."
       ],
@@ -2756,14 +2882,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Melting snow coverage appears on the eastern part of RN293 near the Chilean border in the far south-west."
     },
     {
       "id": "ar-IIWE",
       "step": 2,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: These snowy mountains to the north can only be found in…",
+      "title": "Landscape: snowy mountains to the north of a southern city",
       "text": [
         "These snowy mountains to the north can only be found in **Ushuaia**.",
         "NOTE: Ushuaia is the southernmost city of Argentina and the province capital of Tierra del Fuego."
@@ -2803,14 +2930,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/argentina",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Snowy mountains lie to the north of the southernmost city, the island province capital. They are found only there."
     },
     {
       "id": "ar-lm-157",
       "step": 3,
       "order": 0,
       "family": "other",
-      "title": "Highway markers",
+      "title": "Marker: black-and-white highway markers",
       "text": [
         "If you see black-and-white highway markers, you're in Argentina."
       ],
@@ -2830,14 +2958,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Black-and-white highway markers are a good sign you are in this country."
     },
     {
       "id": "ar-lm-278",
       "step": 3,
       "order": 1,
       "family": "pole",
-      "title": "Pole: Double concrete pole",
+      "title": "Pole: double round concrete poles joined by a ring",
       "text": [
         "This double-rounded concrete pole connected by a concrete ring is almost exclusive to Argentina. Similar ones can occasionally be found in Bolivia, but the landscape will be vastly different."
       ],
@@ -2859,14 +2988,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Two round concrete poles connected by a concrete ring are almost exclusive to this country. Bolivia has similar ones only occasionally, with very different scenery.",
+      "differs": [
+        {
+          "country": "BO",
+          "how": "Only occasionally, with very different scenery"
+        }
+      ]
     },
     {
       "id": "ar-lm-280",
       "step": 3,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Landscape + black car",
+      "title": "Landscape: flat, empty land with black car back",
       "text": [
         "If you find yourself in a flat, desolate, treeless, sparsely populated area with a visible black back of the Google car, you're likely in Argentina.",
         "(Jordan might resemble this landscape for new players, and it also has a black back on the car, so be aware of that.)",
@@ -2892,14 +3028,25 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A flat, desolate, treeless, thinly populated area with the black back of the Google car points here. Jordan can look similar and also has a black car back.",
+      "sameAs": [
+        "PE",
+        "UY"
+      ],
+      "differs": [
+        {
+          "country": "JO",
+          "how": "Similar landscape and black car, but different other clues"
+        }
+      ]
     },
     {
       "id": "ar-lm-3646",
       "step": 3,
       "order": 3,
       "family": "car",
-      "title": "Google car: Tucuman mist road",
+      "title": "Coverage: thick mist on a mountain road",
       "text": [
         "On the 65 in Tucuman, leading west to the Catamarca border near Parque Nacional Aconquija, the Google car drove through what appears to be mist thick enough to clog your windpipe."
       ],
@@ -2919,14 +3066,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On route 65 in the north-west, heading west, the car drives through mist so thick it blocks the view."
     },
     {
       "id": "ar-lm-3888",
       "step": 3,
       "order": 4,
       "family": "other",
-      "title": "Neuqén sunrise",
+      "title": "Coverage: glitchy colours from an early start",
       "text": [
         "In the North of Neuquén, the Google driver started their day early and the camera did not like it. As the day progresses, the car goes further north and the glitchy colors fade, until only a bit of color noise remains, and finally, around the province border, it starts to look like normal footage."
       ],
@@ -2946,43 +3094,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7342",
-      "step": 3,
-      "order": 5,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Infrastructure - km-marker",
-      "text": [
-        "Argentinian kilometer markers are typically white with a **black strip** displaying the road number at the top. RN stands for ruta national (white on the map), RP stands for ruta provincial (green on the map)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b7f06876119f",
-          "src": "https://learnablemeta.com/images/100/MOMCTTtIAdO6oWJtS2Ts87o2g1rnywNzXp1t.avif",
-          "giveaway": true,
-          "path": "ar/b7f06876119f.webp",
-          "width": 1000,
-          "height": 513
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the north of a Patagonian province, the camera produced glitchy colours at sunrise. They fade going north and look normal by the province border."
     },
     {
       "id": "ar-lm-7343",
       "step": 3,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - Jujuy Taxi",
+      "title": "Vehicles: black taxi with yellow roof top only",
       "text": [
         "Taxis in Jujuy have a **black body** and a **yellow roof**. Notably, only the top of the roof is yellow, making it distinct from Rosario or Buenos Aires taxis."
       ],
@@ -3002,14 +3122,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A taxi with a black body and only the top of the roof yellow. Rosario and the capital have different taxis."
     },
     {
       "id": "ar-lm-7344",
       "step": 3,
       "order": 7,
       "family": "other",
-      "title": "Infrastructure - Salta Taxi",
+      "title": "Vehicles: red taxi with black stripe",
       "text": [
         "**Red taxis** with a **black stripe** are unique to Salta."
       ],
@@ -3029,14 +3150,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Red taxis with a black stripe are unique to one north-west city."
     },
     {
       "id": "ar-lm-7345",
       "step": 3,
       "order": 8,
       "family": "other",
-      "title": "Infrastructure - Cordoba Taxi",
+      "title": "Vehicles: all green or all yellow taxi with oval",
       "text": [
         "These **all green** or **all yellow** taxis with an oval shape beneath the driver door are unique to Cordoba."
       ],
@@ -3056,41 +3178,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7346",
-      "step": 3,
-      "order": 9,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Ushuaia",
-      "text": [
-        "These **snowy mountains** to the **north** can only be found in Ushuaia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ab863a68468d",
-          "src": "https://learnablemeta.com/images/100/zQmbj9NE5Lw8l0THD1jI31DsqB1MBNFlfnfj.avif",
-          "path": "ar/ab863a68468d.webp",
-          "width": 1000,
-          "height": 492
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "All-green or all-yellow taxis with an oval shape under the driver's door are unique to one central city."
     },
     {
       "id": "ar-lm-7347",
       "step": 3,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - San Juan Taxi",
+      "title": "Vehicles: white taxi with yellow roof",
       "text": [
         "**White taxis** with a **yellow roof** are unique to San Juan."
       ],
@@ -3110,14 +3206,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White taxis with a yellow roof are unique to one western province."
     },
     {
       "id": "ar-lm-7348",
       "step": 3,
       "order": 11,
       "family": "other",
-      "title": "Infrastructure - Mendoza Taxi",
+      "title": "Vehicles: black and yellow taxi, body only partly black",
       "text": [
         "This **black and yellow** taxi is unique to Mendoza. Jujuy, Rosario and Buenos Aires also have black and yellow taxis, but on those taxis, the body is completely black."
       ],
@@ -3137,14 +3234,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "This black and yellow taxi is unique to one wine province. Other cities have black-and-yellow taxis, but with a completely black body."
     },
     {
       "id": "ar-lm-7349",
       "step": 3,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - Bariloche Taxi",
+      "title": "Vehicles: white taxi with blue roof and logo",
       "text": [
         "This taxi with the **white body**, **blue roof** and **blue logo** is unique to the city of Bariloche."
       ],
@@ -3164,14 +3262,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A taxi with a white body, blue roof and blue logo is unique to one Andean lake city."
     },
     {
       "id": "ar-lm-7350",
       "step": 3,
       "order": 13,
       "family": "other",
-      "title": "Infrastructure - Tucuman Taxi",
+      "title": "Vehicles: old white taxi, yellow-black checker stripe",
       "text": [
         "These **old-school**, **white** taxis with a **yellow-black checkerboard** stripe are unique to Tucuman."
       ],
@@ -3191,14 +3290,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Old-style white taxis with a yellow-and-black checkerboard stripe are unique to one north-west city."
     },
     {
       "id": "ar-lm-7351",
       "step": 3,
       "order": 14,
       "family": "other",
-      "title": "Infrastructure - Resistencia Taxi",
+      "title": "Vehicles: taxi with red-white-green stripe",
       "text": [
         "Taxis with a **red-white-green stripe** (hungarian flag) are unique to Resistencia."
       ],
@@ -3218,14 +3318,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Taxis with a red, white and green stripe (like the Hungarian flag) are unique to one northern city."
     },
     {
       "id": "ar-lm-7352",
       "step": 3,
       "order": 15,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - Santiago del Estero Taxi",
+      "title": "Vehicles: white taxi with light-green roof",
       "text": [
         "**White taxis** with **light-green roofs** are unique to Santiago del Estero."
       ],
@@ -3245,14 +3346,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White taxis with light-green roofs are unique to one northern city."
     },
     {
       "id": "ar-lm-7353",
       "step": 3,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - Rosario Taxi",
+      "title": "Vehicles: black taxi, yellow roof, black middle bar",
       "text": [
         "Taxis in Rosario have a **black body** and a **yellow roof**. The outer bars are yellow, while the middle bar (behind the driver) is black. This makes them distinguishable from taxis in Jujuy and Buenos Aires."
       ],
@@ -3272,14 +3374,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A black body with a yellow roof. The outer roof bars are yellow and the middle bar behind the driver is black, unlike the capital and one north-west city."
     },
     {
       "id": "ar-lm-7354",
       "step": 3,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Infrastructure - Buenos Aires Taxi",
+      "title": "Vehicles: black taxi, yellow roof, painted middle bar",
       "text": [
         "This taxi with a **black body** and **yellow roof** is common in Buenos Aires. Note that taxis from Jujuy and Rosarío have the same combination. However, Buenos Aires is the only city where the taxi has the **middle bar** (behind the driver) painted."
       ],
@@ -3299,14 +3402,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Black body and yellow roof, like in two other cities, but here the middle roof bar behind the driver is painted too. Only the capital does that."
     },
     {
       "id": "ar-lm-7355",
       "step": 3,
       "order": 18,
       "family": "other",
-      "title": "Infrastructure - San Luis Taxi",
+      "title": "Vehicles: white taxi with two light-blue stripes",
       "text": [
         "**White taxis** with **two light-blue stripes** (resembling the Argentinian flag) are unique to San Luis."
       ],
@@ -3326,14 +3430,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White taxis with two light-blue stripes, like the national flag, are unique to one central province."
     },
     {
       "id": "ar-lm-7356",
       "step": 3,
       "order": 19,
       "family": "other",
-      "title": "Infrastructure - Neuquen Taxi",
+      "title": "Vehicles: all-yellow taxi, no door logos",
       "text": [
         "Taxis in Neuquen are **all yellow**. What distinguishes them from Cordoba taxis is that their doors have no logos or paintings on them."
       ],
@@ -3353,14 +3458,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "All-yellow taxis. Unlike another city's yellow taxis, their doors have no logos or paintings."
     },
     {
       "id": "ar-lm-7357",
       "step": 3,
       "order": 20,
       "family": "other",
-      "title": "Infrastructure - La Plata Taxi",
+      "title": "Vehicles: white taxi with green parts",
       "text": [
         "La Plata has **white taxis** with **green elements**."
       ],
@@ -3380,14 +3486,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White taxis with green elements are typical of one big city near the capital."
     },
     {
       "id": "ar-lm-7358",
       "step": 3,
       "order": 21,
       "family": "other",
-      "title": "Infrastructure - Comodoro Rivadavia Taxi",
+      "title": "Vehicles: all-white taxi with black logo",
       "text": [
         "This **all white** taxi with a **black logo** is unique to Comodoro Rivadavia."
       ],
@@ -3407,827 +3514,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7359",
-      "step": 3,
-      "order": 22,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Mountains",
-      "text": [
-        "Far western Argentina typically features a **mountainous** landscape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "06cb385d38bf",
-          "src": "https://learnablemeta.com/images/100/zq05GeFHNTjEBYviAW4tjtho7VN1CNYZGqZu.avif",
-          "path": "ar/06cb385d38bf.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7360",
-      "step": 3,
-      "order": 23,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Red Soil",
-      "text": [
-        "**Red soil** is typically found in the Misiones province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2a22090ebfcf",
-          "src": "https://learnablemeta.com/images/100/Rh8PlAnV2iA9DZrf7PlQDdBjDRJ7XJdnCzez.avif",
-          "path": "ar/2a22090ebfcf.webp",
-          "width": 1000,
-          "height": 512
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7361",
-      "step": 3,
-      "order": 24,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Chaco & Formosa Landscape",
-      "text": [
-        "In the Chaco and Formosa provinces, you will often see **sandy soil** with an **abundance of vegetation**; mainly low trees and bushes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "65d149ef42a0",
-          "src": "https://learnablemeta.com/images/100/bazX5FRNgxotGytP3bpgnIan2HHeP9CGZK4g.avif",
-          "path": "ar/65d149ef42a0.webp",
-          "width": 1000,
-          "height": 506
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7362",
-      "step": 3,
-      "order": 25,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Grassland",
-      "text": [
-        "**Grassland** with a few separated tree plantations is generally found in this area."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b6d0c410fc53",
-          "src": "https://learnablemeta.com/images/100/iJ1qXSede0VhwouiKvp0k227FuoFA99PcbOs.avif",
-          "path": "ar/b6d0c410fc53.webp",
-          "width": 1000,
-          "height": 511
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7363",
-      "step": 3,
-      "order": 26,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Small Lakes and Ponds",
-      "text": [
-        "**Small lakes** near the road are occasionally seen in the province of Buenos Aires."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "221ff722ac65",
-          "src": "https://learnablemeta.com/images/100/AQE7RsveYW5xwazKzssIgqpCdaAAxo2UMuxU.avif",
-          "path": "ar/221ff722ac65.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7364",
-      "step": 3,
-      "order": 27,
-      "family": "landscape",
-      "title": "Landscape: Landscape - San Luis Roads",
-      "text": [
-        "Roads with **reddish pavement** lined with **long Argentine needle-grass** are common in San Luis."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fa9ba9105f58",
-          "src": "https://learnablemeta.com/images/100/KO21UfC96H2Uy6DFm144yMM9lmcnV7iwsUz5.avif",
-          "path": "ar/fa9ba9105f58.webp",
-          "width": 1000,
-          "height": 495
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7365",
-      "step": 3,
-      "order": 28,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Flat & Barren Landscape",
-      "text": [
-        "**Flat** and **barren** landscapes like this are typically found in central southern Argentina."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7566ac0e010",
-          "src": "https://learnablemeta.com/images/100/mrRHJo51SQEN5lpRxqMSyO0NwotfqH2eQkMi.avif",
-          "path": "ar/f7566ac0e010.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7366",
-      "step": 3,
-      "order": 29,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Max South Landscape",
-      "text": [
-        "If you see this kind of vegetation with **flat grass** and a low number of bushes, you are almost certainly in the state of Tierra del Fuego or southeastern Santa Cruz."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ab4b2945893c",
-          "src": "https://learnablemeta.com/images/100/fRvfao4TaaRlNORfnJNmkZx0DPuBlewDHnIJ.avif",
-          "path": "ar/ab4b2945893c.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7367",
-      "step": 3,
-      "order": 30,
-      "family": "vegetation",
-      "title": "Vegetation: Agriculture - Tree Plantations",
-      "text": [
-        "The majority of **tree plantations** in Argentina are located in the Entre Rios province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e3519fa37ef3",
-          "src": "https://learnablemeta.com/images/100/E4ltNBwDJ2XXdm8mmbnekHm3bpaJnqHYgPE1.avif",
-          "path": "ar/e3519fa37ef3.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7368",
-      "step": 3,
-      "order": 31,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Beech Forest",
-      "text": [
-        "**Beech forests** are commonly found in the state of Tierra del Fuego."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "74cc715a6ef5",
-          "src": "https://learnablemeta.com/images/100/GJkuQzGdE5kaQpyQHsUW5tPFDfkyFA2c3xkc.avif",
-          "path": "ar/74cc715a6ef5.webp",
-          "width": 1000,
-          "height": 506
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7369",
-      "step": 3,
-      "order": 32,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Caranday Wax Palm",
-      "text": [
-        "Coperinicia alba, also known as the Caranday Wax Palm, have **short, fan-like leaves** that tend to grow in low-density, single-species forests. Most common in Formosa, they can also be found in Chaco, Corrientes and northern Santa Fe."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "588c46469ac4",
-          "src": "https://learnablemeta.com/images/100/FPrW0ezs4Coz8d1udl5O7KpsptQvOrDMZ7kO.avif",
-          "path": "ar/588c46469ac4.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7370",
-      "step": 3,
-      "order": 33,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Caranday Palm",
-      "text": [
-        "Trithrinax Campestris, or the caranday palm, not to be confused with the Caranday Wax Palm, is a rustic palm native to the Sierras de Córdoba with a broader distribution in San Luis and northern mountainous Argentina. It can be identified by its compact fan-like leaves with a trunk hidden by a **coat of dead-leaves.**"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dda8a56c419f",
-          "src": "https://learnablemeta.com/images/100/X42lXE3xDwqsVq5vlaextk2UZm2DXfYQHI4b.avif",
-          "path": "ar/dda8a56c419f.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7371",
-      "step": 3,
-      "order": 34,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Butia Yatay Palm",
-      "text": [
-        "The Butia yatay palm has **arching, pinnate leaves** and often grows at an incline with varying heights. It is most common in Corrientes and Parque Nacional El Palmar, Entre Rios."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "66bef5ec439b",
-          "src": "https://learnablemeta.com/images/100/aY6DeCbYGkf5nsLK80LEUv9xZl2280qcXuIN.avif",
-          "path": "ar/66bef5ec439b.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7372",
-      "step": 3,
-      "order": 35,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Macaw Palm",
-      "text": [
-        "The Macaw Palm has **small thin leaves** with a visible **spear shaped** top. It can be found as a decorational plant all across Argentina, however in the wild it is most common in Formosa, Chaco and Misiones."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ce2e3ad22041",
-          "src": "https://learnablemeta.com/images/100/FTbGdbezyuPUJ8FPBKVbf8qhgkgcUxo8JZxH.avif",
-          "path": "ar/ce2e3ad22041.webp",
-          "width": 1000,
-          "height": 505
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7373",
-      "step": 3,
-      "order": 36,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Cardón",
-      "text": [
-        "Trichocereus atacamensis, or the **cardón**, is a cactus native to the high elevation mountain ranges of Catamarca, Tucumán, Salta and Jujuy. It can be identified by its candelabra-like appearance and fuzzy golden brown spines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa3ac38ae623",
-          "src": "https://learnablemeta.com/images/100/pLPfgij9j2fhH8DsmnCcHTO2D4glw17URZwU.avif",
-          "path": "ar/aa3ac38ae623.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7374",
-      "step": 3,
-      "order": 37,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Toothpick Cactus",
-      "text": [
-        "Stetsonia coryne, or the **toothpick cactus**, is a large tree-like cactus with many branches and spines resembling toothpicks. Its habitat includes a hotspot between Catamarca and Cordoba as well as the border area between Chaco, Salta and Formosa."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "92f80a678ba3",
-          "src": "https://learnablemeta.com/images/100/zyx5aVJQ8i5dalMshyxN7fszrpum8C1ScSI7.avif",
-          "path": "ar/92f80a678ba3.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7375",
-      "step": 3,
-      "order": 38,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Wild Sunflower",
-      "text": [
-        "**Wild sunflowers** (Verbesina encelioides) are often found in Salta, Jujuy and Tucumán."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "42d36973f13c",
-          "src": "https://learnablemeta.com/images/100/AyiyXamPfPyDyAtpQARRJrH7p5ie6FXaUpbH.avif",
-          "path": "ar/42d36973f13c.webp",
-          "width": 1000,
-          "height": 502
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7376",
-      "step": 3,
-      "order": 39,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Caldén",
-      "text": [
-        "Prosopis caldenia, known as the caldén, is a decently **large deciduous tree** with **small leaves** and **sinuous branches**. It is mainly found in La Pampa."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1776a343a66a",
-          "src": "https://learnablemeta.com/images/100/I1juf3zMEB9TvOMGDt01oGaaDjnjutTxdN1L.avif",
-          "path": "ar/1776a343a66a.webp",
-          "width": 1000,
-          "height": 493
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7377",
-      "step": 3,
-      "order": 40,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Pampas Grass",
-      "text": [
-        "Pampas grass (Cortaderia selloana) is one of the most defining flora of the Pampas region. It is recognizable by its long bunched reeds and **white fluffy flowerheads**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8f3c45b3838e",
-          "src": "https://learnablemeta.com/images/100/Lk5k645eE0iIR0qoFDrYZpYV94k620fYSnw1.avif",
-          "path": "ar/8f3c45b3838e.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7378",
-      "step": 3,
-      "order": 41,
-      "family": "other",
-      "title": "Agriculture - Sugarcane",
-      "text": [
-        "**Sugarcane** plantations are most common in Tucumán, with hotspots appearing in Salta and Jujuy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dc504c9e314d",
-          "src": "https://learnablemeta.com/images/100/xCyeeIf9hDTg2dDL1egd4hJrc5OArIodnsQa.avif",
-          "path": "ar/dc504c9e314d.webp",
-          "width": 1000,
-          "height": 502
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7379",
-      "step": 3,
-      "order": 42,
-      "family": "other",
-      "title": "Agriculture - Sorghum",
-      "text": [
-        "Fields of **sorghum** can most commonly be seen in Santa Fe, Córdoba and Buenos Aires. It can be identified by its dark red flowerheads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2f36c7842599",
-          "src": "https://learnablemeta.com/images/100/SfaCYUjs4TgqpH1j5i9oPQxKR2ZAaqcROCO3.avif",
-          "path": "ar/2f36c7842599.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7380",
-      "step": 3,
-      "order": 43,
-      "family": "other",
-      "title": "Agriculture - Corn",
-      "text": [
-        "**Corn fields** can be found in most of northern Argentina, however they are most common in Córdoba, Buenos Aires and Santiago del Estero."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e2e72eead83a",
-          "src": "https://learnablemeta.com/images/100/ANqIbyD5E8QHOqo5Mg2nnJLdNVSzRU0H2Shq.avif",
-          "path": "ar/e2e72eead83a.webp",
-          "width": 1000,
-          "height": 502
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7381",
-      "step": 3,
-      "order": 44,
-      "family": "other",
-      "title": "Agriculture - Sunflower",
-      "text": [
-        "Fields of **sunflowers** are mainly found in southern Chaco, and less commonly in Buenos Aires and southern Córdoba."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9cc9aa5f7ade",
-          "src": "https://learnablemeta.com/images/100/CbGUDycb87CckG3vAOGUEXGHBnlrd6NPuTE2.avif",
-          "path": "ar/9cc9aa5f7ade.webp",
-          "width": 1000,
-          "height": 501
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7382",
-      "step": 3,
-      "order": 45,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Latvian-style Poles",
-      "text": [
-        "Within Argentina, these Latvian style **wooden** hook poles are unique to La Rioja and Mendoza."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c40e338b1352",
-          "src": "https://learnablemeta.com/images/100/L8XGJ9Zx4JbU6gF2PEWt58EKsCCbj7aWj4it.avif",
-          "path": "ar/c40e338b1352.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7383",
-      "step": 3,
-      "order": 46,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Single Hook Insulator",
-      "text": [
-        "In Mendoza, poles with a **single insulator** attached to the side of the pole can be found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d817f8437f07",
-          "src": "https://learnablemeta.com/images/100/XEU5juOHmv674o6FNru1NllNMXldYzES3aU1.avif",
-          "path": "ar/d817f8437f07.webp",
-          "width": 1000,
-          "height": 502
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7384",
-      "step": 3,
-      "order": 47,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Tucuman Pole ID",
-      "text": [
-        "**White vertical pole stickers** with several **digits** can be found in Tucumán."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "935aee3bb16e",
-          "src": "https://learnablemeta.com/images/100/8Bt0ROvsoSPlf6GHrtgXjR8QVSFPZU9wHVok.avif",
-          "path": "ar/935aee3bb16e.webp",
-          "width": 1000,
-          "height": 511
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7385",
-      "step": 3,
-      "order": 48,
-      "family": "other",
-      "title": "Infrastructure - Cordoba km-marker",
-      "text": [
-        "You can find these unique markers on provincial roads in Cordoba."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0de69a87f1d6",
-          "src": "https://learnablemeta.com/images/100/3EIFhFH3NxoOGwCxB5Ji0ytv8KH6JITwzCoy.avif",
-          "path": "ar/0de69a87f1d6.webp",
-          "width": 1000,
-          "height": 497
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7386",
-      "step": 3,
-      "order": 49,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Infrastructure - La Pampa Junction Sign",
-      "text": [
-        "T-Junctions in La Pampa sometimes have these **yellow rectangular signs**, with a chevron pattern on the bottom, and the **Road Number(s) above**, with an arrow on both sides."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0766537986fd",
-          "src": "https://learnablemeta.com/images/100/a3tZavjuju3GyctXhkCRyYmagllwzsPaCJ5I.avif",
-          "path": "ar/0766537986fd.webp",
-          "width": 1000,
-          "height": 500
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7387",
-      "step": 3,
-      "order": 50,
-      "family": "architecture",
-      "title": "Architecture: Architecture - Red Brick Architecture",
-      "text": [
-        "**Red bricks**, similar to what is common in Bolivia, can be found in the northwest of the country, especially in western Jujuy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "01af8ef8edaa",
-          "src": "https://learnablemeta.com/images/100/UVafhY3FsYVsKvu50JlGyQ4igNEh64YeKtCa.avif",
-          "path": "ar/01af8ef8edaa.webp",
-          "width": 1000,
-          "height": 513
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7388",
-      "step": 3,
-      "order": 51,
-      "family": "architecture",
-      "title": "Architecture: Architecture - Mar del Plata Architecture",
-      "text": [
-        "In Mar Del Plata and surrounding cities (such as Miramar and Necochea), a unique style of architecture can be found. Its main features include **quartzite stoned facades, orange tiled roofs**, attached garages, and vault shaped porches."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f13e61eba95",
-          "src": "https://learnablemeta.com/images/100/U0BzRCcloGMYHiFxAcIrMLtgFM1VC2fjhbAh.avif",
-          "path": "ar/3f13e61eba95.webp",
-          "width": 1000,
-          "height": 500
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "An all-white taxi with a black logo is unique to one southern coastal city."
     },
     {
       "id": "ar-lm-7389",
       "step": 3,
       "order": 52,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Pink Trumpet Tree",
+      "title": "Plants: pink trumpet trees in northern towns",
       "text": [
         "The **Pink Trumpet Tree** (Handroanthus impetiginosus) can be found in cities in northern Salta such as Orán, Tartagal and General Mosconi."
       ],
@@ -4247,305 +3542,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7390",
-      "step": 3,
-      "order": 53,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Salt Pans",
-      "text": [
-        "**Salt pans** in Argentina are typically found in Jujuy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6e7193a4d8d4",
-          "src": "https://learnablemeta.com/images/100/0bkcJRft7L599nFNI3qCCiiWmyieJWhTapAz.avif",
-          "path": "ar/6e7193a4d8d4.webp",
-          "width": 1000,
-          "height": 506
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7391",
-      "step": 3,
-      "order": 54,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Red Mountains",
-      "text": [
-        "These **red mountains** are unique to the RN68 valley in southern Salta."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e2d69e8aed3a",
-          "src": "https://learnablemeta.com/images/100/FJqRdmSjpZgItNIiB8sKrIeBrfpIR5rmCGPR.avif",
-          "path": "ar/e2d69e8aed3a.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7392",
-      "step": 3,
-      "order": 55,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Volcanic Rocks",
-      "text": [
-        "These **volcanic rocks** in Generation 4 coverage can only be found on the RP43 south of Antofagasta de la Sierra in northwestern Catamarca."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1322ca527cec",
-          "src": "https://learnablemeta.com/images/100/ml0Lqi59B4vEslu2C19U2Y26176FIypojgEq.avif",
-          "path": "ar/1322ca527cec.webp",
-          "width": 1000,
-          "height": 520
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7393",
-      "step": 3,
-      "order": 56,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Road of Death",
-      "text": [
-        "The western part of the RN65 in western Tucumán can easily be recognized by this bendy unpaved road up in the mountains."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8a6c7b283d77",
-          "src": "https://learnablemeta.com/images/100/1763935088668-wjR.avif",
-          "path": "ar/8a6c7b283d77.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7394",
-      "step": 3,
-      "order": 57,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Talampaya National Park",
-      "text": [
-        "Red soil with a barren landscape and mountain ranges, can often be seen on the RN76 in **Parque Nacional Talampaya** in western La Rioja."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f48a9dd57cc0",
-          "src": "https://learnablemeta.com/images/100/VYk7J5ZV3ZkWpmWCPOcd5zBMPSjtNtthd1PY.avif",
-          "path": "ar/f48a9dd57cc0.webp",
-          "width": 1000,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7395",
-      "step": 3,
-      "order": 58,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Cordoba Mountains",
-      "text": [
-        "These mountains are typically found west of Córdoba."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8a458902a458",
-          "src": "https://learnablemeta.com/images/100/IacMTZLbPcw007amScMN25ykcIrQfwNM81lk.avif",
-          "path": "ar/8a458902a458.webp",
-          "width": 1000,
-          "height": 510
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7396",
-      "step": 3,
-      "order": 59,
-      "family": "coverage",
-      "title": "Coverage: Trekker - Horse Trekker",
-      "text": [
-        "This **horse trekker** can be found in southwestern San Juan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ff4938a660",
-          "src": "https://learnablemeta.com/images/100/ab9zNAvRO4dadyDt9wyDPp8rNpQmdtu5py51.avif",
-          "path": "ar/18ff4938a660.webp",
-          "width": 1000,
-          "height": 512
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7397",
-      "step": 3,
-      "order": 60,
-      "family": "landscape",
-      "title": "Landscape: Agriculture - Mendoza Vineyards",
-      "text": [
-        "If you see **vineyards** with mountains in the west and flatness in the east, you are most likely in the outskirts of Mendoza."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fea047bb85cd",
-          "src": "https://learnablemeta.com/images/100/9ukKEUl7FGrmA5jTH7i9lGvGnzyMPqXyWwce.avif",
-          "path": "ar/fea047bb85cd.webp",
-          "width": 1000,
-          "height": 499
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7398",
-      "step": 3,
-      "order": 61,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Bahia Blanca Hills",
-      "text": [
-        "**Semi-coastal grass hills** are seen in southern Buenos Aires, especially northeast of Bahía Blanca."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2643f2265990",
-          "src": "https://learnablemeta.com/images/100/QWbmJKLFB5ztoFLUhQP5DS9cxHStVA5BYLWT.avif",
-          "path": "ar/2643f2265990.webp",
-          "width": 1000,
-          "height": 506
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7399",
-      "step": 3,
-      "order": 62,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Monkey Puzzle Tree",
-      "text": [
-        "The **monkey puzzle tree** can be found in western Neuquen. The most specimens are seen on provincial road 23 + offroads, between Caviahue and Atreuco."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a1b3e029af6e",
-          "src": "https://learnablemeta.com/images/100/1765046537261-uvq.avif",
-          "path": "ar/a1b3e029af6e.webp",
-          "width": 800,
-          "height": 367
-        },
-        {
-          "id": "07731304cba8",
-          "src": "https://learnablemeta.com/images/100/1765046541944-2bZ.avif",
-          "path": "ar/07731304cba8.webp",
-          "width": 484,
-          "height": 745
-        },
-        {
-          "id": "cf4bc2d45f72",
-          "src": "https://learnablemeta.com/images/100/1765046546631-TZ7.avif",
-          "path": "ar/cf4bc2d45f72.webp",
-          "width": 800,
-          "height": 350
-        },
-        {
-          "id": "640db8188abc",
-          "src": "https://learnablemeta.com/images/100/1765046552795-QnZ.avif",
-          "path": "ar/640db8188abc.webp",
-          "width": 800,
-          "height": 375
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Pink trumpet trees, covered in pink blossoms, grow in towns of the far north of a north-west province."
     },
     {
       "id": "ar-lm-7400",
       "step": 3,
       "order": 63,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Low Quality Sunset Coverage",
+      "title": "Coverage: low-quality sunset footage on a long road",
       "text": [
         "**Sunset coverage** with degraded image quality is found on the RN40 just south of the Mendoza border with Neuquén."
       ],
@@ -4565,14 +3570,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Dark, degraded sunset footage on RN40 just south of the border between two western provinces."
     },
     {
       "id": "ar-lm-7401",
       "step": 3,
       "order": 64,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Sunrise Coverage with Blurs",
+      "title": "Coverage: low-quality sunrise footage with several blurs",
       "text": [
         "**Sunrise coverage** with bad image quality and multiple blurs is found on a short part of the RN251 and RN22, west of Río Colorado."
       ],
@@ -4592,95 +3598,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7402",
-      "step": 3,
-      "order": 65,
-      "family": "other",
-      "title": "Car Meta - Sawdust Car Meta",
-      "text": [
-        "The **“sawdust”** car is found in centre-south Argentina and has a unique sandy dust on its visible black back."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b93b7bda981b",
-          "src": "https://learnablemeta.com/images/100/q4MsrGgpcKLR57z78o74OomEtv8TXmJi9NUu.avif",
-          "path": "ar/b93b7bda981b.webp",
-          "width": 1000,
-          "height": 500
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7403",
-      "step": 3,
-      "order": 66,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Villa Dique Florentino Ameghino",
-      "text": [
-        "Villa Dique Florentino Ameghino in northeastern Chubut is surrounded by these **rock formations**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5b4f4ace08cf",
-          "src": "https://learnablemeta.com/images/100/0GtZtkSAVHBQISMFmjHgKOsuseFLwArPn51h.avif",
-          "path": "ar/5b4f4ace08cf.webp",
-          "width": 1000,
-          "height": 509
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7404",
-      "step": 3,
-      "order": 67,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Chenque Hill",
-      "text": [
-        "**Comodoro Rivadavia** is built on the slopes of Chenque hill, making the city recognisable."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "52eccc1fae92",
-          "src": "https://learnablemeta.com/images/100/TFtYnBfcMd61SLXUr8M2ohdKk5XIT1yHtRNS.avif",
-          "path": "ar/52eccc1fae92.webp",
-          "width": 1000,
-          "height": 493
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Sunrise footage with bad quality and several blurs on a short part of RN251 and RN22, west of a river town."
     },
     {
       "id": "ar-lm-7405",
       "step": 3,
       "order": 68,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Snow Coverage",
+      "title": "Coverage: snow on the ground on a south-east road",
       "text": [
         "This **snow coverage** is found on the eastern RP25 in eastern Santa Cruz."
       ],
@@ -4700,41 +3626,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-7406",
-      "step": 3,
-      "order": 69,
-      "family": "coverage",
-      "title": "Coverage: Coverage Meta - Melted Snow Coverage",
-      "text": [
-        "**Melting snow coverage** is seen on the eastern RN293 close to the Chilean border in southwestern Santa Cruz."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e54151e3d37b",
-          "src": "https://learnablemeta.com/images/100/9G9wpeIVYcKM7woboHQ09bGjCFLH5TMPTLqH.avif",
-          "path": "ar/e54151e3d37b.webp",
-          "width": 1000,
-          "height": 499
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Snow-covered coverage on the eastern part of RP25 in the east of the far-south province."
     },
     {
       "id": "ar-lm-7407",
       "step": 3,
       "order": 70,
       "family": "landscape",
-      "title": "Landscape: Landscape - Mars Coverage",
+      "title": "Road: dark red dirt, dark cloudy, like Mars",
       "text": [
         "The **RP1** in Neuquen has **dark, cloudy coverage**. It is a **dark red dirt road** and thus **resembles Mars**. There is some spill onto the RP7 in the North and the RP10 in the South."
       ],
@@ -4754,14 +3654,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "RP1 in the Patagonian-edge province is a dark red dirt road with dark, cloudy coverage that looks like Mars. It spills onto RP7 in the north and RP10 in the south."
     },
     {
       "id": "ar-lm-7408",
       "step": 3,
       "order": 71,
       "family": "landscape",
-      "title": "Landscape: Landscape - Villa Dique Florentino Ameghino Dam",
+      "title": "Landscape: dam among rock formations",
       "text": [
         "This unique dam with the **rock formations** typical for Villa Dique Florentino Ameghino can be found west of the town."
       ],
@@ -4781,472 +3682,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-13756",
-      "step": 3,
-      "order": 72,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Kilometre Markers",
-      "text": [
-        "Argentinian kilometre markers are typically white with a black strip displaying the road number at the top.",
-        "**--- NOTE:**",
-        "The markers on national highways are indicated with RN, while RP indicates a provincial highway.",
-        "National highways will be labelled white on the map, while provincial highways will be labelled green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1979528b33a3",
-          "src": "https://learnablemeta.com/images/611/FIWmQwYcY3R6oCDSU30b0sOql5fnEB8xxA9j.avif",
-          "giveaway": true,
-          "path": "ar/1979528b33a3.webp",
-          "width": 1000,
-          "height": 524
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-13772",
-      "step": 3,
-      "order": 73,
-      "family": "car",
-      "title": "Google car: Black Car",
-      "text": [
-        "Argentina has a black Google car in Generation 3 coverage.",
-        "**--- NOTE:**",
-        "Within South America, only Argentina, Peru and Uruguay have a black Google car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "70508e4c1657",
-          "src": "https://learnablemeta.com/images/611/ZNHmQrA8CJgzeQ3wvSjtjiFnHHplvddZfEd9.avif",
-          "path": "ar/70508e4c1657.webp",
-          "width": 1000,
-          "height": 448
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PE",
-        "UY"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15173",
-      "step": 3,
-      "order": 74,
-      "family": "vegetation",
-      "title": "Vegetation: Grassland",
-      "text": [
-        "Grassland with a few separated tree plantations is generally found in this area."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "73f85c8aa42f",
-          "src": "https://learnablemeta.com/images/664/4sP3opnS6nQTPREDiS7jCDvu6r6yeIYLvoOP.avif",
-          "path": "ar/73f85c8aa42f.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15174",
-      "step": 3,
-      "order": 75,
-      "family": "other",
-      "title": "Buenos Aires Lakes",
-      "text": [
-        "Small lakes near the road are occasionally seen in the province of Buenos Aires."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e704f63ea40c",
-          "src": "https://learnablemeta.com/images/664/3ftRXtkm18c8GfPMHhHGMd6xldVxHujpFJ25.avif",
-          "path": "ar/e704f63ea40c.webp",
-          "width": 1000,
-          "height": 488
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15175",
-      "step": 3,
-      "order": 76,
-      "family": "other",
-      "title": "San Luis",
-      "text": [
-        "Roads with reddish pavement lined with long Argentine needle-grass are common in San Luis."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c51e5f1552cf",
-          "src": "https://learnablemeta.com/images/664/JRvrgPE2plAjOBB76YsRz4uZBpGiEQ95Mv5v.avif",
-          "path": "ar/c51e5f1552cf.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15178",
-      "step": 3,
-      "order": 77,
-      "family": "vegetation",
-      "title": "Vegetation: Southern Tierra Del Fuego",
-      "text": [
-        "Beech forests are commonly found in the state of Tierra del Fuego."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b3f979e471ea",
-          "src": "https://learnablemeta.com/images/664/hYZB8D2EgX1FfrYDexyQIdEjwHzdwRQfRgMn.avif",
-          "path": "ar/b3f979e471ea.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15179",
-      "step": 3,
-      "order": 78,
-      "family": "vegetation",
-      "title": "Vegetation: Far South",
-      "text": [
-        "If you see this kind of vegetation with flat grass and a low number of bushes, you are almost certainly in the state of Tierra del Fuego or southeastern Santa Cruz."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e2f0eb39d517",
-          "src": "https://learnablemeta.com/images/664/CSkEaBQmZqU0Cu3qRvI3U3OmcVgADvhH2IaB.avif",
-          "path": "ar/e2f0eb39d517.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15180",
-      "step": 3,
-      "order": 79,
-      "family": "landscape",
-      "title": "Landscape: Central South",
-      "text": [
-        "Flat and barren landscapes like this are typically found in central southern Argentina."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "613ca1eb82da",
-          "src": "https://learnablemeta.com/images/664/LchwI4zsrbQ3UZEbM4cBTYxY3pvGvTR9yupk.avif",
-          "path": "ar/613ca1eb82da.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15181",
-      "step": 3,
-      "order": 80,
-      "family": "landscape",
-      "title": "Landscape: Chaco and Formosa",
-      "text": [
-        "In the Chaco and Formosa provinces, you will often see sandy soil with an abundance of vegetation; mainly low trees and bushes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ccb0b27fe41d",
-          "src": "https://learnablemeta.com/images/664/k62Homtad4mOfVZfz5mevZKuU68pCiDGThwj.avif",
-          "path": "ar/ccb0b27fe41d.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15183",
-      "step": 3,
-      "order": 81,
-      "family": "landscape",
-      "title": "Landscape: Talampaya National Park",
-      "text": [
-        "Red soil with a barren landscape and mountain ranges, can often be seen on the RN76 in Parque Nacional Talampaya in western La Rioja."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "45e92501ea2e",
-          "src": "https://learnablemeta.com/images/664/4ackV1YgtQ8kyfcHGSWTZD0YyyASpiS9iZZp.avif",
-          "path": "ar/45e92501ea2e.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15184",
-      "step": 3,
-      "order": 82,
-      "family": "car",
-      "title": "Google car: Catamarca Volcanic Rock",
-      "text": [
-        "These volcanic rocks in Generation 4 coverage can only be found on the RP43 south of Antofagasta de la Sierra in northwestern Catamarca."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c893fe61061f",
-          "src": "https://learnablemeta.com/images/664/3aT1KCiwzYzINEdMpfcrlrjjcuh6yZLPNDR3.avif",
-          "path": "ar/c893fe61061f.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-15186",
-      "step": 3,
-      "order": 83,
-      "family": "car",
-      "title": "Google car: Jujuy Salt Pans",
-      "text": [
-        "Salt pans in Argentina are typically found in Jujuy.",
-        "NOTE: They can also be found in southwestern Bolivia and northeastern Chile, but without Generation 4 coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "70b921679b0a",
-          "src": "https://learnablemeta.com/images/664/id0NA4PFshwXKU23ePKK8IUCWZ2Pl5AynxFX.avif",
-          "path": "ar/70b921679b0a.webp",
-          "width": 1000,
-          "height": 488
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BO",
-        "CL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-51353",
-      "step": 3,
-      "order": 84,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Kilometre Markers",
-      "text": [
-        "Argentinian kilometre markers are typically white with a black strip displaying the road number at the top.",
-        "**--- NOTE:**",
-        "The markers on national highways are indicated with RN, while RP indicates a provincial highway.",
-        "National highways will be labelled white on the map, while provincial highways will be labelled green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1979528b33a3",
-          "src": "https://learnablemeta.com/images/611/FIWmQwYcY3R6oCDSU30b0sOql5fnEB8xxA9j.avif",
-          "giveaway": true,
-          "path": "ar/1979528b33a3.webp",
-          "width": 1000,
-          "height": 524
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-51447",
-      "step": 3,
-      "order": 85,
-      "family": "car",
-      "title": "Google car: Black Car",
-      "text": [
-        "Argentina has a black Google car in Generation 3 coverage.",
-        "**--- NOTE:**",
-        "Within South America, only Argentina, Peru and Uruguay have a black Google car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "70508e4c1657",
-          "src": "https://learnablemeta.com/images/611/ZNHmQrA8CJgzeQ3wvSjtjiFnHHplvddZfEd9.avif",
-          "path": "ar/70508e4c1657.webp",
-          "width": 1000,
-          "height": 448
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PE",
-        "UY"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-104472",
-      "step": 3,
-      "order": 86,
-      "family": "other",
-      "title": "Jujuy - Red Bricks",
-      "text": [
-        "Red bricks, similar to what is common in Bolivia, can be found in the northwest of the country, especially in western Jujuy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "431ff2fde621",
-          "src": "https://learnablemeta.com/images/1072/p4VOhFD84XKZC2YZahsI8AXkwjIVGu3cFSvU.avif",
-          "path": "ar/431ff2fde621.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-464193",
-      "step": 3,
-      "order": 87,
-      "family": "pole",
-      "title": "Pole: single insulator",
-      "text": [
-        "In Mendoza, poles with a single insulator attached to the side of the pole can be found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a121998865eb",
-          "src": "https://learnablemeta.com/images/1822/1749330227589-zxR.avif",
-          "path": "ar/a121998865eb.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A unique dam surrounded by the same rock formations as the village east of it, found west of that town."
     },
     {
       "id": "ar-lm-465032",
       "step": 3,
       "order": 88,
       "family": "other",
-      "title": "Argentina",
+      "title": "Phone numbers: 10 digits, first 3-4 are regional",
       "text": [
         "Phone Codes in Argentina are 10 digits, with the 3 ou 4 firsts digit wich are regionals (2 for Buenos Aires)."
       ],
@@ -5266,14 +3710,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Phone numbers have 10 digits. The first 3 or 4 digits are the regional code, only 2 for the capital."
     },
     {
       "id": "ar-lm-486304",
       "step": 3,
       "order": 89,
       "family": "pole",
-      "title": "Pole: B Type - no top",
+      "title": "Pole: type B, vertical bar stops at top bar",
       "text": [
         "This is a variant of the B type pole where the vertical bar ends at the top horizontal bar unlike the standard version where it extends past it."
       ],
@@ -5293,14 +3738,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A B-type pole where the vertical bar ends at the top horizontal bar instead of sticking out above it."
     },
     {
       "id": "ar-lm-486305",
       "step": 3,
       "order": 90,
       "family": "other",
-      "title": "B Type - standard length top",
+      "title": "Pole: type B, vertical bar sticks out a medium length",
       "text": [
         "In this variant, the vertical beam extends above the top horizontal bar at roughly about the same length between the two horizontal bars."
       ],
@@ -5320,14 +3766,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A B-type pole where the vertical beam extends above the top horizontal bar by about the gap between the two horizontal bars."
     },
     {
       "id": "ar-lm-486306",
       "step": 3,
       "order": 91,
       "family": "pole",
-      "title": "Pole: B Type - wooden",
+      "title": "Pole: type B, wooden",
       "text": [
         "A wooden variant of the B Type pole."
       ],
@@ -5347,14 +3794,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A wooden version of the B-type pole."
     },
     {
       "id": "ar-lm-486307",
       "step": 3,
       "order": 92,
       "family": "other",
-      "title": "B Type - cap",
+      "title": "Pole: type B with cap, down-facing insulators",
       "text": [
         "B Type with a cap on top featuring a lower bar with 2 insulator racks facing downwards and a one-sided bar above it with more down-facing insulators."
       ],
@@ -5374,14 +3822,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A B-type pole with a cap on top: a lower bar with two sets of insulators pointing down, and a one-sided bar above it with more down-pointing insulators."
     },
     {
       "id": "ar-lm-486308",
       "step": 3,
       "order": 93,
       "family": "other",
-      "title": "B Type - short top",
+      "title": "Pole: type B, short top",
       "text": [
         "B-Type short top - In this variant, the vertical bar only extends a very small amount past the top horizontal bar, less than the length between the two horizontal bars."
       ],
@@ -5401,14 +3850,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A B-type pole where the vertical bar sticks out only slightly above the top bar, less than the gap between the horizontal bars."
     },
     {
       "id": "ar-lm-486309",
       "step": 3,
       "order": 94,
       "family": "other",
-      "title": "B Type - insulators facing Up",
+      "title": "Pole: type B with up-facing insulators",
       "text": [
         "B-Type with insulators facing up featuring a lower bar with 2 insulator racks facing upwards and a one-sided bar above it with more up-facing insulators."
       ],
@@ -5428,41 +3878,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-486310",
-      "step": 3,
-      "order": 95,
-      "family": "plate",
-      "title": "Plate: silver plate",
-      "text": [
-        "White vertical pole stickers with several digits can be found in Tucumán."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9ccf4c9bf474",
-          "src": "https://learnablemeta.com/images/1955/1751804468929-fj3.avif",
-          "path": "ar/9ccf4c9bf474.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A B-type pole with a lower bar of two insulator sets pointing up and a one-sided bar above with more up-pointing insulators."
     },
     {
       "id": "ar-lm-486311",
       "step": 3,
       "order": 96,
       "family": "other",
-      "title": "C Type - short cap",
+      "title": "Pole: type C, short cap on top",
       "text": [
         "Short cap is where the vertical beam extends above the top horizontal bar a distance less than the distance less than the distance between the other horizontal beams."
       ],
@@ -5482,14 +3906,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A C-type pole where the vertical beam extends above the top horizontal bar by less than the gap between the other bars."
     },
     {
       "id": "ar-lm-486312",
       "step": 3,
       "order": 97,
       "family": "pole",
-      "title": "Pole: C Type - no cap",
+      "title": "Pole: type C, three alternating bars, no cap",
       "text": [
         "C Type Pole, where there are 3 alternating horizontal beams with down-facing insulators on the end of each of them. In this variant there is no cap on top."
       ],
@@ -5509,14 +3934,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A C-type pole with 3 alternating horizontal beams, each with down-facing insulators at the end, and no cap on top."
     },
     {
       "id": "ar-lm-486313",
       "step": 3,
       "order": 98,
       "family": "pole",
-      "title": "Pole: D Type",
+      "title": "Pole: type D, only one top bar with unusual shape",
       "text": [
         "It has no other horizontal beams except the one on top which has a unique shape to the other types of poles in Argentina. It can be found everywhere but there are region where there less common."
       ],
@@ -5536,14 +3962,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A D-type pole has no horizontal beams except the one on top, which has a shape unlike other poles here. Found everywhere but rarer in some regions."
     },
     {
       "id": "ar-lm-617590",
       "step": 3,
       "order": 99,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Poplar Plantation - Mediterranean",
+      "title": "Plants: single-row poplars, hills, vineyards, olives",
       "text": [
         "Poplar Trees are thin and tall decidiuous trees. They can be found all over Argentina.",
         "If you see them planted in single rows accompanied by hilly to mountainous, mediterranean landscape, as well as mediterranean agriculture (e.g. vineyards and olives) and vegetation (e.g. palm trees, platanus trees), you are likely in a town or city in the provinces of Mendoza and San Juan."
@@ -5571,14 +3998,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Tall thin poplars grow all over, but single rows with hilly Mediterranean scenery, vineyards, olives, palms and plane trees mean a town in the two western wine provinces."
     },
     {
       "id": "ar-lm-617594",
       "step": 3,
       "order": 100,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Azorella Prolifera - Light Green",
+      "title": "Plants: light-green cushion plants in Patagonia",
       "text": [
         "Azorella Prolifera is a plant that looks like \"cushions\". It is found throughout Patagonia. It's appearence depends on season.",
         "You can see this plant in a distinctive light green color in these regions:",
@@ -5624,14 +4052,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cushion-like plants that are found all across Patagonia. In a distinctive light green they appear in the south of one province, on certain roads in the next province, and in the middle and south of the next one."
     },
     {
       "id": "ar-lm-617595",
       "step": 3,
       "order": 101,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Single Row Poplar - Flat",
+      "title": "Plants: single-row poplars on very flat land",
       "text": [
         "Poplar Trees are thin and tall decidiuous trees. They can be found all over Argentina.",
         "If you see them planted in a single row and accompanied by a very flat landscape, you are in one of these places:",
@@ -5676,14 +4105,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Single rows of poplars with a very flat landscape point to certain places: route 22 between two river-valley towns, and two towns in the south-east Patagonian province."
     },
     {
       "id": "ar-lm-617596",
       "step": 3,
       "order": 102,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Red Baron - Dense",
+      "title": "Plants: dense, very red grass in the far south",
       "text": [
         "Red Baron is a grass species that has a very distinctive red hue.",
         "In very dense assemblages, it can appear here:",
@@ -5728,14 +4158,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A grass with a very red hue. In dense stands it appears at the far southern end south of the southernmost mainland city, on route 40 in the far south, and on route 40 in the south-west."
     },
     {
       "id": "ar-lm-617597",
       "step": 3,
       "order": 103,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Red Baron",
+      "title": "Plants: red-tinged grass across the south",
       "text": [
         "Red Baron is a grass species that has a very distinctive red hue. It's found in",
         "Western and Southern Santa Cruz",
@@ -5756,14 +4187,16 @@
           "src": "https://learnablemeta.com/images/100/1765046420375-aab.avif",
           "path": "ar/9188aacfba5c.webp",
           "width": 653,
-          "height": 800
+          "height": 800,
+          "dupeOf": "e26ffc76a2ec"
         },
         {
           "id": "c15d5bce56df",
           "src": "https://learnablemeta.com/images/100/1765046477741-5gf.avif",
           "path": "ar/c15d5bce56df.webp",
           "width": 658,
-          "height": 704
+          "height": 704,
+          "dupeOf": "4a158b2f6077"
         }
       ],
       "locations": [],
@@ -5772,64 +4205,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-617599",
-      "step": 3,
-      "order": 104,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Road of Death - Cloudy",
-      "text": [
-        "The western part of the RN65 in western Tucumán can easily be recognized by this bendy unpaved road up in the mountains with its western part up in the clouds."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "129b3d2d7955",
-          "src": "https://learnablemeta.com/images/100/1763935195194-Y6o.avif",
-          "path": "ar/129b3d2d7955.webp",
-          "width": 739,
-          "height": 417
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ar-lm-634013",
-      "step": 3,
-      "order": 105,
-      "family": "plate",
-      "title": "Plate: Argentina",
-      "text": [
-        "Argentina uses two types of licence plates: a black one, which will be visible on street view with a black dot in the middle, and a white one with a blue bar at the top.",
-        "NOTE: The black dot can only be found on Argentinian licence plates, while the blue bar can be found in Brazil as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7d352d57f4a5",
-          "src": "https://learnablemeta.com/images/5431/1766259605415-mwH.avif",
-          "path": "ar/7d352d57f4a5.webp",
-          "width": 800,
-          "height": 322
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The red grass is found in the west and south of the far-south province, the north-west of the next province up, and the south of a Patagonian-edge province."
     }
   ]
 }

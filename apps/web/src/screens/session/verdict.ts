@@ -42,6 +42,13 @@ function baseVerdict(
   if (card.type === 'which') return whichVerdict(card, outcome);
   const scope = scopeOf(card);
   const answer = answerLabel(card);
+  if (outcome.correct && outcome.given !== card.answer && card.spans?.includes(outcome.given)) {
+    return {
+      verdict: 'Got it',
+      tone: 'right',
+      detail: `Mainly ${answer}; it also covers ${label(outcome.given, scope)}`,
+    };
+  }
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: answer };
   if (!outcome.given) return { verdict: `It’s ${answer}`, tone: 'neutral' };
   const detail = item.contrastPair

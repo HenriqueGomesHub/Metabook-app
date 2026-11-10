@@ -1,22 +1,28 @@
 import { haversineKm, mastery, medalFor, pickTip, roundScore } from '@metabook/core';
 import type { PickedTip, Tip } from '@metabook/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
-import { BrazilMap, digitGroups, groupOf, stateByCode } from '../components/BrazilMap';
+import { label } from '../app/labels';
+import { useRegionMap } from '../app/useRegionMaps';
+import { AreaCodeMap } from '../components/AreaCodeMap';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Medal } from '../components/Medal';
 import { CloseButton } from '../components/Chip';
 import { Status } from '../components/Status';
 import { TipBox } from '../components/TipBox';
+import { areaCodeCountries } from '../data/areaCodes';
+import type { MapRegion } from '../data/content';
 import { pct } from './atlas/format';
 import './games/games.css';
 
 const ROUND_SIZE = 12;
-/** GeoGuessr-style score decay for Brazil, in km. */
+/** GeoGuessr-style score decay, in km, where regions have capitals (Brazil). */
 const SCALE_KM = 700;
-const PATTERN_TIP = 'ddd:br:pattern';
+/** Without capitals: decay over the share of the map's diagonal between the two regions. */
+const SCALE_MAP = 0.12;
 
 const fmt = (n: number) => n.toLocaleString('en-US');
 
@@ -32,11 +38,14 @@ function shuffled<T>(items: T[]): T[] {
   return copy;
 }
 
+/** `/games/areacode/:country`: the area-code game on one country's map (Brazil by default). */
 export function AreaCodeGame() {
   const { data, error } = useAppData();
+  const params = useParams();
+  const country = (params.country ?? 'br').toUpperCase();
   const [run, setRun] = useState(0);
   return data ? (
-    <Play key={run} data={data} onAgain={() => setRun(run + 1)} />
+    <Play key={`${country}:${run}`} data={data} country={country} onAgain={() => setRun(run + 1)} />
   ) : (
     <Status error={error} />
   );
@@ -44,24 +53,51 @@ export function AreaCodeGame() {
 
 interface Result {
   correct: boolean;
-  km: number;
+  /** undefined where the map has no capitals to measure between */
+  km?: number;
   points: number;
 }
 
-function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
+const point = (region: MapRegion) => region.capital?.xy ?? region.label;
+
+function Play({
+  data,
+  country,
+  onAgain,
+}: {
+  data: AppSnapshot;
+  country: string;
+  onAgain: () => void;
+}) {
   const { answer, recordTipView } = useAppData();
   const now = useMemo(() => new Date(), []);
   const touch = useMemo(() => window.matchMedia?.('(hover: none)').matches ?? false, []);
-  const cards = useMemo(
-    () =>
-      data.content.cards.filter(
-        (card) => card.type === 'areacode' && card.country === 'BR' && stateByCode.has(card.answer),
-      ),
-    [data.content.cards],
+  const map = useRegionMap(country);
+  const regions = useMemo(() => new Map((map?.states ?? []).map((s) => [s.code, s])), [map]);
+  const countries = useMemo(
+    () => areaCodeCountries(data.content.cards, data.content.pool),
+    [data.content],
   );
-  /** First digits of each state's area codes, so the reveal can tint the whole group. */
-  const digits = useMemo(() => digitGroups(cards), [cards]);
-  const [queue] = useState(() => shuffled(cards).slice(0, ROUND_SIZE));
+  const all = useMemo(
+    () => data.content.cards.filter((card) => card.type === 'areacode' && card.country === country),
+    [data.content.cards, country],
+  );
+  const cards = useMemo(
+    () => (map ? all.filter((card) => regions.has(card.answer)) : all),
+    [all, map, regions],
+  );
+  const patternTip = `ddd:${country.toLowerCase()}:pattern`;
+  const name = label(country);
+  const [, , mapW = 640, mapH = 580] = (map?.viewBox ?? '').split(' ').map(Number);
+  const diagonal = Math.hypot(mapW, mapH);
+  const [queue, setQueue] = useState(() => shuffled(cards).slice(0, ROUND_SIZE));
+  // the map arriving can drop codes whose region it lacks: deal again once, before any answer
+  useEffect(() => {
+    if (map)
+      setQueue((q) =>
+        q.every((c) => regions.has(c.answer)) ? q : shuffled(cards).slice(0, ROUND_SIZE),
+      );
+  }, [map, regions, cards]);
   const medalValue = useMemo(
     () =>
       mastery(
@@ -91,33 +127,62 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
   const medal = medalFor(medalValue);
   const total = results.reduce((sum, r) => sum + r.points, 0);
 
-  const header = (
-    <div className="ddd-bar rise">
-      <CloseButton to="/games" label="Back to mini-games" />
-      <div className="ddd-title">
-        <span>
-          <svg className="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-            <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
-          </svg>
-          Brazil · Area codes
-        </span>
-        {cards.length > 0 && (
-          <span className="medal-pill" title="Area-code mastery">
-            {medal && <Medal medal={medal} size={20} />}
-            {medal ? <span className="cap">{medal}</span> : 'No medal yet'} · {pct(medalValue)}%
-          </span>
-        )}
-      </div>
-      <div className="ddd-score">
-        {card && (
-          <span className="muted">
-            Code {index + 1} / {queue.length}
-          </span>
-        )}
-        <b aria-live="polite">{fmt(total)} pts</b>
-      </div>
-    </div>
+  const chips = countries.length > 1 && (
+    <nav className="ddd-countries" aria-label="Country">
+      {countries.map((code) => (
+        <Link
+          key={code}
+          to={`/games/areacode/${code.toLowerCase()}`}
+          className={code === country ? 'game-chip hot' : 'game-chip'}
+          aria-current={code === country ? 'page' : undefined}
+        >
+          {label(code)}
+        </Link>
+      ))}
+    </nav>
   );
+
+  const header = (
+    <>
+      <div className="ddd-bar rise">
+        <CloseButton to="/games" label="Back to mini-games" />
+        <div className="ddd-title">
+          <span>
+            <svg className="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
+            </svg>
+            {name} · Area codes
+          </span>
+          {cards.length > 0 && (
+            <span className="medal-pill" title="Area-code mastery">
+              {medal && <Medal medal={medal} size={20} />}
+              {medal ? <span className="cap">{medal}</span> : 'No medal yet'} · {pct(medalValue)}%
+            </span>
+          )}
+        </div>
+        <div className="ddd-score">
+          {card && (
+            <span className="muted">
+              Code {index + 1} / {queue.length}
+            </span>
+          )}
+          <b aria-live="polite">{fmt(total)} pts</b>
+        </div>
+      </div>
+      {chips}
+    </>
+  );
+
+  if (map === undefined && queue.length === 0) {
+    return (
+      <div className="page">
+        {header}
+        <p className="map-status" role="status">
+          Loading the map…
+        </p>
+      </div>
+    );
+  }
 
   if (queue.length === 0) {
     return (
@@ -125,7 +190,7 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
         {header}
         <EmptyState
           title="No area codes yet"
-          text="Area-code cards haven’t been added for this map."
+          text={`Area codes for ${name} haven’t been added yet.`}
           actions={[{ label: 'Back to games', to: '/games' }]}
         />
       </div>
@@ -134,7 +199,11 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
 
   if (!card) {
     const exact = results.filter((r) => r.correct).length;
-    const avgKm = Math.round(results.reduce((sum, r) => sum + r.km, 0) / results.length);
+    const measured = results.filter((r) => r.km !== undefined);
+    const avgKm =
+      measured.length > 0
+        ? Math.round(measured.reduce((sum, r) => sum + (r.km ?? 0), 0) / measured.length)
+        : undefined;
     return (
       <div className="page">
         {header}
@@ -143,7 +212,8 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
             <p className="kicker">Round done</p>
             <h1 className="headline">{fmt(total)} pts</h1>
             <p className="summary-sub">
-              {exact} of {results.length} exact · {fmt(avgKm)} km off on average
+              {exact} of {results.length} right
+              {avgKm !== undefined && <> · {fmt(avgKm)} km off on average</>}
             </p>
           </div>
           <div className="reveal-actions rise d1">
@@ -160,31 +230,41 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
     );
   }
 
-  const answerState = stateByCode.get(card.answer);
-  const pickedState = picked ? stateByCode.get(picked) : undefined;
+  const answerState = regions.get(card.answer);
+  const pickedState = picked ? regions.get(picked) : undefined;
   const result = picked ? results[index] : undefined;
   const right = result?.correct ?? false;
-  const hovered = hover ? stateByCode.get(hover) : undefined;
-  const group = groupOf(card.answer, digits);
+  const spanned = right && picked !== card.answer;
+  const hovered = hover ? regions.get(hover) : undefined;
 
   function showTip(digit?: string) {
     const prefer = digit ? mentionsGroup(digit) : undefined;
-    const next = pickTip(data.content.tips, PATTERN_TIP, 'areacode', data.tipViews, 0, prefer);
+    const next = pickTip(data.content.tips, patternTip, 'areacode', data.tipViews, 0, prefer);
     setTip(next);
     if (next) recordTipView(next.tip.id);
   }
 
   function pick(code: string) {
-    const guess = stateByCode.get(code);
+    const guess = regions.get(code);
     if (picked || !guess || !card || !answerState) return;
-    const correct = code === card.answer;
-    const km = correct
-      ? 0
-      : haversineKm(
-          { lat: guess.capital.lat, lon: guess.capital.lon },
-          { lat: answerState.capital.lat, lon: answerState.capital.lon },
-        );
-    const points = roundScore(km, SCALE_KM);
+    // a code spanning a border: its other regions count as right
+    const correct = code === card.answer || (card.spans ?? []).includes(code);
+    let km: number | undefined;
+    let points: number;
+    if (guess.capital && answerState.capital) {
+      km = correct
+        ? 0
+        : haversineKm(
+            { lat: guess.capital.lat, lon: guess.capital.lon },
+            { lat: answerState.capital.lat, lon: answerState.capital.lon },
+          );
+      points = roundScore(km, SCALE_KM);
+    } else {
+      const [ax = 0, ay = 0] = point(guess);
+      const [bx = 0, by = 0] = point(answerState);
+      const share = correct ? 0 : Math.hypot(ax - bx, ay - by) / diagonal;
+      points = roundScore(share, SCALE_MAP);
+    }
     answer({
       card,
       given: code,
@@ -210,25 +290,34 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
       <main className="ddd-main">
         <section className="ddd-side">
           <div className="ddd-prompt rise d1">
-            <p>Which state uses</p>
+            <p>{country === 'BR' ? 'Which state uses' : 'Which region uses'}</p>
             <div key={index} className="ddd-code headline">
               {card.prompt.value}
             </div>
-            <p>{touch ? 'Tap' : 'Click'} the state. Closer is better.</p>
+            <p>
+              {touch ? 'Tap' : 'Click'} the {country === 'BR' ? 'state' : 'region'}. Closer is
+              better.
+            </p>
           </div>
           {picked && result && answerState && (
             <div className="ddd-result rise">
               <div>
                 <p className={right ? 'ddd-verdict right' : 'ddd-verdict'}>
-                  {right ? 'Exactly right' : `You picked ${pickedState?.name ?? picked}`}
+                  {spanned
+                    ? `Right: it also covers ${pickedState?.name ?? picked}`
+                    : right
+                      ? 'Exactly right'
+                      : `You picked ${pickedState?.name ?? picked}`}
                 </p>
                 <h2 className="headline">{answerState.name}</h2>
               </div>
               <dl className="ddd-figures">
-                <div>
-                  <dt>distance</dt>
-                  <dd>{fmt(Math.round(result.km))} km</dd>
-                </div>
+                {result.km !== undefined && (
+                  <div>
+                    <dt>distance</dt>
+                    <dd>{fmt(Math.round(result.km))} km</dd>
+                  </div>
+                )}
                 <div>
                   <dt>points</dt>
                   <dd>{fmt(result.points)}</dd>
@@ -261,11 +350,13 @@ function Play({ data, onAgain }: { data: AppSnapshot; onAgain: () => void }) {
               : picked
                 ? ''
                 : touch
-                  ? 'Tap a state to answer'
-                  : 'Hover a state to see its name'}
+                  ? 'Tap a region to answer'
+                  : 'Hover a region to see its name'}
           </div>
-          <BrazilMap
-            reveal={picked ? { answer: card.answer, picked, group } : undefined}
+          <AreaCodeMap
+            country={country}
+            cards={all}
+            reveal={picked ? { answer: card.answer, picked } : undefined}
             onPick={pick}
             onHover={setHover}
           />

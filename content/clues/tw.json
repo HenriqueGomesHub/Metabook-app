@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "language",
-      "title": "Language: Taiwan uses Traditional Chinese",
+      "title": "Language: dense traditional Chinese characters",
       "text": [
         "Taiwan uses **Traditional Chinese**. It is one of the most complex scripts visible on street view, with intricate characters that consist of many strokes.",
         "NOTE: Hong Kong also uses traditional Chinese characters on signage.",
@@ -48,14 +48,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traditional Chinese: complex characters with many strokes. Hong Kong uses it too. Japanese looks similar but mixes in simpler kana characters.",
+      "sameAs": [
+        "HK"
+      ]
     },
     {
       "id": "tw-rqqJ",
       "step": 0,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Poles almost always feature these black and yellow…",
+      "title": "Pole: black and yellow stripes to the ground",
       "text": [
         "Poles almost always feature these **black and yellow** diagonal-striped markings that run all the way to the bottom.",
         "NOTE: Similar markings can be seen in [South Korea](https://www.google.com/maps/@36.1050385,128.4118405,3a,18.9y,354.87h,62.54t,0.72r/data=!3m6!1e1!3m4!1sfnv3wLOv1V2RQUZuioxNXA!2e0!7i13312!8i6656?entry=ttu). However, the markings are much shorter and do not run all the way to the bottom."
@@ -92,14 +96,16 @@
           "src": "https://learnablemeta.com/images/681/2U8T9deBoSUJCNOwT4YoBMcZRPVn82CixBvt.avif",
           "path": "tw/042335f44271.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "18b3eab06f8f"
         },
         {
           "id": "28cae03d8d2a",
           "src": "https://learnablemeta.com/images/1955/1751110364866-sit.avif",
           "path": "tw/28cae03d8d2a.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "18b3eab06f8f"
         }
       ],
       "locations": [
@@ -120,14 +126,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles almost always have black and yellow diagonal stripes that run all the way to the bottom. South Korea has similar stripes, but shorter and not to the ground.",
+      "differs": [
+        {
+          "country": "KR",
+          "how": "Korean stripes are shorter, not down to the ground"
+        }
+      ]
     },
     {
       "id": "tw-DIGz",
       "step": 0,
       "order": 3,
       "family": "other",
-      "title": "Taiwan drives on the right side of the road",
+      "title": "Driving side: right",
       "text": [
         "Taiwan drives on the **right** side of the road.",
         "NOTE: Japan and Hong Kong drive on the left."
@@ -170,14 +183,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the right. Japan and Hong Kong drive on the left.",
+      "differs": [
+        {
+          "country": "JP",
+          "how": "Japan drives on the left"
+        },
+        {
+          "country": "HK",
+          "how": "Hong Kong drives on the left"
+        }
+      ]
     },
     {
       "id": "tw-ajya",
       "step": 0,
       "order": 4,
       "family": "line",
-      "title": "Road line: Roads in Taiwan generally feature double yellow middle…",
+      "title": "Road lines: double yellow centre, white edges",
       "text": [
         "Roads in Taiwan generally feature **double yellow** middle lines with single white outer lines. Thinner roads sometimes use [single dashed yellow lines](https://www.google.com/maps/@24.190668,120.5867726,3a,42.8y,208.23h,66.98t/data=!3m6!1e1!3m4!1sdNcXxnPJ8NIgkICUleOrEQ!2e0!7i16384!8i8192?entry=ttu) instead."
       ],
@@ -204,7 +228,8 @@
           "src": "https://learnablemeta.com/images/503/zIfGMHkQajiXolZaP0MevbJu811HnANTASvy.avif",
           "path": "tw/4807f4b3e753.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "6485822aa668"
         }
       ],
       "locations": [
@@ -223,14 +248,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Double yellow centre lines with single white edge lines. Thin roads sometimes have a single dashed yellow line."
     },
     {
       "id": "tw-pMsV",
       "step": 0,
       "order": 5,
       "family": "line",
-      "title": "Road line: Roads with outside white road lines and no middle lines at…",
+      "title": "Road lines: white edge lines, no centre line",
       "text": [
         "Roads with outside white road lines and **no middle lines** at all are common. In the absence of better clues, this type of road line can be a very good way to identify Taiwan."
       ],
@@ -257,7 +283,8 @@
           "src": "https://learnablemeta.com/images/503/cJz9dXpYD7vhFKH7zIoinRZGXYe8xRoJKxbl.avif",
           "path": "tw/39d67829cfbd.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "49e294a2e144"
         },
         {
           "id": "02186b310f48",
@@ -283,14 +310,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads with white edge lines and no middle line are common. With no better clue, this is a good hint."
     },
     {
       "id": "tw-ADWN",
       "step": 0,
       "order": 6,
       "family": "other",
-      "title": "Red outer lines that indicate no parking are common in…",
+      "title": "Road lines: red edge lines for no parking",
       "text": [
         "**Red outer lines** that indicate no parking are common in Taiwan, especially in cities. This is essentially unique to the country."
       ],
@@ -329,7 +357,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red edge lines mark no parking, especially in cities. Almost unique to this country."
     },
     {
       "id": "tw-m9ZV",
@@ -337,7 +366,7 @@
       "order": 7,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Taiwan uses black on yellow chevrons",
+      "title": "Chevron: black on yellow",
       "text": [
         "Taiwan uses **black on yellow** chevrons."
       ],
@@ -364,7 +393,8 @@
           "src": "https://learnablemeta.com/images/914/Frf8cErlw3FzCdgeqDbtuCQyMTH6mraGrTbv.avif",
           "path": "tw/ee82054e2c6f.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "799833bfa5b3"
         }
       ],
       "locations": [
@@ -383,14 +413,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve chevrons are black arrows on yellow."
     },
     {
       "id": "tw-8yzs",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "These mirrors with orange hoods are frequently featured in…",
+      "title": "Mirror: orange hood at junctions and bends",
       "text": [
         "These **mirrors with orange hoods** are frequently featured in intersections and bends."
       ],
@@ -429,14 +460,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road mirrors with orange hoods stand at junctions and bends."
     },
     {
       "id": "tw-vpmY",
       "step": 0,
       "order": 9,
       "family": "guardrail",
-      "title": "Guardrail: Taiwan uses these bollards with either two or three…",
+      "title": "Bollard: black rectangle, 2 or 3 round reflectors",
       "text": [
         "Taiwan uses these bollards with either two or three **circular reflectors** on a black rectangle.",
         "You can also find these **lollipop** looking reflectors on guardrails, similar to the designs found in [Japan](https://goo.gl/maps/JvYoen6Zsh9iptr16)."
@@ -481,14 +513,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bollards are a black rectangle with two or three round reflectors. Similar lollipop-shaped reflectors appear on guardrails, like in Japan.",
+      "differs": [
+        {
+          "country": "JP",
+          "how": "Japan has similar lollipop reflectors on guardrails"
+        }
+      ]
     },
     {
       "id": "tw-dA3T",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "Concrete drainage ditches are commonly found on the side of…",
+      "title": "Road: concrete drainage ditches at the side",
       "text": [
         "**Concrete drainage ditches** are commonly found on the side of roads."
       ],
@@ -508,14 +547,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Concrete drainage ditches run along the road sides."
     },
     {
       "id": "tw-l3o2",
       "step": 0,
       "order": 11,
       "family": "pole",
-      "title": "Pole: These distribution transformers that look like boxes are…",
+      "title": "Pole: box transformers, dark green or grey",
       "text": [
         "These **distribution transformers** that look like boxes are frequently found in Taiwan, especially in urban areas.They are mostly painted in dark green or grey."
       ],
@@ -557,14 +597,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Box-shaped distribution transformers, mostly dark green or grey, often in cities."
     },
     {
       "id": "tw-PZaA",
       "step": 0,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: Architecture in Taiwan varies in designs",
+      "title": "Houses: boxy, white tiles, light green tin sheds",
       "text": [
         "Architecture in Taiwan varies in designs, ranging from cramped, multiple-story housing to flat, single-story houses with backyards. Many residential buildings have a very **boxy** look. A lot of walls are covered in **tiles**, usually white. Sheds made out of tin are also featured, commonly painted in a light green colour."
       ],
@@ -591,7 +632,8 @@
           "src": "https://learnablemeta.com/images/1072/udRDqRrdPs2v3TvovNNchhYJUBKV02FcSbxg.avif",
           "path": "tw/7ac7e9cc2718.webp",
           "width": 1000,
-          "height": 565
+          "height": 565,
+          "dupeOf": "3b5cdec277fe"
         }
       ],
       "locations": [
@@ -610,14 +652,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Anything from cramped multi-storey blocks to single-storey houses with yards. Many are boxy with white-tiled walls, and tin sheds are often light green."
     },
     {
       "id": "tw-5awu",
       "step": 0,
       "order": 13,
       "family": "car",
-      "title": "Google car: In Generation 3 coverage",
+      "title": "Google car: black, long antenna, red middle light",
       "text": [
         "In Generation 3 coverage, you can find this **black car with a long antenna** and a red brake light in the middle, similar to the one you can see in Russia."
       ],
@@ -644,7 +687,8 @@
           "src": "https://learnablemeta.com/images/681/apdGXVbAVEy4VPKqIDTBeFa7JYycTrRXFr6M.avif",
           "path": "tw/01d4a1c89ed9.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "4f4856607c6e"
         }
       ],
       "locations": [
@@ -665,14 +709,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In older Gen 3 coverage (blurrier, softer colours): a black car with a long antenna and a red brake light in the middle. It looks like the Russian car.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russia has a similar black car with antenna"
+        }
+      ]
     },
     {
       "id": "tw-AJuH",
       "step": 0,
       "order": 14,
       "family": "car",
-      "title": "Google car: You can also find this Generation 3 car with a very large…",
+      "title": "Google car: huge blur covering the car",
       "text": [
         "You can also find this Generation 3 car with a **very large blur** that covers the entire car and almost looks like low-cam.",
         "Note that this is not the same as low-cam: the camera is still at a normal height, meaning you see the world around you from a normal vantage point."
@@ -712,14 +763,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 3 car with a very large blur over the whole car that looks like a low camera. The camera is actually at normal height, so the view is normal."
     },
     {
       "id": "tw-U317",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: This is a map of the counties of Taiwan",
+      "title": "Coverage: far-away small islands",
       "text": [
         "This is a map of the **counties of Taiwan**. Importantly, Taiwan has a couple of smaller islands and island groups with coverage that are fairly far away from the main island. It is important to be aware of these, as they often catch beginning players off-guard. These include:",
         "- Kinmen close to the coast of mainland China.",
@@ -744,14 +796,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Several small islands lie far from the main island: two near the Chinese coast, one in the middle of the strait, and two to the south-east. They often surprise new players."
     },
     {
       "id": "tw-LVli",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Taiwan telephone numbers are 10 digits",
+      "title": "Phone numbers: 10 digits, area code 02-08",
       "text": [
         "Taiwan telephone numbers are 10 digits, with the first two digits indicating the **area code**. Area codes range from 02 to 08, increasing as you go south.",
         "_This image was provided by DrizzleMayFiddle._",
@@ -774,14 +827,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "10 digits, with the first two as the area code, running 02 to 08 and rising towards the south. The code is often in brackets. Mobile numbers start with 09."
     },
     {
       "id": "tw-WWc3",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Taiwan’s National Freeway system is organised so that odd…",
+      "title": "Road numbers: freeway odd = north-south",
       "text": [
         "Taiwan’s **National Freeway system** is organised so that odd numbers represent north-south roads and even numbers represent east-west. Generally, numbers also increase moving west to east and north to south. The 1 and the 3 are by far the longest, running across the west coast.",
         "_You can click on the image to enlarge it._"
@@ -802,7 +856,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Odd freeway numbers run north-south, even ones east-west. Numbers rise going east and south. Routes 1 and 3 are the longest, along the west coast."
     },
     {
       "id": "tw-3RIG",
@@ -810,7 +865,7 @@
       "order": 3,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: These signs indicate Township roads",
+      "title": "Route marker: township road, county character first",
       "text": [
         "These signs indicate Township roads, with the character written **before** or **above** the road number indicating the county.",
         "_You can click on the image to enlarge it._"
@@ -831,14 +886,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Township road signs put a character before or above the number that stands for the county."
     },
     {
       "id": "tw-mvZD",
       "step": 1,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Many poles in Taiwan feature these blue plaques with…",
+      "title": "Pole: blue plaque with grid code",
       "text": [
         "Many poles in Taiwan feature these **blue plaques** with strings of letters and numbers that act as precise coordinates.",
         "For an example of how to read the plaques in-game, the only thing that is useful here is the string “E3264”. “BE08” can further narrow down the position but is not practical in-game.",
@@ -865,14 +921,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue plaques on poles hold letter-number codes that act as map coordinates. The useful part is the letter plus four digits: the letter gives a big rectangle, the digits give percent east and north inside it."
     },
     {
       "id": "tw-s6am",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "The central western plain of Taiwan mainly consists of flat…",
+      "title": "Landscape: flat plains and farmland in the west",
       "text": [
         "The central western plain of Taiwan mainly consists of **flat** to low rolling plains. It is common to find crops and other farmland in this area."
       ],
@@ -911,14 +968,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The central west is flat to gently rolling, with lots of crops and farmland."
     },
     {
       "id": "tw-hIN3",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: The central-eastern region that covers two-thirds of Taiwan…",
+      "title": "Landscape: forested mountains over most of the island",
       "text": [
         "The central-eastern region that covers two-thirds of Taiwan consists of **forested mountains**.",
         "The central mountain range that runs all the way to the south of the island is made up of tall mountains and rugged valleys. At high elevations, the vegetation can look **less tropical** and feature temperate or even coniferous trees."
@@ -937,7 +995,8 @@
           "src": "https://learnablemeta.com/images/664/FjFOf9Tume1ylGHCpeVRD6AbaUDnzlimbImo.avif",
           "path": "tw/336ad09346f3.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "ce84e7c96047"
         }
       ],
       "locations": [],
@@ -946,14 +1005,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The central and eastern two-thirds is forested mountain with rugged valleys. At high altitude the plants look less tropical, with temperate or conifer trees."
     },
     {
       "id": "tw-tuU2",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: The Hualien-Taitung Valley is a thin and long valley…",
+      "title": "Landscape: long thin valley with mountains each side",
       "text": [
         "The **Hualien-Taitung Valley** is a thin and long valley located on the east coast of the island passing from Hualien City at the north to Taitung City at the south. It is very recognizable as it consists of flat gentle plains surrounded by densely-forested mountains to the east and west.",
         "NOTE: Most of the coverage on the east coast lies within this valley.",
@@ -976,14 +1036,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the east coast, a long, thin valley of flat gentle plains with densely forested mountains to both east and west. Most east coast coverage is here. Other valleys in the centre can look similar."
     },
     {
       "id": "tw-mxtA",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: The Yilan Plain is easily identifiable by the mountain…",
+      "title": "Landscape: rice plain, mountains N, W and S",
       "text": [
         "The **Yilan Plain** is easily identifiable by the mountain ranges that are seen in the north, west, and south. Rice paddies are also extremely common as well as houses built right next to these fields.",
         "NOTE: While the landscape on the surface can look quite similar to the valleys of Hualien and Taitung, unlike those two, you will almost never find mountains to the **east** in the plains of Yilan. Furthermore, the flat plains of Yilan are also generally more open."
@@ -1024,14 +1085,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-east, a wide open plain with mountains to the north, west and south, lots of rice paddies and houses beside the fields. Unlike the east-coast valley, there are almost no mountains to the east."
     },
     {
       "id": "tw-3U8M",
       "step": 1,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: The island of Kinmen can be recognized by these trees with…",
+      "title": "Plants: fuzzy-leaved roadside trees, red-tinged soil",
       "text": [
         "The island of Kinmen can be recognized by these trees with **fuzzy leaves** lining the road and **red-tinged** soil.",
         "NOTE: There is no Generation 4 coverage in Kinmen."
@@ -1072,14 +1134,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On an island near the Chinese coast: trees with fuzzy leaves along the road and reddish soil. It has no newer Gen 4 coverage."
     },
     {
       "id": "tw-cjeB",
       "step": 1,
       "order": 11,
       "family": "landscape",
-      "title": "Landscape: Miaoli and Hsinchu share a landscape of low rolling hills…",
+      "title": "Landscape: low rolling hills, messy farmland",
       "text": [
         "Miaoli and Hsinchu share a landscape of **low rolling hills** and winding roads as well as sparse farmland with vegetation that can look messy and unkempt."
       ],
@@ -1098,7 +1161,8 @@
           "src": "https://learnablemeta.com/images/664/hUlnz45tDqUm2fZ5ys18zvYM0JtQUYB6c2Pg.avif",
           "path": "tw/45b95b8ae0ad.webp",
           "width": 1000,
-          "height": 484
+          "height": 484,
+          "dupeOf": "82ed99876a98"
         }
       ],
       "locations": [],
@@ -1107,14 +1171,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-west: low rolling hills, winding roads and sparse farmland with messy, unkempt-looking plants."
     },
     {
       "id": "tw-MRFx",
       "step": 1,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: Similarly, Taichung features these open plains surrounded…",
+      "title": "Landscape: open plains, distant low mountains",
       "text": [
         "Similarly, Taichung features these open plains surrounded by **low mountains** that are often in the distance."
       ],
@@ -1153,14 +1218,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the west-centre: open plains with low mountains often far in the background."
     },
     {
       "id": "tw-AitK",
       "step": 1,
       "order": 14,
       "family": "vegetation",
-      "title": "Vegetation: _Areca catechu_, also known as areca palms or betel nut…",
+      "title": "Plants: areca (betel nut) palms",
       "text": [
         "[_Areca catechu_](https://en.wikipedia.org/wiki/Areca_catechu), also known as **areca palms** or betel nut palms, are extensively found in central and southern Taiwan.",
         "Areca palms are most common in the **mountainous** regions of Taiwan, you can still see dense areca palm patches in northern counties but they are few and far between."
@@ -1200,14 +1266,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Slim areca palms are common in the centre and south, mostly in the mountains. Dense patches in the north are rare."
     },
     {
       "id": "tw-Z5mI",
       "step": 1,
       "order": 15,
       "family": "vegetation",
-      "title": "Vegetation: Coconut palms (_Cocos nucifera_) are primarily found in the…",
+      "title": "Plants: coconut palms in the south, near the coast",
       "text": [
         "**Coconut palms** ([_Cocos nucifera_](https://en.wikipedia.org/wiki/Coconut)) are primarily found in the southern-half of the island, toward the coast."
       ],
@@ -1246,14 +1313,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coconut palms are mostly in the southern half of the island, close to the coast."
     },
     {
       "id": "tw-syWO",
       "step": 1,
       "order": 16,
       "family": "vegetation",
-      "title": "Vegetation: Cook pines (_Araucaria columnaris_) are extremely common in…",
+      "title": "Plants: tight rows of Cook pines",
       "text": [
         "**Cook pines** ([_Araucaria columnaris_](https://en.wikipedia.org/wiki/Araucaria_columnaris)) are extremely common in the county of Penghu, especially in tightly-packed rows next to roads.",
         "NOTE: While these trees can be found on the main island as well, they are usually never found in such close proximity."
@@ -1294,14 +1362,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On an island group in the middle of the strait, Cook pines stand in tightly packed rows beside roads. They exist on the main island too but never so close together."
     },
     {
       "id": "tw-LDPc",
       "step": 1,
       "order": 17,
       "family": "vegetation",
-      "title": "Vegetation: These leafless trees are most frequently seen in Penghu",
+      "title": "Plants: leafless trees",
       "text": [
         "These **leafless** trees are most frequently seen in Penghu."
       ],
@@ -1341,14 +1410,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Leafless trees are mostly seen on the island group in the middle of the strait."
     },
     {
       "id": "tw-hLAJ",
       "step": 1,
       "order": 18,
       "family": "other",
-      "title": "Cultivated fish farms are mostly found right next to the…",
+      "title": "Landscape: fish farm ponds near the coast",
       "text": [
         "**Cultivated fish farms** are mostly found right next to the coast in the western counties.They are generally seen in the southern-half of the island, anywhere from Changhua to Pingtung, but predominantly found in the counties of Yunlin, Chiayi, Tainan, and Kaohsiung."
       ],
@@ -1387,14 +1457,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fish farm ponds right by the coast in the west and south-west, mainly in the south-western counties."
     },
     {
       "id": "tw-Ls6z",
       "step": 1,
       "order": 19,
       "family": "other",
-      "title": "Tea plantations are generally seen in mountainous areas all…",
+      "title": "Plants: tea plantations on mountains",
       "text": [
         "**Tea plantations** are generally seen in mountainous areas all over Taiwan. You can find them commonly in Chiayi, Nantou, Hsinchu, and Miaoli."
       ],
@@ -1433,14 +1504,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tea plantations on mountain slopes across the island, common in the west-centre and north-west."
     },
     {
       "id": "tw-G2A6",
       "step": 1,
       "order": 20,
       "family": "vegetation",
-      "title": "Vegetation: These areca palm plantations are mostly found in the county…",
+      "title": "Plants: areca palms in neat rows on flat land",
       "text": [
         "These **areca palm plantations** are mostly found in the county of Pingtung.",
         "NOTE: Plantations in Pingtung are mainly found in neat, organised rows like these, in the flat plains. While in most central and southern counties, they will be found in the mountainous areas. Additionally, the counties further north will also rarely have areca palms in the flat plains of the west coast."
@@ -1481,14 +1553,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far south, areca palm plantations grow in neat rows on flat plains. Elsewhere they are in the mountains, and rarely on the flat western coast in the north."
     },
     {
       "id": "tw-wl3v",
       "step": 1,
       "order": 22,
       "family": "other",
-      "title": "Old and disorganised housing units as well as tall…",
+      "title": "Houses: old, messy, dingy apartment blocks",
       "text": [
         "Old and **disorganised** housing units as well as tall **dingy-looking** apartment blocks are frequently seen in the urban areas of northern Taiwan."
       ],
@@ -1527,14 +1600,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Old messy housing and tall dingy-looking apartment blocks in northern cities."
     },
     {
       "id": "tw-e0bH",
       "step": 1,
       "order": 23,
       "family": "architecture",
-      "title": "Architecture: Taoyuan features these red brick and sometimes red tile…",
+      "title": "Houses: red brick or red tile apartments",
       "text": [
         "Taoyuan features these **red brick** and sometimes red tile apartment buildings.",
         "NOTE: They can also be commonly spotted in the greater Taipei area and rarely in other urban areas but are most common in Taoyuan."
@@ -1575,14 +1649,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red brick, sometimes red tile, apartment buildings. Most common in the north-west, also around the capital and rarely in other cities."
     },
     {
       "id": "tw-YhkW",
       "step": 1,
       "order": 24,
       "family": "other",
-      "title": "In Yilan, you can find these rich multiple-story…",
+      "title": "Houses: rich, multi-storey gated villas",
       "text": [
         "In Yilan, you can find these **rich multiple-story villas**.They come in all types of designs and are often gated."
       ],
@@ -1622,14 +1697,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-east: rich multi-storey villas in all kinds of designs, often gated."
     },
     {
       "id": "tw-C92E",
       "step": 1,
       "order": 25,
       "family": "architecture",
-      "title": "Architecture: White-tinged cream coloured houses are frequently seen in…",
+      "title": "Houses: white-cream coloured houses",
       "text": [
         "White-tinged **cream coloured houses** are frequently seen in Penghu."
       ],
@@ -1657,7 +1733,8 @@
           "src": "https://learnablemeta.com/images/1072/1zXGzs2Y2YgcTAPwqrEPVkdo7GwKL5etdkyh.avif",
           "path": "tw/1a3d2da441d0.webp",
           "width": 1000,
-          "height": 483
+          "height": 483,
+          "dupeOf": "5e04ee4d723c"
         }
       ],
       "locations": [
@@ -1676,14 +1753,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On an island group in the middle of the strait: houses coloured a white-tinged cream."
     },
     {
       "id": "tw-ePib",
       "step": 1,
       "order": 26,
       "family": "architecture",
-      "title": "Architecture: You can find these small",
+      "title": "Houses: small traditional-looking houses",
       "text": [
         "You can find these small, **traditional-looking** houses in Kinmen."
       ],
@@ -1711,7 +1789,8 @@
           "src": "https://learnablemeta.com/images/1072/wooyZzFcqDTBLEkSHHbuMBUj3ZQbsSQh0KuY.avif",
           "path": "tw/b14d38cda729.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "f45cd8bdb9a3"
         }
       ],
       "locations": [
@@ -1730,14 +1809,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small traditional-looking houses on an island near the Chinese coast."
     },
     {
       "id": "tw-Ldeq",
       "step": 1,
       "order": 28,
       "family": "pole",
-      "title": "Pole: Similar to the blue plaques found on utility poles",
+      "title": "Pole: ID stickers on lamps",
       "text": [
         "Similar to the blue plaques found on utility poles, Taiwan also features **stickers** to ID the locations of **lamps**. These can be found on both lampposts and utility poles with lamps attached to them.",
         "_You can click on the image to enlarge it._"
@@ -1760,14 +1840,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stickers with ID codes mark lamps, on lampposts and on poles with lamps attached."
     },
     {
       "id": "tw-8WC6",
       "step": 1,
       "order": 29,
       "family": "other",
-      "title": "Pavement with white speckles is commonly found along the…",
+      "title": "Road: white-speckled pavement on the east coast",
       "text": [
         "Pavement with **white speckles** is commonly found along the east coast."
       ],
@@ -1806,14 +1887,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pavement with white speckles is common along the east coast."
     },
     {
       "id": "tw-BZpM",
       "step": 1,
       "order": 30,
       "family": "other",
-      "title": "Kinmen often features lampposts with red and white diagonal…",
+      "title": "Pole: red-white striped lampposts",
       "text": [
         "Kinmen often features lampposts with **red and white** diagonal stripes.",
         "NOTE: Red and white striped markings are also found on the main island, especially in cities and urban areas."
@@ -1854,14 +1936,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On an island near the Chinese coast, lampposts often have red and white diagonal stripes. Red-white markings also appear on the main island, especially in cities."
     },
     {
       "id": "tw-p8lC",
       "step": 1,
       "order": 31,
       "family": "other",
-      "title": "Similarly, lampposts with red and white diagonal stripes on…",
+      "title": "Pole: red-white lamppost on a trapezoid base",
       "text": [
         "Similarly, lampposts with **red and white** diagonal stripes on a **trapezoidal** base are frequently found in Kaohsiung City."
       ],
@@ -1901,14 +1984,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red and white striped lampposts on a trapezoid-shaped base are common in the big southern port city."
     },
     {
       "id": "tw-X7Nc",
       "step": 1,
       "order": 32,
       "family": "pole",
-      "title": "Pole: In Yunlin, you can find poles with a thicker support below…",
+      "title": "Pole: thicker support under the top",
       "text": [
         "In Yunlin, you can find poles with a **thicker support** below the pole top."
       ],
@@ -1950,14 +2034,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the west-centre, some poles have a thicker support below the pole top."
     },
     {
       "id": "tw-ibx1",
       "step": 1,
       "order": 33,
       "family": "other",
-      "title": "Many traffic control boxes in Changhua County are marked…",
+      "title": "Traffic box: large yellow stickers",
       "text": [
         "Many traffic control boxes in Changhua County are marked with large **yellow stickers**. You will find these boxes at intersections."
       ],
@@ -1997,14 +2082,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the west-centre, traffic control boxes at junctions often have large yellow stickers."
     },
     {
       "id": "tw-ZugP",
       "step": 1,
       "order": 34,
       "family": "pole",
-      "title": "Pole: These green square stickers are typically seen on every…",
+      "title": "Pole: green square stickers on every pole",
       "text": [
         "These **green square stickers** are typically seen on every pole in Chiayi City."
       ],
@@ -2046,7 +2132,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one south-western city nearly every pole has a green square sticker."
     },
     {
       "id": "tw-t3mm",
@@ -2054,7 +2141,7 @@
       "order": 35,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: These bent sign and chevron holders with two black and…",
+      "title": "Chevron: bent holder with black-yellow stickers",
       "text": [
         "These **bent** sign and chevron holders with two **black and yellow**-striped stickers are only found in Pingtung, Kaohsiung, and Taitung."
       ],
@@ -2094,14 +2181,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bent sign and chevron holders with two black-and-yellow striped stickers. Found only in the south and south-east."
     },
     {
       "id": "tw-HihI",
       "step": 1,
       "order": 36,
       "family": "pole",
-      "title": "Pole: Distribution transformers raised by a dark green holder are…",
+      "title": "Pole: transformer raised on a dark green holder",
       "text": [
         "Distribution transformers **raised** **by a dark green holder** are mostly found in New Taipei City and Keelung City."
       ],
@@ -2124,14 +2212,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Transformers lifted on a dark green holder, mostly in the far north."
     },
     {
       "id": "tw-R3Gf",
       "step": 1,
       "order": 37,
       "family": "other",
-      "title": "Blue outer lines are almost entirely exclusive to Penghu",
+      "title": "Road lines: blue edge lines",
       "text": [
         "**Blue outer lines** are almost entirely exclusive to Penghu."
       ],
@@ -2171,14 +2260,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue edge lines are almost only found on the island group in the middle of the strait."
     },
     {
       "id": "tw-0kzS",
       "step": 2,
       "order": 0,
       "family": "vegetation",
-      "title": "Vegetation: The islands east of Taitung",
+      "title": "Landscape: tropical islands, coconut palms, concrete road",
       "text": [
         "The islands east of Taitung, Green Island and Orchid Island, are distinct due to the more **tropical** climate, abundance of coconut palms, and lush cliffs. Additionally, it is common to find run-down, **concrete** pavement.",
         "NOTE: While the landscape between Green Island and Orchid Island are quite similar, a good way to distinguish the two is that Green Island frequently uses **yellow outer lines**. Additionally, Green Island is slightly more built-up."
@@ -2218,14 +2308,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two islands south-east of the main island: tropical, lots of coconut palms, lush cliffs and run-down concrete pavement. One has yellow edge lines and is a bit more built-up."
     },
     {
       "id": "tw-SMPt",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Lienchiang County, also referred to as the Matsu Islands,…",
+      "title": "Landscape: hilly, overcast, concrete roads",
       "text": [
         "Lienchiang County, also referred to as the Matsu Islands, is recognizable from the hilly landscape and frequent use of **concrete roads**. The coverage is **overcast** and [this pavement](https://www.google.com/maps/@26.2025968,119.9695409,3a,48.8y,276.8h,91.84t,2.84r/data=!3m6!1e1!3m4!1s3KR53okaioyHthx43kE3bQ!2e0!7i13312!8i6656?entry=ttu) can also commonly be found."
       ],
@@ -2264,14 +2355,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An island group near the Chinese coast: hilly, overcast photos and frequent concrete roads."
     },
     {
       "id": "tw-FdnX",
       "step": 2,
       "order": 2,
       "family": "guardrail",
-      "title": "Guardrail: The Provincial Highway 8 that runs from Taichung to Hualien…",
+      "title": "Guardrail: yellow rail, then tall rock cliffs",
       "text": [
         "The Provincial Highway 8 that runs from Taichung to Hualien is very recognizable, specifically in the Hualien part, due to the **yellow guardrail** that can be found all throughout the western half of the road in the county.",
         "The eastern half of the road features these tall exposed-rock cliffs that tower over the road."
@@ -2313,14 +2405,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mountain highway on the east side: yellow guardrail along the western half, and tall exposed rock cliffs above the eastern half."
     },
     {
       "id": "tw-QXJU",
       "step": 2,
       "order": 3,
       "family": "guardrail",
-      "title": "Guardrail: The Provincial Highway 20",
+      "title": "Guardrail: tube-like double rails in conifer mountains",
       "text": [
         "The Provincial Highway 20, specifically the part that runs through **Yushan National Park**, features tall mountains covered with coniferous trees. The road also utilises these tube-like double guardrails.",
         "NOTE: This road is only covered in Generation 2 and 4. The Generation 4 coverage is very overexposed and features sunny weather."
@@ -2343,14 +2436,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A high road through tall mountains covered in conifers, with tube-like double guardrails. Only covered by Gen 2 and Gen 4, and the Gen 4 is overexposed and sunny."
     },
     {
       "id": "tw-X2t0",
       "step": 2,
       "order": 4,
       "family": "guardrail",
-      "title": "Guardrail: The road that leads up to Taipingshan National Forest in…",
+      "title": "Guardrail: foggy conifer road, red-legged rails",
       "text": [
         "The road that leads up to Taipingshan National Forest in Yilan is distinct due to it often being **very foggy** when covered. Other features of this road include the coniferous trees and a guardrail with red legs.",
         "NOTE: Certain parts of the roads feature a [sunset](https://www.google.com/maps/@?api=1&map_action=pano&pano=Guivd71mf24KYdvORBDNSA&viewpoint=24.515398%2C121.583108&heading=223.98270208148256&pitch=13.883893360213435&fov=133.16346058432444) in Generation 3."
@@ -2392,14 +2486,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road often covered in fog, with conifers and a guardrail with red legs. Some Gen 3 photos show a sunset."
     },
     {
       "id": "tw-Gypc",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: This open landscape with forests of short trees surrounding…",
+      "title": "Landscape: short-tree forests, narrow grassy road",
       "text": [
         "This open landscape with forests of **short trees** surrounding a narrow **grassy road** can be found in Hualien in the flat parts of Guangfu and Fenglin. This area can be distinguished due to it being commonly covered in Generation 2; however, you can find [similar landscapes in Generation 3 and 4](https://www.google.com/maps/@23.6277781,121.4209628,3a,90y,116.32h,95.59t,0.07r/data=!3m6!1e1!3m4!1sKO9EMyTVK1jlvcEvATqKog!2e0!7i13312!8i6656?entry=ttu)."
       ],
@@ -2438,14 +2533,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the east: open land with small-tree forests around a narrow grassy road. Usually older Gen 2 coverage, though Gen 3 and 4 look similar."
     },
     {
       "id": "tw-ufvr",
       "step": 2,
       "order": 6,
       "family": "vegetation",
-      "title": "Vegetation: A green train car can be found in east Chiayi around…",
+      "title": "Train: green train car in the mountains",
       "text": [
         "A **green train car** can be found in east Chiayi around Alishan National Forest."
       ],
@@ -2484,14 +2580,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A green train car in the south-west mountains near a forest park."
     },
     {
       "id": "tw-AVoo",
       "step": 2,
       "order": 7,
       "family": "other",
-      "title": "A blue pickup truck can be seen in a few of the riverside…",
+      "title": "Google car: blue pickup truck in riverside parks",
       "text": [
         "A **blue pickup truck** can be seen in a few of the riverside parks in Taipei City."
       ],
@@ -2530,349 +2627,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/taiwan",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "tw-lm-15328",
-      "step": 3,
-      "order": 0,
-      "family": "landscape",
-      "title": "Landscape: Hualien",
-      "text": [
-        "This open landscape with forests of short trees surrounding a narrow grassy road can be found in Hualien in the flat parts of Guangfu and Fenglin.",
-        "This area can be distinguished due to it being commonly covered in Generation 2; however, you can find similar landscapes in Generation 3 and 4."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ee711cc21ee6",
-          "src": "https://learnablemeta.com/images/664/T1QVsxbaYKx2YUOcq2u395hzUXSrfQdg2AIt.avif",
-          "path": "tw/ee711cc21ee6.webp",
-          "width": 1000,
-          "height": 482
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-15329",
-      "step": 3,
-      "order": 1,
-      "family": "vegetation",
-      "title": "Vegetation: Green and Orchid Island",
-      "text": [
-        "The islands east of Taitung, Green Island and Orchid Island, are distinct due to the more tropical climate, abundance of coconut palms, and lush cliffs. Additionally, it is common to find run-down, concrete pavement.",
-        "NOTE: While the landscape between Green Island and Orchid Island are quite similar, a good way to distinguish the two is that Green Island frequently uses yellow outer lines. Additionally, Green Island is slightly more built-up."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "79bbdde30f4f",
-          "src": "https://learnablemeta.com/images/664/G9CsqBx4zsJskzOn8faaOEZxe7GcardVuZR4.avif",
-          "path": "tw/79bbdde30f4f.webp",
-          "width": 1000,
-          "height": 481
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-15330",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Taichung Plains",
-      "text": [
-        "Similarly, Taichung features these open plains surrounded by low mountains that are often in the distance."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d83938b06f56",
-          "src": "https://learnablemeta.com/images/664/2kAIZS7y32HaxqTkhZjsImpz6Lq4ptKH0wSm.avif",
-          "path": "tw/d83938b06f56.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-15332",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Yilan Plain",
-      "text": [
-        "The Yilan Plain is easily identifiable by the mountain ranges that are seen in the north, west, and south. Rice paddies are also extremely common as well as houses built right next to these fields.",
-        "NOTE: While the landscape on the surface can look quite similar to the valleys of Hualien and Taitung, unlike those two, you will almost never find mountains to the east in the plains of Yilan. Furthermore, the flat plains of Yilan are also generally more open."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cc062ca3a40b",
-          "src": "https://learnablemeta.com/images/664/PrSqKqjFaoX2VuDqAM8zGDQ1mDmOKR2CW26F.avif",
-          "path": "tw/cc062ca3a40b.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-15333",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: Hualien Taitung Valley",
-      "text": [
-        "The Hualien-Taitung Valley is a thin and long valley located on the east coast of the island passing from Hualien City at the north to Taitung City at the south. It is very recognizable as it consists of flat gentle plains surrounded by densely-forested mountains to the east and west.",
-        "NOTE: Most of the coverage on the east coast lies within this valley. There are also other valleys in central Taiwan that can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cc1fc5289b20",
-          "src": "https://learnablemeta.com/images/664/jcyiP1YxFEuB0zuaBxzr7CMdCmU7DWdDCxBT.avif",
-          "path": "tw/cc1fc5289b20.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-15335",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Western Plains",
-      "text": [
-        "The central western plain of Taiwan mainly consists of flat to low rolling plains. It is common to find crops and other farmland in this area."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "40154cfab976",
-          "src": "https://learnablemeta.com/images/664/Q656V6bpmhyMOAYvfywTzS1biG5hOMWSTiNk.avif",
-          "path": "tw/40154cfab976.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-89972",
-      "step": 3,
-      "order": 6,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Taiwan uses these bollards with either two or three circular reflectors on a black rectangle.",
-        "You can also find these lollipop looking reflectors on guardrails, similar to the designs found in Japan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aaa9fe1dded5",
-          "src": "https://learnablemeta.com/images/739/aFPVUd23dexJJ53fH4zcmp0bPXwQnqAu9rR5.avif",
-          "path": "tw/aaa9fe1dded5.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "JP"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-104462",
-      "step": 3,
-      "order": 7,
-      "family": "architecture",
-      "title": "Architecture: North - Old & Disorganized Buildings",
-      "text": [
-        "Old and disorganised housing units as well as tall dingy-looking apartment blocks are frequently seen in the urban areas of northern Taiwan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a9deb6daba1f",
-          "src": "https://learnablemeta.com/images/1072/NxeWscSKvTG7G9Z4nlbgSsetXHu36IEJYIjS.avif",
-          "path": "tw/a9deb6daba1f.webp",
-          "width": 1000,
-          "height": 482
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-104463",
-      "step": 3,
-      "order": 8,
-      "family": "architecture",
-      "title": "Architecture: Taoyuan - Red Bricks",
-      "text": [
-        "Taoyuan features these red brick and sometimes red tile apartment buildings.",
-        "**--- NOTE:**",
-        "They can also be commonly spotted in the greater Taipei area and rarely in other urban areas but are most common in Taoyuan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6659830e1348",
-          "src": "https://learnablemeta.com/images/1072/008za8GPtvTgsnxivnT96i3tXRUCFppmC3kx.avif",
-          "path": "tw/6659830e1348.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-104637",
-      "step": 3,
-      "order": 9,
-      "family": "other",
-      "title": "Yilan - Multiple-Story Villas",
-      "text": [
-        "In Yilan, you can find these rich multiple-story villas.",
-        "They come in all types of designs and are often gated."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7d57b0b3446d",
-          "src": "https://learnablemeta.com/images/1072/pdN8wTtxhx7oJaKvFJemlRNfgSh1lAvjxLC6.avif",
-          "path": "tw/7d57b0b3446d.webp",
-          "width": 1000,
-          "height": 483
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-128277",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: North - Old & Disorganized Buildings",
-      "text": [
-        "Old and disorganised housing units as well as tall dingy-looking apartment blocks are frequently seen in the urban areas of northern Taiwan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a9deb6daba1f",
-          "src": "https://learnablemeta.com/images/1072/NxeWscSKvTG7G9Z4nlbgSsetXHu36IEJYIjS.avif",
-          "path": "tw/a9deb6daba1f.webp",
-          "width": 1000,
-          "height": 482
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-128335",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Yilan - Multiple-Story Villas",
-      "text": [
-        "In Yilan, you can find these rich multiple-story villas.",
-        "They come in all types of designs and are often gated."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7d57b0b3446d",
-          "src": "https://learnablemeta.com/images/1072/pdN8wTtxhx7oJaKvFJemlRNfgSh1lAvjxLC6.avif",
-          "path": "tw/7d57b0b3446d.webp",
-          "width": 1000,
-          "height": 483
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A blue pickup truck seen in a few riverside parks in the northern capital."
     },
     {
       "id": "tw-lm-473887",
       "step": 3,
       "order": 12,
       "family": "pole",
-      "title": "Pole: pole top",
+      "title": "Pole: round concrete with small holes",
       "text": [
         "Like Cambodia Taiwan has round concrete poles with small holes."
       ],
@@ -2894,35 +2657,11 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tw-lm-614122",
-      "step": 3,
-      "order": 13,
-      "family": "other",
-      "title": "Taiwan",
-      "text": [
-        "Taiwan telephone numbers are 10 digits, with the first two digits indicating the area code. Area codes range from 02 to 08, increasing as you go south.",
-        "NOTE: Oftentimes the area code will be written within parentheses. Mobile numbers start with 09."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "487c3108be39",
-          "src": "https://learnablemeta.com/images/1398/1765035283798-Q4M.avif",
-          "path": "tw/487c3108be39.webp",
-          "width": 566,
-          "height": 800
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Round concrete poles with small holes, like Cambodia.",
+      "sameAs": [
+        "KH"
+      ]
     }
   ]
 }

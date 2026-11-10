@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "car",
-      "title": "Google car: Costa Rica’s Generation 4 imagery was captured using a…",
+      "title": "Google car: white pickup, front antenna",
       "text": [
         "Costa Rica’s Generation 4 imagery was captured using a large **white pickup truck**. In many locations, it is either fully or partially visible, but can occasionally be entirely blurred out. There is an antenna attached to the front of the car.",
         "NOTE: The Panamanian truck is almost always [fully blurred out](https://maps.app.goo.gl/SXjYfDTrfFwZTWLs8). The truck used in [Ecuador](https://maps.app.goo.gl/dSweUPGTkgTasq9B7) does not have an antenna."
@@ -68,14 +68,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large white pickup truck with an antenna on the front, often partly visible but sometimes fully blurred. Panama's truck is almost always fully blurred, and Ecuador's has no antenna.",
+      "differs": [
+        {
+          "country": "PA",
+          "how": "Truck is almost always fully blurred"
+        },
+        {
+          "country": "EC",
+          "how": "Pickup has no antenna"
+        }
+      ]
     },
     {
       "id": "cr-m8UD",
       "step": 0,
       "order": 2,
       "family": "plate",
-      "title": "Plate: Costa Rican licence plates are typically short and white…",
+      "title": "Plate: short, white, blue text",
       "text": [
         "Costa Rican licence plates are typically short and white with **blue text**, giving them a light blue tint through the blur."
       ],
@@ -95,14 +106,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plates are short and white with blue text, which gives a light blue tint through the blur. This helps tell it apart from Panama.",
+      "differs": [
+        {
+          "country": "PA",
+          "how": "Panamanian plates are not tinted light blue"
+        }
+      ]
     },
     {
       "id": "cr-dyRW",
       "step": 0,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: Costa Rica is a mostly lush tropical country",
+      "title": "Landscape: lush hills, volcanoes, rainforest",
       "text": [
         "Costa Rica is a mostly** lush tropical country**, with rolling hills, agricultural lowlands, peaky volcanoes running through the centre of the country, as well as dense rainforests dotted around."
       ],
@@ -141,14 +159,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A lush tropical country with rolling hills, farmland lowlands, pointed volcanoes through the middle and patches of dense rainforest."
     },
     {
       "id": "cr-1FnG",
       "step": 0,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: Costa Rican architecture is less colonial than that of…",
+      "title": "Houses: pastel concrete, fences, barred windows",
       "text": [
         "Costa Rican architecture is less colonial than that of Panama. Few houses have proper tiled roofs, with dark red sheet metal or dark red plastic tiles being more common. Buildings typically have **pastel-coloured concrete walls** and are usually either a low **single-family** house or **boxy two-storey** structure. They are often heavily guarded with **fences **and **barred windows**, to the point that it can be hard to even see a building on many streets."
       ],
@@ -189,14 +208,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pastel-coloured concrete houses, low single-family homes or boxy two-storey ones, with dark red metal or plastic roofs. Heavy fences and barred windows can hide the buildings. Less colonial than Panama.",
+      "differs": [
+        {
+          "country": "PA",
+          "how": "More colonial style, with tiled roofs"
+        }
+      ]
     },
     {
       "id": "cr-iWum",
       "step": 0,
       "order": 5,
       "family": "language",
-      "title": "Language: Like in most of Latin America",
+      "title": "Language: Spanish",
       "text": [
         "Like in most of Latin America, **Spanish** is the official language of Costa Rica.",
         "NOTE: In Brazil, they speak Portuguese."
@@ -219,7 +245,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Spanish is the language, as in most of Latin America. Brazil speaks Portuguese.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Portuguese, not Spanish"
+        }
+      ]
     },
     {
       "id": "cr-h4cR",
@@ -227,7 +260,7 @@
       "order": 6,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Like in Mexico, Panama and Guatemala, Costa Rican stop…",
+      "title": "Sign: stop sign says ALTO",
       "text": [
         "Like in Mexico, Panama and Guatemala, Costa Rican stop signs display the word **“ALTO”**.",
         "NOTE: Stop signs in [Panama](https://goo.gl/maps/LaAjCE36HSZziiCg8) use a thicker font. Furthermore, in the rest of Spanish Latin America they say “PARE”."
@@ -271,14 +304,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs say ALTO, as in Mexico, Panama and Guatemala. The rest of Spanish-speaking Latin America writes PARE. Panama's ALTO has a thicker font.",
+      "sameAs": [
+        "GT",
+        "MX"
+      ],
+      "differs": [
+        {
+          "country": "PA",
+          "how": "Panama uses a thicker font"
+        }
+      ]
     },
     {
       "id": "cr-gNL6",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "Red taxis are the standard in Costa Rica",
+      "title": "Taxis: red",
       "text": [
         "Red taxis are the standard in Costa Rica. ",
         "NOTE: Panama uses yellow taxis."
@@ -320,14 +364,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red taxis are the standard. Panama uses yellow taxis.",
+      "differs": [
+        {
+          "country": "PA",
+          "how": "Panama's taxis are yellow"
+        }
+      ]
     },
     {
       "id": "cr-iRIo",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Costa Rica uses long silver insulators",
+      "title": "Pole: long silver insulators",
       "text": [
         "Costa Rica uses **long silver insulators**.",
         "NOTE: Panama uses a variety of insulators, some of which are also [long silver insulators](https://maps.app.goo.gl/fVdRraxxpbLSgzWdA), they also use [short silver](https://maps.app.goo.gl/15arUFZ8Zi7XbEii7), [long black](https://maps.app.goo.gl/Ch37q5EZoLi7Xe9z9), [UFO](https://maps.app.goo.gl/GbzUD5YTpd9RXAb27) and [white mushroom](https://maps.app.goo.gl/2fAxTEEveNTe6Pdd9) insulators. Additionally, Brazil can have long silver insulators. Lastly, Ecuador uses UFO and mushroom insulators."
@@ -373,14 +424,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles carry long silver insulators. Panama has these among other kinds, and Brazil can have them too, while Ecuador uses UFO and mushroom ones.",
+      "sameAs": [
+        "BR",
+        "PA"
+      ],
+      "differs": [
+        {
+          "country": "EC",
+          "how": "Uses UFO and mushroom insulators"
+        }
+      ]
     },
     {
       "id": "cr-4iGB",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: One of the most common pole tops is an even crossbar with…",
+      "title": "Pole: low even crossbar, 2+1 insulators",
       "text": [
         "One of the most common pole tops is an even crossbar with uneven insulators, meaning there is one on one side and two on the other. Additionally, the crossbar is further down on the pole than usual.",
         "NOTE: 2 on 1 insulator poles with a low crossbar can also be found in Panama. However, poles in Costa Rica usually feature support bars, while this is much more rare on [Panamanian poles.](https://maps.app.goo.gl/nUBSxGGYTvWqCygu8)"
@@ -424,14 +486,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A common pole top has an even crossbar sitting low on the pole, with one insulator on one side and two on the other. Costa Rican poles usually have support bars. Panama's rarely do.",
+      "differs": [
+        {
+          "country": "PA",
+          "how": "Panamanian poles rarely have support bars"
+        }
+      ]
     },
     {
       "id": "cr-9TUK",
       "step": 0,
       "order": 10,
       "family": "pole",
-      "title": "Pole: Poles that have a single insulator attached to the side at…",
+      "title": "Pole: single insulator on the side at the top",
       "text": [
         "Poles that have a single insulator attached to the side at the top of the pole are commonly found in Costa Rica."
       ],
@@ -472,14 +541,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with a single insulator fixed to the side near the top are common."
     },
     {
       "id": "cr-I3Ot",
       "step": 0,
       "order": 11,
       "family": "pole",
-      "title": "Pole: Utility poles in Costa Rica feature a lamp with a blue dot…",
+      "title": "Pole: lamp with a blue dot on top",
       "text": [
         "Utility poles in Costa Rica feature a lamp with a blue dot on the top, similarly to other Latin American countries like Panama, Colombia and Brazil."
       ],
@@ -524,14 +594,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles carry a lamp with a blue dot on the top, as in Panama, Colombia and Brazil.",
+      "sameAs": [
+        "BR",
+        "CO",
+        "PA"
+      ]
     },
     {
       "id": "cr-NRyJ",
       "step": 0,
       "order": 12,
       "family": "pole",
-      "title": "Pole: Also common is this thin metal crossbar that is bent 90…",
+      "title": "Pole: thin metal crossbar bent into an L",
       "text": [
         "Also common is this thin metal crossbar that is bent 90 degrees to form an L-shape.",
         "NOTE: Also commonly found in Panama, Colombia and Ecuador. However, poles with crossbars are generally not as common in Panama as they are in Costa Rica."
@@ -577,7 +653,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A thin metal crossbar bent 90 degrees into an L shape is common. Panama, Colombia and Ecuador have it too, but crossbars are less common in Panama.",
+      "sameAs": [
+        "CO",
+        "EC",
+        "PA"
+      ]
     },
     {
       "id": "cr-K2iz",
@@ -585,7 +667,7 @@
       "order": 13,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: Many road signs have a distinct cross on the back",
+      "title": "Sign back: cross brace behind warning signs",
       "text": [
         "Many road signs have a distinct **cross **on the back. This is most common on diamond-shaped warning signs, while others are mostly attached regularly.",
         "NOTE: Signs in Colombia almost always have a cross at the back, but they use white signposts."
@@ -627,14 +709,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many road signs have a distinct cross on the back, most often on diamond warning signs. Colombia almost always has the cross, but on white posts.",
+      "differs": [
+        {
+          "country": "CO",
+          "how": "Cross on almost every sign, with white signposts"
+        }
+      ]
     },
     {
       "id": "cr-KYKK",
       "step": 0,
       "order": 14,
       "family": "bollard",
-      "title": "Bollard: The equivalent of a bollard in Costa Rica would be these…",
+      "title": "Bollard: orange board with 3 black circles",
       "text": [
         "The equivalent of a bollard in Costa Rica would be these vertical **orange boards** with **3 black circles** on them."
       ],
@@ -675,14 +764,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Instead of bollards, look for vertical orange boards with three black circles."
     },
     {
       "id": "cr-dq4a",
       "step": 0,
       "order": 15,
       "family": "other",
-      "title": "Electricity counters in Costa Rica are circular and often…",
+      "title": "Electricity meter: round, big metal box beside",
       "text": [
         "Electricity counters in Costa Rica are circular and often have a big metal box alongside them.",
         "NOTE: Circular counters may be found in other North American countries, most notably Mexico."
@@ -724,14 +814,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round electricity meters, often with a large metal box next to them. Mexico and other North American countries have round meters too.",
+      "sameAs": [
+        "MX"
+      ]
     },
     {
       "id": "cr-gY2v",
       "step": 0,
       "order": 16,
       "family": "other",
-      "title": "Imperial beer ads with its black eagle mascot are a common…",
+      "title": "Ads: beer with black eagle mascot",
       "text": [
         "Imperial beer ads with its** black eagle mascot** are a common sight in Costa Rica."
       ],
@@ -770,7 +864,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ads for a beer with a black eagle mascot are common."
     },
     {
       "id": "cr-OMhy",
@@ -778,7 +873,7 @@
       "order": 0,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: The provinces are sometimes written on signs",
+      "title": "Provinces: names sometimes on signs",
       "text": [
         "The provinces are sometimes written on signs, so they are useful to know. We will also refer to them in the clues below."
       ],
@@ -798,14 +893,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Province names are sometimes written on signs, so it helps to know them."
     },
     {
       "id": "cr-O51t",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Each province has their own provincial flag",
+      "title": "Flags: each province has its own flag",
       "text": [
         "Each province has their own provincial flag."
       ],
@@ -816,7 +912,8 @@
           "src": "https://www.plonkit.net/images/costa-rica/cr_flags",
           "path": "cr/61a653dc22f6.webp",
           "width": 800,
-          "height": 775
+          "height": 775,
+          "dupeOf": "b0abb50ae02c"
         }
       ],
       "locations": [],
@@ -825,14 +922,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Every province has its own flag, which you may see on buildings."
     },
     {
       "id": "cr-ylQi",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Area codes are moderately useful to learn for Costa Rica",
+      "title": "Phone numbers: area codes moderately useful",
       "text": [
         "Area codes are moderately useful to learn for Costa Rica."
       ],
@@ -852,14 +950,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes help a bit with locating a round. Worth learning if you want extra detail."
     },
     {
       "id": "cr-SD0q",
       "step": 1,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Poles are sometimes marked with large black or white…",
+      "title": "Pole: large black or white stickers with numbers",
       "text": [
         "Poles are sometimes marked with large [black](https://maps.app.goo.gl/VcCnYBtpTctWDzPj8) or [white](https://maps.app.goo.gl/BLrafkVmtcoLRzqMA) stickers, containing multiple lines of text. The **first digit **of the topmost number is province-specific.",
         "_For more specific information, please see this research _[document](https://docs.google.com/presentation/d/1v0JPX6oGBOsDQ8x68jGbO3LpWcwU9UcNn9GV3bcwW1M/edit?slide=id.g3790a800eb2_0_129#slide=id.g3790a800eb2_0_129)_ created by L’Heureux Traité._"
@@ -882,14 +981,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles sometimes carry big black or white stickers with several lines of text. The first digit of the top number tells you the province."
     },
     {
       "id": "cr-EymR",
       "step": 1,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Asymmetrical pole tops with one insulator on one side of…",
+      "title": "Pole: one insulator one side, two on the other",
       "text": [
         "Asymmetrical pole tops with one insulator on one side of the pole and two on the other are found in and around San José.",
         "NOTE: Fully asymmetrical pole tops with all insulators on one side of the pole can be found all across the country."
@@ -932,14 +1032,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with one insulator on one side and two on the other are found around the capital. Poles with all insulators on one side are found across the country."
     },
     {
       "id": "cr-RSLp",
       "step": 1,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Pole attachments consisting of numbers made out of wires…",
+      "title": "Pole: numbers made of wire",
       "text": [
         "Pole attachments consisting of numbers made out of wires are found in central Alajuela and over the border in Heredia province."
       ],
@@ -981,14 +1082,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pole attachments shaped like numbers made of wire are found in central Alajuela and over the border in Heredia."
     },
     {
       "id": "cr-3jYU",
       "step": 1,
       "order": 7,
       "family": "pole",
-      "title": "Pole: White pole plates with black lettering are specific to the…",
+      "title": "Pole: white plate with black letters",
       "text": [
         "**White pole plates** with black lettering are specific to the Greater Metropolitan Area. They are usually attached to the pole using metal bands, although these may sometimes be [missing](https://maps.app.goo.gl/QbxrouQ556tLVWo29)."
       ],
@@ -1029,14 +1131,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White pole plates with black lettering are specific to the Greater Metropolitan Area. They are usually held on by metal bands, though sometimes missing."
     },
     {
       "id": "cr-hidd",
       "step": 1,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Usually blue lettering forming a P-XXXXX code with or…",
+      "title": "Pole: blue P-XXXXX code",
       "text": [
         "Usually blue lettering forming a P-XXXXX code with or without the accompanying white background can be found in western Cartago province."
       ],
@@ -1078,14 +1181,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue lettering forming a P-XXXXX code, with or without a white background, is found in western Cartago province."
     },
     {
       "id": "cr-B7ks",
       "step": 1,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Small black stickers with a QR code on the bottom can be…",
+      "title": "Pole: small black stickers with a QR code",
       "text": [
         "Small black stickers with a **QR code** on the bottom can be seen around Corralillo, south of San José."
       ],
@@ -1127,14 +1231,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small black stickers with a QR code at the bottom appear around Corralillo, south of San José."
     },
     {
       "id": "cr-8lrg",
       "step": 1,
       "order": 10,
       "family": "pole",
-      "title": "Pole: Yellow pole paint that is tall and has 3 sections with…",
+      "title": "Pole: tall yellow paint, 3 numbered sections",
       "text": [
         "Yellow pole paint that is** tall** and has **3 sections** with numbers is mainly found in Puntarenas and southern Alajuela provinces."
       ],
@@ -1176,14 +1281,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall yellow pole paint divided into three sections with numbers, mainly in Puntarenas and southern Alajuela."
     },
     {
       "id": "cr-RSDA",
       "step": 1,
       "order": 11,
       "family": "pole",
-      "title": "Pole: Yellow pole paint that is shorter and contains all the…",
+      "title": "Pole: short yellow paint",
       "text": [
         "Yellow pole paint that is **shorter **and contains all the numbers **without dividing lines** is mainly found in Guanacaste and northwestern Alajuela provinces."
       ],
@@ -1225,14 +1331,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Shorter yellow pole paint with all the numbers and no dividing lines, mainly in Guanacaste and northwestern Alajuela."
     },
     {
       "id": "cr-FAHB",
       "step": 1,
       "order": 12,
       "family": "pole",
-      "title": "Pole: Yellow pole paint divided into 2 sections with horizontal…",
+      "title": "Pole: yellow paint, 2 sections",
       "text": [
         "Yellow pole paint divided into** 2 sections** with** horizontal characters** at the **bottom **are almost unique to southern Alajuela province.",
         "NOTE: You can find 2 sectioned yellow pole paint without the horizontal characters at the bottom almost everywhere in Costa Rica."
@@ -1275,14 +1382,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow pole paint in two sections with horizontal characters at the bottom is almost only found in southern Alajuela. Two sections without the horizontal characters are found almost everywhere."
     },
     {
       "id": "cr-zf4y",
       "step": 1,
       "order": 13,
       "family": "pole",
-      "title": "Pole: These black pole stickers with yellow lettering",
+      "title": "Pole: black sticker, yellow letters, low",
       "text": [
         "These black pole stickers with **yellow lettering**, located near the bottom of the pole, are limited to western Guanacaste province and the Nicoya peninsula."
       ],
@@ -1324,14 +1432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black pole stickers with yellow lettering, low on the pole, are only in western Guanacaste and the Nicoya peninsula."
     },
     {
       "id": "cr-gPNt",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: North of the mountains lie the largely flat Caribbean…",
+      "title": "Landscape: flat lowlands, grey dirt",
       "text": [
         "North of the mountains lie the largely flat Caribbean **Lowlands**, characterised by extensive agriculture, grey dirt and a good number of straight roads. Although overcast coverage is common in this area, some locations can be rather [sunny](https://maps.app.goo.gl/N4eAcvDuwTzWmg4n7)."
       ],
@@ -1370,14 +1479,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "North of the mountains the Caribbean lowlands are largely flat, with lots of farming, grey dirt and straight roads. Overcast is common but some places are sunny."
     },
     {
       "id": "cr-Hh2x",
       "step": 1,
       "order": 16,
       "family": "coverage",
-      "title": "Coverage: A lot of the coverage in western Costa Rica was captured…",
+      "title": "Coverage: dry-season shots in the west",
       "text": [
         "A lot of the coverage in western Costa Rica was captured during the **dry season**."
       ],
@@ -1416,14 +1526,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A lot of the western coverage was taken in the dry season, so it looks drier and browner."
     },
     {
       "id": "cr-ATZk",
       "step": 1,
       "order": 17,
       "family": "other",
-      "title": "Most of the banana plantations are found in Limón province",
+      "title": "Plants: banana plantations in the east",
       "text": [
         "Most of the **banana **plantations are found in Limón province.",
         "NOTE: Wild banana plants and planted bananas in gardens are found throughout most of the country."
@@ -1464,14 +1575,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most banana plantations are in Limón province in the east. Wild bananas and garden bananas are found almost everywhere."
     },
     {
       "id": "cr-mSOa",
       "step": 1,
       "order": 18,
       "family": "vegetation",
-      "title": "Vegetation: The majority of oil palm plantations are found along the…",
+      "title": "Plants: oil palm plantations on the coast",
       "text": [
         "The majority of **oil palm** plantations are found along the coast in Puntarenas province. A few smaller plantations are located in Limón province. ",
         "NOTE: A few oil palms can be found here and there throughout the country, especially on the east coast but they’re not part of any plantations."
@@ -1512,14 +1624,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most oil palm plantations are along the coast of Puntarenas province, with a few smaller ones in Limón. Single oil palms appear all over, especially on the east coast."
     },
     {
       "id": "cr-WEnx",
       "step": 1,
       "order": 19,
       "family": "other",
-      "title": "Pineapple plantations can be seen in western Limón province",
+      "title": "Plants: pineapple plantations",
       "text": [
         "**Pineapple **plantations can be seen in western Limón province, northern Alajuela province as well as around the town of Buenos Aires in Puntarenas province."
       ],
@@ -1559,14 +1672,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pineapple plantations are in western Limón, northern Alajuela, and around Buenos Aires in Puntarenas."
     },
     {
       "id": "cr-j1NK",
       "step": 1,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: Sugarcane plantations can be found in multiple areas across…",
+      "title": "Plants: sugarcane, silvery tufts in the south",
       "text": [
         "**Sugarcane **plantations can be found in multiple areas across the country, but the major areas are usually distinguishable based on landscape. In the southern area around San Isidro de El General and Buenos Aires you can find sugarcane plantations in [bloom](https://maps.app.goo.gl/j6rWvHbxbdmVnqwRA) with silvery tufts of strands at the top of the plants."
       ],
@@ -1605,14 +1719,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sugarcane is grown in several areas. In the south, around San Isidro de El General and Buenos Aires, it often flowers with silvery tufts on top."
     },
     {
       "id": "cr-AMIc",
       "step": 1,
       "order": 21,
       "family": "other",
-      "title": "Rice fields are mostly found south of the town of Bagaces…",
+      "title": "Fields: rice paddies with raised edges",
       "text": [
         "**Rice **fields are mostly found south of the town of Bagaces in Guanacaste province. Some fields are harvested or just recently planted but can be recognized by the [raised edges](https://maps.app.goo.gl/6mzgeZSYFtH7G2Nt8) around the paddies."
       ],
@@ -1652,14 +1767,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rice fields are mostly south of Bagaces in Guanacaste. Even harvested or newly planted ones show raised edges around the paddies."
     },
     {
       "id": "cr-Y5zz",
       "step": 1,
       "order": 22,
       "family": "other",
-      "title": "The majority of coffee plantations are located throughout…",
+      "title": "Plants: coffee plantations in the central valley",
       "text": [
         "The majority of **coffee **plantations are located throughout the central valley."
       ],
@@ -1698,14 +1814,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most coffee plantations are throughout the central valley."
     },
     {
       "id": "cr-gRxp",
       "step": 1,
       "order": 23,
       "family": "other",
-      "title": "Cassava plantations are most commonly found in western…",
+      "title": "Plants: cassava plantations in the east",
       "text": [
         "**Cassava **plantations are most commonly found in western Limón province."
       ],
@@ -1745,14 +1862,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cassava plantations are most common in western Limón province."
     },
     {
       "id": "cr-0aiX",
       "step": 1,
       "order": 24,
       "family": "other",
-      "title": "Teak is recognisable for their tall straight trunks and…",
+      "title": "Trees: teak with tall trunks",
       "text": [
         "**Teak **is recognisable for their tall straight trunks and round glossy, yellow-green leaves and is most common in Guanacaste."
       ],
@@ -1792,14 +1910,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Teak has tall straight trunks and round, glossy, yellow-green leaves, and is most common in Guanacaste."
     },
     {
       "id": "cr-yCjN",
       "step": 1,
       "order": 25,
       "family": "vegetation",
-      "title": "Vegetation: Guanacaste trees can be recognised by their thick trunk and…",
+      "title": "Trees: thick trunk, big umbrella crown",
       "text": [
         "**Guanacaste trees **can be recognised by their thick trunk and characteristically large, umbrella-shaped crown. They are mostly seen in the eponymous Guanacaste province."
       ],
@@ -1839,14 +1958,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guanacaste trees have thick trunks and a large umbrella-shaped crown. They are mostly seen in Guanacaste province."
     },
     {
       "id": "cr-VtdW",
       "step": 1,
       "order": 26,
       "family": "vegetation",
-      "title": "Vegetation: Mainly growing along the southern coast",
+      "title": "Palms: upward leaves that droop slightly",
       "text": [
         "Mainly growing along the southern coast, **Attalea palms** can be recognised by the upwards facing leaves that droop slightly."
       ],
@@ -1885,14 +2005,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Attalea palms have upward-pointing leaves that droop a little. They grow mainly along the southern coast."
     },
     {
       "id": "cr-64Q4",
       "step": 1,
       "order": 27,
       "family": "vegetation",
-      "title": "Vegetation: Macaw palms are common in western Costa Rica and can be…",
+      "title": "Palms: round crown, messy bunches, spiky trunk",
       "text": [
         "**Macaw palms** are common in western Costa Rica and can be recognised by the long and disheveled looking broods that form an almost round crown. They also usually have a spiky trunk as well."
       ],
@@ -1931,14 +2052,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Macaw palms are common in the west, with long, messy-looking leaf clusters forming a nearly round crown and usually a spiky trunk."
     },
     {
       "id": "cr-fu5H",
       "step": 1,
       "order": 28,
       "family": "other",
-      "title": "Dark volcanic rocks can be found in most of central Costa…",
+      "title": "Rocks: dark volcanic rocks",
       "text": [
         "Dark **volcanic rocks** can be found in most of central Costa Rica, but are more common around Guapiles, Limón Province and around the Miravalles Volcano on the border of Alajuela and Guanacaste provinces."
       ],
@@ -1978,14 +2100,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dark volcanic rocks are found in much of central Costa Rica, and more so around Guápiles in Limón and around the Miravalles Volcano."
     },
     {
       "id": "cr-1dUl",
       "step": 1,
       "order": 30,
       "family": "other",
-      "title": "Taxis in Costa Rica are red",
+      "title": "Taxis: red with yellow triangles",
       "text": [
         "Taxis in Costa Rica are [red](https://maps.app.goo.gl/inEA3C7FKWcQ1Sqq5), featuring yellow triangles on the sides and top containing the city/town name as well as a letter code denoting the province."
       ],
@@ -2005,14 +2128,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Taxis are red with yellow triangles on the sides and roof showing the town name and a letter code for the province."
     },
     {
       "id": "cr-AOrt",
       "step": 1,
       "order": 31,
       "family": "landscape",
-      "title": "Landscape: San José is the capital and by far the largest urban area…",
+      "title": "City: valley, inclines, taller buildings",
       "text": [
         "**San José** is the capital and by far the largest urban area in Costa Rica. Situated in a valley between multiple mountains, the roads have a noticeable incline. You will see many suburban neighbourhoods and [taller buildings](https://maps.app.goo.gl/cJGHc42e3oXrugMK8) than anywhere else in the country."
       ],
@@ -2052,14 +2176,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital sits in a valley between mountains, so roads climb and dip. You see lots of suburbs and the tallest buildings in the country."
     },
     {
       "id": "cr-7Mg2",
       "step": 1,
       "order": 32,
       "family": "vegetation",
-      "title": "Vegetation: Simple fences made of irregular wooden branches or logs are…",
+      "title": "Fences: rough wooden branch or log fences",
       "text": [
         "Simple fences made of irregular wooden branches or logs are found all over Costa Rica but much more prevalent in the west, compared to the planted tree rows or spiked concrete variants more common elsewhere."
       ],
@@ -2098,14 +2223,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Simple fences made of irregular branches or logs are found everywhere but much more in the west. Elsewhere, planted tree rows or spiked concrete fences are more common."
     },
     {
       "id": "cr-adoV",
       "step": 1,
       "order": 33,
       "family": "other",
-      "title": "Larger irrigation canals exist in the area south of Bagaces…",
+      "title": "Canals: large irrigation canals",
       "text": [
         "Larger irrigation canals exist in the area south of Bagaces and Cañas in Guanacaste province."
       ],
@@ -2145,14 +2271,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Larger irrigation canals are found south of Bagaces and Cañas in Guanacaste province."
     },
     {
       "id": "cr-4La3",
       "step": 1,
       "order": 34,
       "family": "architecture",
-      "title": "Architecture: Houses on stilts are mostly found on the northeastern coast",
+      "title": "Houses: on stilts, northeast coast",
       "text": [
         "Houses on stilts are mostly found on the northeastern coast."
       ],
@@ -2191,14 +2318,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses raised on stilts are mostly found on the northeastern coast."
     },
     {
       "id": "cr-4M9N",
       "step": 1,
       "order": 35,
       "family": "car",
-      "title": "Google car: The antenna can occasionally be seen folded down",
+      "title": "Google car: antenna folded down",
       "text": [
         "The antenna can occasionally be seen **folded down**, predominantly in the north and northeast of the country."
       ],
@@ -2237,7 +2365,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The antenna is occasionally folded down, mostly in the north and northeast."
     },
     {
       "id": "cr-RsZ0",
@@ -2245,7 +2374,7 @@
       "order": 0,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The entire municipality of San José consistently uses these…",
+      "title": "Street sign: green with a white emblem box",
       "text": [
         "The entire municipality of San José consistently uses these **green **street signs with a **white rectangle** containing an emblem. Calle/Avenida streets are numerically ordered, increasing from downtown outwards."
       ],
@@ -2284,14 +2413,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital municipality consistently uses green street signs with a white rectangle holding an emblem. Calle and Avenida numbers increase from downtown outwards."
     },
     {
       "id": "cr-Vms6",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "There are only a few train tracks in Costa Rica",
+      "title": "Railways: only a few lines",
       "text": [
         "There are only a few train tracks in Costa Rica. A few lines exist in the Greater Metropolitan Area, from which they go to Puntarenas in the west, and through Turrialba to Siquirres in the east, where it further continues southeast to Limón and to [Patio San Cristobal](https://maps.app.goo.gl/UwTxj8noX6TYdcKu7) to the northwest."
       ],
@@ -2330,14 +2460,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "There are only a few train tracks: some in the Greater Metropolitan Area, one to the west coast, and one east through Turrialba to Siquirres, continuing to Limón and the northwest."
     },
     {
       "id": "cr-kDJo",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "The only concrete highways are the eastern stretch of Ruta…",
+      "title": "Highways: only two concrete stretches",
       "text": [
         "The only concrete highways are the eastern stretch of Ruta Nacional 18, and the divided Pan-American Highway ([RN 1](https://maps.app.goo.gl/mNZWwCKic8Ue2BXZ7)) from Liberia to the intersection with RN 18."
       ],
@@ -2376,14 +2507,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only concrete highways are the eastern stretch of Ruta 18 and the divided Pan-American Highway (Ruta 1) from Liberia to Ruta 18."
     },
     {
       "id": "cr-zTr2",
       "step": 2,
       "order": 3,
       "family": "vegetation",
-      "title": "Vegetation: Another major divided highway is the RN 32 from the…",
+      "title": "Highway: divided road through lush flat forest",
       "text": [
         "Another major divided highway is the RN 32 from the intersection with RN 4 to Limón on the Caribbean coast. The road passes through lush forests in the generally flat Northern lowlands. ",
         "NOTE: Aside from the stretch of the RN 1 with concrete pavement, all other major divided highways are in close proximity to San José."
@@ -2423,14 +2555,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The RN 32 is a major divided highway from the junction with RN 4 to Limón on the Caribbean coast, through lush forests in the flat northern lowlands. Other divided highways are near the capital."
     },
     {
       "id": "cr-jFoY",
       "step": 2,
       "order": 4,
       "family": "bollard",
-      "title": "Bollard: From the “Route 32 Toll” close to the San José and Heredia…",
+      "title": "Bollard: yellow, between the centre lines",
       "text": [
         "From the “Route 32 Toll” close to the San José and Heredia border until where it intersects RN 4 west of Guapiles, the road uses yellow bollards placed between the centre road lines."
       ],
@@ -2471,14 +2604,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "From the Route 32 toll near the San José and Heredia border to the junction with RN 4 west of Guápiles, yellow bollards sit between the centre lines."
     },
     {
       "id": "cr-Rg9U",
       "step": 2,
       "order": 5,
       "family": "other",
-      "title": "A yellow follow car with two front windows can be seen…",
+      "title": "Follow car: yellow with two front windows",
       "text": [
         "A** yellow follow car** with two front windows can be seen trailing the Google truck on RN 2 east of Palmar Norte and halfway up to Buenos Aires. The **river valley** also makes this section of road unique."
       ],
@@ -2517,14 +2651,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A yellow follow car with two front windows trails the Google truck on RN 2 east of Palmar Norte, halfway to Buenos Aires. The river valley is also distinctive."
     },
     {
       "id": "cr-yFUc",
       "step": 2,
       "order": 6,
       "family": "other",
-      "title": "Wind turbines are found in a few clusters",
+      "title": "Landmarks: wind turbine clusters",
       "text": [
         "**Wind turbines** are found in a few clusters, mainly in Guanacaste province, but also [southwest of Cartago](https://maps.app.goo.gl/kinQ4DrYnX1DDAE78), over the province border in San José province. In Guanacaste, you’ll find them around [La Fortuna](https://maps.app.goo.gl/UmgV5e75VdZt6U4BA), south and northwest of [Tilarán](https://maps.app.goo.gl/DsX2L86PBvAD4EYG6), around [Santa Cruz](https://maps.app.goo.gl/az1pUNDBrfYmXzYg6), and quite far north of Liberia around [road 917](https://maps.app.goo.gl/tKdvSioXF9jpiSbP6)."
       ],
@@ -2563,14 +2698,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wind turbines stand in a few clusters, mainly in Guanacaste (La Fortuna, Tilarán, Santa Cruz, north of Liberia) and southwest of Cartago."
     },
     {
       "id": "cr-zp0y",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Bright white soil roads likely place you just north of the…",
+      "title": "Road: bright white soil",
       "text": [
         "Bright white soil roads likely place you just north of the city of Liberia, Guanacaste province."
       ],
@@ -2609,14 +2745,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads with bright white soil probably put you just north of Liberia in Guanacaste."
     },
     {
       "id": "cr-9Slh",
       "step": 2,
       "order": 8,
       "family": "coverage",
-      "title": "Coverage: Late evening into night coverage can be found in the town…",
+      "title": "Coverage: late evening and night shots",
       "text": [
         "Late evening into night coverage can be found in the town of San Vito."
       ],
@@ -2655,14 +2792,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Late evening and night coverage is found in the southern town of San Vito."
     },
     {
       "id": "cr-GaPT",
       "step": 2,
       "order": 9,
       "family": "other",
-      "title": "Tuk-Tuks can be seen around Puerto Viejo de Talamanca on…",
+      "title": "Vehicles: tuk-tuks on the coast",
       "text": [
         "Tuk-Tuks can be seen around Puerto Viejo de Talamanca on the northeast coast, and less often around Nosara on the west coast."
       ],
@@ -2701,14 +2839,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tuk-tuks are seen around Puerto Viejo de Talamanca on the northeast coast, and less often around Nosara on the west coast."
     },
     {
       "id": "cr-sUXT",
       "step": 2,
       "order": 10,
       "family": "other",
-      "title": "You can spot Rainbolt himself",
+      "title": "Filming crew: black Toyota with camera crew",
       "text": [
         "You can spot [Rainbolt](https://en.wikipedia.org/wiki/Trevor_Rainbolt) himself, or the **filming crew** atop a **black Toyota** around the town of La Fortuna, Alajuela Province."
       ],
@@ -2747,14 +2886,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A well-known streamer, or his film crew on top of a black Toyota, can be spotted around La Fortuna in Alajuela."
     },
     {
       "id": "cr-aI96",
       "step": 2,
       "order": 11,
       "family": "car",
-      "title": "Google car: Southwest of La Fortuna",
+      "title": "Backpack: downhill stair trail to a waterfall",
       "text": [
         "Southwest of La Fortuna, near the Fortuna Waterfall, you’ll find a Generation 4 trekker taken by Rainbolt on a downhill trail with many stair segments. It concludes at a [waterfall](https://maps.app.goo.gl/NTT52QT14FChn7Cc9). You can recognise it from his **brown hair** or the **camera crew** following him.",
         "West of La Fortuna, in the Puentes Colgantes Arenal, Mistico Park, there is another trekker on a** tropical trail**, taken by a **black-haired** individual."
@@ -2794,14 +2934,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near La Fortuna, a Gen 4 backpack walk goes down a trail with many stairs to a waterfall, with a brown-haired walker and a camera crew. Another trail at a nearby park has a black-haired walker."
     },
     {
       "id": "cr-H7Rf",
       "step": 2,
       "order": 13,
       "family": "car",
-      "title": "Google car: Generation 3 coverage in Costa Rica is very limited",
+      "title": "Google car: Gen 3 only backpacks and a boat",
       "text": [
         "Generation 3 coverage in Costa Rica is **very limited**, consisting of numerous trekkers in and around San José and by the northern west coast. There is also coverage on [Cocos Island](https://goo.gl/maps/RUkuKe4mafK2gbss9), located 500 kilometres southwest of the coast, as well as a boat trekker around [Caño Island](https://goo.gl/maps/CabJDTQ4Cox9ycSQ6) by the southern west coast."
       ],
@@ -2822,14 +2963,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Older Gen 3 coverage is very limited: backpack walks around the capital and the northern west coast, Cocos Island, and a boat near Caño Island."
     },
     {
       "id": "cr-nmwZ",
       "step": 2,
       "order": 14,
       "family": "coverage",
-      "title": "Coverage: Beach trekkers are mostly found on the northern west coast",
+      "title": "Coverage: beach backpack walks",
       "text": [
         "**Beach trekkers** are mostly found on the northern west coast, but can also be found [west of San José](https://maps.app.goo.gl/W1ft4gW7uTFt9zG3A#extra%5Btags%5D=Beach&extra%5BloadMode%5D=latLng) and on [Cocos Island](https://maps.app.goo.gl/gHZvJaSJNKVMQfFL6#extra%5Btags%5D=Cocos+Forest&extra%5Btags%5D=Beach&extra%5BloadMode%5D=latLng)."
       ],
@@ -2868,14 +3010,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Beach backpack walks are mostly on the northern west coast, but also west of San José and on Cocos Island."
     },
     {
       "id": "cr-nIlI",
       "step": 2,
       "order": 15,
       "family": "vegetation",
-      "title": "Vegetation: Most rural forest trekkers are found in central Costa Rica",
+      "title": "Coverage: forest backpack walks in the middle",
       "text": [
         "Most rural **forest trekkers** are found in central Costa Rica. [Cocos Island](https://maps.app.goo.gl/cFS241KcJxpjsFP87#extra%5Btags%5D=Cocos+Forest&extra%5Btags%5D=forest&extra%5BloadMode%5D=latLng) also mainly consists of dense tropical forests."
       ],
@@ -2914,14 +3057,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most rural forest backpack walks are in central Costa Rica. Cocos Island is mainly dense tropical forest too."
     },
     {
       "id": "cr-4854",
       "step": 2,
       "order": 16,
       "family": "coverage",
-      "title": "Coverage: Urban coverage is mainly found in and around San José and…",
+      "title": "Coverage: city streets in a few places",
       "text": [
         "**Urban coverage** is mainly found in and around San José and [Cartago](https://maps.app.goo.gl/pJVj27i5NueHCWBC7#extra%5Btags%5D=Cartago&extra%5Btags%5D=aigen&extra%5Btags%5D=urban&extra%5BloadMode%5D=latLng), but also exists in [Liberia](https://maps.app.goo.gl/FZAENyiYieA99yqi7#extra%5Btags%5D=Costa+Rica&extra%5Btags%5D=pinpointable&extra%5Btags%5D=urban&extra%5BloadMode%5D=latLng) and [Filadelfia de Guanacaste](https://maps.app.goo.gl/dphFESXufA8G7wwE7#extra%5Btags%5D=Filadelfia+park&extra%5Btags%5D=urban&extra%5BloadMode%5D=latLng)."
       ],
@@ -2960,14 +3104,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "City coverage is mainly in and around San José and Cartago, but also Liberia and Filadelfia."
     },
     {
       "id": "cr-TnhG",
       "step": 2,
       "order": 18,
       "family": "other",
-      "title": "The Children’s Museum in northern San José can be…",
+      "title": "Landmark: museum with a castle-like exterior",
       "text": [
         "The Children’s Museum in northern San José can be recognised by its grand** castle-like** exterior."
       ],
@@ -3006,14 +3151,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Children's Museum in northern San José has a grand, castle-like building."
     },
     {
       "id": "cr-gY25",
       "step": 2,
       "order": 19,
       "family": "other",
-      "title": "Around the National Museum",
+      "title": "Landmark: wealthy homes and a small tower",
       "text": [
         "Around the National Museum, you can find several [wealthy-looking homes](https://maps.app.goo.gl/UPPchESTtJpkyJKr6), as well as a small tower built in a style resembling towers on medieval European fortresses."
       ],
@@ -3052,7 +3198,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around the National Museum you see several wealthy-looking homes and a small tower like those on medieval European fortresses."
     },
     {
       "id": "cr-iZh4",
@@ -3060,7 +3207,7 @@
       "order": 20,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: An orange pedestrian bridge can be found going over a major…",
+      "title": "Landmark: orange footbridge over a highway",
       "text": [
         "An **orange pedestrian bridge** can be found going over a major highway at Parque de la Paz in southeastern San José.",
         "While there is [coverage](https://maps.app.goo.gl/5jnT7JS5boCUVQTF8) throughout most of the park, you’re not likely to encounter anything but the bridge in a pinpointable map."
@@ -3101,14 +3248,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An orange pedestrian bridge crosses a major highway at Parque de la Paz in southeastern San José."
     },
     {
       "id": "cr-NyKR",
       "step": 2,
       "order": 21,
       "family": "other",
-      "title": "La Sabana Park has several sports facilities",
+      "title": "Park: large park with sports facilities",
       "text": [
         "La Sabana Park has several [sports facilities](https://maps.app.goo.gl/8WXHQxLkVboobUpB8), including the National Stadium of Costa Rica, located in the western part of the park."
       ],
@@ -3147,14 +3295,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "La Sabana Park has several sports facilities, including the National Stadium, in its western part."
     },
     {
       "id": "cr-gTTP",
       "step": 2,
       "order": 22,
       "family": "architecture",
-      "title": "Architecture: The University of Costa Rica",
+      "title": "Campus: busy, green, medium buildings",
       "text": [
         "The University of Costa Rica, in eastern San José, is fairly busy, with a lot of greenery and various medium-sized buildings strewn across the campus."
       ],
@@ -3193,14 +3342,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The University of Costa Rica in eastern San José is busy and green, with many medium-sized buildings across the campus."
     },
     {
       "id": "cr-Gv5P",
       "step": 2,
       "order": 23,
       "family": "other",
-      "title": "Palacio de los Deportes is a stadium in Heredia",
+      "title": "Stadium: boxy, red, blue and white",
       "text": [
         "Palacio de los Deportes is a stadium in Heredia, northwest of San José, which can be recognised by its boxy look combined with the red, blue and white colour scheme."
       ],
@@ -3239,14 +3389,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A stadium in Heredia, northwest of San José, with a boxy shape and a red, blue and white colour scheme."
     },
     {
       "id": "cr-zwKu",
       "step": 2,
       "order": 24,
       "family": "coverage",
-      "title": "Coverage: At the Juan Santamaría International Airport you can find…",
+      "title": "Coverage: backpack on a four-lane road",
       "text": [
         "At the Juan Santamaría International Airport you can find the trekker walking in the middle of a major four-lane road. There is also coverage just [outside the airport terminal](https://maps.app.goo.gl/d9V4x5cF5arGJQvK9)."
       ],
@@ -3285,14 +3436,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "At the main airport the backpack walks in the middle of a big four-lane road. There is also coverage just outside the terminal."
     },
     {
       "id": "cr-q9ep",
       "step": 2,
       "order": 25,
       "family": "coverage",
-      "title": "Coverage: In Centro Recreativo Bosque de la Hoja",
+      "title": "Coverage: three dogs follow in pine forest",
       "text": [
         "In Centro Recreativo Bosque de la Hoja, just east of San José de la Montaña, you can see the trekker being followed by **three dogs** through a pine forest."
       ],
@@ -3331,14 +3483,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In a recreation centre just east of San José de la Montaña, three dogs follow the backpack through a pine forest."
     },
     {
       "id": "cr-CAr4",
       "step": 2,
       "order": 26,
       "family": "other",
-      "title": "In Recreational Park Los Manantiales",
+      "title": "Road: sugarcane and dracaena along the roadside",
       "text": [
         "In Recreational Park Los Manantiales, just southwest of Poás, you can find a road lined with sugarcane plantations and [cornstalk dracaena](https://en.wikipedia.org/wiki/Dracaena_fragrans) plants."
       ],
@@ -3377,14 +3530,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In a recreation park southwest of Poás, a road is lined with sugarcane plantations and cornstalk dracaena plants."
     },
     {
       "id": "cr-DdPx",
       "step": 2,
       "order": 27,
       "family": "other",
-      "title": "At the entrance to Laguna de Fraijanes Recreational Park…",
+      "title": "Gate: big orange wooden gate at park entrance",
       "text": [
         "At the entrance to Laguna de Fraijanes Recreational Park you can find a large **orange wooden gate** separating the road from a parking lot. As the name suggests, the park itself is situated around a [small lagoon](https://maps.app.goo.gl/q9T1iTzTioFFpaY48)."
       ],
@@ -3423,14 +3577,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "At the entrance to Laguna de Fraijanes park, a large orange wooden gate separates the road from a car park. The park surrounds a small lagoon."
     },
     {
       "id": "cr-GPIi",
       "step": 2,
       "order": 28,
       "family": "other",
-      "title": "The Cartago Municipal Museum can be recognised by its…",
+      "title": "Museum: palace-like front with a street railway",
       "text": [
         "The Cartago Municipal Museum can be recognised by its **palace-like facade** with a neatly planted garden in front, as well as the railway in the middle of the street in front of the museum."
       ],
@@ -3469,14 +3624,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Cartago Municipal Museum has a palace-like facade, a neat garden in front, and a railway in the middle of the street."
     },
     {
       "id": "cr-Z9ea",
       "step": 2,
       "order": 29,
       "family": "other",
-      "title": "The Ruins of Cartago is the remains of a large Catholic…",
+      "title": "Ruins: remains of a large church",
       "text": [
         "The **Ruins of Cartago** is the remains of a large Catholic church near the centre of the city. The POI is one of the first things to show up when you zoom into the city."
       ],
@@ -3515,14 +3671,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Ruins of Cartago are the remains of a large Catholic church near the city centre, and one of the first things to show up when you zoom into the city."
     },
     {
       "id": "cr-0DSE",
       "step": 2,
       "order": 30,
       "family": "other",
-      "title": "José Rafael “Fello” Meza Ivankovich Stadium in southern…",
+      "title": "Stadium: surrounded by dark blue walls",
       "text": [
         "José Rafael “Fello” Meza Ivankovich Stadium in southern Cartago can be recognised by the **dark blue walls** surrounding it."
       ],
@@ -3561,14 +3718,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A stadium in southern Cartago can be recognised by the dark blue walls around it."
     },
     {
       "id": "cr-h0O1",
       "step": 2,
       "order": 31,
       "family": "landscape",
-      "title": "Landscape: Costa Rica Institute of Technology can usually be…",
+      "title": "Campus: mountain range to the south and east",
       "text": [
         "Costa Rica Institute of Technology can usually be recognised by the **mountain range** which can be seen to the south and east."
       ],
@@ -3607,14 +3765,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Costa Rica Institute of Technology usually shows a mountain range to the south and east."
     },
     {
       "id": "cr-jSmB",
       "step": 2,
       "order": 32,
       "family": "landscape",
-      "title": "Landscape: By the entrance of Jardín Botanico Lankester",
+      "title": "Garden: bad dirt road, mountains, curvy paths",
       "text": [
         "By the entrance of Jardín Botanico Lankester, located southeast of Cartago, you can find a poorly maintained dirt road, surrounded by mountains in the distance, as well as a [sign](https://maps.app.goo.gl/ieKVnVBKyytKZxRw5#extra%5Btags%5D=aigen&extra%5Btags%5D=jardin&extra%5Btags%5D=pinpointable&extra%5Btags%5D=urban&extra%5BloadMode%5D=latLng) with the name of the garden.",
         "Within the garden itself you will find a plethora of different plants, with the [walkways](https://maps.app.goo.gl/ZeyMUPjpFPoufVLk9) having many soft curves, and almost never being straight."
@@ -3654,14 +3813,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "At the entrance of the Lankester botanical garden, southeast of Cartago, a poorly kept dirt road runs with mountains in the distance and a name sign. Inside, walkways curve softly and are almost never straight."
     },
     {
       "id": "cr-I7Hg",
       "step": 2,
       "order": 33,
       "family": "other",
-      "title": "The Punta Leona Resort",
+      "title": "Resort: red brick paving of Turkish shape",
       "text": [
         "The Punta Leona Resort, which can be found by the “Playa Mantas” POI, can be recognised by the **red brick pavement**, with the bricks having the same shape as you’ll commonly find in [Turkey](https://www.google.com/maps/@40.7468922,31.6196471,3a,48.1y,163.7h,64.62t/data=!3m6!1e1!3m4!1sxgSFnYGwZ7tHRph3WXoxAA!2e0!7i16384!8i8192?entry=ttu)."
       ],
@@ -3702,14 +3862,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Punta Leona Resort, near the Playa Mantas POI, has red brick paving with bricks shaped like those common in Turkey.",
+      "sameAs": [
+        "TR"
+      ]
     },
     {
       "id": "cr-2XHK",
       "step": 2,
       "order": 34,
       "family": "coverage",
-      "title": "Coverage: The coverage in Liberia can be recognised by a white…",
+      "title": "Coverage: white building with round windows",
       "text": [
         "The coverage in Liberia can be recognised by a white building with rounded windows having brown wooden window frames. This building can be seen on all coverage in the town."
       ],
@@ -3748,14 +3912,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Liberia, a white building with rounded windows and brown wooden frames appears in all the coverage."
     },
     {
       "id": "cr-J1g1",
       "step": 2,
       "order": 35,
       "family": "coverage",
-      "title": "Coverage: Most of the coverage in Filadelfia de Guanacaste was taken…",
+      "title": "Coverage: park edge with L-shaped red bricks",
       "text": [
         "Most of the coverage in Filadelfia de Guanacaste was taken on the edge of a park, with a distinct red brick pavement where the bricks are placed in the shape of an “L”."
       ],
@@ -3794,69 +3959,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/costa-rica",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "cr-lm-634017",
-      "step": 3,
-      "order": 0,
-      "family": "plate",
-      "title": "Plate: Costa Rica",
-      "text": [
-        "Costa Rican licence plates are typically short and white, with blue text, giving it a light blue tint through the blur.",
-        "Super useful for distinguishing Costa Rica from Panama."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ac68728c6eea",
-          "src": "https://learnablemeta.com/images/5431/1766260372854-i68.avif",
-          "path": "cr/ac68728c6eea.webp",
-          "width": 800,
-          "height": 800
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cr-lm-686066",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Alto",
-      "text": [
-        "Costa Rica, Guatemala, Panama and Mexico are the only countries using the word \"Alto\" on their stop signs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "413aafb15d0c",
-          "src": "https://learnablemeta.com/images/571/1769426404533-WrV.avif",
-          "path": "cr/413aafb15d0c.webp",
-          "width": 392,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GT",
-        "MX",
-        "PA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Most of the coverage in Filadelfia de Guanacaste is at the edge of a park, with red brick paving laid in L shapes."
     }
   ]
 }

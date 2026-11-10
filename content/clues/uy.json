@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: This is the stereotypical Uruguay round",
+      "title": "Landscape: grassland, gentle hills, overcast",
       "text": [
         "This is the stereotypical Uruguay round. The coverage often, but not always, features **overcast** weather. Most of the landscape consists of open grasslands with gentle hills. Occasionally, you might see separated tree plantations. Roads are generally in worse condition than in neighbouring countries."
       ],
@@ -63,14 +63,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Open grassland with gentle hills, often under overcast skies, with the odd block of planted trees. Roads are in worse shape than in neighbouring countries."
     },
     {
       "id": "uy-VOt5",
       "step": 0,
       "order": 2,
       "family": "plate",
-      "title": "Plate: Uruguayan licence plates are plain white with black…",
+      "title": "Plate: plain white, black characters",
       "text": [
         "Uruguayan **licence plates** are plain white with black characters.",
         "NOTE: Neighbouring Argentina also uses white licence plates, but they will have either a black dot in the middle or a blue bar at the top."
@@ -93,14 +94,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plain white plates with black characters. Argentine plates are also white but have a black dot in the middle or a blue bar on top.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentine plates have a black dot or a blue top bar"
+        }
+      ]
     },
     {
       "id": "uy-mv5R",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: Uruguay only has Generation 3 coverage",
+      "title": "Google car: black car, no antenna",
       "text": [
         "Uruguay only has Generation 3 coverage. Coverage was taken by a **black Google car** without an antenna.",
         "The car is [not always visible](https://goo.gl/maps/KnYb3vpU7r7n6sKi8).",
@@ -144,14 +152,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only older Gen 3 coverage, shot by a black car with no antenna. The car is not always visible. Argentina and Peru used the same car.",
+      "sameAs": [
+        "AR",
+        "PE"
+      ]
     },
     {
       "id": "uy-B0c6",
       "step": 0,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: In a lot of coverage",
+      "title": "Coverage: smudgy picture quality",
       "text": [
         "In a lot of coverage, the camera quality is somewhat **smudgy**.",
         "NOTE: This is significantly less common in Argentina."
@@ -193,7 +206,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Much of the coverage looks somewhat smudgy. Argentina has this much less often.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentine coverage is rarely smudgy"
+        }
+      ]
     },
     {
       "id": "uy-07Np",
@@ -201,7 +221,7 @@
       "order": 5,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Uruguay uses thick wooden signposts",
+      "title": "Direction sign: thick white wooden post",
       "text": [
         "Uruguay uses **thick wooden signposts**, which are typically painted white. They often have up to four rectangular notches at the back of the post.",
         "NOTE: Thick wooden signposts can also be seen in Bolivia."
@@ -236,7 +256,8 @@
           "src": "https://learnablemeta.com/images/611/WnNZj56xKalbigJu4kQu8DkquAGDEeKgiYbS.avif",
           "path": "uy/b82bcac81880.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "fe188c004075"
         }
       ],
       "locations": [
@@ -257,14 +278,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Thick wooden signposts, usually painted white, often with up to four rectangular notches at the back. Bolivia has thick wooden posts too.",
+      "sameAs": [
+        "BO"
+      ]
     },
     {
       "id": "uy-ZQG4",
       "step": 0,
       "order": 6,
       "family": "line",
-      "title": "Road line: Uruguay often has these triple road lines",
+      "title": "Road lines: yellow double with white dashes",
       "text": [
         "Uruguay often has these **triple road lines**, that consist of double yellow roadlines with white dashes in between. This is a design not seen anywhere else in the Americas."
       ],
@@ -291,14 +316,16 @@
           "src": "https://learnablemeta.com/images/311/6BMjzntlaIcOVgYXZeT6dTewLtVk0c2fkzN8.avif",
           "path": "uy/aa2b44be1d28.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "69d47df78eb2"
         },
         {
           "id": "16d1eb872238",
           "src": "https://learnablemeta.com/images/508/N0z6et65MFngBKdeKQhOuesj4XirPJRQIT6c.avif",
           "path": "uy/16d1eb872238.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "69d47df78eb2"
         },
         {
           "id": "399fc186ed7b",
@@ -312,7 +339,8 @@
           "src": "https://learnablemeta.com/images/863/JtNNC4fO2XvM4LHCOSVEENtJxXyYo5MKpQhJ.avif",
           "path": "uy/57964dace389.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "69d47df78eb2"
         }
       ],
       "locations": [
@@ -331,14 +359,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Triple road lines: a double yellow line with white dashes between. Not seen anywhere else in the Americas."
     },
     {
       "id": "uy-Z9bh",
       "step": 0,
       "order": 7,
       "family": "line",
-      "title": "Road line: You can also find two other",
+      "title": "Road lines: yellow-white or plain white",
       "text": [
         "You can also find two other, non-unique road line patterns:",
         "- Yellow-white lines (also found in Argentina)",
@@ -367,7 +396,8 @@
           "src": "https://learnablemeta.com/images/508/LYMItsfGS4ezqTTg6kuj0v2jmT1bbOF3XdwD.avif",
           "path": "uy/fce40be5f2f4.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "4ef6694c4efe"
         }
       ],
       "locations": [
@@ -388,14 +418,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two other patterns that are not unique: yellow-white lines (also in Argentina) and simple white lines (found in many places).",
+      "sameAs": [
+        "AR"
+      ]
     },
     {
       "id": "uy-Pveh",
       "step": 0,
       "order": 8,
       "family": "bollard",
-      "title": "Bollard: These white bollards, with one side often painted yellow,…",
+      "title": "Bollard: white post, one side yellow",
       "text": [
         "These **white bollards**, with one side often painted [yellow](https://goo.gl/maps/Tt64mBZvxz5qYZhv9), and **stone barriers**, are specific to Uruguay."
       ],
@@ -424,21 +458,24 @@
           "src": "https://learnablemeta.com/images/311/ZeiY17El9KeAIch20Tbe4crJhipbm4bYPvkU.avif",
           "path": "uy/8bf9d0e31f60.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "9faa6e872100"
         },
         {
           "id": "83a476b69492",
           "src": "https://learnablemeta.com/images/611/CLt3eFu2RX69XvEshHJjaHMtYksMvJKwnGXg.avif",
           "path": "uy/83a476b69492.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "9faa6e872100"
         },
         {
           "id": "0980989899c6",
           "src": "https://learnablemeta.com/images/739/YMoE1UA9a9TbFM0tYcatXeIgWhwJRSQWfAf1.avif",
           "path": "uy/0980989899c6.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "9faa6e872100"
         }
       ],
       "locations": [
@@ -457,14 +494,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White bollards, often with one side painted yellow, and stone barriers. Both are specific to this country."
     },
     {
       "id": "uy-0wFk",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Uruguay uses a handful of different utility poles",
+      "title": "Pole: trident, three upward insulators",
       "text": [
         "Uruguay uses a handful of different utility poles. One very common and useful one are the so-called **trident poles**, which get their name from their distinctive pole tops with three insulators that point upwards.",
         "NOTE: Similar trident poles can be found in the neighbouring Brazilian state of Rio Grande do Sul."
@@ -494,14 +532,16 @@
           "src": "https://learnablemeta.com/images/311/SzvKKXP3BRxwLrTfPWujeiWG2Zbl4qwK4PyR.avif",
           "path": "uy/db51eb6d8575.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "5e3be03d574c"
         },
         {
           "id": "99d93caf6710",
           "src": "https://learnablemeta.com/images/611/xvJNpisZnBsXwCGtoIXw4O75Mi5FnFMtd9wZ.avif",
           "path": "uy/99d93caf6710.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "5e3be03d574c"
         }
       ],
       "locations": [
@@ -520,14 +560,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very common pole with three insulators pointing up like a trident. The same type exists in the neighbouring Brazilian state of Rio Grande do Sul.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Only in the far south of Brazil, next to the border"
+        }
+      ]
     },
     {
       "id": "uy-cpJZ",
       "step": 0,
       "order": 10,
       "family": "pole",
-      "title": "Pole: You can also see a variety of other pole designs",
+      "title": "Pole: flat metal sheets top or square concrete",
       "text": [
         "You can also see a variety of other pole designs, including:",
         "- Round poles with a pole top consisting of **flat metal sheets**",
@@ -574,14 +621,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round poles topped with flat metal sheets, and square concrete poles, are both good clues. You may also see simple wooden poles with one insulator and, very rarely, Argentine-style poles.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentine poles are rare here and look different"
+        }
+      ]
     },
     {
       "id": "uy-HRMl",
       "step": 0,
       "order": 11,
       "family": "guardrail",
-      "title": "Guardrail: Uruguayan guardrails have a small",
+      "title": "Guardrail: small reflector, 3.5-sided support",
       "text": [
         "Uruguayan guardrails have a small, rectangular yellow or red reflector, which is the same as in Argentina. They can be differentiated by the shape of their [support](/images/uruguay/argentinauruguay_guardrailsupport.jpg).",
         "In Argentina, the supports are made up of three sides of a rectangle. Uruguayan supports have the same three sides, and additionally parts of the fourth side at the corners."
@@ -625,14 +679,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small rectangular yellow or red reflector, as in Argentina. Tell them apart by the support: Argentine ones have three sides of a rectangle, Uruguayan ones also have bits of the fourth side at the corners.",
+      "sameAs": [
+        "AR"
+      ],
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Support has exactly three sides of a rectangle"
+        }
+      ]
     },
     {
       "id": "uy-3qgY",
       "step": 0,
       "order": 12,
       "family": "other",
-      "title": "This green-painted stone kilometre marker is unique to…",
+      "title": "Kilometre marker: green-painted stone",
       "text": [
         "This **green-painted** stone kilometre marker is unique to Uruguay."
       ],
@@ -671,7 +735,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A stone kilometre marker painted green. Unique here."
     },
     {
       "id": "uy-rYkI",
@@ -679,7 +744,7 @@
       "order": 13,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Like most of Latin America",
+      "title": "Chevron: yellow with black arrows",
       "text": [
         "Like most of Latin America, chevrons are **yellow with black arrows**.",
         "NOTE: This is mostly useful to distinguish between Argentina, which uniquely uses chevrons that are white with red arrows."
@@ -728,14 +793,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow chevrons with black arrows, like most of Latin America. Useful mainly to rule out Argentina, which uses white with red arrows.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentine chevrons are white with red arrows"
+        }
+      ]
     },
     {
       "id": "uy-mVth",
       "step": 0,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: As mentioned before, most of Uruguay is slightly hilly,…",
+      "title": "Landscape: subtle hills, never flat",
       "text": [
         "As mentioned before, most of Uruguay is **slightly hilly**, even though the overall elevation is fairly low. Although it is by no means a mountainous country, roads generally have at least a slight incline.",
         "Take note that this hilliness is usually very subtle: don’t expect immense rolling hills in most of the country.",
@@ -778,14 +850,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the country is slightly hilly even though it's low. Roads usually have at least a slight incline, but the hills are subtle. If it's totally flat, think Argentina.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentine pampas can be completely flat"
+        }
+      ]
     },
     {
       "id": "uy-lQlm",
       "step": 0,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: In many parts of Uruguay",
+      "title": "Soil: reddish, light pink to deep red",
       "text": [
         "In many parts of Uruguay, you can find **reddish soil**. The tint can range from light pink (pictured here) to [deep red](https://goo.gl/maps/64EEWrb8oLht4QVB7).",
         "NOTE: This type of reddish soil is less common in the similar-looking parts of Argentina. Hence, it can be a good clue for Uruguay when you are faced with a tough decision.",
@@ -828,14 +907,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Reddish soil, from light pink to deep red, is common. It is rarer in similar parts of Argentina, so it helps in a tough call. White and brown soil also occurs, so its absence rules nothing out.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Reddish soil is less common there"
+        }
+      ]
     },
     {
       "id": "uy-gxV0",
       "step": 0,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: Many Uruguayan houses are made out of concrete",
+      "title": "Houses: boxy concrete, drab, flat roofs",
       "text": [
         "Many **Uruguayan houses** are made out of concrete, and are somewhat cube-shaped. Walls often have drab colours and tend to look weathered. Flat roofs are relatively common.",
         "NOTE: Architecture in Argentina often looks similar."
@@ -863,7 +949,8 @@
           "src": "https://learnablemeta.com/images/1072/ubQlE7zpMyaOL2hByPLNFPavUAGAgNxJytjZ.avif",
           "path": "uy/87c38fae0f4f.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "dc0ceb23cbbd"
         }
       ],
       "locations": [
@@ -884,14 +971,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many houses are cube-shaped concrete with drab, weathered colours and often flat roofs. Argentine houses often look similar.",
+      "sameAs": [
+        "AR"
+      ]
     },
     {
       "id": "uy-FChw",
       "step": 0,
       "order": 17,
       "family": "vegetation",
-      "title": "Vegetation: Occasionally, you might see palm trees",
+      "title": "Plants: short stocky palm trees",
       "text": [
         "Occasionally, you might see **palm trees**. These short and stocky species of palm tree are particularly common."
       ],
@@ -930,14 +1021,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Short, stocky palm trees are an occasional sight."
     },
     {
       "id": "uy-hQj8",
       "step": 0,
       "order": 18,
       "family": "other",
-      "title": "Cattle farming is an important part of Uruguay’s agriculture",
+      "title": "Landscape: lots of cattle",
       "text": [
         "**Cattle farming** is an important part of Uruguay’s agriculture. Cattle outnumber people four by one, so you will see a lot of them around in rural rounds."
       ],
@@ -976,14 +1068,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cattle outnumber people about four to one, so you see plenty of them in the countryside."
     },
     {
       "id": "uy-Ql63",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in Uruguay is somewhat limited",
+      "title": "Coverage: limited, mostly main roads",
       "text": [
         "**Coverage** in Uruguay is somewhat limited. The densest coverage is in the south, in and around Montevideo. Outside of this area, most coverage is confined to yellow roads. This makes **angle guessing** a powerful tool to potentially get very close guesses.",
         "For a zoomable overview of official street view coverage, [see this site](https://sv-map.netlify.app/#base=roadmap&cov=official&zoom=7&center=-32.46354529706703%2C-55.93139648437501)."
@@ -1004,14 +1097,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is thin. The densest is in the south around the capital; elsewhere it follows the yellow main roads, so guessing the road angle can get you very close."
     },
     {
       "id": "uy-8hZX",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Subtle differences in elevation can help when trying to…",
+      "title": "Landscape: tallest hills in two spots",
       "text": [
         "Subtle differences in **elevation** can help when trying to region-guess Uruguay.",
         "The highest hills are mostly concentrated around two areas:",
@@ -1035,14 +1129,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The highest hills are in two areas: near Minas, east of the capital, and north of Tacuarembó in the far north. Use subtle height differences to region-guess."
     },
     {
       "id": "uy-sGGa",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The landscape near the town of Minas is recognizable",
+      "title": "Landscape: tall hills, exposed rocks, bushland",
       "text": [
         "The landscape near the town of Minas is recognizable: some of the **tallest hills** in the country, with lots of **exposed rocks**, and often [heavy bushland vegetation](https://goo.gl/maps/1ZNebpfyoL27cq6C9).",
         "The image shown here is a fairly extreme example of this landscape, used for illustration purposes – usually it is more subtle. However, the exposed rock is always a good clue.",
@@ -1071,7 +1166,8 @@
           "src": "https://learnablemeta.com/images/664/yYxprcwPzORIBcoeHwc02EYMJIa1Amm0oWPk.avif",
           "path": "uy/c85bbfde6406.webp",
           "width": 1000,
-          "height": 488
+          "height": 488,
+          "dupeOf": "b20f35eaf9c8"
         }
       ],
       "locations": [
@@ -1090,14 +1186,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around Minas are some of the tallest hills here with lots of bare rock and heavy bushes. Usually more subtle than the example. Bare rock is always a good clue. The Quebrada de los Cuervos reserve further north can look similar."
     },
     {
       "id": "uy-RpLA",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: You can also find tall hills in the north of the country",
+      "title": "Landscape: tall hills with darker soil",
       "text": [
         "You can also find tall hills in the north of the country. These can be recognized by their noticeably **darker soil**. These hills also typically do not have the exposed rocks that are visible in the Minas hills.",
         "The vegetation tends to be natural, and you will often see **tree plantations**.",
@@ -1126,7 +1223,8 @@
           "src": "https://learnablemeta.com/images/664/Br1GFBxU0ezAttI8hmt2tJnduNR2VAz3Q1wX.avif",
           "path": "uy/a66d89ed7b42.webp",
           "width": 1000,
-          "height": 490
+          "height": 490,
+          "dupeOf": "f443b6a7d6c2"
         }
       ],
       "locations": [
@@ -1147,14 +1245,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north, tall hills with noticeably darker soil, natural vegetation and often tree plantations. No bare rocks like in the Minas hills. Strongest near the Brazil border on Route 30 near Tranqueras.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Brazilian side looks similar, so check signs and plates"
+        }
+      ]
     },
     {
       "id": "uy-MSWj",
       "step": 1,
       "order": 4,
       "family": "vegetation",
-      "title": "Vegetation: Tree plantations are a defining feature of much of…",
+      "title": "Plants: tree plantations",
       "text": [
         "**Tree plantations** are a defining feature of much of Uruguay’s countryside, but they are especially common in two areas in the north and northwest.",
         "Note that the highest density of plantations is in these areas, but more isolated plantations can be found all over the country."
@@ -1194,14 +1299,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Planted tree blocks are common in the countryside, densest in two areas in the north and northwest, with isolated ones all over."
     },
     {
       "id": "uy-D8A0",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The region near Lagoa Mirim and the Brazil border in the…",
+      "title": "Landscape: very flat southeast near Brazil",
       "text": [
         "The region near Lagoa Mirim and the Brazil border in the southeast of the country is noticeably **very flat**, in contrast to the slight hills found in most of the rest of the country."
       ],
@@ -1242,14 +1348,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The southeast near Lagoa Mirim and the Brazil border is very flat, unlike the gentle hills in most of the country.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Same flat land continues across the border"
+        }
+      ]
     },
     {
       "id": "uy-nX58",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "There are only a couple of divided highways in Uruguay",
+      "title": "Road: divided highway",
       "text": [
         "There are only a couple of **divided highways** in Uruguay, all of which are close to Montevideo:",
         "- Ruta 1 going west out of Montevideo, up until Colonia Valdense.",
@@ -1290,14 +1403,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Divided highways are rare and all near the capital: Ruta 1 west to Colonia Valdense, Ruta IB east to Punta del Este and a short bit of Ruta 5 north to Canelones."
     },
     {
       "id": "uy-prxs",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "These bins with orange lids are specific to Rocha Department",
+      "title": "Bins: orange lids",
       "text": [
         "These bins with **orange lids are** specific to Rocha Department. However, you can still find these [black bins](https://goo.gl/maps/6evWkb48DFNw31847) in both the Rocha and Canelones Department."
       ],
@@ -1337,14 +1451,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bins with orange lids are only in Rocha Department. Black bins appear in both Rocha and Canelones."
     },
     {
       "id": "uy-Zjpu",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "Montevideo is by far the largest city in Uruguay",
+      "title": "Landscape: dense big-city sprawl",
       "text": [
         "**Montevideo** is by far the largest city in Uruguay. More than half the Uruguayan population lives within its metropolitan area.",
         "Its relatively massive size may not always be as apparent in its suburbs. However, if you are in a densely populated, highly built-up area, consider guessing in downtown Montevideo, as there are very few places like that in other parts of Uruguay."
@@ -1384,14 +1499,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital is by far the biggest city; over half the population lives in its area. If you are somewhere very dense and built-up, guess the capital, since few places elsewhere look like that."
     },
     {
       "id": "uy-CX3t",
       "step": 2,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: Punta del Este is a seaside resort town with a recognizable…",
+      "title": "Houses: tall modern flats by a sandy beach",
       "text": [
         "**Punta del Este** is a seaside resort town with a recognizable look. It is an affluent and touristic place with a developed downtown that consists of many tall, modern apartment buildings. Its main attraction is its large, sandy beach.",
         "Further away from the downtown area, you will see less highrises, but still a lot of expensive-looking villa neighbourhoods. Here, you will often see distinctive [tall pine trees](https://goo.gl/maps/9cKem7TVVuhbksbE8)."
@@ -1431,14 +1547,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A rich seaside resort town with many tall modern apartment blocks and a big sandy beach. Further out are expensive villas and tall pine trees."
     },
     {
       "id": "uy-xQPs",
       "step": 2,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: The small island of Isla de Flores is located off the coast…",
+      "title": "Coverage: small island trekker, lighthouse",
       "text": [
         "The small island of **Isla de Flores** is located off the coast of Montevideo. It has a trekker where you can see abandoned buildings, and usually also the lighthouse."
       ],
@@ -1477,14 +1594,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Isla de Flores, a small island off the capital, has a walking-camera trek showing abandoned buildings and usually the lighthouse."
     },
     {
       "id": "uy-qHa3",
       "step": 2,
       "order": 3,
       "family": "car",
-      "title": "Google car: This unique Google car is found in the coastal town of Cabo…",
+      "title": "Google car: orange strap on the left",
       "text": [
         "This unique Google car is found in the coastal town of **Cabo Polonio**. It can be recognized by the orange strap on the left.",
         "The coverage is an off-road trekker line on the map. The town that it drives through has a unique vibe, consisting of [makeshift-looking shacks](https://goo.gl/maps/kFRyFRU2vKYk4qUc6), scattered around the seaside landscape. In some of the coverage, the car drives [on the beach](https://goo.gl/maps/TcgFWK775WANzTax8)."
@@ -1525,14 +1643,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A unique off-road trekker in the coastal town of Cabo Polonio, with an orange strap on the left. It passes makeshift-looking shacks by the sea and sometimes drives on the beach."
     },
     {
       "id": "uy-E7Gs",
       "step": 2,
       "order": 4,
       "family": "car",
-      "title": "Google car: This unique Google car is found in the Valle del Lunarejo…",
+      "title": "Google car: white front, curved black back",
       "text": [
         "This unique Google car is found in the **Valle del Lunarejo** natural park, located west of the town of Tranqueras. The car has a white front and a curved black backside with a brown strap.",
         "The coverage is an off-road trekker line on the map. The car drives on a small track through a [grassy landscape](https://goo.gl/maps/uBVaJPJwiV9Ks2UX6).",
@@ -1574,311 +1693,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/uruguay",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "uy-lm-13786",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Black Car",
-      "text": [
-        "Uruguay only has Generation 3 coverage.",
-        "Coverage was taken by a black Google car without an antenna.",
-        "The car is not always visible.",
-        "**--- NOTE:**",
-        "Within South America, you can also find this car in Argentina and Peru."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2817a3daa7b9",
-          "src": "https://learnablemeta.com/images/611/fJPFpWFR5ayLw9ZxKYiqZtcTErQShLl4yaDj.avif",
-          "path": "uy/2817a3daa7b9.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR",
-        "PE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-13805",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "**This is the stereotypical Uruguay round:**",
-        "The coverage often, but not always, features overcast weather.",
-        "Most of the landscape consists of open grasslands with gentle hills.",
-        "Occasionally, you might see separated tree plantations.",
-        "Roads are generally in worse condition than in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "38fc5daed5a1",
-          "src": "https://learnablemeta.com/images/611/S5JwL2Yx7y3inhI5KFnxTAkPzHnY9oOOG00T.avif",
-          "path": "uy/38fc5daed5a1.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-15245",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Eastern Flatland",
-      "text": [
-        "The region near Lagoa Mirim and the Brazil border in the southeast of the country is noticeably very flat, in contrast to the slight hills found in most of the rest of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b8fd02eae099",
-          "src": "https://learnablemeta.com/images/664/r42lqMTrUnEAyCe64ifEvOIAQk8pWZKtmu1Q.avif",
-          "path": "uy/b8fd02eae099.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-15246",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: General Landscape",
-      "text": [
-        "This is the stereotypical Uruguay round. The coverage often, but not always, features overcast weather. Most of the landscape consists of open grasslands with gentle hills. Occasionally, you might see separated tree plantations. Roads are generally in worse condition than in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d9e3cf01d3e4",
-          "src": "https://learnablemeta.com/images/664/GkciBzidUrQ4ZMz1G6xFVSgKmpXAVFUCOJIB.avif",
-          "path": "uy/d9e3cf01d3e4.webp",
-          "width": 1000,
-          "height": 545
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-51476",
-      "step": 3,
-      "order": 4,
-      "family": "car",
-      "title": "Google car: Black Car",
-      "text": [
-        "Uruguay only has Generation 3 coverage.",
-        "Coverage was taken by a black Google car without an antenna.",
-        "The car is not always visible.",
-        "**--- NOTE:**",
-        "Within South America, you can also find this car in Argentina and Peru."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2817a3daa7b9",
-          "src": "https://learnablemeta.com/images/611/fJPFpWFR5ayLw9ZxKYiqZtcTErQShLl4yaDj.avif",
-          "path": "uy/2817a3daa7b9.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR",
-        "PE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-51480",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "**This is the stereotypical Uruguay round:**",
-        "The coverage often, but not always, features overcast weather.",
-        "Most of the landscape consists of open grasslands with gentle hills.",
-        "Occasionally, you might see separated tree plantations.",
-        "Roads are generally in worse condition than in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "38fc5daed5a1",
-          "src": "https://learnablemeta.com/images/611/S5JwL2Yx7y3inhI5KFnxTAkPzHnY9oOOG00T.avif",
-          "path": "uy/38fc5daed5a1.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-479033",
-      "step": 3,
-      "order": 6,
-      "family": "pole",
-      "title": "Pole: flat metal sheets",
-      "text": [
-        "Round poles with a pole top consisting of flat metal sheets.",
-        "In addition, you might see simple wooden poles with one insulator, as well as very rarely some Argentina-style poles."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2cc47b0f53a6",
-          "src": "https://learnablemeta.com/images/1955/1750934451650-lB3.avif",
-          "path": "uy/2cc47b0f53a6.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-479034",
-      "step": 3,
-      "order": 7,
-      "family": "pole",
-      "title": "Pole: square concrete",
-      "text": [
-        "Square concrete poles is in South America a good clue for Uruguay.",
-        "In addition, you might see simple wooden poles with one insulator, as well as very rarely some Argentina-style poles."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f740bd4eaf63",
-          "src": "https://learnablemeta.com/images/1955/1750934445737-hWl.avif",
-          "path": "uy/f740bd4eaf63.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-479035",
-      "step": 3,
-      "order": 8,
-      "family": "pole",
-      "title": "Pole: trident",
-      "text": [
-        "Uruguay uses a handful of different utility poles. One very common and useful one are the so-called trident poles, which get their name from their distinctive pole tops with three insulators that point upwards.",
-        "NOTE: Similar trident poles can be found in the neighbouring Brazilian state of Rio Grande do Sul."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "caa667211b5a",
-          "src": "https://learnablemeta.com/images/1955/1750934430232-Mrl.avif",
-          "path": "uy/caa667211b5a.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "uy-lm-634049",
-      "step": 3,
-      "order": 9,
-      "family": "plate",
-      "title": "Plate: Uruguay",
-      "text": [
-        "Uruguayan licence plates are plain white with black characters.",
-        "NOTE: Neighbouring Argentina also uses white licence plates, but they will have either a black dot in the middle or a blue bar at the top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2f447c822efe",
-          "src": "https://learnablemeta.com/images/5431/1766263211663-dZw.avif",
-          "path": "uy/2f447c822efe.webp",
-          "width": 800,
-          "height": 250
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A unique off-road trekker in Valle del Lunarejo park, west of Tranqueras. The car has a white front and curved black back with a brown strap, on a small track through grassland. The park shows as a point on the map, not a green area."
     }
   ]
 }

@@ -69,6 +69,11 @@ export interface Card {
    * map, and `answer` (and any confusion it records) is one of the map's state codes.
    */
   map?: string;
+  /**
+   * Area codes: other regions the code also covers (it spans a border). Picking one counts as
+   * right; the reveal still names `answer`, the main region.
+   */
+  spans?: string[];
 }
 
 /** One fact about a country, written once and reused by generated cards. */

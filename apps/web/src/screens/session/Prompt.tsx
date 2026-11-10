@@ -28,7 +28,14 @@ export function Prompt({
         <p className="clue">{prompt.value}</p>
       );
     case 'image':
-      return <PromptImage key={prompt.value} prompt={prompt} alt={prompt.alt ?? alt} revealed={revealed} />;
+      return (
+        <PromptImage
+          key={prompt.value}
+          prompt={prompt}
+          alt={prompt.alt ?? alt}
+          revealed={revealed}
+        />
+      );
     case 'svg':
       return (
         <img

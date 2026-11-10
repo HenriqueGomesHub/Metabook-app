@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "other",
-      "title": "South Africa drives on the left",
+      "title": "Driving side: left",
       "text": [
         "South Africa drives on the **left.**",
         "NOTE: A handful of other countries also drive on the left. See [this](/images/south-africa/rightleftdrive.png) infographic for more information."
@@ -64,14 +64,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the left. A handful of other countries do too."
     },
     {
       "id": "za-Btnv",
       "step": 0,
       "order": 2,
       "family": "line",
-      "title": "Road line: On most roads, South Africa utilizes single yellow outer…",
+      "title": "Road lines: yellow edges, white centre",
       "text": [
         "On most roads, South Africa utilizes single **yellow outer lines **and white centre lines.",
         "NOTE: The other southern African countries of Botswana, Eswatini, Lesotho and Namibia also use single yellow outer lines.",
@@ -107,7 +108,8 @@
           "src": "https://learnablemeta.com/images/662/50oLBWAt8FVXm12FvieEndkepQKAobt9OEoF.avif",
           "path": "za/9cf4daf8e6ee.webp",
           "width": 1000,
-          "height": 506
+          "height": 506,
+          "dupeOf": "2be8886dffcc"
         }
       ],
       "locations": [
@@ -132,14 +134,27 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Single yellow lines at the road edge and white lines in the middle. Botswana, Eswatini, Lesotho and Namibia use them too. Australia practically never uses yellow edge lines.",
+      "sameAs": [
+        "BW",
+        "LS",
+        "NA",
+        "SZ"
+      ],
+      "differs": [
+        {
+          "country": "AU",
+          "how": "Practically never has yellow edge lines"
+        }
+      ]
     },
     {
       "id": "za-2WI6",
       "step": 0,
       "order": 3,
       "family": "line",
-      "title": "Road line: South Africa occasionally features unique white triple…",
+      "title": "Road lines: white triple centre line",
       "text": [
         "South Africa occasionally features unique white **triple centre lines** with 2 solid lines on the outside and a dashed line on the inside.",
         "You may also sometimes encounter another unique triple centre line, consisting of two white lines with one yellow line in the middle. These centre lines are usually found on larger main roads.",
@@ -168,14 +183,16 @@
           "src": "https://learnablemeta.com/images/502/brUwdfDTiIq7r3PWONW31t7WL2AmooPQAXIX.avif",
           "path": "za/d74fe6eb1170.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "b344cfa70d07"
         },
         {
           "id": "ef11c9973194",
           "src": "https://learnablemeta.com/images/662/p4Dl9oPBodj2hwH9H3FCVboIK6vzQNGJhZEO.avif",
           "path": "za/ef11c9973194.webp",
           "width": 1000,
-          "height": 557
+          "height": 557,
+          "dupeOf": "b344cfa70d07"
         }
       ],
       "locations": [
@@ -199,14 +216,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sometimes a triple centre line: two solid white lines with a dashed one inside. Another version has two white lines with a yellow one in the middle, usually on big main roads. Only the neighbouring southern African countries have these.",
+      "sameAs": [
+        "BW",
+        "LS",
+        "NA",
+        "SZ"
+      ]
     },
     {
       "id": "za-bF5N",
       "step": 0,
       "order": 4,
       "family": "car",
-      "title": "Google car: Generation 2 coverage is quite common in the country",
+      "title": "Google car: Gen 2, big round blur, sky halo",
       "text": [
         "**Generation 2 coverage** is quite common in the country.",
         "It can be recognized by the large circular car blur and the halo-like colour distortion in the sky.",
@@ -235,7 +259,8 @@
           "src": "https://learnablemeta.com/images/662/cQ2Pke74Dg5ctX7aCLefW3mIBkcwLVQPUdvi.avif",
           "path": "za/f77ed5556e21.webp",
           "width": 1000,
-          "height": 558
+          "height": 558,
+          "dupeOf": "f7c517c8bce6"
         }
       ],
       "locations": [
@@ -254,14 +279,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 2 is fairly common. It has a big round blur where the car is and a halo-like colour glow in the sky. In Africa, only this country has Gen 2."
     },
     {
       "id": "za-LxHT",
       "step": 0,
       "order": 5,
       "family": "language",
-      "title": "Language: South Africa has 11 official languages",
+      "title": "Language: English plus Afrikaans place names",
       "text": [
         "South Africa has **11 official languages**: English, Afrikaans, and various Bantu languages. English is the [lingua franca](https://en.wikipedia.org/wiki/Lingua_franca) and therefore appears most often on signage.",
         "**Afrikaans** is a Germanic language that is closely related to Dutch. Common Afrikaans place name suffixes are -fontein, -kraal, -kop, -dorp, -nek, and -berg or -burg. While Afrikaans is most commonly spoken in the [western half](https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/South_Africa_2011_Afrikaans_speakers_proportion_map.svg/2337px-South_Africa_2011_Afrikaans_speakers_proportion_map.svg.png) of the country, you will find Afrikaans place names all over South Africa, meaning that it is not useful for region-guessing.",
@@ -306,14 +332,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "English is most common on signs. Afrikaans looks like Dutch, with place name endings like -fontein, -kraal, -kop, -dorp, -nek and -berg. It appears nationwide, so it does not help pick a region."
     },
     {
       "id": "za-riHx",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: The most common type of pole in South Africa features 1 to…",
+      "title": "Pole: bird poles, white insulators on bars",
       "text": [
         "The most common type of pole in South Africa features 1 to 5 horizontal bars with thin white insulators that resemble rows of birds, which is why they are referred to as “**bird poles**” in the community.",
         "NOTE: South Africa has a wide variety of other poles and pole tops. Some of these are (mostly) limited to a certain region; you can learn more about them in the region guessing section."
@@ -350,14 +377,16 @@
           "src": "https://learnablemeta.com/images/662/N5qbuRqf0XS1JU05Ftvm25ks09noxhILiHCF.avif",
           "path": "za/97a68c785e23.webp",
           "width": 1000,
-          "height": 468
+          "height": 468,
+          "dupeOf": "c60a0aec6cc4"
         },
         {
           "id": "f7ff2d4340d6",
           "src": "https://learnablemeta.com/images/1822/1749210173231-usu.avif",
           "path": "za/f7ff2d4340d6.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "7af925bc3a49"
         }
       ],
       "locations": [
@@ -376,7 +405,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common pole has 1 to 5 horizontal bars with thin white insulators that look like rows of birds. Many other pole types exist, some limited to certain regions."
     },
     {
       "id": "za-x5Nk",
@@ -384,7 +414,7 @@
       "order": 7,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: South Africa uses green directional signs with the road…",
+      "title": "Sign: green direction sign, yellow road number",
       "text": [
         "South Africa uses **green** directional signs with the road number in yellow.",
         "NOTE: Green directional signs with yellow road numbers are also used in Lesotho, Eswatini, Botswana and Namibia. Here, the format of road numbers is useful:",
@@ -432,7 +462,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Green direction signs with a yellow road number. Neighbours use the same, so read the number: N and R roads exist only here, A and B roads in Botswana, Lesotho and Namibia, and MR roads in Eswatini.",
+      "sameAs": [
+        "BW",
+        "LS",
+        "NA",
+        "SZ"
+      ]
     },
     {
       "id": "za-Hx3k",
@@ -440,7 +477,7 @@
       "order": 8,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: South Africa utilizes triangular warning signs with a red…",
+      "title": "Sign: triangular warning sign, red border",
       "text": [
         "South Africa utilizes **triangular warning signs** with a red border and a white background.",
         "NOTE: The four other southern African countries use similar warning signs.",
@@ -484,7 +521,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warning signs are red-bordered triangles on white. The other southern African countries use similar ones. Australia and New Zealand use yellow diamonds.",
+      "sameAs": [
+        "BW",
+        "LS",
+        "NA",
+        "SZ"
+      ],
+      "differs": [
+        {
+          "country": "AU",
+          "how": "Yellow diamond warning signs"
+        },
+        {
+          "country": "NZ",
+          "how": "Yellow diamond warning signs"
+        }
+      ]
     },
     {
       "id": "za-Ud2I",
@@ -492,7 +546,7 @@
       "order": 9,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: South Africa uses white-and-red chevrons",
+      "title": "Chevron: white-and-red, plus thin single-arrow ones",
       "text": [
         "South Africa uses **white-and-red **chevrons. You can find a similar chevron pattern below directional signs.",
         "In addition, unique-looking [small, thin chevrons](https://goo.gl/maps/UtnQqFLqBe9EupxC6) with one arrow are common next to roads.",
@@ -528,7 +582,8 @@
           "src": "https://learnablemeta.com/images/914/Vix1yCKOiSTWne16aMlzwDDVEoVFthilR8BO.avif",
           "path": "za/9664b2722295.webp",
           "width": 1000,
-          "height": 511
+          "height": 511,
+          "dupeOf": "dd2b34bfbb72"
         }
       ],
       "locations": [
@@ -552,14 +607,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White-and-red chevrons, with the same pattern under direction signs. Small thin single-arrow chevrons by the road are common, and neighbouring southern African countries have them too.",
+      "sameAs": [
+        "BW",
+        "LS",
+        "NA",
+        "SZ"
+      ]
     },
     {
       "id": "za-ShVC",
       "step": 0,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: Suburban houses in and around large cities will often be…",
+      "title": "Houses: high walls, fences and gates",
       "text": [
         "Suburban houses in and around large cities will often be surrounded by **high walls,** fences, and gates** **to deter criminals."
       ],
@@ -598,14 +660,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Suburban houses in and around big cities are often surrounded by high walls, fences and gates."
     },
     {
       "id": "za-ulWW",
       "step": 0,
       "order": 11,
       "family": "car",
-      "title": "Google car: All Generation 4 coverage in South Africa was taken by a…",
+      "title": "Google car: Gen 4 blue car, short antenna",
       "text": [
         "All Generation 4 coverage in South Africa was taken by a blue Street View car with a short antenna.",
         "NOTE: The antenna is sometimes [hidden by the blur](https://maps.app.goo.gl/fKdBXrspbEe8CeaF9)."
@@ -652,14 +715,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All Gen 4 coverage shows a blue car with a short antenna. The blur sometimes hides the antenna."
     },
     {
       "id": "za-jfTY",
       "step": 0,
       "order": 12,
       "family": "car",
-      "title": "Google car: South Africa also has Generation 4 “smallcam” coverage",
+      "title": "Google car: Gen 4 smallcam, low with big blur",
       "text": [
         "South Africa also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, but with a short antenna on the back."
       ],
@@ -698,14 +762,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 4 camera mounted lower than normal, with a big round blur and a small bump at the front. The blur can be see-through, but a short antenna shows at the back."
     },
     {
       "id": "za-iZzK",
       "step": 1,
       "order": 0,
       "family": "plate",
-      "title": "Plate: Each province features a different licence plate design",
+      "title": "Plate: each province has its own design",
       "text": [
         "Each province features a **different **licence plate design, which can be somewhat visible through the blur. Most notably Free State or KwaZulu-Natal, which have a slight green tint and blue tint respectively.",
         "_You can click on the image to enlarge it._"
@@ -727,7 +792,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plate designs differ by province and may show through the blur. Two stand out: one has a slight green tint, another a blue tint."
     },
     {
       "id": "za-pE0c",
@@ -735,7 +801,7 @@
       "order": 1,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: A map of major highways in South Africa",
+      "title": "Sign: N before the number, blue pentagon on maps",
       "text": [
         "A map of major highways in South Africa. On road signs, the **letter ‘N’ **should appear in front of the highway number. On Google Maps, however, the letter ‘N’ will not be present. Instead, a **blue pentagon** with the number will be displayed.",
         "_You can click on the image to enlarge it._"
@@ -757,7 +823,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On road signs the highway number has an N in front. On Google Maps the N is missing and a blue pentagon with the number is shown instead."
     },
     {
       "id": "za-OmMx",
@@ -765,7 +832,7 @@
       "order": 2,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Most of the R-roads with three-digit road numbers are…",
+      "title": "Sign: three-digit R roads grouped by region",
       "text": [
         "Most of the **R-roads with three-digit road numbers** are geographically grouped. However, many roads go through multiple provinces and some, especially the 100s, are spread throughout the whole country. The map shows roughly where you can find each set of R-roads.",
         "_You can click on the image to enlarge it._"
@@ -787,14 +854,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most three-digit R roads are geographically grouped, but many cross provinces and the 100s are spread across the whole country. The map shows roughly where each set is."
     },
     {
       "id": "za-pn0o",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Telephone numbers are 10 digits long",
+      "title": "Phone numbers: 10 digits, area code starts with 0",
       "text": [
         "**Telephone numbers** are 10 digits long. The first three digits of landline numbers are the area code. The first digit is always a zero; the second and third digits give you the area. The area codes are geographically grouped, so even learning just the first digit is useful.",
         "NOTE: Mobile phone numbers start with 06–08. These numbers are not specific to an area.",
@@ -818,14 +886,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers are 10 digits. Landlines start with a 0 followed by two digits for the area, and areas are geographically grouped. Mobile numbers start with 06 to 08 and say nothing about area."
     },
     {
       "id": "za-UxL1",
       "step": 1,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Poles with 3 bars forming the letter ‘A’",
+      "title": "Pole: narrow A-shaped top on a horizontal bar",
       "text": [
         "Poles with 3 bars forming the letter **‘A’**, with the bottom insulators being attached at the edges of a horizontal bar, can be found almost exclusively in Western Cape, and rarely in bordering provinces."
       ],
@@ -853,7 +922,8 @@
           "src": "https://learnablemeta.com/images/565/hgW1RheabvqTvB5rhnkIxyVOC3nXWIjB3Yzv.avif",
           "path": "za/c3736bd068e2.webp",
           "width": 1000,
-          "height": 489
+          "height": 489,
+          "dupeOf": "5119d24e82a8"
         }
       ],
       "locations": [],
@@ -862,14 +932,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with 3 bars forming an A, with the bottom insulators on the ends of a horizontal bar. Almost only in the south-west, rarely in neighbouring provinces."
     },
     {
       "id": "za-Prjw",
       "step": 1,
       "order": 6,
       "family": "pole",
-      "title": "Pole: A similar poletop can be found in Eastern Cape",
+      "title": "Pole: wide A-shaped top, insulators on the A",
       "text": [
         "A similar poletop can be found in Eastern Cape, however the A-shape is noticeably wider and the bottom insulators are attached directly to the ‘A’ rather than a horizontal bar."
       ],
@@ -899,7 +970,8 @@
           "src": "https://learnablemeta.com/images/565/iJFLFt6cNFByyIYnGGI6CHvDU3k4s8azEulE.avif",
           "path": "za/1fe707b58dbd.webp",
           "width": 1000,
-          "height": 489
+          "height": 489,
+          "dupeOf": "bd077f896e1d"
         }
       ],
       "locations": [
@@ -918,14 +990,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Similar A-shape but noticeably wider, with the bottom insulators attached directly to the A instead of a horizontal bar. Found in the south-east."
     },
     {
       "id": "za-RWlO",
       "step": 1,
       "order": 7,
       "family": "pole",
-      "title": "Pole: Trident pole tops are almost unique to KwaZulu-Natal",
+      "title": "Pole: trident pole tops",
       "text": [
         "**Trident pole tops** are almost unique to KwaZulu-Natal."
       ],
@@ -962,14 +1035,16 @@
           "src": "https://learnablemeta.com/images/565/SCbeJHdAtioxkvNLPxljGN0wnxHf3C2owpMF.avif",
           "path": "za/461730c30b6c.webp",
           "width": 1000,
-          "height": 489
+          "height": 489,
+          "dupeOf": "2f470bd683cd"
         },
         {
           "id": "a087103b47e3",
           "src": "https://learnablemeta.com/images/1822/1749210348027-Kdb.avif",
           "path": "za/a087103b47e3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "2f470bd683cd"
         }
       ],
       "locations": [
@@ -988,14 +1063,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Trident pole tops are almost unique to the east coast province."
     },
     {
       "id": "za-KDMw",
       "step": 1,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Poles with 3 alternating insulators sticking out…",
+      "title": "Pole: 3 alternating insulators sticking out sideways",
       "text": [
         "Poles with **3 alternating insulators **sticking out horizontally at the top are mostly seen in the four northern provinces of Limpopo, Gauteng, North West and Mpumalanga. They can also sometimes be found in Northern Cape. In the rest of the country, these pole tops are exceedingly rare."
       ],
@@ -1024,7 +1100,8 @@
           "src": "https://learnablemeta.com/images/565/mW3wqjwWoVxd5sqoQbhWospYDDev7RmeziAG.avif",
           "path": "za/5099f1f8100f.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "e8c3e6400d1c"
         }
       ],
       "locations": [
@@ -1043,14 +1120,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with 3 alternating insulators sticking out horizontally are mostly in the four northern provinces, sometimes the north-west dry region. Very rare elsewhere."
     },
     {
       "id": "za-Fho0",
       "step": 1,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Poles with 2 diagonal bars forming a ‘<’ shape can be found…",
+      "title": "Pole: two diagonal bars forming a < shape",
       "text": [
         "Poles with 2 **diagonal bars **forming a ‘<’ shape can be found mostly in the northeastern provinces, most commonly in Limpopo and North West."
       ],
@@ -1080,7 +1158,8 @@
           "src": "https://learnablemeta.com/images/565/CHkqjt6vP5SZUi57u4pvE20ttQ7XOo4eKN5O.avif",
           "path": "za/725deb0284ac.webp",
           "width": 1000,
-          "height": 487
+          "height": 487,
+          "dupeOf": "a4169f1b901c"
         }
       ],
       "locations": [
@@ -1099,14 +1178,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with 2 diagonal bars forming a < shape are mostly in the north-east, most often in the far north and the north-west."
     },
     {
       "id": "za-D9sE",
       "step": 1,
       "order": 10,
       "family": "pole",
-      "title": "Pole: Poles with 1 or 2 metal arms holding up insulators are most…",
+      "title": "Pole: 1 or 2 metal arms holding insulators",
       "text": [
         "Poles with **1 or 2 metal arms** holding up insulators are most commonly seen in Mpumalanga."
       ],
@@ -1136,7 +1216,8 @@
           "src": "https://learnablemeta.com/images/565/XPxVhF0CKoZ67uhsPDH2leu9w66BkGFFs1WN.avif",
           "path": "za/ac2427c8cd2f.webp",
           "width": 1000,
-          "height": 490
+          "height": 490,
+          "dupeOf": "cc09c818edb3"
         }
       ],
       "locations": [
@@ -1155,7 +1236,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with one or two metal arms are most common in the east, in one inland province."
     },
     {
       "id": "za-u08Z",
@@ -1163,7 +1245,7 @@
       "order": 11,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Square, red stickers on the back of regular signs are often…",
+      "title": "Sign: square red stickers on sign backs",
       "text": [
         "**Square, red stickers **on the back of regular signs are often found in Eastern cape and close to Eastern cape in Northern Cape and Free State. You may see them in the North West province as well, but to a lesser extent.",
         "NOTE: Red stickers on the back of chevrons can be seen in almost every province."
@@ -1204,7 +1286,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square red stickers on the back of regular signs are common in the south-east and close to it in the dry north-west and the centre. A little in the north-west. Red stickers on chevron backs appear in almost every province."
     },
     {
       "id": "za-eJUt",
@@ -1212,7 +1295,7 @@
       "order": 12,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: White stickers on the back of chevrons are often seen in…",
+      "title": "Sign: white stickers on chevron backs",
       "text": [
         "**White stickers **on the back of chevrons are often seen in the Cape provinces."
       ],
@@ -1251,14 +1334,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White stickers on the back of chevrons are often seen in the Cape provinces in the south and west."
     },
     {
       "id": "za-0BuS",
       "step": 1,
       "order": 13,
       "family": "other",
-      "title": "You can find this grainy",
+      "title": "Road: grainy pavement with a pink tint",
       "text": [
         "You can find this **grainy**, almost Texas-like pavement with a hint of **pink **in Limpopo."
       ],
@@ -1298,14 +1382,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A grainy, almost Texas-like road surface with a hint of pink, found in the far north-east."
     },
     {
       "id": "za-Oy3D",
       "step": 1,
       "order": 14,
       "family": "pole",
-      "title": "Pole: Big bird nests on top of poles are commonly seen in the…",
+      "title": "Pole: big bird nests on top",
       "text": [
         "Big **bird nests** on top of poles are commonly seen in the northern part of the Northern Cape Province."
       ],
@@ -1342,7 +1427,8 @@
           "src": "https://learnablemeta.com/images/565/nwqKXdEi3I4lAXP7KY9DzimQjOWvrOUYfqeR.avif",
           "path": "za/cdadc6397fb4.webp",
           "width": 1000,
-          "height": 487
+          "height": 487,
+          "dupeOf": "d2355645164c"
         }
       ],
       "locations": [
@@ -1361,14 +1447,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Big bird nests sit on top of poles, commonly in the northern part of the dry north-west province."
     },
     {
       "id": "za-iJbI",
       "step": 1,
       "order": 15,
       "family": "other",
-      "title": "Power plants are often seen in between the town of Secunda…",
+      "title": "Landscape: power plants between two towns",
       "text": [
         "**Power plants** are often seen in between the town of Secunda and eMalahleni in Mpumalanga."
       ],
@@ -1408,14 +1495,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Power plants appear between two towns in the east inland province."
     },
     {
       "id": "za-GgUS",
       "step": 1,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: The northeast of the country can look very dry and somewhat…",
+      "title": "Landscape: dry, barren, orange-red soil, shrub hills",
       "text": [
         "The northeast of the country can look very dry and somewhat barren, with a lot of orange or red soil. You will often see hills or mountains covered in shrubs.",
         "NOTE: Depending on the season, the coverage can change drastically from [dry](https://maps.app.goo.gl/XsQme5RXp7jB2U1p6) to [very green](https://maps.app.goo.gl/hLARbuFeBKWx6hot7)."
@@ -1443,7 +1531,8 @@
           "src": "https://learnablemeta.com/images/565/9jDqvrYzM6xe7rUaQzhotOycJkoxCBtneQ7J.avif",
           "path": "za/e1ce2d8738d0.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "76d4340c3347"
         }
       ],
       "locations": [
@@ -1462,14 +1551,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north-east can look very dry and barren, with orange or red soil and hills covered in shrubs. Coverage can change from dry to very green depending on season."
     },
     {
       "id": "za-UBPX",
       "step": 1,
       "order": 18,
       "family": "landscape",
-      "title": "Landscape: Unique rocky, treeless mountains can be seen in Western…",
+      "title": "Landscape: rocky treeless mountains, steep sides",
       "text": [
         "Unique **rocky**, treeless mountains can be seen in Western Cape, with most of the mountains having tall, steep sides and sharp peaks.",
         "NOTE: Similar mountains can be seen in and around Lesotho."
@@ -1489,14 +1579,16 @@
           "src": "https://learnablemeta.com/images/565/lk47wl2yIFP0jwlVxaIO6713uYTp8Ea8B8eq.avif",
           "path": "za/9c9fbaf30a49.webp",
           "width": 1000,
-          "height": 487
+          "height": 487,
+          "dupeOf": "fdaf647e15d3"
         },
         {
           "id": "54edaf475aa9",
           "src": "https://learnablemeta.com/images/664/CeWqft3AYr1D10kkaOceqtqsIUUDvFBEgQ66.avif",
           "path": "za/54edaf475aa9.webp",
           "width": 1000,
-          "height": 493
+          "height": 493,
+          "dupeOf": "fdaf647e15d3"
         }
       ],
       "locations": [],
@@ -1507,14 +1599,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rocky, treeless mountains with tall steep sides and sharp peaks in the south-west. Similar mountains are in and around Lesotho.",
+      "sameAs": [
+        "LS"
+      ]
     },
     {
       "id": "za-nSzl",
       "step": 1,
       "order": 19,
       "family": "other",
-      "title": "Vineyards are almost exclusively found in Western Cape",
+      "title": "Crops: vineyards in coastal valleys",
       "text": [
         "Vineyards are almost exclusively found in** Western Cape**, mostly in valleys near the coast. You can also commonly find them near Upington, in Northern Cape."
       ],
@@ -1554,14 +1650,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards are almost only in the south-west, mostly in coastal valleys. They also appear near one inland town in the north-west."
     },
     {
       "id": "za-Q1UD",
       "step": 1,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: A dry landscape with red soil is typically found in the…",
+      "title": "Landscape: dry land with red soil, north-west",
       "text": [
         "A dry landscape with red soil is typically found in the Northern Cape.",
         "NOTE: This [map](https://upload.wikimedia.org/wikipedia/commons/c/c8/Koppen-Geiger_Map_ZAF_present.svg) is a useful guide in guessing based on the climate of South Africa."
@@ -1591,7 +1688,8 @@
           "src": "https://learnablemeta.com/images/565/0ysr7d3YOegOpLOI5ktnU5V3KEzUxoL8dMYj.avif",
           "path": "za/d4d7585c2f4a.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "72f8ad2e668a"
         }
       ],
       "locations": [
@@ -1610,14 +1708,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A dry landscape with red soil is typical of the north-west province. The climate map is a useful guide."
     },
     {
       "id": "za-58eY",
       "step": 1,
       "order": 21,
       "family": "other",
-      "title": "Sugarcane plantations are most commonly seen in…",
+      "title": "Crops: sugarcane along the east coast",
       "text": [
         "**Sugarcane plantations** are most commonly seen in KwaZulu-Natal, mostly along the coast. However, they can also be seen in Mpumalanga on the Mozambique border. For an overview, see [this](/images/south-africa/southafrica_sugarcane.jpg) map."
       ],
@@ -1658,14 +1757,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sugarcane plantations are most common on the east coast, and also on the north-east border in another province."
     },
     {
       "id": "za-EW6K",
       "step": 1,
       "order": 22,
       "family": "vegetation",
-      "title": "Vegetation: Uniquely tall Cook pine trees are found mostly between the…",
+      "title": "Plants: very tall Cook pines on the south-east coast",
       "text": [
         "Uniquely tall **Cook pine trees** are found mostly between the cities of East London and Durban along the southeastern coast.",
         "NOTE: These are planted and not native, so they can be found anywhere along the coast."
@@ -1693,7 +1793,8 @@
           "src": "https://learnablemeta.com/images/565/a7RQJOkJp2p2bncXdI3b7Xq84EAB8jAMI9Wi.avif",
           "path": "za/57da572d03a3.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "6383c4a07b67"
         }
       ],
       "locations": [
@@ -1712,14 +1813,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall Cook pines grow mostly between two south-east coast cities. They are planted, so they can appear anywhere on the coast."
     },
     {
       "id": "za-mWX6",
       "step": 1,
       "order": 23,
       "family": "vegetation",
-      "title": "Vegetation: Tree plantations that consist mostly of pine are common to…",
+      "title": "Plants: pine plantations next to the western border",
       "text": [
         "**Tree plantations** that consist mostly of pine** **are common to the west of Eswatini, and some to the south in KwaZulu-Natal.",
         "NOTE: Pine tree plantations are typically seen within the country of Eswatini itself."
@@ -1748,7 +1850,8 @@
           "src": "https://learnablemeta.com/images/565/ViLV7YfqPgP1usmaISeW3W0fsvGtAgI3869k.avif",
           "path": "za/ab3fc56269df.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "d79ea30f7769"
         }
       ],
       "locations": [
@@ -1769,14 +1872,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tree plantations that are mostly pine are common west of Eswatini and in some parts of the east coast province to the south. Pine plantations are normally seen inside Eswatini itself.",
+      "sameAs": [
+        "SZ"
+      ]
     },
     {
       "id": "za-wMNA",
       "step": 1,
       "order": 24,
       "family": "landscape",
-      "title": "Landscape: Grassy rolling hills are generally located in the coastal…",
+      "title": "Landscape: grassy rolling hills, ridges north or east",
       "text": [
         "**Grassy rolling hills** are generally located in the coastal area of Western Cape between Cape Town and George, and just north of Cape Town. Tall ridges are usually visible to the north or east."
       ],
@@ -1804,14 +1911,16 @@
           "src": "https://learnablemeta.com/images/565/ZsR3UcohRhDjfeHpY9LUCKbQ25BDokh8bhue.avif",
           "path": "za/65a573cbc4ca.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "dupeOf": "386fcfddc75e"
         },
         {
           "id": "04041c19ec22",
           "src": "https://learnablemeta.com/images/664/y0tgS4CHFpuv75gLzCF2jgFenuewH7OKYitq.avif",
           "path": "za/04041c19ec22.webp",
           "width": 1000,
-          "height": 489
+          "height": 489,
+          "dupeOf": "386fcfddc75e"
         }
       ],
       "locations": [
@@ -1830,14 +1939,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grassy rolling hills on the south-west coast between the main city and a southern town, and just north of the city. Tall ridges usually appear to the north or east."
     },
     {
       "id": "za-p5p1",
       "step": 1,
       "order": 25,
       "family": "landscape",
-      "title": "Landscape: The landscape near the Mozambique border in the highlighted…",
+      "title": "Landscape: flat and green subtropical near the border",
       "text": [
         "The landscape near the Mozambique border in the highlighted area is noticeably **flat**, with green subtropical vegetation."
       ],
@@ -1876,14 +1986,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the north-east border with Mozambique the land is noticeably flat with green subtropical plants."
     },
     {
       "id": "za-Z6GT",
       "step": 1,
       "order": 27,
       "family": "architecture",
-      "title": "Architecture: A camouflage car with black side mirrors and roof racks can…",
+      "title": "Google car: camouflage car, black mirrors, roof racks",
       "text": [
         "A **camouflage **car with black side mirrors and roof racks can be seen in Kruger National Park, on the Mozambique border.",
         "NOTE: The Park now also has generation 4 coverage."
@@ -1923,14 +2034,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the big north-east national park, a camouflage car with black side mirrors and roof racks. The park also has Gen 4 coverage now."
     },
     {
       "id": "za-EHXL",
       "step": 1,
       "order": 28,
       "family": "landscape",
-      "title": "Landscape: The landscape around Kruger National Park is generally flat",
+      "title": "Landscape: flat savannah, grass and small trees, waystones",
       "text": [
         "The landscape around Kruger National Park is generally flat, with a **savannah **climate and dry vegetation. You will not see any agriculture and the vegetation is mostly made up of grasses, with small trees dotting the landscape. Red soil can also be seen below the grass.",
         "In addition, this distinctive [directional waystone](https://goo.gl/maps/C4VRQ6v1PyAStJUz7) is commonly found at many junctions.",
@@ -1971,7 +2083,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around the big north-east park: flat, dry savannah with grass, scattered small trees, red soil, and distinctive direction waystones at junctions. Mostly gravel roads or small unmarked paved roads."
     },
     {
       "id": "za-IPzM",
@@ -1979,7 +2092,7 @@
       "order": 0,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Metropolitan Routes are major roads around cities",
+      "title": "Sign: M route signs in two coastal cities",
       "text": [
         "**Metropolitan Routes** are major roads around cities. They are designated with the letter M.",
         "These distinct and unique M route signs are commonly found in [Port Elizabeth](https://goo.gl/maps/ZfbwsNaUjonKnoAY9) (Gqeberha) and [Durban](https://goo.gl/maps/C94hkSvFEopmUoJx9), respectively."
@@ -2019,14 +2132,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Metropolitan routes, big roads around cities, carry the letter M. The sign designs are distinct in one south-east port city and in the east coast city."
     },
     {
       "id": "za-ISiU",
       "step": 2,
       "order": 1,
       "family": "pole",
-      "title": "Pole: Traffic lights and pedestrian crossing poles in…",
+      "title": "Pole: three strips of reflective tape on signal poles",
       "text": [
         "Traffic lights and pedestrian crossing poles in Johannesburg are encircled by three strips of **reflective tape**."
       ],
@@ -2067,14 +2181,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the biggest northern city, traffic light and crossing poles have three strips of reflective tape around them."
     },
     {
       "id": "za-VsjT",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "While this lamp and arm can be found uncommonly across the…",
+      "title": "Street lamp: arm with a bump on top",
       "text": [
         "While this lamp and arm can be found uncommonly across the country, Durban uniquely has this** bump** on the top. You may, however, still see the standard lamp and arm."
       ],
@@ -2113,14 +2228,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "This lamp and arm shows up rarely across the country, but one east coast city has a bump on top. You may still see the standard lamp."
     },
     {
       "id": "za-7cr3",
       "step": 2,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Poles or any public infrastructure will often be plastered…",
+      "title": "Poles: stuck-on adverts for abortion and enlargement pills",
       "text": [
         "Poles or any public infrastructure will often be plastered with **dodgy adverts** for abortion services or penis enlargement pills in and around Gauteng, in particular in Johannesburg and Emalahleni."
       ],
@@ -2161,14 +2277,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles and public property are often covered in dodgy adverts for abortion services or enlargement pills, in and around the northern urban area, especially the biggest city and one mining town."
     },
     {
       "id": "za-OMTa",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The section of the R360 north of Bokspits",
+      "title": "Road: reddish asphalt, dry grey trees, golden grass",
       "text": [
         "The section of the **R360 north of Bokspits**, next to the Botswana border, has asphalt with a recognizable reddish tint. The landscape is arid and features dry greyish trees, shrubs and long golden grass. The road runs in a general north to south direction.",
         "NOTE: Asphalt with a reddish tint can be found on other roads and the southern part of the R360. However, the landscape north of Bokspits looks predominantly like this."
@@ -2210,14 +2327,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On one road north of a border village next to Botswana, reddish-tinted asphalt, arid land with grey dry trees, shrubs and long golden grass. The road runs north-south. Red asphalt also appears elsewhere, but this landscape is typical here."
     },
     {
       "id": "za-t7mv",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The distinct Table Mountain",
+      "title": "Landscape: flat-topped mountain with pyramid neighbour",
       "text": [
         "The distinct **Table Mountain**, located west of Cape Town, can be recognized by its prominent three-kilometre plateau. It is flanked by Devil’s Peak, which is more pyramidal."
       ],
@@ -2256,14 +2374,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A famous mountain west of the main southern city with a 3 km flat plateau, flanked by a more pyramid-shaped peak."
     },
     {
       "id": "za-G6kZ",
       "step": 2,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: Mountains in the Witfontein Nature Reserve",
+      "title": "Landscape: mountains visible north of a southern city",
       "text": [
         "Mountains in the Witfontein Nature Reserve, likely **George’s Peak**, will be visible **north** from the city of George."
       ],
@@ -2302,14 +2421,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/south-africa",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mountains in a nature reserve, likely a peak named after a man, are visible north of the southern coastal city."
     },
     {
       "id": "za-lm-411",
       "step": 3,
       "order": 0,
       "family": "car",
-      "title": "Google car: Blue back of google car",
+      "title": "Google car: blue back means this country or Europe",
       "text": [
         "If you see blue back of the google car with/or without antenna you can be only in South Africa or Europe.",
         "With yellow outer lines and driving left you are gonna be only in South Africa."
@@ -2330,14 +2450,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A blue car back, with or without an antenna, means you are in this country or Europe. Add yellow edge lines and driving on the left, and it can only be here."
     },
     {
       "id": "za-lm-870",
       "step": 3,
       "order": 1,
       "family": "other",
-      "title": "Koloti boulders",
+      "title": "Landscape: yellow boulders scattered around",
       "text": [
         "In Limpopo, northeast of Polokwane, there are yellow boulders lying around as if a giant dropped his toys."
       ],
@@ -2357,14 +2478,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the north, north-east of the main city, big yellow boulders lie around as if a giant dropped his toys."
     },
     {
       "id": "za-lm-7828",
       "step": 3,
       "order": 2,
       "family": "line",
-      "title": "Road line: Yellow Outer Lines",
+      "title": "Road lines: yellow edges, white centre vs Australia",
       "text": [
         "In South Africa, most paved roads have **single yellow outer lines** and **white center lines**. This can be used to differentiate from Australia which has only **white lines** and never single yellow lines.",
         "**REMEMBER:**",
@@ -2392,1575 +2514,19 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13160",
-      "step": 3,
-      "order": 3,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Red Sticker",
-      "text": [
-        "Square, red stickers on the back of regular signs are often found in Eastern cape and close to Eastern cape in Northern Cape and Free State.",
-        "You may see them in the North West province as well, but to a lesser extent.",
-        "**NOTE:**",
-        "Red stickers on the back of chevrons can be seen in almost every province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b749585b58ee",
-          "src": "https://learnablemeta.com/images/565/9JLgUmill1D6gYpX70lP8Ye79aDJk3wgPClV.avif",
-          "path": "za/b749585b58ee.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13161",
-      "step": 3,
-      "order": 4,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: White Sticker",
-      "text": [
-        "White stickers on the back of chevrons are often seen in the Cape provinces."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8d7e68dc272d",
-          "src": "https://learnablemeta.com/images/565/0q16Z9EPX5XLAQMTnLc7kquf9rjkxx63bFPy.avif",
-          "path": "za/8d7e68dc272d.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13162",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Grainy Pavement",
-      "text": [
-        "You can find this grainy, almost Texas-like pavement with a hint of pink in Limpopo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ea3e97db13c9",
-          "src": "https://learnablemeta.com/images/565/FqWv9t9KK9CLlNiLUuZsALIn1zEimpMSGwvt.avif",
-          "path": "za/ea3e97db13c9.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13164",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Power Plants",
-      "text": [
-        "Power plants are often seen in between the town of Secunda and eMalahleni in Mpumalanga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "122a8e67ab91",
-          "src": "https://learnablemeta.com/images/565/tBw7ri2OxejwkkBRKAUIjUyq8KI2qqz3qiYB.avif",
-          "path": "za/122a8e67ab91.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13167",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Vineyards",
-      "text": [
-        "Vineyards are almost exclusively found in Western Cape, mostly in valleys near the coast.",
-        "You can also commonly find them near Upington, in Northern Cape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "88fae90a1400",
-          "src": "https://learnablemeta.com/images/565/NwiujqTISDy9RqmOMO8Qf3G3m1cpSmZbKZnj.avif",
-          "path": "za/88fae90a1400.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13169",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "Sugarcane Plantations",
-      "text": [
-        "Sugarcane plantations are most commonly seen in KwaZulu-Natal, mostly along the coast.",
-        "However, they can also be seen in Mpumalanga on the Mozambique border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6213c2e6a3ba",
-          "src": "https://learnablemeta.com/images/565/W1u7EtSLDyoeAcoCyClEWoPbla0Cbtu6eoa0.avif",
-          "path": "za/6213c2e6a3ba.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13173",
-      "step": 3,
-      "order": 9,
-      "family": "vegetation",
-      "title": "Vegetation: Flat & Subtropical Vegetation",
-      "text": [
-        "The landscape near the Mozambique border in the highlighted area is noticeably flat, with green subtropical vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3c0f78d07ecf",
-          "src": "https://learnablemeta.com/images/565/GHCMYowKCeXmlefSJsbtqkgIwOgpwQFgQtdp.avif",
-          "path": "za/3c0f78d07ecf.webp",
-          "width": 1000,
-          "height": 488
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-13174",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: Kruger Park Car",
-      "text": [
-        "A camouflage car with black side mirrors and roof racks can be seen in Kruger National Park, on the Mozambique border.",
-        "**NOTE:**",
-        "The Park now also has generation 4 coverage, without the car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a73e653d5642",
-          "src": "https://learnablemeta.com/images/565/wwHbAqU1FHVuVCcI5A64H9n6yI2LjffpqjzM.avif",
-          "path": "za/a73e653d5642.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15166",
-      "step": 3,
-      "order": 11,
-      "family": "architecture",
-      "title": "Architecture: High Walls",
-      "text": [
-        "Suburban houses in and around large cities will often be surrounded by high walls, fences, and gates to deter criminals."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85dc7f065ed6",
-          "src": "https://learnablemeta.com/images/662/YrkP7sYjGzx0sIz47ABQ79uXYRO2X0jE1m10.avif",
-          "path": "za/85dc7f065ed6.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cf5988a23c1c056ae785f2",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15172",
-      "step": 3,
-      "order": 12,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: N & R Roads",
-      "text": [
-        "**Green directional signs with yellow road numbers are also used in Lesotho, Eswatini and Botswana. Here, the format of road numbers is useful:**",
-        "N and R-roads are exclusive to South Africa.",
-        "A and B-roads are exclusive to Botswana and Lesotho.",
-        "MR-roads are exclusive to Eswatini."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c42d4a2e8db4",
-          "src": "https://learnablemeta.com/images/662/oiOLRQvX1p80oqgdS6RaSq9Q0Pcr9uSSWe4I.avif",
-          "path": "za/c42d4a2e8db4.webp",
-          "width": 1000,
-          "height": 513
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
+      },
+      "summary": "Most paved roads have single yellow edge lines and white centre lines. Australia only has white. Middle Eastern countries can have yellow edges too, so check driving side. Botswana, Eswatini and Lesotho share them but usually have a white car.",
+      "sameAs": [
         "BW",
         "LS",
         "SZ"
       ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cf5988a23c1c056ae785f2",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15270",
-      "step": 3,
-      "order": 13,
-      "family": "landscape",
-      "title": "Landscape: Kruger National Park",
-      "text": [
-        "The landscape around Kruger National Park is generally flat, with a savannah climate and dry vegetation. You will not see any agriculture and the vegetation is mostly made up of grasses, with small trees dotting the landscape. Red soil can also be seen below the grass. In addition, this distinctive directional waystone is commonly found at many junctions.",
-        "NOTE: Within the coverage of the park, you will mostly find unpaved gravel roads or small and paved roads without road lines."
-      ],
-      "tags": [],
-      "images": [
+      "differs": [
         {
-          "id": "dbe1d094f2b3",
-          "src": "https://learnablemeta.com/images/664/W8qpAWKsC6AC8cDoChKr2YyyIlLSwilaFKsV.avif",
-          "path": "za/dbe1d094f2b3.webp",
-          "width": 1000,
-          "height": 494
+          "country": "AU",
+          "how": "Only white lines, never single yellow"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15271",
-      "step": 3,
-      "order": 14,
-      "family": "landscape",
-      "title": "Landscape: Mozambique Border Flatness",
-      "text": [
-        "The landscape near the Mozambique border in the highlighted area is noticeably flat, with green subtropical vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e60aed9f3f3e",
-          "src": "https://learnablemeta.com/images/664/ZDVF5rqAgaiGSDeNILzD48GEuPiryKCuKiK2.avif",
-          "path": "za/e60aed9f3f3e.webp",
-          "width": 1000,
-          "height": 495
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15273",
-      "step": 3,
-      "order": 15,
-      "family": "landscape",
-      "title": "Landscape: Northern Cape Dryness",
-      "text": [
-        "A dry landscape with red soil is typically found in the Northern Cape.",
-        "NOTE: This map is a useful guide in guessing based on the climate of South Africa."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "399c4541ccb5",
-          "src": "https://learnablemeta.com/images/664/jCmxye4L3aBmiWCByc789EWqgEJJjN72fGOe.avif",
-          "giveaway": true,
-          "path": "za/399c4541ccb5.webp",
-          "width": 1000,
-          "height": 496
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-15275",
-      "step": 3,
-      "order": 16,
-      "family": "landscape",
-      "title": "Landscape: Northeast",
-      "text": [
-        "The northeast of the country can look very dry and somewhat barren, with a lot of orange or red soil. You will often see hills or mountains covered in shrubs.",
-        "NOTE: Depending on the season, the coverage can change drastically from dry to very green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1572416b634b",
-          "src": "https://learnablemeta.com/images/664/8fNsRRTqU6qjlbRN7XjwsmRymuvWyUrMJbh5.avif",
-          "path": "za/1572416b634b.webp",
-          "width": 1000,
-          "height": 498
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-51008",
-      "step": 3,
-      "order": 17,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: N & R Roads",
-      "text": [
-        "**Green directional signs with yellow road numbers are also used in Lesotho, Eswatini and Botswana. Here, the format of road numbers is useful:**",
-        "N and R-roads are exclusive to South Africa.",
-        "A and B-roads are exclusive to Botswana and Lesotho.",
-        "MR-roads are exclusive to Eswatini."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c42d4a2e8db4",
-          "src": "https://learnablemeta.com/images/662/oiOLRQvX1p80oqgdS6RaSq9Q0Pcr9uSSWe4I.avif",
-          "path": "za/c42d4a2e8db4.webp",
-          "width": 1000,
-          "height": 513
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BW",
-        "LS",
-        "SZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-51049",
-      "step": 3,
-      "order": 18,
-      "family": "architecture",
-      "title": "Architecture: High Walls",
-      "text": [
-        "Suburban houses in and around large cities will often be surrounded by high walls, fences, and gates to deter criminals."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85dc7f065ed6",
-          "src": "https://learnablemeta.com/images/662/YrkP7sYjGzx0sIz47ABQ79uXYRO2X0jE1m10.avif",
-          "path": "za/85dc7f065ed6.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-56209",
-      "step": 3,
-      "order": 19,
-      "family": "line",
-      "title": "Road line: Tripples",
-      "text": [
-        "South Africa occasionally features unique white triple centre lines.",
-        "**--- NOTE:**",
-        "The only other countries where you will find road lines like these are the other southern African countries of Botswana, Eswatini, and Lesotho."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "77f8c0041ff5",
-          "src": "https://learnablemeta.com/images/863/dKo9AA6yfWnx5ejMW0tQ4zsHDwIxugH184Fh.avif",
-          "path": "za/77f8c0041ff5.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BW",
-        "LS",
-        "SZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-56211",
-      "step": 3,
-      "order": 20,
-      "family": "line",
-      "title": "Road line: Yellow Outers",
-      "text": [
-        "On most roads, South Africa utilizes single yellow outer lines and white centre lines.",
-        "**--- NOTE:**",
-        "**These roadlines also exist in:**",
-        "Botswana",
-        "Eswatini",
-        "Lesotho"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "032b54835995",
-          "src": "https://learnablemeta.com/images/863/Ik4mPsEjx6hZLcEM0mssBn9o7kj6aMGJ2S4M.avif",
-          "path": "za/032b54835995.webp",
-          "width": 1000,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BW",
-        "LS",
-        "SZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-361744",
-      "step": 3,
-      "order": 21,
-      "family": "other",
-      "title": "South Africa",
-      "text": [
-        "Telephone numbers are 10 digits long. The first three digits of landline numbers are the area code. The first digit is always a zero; the second and third digits give you the area. The area codes are geographically grouped, so even learning just the first digit is useful.",
-        "NOTE: Mobile phone numbers start with 06–08. These numbers are not specific to an area."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a60491baeb5b",
-          "src": "https://learnablemeta.com/images/1398/6kD6iXcBqASJu9W3Z0I50IIwLhP9bzXtaVvJ.avif",
-          "path": "za/a60491baeb5b.webp",
-          "width": 1000,
-          "height": 516
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-464169",
-      "step": 3,
-      "order": 22,
-      "family": "pole",
-      "title": "Pole: 3 alternating insulators",
-      "text": [
-        "Poles with 3 alternating insulators sticking out horizontally at the top are mostly seen in the four northern provinces of Limpopo, Gauteng, North West and Mpumalanga. They can also sometimes be found in Northern Cape. In the rest of the country, these pole tops are exceedingly rare."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b9e6f67396c4",
-          "src": "https://learnablemeta.com/images/1822/1749210296005-zg0.avif",
-          "path": "za/b9e6f67396c4.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-464170",
-      "step": 3,
-      "order": 23,
-      "family": "pole",
-      "title": "Pole: 2 diagonal bars",
-      "text": [
-        "Poles with 2 diagonal bars forming a ‘&#x3C;’ shape can be found mostly in the northeastern provinces, most commonly in Limpopo and North West."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0f42ac15f0b5",
-          "src": "https://learnablemeta.com/images/1822/1749210471326-f1d.avif",
-          "path": "za/0f42ac15f0b5.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-464171",
-      "step": 3,
-      "order": 24,
-      "family": "pole",
-      "title": "Pole: 1 or 2 metal arms",
-      "text": [
-        "Poles with 1 or 2 metal arms holding up insulators are most commonly seen in Mpumalanga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f1d8682b4570",
-          "src": "https://learnablemeta.com/images/1822/1749210513800-Ltf.avif",
-          "path": "za/f1d8682b4570.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-464201",
-      "step": 3,
-      "order": 25,
-      "family": "other",
-      "title": "wide A poletop",
-      "text": [
-        "A similar poletop can be found in Eastern Cape, however the A-shape is noticeably wider and the bottom insulators are attached directly to the ‘A’ rather than a horizontal bar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64bbb54f2542",
-          "src": "https://learnablemeta.com/images/1822/1749210388715-TR9.avif",
-          "path": "za/64bbb54f2542.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-464205",
-      "step": 3,
-      "order": 26,
-      "family": "pole",
-      "title": "Pole: A poletop",
-      "text": [
-        "Poles with 3 bars forming the letter ‘A’, with the bottom insulators being attached at the edges of a horizontal bar, can be found almost exclusively in Western Cape, and rarely in bordering provinces."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e500991cf7f1",
-          "src": "https://learnablemeta.com/images/1822/1749210237111-dA5.avif",
-          "path": "za/e500991cf7f1.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595947",
-      "step": 3,
-      "order": 27,
-      "family": "pole",
-      "title": "Pole: Infrastructure - A-Poletop (narrow)",
-      "text": [
-        "Poles with 3 bars forming the letter **‘A’**, with the bottom insulators being attached at the edges of a horizontal bar, can be found almost exclusively in Western Cape, and rarely in bordering provinces."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "445609884fcf",
-          "src": "https://learnablemeta.com/images/5026/1763251632069-eTM.avif",
-          "path": "za/445609884fcf.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595948",
-      "step": 3,
-      "order": 28,
-      "family": "pole",
-      "title": "Pole: Infrastructure - A-Poletop (wide)",
-      "text": [
-        "Poles with 3 bars forming the letter **‘A’**, with the bottom insulators being attached directly to the 'A' rather than a horizontal bar, can be found in Eastern Cape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f238c6c7674",
-          "src": "https://learnablemeta.com/images/5026/1763251620865-p3I.avif",
-          "path": "za/3f238c6c7674.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595949",
-      "step": 3,
-      "order": 29,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Trident Pole",
-      "text": [
-        "**Trident pole tops** are almost unique to KwaZulu-Natal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0113288f60c6",
-          "src": "https://learnablemeta.com/images/5026/1763251588532-s0R.avif",
-          "path": "za/0113288f60c6.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595950",
-      "step": 3,
-      "order": 30,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Alternating Insulators",
-      "text": [
-        "Poles with **3 alternating insulators** sticking out horizontally at the top are mostly seen in the four northern provinces of Limpopo, Gauteng, North West and Mpumalanga. They can also sometimes be found in Northern Cape. In the rest of the country, these pole tops are exceedingly rare."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6eda79704214",
-          "src": "https://learnablemeta.com/images/5026/1763251612196-VVD.avif",
-          "path": "za/6eda79704214.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595951",
-      "step": 3,
-      "order": 31,
-      "family": "pole",
-      "title": "Pole: Infrastructure - <-Pole",
-      "text": [
-        "Poles with 2 **diagonal bars** forming a ‘&#x3C;’ shape can be found mostly in the northeastern provinces, most commonly in Limpopo and North West."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7ee8a376c72b",
-          "src": "https://learnablemeta.com/images/5026/1763251539277-ElJ.avif",
-          "path": "za/7ee8a376c72b.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595952",
-      "step": 3,
-      "order": 32,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Metal Arms",
-      "text": [
-        "Poles with **1 or 2 metal arms** holding up insulators are most commonly seen in Mpumalanga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "03ef7ba11942",
-          "src": "https://learnablemeta.com/images/5026/1763251663382-Ciy.avif",
-          "path": "za/03ef7ba11942.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595953",
-      "step": 3,
-      "order": 33,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Infrastructure - Red Sticker",
-      "text": [
-        "**Square, red stickers** on the back of regular signs are often found in Eastern cape and close to Eastern cape in Northern Cape and Free State. You may see them in the North West province as well, but to a lesser extent.",
-        "NOTE: Red stickers on the back of chevrons can be seen in almost every province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7fc54c4573a9",
-          "src": "https://learnablemeta.com/images/5026/1763251566083-5pG.avif",
-          "path": "za/7fc54c4573a9.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595954",
-      "step": 3,
-      "order": 34,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Infrastructure - White Sticker",
-      "text": [
-        "**White stickers** on the back of chevrons are often seen in the Cape provinces."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "eed81712e941",
-          "src": "https://learnablemeta.com/images/5026/1763251602362-52z.avif",
-          "path": "za/eed81712e941.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595955",
-      "step": 3,
-      "order": 35,
-      "family": "other",
-      "title": "Infrastructure - Limpopo Pavement",
-      "text": [
-        "You can find this **grainy**, almost Texas-like pavement with a hint of **pink** in Limpopo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "09fc3130ba07",
-          "src": "https://learnablemeta.com/images/5026/1763251653526-U4U.avif",
-          "path": "za/09fc3130ba07.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595956",
-      "step": 3,
-      "order": 36,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Bird Nest",
-      "text": [
-        "Big bird nests on top of poles are commonly seen in the northern part of the Northern Cape Province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1e7e7ae9cb36",
-          "src": "https://learnablemeta.com/images/5026/1763251640546-KCZ.avif",
-          "path": "za/1e7e7ae9cb36.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-595957",
-      "step": 3,
-      "order": 37,
-      "family": "other",
-      "title": "Infrastructure - Powerplant",
-      "text": [
-        "**Power plants** are often seen in between the town of Secunda and eMalahleni in Mpumalanga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d2a2b94f63a3",
-          "src": "https://learnablemeta.com/images/5026/1763251552821-ytO.avif",
-          "path": "za/d2a2b94f63a3.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615757",
-      "step": 3,
-      "order": 38,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Northeastern Dry Season",
-      "text": [
-        "The northeast of the country can look very dry and somewhat barren, with a lot of orange or red soil. You will often see hills or mountains covered in shrubs.",
-        "NOTE: Depending on the season, the coverage can change drastically from dry to very green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fa3159404e22",
-          "src": "https://learnablemeta.com/images/5026/1765041936725-Xdo.avif",
-          "path": "za/fa3159404e22.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615758",
-      "step": 3,
-      "order": 39,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Rocky Mountains",
-      "text": [
-        "Unique **rocky**, treeless mountains can be seen in Western Cape, with most of the mountains having tall, steep sides and sharp peaks.",
-        "NOTE: Similar mountains can be seen in and around Lesotho."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "19229e8702f7",
-          "src": "https://learnablemeta.com/images/5026/1765041987297-PcA.avif",
-          "path": "za/19229e8702f7.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615759",
-      "step": 3,
-      "order": 40,
-      "family": "other",
-      "title": "Agriculture - Vineyards",
-      "text": [
-        "Vineyards are almost exclusively found in **Western Cape**, mostly in valleys near the coast. You can also commonly find them near Upington, in Northern Cape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56f7286936a8",
-          "src": "https://learnablemeta.com/images/5026/1765042043531-0SI.avif",
-          "path": "za/56f7286936a8.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615760",
-      "step": 3,
-      "order": 41,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Northern Cape",
-      "text": [
-        "A dry landscape with red soil is typically found in the Northern Cape.",
-        "NOTE: This map is a useful guide in guessing based on the climate of South Africa."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "43861d932af4",
-          "src": "https://learnablemeta.com/images/5026/1765041958395-qqL.avif",
-          "giveaway": true,
-          "path": "za/43861d932af4.webp",
-          "width": 600,
-          "height": 295
-        },
-        {
-          "id": "3ed992f35199",
-          "src": "https://learnablemeta.com/images/5026/1765041961932-il0.avif",
-          "giveaway": true,
-          "path": "za/3ed992f35199.webp",
-          "width": 800,
-          "height": 461
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615761",
-      "step": 3,
-      "order": 42,
-      "family": "other",
-      "title": "Agriculture - Sugarcane",
-      "text": [
-        "**Sugarcane plantations** are most commonly seen in KwaZulu-Natal, mostly along the coast. However, they can also be seen in Mpumalanga on the Mozambique border. For an overview, see this map."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f766ec3fe5c2",
-          "src": "https://learnablemeta.com/images/5026/1765042018792-NTC.avif",
-          "giveaway": true,
-          "path": "za/f766ec3fe5c2.webp",
-          "width": 600,
-          "height": 295
-        },
-        {
-          "id": "5a3e2ed55bc6",
-          "src": "https://learnablemeta.com/images/5026/1765042027463-DvK.avif",
-          "giveaway": true,
-          "path": "za/5a3e2ed55bc6.webp",
-          "width": 600,
-          "height": 669
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615762",
-      "step": 3,
-      "order": 43,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Cook Pine",
-      "text": [
-        "Uniquely tall **Cook pine trees** are found mostly between the cities of East London and Durban along the southeastern coast.",
-        "NOTE: These are planted and not native, so they can be found anywhere along the coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "641d6350f2c3",
-          "src": "https://learnablemeta.com/images/5026/1765041850448-G5J.avif",
-          "path": "za/641d6350f2c3.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615763",
-      "step": 3,
-      "order": 44,
-      "family": "vegetation",
-      "title": "Vegetation: Agriculture - Pine Plantation",
-      "text": [
-        "**Tree plantations** that consist mostly of pine are common to the west of Eswatini, and some to the south in KwaZulu-Natal.",
-        "NOTE: Pine tree plantations are typically seen within the country of Eswatini itself."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dce2d94915b9",
-          "src": "https://learnablemeta.com/images/5026/1765041973089-xDe.avif",
-          "path": "za/dce2d94915b9.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "SZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615764",
-      "step": 3,
-      "order": 45,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Rolling Hills",
-      "text": [
-        "**Grassy rolling hills** are generally located in the coastal area of Western Cape between Cape Town and George, and just north of Cape Town. Tall ridges are usually visible to the north or east."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0443c0b2f454",
-          "src": "https://learnablemeta.com/images/5026/1765041995834-6Gd.avif",
-          "path": "za/0443c0b2f454.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615765",
-      "step": 3,
-      "order": 46,
-      "family": "landscape",
-      "title": "Landscape: Landscape - South of Mozambique",
-      "text": [
-        "The landscape near the Mozambique border in the highlighted area is noticeably flat, with green subtropical vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4b8e89f463de",
-          "src": "https://learnablemeta.com/images/5026/1765042005923-3ZT.avif",
-          "path": "za/4b8e89f463de.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615766",
-      "step": 3,
-      "order": 47,
-      "family": "architecture",
-      "title": "Architecture: Car Meta - Kruger National Park Car",
-      "text": [
-        "A camouflage car with black side mirrors and roof racks can be seen in Kruger National Park, on the Mozambique border.",
-        "NOTE: The Park now also has generation 4 coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a2219364f4f",
-          "src": "https://learnablemeta.com/images/5026/1765041889474-1VF.avif",
-          "path": "za/3a2219364f4f.webp",
-          "width": 372,
-          "height": 187
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615767",
-      "step": 3,
-      "order": 48,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Kruger National Park",
-      "text": [
-        "The landscape around Kruger National Park is generally flat, with a savannah climate and dry vegetation. You will not see any agriculture and the vegetation is mostly made up of grasses, with small trees dotting the landscape. Red soil can also be seen below the grass.",
-        "NOTE: Within the coverage of the park, you will mostly find unpaved gravel roads or small and paved roads without road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1f7f0e6f0525",
-          "src": "https://learnablemeta.com/images/5026/1765041840296-kMV.avif",
-          "path": "za/1f7f0e6f0525.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-615768",
-      "step": 3,
-      "order": 49,
-      "family": "other",
-      "title": "Infrastructure - Kruger National Park Waystone",
-      "text": [
-        "This distinctive directional waystone is commonly found at many junctions in Kruger National Park."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bacde41d6c87",
-          "src": "https://learnablemeta.com/images/5026/1765041922126-gbq.avif",
-          "path": "za/bacde41d6c87.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632385",
-      "step": 3,
-      "order": 50,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Infrastructure - M-Road - Gqeberha",
-      "text": [
-        "Metropolitan Routes are major roads around cities. They are designated with the letter M. These distinct and unique M route signs are commonly found in Port Elizabeth (Gqeberha)"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1d9b9d456e90",
-          "src": "https://learnablemeta.com/images/5026/1766239469765-2iW.avif",
-          "path": "za/1d9b9d456e90.webp",
-          "width": 221,
-          "height": 238
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632386",
-      "step": 3,
-      "order": 51,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Infrastructure - M-Road - Durban",
-      "text": [
-        "Metropolitan Routes are major roads around cities. They are designated with the letter M. These distinct and unique M route signs are commonly found in Durban."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8d493e24f2c2",
-          "src": "https://learnablemeta.com/images/5026/1766239460959-hl2.avif",
-          "path": "za/8d493e24f2c2.webp",
-          "width": 141,
-          "height": 258
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632387",
-      "step": 3,
-      "order": 52,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Infrastructure - Three Stripes",
-      "text": [
-        "Traffic lights and pedestrian crossing poles in Johannesburg are encircled by three strips of reflective tape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4d73e9dd6b3c",
-          "src": "https://learnablemeta.com/images/5026/1766239452956-E0a.avif",
-          "path": "za/4d73e9dd6b3c.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632388",
-      "step": 3,
-      "order": 53,
-      "family": "other",
-      "title": "Infrastructure - Durban Lamp",
-      "text": [
-        "While this lamp and arm can be found uncommonly across the country, Durban uniquely has this bump on the top. You may, however, still see the standard lamp and arm."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1138d8338758",
-          "src": "https://learnablemeta.com/images/5026/1766239441340-gjL.avif",
-          "path": "za/1138d8338758.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632389",
-      "step": 3,
-      "order": 54,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Dodgy Adverts",
-      "text": [
-        "Poles or any public infrastructure will often be plastered with dodgy adverts for abortion services or penis enlargement pills in and around Gauteng, in particular in Johannesburg and Emalahleni."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4836a450ca04",
-          "src": "https://learnablemeta.com/images/5026/1766239434076-kpY.avif",
-          "path": "za/4836a450ca04.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632390",
-      "step": 3,
-      "order": 55,
-      "family": "landscape",
-      "title": "Landscape: Landscape - R360 North of Bokspits",
-      "text": [
-        "The section of the R360 north of Bokspits, next to the Botswana border, has asphalt with a recognizable reddish tint. The landscape is arid and features dry greyish trees, shrubs and long golden grass. The road runs in a general north to south direction.",
-        "NOTE: Asphalt with a reddish tint can be found on other roads and the southern part of the R360. However, the landscape north of Bokspits looks predominantly like this."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "94948503b71a",
-          "src": "https://learnablemeta.com/images/5026/1766239424013-YjS.avif",
-          "path": "za/94948503b71a.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BW"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632391",
-      "step": 3,
-      "order": 56,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Cape Town Mountains",
-      "text": [
-        "The distinct Table Mountain, located west of Cape Town, can be recognized by its prominent three-kilometre plateau. It is flanked by Devil’s Peak, which is more pyramidal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e7009431ec93",
-          "src": "https://learnablemeta.com/images/5026/1766239415909-acv.avif",
-          "path": "za/e7009431ec93.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "za-lm-632392",
-      "step": 3,
-      "order": 57,
-      "family": "landscape",
-      "title": "Landscape: Landscape - George Mountains",
-      "text": [
-        "Mountains in the Witfontein Nature Reserve, likely George’s Peak, will be visible north from the city of George."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b61f1f111638",
-          "src": "https://learnablemeta.com/images/5026/1766239405670-JM5.avif",
-          "path": "za/b61f1f111638.webp",
-          "width": 600,
-          "height": 295
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     }
   ]
 }

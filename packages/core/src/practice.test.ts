@@ -267,6 +267,18 @@ describe('practice on the 67 Brazilian area codes', () => {
     });
   }
 
+  it('keeps two codes of one state apart, but for a missed card at its deadline', () => {
+    const byId = new Map(areaCodes.map((c) => [c.id, c]));
+    for (const seed of [1, 2, 3, 4, 5]) {
+      const { ids, wrong } = realistic(areaCodes, seed, 300);
+      const back = ids.filter(
+        (id, i) => i > 0 && byId.get(id)!.answer === byId.get(ids[i - 1]!)!.answer,
+      ).length;
+      // only a missed card forced back at its deadline may land next to its own state
+      expect(back).toBeLessThanOrEqual(wrong.filter(Boolean).length / 4);
+    }
+  });
+
   it('brings every wrong card back within 3 to 6 cards', () => {
     for (const seed of [1, 2, 3]) {
       const { ids, wrong } = realistic(areaCodes, seed, 300, 0.7);

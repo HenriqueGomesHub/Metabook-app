@@ -24,7 +24,7 @@
       "step": 0,
       "order": 2,
       "family": "plate",
-      "title": "Plate: Israeli licence plates are yellow with a blue strip on the…",
+      "title": "Plate: yellow with blue strip",
       "text": [
         "Israeli licence plates are **yellow **with a blue strip on the left.",
         "NOTE: While this design is specific for Israel, it is also very common on the West Bank. Jordan and the UAE use white licence plates. Tunisia uses black plates."
@@ -43,7 +43,8 @@
           "src": "https://learnablemeta.com/images/665/1pMYyKuqctADkOrm4vXpyinU9Le1TfFDRVPd.avif",
           "path": "il/4162477f1cad.webp",
           "width": 1000,
-          "height": 423
+          "height": 423,
+          "dupeOf": "b81424e26a1e"
         }
       ],
       "locations": [],
@@ -56,14 +57,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow plates with a blue strip on the left. Also very common in the West Bank. Jordan and the UAE use white plates, Tunisia black.",
+      "differs": [
+        {
+          "country": "JO",
+          "how": "Jordan uses white plates"
+        },
+        {
+          "country": "AE",
+          "how": "UAE uses white plates"
+        },
+        {
+          "country": "TN",
+          "how": "Tunisia uses black plates"
+        }
+      ]
     },
     {
       "id": "il-UXde",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: Most Generation 3 coverage was taken by a black Street View…",
+      "title": "Google car: black car, long antenna",
       "text": [
         "Most Generation 3 coverage was taken by a **black** Street View car with a **long antenna**.",
         "You may also see the black car [without an antenna](https://goo.gl/maps/WnSVs5zTAD2Ek8vu5) and a [silver car](https://www.google.com/maps/@32.8549507,35.0841946,3a,38.6y,212.8h,56.31t/data=!3m6!1e1!3m4!1sumy_ztStyzHowLAKdqEq6g!2e0!7i13312!8i6656?entry=ttu) with a short antenna."
@@ -107,14 +123,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most Gen 3 coverage is a black car with a long antenna. You may also see a black car with no antenna, or a silver car with a short antenna."
     },
     {
       "id": "il-26il",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: You will typically find two languages",
+      "title": "Language: Hebrew and Arabic",
       "text": [
         "You will typically find two languages; **Hebrew**, which is practically only found in Israel and the West Bank, and Arabic, which is particularly common in the West Bank."
       ],
@@ -131,14 +148,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two languages appear: Hebrew, found practically only here and in the West Bank, and Arabic, especially in the West Bank."
     },
     {
       "id": "il-cY6B",
       "step": 0,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The landscape ranges from a greener Mediterranean landscape…",
+      "title": "Landscape: green north, very dry south",
       "text": [
         "The landscape ranges from a greener Mediterranean landscape in the north, to a very arid landscape in the south."
       ],
@@ -174,14 +192,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Greener Mediterranean land in the north, becoming very arid in the south."
     },
     {
       "id": "il-Xg52",
       "step": 0,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Architecture tends to consist of bright and warm-coloured…",
+      "title": "Houses: warm-coloured stone blocks",
       "text": [
         "Architecture tends to consist of bright and warm-coloured stone buildings, often with a blocky appearance. While Mediterranean-style houses with orange tiled roofs are more common than in other Middle Eastern countries, flat roofs are still just as common."
       ],
@@ -224,14 +243,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bright, warm-coloured stone buildings with a blocky look. Orange tiled Mediterranean roofs are more common than in nearby countries, but flat roofs are just as common."
     },
     {
       "id": "il-cn98",
       "step": 0,
       "order": 7,
       "family": "line",
-      "title": "Road line: Most roads feature yellow outer lines with white centre…",
+      "title": "Road lines: yellow edge, white centre",
       "text": [
         "Most roads feature **yellow outer lines** with white centre lines."
       ],
@@ -262,7 +282,8 @@
           "src": "https://learnablemeta.com/images/665/MphKxWVSK6RivIEfkHNM0YQGzI4scRuPR3Jl.avif",
           "path": "il/7405c54e9ea5.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "765e2d8b6c9c"
         }
       ],
       "locations": [
@@ -281,14 +302,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most roads have yellow edge lines and white centre lines. Jordan, Qatar, the UAE and Oman use this too.",
+      "sameAs": [
+        "AE",
+        "JO",
+        "OM",
+        "QA"
+      ]
     },
     {
       "id": "il-OiB7",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "You will very often see striped kerbs",
+      "title": "Kerb: red and white stripes",
       "text": [
         "You will very often see striped kerbs: **red and white** and fairly commonly black and white.",
         "[Red and yellow](https://goo.gl/maps/x7aWo5BaepqFo2LB9) and [blue and white](https://goo.gl/maps/JhFtRwM7ARjWGsq98) are also rarely found."
@@ -325,14 +353,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Striped kerbs are very common: red and white, and fairly often black and white. Red and yellow or blue and white are rare."
     },
     {
       "id": "il-aDf0",
       "step": 0,
       "order": 9,
       "family": "guardrail",
-      "title": "Guardrail: Both A-type and B-type guardrails are common",
+      "title": "Guardrail: both A-type and B-type",
       "text": [
         "Both A-type and B-type guardrails are common.",
         "NOTE: The only other Middle Eastern country where B-type guardrails are common is Turkey."
@@ -373,7 +402,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Both A-type and B-type guardrails are common. The only other Middle Eastern country where B-type is common is Turkey.",
+      "sameAs": [
+        "TR"
+      ]
     },
     {
       "id": "il-LiS4",
@@ -381,7 +414,7 @@
       "order": 10,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Chevrons are white on black",
+      "title": "Chevron: white on black",
       "text": [
         "Chevrons are **white** on **black**."
       ],
@@ -412,7 +445,8 @@
           "src": "https://learnablemeta.com/images/914/7Qu0UPVipXLhJWMAL59SIJN0Ej2RrOk10p4C.avif",
           "path": "il/ee8c786368e0.webp",
           "width": 1000,
-          "height": 430
+          "height": 430,
+          "dupeOf": "37ef87cd3da3"
         }
       ],
       "locations": [
@@ -431,14 +465,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chevrons are white on black."
     },
     {
       "id": "il-8sED",
       "step": 0,
       "order": 11,
       "family": "other",
-      "title": "Kilometre markers are white with a thick border",
+      "title": "Route marker: white km marker, thick coloured border",
       "text": [
         "Kilometre markers are white with a **thick border**, which can either be red, green or blue."
       ],
@@ -474,7 +509,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Kilometre markers are white with a thick border in red, green or blue."
     },
     {
       "id": "il-QlFr",
@@ -482,7 +518,7 @@
       "order": 12,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Rather than having a word meaning ‘stop’ written on them",
+      "title": "Sign: stop sign with a hand symbol",
       "text": [
         "Rather than having a word meaning ‘stop’ written on them, stop signs have a **hand** painted on them."
       ],
@@ -525,14 +561,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs show a hand instead of a word."
     },
     {
       "id": "il-ik9R",
       "step": 0,
       "order": 13,
       "family": "pole",
-      "title": "Pole: Utility poles commonly feature these painted black and…",
+      "title": "Pole: black and white striped bottoms",
       "text": [
         "Utility poles commonly feature these painted **black and white striped** bottoms."
       ],
@@ -577,14 +614,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles often have painted black and white striped bottoms."
     },
     {
       "id": "il-q6eN",
       "step": 0,
       "order": 14,
       "family": "pole",
-      "title": "Pole: Utility poles with a mesh framework are very common",
+      "title": "Pole: mesh lattice framework",
       "text": [
         "Utility poles with a **mesh framework** are very common."
       ],
@@ -625,14 +663,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles built as a mesh lattice are very common."
     },
     {
       "id": "il-5SOq",
       "step": 0,
       "order": 15,
       "family": "pole",
-      "title": "Pole: You can often find this yellow warning sign on poles",
+      "title": "Pole: yellow warning sign",
       "text": [
         "You can often find this **yellow warning sign** on poles."
       ],
@@ -673,14 +712,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A yellow warning sign is often attached to poles."
     },
     {
       "id": "il-laqT",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: This is a coverage map over Israel and the West Bank",
+      "title": "Coverage: sparse in south and eastern area",
       "text": [
         "This is a coverage map over Israel and the West Bank. Notably, southern Israel and most of the West Bank has very sparse coverage.",
         "_You can click on the image to enlarge it._"
@@ -702,14 +742,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The south and most of the eastern territory have very sparse coverage."
     },
     {
       "id": "il-McC9",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Here is a map of area codes in Israel and the West Bank",
+      "title": "Phone numbers: area codes by region",
       "text": [
         "Here is a map of **area codes** in Israel and the West Bank. Note that only the phone codes featured on the map are regional."
       ],
@@ -730,14 +771,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only the phone codes shown on the map are regional."
     },
     {
       "id": "il-4Y89",
       "step": 1,
       "order": 2,
       "family": "car",
-      "title": "Google car: Generation 4 coverage is only found in Israel",
+      "title": "Google car: Gen 4 only in one country, black car",
       "text": [
         "**Generation 4** coverage is only found in Israel, in the areas marked on the map.",
         "The coverage was taken with a **black** Street View car."
@@ -778,14 +820,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage exists only in Israel proper, in the mapped areas, filmed with a black car."
     },
     {
       "id": "il-HUcN",
       "step": 1,
       "order": 3,
       "family": "car",
-      "title": "Google car: Most of the Generation 4 coverage features a dirty front…",
+      "title": "Google car: dirty front camera",
       "text": [
         "Most of the Generation 4 coverage features a **dirty front camera**."
       ],
@@ -824,14 +867,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most Gen 4 coverage has a dirty front camera."
     },
     {
       "id": "il-dPE9",
       "step": 1,
       "order": 4,
       "family": "car",
-      "title": "Google car: Generation 4 coverage with a clean front camera is mostly…",
+      "title": "Google car: clean front camera",
       "text": [
         "Generation 4 coverage with a **clean** front camera is mostly found in and around Tel Aviv."
       ],
@@ -871,14 +915,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage with a clean front camera is mostly in and around the big coastal city, Tel Aviv."
     },
     {
       "id": "il-XZS5",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Northern Israel is usually far more mountainous and green…",
+      "title": "Landscape: mountainous, green, forested hills",
       "text": [
         "Northern Israel is usually far more **mountainous** and **green** than the rest of Israel. Throughout the region you will almost always see forested hills and mountains."
       ],
@@ -917,14 +962,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north is far more mountainous and green than the rest, almost always with forested hills and mountains."
     },
     {
       "id": "il-DjZZ",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Central Israel is usually flat and has several cities",
+      "title": "Landscape: flat, many cities, good highways",
       "text": [
         "Central Israel is usually **flat** and has **several cities**. Highways are usually in better condition than roads in the south and north."
       ],
@@ -963,14 +1009,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The centre is flat with several cities and better highways than the south and north."
     },
     {
       "id": "il-5uEB",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Southern Israel and eastern West Bank are extremely dry and…",
+      "title": "Landscape: extremely dry and sandy",
       "text": [
         "Southern Israel and eastern West Bank are **extremely dry** and sandy."
       ],
@@ -1009,14 +1056,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The south and the eastern territory are extremely dry and sandy."
     },
     {
       "id": "il-cUXB",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: The area west of Jerusalem can often look deceptively…",
+      "title": "Landscape: green forested hills near the holy city",
       "text": [
         "The area west of Jerusalem can often look deceptively similar to northern Israel, with green forested hills and some agriculture sprinkled across the landscape.",
         "Two things can occasionally be used to tell the two apart. Firstly, in northern Israel you may occasionally see wide, [flat valleys](https://goo.gl/maps/6TvF6u9qvM7ZGx2k8), while the Jerusalem area is always going to be hilly. Secondly, if you see houses made of [Jerusalem stone](https://goo.gl/maps/8QyM47Z1iwZCsiR9A), you are likely to be near Jerusalem."
@@ -1064,14 +1112,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The area west of Jerusalem looks like the north, with green forested hills and some farming. In the north you may see wide flat valleys, while Jerusalem's area is always hilly, and houses of Jerusalem stone point to Jerusalem."
     },
     {
       "id": "il-yoLh",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: Most of the West Bank has a semi-arid Mediterranean…",
+      "title": "Landscape: semi-arid Mediterranean",
       "text": [
         "Most of the West Bank has a **semi-arid** Mediterranean landscape. It is generally greener than southern Israel, drier than northern Israel and west of Jerusalem, and hillier and less agricultural than central Israel."
       ],
@@ -1110,14 +1159,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the West Bank is semi-arid: greener than the south, drier than the north, hillier and less farmed than the centre."
     },
     {
       "id": "il-l6Gd",
       "step": 1,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: In Jerusalem and surrounding cities in the West Bank",
+      "title": "Houses: pale Jerusalem stone everywhere",
       "text": [
         "In Jerusalem and surrounding cities in the West Bank, nearly every building is built with the same type of material, called [Jerusalem stone](https://en.wikipedia.org/wiki/Jerusalem_stone). Beware that the stone will look [much smoother](https://goo.gl/maps/mXZoK6pDh3FiQcjE6) on newer buildings.",
         "NOTE: Single houses with the same material can be found in other towns and cities."
@@ -1158,14 +1208,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Jerusalem and nearby West Bank cities almost every building uses the same pale Jerusalem stone, smoother on newer buildings. Single houses of it exist in other towns."
     },
     {
       "id": "il-bTSZ",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: Date palm plantations can often be seen close to the…",
+      "title": "Plants: date palm plantations",
       "text": [
         "**Date palm** plantations can often be seen close to the Jordanian border."
       ],
@@ -1204,14 +1255,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Date palm plantations are often seen near the Jordan border."
     },
     {
       "id": "il-8ktx",
       "step": 1,
       "order": 12,
       "family": "other",
-      "title": "Rock walls put together with cement are found in the north…",
+      "title": "Walls: rock walls set in cement",
       "text": [
         "**Rock walls** put together with **cement** are found in the north of Israel."
       ],
@@ -1250,14 +1302,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rock walls held together with cement are found in the north."
     },
     {
       "id": "il-8SBk",
       "step": 1,
       "order": 13,
       "family": "other",
-      "title": "The Dead Sea can easily be recognised by the dryness…",
+      "title": "Landscape: very dry shores of an inland sea",
       "text": [
         "The Dead Sea can easily be recognised by the **dryness** surrounding it.",
         "NOTE: It is also visible from Jordan and the West Bank."
@@ -1299,14 +1352,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Dead Sea is recognised by the dryness around it. It is also visible from Jordan and the West Bank.",
+      "differs": [
+        {
+          "country": "JO",
+          "how": "also visible from Jordan, use plates and signs"
+        }
+      ]
     },
     {
       "id": "il-6r1q",
       "step": 1,
       "order": 14,
       "family": "other",
-      "title": "Other than the Dead Sea and the Mediterranean Sea",
+      "title": "Landscape: lake, much greener than the Dead Sea",
       "text": [
         "Other than the Dead Sea and the Mediterranean Sea, the only major body of water is the Sea of Galilee. It is noticeably **more vegetated** than the Dead Sea, making it easily recognisable."
       ],
@@ -1345,14 +1405,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only other major body of water is the Sea of Galilee, which is noticeably greener than the Dead Sea."
     },
     {
       "id": "il-vYUO",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Mount Carmel is a long mountain ridge",
+      "title": "Landscape: long NW-SE mountain ridge",
       "text": [
         "Mount Carmel is a **long mountain ridge**, going northwest to southeast, near the city of Haifa. From the northeast, it can easily be recognised by its direction and size.",
         "There is also a lot of coverage [on top](https://goo.gl/maps/A4p7Eveq31t2uCDB9) of the mountain range, which is generally fairly green and looks noticeably high altitude."
@@ -1393,14 +1454,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mount Carmel is a long ridge running northwest to southeast near Haifa. From the northeast its size and direction stand out. The coverage on top is green and high up."
     },
     {
       "id": "il-LWEc",
       "step": 1,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Mount Gilboa is a very dry looking mountain",
+      "title": "Landscape: very dry mountain seen from afar",
       "text": [
         "Mount Gilboa is a very **dry looking mountain**, which can be seen from far away and from many angles.",
         "There is [some coverage](https://goo.gl/maps/YJhYwAjXK71YwQtj9) on top of the mountain, which is very green and often with a very good view over the surrounding valleys."
@@ -1440,14 +1502,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mount Gilboa looks very dry and is visible from far away. Coverage on top is very green with great views of the valleys."
     },
     {
       "id": "il-8gNf",
       "step": 1,
       "order": 17,
       "family": "other",
-      "title": "You can find these small irrigation canals on the side of…",
+      "title": "Roadside: small irrigation canals",
       "text": [
         "You can find these small **irrigation canals** on the side of the road, in the area around the city of Beit She’an."
       ],
@@ -1486,14 +1549,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small irrigation canals beside the road around the city of Beit She'an."
     },
     {
       "id": "il-isW8",
       "step": 1,
       "order": 18,
       "family": "plate",
-      "title": "Plate: Licence plates in the West Bank are often white with green…",
+      "title": "Plate: white with green text, or green with white",
       "text": [
         "Licence plates in the West Bank are often [white](/images/israel-west-bank/ps_licenceplate1.png) with green text, often giving blurred plates a slight green tint. On public transport vehicles, such as taxis and buses, the colours will be inverted; [green](/images/israel-west-bank/ps_licenceplate2.png) with white text, making blurred plates almost completely green.",
         "Beware that Israeli licence plates are also very common in most of the West Bank."
@@ -1533,14 +1597,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "West Bank plates are often white with green text, so blurred plates look slightly green. On buses and taxis colours are swapped, so they look nearly all green. Israeli plates are also common there."
     },
     {
       "id": "il-jBWo",
       "step": 1,
       "order": 19,
       "family": "coverage",
-      "title": "Coverage: A significant portion of the coverage in the West Bank has…",
+      "title": "Coverage: security follow car, white Suzuki",
       "text": [
         "A significant portion of the coverage in the West Bank has a visible security **follow car**. The most extensive of these is a small **white Suzuki**, which is found in the central and southern regions."
       ],
@@ -1579,14 +1644,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Much West Bank coverage has a security follow car. The most widespread is a small white Suzuki in the centre and south."
     },
     {
       "id": "il-z5QI",
       "step": 1,
       "order": 20,
       "family": "other",
-      "title": "Another follow car is a small dark blue Ford",
+      "title": "Coverage: small dark blue Ford follow car",
       "text": [
         "Another follow car is a small **dark blue Ford**, which is found in the northwest."
       ],
@@ -1625,14 +1691,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small dark blue Ford follow car is found in the northwest."
     },
     {
       "id": "il-vqbJ",
       "step": 1,
       "order": 21,
       "family": "plate",
-      "title": "Plate: This larger white Citroën follow car with a West Bank…",
+      "title": "Coverage: larger white follow car, West Bank plate",
       "text": [
         "This **larger white** Citroën follow car with a **West Bank licence plate** can be found in a region surrounding Jerusalem. It is noticeably found in the cities of Bethlehem and Ramallah.",
         "NOTE: The [side](https://goo.gl/maps/CyZBjDakijcXH87L6) of this car features the text “SECURITY” in a bold font. Furthermore, this coverage will always feature a black Street View car with [no antenna](https://goo.gl/maps/qSquP511uzs7bk9o6)."
@@ -1673,14 +1740,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A larger white Citroën follow car with a West Bank plate appears in the area around Jerusalem, including Bethlehem and Ramallah. Its side says SECURITY, and the Street View car has no antenna."
     },
     {
       "id": "il-nIuy",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "Road 90 is the longest road in Israel",
+      "title": "Road: dry, north-south, the longest road",
       "text": [
         "Road 90 is the longest road in Israel, and can often be recognised by its dryness combined with the general north to south angle.",
         "Be careful, as road 90 can sometimes look quite similar to roads 31 and 40."
@@ -1720,14 +1788,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road 90 is the longest road in the country. It is dry and runs north to south. It can look like roads 31 and 40."
     },
     {
       "id": "il-qZaS",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The southern stretch of road 90 will have a dry mountain…",
+      "title": "Road: dry mountains to the east, palms",
       "text": [
         "The southern stretch of road 90 will have a **dry mountain range** to the east. It is also common to see palm trees."
       ],
@@ -1766,14 +1835,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The southern part of road 90 has a dry mountain range to the east and often palm trees."
     },
     {
       "id": "il-SBtu",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Road 2 can usually be recognised by the Mediterranean sea…",
+      "title": "Road: sea visible to the west",
       "text": [
         "Road 2 can usually be recognised by the Mediterranean sea being visible on the west side of the road.",
         "NOTE: If you see [mountains to the east](https://www.google.com/maps/@32.7489022,34.9519266,3a,75y,93.89h,86.25t/data=!3m6!1e1!3m4!1sJSwoI-La_6_N63MjNVZ4Dg!2e0!7i13312!8i6656?entry=ttu), you will be somewhere between Haifa and Zikhron Yaakov."
@@ -1813,14 +1883,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road 2 is recognisable by the Mediterranean on the west side. Mountains to the east put you between Haifa and Zikhron Yaakov."
     },
     {
       "id": "il-D6Hi",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "Mount Tavor is located in the Northern District and can be…",
+      "title": "Landscape: soft round mountain",
       "text": [
         "Mount Tavor is located in the Northern District and can be recognised by its soft, **round shape**."
       ],
@@ -1859,14 +1930,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mount Tavor in the north has a soft, round shape."
     },
     {
       "id": "il-pTNG",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Timna National park can be recognised by the complete…",
+      "title": "Landscape: total dryness, ridges all around",
       "text": [
         "Timna National park can be recognised by the complete dryness combined with the mountain ridges in **all directions**."
       ],
@@ -1905,14 +1977,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Timna National Park is completely dry, with mountain ridges in all directions."
     },
     {
       "id": "il-YgqZ",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: These tall, rocky mountains can be found east of Eilat,…",
+      "title": "Landscape: tall rocky mountains by the southern port",
       "text": [
         "These **tall, rocky mountains** can be found east of Eilat, making the city very easy to recognize."
       ],
@@ -1955,14 +2028,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall rocky mountains east of Eilat make the city easy to recognise."
     },
     {
       "id": "il-gafP",
       "step": 2,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: This mountain range, in the far north of Israel, can be…",
+      "title": "Landscape: camel's-back mountain range",
       "text": [
         "This mountain range, in the far north of Israel, can be recognised by its shape, somewhat resembling a **camel's back**.",
         "As a bonus, if you are in a city and see these mountains to the west, you will be in Kiryat Shmona."
@@ -1999,14 +2073,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A far-north range shaped like a camel's back. If you are in a city with these mountains to the west, it is Kiryat Shmona."
     },
     {
       "id": "il-bhS4",
       "step": 2,
       "order": 7,
       "family": "vegetation",
-      "title": "Vegetation: North of the Hasolelim forest reserve you can see this…",
+      "title": "Landscape: large reservoir north of a forest",
       "text": [
         "North of the Hasolelim forest reserve you can see this **large reservoir**."
       ],
@@ -2042,14 +2117,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large reservoir lies north of the Hasolelim forest reserve."
     },
     {
       "id": "il-hFUY",
       "step": 2,
       "order": 8,
       "family": "other",
-      "title": "Finding parking in Tel Aviv is notoriously difficult",
+      "title": "Streets: roadsides full of parked cars",
       "text": [
         "Finding parking in Tel Aviv is notoriously difficult, meaning the side of almost every road will be **full of parked cars**.",
         "NOTE: If you are confident that you are in Tel Aviv and see available parking spots, you are more likely to be in the north of the city."
@@ -2089,7 +2165,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Parking in Tel Aviv is very hard, so roadsides are packed with cars. Free spaces suggest the north of the city."
     },
     {
       "id": "il-rMis",
@@ -2097,7 +2174,7 @@
       "order": 9,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: These white rectangular signs with a thin blue border are…",
+      "title": "Sign: white rectangle, thin blue border",
       "text": [
         "These **white** rectangular signs with a thin **blue border** are typically found in Jerusalem."
       ],
@@ -2133,14 +2210,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White rectangular signs with a thin blue border are typical of Jerusalem."
     },
     {
       "id": "il-NQSw",
       "step": 2,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: Jericho can commonly be recognised by the date palms in a…",
+      "title": "Plants: date palms in a sparse, poorer town",
       "text": [
         "Jericho can commonly be recognised by the date palms in a somewhat sparsely built and poor-looking urban setting."
       ],
@@ -2176,14 +2254,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Jericho is known by date palms in a thinly built, poor-looking town."
     },
     {
       "id": "il-n3eR",
       "step": 2,
       "order": 11,
       "family": "architecture",
-      "title": "Architecture: In the city of Ramallah you will generally see several…",
+      "title": "Houses: many black water tanks on roofs",
       "text": [
         "In the city of Ramallah you will generally see several **black water tanks** on most houses.",
         "NOTE: Several other cities in both the [West Bank](https://goo.gl/maps/7Am2paYniAS5E67d8) and [Israel](https://goo.gl/maps/cRJcvcWMiSvRwLye9) can have black water tanks. What makes Ramallah stand out is the sheer number of them on most buildings."
@@ -2220,14 +2299,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ramallah has several black water tanks on most houses. Other cities have some, but not nearly as many."
     },
     {
       "id": "il-x53j",
       "step": 2,
       "order": 12,
       "family": "other",
-      "title": "This grey mosaic brick work shaped like towers is unique to…",
+      "title": "Walls: grey mosaic brickwork shaped like towers",
       "text": [
         "This **grey mosaic brick work** shaped like towers is unique to the city of Harish."
       ],
@@ -2263,14 +2343,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grey mosaic brickwork shaped like towers is unique to the city of Harish."
     },
     {
       "id": "il-xiPx",
       "step": 2,
       "order": 13,
       "family": "other",
-      "title": "This white lamp is unique to Nahariya",
+      "title": "Lamp post: white, three arms, round bulbs",
       "text": [
         "This **white lamp** is unique to Nahariya. It has three arms, with round light bulbs on top."
       ],
@@ -2306,14 +2387,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white lamp with three arms and round bulbs on top is unique to Nahariya."
     },
     {
       "id": "il-BogJ",
       "step": 2,
       "order": 14,
       "family": "other",
-      "title": "These lamps, shaped similarly to Barad Dûr, are unique to…",
+      "title": "Lamp post: dark tower with two horns",
       "text": [
         "These lamps, shaped similarly to [Barad Dûr](https://lotr.fandom.com/wiki/Barad-d%C3%BBr), are unique to Acre. It can be found in several different colours.",
         "NOTE: Similar looking lamps can be found around central Israel, however the gap between the two horns on top of the lamp should confirm Acre."
@@ -2350,14 +2432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lamps shaped like Barad-dûr, in several colours, are unique to Acre. Similar lamps exist in the centre, but the gap between the two horns on top confirms Acre."
     },
     {
       "id": "il-87Ha",
       "step": 2,
       "order": 15,
       "family": "other",
-      "title": "These metal lamps, characterised by one high and one low…",
+      "title": "Lamp post: angular, one high and one low lamp",
       "text": [
         "These metal lamps, characterised by **one high** and **one low** lamp put together with a very angular look, are unique to Netivot."
       ],
@@ -2393,14 +2476,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Metal lamps with one high and one low lamp in an angular shape are unique to Netivot."
     },
     {
       "id": "il-TTYJ",
       "step": 2,
       "order": 16,
       "family": "pole",
-      "title": "Pole: Poles with blue and white paint on the bottom are unique to…",
+      "title": "Pole: blue and white painted bottoms",
       "text": [
         "Poles with **blue and white** paint on the bottom are unique to Eilat."
       ],
@@ -2438,7 +2522,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with blue and white paint at the bottom are unique to Eilat."
     },
     {
       "id": "il-5VTI",
@@ -2446,7 +2531,7 @@
       "order": 17,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: These yellow fences and signposts are unique to Kiryat…",
+      "title": "Sign: yellow fences and signposts",
       "text": [
         "These **yellow** fences and signposts are unique to Kiryat Motzkin."
       ],
@@ -2482,14 +2567,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow fences and signposts are unique to Kiryat Motzkin."
     },
     {
       "id": "il-o2lV",
       "step": 2,
       "order": 18,
       "family": "other",
-      "title": "This style of blue and white fence is very common to see in…",
+      "title": "Fence: blue and white",
       "text": [
         "This style of **blue and white fence** is very common to see in Ashdod."
       ],
@@ -2525,14 +2611,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A blue and white fence style is very common in Ashdod."
     },
     {
       "id": "il-0SY5",
       "step": 2,
       "order": 19,
       "family": "architecture",
-      "title": "Architecture: Blue house numbers with the number written with Arabic…",
+      "title": "House number: blue, two numeral styles, diagonal line",
       "text": [
         "Blue house numbers with the number written with [Arabic numerals](https://en.wikipedia.org/wiki/Arabic_numerals) in the top left and with [Eastern Arabic numerals](https://en.wikipedia.org/wiki/Eastern_Arabic_numerals) in the bottom right, with a thin **diagonal line** between them, can be found in Bethlehem. [Street signs](https://goo.gl/maps/eouNa6SnvDgD8WQr9) will generally have the same format."
       ],
@@ -2568,14 +2655,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue house numbers with Western numerals top left and Eastern Arabic numerals bottom right, split by a thin diagonal line, are in Bethlehem. Street signs use the same format."
     },
     {
       "id": "il-wUDq",
       "step": 2,
       "order": 20,
       "family": "architecture",
-      "title": "Architecture: House numbers in Rosh Haayin are blue",
+      "title": "House number: blue with a G-clef",
       "text": [
         "House numbers in Rosh Haayin are blue, with a **G-clef** in the bottom left corner."
       ],
@@ -2611,14 +2699,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue house numbers with a G-clef in the bottom left corner are in Rosh Haayin."
     },
     {
       "id": "il-B8PX",
       "step": 2,
       "order": 21,
       "family": "architecture",
-      "title": "Architecture: In Ness Ziona, There is an Israeli flag on house numbers",
+      "title": "House number: small national flag",
       "text": [
         "In Ness Ziona, There is an **Israeli flag** on house numbers."
       ],
@@ -2654,14 +2743,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "House numbers in Ness Ziona carry a small Israeli flag."
     },
     {
       "id": "il-algU",
       "step": 2,
       "order": 22,
       "family": "architecture",
-      "title": "Architecture: Blue, shield-shaped house numbers are unique to the city of…",
+      "title": "House number: blue shield shape",
       "text": [
         "Blue, **shield-shaped house numbers** are unique to the city of Herzliya."
       ],
@@ -2697,14 +2787,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue shield-shaped house numbers are unique to Herzliya."
     },
     {
       "id": "il-OyOI",
       "step": 2,
       "order": 23,
       "family": "other",
-      "title": "Bnei Brak is an ultra-Orthodox Jewish stronghold",
+      "title": "People: ultra-Orthodox religious clothing",
       "text": [
         "Bnei Brak is an **ultra-Orthodox Jewish stronghold**, which can be seen only by looking at the people around. There will usually be people wearing Jewish religious clothes."
       ],
@@ -2740,7 +2831,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bnei Brak is an ultra-Orthodox stronghold. You can tell from the people, who usually wear Jewish religious clothes."
     },
     {
       "id": "il-ohFr",
@@ -2748,7 +2840,7 @@
       "order": 24,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Roundabout signs which are either very thick or attached to…",
+      "title": "Sign: thick roundabout signs or on a big cube",
       "text": [
         "Roundabout signs which are either very **thick** or attached to a **large cube**, can be found in the city of Raanana."
       ],
@@ -2784,14 +2876,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roundabout signs that are very thick or on a large cube are found in Raanana."
     },
     {
       "id": "il-WRHe",
       "step": 2,
       "order": 25,
       "family": "other",
-      "title": "These tall industrial chimneys",
+      "title": "Landmark: tall industrial chimneys on the coast",
       "text": [
         "These **tall industrial chimneys**, by the coast north of Netanya, are visible from far away."
       ],
@@ -2827,14 +2920,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall industrial chimneys on the coast north of Netanya are visible from far away."
     },
     {
       "id": "il-fagW",
       "step": 2,
       "order": 26,
       "family": "other",
-      "title": "This grey Hyundai follow car is unique to Rahat",
+      "title": "Coverage: grey Hyundai follow car",
       "text": [
         "This **grey Hyundai** follow car is unique to Rahat."
       ],
@@ -2870,14 +2964,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A grey Hyundai follow car is unique to Rahat."
     },
     {
       "id": "il-qG8X",
       "step": 2,
       "order": 27,
       "family": "coverage",
-      "title": "Coverage: The Israel National Trail goes through the entire country…",
+      "title": "Coverage: very long trail trekker",
       "text": [
         "The Israel National Trail goes through the entire country and has one of the **longest trekkers** in the world. The trail goes through more or less every landscape present in the country, from the [rocky desert](https://goo.gl/maps/N9yF7LjTjYj2jXo89) in the south to [lush forests](https://goo.gl/maps/iKEmza2XMqA6DuP6A) in the north. Along the trail you may find [these markings](https://www.google.com/maps/@29.7794747,34.9703316,2a,15y,278.69h,83.71t,2.5r/data=!3m6!1e1!3m4!1sCNnIN-Yjz8voGkn46w7zjw!2e0!7i13312!8i6656?entry=ttu), which will typically be orange, blue and white, but can also feature [other colour schemes](https://www.google.com/maps/@30.8947414,34.9497539,2a,15y,70.95h,72.04t,2.13r/data=!3m6!1e1!3m4!1sEjA0G5uGy2rDeCJn5cFLSA!2e0!7i13312!8i6656?entry=ttu)."
       ],
@@ -2913,489 +3008,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "il-lm-105",
-      "step": 3,
-      "order": 0,
-      "family": "plate",
-      "title": "Plate: Yellow plates",
-      "text": [
-        "If you see cars with yellow front and back license plates in the Middle East, you are in Israel."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a9827e795229",
-          "src": "https://learnablemeta.com/images/Hg3vzAIG3ktsLrdNGVnfC6YnB1liZv5MQRDR.avif",
-          "path": "il/a9827e795229.webp",
-          "width": 1000,
-          "height": 418
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-12980",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: ✋🏻",
-      "text": [
-        "Israel is the only country that uses a symbol on its stop signs, which makes it unique and easily recognizable."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5c8e7e9769fc",
-          "src": "https://learnablemeta.com/images/571/SfATCGcJmsNNGQdZxoRZcfHSTUfjIP3FC6sH.avif",
-          "path": "il/5c8e7e9769fc.webp",
-          "width": 953,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15363",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: North",
-      "text": [
-        "Northern Israel is usually far more mountainous and green than the rest of Israel. Throughout the region you will almost always see forested hills and mountains."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4838a78eed9e",
-          "src": "https://learnablemeta.com/images/664/IhzaEsQtKH8vY2nuBSZCWiWTK4Uqd6UPZ8D8.avif",
-          "path": "il/4838a78eed9e.webp",
-          "width": 1000,
-          "height": 492
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15364",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Southern Dryness",
-      "text": [
-        "Southern Israel and eastern West Bank are extremely dry and sandy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7c1cc7cce7cd",
-          "src": "https://learnablemeta.com/images/664/zbT1v2tXId84wcdZoVgBtuc3xPqlcO3vf87i.avif",
-          "path": "il/7c1cc7cce7cd.webp",
-          "width": 1000,
-          "height": 497
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15367",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: West Bank",
-      "text": [
-        "Most of the West Bank has a semi-arid Mediterranean landscape. It is generally greener than southern Israel, drier than northern Israel and west of Jerusalem, and hillier and less agricultural than central Israel."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5434367a107d",
-          "src": "https://learnablemeta.com/images/664/0uF2YUqhY6VUAJvBCPzxix9sjr0KSpnTSjUb.avif",
-          "path": "il/5434367a107d.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15368",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: Mount Carmel",
-      "text": [
-        "Mount Carmel is a long mountain ridge, going northwest to southeast, near the city of Haifa. From the northeast, it can easily be recognised by its direction and size. There is also a lot of coverage on top of the mountain range, which is generally fairly green and looks noticeably high altitude."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "362bbde88912",
-          "src": "https://learnablemeta.com/images/664/iofKVwqrdV7GKz9MXAcOxrx68UkrNgthFm3a.avif",
-          "path": "il/362bbde88912.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15369",
-      "step": 3,
-      "order": 6,
-      "family": "landscape",
-      "title": "Landscape: Mount Gilboa",
-      "text": [
-        "Mount Gilboa is a very dry looking mountain, which can be seen from far away and from many angles. There is some coverage on top of the mountain, which is very green and often with a very good view over the surrounding valleys."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f68a57970206",
-          "src": "https://learnablemeta.com/images/664/ZhAxPRb2xEzUzMtOjEimASzrO1zGQCCWpjl3.avif",
-          "path": "il/f68a57970206.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15370",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Mount Tavor",
-      "text": [
-        "Mount Tavor is located in the Northern District and can be recognised by its soft, round shape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f4318bbe4ba2",
-          "src": "https://learnablemeta.com/images/664/kKy3n9cVsDBfoiBHMt4LcmmYlwyvuuTR7kQA.avif",
-          "path": "il/f4318bbe4ba2.webp",
-          "width": 1000,
-          "height": 493
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15372",
-      "step": 3,
-      "order": 8,
-      "family": "landscape",
-      "title": "Landscape: Timna National Park",
-      "text": [
-        "Timna National park can be recognised by the complete dryness combined with the mountain ridges in all directions."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7c1dbb8d2375",
-          "src": "https://learnablemeta.com/images/664/SlspjjWO10PElGjobQ2dFCYxJnhjAhYJbTPC.avif",
-          "path": "il/7c1dbb8d2375.webp",
-          "width": 1000,
-          "height": 488
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15400",
-      "step": 3,
-      "order": 9,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "Kilometre markers are white with a thick border, which can either be red, green or blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2d76d7943f30",
-          "src": "https://learnablemeta.com/images/665/IEUFWntkPTPMpBmp3AjcjQEA3x71BclhgX03.avif",
-          "path": "il/2d76d7943f30.webp",
-          "width": 1000,
-          "height": 383
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15418",
-      "step": 3,
-      "order": 10,
-      "family": "other",
-      "title": "Curbs",
-      "text": [
-        "You will very often see striped kerbs.",
-        "Red and white and fairly commonly black and white.",
-        "Red and yellow and blue and white are also rarely found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e0d7c0637d52",
-          "src": "https://learnablemeta.com/images/665/IcJAYpgK4rGnLiIsONMPkA0hUE6hwLMI7hYX.avif",
-          "path": "il/e0d7c0637d52.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15847",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "Kilometre markers are white with a thick border, which can either be red, green or blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2d76d7943f30",
-          "src": "https://learnablemeta.com/images/665/IEUFWntkPTPMpBmp3AjcjQEA3x71BclhgX03.avif",
-          "path": "il/2d76d7943f30.webp",
-          "width": 1000,
-          "height": 383
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-15865",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Curbs",
-      "text": [
-        "You will very often see striped kerbs.",
-        "Red and white and fairly commonly black and white.",
-        "Red and yellow and blue and white are also rarely found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e0d7c0637d52",
-          "src": "https://learnablemeta.com/images/665/IcJAYpgK4rGnLiIsONMPkA0hUE6hwLMI7hYX.avif",
-          "path": "il/e0d7c0637d52.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-51275",
-      "step": 3,
-      "order": 13,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "Kilometre markers are white with a thick border, which can either be red, green or blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2d76d7943f30",
-          "src": "https://learnablemeta.com/images/665/IEUFWntkPTPMpBmp3AjcjQEA3x71BclhgX03.avif",
-          "path": "il/2d76d7943f30.webp",
-          "width": 1000,
-          "height": 383
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-51299",
-      "step": 3,
-      "order": 14,
-      "family": "other",
-      "title": "Curbs",
-      "text": [
-        "You will very often see striped kerbs.",
-        "Red and white and fairly commonly black and white.",
-        "Red and yellow and blue and white are also rarely found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e0d7c0637d52",
-          "src": "https://learnablemeta.com/images/665/IcJAYpgK4rGnLiIsONMPkA0hUE6hwLMI7hYX.avif",
-          "path": "il/e0d7c0637d52.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-56221",
-      "step": 3,
-      "order": 15,
-      "family": "line",
-      "title": "Road line: Yellow Outers",
-      "text": [
-        "Most roads feature yellow outer lines with white centre lines.",
-        "**--- NOTE:**",
-        "**These roadlines also exist in:**",
-        "Jordan",
-        "Qatar",
-        "UAE",
-        "Oman"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ad2c70fa0b1c",
-          "src": "https://learnablemeta.com/images/863/VCF9N5O9zOfs53OuidllhGUSs68ICDursxAw.avif",
-          "path": "il/ad2c70fa0b1c.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AE",
-        "JO",
-        "OM",
-        "QA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "il-lm-634036",
-      "step": 3,
-      "order": 16,
-      "family": "plate",
-      "title": "Plate: Israel",
-      "text": [
-        "Israeli licence plates are yellow with a blue strip on the left.",
-        "NOTE: While this design is specific for Israel, it is also very common on the West Bank. Jordan and the UAE use white licence plates. Tunisia uses black plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "00e40729d611",
-          "src": "https://learnablemeta.com/images/5431/1766260738054-owM.avif",
-          "path": "il/00e40729d611.webp",
-          "width": 800,
-          "height": 339
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AE",
-        "JO",
-        "TN"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A national hiking trail crosses the whole country, with one of the longest trekkers in the world, from rocky desert in the south to lush forest in the north. Trail markings are usually orange, blue and white."
     }
   ]
 }

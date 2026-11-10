@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The Slovenian landscape is generally very hilly and forested",
+      "title": "Landscape: hilly and forested",
       "text": [
         "The Slovenian landscape is generally very **hilly and forested**, with occasional agriculture.",
         "_For exceptions to this, see the region guessing section._"
@@ -52,7 +52,8 @@
           "src": "https://learnablemeta.com/images/847/CbnZc3OaUD3ReKoODSwqJQmK2s6ih6Nq7RS7.avif",
           "path": "si/ea20cbbddf16.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "dupeOf": "41558008af73"
         }
       ],
       "locations": [
@@ -71,14 +72,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly hilly and forested with some farmland. Exceptions are covered in the region clues."
     },
     {
       "id": "si-oVxl",
       "step": 0,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: A very significant portion of the coverage in Slovenia was…",
+      "title": "Coverage: small roads deep in forest",
       "text": [
         "A very significant portion of the coverage in Slovenia was taken on small roads deep **inside forest**."
       ],
@@ -117,14 +119,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big share of the coverage is on small roads deep inside forest."
     },
     {
       "id": "si-hUzj",
       "step": 0,
       "order": 3,
       "family": "architecture",
-      "title": "Architecture: Slovenian architecture takes much inspiration from alpine…",
+      "title": "Houses: alpine style, dark wood, half-hip roof",
       "text": [
         "Slovenian architecture takes much inspiration from alpine architecture, with light coloured walls, **dark wooden details** and semi-steep roofs. The most common roof shape is [half-](https://en.wikipedia.org/wiki/Hip_roof#Half-hip_roof)[h](https://en.wikipedia.org/wiki/Hip_roof#Half-hip_roof)[ipped roofs](https://en.wikipedia.org/wiki/Hip_roof#Half-hip_roof)."
       ],
@@ -151,14 +154,16 @@
           "src": "https://learnablemeta.com/images/847/edfSCV10i8CfKYeLX1NkCjRgGkAszNVfVmjg.avif",
           "path": "si/ef634e74c44c.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "8343a2471959"
         },
         {
           "id": "828f3590d48b",
           "src": "https://learnablemeta.com/images/1072/CWMRzIACHbhnaFeBvQcbWbx5Rdc6p7islOqz.avif",
           "path": "si/828f3590d48b.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "8343a2471959"
         }
       ],
       "locations": [
@@ -177,14 +182,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Alpine-style houses with light walls, dark wooden details and fairly steep roofs. The most common roof shape is the half-hip roof."
     },
     {
       "id": "si-Pi36",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: Slovene is a Slavic language featuring the special letters Č",
+      "title": "Language: Č Š Ž letters, no Ć or Đ",
       "text": [
         "Slovene is a **Slavic language** featuring the special letters Č, Š, and Ž. It is closely related to Croatian, Serbian and Montenegrin.",
         "NOTE: On top of having the same letters as Slovene, Croatian also has the letters Ć and Đ."
@@ -205,14 +211,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Slavic language with the letters Č, Š and Ž, closely related to Croatian, Serbian and Montenegrin. Croatian also uses Ć and Đ, which are missing here.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "Croatian also has the letters Ć and Đ"
+        }
+      ]
     },
     {
       "id": "si-9Pxm",
       "step": 0,
       "order": 5,
       "family": "bollard",
-      "title": "Bollard: Slovenian bollards are white with a black top",
+      "title": "Bollard: white, black top, bright red front",
       "text": [
         "Slovenian bollards are white with a black top. The front reflector will typically be **bright red**, while the back reflector will be **white**.",
         "NOTE: [Austrian](https://www.google.com/maps/@47.935857,15.6009415,3a,20.6y,357.69h,65.73t/data=!3m6!1e1!3m4!1sak-sxymIs2V63Wt8uwtlKA!2e0!7i16384!8i8192?entry=ttu) bollards have the same design, but with a dark red front reflector and a black or grey back reflector. [Montenegrin](https://maps.app.goo.gl/VKcVBeDadPfdZEwQ9) bollards also have a very similar design, also with a red and a white reflector."
@@ -249,14 +262,16 @@
           "src": "https://learnablemeta.com/images/739/hRdwCwEFgfBqb8Pp6sSTIdMmvqv3upU3EHxK.avif",
           "path": "si/1c11235ed2e7.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "244bce7ece13"
         },
         {
           "id": "47209799d676",
           "src": "https://learnablemeta.com/images/847/MleSPE6rFn3cj2t6RqVEp9pbA67nSRcH03lB.avif",
           "path": "si/47209799d676.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "244bce7ece13"
         }
       ],
       "locations": [
@@ -275,7 +290,17 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White bollard with a black top, a bright red front reflector and a white back reflector. Austria's is the same shape but darker red in front and black or grey behind. Montenegro is very similar.",
+      "sameAs": [
+        "ME"
+      ],
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian front reflector is dark red, back black or grey"
+        }
+      ]
     },
     {
       "id": "si-LTMm",
@@ -283,7 +308,7 @@
       "order": 6,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Slovenian directional signs are yellow with a black border",
+      "title": "Sign: yellow direction sign, black border",
       "text": [
         "Slovenian directional signs are **yellow** with a **black border**.",
         "NOTE: Croatia, North Macedonia, Serbia and Montenegro all have similar directional signs. [Austrian](https://www.google.com/maps/@46.5568458,13.9585166,3a,17.9y,222.77h,88.58t/data=!3m6!1e1!3m4!1sgiePX811VzIqDTkzzrcHsw!2e0!7i13312!8i6656?entry=ttu) directional signs are typically white with a blue outline."
@@ -328,7 +353,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow direction signs with a black border. Croatia, North Macedonia, Serbia and Montenegro look similar, while Austria's are white with a blue outline.",
+      "sameAs": [
+        "HR",
+        "ME",
+        "MK",
+        "RS"
+      ],
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian signs are white with a blue outline"
+        }
+      ]
     },
     {
       "id": "si-CUtN",
@@ -336,7 +374,7 @@
       "order": 7,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Slovenian kilometre markers have a very distinct design",
+      "title": "Km marker: yellow road-number box, black line",
       "text": [
         "Slovenian kilometre markers have a very distinct design. At the top left the road number is shown in a **yellow rectangle**, and a second number is to the right of it. A horizontal black line divides the top and bottom, and the distance is shown below.",
         "NOTE: [Austrian](https://goo.gl/maps/jtRvnb9JCZBuW8iLA) kilometre markers are blue with a white number."
@@ -376,7 +414,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Kilometre markers show the road number in a yellow rectangle at top left, a second number beside it, a black line across, and the distance below.",
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian markers are blue with a white number"
+        }
+      ]
     },
     {
       "id": "si-Dzth",
@@ -384,7 +429,7 @@
       "order": 8,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Slovenian chevrons usually have red arrows on a white…",
+      "title": "Chevron: red arrows on white",
       "text": [
         "Slovenian chevrons usually have **red arrows** on a **white background**.",
         "You can also find a less common [version](https://maps.app.goo.gl/3rjSbRq9SMVina6a7) with a **black arrow** on a **white background**.",
@@ -413,7 +458,8 @@
           "src": "https://learnablemeta.com/images/914/486Rf5aJLvjnjj37eLCbnFVGNQEioRuHyDlI.avif",
           "path": "si/c91d843def28.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "0184cda2cee5"
         }
       ],
       "locations": [
@@ -432,7 +478,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chevrons usually have red arrows on a white background. A rarer version has a black arrow on white.",
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian chevrons are white on red or red on yellow"
+        }
+      ]
     },
     {
       "id": "si-t32B",
@@ -440,7 +493,7 @@
       "order": 9,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Slovenian pedestrian signs have five stripes and a simply…",
+      "title": "Sign: pedestrian, 5 stripes",
       "text": [
         "Slovenian pedestrian signs have **five stripes** and a simply drawn person without a belt.",
         "NOTE: [Austrian](https://goo.gl/maps/S3nXofrbfKot9eLD6) pedestrian signs have two dotted lines, while the person on [Croatian](https://maps.app.goo.gl/yy9Gf53S8AH7Areg6) signs has a belt."
@@ -480,14 +533,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossing sign with five stripes and a simply drawn person with no belt.",
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian sign has two dotted lines"
+        },
+        {
+          "country": "HR",
+          "how": "Croatian person has a belt"
+        }
+      ]
     },
     {
       "id": "si-mOHj",
       "step": 0,
       "order": 10,
       "family": "line",
-      "title": "Road line: Slovenian roads commonly feature long outer dashes",
+      "title": "Road lines: long dashes on the outer edge",
       "text": [
         "Slovenian roads commonly feature **long outer dashes**.",
         "NOTE: Neighbouring countries do not frequently use dashed outside lines."
@@ -515,14 +579,16 @@
           "src": "https://learnablemeta.com/images/505/RdfBXYz3rYDwe9nMf4EALvXwuVEFhlfcgdIG.avif",
           "path": "si/60e5feb400d4.webp",
           "width": 1000,
-          "height": 567
+          "height": 567,
+          "dupeOf": "53005eeb2ae0"
         },
         {
           "id": "27c0a0809fc6",
           "src": "https://learnablemeta.com/images/847/qMrAEHlXhJDitOvug6Gu1Gi7b9U3ObTBoqxD.avif",
           "path": "si/27c0a0809fc6.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "53005eeb2ae0"
         }
       ],
       "locations": [
@@ -541,7 +607,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads commonly have long dashed lines along the outer edge. Neighbouring countries rarely use dashed outside lines."
     },
     {
       "id": "si-d0cG",
@@ -549,7 +616,7 @@
       "order": 11,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Slovenian street signs are most commonly white with a metal…",
+      "title": "Street sign: white metal-framed or red on walls",
       "text": [
         "Slovenian street signs are most commonly white with a **metal border** attached to signposts, or **red** and attached to house walls.",
         "NOTE: [Czech](https://goo.gl/maps/gi5f8C9LNAUumAQFA) street signs are also typically red and attached to walls. However, Czech street names will not contain the word “ulica”, which most Slovenian street names have."
@@ -596,14 +663,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs are most often white with a metal border on posts, or red and fixed to house walls. Most street names contain the word \"ulica\".",
+      "differs": [
+        {
+          "country": "CZ",
+          "how": "Czech red wall signs lack the word \"ulica\""
+        }
+      ]
     },
     {
       "id": "si-9zaA",
       "step": 0,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: Slovenian house numbers are typically red with white text",
+      "title": "House numbers: red with white text",
       "text": [
         "Slovenian house numbers are typically **red** with white text.",
         "NOTE: [Czech](https://www.google.com/maps/@50.7257121,15.1788819,3a,15y,1.15h,98.69t/data=!3m6!1e1!3m4!1s4rpA0yUvp4TJif4QGtcHvQ!2e0!7i16384!8i8192?entry=ttu) house numbers are also commonly red."
@@ -631,7 +705,8 @@
           "src": "https://learnablemeta.com/images/847/WITr1UI9V22Hx2eiVSp4tqwE3p2SbIUqYSgZ.avif",
           "path": "si/b2245a245653.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "dupeOf": "99da3de58579"
         }
       ],
       "locations": [
@@ -650,14 +725,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "House numbers are typically red with white text. Czech house numbers are often red too.",
+      "sameAs": [
+        "CZ"
+      ]
     },
     {
       "id": "si-Jptp",
       "step": 0,
       "order": 13,
       "family": "guardrail",
-      "title": "Guardrail: Slovenia uses a regular A-type guardrail",
+      "title": "Guardrail: A-type with rounded edges",
       "text": [
         "Slovenia uses a regular A-type guardrail, like most European countries. This guardrail type has **rounded edges**.",
         "This is mostly useful for 50-50s with Croatia, which uses B-type guardrails. This type has square edges.",
@@ -688,7 +767,8 @@
           "src": "https://learnablemeta.com/images/847/1uv4NJEPVzkaZu6qSpEpVr7E3INYxssaxVH9.avif",
           "path": "si/f55deb0139b8.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "70a8706e5f5b"
         }
       ],
       "locations": [
@@ -709,14 +789,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Standard A-type guardrail with rounded edges, as in most of Europe. Useful against Croatia, whose B-type guardrail has square edges.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "Croatian B-type guardrail has square edges"
+        }
+      ]
     },
     {
       "id": "si-AOGZ",
       "step": 0,
       "order": 14,
       "family": "other",
-      "title": "This type of shed",
+      "title": "Shed: open hayrack of thin wooden beams",
       "text": [
         "This type of shed, called a [kozolec](https://en.wikipedia.org/wiki/Hayrack), made of thin **wooden beams** with noticeable gaps in between, is very typical for Slovenia."
       ],
@@ -755,14 +842,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A shed called a kozolec, built from thin wooden beams with visible gaps between them, is very typical here."
     },
     {
       "id": "si-KjFQ",
       "step": 0,
       "order": 15,
       "family": "car",
-      "title": "Google car: A black generation 4 car can be found in Slovenia",
+      "title": "Google car: black Gen 4 car",
       "text": [
         "A black generation 4 car can be found in Slovenia.",
         "NOTE: A black car can be found in many European countries."
@@ -802,14 +890,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black Gen 4 car. Many European countries also have a black car, so it does not narrow things down much."
     },
     {
       "id": "si-w1wH",
       "step": 0,
       "order": 16,
       "family": "car",
-      "title": "Google car: A white generation 4 Google car can also rarely be found in…",
+      "title": "Google car: white Gen 4 car (rare)",
       "text": [
         "A white generation 4 Google car can also rarely be found in Slovenia.",
         "NOTE: It can also be found in other European countries."
@@ -849,14 +938,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white Gen 4 car appears rarely. Other European countries have it too."
     },
     {
       "id": "si-ta6V",
       "step": 1,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: The tallest mountains in the country can be found in the…",
+      "title": "Landscape: tall alpine peaks in the northwest",
       "text": [
         "The tallest mountains in the country can be found in the northwestern **alpine** region."
       ],
@@ -883,7 +973,8 @@
           "src": "https://learnablemeta.com/images/664/E5jAWSMQpAIujBQhU5CpFJSujVbAJ8b6zzEB.avif",
           "path": "si/11f4ce5f11da.webp",
           "width": 1000,
-          "height": 484
+          "height": 484,
+          "dupeOf": "cac62b280517"
         }
       ],
       "locations": [
@@ -902,14 +993,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The tallest mountains are in the northwestern alpine region."
     },
     {
       "id": "si-LRnZ",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Flat, or rolling, agricultural fields with no mountains or…",
+      "title": "Landscape: flat farmland, no mountains",
       "text": [
         "**Flat**, or rolling, agricultural fields with **no mountains or tall hills** in view can be seen in the east of the country."
       ],
@@ -948,14 +1040,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the east: flat or gently rolling farmland with no mountains or tall hills in view."
     },
     {
       "id": "si-wTix",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Near the coast you get a landscape similar to the rest of…",
+      "title": "Landscape: white cliffs, bushes, vineyards",
       "text": [
         "Near the coast you get a landscape similar to the rest of the Adriatic coast; **white cliffs** with bushy vegetation, vineyards and Mediterranean architecture."
       ],
@@ -994,14 +1087,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the coast: white cliffs with bushy vegetation, vineyards and Mediterranean-style buildings, like the rest of the Adriatic coast."
     },
     {
       "id": "si-66mW",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: A wide valley going east to west",
+      "title": "Landscape: wide east-west valley between mountains",
       "text": [
         "A **wide valley** going east to west, with mountains to the north and south can be found in the southeast."
       ],
@@ -1040,7 +1134,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southeast: a wide valley running east to west, with mountains to the north and south."
     },
     {
       "id": "si-t0v8",
@@ -1048,7 +1143,7 @@
       "order": 4,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Italian bilingual signs can be found in the westernmost…",
+      "title": "Sign: Italian bilingual signs",
       "text": [
         "**Italian bilingual signs** can be found in the westernmost region."
       ],
@@ -1087,14 +1182,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs in Italian as well as the local language appear in the westernmost region."
     },
     {
       "id": "si-y26n",
       "step": 2,
       "order": 0,
       "family": "architecture",
-      "title": "Architecture: Instead of the normal red house numbers",
+      "title": "House numbers: green instead of red",
       "text": [
         "Instead of the normal red house numbers, Ljubljana will typically feature **green house numbers**.",
         "NOTE: [Street signs](https://goo.gl/maps/h5GSwk121qRJantj8) in Ljubljana are also occasionally green."
@@ -1134,7 +1230,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the capital, house numbers are usually green rather than the normal red. Street signs there are sometimes green too."
     },
     {
       "id": "si-HIaX",
@@ -1142,7 +1239,7 @@
       "order": 1,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs in Celje feature the emblem of the city",
+      "title": "Street sign: city emblem, blue shield",
       "text": [
         "Street signs in Celje feature the emblem of the city, a blue shield with **three yellow stars**."
       ],
@@ -1181,14 +1278,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one city the street signs show its emblem: a blue shield with three yellow stars."
     },
     {
       "id": "si-dqcC",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "Similar to Celje, Trbovlje also features the city’s coat of…",
+      "title": "Street sign: blue-green shield with black crest",
       "text": [
         "Similar to Celje, Trbovlje also features the city’s coat of arms, which is a **blue and green** shield with a black crest."
       ],
@@ -1227,14 +1325,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/slovenia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one mining town the signs show the city coat of arms: a blue and green shield with a black crest."
     },
     {
       "id": "si-lm-2981",
       "step": 3,
       "order": 0,
       "family": "other",
-      "title": "Slovenia",
+      "title": "Sign: white/silver border, no blue corners",
       "text": [
         "Italy, Romania, Serbia, and Slovenia all look about the same. Thankfully Romania will **not** have a **white/silver border**. Italy will have **blue corners** visible outside the white edge."
       ],
@@ -1258,110 +1357,25 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "si-lm-49952",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Kilometre Markers",
-      "text": [
-        "Slovenian kilometre markers have a very distinct design.",
-        "At the top left the road number is shown in a yellow rectangle, and a second number is to the right of it.",
-        "A horizontal black line divides the top and bottom, and the distance is shown below.",
-        "**--- NOTE:**",
-        "Austrian kilometre markers are blue with a white number."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Italy, Romania, Serbia and Slovenia look about the same here. Romania has no white or silver border, and Italy shows blue corners outside the white edge.",
+      "differs": [
         {
-          "id": "e75188d0429f",
-          "src": "https://learnablemeta.com/images/847/tstZzmX34SP2xIwGD4U8rVSOuGbCOkg5XJUK.avif",
-          "path": "si/e75188d0429f.webp",
-          "width": 1000,
-          "height": 559
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "si-lm-50338",
-      "step": 3,
-      "order": 2,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Kilometre Markers",
-      "text": [
-        "Slovenian kilometre markers have a very distinct design.",
-        "At the top left the road number is shown in a yellow rectangle, and a second number is to the right of it.",
-        "A horizontal black line divides the top and bottom, and the distance is shown below.",
-        "**--- NOTE:**",
-        "Austrian kilometre markers are blue with a white number."
-      ],
-      "tags": [],
-      "images": [
+          "country": "RO",
+          "how": "Romanian version has no white or silver border"
+        },
         {
-          "id": "e75188d0429f",
-          "src": "https://learnablemeta.com/images/847/tstZzmX34SP2xIwGD4U8rVSOuGbCOkg5XJUK.avif",
-          "path": "si/e75188d0429f.webp",
-          "width": 1000,
-          "height": 559
+          "country": "IT",
+          "how": "Italian version shows blue corners outside the white edge"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "si-lm-50964",
-      "step": 3,
-      "order": 3,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Kilometre Markers",
-      "text": [
-        "Slovenian kilometre markers have a very distinct design.",
-        "At the top left the road number is shown in a yellow rectangle, and a second number is to the right of it.",
-        "A horizontal black line divides the top and bottom, and the distance is shown below.",
-        "**--- NOTE:**",
-        "Austrian kilometre markers are blue with a white number."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e75188d0429f",
-          "src": "https://learnablemeta.com/images/847/tstZzmX34SP2xIwGD4U8rVSOuGbCOkg5XJUK.avif",
-          "path": "si/e75188d0429f.webp",
-          "width": 1000,
-          "height": 559
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "si-lm-783121",
       "step": 3,
       "order": 4,
       "family": "language",
-      "title": "Language: Slovene",
+      "title": "Language: šola, ulica, lj and nj",
       "text": [
         "Slovene is a South Slavic language closely related to Serbo-Croatian (Croatian, Serbian, Bosnian, Montenegrin). Slovene features the special letters **Č, Š**, and **Ž**. Croatian has these aswell, but also uses **Ć** and **Đ** which don't exist in Slovene.",
         "The Slovene word for school is **šola**, while Croatian is škola. This can commonly be found painted on roads.",
@@ -1375,7 +1389,8 @@
           "src": "https://learnablemeta.com/images/9388/1785605361649-9jy.avif",
           "path": "si/d4ca89dd83ba.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "6179a8295984"
         },
         {
           "id": "c972dc3f389f",
@@ -1391,7 +1406,14 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Slovene has Č, Š, Ž but not Ć or Đ. \"Šola\" (school) is written škola in Croatian, \"ulica\" means street, and lj or nj combos mark a South Slavic language, not Czech or Slovak.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "Croatian also has Ć and Đ, and writes škola"
+        }
+      ]
     }
   ]
 }

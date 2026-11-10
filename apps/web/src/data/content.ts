@@ -1,6 +1,8 @@
 import { applyClueOverrides, clueCards } from '@metabook/core';
 import type { Card, ClueCountry, ClueImageOverride, PoolCountry, Tip } from '@metabook/core';
 import countryNames from 'virtual:country-names';
+import { areaCodeCards } from './areaCodes';
+import type { AreaCodeFile } from './areaCodes';
 import type { CardOverride, Repository } from './repository';
 
 export interface Chapter {
@@ -91,6 +93,10 @@ const cards = import.meta.glob<Card[]>(
 );
 const loadGenerated = async () => (await import('./generatedCards')).generatedCards;
 const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', { import: 'default' });
+// Telephone area codes per country (content/areacodes/<code>.json); none is fine.
+const areaCodes = import.meta.glob<AreaCodeFile>('../../../../content/areacodes/*.json', {
+  import: 'default',
+});
 const loadClues = async () => (await import('./allClues')).allClues;
 
 const loadAll = async <T>(files: Record<string, () => Promise<T[]>>): Promise<T[]> =>
@@ -111,7 +117,7 @@ let loading: Promise<void> | undefined;
 /** Fetches the content chunks once and fills `bundled` and `brStates` in place. */
 export function loadBundled(): Promise<void> {
   loading ??= (async () => {
-    const [poolItems, chapterItems, cardItems, generated, tipItems, br, clueItems] =
+    const [poolItems, chapterItems, cardItems, generated, tipItems, br, clueItems, codeFiles] =
       await Promise.all([
         loadAll(pool),
         loadAll(chapters),
@@ -120,13 +126,20 @@ export function loadBundled(): Promise<void> {
         loadAll(tips),
         Object.values(brStatesFile)[0]!(),
         loadClues(),
+        Promise.all(Object.values(areaCodes).map((load) => load())),
       ]);
     Object.assign(brStates, br);
     brStatesByCode.clear();
     for (const state of br.states) brStatesByCode.set(state.code, state);
     bundled.pool = poolItems;
     bundled.chapters = chapterItems;
-    bundled.cards = [...cardItems, ...generated];
+    const shipped = [...cardItems, ...generated];
+    const codes = areaCodeCards(
+      codeFiles,
+      poolItems,
+      shipped.map((card) => card.id),
+    );
+    bundled.cards = [...shipped, ...codes];
     bundled.tips = tipItems;
     bundled.clues = clueItems;
   })().catch((error: unknown) => {

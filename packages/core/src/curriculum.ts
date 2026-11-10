@@ -5,11 +5,14 @@
 //   the active set, are introduced at a time: the first ACTIVE_COUNTRIES countries that still have
 //   a clue card not seen yet. New clue cards are taken round-robin across the active countries; a
 //   country leaves the set once all its clue cards are introduced and the next one joins.
-// - Inside a country, clues come in Plonk It's order (the order clueCards emits them), the families
-//   that tell countries apart most (EARLY_FAMILIES) before landscape, architecture, vegetation and
-//   the rest. A clue's cards come a pair at a time, spread over types (Spot it, Which clue, Live
-//   view, then its other images and spots), and at most MAX_SIBLINGS_PER_DAY of one clue are
-//   introduced on one day: its other cards come on later days.
+// - Each country's turn takes its next family in FAMILY_ROTATION (bollard, pole, sign, line, …,
+//   then architecture, landscape, vegetation, other), each country starting at a different family,
+//   so a day is a mix of everything rather than all bollards. No family gets more than
+//   MAX_FAMILY_SHARE of a day's new clue cards while another family has cards to give.
+// - Inside a family, clues come in Plonk It's order (the order clueCards emits them). A clue's
+//   cards come a pair at a time, spread over types (Spot it, Which clue, Live view, then its other
+//   images and spots), and at most MAX_SIBLINGS_PER_DAY of one clue are introduced on one day: its
+//   other cards come on later days.
 // - Cards not made from clues (flags, scripts, area codes, region maps) are about OTHER_SHARE of the
 //   new cards, by country priority and round-robin across their types.
 import type { Card, CardState, CardType, MetaSubject } from './types';
@@ -37,18 +40,29 @@ export const MAX_SIBLINGS_PER_DAY = 2;
 /** Share of new cards that are not made from clues. */
 export const OTHER_SHARE = 0.2;
 
-/** Families introduced before the rest of a country's clues. */
-export const EARLY_FAMILIES: readonly MetaSubject[] = [
+/** The order a country's turns go through the clue families. */
+export const FAMILY_ROTATION: readonly MetaSubject[] = [
   'bollard',
   'pole',
   'sign',
-  'plate',
   'line',
+  'guardrail',
+  'plate',
   'car',
   'coverage',
   'language',
-  'guardrail',
+  'architecture',
+  'landscape',
+  'vegetation',
+  'other',
 ];
+/** Most of a day's new clue cards one family may have, while others have cards left. */
+export const MAX_FAMILY_SHARE = 0.25;
+
+const familyRank = (subject: MetaSubject | undefined): number => {
+  const rank = subject ? FAMILY_ROTATION.indexOf(subject) : -1;
+  return rank < 0 ? FAMILY_ROTATION.length - 1 : rank;
+};
 
 /** The order cards of one clue are introduced in, by type. */
 const TYPE_TURNS: CardType[] = ['spot', 'which', 'live', 'meta'];
@@ -81,21 +95,21 @@ export function activeCountries(
 
 interface Ranked {
   card: Card;
-  /** sort key inside the country: family tier, pair of the clue, clue position, card position */
-  key: [number, number, number, number];
+  /** sort key inside the country and family: pair of the clue, clue position, card position */
+  key: [number, number, number];
 }
 
-/** Each country's clue cards in introduction order. */
-function clueQueues(cards: Card[]): Map<string, Card[]> {
+/** Each country's clue cards by family rank (FAMILY_ROTATION index), in introduction order. */
+function clueQueues(cards: Card[]): Map<string, Map<number, Card[]>> {
   const byClue = new Map<string, Card[]>();
   for (const card of cards) {
     const id = clueOf(card);
     if (id) byClue.set(id, [...(byClue.get(id) ?? []), card]);
   }
-  const byCountry = new Map<string, Ranked[]>();
+  const byCountry = new Map<string, Map<number, Ranked[]>>();
   [...byClue.values()].forEach((siblings, clueIndex) => {
     const first = siblings[0] as Card;
-    const tier = first.subject && EARLY_FAMILIES.includes(first.subject) ? 0 : 1;
+    const family = familyRank(first.subject);
     const turns = TYPE_TURNS.map((type) => siblings.filter((c) => c.type === type));
     const others = siblings.filter((c) => !TYPE_TURNS.includes(c.type));
     const ordered: Card[] = [];
@@ -103,16 +117,23 @@ function clueQueues(cards: Card[]): Map<string, Card[]> {
       for (const turn of turns) if (turn[round]) ordered.push(turn[round] as Card);
     }
     ordered.push(...others);
-    const ranked = byCountry.get(first.country) ?? [];
+    const families = byCountry.get(first.country) ?? new Map<number, Ranked[]>();
+    const ranked = families.get(family) ?? [];
     ordered.forEach((card, rank) =>
-      ranked.push({ card, key: [tier, Math.floor(rank / MAX_SIBLINGS_PER_DAY), clueIndex, rank] }),
+      ranked.push({ card, key: [Math.floor(rank / MAX_SIBLINGS_PER_DAY), clueIndex, rank] }),
     );
-    byCountry.set(first.country, ranked);
+    families.set(family, ranked);
+    byCountry.set(first.country, families);
   });
   const compare = (a: Ranked, b: Ranked) =>
     a.key.reduce((diff, value, i) => diff || value - (b.key[i] as number), 0);
   return new Map(
-    [...byCountry].map(([country, ranked]) => [country, ranked.sort(compare).map((r) => r.card)]),
+    [...byCountry].map(([country, families]) => [
+      country,
+      new Map(
+        [...families].map(([family, ranked]) => [family, ranked.sort(compare).map((r) => r.card)]),
+      ),
+    ]),
   );
 }
 
@@ -181,49 +202,89 @@ export function pickNewCards(input: {
   // ranked over all of a clue's cards, so a card's place does not move as its siblings are seen
   const queues = new Map(
     [...clueQueues(cards.filter((card) => clueOf(card)))]
-      .map(([code, queue]) => [code, queue.filter((card) => isNew(states, card))] as const)
-      .filter(([, queue]) => queue.length > 0),
+      .map(
+        ([code, families]) =>
+          [
+            code,
+            new Map(
+              [...families]
+                .map(
+                  ([family, queue]) =>
+                    [family, queue.filter((card) => isNew(states, card))] as const,
+                )
+                .filter(([, queue]) => queue.length > 0),
+            ),
+          ] as const,
+      )
+      .filter(([, families]) => families.size > 0),
   );
   const others = otherQueue(
     fresh.filter((card) => !clueOf(card)),
     order,
   );
-  const clueTotal = [...queues.values()].reduce((sum, q) => sum + q.length, 0);
+  const clueTotal = [...queues.values()].reduce(
+    (sum, families) => sum + [...families.values()].reduce((n, q) => n + q.length, 0),
+    0,
+  );
   const otherCount = Math.min(
     others.length,
     Math.max(Math.round(count * OTHER_SHARE), count - clueTotal),
   );
   const clueCount = count - otherCount;
+  const familyCap = Math.max(1, Math.ceil(clueCount * MAX_FAMILY_SHARE));
 
-  // round-robin over the active countries; the next countries in line join only when the active
-  // ones have nothing left for today, so a day is never short while clue cards remain
+  // round-robin over the active countries, each turn the country's next family; the next countries
+  // in line join only when the active ones have nothing left for today, so a day is never short
+  // while clue cards remain
   const countries = order.filter((code) => queues.has(code));
+  const rotation = FAMILY_ROTATION.length;
   const picked: Card[] = [];
+  const perFamily = new Map<number, number>();
+  /** per country: the family rank its next turn starts from; countries start a family apart */
+  const nextFamily = new Map(countries.map((code, i) => [code, i % rotation]));
   const cursor = new Map<string, number>();
-  const take = (code: string): boolean => {
-    const queue = queues.get(code) as Card[];
-    for (let i = cursor.get(code) ?? 0; i < queue.length; i++) {
+  const takeFrom = (code: string, family: number): boolean => {
+    const queue = queues.get(code)?.get(family);
+    if (!queue) return false;
+    const key = `${code}:${family}`;
+    for (let i = cursor.get(key) ?? 0; i < queue.length; i++) {
       const card = queue[i] as Card;
       if (!roomFor(card)) continue;
-      cursor.set(code, i + 1);
+      cursor.set(key, i + 1);
       today.set(clueOf(card) as string, (today.get(clueOf(card) as string) ?? 0) + 1);
+      perFamily.set(family, (perFamily.get(family) ?? 0) + 1);
       picked.push(card);
       return true;
     }
-    cursor.set(code, queue.length);
+    cursor.set(key, queue.length);
     return false;
   };
-  for (let size = ACTIVE_COUNTRIES; picked.length < clueCount; size++) {
-    const group = countries.slice(0, size);
-    let progress = true;
-    while (picked.length < clueCount && progress) {
-      progress = false;
-      for (const code of group) {
-        if (picked.length >= clueCount) break;
-        if (take(code)) progress = true;
+  const take = (code: string, capped: boolean): boolean => {
+    const start = nextFamily.get(code) ?? 0;
+    for (let k = 0; k < rotation; k++) {
+      const family = (start + k) % rotation;
+      if (capped && (perFamily.get(family) ?? 0) >= familyCap) continue;
+      if (takeFrom(code, family)) {
+        nextFamily.set(code, (family + 1) % rotation);
+        return true;
       }
     }
-    if (size >= countries.length) break;
+    return false;
+  };
+  // first within the family cap; only if that leaves the day short, past it
+  for (const capped of [true, false]) {
+    for (let size = ACTIVE_COUNTRIES; picked.length < clueCount; size++) {
+      const group = countries.slice(0, size);
+      let progress = true;
+      while (picked.length < clueCount && progress) {
+        progress = false;
+        for (const code of group) {
+          if (picked.length >= clueCount) break;
+          if (take(code, capped)) progress = true;
+        }
+      }
+      if (size >= countries.length) break;
+    }
   }
 
   const filled = Math.min(others.length, count - picked.length);

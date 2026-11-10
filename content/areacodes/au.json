@@ -1,0 +1,38 @@
+{
+ "country": "AU",
+ "label": "Area codes",
+ "prefix": "+61",
+ "format": "(0X) XXXX XXXX",
+ "sources": [
+  "https://www.accesscomms.com.au/australian-area-code-list/"
+ ],
+ "notes": "Only 4 codes. Border/offshore exceptions (e.g. Broken Hill 08, Norfolk Island) not stated by source, not modelled. Map has two NSW entries (incl. Lord Howe).",
+ "codes": [
+  {
+   "code": "02",
+   "region": "NSW",
+   "spans": [
+    "ACT"
+   ]
+  },
+  {
+   "code": "03",
+   "region": "VIC",
+   "spans": [
+    "TAS"
+   ]
+  },
+  {
+   "code": "07",
+   "region": "QLD"
+  },
+  {
+   "code": "08",
+   "region": "WA",
+   "spans": [
+    "SA",
+    "NT"
+   ]
+  }
+ ]
+}

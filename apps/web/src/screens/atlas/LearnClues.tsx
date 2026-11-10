@@ -71,7 +71,7 @@ export function LearnClues({
           <ul className="learn-list learn-clues">
             {step.clues.map((clue) => (
               <li key={clue.id} className="learn-card">
-                <ClueDetails clue={clue} heading="h4" />
+                <ClueDetails clue={clue} heading="h4" teachSame />
               </li>
             ))}
           </ul>

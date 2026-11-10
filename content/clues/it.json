@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Contrary to most European licence plates",
+      "title": "Plate: blue strips both sides, short front",
       "text": [
         "Contrary to most European licence plates, Italian plates have blue strips on **either side** of the plate. Furthermore, the front plate is distinctly **shorter** than most European plates, which in combination with the two strips, makes it unique.",
         "NOTE: Albanian licence plates also have two blue strips, and French licence plates have a smaller strip on the right. However, neither Albanian nor French front plates are short."
@@ -46,14 +46,16 @@
           "src": "https://learnablemeta.com/images/DNLzrHPD8J1zt6HDnV6wCn4Dql4exy5yvZmf.avif",
           "path": "it/86246adf17a4.webp",
           "width": 1000,
-          "height": 221
+          "height": 221,
+          "dupeOf": "339813c100b1"
         },
         {
           "id": "9d60d1d38907",
           "src": "https://learnablemeta.com/images/847/7nSMq5CX7J6Wf7HqNMyo8gM2egVzoTV5Lryz.avif",
           "path": "it/9d60d1d38907.webp",
           "width": 1000,
-          "height": 215
+          "height": 215,
+          "dupeOf": "339813c100b1"
         }
       ],
       "locations": [],
@@ -62,14 +64,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue strips on both sides of the plate, and a front plate noticeably shorter than most European ones. Together that is unique. Albania has two strips but long front plates.",
+      "differs": [
+        {
+          "country": "AL",
+          "how": "Two blue strips but front plates are not short"
+        },
+        {
+          "country": "FR",
+          "how": "Only a small strip on the right, front not short"
+        }
+      ]
     },
     {
       "id": "it-BBrE",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Italian bollards are triangular in shape",
+      "title": "Bollard: triangular, black top, red front reflector",
       "text": [
         "Italian bollards are triangular in shape, and white with a **black top**. They have a red front and a white rear reflector.",
         "NOTE: Albania uses the same bollards."
@@ -107,14 +120,16 @@
           "src": "https://learnablemeta.com/images/847/6POnLBHVQJSPlRFOtzYEIBHNZYDusLBoLBaW.avif",
           "path": "it/5f406d910e67.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "ba0104cb7361"
         },
         {
           "id": "1adb9c4466f3",
           "src": "https://learnablemeta.com/images/739/1749942802061-aPf.avif",
           "path": "it/1adb9c4466f3.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "ba0104cb7361"
         }
       ],
       "locations": [
@@ -135,14 +150,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White triangular bollard with a black top, a red reflector at the front and a white one at the back. Albania uses the same one.",
+      "sameAs": [
+        "AL"
+      ]
     },
     {
       "id": "it-GY26",
       "step": 0,
       "order": 3,
       "family": "line",
-      "title": "Road line: One of the most common types of Italian road lines are…",
+      "title": "Road lines: white solid edges, no centre line",
       "text": [
         "One of the most common types of Italian road lines are **white solid outer lines** with no middle line. This is generally less common in other Mediterranean countries."
       ],
@@ -171,14 +190,16 @@
           "src": "https://learnablemeta.com/images/505/VrbxWFQ90ug79B0SEC8l0Lwqh77YMtojJAFG.avif",
           "path": "it/d5d5bfca757e.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "9ee17d95209a"
         },
         {
           "id": "10813454f274",
           "src": "https://learnablemeta.com/images/847/cSHV5auT9ASSy1HtPXZoiwOEXdVKTfElFcUM.avif",
           "path": "it/10813454f274.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "9ee17d95209a"
         }
       ],
       "locations": [
@@ -197,14 +218,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very common: solid white edge lines with no middle line. Less common in other Mediterranean countries."
     },
     {
       "id": "it-clmq",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: Italian is the most spoken language in Italy",
+      "title": "Language: double consonants, many i, vowel endings",
       "text": [
         "Italian is the most spoken language in Italy. It uses many double consonants, and typically has a very large number of i’s. You can also find ì, é and à. Most words will end with a vowel.",
         "NOTE: The Italian word for street is ‘via’, and can be found on most street signs."
@@ -228,14 +250,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of double consonants and many letter i, plus ì, é and à. Most words end in a vowel. Street signs usually say via."
     },
     {
       "id": "it-RTSX",
       "step": 0,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Italy has a Mediterranean landscape with a lot of…",
+      "title": "Landscape: farmland on rolling hills, forested valleys",
       "text": [
         "Italy has a **Mediterranean landscape** with a lot of agricultural fields on rolling hills, and forested mountain valleys."
       ],
@@ -276,14 +299,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Mediterranean look: farm fields on rolling hills and forested mountain valleys."
     },
     {
       "id": "it-CcGf",
       "step": 0,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Italian architecture mainly consists of pastel coloured…",
+      "title": "Houses: pastel stone, terracotta roofs, split shutters",
       "text": [
         "Italian architecture mainly consists of pastel coloured stone houses, generally with terracotta roofs. Houses will very commonly have wooden shutters, which will typically be divided in two and open sideways."
       ],
@@ -312,14 +336,16 @@
           "src": "https://learnablemeta.com/images/847/fC7tTrrXDz8JDtoNeOpS61FcRt0vYLX5vhxk.avif",
           "path": "it/eca0a5bd9b21.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "53afccb3c6c8"
         },
         {
           "id": "b6bba1357b49",
           "src": "https://learnablemeta.com/images/1072/VxMj2YFEBIE3CyjjA7RYU0gSr2zldzRL1uzT.avif",
           "path": "it/b6bba1357b49.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "53afccb3c6c8"
         }
       ],
       "locations": [
@@ -338,14 +364,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pastel stone houses with terracotta roofs. Wooden shutters are very common and split in two, opening sideways."
     },
     {
       "id": "it-NzGb",
       "step": 0,
       "order": 7,
       "family": "pole",
-      "title": "Pole: Unlike most Mediterranean countries",
+      "title": "Pole: round concrete",
       "text": [
         "Unlike most Mediterranean countries, Italy features a lot of **round concrete poles**."
       ],
@@ -386,14 +413,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of round concrete poles, which most other Mediterranean countries do not have."
     },
     {
       "id": "it-Qtgc",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Wooden poles in Italy will commonly feature a small white…",
+      "title": "Pole: wooden with small white sticker",
       "text": [
         "Wooden poles in Italy will commonly feature a small **white pole sticker**."
       ],
@@ -422,14 +450,16 @@
           "src": "https://learnablemeta.com/images/847/CmD1yyumRsezZunGpHEz6ZtRmGr0g9WoYBey.avif",
           "path": "it/ab5e6abf4f3e.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "26c8278b9027"
         },
         {
           "id": "bccbd47e5b22",
           "src": "https://learnablemeta.com/images/1955/1750621210124-B1X.avif",
           "path": "it/bccbd47e5b22.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "26c8278b9027"
         }
       ],
       "locations": [
@@ -448,14 +478,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles often carry a small white sticker."
     },
     {
       "id": "it-uuBU",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: The most common pole tops in Italy are concrete trident…",
+      "title": "Pole: concrete trident tops",
       "text": [
         "The most common pole tops in Italy are **concrete trident pole tops**.",
         "There are several possible configurations of insulators.The two shown in the image are the most common ones."
@@ -504,14 +535,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common pole top is a concrete trident, with a few possible insulator layouts. The two in the picture are the most common."
     },
     {
       "id": "it-6adv",
       "step": 0,
       "order": 10,
       "family": "guardrail",
-      "title": "Guardrail: It is very common to find double guardrails in Italy",
+      "title": "Guardrail: double guardrails",
       "text": [
         "It is very common to find **double guardrails** in Italy."
       ],
@@ -559,14 +591,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Double guardrails, with two rails stacked, are very common."
     },
     {
       "id": "it-qoV6",
       "step": 0,
       "order": 11,
       "family": "guardrail",
-      "title": "Guardrail: Italian guardrails feature red front reflectors",
+      "title": "Guardrail: red front reflectors",
       "text": [
         "Italian guardrails feature **red** front reflectors.",
         "NOTE: This is most useful to distinguish Italy from Spain, which uses yellow reflectors. For a good overview of European guardrails, see [this infographic](/images/italy/europeguardrail.png)."
@@ -610,14 +643,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails have red reflectors on the front. This mainly separates it from Spain, which uses yellow.",
+      "differs": [
+        {
+          "country": "ES",
+          "how": "Spanish reflectors are yellow"
+        }
+      ]
     },
     {
       "id": "it-gSjf",
       "step": 0,
       "order": 12,
       "family": "guardrail",
-      "title": "Guardrail: Italian guardrails commonly end in this distinct shape",
+      "title": "Guardrail: end flattens, widens, bends away",
       "text": [
         "Italian guardrails commonly end in this distinct shape. The guardrail gets flatter, wider, and it bends away from the road."
       ],
@@ -653,14 +693,16 @@
           "src": "https://learnablemeta.com/images/847/7PXUKAr4nC02FuEGNRKnOU9RbBdPjW14otFp.avif",
           "path": "it/cdac100cf843.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "b3bc7abae5d2"
         },
         {
           "id": "1ded538286e3",
           "src": "https://learnablemeta.com/images/3660/1755387928391-3EO.avif",
           "path": "it/1ded538286e3.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "b3bc7abae5d2"
         }
       ],
       "locations": [
@@ -679,7 +721,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrail ends get flatter and wider and bend away from the road."
     },
     {
       "id": "it-RnwF",
@@ -687,7 +730,7 @@
       "order": 13,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: It is very common for the back of Italian road signs to be…",
+      "title": "Sign: black or dark grey backs",
       "text": [
         "It is very common for the back of Italian road signs to be **black**, or dark grey."
       ],
@@ -728,7 +771,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The back of road signs is very often black or dark grey."
     },
     {
       "id": "it-hAqF",
@@ -736,7 +780,7 @@
       "order": 14,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs are blue with a white arrow",
+      "title": "Sign: blue direction sign, white arrow, capitals",
       "text": [
         "Directional signs are **blue** with a **white arrow**. All letters on these signs will be **capitalised**."
       ],
@@ -777,7 +821,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue direction signs with a white arrow. All letters are capitals."
     },
     {
       "id": "it-7iSX",
@@ -785,7 +830,7 @@
       "order": 15,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs in national roads",
+      "title": "Sign: blue national road sign, green on highways",
       "text": [
         "Directional signs in national roads (Strada Statale) are **blue** with a **white and blue border**.",
         "Divided highways (Autostrade) have **green** signs with a **white and green border**."
@@ -827,7 +872,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "National roads have blue direction signs with a white-and-blue border. Motorways have green signs with a white-and-green border."
     },
     {
       "id": "it-q7lg",
@@ -835,7 +881,7 @@
       "order": 16,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Italian kilometre markers are white squares with a roman…",
+      "title": "Marker: white square, roman numeral over number",
       "text": [
         "Italian kilometre markers are white squares with a **roman numeral** on top and an arabic numeral on the bottom. The arabic numeral gives you the number of kilometres and the roman numeral gives you the number of hundred metres from the start of the road."
       ],
@@ -876,7 +922,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white square km marker with a roman numeral on top and a regular number below. The number is kilometres; the roman numeral is hundreds of metres."
     },
     {
       "id": "it-AHSj",
@@ -884,7 +931,7 @@
       "order": 17,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Italian road numbers will normally begin with the letters…",
+      "title": "Sign: road numbers start with SS, SR or SP",
       "text": [
         "Italian road numbers will normally begin with the letters “SS”, “SR” or “SP”.",
         "The second letter can be used to identify the type of road.",
@@ -929,7 +976,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road numbers usually begin with SS (state), SR (regional) or SP (provincial). The second letter shows the road type."
     },
     {
       "id": "it-7zlG",
@@ -937,7 +985,7 @@
       "order": 18,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Italian chevrons are white arrows on a black background",
+      "title": "Chevron: white arrows on black",
       "text": [
         "Italian chevrons are **white arrows** on a **black background**.",
         "NOTE: In Southern Europe, white on black chevrons can also be found in Spain, Greece and Albania."
@@ -967,14 +1015,16 @@
           "src": "https://learnablemeta.com/images/847/m40Pi9DpQYlz06djWq5ADE5vzVMnGwrLO0wz.avif",
           "path": "it/2b2d0588a30e.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "dupeOf": "e8ef99394322"
         },
         {
           "id": "a78feec852d9",
           "src": "https://learnablemeta.com/images/914/8W268PEDlTqobo4Gy95xf0Cf6OLIRXLSpQnU.avif",
           "path": "it/a78feec852d9.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "e8ef99394322"
         }
       ],
       "locations": [
@@ -997,7 +1047,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White arrows on a black background. Spain, Greece and Albania use the same in southern Europe.",
+      "sameAs": [
+        "AL",
+        "ES",
+        "GR"
+      ]
     },
     {
       "id": "it-TyCh",
@@ -1005,7 +1061,7 @@
       "order": 19,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs are typically white with a thin blue border…",
+      "title": "Sign: white street sign, thin blue border",
       "text": [
         "Street signs are typically white with a thin **blue border** and **black text**."
       ],
@@ -1034,7 +1090,8 @@
           "src": "https://learnablemeta.com/images/847/BjRYjYtqCPew6UJtxWovATzg1FupDbSiPPnE.avif",
           "path": "it/0efe9ec0a24c.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "8e6d7da6760e"
         },
         {
           "id": "98e10dd9c2d6",
@@ -1067,7 +1124,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs are usually white with a thin blue border and black text."
     },
     {
       "id": "it-TXiT",
@@ -1075,7 +1133,7 @@
       "order": 20,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Italian pedestrian signs have five stripes and a basic…",
+      "title": "Sign: pedestrian sign, 5 stripes, no belt",
       "text": [
         "Italian pedestrian signs have **five stripes** and a basic person without a belt."
       ],
@@ -1116,7 +1174,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian sign with five stripes and a basic figure without a belt."
     },
     {
       "id": "it-aDjA",
@@ -1124,7 +1183,7 @@
       "order": 21,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: These signs, featuring a “no parking”-sign with the text…",
+      "title": "Sign: no-parking sign saying \"passo carrabile\"",
       "text": [
         "These signs, featuring a “no parking”-sign with the text “**passo carrabile**” are commonly found in urban areas. At the top of these signs you will typically find the municipality (comune) name."
       ],
@@ -1165,14 +1224,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A no-parking sign with the words passo carrabile (driveway), common in towns. The top usually shows the municipality name."
     },
     {
       "id": "it-dto7",
       "step": 0,
       "order": 22,
       "family": "car",
-      "title": "Google car: Italy has Generation 4 “smallcam” coverage",
+      "title": "Google car: low Gen 4 smallcam, big round blur",
       "text": [
         "Italy has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1213,14 +1273,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 4 camera mounted lower than normal, with a big round blur at the bottom and a small bump at the front. The blur can be transparent and hard to spot."
     },
     {
       "id": "it-mzWF",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Italian area codes follow a pattern where the first digit…",
+      "title": "Phone numbers: first area-code digit rises east then south",
       "text": [
         "Italian **area codes** follow a pattern where the first digit generally increases to the east, then south."
       ],
@@ -1242,14 +1303,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The first digit of the area code generally increases going east, then south."
     },
     {
       "id": "it-lfUH",
       "step": 1,
       "order": 1,
       "family": "language",
-      "title": "Language: Each Italian region has its own unique flag",
+      "title": "Flags: every region has its own flag",
       "text": [
         "Each Italian region has its own unique flag."
       ],
@@ -1273,14 +1335,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Each region has its own unique flag, which helps place you in a region."
     },
     {
       "id": "it-ZxGw",
       "step": 1,
       "order": 3,
       "family": "language",
-      "title": "Language: The region of South Tyrol has a German majority",
+      "title": "Language: German bilingual signs in the north",
       "text": [
         "The region of South Tyrol has a German majority, and as such uses **German bilingual signs**."
       ],
@@ -1321,14 +1384,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "One northern region has a German majority, so signs are bilingual in German."
     },
     {
       "id": "it-IZSl",
       "step": 1,
       "order": 4,
       "family": "language",
-      "title": "Language: French can be seen on signs in the Aosta Valley",
+      "title": "Language: French on signs, \"rue\" next to \"via\"",
       "text": [
         "**French** can be seen on signs in the Aosta Valley. Most notably, street signs often use both the Italian word “via” and the French word “rue”."
       ],
@@ -1370,14 +1434,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-west valley, signs show French as well. Street signs often use both via and rue."
     },
     {
       "id": "it-T4R2",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: The Padan Plain",
+      "title": "Landscape: totally flat and hazy",
       "text": [
         "The Padan Plain (commonly referred to as Po Valley) can typically be recognized by its complete **flatness**. The plain has some of the worst air quality in Europe, which has led to much of the coverage having a noticeable [haze](https://www.google.com/maps/@44.9090493,11.4587497,3a,52.2y,90.92h,87.93t/data=!3m7!1e1!3m5!1sZK0fGSH3oe3u7ooE8Yt2KA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DZK0fGSH3oe3u7ooE8Yt2KA%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D81.52424%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192)."
       ],
@@ -1418,14 +1483,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A completely flat plain with some of the worst air in Europe, so much of the coverage looks hazy."
     },
     {
       "id": "it-kMZN",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: The landscape on the southeastern peninsula surrounding…",
+      "title": "Landscape: olive groves, bright rock walls, red soil",
       "text": [
         "The landscape on the southeastern peninsula surrounding Bari has many **olive plantations**, which are often seen together with **bright** **rock walls**. The dirt in the region typically has a noticeably red colour.",
         "Beware that a similar landscape can also be found in [southeastern Sicily](https://maps.app.goo.gl/aRgNqNdsccanmo3m8)."
@@ -1469,14 +1535,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south-east heel, many olive plantations with bright rock walls and noticeably red soil. South-east Sicily looks similar."
     },
     {
       "id": "it-8uch",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: The alpine region in northern Italy has tall",
+      "title": "Landscape: tall wide mountain ranges, deep valleys",
       "text": [
         "The alpine region in northern Italy has tall, wide **mountain ranges** and deep valleys."
       ],
@@ -1517,14 +1584,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north, tall, wide mountain ranges and deep valleys."
     },
     {
       "id": "it-F3fZ",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: The Sicilian landscape is characterised by an arid",
+      "title": "Landscape: dry hills, rocky mountains",
       "text": [
         "The Sicilian landscape is characterised by an **arid**, hilly agricultural landscape, often combined with **rocky mountains**."
       ],
@@ -1565,14 +1633,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the large southern island: arid, hilly farmland, often next to rocky mountains."
     },
     {
       "id": "it-5TiR",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: Grey rocks sticking up from the ground are commonly found…",
+      "title": "Landscape: grey rocks sticking out of the ground",
       "text": [
         "Grey **rocks** sticking up from the ground are commonly found on Sardinia, particularly in the northeast.",
         "NOTE: A similar phenomenon can be seen on [Sicily](https://www.google.com/maps/@37.4586829,14.0819986,3a,42.3y,232.74h,94.42t/data=!3m6!1e1!3m4!1sGGxh3x_wUzS4zIyD0PD2mA!2e0!7i16384!8i8192?entry=ttu), however the landscape will typically be much drier than Sardinia."
@@ -1614,14 +1683,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the western island, especially the north-east, grey rocks poke out of the ground. Sicily has similar rocks but is much drier."
     },
     {
       "id": "it-dfcb",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: Cacti in Italy are most common in the south",
+      "title": "Plants: cacti in the south",
       "text": [
         "**Cacti** in Italy are most common in the south, particularly in Sicily, southern Sardinia and the south of Apulia."
       ],
@@ -1662,14 +1732,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cacti are most common in the south: Sicily, southern Sardinia and the south of Apulia."
     },
     {
       "id": "it-zeHg",
       "step": 1,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: Citrus plantations are primarily found on eastern Sicily…",
+      "title": "Plants: citrus plantations in the far south",
       "text": [
         "**Citrus plantations** are primarily found on eastern Sicily and the southern tip of Calabria."
       ],
@@ -1710,14 +1781,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Citrus groves are mostly in eastern Sicily and the southern tip of the mainland toe."
     },
     {
       "id": "it-PYmb",
       "step": 1,
       "order": 13,
       "family": "vegetation",
-      "title": "Vegetation: Rice is mainly produced in the western and central parts of…",
+      "title": "Crops: rice in the northern plain",
       "text": [
         "**Rice** is mainly produced in the western and central parts of Po valley, and less commonly in Sardinia."
       ],
@@ -1758,14 +1830,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rice grows mainly in the western and central part of the Po valley, and less often in Sardinia."
     },
     {
       "id": "it-WLd3",
       "step": 1,
       "order": 15,
       "family": "architecture",
-      "title": "Architecture: A lot of buildings in and around Tuscany are made of…",
+      "title": "Houses: rough unpainted brown-grey bricks",
       "text": [
         "A lot of buildings in and around Tuscany are made of irregular **unpainted brown-grey bricks**.",
         "NOTE: A similar style of architecture can be found in northeastern [Spain](https://www.google.se/maps/@42.1527702,0.814623,3a,75y,79.59h,97.61t/data=!3m6!1e1!3m4!1sBIg-H1KNLM2FxWRl-hDEVQ!2e0!7i13312!8i6656)."
@@ -1809,14 +1882,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In and around one central region, many buildings use irregular unpainted brown-grey bricks. North-east Spain has a similar style."
     },
     {
       "id": "it-tpUa",
       "step": 1,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: Alpine architecture, which typically features large…",
+      "title": "Houses: big white stone, wooden details",
       "text": [
         "**Alpine architecture**, which typically features large buildings with white stone walls and wooden details, are found in the Alpine region."
       ],
@@ -1845,7 +1919,8 @@
           "src": "https://learnablemeta.com/images/1072/2EQLOJ1Ad9BnxNtN9v4ETa393ZUjX3AdD3gQ.avif",
           "path": "it/2a57cfdfa51f.webp",
           "width": 1000,
-          "height": 484
+          "height": 484,
+          "dupeOf": "43a7f28e1910"
         }
       ],
       "locations": [
@@ -1864,14 +1939,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the Alps, large buildings with white stone walls and wooden details."
     },
     {
       "id": "it-nLtP",
       "step": 1,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Buildings in Aosta Valley are often built with grey uneven…",
+      "title": "Houses: grey uneven bricks, Alpine look",
       "text": [
         "Buildings in Aosta Valley are often built with **grey uneven bricks**, with an Alpine look.",
         "NOTE: This can look superficially similar to Andorran architecture."
@@ -1914,14 +1990,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-west valley, buildings use grey uneven bricks and look Alpine. They can look a bit like Andorran architecture."
     },
     {
       "id": "it-9MDD",
       "step": 1,
       "order": 18,
       "family": "architecture",
-      "title": "Architecture: Solid wooden shutters with black metal hinges is a common…",
+      "title": "Houses: solid wooden shutters, black hinges",
       "text": [
         "**Solid wooden shutters** with black metal hinges is a common feature in the northeast of Italy, particularly in Veneto."
       ],
@@ -1962,14 +2039,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Solid wooden shutters with black metal hinges are common in the north-east, especially one region."
     },
     {
       "id": "it-hndZ",
       "step": 1,
       "order": 19,
       "family": "architecture",
-      "title": "Architecture: Houses in the Apulian region are generally very light…",
+      "title": "Houses: pale, flat roofs, 2-3 floors",
       "text": [
         "Houses in the Apulian region are generally very light coloured, and have **flat roofs**, typically with two to three floors. The architecture is sometimes reminiscent of the Middle East."
       ],
@@ -1998,7 +2076,8 @@
           "src": "https://learnablemeta.com/images/1072/g8bDcnGgwLA3jcfgvovcNS6HsqoHXSJIcaeC.avif",
           "path": "it/68b54ad5ae5b.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "ab352a58837e"
         }
       ],
       "locations": [
@@ -2017,14 +2096,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the heel region, very light-coloured houses with flat roofs, two to three floors. Sometimes reminiscent of the Middle East."
     },
     {
       "id": "it-zq9T",
       "step": 1,
       "order": 20,
       "family": "architecture",
-      "title": "Architecture: This particular style of roof",
+      "title": "Houses: round stone cone roofs (trulli)",
       "text": [
         "This particular style of roof, called a **trullo**, is unique to the Itria valley in southeastern Italy. It is particularly common in and around the town of [Alberobello](https://goo.gl/maps/DwAPahJnQNW1BMY2A)."
       ],
@@ -2053,7 +2133,8 @@
           "src": "https://learnablemeta.com/images/1072/PnDcoT70Ww7vUWPvgsjP95E3RHvISoyZCgII.avif",
           "path": "it/9b5ac3a9525d.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "0b54a4fb2ddf"
         }
       ],
       "locations": [
@@ -2072,7 +2153,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "This cone-shaped roof style, a trullo, exists only in one valley in the south-east. It is especially common around one town."
     },
     {
       "id": "it-UJSC",
@@ -2080,7 +2162,7 @@
       "order": 0,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Close to the Slovenian border you can find Slovene…",
+      "title": "Language: Slovene bilingual signs near the border",
       "text": [
         "Close to the Slovenian border you can find **Slovene bilingual signs**."
       ],
@@ -2122,14 +2204,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Close to the north-eastern border you find signs in both languages, with Slovene as the second."
     },
     {
       "id": "it-42k5",
       "step": 2,
       "order": 1,
       "family": "car",
-      "title": "Google car: The Campione d'Italia exclave in Switzerland can be…",
+      "title": "Google car: low camera, long antenna, flag, lake west",
       "text": [
         "The Campione d'Italia **exclave** in Switzerland can be recognized by its low camera, having a long antenna and a flag. There is also a body of water to the west.",
         "NOTE: This antenna can also be found in several areas in [Switzerland](https://www.google.com/maps/@45.8917308,9.0384397,3a,38.3y,19.25h,71.73t/data=!3m6!1e1!3m4!1s0x8K6Xn3tuFsalTznE_BGw!2e0!7i13312!8i6656)."
@@ -2174,14 +2257,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small exclave inside Switzerland shows a low camera with a long antenna and a flag, and a lake to the west. Some Swiss areas have the same antenna."
     },
     {
       "id": "it-AHUP",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Etna, the tallest volcano in Europe, can be seen rising…",
+      "title": "Landscape: huge volcano in the distance",
       "text": [
         "**Etna**, the tallest volcano in Europe, can be seen rising above the landscape from far away in eastern Sicily."
       ],
@@ -2222,14 +2306,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Europe's tallest volcano towers over the landscape from far away in eastern Sicily."
     },
     {
       "id": "it-s1Uh",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The volcano of Vesuvius can often be seen to the south or…",
+      "title": "Landscape: volcano to the south or east of a city plain",
       "text": [
         "The volcano of **Vesuvius** can often be seen to the south or east from the plains around Naples."
       ],
@@ -2270,14 +2355,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vesuvius is often seen to the south or east from the plains around Naples."
     },
     {
       "id": "it-KSAH",
       "step": 2,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: Venice can typically be recognized by its many canals…",
+      "title": "City: canals through most of the city",
       "text": [
         "Venice can typically be recognized by its many **canals** running through most of the city."
       ],
@@ -2318,14 +2404,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Canals run through most of the city, so streets are mostly water."
     },
     {
       "id": "it-s80c",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Piana del Fùcino is a small plain surrounded by mountains…",
+      "title": "Landscape: small mountain-ringed plain, north-south grid",
       "text": [
         "Piana del Fùcino is a **small plain** surrounded by mountains in the middle of Italy with a grid of roads going completely **north-to-south**."
       ],
@@ -2373,14 +2460,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small plain surrounded by mountains in central Italy, with roads in a grid running exactly north-south."
     },
     {
       "id": "it-2pam",
       "step": 2,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: The island of Pantelleria is a volcanic island southwest of…",
+      "title": "Landscape: dark volcanic rock, yellow lichen, cacti",
       "text": [
         "The island of Pantelleria is a volcanic island southwest of Sicily. Dark volcanic rocks can be seen in the many rock walls of the island, as well as on some houses. It is fairly common to see **yellow lichen** covering the rocks. The island also has a very large amount of cacti."
       ],
@@ -2422,14 +2510,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A volcanic island south-west of Sicily: dark rock walls and houses, yellow lichen on rocks, and lots of cacti."
     },
     {
       "id": "it-K2KL",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: The Aeolian islands are a volcanic archipelago north of…",
+      "title": "Landscape: volcanic islands, white villas on slopes",
       "text": [
         "The Aeolian islands are a volcanic archipelago north of Sicily. Here you will find a mix of volcanic soil and rocks with mediterranean vegetation, like stone pines or olive trees. Like in Sicily, cacti are fairly common.",
         "In the mountains of the islands it is very common to see [touristic white villas](https://www.google.com/maps/@38.4821375,14.9501444,3a,33.7y,13.97h,96.75t/data=!3m6!1e1!3m4!1shlfKkMyHDc-zTzWKFLh70g!2e0!7i13312!8i6656?entry=ttu)."
@@ -2472,14 +2561,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A volcanic archipelago north of Sicily with volcanic soil, stone pines, olive trees and cacti. White tourist villas are common in the hills."
     },
     {
       "id": "it-Q35Q",
       "step": 2,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: Within the Aeolian islands",
+      "title": "Landscape: twin volcanoes forming a valley",
       "text": [
         "Within the Aeolian islands, Salina can easily be distinguished from the **twin volcanoes** forming a valley across the island."
       ],
@@ -2520,14 +2610,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On one of the volcanic islands, two volcanoes form a valley across the island."
     },
     {
       "id": "it-aA4U",
       "step": 2,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: Vulcano is perhaps the most easily recognisable of the…",
+      "title": "Landscape: volcano with white stripe near the top",
       "text": [
         "Vulcano is perhaps the most easily recognisable of the Aeolian islands, with its volcano having an almost **white stripe of dirt** following the top of the mountainside. It can typically be spotted from [afar](https://goo.gl/maps/THJBuAvQtzUCYWCZ7) on the island."
       ],
@@ -2568,14 +2659,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A volcano with an almost white stripe of dirt along its upper slope. Easy to spot from afar."
     },
     {
       "id": "it-a1vN",
       "step": 2,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: The island of Favignana has a distinct topography",
+      "title": "Landscape: mountain ridge splitting a flat island",
       "text": [
         "The island of Favignana has a distinct topography, with mountains running north to south splitting the island in two.",
         "On both sides of the island you will find flat areas, with many rock walls similar to those found in Bari.",
@@ -2618,14 +2710,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mountains run north to south and split the island in two, with flat areas and rock walls on both sides. Unlike nearby islands it is not volcanic."
     },
     {
       "id": "it-n7fO",
       "step": 2,
       "order": 11,
       "family": "car",
-      "title": "Google car: The island of San Domino only has overcast Generation 2…",
+      "title": "Google car: gloomy overcast Gen 2",
       "text": [
         "The island of San Domino only has **overcast Generation 2** coverage, which mostly looks quite gloomy."
       ],
@@ -2666,14 +2759,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/italy",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "This small island has only overcast Gen 2 coverage, which mostly looks gloomy."
     },
     {
       "id": "it-lm-2245",
       "step": 3,
       "order": 0,
       "family": "language",
-      "title": "Language: Italian Helpful Words",
+      "title": "Language: useful words (senso unico, piazza, vietato)",
       "text": [
         "Here are a few words in Italian that can either help you identify the language quickly, be helpful in region guessing, or just help learn the general feel of the language:",
         "**senso unico** - one way",
@@ -2694,7 +2788,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Handy words: senso unico (one way), di (of), castello, prezzi (prices), piazza, autostrada (motorway), vietato (forbidden), polizia, sconto (discount)."
     },
     {
       "id": "it-lm-2246",
@@ -2702,7 +2797,7 @@
       "order": 1,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Word for street in Italian",
+      "title": "Sign: via, strada, viale, tangenziale",
       "text": [
         "Italy typical uses the word \"via\" on their street signs. Note that \"strada\" also means street but is the same word in Romanian and used more commonly there.",
         "Here are some similar words:",
@@ -2727,14 +2822,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Street signs mostly say via. Strada also means street and is used on rural roads; viale is avenue and tangenziale is ring road. Romanian uses strada more."
     },
     {
       "id": "it-lm-2247",
       "step": 3,
       "order": 2,
       "family": "language",
-      "title": "Language: Italian General Tips",
+      "title": "Language: vowel endings, -zione, gli, gn, sci",
       "text": [
         "In Italian most words end in a vowel. Example exceptions include non, il, per, con, del.",
         "Double consonants (tt, zz, cc, ss, bb, pp, ll, gg, etc.) are frequent.",
@@ -2758,42 +2854,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-2250",
-      "step": 3,
-      "order": 3,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Bilingual French in Italy",
-      "text": [
-        "French can be seen on signs in the Aosta Valley. Most notably, street signs often use both the Italian word “via” and the French word “rue”."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b354a64d2f12",
-          "src": "https://learnablemeta.com/images/5/qPVQQJVlzUjlG5L48c9U4UBrTbilCZlJC2uf.avif",
-          "path": "it/b354a64d2f12.webp",
-          "width": 1000,
-          "height": 804
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Most words end in a vowel and double consonants are common. Look for endings -zione, -tà, -aggio, -mento and letter groups gli, gn, sci."
     },
     {
       "id": "it-lm-2995",
       "step": 3,
       "order": 4,
       "family": "other",
-      "title": "Blue-Corners Italy",
+      "title": "Sign: blue corners outside the white edge",
       "text": [
         "Italy, Romania, Serbia, and Slovenia all look about the same. Thankfully Romania will **not** have a **white/silver border**. Italy will have **blue corners** visible outside the white edge."
       ],
@@ -2817,497 +2886,18 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24591",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: Alps",
-      "text": [
-        "The alpine region in northern Italy has tall, wide mountain ranges and deep valleys."
+      },
+      "summary": "Italy, Romania, Serbia and Slovenia look much alike. Italy shows blue corners outside the white edge, while Romania has no white or silver border.",
+      "sameAs": [
+        "RS",
+        "SI"
       ],
-      "tags": [],
-      "images": [
+      "differs": [
         {
-          "id": "c4441f4c4157",
-          "src": "https://learnablemeta.com/images/664/bCDS3f5k26hOItwXAHU0BQ7JXkw6kOyy5dTu.avif",
-          "path": "it/c4441f4c4157.webp",
-          "width": 1000,
-          "height": 484
+          "country": "RO",
+          "how": "No white or silver border"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24592",
-      "step": 3,
-      "order": 6,
-      "family": "landscape",
-      "title": "Landscape: Etna",
-      "text": [
-        "Etna, the tallest volcano in Europe, can be seen rising above the landscape from far away in eastern Sicily."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0d41cec0a5b4",
-          "src": "https://learnablemeta.com/images/664/QTyfwXdfV2nJZeAFh2l0lNGw51Tri0zetUW7.avif",
-          "path": "it/0d41cec0a5b4.webp",
-          "width": 1000,
-          "height": 481
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24593",
-      "step": 3,
-      "order": 7,
-      "family": "coverage",
-      "title": "Coverage: Po Valley",
-      "text": [
-        "The Padan Plain (commonly referred to as Po Valley) can typically be recognized by its complete flatness. The plain has some of the worst air quality in Europe, which has led to much of the coverage having a noticeable haze."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "25ef5b77e601",
-          "src": "https://learnablemeta.com/images/664/hMQAwd3mix9P4XQ2IM8VYJeAWOfrbVHEvctq.avif",
-          "path": "it/25ef5b77e601.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24594",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "Salina",
-      "text": [
-        "Within the Aeolian islands, Salina can easily be distinguished from the twin volcanoes forming a valley across the island."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4a891d5dab36",
-          "src": "https://learnablemeta.com/images/664/nDFdyBAlMW8tdyai3npb6BXa8vHH6lPRZC0m.avif",
-          "path": "it/4a891d5dab36.webp",
-          "width": 1000,
-          "height": 483
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24595",
-      "step": 3,
-      "order": 9,
-      "family": "landscape",
-      "title": "Landscape: Sardinia",
-      "text": [
-        "Grey rocks sticking up from the ground are commonly found on Sardinia, particularly in the northeast.",
-        "NOTE: A similar phenomenon can be seen on Sicily, however the landscape will typically be much drier than Sardinia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4f19979c7bde",
-          "src": "https://learnablemeta.com/images/664/4yB5GvVWcLOuXdg156lCUlW1sQLqTWhwmjSD.avif",
-          "path": "it/4f19979c7bde.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24596",
-      "step": 3,
-      "order": 10,
-      "family": "other",
-      "title": "Vulcano",
-      "text": [
-        "Vulcano is perhaps the most easily recognisable of the Aeolian islands, with its volcano having an almost white stripe of dirt following the top of the mountainside. It can typically be spotted from afar on the island."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b664dccaa6f5",
-          "src": "https://learnablemeta.com/images/664/3XFIMZESa4u9kDXjrAysaByyUzHHHmIfZonQ.avif",
-          "path": "it/b664dccaa6f5.webp",
-          "width": 1000,
-          "height": 483
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24597",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Vesuvius",
-      "text": [
-        "The volcano of Vesuvius can often be seen to the south or east from the plains around Naples."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d92bc411040e",
-          "src": "https://learnablemeta.com/images/664/ZDRbSqQvSVjxJwjJsrXY7t7cCplzd7JF2cJz.avif",
-          "path": "it/d92bc411040e.webp",
-          "width": 1000,
-          "height": 480
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-24598",
-      "step": 3,
-      "order": 12,
-      "family": "landscape",
-      "title": "Landscape: Sicily",
-      "text": [
-        "The Sicilian landscape is characterised by an arid, hilly agricultural landscape, often combined with rocky mountains."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7c443c010b0",
-          "src": "https://learnablemeta.com/images/664/BdfWMyFuZkxjrU0ClGH09cr8iT5cXoQ55gf9.avif",
-          "path": "it/f7c443c010b0.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-49925",
-      "step": 3,
-      "order": 13,
-      "family": "guardrail",
-      "title": "Guardrail: Red Reflectors",
-      "text": [
-        "Italian guardrails feature red front reflectors.",
-        "**--- NOTE:**",
-        "This is most useful to distinguish Italy from Spain, which uses yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "128467b076f3",
-          "src": "https://learnablemeta.com/images/847/HYHvH80GJxp3g8MNY5NSOZYRlCtCA6UdqLwb.avif",
-          "path": "it/128467b076f3.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-50288",
-      "step": 3,
-      "order": 14,
-      "family": "guardrail",
-      "title": "Guardrail: Red Reflectors",
-      "text": [
-        "Italian guardrails feature red front reflectors.",
-        "**--- NOTE:**",
-        "This is most useful to distinguish Italy from Spain, which uses yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "128467b076f3",
-          "src": "https://learnablemeta.com/images/847/HYHvH80GJxp3g8MNY5NSOZYRlCtCA6UdqLwb.avif",
-          "path": "it/128467b076f3.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-50933",
-      "step": 3,
-      "order": 15,
-      "family": "guardrail",
-      "title": "Guardrail: Red Reflectors",
-      "text": [
-        "Italian guardrails feature red front reflectors.",
-        "**--- NOTE:**",
-        "This is most useful to distinguish Italy from Spain, which uses yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "128467b076f3",
-          "src": "https://learnablemeta.com/images/847/HYHvH80GJxp3g8MNY5NSOZYRlCtCA6UdqLwb.avif",
-          "path": "it/128467b076f3.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-104514",
-      "step": 3,
-      "order": 16,
-      "family": "architecture",
-      "title": "Architecture: Tuscany - Unpainted Bricks",
-      "text": [
-        "A lot of buildings in and around Tuscany are made of irregular unpainted brown-grey bricks.",
-        "**--- NOTE:**",
-        "A similar style of architecture can be found in northeastern Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "79b67ed2b7c4",
-          "src": "https://learnablemeta.com/images/1072/53qeVz5nayh4teCy5YspitnnaC8lf0AiATET.avif",
-          "path": "it/79b67ed2b7c4.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-104515",
-      "step": 3,
-      "order": 17,
-      "family": "architecture",
-      "title": "Architecture: Aosta Valley - Grey Uneven Bricks",
-      "text": [
-        "Buildings in Aosta Valley are often built with grey uneven bricks, with an Alpine look.",
-        "**--- NOTE:**",
-        "This can look superficially similar to Andorran architecture."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a54b52d71024",
-          "src": "https://learnablemeta.com/images/1072/OjYhcGpTxL14WEAlkDEvsZp2tYerT6etpYj7.avif",
-          "path": "it/a54b52d71024.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-104575",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "Northeast - Solid Wooden Shutters",
-      "text": [
-        "Solid wooden shutters with black metal hinges is a common feature in the northeast of Italy, particularly in Veneto."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cafdba92a11f",
-          "src": "https://learnablemeta.com/images/1072/9EbfpzDOgdznX1kLkrnuouG6SbYPEZFha8BM.avif",
-          "path": "it/cafdba92a11f.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-361825",
-      "step": 3,
-      "order": 19,
-      "family": "other",
-      "title": "Italy",
-      "text": [
-        "Italian area codes follow a pattern where the first digit generally increases to the east, then south."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d6ec6848fa7f",
-          "src": "https://learnablemeta.com/images/1398/kKAbzfrrG7ro4FewAWzKaifGWPgPFWsPSpPz.avif",
-          "path": "it/d6ec6848fa7f.webp",
-          "width": 798,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-474146",
-      "step": 3,
-      "order": 20,
-      "family": "pole",
-      "title": "Pole: trident",
-      "text": [
-        "The most common pole tops in Italy are tridents pole tops with a concrete or metall crossbar.",
-        "There are several possible configurations of insulators.The two shown in the image are the most common ones."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6920f4e347cd",
-          "src": "https://learnablemeta.com/images/1955/1750621218142-VVf.avif",
-          "path": "it/6920f4e347cd.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-515557",
-      "step": 3,
-      "order": 21,
-      "family": "guardrail",
-      "title": "Guardrail: A-Type with orange or red reflectors",
-      "text": [
-        "Italian guardrails feature orange or red front reflectors. Also, they often are doubled, just like in Ecuador.",
-        "NOTE: This is most useful to distinguish Italy from Spain, which uses yellow reflectors. For a good overview of European guardrails, see this infographic."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "153b2bdda40d",
-          "src": "https://learnablemeta.com/images/3660/1755387761199-v4b.avif",
-          "path": "it/153b2bdda40d.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "15c0c5b08d70",
-          "src": "https://learnablemeta.com/images/3660/1755387857219-CHG.avif",
-          "path": "it/15c0c5b08d70.webp",
-          "width": 800,
-          "height": 356
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EC",
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "it-lm-558213",
@@ -3315,7 +2905,7 @@
       "order": 22,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Turin street sign",
+      "title": "Sign: street sign with unusual font, years below",
       "text": [
         "Turin street signs have this unique font, sometimes they also have the date of the years on the bottom."
       ],
@@ -3335,7 +2925,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "One northern city has street signs in a unique font, sometimes with years on the bottom."
     },
     {
       "id": "it-lm-558217",
@@ -3343,7 +2934,7 @@
       "order": 23,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Bari street sign",
+      "title": "Sign: street sign with logo top left",
       "text": [
         "Bari street signs have this unique logo in the top left."
       ],
@@ -3363,7 +2954,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "One southern port city has street signs with a unique logo in the top left."
     },
     {
       "id": "it-lm-558219",
@@ -3371,7 +2963,7 @@
       "order": 24,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Naples street sign",
+      "title": "Sign: street sign with extra name under it",
       "text": [
         "Naples street signs have a unique font with an extra name under the street name."
       ],
@@ -3391,7 +2983,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "One southern city has street signs in a unique font with an extra name under the street name."
     },
     {
       "id": "it-lm-558220",
@@ -3399,7 +2992,7 @@
       "order": 25,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Palermo street sign",
+      "title": "Sign: street sign with 4 dots in each corner",
       "text": [
         "Palermo street signs have 4 dots in each corner."
       ],
@@ -3419,7 +3012,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "One Sicilian city has street signs with four dots in each corner."
     },
     {
       "id": "it-lm-558221",
@@ -3427,7 +3021,7 @@
       "order": 26,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Florence street signs",
+      "title": "Sign: street sign on 3 small supports",
       "text": [
         "Florence street signs are supported by 3 small supports (1 on top, 2 on bottom)."
       ],
@@ -3447,7 +3041,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "One Tuscan city has street signs held by 3 small supports: one on top and two at the bottom."
     },
     {
       "id": "it-lm-558222",
@@ -3455,7 +3050,7 @@
       "order": 27,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Rome street sign",
+      "title": "Sign: huge street sign, thick frame, roman numerals",
       "text": [
         "Rome street signs are by far the most distinct street signs in Italy, their bigger than any other street sign in Italy, they have a very thick frame and the Roman numerals in the top right."
       ],
@@ -3475,102 +3070,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-558223",
-      "step": 3,
-      "order": 28,
-      "family": "other",
-      "title": "Venice",
-      "text": [
-        "Venice can typically be recognized by its many canals running through most of the city."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0fef6ec30204",
-          "src": "https://learnablemeta.com/images/4588/1777482284925-ds7.avif",
-          "path": "it/0fef6ec30204.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-634026",
-      "step": 3,
-      "order": 29,
-      "family": "plate",
-      "title": "Plate: Italy",
-      "text": [
-        "Contrary to most European licence plates, Italian plates have blue strips on either side of the plate. Furthermore, the front plate is distinctly shorter than most European plates, which in combination with the two strips, makes it unique.",
-        "NOTE: Albanian licence plates also have two blue strips, and French licence plates have a smaller strip on the right. However, neither Albanian nor French front plates are short."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1a2af3cc2aa5",
-          "src": "https://learnablemeta.com/images/5431/1766260774117-EDk.avif",
-          "path": "it/1a2af3cc2aa5.webp",
-          "width": 800,
-          "height": 176
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "it-lm-783115",
-      "step": 3,
-      "order": 30,
-      "family": "language",
-      "title": "Language: Italian",
-      "text": [
-        "Italian is a Romance language and the most spoken language in Italy. Italian does not use any real special letters, only accents on top of vowels: (**À, È, É, Ì, Ò, Ó** and **Ù**).",
-        "The Italian word for street is **via**.",
-        "Italian is perhaps most often confused with Spanish. Some characteristics of Italian that can help with this distinction are:",
-        "Extensive use of double consonants",
-        "Extensive use of the letter i",
-        "Almost all words ending in a vowel",
-        "Take the text in the picture below as an example. In Italian, this text has 5 uses of double vowels, 28 uses of the letter i and 29 words ending in a vowel. The same numbers for the Spanish version are 0, 6 and 6 respectively."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "873ce5fb8d6d",
-          "src": "https://learnablemeta.com/images/9388/1785588992176-CL9.avif",
-          "path": "it/873ce5fb8d6d.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "14d24aa70d66",
-          "src": "https://learnablemeta.com/images/9388/1785589389871-cHM.avif",
-          "path": "it/14d24aa70d66.webp",
-          "width": 190,
-          "height": 110
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The capital has the most distinctive street signs: bigger than any other, with a very thick frame and roman numerals in the top right."
     }
   ]
 }

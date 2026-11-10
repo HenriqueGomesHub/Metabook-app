@@ -14,7 +14,7 @@
       "step": 0,
       "order": 0,
       "family": "other",
-      "title": "Belt + Straight Legs Croatia/Bosnia",
+      "title": "Pedestrian: white belt, straight legs",
       "text": [
         "**White Belt**: Croatia/Bosnia, Portugal, Germany, Hungary. > **Non-Pointed Shoes**: Croatia/Bosnia, Portugal. > **Straight legs**: Croatia/Bosnia."
       ],
@@ -39,14 +39,28 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Google car's pedestrian figure has a white belt, non-pointed shoes and straight legs. The belt is shared with Croatia, Portugal, Germany and Hungary; the straight legs and flat shoes narrow it further.",
+      "sameAs": [
+        "HR"
+      ],
+      "differs": [
+        {
+          "country": "DE",
+          "how": "Germany has the white belt but not the straight legs and flat shoes"
+        },
+        {
+          "country": "HU",
+          "how": "Hungary has the white belt but not the straight legs and flat shoes"
+        }
+      ]
     },
     {
       "id": "ba-lm-787131",
       "step": 0,
       "order": 1,
       "family": "language",
-      "title": "Language: Serbian",
+      "title": "Language: Cyrillic Serbian text",
       "text": [
         "There are three versions of the Serbo-Croatian language recognized in Bosnia and Herzegovina: Bosnian, Serbian and Croatian. Speakers consider them separate languages though, and base the split on the ethnicity of the user: Bosniak, Serb or Croat. Serbian (and Bosnian technically ) use either Latin or Cyrillic, while Croatian always uses the Latin script. In practice, it is **only** in Serbian-majority regions (mostly in Republika Srpska) where you will find Cyrillic.",
         "NOTE: Serbian is **also** commonly written with Latin script, and thus might be indistinguishable from Bosnian/Croatian.",
@@ -60,14 +74,16 @@
           "src": "https://learnablemeta.com/images/9388/1786229433716-4di.avif",
           "path": "ba/6fa0f2913870.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "4262c9ee6767"
         },
         {
           "id": "a17740d8005b",
           "src": "https://learnablemeta.com/images/9388/1786229448352-KYl.avif",
           "path": "ba/a17740d8005b.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "567d3da968ee"
         },
         {
           "id": "2f4c28228594",
@@ -90,14 +106,18 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cyrillic writing (улица for street) points to Serb-majority areas, mostly Republika Srpska. Serbian is also written in Latin script, and road signs often use both scripts everywhere.",
+      "sameAs": [
+        "RS"
+      ]
     },
     {
       "id": "ba-lm-787132",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: Bosnian (or Croatian)",
+      "title": "Language: Latin Bosnian/Croatian text",
       "text": [
         "There are three versions of the Serbo-Croatian language recognized in Bosnia and Herzegovina: Bosnian, Serbian and Croatian. Speakers consider them separate languages though, and base the split on the ethnicity of the user: Bosniak, Serb or Croat. Serbian (and Bosnian technically ) use either Latin or Cyrillic, while Croatian always uses the Latin script. In practice, it is **only** in Serbian-majority regions (mostly in Republika Srpska) where you will find Cyrillic.",
         "NOTE: Serbian is **also** commonly written with Latin script, and thus might be indistinguishable from Bosnian/Croatian.",
@@ -111,14 +131,16 @@
           "src": "https://learnablemeta.com/images/9388/1786228716580-NGZ.avif",
           "path": "ba/8e34be8c7b59.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "5de6b478280d"
         },
         {
           "id": "1a8e908d47a2",
           "src": "https://learnablemeta.com/images/9388/1786228726155-bwg.avif",
           "path": "ba/1a8e908d47a2.webp",
           "width": 800,
-          "height": 780
+          "height": 780,
+          "dupeOf": "2f4c28228594"
         },
         {
           "id": "08a4d6a5bada",
@@ -134,7 +156,12 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Latin-script text with 'ulica' for street. Bosnian and Croatian look almost identical, and Serbian is often written in Latin too, so this alone cannot pin down the country.",
+      "sameAs": [
+        "HR",
+        "RS"
+      ]
     }
   ]
 }

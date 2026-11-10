@@ -45,9 +45,10 @@ export function createStorage({
 
     exists,
 
-    /** The bytes of a file in the public bucket. */
+    /** The bytes of a file (a private bucket is read with the service key). */
     async download(path) {
-      return Buffer.from(await (await request(`${base}/object/public/${bucket}/${path}`, {}, { timeoutMs: 120_000 })).arrayBuffer());
+      const url = isPublic ? `${base}/object/public/${bucket}/${path}` : `${base}/object/authenticated/${bucket}/${path}`;
+      return Buffer.from(await (await request(url, isPublic ? {} : { headers }, { timeoutMs: 120_000 })).arrayBuffer());
     },
 
     /** Every object path under `prefix` (folders walked), listed 1000 at a time. */

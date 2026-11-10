@@ -1,4 +1,4 @@
-import { orderRoundClues, primaryCardId } from '@metabook/core';
+import { orderRoundClues, primaryCardId, quizImages } from '@metabook/core';
 import type { Card, Clue, Grade, PoolCountry } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -124,7 +124,7 @@ function primaryCard(data: AppSnapshot, country: PoolCountry, clue: Clue): Card 
   return (
     data.content.cards.find((card) => card.id === id) ?? {
       id,
-      type: shipped.images.length > 0 ? 'spot' : 'meta',
+      type: quizImages(shipped).length > 0 ? 'spot' : 'meta',
       country: country.code,
       answer: country.name,
       prompt: { kind: 'text', value: clue.title },

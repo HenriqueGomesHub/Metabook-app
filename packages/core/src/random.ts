@@ -20,3 +20,16 @@ export function shuffle<T>(items: readonly T[], rng: Rng): T[] {
   }
   return out;
 }
+
+/** A 32-bit FNV-1a hash of a string, to seed `mulberry32` from text. */
+export function hashText(text: string): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/** A PRNG seeded by a string: the same text always gives the same sequence. */
+export const seededRng = (seed: string): Rng => mulberry32(hashText(seed));

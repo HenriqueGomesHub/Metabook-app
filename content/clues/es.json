@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Spain uses standard long",
+      "title": "Plate: long white, one blue strip on left",
       "text": [
         "Spain uses standard long, **white** European plates with a single **blue strip** on the left.",
         "NOTE: Most Portuguese plates have a yellow strip on the right. Italian plates have two blue strips on either side of the plate."
@@ -45,14 +45,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Standard long white European plates with a single blue strip on the left. Portuguese plates mostly have a yellow strip on the right, and Italian plates have two blue strips, one on each side.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Yellow strip on the right"
+        },
+        {
+          "country": "IT",
+          "how": "Blue strips on both sides"
+        }
+      ]
     },
     {
       "id": "es-v8wo",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: The standard Spanish bollards have a yellow-orange…",
+      "title": "Bollard: yellow-orange reflector",
       "text": [
         "The standard Spanish bollards have a **yellow-orange** reflector on the front and two white dots on the back (though the back can also be blank). They are typically hollow.",
         "NOTE: Very close to Andorra, you can find a [slightly different bollard](https://goo.gl/maps/7zfsuvqVcq5xhuTJ7), which is also used in Andorra itself."
@@ -89,14 +100,16 @@
           "src": "https://learnablemeta.com/images/739/OHmvI6z6TE0jr8wnuIm8Y33jPXYYgWe4sYVc.avif",
           "path": "es/15c89cbc31b7.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "f47cebfff40a"
         },
         {
           "id": "0d22a7c9b130",
           "src": "https://learnablemeta.com/images/847/tGSNvEFZ5tKN6ypcD1K0fXw9HzpzWv71zACZ.avif",
           "path": "es/0d22a7c9b130.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "f47cebfff40a"
         }
       ],
       "locations": [
@@ -117,14 +130,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The standard bollard has a yellow-orange reflector on the front and two white dots (or nothing) on the back. They are usually hollow. Very close to Andorra a slightly different bollard is used, and also in Andorra.",
+      "differs": [
+        {
+          "country": "AD",
+          "how": "Near the border a slightly different bollard is used"
+        }
+      ]
     },
     {
       "id": "es-qBpO",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: In Spain, you can find a variety of electricity poles and…",
+      "title": "Pole: concrete ladder or wooden in rural areas",
       "text": [
         "In Spain, you can find a variety of electricity poles and pole tops. In small towns and sparsely populated rural areas **concrete ladder poles** and **wooden poles** are the most common.",
         "“Ladder” poles have indents that resemble a ladder, hence the name."
@@ -154,7 +174,8 @@
           "src": "https://learnablemeta.com/images/847/RXXwO0dVxotSNyrbGSXZdLER24uL5mS09hc9.avif",
           "path": "es/64e9f870177f.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "80e5f78955b1"
         },
         {
           "id": "e5fac8d715fc",
@@ -168,21 +189,24 @@
           "src": "https://learnablemeta.com/images/851/uc06NsK0PIcVXDxZgTeVTbyetjOZ3S6zEOrH.avif",
           "path": "es/403e8a1626b7.webp",
           "width": 1000,
-          "height": 667
+          "height": 667,
+          "dupeOf": "e5fac8d715fc"
         },
         {
           "id": "588802f8d2b2",
           "src": "https://learnablemeta.com/images/853/yLQ1GSsIjocARKgVGsT3Ne7RHONwBQsd4DpK.avif",
           "path": "es/588802f8d2b2.webp",
           "width": 1000,
-          "height": 667
+          "height": 667,
+          "dupeOf": "e5fac8d715fc"
         },
         {
           "id": "cd61daeb8e44",
           "src": "https://learnablemeta.com/images/1955/1749989690630-uMI.avif",
           "path": "es/cd61daeb8e44.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "80e5f78955b1"
         }
       ],
       "locations": [
@@ -201,14 +225,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many pole types exist. In small towns and sparse rural areas, concrete ladder poles (with ladder-like indents) and wooden poles are the most common."
     },
     {
       "id": "es-20Je",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: “French style” poletops are common in Spain",
+      "title": "Pole: upside-down triangle top, upturned bar",
       "text": [
         "“**French style**” poletops are common in Spain. They are shaped like an upside down triangle, with a horizontal top bar that is curved slightly upwards. They are usually found on top of tall ladder poles or [medium sized steel poles](https://goo.gl/maps/yWPof9m7EEy7o5u97).",
         "NOTE: As the name suggests, French poletops are also very common in France."
@@ -238,7 +263,8 @@
           "src": "https://learnablemeta.com/images/847/YXDpz6QJgjWoEInUKYwKQjsGW0X3B7wr36Wi.avif",
           "path": "es/c30a1402c456.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "62b354748aad"
         }
       ],
       "locations": [
@@ -259,14 +285,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "\"French style\" pole tops shaped like an upside-down triangle with a slightly upward-curved top bar, on tall ladder poles or mid-size steel poles. Also very common in France.",
+      "sameAs": [
+        "FR"
+      ]
     },
     {
       "id": "es-aLWf",
       "step": 0,
       "order": 5,
       "family": "other",
-      "title": "High voltage electricity lines supported by pylons are very…",
+      "title": "Power: many big pylons with high-voltage lines",
       "text": [
         "High voltage electricity lines supported by **pylons** are very common in Spain, especially compared to other Mediterranean countries."
       ],
@@ -305,7 +335,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "High-voltage lines on pylons are very common, even compared with other Mediterranean countries."
     },
     {
       "id": "es-oE35",
@@ -313,7 +344,7 @@
       "order": 6,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Spain has distinct road markers with a variety of colourful…",
+      "title": "Sign: road marker with colourful border",
       "text": [
         "Spain has distinct road markers with a variety of **colourful borders**. The code on top is the number of the road.",
         "NOTE: Andorra has [similar markers](https://goo.gl/maps/FEWfZhUVrr8EUTv28) and the letter codes preceding the road number on these markers are often an important region-specific clue. You can learn more about these codes in the region guessing section."
@@ -355,7 +386,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Distinct road markers with colourful borders, with the road number in the code on top. Andorra has similar markers, and the letters before the number are a key region clue.",
+      "sameAs": [
+        "AD"
+      ]
     },
     {
       "id": "es-0bDx",
@@ -363,7 +398,7 @@
       "order": 7,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: In rural areas you will often find hunting signs",
+      "title": "Sign: hunting signs",
       "text": [
         "In rural areas you will often find hunting signs. There are two versions, both of which are unique to Spain. One is a simple white sign with a text starting with “coto” and ending in “caza”. The other one has a diagonally divided black and white background.",
         "NOTE: These signs have an identifying [code](https://www.google.com/maps/@39.7437882,-5.9988875,3a,15y,62.89h,79.86t/data=!3m6!1e1!3m4!1ssz27mavsgGpo566T_-XEmg!2e0!7i16384!8i8192) that can sometimes be read. In this case “Ex” stands for Extremadura."
@@ -417,14 +452,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rural hunting signs, unique here: a plain white one reading \"coto ... caza\", or one split diagonally black and white. A readable code on it can show the region (\"Ex\" is Extremadura)."
     },
     {
       "id": "es-okgv",
       "step": 0,
       "order": 8,
       "family": "guardrail",
-      "title": "Guardrail: Spain has yellow reflectors on rounded A-type guardrails",
+      "title": "Guardrail: yellow reflectors on rounded A-type",
       "text": [
         "Spain has **yellow reflectors** on rounded A-type guardrails.",
         "NOTE: Belgium, Andorra, Gibraltar and most Latin American countries also have yellow reflectors. For a good overview of European guardrails, see [this infographic](/images/spain/europeguardrail.png)."
@@ -454,7 +490,8 @@
           "src": "https://learnablemeta.com/images/1/xc0Mdwyrqvm54C3xoawfApxuYqNIze70je8m.avif",
           "path": "es/cc57d28a23f1.webp",
           "width": 1000,
-          "height": 555
+          "height": 555,
+          "dupeOf": "d4aeb837d872"
         }
       ],
       "locations": [
@@ -477,7 +514,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow reflectors on rounded A-type guardrails. Belgium, Andorra, Gibraltar and most Latin American countries have yellow reflectors too.",
+      "sameAs": [
+        "AD",
+        "BE",
+        "GI"
+      ]
     },
     {
       "id": "es-JLZT",
@@ -485,7 +528,7 @@
       "order": 9,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Spanish pedestrian crossing signs have 8 stripes",
+      "title": "Sign: pedestrian crossing with 8 stripes",
       "text": [
         "Spanish pedestrian crossing signs have **8 stripes**. This is the highest number of stripes in Europe, and almost unique to Spain.",
         "NOTE: The only other European country with 8 stripes is Andorra."
@@ -513,14 +556,16 @@
           "src": "https://learnablemeta.com/images/311/bTatfyjPhyzKt0tmQrRxTpVFmsUo51fFt1ds.avif",
           "path": "es/b486db95a415.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "6cfb06188a20"
         },
         {
           "id": "d05e4bd47013",
           "src": "https://learnablemeta.com/images/847/oVFgDdGXEkvft5mmYBKW4lo3BC2q70vadOkk.avif",
           "path": "es/d05e4bd47013.webp",
           "width": 1000,
-          "height": 493
+          "height": 493,
+          "dupeOf": "6cfb06188a20"
         }
       ],
       "locations": [
@@ -541,7 +586,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A crossing sign with 8 stripes, the most in Europe and almost unique to Spain. Andorra is the only other European country with 8.",
+      "sameAs": [
+        "AD"
+      ]
     },
     {
       "id": "es-xE7c",
@@ -549,7 +598,7 @@
       "order": 10,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Spanish stop signs have a distinct small font",
+      "title": "Sign: stop sign with small text",
       "text": [
         "Spanish stop signs have a distinct **small** font.",
         "NOTE: These are mostly useful to distinguish Portugal from Spain: Portuguese stop signs have a noticeably [larger](https://maps.app.goo.gl/fFE4hc7vSRj35Kc89) font."
@@ -591,7 +640,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs use a distinctly small font. This mostly separates it from Portugal, whose stop signs have a noticeably larger font.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Portuguese stop sign font is noticeably larger"
+        }
+      ]
     },
     {
       "id": "es-lZxf",
@@ -599,7 +655,7 @@
       "order": 11,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Red borders on road signs extend all the way to the edge of…",
+      "title": "Sign: red borders reach the edge of road signs",
       "text": [
         "Red borders on road signs extend all the way to the edge of the sign. There is **no small white border** separating the red part from the edge.",
         "NOTE: France, Italy and Portugal have a small [white](https://goo.gl/maps/qq8QB3ArzXtkz7sw5) border on the edge of such road signs."
@@ -627,7 +683,8 @@
           "src": "https://learnablemeta.com/images/847/lWZSelwjA6qCm1jC6ZNsXqE213RA3bKHIet5.avif",
           "path": "es/e3ea998c7b33.webp",
           "width": 1000,
-          "height": 523
+          "height": 523,
+          "dupeOf": "fa39c27e4015"
         }
       ],
       "locations": [
@@ -650,7 +707,22 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The red border of road signs goes right to the sign's edge, with no thin white outer border. France, Italy and Portugal have a small white edge.",
+      "differs": [
+        {
+          "country": "FR",
+          "how": "Small white edge on signs"
+        },
+        {
+          "country": "IT",
+          "how": "Small white edge on signs"
+        },
+        {
+          "country": "PT",
+          "how": "Small white edge on signs"
+        }
+      ]
     },
     {
       "id": "es-t0On",
@@ -658,7 +730,7 @@
       "order": 12,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Almost all traffic signs",
+      "title": "Sign: flat signposts on most road signs",
       "text": [
         "Almost all traffic signs, kilometre markers, chevrons and some direction signs in Spain have a **flat signpost**.",
         "NOTE: Flat signposts in Europe are also present in Portugal, France and Andorra."
@@ -702,7 +774,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Almost all road signs, kilometre markers, chevrons and some direction signs sit on flat signposts. Portugal, France and Andorra have flat posts too.",
+      "sameAs": [
+        "AD",
+        "FR",
+        "PT"
+      ]
     },
     {
       "id": "es-4Xxl",
@@ -710,7 +788,7 @@
       "order": 13,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Spain has two chevrons",
+      "title": "Chevron: black or blue with white arrows",
       "text": [
         "Spain has two chevrons: **black with white** arrows, and **blue with white** arrows. Chevrons with a single arrow are rare.",
         "NOTE:",
@@ -745,7 +823,8 @@
           "src": "https://learnablemeta.com/images/914/xcklkeVvCL50NfRosNahHRcXzrZxxmFlqzuf.avif",
           "path": "es/57ff16173a9f.webp",
           "width": 1000,
-          "height": 525
+          "height": 525,
+          "dupeOf": "98e25d76482d"
         }
       ],
       "locations": [
@@ -770,7 +849,17 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two chevrons: black with white arrows and blue with white arrows. Single-arrow chevrons are rare. Black-white ones also exist in Italy, Greece and Albania, blue-white only in France, and Portugal uses black with yellow.",
+      "sameAs": [
+        "FR"
+      ],
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Portuguese chevrons are black with yellow arrows"
+        }
+      ]
     },
     {
       "id": "es-4F9m",
@@ -778,7 +867,7 @@
       "order": 14,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Spanish direction signs have a white background",
+      "title": "Sign: white direction signs with coloured road",
       "text": [
         "Spanish direction signs have a white background. They often feature **colourful boxes** with road numbers, making them recognizable. These road number boxes can be many different colours.",
         "Highway signs have a blue background."
@@ -818,14 +907,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White direction signs, often with colourful boxes showing road numbers in many colours. Highway signs are blue."
     },
     {
       "id": "es-Pr6E",
       "step": 0,
       "order": 15,
       "family": "line",
-      "title": "Road line: Rural roads sometimes have dashed outer lines",
+      "title": "Road lines: dashed outer lines on rural roads",
       "text": [
         "Rural roads sometimes have **dashed outer lines**. This can help tell Spain apart from Portugal and Italy, where such road lines are (almost) non-existent.",
         "Note that the reverse is not true: like Italy and Portugal, many Spanish roads do have solid outer lines."
@@ -853,7 +943,8 @@
           "src": "https://learnablemeta.com/images/847/1gtaXA36MPqkE2vXqbZLY7XQUZSdse1ZhCLG.avif",
           "path": "es/0eb1ea9b593b.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "f63e8dc1c8a4"
         }
       ],
       "locations": [
@@ -875,14 +966,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rural roads sometimes have dashed outer lines, which are almost nonexistent in Portugal and Italy. But many roads here have solid outer lines too, so only the dashed type is a clue.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Dashed outer lines are almost nonexistent there"
+        },
+        {
+          "country": "IT",
+          "how": "Dashed outer lines are almost nonexistent there"
+        }
+      ]
     },
     {
       "id": "es-15qx",
       "step": 0,
       "order": 16,
       "family": "language",
-      "title": "Language: Spanish is the main language in most of the country",
+      "title": "Language: Spanish, ñ, de and del",
       "text": [
         "**Spanish** is the main language in most of the country. It is a Romance language that is closely related to Portuguese.",
         "Spanish and Portuguese can look very similar. Some key differences between the two:",
@@ -908,14 +1010,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Closely related to Portuguese. Ñ only exists in Spanish; Ç and lh are Portuguese (Ç is also Catalan). Portuguese uses -ao endings and -nh- instead of ñ, and contracts de to da, do, das, dos. Regional languages are covered separately.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Portuguese has ç, lh, -ão, -nh- and da/do/dos"
+        }
+      ]
     },
     {
       "id": "es-gdaf",
       "step": 0,
       "order": 17,
       "family": "other",
-      "title": "The Spanish word for street is calle",
+      "title": "Language: \"calle\" means street",
       "text": [
         "The Spanish word for street is **calle**."
       ],
@@ -954,7 +1063,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Spanish word for street is calle."
     },
     {
       "id": "es-Pfi5",
@@ -962,7 +1072,7 @@
       "order": 18,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: You will often find no parking signs in front of garage…",
+      "title": "Sign: \"Vado permanente\" no-parking at garages",
       "text": [
         "You will often find no parking signs in front of garage doors and gates. They will usually read “**Vado permanente**”.",
         "These signs will very often have the name of the municipality after “Ayuntamiento de”.",
@@ -1005,14 +1115,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "No-parking signs in front of garage doors and gates read \"Vado permanente\", often with the municipality after \"Ayuntamiento de\". Italy's say \"Passo carrabile\".",
+      "differs": [
+        {
+          "country": "IT",
+          "how": "Italian signs say \"Passo carrabile\""
+        }
+      ]
     },
     {
       "id": "es-COji",
       "step": 0,
       "order": 19,
       "family": "landscape",
-      "title": "Landscape: Spain has highly diverse landscapes",
+      "title": "Landscape: very diverse, forests to semi-desert",
       "text": [
         "Spain has **highly diverse landscapes**, ranging from [lush Atlantic forests](https://goo.gl/maps/U8Vp3k1yGrLdVQANA) to [bone-dry semideserts](https://goo.gl/maps/PwTpyn5Lw6DMApWGA). Elevation is also varied: highland plateaus interspersed with [rolling hills](https://goo.gl/maps/hDzbVSrJbPSPQVnJ7) are common, but you might also encounter jagged mountain ranges and [very flat lowland](https://goo.gl/maps/kgiM3UXvKiQAcToWA) areas."
       ],
@@ -1051,14 +1168,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Highly varied: lush forests to bone-dry semi-desert, high plateaus with rolling hills, jagged mountains and very flat lowlands."
     },
     {
       "id": "es-mAZ9",
       "step": 0,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: While there is not one single definitive Spanish landscape",
+      "title": "Landscape: dry Mediterranean most places",
       "text": [
         "While there is not one single definitive Spanish landscape, most of the country has a somewhat dry, **Mediterranean** climate, with matching vegetation and agriculture."
       ],
@@ -1097,14 +1215,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "There is no single landscape, but most of the country has a fairly dry Mediterranean climate with matching plants and crops."
     },
     {
       "id": "es-wz9Z",
       "step": 0,
       "order": 21,
       "family": "car",
-      "title": "Google car: Generation 3 cars can have long",
+      "title": "Google car: Gen 3, antenna long, short or none",
       "text": [
         "Generation 3 cars can have **long, short** or **no** antennas. The back of the car is usually not visible, but when it is, it can be either black or white.",
         "NOTE: Coverage in Eastern Andalusia, Huesca, and Lleida sometimes has a long antenna with a [distinctive white top](https://maps.app.goo.gl/Hg7iR7rEuQNftXKe6)."
@@ -1144,14 +1263,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Older Gen 3 cars (blurrier, softer colours) can have a long, short or no antenna. The back is usually hidden, but if visible it is black or white. East Andalusia, Huesca and Lleida sometimes have a long antenna with a white tip."
     },
     {
       "id": "es-ni44",
       "step": 0,
       "order": 22,
       "family": "car",
-      "title": "Google car: Generation 4 cars are blue or less commonly black",
+      "title": "Google car: blue or black Gen 4",
       "text": [
         "Generation 4 cars are **blue** or less commonly **black**. The car can be completely hidden."
       ],
@@ -1190,14 +1310,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Newer Gen 4 cars are blue or, less often, black. The car can be completely hidden."
     },
     {
       "id": "es-ejSh",
       "step": 0,
       "order": 23,
       "family": "car",
-      "title": "Google car: Spain also has Generation 4 “smallcam” coverage",
+      "title": "Camera: low smallcam",
       "text": [
         "Spain also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1236,14 +1357,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some Gen 4 smallcam coverage is mounted lower than usual, with a big round blur and a small front bump. The blur can be fully transparent and hard to spot."
     },
     {
       "id": "es-JopK",
       "step": 0,
       "order": 24,
       "family": "car",
-      "title": "Google car: Google used a weird",
+      "title": "Camera: weird low-quality, wide round blur",
       "text": [
         "Google used a weird, low-quality camera in Spain. This camera is known as the **official Ari** (or “Shitcam”). It has a wide circular car blur, and can be distinguished from Generation 2 by its lack of a sky halo and often somewhat brownish colours. A good map will not usually include this coverage, but it is good to be aware of its existence, in order to not be caught off-guard by it."
       ],
@@ -1283,7 +1405,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A strange low-quality camera (the Ari, or \"shitcam\") with a wide round car blur, no sky halo (which Gen 2 has) and often brownish colours. Good maps usually exclude it, but know it exists."
     },
     {
       "id": "es-CAu9",
@@ -1291,7 +1414,7 @@
       "order": 0,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Spanish regional road numbers feature region-specific codes",
+      "title": "Road numbers: letter codes show the region",
       "text": [
         "Spanish regional road numbers feature **region-specific codes**. These are found on [road markers](https://goo.gl/maps/rhKLQGfHBrjwrCcVA), and sometimes on [direction signs](https://goo.gl/maps/3mEpJjQ2V7dRHXEb7).",
         "For example, the [SG code on road markers](https://goo.gl/maps/1sgfM2413ykRU9P78) refers to a road in Segovia province.",
@@ -1317,14 +1440,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Regional road numbers carry region codes on markers and sometimes direction signs (for example SG is one province). National roads use E, AP, A, R, N anywhere. A is also used for regional roads in two regions. See the infographic for all codes."
     },
     {
       "id": "es-RiC9",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Area codes in Spain are very useful",
+      "title": "Phone numbers: landlines start 9 plus region",
       "text": [
         "**Area codes** in Spain are very useful, as you only need two digits to get a very accurate guess. Every landline number starts with “9”, followed by the regional numbers.",
         "Mobile numbers start with “6”, and are not relevant in region guessing."
@@ -1345,14 +1469,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes are very useful: two digits give a very accurate guess. Landlines start with 9 followed by the regional digits. Mobiles start with 6 and don't help."
     },
     {
       "id": "es-yq2C",
       "step": 1,
       "order": 3,
       "family": "language",
-      "title": "Language: Spain has several regional languages",
+      "title": "Language: several regional languages",
       "text": [
         "Spain has several regional languages. The ones that are most useful to GeoGuessr are **Catalan**, **Basque** and **Galician**.",
         "Some other regions, such as Asturias, also have their own regional languages. But there, non-Spanish signage is much more rare."
@@ -1373,14 +1498,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most useful for the game are Catalan, Basque and Galician. Other regions like Asturias have regional languages too, but non-Spanish signs are much rarer there."
     },
     {
       "id": "es-Y8q6",
       "step": 1,
       "order": 4,
       "family": "language",
-      "title": "Language: Catalan is a Romance language that is closely related to…",
+      "title": "Language: Catalan, i for and, à è ò, ç",
       "text": [
         "**Catalan** is a Romance language that is closely related to both Spanish and French.",
         "It is spoken in Catalonia, the Valencian Community, and the Balearic Islands. In Catalonia and the Balearic Islands, it is (much) more common than Spanish on signage. The Valencian Community is more bilingual.",
@@ -1405,14 +1531,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Romance language close to Spanish and French, much more common than Spanish on signs on the north-east coast and islands, more mixed in Valencia. Catalan uses i for \"and\" (Spanish y), grave accents à è ò, and ç, none of which Spanish uses."
     },
     {
       "id": "es-NHoP",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "The Catalan word for street is “carrer”",
+      "title": "Language: \"carrer\" means street",
       "text": [
         "The Catalan word for street is “**carrer**”."
       ],
@@ -1451,7 +1578,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Catalan word for street is carrer. Seeing it instead of calle means a Catalan-speaking region (the north-east, Valencia or the Balearic Islands). Andorra uses Catalan too.",
+      "sameAs": [
+        "AD"
+      ]
     },
     {
       "id": "es-lQAo",
@@ -1459,7 +1590,7 @@
       "order": 6,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: No parking signs in Catalan speaking areas will read “Gual…",
+      "title": "Sign: \"Gual permanent\" no-parking",
       "text": [
         "No parking signs in Catalan speaking areas will read “**Gual permanent**”. Most municipalities use “gual” in Catalonia and the Balearic Islands, while it’s more common to find a mix of Spanish and Catalan signs in Valencia."
       ],
@@ -1498,14 +1629,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Catalan-speaking areas no-parking signs read \"Gual permanent\". Most municipalities in Catalonia and the Balearic Islands use \"gual\", while Valencia mixes Spanish and Catalan."
     },
     {
       "id": "es-yAfo",
       "step": 1,
       "order": 7,
       "family": "language",
-      "title": "Language: Basque is a language isolate that is spoken in the Basque…",
+      "title": "Language: Basque, many Z and K",
       "text": [
         "**Basque** is a language isolate that is spoken in the Basque Country and northern Navarre. In these regions, you will find a mix of Spanish and Basque signs (often bilingual).",
         "Basque is not related to any other language, so it has a unique look. Z and K are common letters.",
@@ -1530,14 +1662,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A language unrelated to any other, spoken in the Basque Country and northern Navarre, so signs are a mix of Spanish and Basque. Z and K are common letters. Also used across the border in southwest France.",
+      "sameAs": [
+        "FR"
+      ]
     },
     {
       "id": "es-rcrC",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "Streets in Basque-speaking areas are sometimes called…",
+      "title": "Language: \"kalea\" for street",
       "text": [
         "Streets in Basque-speaking areas are sometimes called “**kalea**”. However, Spanish “calle” is also still common."
       ],
@@ -1576,7 +1712,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Streets in Basque-speaking areas are sometimes called \"kalea\", though \"calle\" is still common."
     },
     {
       "id": "es-lFNR",
@@ -1584,7 +1721,7 @@
       "order": 9,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Road signs in the Basque Country and Navarre often have…",
+      "title": "Sign: bilingual sub-signs with thick black",
       "text": [
         "Road signs in the Basque Country and Navarre often have these distinctive **bilingual sub-signs** with a **thick black border**.",
         "Generally you will find Basque on top in the Basque Country, while it is more common to find Spanish on top in Navarre."
@@ -1625,14 +1762,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road signs in the Basque Country and Navarre often have bilingual sub-signs with a thick black border. Basque is usually on top in the Basque Country, Spanish usually on top in Navarre."
     },
     {
       "id": "es-4l5N",
       "step": 1,
       "order": 10,
       "family": "language",
-      "title": "Language: Galician is a Romance language that is closely related to…",
+      "title": "Language: Galician, ñ but no ç",
       "text": [
         "**Galician** is a Romance language that is closely related to Portuguese. It is (unsurprisingly) spoken in Galicia. Compared to Catalan, it is less dominant, meaning you will still find a lot of Spanish-only signs in this region.",
         "Galician can look very similar to Portuguese. Some ways to tell them apart is the use of **ñ** and the lack of **ç** in Galician."
@@ -1653,7 +1791,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Romance language close to Portuguese, less dominant than Catalan, so many signs are Spanish only. Galician uses ñ and has no ç, which helps tell it from Portuguese.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Portuguese has ç and no ñ"
+        }
+      ]
     },
     {
       "id": "es-NyOz",
@@ -1661,7 +1806,7 @@
       "order": 11,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Streets are commonly called Rúa in Galicia",
+      "title": "Sign: \"Rúa\" with accent for street",
       "text": [
         "Streets are commonly called **Rúa** in Galicia, whereas in Portugal they are called Rua (without an accent). However, you can sometimes find signs without the accent in Galicia."
       ],
@@ -1702,14 +1847,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Streets are commonly \"Rúa\" in this region, while Portugal writes \"Rua\" without an accent. Signs without the accent can still appear here.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Portugal writes Rua without the accent"
+        }
+      ]
     },
     {
       "id": "es-7jLe",
       "step": 1,
       "order": 12,
       "family": "other",
-      "title": "Many Galician town names start with A",
+      "title": "Town names: begin with A, O, As or Os",
       "text": [
         "Many **Galician town names** start with A, O, As or Os articles (examples: “A Pena”, “O Burgo”, “As Cruces”). This is both very common and unique to this region, and rarely over the border in western Asturias."
       ],
@@ -1729,14 +1881,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many town names start with A, O, As or Os (\"A Pena\", \"O Burgo\", \"As Cruces\"). This is common and unique to the north-west, and rarely over the border in western Asturias."
     },
     {
       "id": "es-H1IB",
       "step": 1,
       "order": 14,
       "family": "other",
-      "title": "The regional flags of the autonomous communities are…",
+      "title": "Flags: regional flags are common",
       "text": [
         "The regional flags of the autonomous communities are reasonably common, so it is worth learning them.",
         "NOTE: You can practise them with [this quiz](https://www.geoguessr.com/seterra/en/fl/2033)."
@@ -1758,14 +1911,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Regional flags are fairly common, so they are worth learning."
     },
     {
       "id": "es-eqyH",
       "step": 1,
       "order": 15,
       "family": "other",
-      "title": "The Catalan Independence flag is not official",
+      "title": "Flag: unofficial red-yellow striped",
       "text": [
         "The Catalan Independence flag is not official, but is commonly found in Catalan-speaking areas. It uses the **red-and-yellow** striped [Senyera](https://en.wikipedia.org/wiki/Senyera) pattern that is also used in four of the autonomous community flags."
       ],
@@ -1804,14 +1958,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Catalan independence flag is unofficial but common in Catalan-speaking areas. It uses the red and yellow Senyera stripes that also appear in four regional flags."
     },
     {
       "id": "es-Pgs1",
       "step": 1,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: Spain is a very mountainous country",
+      "title": "Landscape: very mountainous",
       "text": [
         "Spain is a very **mountainous** country.",
         "The highest mountain ranges are the Pyrenees in the northeast, and the Baetic System (which includes Sierra Nevada) in the southeast.",
@@ -1837,14 +1992,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very mountainous country. The highest ranges are in the northeast and southeast. A high, mostly flat plateau sits in the centre, ringed by smaller ranges, with two more ranges inside."
     },
     {
       "id": "es-FDKM",
       "step": 1,
       "order": 18,
       "family": "landscape",
-      "title": "Landscape: The landscape in the far north is much more green and lush…",
+      "title": "Landscape: green lush hills, hedges and meadows",
       "text": [
         "The landscape in the far north is much more **green and lush** than the rest of Spain. The landscape is generally quite hilly. Hedges and green meadows are common. In some places, this region’s landscape bears a vague resemblance to Ireland, France and the UK."
       ],
@@ -1887,14 +2043,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The far north is much greener and lusher than the rest, generally hilly, with hedges and green meadows. Some places look a bit like Ireland, France or the UK."
     },
     {
       "id": "es-df4l",
       "step": 1,
       "order": 19,
       "family": "landscape",
-      "title": "Landscape: The Pyrenees is a large mountain range on the border…",
+      "title": "Landscape: light grey rock, pines, rock walls",
       "text": [
         "The **Pyrenees** is a large mountain range on the border between Spain and France. Its mountains are some of the highest in all of Spain. It can be recognized by its light grey rock and abundance of pine trees. Local architecture features many [rock walls](https://goo.gl/maps/F67y544xPUyR5ypo7).",
         "NOTE: Andorra and the French part of the Pyrenees look very similar in terms of landscape and architecture. Also consider that the exclave of [Llívia](/images/spain/spain_pyreneesllivia.png) is part of Spain."
@@ -1937,14 +2094,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big mountain range on the French border with some of the highest peaks, light grey rock, many pines and local buildings with rock walls. Andorra and the French side look very similar, and the exclave of Llívia is Spanish.",
+      "sameAs": [
+        "AD",
+        "FR"
+      ]
     },
     {
       "id": "es-rjCb",
       "step": 1,
       "order": 20,
       "family": "vegetation",
-      "title": "Vegetation: Thick forests of tall pines can be found all throughout the…",
+      "title": "Plants: thick forests of tall pines",
       "text": [
         "Thick forests of **tall pines** can be found all throughout the Pyrenees. When encountered in smaller mountains in between grazing fields or agricultural land, it will most likely be in the Basque Country or Navarra."
       ],
@@ -1983,14 +2145,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Thick tall pine forests cover the mountains on the French border. In smaller mountains between grazing fields or farmland, you are most likely in the Basque Country or Navarra."
     },
     {
       "id": "es-JhZA",
       "step": 1,
       "order": 21,
       "family": "landscape",
-      "title": "Landscape: The centre of Castilla y León features a mostly flat…",
+      "title": "Landscape: flat farmland, cereals, sunflowers",
       "text": [
         "The centre of Castilla y León features a **mostly flat agricultural landscape**, with only slight changes in elevation. Most of the fields will have cereal crops like wheat and barley, and it is fairly common to find sunflower plantations."
       ],
@@ -2030,14 +2193,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The centre of Castilla y León is mostly flat farmland with slight height changes. Most fields grow wheat and barley, and sunflower fields are fairly common."
     },
     {
       "id": "es-OutB",
       "step": 1,
       "order": 22,
       "family": "landscape",
-      "title": "Landscape: Vineyards can be found in several places in Spain",
+      "title": "Plants: vineyards between mountain ranges",
       "text": [
         "Vineyards can be found in several places in Spain. However, if you see vineyards **in between mountain ranges** to the north and south, you are most likely in La Rioja."
       ],
@@ -2076,14 +2240,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards appear in several places, but vineyards between mountain ranges to the north and south mean La Rioja."
     },
     {
       "id": "es-TrLp",
       "step": 1,
       "order": 23,
       "family": "landscape",
-      "title": "Landscape: Starting in Navarra and cutting across the middle of Aragón",
+      "title": "Landscape: semi-desert strip, light sand",
       "text": [
         "Starting in Navarra and cutting across the middle of Aragón, there is a strip of semi-desert landscape on both sides of the Ebro river basin. Light sandy soil and **small shrubs** growing on **small hills** are common in this area."
       ],
@@ -2122,14 +2287,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A strip of semi-desert on both sides of the Ebro basin, from Navarra across the middle of Aragón, with light sandy soil and small shrubs on small hills."
     },
     {
       "id": "es-pz9i",
       "step": 1,
       "order": 24,
       "family": "landscape",
-      "title": "Landscape: Very arid looking and mostly flat areas are common in…",
+      "title": "Landscape: very arid, mostly flat",
       "text": [
         "Very **arid** looking and mostly **flat** areas are common in central and south Aragón.",
         "The soil is very white and rocky in the northern part. Red soil is more common in Teruel."
@@ -2169,14 +2335,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very dry, mostly flat land in central and south Aragón. Soil is very white and rocky in the north and redder around Teruel."
     },
     {
       "id": "es-vbq8",
       "step": 1,
       "order": 25,
       "family": "landscape",
-      "title": "Landscape: Castilla la Mancha can have completely flat landscapes",
+      "title": "Landscape: totally flat land, vineyards, olives",
       "text": [
         "Castilla la Mancha can have **completely flat landscapes**, which are not that common in Castilla y León. Half of Spain’s wine is produced in this region, so vineyards are fairly common.",
         "In the western provinces of Ciudad Real and Toledo, it is very common to see olive tree plantations, generally in flatter ground than those found in Andalusia."
@@ -2217,14 +2384,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Castilla la Mancha can be completely flat, which is less common in Castilla y León. Half of the country's wine comes from here, so vineyards are common. In the western provinces of Ciudad Real and Toledo olive plantations are common, on flatter ground than in Andalusia."
     },
     {
       "id": "es-FT9W",
       "step": 1,
       "order": 26,
       "family": "vegetation",
-      "title": "Vegetation: Open fields sparsely populated with holm oaks",
+      "title": "Plants: open fields with scattered holm and",
       "text": [
         "Open fields sparsely populated with **holm oaks** ([Quercus ilex](https://en.wikipedia.org/wiki/Quercus_ilex)) and **cork oaks** ([Quercus suber](https://en.wikipedia.org/wiki/Quercus_suber)) are very common in Extremadura and neighbouring regions. These species of oaks tend to be on the smaller side, and have a Mediterranean look. Be careful not to confuse them with olive trees, as they can look superficially similar to the untrained eye.",
         "North of Cáceres the vegetation is [more lush](https://goo.gl/maps/c2eY7SkHd8KcXn69A) and winter and spring coverage is more common."
@@ -2264,14 +2432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Open fields sparsely dotted with small holm oaks and cork oaks, very common in Extremadura and nearby. They look Mediterranean and can resemble olive trees at first glance. North of Cáceres it is lusher and winter and spring coverage is more common."
     },
     {
       "id": "es-080h",
       "step": 1,
       "order": 27,
       "family": "landscape",
-      "title": "Landscape: In the southeast of Spain",
+      "title": "Landscape: arid, very sandy soil",
       "text": [
         "In the southeast of Spain, especially in Murcia, you can find a rather **arid landscape**, with very sandy soil and **medium sized mountains** surrounding.",
         "Small shrubs and small plantations of fruit trees and olive trees are a common sight around rural roads."
@@ -2312,14 +2481,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southeast, especially Murcia, a rather arid landscape with very sandy soil and medium-size mountains around. Small shrubs and small fruit or olive plantations are common by rural roads."
     },
     {
       "id": "es-zUkq",
       "step": 1,
       "order": 28,
       "family": "landscape",
-      "title": "Landscape: Mountains in this area",
+      "title": "Landscape: rugged bare mountains in haze",
       "text": [
         "Mountains in this area, especially Murcia and the south of Alicante have a very distinct look.",
         "They are quite **rugged**, usually lacking in vegetation. This region commonly features a **hazy** look, making mountains in the distance look like they are behind a sort of mist."
@@ -2360,14 +2530,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mountains in Murcia and the south of Alicante look very distinct: rugged and mostly bare. The area is often hazy, so far mountains look like they are behind mist."
     },
     {
       "id": "es-9frM",
       "step": 1,
       "order": 29,
       "family": "landscape",
-      "title": "Landscape: The mountain range of Sierra Nevada features snowy peaks…",
+      "title": "Landscape: snowy peaks November to May",
       "text": [
         "The mountain range of Sierra Nevada features **snowy peaks** through the months of November and May. Sierra Nevada is the only mountain range in south Spain with snow during most of the year."
       ],
@@ -2406,14 +2577,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Sierra Nevada has snowy peaks from November through May, and is the only range in the south with snow most of the year."
     },
     {
       "id": "es-2KLU",
       "step": 1,
       "order": 30,
       "family": "landscape",
-      "title": "Landscape: Towns built on a mountain face",
+      "title": "Towns: all-white houses on a mountainside",
       "text": [
         "Towns built **on a mountain face**, consisting entirely of white houses, are very common on the south coast of Spain, around Málaga."
       ],
@@ -2453,14 +2625,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Towns of entirely white houses built on a mountain face are very common on the south coast around Málaga."
     },
     {
       "id": "es-oi9R",
       "step": 1,
       "order": 31,
       "family": "vegetation",
-      "title": "Vegetation: Olive trees are one of the main crops planted in Spain",
+      "title": "Plants: olive trees across half the country",
       "text": [
         "**Olive trees** are one of the main crops planted in Spain, they can be commonly seen in more than half of the country."
       ],
@@ -2499,14 +2672,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Olive trees are one of the main crops and can be seen in more than half of the country."
     },
     {
       "id": "es-GkGj",
       "step": 1,
       "order": 32,
       "family": "vegetation",
-      "title": "Vegetation: Around Córdoba and Jaén",
+      "title": "Plants: endless olive groves on rolling hills",
       "text": [
         "Around Córdoba and Jaén, you can find massive **olive tree plantations** growing over **rolling hills** and going as far as the eye can see.",
         "The bigger and more remote plantations are usually only covered in [Generation 2](https://goo.gl/maps/kpRdHCFYG9cevzqG6)."
@@ -2547,14 +2721,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around Córdoba and Jaén, massive olive plantations spread over rolling hills as far as the eye can see. The bigger, more remote ones are usually only covered in Gen 2."
     },
     {
       "id": "es-kVqr",
       "step": 1,
       "order": 33,
       "family": "vegetation",
-      "title": "Vegetation: South of Madrid, olive tree plantations are usually in…",
+      "title": "Plants: olives in small or medium fields",
       "text": [
         "South of Madrid, olive tree plantations are usually in small or medium sized fields, in mostly flat terrain and commonly accompanied by red soil."
       ],
@@ -2593,14 +2768,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "South of Madrid, olive plantations are usually in small or medium fields on mostly flat ground, often with red soil."
     },
     {
       "id": "es-mvou",
       "step": 1,
       "order": 34,
       "family": "landscape",
-      "title": "Landscape: Olive plantations on the east coast are commonly fenced or…",
+      "title": "Plants: fenced olive groves or behind rock",
       "text": [
         "Olive plantations on the east coast are commonly fenced or behind rock walls and you will almost always see mountains in some direction."
       ],
@@ -2639,14 +2815,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the east coast, olive plantations are often fenced or behind rock walls, and you almost always see mountains in some direction."
     },
     {
       "id": "es-pPsk",
       "step": 1,
       "order": 35,
       "family": "other",
-      "title": "All throughout the north coast of Spain you will find…",
+      "title": "Plants: eucalyptus plantations",
       "text": [
         "All throughout the north coast of Spain you will find **eucalyptus plantations** looking like this. Galicia has more plantations than the rest of the north combined.",
         "NOTE: Eucalyptus plantations are also extremely common in Portugal."
@@ -2688,14 +2865,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Eucalyptus plantations are found all along the north coast, with more in Galicia than in the rest of the north combined. Also extremely common in Portugal.",
+      "sameAs": [
+        "PT"
+      ]
     },
     {
       "id": "es-pS3a",
       "step": 1,
       "order": 36,
       "family": "vegetation",
-      "title": "Vegetation: When you encounter eucalyptus trees in a dry environment",
+      "title": "Plants: eucalyptus in dry land",
       "text": [
         "When you encounter **eucalyptus trees in a dry environment**, you will most likely be in the province of Huelva. You can find them more rarely in Extremadura in the north and up until Córdoba in the east."
       ],
@@ -2735,14 +2916,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Eucalyptus trees in a dry setting most likely mean Huelva province. They are rarer in Extremadura to the north and as far east as Córdoba."
     },
     {
       "id": "es-Pohw",
       "step": 1,
       "order": 37,
       "family": "vegetation",
-      "title": "Vegetation: On the east coast of Spain",
+      "title": "Plants: orange groves in small valleys",
       "text": [
         "On the east coast of Spain, you can find many **orange tree plantations**. They are usually in small valleys, and if they are in flat land you can usually see mountains to the west, north or south."
       ],
@@ -2781,14 +2963,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many orange plantations on the east coast, usually in small valleys. On flat land you can usually see mountains to the west, north or south."
     },
     {
       "id": "es-5Z5E",
       "step": 1,
       "order": 38,
       "family": "landscape",
-      "title": "Landscape: In the Guadalquivir river basin you can also find many…",
+      "title": "Plants: orange groves on open flat land",
       "text": [
         "In the Guadalquivir river basin you can also find many orange plantations, usually in much more open and flat terrain than those of the east coast.",
         "There are some extensive [plantations](https://goo.gl/maps/6k7YejSEZE3tyhgu9) in the mountains, but coverage is sparse there."
@@ -2828,14 +3011,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the Guadalquivir basin, many orange plantations on much more open and flat land than on the east coast. Some are in the mountains, but coverage is sparse there."
     },
     {
       "id": "es-rzeV",
       "step": 1,
       "order": 39,
       "family": "other",
-      "title": "Corn is most commonly grown in big river basins in Spain",
+      "title": "Crops: corn in big river basins",
       "text": [
         "**Corn** is most commonly grown in big river basins in Spain. It is also grown on the north coast, especially Galicia, and in an area in the north west of Castilla y León."
       ],
@@ -2874,14 +3058,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Corn is mostly grown in big river basins. It also grows on the north coast, especially Galicia, and in part of north-west Castilla y León."
     },
     {
       "id": "es-EBga",
       "step": 1,
       "order": 40,
       "family": "vegetation",
-      "title": "Vegetation: Stone pines (Pinus pinea) can be recognized by their fluffy…",
+      "title": "Plants: stone pine, fluffy, wide bulbous crown",
       "text": [
         "**Stone pines** ([Pinus pinea](https://en.wikipedia.org/wiki/Stone_pine)) can be recognized by their fluffy leaves, and compact bulbous crown that is wider than it is tall.",
         "Forests of exclusively stone pines in a flat area are very common around Valladolid and Huelva. It is common to see them in the mountains close to Barcelona in residential areas."
@@ -2921,14 +3106,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stone pines have fluffy leaves and a compact bulb-shaped crown wider than tall. Pure stone pine forests on flat land are common around Valladolid and Huelva, and they appear in residential mountain areas near Barcelona."
     },
     {
       "id": "es-Hrj7",
       "step": 1,
       "order": 41,
       "family": "other",
-      "title": "Aleppo pines (Pinus halepensis) also have fluffy leaves,…",
+      "title": "Plants: Aleppo pine, fluffy, messy crown",
       "text": [
         "**Aleppo pines** ([Pinus halepensis](https://en.wikipedia.org/wiki/Pinus_halepensis)) also have fluffy leaves, but their crown is less compact, more disorganised looking, and often taller, compared to stone pines.",
         "This is the most common pine on the east coast of Spain and the Balearic Islands."
@@ -2968,14 +3154,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Aleppo pines are fluffy too, but their crown is looser, messier and often taller than a stone pine's. The most common pine on the east coast and Balearic Islands."
     },
     {
       "id": "es-SBbI",
       "step": 1,
       "order": 42,
       "family": "landscape",
-      "title": "Landscape: Baltic pines (Pinus sylvestris) are tall and thin, with a…",
+      "title": "Plants: tall thin pine, dark bark",
       "text": [
         "**Baltic pines** ([Pinus sylvestris](https://en.wikipedia.org/wiki/Pinus_sylvestris)) are tall and thin, with a dark bark that sheds at the top, revealing the orange-red wood underneath. They usually do not have branches on the bottom half of the trunk, especially when fully grown.",
         "Baltic pines can be found in mainly three mountain ranges: the Pyrinees, Sierra de Guadarrama and the Iberian System."
@@ -3015,14 +3202,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Scots pines are tall and thin, with dark bark that sheds near the top to show orange-red wood, and no branches on the lower half of the trunk when mature. Found mainly in the Pyrenees, the Sierra de Guadarrama and the Iberian System."
     },
     {
       "id": "es-C47E",
       "step": 1,
       "order": 43,
       "family": "vegetation",
-      "title": "Vegetation: Maritime pines (Pinus Pinaster) has two variants in Spain,…",
+      "title": "Plants: maritime pine, grey-red bark",
       "text": [
         "**Maritime pines** ([Pinus Pinaster](https://en.wikipedia.org/wiki/Pinus_pinaster)) has two variants in Spain, near the Atlantic coast, it has grey bark with red undertones, and fluffy branches that point upwards. Older trees often don’t have any branches in the bottom half of the tree.",
         "NOTE: Plantations of this pine are extremely common in north and central Portugal."
@@ -3064,14 +3252,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the Atlantic coast, maritime pines have grey bark with red undertones and fluffy upward-pointing branches, and older trees have no branches in the lower half. Plantations are extremely common in north and central Portugal.",
+      "sameAs": [
+        "PT"
+      ]
     },
     {
       "id": "es-Boq6",
       "step": 1,
       "order": 44,
       "family": "vegetation",
-      "title": "Vegetation: In the rest of Spain you can find the Mediterranean variant…",
+      "title": "Plants: Mediterranean maritime pine",
       "text": [
         "In the rest of Spain you can find the Mediterranean variant of the tree. It still has a grey bark with red tones, and it is usually very fissured.",
         "You can find the tree in most of the mountain ranges in central and southern Spain. Extensive plantations in flat ground can be found North of [Segovia](https://goo.gl/maps/i6S6jEeFsbjheYQe6)."
@@ -3111,14 +3303,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Mediterranean variant has grey bark with red tones, usually deeply fissured. Found in most central and southern mountain ranges, with big plantations on flat ground north of Segovia."
     },
     {
       "id": "es-DSs8",
       "step": 1,
       "order": 46,
       "family": "line",
-      "title": "Road line: On small roads, particularly those without a middle line,…",
+      "title": "Road lines: outer line style",
       "text": [
         "On small roads, particularly those without a middle line, roadlines can be a very good clue to determine where in the country a location can be.",
         "- In places where straight outer lines are prevalent you will very rarely find dashed outer lines.",
@@ -3142,14 +3335,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On small roads without a centre line, edge-line style is a strong region clue. Where solid edges prevail, dashed ones are very rare. Where dashed prevail, solid ones are rare but less so."
     },
     {
       "id": "es-EYsT",
       "step": 1,
       "order": 47,
       "family": "other",
-      "title": "Most kilometre markers in Spain are either rectangular or…",
+      "title": "Road: rectangular or square km markers",
       "text": [
         "Most kilometre markers in Spain are either rectangular or square in shape. This can be a good clue to exclude half the country if you can see one in the distance.",
         "There are also some unique designs.",
@@ -3171,14 +3365,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most kilometre markers are rectangular or square, which can rule out half the country. Some unique designs: very tall ones with an extra stripe naming the road authority in Andalusia, square ones with the regional flag at the top in Madrid, and larger ones with a semicircle top in Biscay."
     },
     {
       "id": "es-LcNX",
       "step": 1,
       "order": 48,
       "family": "other",
-      "title": "Kilometre markers in Spain feature a coloured border",
+      "title": "Road: km marker with orange",
       "text": [
         "Kilometre markers in Spain feature a coloured border. The standard colours, going from bigger to smaller roads, are **orange**, **green**, and **yellow**.",
         "Some autonomous communities and provinces use different colours, or even unique designs altogether.",
@@ -3200,7 +3395,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Kilometre markers have a coloured border: standard colours are orange, green and yellow from bigger to smaller roads. Some regions and provinces use different colours or designs."
     },
     {
       "id": "es-Sxg8",
@@ -3208,7 +3404,7 @@
       "order": 49,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Galician towns frequently use signs with a green or blue…",
+      "title": "Sign: green or blue top strip with municipality",
       "text": [
         "Galician towns frequently use signs with a **green or blue strip** at the top featuring the name of the municipality.",
         "NOTE: “Concello” is the Galician word for municipality, and exclusive to the region."
@@ -3248,14 +3444,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Towns often use signs with a green or blue strip at the top showing the municipality name. \"Concello\" is the word for municipality and is exclusive to the region."
     },
     {
       "id": "es-H9Dc",
       "step": 1,
       "order": 50,
       "family": "other",
-      "title": "Most bus stops in Asturias have a red post with the CTA…",
+      "title": "Bus stops: red post with CTA logo",
       "text": [
         "Most bus stops in Asturias have a red post with the CTA logo at the top.",
         "NOTE: These may be confused with [Madrid bus stops](https://maps.app.goo.gl/BUtYyixugRSHYbgR8), which can also have a red post. The company in charge of Madrid public transport goes by EMT."
@@ -3296,14 +3493,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most bus stops in Asturias have a red post with the CTA logo on top. Madrid bus stops can be red too, but the operator there is EMT."
     },
     {
       "id": "es-PXQL",
       "step": 1,
       "order": 51,
       "family": "other",
-      "title": "Trash containers in Asturias frequently have the logo of…",
+      "title": "Rubbish bins: COGERSA logo",
       "text": [
         "Trash containers in Asturias frequently have the logo of COGERSA, the logo’s shape is distinct and can be recognized from afar.",
         "NOTE: Recycling bins can also feature this logo."
@@ -3344,14 +3542,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Trash containers in Asturias often carry the COGERSA logo, a distinct shape visible from far away. Recycling bins can have it too."
     },
     {
       "id": "es-3rNS",
       "step": 1,
       "order": 52,
       "family": "pole",
-      "title": "Pole: Yellow snow poles with one or two reflectors are unique to…",
+      "title": "Pole: yellow snow poles with one or two",
       "text": [
         "Yellow snow poles with one or two reflectors are unique to Asturias. They are usually found in the south of the region."
       ],
@@ -3400,14 +3599,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow snow poles with one or two reflectors are unique to Asturias, usually in the south of the region."
     },
     {
       "id": "es-d6lH",
       "step": 1,
       "order": 53,
       "family": "bollard",
-      "title": "Bollard: In Aragón, it is common to see this bollard design on…",
+      "title": "Bollard: short flat white stick",
       "text": [
         "In Aragón, it is common to see this bollard design on regional roads.",
         "It has a simple design, consisting of a short flat rectangular white stick with a grey reflector on both sides.",
@@ -3438,7 +3638,8 @@
           "src": "https://learnablemeta.com/images/739/1749507420283-1rW.avif",
           "path": "es/c1763b8b8e80.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "c9ffa570a541"
         },
         {
           "id": "db88c816facc",
@@ -3464,7 +3665,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Common on regional roads in Aragón: a short, flat, rectangular white bollard with a grey reflector on both sides. Similar ones exist elsewhere but are far less frequent."
     },
     {
       "id": "es-vcUq",
@@ -3472,7 +3674,7 @@
       "order": 54,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Many signs in Catalonia have round",
+      "title": "Sign: round corrugated signposts",
       "text": [
         "Many signs in Catalonia have **round, corrugated signposts**. This is especially common for direction signs. A similar design is also common in the [Basque Country](https://goo.gl/maps/7yJp32FEUtWj2mGp6) and the [Balearic Islands](https://goo.gl/maps/N8qyyoWVysXz7cKR6).",
         "Note that municipalities may use signposts like this anywhere in the country, and that regular traffic signs retain the standard flat Spanish design.",
@@ -3513,7 +3715,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many signs in Catalonia have round, corrugated signposts, especially direction signs. Also common in the Basque Country and Balearic Islands, and any municipality may use them. Regular traffic signs keep the flat Spanish design. French signs look very similar.",
+      "sameAs": [
+        "FR"
+      ]
     },
     {
       "id": "es-IRH5",
@@ -3521,7 +3727,7 @@
       "order": 55,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: In Catalonia and sometimes the Balearic Islands you will…",
+      "title": "Sign: hunting sign \"Àrea privada de Caça\"",
       "text": [
         "In Catalonia and sometimes the Balearic Islands you will find huntings signs in Catalan, usually reading “**Àrea privada de Caça**”."
       ],
@@ -3561,14 +3767,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Catalonia and sometimes the Balearic Islands, hunting signs in Catalan, usually \"Àrea privada de Caça\"."
     },
     {
       "id": "es-uZlj",
       "step": 1,
       "order": 56,
       "family": "bollard",
-      "title": "Bollard: Within mainland Spain, this bollard is almost exclusive to…",
+      "title": "Bollard: squarer orange reflector",
       "text": [
         "Within mainland Spain, this bollard is almost exclusive to the provinces of Lleida and Tarragona in Catalonia.",
         "It features a more **square and orange reflector** on the front, compared to the standard Spanish bollard design. There is a **white reflector** on the back, instead of the two dots of standard bollards.",
@@ -3613,7 +3820,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the mainland almost only in Lleida and Tarragona: a squarer orange reflector on the front and one white reflector on the back instead of two dots. Some toll highways such as the AP-6 use it too, and so does the eastern half of the Canary Islands."
     },
     {
       "id": "es-Pptg",
@@ -3621,7 +3829,7 @@
       "order": 57,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Big square chevrons with a single arrow are commonly found…",
+      "title": "Chevron: big square, single arrow",
       "text": [
         "Big square chevrons with a **single arrow** are commonly found in Catalonia."
       ],
@@ -3660,7 +3868,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Big square chevrons with a single arrow are common in Catalonia."
     },
     {
       "id": "es-iLYe",
@@ -3668,7 +3877,7 @@
       "order": 58,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Small square chevrons with a red arrow on a white…",
+      "title": "Chevron: small square, red arrow on white",
       "text": [
         "Small square chevrons with a **red arrow** on a white background are exclusive to Murcia."
       ],
@@ -3708,14 +3917,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small square chevrons with a red arrow on white exist only in Murcia."
     },
     {
       "id": "es-0hzs",
       "step": 1,
       "order": 59,
       "family": "other",
-      "title": "The surrounding region of Madrid has round topped red bus…",
+      "title": "Bus stops: round-topped red stops, green buses",
       "text": [
         "The surrounding region of Madrid has round topped **red bus stops**, and **green buses**. Some bus stops are just a [red post](https://goo.gl/maps/gtNJEs9Bswb7QT9PA).",
         "In the city centre, you can find urban blue buses."
@@ -3755,14 +3965,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around the capital, bus stops have round red tops and buses are green. Some stops are just a red post. In the city centre buses are blue."
     },
     {
       "id": "es-Ghny",
       "step": 1,
       "order": 60,
       "family": "bollard",
-      "title": "Bollard: In the region of Extremadura",
+      "title": "Bollard: standard with green top",
       "text": [
         "In the region of Extremadura, it is common to see the normal Spanish bollards with **green tops**. This bollard variant is exclusive to this region."
       ],
@@ -3791,7 +4002,8 @@
           "src": "https://learnablemeta.com/images/739/1749507596081-xND.avif",
           "path": "es/d7c611ac81ce.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "b9b232edece0"
         },
         {
           "id": "cf070cae244c",
@@ -3817,14 +4029,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Extremadura the normal Spanish bollards often have green tops, a variant unique to the region."
     },
     {
       "id": "es-6msN",
       "step": 1,
       "order": 61,
       "family": "other",
-      "title": "In Castilla la Mancha you can find stone markers with the…",
+      "title": "Field markers: stone with blue left half",
       "text": [
         "In Castilla la Mancha you can find stone markers with the region’s [coat of arms](https://brandemia.org/sites/default/files/inline/images/logo_castilla_antes.jpg) lining up fields. It can be recognized from afar by the blue coloured left side and the unpainted right side."
       ],
@@ -3863,14 +4076,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Castilla la Mancha, stone markers with the regional coat of arms line fields. They are recognisable from afar by the blue left side and unpainted right side."
     },
     {
       "id": "es-lRNZ",
       "step": 1,
       "order": 62,
       "family": "pole",
-      "title": "Pole: Poles with a steel mesh structure making rectangular shapes…",
+      "title": "Pole: steel mesh with rectangles, not triangles",
       "text": [
         "Poles with a **steel mesh** structure making **rectangular shapes** instead of the typical triangles can be found in the southern half of Spain, and are particularly common in Murcia and southern Alicante."
       ],
@@ -3912,7 +4126,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles whose steel mesh forms rectangles instead of the usual triangles, in the southern half, especially Murcia and southern Alicante."
     },
     {
       "id": "es-Ug5F",
@@ -3920,7 +4135,7 @@
       "order": 63,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signs from the local government of Andalusia are very…",
+      "title": "Sign: government signs with green stripe on",
       "text": [
         "Signs from the local government of Andalusia are very recognizable because of the **green stripe** on the left side.",
         "It is also very common to see small versions of these signs around nature reserves with **green signposts**."
@@ -3960,14 +4175,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs from the Andalusian regional government have a green stripe on the left. Small versions on green signposts often mark nature reserves."
     },
     {
       "id": "es-ckbR",
       "step": 1,
       "order": 64,
       "family": "pole",
-      "title": "Pole: Blue and yellow snow poles are unique to Andalusia",
+      "title": "Pole: blue and yellow snow poles",
       "text": [
         "**Blue and yellow snow poles** are unique to Andalusia."
       ],
@@ -4008,14 +4224,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue and yellow snow poles are unique to Andalusia."
     },
     {
       "id": "es-MxpO",
       "step": 1,
       "order": 66,
       "family": "architecture",
-      "title": "Architecture: There is a large part of north-west Spain where you will…",
+      "title": "Roofs: almost black slate roofs",
       "text": [
         "There is a large part of north-west Spain where you will find almost exclusively **slate roofs** (recognisable by their almost black colour). This type of roofing can be seen sparingly all the way to the west coast of Galicia, but ends rather abruptly on the east.",
         "Slate roofs can also be found in the [Pyrenees](https://goo.gl/maps/gEG616kL4GBMD2HV8) near Andorra, and in the [mountain ranges](https://goo.gl/maps/WF1eMyRmBBnrFF867) north east of Madrid."
@@ -4043,7 +4260,8 @@
           "src": "https://learnablemeta.com/images/1072/Twnd6JuX68LgnQ5pXZu6OLegCt1OgzqLeaFd.avif",
           "path": "es/5ec7ef08d1b8.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "abfb94922032"
         }
       ],
       "locations": [
@@ -4064,14 +4282,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large part of the north-west has almost only slate roofs (nearly black). They reach the west coast of Galicia but stop abruptly in the east. Slate roofs also appear in the Pyrenees near Andorra and in the mountains northeast of Madrid.",
+      "differs": [
+        {
+          "country": "AD",
+          "how": "Slate roofs appear near Andorra in the Pyrenees too"
+        }
+      ]
     },
     {
       "id": "es-D6m4",
       "step": 1,
       "order": 67,
       "family": "architecture",
-      "title": "Architecture: Many houses in Galicia are built with big concrete blocks",
+      "title": "Houses: big concrete blocks",
       "text": [
         "Many houses in Galicia are built with **big concrete blocks**, sometimes textured to resemble natural stone.",
         "Plain concrete blocks are also an extremely common material for [walls](https://goo.gl/maps/rPpmQLWq37euCkuJ9) and miscellaneous buildings like [garages](https://maps.app.goo.gl/nwbdKGLUKSJGjp7FA)."
@@ -4111,14 +4336,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many houses in Galicia are built with big concrete blocks, sometimes textured like natural stone. Plain concrete blocks are also very common for walls and garages."
     },
     {
       "id": "es-EV7o",
       "step": 1,
       "order": 68,
       "family": "other",
-      "title": "In Galicia, these unique granaries called “horreos…",
+      "title": "Buildings: narrow raised granary (horreo)",
       "text": [
         "In Galicia, these unique **granaries** called “horreos gallegos”, or “cabazos”, are very common. Note that they can be made from various materials, but the shape remains the same."
       ],
@@ -4157,14 +4383,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Galicia, unique raised granaries called horreos gallegos or cabazos are very common. They can be of different materials but always have the same shape."
     },
     {
       "id": "es-11lN",
       "step": 1,
       "order": 69,
       "family": "architecture",
-      "title": "Architecture: In Asturias, “hórreos” are bigger, generally with a square…",
+      "title": "Buildings: big square granary on four pillars",
       "text": [
         "In Asturias, “hórreos” are bigger, generally with a square design, and are built above four pillars, with or without walls. You will sometimes find a **rectangular** variation, usually built on top of six or eight pillars called “[panera](https://goo.gl/maps/drVo2HBDcETz5TY68)”.",
         "If you find an “horreo” with a slate roof, you will be in western Asturias."
@@ -4205,14 +4432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Asturias, hórreos are bigger, usually square and on four pillars, with or without walls. A rectangular version on six or eight pillars is called a panera. A slate roof means western Asturias."
     },
     {
       "id": "es-woK5",
       "step": 1,
       "order": 70,
       "family": "architecture",
-      "title": "Architecture: Large white houses with wooden frames are common in the…",
+      "title": "Houses: large white with wooden frames",
       "text": [
         "**Large white houses** with wooden frames are common in the Basque Country, the Basque part of Navarra, and Cantabria."
       ],
@@ -4240,7 +4468,8 @@
           "src": "https://learnablemeta.com/images/1072/PBBH3M4brtyRvoOr3Y38xyVrajqWvxVevToC.avif",
           "path": "es/e769585ea451.webp",
           "width": 1000,
-          "height": 484
+          "height": 484,
+          "dupeOf": "933ed256e5a0"
         }
       ],
       "locations": [
@@ -4259,14 +4488,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large white houses with wooden frames are common in the Basque Country, the Basque part of Navarra and Cantabria."
     },
     {
       "id": "es-ln7z",
       "step": 1,
       "order": 71,
       "family": "architecture",
-      "title": "Architecture: Traditional farm houses called “masías” are common in…",
+      "title": "Houses: isolated stone farmhouses (masías)",
       "text": [
         "Traditional farm houses called “[masías](https://en.wikipedia.org/wiki/Masia)” are common in Catalonia, eastern Aragón and parts of the Valencian Community.",
         "They are usually made of stone and stand isolated or as part of a small complex."
@@ -4306,14 +4536,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traditional stone farmhouses called masías, standing alone or in a small group, are common in Catalonia, eastern Aragón and parts of Valencia."
     },
     {
       "id": "es-7JxR",
       "step": 1,
       "order": 72,
       "family": "architecture",
-      "title": "Architecture: Within the centre and south of Spain",
+      "title": "Towns: whole towns of white-painted houses",
       "text": [
         "Within the centre and south of Spain, towns made **completely** out of **white painted houses** are very common in Andalucía and Extremadura.",
         "You can still see a fair amount of white painted houses in Castilla la Mancha but streets where every house is white will not be common."
@@ -4353,14 +4584,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the centre and south, towns made fully of white houses are very common in Andalucía and Extremadura. Castilla la Mancha has many white houses too, but streets where every house is white are uncommon."
     },
     {
       "id": "es-kZ8q",
       "step": 1,
       "order": 74,
       "family": "car",
-      "title": "Google car: In Asturias you can find a black car with no antenna and a…",
+      "title": "Google car: black, no antenna",
       "text": [
         "In Asturias you can find a **black** car with **no antenna** and a visible brake light.",
         "NOTE: This car can very rarely spill into neighbour regions like [Galicia](https://goo.gl/maps/NrhqCAJyCAzVSnb69)."
@@ -4401,14 +4633,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Asturias, a black car with no antenna and a visible brake light. It can very rarely spill into neighbouring regions like Galicia."
     },
     {
       "id": "es-RAmj",
       "step": 1,
       "order": 75,
       "family": "car",
-      "title": "Google car: You can sometimes find a special Generation 3 antenna with…",
+      "title": "Google car: Gen 3 antenna with white top",
       "text": [
         "You can sometimes find a special Generation 3 antenna with a distinctive **white top**, similar to the one found in Gibraltar.",
         "This antenna is found in the eastern half of Andalusia and in the provinces of Huesca and Lleida in the northeast of the country."
@@ -4450,14 +4683,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A special Gen 3 antenna with a white top, like Gibraltar's, in the eastern half of Andalusia and the provinces of Huesca and Lleida.",
+      "sameAs": [
+        "GI"
+      ]
     },
     {
       "id": "es-XXLv",
       "step": 1,
       "order": 77,
       "family": "vegetation",
-      "title": "Vegetation: The Balearic islands have a recognizable",
+      "title": "Landscape: dry coastal pine hills",
       "text": [
         "The **Balearic islands** have a recognizable, coastal Mediterranean look. Somewhat dry looking forests of Aleppo pines cover most of the hills, and small patches of agricultural land, mainly with fruit trees and olive trees, cover the flatter areas between towns."
       ],
@@ -4496,14 +4733,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A coastal Mediterranean look: somewhat dry Aleppo pine forests on most hills, with small patches of farmland (mainly fruit and olive trees) on flatter ground between towns."
     },
     {
       "id": "es-HdDf",
       "step": 1,
       "order": 78,
       "family": "other",
-      "title": "Low rock walls are extremely common on the Balearic Islands",
+      "title": "Walls: low rock walls everywhere",
       "text": [
         "Low **rock walls** are extremely common on the Balearic Islands.",
         "NOTE: Another Mediterranean region with a similar amount of rock walls is the area around Bari in Italy. This region can sometimes [look similar](https://goo.gl/maps/f2TAiSPiTVn5uNco6) to the Balearic Islands."
@@ -4546,14 +4784,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Low rock walls are extremely common on the Balearic Islands. The area around Bari in Italy has a similar amount and can look alike.",
+      "differs": [
+        {
+          "country": "IT",
+          "how": "Bari area has similar walls and can look alike"
+        }
+      ]
     },
     {
       "id": "es-B90V",
       "step": 1,
       "order": 79,
       "family": "architecture",
-      "title": "Architecture: The stereotypical Balearic house is painted completely white",
+      "title": "Houses: fully white",
       "text": [
         "The stereotypical Balearic house is painted completely **white**. You can find flat roofs, but tiled roofs with a small incline are the most common."
       ],
@@ -4580,7 +4825,8 @@
           "src": "https://learnablemeta.com/images/1072/H6ztquq4TN0RGXu5atbZjqiV6Dc9Z5DlEMFA.avif",
           "path": "es/e526f2875613.webp",
           "width": 1000,
-          "height": 483
+          "height": 483,
+          "dupeOf": "338eac9e71c5"
         }
       ],
       "locations": [
@@ -4599,14 +4845,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The typical Balearic house is painted completely white. Flat roofs exist, but low-pitched tiled roofs are the most common."
     },
     {
       "id": "es-WihJ",
       "step": 1,
       "order": 80,
       "family": "other",
-      "title": "Within the Balearic Islands",
+      "title": "Landscape: grazing fields on one island",
       "text": [
         "Within the Balearic Islands, **grazing fields** are almost exclusive to the island of Menorca."
       ],
@@ -4646,14 +4893,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Within the Balearic Islands, grazing fields are almost exclusive to Menorca."
     },
     {
       "id": "es-Ci25",
       "step": 1,
       "order": 81,
       "family": "landscape",
-      "title": "Landscape: The small island of Formentera frequently features low…",
+      "title": "Landscape: low coastal shrubs",
       "text": [
         "The small island of Formentera frequently features low **coastal shrubs**. It is common to be able to see the mountains of Ibiza from Formentera’s north coast."
       ],
@@ -4692,14 +4940,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Formentera often shows low coastal shrubs, and the mountains of Ibiza can often be seen from its north coast."
     },
     {
       "id": "es-wOmb",
       "step": 1,
       "order": 82,
       "family": "landscape",
-      "title": "Landscape: The north-west of Mallorca has a tall mountain range that…",
+      "title": "Landscape: tall mountain range to the northwest",
       "text": [
         "The north-west of Mallorca has a **tall mountain range** that can be seen from many places on the island. It is the only island in the Balearics with mountains this big."
       ],
@@ -4738,14 +4987,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north-west of Mallorca has a tall mountain range seen from many places on the island, the only Balearic island with mountains this big."
     },
     {
       "id": "es-Ozxq",
       "step": 1,
       "order": 84,
       "family": "other",
-      "title": "The Canary Islands",
+      "title": "Islands: archipelago off west Africa",
       "text": [
         "The **Canary Islands** (or Canaries for short) are a Spanish archipelago off the west coast of Africa. Because they are so far away from mainland Spain, being able to consistently recognize them is important for your scores.",
         "NOTE: Do not confuse their location with the nearby Portuguese island groups of the Azores and Madeira."
@@ -4769,14 +5019,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Canary Islands are a Spanish archipelago off the west coast of Africa, far from the mainland, so recognising them matters for your score. Don't confuse them with the Portuguese Azores and Madeira.",
+      "differs": [
+        {
+          "country": "PT",
+          "how": "Azores and Madeira are Portuguese island groups nearby"
+        }
+      ]
     },
     {
       "id": "es-pq0v",
       "step": 1,
       "order": 85,
       "family": "landscape",
-      "title": "Landscape: The Canaries have extremely diverse landscapes",
+      "title": "Landscape: very diverse, volcanic, pines, arid",
       "text": [
         "The Canaries have **extremely diverse landscapes**, including [steep mountains](https://goo.gl/maps/rfH1kBDye8h9rWaS6), [pine forests](https://goo.gl/maps/Bn6ErCKJ3sfiUaUa8), [volcanic soil](https://goo.gl/maps/6JqQk3AxRiRF3WoDA), and [extreme aridity](https://goo.gl/maps/4fdpWvUUTJYxJMEd7). You can also encounter [more normal landscapes](https://goo.gl/maps/zVYFchUyxrDQ7uyx5) that can look more like mainland Spain.",
         "NOTE: Because of its diversity, it is hard to pin down the average landscape in the Canaries. A more useful strategy is to focus on whether it looks unique and unlike anything that you would find in mainland Europe: if meta matches with Spain, but something is “off” in terms of vibe, consider the Canaries."
@@ -4797,14 +5054,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Extremely varied: steep mountains, pine forests, volcanic soil and extreme dryness, though some places look like mainland Spain. Look for something that feels off compared with mainland Europe even when the other clues say Spain."
     },
     {
       "id": "es-Npdc",
       "step": 1,
       "order": 86,
       "family": "landscape",
-      "title": "Landscape: In some parts of the island of Lanzarote on the Canary…",
+      "title": "Landscape: dark exposed volcanic soil",
       "text": [
         "In some parts of the island of **Lanzarote** on the Canary Islands, a very dark, exposed volcanic soil can be seen. In places, this landscape superficially resembles the surface of the moon.",
         "NOTE: The other Canary Islands can sometimes have similar landscapes as well, but it is by far the most common on Lanzarote."
@@ -4844,14 +5102,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On Lanzarote, very dark, bare volcanic soil that can look like the moon. Other Canary islands can look similar, but it is by far the most common here."
     },
     {
       "id": "es-DtCL",
       "step": 1,
       "order": 87,
       "family": "landscape",
-      "title": "Landscape: The island of Fuerteventura in the Canary Islands is…",
+      "title": "Landscape: very arid, little plants",
       "text": [
         "The island of **Fuerteventura** in the Canary Islands is characterised by a very arid landscape with little to no vegetation. Orange soil is very common, and within the Canary Islands archipelago essentially unique to this island."
       ],
@@ -4890,14 +5149,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fuerteventura is very arid with almost no vegetation. Orange soil is common and essentially unique to this island among the Canaries."
     },
     {
       "id": "es-QsFO",
       "step": 1,
       "order": 88,
       "family": "bollard",
-      "title": "Bollard: This unique bollard design is extremely common in the…",
+      "title": "Bollard: squarer orange reflector",
       "text": [
         "This **unique bollard design** is extremely common in the province of Las Palmas (which includes the islands of Gran Canaria, Fuerteventura and Lanzarote).",
         "It features a more square and orange reflector on the front, compared to the standard Spanish bollard design. There is a white reflector on the back, instead of the two dots of standard bollards.",
@@ -4942,14 +5202,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Extremely common in Las Palmas province (Gran Canaria, Fuerteventura, Lanzarote): a squarer orange reflector on the front and a white reflector at the back instead of two dots. Also in Lleida and Tarragona on the mainland. Tenerife province only has standard bollards, on highways."
     },
     {
       "id": "es-b7or",
       "step": 1,
       "order": 89,
       "family": "landscape",
-      "title": "Landscape: You can find these unique wine plantations with volcanic…",
+      "title": "Plants: vines in volcanic soil behind",
       "text": [
         "You can find these **unique wine plantations** with volcanic soil and rocks in the shape of a semicircle on the island of Lanzarote."
       ],
@@ -4988,14 +5249,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Unique vineyards in volcanic soil with semicircular rock walls, on Lanzarote."
     },
     {
       "id": "es-kpT2",
       "step": 1,
       "order": 90,
       "family": "landscape",
-      "title": "Landscape: Off the north coast of Lanzarote",
+      "title": "Landscape: barren island, always overcast",
       "text": [
         "Off the north coast of Lanzarote, you will find the small island of **La Graciosa**. The island’s landscape is completely barren, and the entire coverage features **overcast weather**. There are two towns on the south coast of the island, with white flat-roofed houses like the east Canaries."
       ],
@@ -5034,14 +5296,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The small island of La Graciosa, off Lanzarote's north coast, is completely barren and all coverage is overcast. Two towns on the south coast have white flat-roofed houses like the eastern Canaries."
     },
     {
       "id": "es-k10w",
       "step": 1,
       "order": 92,
       "family": "coverage",
-      "title": "Coverage: The two Spanish enclaves of Ceuta and Melilla in North…",
+      "title": "Coverage: two exclaves in North Africa",
       "text": [
         "The two Spanish enclaves of **Ceuta **and** Melilla** in North Africa, which are partially surrounded by Morocco, both have coverage. They often catch beginning players off-guard, so it is good to be aware of them and their location."
       ],
@@ -5062,14 +5325,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two Spanish enclaves in North Africa, partly surrounded by Morocco, have coverage. They often surprise new players, so know they exist."
     },
     {
       "id": "es-TrmZ",
       "step": 1,
       "order": 93,
       "family": "architecture",
-      "title": "Architecture: Ceuta features north African architecture",
+      "title": "Houses: flat roofs in warm pale yellow to red",
       "text": [
         "Ceuta features north African architecture, consisting of mainly flat roofed houses in warm colours, ranging from pale yellow to red.",
         "Almost all of the Generation 4 coverage in Ceuta features a **bright blue sky** in sunny weather with occasional clouds."
@@ -5110,14 +5374,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ceuta has north African architecture: mostly flat-roofed houses in warm colours from pale yellow to red. Almost all Gen 4 coverage has a bright blue sky in sunny weather with occasional clouds."
     },
     {
       "id": "es-k4DO",
       "step": 1,
       "order": 94,
       "family": "landscape",
-      "title": "Landscape: You will find a mountainous",
+      "title": "Landscape: mountainous Mediterranean",
       "text": [
         "You will find a **mountainous, mediterranean** landscape in Ceuta, featuring a mix of eucalyptus trees and pines."
       ],
@@ -5157,14 +5422,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mountainous Mediterranean landscape with a mix of eucalyptus and pines in Ceuta."
     },
     {
       "id": "es-EW4H",
       "step": 1,
       "order": 95,
       "family": "guardrail",
-      "title": "Guardrail: Within Spain, black and white guardrails are unique to Ceuta",
+      "title": "Guardrail: black and white",
       "text": [
         "Within Spain, **black and white guardrails** are unique to Ceuta."
       ],
@@ -5206,14 +5472,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Within Spain, black and white guardrails are found only in Ceuta."
     },
     {
       "id": "es-m1NG",
       "step": 1,
       "order": 96,
       "family": "architecture",
-      "title": "Architecture: Melilla also features similar North African architecture",
+      "title": "Houses: north African style, hazy and overcast",
       "text": [
         "Melilla also features similar North African architecture. The coverage in Melilla has a **hazy** look, with a significantly less saturated sky than Ceuta. Most of the coverage is cloudy or overcast.",
         "Melilla has little rural coverage, mainly by the [Morocco-Spain border](https://goo.gl/maps/MEvyBFFYmeHYiDhw6)."
@@ -5254,7 +5521,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Melilla has similar north African architecture. Its coverage looks hazy with a much less saturated sky than Ceuta and is mostly cloudy or overcast. There is little rural coverage, mainly by the Morocco border."
     },
     {
       "id": "es-RGJT",
@@ -5262,7 +5530,7 @@
       "order": 0,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: The Camino de Santiago",
+      "title": "Sign: yellow scallop shell on blue",
       "text": [
         "The [**Camino de Santiago**](https://en.wikipedia.org/wiki/Camino_de_Santiago) (the **Way of St. James** in English), is a network of pilgrim's ways across Europe leading to the shrine of apostle James (Santiago in Spanish) in Santiago de Compostela.",
         "These paths are frequently marked with a yellow [scallop](https://en.wikipedia.org/wiki/Scallop#Shell_of_Saint_James) on a blue background. Markers can be found both in traffic signs and in waystones.",
@@ -5306,14 +5574,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Camino de Santiago pilgrim routes are marked with a yellow scallop on blue, on traffic signs and waystones. Pilgrims often hike or bike here, especially in summer. Markers exist across Europe, even Lithuania, but are far more common near Santiago de Compostela.",
+      "differs": [
+        {
+          "country": "LT",
+          "how": "Markers appear there but are much rarer"
+        }
+      ]
     },
     {
       "id": "es-yHR2",
       "step": 2,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Coverage during early spring on dirt roads between green…",
+      "title": "Coverage: early-spring dirt roads, green grass",
       "text": [
         "Coverage during early spring on dirt roads between green grassy fields, and leafless vineyards with red soil, is very common in the central-north part of Castilla la Mancha.",
         "This type of coverage is particularly extensive in the northern part and exclusively in generation 3. Towards the south you will also find very similar looking coverage in generation 4."
@@ -5353,14 +5628,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In north-central Castilla la Mancha, early spring coverage on dirt roads between green grassy fields and leafless vineyards on red soil is very common, especially in the north and only Gen 3. Further south similar Gen 4 coverage exists."
     },
     {
       "id": "es-IsPo",
       "step": 2,
       "order": 2,
       "family": "guardrail",
-      "title": "Guardrail: The AP-15 in Navarra features unique bollards with a simple…",
+      "title": "Bollard: flat with square red reflector",
       "text": [
         "The AP-15 in Navarra features unique bollards with a simple flat design and a square red reflector. Guardrails also have [red reflectors](https://maps.app.goo.gl/c9X1ak7KB5EhdDqRA) unlike the rest of Spain."
       ],
@@ -5402,14 +5678,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The AP-15 in Navarra has unique simple flat bollards with a square red reflector, and guardrails there have red reflectors unlike the rest of the country."
     },
     {
       "id": "es-NrMX",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "Taxis in Barcelona are black with yellow doors",
+      "title": "Taxi: black with yellow doors",
       "text": [
         "Taxis in Barcelona are black with yellow doors, including the trunk door."
       ],
@@ -5448,14 +5725,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Taxis in Barcelona are black with yellow doors, including the trunk door."
     },
     {
       "id": "es-ATBx",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The Ebro delta",
+      "title": "Landscape: extremely flat delta",
       "text": [
         "The Ebro delta (Deltebre in catalan) features an extremely **flat **landscape, where **rice fields** and **water canals** are very common.",
         "There are significant mountains to the South, West, and North, and some of them can be seen from almost every location in the delta."
@@ -5495,14 +5773,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Ebro delta (Deltebre) is extremely flat with rice fields and water canals. Big mountains lie to the south, west and north, and some can be seen from nearly everywhere."
     },
     {
       "id": "es-bzWl",
       "step": 2,
       "order": 5,
       "family": "architecture",
-      "title": "Architecture: Between Almeria and Motril you can find many greenhouses…",
+      "title": "Greenhouses: many white-roofed greenhouses",
       "text": [
         "Between Almeria and Motril you can find many **greenhouses** with white roofs, in the lowland area close to the sea. They are especially common in El Ejido."
       ],
@@ -5541,7 +5820,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Between Almería and Motril, many greenhouses with white roofs on lowland by the sea, especially around El Ejido."
     },
     {
       "id": "es-GGQR",
@@ -5549,7 +5829,7 @@
       "order": 6,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The city of Bilbao uses this unique street sign",
+      "title": "Sign: very ornate decorated frame street name",
       "text": [
         "The city of Bilbao uses this unique street sign, with a very **elaborately decorated frame**. It is not found anywhere else in Spain."
       ],
@@ -5576,7 +5856,8 @@
           "src": "https://learnablemeta.com/images/4588/1777502111547-V4s.avif",
           "path": "es/b31528833cfb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "62189c2f1dcf"
         }
       ],
       "locations": [
@@ -5595,14 +5876,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bilbao uses a street sign with a very elaborately decorated frame, found nowhere else in the country."
     },
     {
       "id": "es-VJKm",
       "step": 2,
       "order": 7,
       "family": "other",
-      "title": "In Doñana National Park",
+      "title": "Coverage: rare unique car in a national park",
       "text": [
         "In Doñana National Park, southwest of Seville, you will find this rare and unique car meta."
       ],
@@ -5641,14 +5923,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/spain",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Doñana National Park, southwest of Seville, there is a rare and unique car."
     },
     {
       "id": "es-lm-840",
       "step": 3,
       "order": 0,
       "family": "language",
-      "title": "Language: Aranese",
+      "title": "Language: Aranese, carrèr, avenguda, passeg",
       "text": [
         "Aranese is a language spoken only by about 2,800 people in Val d'Aran (Catalonia region of Spain west of Andorra on French border), most notably the town of Vielha. It looks very similar to Catalan and the street names are the easiest way of identifying it. Although uncommon recognizing it could give you an easy high scoring guess.",
         "**carrèr** - (carrer in Catalan, look for the accent on the \"e\")",
@@ -5674,104 +5957,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-2225",
-      "step": 3,
-      "order": 1,
-      "family": "language",
-      "title": "Language: Galician",
-      "text": [
-        "Galician is a romance language spoken in Spain in the area north of portugal. Unsurprisingly given it's proximity it is closely related to portuguese. In addition to the tips below the most helpful tip is to look for town names that have \"A(s)\" or \"O(s)\" in front of them ( “A Pena”, “O Burgo”, “As Cruces”). This is ALMOST unique to the galician area of Spain to see this.",
-        "uses ñ like spanish",
-        "Doesn't use ç",
-        "uses \"nh\" diagraph like portuguese but words end in -ción like spanish",
-        "heavier usage of the letter \"x\""
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Spoken by about 2,800 people in Val d'Aran, looking very similar to Catalan. Street names are the easiest clue: carrèr (Catalan carrer, with the accent on e), avenguda (avinguda), passeg (passeig). It is mountainous with many rock buildings like Andorra.",
+      "differs": [
         {
-          "id": "efa220d23e40",
-          "src": "https://learnablemeta.com/images/5/IsAyuKLbzht6CtpdNs5oW1cytn9O6kMuFtKM.avif",
-          "path": "es/efa220d23e40.webp",
-          "width": 1000,
-          "height": 810
+          "country": "AD",
+          "how": "Similar mountains and rock houses, but Aranese spellings differ"
         }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-2226",
-      "step": 3,
-      "order": 2,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Basque Country Spain",
-      "text": [
-        "Road signs in the Basque Country and Navarre often have these distinctive bilingual sub-signs with a thick black border. Generally you will find Basque on top in the Basque Country, while it is more common to find Spanish on top in Navarre.",
-        "Streets in Basque-speaking areas are sometimes called “kalea”. However, Spanish “calle” is also still common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "894d063ad8f2",
-          "src": "https://learnablemeta.com/images/5/96BYv90GCaw9zquDUxi8WULBmuVkdz4OrXlh.avif",
-          "path": "es/894d063ad8f2.webp",
-          "width": 1000,
-          "height": 763
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-2229",
-      "step": 3,
-      "order": 3,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Catalan Valencian Community",
-      "text": [
-        "The Valencian community in Spain also uses catalan but to a lesser extent than Catalonia. You will see more bilingual and spanish only signs but most street signs will still use the word \"carrer\"."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a437c8058e5",
-          "src": "https://learnablemeta.com/images/5/G1dt0eoyY4uKU1t88Tw4EkkFOiEriuiS44Td.avif",
-          "path": "es/3a437c8058e5.webp",
-          "width": 1000,
-          "height": 751
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "es-lm-2236",
       "step": 3,
       "order": 4,
       "family": "language",
-      "title": "Language: Spanish General Tips",
+      "title": "Language: ñ, ¿ ¡, y, -ción, -miento, ll",
       "text": [
         "Here are some general tips to recognize Spanish:",
         "Ñ is ALMOST unique to Spnaish (exception = Galician)",
@@ -5797,14 +5997,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Ñ is almost unique to Spanish (Galician aside). Inverted ¿ ¡ are common, \"and\" is y, and common words are de, el, del, los, la, uno, una. Endings: -o, -a, -ción, -miento, -dad. Double ll is more common than in other Romance languages (except Catalan)."
     },
     {
       "id": "es-lm-2238",
       "step": 3,
       "order": 5,
       "family": "language",
-      "title": "Language: Spanish Helpful Words",
+      "title": "Language: handy words like estación",
       "text": [
         "Here are a few words in Spanish that can either help you identify the language quickly, be helpful in region guessing, or just help learn the general feel of the language:",
         "**centro ciudad** - city center",
@@ -5828,14 +6029,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Useful Spanish words: centro ciudad (city centre), estación (station), iglesia (church), excepto (except), aparcamiento (parking), salida (exit), parque (park), todas direcciones (all directions), se vende (for sale), se alquila (for rent)."
     },
     {
       "id": "es-lm-2239",
       "step": 3,
       "order": 6,
       "family": "other",
-      "title": "Street in Spanish",
+      "title": "Language: street words calle, avenida, camino",
       "text": [
         "**\"Calle\"** is the word for street in Spanish. Here are some other related words:",
         "**pasaje** - passage/alleyway",
@@ -5859,1264 +6061,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-2982",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Bola Ocho",
-      "text": [
-        "Spain has a whopping **8 zebra stripes**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d5577d60a1c6",
-          "src": "https://learnablemeta.com/images/90/S856ptqQbvJd3jebBXKVvkWfXor4swUrN1bX.avif",
-          "path": "es/d5577d60a1c6.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-7965",
-      "step": 3,
-      "order": 8,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Road Markers",
-      "text": [
-        "Spain has distinct road markers, easy to recognize being **usually square** and having **colourful borders**. The code on top is the **number of the road**.",
-        "**NOTE:**: The letter codes before the road number on these markers are often an important region-specific clue, check **plonkit** for all the code regions."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b1acaf41c92d",
-          "src": "https://learnablemeta.com/images/310/kBb6I9HuqqNurvmNmXs4UI2jHTCxra343LUY.avif",
-          "path": "es/b1acaf41c92d.webp",
-          "width": 1000,
-          "height": 459
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-7966",
-      "step": 3,
-      "order": 9,
-      "family": "pole",
-      "title": "Pole: Ladder poles",
-      "text": [
-        "In Spain, these concrete **ladder** poles can be found amongst other types. They're called \"ladder\" poles because of its similarity to the steps of a ladder.",
-        "**NOTE:** France can have the same poles, try using landscape or language to tell them apart."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bd06e7e34bc6",
-          "src": "https://learnablemeta.com/images/310/NEwbVMeDu0Z9BC4vRf4q5K7dITiiCxcpN8Py.avif",
-          "path": "es/bd06e7e34bc6.webp",
-          "width": 1000,
-          "height": 937
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24636",
-      "step": 3,
-      "order": 10,
-      "family": "landscape",
-      "title": "Landscape: Aragon Dryness",
-      "text": [
-        "Very arid looking and mostly flat areas are common in central and south Aragón. The soil is very white and rocky in the northern part. Red soil is more common in Teruel."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "65012bfbbed8",
-          "src": "https://learnablemeta.com/images/664/k9jjxk1ygSzdgnAGu7vSwlbdx72TDSeIGHoa.avif",
-          "path": "es/65012bfbbed8.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24637",
-      "step": 3,
-      "order": 11,
-      "family": "landscape",
-      "title": "Landscape: Castilla La Mancha",
-      "text": [
-        "Castilla la Mancha can have completely flat landscapes. Half of Spain’s wine is produced in this region, so vineyards are fairly common. In the western provinces of Ciudad Real and Toledo, it is very common to see olive tree plantations, generally in flatter ground than those found in Andalusia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "65d0be999773",
-          "src": "https://learnablemeta.com/images/664/xUwGcjE5mO9S7ZiJoJVImuKpjMA8IN3j5XMb.avif",
-          "path": "es/65d0be999773.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24638",
-      "step": 3,
-      "order": 12,
-      "family": "landscape",
-      "title": "Landscape: Navarra Semi Desert",
-      "text": [
-        "Starting in Navarra and cutting across the middle of Aragón, there is a strip of semi-desert landscape on both sides of the Ebro river basin. Light sandy soil and small shrubs growing on small hills are common in this area."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b75886abe607",
-          "src": "https://learnablemeta.com/images/664/TCA5Vs1IxOuXfeaEjtmSpRIbCKdftjE1THb5.avif",
-          "path": "es/b75886abe607.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24639",
-      "step": 3,
-      "order": 13,
-      "family": "landscape",
-      "title": "Landscape: Lanzarote Volcanic Rock",
-      "text": [
-        "In some parts of the island of Lanzarote on the Canary Islands, a very dark, exposed volcanic soil can be seen. In places, this landscape superficially resembles the surface of the moon.",
-        "NOTE: The other Canary Islands can sometimes have similar landscapes as well, but it is by far the most common on Lanzarote."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b14cf68c3295",
-          "src": "https://learnablemeta.com/images/664/kuYGio8e1h4tm7JG7fKhAU2GE5EcZhGOHfP2.avif",
-          "path": "es/b14cf68c3295.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24640",
-      "step": 3,
-      "order": 14,
-      "family": "landscape",
-      "title": "Landscape: Fuerteventura",
-      "text": [
-        "The island of Fuerteventura in the Canary Islands is characterised by a very arid landscape with little to no vegetation. Orange soil is very common, and within the Canary Islands archipelago essentially unique to this island."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "528ed30ab45f",
-          "src": "https://learnablemeta.com/images/664/5S8axi78zlf2HoNL1WWNr5Ey8oSsaiUzSPFs.avif",
-          "path": "es/528ed30ab45f.webp",
-          "width": 1000,
-          "height": 492
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24641",
-      "step": 3,
-      "order": 15,
-      "family": "landscape",
-      "title": "Landscape: CastillaYLeon",
-      "text": [
-        "The centre of Castilla y León features a mostly flat agricultural landscape, with only slight changes in elevation. Most of the fields will have cereal crops like wheat and barley, and it is fairly common to find sunflower plantations."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4c7018f88186",
-          "src": "https://learnablemeta.com/images/664/Dh2tmDhbmWLelSRTFquNYvtXJ7Ry6JvHilhX.avif",
-          "path": "es/4c7018f88186.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24642",
-      "step": 3,
-      "order": 16,
-      "family": "landscape",
-      "title": "Landscape: Formentera",
-      "text": [
-        "The small island of Formentera frequently features low coastal shrubs. It is common to be able to see the mountains of Ibiza from Formentera’s north coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5bd4090a6d12",
-          "src": "https://learnablemeta.com/images/664/ljaYTr5aTjddXZzHp3VR9G5UT0ng4S9kydDZ.avif",
-          "path": "es/5bd4090a6d12.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24643",
-      "step": 3,
-      "order": 17,
-      "family": "landscape",
-      "title": "Landscape: Pyrenees",
-      "text": [
-        "The Pyrenees is a large mountain range on the border between Spain and France. Its mountains are some of the highest in all of Spain. It can be recognized by its light grey rock and abundance of pine trees. Local architecture features many rock walls.",
-        "NOTE: Andorra and the Spanish part of the Pyrenees look very similar in terms of landscape and architecture. And consider that the exclave of Llívia is part of Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ef06752298d2",
-          "src": "https://learnablemeta.com/images/664/jagJKh0hjnVMbBOh2BVRPHjk32vuyuZadW9H.avif",
-          "path": "es/ef06752298d2.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24644",
-      "step": 3,
-      "order": 18,
-      "family": "landscape",
-      "title": "Landscape: Northeast",
-      "text": [
-        "The landscape in the far north is much more green and lush than the rest of Spain. The landscape is generally quite hilly. Hedges and green meadows are common. In some places, this region’s landscape bears a vague resemblance to Ireland, France and the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "04c3fd5ceff4",
-          "src": "https://learnablemeta.com/images/664/0TMxFmd15ciAZW63TtluM2CnqkU0g3S3jGBk.avif",
-          "path": "es/04c3fd5ceff4.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR",
-        "GB",
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24645",
-      "step": 3,
-      "order": 19,
-      "family": "landscape",
-      "title": "Landscape: Ebro Delta",
-      "text": [
-        "The Ebro delta (Deltebre in catalan) features an extremely flat landscape, where rice fields and water canals are very common. There are significant mountains to the South, West, and North, and some of them can be seen from almost every location in the delta."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "79626c27af8d",
-          "src": "https://learnablemeta.com/images/664/APs2AW47QlJyVAa1f5KDE3sHc2gp1PvufObj.avif",
-          "path": "es/79626c27af8d.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-24646",
-      "step": 3,
-      "order": 20,
-      "family": "landscape",
-      "title": "Landscape: Sierra Nevada National Park",
-      "text": [
-        "The mountain range of Sierra Nevada features snowy peaks through the months of November and May. Sierra Nevada is the only mountain range in south Spain with snow during most of the year."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4bc9f0b31143",
-          "src": "https://learnablemeta.com/images/664/z8yEVR9t21pRi2DFzSdBi2rXm2pifZMEv96n.avif",
-          "path": "es/4bc9f0b31143.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-49955",
-      "step": 3,
-      "order": 21,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Road Markers",
-      "text": [
-        "Spain has distinct road markers with a variety of colourful borders.",
-        "The code on top is the number of the road.",
-        "**--- NOTE:**",
-        "Andorra has similar markers and the letter codes preceding the road number on these markers are often an important region-specific clue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3394230ba20f",
-          "src": "https://learnablemeta.com/images/847/qgzTbIHSTryAddAtKtEWTsCA3NyoPtt4zPEs.avif",
-          "path": "es/3394230ba20f.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-49956",
-      "step": 3,
-      "order": 22,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Spain has yellow reflectors on rounded A-type guardrails.",
-        "**--- NOTE:**",
-        "Belgium, Andorra and Gibraltar also have yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f33cf5ea5b6e",
-          "src": "https://learnablemeta.com/images/847/d3QqgGmGUPmWHqA9IE3STnT5Ztt9iAXHh0gM.avif",
-          "path": "es/f33cf5ea5b6e.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "BE",
-        "GI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-49958",
-      "step": 3,
-      "order": 23,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Small Font Stop",
-      "text": [
-        "Spanish stop signs have a distinct small font.",
-        "**--- NOTE:**",
-        "These are mostly useful to distinguish Portugal from Spain.",
-        "Portuguese stop signs have a noticeably larger font."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "af7715a9c849",
-          "src": "https://learnablemeta.com/images/847/0439RXr8nWaZwctUpKOwEbwGM8ZSq4eV7Tai.avif",
-          "path": "es/af7715a9c849.webp",
-          "width": 1000,
-          "height": 515
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-49986",
-      "step": 3,
-      "order": 24,
-      "family": "other",
-      "title": "Calle",
-      "text": [
-        "The Spanish word for street is calle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85be2e721f88",
-          "src": "https://learnablemeta.com/images/847/xctXJKjO2XVF3yCLGHP1eT1O98vmu9YhXgHs.avif",
-          "path": "es/85be2e721f88.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-49988",
-      "step": 3,
-      "order": 25,
-      "family": "other",
-      "title": "Pylon Supports",
-      "text": [
-        "High voltage electricity lines supported by pylons are very common in Spain, especially compared to other Mediterranean countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ce54f461f99",
-          "src": "https://learnablemeta.com/images/847/bPs0bFL69HzRox0RQHWKnUbWqzlnA18Ccx1z.avif",
-          "path": "es/8ce54f461f99.webp",
-          "width": 1000,
-          "height": 561
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50304",
-      "step": 3,
-      "order": 26,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Road Markers",
-      "text": [
-        "Spain has distinct road markers with a variety of colourful borders.",
-        "The code on top is the number of the road.",
-        "**--- NOTE:**",
-        "Andorra has similar markers and the letter codes preceding the road number on these markers are often an important region-specific clue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3394230ba20f",
-          "src": "https://learnablemeta.com/images/847/qgzTbIHSTryAddAtKtEWTsCA3NyoPtt4zPEs.avif",
-          "path": "es/3394230ba20f.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50315",
-      "step": 3,
-      "order": 27,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Spain has yellow reflectors on rounded A-type guardrails.",
-        "**--- NOTE:**",
-        "Belgium, Andorra and Gibraltar also have yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f33cf5ea5b6e",
-          "src": "https://learnablemeta.com/images/847/d3QqgGmGUPmWHqA9IE3STnT5Ztt9iAXHh0gM.avif",
-          "path": "es/f33cf5ea5b6e.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "BE",
-        "GI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50322",
-      "step": 3,
-      "order": 28,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Small Font Stop",
-      "text": [
-        "Spanish stop signs have a distinct small font.",
-        "**--- NOTE:**",
-        "These are mostly useful to distinguish Portugal from Spain.",
-        "Portuguese stop signs have a noticeably larger font."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "af7715a9c849",
-          "src": "https://learnablemeta.com/images/847/0439RXr8nWaZwctUpKOwEbwGM8ZSq4eV7Tai.avif",
-          "path": "es/af7715a9c849.webp",
-          "width": 1000,
-          "height": 515
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50348",
-      "step": 3,
-      "order": 29,
-      "family": "other",
-      "title": "Pylon Supports",
-      "text": [
-        "High voltage electricity lines supported by pylons are very common in Spain, especially compared to other Mediterranean countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ce54f461f99",
-          "src": "https://learnablemeta.com/images/847/bPs0bFL69HzRox0RQHWKnUbWqzlnA18Ccx1z.avif",
-          "path": "es/8ce54f461f99.webp",
-          "width": 1000,
-          "height": 561
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50352",
-      "step": 3,
-      "order": 30,
-      "family": "other",
-      "title": "Calle",
-      "text": [
-        "The Spanish word for street is calle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85be2e721f88",
-          "src": "https://learnablemeta.com/images/847/xctXJKjO2XVF3yCLGHP1eT1O98vmu9YhXgHs.avif",
-          "path": "es/85be2e721f88.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50967",
-      "step": 3,
-      "order": 31,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Road Markers",
-      "text": [
-        "Spain has distinct road markers with a variety of colourful borders.",
-        "The code on top is the number of the road.",
-        "**--- NOTE:**",
-        "Andorra has similar markers and the letter codes preceding the road number on these markers are often an important region-specific clue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3394230ba20f",
-          "src": "https://learnablemeta.com/images/847/qgzTbIHSTryAddAtKtEWTsCA3NyoPtt4zPEs.avif",
-          "path": "es/3394230ba20f.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50968",
-      "step": 3,
-      "order": 32,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Spain has yellow reflectors on rounded A-type guardrails.",
-        "**--- NOTE:**",
-        "Belgium, Andorra and Gibraltar also have yellow reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f33cf5ea5b6e",
-          "src": "https://learnablemeta.com/images/847/d3QqgGmGUPmWHqA9IE3STnT5Ztt9iAXHh0gM.avif",
-          "path": "es/f33cf5ea5b6e.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "BE",
-        "GI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50970",
-      "step": 3,
-      "order": 33,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Small Font Stop",
-      "text": [
-        "Spanish stop signs have a distinct small font.",
-        "**--- NOTE:**",
-        "These are mostly useful to distinguish Portugal from Spain.",
-        "Portuguese stop signs have a noticeably larger font."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "af7715a9c849",
-          "src": "https://learnablemeta.com/images/847/0439RXr8nWaZwctUpKOwEbwGM8ZSq4eV7Tai.avif",
-          "path": "es/af7715a9c849.webp",
-          "width": 1000,
-          "height": 515
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50990",
-      "step": 3,
-      "order": 34,
-      "family": "other",
-      "title": "Pylon Supports",
-      "text": [
-        "High voltage electricity lines supported by pylons are very common in Spain, especially compared to other Mediterranean countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ce54f461f99",
-          "src": "https://learnablemeta.com/images/847/bPs0bFL69HzRox0RQHWKnUbWqzlnA18Ccx1z.avif",
-          "path": "es/8ce54f461f99.webp",
-          "width": 1000,
-          "height": 561
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-50992",
-      "step": 3,
-      "order": 35,
-      "family": "other",
-      "title": "Calle",
-      "text": [
-        "The Spanish word for street is calle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85be2e721f88",
-          "src": "https://learnablemeta.com/images/847/xctXJKjO2XVF3yCLGHP1eT1O98vmu9YhXgHs.avif",
-          "path": "es/85be2e721f88.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-104537",
-      "step": 3,
-      "order": 36,
-      "family": "architecture",
-      "title": "Architecture: Galicia - Big Concrete Blocks",
-      "text": [
-        "Many houses in Galicia are built with big concrete blocks, sometimes textured to resemble natural stone.",
-        "Plain concrete blocks are also an extremely common material for walls and miscellaneous buildings like garages."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2171ed5e6aef",
-          "src": "https://learnablemeta.com/images/1072/dxC4BSXykTzGzotWvEnMt1Rks4jt5RsKFc3d.avif",
-          "path": "es/2171ed5e6aef.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-104581",
-      "step": 3,
-      "order": 37,
-      "family": "other",
-      "title": "Galicia - Cabazos",
-      "text": [
-        "In Galicia, these unique granaries called “horreos gallegos”, or “cabazos”, are very common.",
-        "Note that they can be made from various materials, but the shape remains the same."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "177d22319fb9",
-          "src": "https://learnablemeta.com/images/1072/WsNOd1J9ofMD3iVES97zomwJTP5UHVTwLZtT.avif",
-          "path": "es/177d22319fb9.webp",
-          "width": 1000,
-          "height": 483
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-104582",
-      "step": 3,
-      "order": 38,
-      "family": "architecture",
-      "title": "Architecture: Asturias - Square Hórreos",
-      "text": [
-        "In Asturias, “hórreos” are bigger, generally with a square design, and are built above four pillars, with or without walls.",
-        "You will sometimes find a rectangular variation, usually built on top of six or eight pillars called “panera”.",
-        "If you find an “horreo” with a slate roof, you will be in western Asturias."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3999b53a1186",
-          "src": "https://learnablemeta.com/images/1072/qPLyHdk36kZZ4iFjBdNhup7axlCJg1gqzqft.avif",
-          "path": "es/3999b53a1186.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-104584",
-      "step": 3,
-      "order": 39,
-      "family": "architecture",
-      "title": "Architecture: Catalonia & Aragón - Masias",
-      "text": [
-        "Traditional farm houses called “masías” are common in Catalonia, eastern Aragón and parts of the Valencian Community.",
-        "They are usually made of stone and stand isolated or as part of a small complex."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1a355aa12b98",
-          "src": "https://learnablemeta.com/images/1072/enYiigJS0DnBQItfDF0Bk6bG2ZAtd7yUl4kM.avif",
-          "path": "es/1a355aa12b98.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-104586",
-      "step": 3,
-      "order": 40,
-      "family": "architecture",
-      "title": "Architecture: Centre & South - White Towns",
-      "text": [
-        "Within the centre and south of Spain, towns made completely out of white painted houses are very common in Andalucía and Extremadura.",
-        "You can still see a fair amount of white painted houses in Castilla la Mancha but streets where every house is white will not be common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ebe41b9149ce",
-          "src": "https://learnablemeta.com/images/1072/kJ9cZcQC60sdAzmtT0a7vu3oaq2ZOjGeY17k.avif",
-          "path": "es/ebe41b9149ce.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-128318",
-      "step": 3,
-      "order": 41,
-      "family": "architecture",
-      "title": "Architecture: Centre & South - White Towns",
-      "text": [
-        "Within the centre and south of Spain, towns made completely out of white painted houses are very common in Andalucía and Extremadura.",
-        "You can still see a fair amount of white painted houses in Castilla la Mancha but streets where every house is white will not be common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ebe41b9149ce",
-          "src": "https://learnablemeta.com/images/1072/kJ9cZcQC60sdAzmtT0a7vu3oaq2ZOjGeY17k.avif",
-          "path": "es/ebe41b9149ce.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-128320",
-      "step": 3,
-      "order": 42,
-      "family": "architecture",
-      "title": "Architecture: Catalonia & Aragón - Masias",
-      "text": [
-        "Traditional farm houses called “masías” are common in Catalonia, eastern Aragón and parts of the Valencian Community.",
-        "They are usually made of stone and stand isolated or as part of a small complex."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1a355aa12b98",
-          "src": "https://learnablemeta.com/images/1072/enYiigJS0DnBQItfDF0Bk6bG2ZAtd7yUl4kM.avif",
-          "path": "es/1a355aa12b98.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-438805",
-      "step": 3,
-      "order": 43,
-      "family": "other",
-      "title": "Spain",
-      "text": [
-        "Area codes in Spain are very useful, as you only need two digits to get a very accurate guess. Every landline number starts with “9”, followed by the regional numbers.",
-        "Mobile numbers start with “6”, and are not relevant in region guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5ef21deaa7d2",
-          "src": "https://learnablemeta.com/images/1398/hNLcv6XjihPtRlaYa5rpbpznivbpSkEkDa6M.avif",
-          "path": "es/5ef21deaa7d2.webp",
-          "width": 1000,
-          "height": 689
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-470495",
-      "step": 3,
-      "order": 44,
-      "family": "other",
-      "title": "pylons",
-      "text": [
-        "High voltage electricity lines supported by pylons are very common in Spain, especially compared to other Mediterranean countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2f162326137e",
-          "src": "https://learnablemeta.com/images/1955/1749989643468-isI.avif",
-          "path": "es/2f162326137e.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-470497",
-      "step": 3,
-      "order": 45,
-      "family": "pole",
-      "title": "Pole: french style",
-      "text": [
-        "“French style” poletops are common in Spain. They are shaped like an upside down triangle, with a horizontal top bar that is curved slightly upwards. They are usually found on top of tall ladder poles or medium sized steel poles.",
-        "NOTE: As the name suggests, French poletops are also very common in France."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f08e466ab375",
-          "src": "https://learnablemeta.com/images/1955/1749989671749-alA.avif",
-          "path": "es/f08e466ab375.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-470499",
-      "step": 3,
-      "order": 46,
-      "family": "pole",
-      "title": "Pole: steel mesh rectangular",
-      "text": [
-        "Poles with a steel mesh structure making rectangular shapes instead of the typical triangles can be found in the southern half of Spain, and are particularly common in Murcia and southern Alicante."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b892996548f1",
-          "src": "https://learnablemeta.com/images/1955/1749989581461-3M7.avif",
-          "path": "es/b892996548f1.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-501458",
-      "step": 3,
-      "order": 47,
-      "family": "language",
-      "title": "Language: Catalan language - carrer",
-      "text": [
-        "If you're in Spain and see a street sign with \"Carrer\" instead of \"Calle\", you're likely in a Catalan -speaking region, such as Catalonia, Valencia, or the Balearic Islands.",
-        "Andorra also uses Catalan as its official language."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2fd837fac023",
-          "src": "https://learnablemeta.com/images/1/1754129452255-jf0.avif",
-          "path": "es/2fd837fac023.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-515547",
-      "step": 3,
-      "order": 48,
-      "family": "guardrail",
-      "title": "Guardrail: A-Type with yellow reflectors",
-      "text": [
-        "Spain has yellow reflectors on rounded A-type guardrails.",
-        "NOTE: Belgium, Andorra and Gibraltar also have yellow reflectors. For a good overview of European guardrails, see this infographic."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5526fc290932",
-          "src": "https://learnablemeta.com/images/3660/1755389994872-SgI.avif",
-          "path": "es/5526fc290932.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "8b921d028284",
-          "src": "https://learnablemeta.com/images/3660/1755390011930-OYm.avif",
-          "path": "es/8b921d028284.webp",
-          "width": 800,
-          "height": 356
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "BE",
-        "GI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-557060",
-      "step": 3,
-      "order": 49,
-      "family": "other",
-      "title": "Cogersa bins",
-      "text": [
-        "Trash containers in Asturias frequently have the logo of COGERSA, the logo’s shape is distinct and can be recognized from afar.",
-        "NOTE: Recycling bins can also feature this logo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6f143a96c2c9",
-          "src": "https://learnablemeta.com/images/1/1759732921400-0c9.avif",
-          "path": "es/6f143a96c2c9.webp",
-          "width": 708,
-          "height": 359
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Street words: calle (street), pasaje (alley), avenida (avenue), camino (way or path), carretera (highway)."
     },
     {
       "id": "es-lm-558163",
@@ -7124,7 +6070,7 @@
       "order": 50,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Seville street sign",
+      "title": "Sign: each street name in its own section",
       "text": [
         "Seville street signs are pretty unique, each individual name has its own section with this unique font."
       ],
@@ -7144,7 +6090,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Seville street signs have each name in its own section in a distinctive font."
     },
     {
       "id": "es-lm-558167",
@@ -7152,7 +6099,7 @@
       "order": 51,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Zaragoza street sign",
+      "title": "Sign: white street name, leaf-like blue frame",
       "text": [
         "Zaragoza street signs are white with a unique logo in the top left and also has a fancy decorated blue frame, they kinda look like many leaves."
       ],
@@ -7172,7 +6119,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Zaragoza street signs are white with a unique logo in the top left and a fancy decorated blue frame that looks a bit like leaves."
     },
     {
       "id": "es-lm-558168",
@@ -7180,7 +6128,7 @@
       "order": 52,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Velencia street sign",
+      "title": "Sign: street name with logo in top left",
       "text": [
         "Velencia street signs have this unique logo on the top left."
       ],
@@ -7200,34 +6148,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-558169",
-      "step": 3,
-      "order": 53,
-      "family": "other",
-      "title": "Barcelona taxi",
-      "text": [
-        "Taxis in Barcelona are black with yellow doors, including the trunk door."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aef6f50fe23c",
-          "src": "https://learnablemeta.com/images/4588/1777502069444-TB2.avif",
-          "path": "es/aef6f50fe23c.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Valencia street signs have a unique logo in the top left."
     },
     {
       "id": "es-lm-558225",
@@ -7235,7 +6157,7 @@
       "order": 54,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Madrid street sign",
+      "title": "Sign: picture street names or blue with crown",
       "text": [
         "Madrid has 2 different kinds of street signs, the bottom one, found in the centre, is a very unique street sign, every street sign has a different picture shown. The street sign above is found outside of its centre, its blue with white text, but has a very important logo on the left, looks like a crown on top of something. There are a few slightly different versions of this crown logo throughout this city. So make sure to look if there is a crown on top of the logo."
       ],
@@ -7255,7 +6177,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Madrid has two kinds: in the centre each sign has a different picture; outside the centre they are blue with white text and a logo on the left that looks like a crown over something. Check for the crown, as there are slightly different versions."
     },
     {
       "id": "es-lm-742376",
@@ -7263,7 +6186,7 @@
       "order": 55,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Murcia street sign",
+      "title": "Sign: blue street name, thick white edge",
       "text": [
         "Murcia street signs are blue with this thick white edge and have this unique logo on the left with a crown."
       ],
@@ -7283,140 +6206,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-783075",
-      "step": 3,
-      "order": 56,
-      "family": "language",
-      "title": "Language: Catalan",
-      "text": [
-        "Catalan is a Romance language closely related to Spanish and French. In Spain, it is spoken in Catalonia, the Valencian Community, and the Balearic Islands. In Catalonia and the Balearic Islands, it is (much) more common than Spanish on signage. The Valencian Community is more bilingual.",
-        "The Catalan word for street is **carrer**. This is unlike Spainsh where it is **calle**.",
-        "If you are unfamiliar with Romance languages, it can otherwise be hard to distinguish between Catalan and Spanish. If you see **i** instead of **y** (“and” in English), it is Catalan. In addition, more Catalan words end with consonants."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "90be5fcb7bab",
-          "src": "https://learnablemeta.com/images/9388/1785605999364-FLq.avif",
-          "path": "es/90be5fcb7bab.webp",
-          "width": 800,
-          "height": 393
-        },
-        {
-          "id": "911a2182e6dc",
-          "src": "https://learnablemeta.com/images/9388/1785606069358-cd3.avif",
-          "path": "es/911a2182e6dc.webp",
-          "width": 800,
-          "height": 393
-        },
-        {
-          "id": "1a7cb425ff2d",
-          "src": "https://learnablemeta.com/images/9388/1785606083554-Ico.avif",
-          "path": "es/1a7cb425ff2d.webp",
-          "width": 800,
-          "height": 408
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-783106",
-      "step": 3,
-      "order": 57,
-      "family": "language",
-      "title": "Language: Basque",
-      "text": [
-        "Basque is a language isolate spoken in adjacent parts of northern Spain and southwestern France. It has a unique look, not resembling any other language, commonly including the letters **K, X** and **Z**. In Spain, you will find a mix of Spanish and Basque signs (often bilingual) in the Basque Country and northern Navarre.",
-        "Streets in Basque-speaking areas of Spain are sometimes called **kalea** (in France **karrika** instead). However, Spanish **calle** is also still common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59e741884218",
-          "src": "https://learnablemeta.com/images/9388/1785605792038-JAA.avif",
-          "path": "es/59e741884218.webp",
-          "width": 800,
-          "height": 393
-        },
-        {
-          "id": "82ead8a8178f",
-          "src": "https://learnablemeta.com/images/9388/1785605804585-5AD.avif",
-          "path": "es/82ead8a8178f.webp",
-          "width": 800,
-          "height": 393
-        },
-        {
-          "id": "4073e0a07f54",
-          "src": "https://learnablemeta.com/images/9388/1785605820176-an0.avif",
-          "path": "es/4073e0a07f54.webp",
-          "width": 800,
-          "height": 408
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "es-lm-783108",
-      "step": 3,
-      "order": 58,
-      "family": "language",
-      "title": "Language: Spanish",
-      "text": [
-        "Spanish is a Romance language closely related to Portuguese. Spanish and Portuguese can look very similar. Some key differences between the two:",
-        "**Ñ** is unique to Spanish.",
-        "**Ç, Ã, Õ, Â, Ê** and **lh** are unique to Portuguese (**Ç** is also present in Catalan).",
-        "Portuguese uses the **-ao** word ending, and **-nh-** instead of **ñ**.",
-        "Spanish uses **de** and **del**, while these are often contracted to **da**, **do**, **das** and **dos** in Portuguese.",
-        "The Spanish word for street is **calle**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0cd77b7c78e9",
-          "src": "https://learnablemeta.com/images/9388/1785606813173-lUQ.avif",
-          "path": "es/0cd77b7c78e9.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "25f56c19b8c1",
-          "src": "https://learnablemeta.com/images/9388/1785606826721-d9X.avif",
-          "path": "es/25f56c19b8c1.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "62529446c58e",
-          "src": "https://learnablemeta.com/images/9388/1785606847358-DTv.avif",
-          "path": "es/62529446c58e.webp",
-          "width": 800,
-          "height": 408
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Murcia street signs are blue with a thick white edge and a unique logo with a crown on the left."
     }
   ]
 }

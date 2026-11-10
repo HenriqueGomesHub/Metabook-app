@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Guatemala has short licence plates",
+      "title": "Plate: short, blue or green tinge when blurred",
       "text": [
         "Guatemala has short licence plates, which when blurred will typically have either a blue tinge, or a hint of green on the left side."
       ],
@@ -44,14 +44,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Short plates that look blue, or slightly green on the left side, once blurred."
     },
     {
       "id": "gt-gZYw",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: This grey Street View car with a visible roof rack and side…",
+      "title": "Google car: grey with roof rack and mirrors",
       "text": [
         "This **grey** Street View car with a visible roof rack and side mirrors can be seen on all car coverage in Guatemala.",
         "NOTE: The only other tropical country with a similar car is [Laos](https://maps.app.goo.gl/uMGhM4Th1yi9GsaT9). The car used in the [Dominican Republic](https://goo.gl/maps/Hjv6G6xFYJm1F38i6) may look similar, but has thick black stripes on the bars and the mirrors are not visible."
@@ -94,14 +95,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A grey car with a roof rack and visible side mirrors, on all car coverage. Only Laos has a similar car.",
+      "differs": [
+        {
+          "country": "LA",
+          "how": "Laos has a similar grey car but a different landscape"
+        },
+        {
+          "country": "DO",
+          "how": "Dominican car has thick black stripes on bars, mirrors hidden"
+        },
+        {
+          "country": "CW",
+          "how": "Curaçao car has a black front"
+        }
+      ]
     },
     {
       "id": "gt-HQly",
       "step": 0,
       "order": 3,
       "family": "other",
-      "title": "Guatemala is a tropical country",
+      "title": "Landscape: tropical, rainforest",
       "text": [
         "Guatemala is a **tropical country**, and is mainly covered by rainforests."
       ],
@@ -140,14 +156,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A tropical country, mostly covered by rainforest."
     },
     {
       "id": "gt-PGLM",
       "step": 0,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: Guatemalan architecture mainly consists of pastel painted…",
+      "title": "Houses: pastel stone, rusty metal roofs",
       "text": [
         "Guatemalan architecture mainly consists of pastel painted stone houses, commonly with rusted sheet metal roofs. It is also somewhat common for buildings to be made out of exposed white brick."
       ],
@@ -174,7 +191,8 @@
           "src": "https://learnablemeta.com/images/1072/eFswah02lHDcargEeOQtu8qcNITBjdIozmrx.avif",
           "path": "gt/2a24ad05dbf8.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "273a3a7f2a90"
         }
       ],
       "locations": [
@@ -193,14 +211,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pastel-painted stone houses, often with rusty sheet metal roofs. Exposed white brick buildings are fairly common too."
     },
     {
       "id": "gt-PUP5",
       "step": 0,
       "order": 5,
       "family": "line",
-      "title": "Road line: Similarly to Mexico, Guatemalan roads generally have solid…",
+      "title": "Road lines: thin, single yellow centre line",
       "text": [
         "Similarly to Mexico, Guatemalan roads generally have solid white outer lines with a **single yellow middle line**. Road lines in Guatemala are generally significantly **thinner** than in [Mexico](https://www.google.com/maps/@15.684137,-92.0520015,3a,67.2y,89.22h,61.96t/data=!3m6!1e1!3m4!1sAWSMGxU5u0okOM9sg-Ah0g!2e0!7i16384!8i8192?entry=ttu)."
       ],
@@ -227,7 +246,8 @@
           "src": "https://learnablemeta.com/images/506/BQFk1kZRXW0PTn8ZXpSaOKKJl9GNhQ8ZDvUz.avif",
           "path": "gt/545da480d747.webp",
           "width": 1000,
-          "height": 564
+          "height": 564,
+          "dupeOf": "930cabd68477"
         }
       ],
       "locations": [
@@ -248,7 +268,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Solid white edge lines with a single yellow centre line, like Mexico, but noticeably thinner than Mexican lines.",
+      "differs": [
+        {
+          "country": "MX",
+          "how": "Mexican road lines are much thicker"
+        }
+      ]
     },
     {
       "id": "gt-mgoz",
@@ -256,7 +283,7 @@
       "order": 6,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Like Mexico, Panama and Costa Rica, Guatemala uses the word…",
+      "title": "Sign: stop sign says ALTO",
       "text": [
         "Like Mexico, Panama and Costa Rica, Guatemala uses the word “**ALTO**” on stop signs."
       ],
@@ -299,14 +326,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs read ALTO, as in Mexico, Panama and Costa Rica.",
+      "sameAs": [
+        "CR",
+        "MX",
+        "PA"
+      ]
     },
     {
       "id": "gt-kyzr",
       "step": 0,
       "order": 7,
       "family": "pole",
-      "title": "Pole: In Guatemala you will very commonly see poles painted with…",
+      "title": "Pole: painted pink, green or both",
       "text": [
         "In Guatemala you will very commonly see poles painted with either **pink**, **green** or a combination of the two."
       ],
@@ -335,21 +368,24 @@
           "src": "https://learnablemeta.com/images/3/Mk9UJBHvQ0UqOvfIj539lcGxv46NB9BDAoCU.avif",
           "path": "gt/df3d783b2fae.webp",
           "width": 1000,
-          "height": 1000
+          "height": 1000,
+          "dupeOf": "95b92c413ee6"
         },
         {
           "id": "72fa6e944c5b",
           "src": "https://learnablemeta.com/images/620/sU88p5eZOiRbEIJDd4gnxjto2WcaaaxRqHxx.avif",
           "path": "gt/72fa6e944c5b.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "d60a1d1e35c5"
         },
         {
           "id": "5eabdf5a4bf2",
           "src": "https://learnablemeta.com/images/1955/1749642034159-Ebo.avif",
           "path": "gt/5eabdf5a4bf2.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "d60a1d1e35c5"
         }
       ],
       "locations": [
@@ -368,14 +404,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles are very often painted pink, green, or a mix of both."
     },
     {
       "id": "gt-UdGx",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Guatemala has a fairly low amount of coverage",
+      "title": "Coverage: sparse, especially in the north",
       "text": [
         "Guatemala has a fairly **low amount of coverage**, particularly in the north. Here you can see which roads are covered."
       ],
@@ -395,14 +432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Not much coverage, especially in the north. Check which roads are covered on the map."
     },
     {
       "id": "gt-bviD",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "This is a topographic map of Guatemala",
+      "title": "Landscape: mountainous middle, flat ends",
       "text": [
         "This is a topographic map of Guatemala. Generally speaking, the middle of the country is mountainous, while the south and north are fairly flat."
       ],
@@ -423,14 +461,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The middle of the country is mountainous, while the south and north are fairly flat."
     },
     {
       "id": "gt-HmBj",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "The southern regions of Guatemala mainly consist of…",
+      "title": "Landscape: completely flat farmland, built up",
       "text": [
         "The southern regions of Guatemala mainly consist of **completely flat** agricultural land. It is generally more built up than flat areas in the [north](https://www.google.com/maps/@16.6546485,-90.1707062,3a,90y,317.32h,87t/data=!3m6!1e1!3m4!1sk183E0zMqWnu74AJOcvOFQ!2e0!7i13312!8i6656?entry=ttu)."
       ],
@@ -469,14 +508,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The south is completely flat farmland and more built up than the flat north."
     },
     {
       "id": "gt-rIJc",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "The central regions of Guatemala are generally mountainous",
+      "title": "Landscape: mountainous centre",
       "text": [
         "The central regions of Guatemala are generally **mountainous**."
       ],
@@ -515,14 +555,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The central part of the country is generally mountainous."
     },
     {
       "id": "gt-gNVA",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The northern regions of Guatemala are typically fairly flat",
+      "title": "Landscape: fairly flat with gentle hills",
       "text": [
         "The northern regions of Guatemala are typically **fairly flat**. You will however usually see some hills or a slightly [rolling landscape](https://goo.gl/maps/gn49EV7aAQv94cq6A), rather than the complete flatness of the south."
       ],
@@ -561,14 +602,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north is fairly flat but slightly rolling, unlike the completely flat south."
     },
     {
       "id": "gt-urVz",
       "step": 1,
       "order": 5,
       "family": "vegetation",
-      "title": "Vegetation: Oil palm plantations are primarily found in two general…",
+      "title": "Plants: oil palm plantations",
       "text": [
         "**Oil palm plantations** are primarily found in two general areas: in the southwest and just north of the central mountain range."
       ],
@@ -607,14 +649,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Oil palm plantations are mainly in the southwest and just north of the central mountains."
     },
     {
       "id": "gt-wuun",
       "step": 1,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Completely green utility poles are primarily found in the…",
+      "title": "Pole: fully green, with small plates",
       "text": [
         "**Completely green utility poles** are primarily found in the southeast of the country, but also on a road in the further north in the east and on a small stretch of road around Melchor de Mencos, near the end of the coverage in the far northeast.",
         "These poles also feature small [pole plates](https://goo.gl/maps/sw6JyNjNerwDncwx8), which can further narrow down the road. This will be further explained in the next tip."
@@ -644,7 +687,8 @@
           "src": "https://learnablemeta.com/images/1955/1749641987586-pW2.avif",
           "path": "gt/55958e78e4e0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "dupeOf": "22a15f6e7c85"
         }
       ],
       "locations": [
@@ -663,14 +707,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fully green utility poles are mostly in the southeast, plus one road in the east and a stretch near the far northeast. They carry small plates that help find the road."
     },
     {
       "id": "gt-7t14",
       "step": 1,
       "order": 7,
       "family": "pole",
-      "title": "Pole: Most green utility poles contain a white pole plate",
+      "title": "Pole: green with white plate, road code",
       "text": [
         "Most green utility poles contain a **white pole plate**, for which the **top two characters** will determine which road you are on. These roads and their corresponding characters are shown in this infographic."
       ],
@@ -692,14 +737,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most green poles have a white plate. Its first two characters tell you which road you are on."
     },
     {
       "id": "gt-LaQp",
       "step": 1,
       "order": 8,
       "family": "coverage",
-      "title": "Coverage: In most of the Guatemala coverage",
+      "title": "Google car: top right bar faces forward",
       "text": [
         "In most of the Guatemala coverage, the [top right bar](/images/guatemala/top_right_bar.png?) will be **facing forward**. This means that you can see [this line](/images/guatemala/zoomedinbar_line_highlighted.png?) on the side facing forward."
       ],
@@ -738,14 +784,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On most coverage the bar at the top right of the car points forward, so you see a line on its front-facing side."
     },
     {
       "id": "gt-TOL4",
       "step": 1,
       "order": 9,
       "family": "other",
-      "title": "The opposite is true in southeastern Guatemala",
+      "title": "Google car: top right bar faces backward",
       "text": [
         "The opposite is true in southeastern Guatemala, where the line is facing backwards."
       ],
@@ -784,14 +831,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southeast the same bar points backward instead, so that line is not on the forward-facing side."
     },
     {
       "id": "gt-2nYg",
       "step": 1,
       "order": 10,
       "family": "other",
-      "title": "In these regions, you can often see a blue rope on the…",
+      "title": "Google car: blue rope on bottom right bar",
       "text": [
         "In these regions, you can often see a **blue rope** on the bottom right bar.",
         "NOTE: Sometimes it can be [hard](https://maps.app.goo.gl/at4smsdgVk8HbsGaA) or [almost impossible](https://maps.app.goo.gl/HPXi6nrvanWVH3kk8) to see, in which case it might look like a normal backward facing bar."
@@ -831,14 +879,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In those backward-bar regions you can often see a blue rope on the bottom right bar. It can be hard to see, and then it just looks like a normal backward bar."
     },
     {
       "id": "gt-lkgV",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "These regions in the south and northeast also have the…",
+      "title": "Google car: bottom bar missing black cap",
       "text": [
         "These regions in the south and northeast also have the backwards facing bar. The difference here is that the bottom right bar is **missing** the **thin black cap**, which is present in the other regions."
       ],
@@ -877,14 +926,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south and northeast, the bar also faces backward, but the bottom right bar is missing its thin black cap seen elsewhere."
     },
     {
       "id": "gt-VLvK",
       "step": 1,
       "order": 12,
       "family": "other",
-      "title": "Phone numbers starting with a 2 are unique to Guatemala City",
+      "title": "Phone numbers: start with 2",
       "text": [
         "Phone numbers starting with a **2** are unique to Guatemala City."
       ],
@@ -923,14 +973,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Phone numbers starting with 2 are only found in the capital, Guatemala City."
     },
     {
       "id": "gt-acEC",
       "step": 1,
       "order": 13,
       "family": "other",
-      "title": "Similarly, phone numbers starting with a 6 are unique to…",
+      "title": "Phone numbers: start with 6",
       "text": [
         "Similarly, phone numbers starting with a **6** are unique to the Guatemala Department.",
         "NOTE: Phone numbers starting with 7 are found anywhere except for Guatemala Department, and phones starting with 3, 4 or 5 can be found anywhere in the country."
@@ -970,14 +1021,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers starting with 6 belong to Guatemala Department only. Numbers starting with 7 are everywhere except there, and 3, 4 or 5 can be anywhere."
     },
     {
       "id": "gt-hIlm",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Lago de Atitlán is by far the largest lake in the…",
+      "title": "Landscape: huge lake among volcanoes",
       "text": [
         "Lago de Atitlán is by far the **largest lake** in the mountainous regions of Guatemala. It is surrounded by mountains, and some volcanoes."
       ],
@@ -1004,7 +1056,8 @@
           "src": "https://learnablemeta.com/images/664/r6HkItJ9gsNjI0dLEtfyogjYUTStdFpeWkfP.avif",
           "path": "gt/d99ef3158473.webp",
           "width": 1000,
-          "height": 493
+          "height": 493,
+          "dupeOf": "b2a014196e1a"
         }
       ],
       "locations": [
@@ -1023,14 +1076,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lago de Atitlán is by far the largest lake in the mountains, surrounded by mountains and some volcanoes."
     },
     {
       "id": "gt-UW8N",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "A small dirt road in the middle of a dense jungle can be…",
+      "title": "Landscape: small dirt road in dense jungle",
       "text": [
         "A **small dirt road** in the middle of a **dense jungle** can be found north of Tikal, in the far north of the country."
       ],
@@ -1069,14 +1123,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small dirt road through dense jungle, north of Tikal in the far north."
     },
     {
       "id": "gt-QYdU",
       "step": 2,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: These small white bollards with two black stripes can be…",
+      "title": "Bollard: small white, two black stripes",
       "text": [
         "These small **white bollards** with **two black stripes** can be found on road 1 northeast of Quetzaltenango."
       ],
@@ -1117,14 +1172,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small white bollards with two black stripes, found on road 1 northeast of Quetzaltenango."
     },
     {
       "id": "gt-eusx",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The PET-11, south of Las Pozas can be recognised by the…",
+      "title": "Road: rolling land, straight north-south",
       "text": [
         "The PET-11, south of Las Pozas can be recognised by the slightly rolling landscape combined with its completely **north-to-south road angle**."
       ],
@@ -1163,14 +1219,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The PET-11 south of Las Pozas has gently rolling land and a road that runs straight north to south."
     },
     {
       "id": "gt-lw5V",
       "step": 2,
       "order": 4,
       "family": "other",
-      "title": "The CA9, going between Escuintla and the coast, can be…",
+      "title": "Road: divided highway on concrete",
       "text": [
         "The CA9, going between Escuintla and the coast, can be recognised by being a **divided highway** with **concrete pavement**."
       ],
@@ -1209,14 +1266,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The CA9 between Escuintla and the coast is a divided highway with concrete pavement."
     },
     {
       "id": "gt-xmWF",
       "step": 2,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: A trekker featuring several Mayan temples can be found just…",
+      "title": "Coverage: trekker among Mayan temples",
       "text": [
         "A trekker featuring several **Mayan temples** can be found just west of the town of Tikal.",
         "It is worth mentioning that while there are other Guatemalan trekkers featuring [Mayan ruins](https://goo.gl/maps/fTti23Fq4zrCGzUE6), this is by far the most prominent and contains the largest and most intact temple structures."
@@ -1256,14 +1314,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A walking trekker with several Mayan temples, just west of Tikal. It has the biggest and most intact temples of any trekker here."
     },
     {
       "id": "gt-Wu24",
       "step": 2,
       "order": 6,
       "family": "pole",
-      "title": "Pole: These white rectangular stickers that have the word…",
+      "title": "Pole: white 'electricista' sticker",
       "text": [
         "These white rectangular stickers that have the word **‘electricista’** written on them are unique to Guatemala City."
       ],
@@ -1304,213 +1363,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guatemala",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gt-lm-321",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Unique car",
-      "text": [
-        "This gray Street View car with a visible roof rack and mirrors is unique to Guatemala. Don’t confuse it with the Dominican Republic car, which has black stripes on the roof rack, or the Curaçao car, which has a black front. A similar car is found in Laos, so always check the surroundings before making a guess."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3836416550f9",
-          "src": "https://learnablemeta.com/images/Lv7eNpzXuwRl0WP2qzEzlO9yYN20RfeI9pVU.avif",
-          "path": "gt/3836416550f9.webp",
-          "width": 1000,
-          "height": 569
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CW",
-        "DO",
-        "LA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-12975",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Alto",
-      "text": [
-        "Guatemala, Panama, Costa Rica and Mexico are the only countries using the word \"Alto\" on their stop signs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9383c4f4dc89",
-          "src": "https://learnablemeta.com/images/571/sh8IKLIZ6S0KSf8iFAPDVI1gIGw7dSdmWFAO.avif",
-          "path": "gt/9383c4f4dc89.webp",
-          "width": 893,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CR",
-        "MX",
-        "PA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-13833",
-      "step": 3,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "This grey Street View car with a visible roof rack and side mirrors can be seen on all car coverage in Guatemala.",
-        "**--- NOTE:**",
-        "The only other tropical country with a similar car is Laos."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8a6e838e3a39",
-          "src": "https://learnablemeta.com/images/620/OyCO3jaHTvmr38gWOe7jSiCr6yUxscfsZEQc.avif",
-          "path": "gt/8a6e838e3a39.webp",
-          "width": 560,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cbbe79df46dccadd041a6d",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-17941",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Lago de Atitlán",
-      "text": [
-        "Lago de Atitlán is by far the largest lake in the mountainous regions of Guatemala. It is surrounded by mountains, and some volcanoes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "49523d34e95f",
-          "src": "https://learnablemeta.com/images/664/u8sgwWpHAIPNMSaLk3NHzfyFynjSRDxELqie.avif",
-          "path": "gt/49523d34e95f.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-17943",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: North",
-      "text": [
-        "The northern regions of Guatemala are typically fairly flat. You will however usually see some hills or a slightly rolling landscape, rather than the complete flatness of the south."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "efe318ab5269",
-          "src": "https://learnablemeta.com/images/664/b0xzCggLla2oIDoAYESXVrnuagIimLQHlOkf.avif",
-          "path": "gt/efe318ab5269.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-17944",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "South",
-      "text": [
-        "The southern regions of Guatemala mainly consist of completely flat agricultural land. It is generally more built up than flat areas in the north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bab096f88ff1",
-          "src": "https://learnablemeta.com/images/664/ExByT5jjhTU9wQ4Ll4jRM2347aD9QcKcJ8eh.avif",
-          "path": "gt/bab096f88ff1.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gt-lm-51239",
-      "step": 3,
-      "order": 6,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "This grey Street View car with a visible roof rack and side mirrors can be seen on all car coverage in Guatemala.",
-        "**--- NOTE:**",
-        "The only other tropical country with a similar car is Laos."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8a6e838e3a39",
-          "src": "https://learnablemeta.com/images/620/OyCO3jaHTvmr38gWOe7jSiCr6yUxscfsZEQc.avif",
-          "path": "gt/8a6e838e3a39.webp",
-          "width": 560,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Rectangular white stickers reading 'electricista' on poles are only in Guatemala City."
     }
   ]
 }

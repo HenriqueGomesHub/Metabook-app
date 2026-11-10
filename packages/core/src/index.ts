@@ -16,3 +16,4 @@ export * from './session';
 export * from './tips';
 export * from './clueCards';
 export * from './clueSlim';
+export * from './showing';

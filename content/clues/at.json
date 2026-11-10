@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Austria has long, white licence plates with the standard…",
+      "title": "Plate: long white, one blue strip",
       "text": [
         "Austria has long, **white** licence plates with the standard **blue EU strip** on the left.",
         "NOTE: Italian plates have two blue strips, on both sides of the plate. Italian plates also tend to be noticeably shorter.",
@@ -48,14 +48,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with the blue EU strip on the left only. Italian plates have two blue strips and are shorter; Swiss plates are long and white but have no blue strip.",
+      "differs": [
+        {
+          "country": "IT",
+          "how": "Italian plates are shorter with a blue strip on both sides"
+        },
+        {
+          "country": "CH",
+          "how": "Swiss plates have no blue strip"
+        }
+      ]
     },
     {
       "id": "at-Z6SF",
       "step": 0,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Austria uses white bollards",
+      "title": "Bollard: white, black top, dark red reflector",
       "text": [
         "Austria uses white** **bollards, with a **black top**. The colour of the reflector is **(dark) red or dark grey**.",
         "Many bollards also feature a small nipple-shaped black cap on the top. Bollards sometimes have a [snow pole on top](https://goo.gl/maps/kkcrsQwXxFkn52rq8).",
@@ -103,7 +114,22 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White post with a black top and a dark red or dark grey reflector. Many have a small black nipple-shaped cap, and some have a snow pole on top. Slovenia and Montenegro use similar ones with a bright red reflector.",
+      "differs": [
+        {
+          "country": "SI",
+          "how": "Slovenian reflectors are bright red"
+        },
+        {
+          "country": "ME",
+          "how": "Montenegrin reflectors are bright red"
+        },
+        {
+          "country": "DE",
+          "how": "German posts are plain white with grey reflectors"
+        }
+      ]
     },
     {
       "id": "at-0Ecv",
@@ -111,7 +137,7 @@
       "order": 3,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Austria uses two colour schemes for chevrons",
+      "title": "Chevron: white on red or red on yellow",
       "text": [
         "Austria uses two colour schemes for **chevrons**:",
         "- white on red",
@@ -150,7 +176,8 @@
           "src": "https://learnablemeta.com/images/914/LLaRSTh31C481RUPfZgEplyzYRcOYALBKOs7.avif",
           "path": "at/1513e0f95203.webp",
           "width": 1000,
-          "height": 427
+          "height": 427,
+          "dupeOf": "2c35e5ab1b20"
         }
       ],
       "locations": [
@@ -171,14 +198,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two colour styles: white on red, or red on yellow. Germany mostly uses red on white and only rarely red on yellow.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "Germany mostly uses red on white"
+        }
+      ]
     },
     {
       "id": "at-XNJA",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Round wooden poles are the most common type of pole found…",
+      "title": "Pole: round wooden",
       "text": [
         "Round **wooden** poles are the most common type of pole found in Austria."
       ],
@@ -219,14 +253,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round wooden poles are the most common utility poles."
     },
     {
       "id": "at-3ouy",
       "step": 0,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Most of Austria is mountainous and covered in forests",
+      "title": "Landscape: forested mountains, flatter east",
       "text": [
         "Most of Austria is **mountainous** and covered in forests. However, some areas in the east and northeast are much more flat and agricultural."
       ],
@@ -255,7 +290,8 @@
           "src": "https://learnablemeta.com/images/768/WTq7Q8b31CePV8JPgsRA3bA1dlj8f2ml7i4S.avif",
           "path": "at/52813ce308cf.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "00a5d5dd82e7"
         }
       ],
       "locations": [
@@ -274,14 +310,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the country is mountainous and forested, but parts of the east and northeast are flatter and agricultural."
     },
     {
       "id": "at-zryZ",
       "step": 0,
       "order": 6,
       "family": "architecture",
-      "title": "Architecture: Alpine architecture is common in Austria and other…",
+      "title": "Houses: light walls, wooden balconies, wide roofs",
       "text": [
         "Alpine architecture is common in Austria and other countries in the Alps. Houses commonly have distinct **light **coloured walls, with **wooden **elements such as balconies or panelling around the top floor, with dark-coloured wooden roofs that extend outward. The roofs can sometimes be angled downward at the front and back. In addition, houses are also often multi-storeyed.",
         "NOTE: Germany uses similar architecture in its southern states."
@@ -302,14 +339,16 @@
           "src": "https://learnablemeta.com/images/768/O8t5TxQa3jfJ2sv9M1N4G8nwFl0ih6YTfmU7.avif",
           "path": "at/7519cd02cbaa.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "8c6271722874"
         },
         {
           "id": "32d46d3006d8",
           "src": "https://learnablemeta.com/images/1072/VMonmMiZhcW5OsUPaYXtEycNXZnuSB2Bz07c.avif",
           "path": "at/32d46d3006d8.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "8c6271722874"
         }
       ],
       "locations": [],
@@ -320,14 +359,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Alpine houses with light walls, wooden balconies or panelling on the top floor, and dark wooden roofs that stick out. Often several floors. Southern Germany builds in a similar way.",
+      "sameAs": [
+        "DE"
+      ]
     },
     {
       "id": "at-PGTR",
       "step": 0,
       "order": 7,
       "family": "language",
-      "title": "Language: The official language of Austria is German",
+      "title": "Language: German letters Ä Ö Ü ß",
       "text": [
         "The official language of Austria is **German**. The German language uses the special letters Ä, Ö, Ü and ß.",
         "NOTE: The other majority German-speaking countries with coverage are Switzerland and Germany. In addition, German is spoken in [East Belgium](https://en.wikipedia.org/wiki/German-speaking_Community_of_Belgium) and the Italian province of [South Tyrol](https://en.wikipedia.org/wiki/South_Tyrol)."
@@ -354,14 +397,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "German uses the special letters Ä, Ö, Ü and ß. Germany and Switzerland are also German-speaking, as are East Belgium and South Tyrol in Italy.",
+      "sameAs": [
+        "CH",
+        "DE"
+      ]
     },
     {
       "id": "at-N5fI",
       "step": 0,
       "order": 8,
       "family": "car",
-      "title": "Google car: You can tell the three German-speaking countries apart by…",
+      "title": "Coverage: Gen 3 and Gen 4 only, never low-cam",
       "text": [
         "You can tell the three German-speaking countries apart by **camera meta **alone:",
         "- Austria only has **Generation 3** and Generation 4 coverage (the only exceptions being Generation 2 on [one road](https://goo.gl/maps/LebHyLrqsjkqyoZMA) in Burgenland, and several [ski resort trekkers](https://goo.gl/maps/pdquUsUJoNwZghxRA)).",
@@ -408,14 +456,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Austria has mainly the older Gen 3 and the newer Gen 4. Germany has only Gen 4, and Switzerland is always low-cam with a much bigger car blur.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "Germany has only Gen 4 camera"
+        },
+        {
+          "country": "CH",
+          "how": "Switzerland always has the big car blur of a low camera"
+        }
+      ]
     },
     {
       "id": "at-jtGs",
       "step": 0,
       "order": 9,
       "family": "car",
-      "title": "Google car: Austria also has generation 4 “smallcam” coverage",
+      "title": "Google car: low camera, big round blur",
       "text": [
         "Austria also has generation 4 “smallcam” coverage, which is mounted lower than regular generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Western Europe also has smallcam."
@@ -457,7 +516,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low-mounted Gen 4 camera with a big round blur and a small bump at the front. The blur can be see-through, which makes it easy to miss. Most of Western Europe has it too.",
+      "sameAs": [
+        "CH",
+        "DE"
+      ]
     },
     {
       "id": "at-W0XX",
@@ -465,7 +529,7 @@
       "order": 10,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Direction signs have a white background",
+      "title": "Direction sign: white, blue outline, special font",
       "text": [
         "Direction signs have a white background, a **blue outline**, and a unique font."
       ],
@@ -506,7 +570,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs are white with a blue outline and a distinctive font."
     },
     {
       "id": "at-xfLD",
@@ -514,7 +579,7 @@
       "order": 11,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Similar white signs with a blue outline and unique font can…",
+      "title": "Sign: white town sign, blue outline",
       "text": [
         "Similar white signs with a** **blue outline and unique font can also be seen at the **entrance of towns**.",
         "NOTE: Germany uses [yellow town entrance signs](https://maps.app.goo.gl/fLnrUWoSDqzsyGxx5) with a black outline."
@@ -558,7 +623,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Similar white signs with a blue outline and the same font mark the entrance of towns. Germany uses yellow town signs with a black outline.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "German town signs are yellow with a black outline"
+        }
+      ]
     },
     {
       "id": "at-jkM9",
@@ -566,7 +638,7 @@
       "order": 12,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Green signs can commonly be seen",
+      "title": "Sign: green local-facility signs",
       "text": [
         "**Green** signs can commonly be seen, giving directions to different local facilities."
       ],
@@ -607,7 +679,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Green signs are common, pointing to local facilities."
     },
     {
       "id": "at-aurF",
@@ -615,7 +688,7 @@
       "order": 13,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian signs have a unique design",
+      "title": "Pedestrian sign: two dashed lines, no stripes",
       "text": [
         "**Pedestrian signs** have a unique design: instead of zebra stripes, they have two horizontal dashed lines.",
         "NOTE: All neighbouring countries have pedestrian signs with zebra stripes."
@@ -657,7 +730,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian signs show two horizontal dashed lines instead of zebra stripes. All neighbouring countries use zebra stripes."
     },
     {
       "id": "at-KsHC",
@@ -665,7 +739,7 @@
       "order": 14,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Road signs in Austria are sometimes mounted by four metal…",
+      "title": "Sign: mounted with four metal clips",
       "text": [
         "Road signs in Austria are sometimes mounted by **four metal clips**, which is unique within central Europe. However, plenty of Austrian signs are attached in other ways."
       ],
@@ -706,7 +780,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road signs are sometimes held by four metal clips, which is unique in central Europe. Many are fixed other ways, though."
     },
     {
       "id": "at-zEpW",
@@ -714,7 +789,7 @@
       "order": 15,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Road markers are blue with white numbers",
+      "title": "Route marker: blue with white number and comma",
       "text": [
         "**Road markers** are blue with white numbers. They have one decimal separated by a comma, making them very recognizable.",
         "NOTE: Slovenian road markers are white. And German markers have a thin white outline."
@@ -756,7 +831,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue markers with white numbers that have one decimal after a comma. Slovenian markers are white, and German ones have a thin white outline.",
+      "differs": [
+        {
+          "country": "SI",
+          "how": "Slovenian markers are white"
+        },
+        {
+          "country": "DE",
+          "how": "German markers have a thin white outline"
+        }
+      ]
     },
     {
       "id": "at-nkbT",
@@ -764,7 +850,7 @@
       "order": 16,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Austrian bus stop signs contain a yellow and green circle…",
+      "title": "Sign: bus stop with yellow-green circle and H",
       "text": [
         "Austrian **bus stop signs** contain a yellow and green circle with the letter **H**.",
         "NOTE: This design is relatively unique in Europe. The only other country with similar bus stop signs is Germany."
@@ -794,7 +880,8 @@
           "src": "https://learnablemeta.com/images/497/ozj380SyeauUEt7mnzh4BfGDAoVgAlbOxisJ.avif",
           "path": "at/b7d7d514dfd4.webp",
           "width": 1000,
-          "height": 552
+          "height": 552,
+          "dupeOf": "22c4d0138acf"
         }
       ],
       "locations": [
@@ -815,7 +902,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stop signs show a yellow and green circle with the letter H. Germany is the only other country with similar signs.",
+      "sameAs": [
+        "DE"
+      ]
     },
     {
       "id": "at-wkwt",
@@ -823,7 +914,7 @@
       "order": 17,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: These one-way traffic signs",
+      "title": "Sign: one-way sign says EINBAHN",
       "text": [
         "These one-way traffic signs, with the word **‘EINBAHN’** written on them, are unique to Austria.",
         "NOTE: In Germany there will be “Einbahnstraße” written on the sign."
@@ -867,7 +958,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "One-way signs with the word EINBAHN are unique. German ones say Einbahnstraße.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "German signs say Einbahnstraße"
+        }
+      ]
     },
     {
       "id": "at-Aj8O",
@@ -875,7 +973,7 @@
       "order": 18,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: “No Stopping” and “No Waiting” signs in Austria will often…",
+      "title": "Sign: No Stopping with Anfang or Ende",
       "text": [
         "“No Stopping” and “No Waiting” signs in Austria will often have the words “Anfang” or “Ende” (meaning “beginning” and “end”) written on, or below, them."
       ],
@@ -916,7 +1014,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "No Stopping and No Waiting signs often have Anfang (beginning) or Ende (end) written on or below them."
     },
     {
       "id": "at-Lxtx",
@@ -924,7 +1023,7 @@
       "order": 19,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: These simple dead-end signs with a white upside down T are…",
+      "title": "Sign: dead end with white upside-down T",
       "text": [
         "These simple dead-end signs with a **white upside down T** are mostly unique to Austria.",
         "Most countries in Europe use [this sign](https://maps.app.goo.gl/cB2CMCs6fQTNTZPQ8).",
@@ -969,14 +1068,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Simple dead-end signs with a white upside-down T are mostly unique. Most of Europe uses a different design, and older Swiss coverage used this one too.",
+      "differs": [
+        {
+          "country": "CH",
+          "how": "Older Swiss coverage used the same sign"
+        }
+      ]
     },
     {
       "id": "at-qDvc",
       "step": 0,
       "order": 20,
       "family": "pole",
-      "title": "Pole: These yellow natural gas poles",
+      "title": "Pole: yellow gas marker, like a snow pole",
       "text": [
         "These **yellow **natural gas poles, which resemble snow poles, are unique to Austria."
       ],
@@ -1017,14 +1123,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow natural gas poles that look like snow poles. Unique here."
     },
     {
       "id": "at-wOk9",
       "step": 1,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Elevation is very important when region-guessing Austria…",
+      "title": "Landscape: height shows the region",
       "text": [
         "**Elevation** is very important when region-guessing Austria based on landscape alone.",
         "The central and western parts of Austria are the most mountainous. The flatter areas are found in the east, mostly near the borders. Note that “flat” is a relative concept in Austria: even in the flat areas, rolling hills are still common."
@@ -1046,14 +1153,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Height is key. The centre and west are the most mountainous; flatter parts are in the east near the borders, though even those have rolling hills."
     },
     {
       "id": "at-9j96",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "A map of Austrian A-roads can be seen here",
+      "title": "Route marker: A-road numbers rise westward",
       "text": [
         "A map of Austrian **A-roads **can be seen here, following the general trend of increasing in number from east to west.",
         "_You can click the image to enlarge it._"
@@ -1075,14 +1183,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Motorway numbers get bigger the further west you go."
     },
     {
       "id": "at-pdDS",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Austrian B-roads, indicated by white text inside of a blue…",
+      "title": "Route marker: B-roads rise westward",
       "text": [
         "Austrian **B-roads**, indicated by white text inside of a blue rectangle, also follow the general trend of increasing in number from east to west.",
         "An important exception to this are roads 222-230, which are located inside the state of Vienna.",
@@ -1104,14 +1213,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "B-roads, white text in a blue rectangle, also rise in number from east to west. The exception is 222 to 230, around the capital."
     },
     {
       "id": "at-brez",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Each Austrian state has its own unique flag",
+      "title": "Flags: each state has its own flag",
       "text": [
         "Each Austrian state has its own **unique flag**, shown in the image.",
         "_You can click the image to enlarge it._"
@@ -1132,14 +1242,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Every state has its own flag, which you may see on buildings."
     },
     {
       "id": "at-3bP3",
       "step": 1,
       "order": 4,
       "family": "other",
-      "title": "Each Austrian state has its own unique bus company",
+      "title": "Buses: each state has its own bus company",
       "text": [
         "Each Austrian state has its own **unique **bus company, the logo of which can be seen on the side of buses.",
         "_You can click the image to enlarge it._"
@@ -1160,14 +1271,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Each state has its own bus company, with its logo on the side of buses."
     },
     {
       "id": "at-mNtb",
       "step": 1,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Bus stops consisting of neon-yellow poles are found in…",
+      "title": "Bus stop: neon-yellow poles",
       "text": [
         "Bus stops consisting of **neon-yellow poles** are found in Vorarlberg."
       ],
@@ -1209,14 +1321,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stops made of neon-yellow poles are in Vorarlberg, the far west."
     },
     {
       "id": "at-6K4Z",
       "step": 1,
       "order": 6,
       "family": "pole",
-      "title": "Pole: These yellow and white stripes around poles and signposts…",
+      "title": "Pole: yellow and white stripes",
       "text": [
         "These **yellow and white stripes** around poles and signposts are found in Vorarlberg."
       ],
@@ -1258,14 +1371,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow-and-white stripes around poles and signposts are found in Vorarlberg, the far west."
     },
     {
       "id": "at-Wz4z",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "White kilometre markers can be found in Vorarlberg as well…",
+      "title": "Kilometre marker: white",
       "text": [
         "**White kilometre markers** can be found in Vorarlberg as well as on a road in [western Salzburg](https://maps.app.goo.gl/sDKDbQ2Czn1zkd59A)."
       ],
@@ -1305,14 +1419,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White kilometre markers are in Vorarlberg and on one road in western Salzburg."
     },
     {
       "id": "at-UnOK",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "A large white painted square in the middle of the road can…",
+      "title": "Road: large white painted square",
       "text": [
         "A large **white** **painted square** in the middle of the road can be found next to kilometre markers in Salzburg."
       ],
@@ -1352,7 +1467,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big white painted square in the middle of the road next to kilometre markers means Salzburg state."
     },
     {
       "id": "at-yHR2",
@@ -1360,7 +1476,7 @@
       "order": 9,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Green “Güterweg” signs are found in Burgenland",
+      "title": "Sign: green Güterweg sign",
       "text": [
         "**Green** “[Güterweg](https://de.wikipedia.org/wiki/G%C3%BCterweg)” signs are found in Burgenland."
       ],
@@ -1400,7 +1516,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Green Güterweg (local farm road) signs are found in Burgenland, in the east."
     },
     {
       "id": "at-FhCj",
@@ -1408,7 +1525,7 @@
       "order": 10,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: White “Güterweg” signs with a black outline are mainly…",
+      "title": "Sign: white Güterweg, black outline",
       "text": [
         "**White** “Güterweg” signs with a **black outline** are mainly found in Upper Austria."
       ],
@@ -1448,7 +1565,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White Güterweg signs with a black outline are mainly found in Upper Austria."
     },
     {
       "id": "at-byhm",
@@ -1456,7 +1574,7 @@
       "order": 11,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: In Lower Austria, you may find signs with yellow and blue…",
+      "title": "Sign: yellow and blue borders",
       "text": [
         "In Lower Austria, you may find signs with **yellow and blue sign borders**, corresponding to the [flag of the region](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_Lower_Austria_%28state%29.svg/2560px-Flag_of_Lower_Austria_%28state%29.svg.png)."
       ],
@@ -1496,14 +1614,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Lower Austria, signs may have yellow and blue borders matching the regional flag."
     },
     {
       "id": "at-scuj",
       "step": 1,
       "order": 12,
       "family": "other",
-      "title": "Vineyards are limited to the far eastern part of the country",
+      "title": "Plants: vineyards in the far east",
       "text": [
         "**Vineyards** are limited to the far eastern part of the country.",
         "You can find a very precise map [here](https://vineyards.com/photos/maps/Austria%20Wine%20Map.png). Notably, there are a lot of vineyards close to Vienna and around Lake Neusiedl."
@@ -1544,14 +1663,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards are limited to the far east, with many near Vienna and around Lake Neusiedl."
     },
     {
       "id": "at-ctpi",
       "step": 1,
       "order": 13,
       "family": "landscape",
-      "title": "Landscape: The highest parts of the Alps are found in the west and…",
+      "title": "Landscape: tallest sharp Alps",
       "text": [
         "The **highest parts of the Alps** are found in the west and central parts of the country.",
         "The tallest mountains are found in the panhandle of Austria, on the Italian border. These mountains can be recognized by their generally sharper peak and [grander appearance](https://www.google.com/maps/@47.1389055,10.2855153,3a,75y,66.33h,92.53t/data=!3m7!1e1!3m5!1sTDJ_tFCAlBIH4nUIgmkiMw!2e0!5s20200901T000000!7i16384!8i8192?entry=ttu)."
@@ -1591,14 +1711,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The highest Alps are in the west and centre. The tallest mountains are in the narrow southern strip on the Italian border, with sharper peaks and a grander look."
     },
     {
       "id": "at-0jT0",
       "step": 1,
       "order": 14,
       "family": "car",
-      "title": "Google car: This unique tin foil antenna can be found in western Austria",
+      "title": "Google car: tin foil antenna",
       "text": [
         "This unique **tin foil antenna** can be found in western** **Austria, mostly near the Swiss border.",
         "NOTE: This antenna is unique to Austria."
@@ -1638,7 +1759,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A tin-foil-looking antenna, mostly in western Austria near the Swiss border. Unique here."
     },
     {
       "id": "at-auEK",
@@ -1646,7 +1768,7 @@
       "order": 0,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Vienna street signs are extremely recognizable dark blue…",
+      "title": "Street sign: dark blue, white serif, district no.",
       "text": [
         "**Vienna street signs** are extremely recognizable dark blue plaques with a traditional-looking white serif font. The number at the start will indicate which district you are in (see the map).",
         "_You can click the image to enlarge it._"
@@ -1668,7 +1790,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital's street signs are dark blue plaques with a traditional white serif font. The number at the start is the district."
     },
     {
       "id": "at-whoL",
@@ -1676,7 +1799,7 @@
       "order": 1,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Most other major cities in Austria also have their own…",
+      "title": "Street sign: each big city has its own",
       "text": [
         "Most other major cities in Austria also have their own **unique street signs**.",
         "NOTE: Many of the arbitrary blue ones can look similar, but the 4 listed in the graphic can be differentiated by:",
@@ -1702,14 +1825,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many cities have their own street signs. The blue ones look alike, but can be told apart: Vienna by district number, Salzburg by its font, Klagenfurt by an irregular white border, St Pölten by a rounded white border."
     },
     {
       "id": "at-AH8p",
       "step": 2,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Poles in Vienna and Innsbruck feature these red-and-white…",
+      "title": "Pole: red-and-white tape like the flag",
       "text": [
         "Poles in Vienna and [Innsbruck](https://goo.gl/maps/MWpqa8t1cVzunLrz9) feature these **red**-and-**white **pieces of tape that look like the Austrian flag. They can be differentiated by the fact that the tapes in [Vienna](https://goo.gl/maps/N4tkGXcAt1sbjxNy7) are thinner, and there are typically two on each pole."
       ],
@@ -1750,14 +1874,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red-and-white tape resembling the national flag appears on poles in Vienna and Innsbruck. In Vienna the tape is thinner and there are usually two on each pole."
     },
     {
       "id": "at-pHCf",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "Lake Constance (known in German as the Bodensee) is a large…",
+      "title": "Landscape: huge lake in the far west",
       "text": [
         "**Lake Constance** (known in German as the Bodensee) is a large lake on the western border of Austria. It can be recognized by its vastness, which is not seen in other lakes within the mountainous part of the country."
       ],
@@ -1796,463 +1921,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "at-lm-137",
-      "step": 3,
-      "order": 0,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Austria's bollards are white with a black top and dark red or grey reflectors, often featuring a nipple-shaped black cap and sometimes a snow pole.",
-        "Slovenia’s bollards are similar but always have a white back reflector, whereas in Austria, white reflectors are rare but possible."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7e83aef8681b",
-          "src": "https://learnablemeta.com/images/ULJUElQw5CIdWIGkDCBoMOxikLh8haOBJZfz.avif",
-          "path": "at/7e83aef8681b.webp",
-          "width": 783,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-2986",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Austria",
-      "text": [
-        "**Hat** - Austria, Bulgaria, Czechia, Slovakia. > those with **Horizontal Crosswalk** - Austria."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0504197b8274",
-          "src": "https://learnablemeta.com/images/90/0SFaF6TWsAXZrfRE9xtpRAYlVV2x2pLu3jcv.avif",
-          "path": "at/0504197b8274.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BG",
-        "CZ",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-15250",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: High Alps",
-      "text": [
-        "The highest parts of the Alps are found in the west and central parts of the country. The tallest mountains are found in the panhandle of Austria, on the Italian border. These mountains can be recognized by their generally sharper peak and grander appearance."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bc6d39bc3590",
-          "src": "https://learnablemeta.com/images/664/1bbY1GO7oxlXHr3yEV6em8AJdCf3AkgWvF6I.avif",
-          "path": "at/bc6d39bc3590.webp",
-          "width": 1000,
-          "height": 477
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-19925",
-      "step": 3,
-      "order": 3,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Austria uses white bollards, with a black top. The colour of the reflector is (dark) red or dark grey.",
-        "Many bollards also feature a small nipple-shaped black cap on the top. Bollards sometimes have a snow pole on top.",
-        "**NOTE:** Slovenia and Montenegro use the same bollards, but with bright red reflectors instead of grey or dark red. Germany uses simple white bollards with grey reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d7123f25a709",
-          "src": "https://learnablemeta.com/images/739/J2XDIKg2uTSidoU0fXrbhS8ceDUoosHlbAmc.avif",
-          "path": "at/d7123f25a709.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE",
-        "ME",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-23800",
-      "step": 3,
-      "order": 4,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Einbahn",
-      "text": [
-        "These one-way traffic signs, with the word ‘EINBAHN’ written on them, are unique to Austria.",
-        "**--- NOTE:**",
-        "In Germany there will be “Einbahnstraße” written on the sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "51203a833cf6",
-          "src": "https://learnablemeta.com/images/768/yshCnqBRlIXS6c4UytfFwCFXEFNq11ZoHNoQ.avif",
-          "path": "at/51203a833cf6.webp",
-          "width": 1000,
-          "height": 421
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-23803",
-      "step": 3,
-      "order": 5,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Austria uses white bollards, with a black top.",
-        "The colour of the reflector is (dark) red or dark grey.",
-        "Many bollards also feature a small nipple-shaped black cap on the top.",
-        "**--- NOTE:**",
-        "Slovenia and Montenegro use the same bollards, but with bright red reflectors instead of grey or dark red."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7855d9888dd4",
-          "src": "https://learnablemeta.com/images/768/biDHzggA2NNkqpA4Uyh9GQPycMjYeasTkge4.avif",
-          "path": "at/7855d9888dd4.webp",
-          "width": 1000,
-          "height": 468
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-50196",
-      "step": 3,
-      "order": 6,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Austria uses white bollards, with a black top.",
-        "The colour of the reflector is (dark) red or dark grey.",
-        "Many bollards also feature a small nipple-shaped black cap on the top.",
-        "**--- NOTE:**",
-        "Slovenia and Montenegro use the same bollards, but with bright red reflectors instead of grey or dark red."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7855d9888dd4",
-          "src": "https://learnablemeta.com/images/768/biDHzggA2NNkqpA4Uyh9GQPycMjYeasTkge4.avif",
-          "path": "at/7855d9888dd4.webp",
-          "width": 1000,
-          "height": 468
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-50199",
-      "step": 3,
-      "order": 7,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Einbahn",
-      "text": [
-        "These one-way traffic signs, with the word ‘EINBAHN’ written on them, are unique to Austria.",
-        "**--- NOTE:**",
-        "In Germany there will be “Einbahnstraße” written on the sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "51203a833cf6",
-          "src": "https://learnablemeta.com/images/768/yshCnqBRlIXS6c4UytfFwCFXEFNq11ZoHNoQ.avif",
-          "path": "at/51203a833cf6.webp",
-          "width": 1000,
-          "height": 421
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-51099",
-      "step": 3,
-      "order": 8,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Austria uses white bollards, with a black top.",
-        "The colour of the reflector is (dark) red or dark grey.",
-        "Many bollards also feature a small nipple-shaped black cap on the top.",
-        "**--- NOTE:**",
-        "Slovenia and Montenegro use the same bollards, but with bright red reflectors instead of grey or dark red."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7855d9888dd4",
-          "src": "https://learnablemeta.com/images/768/biDHzggA2NNkqpA4Uyh9GQPycMjYeasTkge4.avif",
-          "path": "at/7855d9888dd4.webp",
-          "width": 1000,
-          "height": 468
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-51102",
-      "step": 3,
-      "order": 9,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Einbahn",
-      "text": [
-        "These one-way traffic signs, with the word ‘EINBAHN’ written on them, are unique to Austria.",
-        "**--- NOTE:**",
-        "In Germany there will be “Einbahnstraße” written on the sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "51203a833cf6",
-          "src": "https://learnablemeta.com/images/768/yshCnqBRlIXS6c4UytfFwCFXEFNq11ZoHNoQ.avif",
-          "path": "at/51203a833cf6.webp",
-          "width": 1000,
-          "height": 421
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295894",
-      "step": 3,
-      "order": 10,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Vienna Street Signs",
-      "text": [
-        "**Vienna street signs** are **dark blue plaques** with a classic white serif font. The number at the beginning shows the district you're in (see map)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "748f668a1c47",
-          "src": "https://learnablemeta.com/images/1271/R2U9vIj4hpp0J8TYNHRU2Vd2t0YbCWbs3Xik.avif",
-          "giveaway": true,
-          "path": "at/748f668a1c47.webp",
-          "width": 1000,
-          "height": 540
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295895",
-      "step": 3,
-      "order": 11,
-      "family": "pole",
-      "title": "Pole: Vorarlberg Bus Stops",
-      "text": [
-        "Bus stops consisting of **neon-yellow poles** are found in **Vorarlberg**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "655ebe7130aa",
-          "src": "https://learnablemeta.com/images/1271/kS4Xi0B9QBpw14TXhVGpMzQDhUtkzQJaz5KK.avif",
-          "path": "at/655ebe7130aa.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295896",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Vorarlberg Kilometer Markers",
-      "text": [
-        "White **kilometre markers** can be found in **Vorarlberg** as well as on a road in western Salzburg ."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "756e52e40e9d",
-          "src": "https://learnablemeta.com/images/1271/fevETurmTOCq1jGiWsh7bDj6EHyQfLMKW6Lz.avif",
-          "path": "at/756e52e40e9d.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295897",
-      "step": 3,
-      "order": 13,
-      "family": "landscape",
-      "title": "Landscape: Lake of Constance",
-      "text": [
-        "**Lake Constance** (also known as **Bodensee**) lies on **Austria’s western border**. It's easy to recognize by its **size**, unmatched by other lakes in Austria’s **mountain regions**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "71d67319d754",
-          "src": "https://learnablemeta.com/images/1271/FYuiK4lq5A7pZbuU8ewO6w3CBboZBfi6gfqb.avif",
-          "path": "at/71d67319d754.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295898",
-      "step": 3,
-      "order": 14,
-      "family": "pole",
-      "title": "Pole: Red White Pole Tape",
-      "text": [
-        "Poles in Vienna and Innsbruck often have **red-and-white tape** resembling the **Austrian flag**. In Vienna, the tape is **thinner**, usually with **two strips** per pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56df581bf5a8",
-          "src": "https://learnablemeta.com/images/1271/KIUMdpoWyfOnGgEtXxpUV52wDqBHyRj5QpkR.avif",
-          "path": "at/56df581bf5a8.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Lake Constance (Bodensee) on the western border is recognisable by its vast size, unlike other lakes in the mountains."
     },
     {
       "id": "at-lm-295899",
@@ -2260,7 +1930,7 @@
       "order": 15,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Dornbirn Street Signs",
+      "title": "Street sign: red",
       "text": [
         "In **Dornbirn** you can find **red streetsigns**"
       ],
@@ -2280,7 +1950,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Dornbirn, in the far west, has red street signs."
     },
     {
       "id": "at-lm-295900",
@@ -2288,7 +1959,7 @@
       "order": 16,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Graz Street Signs",
+      "title": "Street sign: green with two lines",
       "text": [
         "**In Graz** you can find **green streetsigns** with **2 lines**."
       ],
@@ -2299,7 +1970,8 @@
           "src": "https://learnablemeta.com/images/1271/cWEaB66HzXQnDi4wRf2bi8O4Exoso93QgXzR.avif",
           "path": "at/c51614e1096b.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "fba40891bc71"
         }
       ],
       "locations": [],
@@ -2308,7 +1980,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Graz has green street signs with two lines of text."
     },
     {
       "id": "at-lm-295901",
@@ -2316,7 +1989,7 @@
       "order": 17,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Innsbruck Street Sign",
+      "title": "Street sign: large, heading plus small text",
       "text": [
         "In **Innsbruck** you can find **large streetsigns** with a **heading** and **small text** on it."
       ],
@@ -2327,7 +2000,8 @@
           "src": "https://learnablemeta.com/images/1271/foDhys04vRI7iJ1I3UNQAmJQFZF6OOH34uiR.avif",
           "path": "at/e608d922930b.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "fba40891bc71"
         }
       ],
       "locations": [],
@@ -2336,42 +2010,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295902",
-      "step": 3,
-      "order": 18,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Burgenland Güterweg Sign",
-      "text": [
-        "**Green** “ **Güterweg** ” signs are found in **Burgenland**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3feb6cd42097",
-          "src": "https://learnablemeta.com/images/1271/nhL8KMC9M5w4oYiU4I51jyWhQur0bmGqVJr8.avif",
-          "path": "at/3feb6cd42097.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Innsbruck has large street signs with a heading and small text underneath."
     },
     {
       "id": "at-lm-295903",
       "step": 3,
       "order": 19,
       "family": "other",
-      "title": "Vorarlberg Landbus",
+      "title": "Buses: Landbus logo",
       "text": [
         "**Vorarlberg**´s public transport company is called \"**Landbus**\". The logo of it can be seen on busses in this region."
       ],
@@ -2382,7 +2029,8 @@
           "src": "https://learnablemeta.com/images/1271/oKqf3jJfJsFJExfJqNHpC7isJLnhKZVbhoqc.avif",
           "path": "at/8f8c56842900.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "72661ab905f1"
         }
       ],
       "locations": [],
@@ -2391,14 +2039,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The public transport company in Vorarlberg, in the far west, is called Landbus. Its logo is on buses there."
     },
     {
       "id": "at-lm-295904",
       "step": 3,
       "order": 20,
       "family": "other",
-      "title": "Upper Austria Bus",
+      "title": "Buses: OÖVV logo",
       "text": [
         "**Upper Austria**´s public transport company is called \"**OÖVV**\". The logo of it can be seen on busses in this region."
       ],
@@ -2409,7 +2058,8 @@
           "src": "https://learnablemeta.com/images/1271/aT3EDrwugmK3W9ijZfDtt570KcUv2A7OzjsN.avif",
           "path": "at/9f75c22dc364.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "72661ab905f1"
         }
       ],
       "locations": [],
@@ -2418,14 +2068,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The public transport company in Upper Austria is called OÖVV, and its logo is on buses there."
     },
     {
       "id": "at-lm-295905",
       "step": 3,
       "order": 21,
       "family": "other",
-      "title": "Vienna Bus",
+      "title": "Buses: Wiener Linien logo",
       "text": [
         "**Vienna**´s public transport company is called \"**Wiener Linien**\". The logo of it can be seen on busses in/around the city. ( image ) **NOTE:** You can also see \"Wiener Linien\"/the logo on trams."
       ],
@@ -2443,7 +2094,8 @@
           "src": "https://learnablemeta.com/images/1271/VhpTtihkSDtba4WYNHE6uq9pwRQH22NiWPxw.avif",
           "path": "at/8321dbbc7ac4.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "72661ab905f1"
         }
       ],
       "locations": [],
@@ -2452,14 +2104,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The capital's transport company is Wiener Linien. Its logo is on buses and trams in and around the city."
     },
     {
       "id": "at-lm-295906",
       "step": 3,
       "order": 22,
       "family": "other",
-      "title": "Graz Bus",
+      "title": "Buses: Graz Holding logo",
       "text": [
         "**Graz**´s public transport company is called \"**Graz Holding**\". The logo of it can be seen on busses/trams in this region."
       ],
@@ -2479,14 +2132,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The transport company in Graz is called Graz Holding, with its logo on buses and trams."
     },
     {
       "id": "at-lm-295907",
       "step": 3,
       "order": 23,
       "family": "other",
-      "title": "Styria Bus",
+      "title": "Buses: RegioBus Steiermark logo",
       "text": [
         "**Styria**´s public transport company is called \"**RegioBus Steiermark**\". The logo of it can be seen on busses in this region."
       ],
@@ -2497,7 +2151,8 @@
           "src": "https://learnablemeta.com/images/1271/7sa7LFUnYCCqSskpYkVFGXDUlzEu9iX0BmNO.avif",
           "path": "at/3eaecf65e292.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "72661ab905f1"
         }
       ],
       "locations": [],
@@ -2506,119 +2161,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295908",
-      "step": 3,
-      "order": 24,
-      "family": "other",
-      "title": "Alps",
-      "text": [
-        "The **highest parts** of the **Alps** are in **western** and **central Switzerland**. The tallest peaks are on the Italian border in Austria’s panhandle, known for their **sharp**, **dramatic appearance** ."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "359f5ce00529",
-          "src": "https://learnablemeta.com/images/1271/cvJf1NJtcH0RrOlgDJ7VAGNbkviShbprE17e.avif",
-          "path": "at/359f5ce00529.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295909",
-      "step": 3,
-      "order": 25,
-      "family": "other",
-      "title": "Vineyards",
-      "text": [
-        "**Vineyards** are limited to the far **eastern part** of the **country**.",
-        "You can find a very precise map here . Notably, there are a lot of vineyards close to Vienna and around Lake Neusiedl."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "047aef8b97c1",
-          "src": "https://learnablemeta.com/images/1271/VfcArJzkjorcShx4PepXmxnvc3BSkD2RuPvH.avif",
-          "giveaway": true,
-          "path": "at/047aef8b97c1.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295910",
-      "step": 3,
-      "order": 26,
-      "family": "pole",
-      "title": "Pole: Vorarlberg Pole Markings",
-      "text": [
-        "These **yellow** and **white stripes** around **poles** and **signposts** are found in **Vorarlberg**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b20f2dafbf23",
-          "src": "https://learnablemeta.com/images/1271/cbIgPb86P46ZjjUGUBXv9B9DMTc5ZtMj7oyw.avif",
-          "path": "at/b20f2dafbf23.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-295911",
-      "step": 3,
-      "order": 27,
-      "family": "other",
-      "title": "Salzburg Roadmarking",
-      "text": [
-        "A large **white painted square** in the middle of the road can be found next to kilometre markers in **Salzburg**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "70eee076ec3a",
-          "src": "https://learnablemeta.com/images/1271/k6FF7xfrgMbYyL2FwLB87EigsBnylGrlgwKJ.avif",
-          "path": "at/70eee076ec3a.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Styria's transport company is RegioBus Steiermark, with its logo on buses there."
     },
     {
       "id": "at-lm-295912",
@@ -2626,7 +2170,7 @@
       "order": 28,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Linz Street Signs",
+      "title": "Street sign: blue or white with coat of arms",
       "text": [
         "In **Linz** you can find both **blue signs** with a **unique font** and **white** (red frame) with a **coat of arms** on them."
       ],
@@ -2637,7 +2181,8 @@
           "src": "https://learnablemeta.com/images/1271/GZqoUBQaMD9HHZt9qW6AZcm9CN8nm3MI29ky.avif",
           "path": "at/51e876db51c1.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "fba40891bc71"
         }
       ],
       "locations": [],
@@ -2646,14 +2191,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68152397a639110808ea0082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Linz has blue signs with a distinctive font, and white signs with a red frame and a coat of arms."
     },
     {
       "id": "at-lm-361745",
       "step": 3,
       "order": 29,
       "family": "other",
-      "title": "Austria",
+      "title": "Phone numbers: area code 01 up to 07",
       "text": [
         "01 (Vienna) > 07"
       ],
@@ -2673,14 +2219,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Area codes run from 01 for the capital up to 07."
     },
     {
       "id": "at-lm-634057",
       "step": 3,
       "order": 30,
       "family": "plate",
-      "title": "Plate: Austria",
+      "title": "Plate: thin red edge around blue strip",
       "text": [
         "Austria has long, white licence plates with the standard blue EU strip on the left. But has a tiny bit of red around it aswell as on the left side, can often be hard to see.",
         "Most useful for distinguishing Austria from Germany which has just the default EU plate."
@@ -2692,7 +2239,8 @@
           "src": "https://learnablemeta.com/images/5431/1766259848878-b3q.avif",
           "path": "at/62234ba86a98.webp",
           "width": 800,
-          "height": 371
+          "height": 371,
+          "dupeOf": "f4d7b4e7521f"
         }
       ],
       "locations": [],
@@ -2703,63 +2251,14 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-740318",
-      "step": 3,
-      "order": 31,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Salzburg",
-      "text": [
-        "Salzburg street sign."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Long white plate with the blue EU strip plus a tiny bit of red around it and on the left, often hard to see. This is how to tell it from Germany, which has just the plain EU plate.",
+      "differs": [
         {
-          "id": "36499a38e7d6",
-          "src": "https://learnablemeta.com/images/4588/1777394108038-yzm.avif",
-          "path": "at/36499a38e7d6.webp",
-          "width": 800,
-          "height": 450
+          "country": "DE",
+          "how": "German plates have only the plain blue EU strip"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-740319",
-      "step": 3,
-      "order": 32,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Graz",
-      "text": [
-        "Graz street signs are green with white text."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f80c07fcee99",
-          "src": "https://learnablemeta.com/images/4588/1777393355956-oF7.avif",
-          "path": "at/f80c07fcee99.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "at-lm-740320",
@@ -2767,7 +2266,7 @@
       "order": 33,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Linz",
+      "title": "Street sign: white, orange stripes and logo",
       "text": [
         "Linz has these 2 different street signs, a black street sign with white text, and a unique street sign thats white with black text and has orange stripes above and under and an orange logo on the left."
       ],
@@ -2778,7 +2277,8 @@
           "src": "https://learnablemeta.com/images/4588/1777393929152-BaY.avif",
           "path": "at/52db90c9bfa1.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "fba40891bc71"
         }
       ],
       "locations": [],
@@ -2787,89 +2287,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-740321",
-      "step": 3,
-      "order": 34,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Vienna",
-      "text": [
-        "Vienna street sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f695ba26754e",
-          "src": "https://learnablemeta.com/images/4588/1777394157676-BMj.avif",
-          "path": "at/f695ba26754e.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-740376",
-      "step": 3,
-      "order": 35,
-      "family": "pole",
-      "title": "Pole: Vienna Tape",
-      "text": [
-        "Poles in Vienna and Innsbruck feature these red-and-white pieces of tape that look like the Austrian flag. They can be differentiated by the fact that the tapes in Vienna are thinner, and there are typically two on each pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "29ce72f31f64",
-          "src": "https://learnablemeta.com/images/4588/1777394175575-qwb.avif",
-          "path": "at/29ce72f31f64.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-740377",
-      "step": 3,
-      "order": 36,
-      "family": "pole",
-      "title": "Pole: Innsbruck Tape",
-      "text": [
-        "Poles in Vienna and Innsbruck feature these red-and-white pieces of tape that look like the Austrian flag. They can be differentiated by the fact that the tapes in Vienna are thinner, and there are typically two on each pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5e24a0a5e14",
-          "src": "https://learnablemeta.com/images/4588/1777393835409-ZXU.avif",
-          "path": "at/b5e24a0a5e14.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Linz also has black signs with white text, and a unique white one with orange stripes above and below and an orange logo on the left."
     },
     {
       "id": "at-lm-740534",
@@ -2877,7 +2296,7 @@
       "order": 37,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Innsbruck",
+      "title": "Street sign: very dark red-brown, white text",
       "text": [
         "Innsbruck street signs are very dark red/brown with white text."
       ],
@@ -2888,7 +2307,8 @@
           "src": "https://learnablemeta.com/images/4588/1777394543738-nk7.avif",
           "path": "at/7c426c4c7dec.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "fba40891bc71"
         }
       ],
       "locations": [],
@@ -2897,49 +2317,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "at-lm-783099",
-      "step": 3,
-      "order": 38,
-      "family": "language",
-      "title": "Language: German",
-      "text": [
-        "German is a Germanic language related to Dutch, and the official language of Austria. The German language uses the special letters **Ä, Ö, Ü** and **ẞ**.",
-        "The German word for street is **Straße**.",
-        "The German word for road is **Weg** (same as Dutch).",
-        "NOTE: Alongside Austria, German is the majority language in Germany, Switzerland and Liechtenstein, and has regional majority in eastern Belgium and the Italian province of South Tyrol."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6a8f31ebb5af",
-          "src": "https://learnablemeta.com/images/9388/1785094591109-10M.avif",
-          "path": "at/6a8f31ebb5af.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "6d6bf5e01383",
-          "src": "https://learnablemeta.com/images/9388/1785094680540-2o2.avif",
-          "path": "at/6d6bf5e01383.webp",
-          "width": 367,
-          "height": 152
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BE",
-        "CH",
-        "DE",
-        "LI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Innsbruck has very dark red or brown street signs with white text."
     }
   ]
 }

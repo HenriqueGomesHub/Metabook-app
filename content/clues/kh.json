@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Licence plates are white with blue letters",
+      "title": "Plate: white with blue letters",
       "text": [
         "Licence plates are **white** with **blue** letters. The blue sheen of the letters can be hard to see through the blur, and the plates might appear as plain white.",
         "Plates on government vehicles are [green](https://goo.gl/maps/Y5GJLe2TPsuKVnts5)."
@@ -45,14 +45,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White plates with blue letters. The blue sheen is hard to see through the blur, so they can look plain white. Government vehicles have green plates."
     },
     {
       "id": "kh-MWhC",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: On the Generation 3 coverage you can find two different…",
+      "title": "Google car: striped car or ridged antenna",
       "text": [
         "On the Generation 3 coverage you can find two different Google cars:",
         "- A car with a short, stubby antenna. The antenna has **three ridges**. It can sometimes be hard to tell if the antenna has ridges.",
@@ -115,14 +116,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 has two cars: one with a short stubby antenna with three ridges, and a white car with no antenna, a white stripe on the left and a yellow stripe on the right. The striped car is unique here.",
+      "differs": [
+        {
+          "country": "BD",
+          "how": "Bangladesh also has a striped car, but with different stripes"
+        }
+      ]
     },
     {
       "id": "kh-5Ed2",
       "step": 0,
       "order": 3,
       "family": "other",
-      "title": "Cambodia drives on the right",
+      "title": "Driving side: right",
       "text": [
         "Cambodia drives on the **right**.",
         "NOTE: Thailand drives on the left, while Vietnam and Laos also drive on the right."
@@ -165,14 +173,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the right. Thailand drives on the left, while Vietnam and Laos also drive on the right.",
+      "sameAs": [
+        "LA"
+      ],
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand drives on the left"
+        }
+      ]
     },
     {
       "id": "kh-sIUL",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: Khmer is the official language of Cambodia",
+      "title": "Language: Khmer script, curvy and intricate",
       "text": [
         "**Khmer **is the official language of Cambodia. It has its own unique script, which is very distinct and recognizable. In most fonts, letters have an intricate, curvy look.",
         "Khmer can look fairly different depending on the font used. A compilation of what this script looks like in street view can be [found here](/images/cambodia/cambo_script.png).",
@@ -194,14 +212,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Khmer has its own script with intricate, curvy letters, though fonts vary a lot. Thai and Lao look similar but are less intricate, and simple Khmer fonts can resemble them.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thai letters look less intricate"
+        },
+        {
+          "country": "LA",
+          "how": "Lao letters look less intricate"
+        }
+      ]
     },
     {
       "id": "kh-7UIH",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Two types of poles are common",
+      "title": "Pole: concrete ladder pole or round holed pole",
       "text": [
         "Two types of poles are common:",
         "- Concrete** ladder** poles (so named because the indents and ridges resemble a ladder).",
@@ -242,14 +271,16 @@
           "src": "https://learnablemeta.com/images/681/dSjleOjsBRE3C55do9jCyqSQpiH9g0OHWWuH.avif",
           "path": "kh/5dc392282e1f.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "33ad1ca8dd62"
         },
         {
           "id": "6db06d4c15b0",
           "src": "https://learnablemeta.com/images/1822/1749330310740-knY.avif",
           "path": "kh/6db06d4c15b0.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "33ad1ca8dd62"
         }
       ],
       "locations": [
@@ -270,14 +301,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two common types: concrete ladder poles with ridges, and round concrete poles with small holes. Rare wooden poles exist. Vietnam has the same round poles. Thailand uses square poles with rows of tiny holes, which are rare here.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand uses square concrete poles with rows of tiny pinholes"
+        }
+      ]
     },
     {
       "id": "kh-EFcY",
       "step": 0,
       "order": 6,
       "family": "bollard",
-      "title": "Bollard: Cambodia has a variety of different bollards",
+      "title": "Bollard: red-and-white stone",
       "text": [
         "Cambodia has a variety of different **bollards**. The most common ones are:",
         "- A stone bollard with red-and-white stripes.",
@@ -309,7 +347,8 @@
           "src": "https://learnablemeta.com/images/681/UNaeSsQsinTllmH0rMDYDDh2o1DXePTPUUWG.avif",
           "path": "kh/34e810f0bc0d.webp",
           "width": 1000,
-          "height": 483
+          "height": 483,
+          "dupeOf": "bb9acfdc69c1"
         }
       ],
       "locations": [
@@ -328,7 +367,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most common are a stone bollard with red-and-white stripes, and a stone bollard with a red top and white base, usually with a reflector in the red part. Some designs belong to single roads."
     },
     {
       "id": "kh-mdL7",
@@ -336,7 +376,7 @@
       "order": 7,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Cambodian road markers are made of stone",
+      "title": "Route marker: stone, white base, red top",
       "text": [
         "Cambodian** road markers** are made of stone, with a white-coloured base and a rounded red top. You will find the road number on the narrow side and a town name with a distance on the main side."
       ],
@@ -375,14 +415,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stone road markers with a white base and a rounded red top. The road number is on the narrow side and a town name with distance on the wide side."
     },
     {
       "id": "kh-1PXc",
       "step": 0,
       "order": 8,
       "family": "bollard",
-      "title": "Bollard: Chevrons in Cambodia are black with yellow arrows",
+      "title": "Chevron: black with yellow arrows",
       "text": [
         "Chevrons in Cambodia are **black with yellow arrows**.",
         "Chevrons are somewhat rare. On many occasions, Cambodia prefers to use bollards instead of chevrons to mark curves in the road.",
@@ -425,14 +466,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve signs are black with yellow arrows. They are rare, since bollards often mark curves instead. All other Southeast Asian countries use yellow with black arrows, the reverse.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand's chevrons are yellow with black arrows"
+        }
+      ]
     },
     {
       "id": "kh-6wbR",
       "step": 0,
       "order": 9,
       "family": "line",
-      "title": "Road line: Roads have dashed or solid yellow middle road lines",
+      "title": "Road lines: yellow centre, rare white edge",
       "text": [
         "Roads have dashed or solid **yellow middle road lines**. Outer road lines are somewhat rare, but when present, they are solid white.",
         "NOTE: Thailand uses similar road lines."
@@ -460,14 +508,16 @@
           "src": "https://learnablemeta.com/images/503/iQyCH7HTOfRDuZllZaCbdH2f3QN8d63dkGTV.avif",
           "path": "kh/1340a68a4267.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "fda725444115"
         },
         {
           "id": "f6184539a48d",
           "src": "https://learnablemeta.com/images/681/YIUQeVL28vDV9wxuzztFfQMZvbom7YjZT2RJ.avif",
           "path": "kh/f6184539a48d.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "fda725444115"
         }
       ],
       "locations": [
@@ -488,14 +538,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dashed or solid yellow centre lines. Edge lines are rare and solid white when present. Thailand uses similar lines.",
+      "sameAs": [
+        "TH"
+      ]
     },
     {
       "id": "kh-hIEP",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "Many roads are unpaved",
+      "title": "Roads: many are unpaved",
       "text": [
         "Many roads are **unpaved**. Usually, only main roads and roads in and near urban areas are paved."
       ],
@@ -534,14 +588,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many roads are unpaved. Usually only main roads and roads in or near towns are paved."
     },
     {
       "id": "kh-E31g",
       "step": 0,
       "order": 11,
       "family": "architecture",
-      "title": "Architecture: Wooden houses on stilts are common",
+      "title": "Houses: wooden stilt houses, vertical planks",
       "text": [
         "**Wooden houses on stilts** are common. Walls are often made of vertical planks. Many homes have [double or triple roofs](https://goo.gl/maps/21wWXJpTT8z9E3ua9)."
       ],
@@ -559,21 +614,24 @@
           "src": "https://learnablemeta.com/images/kSfdPMfSFPIeosDW9gHtApmKhUMpylUBtIXM.avif",
           "path": "kh/13f68341e524.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "1c18b1b2a96d"
         },
         {
           "id": "a9c6633e1247",
           "src": "https://learnablemeta.com/images/681/L9NQwx9PjA028qdfTF98hlZU9VpKsjcaTtAZ.avif",
           "path": "kh/a9c6633e1247.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "dupeOf": "1c18b1b2a96d"
         },
         {
           "id": "f0db42d97297",
           "src": "https://learnablemeta.com/images/1072/2XNEMHEk58iJSpbfrouyhDMrT5xcdaWJRhsG.avif",
           "path": "kh/f0db42d97297.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "1c18b1b2a96d"
         }
       ],
       "locations": [],
@@ -582,14 +640,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden houses raised on stilts are common. Walls are often vertical planks and many roofs are double or triple layered."
     },
     {
       "id": "kh-XnE4",
       "step": 0,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: In addition, traditional Cambodian wooden stilt houses tend…",
+      "title": "Houses: red-brown or blue walls, blue trim",
       "text": [
         "In addition, traditional Cambodian wooden stilt houses tend to have very recognizable **colour schemes**.",
         "- Walls are commonly painted dark red-brown, light blue or an ochre orange.",
@@ -612,14 +671,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traditional stilt houses have walls painted dark red-brown, light blue or ochre orange, with bright blue doors and windows. Newer houses use more colours."
     },
     {
       "id": "kh-Vzui",
       "step": 0,
       "order": 13,
       "family": "architecture",
-      "title": "Architecture: Many traditional homes have tiled orange or red roofs",
+      "title": "Houses: orange or red tiled roofs",
       "text": [
         "Many traditional homes have **tiled orange or red roofs**, sometimes with ornaments on the ridges and corners. Corrugated and plain metal roofs are also common.",
         "On other, more modern buildings, you can see a wider variety of roof colours and materials."
@@ -638,7 +698,8 @@
           "src": "https://learnablemeta.com/images/1072/GLtHrSwFPSLfluANhFdMJSQEq6XgL9Akcx2B.avif",
           "path": "kh/5c23c647a884.webp",
           "width": 1000,
-          "height": 551
+          "height": 551,
+          "dupeOf": "d0d58aedb92a"
         }
       ],
       "locations": [],
@@ -647,14 +708,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many traditional homes have orange or red tiled roofs, sometimes with ornaments on the ridges. Plain or corrugated metal roofs are also common. Newer buildings vary."
     },
     {
       "id": "kh-3k1I",
       "step": 0,
       "order": 14,
       "family": "architecture",
-      "title": "Architecture: The majority of Cambodians are Buddhist",
+      "title": "Buildings: ornate Buddhist temples",
       "text": [
         "The majority of Cambodians are **Buddhist**. Temples are common throughout the country. Temple architecture is highly decorative, with ornamented roofs. You might also see [Buddhist flags](https://en.wikipedia.org/wiki/Buddhist_flag).",
         "NOTE: Thailand and Laos are also majority Buddhist. Temples in these countries can look similar."
@@ -697,14 +759,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most people are Buddhist, so decorated temples with ornamented roofs are common. Thailand and Laos have similar temples.",
+      "sameAs": [
+        "LA",
+        "TH"
+      ]
     },
     {
       "id": "kh-Knff",
       "step": 0,
       "order": 15,
       "family": "other",
-      "title": "You will see a lot of advertisements for the beer brands…",
+      "title": "Ads: Angkor, Anchor and Cambodia beer",
       "text": [
         "You will see a lot of **advertisements** for the beer brands Angkor, Anchor, and the very creatively named Cambodia Beer."
       ],
@@ -743,7 +810,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of adverts for the beers Angkor, Anchor and Cambodia Beer."
     },
     {
       "id": "kh-llUG",
@@ -751,7 +819,7 @@
       "order": 16,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Throughout the country, you can find distinct blue signs…",
+      "title": "Sign: blue political party signs",
       "text": [
         "Throughout the country, you can find distinct **blue signs** from the Cambodian People’s Party (CPP).",
         "These signs occasionally feature the likenesses of major party politicians: usually [three men](https://goo.gl/maps/uWwgvxjSdKMp7W676) side by side."
@@ -791,14 +859,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue signs from the ruling party across the country, often with three men's faces side by side."
     },
     {
       "id": "kh-Nned",
       "step": 0,
       "order": 17,
       "family": "coverage",
-      "title": "Coverage: Google used a weird",
+      "title": "Coverage: low-quality brownish camera",
       "text": [
         "Google used a weird, low-quality camera in Cambodia. This camera is known as the official Ari (or “Shitcam”). It has a wide circular car blur and often somewhat brownish colours. A good map will not usually include this coverage, but it is good to be aware of its existence, in order to not be caught off-guard by it.",
         "NOTE: Within Asia, India, Bangladesh, Sri Lanka and Nepal also have shitcam coverage."
@@ -844,14 +913,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A poor camera with a wide circular car blur and brownish colours. Good maps rarely include it. India, Bangladesh, Sri Lanka and Nepal have the same camera.",
+      "sameAs": [
+        "BD",
+        "IN",
+        "LK",
+        "NP"
+      ]
     },
     {
       "id": "kh-bFGl",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Street view coverage is somewhat limited",
+      "title": "Coverage: limited, around big cities",
       "text": [
         "**Street view coverage** is somewhat limited. Most of the coverage is located around the cities of Phnom Penh, Siem Reap and Battambang.",
         "_You can click on the image to enlarge it. You can also view the official street view coverage in more detail on [this site](https://sv-map.netlify.app/#base=roadmap&cov=official2x&zoom=8&center=12.541158630852788%2C104.71069335937501)._"
@@ -872,14 +948,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street View is patchy. Most of it is around the capital, Siem Reap and Battambang."
     },
     {
       "id": "kh-4afK",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Shitcam in Cambodia is only found in the southwestern half",
+      "title": "Coverage: low-quality camera in the southwest",
       "text": [
         "Shitcam in Cambodia is only found in the **southwestern** half."
       ],
@@ -919,14 +996,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The low-quality camera is only found in the southwestern half of the country."
     },
     {
       "id": "kh-mhzQ",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The low-lying central plain is home to most agricultural…",
+      "title": "Landscape: flat farmland with villages",
       "text": [
         "The **low-lying central plain** is home to most agricultural land. The landscape is flat, cultivated, and dotted with villages and farms."
       ],
@@ -965,14 +1043,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The low central plain holds most of the farmland: flat, cultivated land dotted with villages and farms."
     },
     {
       "id": "kh-0dYP",
       "step": 1,
       "order": 3,
       "family": "vegetation",
-      "title": "Vegetation: Conversely, the northeast is much more uncultivated: there…",
+      "title": "Landscape: wild, uncultivated northeast",
       "text": [
         "Conversely, **the northeast** is much more uncultivated: there is less agriculture and more natural vegetation. Some areas are slightly hilly."
       ],
@@ -1011,14 +1090,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the northeast, there is less farming and more natural vegetation, with some slightly hilly areas."
     },
     {
       "id": "kh-NpbG",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The southwest is the area with the most elevation in…",
+      "title": "Landscape: hills and low mountains",
       "text": [
         "**The southwest** is the area with the most elevation in Cambodia. This region is characterized by hills and low mountains. Some inland roads feature dense forest cover, but the coastal areas in particular are fairly densely populated."
       ],
@@ -1045,7 +1125,8 @@
           "src": "https://learnablemeta.com/images/664/LwE6BcTtdVvItPHEFgX9XYyQcHwxJq8u0Bs5.avif",
           "path": "kh/88bce2a24308.webp",
           "width": 1000,
-          "height": 493
+          "height": 493,
+          "dupeOf": "b815321f43b2"
         }
       ],
       "locations": [
@@ -1064,14 +1145,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The southwest is the highest part, with hills and low mountains. Inland roads can have dense forest, while the coast is quite densely populated."
     },
     {
       "id": "kh-Bp20",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Sandy, white soil is very common in the region southeast of…",
+      "title": "Soil: sandy white ground",
       "text": [
         "**Sandy, white soil** is very common in the region southeast of Phnom Penh, as well as around the city itself. The colour can range from bright white to slightly beige.",
         "NOTE: You may find sandy, white soil in other parts of the country, however it is by far the most common in this area. Conversely, some roads in this region can have darker soil than expected."
@@ -1100,7 +1182,8 @@
           "src": "https://learnablemeta.com/images/664/Fg53k6ERrcIUkmYwSxyxejdLlEVXw9Kl55ri.avif",
           "path": "kh/d76ea9e9bfed.webp",
           "width": 1000,
-          "height": 495
+          "height": 495,
+          "dupeOf": "81d7280d27fd"
         }
       ],
       "locations": [
@@ -1119,14 +1202,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sandy white soil, from bright white to beige, is very common southeast of the capital and around it. It appears elsewhere less often, and some roads here have darker soil."
     },
     {
       "id": "kh-cjig",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: Near the northern border with Thailand",
+      "title": "Landscape: mountain ridge to the north, red soil",
       "text": [
         "Near the northern border with Thailand, you can often see a **mountainous ridgeline to your north**. The soil in this region tends to be red, ranging from a slight reddish tinge to deep dark red.",
         "The ridgeline closely corresponds with the border with Thailand. The drop-off to the Cambodian lowland to its south is abrupt. This means that the roads you are on are themselves located in a very flat landscape (see inset map)."
@@ -1169,14 +1253,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the northern Thai border, a mountain ridge runs along the horizon to your north, with red soil. The road itself is on a very flat lowland below the ridge.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thai side is higher, but looks similar from the border"
+        }
+      ]
     },
     {
       "id": "kh-TMCo",
       "step": 1,
       "order": 7,
       "family": "vegetation",
-      "title": "Vegetation: Rubber tree plantations are found in three places",
+      "title": "Plants: rubber tree plantations in rows",
       "text": [
         "**Rubber tree plantations** are found in three places:",
         "- In a narrow belt northeast of Phnom Penh, mostly centred around the southern sections of Roads 7 and 71",
@@ -1222,14 +1313,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rubber trees have thin trunks and dark green crowns in neat rows, often with small taps near the base. Found in a belt northeast of the capital, around Ban Lung and around Pech Sreada. Common in Thailand too, so use only to place yourself inside the country.",
+      "sameAs": [
+        "TH"
+      ]
     },
     {
       "id": "kh-j4t2",
       "step": 2,
       "order": 0,
       "family": "bollard",
-      "title": "Bollard: Black-and-white bollards in Cambodia are only found on Road…",
+      "title": "Bollard: black-and-white, one road only",
       "text": [
         "**Black-and-white bollards** in Cambodia are only found on Road 48, between Tatai and the intersection with Road 4.",
         "NOTE: Make sure to check other clues before guessing, because this style of bollard is commonly found in Thailand."
@@ -1259,7 +1354,8 @@
           "src": "https://learnablemeta.com/images/739/B6J6pO0dZUZ7UIn03M0h3L8uQV68jFatICpI.avif",
           "path": "kh/25e360eeae52.webp",
           "width": 1000,
-          "height": 490
+          "height": 490,
+          "dupeOf": "fd52fbd8df95"
         }
       ],
       "locations": [
@@ -1280,14 +1376,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black-and-white bollards appear in Cambodia only on Road 48 between Tatai and Road 4. Thailand uses them commonly, so check other clues first.",
+      "sameAs": [
+        "TH"
+      ]
     },
     {
       "id": "kh-VDZi",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The road between Road 48 and Kiri Sakor is under…",
+      "title": "Road: only one side paved, red soil",
       "text": [
         "The road between Road 48 and Kiri Sakor is under construction and only has **one paved road side**. The unpaved side has red soil."
       ],
@@ -1326,14 +1426,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The road between Road 48 and Kiri Sakor is under construction, with just one paved side and red soil on the unpaved side."
     },
     {
       "id": "kh-2lvR",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Several unpaved jungle offroads in the southwest of the…",
+      "title": "Landscape: red-soil jungle off-roads",
       "text": [
         "Several **unpaved jungle offroads** in the southwest of the country, northeast of Road 48, have a distinct look: red soil, dense jungle, and generally hilly terrain.",
         "NOTE: Some rural jungle roads in the east of the country can look similar. Here, however, the soil tends to be more brownish or orange rather than red."
@@ -1373,14 +1474,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Unpaved jungle tracks in the southwest have red soil, dense jungle and hilly ground. Some eastern jungle roads look similar but with brown or orange soil."
     },
     {
       "id": "kh-JTi1",
       "step": 2,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: The coverage close to Phnum Samkos has a distinct look",
+      "title": "Coverage: overcast, big mountains, dirt road",
       "text": [
         "The coverage close to **Phnum Samkos** has a distinct look: overcast weather, and large, prominent mountains that are visible in the distance. The roads are unpaved and consist of brown soil. Wild, very green vegetation can be seen all around you."
       ],
@@ -1419,14 +1521,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near Phnum Samkos: overcast skies, big mountains in the distance, unpaved brown roads and wild, very green vegetation."
     },
     {
       "id": "kh-xNF2",
       "step": 2,
       "order": 4,
       "family": "bollard",
-      "title": "Bollard: Unique triangular bollards with red stripes can be found in…",
+      "title": "Bollard: triangular with red stripes",
       "text": [
         "Unique **triangular bollards** with red stripes can be found in three places in Cambodia, all located in the same area in the southwest:",
         "- On Road 4 between Angk Snuol and Preah Sihanouk. They are especially common in the section between Kirirom National Park and Preah Sihanouk.",
@@ -1458,7 +1561,8 @@
           "src": "https://learnablemeta.com/images/739/C0DjmvmrruoYoq3PbveD2Ylboc7nNcD4OQXF.avif",
           "path": "kh/dcfa552b4671.webp",
           "width": 1000,
-          "height": 490
+          "height": 490,
+          "dupeOf": "46f27083d992"
         }
       ],
       "locations": [
@@ -1477,14 +1581,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Triangular bollards with red stripes appear only in the southwest: on Road 4 (mainly Kirirom to Preah Sihanouk), one off-road in Ream National Park, and Preah Monivong National Park."
     },
     {
       "id": "kh-mBby",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: There is another good way to recognize Road 4 between Angk…",
+      "title": "Road: wide red-brown shoulders",
       "text": [
         "There is another good way to recognize Road 4 between Angk Snuol and Preah Sihanouk: in most sections, it has a distinctive **wide, red-brownish shoulder **on both sides of the road.",
         "NOTE: Near Phnom Penh, the soil of these shoulders tends to have a lighter, pinkish or beige colour. In the hills and closer to Preah Sihanouk, the soil tends to have a darker colour."
@@ -1524,14 +1629,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road 4 between Angk Snuol and Preah Sihanouk mostly has wide red-brown shoulders on both sides. Near the capital they are paler, pinkish or beige; in the hills and near the coast they are darker."
     },
     {
       "id": "kh-iFSu",
       "step": 2,
       "order": 6,
       "family": "vegetation",
-      "title": "Vegetation: Oil palm plantations can only be found on Road 4",
+      "title": "Plants: oil palm plantations",
       "text": [
         "**Oil palm plantations** can only be found on Road 4, as well as some of its rural offroads, just north of Preah Nob.",
         "NOTE: Oil palm plantations are much more common in Malaysia and Indonesia. Only use this clue to region-guess if you are certain that you are in Cambodia, and not to identify the country."
@@ -1574,14 +1680,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Oil palms only grow on Road 4 and some side roads just north of Preah Nob. They are far more common in Malaysia and Indonesia, so use this only once you know it's Cambodia.",
+      "sameAs": [
+        "ID",
+        "MY"
+      ]
     },
     {
       "id": "kh-mIwy",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Preah Monivong National Park in the south of the country…",
+      "title": "Landscape: white rocky plateau, stunted bushes",
       "text": [
         "**Preah Monivong National Park** in the south of the country has a unique and recognizable landscape. It is situated on a highland plateau. The soil is white and very rocky. The vegetation consists of stunted, windswept bushes and low trees. The foliage has a distinct dark green tint that contrasts with the white rocks. Some parts of the park are [more forested](https://goo.gl/maps/o8jNzth6g1aK3woh7) but will still have the same rocky soil."
       ],
@@ -1620,14 +1731,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Preah Monivong National Park is a highland plateau with white, very rocky soil and low windswept bushes in a dark green tint. Some parts are more forested but keep the rocky soil."
     },
     {
       "id": "kh-xU6h",
       "step": 2,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: Road 41, southwest of Phnom Penh, has a recognizable look…",
+      "title": "Road: wide grey gravel, runs north-northeast",
       "text": [
         "**Road 41**, southwest of Phnom Penh, has a recognizable look and road angle:",
         "- It is a wide road, with a grey and very gravelly road surface",
@@ -1670,14 +1782,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road 41 is wide with a grey, gravelly surface and runs roughly north-northeast. The land beside it is flat farmland, with hills often seen in the distance. Road angle is key since other roads look similar."
     },
     {
       "id": "kh-gL9F",
       "step": 2,
       "order": 9,
       "family": "pole",
-      "title": "Pole: In the sections of Road 6 west of Siem Reap",
+      "title": "Pole: three beams, insulators on one side",
       "text": [
         "In the sections of Road 6 west of Siem Reap, to Sisophon, and Road 5, south of Sisophon to Krong Battambang, you can find power lines with **unique poles** that are found nowhere else in Cambodia. The pole tops have three horizontal beams, with hanging insulators** on only one side**. The bottom of the poles have [indents](https://goo.gl/maps/HPrch2sJ2uRi862a9)."
       ],
@@ -1718,14 +1831,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Along Road 6 west of Siem Reap to Sisophon, and Road 5 south of Sisophon to Battambang, poles have three horizontal beams with hanging insulators on one side only, and indents at the bottom. Found nowhere else here."
     },
     {
       "id": "kh-hIz3",
       "step": 2,
       "order": 10,
       "family": "pole",
-      "title": "Pole: The powerline from the previous tip continues on the…",
+      "title": "Pole: three beams, insulators on both sides",
       "text": [
         "The powerline from the previous tip continues on the section of Road 5 west of Sisophon. However, here the pole tops have insulators **on both sides**. The rest of the pole is identical however."
       ],
@@ -1766,14 +1880,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The same powerline continues on Road 5 west of Sisophon, but the insulators hang on both sides. The rest of the pole is the same."
     },
     {
       "id": "kh-ie5M",
       "step": 2,
       "order": 11,
       "family": "coverage",
-      "title": "Coverage: The southern section of Road 76",
+      "title": "Coverage: overcast, dark tarmac, edge lines",
       "text": [
         "The **southern section of Road 76**, south of Krong Saen Monourom, has recognizable coverage: overcast weather, dark asphalt, the presence of outer road lines, and relatively crisp lines for Cambodian standards. Furthermore, a large part of the eastern half of this road runs through hilly terrain with dense jungle."
       ],
@@ -1812,14 +1927,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The southern part of Road 76 has overcast weather, dark asphalt, outer road lines and crisp markings by local standards. Much of the east side runs through hilly dense jungle."
     },
     {
       "id": "kh-Djem",
       "step": 2,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: Most of the northern section of Road 76",
+      "title": "Road: wide unpaved brown road in open jungle",
       "text": [
         "Most of the **northern section of Road 76**, between Lumphat and Mayura Wild Park, is recognizable too: it is a wide, unpaved road, with brown soil, and a semi-open jungle forest all around you.",
         "Weather conditions start off as overcast on the southern end of the road, and quickly improve the further north you go, with almost completely clear skies on the northern end.",
@@ -1860,7 +1976,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The northern part of Road 76 is a wide unpaved road with brown soil and semi-open jungle all around. Skies are overcast in the south and nearly clear in the north. Other roads can look similar but this is the longest."
     },
     {
       "id": "kh-2RXL",
@@ -1868,7 +1985,7 @@
       "order": 13,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Bilingual signs with Chinese writing can commonly be found…",
+      "title": "Sign: Chinese writing next to local script",
       "text": [
         "Bilingual signs with **Chinese** writing can commonly be found in Preah Sihanouk."
       ],
@@ -1907,14 +2024,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs with Chinese writing alongside the local language are common in Preah Sihanouk."
     },
     {
       "id": "kh-vddA",
       "step": 2,
       "order": 14,
       "family": "vegetation",
-      "title": "Vegetation: Around the town of Pech Sreada",
+      "title": "Plants: dry-season rubber trees, orange soil",
       "text": [
         "Around the town of **Pech Sreada**, in the far east of Cambodia, you can find rubber tree plantations that were covered during the dry season, leading to a distinct look. In addition, the soil is very orange, making it easy to distinguish this area from other regions in Cambodia with rubber tree plantations."
       ],
@@ -1953,14 +2071,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around Pech Sreada in the far east, rubber plantations were filmed in the dry season, giving them a distinct look, and the soil is very orange."
     },
     {
       "id": "kh-zw5H",
       "step": 2,
       "order": 15,
       "family": "coverage",
-      "title": "Coverage: Angkor Wat is a massive temple complex built by the…",
+      "title": "Landmark: dark weathered stone temple complex",
       "text": [
         "**Angkor Wat** is a massive temple complex built by the historical Khmer Empire. It is located just north of Siem Reap and has extensive trekker coverage. It can be recognized by its dark, weathered stone buildings. While this location is unlikely to show up in competitive maps, it is extremely common in GeoGuessr’s official Cambodia map."
       ],
@@ -2000,34 +2119,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cambodia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "kh-lm-528",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Unique car",
-      "text": [
-        "This back of the google car with white stripe on the left, and a yellow stripe on the right is unique to cambodia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dda04fe5805f",
-          "src": "https://learnablemeta.com/images/1/dgtX6WXCdMLo8MCt1CaYM3xMRIjnCCfZbiY9.avif",
-          "path": "kh/dda04fe5805f.webp",
-          "width": 1000,
-          "height": 283
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Angkor Wat, just north of Siem Reap, has a huge complex of dark, weathered stone buildings. It has lots of walking-camera coverage and is common on GeoGuessr's official map, but rare in competitive maps."
     },
     {
       "id": "kh-lm-12981",
@@ -2035,7 +2128,7 @@
       "order": 1,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: ឈប់/Stop",
+      "title": "Sign: stop sign with Khmer and English",
       "text": [
         "Stop signs in Cambodia always have the word \"Stop\" written in Khmer (ឈប់) in addition to the English word."
       ],
@@ -2055,354 +2148,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-15382",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Central Plain",
-      "text": [
-        "The low-lying central plain is home to most agricultural land. The landscape is flat, cultivated, and dotted with villages and farms."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d3d7e59acd63",
-          "src": "https://learnablemeta.com/images/664/BBTGdkLrFK3JRG0CKQNgiYDabwwhJp5N7p9d.avif",
-          "path": "kh/d3d7e59acd63.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-15384",
-      "step": 3,
-      "order": 3,
-      "family": "vegetation",
-      "title": "Vegetation: Northeast",
-      "text": [
-        "Conversely, the northeast is much more uncultivated: there is less agriculture and more natural vegetation. Some areas are slightly hilly."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85bc47e47513",
-          "src": "https://learnablemeta.com/images/664/OLnukQVu1DV3uNmfnnW728D8BKctP7Fwjz42.avif",
-          "path": "kh/85bc47e47513.webp",
-          "width": 1000,
-          "height": 485
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-15387",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: Northern Ridge",
-      "text": [
-        "Near the northern border with Thailand, you can often see a mountainous ridgeline to your north. The soil in this region tends to be red, ranging from a slight reddish tinge to deep dark red."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d55eeaa1b9a6",
-          "src": "https://learnablemeta.com/images/664/fDAk5RcLv9vG4WhjnWKdSkWG02QEkH9uyX2H.avif",
-          "path": "kh/d55eeaa1b9a6.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-15770",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Google used a weird, low-quality camera in Cambodia.",
-        "This camera is known as the official Ari (or “Shitcam”).",
-        "It has a wide circular car blur and often somewhat brownish colours.",
-        "**--- NOTE:**",
-        "Within Asia, India, Bangladesh and Sri Lanka also have shitcam coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "97fe829c63d6",
-          "src": "https://learnablemeta.com/images/681/V7Obx2Z0hryK0z6Q3BC6DHAv5j4Ng6vZoaTV.avif",
-          "path": "kh/97fe829c63d6.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "LK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-15921",
-      "step": 3,
-      "order": 6,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Google used a weird, low-quality camera in Cambodia.",
-        "This camera is known as the official Ari (or “Shitcam”).",
-        "It has a wide circular car blur and often somewhat brownish colours.",
-        "**--- NOTE:**",
-        "Within Asia, India, Bangladesh and Sri Lanka also have shitcam coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "97fe829c63d6",
-          "src": "https://learnablemeta.com/images/681/V7Obx2Z0hryK0z6Q3BC6DHAv5j4Ng6vZoaTV.avif",
-          "path": "kh/97fe829c63d6.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "LK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-51391",
-      "step": 3,
-      "order": 7,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Google used a weird, low-quality camera in Cambodia.",
-        "This camera is known as the official Ari (or “Shitcam”).",
-        "It has a wide circular car blur and often somewhat brownish colours.",
-        "**--- NOTE:**",
-        "Within Asia, India, Bangladesh and Sri Lanka also have shitcam coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "97fe829c63d6",
-          "src": "https://learnablemeta.com/images/681/V7Obx2Z0hryK0z6Q3BC6DHAv5j4Ng6vZoaTV.avif",
-          "path": "kh/97fe829c63d6.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "LK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-66769",
-      "step": 3,
-      "order": 8,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Chevrons in Cambodia are black with yellow arrows.",
-        "Chevrons are somewhat rare.",
-        "**--- NOTE:**",
-        "**Chevrons in all other Southeast Asian countries have the reverse colour scheme:**",
-        "Yellow with black arrows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d1506b814558",
-          "src": "https://learnablemeta.com/images/914/V9wiNWBqiK2Lt0V24b3FXBNNoHW7IF9wNdrd.avif",
-          "path": "kh/d1506b814558.webp",
-          "width": 1000,
-          "height": 466
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-104442",
-      "step": 3,
-      "order": 9,
-      "family": "architecture",
-      "title": "Architecture: Temples",
-      "text": [
-        "The majority of Cambodians are Buddhist.",
-        "Temples are common throughout the country.",
-        "Temple architecture is highly decorative, with ornamented roofs.",
-        "**--- NOTE:**",
-        "Thailand and Laos are also majority Buddhist.",
-        "Temples in these countries can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ddc110ab9b8a",
-          "src": "https://learnablemeta.com/images/1072/ltiTFGpFA9iuMqRJuF6HCUh8byNKzIfw3dH0.avif",
-          "path": "kh/ddc110ab9b8a.webp",
-          "width": 1000,
-          "height": 531
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LA",
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-104447",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: Blue Windows",
-      "text": [
-        "**Traditional Cambodian wooden stilt houses tend to have very recognizable colour schemes:**",
-        "Walls are commonly painted dark red-brown, light blue or an ochre orange.",
-        "Doors, windows and other architectural details are often painted bright blue.",
-        "**--- NOTE:**",
-        "More modern houses tend to have a wider variety of colour schemes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f1f9f7599b74",
-          "src": "https://learnablemeta.com/images/1072/3eB1dhL8b0mKL9oqG8LIQjOTfeCV1McvUeRV.avif",
-          "path": "kh/f1f9f7599b74.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-128269",
-      "step": 3,
-      "order": 11,
-      "family": "architecture",
-      "title": "Architecture: Blue Windows",
-      "text": [
-        "**Traditional Cambodian wooden stilt houses tend to have very recognizable colour schemes:**",
-        "Walls are commonly painted dark red-brown, light blue or an ochre orange.",
-        "Doors, windows and other architectural details are often painted bright blue.",
-        "**--- NOTE:**",
-        "More modern houses tend to have a wider variety of colour schemes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f1f9f7599b74",
-          "src": "https://learnablemeta.com/images/1072/3eB1dhL8b0mKL9oqG8LIQjOTfeCV1McvUeRV.avif",
-          "path": "kh/f1f9f7599b74.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kh-lm-464191",
-      "step": 3,
-      "order": 12,
-      "family": "pole",
-      "title": "Pole: waffel",
-      "text": [
-        "Concrete ladder poles (so named because the indents and ridges resemble a ladder).",
-        "NOTE: You can easily distinguish between Thailand and Cambodia based on the poles. Thailand uses square concrete poles with rows of small pinholes on the sides. Such poles are very uncommon in Cambodia (but not completely absent)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6b27dc75958f",
-          "src": "https://learnablemeta.com/images/1822/1749330301351-IFG.avif",
-          "path": "kh/6b27dc75958f.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Stop signs always have the Khmer word (ឈប់) as well as the English word STOP."
     }
   ]
 }

@@ -20,40 +20,11 @@
   ],
   "clues": [
     {
-      "id": "mp-4Uer",
-      "step": 0,
-      "order": 1,
-      "family": "other",
-      "title": "The Northern Mariana Islands is a United States overseas…",
-      "text": [
-        "The Northern Mariana Islands is a United States overseas territory. As such, it is counted as **the US** for country streaks purposes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fedcecab8124",
-          "src": "https://www.plonkit.net/images/northern-mariana-islands/nmi_location.png",
-          "path": "mp/fedcecab8124.webp",
-          "width": 600,
-          "height": 515
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "US"
-      ],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/northern-mariana-islands",
-        "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
       "id": "mp-QEJK",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: The entire Google car is blurred",
+      "title": "Google car: fully blurred, close antenna",
       "text": [
         "The entire Google car is blurred, however an antenna at the front right can be seen. The antenna is also **noticeably closer** to the camera than in the Guam Google car."
       ],
@@ -80,14 +51,16 @@
           "src": "https://learnablemeta.com/images/621/2AOrgcfkKMpIXcvI3yMMr6gXI5MrOAanZzHJ.avif",
           "path": "mp/797ec3665c87.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "114402e89b69"
         },
         {
           "id": "e595f9108144",
           "src": "https://learnablemeta.com/images/715/5MlHQhJbRuDrfHPoNbnhWtyDboI0NZ2B2dew.avif",
           "path": "mp/e595f9108144.webp",
           "width": 1000,
-          "height": 555
+          "height": 555,
+          "dupeOf": "114402e89b69"
         }
       ],
       "locations": [
@@ -108,14 +81,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The whole car is blurred, but you can see an antenna at the front right, sitting close to the camera. On Guam it looks farther away.",
+      "differs": [
+        {
+          "country": "GU",
+          "how": "Guam's antenna sits farther from the camera"
+        },
+        {
+          "country": "PR",
+          "how": "Puerto Rico has no front plates and Spanish signs"
+        }
+      ]
     },
     {
       "id": "mp-H2l8",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Northern Mariana Islands have wooden poles",
+      "title": "Pole: wooden, often with a crossbar",
       "text": [
         "Northern Mariana Islands have **wooden poles**, frequently with a crossbar at the top.",
         "NOTE: Guam typically has concrete poles."
@@ -145,7 +129,8 @@
           "src": "https://learnablemeta.com/images/621/xiFBgM6Agrj693pt2PSGHMobMNYc8SLbOBNV.avif",
           "path": "mp/686dab34d0bb.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "e338fe1dac5c"
         }
       ],
       "locations": [
@@ -166,7 +151,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden utility poles, frequently with a crossbar at the top. Guam mostly has concrete poles instead.",
+      "differs": [
+        {
+          "country": "GU",
+          "how": "Guam typically has concrete poles"
+        }
+      ]
     },
     {
       "id": "mp-jle0",
@@ -174,7 +166,7 @@
       "order": 4,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The Northern Mariana Islands uses blue street signs",
+      "title": "Street sign: blue name plates",
       "text": [
         "The Northern Mariana Islands uses **blue** street signs, unlike Guam, which use green street signs."
       ],
@@ -215,14 +207,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs are blue. Guam's are green, so blue points to the Northern Marianas.",
+      "differs": [
+        {
+          "country": "GU",
+          "how": "Guam street signs are green"
+        }
+      ]
     },
     {
       "id": "mp-7SWm",
       "step": 0,
       "order": 5,
       "family": "vegetation",
-      "title": "Vegetation: Northern Mariana Islands have a tropical climate with a lot…",
+      "title": "Vegetation: dense, low tropical growth",
       "text": [
         "Northern Mariana Islands have a **tropical climate** with a lot of dense and somewhat low vegetation."
       ],
@@ -261,14 +260,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A tropical island look with thick, fairly low vegetation. Useful to confirm a Pacific island, not to pick between islands."
     },
     {
       "id": "mp-c1Di",
       "step": 0,
       "order": 6,
       "family": "vegetation",
-      "title": "Vegetation: Royal Poinciana, Flamboyant Tree or Flame Tree (Delonix…",
+      "title": "Plants: wide tree with bright red flowers",
       "text": [
         "Royal Poinciana, Flamboyant Tree or Flame Tree ([Delonix Regia](https://en.wikipedia.org/wiki/Delonix_regia)) is the official tree of the Northern Mariana Islands and very common to see in the territory. Its **wide crown** with **bright red flowers** is easy to recognize.",
         "NOTE: This tree is not common in Guam."
@@ -310,14 +310,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Look for a wide-crowned tree covered in bright red flowers (Royal Poinciana). It is very common here but not common on Guam.",
+      "differs": [
+        {
+          "country": "GU",
+          "how": "Guam rarely has these red-flowered trees"
+        }
+      ]
     },
     {
       "id": "mp-2NSb",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "Both Northern Mariana Islands and Guam often have a very…",
+      "title": "Road: lots of road reflectors",
       "text": [
         "Both Northern Mariana Islands and Guam often have a very **large number **of** road reflectors**."
       ],
@@ -358,14 +365,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads often have a very large number of reflective studs. Guam is the same, so this narrows it to the Northern Marianas or Guam.",
+      "sameAs": [
+        "GU"
+      ]
     },
     {
       "id": "mp-lSGS",
       "step": 0,
       "order": 8,
       "family": "language",
-      "title": "Language: East Asian languages such as Japanese",
+      "title": "Language: East Asian scripts on signs",
       "text": [
         "**East Asian languages** such as Japanese, Chinese, Korean, and even Russian are common to see in the Northern Mariana Islands.",
         "NOTE: This is also the case in Guam."
@@ -407,14 +418,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Japanese, Chinese, Korean and even Russian text is common on signs. Guam is the same, so it narrows it to the two.",
+      "sameAs": [
+        "GU"
+      ]
     },
     {
       "id": "mp-H5Sf",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: The only island with car coverage is the main island of…",
+      "title": "Coverage: only the main island",
       "text": [
         "The only island with car coverage is the main island of **Saipan**. The islands north of that have no coverage. Tinian and Sinapalu south of Saipan only have **tripod** coverage."
       ],
@@ -436,14 +451,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only the main island, Saipan, has car coverage. Islands to the north have none, and Tinian and the small island south of Saipan only have tripod (backpack-style) coverage."
     },
     {
       "id": "mp-sU1n",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Dense commercial areas can be found on the southern half of…",
+      "title": "Region: dense shops on the west coast",
       "text": [
         "**Dense commercial areas** can be found on the southern half of the west coast."
       ],
@@ -482,14 +498,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southern half of the west coast you find dense commercial areas with many shops and businesses."
     },
     {
       "id": "mp-MPiv",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "The Suicide Cliff is a steep cliff with a lot of exposed…",
+      "title": "Landscape: steep cliff with bare rock",
       "text": [
         "The **Suicide Cliff** is a steep cliff with a lot of exposed rock near the northern tip of the island."
       ],
@@ -528,98 +545,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/northern-mariana-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "mp-lm-336",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Unique car",
-      "text": [
-        "The entire Google car is blurred, but an antenna at the front right can still be seen. It will feel noticeably closer to the car than in other countries with a similar car.",
-        "You can confuse it with:",
-        "Puerto Rico(Cars there won't have front plates, signs will be Spanish).",
-        "Guam (You should be able to see little part of roof rack but as long you will guess NMI or Guam and not Peurto Rico you will get good points)"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b0082d5a37d4",
-          "src": "https://learnablemeta.com/images/7gNx5E2HOPT6445E5ZtznB0uioBZw1ikXOBz.avif",
-          "path": "mp/b0082d5a37d4.webp",
-          "width": 1000,
-          "height": 532
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GU",
-        "PR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mp-lm-13872",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Road Reflectors",
-      "text": [
-        "Both Northern Mariana Islands and Guam often have a very large number of road reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5205980a9190",
-          "src": "https://learnablemeta.com/images/621/6z6YhKgaapfEXg42BJ2vQbiVjXO968Y0H2C6.avif",
-          "path": "mp/5205980a9190.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cbdf07d547bc1d1d94b35e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mp-lm-51286",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Road Reflectors",
-      "text": [
-        "Both Northern Mariana Islands and Guam often have a very large number of road reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5205980a9190",
-          "src": "https://learnablemeta.com/images/621/6z6YhKgaapfEXg42BJ2vQbiVjXO968Y0H2C6.avif",
-          "path": "mp/5205980a9190.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Near the northern tip of the island there is a tall cliff with a lot of exposed rock face."
     }
   ]
 }

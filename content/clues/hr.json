@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Croatia has long, white licence plates",
+      "title": "Plate: long white, blue strip optional",
       "text": [
         "Croatia has long, **white licence plates**. Some plates have a blue strip on the left, some are fully white. Most cars seen in Generation 3 will not feature a blue strip on their licence plates. In addition, there is a mix of cars with or without blue strips in Generation 4, with blue strips more common on newer cars.",
         "NOTE: Blue strips are more common along the coast due to travelling tourists from other EU countries such as Italy."
@@ -47,14 +47,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates, with or without a blue EU strip on the left. Older Gen 3 cars mostly have none; newer Gen 4 cars more often do. Strips are more common on the coast because of tourists."
     },
     {
       "id": "hr-asMp",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Croatian bollards are white with a black rectangle and red…",
+      "title": "Bollard: white, black rectangle, sharp triangle top",
       "text": [
         "Croatian **bollards** are white with a black rectangle and red or white reflector. From the top, it is shaped like a triangle.",
         "NOTE: Hungarian and Lithuanian bollards look similar**, **but have more **rounded **edges compared to Croatia’s sharper edges. Lithuanian bollards will also have an orange reflector. North Macedonia sometimes uses similar bollards."
@@ -91,14 +92,16 @@
           "src": "https://learnablemeta.com/images/739/heoZVsofqUofrFl3Kh2HL12VQCGpUebO6bwW.avif",
           "path": "hr/4ee7cbbc1b14.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "dupeOf": "e63aa088da61"
         },
         {
           "id": "347a4f21e4df",
           "src": "https://learnablemeta.com/images/847/D0Cerh41VRmjycAmciCOna0yKJRsUbcIar5E.avif",
           "path": "hr/347a4f21e4df.webp",
           "width": 1000,
-          "height": 552
+          "height": 552,
+          "dupeOf": "e63aa088da61"
         }
       ],
       "locations": [
@@ -119,14 +122,28 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White post with a black rectangle and a red or white reflector. Seen from above it is a sharp-edged triangle. North Macedonia sometimes uses similar ones.",
+      "sameAs": [
+        "MK"
+      ],
+      "differs": [
+        {
+          "country": "HU",
+          "how": "Hungarian bollards have rounder edges"
+        },
+        {
+          "country": "LT",
+          "how": "Lithuanian ones are rounder with an orange reflector"
+        }
+      ]
     },
     {
       "id": "hr-M3t0",
       "step": 0,
       "order": 3,
       "family": "language",
-      "title": "Language: Croatian is a Slavic language",
+      "title": "Language: Latin letters, IJE spellings",
       "text": [
         "Croatian is a **Slavic** language. It is always written in the Latin alphabet. ‘IJE’ is common in Croatian whereas Serbian uses only ‘E’ instead.",
         "NOTE: The Slovene language also features a lot of ‘J’s. Serbian and Montenegrin are also very similar, but Serbia and Montenegro use both Latin and Cyrillic script."
@@ -150,7 +167,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Slavic language always written in Latin letters. It often uses IJE where Serbian uses just E. Serbian and Montenegrin are very similar but may use Cyrillic.",
+      "differs": [
+        {
+          "country": "RS",
+          "how": "Serbian uses E instead of IJE and also Cyrillic"
+        },
+        {
+          "country": "ME",
+          "how": "Montenegrin is similar but also uses Cyrillic"
+        }
+      ]
     },
     {
       "id": "hr-eUrn",
@@ -158,7 +186,7 @@
       "order": 4,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Croatia features chevrons with a red arrow on a yellow or…",
+      "title": "Chevron: red arrow on yellow or white",
       "text": [
         "Croatia features chevrons with a **red **arrow** **on a **yellow **or **white **background."
       ],
@@ -185,7 +213,8 @@
           "src": "https://learnablemeta.com/images/914/UQrYlv4g7EgZmMrRThZJmssLw8c3hg8Mv8l3.avif",
           "path": "hr/ccda3cd7e1dc.webp",
           "width": 1000,
-          "height": 555
+          "height": 555,
+          "dupeOf": "800c1b5a1e0d"
         }
       ],
       "locations": [
@@ -204,14 +233,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve chevrons show a red arrow on a yellow or white background."
     },
     {
       "id": "hr-qtTT",
       "step": 0,
       "order": 5,
       "family": "guardrail",
-      "title": "Guardrail: Croatia has square",
+      "title": "Guardrail: square B-type",
       "text": [
         "Croatia has **square (B-type) guardrails**.",
         "NOTE: Croatia is one of the few European countries that use B-type guardrails. For a good overview of European guardrails, see [this infographic.](/images/croatia/europeguardrail.png)"
@@ -241,7 +271,8 @@
           "src": "https://learnablemeta.com/images/847/Aa0Zp5RHrFSJ7GETTdLX5T4uav4MEZ2NMC9r.avif",
           "path": "hr/380a85d43c00.webp",
           "width": 1000,
-          "height": 552
+          "height": 552,
+          "dupeOf": "6143b9aa8918"
         }
       ],
       "locations": [
@@ -260,14 +291,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square-profile (B-type) guardrails. Few European countries use this type, so it narrows the guess a lot."
     },
     {
       "id": "hr-sx0i",
       "step": 0,
       "order": 6,
       "family": "car",
-      "title": "Google car: Generation 3 coverage often has a non-standard car blur…",
+      "title": "Google car: side mirrors in the blur",
       "text": [
         "Generation 3 coverage often has a non-standard car blur where the **side mirrors** of the car are partially visible. This is not unique to Croatia, but by far most common there.",
         "NOTE: Sometimes, you can see a small circular [**yellow **sticker](https://goo.gl/maps/8T97sBibVM3pgwEZ9) on the car mirror. This sticker is unique to Croatia."
@@ -295,7 +327,8 @@
           "src": "https://learnablemeta.com/images/847/Kr0ZwwB3QeP0ZzNbeJQpvctlQMfAd011ogy2.avif",
           "path": "hr/e3e7e1b33ee7.webp",
           "width": 1000,
-          "height": 551
+          "height": 551,
+          "dupeOf": "015d8254a31f"
         }
       ],
       "locations": [
@@ -314,14 +347,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In older Gen 3 coverage the car blur often lets the side mirrors show. It happens elsewhere but most often here. A small round yellow sticker on a mirror is unique to this country."
     },
     {
       "id": "hr-5dX0",
       "step": 0,
       "order": 7,
       "family": "car",
-      "title": "Google car: Another quirk of Generation 3 coverage is that the majority…",
+      "title": "Coverage: autumn colours (older camera)",
       "text": [
         "Another quirk of Generation 3 coverage is that the majority of it was made in **autumn**. This means that the vegetation in this coverage will often have distinct yellowish or orange fall colours.",
         "Take note that this seasonal meta is not found in Generation 4 coverage."
@@ -361,14 +395,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most older Gen 3 coverage was shot in autumn, so plants often look yellow or orange. The newer Gen 4 coverage does not have this."
     },
     {
       "id": "hr-MZYL",
       "step": 0,
       "order": 8,
       "family": "car",
-      "title": "Google car: A black generation 4 car that will never have an antenna…",
+      "title": "Google car: black car, never an antenna",
       "text": [
         "A black generation 4 car that will never have an antenna can be found in Croatia.",
         "NOTE: A black car can be found in many European countries, though it will often have an antenna visible."
@@ -408,14 +443,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black newer Gen 4 car that never has an antenna. Many European countries have black cars, but those usually show an antenna."
     },
     {
       "id": "hr-KLL9",
       "step": 0,
       "order": 9,
       "family": "car",
-      "title": "Google car: A white generation 4 car that will never have an antenna…",
+      "title": "Google car: white car, never an antenna",
       "text": [
         "A white generation 4 car that will never have an antenna can be found in Croatia.",
         "NOTE: A white car can be found in many European countries, though it will often have an antenna visible."
@@ -455,14 +491,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white newer Gen 4 car that never has an antenna. Other European white cars usually show an antenna."
     },
     {
       "id": "hr-t3Rl",
       "step": 0,
       "order": 10,
       "family": "language",
-      "title": "Language: Stickers with the letters HR can be found on Croatian cars",
+      "title": "Plate: HR sticker on the back",
       "text": [
         "Stickers with the letters **HR **can be found on Croatian cars. HR stands for Hrvatska, the Croatian name for Croatia.",
         "NOTE: These were mainly used before EU plates were introduced, meaning they will be less common in Generation 4."
@@ -502,7 +539,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small stickers with the letters HR (short for Hrvatska) on cars. They were used before EU plates, so they are rarer in newer Gen 4 coverage."
     },
     {
       "id": "hr-uILw",
@@ -510,7 +548,7 @@
       "order": 11,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Croatia has direction signs with a yellow background and a…",
+      "title": "Sign: yellow direction sign with black outline",
       "text": [
         "Croatia has direction signs with a **yellow background** and a **black **outline. They often have a pencil-shaped tip.",
         "NOTE: The other former Yugoslav countries of Slovenia, Serbia, Montenegro and North Macedonia have similar signs. A comparison can be seen [here](/images/croatia/croatia_directionsigncomp.png)."
@@ -555,14 +593,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs have a yellow background, a black outline and often a pencil-shaped tip. Slovenia, Serbia, Montenegro and North Macedonia have similar signs.",
+      "sameAs": [
+        "ME",
+        "MK",
+        "RS",
+        "SI"
+      ]
     },
     {
       "id": "hr-FJLL",
       "step": 0,
       "order": 12,
       "family": "pole",
-      "title": "Pole: Croatian utility poles are cylindrical and made of concrete…",
+      "title": "Pole: round concrete or wood, alternating hooks",
       "text": [
         "Croatian utility poles are cylindrical and made of concrete or wood, often with **alternating hooks **on the [wooden poles](https://goo.gl/maps/tudAitHkDfNSgbQu5) (somewhat similar to Latvian poles)."
       ],
@@ -603,14 +648,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round concrete or wooden poles, with wooden ones often having hooks alternating on each side. Somewhat like Latvian poles.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Only somewhat similar hook layout"
+        }
+      ]
     },
     {
       "id": "hr-m4wI",
       "step": 0,
       "order": 13,
       "family": "architecture",
-      "title": "Architecture: Buildings in Croatia sometimes feature exposed red brick…",
+      "title": "Houses: exposed red brick walls",
       "text": [
         "Buildings in Croatia sometimes feature exposed **red brick walls**. This architecture is more common in inland areas.",
         "NOTE: This type of architecture can also be found in Slovenia and Serbia."
@@ -638,7 +690,8 @@
           "src": "https://learnablemeta.com/images/847/ZY2IrNecCMxoF6vhtWgKtGXzqnSq749CxCd6.avif",
           "path": "hr/6ae1ffe2dca2.webp",
           "width": 1000,
-          "height": 552
+          "height": 552,
+          "dupeOf": "4085e80507d8"
         }
       ],
       "locations": [
@@ -660,14 +713,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses sometimes show bare red brick walls, more often inland. Slovenia and Serbia have the same style.",
+      "sameAs": [
+        "RS",
+        "SI"
+      ]
     },
     {
       "id": "hr-R9QL",
       "step": 0,
       "order": 14,
       "family": "car",
-      "title": "Google car: Croatia features blue fire hydrants with two diagonal…",
+      "title": "Fire hydrant: blue with two diagonal arms",
       "text": [
         "Croatia features **blue **fire hydrants with two diagonal protrusions on either side. Newer fire hydrants seen in Generation 4 have a [smaller top](https://www.google.com/maps/@45.3444374,19.0031362,3a,15y,342.71h,79.67t/data=!3m6!1e1!3m4!1sPvq5ffNHeVxmDooenAuoyA!2e0!7i16384!8i8192) but are still recognisable due to the blue paint.",
         "NOTE: Similar fire hydrants can be found in bordering countries, most commonly in Hungary."
@@ -709,7 +767,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue fire hydrants with two diagonal protrusions on the sides. Newer ones have a smaller top but are still blue. Neighbouring countries have similar ones, most often Hungary.",
+      "sameAs": [
+        "HU"
+      ]
     },
     {
       "id": "hr-mubM",
@@ -717,7 +779,7 @@
       "order": 15,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Croatia’s pedestrian sign features a pedestrian with a belt…",
+      "title": "Sign: pedestrian with belt, 5-stripe crossing",
       "text": [
         "Croatia’s pedestrian sign features a **pedestrian with a belt** and a zebra path with 5 stripes.",
         "NOTE: The pedestrian on Slovenia’s sign does not have a belt."
@@ -759,14 +821,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The pedestrian sign shows a person with a belt on a crossing with 5 stripes. Slovenia's pedestrian has no belt.",
+      "differs": [
+        {
+          "country": "SI",
+          "how": "Slovenia's pedestrian has no belt"
+        }
+      ]
     },
     {
       "id": "hr-x9Iz",
       "step": 0,
       "order": 16,
       "family": "other",
-      "title": "Karlovačko and Ožujsko are common Croatian beer companies",
+      "title": "Shops: Karlovačko, Ožujsko, Konzum, Plodine",
       "text": [
         "**Karlovačko **and **Ožujsko** are common Croatian beer companies, with advertisements seen around the country.",
         "**Konzum** and **Plodine** are common supermarket chains, mostly found in big cities. Plodine is exclusive to Croatia, while Konzum also operates stores in Bosnia."
@@ -808,14 +877,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ads for Karlovačko and Ožujsko beer are common. Konzum and Plodine are supermarket chains in big cities. Plodine is only here; Konzum also has stores in Bosnia.",
+      "differs": [
+        {
+          "country": "BA",
+          "how": "Konzum also exists in Bosnia, Plodine does not"
+        }
+      ]
     },
     {
       "id": "hr-FWfo",
       "step": 0,
       "order": 17,
       "family": "car",
-      "title": "Google car: Croatia does not have Generation 2 car coverage",
+      "title": "Coverage: old backpack camera in historic towns",
       "text": [
         "Croatia does not have Generation 2 car coverage. However, in some historic downtown areas, a **Generation 2 trekker** camera was used.",
         "NOTE: In some of this trekker coverage, the Google employee’s red cap is visible."
@@ -855,41 +931,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "hr-b8co",
-      "step": 1,
-      "order": 0,
-      "family": "other",
-      "title": "Croatian landlines typically start with a zero followed by…",
-      "text": [
-        "Croatian landlines typically start with a zero followed by the **area code**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5650f23ae96d",
-          "src": "https://www.plonkit.net/images/croatia/hr_areacodes_copy.png",
-          "path": "hr/5650f23ae96d.webp",
-          "width": 600,
-          "height": 580
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/croatia",
-        "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "No older Gen 2 car coverage, but some historic town centres were shot with an old Gen 2 walking backpack. Sometimes the photographer's red cap is visible."
     },
     {
       "id": "hr-iF5g",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The north-eastern region of Croatia is mostly flat and…",
+      "title": "Landscape: flat farmland in the north-east",
       "text": [
         "The north-eastern region of Croatia is mostly **flat **and features a lot of agriculture. It is similar in terms of landscape to Hungary and north-western Serbia."
       ],
@@ -931,14 +981,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-east the land is mostly flat with lots of farming. It looks like Hungary and north-west Serbia.",
+      "differs": [
+        {
+          "country": "HU",
+          "how": "Landscape looks similar"
+        },
+        {
+          "country": "RS",
+          "how": "North-west Serbia looks similar"
+        }
+      ]
     },
     {
       "id": "hr-9d6r",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "The region north and west of Zagreb is hilly and…",
+      "title": "Landscape: hilly farmland north and west of the capital",
       "text": [
         "The region north and west of Zagreb is **hilly **and **agricultural**."
       ],
@@ -978,14 +1039,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "North and west of the capital the land is hilly and agricultural."
     },
     {
       "id": "hr-ELIq",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The Adriatic coast features rocky mountains similar to…",
+      "title": "Landscape: rocky coastal mountains, shrubs, islands",
       "text": [
         "The Adriatic coast features **rocky **mountains similar to those seen in Montenegro or Albania. Shrubs are more common instead of trees along the coast, especially in the south. This coastal region has a lot of islands and peninsulas."
       ],
@@ -1027,14 +1089,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Adriatic coast has rocky mountains like Montenegro or Albania, with shrubs more than trees, especially in the south, and many islands and peninsulas.",
+      "differs": [
+        {
+          "country": "ME",
+          "how": "Landscape looks similar"
+        },
+        {
+          "country": "AL",
+          "how": "Landscape looks similar"
+        }
+      ]
     },
     {
       "id": "hr-hHNn",
       "step": 1,
       "order": 4,
       "family": "architecture",
-      "title": "Architecture: Houses and walls made of beige brick are common on the…",
+      "title": "Houses: beige brick, green shutters",
       "text": [
         "Houses and walls made of **beige brick** are common on the Adriatic coast. They often feature **green **shutters.",
         "NOTE: Similar architecture can also be found in some regions in Italy. Additionally, Croatian shutters can also be white, beige etc."
@@ -1076,14 +1149,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses and walls of beige brick, often with green shutters (sometimes white or beige) are common on the coast. Parts of Italy look similar.",
+      "sameAs": [
+        "IT"
+      ]
     },
     {
       "id": "hr-fguV",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The north-western region of Istria",
+      "title": "Landscape: red soil in the north-west peninsula",
       "text": [
         "The north-western region of Istria, south of the Italian city of Trieste, sometimes has distinct **red **soil."
       ],
@@ -1123,7 +1200,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north-western peninsula south of Trieste sometimes has clearly red soil."
     },
     {
       "id": "hr-79X3",
@@ -1131,7 +1209,7 @@
       "order": 6,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Bilingual street name signs with Croatian and Italian are…",
+      "title": "Sign: street names in two languages (Italian too)",
       "text": [
         "Bilingual street name signs with Croatian and **Italian** are typically found in Istria, especially in the western cities."
       ],
@@ -1171,14 +1249,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs show both the local language and Italian, mostly in the western towns of the northern peninsula."
     },
     {
       "id": "hr-KPaC",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Town names ending with “-ec” are common to see in the…",
+      "title": "Language: town names ending in -ec",
       "text": [
         "Town names ending with “**-ec**” are common to see in the northern parts of central Croatia."
       ],
@@ -1217,14 +1296,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town names ending in -ec are common in the north of the central part of the country."
     },
     {
       "id": "hr-O1bS",
       "step": 2,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Croatia’s capital Zagreb has a distinct big city feel",
+      "title": "Coverage: big city, apartment blocks, blue trams",
       "text": [
         "Croatia’s capital Zagreb has a distinct **big city feel**. Apartment** **blocks can be seen throughout the city. The northern part of the city is hilly. Furthermore, Zagreb has [blue electric trams](https://goo.gl/maps/HKezsyENV7j4TJ1J7).",
         "NOTE: In addition to regular car coverage, Zagreb also has various urban [sidewalk trekkers](https://goo.gl/maps/55CGuPvKbjzGLv4XA), often made with a Generation 2 camera."
@@ -1264,14 +1344,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big-city feel with apartment blocks everywhere, hills in the north, and blue electric trams. Also has city walking-backpack coverage, often with the old Gen 2 camera."
     },
     {
       "id": "hr-qQB2",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "Zagreb and Osijek are the only two cities in Croatia with…",
+      "title": "Tram: only two cities have them",
       "text": [
         "Zagreb and Osijek are the only two cities in Croatia with **trams**."
       ],
@@ -1310,14 +1391,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only the capital and Osijek have trams."
     },
     {
       "id": "hr-kv7I",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The region northeast of Zadar is recognizable as it is flat…",
+      "title": "Landscape: flat with a mountain ridge to the north",
       "text": [
         "The region northeast of Zadar is recognizable as it is flat with a **mountain **ridge visible in the distance north."
       ],
@@ -1356,14 +1438,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A flat area with a mountain ridge visible in the distance to the north. It lies north-east of the coastal city of Zadar."
     },
     {
       "id": "hr-AwCI",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: There are a lot of vineyards around the town of Ilok",
+      "title": "Landscape: many vineyards near the Serbian border",
       "text": [
         "There are a lot of vineyards around the town of **Ilok**, near the Serbian **border**,** **west of Novi Sad. You can find vineyards in other parts of Croatia as well, but they are most common in this area. If you see lots of vineyards in a northeastern Croatian landscape, you are more often than not near Ilok."
       ],
@@ -1402,14 +1485,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of vineyards in the far north-east near the Serbian border, west of Novi Sad. Vineyards exist elsewhere, but if you see many in the north-east, you are most likely here."
     },
     {
       "id": "hr-ffan",
       "step": 2,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Traffic lights in Rijeka are held up by long blue poles…",
+      "title": "Pole: long blue traffic light arms",
       "text": [
         "Traffic lights in Rijeka are held up by **long blue poles** that extend out over the road. These are exclusive to the city."
       ],
@@ -1450,14 +1534,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic lights hang from long blue poles reaching over the road. They are only found in one coastal city."
     },
     {
       "id": "hr-cTVj",
       "step": 2,
       "order": 5,
       "family": "architecture",
-      "title": "Architecture: The town of Petrinja was severely damaged by an earthquake…",
+      "title": "Houses: ruined, being rebuilt",
       "text": [
         "The town of Petrinja was severely damaged by an earthquake in 2020. As a result, many buildings can be seen **ruined** and undergoing repair."
       ],
@@ -1496,14 +1581,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many ruined buildings undergoing repair, from a 2020 earthquake that heavily damaged the town."
     },
     {
       "id": "hr-7sgJ",
       "step": 2,
       "order": 6,
       "family": "other",
-      "title": "The city of Dubrovnik in the far south of coastal Croatia…",
+      "title": "Landmark: medieval city walls by the sea",
       "text": [
         "The city of Dubrovnik in the far south of coastal Croatia is famous for its beautifully preserved **medieval city walls**, which can be seen from many points in and around the Old Town."
       ],
@@ -1542,14 +1628,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Well-preserved medieval city walls visible from many spots in and around the old town, in the far south of the coast."
     },
     {
       "id": "hr-hPMC",
       "step": 2,
       "order": 7,
       "family": "vegetation",
-      "title": "Vegetation: These tall cypress trees are commonly found near the…",
+      "title": "Plants: tall cypress trees",
       "text": [
         "These tall **cypress trees** are commonly found near the southern tip of Croatia."
       ],
@@ -1588,42 +1675,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/croatia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "hr-lm-2224",
-      "step": 3,
-      "order": 0,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Bilingual Italian in Croatia",
-      "text": [
-        "Bilingual street name signs with Croatian and Italian are typically found in Istria, south of the Italian city of Trieste, especially in the western cities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f0ba298e914",
-          "src": "https://learnablemeta.com/images/5/vNrpC0TM2p8cYhAGKdKpuaxL8fLhpxAlLnso.avif",
-          "path": "hr/3f0ba298e914.webp",
-          "width": 1000,
-          "height": 791
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Tall cypress trees are common near the southern tip of the country."
     },
     {
       "id": "hr-lm-2988",
       "step": 3,
       "order": 1,
       "family": "other",
-      "title": "Belt + Straight Legs Croatia/Bosnia",
+      "title": "Sign: pedestrian with white belt, straight legs",
       "text": [
         "**White Belt**: Croatia/Bosnia, Portugal, Germany, Hungary. > **Non-Pointed Shoes**: Croatia/Bosnia, Portugal. > **Straight legs**: Croatia/Bosnia."
       ],
@@ -1648,354 +1708,32 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-24569",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Agricultural Hills",
-      "text": [
-        "The region north and west of Zagreb is hilly and agricultural."
+      },
+      "summary": "The pedestrian figure has a white belt, non-pointed shoes and straight legs. The same figure is used in Bosnia; the belt also appears in Portugal, Germany and Hungary.",
+      "sameAs": [
+        "BA"
       ],
-      "tags": [],
-      "images": [
+      "differs": [
         {
-          "id": "b31b1ff60f94",
-          "src": "https://learnablemeta.com/images/664/hWkTZTtcIijl7NOicDaZiyHw4MoyPiuNZqy6.avif",
-          "path": "hr/b31b1ff60f94.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-24570",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Adriatic Coast",
-      "text": [
-        "The Adriatic coast features rocky mountains similar to those seen in Montenegro or Albania. Shrubs are more common instead of trees along the coast, especially in the south. This coastal region has a lot of islands and peninsulas."
-      ],
-      "tags": [],
-      "images": [
+          "country": "PT",
+          "how": "Portugal also has a belt and non-pointed shoes"
+        },
         {
-          "id": "2495167339ce",
-          "src": "https://learnablemeta.com/images/664/FN60kxzZnnoxUSvpd8wVVhIFcFc2SJvt03IF.avif",
-          "path": "hr/2495167339ce.webp",
-          "width": 1000,
-          "height": 482
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL",
-        "ME"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-24654",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: Istria",
-      "text": [
-        "The north-western region of Istria, south of the Italian city of Trieste, sometimes has distinct red soil."
-      ],
-      "tags": [],
-      "images": [
+          "country": "DE",
+          "how": "Germany also has a white belt"
+        },
         {
-          "id": "824738a8db2e",
-          "src": "https://learnablemeta.com/images/664/8abuMzOUUfc91ckrczT0bhmdUcBkfHQCjdDc.avif",
-          "path": "hr/824738a8db2e.webp",
-          "width": 1000,
-          "height": 495
+          "country": "HU",
+          "how": "Hungary also has a white belt"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-24655",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: East Flatland",
-      "text": [
-        "The north-eastern region of Croatia is mostly flat and features a lot of agriculture. It is similar in terms of landscape to Hungary and north-western Serbia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5d27858a8b03",
-          "src": "https://learnablemeta.com/images/664/sXWTxiPFPcokFVKyO3XBYrPsHrrG2rC0OyEz.avif",
-          "path": "hr/5d27858a8b03.webp",
-          "width": 1000,
-          "height": 482
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "HU",
-        "RS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-49891",
-      "step": 3,
-      "order": 6,
-      "family": "car",
-      "title": "Google car: Blue Fire Hydrants",
-      "text": [
-        "Croatia features blue fire hydrants with two diagonal protrusions on either side.",
-        "Newer fire hydrants seen in Generation 4 have a smaller top but are still recognisable due to the blue paint.",
-        "**--- NOTE:**",
-        "Similar fire hydrants can be found in bordering countries, most commonly in Hungary."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "34290f069d94",
-          "src": "https://learnablemeta.com/images/847/3lnXVfcK5k7jmHKvmGr8K8SR0CQ2HVFoP1QE.avif",
-          "path": "hr/34290f069d94.webp",
-          "width": 1000,
-          "height": 553
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "HU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-50253",
-      "step": 3,
-      "order": 7,
-      "family": "car",
-      "title": "Google car: Blue Fire Hydrants",
-      "text": [
-        "Croatia features blue fire hydrants with two diagonal protrusions on either side.",
-        "Newer fire hydrants seen in Generation 4 have a smaller top but are still recognisable due to the blue paint.",
-        "**--- NOTE:**",
-        "Similar fire hydrants can be found in bordering countries, most commonly in Hungary."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "34290f069d94",
-          "src": "https://learnablemeta.com/images/847/3lnXVfcK5k7jmHKvmGr8K8SR0CQ2HVFoP1QE.avif",
-          "path": "hr/34290f069d94.webp",
-          "width": 1000,
-          "height": 553
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "HU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-50897",
-      "step": 3,
-      "order": 8,
-      "family": "car",
-      "title": "Google car: Blue Fire Hydrants",
-      "text": [
-        "Croatia features blue fire hydrants with two diagonal protrusions on either side.",
-        "Newer fire hydrants seen in Generation 4 have a smaller top but are still recognisable due to the blue paint.",
-        "**--- NOTE:**",
-        "Similar fire hydrants can be found in bordering countries, most commonly in Hungary."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "34290f069d94",
-          "src": "https://learnablemeta.com/images/847/3lnXVfcK5k7jmHKvmGr8K8SR0CQ2HVFoP1QE.avif",
-          "path": "hr/34290f069d94.webp",
-          "width": 1000,
-          "height": 553
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "HU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-104488",
-      "step": 3,
-      "order": 9,
-      "family": "architecture",
-      "title": "Architecture: Red Brick Walls",
-      "text": [
-        "Buildings in Croatia sometimes feature exposed red brick walls.",
-        "This architecture is more common in inland areas.",
-        "**--- NOTE:**",
-        "This type of architecture can also be found in Slovenia and Serbia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2206d486f5b5",
-          "src": "https://learnablemeta.com/images/1072/rzCWWZyjQai854taOibzl7N9B0REWyE37SOY.avif",
-          "path": "hr/2206d486f5b5.webp",
-          "width": 1000,
-          "height": 554
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RS",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-104605",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: Adriatic Coast - Beige Bricks",
-      "text": [
-        "Houses and walls made of beige brick are common on the Adriatic coast.",
-        "They often feature green shutters.",
-        "**--- NOTE:**",
-        "Similar architecture can also be found in some regions in Italy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ce5e66b0f909",
-          "src": "https://learnablemeta.com/images/1072/0A3iO7NHEKdnEtuVPSwTTaTNFOuRFmnWDdDy.avif",
-          "path": "hr/ce5e66b0f909.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-128294",
-      "step": 3,
-      "order": 11,
-      "family": "architecture",
-      "title": "Architecture: Red Brick Walls",
-      "text": [
-        "Buildings in Croatia sometimes feature exposed red brick walls.",
-        "This architecture is more common in inland areas.",
-        "**--- NOTE:**",
-        "This type of architecture can also be found in Slovenia and Serbia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2206d486f5b5",
-          "src": "https://learnablemeta.com/images/1072/rzCWWZyjQai854taOibzl7N9B0REWyE37SOY.avif",
-          "path": "hr/2206d486f5b5.webp",
-          "width": 1000,
-          "height": 554
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RS",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hr-lm-128298",
-      "step": 3,
-      "order": 12,
-      "family": "architecture",
-      "title": "Architecture: Adriatic Coast - Beige Bricks",
-      "text": [
-        "Houses and walls made of beige brick are common on the Adriatic coast.",
-        "They often feature green shutters.",
-        "**--- NOTE:**",
-        "Similar architecture can also be found in some regions in Italy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ce5e66b0f909",
-          "src": "https://learnablemeta.com/images/1072/0A3iO7NHEKdnEtuVPSwTTaTNFOuRFmnWDdDy.avif",
-          "path": "hr/ce5e66b0f909.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "hr-lm-395595",
       "step": 3,
       "order": 13,
       "family": "other",
-      "title": "Croatia",
+      "title": "Phone numbers: landline area codes",
       "text": [
         "Croatian landlines typically start with a zero followed by the area code. Zagreb : 01 South : 02X North : 05X(West) > 04X(Central) > 03X(East)"
       ],
@@ -2015,7 +1753,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Landlines start with a zero then the area code: 01 for the capital, 02X in the south, 05X north-west, 04X centre, 03X east."
     },
     {
       "id": "hr-lm-740393",
@@ -2023,7 +1762,7 @@
       "order": 14,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Zagreb street sign",
+      "title": "Sign: dark blue street sign, white line",
       "text": [
         "These 2 dark blue street signs are unique to Zagreb. It always has a white line next to the street name."
       ],
@@ -2043,14 +1782,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Two dark blue street name signs unique to the capital, always with a white line next to the street name."
     },
     {
       "id": "hr-lm-740394",
       "step": 3,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Split",
+      "title": "Landscape: city on the water, ridges north and east",
       "text": [
         "Split, the 2nd biggest city in Croatia, is a distinct city surrounded by water, with big mountain ridges to the north and east. It has lots of big apartment buildings and 1 sky scraper which can sometimes be seen. An island can also sometimes be seen towards the west."
       ],
@@ -2070,14 +1810,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The second biggest city sits by the sea with large mountain ridges to the north and east, many big apartment blocks, one skyscraper, and sometimes an island to the west."
     },
     {
       "id": "hr-lm-783126",
       "step": 3,
       "order": 16,
       "family": "language",
-      "title": "Language: Croatian",
+      "title": "Language: Latin letters, Č Š Ž Ć Đ, ulica",
       "text": [
         "Croatian is the version of Serbo-Croatian official in Croatia. It is always written in the Latin script, unlike Bosnian, Montenegrin and, especially, Serbian which may use Cyrillic. Serbo-Croatian is also related to Slovene spoken in Slovenia, and may look very similar. Slovene and Serbo-Croatian both use the special characters **Č, Š** and **Ž**, but only Serbo-Croatian uses **Ć** and **Đ** aswell.",
         "The Croatian word for street is **ulica** (like most Slavic languages).",
@@ -2090,7 +1831,8 @@
           "src": "https://learnablemeta.com/images/9388/1785110737504-jWj.avif",
           "path": "hr/8b43740319f8.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "dupeOf": "5de6b478280d"
         },
         {
           "id": "757eca3ad029",
@@ -2108,7 +1850,18 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Always written in Latin letters. It uses Č, Š, Ž plus Ć and Đ, and the word for street is ulica. Slovene looks similar but lacks Ć and Đ. Lots of lj and nj shows a South Slavic language.",
+      "differs": [
+        {
+          "country": "SI",
+          "how": "Slovene has no Ć or Đ"
+        },
+        {
+          "country": "RS",
+          "how": "Serbian may use Cyrillic"
+        }
+      ]
     }
   ]
 }

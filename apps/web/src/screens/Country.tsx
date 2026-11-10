@@ -39,8 +39,9 @@ export function Country() {
 }
 
 function chapterLink(id: string): string {
-  return id === 'br:areacodes'
-    ? '/games/areacode/br'
+  const areaCodes = /^([a-z]{2}):areacodes$/.exec(id);
+  return areaCodes
+    ? `/games/areacode/${areaCodes[1]}`
     : `/session?chapter=${encodeURIComponent(id)}`;
 }
 
@@ -76,7 +77,7 @@ function CountryView({
     // countries without hand-written chapters get one per meta subject with enough cards to drill;
     // the rest share one Basics chapter, which practises all the country's non-map cards. Cards
     // answered on the regions map have their own chapter instead
-    const subjectCards = cards.filter((card) => !card.map);
+    const subjectCards = cards.filter((card) => !card.map && card.type !== 'areacode');
     const ownChapter = (subject: MetaSubject) =>
       subject !== 'other' &&
       subjectCards.filter((card) => card.subject === subject).length >= MIN_CHAPTER_CARDS;
@@ -100,6 +101,17 @@ function CountryView({
         subtitle: `Every ${country?.name ?? code} card, mixed`,
         to: `/session?country=${code}&map=0`,
         cards: subjectCards,
+      });
+    }
+    const codeCards = cards.filter((card) => card.type === 'areacode');
+    if (written.length === 0 && codeCards.length > 0) {
+      chapterList.push({
+        id: `auto:${code}:areacodes`,
+        order: chapterList.length + 1,
+        title: 'Area codes',
+        subtitle: 'See a code, click the region',
+        to: `/games/areacode/${code.toLowerCase()}`,
+        cards: codeCards,
       });
     }
     const mapCards = cards.filter((card) => card.map);

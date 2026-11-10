@@ -24,7 +24,7 @@
       "step": 0,
       "order": 3,
       "family": "plate",
-      "title": "Plate: Ireland has long, white licence plates with the standard…",
+      "title": "Plate: long white, blue strip on left",
       "text": [
         "Ireland has long, **white** licence plates with the standard European **blue strip** on the left.",
         "The white backplate is especially useful to distinguish it from the UK, which uses yellow backplates (but white fronts). In addition, most UK vehicles lack the blue strip on the left."
@@ -43,7 +43,8 @@
           "src": "https://learnablemeta.com/images/847/DB7OdD9u5PgiiUZi0YMim0oz0avr0otwjtuu.avif",
           "path": "ie/9c7010ebabae.webp",
           "width": 1000,
-          "height": 418
+          "height": 418,
+          "dupeOf": "c82fe3ab68e3"
         }
       ],
       "locations": [],
@@ -54,14 +55,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with the European blue strip on the left. The white back plate is the key difference from the UK, which has yellow back plates and often no blue strip.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK back plates are yellow, usually no blue strip"
+        }
+      ]
     },
     {
       "id": "ie-5CWT",
       "step": 0,
       "order": 4,
       "family": "other",
-      "title": "It is very common to see yellow outside dashes on Irish…",
+      "title": "Road lines: yellow dashes on the edge",
       "text": [
         "It is very common to see **yellow outside dashes** on Irish roads.",
         "NOTE: This is essentially never found in the UK. These dashes can also be seen in New Zealand."
@@ -104,14 +112,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow dashed lines along the road edge are very common. The UK almost never has them. New Zealand has them too.",
+      "sameAs": [
+        "NZ"
+      ],
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK roads almost never have yellow edge dashes"
+        }
+      ]
     },
     {
       "id": "ie-Iiqc",
       "step": 0,
       "order": 5,
       "family": "architecture",
-      "title": "Architecture: You will usually find cream white buildings with black…",
+      "title": "Houses: cream walls, black roofs",
       "text": [
         "You will usually find cream white buildings with black roofs in Ireland. Sometimes, the buildings feature grey corner stones. In cities, you will typically find row buildings.",
         "NOTE: British style brick buildings can still be found in Ireland."
@@ -139,14 +157,16 @@
           "src": "https://learnablemeta.com/images/847/z3LqQTO1B3S4ALfFDt1PMEMxFeiM7gk6Pxd2.avif",
           "path": "ie/8dabafba778a.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "3685244b28e4"
         },
         {
           "id": "4d01de8f87e4",
           "src": "https://learnablemeta.com/images/1072/sOvTJmMbMNXYGYz0VTBziU44EQgcjbsHHrkp.avif",
           "path": "ie/4d01de8f87e4.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "3685244b28e4"
         }
       ],
       "locations": [
@@ -165,7 +185,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cream-white houses with black roofs, sometimes with grey corner stones. Cities have rows of terraces. British-style brick buildings still exist here too."
     },
     {
       "id": "ie-Avrb",
@@ -173,7 +194,7 @@
       "order": 6,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: Ireland is the only European country that uses yellow…",
+      "title": "Sign: yellow diamond warning signs",
       "text": [
         "Ireland is the only European country that uses yellow **diamond-shaped** warning signs.",
         "Note that this only applies to warning signs. Regulatory signs (circles and upside down triangles) have the normal red border and white background, like most other European countries."
@@ -201,7 +222,8 @@
           "src": "https://learnablemeta.com/images/847/rzb2K9cBCgaeH9I7Xqydo0P9mCajy9fODapi.avif",
           "path": "ie/cdddf7e475ca.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "302aa5a0caa8"
         }
       ],
       "locations": [
@@ -220,14 +242,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only European country with yellow diamond-shaped warning signs. Regulatory signs have the normal red border and white background."
     },
     {
       "id": "ie-7jug",
       "step": 0,
       "order": 7,
       "family": "language",
-      "title": "Language: Irish signage is often bilingual",
+      "title": "Language: Irish in italics under English",
       "text": [
         "Irish signage is often bilingual, with English in a regular font, and **Irish in italics**. Place names, regular words and phrases are all translated.",
         "Irish language is somewhat less common on non-official signage."
@@ -267,7 +290,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs are often bilingual: English in regular letters and Irish in italics, with place names and phrases translated. Less common on non-official signs."
     },
     {
       "id": "ie-q0Q1",
@@ -275,7 +299,7 @@
       "order": 8,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Irish chevrons are yellow on black",
+      "title": "Chevron: yellow on black",
       "text": [
         "Irish chevrons are **yellow on black**. Both single and multiple arrows are common.",
         "NOTE: UK chevrons are white on black."
@@ -303,14 +327,16 @@
           "src": "https://learnablemeta.com/images/847/m3ZBEA1k24qBRrDxrKrbTgZCPrGPxS3BD3iF.avif",
           "path": "ie/561668932b57.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "be4ae8aee8a7"
         },
         {
           "id": "f13ad3b6818c",
           "src": "https://learnablemeta.com/images/914/x81kwxsrNapV2xMTew0gv15JmHqG4UbL2YrA.avif",
           "path": "ie/f13ad3b6818c.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "dupeOf": "be4ae8aee8a7"
         }
       ],
       "locations": [
@@ -331,14 +357,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow arrows on a black background, with single or multiple arrows. UK chevrons are white on black.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK chevrons are white on black"
+        }
+      ]
     },
     {
       "id": "ie-liz2",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: The yellow warning stickers on utility poles can be a good…",
+      "title": "Pole: yellow sticker, lightning bolt only",
       "text": [
         "The yellow warning stickers on utility poles can be a good way to distinguish between Ireland and the UK.",
         "The most important difference is that UK stickers feature a [guy getting zapped](https://goo.gl/maps/WiwaLDcn6Amn4Mw59) by a lightning bolt.",
@@ -369,7 +402,8 @@
           "src": "https://learnablemeta.com/images/847/PkTfk6Np74Tx1bz5PQbaYpxH8ZdW8cBu5820.avif",
           "path": "ie/58a9eeac5c12.webp",
           "width": 1000,
-          "height": 558
+          "height": 558,
+          "dupeOf": "4a8553acffd1"
         }
       ],
       "locations": [
@@ -390,7 +424,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow warning stickers on utility poles. Irish ones have a lightning bolt but no person being zapped, and often a second black-outlined sticker below it. UK stickers show a person being zapped.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK stickers show a person being zapped"
+        }
+      ]
     },
     {
       "id": "ie-Xamt",
@@ -398,7 +439,7 @@
       "order": 10,
       "family": "sign",
       "kind": "giveway",
-      "title": "Give way sign: Irish yield signs feature the word “YIELD”",
+      "title": "Sign: give way sign says YIELD",
       "text": [
         "Irish yield signs feature the word “**YIELD**”.",
         "NOTE: UK yield signs have the phrase “GIVE WAY”."
@@ -426,7 +467,8 @@
           "src": "https://learnablemeta.com/images/847/ayCVBMVNFzTXAgu0E63xlH9ahjzVumu5IbfI.avif",
           "path": "ie/987677561db6.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "efcccfeb8bc3"
         }
       ],
       "locations": [
@@ -447,14 +489,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Give-way signs say YIELD. UK ones say GIVE WAY.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK signs say GIVE WAY"
+        }
+      ]
     },
     {
       "id": "ie-FO2a",
       "step": 0,
       "order": 11,
       "family": "bollard",
-      "title": "Bollard: These green and white bollards can be a good clue for…",
+      "title": "Bollard: green and white",
       "text": [
         "These **green and white bollards** can be a good clue for Ireland. They are not entirely unique to the country, but they are especially helpful in 50-50s with the UK."
       ],
@@ -483,7 +532,8 @@
           "src": "https://learnablemeta.com/images/847/vkyO0oZ7uJ0wawKgM0jzMDzcZcEafb7ZyaNJ.avif",
           "path": "ie/5b6e27c1f075.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "dupeOf": "c8729b6f14b3"
         }
       ],
       "locations": [
@@ -504,14 +554,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Green and white bollards, not entirely unique but very helpful in 50-50s with the UK.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK bollards are not usually green and white"
+        }
+      ]
     },
     {
       "id": "ie-wBpf",
       "step": 0,
       "order": 12,
       "family": "other",
-      "title": "Rural metal gates with rounded corners are very common in…",
+      "title": "Farm gate: rounded corners",
       "text": [
         "Rural metal gates with **rounded corners** are very common in Ireland.",
         "NOTE: This is mainly useful to distinguish it from [the UK](https://goo.gl/maps/2ZVv7S5ptae1sxbU9), where similar gates typically have square corners. However, gates in [Northern Ireland](https://goo.gl/maps/y1AK7sL8MgoDdmVm9) also typically have rounded corners."
@@ -553,14 +610,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rural metal gates with rounded corners are very common. UK gates usually have square corners, but Northern Ireland also has rounded ones.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK gates usually have square corners"
+        }
+      ]
     },
     {
       "id": "ie-Gvq4",
       "step": 0,
       "order": 13,
       "family": "other",
-      "title": "You will often see a strip of grass in the middle of tiny…",
+      "title": "Road: tiny lane with grass strip",
       "text": [
         "You will often see a **strip of grass** in the middle of tiny rural roads. Such roads are called “[boreens](https://en.wikipedia.org/wiki/Boreen)”. While not unique, these boreens can often be a strong clue in a tough 50-50 between Ireland and the UK."
       ],
@@ -601,14 +665,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tiny rural roads (boreens) often have a strip of grass in the middle. Not unique, but a strong clue in a tough 50-50 with the UK.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "Less common in the UK"
+        }
+      ]
     },
     {
       "id": "ie-Wp2T",
       "step": 0,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Ireland and the UK drive on the left side of the road",
+      "title": "Driving side: left",
       "text": [
         "Ireland and the UK **drive on the left side** of the road.",
         "NOTE: The only other European countries to drive on the left are Malta and Cyprus, but landscape should be sufficient to tell them apart."
@@ -652,14 +723,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the left, as in the UK. Malta and Cyprus also do, but the landscape tells them apart.",
+      "sameAs": [
+        "GB"
+      ]
     },
     {
       "id": "ie-8zJQ",
       "step": 0,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: Most of Ireland is dominated by a very green",
+      "title": "Landscape: green fields with hedgerows",
       "text": [
         "Most of Ireland is dominated by a very green, agricultural landscape, with lots of **hedgerows** next to the roads and dividing the fields.",
         "This type of landscape is also common in many parts of the UK, and can be virtually indistinguishable from Ireland."
@@ -701,14 +776,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very green farmland with lots of hedgerows beside roads and between fields. Also common in much of the UK and can look the same.",
+      "sameAs": [
+        "GB"
+      ]
     },
     {
       "id": "ie-Kiq5",
       "step": 0,
       "order": 18,
       "family": "pole",
-      "title": "Pole: Both Ireland and the UK use wooden utility poles",
+      "title": "Pole: wooden with metal step rods",
       "text": [
         "Both Ireland and the UK use **wooden** utility poles. Pole steps bolted on the side of the pole are very common. These pole steps are shaped like a series of thin horizontal metal rods."
       ],
@@ -751,14 +830,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden utility poles, often with thin horizontal metal rods bolted on as steps. The UK has the same.",
+      "sameAs": [
+        "GB"
+      ]
     },
     {
       "id": "ie-616V",
       "step": 0,
       "order": 19,
       "family": "pole",
-      "title": "Pole: Both Ireland and the UK occasionally have metal crossbars…",
+      "title": "Pole: wooden with metal crossbars",
       "text": [
         "Both Ireland and the UK occasionally have **metal crossbars** on their wooden poles.",
         "NOTE: These types of crossbars are also common in Sweden and Finland."
@@ -785,14 +868,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles sometimes have metal crossbars. The UK has them too, and so do Sweden and Finland.",
+      "sameAs": [
+        "FI",
+        "GB",
+        "SE"
+      ]
     },
     {
       "id": "ie-Ottv",
       "step": 0,
       "order": 20,
       "family": "line",
-      "title": "Road line: In and around urban areas",
+      "title": "Road lines: double yellow at the edge",
       "text": [
         "In and around urban areas, you will sometimes encounter **double yellow road lines** on the sides of marked roads. These indicate a no parking zone, and are also very common in the UK. They are not really found anywhere else in Europe apart from Malta, but landscape should be sufficient to tell it apart."
       ],
@@ -834,7 +923,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In and near towns, double yellow lines at the road edge mean no parking. Also common in the UK. Nowhere else in Europe except Malta.",
+      "sameAs": [
+        "GB"
+      ]
     },
     {
       "id": "ie-koXg",
@@ -842,7 +935,7 @@
       "order": 21,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian crossing signs are somewhat rare in Ireland",
+      "title": "Sign: black-white post with yellow ball",
       "text": [
         "Pedestrian crossing signs are somewhat rare in Ireland. They are yellow and diamond-shaped, like other road signs.",
         "Instead of pedestrian signs, you will often see these **black and white signposts** with a yellow bulb on top.",
@@ -885,14 +978,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossings are often marked by a black-and-white post with a yellow bulb on top rather than a sign. The UK uses exactly the same posts.",
+      "sameAs": [
+        "GB"
+      ]
     },
     {
       "id": "ie-VCo7",
       "step": 0,
       "order": 22,
       "family": "car",
-      "title": "Google car: Ireland has Generation 4 “smallcam” coverage",
+      "title": "Google car: low camera, big round blur",
       "text": [
         "Ireland has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -931,7 +1028,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 camera mounted lower than usual, with a big round blur and a small bump at the front. The blur can be see-through, which makes it easy to miss."
     },
     {
       "id": "ie-N93o",
@@ -939,7 +1037,7 @@
       "order": 0,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Irish regional roads have 3-digit road numbers",
+      "title": "Route marker: 3-digit regional road numbers",
       "text": [
         "Irish **regional roads** have 3-digit road numbers. The first digit of these road numbers gives you a general region within the country (see the infographic).",
         "A good mnemonic to remember the rough location of each region: the numbers go in an anti-clockwise direction around the island, starting in Dublin.",
@@ -963,14 +1061,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The first digit of a 3-digit regional road number tells you the part of the country. Numbers go anti-clockwise around the island, starting at the capital. Numbers starting with 8 or 9 are newer and not tied to a region."
     },
     {
       "id": "ie-5rT8",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Irish phone numbers start with a two digit area code",
+      "title": "Phone numbers: two-digit area code",
       "text": [
         "Irish phone numbers start with a two digit **area code**. The area codes are grouped geographically by first digit, and are therefore very learnable."
       ],
@@ -990,14 +1089,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers start with a two-digit area code grouped by region by its first digit, so it is easy to learn."
     },
     {
       "id": "ie-2Zr0",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Ireland’s west coast is defined by a rugged",
+      "title": "Landscape: rugged wild hills, moors in the west",
       "text": [
         "Ireland’s west coast is defined by a **rugged, hilly landscape**. Steep hills and low mountains dominate. The neat fields of the east make way for wild grass- and moorlands. The grass often has more brownish and yellow tones to it. Sometimes you will be able to see exposed rocks."
       ],
@@ -1024,7 +1124,8 @@
           "src": "https://learnablemeta.com/images/664/aWPDPS2ZFrLCTORltHRpiwutGBAtlyYHHyby.avif",
           "path": "ie/5488e1eea299.webp",
           "width": 1000,
-          "height": 478
+          "height": 478,
+          "dupeOf": "f72221d66862"
         }
       ],
       "locations": [
@@ -1043,14 +1144,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The west coast has steep hills and low mountains, wild moorland and grass in brown and yellow tones, with sometimes bare rock. The neat fields of the east give way."
     },
     {
       "id": "ie-wmsQ",
       "step": 1,
       "order": 3,
       "family": "car",
-      "title": "Google car: If a very small rural road has Generation 4 coverage and is…",
+      "title": "Coverage: hilly tiny lane in Gen 4",
       "text": [
         "If a very small rural road has **Generation 4** coverage and is located in an unusually **hilly** landscape, you are likely to be in Donegal.",
         "Note that this meta only applies to the smallest roads: thin, without road lines, and sometimes with grass in the middle. This type of coverage is also not exclusive to Donegal, it is just likely to be there."
@@ -1091,14 +1193,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very small, thin road with no lines, sometimes with grass in the middle, in hilly land and Gen 4 coverage, probably means Donegal in the northwest. Not exclusive to it."
     },
     {
       "id": "ie-0oal",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: One noteworthy area in the east is the Wicklow Mountains",
+      "title": "Landscape: mountains with no coast in view",
       "text": [
         "One noteworthy area in the east is the **Wicklow Mountains**, just south of Dublin. They can look deceptively similar to the western coastal mountains. It can be very hard, if not downright impossible to distinguish these two areas.",
         "Two things to look out for:",
@@ -1145,14 +1248,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Wicklow Mountains, south of the capital, look like the western coastal mountains. You never see the coast from them, and small roads here have Gen 4 rather than the older Gen 2 typical of the west."
     },
     {
       "id": "ie-SSZH",
       "step": 1,
       "order": 5,
       "family": "car",
-      "title": "Google car: An electrical vehicle",
+      "title": "Google car: grey back with black semicircle",
       "text": [
         "An electrical vehicle (EV) with a Generation 4 camera was used to cover most of Eastern Ireland and parts of the Northwest. The **back of the EV is visible** in all this coverage: it is grey with a black semicircle.",
         "Note that not all Generation 4 coverage in and around Dublin is made with this car. A considerable amount still has the regular blue Generation 4 car."
@@ -1192,14 +1296,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An electric car with a Gen 4 camera covered most of the east and parts of the northwest. Its back is visible: grey with a black semicircle. Some Gen 4 near the capital still uses the regular blue car."
     },
     {
       "id": "ie-k4AI",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: In the north of counties Sligo and Leitrim you can find…",
+      "title": "Landscape: flat-topped mountains",
       "text": [
         "In the north of counties Sligo and Leitrim you can find distinctive **tabletop mountains**.",
         "Note that the mountains in the image are just an example, many of the mountains in this area have the same sort of shape."
@@ -1227,7 +1332,8 @@
           "src": "https://learnablemeta.com/images/664/FC5TjtM7GDzj5K8KVTELiNdPprMZpOE0HiSm.avif",
           "path": "ie/de8c6a343771.webp",
           "width": 1000,
-          "height": 485
+          "height": 485,
+          "dupeOf": "83c2115a42e9"
         }
       ],
       "locations": [
@@ -1246,14 +1352,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north of Sligo and Leitrim, mountains have flat, table-like tops."
     },
     {
       "id": "ie-Y78L",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The area in and around Burren National Park is…",
+      "title": "Landscape: bare grey limestone",
       "text": [
         "The area in and around Burren National Park is characterised by a unique [karst landscape](https://en.wikipedia.org/wiki/Karst) consisting of **exposed grey limestone rocks**."
       ],
@@ -1292,14 +1399,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around Burren National Park, bare grey limestone rock covers the land in a unique karst landscape."
     },
     {
       "id": "ie-R9jd",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "Cork is relatively unique in that it is significantly more…",
+      "title": "Landscape: hilly big city",
       "text": [
         "Cork is relatively unique in that it is significantly more **hilly** than the other big Irish cities."
       ],
@@ -1338,449 +1446,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ireland",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "ie-lm-136",
-      "step": 3,
-      "order": 0,
-      "family": "line",
-      "title": "Road line: Dashed yellow lines",
-      "text": [
-        "Yellow dashed lines like this are super common in Ireland. You can find sometimes similar lines in New Zealand so if you are not sure use other clues like landscape/vegetation etc."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9bb1ecf2d027",
-          "src": "https://learnablemeta.com/images/dnsgpFdiRwZHbVFQXYnO0eSWcYrj9UPFY5NV.avif",
-          "path": "ie/9bb1ecf2d027.webp",
-          "width": 1000,
-          "height": 462
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-10199",
-      "step": 3,
-      "order": 1,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "It is very common to see yellow outside dashes on Irish roads.",
-        "**NOTE:** This is essentially never found in the UK. These dashes can also be seen in New Zealand."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ccfd6af271c7",
-          "src": "https://learnablemeta.com/images/524/vgkAhmrTG7zHXydjMr9Bn1jddJxC0lyLeQEv.avif",
-          "path": "ie/ccfd6af271c7.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67bcfa50de249626b4a3e177",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-24586",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Burren National Park",
-      "text": [
-        "The area in and around Burren National Park is characterised by a unique karst landscape consisting of exposed grey limestone rocks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9ef1bbb80efc",
-          "src": "https://learnablemeta.com/images/664/fGZJ86IH2sNwuQxTvR592pfVUqU2uOwII50t.avif",
-          "path": "ie/9ef1bbb80efc.webp",
-          "width": 1000,
-          "height": 478
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-24590",
-      "step": 3,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: Donegal",
-      "text": [
-        "If a very small rural road has Generation 4 coverage and is located in an unusually hilly landscape, you are likely to be in Donegal. Note that this meta only applies to the smallest roads: thin, without road lines, and sometimes with grass in the middle. This type of coverage is also not exclusive to Donegal, it is just likely to be there."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96751356921a",
-          "src": "https://learnablemeta.com/images/664/gPvtZqbWp70EIoUpYDw8c1uHGS9sBQoR7SIs.avif",
-          "path": "ie/96751356921a.webp",
-          "width": 1000,
-          "height": 486
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-49906",
-      "step": 3,
-      "order": 4,
-      "family": "line",
-      "title": "Road line: Yellow Dashed Outlines",
-      "text": [
-        "It is very common to see yellow outside dashes on Irish roads.",
-        "**--- NOTE:**",
-        "This is essentially never found in the UK.",
-        "These dashes can also be seen in New Zealand."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4e947cfaf302",
-          "src": "https://learnablemeta.com/images/847/wss1ozQyBjHL0hehIhJGbAxLYnsu9Nia7jD3.avif",
-          "path": "ie/4e947cfaf302.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-49911",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Rounded Metal Gates",
-      "text": [
-        "Rural metal gates with rounded corners are very common in Ireland.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from the UK, where similar gates typically have square corners.",
-        "However, gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0a84a3fb837e",
-          "src": "https://learnablemeta.com/images/847/uUPi6WE9nuMaBsWyqRTWeFufd3nfzqKY7R04.avif",
-          "path": "ie/0a84a3fb837e.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-49912",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Strip Of Grass",
-      "text": [
-        "You will often see a strip of grass in the middle of tiny rural roads.",
-        "Such roads are called “boreens”.",
-        "While not unique, these boreens can often be a strong clue in a tough 50-50 between Ireland and the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8613b29f9a05",
-          "src": "https://learnablemeta.com/images/847/A5Isk15FCbuf14gm9Uj7Q5NwXoMATpzTUQ1T.avif",
-          "path": "ie/8613b29f9a05.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50267",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Strip Of Grass",
-      "text": [
-        "You will often see a strip of grass in the middle of tiny rural roads.",
-        "Such roads are called “boreens”.",
-        "While not unique, these boreens can often be a strong clue in a tough 50-50 between Ireland and the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8613b29f9a05",
-          "src": "https://learnablemeta.com/images/847/A5Isk15FCbuf14gm9Uj7Q5NwXoMATpzTUQ1T.avif",
-          "path": "ie/8613b29f9a05.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50270",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "Rounded Metal Gates",
-      "text": [
-        "Rural metal gates with rounded corners are very common in Ireland.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from the UK, where similar gates typically have square corners.",
-        "However, gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0a84a3fb837e",
-          "src": "https://learnablemeta.com/images/847/uUPi6WE9nuMaBsWyqRTWeFufd3nfzqKY7R04.avif",
-          "path": "ie/0a84a3fb837e.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50274",
-      "step": 3,
-      "order": 9,
-      "family": "line",
-      "title": "Road line: Yellow Dashed Outlines",
-      "text": [
-        "It is very common to see yellow outside dashes on Irish roads.",
-        "**--- NOTE:**",
-        "This is essentially never found in the UK.",
-        "These dashes can also be seen in New Zealand."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4e947cfaf302",
-          "src": "https://learnablemeta.com/images/847/wss1ozQyBjHL0hehIhJGbAxLYnsu9Nia7jD3.avif",
-          "path": "ie/4e947cfaf302.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50912",
-      "step": 3,
-      "order": 10,
-      "family": "line",
-      "title": "Road line: Yellow Dashed Outlines",
-      "text": [
-        "It is very common to see yellow outside dashes on Irish roads.",
-        "**--- NOTE:**",
-        "This is essentially never found in the UK.",
-        "These dashes can also be seen in New Zealand."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4e947cfaf302",
-          "src": "https://learnablemeta.com/images/847/wss1ozQyBjHL0hehIhJGbAxLYnsu9Nia7jD3.avif",
-          "path": "ie/4e947cfaf302.webp",
-          "width": 1000,
-          "height": 560
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50917",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Rounded Metal Gates",
-      "text": [
-        "Rural metal gates with rounded corners are very common in Ireland.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from the UK, where similar gates typically have square corners.",
-        "However, gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0a84a3fb837e",
-          "src": "https://learnablemeta.com/images/847/uUPi6WE9nuMaBsWyqRTWeFufd3nfzqKY7R04.avif",
-          "path": "ie/0a84a3fb837e.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-50918",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Strip Of Grass",
-      "text": [
-        "You will often see a strip of grass in the middle of tiny rural roads.",
-        "Such roads are called “boreens”.",
-        "While not unique, these boreens can often be a strong clue in a tough 50-50 between Ireland and the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8613b29f9a05",
-          "src": "https://learnablemeta.com/images/847/A5Isk15FCbuf14gm9Uj7Q5NwXoMATpzTUQ1T.avif",
-          "path": "ie/8613b29f9a05.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-56231",
-      "step": 3,
-      "order": 13,
-      "family": "line",
-      "title": "Road line: Yellow Dashed Outers",
-      "text": [
-        "It is very common to see yellow outside dashes on Irish roads.",
-        "**--- NOTE:**",
-        "This is essentially never found in the UK.",
-        "These dashes can also be seen in New Zealand."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c8ea6689b7be",
-          "src": "https://learnablemeta.com/images/863/TN6ivhxH15yFdgdnW83g7ExhUxGMas2dRzhh.avif",
-          "path": "ie/c8ea6689b7be.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cork is much hillier than the other big Irish cities."
     },
     {
       "id": "ie-lm-474349",
       "step": 3,
       "order": 14,
       "family": "pole",
-      "title": "Pole: slanted top",
+      "title": "Pole: wooden pole with slanted top",
       "text": [
         "It is sometimes hard to distinguish France, Ireland, and the UK. An easy trick is to focus on the tops of the wooden poles: Ireland has a slanted top."
       ],
@@ -1803,14 +1477,25 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "France, Ireland and the UK can be hard to tell apart. Look at the tops of wooden poles: Irish ones are slanted.",
+      "differs": [
+        {
+          "country": "FR",
+          "how": "French pole tops are not slanted"
+        },
+        {
+          "country": "GB",
+          "how": "UK pole tops are not slanted"
+        }
+      ]
     },
     {
       "id": "ie-lm-515552",
       "step": 3,
       "order": 15,
       "family": "guardrail",
-      "title": "Guardrail: A & B-Type w/o reflectors",
+      "title": "Guardrail: A and B types, no reflectors",
       "text": [
         "Ireland uses (just like Germany) A &#x26; B-Type guardrails without any reflectors.",
         "NOTE: The UK only uses A-Type guardrails."
@@ -1841,7 +1526,17 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Both A-type and B-type guardrails with no reflectors, like Germany. The UK only uses A-type.",
+      "sameAs": [
+        "DE"
+      ],
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK uses only A-type guardrails"
+        }
+      ]
     },
     {
       "id": "ie-lm-740286",
@@ -1849,7 +1544,7 @@
       "order": 16,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Dublin street sign",
+      "title": "Sign: blue street sign with district number",
       "text": [
         "Dublin has blue street signs with white text and a white border around it, it also has a number on the right, showing in which district your in. Here is a map of postal areas in Dublin for guessing within the city."
       ],
@@ -1870,61 +1565,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-740378",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "Cork vibes",
-      "text": [
-        "Cork is relatively unique in that it is significantly more hilly than the other big Irish cities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6662a7f95a21",
-          "src": "https://learnablemeta.com/images/4588/1777473866852-Oj8.avif",
-          "path": "ie/6662a7f95a21.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ie-lm-783072",
-      "step": 3,
-      "order": 18,
-      "family": "language",
-      "title": "Language: Irish",
-      "text": [
-        "Irish is a Celtic language native to the island of Ireland and co-official with English in the Republic of Ireland. Irish signage is often bilingual, with English in a regular font, and Irish in italics. Place names, regular words and phrases are all translated. Irish language is somewhat less common on non-official signage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1a27523f3ea0",
-          "src": "https://learnablemeta.com/images/9388/1785140022243-h08.avif",
-          "path": "ie/1a27523f3ea0.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Blue street signs with white text, a white border and a number on the right showing the postal district."
     }
   ]
 }

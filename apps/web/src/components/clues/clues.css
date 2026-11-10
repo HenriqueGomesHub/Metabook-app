@@ -15,10 +15,82 @@
   letter-spacing: -0.01em;
 }
 
+.clue-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+
+.clue-summary {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.clue-compare {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.clue-compare li {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--bg);
+  border: 1px solid var(--line-soft, var(--line));
+}
+
+.clue-compare-label {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.clue-differs .clue-compare-label {
+  color: var(--warn);
+}
+
+.clue-compare-note {
+  color: var(--muted);
+}
+
+.clue-more summary {
+  cursor: pointer;
+  width: fit-content;
+  padding: 4px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.clue-more summary:hover {
+  color: var(--ink);
+}
+
+.clue-more[open] summary {
+  margin-bottom: 8px;
+}
+
+.clue-text {
+  font-size: 15px;
+  color: var(--muted);
+}
+
 .clue-text p {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   line-height: 1.55;
   overflow-wrap: anywhere;
+}
+
+.clue-text p.clue-note {
+  padding-left: 10px;
+  border-left: 2px solid var(--line);
 }
 
 .clue-text p:last-child {
@@ -39,9 +111,24 @@
   gap: 8px;
 }
 
+.clue-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  min-width: 0;
+}
+
+.clue-figure figcaption {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
 .clue-thumb {
   position: relative;
   display: block;
+  width: 100%;
   aspect-ratio: 4 / 3;
   padding: 0;
   overflow: hidden;
@@ -106,24 +193,92 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: 60;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  background: rgb(0 0 0 / 0.85);
+  padding: 56px 64px 24px;
+  background: rgb(0 0 0 / 0.9);
   cursor: zoom-out;
 }
 
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 1400px);
+  height: 100%;
+  margin: 0;
+  touch-action: pan-y;
+}
+
+.lightbox-frame {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  cursor: default;
+}
+
 .lightbox .clue-img {
-  width: min(100%, 1100px);
-  height: min(100%, 86vh);
+  width: 100%;
+  height: 100%;
+}
+
+.lightbox-caption {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 72ch;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #eeeae2;
+  text-align: center;
+  cursor: default;
+}
+
+.lightbox-count {
+  flex: none;
+  font-size: 13px;
+  color: #a39f96;
+  font-variant-numeric: tabular-nums;
 }
 
 .lightbox-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev {
+  left: 12px;
+}
+
+.lightbox-next {
+  right: 12px;
+}
+
+@media (max-width: 599.98px) {
+  .lightbox {
+    padding: 56px 8px 16px;
+  }
+
+  .lightbox-nav {
+    top: auto;
+    bottom: 12px;
+    transform: none;
+  }
+
+  .lightbox-caption {
+    padding: 0 52px;
+    font-size: 15px;
+  }
 }
 
 /* Live view: Google's share embed, its address card covered until the answer */
@@ -202,4 +357,19 @@
 
 .reveal-clue .clue-images {
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+}
+
+.reveal-clue .clue-summary {
+  font-size: 17px;
+}
+
+.reveal-family {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }

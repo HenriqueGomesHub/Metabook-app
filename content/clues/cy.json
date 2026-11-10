@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Cyprus uses both standard white European license plates",
+      "title": "Plate: white EU or UK-style yellow rear",
       "text": [
         "Cyprus uses both standard **white** European license plates, and UK-style plates that have a **yellow rear plate**. Most license plates have the EU strip on the left. Rental cars, which have a distinct **red** plate, are not uncommon either."
       ],
@@ -46,14 +46,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Both white EU-style plates and UK-style plates with a yellow rear are used. Most have the EU strip on the left. Red plates on rental cars are common.",
+      "differs": [
+        {
+          "country": "GB",
+          "how": "UK plates have no EU strip and no red rental plates"
+        }
+      ]
     },
     {
       "id": "cy-tgbp",
       "step": 0,
       "order": 2,
       "family": "other",
-      "title": "Only the southern half of the Island",
+      "title": "Coverage: southern half of the island only",
       "text": [
         "Only the southern half of the Island, namely the Republic of Cyprus and the British overseas territories of Akrotiri and Dhekelia are covered."
       ],
@@ -74,14 +81,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only the southern half of the island is covered, including the two British base areas."
     },
     {
       "id": "cy-LzpI",
       "step": 0,
       "order": 3,
       "family": "language",
-      "title": "Language: Cyprus uses the Greek and English languages",
+      "title": "Language: Greek and English",
       "text": [
         "Cyprus uses the Greek and English languages. Greek has a unique alphabet not used in any other language. It shares similarities with both the Latin and [Cyrillic](https://www.plonkit.net/images/greece/greece_cyrillic.png) alphabets, however the lower case letters generally have softer shapes than the Cyrillic letters.",
         "NOTE: It goes without saying, but Greece also uses the Greek alphabet."
@@ -104,14 +112,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Greek and English are both used. Greek letters have softer, rounder shapes than Cyrillic. Greece uses Greek too, so check the other clues.",
+      "sameAs": [
+        "GR"
+      ]
     },
     {
       "id": "cy-SuER",
       "step": 0,
       "order": 4,
       "family": "other",
-      "title": "Cyprus drives on the left side of the road",
+      "title": "Driving side: left",
       "text": [
         "Cyprus drives on the **left** side of the road.",
         "NOTE: Malta also drives on the left. "
@@ -153,7 +165,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the left. Malta also drives on the left.",
+      "sameAs": [
+        "MT"
+      ]
     },
     {
       "id": "cy-4Jsq",
@@ -161,7 +177,7 @@
       "order": 5,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: A former crown colony of the United Kingdom until 1960",
+      "title": "Sign: British-style signs and road lines",
       "text": [
         "A former crown colony of the United Kingdom until 1960, Cyprus continues to use some **borrowed infrastructure**, like signs and roadlines. This is also why Cyprus drives on the **left**, and why** English** is so widely used."
       ],
@@ -202,14 +218,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A former British colony, it still uses British-style signs and road lines. This is also why it drives on the left and English is widely used."
     },
     {
       "id": "cy-RNMJ",
       "step": 0,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: Most coverage on the island was taken with a Generation 4…",
+      "title": "Google car: low-mounted small camera, round blur",
       "text": [
         "Most coverage on the island was taken with a Generation 4 “smallcam”, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, with a [short antenna sometimes visible](https://maps.app.goo.gl/RLr9WU3DtaeHXx4i7) on the back.",
         "NOTE: Greece also has a significant amount of smallcam coverage, but will never have a visible antenna."
@@ -251,14 +268,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low-mounted camera with a fairly big round blur and a small bump at the front. Sometimes the blur is see-through, with a short antenna visible at the back.",
+      "differs": [
+        {
+          "country": "GR",
+          "how": "Greece has this camera too but never shows an antenna"
+        }
+      ]
     },
     {
       "id": "cy-blro",
       "step": 0,
       "order": 7,
       "family": "bollard",
-      "title": "Bollard: Bollards are superficially similar to Turkish bollards",
+      "title": "Bollard: red front, white back, slanted top",
       "text": [
         "Bollards are superficially similar to Turkish bollards, with a red reflector at the front and a white one at the back. However, unlike Turkish bollards, they are not flat but rather triangular, with a slanted top."
       ],
@@ -299,7 +323,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red reflector at the front, white at the back, and a triangular post with a slanted top. Looks like the Turkish bollard, but that one is flat.",
+      "differs": [
+        {
+          "country": "TR",
+          "how": "Turkish bollards are flat, not triangular"
+        }
+      ]
     },
     {
       "id": "cy-qUjp",
@@ -307,7 +338,7 @@
       "order": 8,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs are very similar to Greek directional…",
+      "title": "Sign: direction signs, Greek in all-caps",
       "text": [
         "Directional signs are very similar to Greek directional signs, with the one notable difference being that the Greek text is written in **all-caps**."
       ],
@@ -346,7 +377,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs look like Greek ones, but the Greek text is written in all capitals.",
+      "differs": [
+        {
+          "country": "GR",
+          "how": "Greek signs do not use all-caps Greek text"
+        }
+      ]
     },
     {
       "id": "cy-e6Mi",
@@ -354,7 +392,7 @@
       "order": 9,
       "family": "sign",
       "kind": "speed",
-      "title": "Speed sign: Town entry signs consist of either a yellow rectangle with…",
+      "title": "Sign: town entry with speed limit above",
       "text": [
         "Town entry signs consist of either a yellow rectangle with a red border, or just the smaller white rectangle that contains the town name in both Greek and English. The signs will also contain a speed limit sign above them. These designs are unique to Cyprus."
       ],
@@ -393,14 +431,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town entry signs are either a yellow rectangle with a red border or a small white rectangle, with the name in Greek and English and a speed limit sign above. This design is unique."
     },
     {
       "id": "cy-Ls03",
       "step": 0,
       "order": 10,
       "family": "pole",
-      "title": "Pole: Utility poles are primarily wooden",
+      "title": "Pole: tall, dark brown wood",
       "text": [
         "Utility poles are primarily **wooden**, typically quite **tall** and have a distinctly dark brown colour.",
         "NOTE: All of these features are shared with Greek utility poles."
@@ -442,14 +481,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly wooden poles, quite tall and dark brown. Greek poles look the same.",
+      "sameAs": [
+        "GR"
+      ]
     },
     {
       "id": "cy-zqFQ",
       "step": 0,
       "order": 11,
       "family": "pole",
-      "title": "Pole: Poles commonly have one of three poletops",
+      "title": "Pole: three kinds of top",
       "text": [
         "Poles commonly have one of three poletops. The first consists of a **crossbar** with** zero** or **three insulators** on top. The second consists of [five insulators](https://maps.app.goo.gl/ufHrL368mHZ8aufFA) attached directly to the side of the pole. And the third one consists of a metal frame **shaped vaguely like a harp**.",
         "NOTE: These are also commonly found in Greece. The symmetrical poletop with three insulators is specific to Cyprus."
@@ -493,14 +536,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Three pole tops: a crossbar with zero or three insulators, five insulators on the side, or a metal frame shaped like a harp. All also exist in Greece, but the symmetrical three-insulator top is only here.",
+      "differs": [
+        {
+          "country": "GR",
+          "how": "symmetrical three-insulator top is only found in Cyprus"
+        }
+      ]
     },
     {
       "id": "cy-mLLv",
       "step": 0,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: Most buildings are made of brightly painted stone",
+      "title": "Houses: bright painted stone, tiled or flat roof",
       "text": [
         "Most buildings are made of brightly painted stone, with either a tiled or a flat roof.",
         "NOTE: These features are also common in Greek architecture."
@@ -540,14 +590,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most buildings are brightly painted stone with a tiled or flat roof. Greek buildings look similar.",
+      "sameAs": [
+        "GR"
+      ]
     },
     {
       "id": "cy-JQb2",
       "step": 0,
       "order": 13,
       "family": "landscape",
-      "title": "Landscape: The island has a Mediterranean landscape",
+      "title": "Landscape: Mediterranean, pines in mountains",
       "text": [
         "The island has a Mediterranean landscape, with bright exposed rock, olive trees, palm trees, cypress trees, and green coastal farmland. The interior consists of pine forests in the mountains."
       ],
@@ -586,14 +640,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bright bare rock, olive, palm and cypress trees, and green farmland on the coast. The mountains inland have pine forests."
     },
     {
       "id": "cy-GraQ",
       "step": 0,
       "order": 14,
       "family": "architecture",
-      "title": "Architecture: Houses in Cyprus often have a horizontal and cylindrical…",
+      "title": "Houses: white cylinder water tank on roof",
       "text": [
         "Houses in Cyprus often have a** horizontal **and **cylindrical** water tank that is **white **in colour, and has a circular access lid near one end on the top."
       ],
@@ -632,14 +687,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses often have a white, horizontal, cylindrical water tank with a round lid near one end on top."
     },
     {
       "id": "cy-E5gR",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Cyprus uses A, B, E, and F roads, and they are grouped by…",
+      "title": "Roads: A, B, E, F letters by first digit",
       "text": [
         "Cyprus uses A, B, E, and F roads, and they are grouped by their first digit.",
         "NOTE: E and F roads are located near the B road with the matching first digit. This is useful because B roads are easier to find. "
@@ -661,14 +717,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads are labelled A, B, E or F and grouped by their first digit. E and F roads are near the B road with the same first digit, and B roads are easier to find."
     },
     {
       "id": "cy-HQht",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Each of the 5 provinces uses a two-digit area code",
+      "title": "Phone numbers: area codes starting with 2",
       "text": [
         "Each of the 5 provinces uses a two-digit area code,** starting with a 2**."
       ],
@@ -689,7 +746,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Each of the 5 provinces has a two-digit area code starting with 2."
     },
     {
       "id": "cy-8xv2",
@@ -697,7 +755,7 @@
       "order": 2,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Cyprus uses four-digit postal codes",
+      "title": "Sign: four-digit postal codes on street signs",
       "text": [
         "Cyprus uses four-digit postal codes, grouped by region. They can be [found on street signs](https://maps.app.goo.gl/QLKgfjhF61xNEmVu9), and are denoted by either T.K. or T.T. ",
         "The first digits can be useful to memorise."
@@ -710,7 +768,8 @@
           "giveaway": true,
           "path": "cy/7df4f3317dfb.webp",
           "width": 800,
-          "height": 477
+          "height": 477,
+          "dupeOf": "122045439ae5"
         }
       ],
       "locations": [],
@@ -719,14 +778,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs show four-digit postal codes marked T.K. or T.T. The codes are grouped by region, so the first digits are worth learning."
     },
     {
       "id": "cy-7IFu",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Being a small island",
+      "title": "Landscape: hilly, highest in the centre",
       "text": [
         "Being a small island, the terrain will be the easiest way to narrow down your location. Most of the country is hilly to mountainous, with the centre having the highest elevation, that you can use to orient yourself. "
       ],
@@ -746,14 +806,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On a small island, terrain is the best way to narrow down your spot. Most of it is hilly to mountainous, and the centre is highest."
     },
     {
       "id": "cy-n354",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "While the bright exposed limestone rock is a good clue for…",
+      "title": "Landscape: bright limestone on south coast",
       "text": [
         "While the **bright exposed limestone** rock is a good clue for the country, it is mainly found along its southern coast."
       ],
@@ -792,14 +853,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bright bare limestone is a good clue for the country, but it is mostly found along the south coast."
     },
     {
       "id": "cy-PP9D",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: On the other hand",
+      "title": "Landscape: red soil inland and northwest",
       "text": [
         "On the other hand, **reddish soil** is found in the interior and northwest of the country. "
       ],
@@ -838,14 +900,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Reddish soil is found inland and in the northwest."
     },
     {
       "id": "cy-gtvS",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Vineyards are found more towards the southwest of Cyprus",
+      "title": "Plants: vineyards in the southwest",
       "text": [
         "**Vineyards **are found more towards the southwest of Cyprus."
       ],
@@ -885,14 +948,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards are more common towards the southwest."
     },
     {
       "id": "cy-kCS4",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "Wild Mustard, which looks like bushes of yellow flowers,…",
+      "title": "Plants: bushes of yellow wild mustard",
       "text": [
         "**Wild Mustard**, which looks like **bushes of yellow flowers**, while possible to find on most of Cyprus, is most common in these areas, mainly in the eastern half of the country."
       ],
@@ -931,14 +995,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wild mustard looks like bushes of yellow flowers. It grows almost everywhere but is most common in the eastern half."
     },
     {
       "id": "cy-IsTg",
       "step": 1,
       "order": 9,
       "family": "bollard",
-      "title": "Bollard: The Paphos Forest nature reserve consists of windy mountain…",
+      "title": "Bollard: none in forest reserve",
       "text": [
         "The Paphos Forest nature reserve consists of windy mountain roads with red soil on the sides, passing through the mostly uninhabited Mediterranean forest. You will not see any bollards in the reserve, with few exceptions."
       ],
@@ -980,14 +1045,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A forest reserve in the west has winding mountain roads with red soil beside them, mostly empty Mediterranean forest. You will almost never see bollards there."
     },
     {
       "id": "cy-QTeI",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: In the northeast of Cyprus",
+      "title": "Landscape: mountain ridge north of flat farmland",
       "text": [
         "In the northeast of Cyprus, you will often be able to see the** Kyrenia Mountain ridge** to the **north**, overlooking the otherwise flat farmland."
       ],
@@ -1026,14 +1092,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the northeast you can often see a long mountain ridge to the north, above otherwise flat farmland."
     },
     {
       "id": "cy-n4db",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: Dark red fields, even if covered in vegetation, are a good…",
+      "title": "Landscape: dark red fields",
       "text": [
         "**Dark red fields**, even if covered in vegetation, are a good clue for northern Cyprus and Famagusta, the far eastern region."
       ],
@@ -1073,14 +1140,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dark red fields, even if covered in plants, point to the north and the far east of the island."
     },
     {
       "id": "cy-H1jq",
       "step": 1,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: Famagusta can easily be recognised by the mostly flat…",
+      "title": "Landscape: flat, red fields, low-quality camera",
       "text": [
         "Famagusta can easily be recognised by the mostly flat landscape, with lots of red fields. Maybe more importantly though, all of the coverage is **shitcam**.",
         "NOTE: Shitcam is quite rare in the rest of Cyprus."
@@ -1121,14 +1189,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The far east is mostly flat with lots of red fields. All coverage there is the old low-quality camera, which is rare in the rest of the island."
     },
     {
       "id": "cy-zbcn",
       "step": 1,
       "order": 14,
       "family": "other",
-      "title": "Wind turbines are found in two main clusters on Cyprus",
+      "title": "Landmark: wind turbines in two clusters",
       "text": [
         "**Wind turbines** are found in two main clusters on Cyprus: west of Larnaca in the east, and southwest of Anogyra, near the Limassol-Paphos subdivision border."
       ],
@@ -1168,14 +1237,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wind turbines sit in two clusters: west of Larnaca in the east, and southwest of Anogyra near the Limassol-Paphos border."
     },
     {
       "id": "cy-d6AJ",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: The wind turbines in the east are built on sandy rolling…",
+      "title": "Landscape: turbines on sandy hills, fields",
       "text": [
         "The wind turbines in the east are built on **sandy rolling hills**, surrounded by **agricultural fields** ."
       ],
@@ -1214,14 +1284,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The eastern wind turbines are on sandy rolling hills surrounded by farm fields."
     },
     {
       "id": "cy-lRj5",
       "step": 1,
       "order": 16,
       "family": "vegetation",
-      "title": "Vegetation: The wind turbines in the SW are located within the Oreites…",
+      "title": "Landscape: turbines on shrubby hill, slope to coast",
       "text": [
         "The wind turbines in the SW are located within the Oreites Forest, a shrubby hill surrounded by more extreme elevation. There is a noticeable incline towards the coast, which is often visible to the southwest."
       ],
@@ -1260,14 +1331,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The south-west turbines are on a shrubby hill in a forest, with steeper land around. The ground clearly slopes down towards the coast, often visible to the southwest."
     },
     {
       "id": "cy-ilC2",
       "step": 1,
       "order": 17,
       "family": "bollard",
-      "title": "Bollard: A different kind of bollard with a black top",
+      "title": "Bollard: black top",
       "text": [
         "A different kind of **bollard with a black top**, resembling those found in Slovenia for example, can sometimes be found in north-eastern Cyprus. ",
         "NOTE: The presence of regular Cypriot bollards does not exclude the highlighted region."
@@ -1311,14 +1383,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A different bollard with a black top, similar to Slovenia's, appears sometimes in the north-east. Normal local bollards can be there too.",
+      "differs": [
+        {
+          "country": "SI",
+          "how": "similar black-topped bollard, so use landscape to separate"
+        }
+      ]
     },
     {
       "id": "cy-MDsc",
       "step": 2,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Snow coverage can be found on a few roads southeast of the…",
+      "title": "Coverage: snowy roads",
       "text": [
         "**Snow coverage** can be found on a few roads southeast of the Cyprus island label, near the Holy Monastery of Panagia Machaira."
       ],
@@ -1357,14 +1436,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A few roads were filmed in snow, southeast of the island label near the Panagia Machaira monastery."
     },
     {
       "id": "cy-ZlY6",
       "step": 2,
       "order": 1,
       "family": "line",
-      "title": "Road line: Dashed blue lines between the outer and inner road markings…",
+      "title": "Road lines: dashed blue between edge and centre",
       "text": [
         "**Dashed blue lines** between the outer and inner road markings can be seen on a few roads around Mount Olympus."
       ],
@@ -1403,14 +1483,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A few roads around Mount Olympus have dashed blue lines between the edge and centre markings."
     },
     {
       "id": "cy-XIJd",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "Banana plantations can be found along the western coast…",
+      "title": "Plants: banana plantations on west coast",
       "text": [
         "**Banana plantations** can be found along the western coast around Peyia."
       ],
@@ -1449,7 +1530,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Banana plantations grow along the west coast, around Peyia."
     },
     {
       "id": "cy-Suab",
@@ -1457,7 +1539,7 @@
       "order": 3,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: With a Russian-speaking population of around 17%",
+      "title": "Sign: shop signs also in Russian",
       "text": [
         "With a Russian-speaking population of around 17%, many commercial signs in Limassol feature **Russian **translations."
       ],
@@ -1496,74 +1578,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/cyprus",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "cy-lm-725900",
-      "step": 3,
-      "order": 0,
-      "family": "plate",
-      "title": "Plate: Cyprus",
-      "text": [
-        "Cyprus uses both standard white European license plates, and UK-style plates that have a yellow rear plate. Most license plates have the EU strip on the left. Rental cars, which have a distinct red plate, are not uncommon either."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "795a491553a1",
-          "src": "https://learnablemeta.com/images/5431/1773051613533-lcq.avif",
-          "path": "cy/795a491553a1.webp",
-          "width": 800,
-          "height": 265
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cy-lm-783117",
-      "step": 3,
-      "order": 1,
-      "family": "language",
-      "title": "Language: Greek",
-      "text": [
-        "Cyprus (the Republic of Cyprus) mainly uses the Greek language. Greek has a unique alphabet not used in any other language. It shares similarities with both the Latin and Cyrillic alphabets, however the lower case letters generally have softer shapes than the Cyrillic letters. English is also common to find on the island, due to Cyprus' history as a British Colony. The UK still holds on to the Sovereign Base Areas of Akrotiri and Dhekelia , which also have a bit of official coverage.",
-        "NOTE: To distinguish Cyprus from Greece, remember that Cyprus drives on the **left**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8bdb5da6de89",
-          "src": "https://learnablemeta.com/images/9388/1785111332673-IpC.avif",
-          "path": "cy/8bdb5da6de89.webp",
-          "width": 800,
-          "height": 451
-        },
-        {
-          "id": "1b15f4238a50",
-          "src": "https://learnablemeta.com/images/9388/1792173076932-SWt.avif",
-          "path": "cy/1b15f4238a50.webp",
-          "width": 742,
-          "height": 467
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "GR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "About 17% of people speak Russian, so many shop signs in Limassol have Russian translations."
     }
   ]
 }

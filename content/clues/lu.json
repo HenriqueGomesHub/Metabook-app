@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Luxembourg uses long yellow plates with a blue strip on the…",
+      "title": "Plate: long yellow with blue strip on left",
       "text": [
         "Luxembourg uses **long** **yellow** plates with a blue strip on the left.",
         "Since Luxembourg is a small country, foreign cars with [white plates](https://goo.gl/maps/5frYTtwZD81cVohD9) are somewhat common.",
@@ -47,7 +47,8 @@
           "src": "https://learnablemeta.com/images/847/zncVMdc14CpqYyZuiktJgPNtvamLt5sWPQB4.avif",
           "path": "lu/f1d5e412ff21.webp",
           "width": 1000,
-          "height": 447
+          "height": 447,
+          "dupeOf": "f40ea97efaff"
         },
         {
           "id": "291628119583",
@@ -66,14 +67,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long yellow plates with a blue strip on the left. Foreign cars with white plates are fairly common because the country is small.",
+      "differs": [
+        {
+          "country": "NL",
+          "how": "Dutch plates are yellow front and rear, no blue strip"
+        },
+        {
+          "country": "GB",
+          "how": "British plates are yellow only at the rear"
+        }
+      ]
     },
     {
       "id": "lu-90cv",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Bollards are black and white",
+      "title": "Bollard: black and white wedge",
       "text": [
         "**Bollards** are black and white. They are wedge-shaped and have grey reflectors. Some have a distinctive [indent](https://goo.gl/maps/P4GMqrARAYXyAqRYA) in the lower half.",
         "NOTE: They look more or less identical to [German](https://goo.gl/maps/6ELNoXaCi3LPUiML9) bollards. The most notable difference is that the reflectors on German bollards have two bolts, while in Luxembourg they have [three](https://goo.gl/maps/w92yU6hXM4GRDrH58).",
@@ -111,14 +123,16 @@
           "src": "https://learnablemeta.com/images/739/UoBnhZgBZySqD8xnvmQSIvLu4FMWyMgw3ahU.avif",
           "path": "lu/5bafdfe88a66.webp",
           "width": 1000,
-          "height": 811
+          "height": 811,
+          "dupeOf": "b34d154fbaea"
         },
         {
           "id": "f71d034ed864",
           "src": "https://learnablemeta.com/images/847/YG4NDh6LuU080xXQ9NQsKeay5NWItnTAuwpe.avif",
           "path": "lu/f71d034ed864.webp",
           "width": 1000,
-          "height": 811
+          "height": 811,
+          "dupeOf": "b34d154fbaea"
         },
         {
           "id": "9f9ea4662da1",
@@ -148,7 +162,26 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black and white wedge-shaped bollard with a grey reflector, sometimes with an indent in the lower half. Looks like the German one, but the reflector has three bolts instead of two.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "German reflector has two bolts, not three"
+        },
+        {
+          "country": "BE",
+          "how": "Belgian bollards look very different"
+        },
+        {
+          "country": "NL",
+          "how": "Dutch bollards look very different"
+        },
+        {
+          "country": "FR",
+          "how": "French bollards look very different"
+        }
+      ]
     },
     {
       "id": "lu-DmBj",
@@ -156,7 +189,7 @@
       "order": 3,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Chevrons are black with yellow arrows",
+      "title": "Chevron: black with yellow arrows",
       "text": [
         "Chevrons are **black with yellow** arrows. You may also rarely come across [blue and yellow](https://www.google.com/maps/@49.6287886,6.1349694,3a,15y,1.97h,71.47t/data=!3m6!1e1!3m4!1s64mNrisMtRf0qKgQ49PAaw!2e0!7i16384!8i8192?entry=ttu) chevrons.",
         "NOTE: None of Luxembourg’s neighbours use these chevrons.",
@@ -192,7 +225,8 @@
           "src": "https://learnablemeta.com/images/914/hLvxq8ZR9A5DuFy8pGtnMYUoA6idepGdKwEe.avif",
           "path": "lu/19c266d31c53.webp",
           "width": 1000,
-          "height": 499
+          "height": 499,
+          "dupeOf": "edfbfc4604ed"
         }
       ],
       "locations": [
@@ -217,14 +251,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black chevron boards with yellow arrows, rarely blue and yellow. No neighbour uses these, so it points to Luxembourg unless the landscape says Iceland, Norway, Finland, Ireland or Portugal.",
+      "differs": [
+        {
+          "country": "IS",
+          "how": "Same colours but a very different landscape"
+        },
+        {
+          "country": "NO",
+          "how": "Same colours but a very different landscape"
+        }
+      ]
     },
     {
       "id": "lu-nKRO",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Poles with poletops shaped like upside-down tridents are…",
+      "title": "Pole: upside-down trident top",
       "text": [
         "Poles with poletops shaped like **upside-down tridents** are the most common type of pole in Luxembourg.",
         "In addition, you can find a variety of other poletops.",
@@ -271,14 +316,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common pole has a top shaped like an upside-down trident, with other tops mixed in. France, Spain and Portugal have it too.",
+      "sameAs": [
+        "ES",
+        "FR",
+        "PT"
+      ]
     },
     {
       "id": "lu-t9UN",
       "step": 0,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: Almost all coverage in Luxembourg is either Generation 2 or…",
+      "title": "Coverage: Gen 2 or Gen 4 camera",
       "text": [
         "Almost all coverage in Luxembourg is either **Generation 2 or Generation 4**.",
         "Generation 3 is rare, but [does exist](https://goo.gl/maps/DVuUian1XUX3BSL1A)."
@@ -318,14 +369,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nearly all coverage is from the Gen 2 or Gen 4 camera. The older, blurrier Gen 3 exists but is rare."
     },
     {
       "id": "lu-MrJA",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: Luxembourg is a highly multilingual country",
+      "title": "Language: French most, then German",
       "text": [
         "Luxembourg is a highly **multilingual country**. It has three administrative languages: Luxembourgish, French, and German.",
         "French is the language that is mostly used for public communication. Road signs and advertisements are usually in French.",
@@ -366,14 +418,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Three official languages, but French is used most on road signs and adverts. German on signs is less common, though not rare."
     },
     {
       "id": "lu-jlnY",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "Luxembourgish is closely related to German and can look…",
+      "title": "Language: German-looking with doubled vowels",
       "text": [
         "**Luxembourgish** is closely related to German and can look very similar. Like German, it uses umlauts (dots over vowels). In addition, it uses a fair amount of double vowels, and sometimes an é with an accent.",
         "Most town names have their origin in Luxembourgish, German, or both."
@@ -394,7 +447,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Looks like German, with umlauts, lots of double vowels and sometimes an accented é. Most town names come from Luxembourgish, German, or both."
     },
     {
       "id": "lu-2Qmq",
@@ -402,7 +456,7 @@
       "order": 8,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs are yellow with a thin black outline",
+      "title": "Sign: yellow framed direction signs",
       "text": [
         "**Directional signs **are yellow with a thin black outline. Town names are written in uppercase. The signs have a pointed tip. They are completely surrounded by a **frame**, making them very recognizable.",
         "Some directional signs feature road numbers:",
@@ -444,7 +498,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow direction signs with a thin black outline, a pointed tip and a full frame around them. Town names are in capitals. Road numbers sit in a red box (1-2 digits) or a yellow box (3 digits)."
     },
     {
       "id": "lu-gJw2",
@@ -452,7 +507,7 @@
       "order": 9,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Town entrance signs are also yellow and surrounded by a…",
+      "title": "Sign: yellow framed town entrance",
       "text": [
         "**Town entrance signs **are also yellow and surrounded by a frame.",
         "Most of these signs have bilingual versions of the town name. They frequently have the road number on the top, along with a speed limit sign."
@@ -492,14 +547,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town entrance signs are yellow with a frame around them, usually with the town name in two languages. The road number and a speed limit often sit on top."
     },
     {
       "id": "lu-oSnE",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "The frames mentioned in the previous two tips are also…",
+      "title": "Road signs: square-cornered frames",
       "text": [
         "The **frames **mentioned in the previous two tips are also commonly found on a lot of other road infrastructure.",
         "NOTE: Denmark notably also uses a lot of similar-looking frames on road infrastructure. A recognizable difference is that the corners on Luxembourg frames are more square, while Danish frames are more [rounded](https://goo.gl/maps/58VmxHoeLNTXUUNM8)."
@@ -541,7 +597,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Frames like those on the direction signs appear on lots of other road items. Denmark has similar frames, but its corners are rounder, while these are more square.",
+      "differs": [
+        {
+          "country": "DK",
+          "how": "Danish frame corners are more rounded"
+        }
+      ]
     },
     {
       "id": "lu-kWxo",
@@ -549,7 +612,7 @@
       "order": 11,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Almost all Luxembourgish road signs will be supported by a…",
+      "title": "Sign: white signposts",
       "text": [
         "Almost all Luxembourgish road signs will be supported by a **white signpost**.",
         "NOTE: While not nearly as common, white signposts are also found in [France](https://maps.app.goo.gl/rYufTJHHu99ALVKf6)."
@@ -577,7 +640,8 @@
           "src": "https://learnablemeta.com/images/847/4spfh6rAUbJX78WTJrwKhhefauFvEV4kJEIH.avif",
           "path": "lu/21114d816b96.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "dupeOf": "34d0b6765bcd"
         }
       ],
       "locations": [
@@ -598,7 +662,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Almost all road signs are mounted on white signposts. France has some too, but much less often."
     },
     {
       "id": "lu-e5yT",
@@ -606,7 +671,7 @@
       "order": 12,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs are almost always short and usually have a…",
+      "title": "Street sign: short, white, slanted blue corners",
       "text": [
         "**Street signs** are almost always short and usually have a white background. The exact designs vary from town to town.",
         "A very common design is the one pictured on the left in the example image, with slanted blue corners.",
@@ -655,7 +720,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs are short and mostly white, with designs varying by town. A common one has slanted blue corners.",
+      "differs": [
+        {
+          "country": "BE",
+          "how": "Belgian ones are also short but can be other colours"
+        },
+        {
+          "country": "NL",
+          "how": "Dutch ones are blue, long and low"
+        }
+      ]
     },
     {
       "id": "lu-D1t5",
@@ -663,7 +739,7 @@
       "order": 13,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Some signposts have this bulky",
+      "title": "Signpost: bulky blue-and-white round reflector",
       "text": [
         "Some signposts have this bulky, round reflector with **blue and white** markings.",
         "NOTE: Similar markings are found in Sweden and Finland. Landscape should be sufficient to tell these apart from Luxembourg, however."
@@ -706,7 +782,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some signposts carry a bulky round reflector with blue and white markings. Sweden and Finland have similar ones, but the landscape tells them apart.",
+      "sameAs": [
+        "FI",
+        "SE"
+      ]
     },
     {
       "id": "lu-b7NW",
@@ -714,7 +795,7 @@
       "order": 14,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian signs have 5 vertical stripes",
+      "title": "Sign: pedestrian crossing, 5 vertical stripes",
       "text": [
         "**Pedestrian signs** have 5 vertical stripes.",
         "NOTE: Belgian pedestrian signs have 2 horizontal stripes."
@@ -754,7 +835,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The pedestrian crossing sign shows 5 vertical stripes. Belgian ones have 2 horizontal stripes.",
+      "differs": [
+        {
+          "country": "BE",
+          "how": "Belgian sign has 2 horizontal stripes"
+        }
+      ]
     },
     {
       "id": "lu-yx10",
@@ -762,7 +850,7 @@
       "order": 15,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Bus stop signs are blue and always have this exact design",
+      "title": "Sign: blue bus stop, bus with six windows",
       "text": [
         "**Bus stop signs** are blue and always have this exact design. The bus has six windows.",
         "NOTE: Bus stop signs in Belgium and the Netherlands have significantly different designs. For example, the Belgian bus stop sign always has a [yellow signpost](https://goo.gl/maps/HRqx4mPFRvtkV2u2A)."
@@ -812,14 +900,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stop signs are blue and always the same design, with a bus that has six windows. Belgian and Dutch ones look quite different; the Belgian one has a yellow post.",
+      "differs": [
+        {
+          "country": "BE",
+          "how": "Belgian bus stop sign has a different design and yellow post"
+        },
+        {
+          "country": "NL",
+          "how": "Dutch bus stop sign has a different design"
+        }
+      ]
     },
     {
       "id": "lu-YP0t",
       "step": 0,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Almost all of Luxembourg’s landscape consists of green…",
+      "title": "Landscape: green rolling hills",
       "text": [
         "Almost all of Luxembourg’s landscape consists of green **rolling hills**, with a patchwork of agriculture and forests.",
         "NOTE: If you see a yellow licence plate, and you are not sure what country it belongs to, landscape is often a good clue: almost all of the Netherlands is completely flat."
@@ -861,14 +960,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nearly everywhere is green rolling hills with a patchwork of farmland and forest. If you see yellow plates and are unsure, hills rule out the Netherlands, which is flat.",
+      "differs": [
+        {
+          "country": "NL",
+          "how": "Netherlands is almost completely flat"
+        }
+      ]
     },
     {
       "id": "lu-SRxb",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Houses tend to have dark slate roofs",
+      "title": "Houses: dark slate roofs, plain walls",
       "text": [
         "Houses tend to have **dark slate roofs**.",
         "Walls and windows tend to be plain and undecorated. Walls are usually painted white, grey, or pastel colours.",
@@ -897,7 +1003,8 @@
           "src": "https://learnablemeta.com/images/1072/QONMRjE8q9YLtaLzCCsO51k54D8u3i0KRGcN.avif",
           "path": "lu/6008e236ec62.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "dupeOf": "dc10d6957dc4"
         }
       ],
       "locations": [
@@ -919,7 +1026,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses have dark slate roofs and plain walls painted white, grey or pastel. Neighbouring parts of Belgium and France look the same, though it is most common here.",
+      "sameAs": [
+        "BE",
+        "FR"
+      ]
     },
     {
       "id": "lu-S1pq",
@@ -927,7 +1039,7 @@
       "order": 0,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Local road numbers have three digits",
+      "title": "Road numbers: 3 digits, first digit by area",
       "text": [
         "**Local road numbers** have three digits. They are geographically clustered by first digit. The first digits range from 1-3.",
         "- 1xx is found in the southern half.",
@@ -950,14 +1062,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Local road numbers have three digits starting with 1 in the south, 2 around the capital and 3 in the north."
     },
     {
       "id": "lu-oEEg",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "The north of the country is hillier and has an overall…",
+      "title": "Landscape: hillier, higher north",
       "text": [
         "The north of the country is **hillier **and has an overall higher elevation than the south."
       ],
@@ -996,14 +1109,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north is hillier and higher than the south."
     },
     {
       "id": "lu-F5fO",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Vineyards are primarily found in the southeast of the…",
+      "title": "Landscape: vineyards in the southeast",
       "text": [
         "**Vineyards** are primarily found in the southeast of the country."
       ],
@@ -1042,14 +1156,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vineyards are mostly in the southeast of the country."
     },
     {
       "id": "lu-wuhb",
       "step": 2,
       "order": 0,
       "family": "car",
-      "title": "Google car: Some of Luxembourg City’s downtown area was covered by a…",
+      "title": "Google car: Gen 3 backpack in city centre",
       "text": [
         "Some of Luxembourg City’s downtown area was covered by a **Generation 3 urban trekker**. Occasionally, the trekker’s sunglasses and greying hair can be seen."
       ],
@@ -1088,77 +1203,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/luxembourg",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "lu-lm-634024",
-      "step": 3,
-      "order": 0,
-      "family": "plate",
-      "title": "Plate: Luxembourg",
-      "text": [
-        "Luxembourg uses long yellow plates with a blue strip on the left.",
-        "Since Luxembourg is a small country, foreign cars with white plates are somewhat common.",
-        "NOTE: There are only a few other European countries that use yellow plates for private vehicles:",
-        "The Netherlands has yellow plates front and rear.",
-        "The UK has yellow rear plates.",
-        "Some pre-2009 French cars have yellow rear plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3303db3e4143",
-          "src": "https://learnablemeta.com/images/5431/1766261128923-kEG.avif",
-          "path": "lu/3303db3e4143.webp",
-          "width": 800,
-          "height": 358
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GB",
-        "NL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lu-lm-783092",
-      "step": 3,
-      "order": 1,
-      "family": "language",
-      "title": "Language: Luxembourgish (+presence of French and German)",
-      "text": [
-        "Luxembourg is a country with an interesting mix of languages. The national language is Luxembourgish, a Germanic language closely related to German. Like German, it uses umlauts (dots over vowels). In addition, it uses a fair amount of double vowels, and sometimes an **é** with an accent.",
-        "French and German are also used as administrative languages in Luxembourg alongside Luxembourgish. French is the language mostly used for public communication. Road signs and advertisements are usually in French. Presence of German on signs is less common compared to French, but certainly not non-existent."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "428eec798f32",
-          "src": "https://learnablemeta.com/images/9388/1785590956849-DEQ.avif",
-          "path": "lu/428eec798f32.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "7d66cbcb6a7d",
-          "src": "https://learnablemeta.com/images/9388/1785590969663-8lc.avif",
-          "path": "lu/7d66cbcb6a7d.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Parts of the capital's downtown were shot with a Gen 3 backpack camera. Sometimes you can see the carrier's sunglasses and greying hair."
     }
   ]
 }

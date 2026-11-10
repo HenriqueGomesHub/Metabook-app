@@ -40,6 +40,23 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
   other: { label: 'Basics', blurb: 'Driving side, domains, calling codes' },
 };
 
+/** How a family's clues are counted on a tile ("38 bollards"). */
+export const FAMILY_NOUNS: Record<MetaSubject, [string, string]> = {
+  bollard: ['bollard', 'bollards'],
+  pole: ['pole', 'poles'],
+  plate: ['plate', 'plates'],
+  sign: ['sign', 'signs'],
+  line: ['line clue', 'line clues'],
+  guardrail: ['guardrail', 'guardrails'],
+  language: ['language clue', 'language clues'],
+  car: ['car clue', 'car clues'],
+  coverage: ['coverage clue', 'coverage clues'],
+  landscape: ['landscape clue', 'landscape clues'],
+  vegetation: ['plant', 'plants'],
+  architecture: ['building clue', 'building clues'],
+  other: ['clue', 'clues'],
+};
+
 export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
 /** Lower-case code of the regions map whose state codes the keys are ('br': Brazil's states). */
@@ -91,8 +108,8 @@ export function pairLabel(picked: string, truth: string, scope?: Scope): string 
 }
 
 /**
- * Regions-map cards answer with their map's state codes, area codes with Brazilian state codes;
- * everything else is a country name or region id.
+ * Regions-map cards answer with their map's state codes, area codes with the state codes of their
+ * country's map ('br' for Brazil); everything else is a country name or region id.
  */
-export const scopeOf = (card: Pick<Card, 'type' | 'map'> | undefined): Scope =>
-  card?.map ?? (card?.type === 'areacode' ? 'br' : undefined);
+export const scopeOf = (card: Pick<Card, 'type' | 'map' | 'country'> | undefined): Scope =>
+  card?.map ?? (card?.type === 'areacode' ? (card.country ?? 'BR').toLowerCase() : undefined);

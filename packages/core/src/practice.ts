@@ -165,8 +165,15 @@ function numberOf(card: Card): number | undefined {
   return match ? Number(match[1]) : undefined;
 }
 
-/** Neighbouring numbers (11 and 12, 11 and 13) or two-digit codes sharing a first digit (11, 17). */
+/**
+ * Neighbouring numbers (11 and 12, 11 and 13), two-digit codes sharing a first digit (11, 17), or
+ * two area codes of the same region (São Paulo's 11 then its 16): back to back they feel like a
+ * repeat.
+ */
 function adjacent(a: Card | undefined, b: Card): boolean {
+  if (a && a.type === 'areacode' && b.type === 'areacode') {
+    if (a.country === b.country && a.answer === b.answer) return true;
+  }
   const x = a && numberOf(a);
   const y = numberOf(b);
   if (x === undefined || y === undefined) return false;
