@@ -100,7 +100,8 @@ export function textEntryProblem(e, own, codes) {
   if (e.differs != null && !(Array.isArray(e.differs) && e.differs.every((d) => d && codeList([d.country], own, codes) && isText(d.how, 200)))) {
     return 'differs must be [{ country: other pool code, how }]';
   }
-  if (e.hide != null && typeof e.hide !== 'boolean') return 'hide must be boolean';
+  // true, or the reason as text ("duplicate of pl-vySo")
+  if (e.hide != null && typeof e.hide !== 'boolean' && !isText(e.hide, 200)) return 'hide must be true or a reason';
   return undefined;
 }
 

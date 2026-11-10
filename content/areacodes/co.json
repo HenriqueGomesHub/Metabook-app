@@ -1,0 +1,77 @@
+{
+ "country": "CO",
+ "label": "Indicativos",
+ "prefix": "+57",
+ "format": "(60X) XXX XXXX",
+ "sources": [
+  "https://wiki.openstreetmap.org/wiki/Colombia/Phone_numbers"
+ ],
+ "notes": "Since 2021 Colombia uses 601-608 regional indicativos. 601 = Bogota + Cundinamarca (single map code CUN). 608 mapped to Amazonas (largest by area) with the rest as spans.",
+ "codes": [
+  {
+   "code": "601",
+   "region": "CUN"
+  },
+  {
+   "code": "602",
+   "region": "VAC",
+   "spans": [
+    "CAU",
+    "NAR"
+   ]
+  },
+  {
+   "code": "604",
+   "region": "ANT",
+   "spans": [
+    "CHO",
+    "COR"
+   ]
+  },
+  {
+   "code": "605",
+   "region": "ATL",
+   "spans": [
+    "BOL",
+    "CES",
+    "LAG",
+    "MAG",
+    "SUC"
+   ]
+  },
+  {
+   "code": "606",
+   "region": "CAL",
+   "spans": [
+    "QUI",
+    "RIS"
+   ]
+  },
+  {
+   "code": "607",
+   "region": "SAN",
+   "spans": [
+    "ARA",
+    "NSA"
+   ]
+  },
+  {
+   "code": "608",
+   "region": "AMA",
+   "spans": [
+    "BOY",
+    "CAQ",
+    "CAS",
+    "GUA",
+    "GUV",
+    "HUI",
+    "MET",
+    "PUT",
+    "SAP",
+    "TOL",
+    "VAU",
+    "VID"
+   ]
+  }
+ ]
+}
