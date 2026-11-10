@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CLUE_FAMILIES, SIGN_KINDS } from '../packages/core/src/clues.ts';
 import { namedIn, regionNameParts } from '../packages/core/src/generate.ts';
 import { licenceOk } from '../tools/content/lib/common.mjs';
 const root = dirname(fileURLToPath(import.meta.url));
@@ -181,5 +182,59 @@ for (const c of chapters) for (const k of ['id', 'country', 'order', 'title', 's
 const chapterIds = new Set(chapters.map((c) => c.id));
 for (const c of allCards) if (c.chapter && !chapterIds.has(c.chapter)) err(`card ${c.id}: unknown chapter ${c.chapter}`);
 
+// clues/<code>.json: ClueCountry files from the clues step (packages/core/src/clues.ts); index.json sums them up
+const LOCATION_SOURCES = ['plonkit', 'learnablemeta', 'carmeta', 'saved'];
+const finite = (...values) => values.every((v) => typeof v === 'number' && Number.isFinite(v));
+const badLocation = (l) =>
+  !l || !finite(l.lat, l.lng, l.heading, l.pitch, l.fov) || Math.abs(l.lat) > 90 || Math.abs(l.lng) > 180 ||
+  !LOCATION_SOURCES.includes(l.source) || (l.pano != null && typeof l.pano !== 'string');
+const clueIds = new Set();
+let clueCount = 0;
+for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
+  const file = load(`clues/${f}`);
+  const w = `clues/${f}`;
+  const code = file.country;
+  if (typeof code !== 'string' || `${code.toLowerCase()}.json` !== f) err(`${w}: country ${code} does not match the file name`);
+  if (!codes.has(code)) err(`${w}: country ${code} not in pool.json`);
+  if (!file.name) err(`${w}: missing name`);
+  if (!isUrl(file.sourceUrl)) err(`${w}: sourceUrl must be http(s) URL`);
+  if (typeof file.fetchedAt !== 'string') err(`${w}: fetchedAt must be a string`);
+  if (!Array.isArray(file.steps) || !file.steps.every((s) => typeof s?.title === 'string')) err(`${w}: steps must be [{ title }]`);
+  if (!Array.isArray(file.clues)) { err(`${w}: clues must be an array`); continue; }
+  for (const c of file.clues) {
+    const cw = `${w} ${c.id}`;
+    if (typeof c.id !== 'string' || !c.id) { err(`${w}: clue without id`); continue; }
+    if (clueIds.has(c.id)) err(`clues: duplicate id ${c.id}`);
+    clueIds.add(c.id);
+    clueCount++;
+    if (!Number.isInteger(c.step) || c.step < 0 || c.step >= (file.steps?.length ?? 0)) err(`${cw}: step ${c.step} is not a step index`);
+    if (!Number.isInteger(c.order) || c.order < 0) err(`${cw}: order must be a non-negative integer`);
+    if (!CLUE_FAMILIES.includes(c.family)) err(`${cw}: bad family ${c.family}`);
+    if (c.kind != null && (c.family !== 'sign' || !SIGN_KINDS.includes(c.kind))) err(`${cw}: kind ${c.kind} only goes on family sign, from SIGN_KINDS`);
+    if (typeof c.title !== 'string' || !c.title.trim()) err(`${cw}: missing title`);
+    if (!strings(c.text) || !strings(c.tags)) err(`${cw}: text and tags must be arrays of strings`);
+    if (c.region != null && typeof c.region !== 'string') err(`${cw}: region must be a string`);
+    if (!strings(c.lookalikes) || !c.lookalikes.every((l) => codes.has(l) && l !== code)) err(`${cw}: lookalikes must be other pool codes`);
+    if (!['Plonk It', 'Learnable Meta'].includes(c.credit?.source) || !isUrl(c.credit?.url) || !c.credit?.licence) err(`${cw}: credit needs source, url and licence`);
+    if (!Array.isArray(c.images) || !Array.isArray(c.locations)) { err(`${cw}: images and locations must be arrays`); continue; }
+    const imageIds = new Set();
+    for (const i of c.images) {
+      if (typeof i.id !== 'string' || !i.id || imageIds.has(i.id)) err(`${cw}: image id ${i.id} missing or repeated`);
+      imageIds.add(i.id);
+      if (!isUrl(i.src)) err(`${cw} image ${i.id}: src must be http(s) URL`);
+      if (i.path != null && !/^[a-z]{2}\/[\w-]+\.webp$/.test(i.path)) err(`${cw} image ${i.id}: path must be <code>/<id>.webp`);
+      if ((i.width != null || i.height != null) && !(Number.isInteger(i.width) && Number.isInteger(i.height))) err(`${cw} image ${i.id}: width and height must be integers`);
+      if (i.crop != null && !(finite(i.crop.x, i.crop.y, i.crop.w, i.crop.h) && [i.crop.x, i.crop.y, i.crop.w, i.crop.h].every((v) => v >= 0 && v <= 1))) err(`${cw} image ${i.id}: crop must be fractions 0..1`);
+      if (i.giveaway != null && typeof i.giveaway !== 'boolean') err(`${cw} image ${i.id}: giveaway must be boolean`);
+      if (i.location != null && badLocation(i.location)) err(`${cw} image ${i.id}: bad location`);
+    }
+    for (const l of c.locations) if (badLocation(l)) err(`${cw}: bad location ${JSON.stringify(l)}`);
+  }
+}
+if (existsSync(join(root, 'clues/index.json'))) {
+  const index = load('clues/index.json');
+  if (!Array.isArray(index) || !index.every((r) => codes.has(r.country) && Number.isInteger(r.clues))) err('clues/index.json: rows must be { country, clues, ... } for pool countries');
+}
+
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`OK: ${pool.length} pool, ${allCards.length} cards, ${allTips.length} tips, ${chapters.length} chapters, ${noteIds.size} facts files, ${mediaCount} photos`);
+console.log(`OK: ${pool.length} pool, ${allCards.length} cards, ${allTips.length} tips, ${chapters.length} chapters, ${noteIds.size} facts files, ${mediaCount} photos, ${clueCount} clues`);
