@@ -111,3 +111,20 @@ export interface ClueCountry {
   steps: { title: string }[];
   clues: Clue[];
 }
+
+/**
+ * Card ids made from clues. Stable as long as the clue and image ids are, so study progress survives a
+ * re-fetch. The extension grades a clue through `primaryCardId`.
+ */
+export const clueCardIds = {
+  spot: (clueId: string, imageId: string) => `clue:${clueId}:spot:${imageId}`,
+  which: (clueId: string) => `clue:${clueId}:which`,
+  live: (clueId: string, index: number) => `clue:${clueId}:live:${index}`,
+  text: (clueId: string) => `clue:${clueId}:text`,
+};
+
+/** The card that stands for the clue as a whole: its first image's Spot it card, else its text card. */
+export function primaryCardId(clue: Pick<Clue, 'id' | 'images'>): string {
+  const first = clue.images[0];
+  return first ? clueCardIds.spot(clue.id, first.id) : clueCardIds.text(clue.id);
+}
