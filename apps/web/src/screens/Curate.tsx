@@ -7,16 +7,18 @@ import { AlreadyCollected } from '../data/curation';
 import type { Candidate, Crop, CurationApi, Decision } from '../data/curation';
 import { CandidateGrid } from './curate/CandidateGrid';
 import { CandidateReview } from './curate/CandidateReview';
+import { TopicReview } from './curate/TopicReview';
 import { Page } from './manage/Page';
 import './curate/curate.css';
 
 const GRID_PAGE = 12;
 const VIEW_KEY = 'metabook.curate.view';
-type View = 'grid' | 'single';
+type View = 'grid' | 'single' | 'topic';
 
 function savedView(): View {
   try {
-    return localStorage.getItem(VIEW_KEY) === 'single' ? 'single' : 'grid';
+    const saved = localStorage.getItem(VIEW_KEY);
+    return saved === 'single' || saved === 'topic' ? saved : 'grid';
   } catch {
     return 'grid';
   }
@@ -195,6 +197,45 @@ function CurateQueue({
       }
     });
 
+  const toggles = (
+    <div className="toggles curate-view" role="group" aria-label="View">
+      <button
+        type="button"
+        className="toggle"
+        aria-pressed={view === 'single'}
+        onClick={() => chooseView('single')}
+      >
+        One by one
+      </button>
+      <button
+        type="button"
+        className="toggle"
+        aria-pressed={view === 'grid'}
+        onClick={() => chooseView('grid')}
+      >
+        Grid
+      </button>
+      <button
+        type="button"
+        className="toggle"
+        aria-pressed={view === 'topic'}
+        onClick={() => chooseView('topic')}
+      >
+        By topic
+      </button>
+    </div>
+  );
+
+  // the agents' suggestions (media_uses); the other views show candidates still pending
+  if (view === 'topic') {
+    return (
+      <Page user={user} title="Curate photos" subtitle="Agent suggestions, by subject">
+        {toggles}
+        <TopicReview api={api} />
+      </Page>
+    );
+  }
+
   return (
     <Page
       user={user}
@@ -236,24 +277,7 @@ function CurateQueue({
           {error}
         </p>
       )}
-      <div className="toggles curate-view" role="group" aria-label="View">
-        <button
-          type="button"
-          className="toggle"
-          aria-pressed={view === 'single'}
-          onClick={() => chooseView('single')}
-        >
-          One by one
-        </button>
-        <button
-          type="button"
-          className="toggle"
-          aria-pressed={view === 'grid'}
-          onClick={() => chooseView('grid')}
-        >
-          Grid
-        </button>
-      </div>
+      {toggles}
       {pending && !current && (
         <EmptyState
           title="Nothing to curate"

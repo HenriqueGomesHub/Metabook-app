@@ -34,6 +34,31 @@ export interface Crop {
   h: number;
 }
 
+/**
+ * An agent-suggested use of a candidate photo (media_uses, 0005_media_uses.sql): a crop tagged
+ * with the subject it teaches. Approved uses become MediaItems of their own.
+ */
+export interface Use {
+  id: string;
+  candidateId: string;
+  subject: MetaSubject;
+  crop: Crop;
+  /** the agent's note, the caption-to-be */
+  note: string | null;
+  /** from the candidate */
+  country: string;
+  storagePath: string;
+  width: number | null;
+  height: number | null;
+  preview: string | null;
+  credit: string;
+  sourceUrl: string;
+  title: string | null;
+  description: string | null;
+}
+
+export type UseStatus = 'suggested' | 'approved' | 'rejected';
+
 export interface Decision {
   status: 'pending' | 'approved' | 'rejected';
   subject: MetaSubject;
@@ -62,6 +87,37 @@ export interface CurationApi {
   decideMany(ids: string[], status: Decision['status']): Promise<string[]>;
   /** Saves only the crop of one uncollected row (the grid approves it later with decideMany). */
   setCrop(id: string, crop: Crop | null): Promise<void>;
+  /** subject → number of suggested uses; throws UsesUnavailable before 0005_media_uses.sql */
+  countUses(): Promise<Partial<Record<MetaSubject, number>>>;
+  /** every suggested use of one subject, oldest first (paged past the 1000-row limit) */
+  listUses(subject: MetaSubject): Promise<Use[]>;
+  /**
+   * Sets one status on many uses in one request; back to 'suggested' (undo) skips collected uses.
+   * Returns the ids it changed; no-op for no ids.
+   */
+  decideUses(ids: string[], status: UseStatus): Promise<string[]>;
+  /** Changes the crop and/or the subject of one uncollected use. */
+  updateUse(id: string, change: { crop?: Crop; subject?: MetaSubject }): Promise<void>;
+}
+
+/** Reading uses before supabase/migrations/0005_media_uses.sql has created the table. */
+export class UsesUnavailable extends Error {
+  constructor() {
+    super('Run supabase/migrations/0005_media_uses.sql to review the agents’ suggestions');
+  }
+}
+
+/** An adjusted use that would be the same as another use of its photo (unique key). */
+export class DuplicateUse extends Error {
+  constructor() {
+    super('That photo already has a use with this subject and crop.');
+  }
+}
+
+/** PostgREST: PGRST205 (or 42P01) for an unknown table. */
+export function isMissingUses(error: unknown): boolean {
+  const { code, message = '' } = (error ?? {}) as PostgrestError;
+  return (code === 'PGRST205' || code === '42P01') && /media_uses/.test(message);
 }
 
 /** An undo refused because the photo is already in the cards. */
@@ -107,6 +163,28 @@ interface Row {
   height?: number | null;
   crop?: Crop | null;
 }
+
+interface UseRow {
+  id: string;
+  candidate_id: string;
+  subject: MetaSubject;
+  crop: Crop;
+  note: string | null;
+  candidate: {
+    country: string;
+    storage_path: string;
+    width: number | null;
+    height: number | null;
+    preview: string | null;
+    credit: string;
+    source_url: string;
+    title: string | null;
+    description: string | null;
+  };
+}
+
+const USE_COLUMNS =
+  'id,candidate_id,subject,crop,note,candidate:media_candidates(country,storage_path,width,height,preview,credit,source_url,title,description)';
 
 const PAGE = 1000;
 const COLUMNS =
@@ -229,6 +307,81 @@ export function supabaseCuration(client: SupabaseClient): CurationApi {
         hasCrop = false;
         throw new CropUnavailable();
       }
+      if (error) throw error;
+    },
+    async countUses() {
+      const counts: Partial<Record<MetaSubject, number>> = {};
+      for (let from = 0; ; from += PAGE) {
+        const { data, error } = await client
+          .from('media_uses')
+          .select('subject')
+          .eq('status', 'suggested')
+          .order('id')
+          .range(from, from + PAGE - 1);
+        if (isMissingUses(error)) throw new UsesUnavailable();
+        if (error) throw error;
+        for (const { subject } of data as { subject: MetaSubject }[]) {
+          counts[subject] = (counts[subject] ?? 0) + 1;
+        }
+        if ((data?.length ?? 0) < PAGE) return counts;
+      }
+    },
+    async listUses(subject) {
+      const rows: UseRow[] = [];
+      for (let from = 0; ; from += PAGE) {
+        const { data, error } = await client
+          .from('media_uses')
+          .select(USE_COLUMNS)
+          .eq('status', 'suggested')
+          .eq('subject', subject)
+          .order('created_at')
+          .order('id')
+          .range(from, from + PAGE - 1);
+        if (isMissingUses(error)) throw new UsesUnavailable();
+        if (error) throw error;
+        rows.push(...(data as unknown as UseRow[]));
+        if ((data?.length ?? 0) < PAGE) break;
+      }
+      return rows.map(({ candidate: c, ...row }) => ({
+        id: row.id,
+        candidateId: row.candidate_id,
+        subject: row.subject,
+        crop: row.crop,
+        note: row.note,
+        country: c.country,
+        storagePath: c.storage_path,
+        width: c.width,
+        height: c.height,
+        preview: c.preview,
+        credit: c.credit,
+        sourceUrl: c.source_url,
+        title: c.title,
+        description: c.description,
+      }));
+    },
+    async decideUses(ids, status) {
+      if (!ids.length) return [];
+      const undo = status === 'suggested';
+      // only the columns 0005_media_uses.sql grants UPDATE on
+      let query = client
+        .from('media_uses')
+        .update({ status, decided_at: undo ? null : new Date().toISOString() })
+        .in('id', ids);
+      if (undo) query = query.is('collected_at', null);
+      const { data, error } = await query.select('id');
+      if (isMissingUses(error)) throw new UsesUnavailable();
+      if (error) throw error;
+      return (data as { id: string }[]).map((row) => row.id);
+    },
+    async updateUse(id, change) {
+      const { error } = await client
+        .from('media_uses')
+        .update(change)
+        .eq('id', id)
+        .is('collected_at', null)
+        .select('id');
+      if (isMissingUses(error)) throw new UsesUnavailable();
+      if ((error as PostgrestError | null)?.code === '23505') throw new DuplicateUse();
       if (error) throw error;
     },
   };
