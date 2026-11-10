@@ -31,9 +31,10 @@ export function isSvg(input) {
 
 /** An SVG drawing → a PNG `width` px wide on white (drawn at that size, not scaled up from a small render). */
 export async function rasteriseSvg(input, width = WIDTH) {
-  const { width: drawn = width } = await sharp(input).metadata();
+  // some sign drawings declare huge canvases; rendering is capped by `width`, so lift sharp's pixel limit
+  const { width: drawn = width } = await sharp(input, { limitInputPixels: false }).metadata();
   const density = Math.min(Math.max((72 * width) / drawn, 1), 2400);
-  return sharp(input, { density }).resize({ width }).flatten({ background: '#ffffff' }).png().toBuffer();
+  return sharp(input, { density, limitInputPixels: false }).resize({ width }).flatten({ background: '#ffffff' }).png().toBuffer();
 }
 
 /** → { webp: Buffer, width, height, preview: 'data:image/webp;base64,…' } */
