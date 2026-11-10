@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metabook</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main id="round-view">
+      <header>
+        <span id="headline">No round captured yet</span>
+        <button id="open" type="button" hidden>Open in Metabook</button>
+        <button id="to-settings" type="button" class="ghost">Settings</button>
+      </header>
+      <iframe id="frame" title="Metabook round" hidden></iframe>
+    </main>
+    <main id="settings-view" hidden>
+      <header>
+        <h1>Settings</h1>
+        <button id="to-round" type="button" class="ghost">Back</button>
+      </header>
+      <form id="form">
+        <label>Supabase functions URL
+          <input id="url" type="url" placeholder="https://&lt;ref&gt;.supabase.co/functions/v1/ingest-rounds" autocomplete="off" />
+        </label>
+        <label>Pairing token
+          <input id="token" type="password" autocomplete="off" />
+        </label>
+        <button type="submit">Save</button>
+      </form>
+      <dl>
+        <dt>Paired</dt><dd id="paired"></dd>
+        <dt>Capture</dt><dd id="enabled"></dd>
+        <dt>Last capture</dt><dd id="last"></dd>
+        <dt>Last parse</dt><dd id="parse"></dd>
+        <dt>Last error</dt><dd id="error"></dd>
+      </dl>
+      <button id="check" type="button" class="ghost">Check status</button>
+    </main>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

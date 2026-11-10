@@ -1,4 +1,4 @@
-import type { Config, ExtensionRound, Status } from './messages';
+import type { Config, ExtensionRound, LastRound, Status } from './messages';
 
 const MAX_SEEN = 500;
 const MAX_QUEUE = 200;
@@ -33,3 +33,6 @@ export async function markSeen(key: string): Promise<boolean> {
   await chrome.storage.local.set({ seen: [...seen, key].slice(-MAX_SEEN) });
   return true;
 }
+
+export const getLastRound = () => get<LastRound>('lastRound');
+export const setLastRound = (lastRound: LastRound) => chrome.storage.local.set({ lastRound });
