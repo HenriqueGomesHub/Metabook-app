@@ -128,3 +128,22 @@ export function primaryCardId(clue: Pick<Clue, 'id' | 'images'>): string {
   const first = clue.images[0];
   return first ? clueCardIds.spot(clue.id, first.id) : clueCardIds.text(clue.id);
 }
+
+/** What a card made from a clue shows of it; the app looks the clue itself up by `id`. */
+export interface CardClue {
+  id: string;
+  /** Spot it: the image shown */
+  image?: ClueImage;
+  /** Live view: the Street View spot shown */
+  location?: ClueLocation;
+  /** Which clue: the images to pick from, in display order; option ids are their image ids */
+  choices?: { country: string; clueId: string; image: ClueImage }[];
+}
+
+/** A correction to one clue image, kept in `clue_image_overrides` and applied over the catalogue. */
+export interface ClueImageOverride {
+  imageId: string;
+  clueId: string;
+  crop: CropBox | null;
+  hidden: boolean;
+}

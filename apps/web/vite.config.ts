@@ -1,9 +1,44 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import react from '@vitejs/plugin-react';
+import type { Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vitest/config';
 
+const FACTS = fileURLToPath(new URL('../../content/facts/', import.meta.url));
+const NAMES_ID = 'virtual:country-names';
+
+/**
+ * `virtual:country-names`: every country's demonyms and capital from content/facts, a few KB, so
+ * clue cards can be checked for names that give the answer away without shipping the facts files.
+ */
+function countryNames(): Plugin {
+  return {
+    name: 'metabook-country-names',
+    resolveId: (id) => (id === NAMES_ID ? `\0${NAMES_ID}` : undefined),
+    load(id) {
+      if (id !== `\0${NAMES_ID}`) return undefined;
+      const names = readdirSync(FACTS)
+        .filter((file) => file.endsWith('.json'))
+        .sort()
+        .map((file) => {
+          const path = FACTS + file;
+          this.addWatchFile(path);
+          const facts = JSON.parse(readFileSync(path, 'utf8'));
+          return {
+            code: String(facts.code).toUpperCase(),
+            ...(facts.demonym && { demonym: facts.demonym }),
+            ...(facts.capital && { capital: facts.capital }),
+          };
+        });
+      return `export default ${JSON.stringify(names)};`;
+    },
+  };
+}
+
 export default defineConfig({
   plugins: [
+    countryNames(),
     react(),
     VitePWA({
       registerType: 'autoUpdate',

@@ -1,3 +1,5 @@
+import type { CardClue, ClueCredit } from './clues';
+
 export type CardType =
   | 'flag'
   | 'script'
@@ -6,8 +8,12 @@ export type CardType =
   | 'region'
   | 'areacode'
   | 'plate'
-  /** reverse card: a text prompt ("Poland's bollard?"); `options` and `answer` are media ids */
-  | 'photo-choice';
+  /** clue catalogue: a clue's image, "Which country?" */
+  | 'spot'
+  /** clue catalogue: "Which is the Poland bollard?"; `options` and `answer` are clue image ids */
+  | 'which'
+  /** clue catalogue: the official Street View spot of a clue, "Which country?" */
+  | 'live';
 
 /** What a meta is about; drill tiles and auto chapters group cards by it. */
 export type MetaSubject =
@@ -21,6 +27,8 @@ export type MetaSubject =
   | 'car'
   | 'landscape'
   | 'architecture'
+  | 'coverage'
+  | 'vegetation'
   | 'other';
 
 export type PromptKind = 'flag' | 'text' | 'image' | 'embed' | 'svg';
@@ -51,9 +59,11 @@ export interface Card {
   explain?: string;
   source: string;
   subject?: MetaSubject;
-  /** ids of the MediaItems the card shows */
-  media?: string[];
   region?: string;
+  /** cards made from the clue catalogue: the clue and what the card shows of it */
+  clue?: CardClue;
+  /** clue catalogue cards: where the clue comes from, shown on the answer */
+  credit?: ClueCredit;
   /**
    * Lower-case code of a country's regions map ("us"): the card is answered by clicking that
    * map, and `answer` (and any confusion it records) is one of the map's state codes.
@@ -92,29 +102,6 @@ export interface CountryFacts {
   /** adjectives and nouns for its people ("Polish", "Poles"); same use as `capital` */
   demonym?: string[];
   notes: FactNote[];
-}
-
-/** One approved photo, content/media/<code>.json. */
-export interface MediaItem {
-  id: string;
-  country: string;
-  subject: MetaSubject;
-  region?: string;
-  noteId?: string;
-  /** path inside the `media` storage bucket ("approved/<id>.webp"), or an absolute URL */
-  url: string;
-  width: number;
-  height: number;
-  /** tiny data URI shown while the photo loads */
-  preview?: string;
-  credit: string;
-  licence: string;
-  licenceUrl?: string;
-  sourceUrl: string;
-  /** subjects this photo is a clear giveaway for */
-  giveaways?: string[];
-  /** curator-written alt text; generation drops it when it names the country */
-  caption?: string;
 }
 
 /** The parts of a regions map (content/maps) the generator needs. */

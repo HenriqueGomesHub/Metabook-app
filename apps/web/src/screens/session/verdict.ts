@@ -1,7 +1,6 @@
 import { SUBJECT_NOUNS } from '@metabook/core';
 import type { Card, SessionItem } from '@metabook/core';
 import { label, scopeOf } from '../../app/labels';
-import { mediaById } from '../../data/media';
 import type { RevealProps } from './Reveal';
 import type { Outcome } from './types';
 
@@ -40,7 +39,7 @@ function baseVerdict(
   item: Pick<SessionItem, 'mode' | 'contrastPair'>,
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
-  if (card.type === 'photo-choice') return photoVerdict(card, outcome);
+  if (card.type === 'which') return whichVerdict(card, outcome);
   const scope = scopeOf(card);
   const answer = answerLabel(card);
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: answer };
@@ -53,19 +52,19 @@ function baseVerdict(
   return { verdict: `Not quite — it’s ${answer}`, tone: 'wrong', detail };
 }
 
-/** Photo picks answer with photo ids; the verdict names countries instead. */
-function photoVerdict(
+/** Which clue cards answer with image ids; the verdict names countries instead. */
+function whichVerdict(
   card: Card,
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   const country = label(card.country);
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: country };
-  const picked = mediaById.get(outcome.given);
-  if (!picked) return { verdict: `It’s the marked photo`, tone: 'neutral', detail: country };
-  const noun = SUBJECT_NOUNS[picked.subject];
+  const picked = card.clue?.choices?.find((c) => c.image.id === outcome.given);
+  if (!picked) return { verdict: `It’s the marked image`, tone: 'neutral', detail: country };
+  const noun = card.subject ? SUBJECT_NOUNS[card.subject] : 'clue';
   return {
-    verdict: 'Not quite — it’s the marked photo',
+    verdict: 'Not quite — it’s the marked image',
     tone: 'wrong',
-    detail: `You picked ${label(picked.country.toUpperCase())}’s ${noun}`,
+    detail: `You picked ${label(picked.country)}’s ${noun}`,
   };
 }

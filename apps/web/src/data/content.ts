@@ -1,5 +1,6 @@
-import type { Card, PoolCountry, Tip } from '@metabook/core';
-import { loadMedia, mediaUrl } from './media';
+import { applyClueOverrides, clueCards } from '@metabook/core';
+import type { Card, ClueCountry, ClueImageOverride, PoolCountry, Tip } from '@metabook/core';
+import countryNames from 'virtual:country-names';
 import type { CardOverride, Repository } from './repository';
 
 export interface Chapter {
@@ -15,6 +16,10 @@ export interface Content {
   chapters: Chapter[];
   cards: Card[];
   tips: Tip[];
+  /** the clue catalogue as shipped (content/clues), before image overrides */
+  clues: ClueCountry[];
+  /** the admin's corrections to clue images (clue_image_overrides) */
+  clueOverrides: ClueImageOverride[];
 }
 
 /** One region of a country map; `capital` is optional for generated maps. */
@@ -73,7 +78,9 @@ export function loadedRegionMap(country: string): RegionMap | undefined {
   return loadedMaps.get(code);
 }
 
-const pool = import.meta.glob<PoolCountry[]>('../../../../content/pool.json', { import: 'default' });
+const pool = import.meta.glob<PoolCountry[]>('../../../../content/pool.json', {
+  import: 'default',
+});
 const chapters = import.meta.glob<Chapter[]>('../../../../content/chapters.json', {
   import: 'default',
 });
@@ -84,39 +91,44 @@ const cards = import.meta.glob<Card[]>(
 );
 const loadGenerated = async () => (await import('./generatedCards')).generatedCards;
 const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', { import: 'default' });
+const loadClues = async () => (await import('./allClues')).allClues;
 
 const loadAll = async <T>(files: Record<string, () => Promise<T[]>>): Promise<T[]> =>
   (await Promise.all(Object.values(files).map((load) => load()))).flat();
 
-/** Generated photo cards store bucket paths; resolve them against the media base. */
-const withMediaUrls = (card: Card): Card =>
-  card.prompt.kind === 'image'
-    ? { ...card, prompt: { ...card.prompt, value: mediaUrl(card.prompt.value) } }
-    : card;
-
 /** The shipped content. Empty until `loadBundled` resolves, which happens before the app renders. */
-export const bundled: Content = { pool: [], chapters: [], cards: [], tips: [] };
+export const bundled: Content = {
+  pool: [],
+  chapters: [],
+  cards: [],
+  tips: [],
+  clues: [],
+  clueOverrides: [],
+};
 
 let loading: Promise<void> | undefined;
 
 /** Fetches the content chunks once and fills `bundled` and `brStates` in place. */
 export function loadBundled(): Promise<void> {
   loading ??= (async () => {
-    const [poolItems, chapterItems, cardItems, generated, tipItems, br] = await Promise.all([
-      loadAll(pool),
-      loadAll(chapters),
-      loadAll(cards),
-      loadGenerated(),
-      loadAll(tips),
-      Object.values(brStatesFile)[0]!(),
-    ]);
+    const [poolItems, chapterItems, cardItems, generated, tipItems, br, clueItems] =
+      await Promise.all([
+        loadAll(pool),
+        loadAll(chapters),
+        loadAll(cards),
+        loadGenerated(),
+        loadAll(tips),
+        Object.values(brStatesFile)[0]!(),
+        loadClues(),
+      ]);
     Object.assign(brStates, br);
     brStatesByCode.clear();
     for (const state of br.states) brStatesByCode.set(state.code, state);
     bundled.pool = poolItems;
     bundled.chapters = chapterItems;
-    bundled.cards = [...cardItems, ...generated].map(withMediaUrls);
+    bundled.cards = [...cardItems, ...generated];
     bundled.tips = tipItems;
+    bundled.clues = clueItems;
   })().catch((error: unknown) => {
     loading = undefined; // let a retry fetch again
     throw error;
@@ -146,7 +158,25 @@ export function mergeOverrides(base: Content, overrides: CardOverride[]): Conten
   };
 }
 
+/** The catalogue as drills and Learn show it: crops applied, hidden images left out. */
+export const visibleClues = (content: Pick<Content, 'clues' | 'clueOverrides'>): ClueCountry[] =>
+  applyClueOverrides(content.clues, content.clueOverrides);
+
+/** Bundled content plus the cards made from the clue catalogue with these image overrides. */
+export function withClueCards(base: Content, clueOverrides: ClueImageOverride[]): Content {
+  const made = clueCards({
+    clues: applyClueOverrides(base.clues, clueOverrides),
+    pool: base.pool,
+    names: countryNames,
+  });
+  return { ...base, cards: [...base.cards, ...made], clueOverrides };
+}
+
 export async function loadContent(repo: Repository): Promise<Content> {
-  await Promise.all([loadBundled(), loadMedia()]);
-  return mergeOverrides(bundled, await repo.listCardOverrides());
+  await loadBundled();
+  const [overrides, clueOverrides] = await Promise.all([
+    repo.listCardOverrides(),
+    repo.listClueImageOverrides().catch(() => []),
+  ]);
+  return mergeOverrides(withClueCards(bundled, clueOverrides), overrides);
 }

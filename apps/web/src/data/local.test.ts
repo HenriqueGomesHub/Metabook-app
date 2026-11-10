@@ -173,6 +173,8 @@ describe('mergeOverrides', () => {
     chapters: [],
     cards: [card('flag:lt', 'Lithuania'), card('flag:lv', 'Latvia')],
     tips: [tip('tip:1', 'bundled')],
+    clues: [],
+    clueOverrides: [],
   };
 
   it('lets overrides win by id and appends new ids', () => {

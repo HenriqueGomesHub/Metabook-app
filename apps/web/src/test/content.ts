@@ -35,7 +35,14 @@ export const tips: Tip[] = [
   },
 ];
 
-export const content: Content = { pool: [], chapters: [], cards, tips };
+export const content: Content = {
+  pool: [],
+  chapters: [],
+  cards,
+  tips,
+  clues: [],
+  clueOverrides: [],
+};
 
 /** A card in review, due an hour ago, past its multiple-choice reviews. */
 export function dueState(cardId: string, now = new Date()): CardState {

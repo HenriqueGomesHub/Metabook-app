@@ -84,6 +84,8 @@ const content: Content = {
   ],
   cards,
   tips,
+  clues: [],
+  clueOverrides: [],
 };
 
 vi.mock('../data/content', async (importOriginal) => ({
@@ -160,18 +162,14 @@ describe('Subjects', () => {
     expect(links[1]?.getAttribute('href')).toBe('/session?country=CL&map=0');
   });
 
-  it('adds a drill tile per subject that has cards', async () => {
+  it('gives regions-map cards their own drill tile', async () => {
     mount('/drills');
-    const tile = (await screen.findByText('Bollards')).closest('a');
-    expect(tile?.getAttribute('href')).toBe('/session?subject=bollard');
-    expect(screen.getByText('Signs').closest('a')?.getAttribute('href')).toBe(
-      '/session?subject=sign',
-    );
-    // regions-map cards have their own tile, not their subject's
+    expect(
+      (await screen.findByText('Where in the country')).closest('a')?.getAttribute('href'),
+    ).toBe('/session?map=1');
+    // family tiles come from the clue catalogue only
+    expect(screen.queryByText('Bollards')).toBeNull();
     expect(screen.queryByText('Poles')).toBeNull();
-    expect(screen.getByText('Where in the country').closest('a')?.getAttribute('href')).toBe(
-      '/session?map=1',
-    );
   });
 
   it('keeps clue-text cards out of subject tiles and gives them a Clue quiz tile', async () => {
@@ -180,16 +178,6 @@ describe('Subjects', () => {
       '/session?clue=1',
     );
     expect(screen.queryByText('Guardrails')).toBeNull();
-  });
-
-  it('lists the country’s notes by subject in a Learn section', async () => {
-    mount('/atlas/CL');
-    const learn = await screen.findByRole('region', { name: 'Learn' });
-    expect(within(learn).getByRole('heading', { name: 'Road lines' })).toBeTruthy();
-    expect(within(learn).getAllByRole('listitem').length).toBeGreaterThan(3);
-    // the clue card makes no Guardrails chapter
-    const nav = screen.getByRole('navigation', { name: 'Chile chapters' });
-    expect(within(nav).queryByText('Guardrails')).toBeNull();
   });
 });
 

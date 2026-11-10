@@ -11,6 +11,7 @@ import { Login } from '../screens/Login';
 import { NotFound } from '../screens/NotFound';
 import { Placement } from '../screens/Placement';
 import { Review } from '../screens/Review';
+import { Round } from '../screens/Round';
 import { Session } from '../screens/Session';
 import { Settings } from '../screens/Settings';
 import { Stats } from '../screens/Stats';
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
           { path: '/atlas', element: <Atlas /> },
           { path: '/atlas/:country', element: <Country /> },
           { path: '/review', element: <Review /> },
+          { path: '/round', element: <Round /> },
           { path: '/blocks', element: <Blocks /> },
           { path: '/stats', element: <Stats /> },
           { path: '/settings', element: <Settings /> },

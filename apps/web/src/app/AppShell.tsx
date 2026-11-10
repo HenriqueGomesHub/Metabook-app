@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Grain } from '../components/Grain';
 
-const HIDDEN_NAV_PREFIXES = ['/session', '/games/areacode', '/placement'];
+const HIDDEN_NAV_PREFIXES = ['/session', '/games/areacode', '/placement', '/round'];
 
 const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
   {
