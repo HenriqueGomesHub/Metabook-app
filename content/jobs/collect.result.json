@@ -1,0 +1,1353 @@
+{
+  "name": "collect",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 40,
+    "name": "collect",
+    "countries": "all",
+    "steps": [
+      "collect",
+      "generate"
+    ]
+  },
+  "startedAt": "2026-11-10T23:16:43.888Z",
+  "finishedAt": "2026-11-10T23:16:45.326Z",
+  "commit": "869b6c82c9b9efb42acdf3d3d5eef9683a37f1aa",
+  "countries": [
+    "al",
+    "ad",
+    "at",
+    "be",
+    "ba",
+    "bg",
+    "hr",
+    "cy",
+    "cz",
+    "dk",
+    "ee",
+    "fi",
+    "fr",
+    "de",
+    "gr",
+    "hu",
+    "is",
+    "ie",
+    "it",
+    "lv",
+    "lt",
+    "lu",
+    "mt",
+    "mc",
+    "me",
+    "nl",
+    "mk",
+    "no",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "sm",
+    "rs",
+    "sk",
+    "si",
+    "es",
+    "se",
+    "ch",
+    "ua",
+    "gb",
+    "li",
+    "fo",
+    "gi",
+    "im",
+    "je",
+    "jp",
+    "kr",
+    "th",
+    "kh",
+    "tw",
+    "sg",
+    "my",
+    "id",
+    "ph",
+    "lk",
+    "mn",
+    "kz",
+    "kg",
+    "il",
+    "jo",
+    "ae",
+    "qa",
+    "tr",
+    "bt",
+    "in",
+    "bd",
+    "la",
+    "lb",
+    "hk",
+    "mo",
+    "za",
+    "bw",
+    "sz",
+    "ls",
+    "ke",
+    "ug",
+    "ng",
+    "gh",
+    "sn",
+    "tn",
+    "rw",
+    "mg",
+    "re",
+    "us",
+    "ca",
+    "mx",
+    "br",
+    "ar",
+    "cl",
+    "co",
+    "pe",
+    "bo",
+    "ec",
+    "uy",
+    "py",
+    "gt",
+    "cr",
+    "pa",
+    "do",
+    "pr",
+    "vi",
+    "cw",
+    "gl",
+    "au",
+    "nz",
+    "gu",
+    "mp",
+    "as",
+    "ge",
+    "xk",
+    "na",
+    "np",
+    "om",
+    "bm",
+    "cx",
+    "cc",
+    "st",
+    "pm",
+    "vn",
+    "pk",
+    "eg",
+    "tz",
+    "iq",
+    "ml",
+    "mq",
+    "by",
+    "cn",
+    "fk",
+    "pn",
+    "gs",
+    "sj",
+    "io",
+    "vu"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "collect",
+      "ms": 1113,
+      "countries": {}
+    },
+    {
+      "step": "generate",
+      "ms": 324,
+      "countries": {
+        "al": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ad": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "at": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 7,
+            "byType": {
+              "region": 7
+            }
+          }
+        },
+        "be": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ba": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "bg": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 6,
+            "byType": {
+              "region": 6
+            }
+          }
+        },
+        "hr": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 8,
+            "byType": {
+              "region": 8
+            }
+          }
+        },
+        "cy": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 6,
+            "byType": {
+              "region": 6
+            }
+          }
+        },
+        "cz": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "dk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ee": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "fi": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 7,
+            "byType": {
+              "region": 7
+            }
+          }
+        },
+        "fr": {
+          "ok": true,
+          "ms": 9,
+          "counts": {
+            "cards": 8,
+            "byType": {
+              "region": 8
+            }
+          }
+        },
+        "de": {
+          "ok": true,
+          "ms": 9,
+          "counts": {
+            "cards": 15,
+            "byType": {
+              "region": 15
+            }
+          }
+        },
+        "gr": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 8,
+            "byType": {
+              "region": 8
+            }
+          }
+        },
+        "hu": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "is": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ie": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "it": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "lv": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "lt": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "lu": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mt": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mc": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "me": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "nl": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 7,
+            "byType": {
+              "region": 7
+            }
+          }
+        },
+        "mk": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "no": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "pl": {
+          "ok": true,
+          "ms": 51,
+          "counts": {
+            "cards": 2,
+            "byType": {
+              "meta": 2
+            }
+          }
+        },
+        "pt": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "ro": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "ru": {
+          "ok": true,
+          "ms": 6,
+          "counts": {
+            "cards": 11,
+            "byType": {
+              "region": 11
+            }
+          }
+        },
+        "sm": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "rs": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "sk": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 2,
+            "byType": {
+              "region": 2
+            }
+          }
+        },
+        "si": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "es": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "se": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 10,
+            "byType": {
+              "region": 10
+            }
+          }
+        },
+        "ch": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 9,
+            "byType": {
+              "region": 9
+            }
+          }
+        },
+        "ua": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 6,
+            "byType": {
+              "region": 6
+            }
+          }
+        },
+        "gb": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "li": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 6,
+            "byType": {
+              "region": 6
+            }
+          }
+        },
+        "fo": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "gi": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "im": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "je": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "jp": {
+          "ok": true,
+          "ms": 7,
+          "counts": {
+            "cards": 14,
+            "byType": {
+              "region": 14
+            }
+          }
+        },
+        "kr": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "th": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "kh": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "tw": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 6,
+            "byType": {
+              "region": 6
+            }
+          }
+        },
+        "sg": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "my": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 8,
+            "byType": {
+              "region": 8
+            }
+          }
+        },
+        "id": {
+          "ok": true,
+          "ms": 6,
+          "counts": {
+            "cards": 11,
+            "byType": {
+              "region": 11
+            }
+          }
+        },
+        "ph": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "lk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mn": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "kz": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "kg": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 10,
+            "byType": {
+              "region": 10
+            }
+          }
+        },
+        "il": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "jo": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ae": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "qa": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "tr": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 2,
+            "byType": {
+              "region": 2
+            }
+          }
+        },
+        "bt": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "in": {
+          "ok": true,
+          "ms": 7,
+          "counts": {
+            "cards": 20,
+            "byType": {
+              "region": 20
+            }
+          }
+        },
+        "bd": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 4,
+            "byType": {
+              "region": 4
+            }
+          }
+        },
+        "la": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "lb": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "hk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mo": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "za": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "bw": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "sz": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ls": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ke": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ug": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ng": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "gh": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "sn": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "tn": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 3,
+            "byType": {
+              "region": 3
+            }
+          }
+        },
+        "rw": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mg": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "re": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "us": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 14,
+            "byType": {
+              "region": 14
+            }
+          }
+        },
+        "ca": {
+          "ok": true,
+          "ms": 8,
+          "counts": {
+            "cards": 21,
+            "byType": {
+              "region": 21
+            }
+          }
+        },
+        "mx": {
+          "ok": true,
+          "ms": 10,
+          "counts": {
+            "cards": 16,
+            "byType": {
+              "region": 16
+            }
+          }
+        },
+        "br": {
+          "ok": true,
+          "ms": 12,
+          "counts": {
+            "cards": 22,
+            "byType": {
+              "region": 22
+            }
+          }
+        },
+        "ar": {
+          "ok": true,
+          "ms": 10,
+          "counts": {
+            "cards": 21,
+            "byType": {
+              "region": 21
+            }
+          }
+        },
+        "cl": {
+          "ok": true,
+          "ms": 10,
+          "counts": {
+            "cards": 14,
+            "byType": {
+              "region": 14
+            }
+          }
+        },
+        "co": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "pe": {
+          "ok": true,
+          "ms": 5,
+          "counts": {
+            "cards": 10,
+            "byType": {
+              "region": 10
+            }
+          }
+        },
+        "bo": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 13,
+            "byType": {
+              "region": 13
+            }
+          }
+        },
+        "ec": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 5,
+            "byType": {
+              "region": 5
+            }
+          }
+        },
+        "uy": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 7,
+            "byType": {
+              "region": 7
+            }
+          }
+        },
+        "py": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "gt": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "cr": {
+          "ok": true,
+          "ms": 3,
+          "counts": {
+            "cards": 9,
+            "byType": {
+              "region": 9
+            }
+          }
+        },
+        "pa": {
+          "ok": true,
+          "ms": 6,
+          "counts": {
+            "cards": 9,
+            "byType": {
+              "region": 9
+            }
+          }
+        },
+        "do": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 7,
+            "byType": {
+              "region": 7
+            }
+          }
+        },
+        "pr": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "vi": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "cw": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "gl": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 8,
+            "byType": {
+              "region": 8
+            }
+          }
+        },
+        "au": {
+          "ok": true,
+          "ms": 4,
+          "counts": {
+            "cards": 13,
+            "byType": {
+              "region": 13
+            }
+          }
+        },
+        "nz": {
+          "ok": true,
+          "ms": 9,
+          "counts": {
+            "cards": 15,
+            "byType": {
+              "region": 15
+            }
+          }
+        },
+        "gu": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mp": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "as": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ge": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "xk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "na": {
+          "ok": true,
+          "ms": 2,
+          "counts": {
+            "cards": 11,
+            "byType": {
+              "region": 11
+            }
+          }
+        },
+        "np": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "om": {
+          "ok": true,
+          "ms": 1,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "bm": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "cx": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "cc": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "st": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "pm": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "vn": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "pk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "eg": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "tz": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "iq": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "ml": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "mq": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "by": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "cn": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "fk": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "pn": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "gs": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "sj": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "io": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        },
+        "vu": {
+          "ok": true,
+          "ms": 0,
+          "counts": {
+            "cards": 0,
+            "byType": {}
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 135 pool, 743 cards, 232 tips, 6 chapters, 119 facts files, 0 photos, 9653 clues"
+    ]
+  }
+}
