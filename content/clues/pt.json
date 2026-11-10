@@ -1,67 +1,2238 @@
 {
   "country": "PT",
   "name": "Portugal",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/portugal",
+  "updatedAt": "2026-06-20T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Portugal"
+    },
+    {
+      "title": "Region-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
+    {
+      "title": "Identifying the Azores"
+    },
+    {
+      "title": "Azores: Region-specific clues"
+    },
+    {
+      "title": "Azores: Spotlight"
+    },
+    {
+      "title": "Identifying Madeira"
+    },
+    {
+      "title": "Madeira: Regional clues"
+    },
+    {
+      "title": "Madeira: Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "pt-lm-5",
+      "id": "pt-lhWL",
       "step": 0,
-      "order": 0,
+      "order": 1,
       "family": "plate",
-      "title": "Plate: License plate",
+      "title": "Plate: Portuguese plates are long and white",
       "text": [
-        "Old Portuguese license plates have a yellow strip on the right side. New plates follow the standard EU design without the yellow strip."
+        "Portuguese plates are long and white, with a blue strip on the left. Most plates have a **yellow strip** on the right, which is unique to Portugal. ",
+        "The yellow strip was discontinued in 2020, so in Generation 4 coverage you may sometimes see plates with just the blue strip."
       ],
       "tags": [],
       "images": [
+        {
+          "id": "392d77e7c945",
+          "src": "https://www.plonkit.net/images/portugal/licenceplate.png"
+        },
         {
           "id": "e6b3c5563a67",
           "src": "https://learnablemeta.com/images/ADoJn0UoYGZac0M7z5IfqwCW4wnP2ETUNpsg.avif"
+        },
+        {
+          "id": "7f251cf492a4",
+          "src": "https://learnablemeta.com/images/847/3gvDQ5wDAxTaNRq5kqnoiJiM2M9a7WRTdSb7.avif"
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
-      "id": "pt-lm-9",
+      "id": "pt-WrlL",
       "step": 0,
-      "order": 1,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: No hunting signs",
+      "order": 2,
+      "family": "language",
+      "title": "Language: Portuguese is a Romance language that is closely related to…",
       "text": [
-        "Hunting signs with a red and white color scheme are commonly seen in rural areas of Portugal. They can be either diamond-shaped or rectangular."
+        "**Portuguese** is a Romance language that is closely related to Spanish. Unlike Spanish, Portuguese includes the letters Ç, Ã, Õ, Â, and Ê, while it does not include the letter Ñ, which is very common in Spanish.",
+        "NOTE: You can also find Ç in Catalan."
       ],
       "tags": [],
       "images": [
         {
-          "id": "fb72ac5a13fc",
-          "src": "https://learnablemeta.com/images/CA5nusuSHXpHnYluSOQU3Vzp4f8OvVNvL5Vw.avif"
+          "id": "c2f40375678f",
+          "src": "https://www.plonkit.net/images/portugal/language.png"
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-OD5a",
+      "step": 0,
+      "order": 3,
+      "family": "vegetation",
+      "title": "Vegetation: Eucalyptus trees are very common in Portugal",
+      "text": [
+        "**Eucalyptus trees** are very common in Portugal. The only other part of Europe where you’ll commonly see eucalyptus is [northern Spain](https://www.google.com/maps/@43.1615813,-8.7773429,3a,90y,44.89h,89.75t/data=!3m6!1e1!3m4!1sC7quFqkQ-yqtdhYH-ACW8w!2e0!7i13312!8i6656?entry=ttu)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "bc3e940ea6f7",
+          "src": "https://www.plonkit.net/images/portugal/eucalyptus.png"
+        },
+        {
+          "id": "9479d0ab1872",
+          "src": "https://learnablemeta.com/images/847/yzybnCztxGLyJzAhuJmAuuSHPuhnHN3CCJr7.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-S7ov",
+      "step": 0,
+      "order": 4,
+      "family": "other",
+      "title": "The Portuguese word for road is ‘Rua’",
+      "text": [
+        "The Portuguese word for road is **‘Rua’**.",
+        "NOTE: In Galician, the word for road is ‘Rúa’, with an accent on the ‘u’."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8bf51c3272f1",
+          "src": "https://www.plonkit.net/images/portugal/rua.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-fbSP",
+      "step": 0,
+      "order": 5,
+      "family": "pole",
+      "title": "Pole: Concrete ladder poles, with very tall ladder steps, are…",
+      "text": [
+        "Concrete ladder poles, with very **tall ladder steps**, are common in Portugal. Each step often has a small [see-through hole](https://maps.app.goo.gl/vDoNQJNkY2srorxc8).",
+        "NOTE: In [Spain](https://www.google.com/maps/@43.5609502,-8.1852362,3a,32.9y,335.94h,91.24t/data=!3m6!1e1!3m4!1sRl489cMP23rutAjdJsp5KA!2e0!7i16384!8i8192?entry=ttu) and [France](https://goo.gl/maps/cYtpBcr8fPxdawT1A) you will commonly see ladder poles with short steps."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "c20c204a2592",
+          "src": "https://www.plonkit.net/images/portugal/ladderpole.png"
+        },
+        {
+          "id": "e1373cf7caa6",
+          "src": "https://learnablemeta.com/images/RIC5T2U9BEO5VxawLcCquTh2Xvc28PbRTS08.avif"
+        },
+        {
+          "id": "0791858b7c07",
+          "src": "https://learnablemeta.com/images/847/8xBODUItcS13G579vmqMDyK36nbVChonisR7.avif"
+        },
+        {
+          "id": "331c7fbeb832",
+          "src": "https://learnablemeta.com/images/1955/1750621520256-TyU.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ES",
+        "FR"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-DGfn",
+      "step": 0,
+      "order": 6,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Hunting signs with a red and white colour scheme are a…",
+      "text": [
+        "**Hunting signs** with a red and white colour scheme are a common sight in rural areas. They are either diamond shaped or rectangular.",
+        "NOTE: In contrast, [Spanish](https://www.google.com/maps/@39.9083771,-2.5360346,3a,15y,154.88h,76.9t/data=!3m6!1e1!3m4!1se3LYRFex8eXCgocKMCvxPw!2e0!7i16384!8i8192?entry=ttu) hunting signs are white and black."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "054dcf5a33dd",
+          "src": "https://www.plonkit.net/images/portugal/huntingsign.png"
+        },
+        {
+          "id": "fb72ac5a13fc",
+          "src": "https://learnablemeta.com/images/CA5nusuSHXpHnYluSOQU3Vzp4f8OvVNvL5Vw.avif"
+        },
+        {
+          "id": "66f4f7ce9e58",
+          "src": "https://learnablemeta.com/images/847/tBZ4iPV1PN1ZQbcY9rVKOD7yJpceZKfQCmB3.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-UKlQ",
+      "step": 0,
+      "order": 7,
+      "family": "bollard",
+      "title": "Bollard: Portuguese bollards are either wedge-shaped with a…",
+      "text": [
+        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector. While most reflectors will be white, you may also find [orange](https://goo.gl/maps/5tWaAjwR2XWPHigU8) reflectors. These are noticeably darker than the [yellow reflectors](https://www.google.com/maps/@41.9861981,-5.1213523,3a,19.2y,201.17h,74.37t/data=!3m6!1e1!3m4!1sJ3baT-DirwydAJfMwHD0Pg!2e0!7i16384!8i8192?entry=ttu) in Spain."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "4a70ae9f83d6",
+          "src": "https://www.plonkit.net/images/portugal/bollard.png"
+        },
+        {
+          "id": "8ea1cc92e5d1",
+          "src": "https://learnablemeta.com/images/1/I92yy0nDiwNa1gjQli4juhpRBm0Kwuded7NK.avif"
+        },
+        {
+          "id": "a30c69b1db82",
+          "src": "https://learnablemeta.com/images/739/9eJvNHZmfqfDaPwW4WVtoTxSR7aUOMyXvoGw.avif"
+        },
+        {
+          "id": "cec38b174c36",
+          "src": "https://learnablemeta.com/images/847/wHW5bY3wG3IEGczR5IFuQjbuzjvInJweoKYR.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ES"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-aXLK",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Directional signs are generally white",
+      "text": [
+        "Directional signs are generally white, with **black arrows** that are **not** touching the borders of the sign.",
+        "NOTE: [Spanish](https://goo.gl/maps/NdKZE9FwK2q66enj6) directional signs will typically feature the road number in colourful boxes and do not have a black arrow, other than a thin black border."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "57c9bc00c1f0",
+          "src": "https://www.plonkit.net/images/portugal/directionalsign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-FxrH",
+      "step": 0,
+      "order": 9,
+      "family": "sign",
+      "kind": "route",
+      "title": "Route marker: Most kilometre markers are wide rectangles with a coloured…",
+      "text": [
+        "Most kilometre markers are wide rectangles with a **coloured section** on the left side divided diagonally from the white part. Every kilometre you will find a larger [square sign](https://goo.gl/maps/d31pnwB3RjC8JZWD8) with a coloured top half featuring the road number."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b6debd229f26",
+          "src": "https://www.plonkit.net/images/portugal/kmmarker.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-OZnB",
+      "step": 0,
+      "order": 10,
+      "family": "other",
+      "title": "Black and white waystones can commonly be found in Portugal",
+      "text": [
+        "Black and white waystones can commonly be found in Portugal."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "ec048afae7c8",
+          "src": "https://www.plonkit.net/images/portugal/kmstone.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-67d6",
+      "step": 0,
+      "order": 11,
+      "family": "sign",
+      "kind": "stop",
+      "title": "Stop sign: Stop signs in Portugal feature a fairly large font",
+      "text": [
+        "Stop signs in Portugal feature a fairly large font.",
+        "NOTE: This is mostly useful to distinguish it from [Spain](https://www.google.com/maps/@41.4989864,-1.390895,3a,15y,67.65h,81.9t/data=!3m6!1e1!3m4!1sPtHx268nIZR2fqVugwTlsQ!2e0!7i16384!8i8192?entry=ttu), where stop signs have a distinctly small and compact font."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "181121c1271f",
+          "src": "https://www.plonkit.net/images/portugal/stopsign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ES"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-QBnA",
+      "step": 0,
+      "order": 12,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Portuguese chevrons are black with yellow arrows",
+      "text": [
+        "Portuguese chevrons are **black with yellow arrows**.",
+        "NOTE: Portugal is the only Mediterranean country with this chevron colour scheme."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d2891b15b446",
+          "src": "https://www.plonkit.net/images/portugal/chevron.png"
+        },
+        {
+          "id": "5466ee9e0288",
+          "src": "https://learnablemeta.com/images/1/PZg0mFj0NR9U4XirA0yhSj4zz0CBIB3t6x2Z.avif"
+        },
+        {
+          "id": "8ac361096c64",
+          "src": "https://learnablemeta.com/images/847/4XgucnyQiDclqf7mYt58wKtDChuJS6nzK4N5.avif"
+        },
+        {
+          "id": "172c54b144b7",
+          "src": "https://learnablemeta.com/images/914/V133qOUMNWOiU7q7pmSgjgM1iCwltuVHDNSQ.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-x15t",
+      "step": 0,
+      "order": 13,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Pedestrian signs have five stripes",
+      "text": [
+        "Pedestrian signs have **five stripes**, and the person is wearing a **belt**, which is noticeably high.",
+        "NOTE: [Spanish pedestrian signs](https://goo.gl/maps/tsQ3wkTxKwZuebwp9) have eight stripes, [Italian signs](https://maps.app.goo.gl/RiDqBuojwMhYqgDCA) don't have a belt and [Greek signs](https://goo.gl/maps/RCxiJ5SWmjfFM3TB8) have two dotted lines instead of stripes."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3bfddb372372",
+          "src": "https://www.plonkit.net/images/portugal/pedestriansign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-U3KE",
+      "step": 0,
+      "order": 14,
+      "family": "guardrail",
+      "title": "Guardrail: Portugal uses A-type guardrails with red reflectors",
+      "text": [
+        "Portugal uses A-type guardrails with **red reflectors**.",
+        "NOTE: This is mostly useful to tell apart Portugal and [Spain](https://goo.gl/maps/shMgzeFPhLmZMiqX6), which uses yellow reflectors."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "a4972c0916b4",
+          "src": "https://www.plonkit.net/images/portugal/guardrail.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ES"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-Ug6C",
+      "step": 0,
+      "order": 15,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Portuguese road signs are typically encased by a white…",
+      "text": [
+        "Portuguese road signs are typically encased by a **white border**.",
+        "NOTE: Most [Spanish](https://www.google.com/maps/@38.8639722,-4.7943486,3a,17.5y,29.06h,88.7t/data=!3m6!1e1!3m4!1swJ7te-wPHR9taiHRqU2LIg!2e0!7i16384!8i8192?entry=ttu) signs don’t have a white border."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8629c6a8c04a",
+          "src": "https://www.plonkit.net/images/portugal/signborder.png"
+        },
+        {
+          "id": "59a39636a04b",
+          "src": "https://learnablemeta.com/images/847/HmYYeMCbvIwKOilSI0yBZ1YULG7fUcqjf3Fq.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-tuqy",
+      "step": 0,
+      "order": 16,
+      "family": "other",
+      "title": "Cobblestone roads are very common in Portugal",
+      "text": [
+        "Cobblestone roads are very common in Portugal. These will typically be made of square cobblestones arranged **diagonally** compared to the road direction."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b93137ab756e",
+          "src": "https://www.plonkit.net/images/portugal/cobblestone.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-pUNV",
+      "step": 0,
+      "order": 17,
+      "family": "other",
+      "title": "Similarly, cobblestone sidewalks made of distinctly bright…",
+      "text": [
+        "Similarly, cobblestone sidewalks made of distinctly **bright stones** are very common."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3def75f81eb5",
+          "src": "https://www.plonkit.net/images/portugal/cobblestonesidewalk.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-kEDt",
+      "step": 0,
+      "order": 18,
+      "family": "architecture",
+      "title": "Architecture: White painted stone houses with orange tiled roofs are…",
+      "text": [
+        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9c25eddd65fb",
+          "src": "https://www.plonkit.net/images/portugal/whitehouse.png"
+        },
+        {
+          "id": "ff4750276d11",
+          "src": "https://learnablemeta.com/images/847/Rzf5XcYGCBCDt0zj3fuajaJ2vmT0ziIF9y7U.avif"
+        },
+        {
+          "id": "2526f0ee59e7",
+          "src": "https://learnablemeta.com/images/1072/fptvUyQQgh9VqoImVRPay1qqS6FvlBsLRLas.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-eha3",
+      "step": 0,
+      "order": 19,
+      "family": "other",
+      "title": "You’ll commonly see blue or yellow lines painted around…",
+      "text": [
+        "You’ll commonly see **blue or yellow lines** painted around windows and doors, as well as around the edges of walls."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "6abee3c703c6",
+          "src": "https://www.plonkit.net/images/portugal/blueyellowhouse.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-WT4U",
+      "step": 0,
+      "order": 20,
+      "family": "architecture",
+      "title": "Architecture: Houses made of decorative mosaic tiles are somewhat common…",
+      "text": [
+        "Houses made of **decorative mosaic tiles** are somewhat common in Portugal."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8998d46cceac",
+          "src": "https://www.plonkit.net/images/portugal/decorativetiles.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-mTk9",
+      "step": 0,
+      "order": 21,
+      "family": "car",
+      "title": "Google car: Portugal has Generation 4 “smallcam” coverage",
+      "text": [
+        "Portugal has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "5a6af8dda395",
+          "src": "https://www.plonkit.net/images/portugal/europe_smallcam.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-oTO0",
+      "step": 1,
+      "order": 0,
+      "family": "other",
+      "title": "The first three digits of Portuguese landlines make up the…",
+      "text": [
+        "The first three digits of Portuguese landlines make up the **area codes**, which are distributed as seen on the map. Phone codes not starting with a 2 are not regional, and codes starting with 29 will either be the Azores or Madeira.",
+        "For a complete list of the third digits, see [this page](https://en.wikipedia.org/wiki/Telephone_numbers_in_Portugal#Prefix_list)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "ce8e3edd2b90",
+          "src": "https://www.plonkit.net/images/portugal/2areacodes_darkmode.webp",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-csJJ",
+      "step": 1,
+      "order": 1,
+      "family": "other",
+      "title": "In the Faro district in the south of Portugal you will very…",
+      "text": [
+        "In the Faro district in the south of Portugal you will very commonly come across decorative chimneys, which will either be round or square shaped with small spire-shaped tops. The round chimneys are a particularly strong clue."
+      ],
+      "region": "Faro",
+      "tags": [],
+      "images": [
+        {
+          "id": "d0714db25c54",
+          "src": "https://www.plonkit.net/images/portugal/2southernchimney.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-TydI",
+      "step": 1,
+      "order": 2,
+      "family": "architecture",
+      "title": "Architecture: Houses in northern Portugal are often made of square…",
+      "text": [
+        "Houses in northern Portugal are often made of **square concrete blocks**, which are commonly put together with white mortar.",
+        "NOTE: Very similar architecture, but typically without the white mortar, is commonly found over the border in [Galicia](https://maps.app.goo.gl/kp1QuJLF1w3t65b59)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "817482e7af27",
+          "src": "https://www.plonkit.net/images/portugal/pt_concreteblocks.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-1SD6",
+      "step": 1,
+      "order": 3,
+      "family": "other",
+      "title": "Open fields sparsely populated with holm oaks",
+      "text": [
+        "Open fields sparsely populated with **holm oaks** ([Quercus ilex](https://en.wikipedia.org/wiki/Quercus_ilex)) and **cork oaks** ([Quercus suber](https://en.wikipedia.org/wiki/Quercus_suber)) are very common in the southeast. These species of oaks tend to be on the smaller side, and have a Mediterranean look. While these fields will look quite dry during summer and fall, they will look [much lusher](https://maps.app.goo.gl/N1VwqNrQLgsqpAnm8) during spring."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7df4426e0bf2",
+          "src": "https://www.plonkit.net/images/portugal/2montado.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-rEuU",
+      "step": 1,
+      "order": 4,
+      "family": "other",
+      "title": "Olive plantations are generally more common in the eastern…",
+      "text": [
+        "**Olive plantations** are generally more common in the eastern half of the country, particularly in the far northeast and slight southeast.",
+        "NOTE: The easiest way to tell apart the olive plantations from the oak fields from the last tip is to look at the pattern in which they’re planted. Olive plantations are typically planted in dense rows, while the oaks are planted more sparsely and not in an obvious pattern."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "23b592885400",
+          "src": "https://www.plonkit.net/images/portugal/2olives.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-JOnQ",
+      "step": 1,
+      "order": 5,
+      "family": "vegetation",
+      "title": "Vegetation: Dense eucalyptus forests are mostly found in the northwest",
+      "text": [
+        "Dense **eucalyptus forests** are mostly found in the northwest."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "819fc3a530c4",
+          "src": "https://www.plonkit.net/images/portugal/2eucalyptusforest.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-Pg4g",
+      "step": 1,
+      "order": 6,
+      "family": "vegetation",
+      "title": "Vegetation: Forests, or plantations of Maritime pines (Pinus Pinaster)…",
+      "text": [
+        "Forests, or plantations of** Maritime pines **([Pinus Pinaster](https://en.wikipedia.org/wiki/Pinus_pinaster)) are very common in the northern half of Portugal. You can recognize the tree by its grey bark with red undertones, and fluffy branches that point upwards. Older trees often don’t have any branches in the bottom half of the tree.",
+        "NOTE: Plantations of this pine are also common in northern Spain, particularly Galicia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c5e81eb7b95d",
+          "src": "https://www.plonkit.net/images/portugal/2maritimepine.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-Sc7E",
+      "step": 1,
+      "order": 7,
+      "family": "other",
+      "title": "In the Douro wine region",
+      "text": [
+        "In the [Douro wine region](https://en.wikipedia.org/wiki/Douro_DOC), straight east of Porto, you will commonly find **steep terraced vineyards**."
+      ],
+      "region": "Porto",
+      "tags": [],
+      "images": [
+        {
+          "id": "5949491b513c",
+          "src": "https://www.plonkit.net/images/portugal/2terracedvineyards.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-MPGC",
+      "step": 1,
+      "order": 8,
+      "family": "other",
+      "title": "Citrus plantations are mostly found along the south coast",
+      "text": [
+        "**Citrus plantations** are mostly found along the south coast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e1c9e35221f4",
+          "src": "https://www.plonkit.net/images/portugal/2citrus.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-sUvJ",
+      "step": 1,
+      "order": 9,
+      "family": "other",
+      "title": "The islands of Madeira and the Azores are found southwest…",
+      "text": [
+        "The islands of Madeira and the Azores are found southwest and west of mainland Portugal respectively. For country streak purposes they are both counted as Portugal.",
+        "Plonk It has more in-depth guides to Madeira [here](https://www.plonkit.net/madeira) and a guide to the Azores [here](https://www.plonkit.net/azores)."
+      ],
+      "region": "Madeira, Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "d95de0a0d279",
+          "src": "https://www.plonkit.net/images/portugal/2azoresmadeira.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-Lkpp",
+      "step": 2,
+      "order": 0,
+      "family": "pole",
+      "title": "Pole: The Serra da Estrela natural park can be recognised by the…",
+      "text": [
+        "The Serra da Estrela natural park can be recognised by the **rocky mountainous highland landscape**, often combined with yellow and black striped snow poles."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "ccfa08043dd4",
+          "src": "https://www.plonkit.net/images/portugal/3serradaestrela.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-7JpO",
+      "step": 2,
+      "order": 1,
+      "family": "vegetation",
+      "title": "Vegetation: Pine forests with extremely sandy white soil can be found…",
+      "text": [
+        "Pine forests with extremely **sandy white soil** can be found near the coast between the cities of Setúbal and Sines."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7f6f94dc136b",
+          "src": "https://www.plonkit.net/images/portugal/3sandypinearea.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-X5pr",
+      "step": 2,
+      "order": 2,
+      "family": "landscape",
+      "title": "Landscape: In the far southwest of the country you can find a flat…",
+      "text": [
+        "In the far southwest of the country you can find a flat uncultivated landscape with very limited vegetation, which typically appears quite dry. There are almost no trees nearby, and only very low bushes and grass."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "118fc644918b",
+          "src": "https://www.plonkit.net/images/portugal/3southwest.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-gIlH",
+      "step": 2,
+      "order": 3,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Lime green street signs can be found in Porto",
+      "text": [
+        "**Lime green street signs** can be found in Porto."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3c336ca3787a",
+          "src": "https://www.plonkit.net/images/portugal/3portostreetsign.png"
+        },
+        {
+          "id": "76c37d9cfb2c",
+          "src": "https://learnablemeta.com/images/4588/1777497643414-IDM.avif"
+        },
+        {
+          "id": "44366621f6c2",
+          "src": "https://learnablemeta.com/images/4588/1777497748146-Vc1.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/portugal",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-fva4",
+      "step": 3,
+      "order": 1,
+      "family": "pole",
+      "title": "Pole: Since the Azores is an autonomous region of Portugal",
+      "text": [
+        "Since the Azores is an autonomous region of Portugal, you will often come across various types of Portuguese infrastructure, such as poles, chevrons and bollards."
+      ],
+      "region": "Azores",
+      "tags": [
+        "pole",
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "38d27e9aa967",
+          "src": "https://www.plonkit.net/images/azores/portugueseinfra_az.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-6R9V",
+      "step": 3,
+      "order": 2,
+      "family": "landscape",
+      "title": "Landscape: Most of the Azores visible on Street View consists of open…",
+      "text": [
+        "Most of the Azores visible on Street View consists of open agricultural fields in a rolling landscape, often with taller round hills in the background.",
+        "NOTE: Madeira has a very mountainous landscape, and very rarely has open agricultural fields."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "a92aa1f96da8",
+          "src": "https://www.plonkit.net/images/azores/landscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-MSfT",
+      "step": 3,
+      "order": 3,
+      "family": "other",
+      "title": "Dry rock walls made of volcanic rocks are very common on…",
+      "text": [
+        "**Dry rock walls** made of volcanic rocks are very common on the Azores.",
+        "NOTE: Dry rock walls are not common on Madeira, and while they are somewhat common on mainland Portugal, they will not be made of volcanic rocks."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "898ceff928b9",
+          "src": "https://www.plonkit.net/images/azores/rockwall.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-uDZd",
+      "step": 3,
+      "order": 4,
+      "family": "other",
+      "title": "Hydrangeas can commonly be seen on the Azores",
+      "text": [
+        "**Hydrangeas** can commonly be seen on the Azores.",
+        "NOTE: They can rarely be found on Madeira."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "fb1274e15889",
+          "src": "https://www.plonkit.net/images/azores/hydrangeas.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-2vH0",
+      "step": 3,
+      "order": 5,
+      "family": "other",
+      "title": "Japanese cedars (cryptomeria japonica) are very common on…",
+      "text": [
+        "Japanese cedars ([cryptomeria japonica](https://en.wikipedia.org/wiki/Cryptomeria)) are very common on the Azores.",
+        "NOTE: While they can less commonly be seen on Madeira, they are not native to any part of mainland Europe."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "f74793417eaf",
+          "src": "https://www.plonkit.net/images/azores/cedars.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-D5Ni",
+      "step": 3,
+      "order": 6,
+      "family": "architecture",
+      "title": "Architecture: Houses in the Azores are typically one or two stories",
+      "text": [
+        "Houses in the Azores are typically one or two stories, with an orange tiled roof. They are painted **white** or in **pastel colours**, and dark green shutters on windows are common.",
+        "While you can also find [yellow](https://maps.app.goo.gl/eKrCqxAGLvi8JfKr8) or [blue](https://maps.app.goo.gl/tztY4hFYy1q7exjYA) highlights like in mainland Portugal, **grey highlights** are almost exclusive to the Azores."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "b56974b5423a",
+          "src": "https://www.plonkit.net/images/azores/architecture.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-159s",
+      "step": 3,
+      "order": 7,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street signs in the Azores are almost exclusively painted…",
+      "text": [
+        "Street signs in the Azores are almost exclusively painted ceramic tiles, with blue letters and, typically, a decorative pattern around the edge."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "4e7c9f7e84b8",
+          "src": "https://www.plonkit.net/images/azores/streetsign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-rdxB",
+      "step": 3,
+      "order": 8,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Signposts on the Azores are often striped",
+      "text": [
+        "Signposts on the Azores are often striped.",
+        "NOTE: These are also seen on Madeira."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "795b6b951bdf",
+          "src": "https://www.plonkit.net/images/azores/signpost.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-eaE2",
+      "step": 3,
+      "order": 9,
+      "family": "other",
+      "title": "Black and white cows are very common on the Azores",
+      "text": [
+        "**Black and white cows** are very common on the Azores.",
+        "NOTE: Cows on Madeira are usually [brown with white spots](https://maps.app.goo.gl/6cXY7T6okctmsJ9FA)."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "d64b8e4ed078",
+          "src": "https://www.plonkit.net/images/azores/cows.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-lyKf",
+      "step": 4,
+      "order": 0,
+      "family": "coverage",
+      "title": "Coverage: The only islands in the Azores with car coverage are Ilha…",
+      "text": [
+        "The only islands in the Azores with car coverage are Ilha de São Miguel, Ilha Terceira and Ilha do Faial."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "8ac8a5473fb6",
+          "src": "https://www.plonkit.net/images/azores/coverage_az_2025.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-j5G7",
+      "step": 4,
+      "order": 1,
+      "family": "car",
+      "title": "Google car: The only island with Generation 4 coverage is Ilha de São…",
+      "text": [
+        "The only island with **Generation 4** coverage is Ilha de São Miguel."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "bdfbae27d541",
+          "src": "https://www.plonkit.net/images/azores/gen4.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-yWA1",
+      "step": 4,
+      "order": 2,
+      "family": "coverage",
+      "title": "Coverage: Shitcam coverage is found on Ilha de São Miguel and Ilha do…",
+      "text": [
+        "**Shitcam** coverage is found on Ilha de São Miguel and Ilha do Faial. ",
+        "The car seen on [São Miguel](https://maps.app.goo.gl/JAvRHWSUTF1WN64C8) has an **indentation** in the centre, while the one on [Faial](https://maps.app.goo.gl/SFnsE3SAKAeeX8Pw7) appears as a smooth surface, sometimes with an antenna visible."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "ef75fc908036",
+          "src": "https://www.plonkit.net/images/azores/azores_shitcam.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-Lvxy",
+      "step": 4,
+      "order": 3,
+      "family": "other",
+      "title": "Ilha de São Miguel is the only island in the Azores or…",
+      "text": [
+        "Ilha de São Miguel is the only island in the Azores or Madeira where you can find lakes."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "6078d2576a52",
+          "src": "https://www.plonkit.net/images/azores/lakes.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-Ukps",
+      "step": 4,
+      "order": 4,
+      "family": "other",
+      "title": "Rock walls with a white painted concrete top are somewhat…",
+      "text": [
+        "Rock walls with a white painted concrete top are somewhat common on Ilha Terceira."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "ea9db717e942",
+          "src": "https://www.plonkit.net/images/azores/whiterockwall.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-HWk5",
+      "step": 4,
+      "order": 5,
+      "family": "other",
+      "title": "On Ilha do Faial",
+      "text": [
+        "On Ilha do Faial, you will sometimes find traditional whitewashed rock walls with unevenly sized dark basalt stones."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "a7df2c42f441",
+          "src": "https://www.plonkit.net/images/azores/faial_white_rocks_very_real_meta.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-az-2fiy",
+      "step": 5,
+      "order": 0,
+      "family": "coverage",
+      "title": "Coverage: A trekker going along the edge of a crater can be seen on…",
+      "text": [
+        "A trekker going along the edge of a crater can be seen on Ilha do Faial."
+      ],
+      "region": "Azores",
+      "tags": [],
+      "images": [
+        {
+          "id": "daf3de145c8f",
+          "src": "https://www.plonkit.net/images/azores/ilhadofaial.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/azores",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-qA1O",
+      "step": 6,
+      "order": 1,
+      "family": "pole",
+      "title": "Pole: Since Madeira is an autonomous region of Portugal",
+      "text": [
+        "Since Madeira is an autonomous region of Portugal, you will often come across various types of Portuguese infrastructure, such as poles and chevrons."
+      ],
+      "region": "Madeira",
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "a3a42c0f2e48",
+          "src": "https://www.plonkit.net/images/madeira/portugueseinfra_ma.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-KlHM",
+      "step": 6,
+      "order": 2,
+      "family": "other",
+      "title": "Madeira is a very mountainous and semi-tropical island",
+      "text": [
+        "Madeira is a very mountainous and semi-tropical island.",
+        "NOTE: The Azores are less mountainous and more temperate."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "fc105378fdc0",
+          "src": "https://www.plonkit.net/images/madeira/landscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-Fnoy",
+      "step": 6,
+      "order": 3,
+      "family": "vegetation",
+      "title": "Vegetation: Similar to continental Portugal",
+      "text": [
+        "Similar to continental Portugal, Madeira has a lot of **eucalyptus forests**, which can sometimes look deceptively [like the mainland](https://maps.app.goo.gl/iPZqubcw1HMTrzAi9).",
+        "NOTE: The Azores do not commonly have eucalypti."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "4fc5f66e71ba",
+          "src": "https://www.plonkit.net/images/madeira/eucalyptus.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-FT2D",
+      "step": 6,
+      "order": 4,
+      "family": "other",
+      "title": "Hydrangeas can occasionally be seen",
+      "text": [
+        "**Hydrangeas** can occasionally be seen.",
+        "NOTE: They are even more common on the Azores."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "0e8d28cb91f0",
+          "src": "https://www.plonkit.net/images/madeira/hydrangea.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-J3BX",
+      "step": 6,
+      "order": 5,
+      "family": "other",
+      "title": "African lilies (Agapanthus praecox) are very common in…",
+      "text": [
+        "African lilies ([Agapanthus praecox](https://en.wikipedia.org/wiki/Agapanthus_praecox)) are very common in Madeira. They can be recognized by their long grassy leaves and round flower clusters at the end of a long stem. The most common colours are white and [blue](https://maps.app.goo.gl/tjbb37GMwtSgrUNb6)."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "401369299a5c",
+          "src": "https://www.plonkit.net/images/madeira/africanlily.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-06MA",
+      "step": 6,
+      "order": 6,
+      "family": "landscape",
+      "title": "Landscape: Due to the lack of flat terrain",
+      "text": [
+        "Due to the lack of flat terrain, **terrace farming** is extensively practised on the island. Stone walls are used to separate the individual plateaus."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "0e7322504ee1",
+          "src": "https://www.plonkit.net/images/madeira/terracefarming.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-TwjW",
+      "step": 6,
+      "order": 7,
+      "family": "other",
+      "title": "Ferns are very common throughout the island",
+      "text": [
+        "**Ferns** are very common throughout the island."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "704118785a5e",
+          "src": "https://www.plonkit.net/images/madeira/ferns.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-CWY3",
+      "step": 6,
+      "order": 8,
+      "family": "architecture",
+      "title": "Architecture: Houses are mainly painted white",
+      "text": [
+        "Houses are mainly painted white, grey, or pastel colours such as yellow and pink. In addition, the red tile roofs will often be in a good condition."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "e70f939cd7ad",
+          "src": "https://www.plonkit.net/images/madeira/houecolours.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-uInB",
+      "step": 6,
+      "order": 9,
+      "family": "guardrail",
+      "title": "Guardrail: Concrete block barriers, usually painted white, are often…",
+      "text": [
+        "**Concrete block barriers**, usually painted white, are often found along roads."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "dd4242c96eac",
+          "src": "https://www.plonkit.net/images/madeira/stoneblocks.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-yIaR",
+      "step": 6,
+      "order": 10,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Bus stops signs on Madeira follow a unique black",
+      "text": [
+        "Bus stops signs on Madeira follow a unique **black, white **and** yellow** colour scheme."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "d47e39c19556",
+          "src": "https://www.plonkit.net/images/madeira/busstops.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-vS4A",
+      "step": 6,
+      "order": 11,
+      "family": "other",
+      "title": "Taxis on Madeira are yellow with a blue stripe running…",
+      "text": [
+        "Taxis on Madeira are yellow with a blue stripe running along the sides of the car."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "0444feffea22",
+          "src": "https://www.plonkit.net/images/madeira/taxis.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-CXPS",
+      "step": 6,
+      "order": 12,
+      "family": "bollard",
+      "title": "Bollard: Madeira commonly uses small and unique stone bollards with…",
+      "text": [
+        "Madeira commonly uses small and unique stone bollards with a red reflector. They are either cuboidal or cylindrical in shape."
+      ],
+      "region": "Madeira",
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "71cc1847b267",
+          "src": "https://www.plonkit.net/images/madeira/stonebollards.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-18cP",
+      "step": 6,
+      "order": 13,
+      "family": "guardrail",
+      "title": "Guardrail: Madeira sometimes uses yellow-and black guardrails on its…",
+      "text": [
+        "Madeira sometimes uses yellow-and black guardrails on its mountain roads."
+      ],
+      "region": "Madeira",
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "add3feb541b9",
+          "src": "https://www.plonkit.net/images/madeira/guardrails.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-kfwz",
+      "step": 6,
+      "order": 14,
+      "family": "sign",
+      "kind": "speed",
+      "title": "Speed sign: These speed limit signs are unique to Madeira and can be…",
+      "text": [
+        "These speed limit signs are unique to Madeira and can be found on its highways."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "2a9e8aa6a326",
+          "src": "https://www.plonkit.net/images/madeira/speedsign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-WqRe",
+      "step": 6,
+      "order": 15,
+      "family": "other",
+      "title": "Low altitude clouds are typical on the island",
+      "text": [
+        "**Low altitude **clouds are typical on the island, and are often seen on street view."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "37eb078d76c1",
+          "src": "https://www.plonkit.net/images/madeira/lowclouds.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-PWVC",
+      "step": 6,
+      "order": 16,
+      "family": "coverage",
+      "title": "Coverage: Foggy coverage is quite common",
+      "text": [
+        "**Foggy coverage** is quite common."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "a79256645a94",
+          "src": "https://www.plonkit.net/images/madeira/cloudywet.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-VNQl",
+      "step": 6,
+      "order": 17,
+      "family": "landscape",
+      "title": "Landscape: As a result of the island’s mountainous terrain",
+      "text": [
+        "As a result of the island’s mountainous terrain, **tunnels** are very common."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "c87d9ba84702",
+          "src": "https://www.plonkit.net/images/madeira/tunnels.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-uLdi",
+      "step": 6,
+      "order": 18,
+      "family": "other",
+      "title": "On bridges you will often find railings painted dark green",
+      "text": [
+        "On bridges you will often find railings painted **dark green**."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "c1d87693d2f1",
+          "src": "https://www.plonkit.net/images/madeira/greenrailing.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-ooPx",
+      "step": 6,
+      "order": 19,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Signposts on Madeira are often striped",
+      "text": [
+        "Signposts on Madeira are often striped.",
+        "NOTE: These are also seen on the Azores."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "cd8339358e9f",
+          "src": "https://www.plonkit.net/images/madeira/signpost.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-4VKJ",
+      "step": 6,
+      "order": 20,
+      "family": "sign",
+      "kind": "warning",
+      "title": "Warning sign: You can sometimes find free roaming cows on high-altitude…",
+      "text": [
+        "You can sometimes find **free roaming cows** on high-altitude roads on the island, as well as warning signs for those cows. The cows will typically be brown with white spots, contrary to the Azores, where the cows will typically be [black and white](https://maps.app.goo.gl/vsM6TJ2DnHi1vKEG7)."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "e56e6df3ab78",
+          "src": "https://www.plonkit.net/images/madeira/cowwarning.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-PUaV",
+      "step": 6,
+      "order": 21,
+      "family": "coverage",
+      "title": "Coverage: Google used a weird",
+      "text": [
+        "Google used a weird, low-quality camera on Madeira, commonly known as the official Ari (or \"shitcam\"). It has a wide circular car blur and makes the image appear rather gloomy. On Madeira, you will often see the unblurred back of a **white** car.",
+        "A good map will usually not include this coverage, but it is good to be aware of its existence, in order not to be caught off-guard."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "3b769efc3883",
+          "src": "https://www.plonkit.net/images/madeira/madeira_shitcam",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-nSn4",
+      "step": 7,
+      "order": 0,
+      "family": "other",
+      "title": "The majority of banana plantations are found in the south",
+      "text": [
+        "The majority of banana plantations are found in the south."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "24c8a28904cf",
+          "src": "https://www.plonkit.net/images/madeira/bananaplantation.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-7hDE",
+      "step": 7,
+      "order": 1,
+      "family": "coverage",
+      "title": "Coverage: The centre-west of the island is home to an elevated plateau",
+      "text": [
+        "The centre-west of the island is home to an **elevated plateau**. It can be recognized by the unusual flatness, misty coverage, and the presence of wind turbines."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "3a0f436f348e",
+          "src": "https://www.plonkit.net/images/madeira/plateau.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-BGSE",
+      "step": 7,
+      "order": 2,
+      "family": "guardrail",
+      "title": "Guardrail: The road east of the plateau can be recognized by its…",
+      "text": [
+        "The road east of the plateau can be recognized by its unique mountain formations and the black-and-yellow guardrail on the side of the road."
+      ],
+      "region": "Madeira",
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "13bd7bd799e6",
+          "src": "https://www.plonkit.net/images/madeira/streeteastplateau.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-Pezj",
+      "step": 7,
+      "order": 3,
+      "family": "vegetation",
+      "title": "Vegetation: The eastern tip of the island is very arid with little to…",
+      "text": [
+        "The eastern tip of the island is very arid with little to no vegetation."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "44fa2e497448",
+          "src": "https://www.plonkit.net/images/madeira/eastdry.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-MaYa",
+      "step": 8,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: The ER211 can be recognized by the dark pavement combined…",
+      "text": [
+        "The ER211 can be recognized by the dark pavement combined with its exposed brownish soil."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "37771fdd7b34",
+          "src": "https://www.plonkit.net/images/madeira/er211.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-KKWQ",
+      "step": 8,
+      "order": 1,
+      "family": "landscape",
+      "title": "Landscape: Pico Areeiro is the second highest mountain on the island",
+      "text": [
+        "**Pico Areeiro** is the second highest mountain on the island, and the highest with coverage. It can be recognized by its view over most of the island, and the white radar station at the top."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "8db5a5a2c9d1",
+          "src": "https://www.plonkit.net/images/madeira/picoareeiro.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-Hntd",
+      "step": 8,
+      "order": 2,
+      "family": "landscape",
+      "title": "Landscape: The Penha d'Águia is located in northeastern Madeira",
+      "text": [
+        "The **Penha d'Águia** is located in northeastern Madeira, isolated on an elevated hill."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "257209ded6de",
+          "src": "https://www.plonkit.net/images/madeira/faialrock.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-6mIy",
+      "step": 8,
+      "order": 3,
+      "family": "other",
+      "title": "The Cristiano Ronaldo International Airport is located in…",
+      "text": [
+        "The **Cristiano Ronaldo International Airport** is located in eastern Madeira. The north of it is built on these numerous concrete pillars."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "6e97e4b3499e",
+          "src": "https://www.plonkit.net/images/madeira/airport.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-5Kfy",
+      "step": 8,
+      "order": 4,
+      "family": "other",
+      "title": "Cascata dos Anjos is situated in the southwest and is a…",
+      "text": [
+        "**Cascata dos Anjos **is situated in the southwest and is a popular location on the island. It is a 100-metre-high waterfall, which cascades onto the road below."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "cb5f8de298df",
+          "src": "https://www.plonkit.net/images/madeira/cascatadosanjos.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-2DE7",
+      "step": 8,
+      "order": 5,
+      "family": "other",
+      "title": "The islands of Ribeira de Janela",
+      "text": [
+        "The islands of **Ribeira de Janela**, located in the northwest,** **are a famous photographer spot with their vertical, jagged shape."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "cd8b8fc22faa",
+          "src": "https://www.plonkit.net/images/madeira/ribeiradejanela.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "pt-ma-8zkm",
+      "step": 8,
+      "order": 6,
+      "family": "other",
+      "title": "These dark, sharp rock formations with an island in the…",
+      "text": [
+        "These dark, sharp rock formations with an island in the background are found in **Porto Moniz** in the northwest."
+      ],
+      "region": "Madeira",
+      "tags": [],
+      "images": [
+        {
+          "id": "9f47139c0414",
+          "src": "https://www.plonkit.net/images/madeira/portomonizrock.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/madeira",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "pt-lm-142",
-      "step": 0,
-      "order": 2,
+      "step": 9,
+      "order": 0,
       "family": "other",
       "title": "Side walks",
       "text": [
@@ -83,33 +2254,9 @@
       }
     },
     {
-      "id": "pt-lm-277",
-      "step": 0,
-      "order": 3,
-      "family": "pole",
-      "title": "Pole: Pole",
-      "text": [
-        "Concrete ladder poles with very tall ladder steps are common in Portugal. Each step often has a small see-through hole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e1373cf7caa6",
-          "src": "https://learnablemeta.com/images/RIC5T2U9BEO5VxawLcCquTh2Xvc28PbRTS08.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-2241",
-      "step": 0,
-      "order": 4,
+      "step": 9,
+      "order": 1,
       "family": "other",
       "title": "Street in Portuguese",
       "text": [
@@ -138,8 +2285,8 @@
     },
     {
       "id": "pt-lm-2242",
-      "step": 0,
-      "order": 5,
+      "step": 9,
+      "order": 2,
       "family": "language",
       "title": "Language: Portuguese Helpful Words",
       "text": [
@@ -158,8 +2305,8 @@
     },
     {
       "id": "pt-lm-2243",
-      "step": 0,
-      "order": 6,
+      "step": 9,
+      "order": 3,
       "family": "language",
       "title": "Language: Portuguese General Tips",
       "text": [
@@ -187,8 +2334,8 @@
     },
     {
       "id": "pt-lm-2979",
-      "step": 0,
-      "order": 7,
+      "step": 9,
+      "order": 4,
       "family": "other",
       "title": "Belt + Bent Knees Portugal",
       "text": [
@@ -216,8 +2363,8 @@
     },
     {
       "id": "pt-lm-8201",
-      "step": 0,
-      "order": 8,
+      "step": 9,
+      "order": 5,
       "family": "other",
       "title": "Word for street - RUA",
       "text": [
@@ -240,87 +2387,9 @@
       }
     },
     {
-      "id": "pt-lm-8816",
-      "step": 0,
-      "order": 9,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector. While most reflectors will be white, you may also find orange reflectors. These are noticeably darker than the yellow reflectors in Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ea1cc92e5d1",
-          "src": "https://learnablemeta.com/images/1/I92yy0nDiwNa1gjQli4juhpRBm0Kwuded7NK.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fd7c30b34ca9145ec96a6a",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-8817",
-      "step": 0,
-      "order": 10,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "NOTE: Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5466ee9e0288",
-          "src": "https://learnablemeta.com/images/1/PZg0mFj0NR9U4XirA0yhSj4zz0CBIB3t6x2Z.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-22740",
-      "step": 0,
-      "order": 11,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector. While most reflectors will be white, you may also find orange reflectors. These are noticeably darker than the yellow reflectors in Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a30c69b1db82",
-          "src": "https://learnablemeta.com/images/739/9eJvNHZmfqfDaPwW4WVtoTxSR7aUOMyXvoGw.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-24613",
-      "step": 0,
-      "order": 12,
+      "step": 9,
+      "order": 6,
       "family": "landscape",
       "title": "Landscape: Azores",
       "text": [
@@ -343,8 +2412,8 @@
     },
     {
       "id": "pt-lm-24614",
-      "step": 0,
-      "order": 13,
+      "step": 9,
+      "order": 7,
       "family": "other",
       "title": "Madeira",
       "text": [
@@ -367,8 +2436,8 @@
     },
     {
       "id": "pt-lm-24615",
-      "step": 0,
-      "order": 14,
+      "step": 9,
+      "order": 8,
       "family": "landscape",
       "title": "Landscape: Serra da Estrela Natural Park",
       "text": [
@@ -391,8 +2460,8 @@
     },
     {
       "id": "pt-lm-24616",
-      "step": 0,
-      "order": 15,
+      "step": 9,
+      "order": 9,
       "family": "landscape",
       "title": "Landscape: Southwest Flatland",
       "text": [
@@ -415,8 +2484,8 @@
     },
     {
       "id": "pt-lm-49855",
-      "step": 0,
-      "order": 16,
+      "step": 9,
+      "order": 10,
       "family": "landscape",
       "title": "Landscape: Landscape",
       "text": [
@@ -441,8 +2510,8 @@
     },
     {
       "id": "pt-lm-49856",
-      "step": 0,
-      "order": 17,
+      "step": 9,
+      "order": 11,
       "family": "other",
       "title": "Dry Rock Walls",
       "text": [
@@ -467,8 +2536,8 @@
     },
     {
       "id": "pt-lm-49857",
-      "step": 0,
-      "order": 18,
+      "step": 9,
+      "order": 12,
       "family": "other",
       "title": "Hydrangeas",
       "text": [
@@ -493,8 +2562,8 @@
     },
     {
       "id": "pt-lm-49935",
-      "step": 0,
-      "order": 19,
+      "step": 9,
+      "order": 13,
       "family": "landscape",
       "title": "Landscape: Mountainous Landscape",
       "text": [
@@ -519,8 +2588,8 @@
     },
     {
       "id": "pt-lm-49936",
-      "step": 0,
-      "order": 20,
+      "step": 9,
+      "order": 14,
       "family": "vegetation",
       "title": "Vegetation: Eucalyptus Forests",
       "text": [
@@ -545,8 +2614,8 @@
     },
     {
       "id": "pt-lm-49937",
-      "step": 0,
-      "order": 21,
+      "step": 9,
+      "order": 15,
       "family": "guardrail",
       "title": "Guardrail: Concrete Blocks",
       "text": [
@@ -569,8 +2638,8 @@
     },
     {
       "id": "pt-lm-49938",
-      "step": 0,
-      "order": 22,
+      "step": 9,
+      "order": 16,
       "family": "bollard",
       "title": "Bollard: Stone Bollards",
       "text": [
@@ -593,62 +2662,9 @@
       }
     },
     {
-      "id": "pt-lm-49944",
-      "step": 0,
-      "order": 23,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Road Signs",
-      "text": [
-        "Portuguese road signs are typically encased by a white border.",
-        "**--- NOTE:**",
-        "Most Spanish signs don’t have a white border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59a39636a04b",
-          "src": "https://learnablemeta.com/images/847/HmYYeMCbvIwKOilSI0yBZ1YULG7fUcqjf3Fq.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-49945",
-      "step": 0,
-      "order": 24,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Portuguese plates are long and white, with a blue strip on the left.",
-        "Most plates have a yellow strip on the right, which is unique to Portugal.",
-        "The yellow strip was discontinued in 2020, so in Generation 4 coverage you may sometimes see plates with just the blue strip."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7f251cf492a4",
-          "src": "https://learnablemeta.com/images/847/3gvDQ5wDAxTaNRq5kqnoiJiM2M9a7WRTdSb7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-49946",
-      "step": 0,
-      "order": 25,
+      "step": 9,
+      "order": 17,
       "family": "other",
       "title": "Rua",
       "text": [
@@ -672,37 +2688,9 @@
       }
     },
     {
-      "id": "pt-lm-49947",
-      "step": 0,
-      "order": 26,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector.",
-        "While most reflectors will be white, you may also find orange reflectors.",
-        "These are noticeably darker than the yellow reflectors in Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cec38b174c36",
-          "src": "https://learnablemeta.com/images/847/wHW5bY3wG3IEGczR5IFuQjbuzjvInJweoKYR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-49948",
-      "step": 0,
-      "order": 27,
+      "step": 9,
+      "order": 18,
       "family": "guardrail",
       "title": "Guardrail: Red Reflector",
       "text": [
@@ -729,8 +2717,8 @@
     },
     {
       "id": "pt-lm-49949",
-      "step": 0,
-      "order": 28,
+      "step": 9,
+      "order": 19,
       "family": "other",
       "title": "Cobblestone Roads",
       "text": [
@@ -754,8 +2742,8 @@
     },
     {
       "id": "pt-lm-49950",
-      "step": 0,
-      "order": 29,
+      "step": 9,
+      "order": 20,
       "family": "other",
       "title": "Cobblestone Sidewalks",
       "text": [
@@ -777,33 +2765,9 @@
       }
     },
     {
-      "id": "pt-lm-49951",
-      "step": 0,
-      "order": 30,
-      "family": "architecture",
-      "title": "Architecture: Architecture",
-      "text": [
-        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ff4750276d11",
-          "src": "https://learnablemeta.com/images/847/Rzf5XcYGCBCDt0zj3fuajaJ2vmT0ziIF9y7U.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-49969",
-      "step": 0,
-      "order": 31,
+      "step": 9,
+      "order": 21,
       "family": "pole",
       "title": "Pole: Portuguese Infrastructure",
       "text": [
@@ -825,66 +2789,9 @@
       }
     },
     {
-      "id": "pt-lm-49974",
-      "step": 0,
-      "order": 32,
-      "family": "pole",
-      "title": "Pole: Tall Ladder Poles",
-      "text": [
-        "Concrete ladder poles, with very tall ladder steps, are common in Portugal.",
-        "Each step often has a small see-through hole.",
-        "**--- NOTE:**",
-        "In Spain and France you will commonly see ladder poles with short steps."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0791858b7c07",
-          "src": "https://learnablemeta.com/images/847/8xBODUItcS13G579vmqMDyK36nbVChonisR7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES",
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-49975",
-      "step": 0,
-      "order": 33,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "**--- NOTE:**",
-        "Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ac361096c64",
-          "src": "https://learnablemeta.com/images/847/4XgucnyQiDclqf7mYt58wKtDChuJS6nzK4N5.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-49976",
-      "step": 0,
-      "order": 34,
+      "step": 9,
+      "order": 22,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: Large Font Stop",
@@ -911,62 +2818,9 @@
       }
     },
     {
-      "id": "pt-lm-49977",
-      "step": 0,
-      "order": 35,
-      "family": "vegetation",
-      "title": "Vegetation: Eucalyptus Trees",
-      "text": [
-        "Eucalyptus trees are very common in Portugal.",
-        "The only other part of Europe where you’ll commonly see eucalyptus is northern Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9479d0ab1872",
-          "src": "https://learnablemeta.com/images/847/yzybnCztxGLyJzAhuJmAuuSHPuhnHN3CCJr7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-49978",
-      "step": 0,
-      "order": 36,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Hunting Signs",
-      "text": [
-        "Hunting signs with a red and white colour scheme are a common sight in rural areas.",
-        "They are either diamond shaped or rectangular.",
-        "**--- NOTE:**",
-        "In contrast, Spanish hunting signs are white and black."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "66f4f7ce9e58",
-          "src": "https://learnablemeta.com/images/847/tBZ4iPV1PN1ZQbcY9rVKOD7yJpceZKfQCmB3.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50216",
-      "step": 0,
-      "order": 37,
+      "step": 9,
+      "order": 23,
       "family": "other",
       "title": "Dry Rock Walls",
       "text": [
@@ -991,8 +2845,8 @@
     },
     {
       "id": "pt-lm-50218",
-      "step": 0,
-      "order": 38,
+      "step": 9,
+      "order": 24,
       "family": "landscape",
       "title": "Landscape: Landscape",
       "text": [
@@ -1017,8 +2871,8 @@
     },
     {
       "id": "pt-lm-50219",
-      "step": 0,
-      "order": 39,
+      "step": 9,
+      "order": 25,
       "family": "other",
       "title": "Hydrangeas",
       "text": [
@@ -1043,8 +2897,8 @@
     },
     {
       "id": "pt-lm-50295",
-      "step": 0,
-      "order": 40,
+      "step": 9,
+      "order": 26,
       "family": "other",
       "title": "Rua",
       "text": [
@@ -1068,37 +2922,9 @@
       }
     },
     {
-      "id": "pt-lm-50296",
-      "step": 0,
-      "order": 41,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector.",
-        "While most reflectors will be white, you may also find orange reflectors.",
-        "These are noticeably darker than the yellow reflectors in Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cec38b174c36",
-          "src": "https://learnablemeta.com/images/847/wHW5bY3wG3IEGczR5IFuQjbuzjvInJweoKYR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50301",
-      "step": 0,
-      "order": 42,
+      "step": 9,
+      "order": 27,
       "family": "other",
       "title": "Cobblestone Sidewalks",
       "text": [
@@ -1120,35 +2946,9 @@
       }
     },
     {
-      "id": "pt-lm-50302",
-      "step": 0,
-      "order": 43,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Portuguese plates are long and white, with a blue strip on the left.",
-        "Most plates have a yellow strip on the right, which is unique to Portugal.",
-        "The yellow strip was discontinued in 2020, so in Generation 4 coverage you may sometimes see plates with just the blue strip."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7f251cf492a4",
-          "src": "https://learnablemeta.com/images/847/3gvDQ5wDAxTaNRq5kqnoiJiM2M9a7WRTdSb7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50303",
-      "step": 0,
-      "order": 44,
+      "step": 9,
+      "order": 28,
       "family": "bollard",
       "title": "Bollard: Stone Bollards",
       "text": [
@@ -1172,8 +2972,8 @@
     },
     {
       "id": "pt-lm-50308",
-      "step": 0,
-      "order": 45,
+      "step": 9,
+      "order": 29,
       "family": "guardrail",
       "title": "Guardrail: Concrete Blocks",
       "text": [
@@ -1196,8 +2996,8 @@
     },
     {
       "id": "pt-lm-50310",
-      "step": 0,
-      "order": 46,
+      "step": 9,
+      "order": 30,
       "family": "landscape",
       "title": "Landscape: Mountainous Landscape",
       "text": [
@@ -1222,8 +3022,8 @@
     },
     {
       "id": "pt-lm-50311",
-      "step": 0,
-      "order": 47,
+      "step": 9,
+      "order": 31,
       "family": "vegetation",
       "title": "Vegetation: Eucalyptus Forests",
       "text": [
@@ -1248,8 +3048,8 @@
     },
     {
       "id": "pt-lm-50320",
-      "step": 0,
-      "order": 48,
+      "step": 9,
+      "order": 32,
       "family": "pole",
       "title": "Pole: Portuguese Infrastructure",
       "text": [
@@ -1272,8 +3072,8 @@
     },
     {
       "id": "pt-lm-50325",
-      "step": 0,
-      "order": 49,
+      "step": 9,
+      "order": 33,
       "family": "guardrail",
       "title": "Guardrail: Red Reflector",
       "text": [
@@ -1299,61 +3099,9 @@
       }
     },
     {
-      "id": "pt-lm-50326",
-      "step": 0,
-      "order": 50,
-      "family": "vegetation",
-      "title": "Vegetation: Eucalyptus Trees",
-      "text": [
-        "Eucalyptus trees are very common in Portugal.",
-        "The only other part of Europe where you’ll commonly see eucalyptus is northern Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9479d0ab1872",
-          "src": "https://learnablemeta.com/images/847/yzybnCztxGLyJzAhuJmAuuSHPuhnHN3CCJr7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50328",
-      "step": 0,
-      "order": 51,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "**--- NOTE:**",
-        "Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ac361096c64",
-          "src": "https://learnablemeta.com/images/847/4XgucnyQiDclqf7mYt58wKtDChuJS6nzK4N5.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50330",
-      "step": 0,
-      "order": 52,
+      "step": 9,
+      "order": 34,
       "family": "other",
       "title": "Cobblestone Roads",
       "text": [
@@ -1376,90 +3124,9 @@
       }
     },
     {
-      "id": "pt-lm-50331",
-      "step": 0,
-      "order": 53,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Road Signs",
-      "text": [
-        "Portuguese road signs are typically encased by a white border.",
-        "**--- NOTE:**",
-        "Most Spanish signs don’t have a white border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59a39636a04b",
-          "src": "https://learnablemeta.com/images/847/HmYYeMCbvIwKOilSI0yBZ1YULG7fUcqjf3Fq.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50332",
-      "step": 0,
-      "order": 54,
-      "family": "architecture",
-      "title": "Architecture: Architecture",
-      "text": [
-        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ff4750276d11",
-          "src": "https://learnablemeta.com/images/847/Rzf5XcYGCBCDt0zj3fuajaJ2vmT0ziIF9y7U.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50334",
-      "step": 0,
-      "order": 55,
-      "family": "pole",
-      "title": "Pole: Tall Ladder Poles",
-      "text": [
-        "Concrete ladder poles, with very tall ladder steps, are common in Portugal.",
-        "Each step often has a small see-through hole.",
-        "**--- NOTE:**",
-        "In Spain and France you will commonly see ladder poles with short steps."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0791858b7c07",
-          "src": "https://learnablemeta.com/images/847/8xBODUItcS13G579vmqMDyK36nbVChonisR7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES",
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50336",
-      "step": 0,
-      "order": 56,
+      "step": 9,
+      "order": 35,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: Large Font Stop",
@@ -1486,37 +3153,9 @@
       }
     },
     {
-      "id": "pt-lm-50346",
-      "step": 0,
-      "order": 57,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Hunting Signs",
-      "text": [
-        "Hunting signs with a red and white colour scheme are a common sight in rural areas.",
-        "They are either diamond shaped or rectangular.",
-        "**--- NOTE:**",
-        "In contrast, Spanish hunting signs are white and black."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "66f4f7ce9e58",
-          "src": "https://learnablemeta.com/images/847/tBZ4iPV1PN1ZQbcY9rVKOD7yJpceZKfQCmB3.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50861",
-      "step": 0,
-      "order": 58,
+      "step": 9,
+      "order": 36,
       "family": "landscape",
       "title": "Landscape: Landscape",
       "text": [
@@ -1541,8 +3180,8 @@
     },
     {
       "id": "pt-lm-50862",
-      "step": 0,
-      "order": 59,
+      "step": 9,
+      "order": 37,
       "family": "other",
       "title": "Dry Rock Walls",
       "text": [
@@ -1567,8 +3206,8 @@
     },
     {
       "id": "pt-lm-50863",
-      "step": 0,
-      "order": 60,
+      "step": 9,
+      "order": 38,
       "family": "other",
       "title": "Hydrangeas",
       "text": [
@@ -1593,8 +3232,8 @@
     },
     {
       "id": "pt-lm-50944",
-      "step": 0,
-      "order": 61,
+      "step": 9,
+      "order": 39,
       "family": "landscape",
       "title": "Landscape: Mountainous Landscape",
       "text": [
@@ -1619,8 +3258,8 @@
     },
     {
       "id": "pt-lm-50945",
-      "step": 0,
-      "order": 62,
+      "step": 9,
+      "order": 40,
       "family": "vegetation",
       "title": "Vegetation: Eucalyptus Forests",
       "text": [
@@ -1645,8 +3284,8 @@
     },
     {
       "id": "pt-lm-50946",
-      "step": 0,
-      "order": 63,
+      "step": 9,
+      "order": 41,
       "family": "guardrail",
       "title": "Guardrail: Concrete Blocks",
       "text": [
@@ -1669,8 +3308,8 @@
     },
     {
       "id": "pt-lm-50947",
-      "step": 0,
-      "order": 64,
+      "step": 9,
+      "order": 42,
       "family": "bollard",
       "title": "Bollard: Stone Bollards",
       "text": [
@@ -1693,62 +3332,9 @@
       }
     },
     {
-      "id": "pt-lm-50953",
-      "step": 0,
-      "order": 65,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Road Signs",
-      "text": [
-        "Portuguese road signs are typically encased by a white border.",
-        "**--- NOTE:**",
-        "Most Spanish signs don’t have a white border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59a39636a04b",
-          "src": "https://learnablemeta.com/images/847/HmYYeMCbvIwKOilSI0yBZ1YULG7fUcqjf3Fq.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50954",
-      "step": 0,
-      "order": 66,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Portuguese plates are long and white, with a blue strip on the left.",
-        "Most plates have a yellow strip on the right, which is unique to Portugal.",
-        "The yellow strip was discontinued in 2020, so in Generation 4 coverage you may sometimes see plates with just the blue strip."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7f251cf492a4",
-          "src": "https://learnablemeta.com/images/847/3gvDQ5wDAxTaNRq5kqnoiJiM2M9a7WRTdSb7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50955",
-      "step": 0,
-      "order": 67,
+      "step": 9,
+      "order": 43,
       "family": "other",
       "title": "Rua",
       "text": [
@@ -1772,37 +3358,9 @@
       }
     },
     {
-      "id": "pt-lm-50956",
-      "step": 0,
-      "order": 68,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Portuguese bollards are either wedge-shaped with a noticeably thin white top, or flat with a wide reflector.",
-        "While most reflectors will be white, you may also find orange reflectors.",
-        "These are noticeably darker than the yellow reflectors in Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cec38b174c36",
-          "src": "https://learnablemeta.com/images/847/wHW5bY3wG3IEGczR5IFuQjbuzjvInJweoKYR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50957",
-      "step": 0,
-      "order": 69,
+      "step": 9,
+      "order": 44,
       "family": "guardrail",
       "title": "Guardrail: Red Reflector",
       "text": [
@@ -1829,8 +3387,8 @@
     },
     {
       "id": "pt-lm-50961",
-      "step": 0,
-      "order": 70,
+      "step": 9,
+      "order": 45,
       "family": "other",
       "title": "Cobblestone Roads",
       "text": [
@@ -1854,8 +3412,8 @@
     },
     {
       "id": "pt-lm-50962",
-      "step": 0,
-      "order": 71,
+      "step": 9,
+      "order": 46,
       "family": "other",
       "title": "Cobblestone Sidewalks",
       "text": [
@@ -1877,33 +3435,9 @@
       }
     },
     {
-      "id": "pt-lm-50963",
-      "step": 0,
-      "order": 72,
-      "family": "architecture",
-      "title": "Architecture: Architecture",
-      "text": [
-        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ff4750276d11",
-          "src": "https://learnablemeta.com/images/847/Rzf5XcYGCBCDt0zj3fuajaJ2vmT0ziIF9y7U.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50975",
-      "step": 0,
-      "order": 73,
+      "step": 9,
+      "order": 47,
       "family": "pole",
       "title": "Pole: Portuguese Infrastructure",
       "text": [
@@ -1925,92 +3459,9 @@
       }
     },
     {
-      "id": "pt-lm-50978",
-      "step": 0,
-      "order": 74,
-      "family": "vegetation",
-      "title": "Vegetation: Eucalyptus Trees",
-      "text": [
-        "Eucalyptus trees are very common in Portugal.",
-        "The only other part of Europe where you’ll commonly see eucalyptus is northern Spain."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9479d0ab1872",
-          "src": "https://learnablemeta.com/images/847/yzybnCztxGLyJzAhuJmAuuSHPuhnHN3CCJr7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50979",
-      "step": 0,
-      "order": 75,
-      "family": "pole",
-      "title": "Pole: Tall Ladder Poles",
-      "text": [
-        "Concrete ladder poles, with very tall ladder steps, are common in Portugal.",
-        "Each step often has a small see-through hole.",
-        "**--- NOTE:**",
-        "In Spain and France you will commonly see ladder poles with short steps."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0791858b7c07",
-          "src": "https://learnablemeta.com/images/847/8xBODUItcS13G579vmqMDyK36nbVChonisR7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES",
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-50980",
-      "step": 0,
-      "order": 76,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Hunting Signs",
-      "text": [
-        "Hunting signs with a red and white colour scheme are a common sight in rural areas.",
-        "They are either diamond shaped or rectangular.",
-        "**--- NOTE:**",
-        "In contrast, Spanish hunting signs are white and black."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "66f4f7ce9e58",
-          "src": "https://learnablemeta.com/images/847/tBZ4iPV1PN1ZQbcY9rVKOD7yJpceZKfQCmB3.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-50981",
-      "step": 0,
-      "order": 77,
+      "step": 9,
+      "order": 48,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: Large Font Stop",
@@ -2037,36 +3488,9 @@
       }
     },
     {
-      "id": "pt-lm-50982",
-      "step": 0,
-      "order": 78,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "**--- NOTE:**",
-        "Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8ac361096c64",
-          "src": "https://learnablemeta.com/images/847/4XgucnyQiDclqf7mYt58wKtDChuJS6nzK4N5.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-66757",
-      "step": 0,
-      "order": 79,
+      "step": 9,
+      "order": 49,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: Chevrons",
@@ -2090,8 +3514,8 @@
     },
     {
       "id": "pt-lm-66780",
-      "step": 0,
-      "order": 80,
+      "step": 9,
+      "order": 50,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: Chevrons",
@@ -2114,63 +3538,9 @@
       }
     },
     {
-      "id": "pt-lm-66783",
-      "step": 0,
-      "order": 81,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "**--- NOTE:**",
-        "Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "172c54b144b7",
-          "src": "https://learnablemeta.com/images/914/V133qOUMNWOiU7q7pmSgjgM1iCwltuVHDNSQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-66814",
-      "step": 0,
-      "order": 82,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Portuguese chevrons are black with yellow arrows.",
-        "**--- NOTE:**",
-        "Portugal is the only Mediterranean country with this chevron colour scheme."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "172c54b144b7",
-          "src": "https://learnablemeta.com/images/914/V133qOUMNWOiU7q7pmSgjgM1iCwltuVHDNSQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67eab303672cc28159c731e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-104520",
-      "step": 0,
-      "order": 83,
+      "step": 9,
+      "order": 51,
       "family": "architecture",
       "title": "Architecture: White, Yellow & Pink Painting",
       "text": [
@@ -2193,33 +3563,9 @@
       }
     },
     {
-      "id": "pt-lm-104529",
-      "step": 0,
-      "order": 84,
-      "family": "architecture",
-      "title": "Architecture: White Stone & Orange Roofs",
-      "text": [
-        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2526f0ee59e7",
-          "src": "https://learnablemeta.com/images/1072/fptvUyQQgh9VqoImVRPay1qqS6FvlBsLRLas.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-104530",
-      "step": 0,
-      "order": 85,
+      "step": 9,
+      "order": 52,
       "family": "architecture",
       "title": "Architecture: Mosaic Tiles",
       "text": [
@@ -2242,8 +3588,8 @@
     },
     {
       "id": "pt-lm-104621",
-      "step": 0,
-      "order": 86,
+      "step": 9,
+      "order": 53,
       "family": "architecture",
       "title": "Architecture: White & Pastel Colors",
       "text": [
@@ -2269,8 +3615,8 @@
     },
     {
       "id": "pt-lm-104626",
-      "step": 0,
-      "order": 87,
+      "step": 9,
+      "order": 54,
       "family": "other",
       "title": "Blue / Yellow Paints",
       "text": [
@@ -2293,8 +3639,8 @@
     },
     {
       "id": "pt-lm-104627",
-      "step": 0,
-      "order": 88,
+      "step": 9,
+      "order": 55,
       "family": "architecture",
       "title": "Architecture: North - Square Blocks & White Mortar",
       "text": [
@@ -2318,33 +3664,9 @@
       }
     },
     {
-      "id": "pt-lm-128306",
-      "step": 0,
-      "order": 89,
-      "family": "architecture",
-      "title": "Architecture: White Stone & Orange Roofs",
-      "text": [
-        "White painted stone houses with orange tiled roofs are extremely common in Portugal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2526f0ee59e7",
-          "src": "https://learnablemeta.com/images/1072/fptvUyQQgh9VqoImVRPay1qqS6FvlBsLRLas.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-364397",
-      "step": 0,
-      "order": 90,
+      "step": 9,
+      "order": 56,
       "family": "other",
       "title": "Portugal",
       "text": [
@@ -2368,8 +3690,8 @@
     },
     {
       "id": "pt-lm-442004",
-      "step": 0,
-      "order": 91,
+      "step": 9,
+      "order": 57,
       "family": "bollard",
       "title": "Bollard: Stone Bollards",
       "text": [
@@ -2391,37 +3713,9 @@
       }
     },
     {
-      "id": "pt-lm-473866",
-      "step": 0,
-      "order": 92,
-      "family": "pole",
-      "title": "Pole: ladder pole with holes",
-      "text": [
-        "Concrete ladder poles, with very tall ladder steps, are common in Portugal. Each step often has a small see-through hole.",
-        "NOTE: In Spain and France you will commonly see ladder poles with short steps."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "331c7fbeb832",
-          "src": "https://learnablemeta.com/images/1955/1750621520256-TyU.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ES",
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-515546",
-      "step": 0,
-      "order": 93,
+      "step": 9,
+      "order": 58,
       "family": "guardrail",
       "title": "Guardrail: A-Type with red reflectors",
       "text": [
@@ -2450,59 +3744,9 @@
       }
     },
     {
-      "id": "pt-lm-558161",
-      "step": 0,
-      "order": 94,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Lisbon street sign",
-      "text": [
-        "Lisbon street signs have 4 big screws in each corner."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "76c37d9cfb2c",
-          "src": "https://learnablemeta.com/images/4588/1777497643414-IDM.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "pt-lm-558162",
-      "step": 0,
-      "order": 95,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Porto street sign",
-      "text": [
-        "Lime green street signs can be found in Porto."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "44366621f6c2",
-          "src": "https://learnablemeta.com/images/4588/1777497748146-Vc1.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "pt-lm-634040",
-      "step": 0,
-      "order": 96,
+      "step": 9,
+      "order": 59,
       "family": "plate",
       "title": "Plate: Portugal",
       "text": [
@@ -2526,8 +3770,8 @@
     },
     {
       "id": "pt-lm-783119",
-      "step": 0,
-      "order": 97,
+      "step": 9,
+      "order": 60,
       "family": "language",
       "title": "Language: Portuguese",
       "text": [

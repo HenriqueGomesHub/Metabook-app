@@ -1,68 +1,927 @@
 {
   "country": "LT",
   "name": "Lithuania",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/lithuania",
+  "updatedAt": "2026-04-10T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Lithuania"
+    },
+    {
+      "title": "Regional and county-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "lt-lm-80",
+      "id": "lt-ggZt",
       "step": 0,
-      "order": 0,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
+      "order": 1,
+      "family": "plate",
+      "title": "Plate: Lithuanian licence plates are long and white",
       "text": [
-        "Lithuanian bollards are wedge-shaped with rectangular reflectors: an orange one on the front and a white one on the back."
+        "Lithuanian **licence plates** are long and white, with the standard blue European strip on the left."
       ],
       "tags": [],
       "images": [
         {
-          "id": "e3a145c3016e",
-          "src": "https://learnablemeta.com/images/Sv4BWjxjJNxjbgUuDyGleCKFhG51JHf7gjAt.avif"
+          "id": "1f2ddc833190",
+          "src": "https://www.plonkit.net/images/lithuania/Lithuania_License_Plate.png",
+          "path": "lt/1f2ddc833190.webp",
+          "width": 600,
+          "height": 263
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
-      "id": "lt-lm-81",
+      "id": "lt-SYjp",
       "step": 0,
-      "order": 1,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street name ending - g",
+      "order": 2,
+      "family": "bollard",
+      "title": "Bollard: Lithuanian bollards are wedge-shaped",
       "text": [
-        "The Lithuanian word for street is \"gatvė,\" often abbreviated as \"g.\" on street signs. If you see a street sign ending in \"g.,\" you're likely in Lithuania.",
-        "This word is almost entirely unique to Lithuanian, though very rarely, you might see \"gatve\" (abbreviated as \"gat.\") in the Latvian capital, Riga."
+        "Lithuanian bollards are **wedge-shaped**.",
+        "They have an orange reflector on the front, and a white reflector on the back. Both reflectors are rectangular. You may find this [thin version](https://maps.app.goo.gl/ePfgVj54LmwVbQX68) as well.",
+        "NOTE: Estonian and Latvian bollards look different.",
+        "[This infographic](/images/lithuania/nordics_bollards.png) shows the main similarities and differences between the bollards of the Baltic and Nordic countries."
       ],
-      "tags": [],
+      "tags": [
+        "bollard"
+      ],
       "images": [
         {
-          "id": "d6e1e2a80fae",
-          "src": "https://learnablemeta.com/images/ehjY0xFvN0XFpuwFZJNoFwbFoBT4I9B1N9oS.avif"
+          "id": "f79c15046bd1",
+          "src": "https://www.plonkit.net/images/lithuania/Bollard.png",
+          "path": "lt/f79c15046bd1.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "e3a145c3016e",
+          "src": "https://learnablemeta.com/images/Sv4BWjxjJNxjbgUuDyGleCKFhG51JHf7gjAt.avif",
+          "path": "lt/e3a145c3016e.webp",
+          "width": 1000,
+          "height": 601
+        },
+        {
+          "id": "8bd868834bbc",
+          "src": "https://learnablemeta.com/images/186/NR5aISjklxUgfwLmIdNPISKF03S2Xxle7sD8.avif",
+          "path": "lt/8bd868834bbc.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "c465850ccce5",
+          "src": "https://learnablemeta.com/images/739/BXTJshOI4palt991tPQk0yLn0JoKgR3Fcuxc.avif",
+          "path": "lt/c465850ccce5.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "10a5dfd3aca2",
+          "src": "https://learnablemeta.com/images/768/ElE70o4ZW5pUkWQMG9ZnhoS3VhzYHf9yQz49.avif",
+          "path": "lt/10a5dfd3aca2.webp",
+          "width": 1000,
+          "height": 562
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-N6PY",
+      "step": 0,
+      "order": 3,
+      "family": "pole",
+      "title": "Pole: Lithuanian poles are usually square and concrete",
+      "text": [
+        "Lithuanian poles are usually square and concrete, and often feature a **diagonal support beam**.",
+        "NOTE: While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "ded77ad088ba",
+          "src": "https://www.plonkit.net/images/lithuania/Leaner_poles.png",
+          "path": "lt/ded77ad088ba.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "f59cac41f438",
+          "src": "https://learnablemeta.com/images/768/AiSaYhXD6Mz0aIAoMeZ2wNwq9K1iVZMECNnQ.avif",
+          "path": "lt/f59cac41f438.webp",
+          "width": 1000,
+          "height": 562
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-RWCn",
+      "step": 0,
+      "order": 4,
+      "family": "pole",
+      "title": "Pole: Pictured here are some typical Lithuanian poletops",
+      "text": [
+        "Pictured here are some typical Lithuanian poletops.",
+        "- They often have **short horizontal rods**, on which the insulators are placed.",
+        "- In some poletops, the insulators are arranged in a **trident-like shape**, with one on top, and two on each side.",
+        "Note that these poletops are not unique to Lithuania: they can also be found in the other post-Soviet countries."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "b834376483b9",
+          "src": "https://www.plonkit.net/images/lithuania/Poletops_Lithuania.png",
+          "path": "lt/b834376483b9.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "b233751c8d39",
+          "src": "https://learnablemeta.com/images/186/Lc46dueBu1tFKHOYDBppMG6wytmZFvqJSfM8.avif",
+          "path": "lt/b233751c8d39.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "829a0cf9e196",
+          "src": "https://learnablemeta.com/images/768/6ZuUKqQwABnvoX8nGGUIgWJH3ksKpj7KQPfI.avif",
+          "path": "lt/829a0cf9e196.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "20c9a0fa129e",
+          "src": "https://learnablemeta.com/images/1955/1750241697073-RTf.avif",
+          "path": "lt/20c9a0fa129e.webp",
+          "width": 800,
+          "height": 450
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-Uc6g",
+      "step": 0,
+      "order": 5,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Lithuania uses white chevrons with red arrows",
+      "text": [
+        "Lithuania uses **white chevrons with red arrows**. The small single chevrons (pictured here) usually have a **red outline** on the edge of the sign.",
+        "NOTE: Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline).",
+        "!!However, Estonia, Russia and Ukraine use chevrons with the opposite colour scheme: red with white arrows."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "638064c25e45",
+          "src": "https://www.plonkit.net/images/lithuania/Chevron_Lithuania.png",
+          "path": "lt/638064c25e45.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "05bbc5c49ce0",
+          "src": "https://learnablemeta.com/images/768/So0mS9pPDVEhE2f4orEg0zc7KlmJcsGHNSbj.avif",
+          "path": "lt/05bbc5c49ce0.webp",
+          "width": 1000,
+          "height": 561
+        },
+        {
+          "id": "b61d377d5953",
+          "src": "https://learnablemeta.com/images/914/CdJI0FtlVcEvlpgoPzu3l6uw72nKugCxUPBR.avif",
+          "path": "lt/b61d377d5953.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV",
+        "PL",
+        "RU",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-0iED",
+      "step": 0,
+      "order": 6,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: All Baltic countries use the same blue kilometre marker",
+      "text": [
+        "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
+        "In Lithuania, the marker will be at a **45° angle** towards the road. The sign itself has an L-shape.",
+        "For a quick overview of all three Baltic countries, see [this infographic](/images/lithuania/baltics_kmmarkerinfographic.png)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3b779debadea",
+          "src": "https://www.plonkit.net/images/lithuania/KM_sign_Lithuania.png",
+          "path": "lt/3b779debadea.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-q5r2",
+      "step": 0,
+      "order": 7,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Each Baltic country has a slightly different border for its…",
+      "text": [
+        "Each Baltic country has a slightly different border for its warning and speed signs.",
+        "Lithuanian signs have a relatively **thin** red border, with a **thin white outline** around it."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4f523fdaf209",
+          "src": "https://www.plonkit.net/images/lithuania/Lithuanian_Signs.png",
+          "path": "lt/4f523fdaf209.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "7d764e0c73fa",
+          "src": "https://learnablemeta.com/images/186/xzgKkf0oDmkhcpmZDRjgf6anrVxf6jUzjZFn.avif",
+          "path": "lt/7d764e0c73fa.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "11c425ea0cea",
+          "src": "https://learnablemeta.com/images/768/AWho8tvwAhUQvaV4jArK7hGLs68sfYlNqYeL.avif",
+          "path": "lt/11c425ea0cea.webp",
+          "width": 1000,
+          "height": 560
+        },
+        {
+          "id": "9f4cefa853fa",
+          "src": "https://learnablemeta.com/images/768/E8FqBfs8XtZmNJMAtp533incAV7uxgjiZ4TY.avif",
+          "path": "lt/9f4cefa853fa.webp",
+          "width": 1000,
+          "height": 983
+        },
+        {
+          "id": "4300e3ac0721",
+          "src": "https://learnablemeta.com/images/851/u1LyccACoOH4kpFgBgXZME9H07YaShtbnUcg.avif",
+          "path": "lt/4300e3ac0721.webp",
+          "width": 1000,
+          "height": 983
+        },
+        {
+          "id": "d0e6c4d52746",
+          "src": "https://learnablemeta.com/images/853/J691j5Lm2jxnVu6hKrOgpeiFH1boxThuag0p.avif",
+          "path": "lt/d0e6c4d52746.webp",
+          "width": 1000,
+          "height": 983
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-koWn",
+      "step": 0,
+      "order": 8,
+      "family": "guardrail",
+      "title": "Guardrail: Lithuania has normal A-type guardrails with orange…",
+      "text": [
+        "Lithuania has normal A-type guardrails with **orange reflectors**.",
+        "NOTE: Estonia has no reflectors. Latvia has red or white reflectors. For a good overview of European guardrails, see [this infographic](/images/lithuania/europeguardrail.png)."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "bea93b2771f4",
+          "src": "https://www.plonkit.net/images/lithuania/Lithuania_guardrail3.png",
+          "path": "lt/bea93b2771f4.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "48463bb4af62",
+          "src": "https://learnablemeta.com/images/186/joZxqDZLTX8uVwvCDEkPcmrFGSFPEbv3CLfm.avif",
+          "path": "lt/48463bb4af62.webp",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-tXGz",
+      "step": 0,
+      "order": 9,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Lithuanian pedestrian signs have 3 stripes",
+      "text": [
+        "Lithuanian pedestrian signs have **3 stripes**. The shape of the pedestrian has a relatively low level of detail.",
+        "NOTE: Both [Russia](https://www.google.com/maps/@55.7423905,37.5885686,3a,15y,227.43h,93.29t/data=!3m7!1e1!3m5!1sM2IafnQY_X5LJKXlumRVzQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DM2IafnQY_X5LJKXlumRVzQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D122.40399%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?entry=ttu) and [Ukraine](https://goo.gl/maps/KBnV7gubZHs349dc8) share the same design.** **[Estonian](https://goo.gl/maps/5vqjNxsfM1wHnxSw5) signs also have 3 stripes, but the pedestrian looks more detailed.",
+        "!!Latvian pedestrian signs have 5 stripes."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "705d6c41a7d2",
+          "src": "https://www.plonkit.net/images/lithuania/Pedestrian_sign_Lithuania.png",
+          "path": "lt/705d6c41a7d2.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "e6e2e7b5bca8",
+          "src": "https://learnablemeta.com/images/186/lt5NKnAATi4LIUnCNx06CA4PGTFNwm5nhgnx.avif",
+          "path": "lt/e6e2e7b5bca8.webp",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "RU",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-sIcK",
+      "step": 0,
+      "order": 10,
+      "family": "sign",
+      "kind": "stop",
+      "title": "Stop sign: Lithuanian bus stop signs have this design",
+      "text": [
+        "Lithuanian bus stop signs have this design.",
+        "The bus has **four windows**. This is mostly useful to distinguish it from the Latvian bus stop sign, which has five windows.",
+        "Note however, that Estonia has the same bus stop signs as Lithuania."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8936cc68132e",
+          "src": "https://www.plonkit.net/images/lithuania/Bus_stop_sign_Lithuania.png",
+          "path": "lt/8936cc68132e.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "29a36bc9c707",
+          "src": "https://learnablemeta.com/images/497/VIWTI9sqLPr3QOb0np84QqIQI0Y3KFxcxo8n.avif",
+          "path": "lt/29a36bc9c707.webp",
+          "width": 820,
+          "height": 1000
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-5P5C",
+      "step": 0,
+      "order": 11,
+      "family": "language",
+      "title": "Language: Lithuanian belongs to the Baltic languages",
+      "text": [
+        "**Lithuanian** belongs to the Baltic languages. The other major member of this branch is Latvian, to which it is closely related.",
+        "Within the Baltic languages, the following letters are unique to Lithuanian:",
+        "- Vowels with small hooks: Ą Ę Į Ų.",
+        "- Ė with a single dot.",
+        "- Y (also in Estonian, but only in loan words).",
+        "NOTE: Estonian is not a member of the Baltic languages (despite its name), and therefore looks significantly different."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "002ae6210d0d",
+          "src": "https://www.plonkit.net/images/lithuania/Lithuanian_language.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-5FSb",
+      "step": 0,
+      "order": 12,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: The Lithuanian word for street is gatve",
+      "text": [
+        "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs and Google Maps.",
+        "This word is almost entirely unique to Lithuanian. However, very rarely, you might see ‘gatve’ (abbreviated as gat.) in the Latvian capital of Riga."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "680869990554",
+          "src": "https://www.plonkit.net/images/lithuania/Gatve.png",
+          "giveaway": true,
+          "path": "lt/680869990554.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "d6e1e2a80fae",
+          "src": "https://learnablemeta.com/images/ehjY0xFvN0XFpuwFZJNoFwbFoBT4I9B1N9oS.avif",
+          "path": "lt/d6e1e2a80fae.webp",
+          "width": 1000,
+          "height": 498
+        },
+        {
+          "id": "88f3973cb0cb",
+          "src": "https://learnablemeta.com/images/186/hkx6twYhk1IclSZhzk0KuiS5yjiUt2gkU9Fz.avif",
+          "giveaway": true,
+          "path": "lt/88f3973cb0cb.webp",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-94Uf",
+      "step": 0,
+      "order": 13,
+      "family": "other",
+      "title": "Many Lithuanian place names end in -ai",
+      "text": [
+        "Many Lithuanian place names end in **-ai**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1f7f314c94a9",
+          "src": "https://www.plonkit.net/images/lithuania/ai_place_names.png",
+          "path": "lt/1f7f314c94a9.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-nVmi",
+      "step": 0,
+      "order": 14,
+      "family": "architecture",
+      "title": "Architecture: Lithuanian architecture primarily consists of light…",
+      "text": [
+        "Lithuanian architecture primarily consists of light coloured brick buildings, usually with somewhat steep corrugated metal roofs. Wooden buildings are also fairly common, however less so than in Estonia. Pastel painted stone buildings are somewhat common, especially in newer suburbs."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "da0dec6e333c",
+          "src": "https://www.plonkit.net/images/lithuania/lt_architecture.png",
+          "path": "lt/da0dec6e333c.webp",
+          "width": 600,
+          "height": 337
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-GkfG",
+      "step": 0,
+      "order": 15,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Lithuanian directional signs are blue with white text",
+      "text": [
+        "Lithuanian directional signs are blue with white text.",
+        "NOTE: The arrow on [Latvian](https://goo.gl/maps/g3aqkLH6yjQwrCSF7) signs is more stylized than in [Estonia](https://goo.gl/maps/eW7AJWdVriTfsprx7) and Lithuania, where the back part of the arrowhead is vertical."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "09e0e6f9ff65",
+          "src": "https://www.plonkit.net/images/lithuania/lt_directionalsign.png",
+          "path": "lt/09e0e6f9ff65.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-3bOZ",
+      "step": 0,
+      "order": 16,
+      "family": "architecture",
+      "title": "Architecture: Lithuania's historical state flag",
+      "text": [
+        "Lithuania's **historical state flag**, known as the _Vytis_, depicts a mounted knight on a dark red background. It can sometimes be seen on both private and public buildings."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8973c00ac317",
+          "src": "https://www.plonkit.net/images/lithuania/lithuania_state_flag.png",
+          "path": "lt/8973c00ac317.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-8k76",
+      "step": 0,
+      "order": 17,
+      "family": "vegetation",
+      "title": "Vegetation: Lithuania has less forest cover than the other two Baltic…",
+      "text": [
+        "Lithuania has **less forest cover** than the other two Baltic countries. As a result, the landscape appears more open and agricultural. Your mileage may vary depending on the round however, so use this meta with some caution."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4e4bcafa0264",
+          "src": "https://www.plonkit.net/images/lithuania/Less_forest_cover2.png",
+          "path": "lt/4e4bcafa0264.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "e998c05f6bc2",
+          "src": "https://learnablemeta.com/images/768/msPfJwlQGvMdHmrQByNksIFo18JIxEOrZ2NR.avif",
+          "path": "lt/e998c05f6bc2.webp",
+          "width": 1000,
+          "height": 562
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-fAPZ",
+      "step": 0,
+      "order": 18,
+      "family": "car",
+      "title": "Google car: In Generation 3 coverage",
+      "text": [
+        "In Generation 3 coverage, you will often see **random small blurs**. These blurs look similar to the ones that are used to blur out licence plates or faces, but instead they cover seemingly random parts of the image – often on direction signs.",
+        "NOTE: This is also common in the Russian oblast of Kaliningrad, just to the southwest of Lithuania.",
+        "!!These random blurs are not typically found in Estonia or Latvia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "68cc622d734e",
+          "src": "https://www.plonkit.net/images/lithuania/Random_blurs_Lithuania.png",
+          "path": "lt/68cc622d734e.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-YZaL",
+      "step": 0,
+      "order": 19,
+      "family": "car",
+      "title": "Google car: A black generation 4 Google car can be found in Lithuania",
+      "text": [
+        "A black generation 4 Google car can be found in Lithuania.",
+        "NOTE: It can also be found in a few other European countries, including Latvia, but not Estonia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1d1c8cb247be",
+          "src": "https://www.plonkit.net/images/lithuania/Screenshot%20(612).png",
+          "path": "lt/1d1c8cb247be.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-NpdU",
+      "step": 0,
+      "order": 20,
+      "family": "car",
+      "title": "Google car: A red generation 4 Google car can also be found in Lithuania",
+      "text": [
+        "A red generation 4 Google car can also be found in Lithuania.",
+        "NOTE: It can also be found in a few other European countries, including Latvia, but not Estonia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3d2059a03e36",
+          "src": "https://www.plonkit.net/images/lithuania/Screenshot%20(614).png",
+          "path": "lt/3d2059a03e36.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LV"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-mtfw",
+      "step": 1,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: Lithuania is overall a fairly flat country",
+      "text": [
+        "Lithuania is overall a fairly flat country, with no hills over 300 metres. However, you can sometimes distinguish the **hilly areas** from the more flat areas. The biggest hills are in the southeast, with some hills in the central part of the west."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3e87a9fb4ae6",
+          "src": "https://www.plonkit.net/images/lithuania/Elevation-map.png",
+          "giveaway": true,
+          "path": "lt/3e87a9fb4ae6.webp",
+          "width": 600,
+          "height": 469
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-FSkc",
+      "step": 1,
+      "order": 1,
+      "family": "pole",
+      "title": "Pole: Metal pole tags are predominantly found in the eastern part…",
+      "text": [
+        "**Metal pole tags** are predominantly found in the eastern part of the country.",
+        "_For more information on Lithuanian pole stickers and car metas, please see this [document](https://docs.google.com/document/d/1IzsTIUFuTojmx2x4KtWyxB5ZZcoPcLtiNSE2w4fSXYo/edit?tab=t.0)._"
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "f5d1f4d3838a",
+          "src": "https://www.plonkit.net/images/lithuania/eastern_metal_tag.png",
+          "path": "lt/f5d1f4d3838a.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-oTsA",
+      "step": 2,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: The Curonian Spit is a long thin sand-dune spit) south of…",
+      "text": [
+        "The Curonian Spit is a long thin sand-dune [spit](https://en.wikipedia.org/wiki/Spit_(landform)) south of Klaipeda, that separates the Curonian Lagoon from the Baltic Sea. The main road on this spit, **road 167**, has a recognizable combination of landscape and road direction:",
+        "- The road runs in an approximate north-south direction and has Generation 4 coverage.",
+        "The road is surrounded on all sides by forest with many [Baltic pines](https://en.wikipedia.org/wiki/Pinus_sylvestris). In many places, you will see slightly windswept trees (visible in the example image)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "334c36f8af26",
+          "src": "https://www.plonkit.net/images/lithuania/Road_167.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-evbw",
+      "step": 2,
+      "order": 1,
+      "family": "architecture",
+      "title": "Architecture: On the Curonian Spit you can also find wooden",
+      "text": [
+        "On the Curonian Spit you can also find wooden, and often red, **Scandinavian looking houses**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4e32f54487c7",
+          "src": "https://www.plonkit.net/images/lithuania/lt_curonianspitarctitecture.png",
+          "path": "lt/4e32f54487c7.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lt-1lsP",
+      "step": 2,
+      "order": 2,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Rarely, you can see bilingual signs with Polish language in…",
+      "text": [
+        "Rarely, you can see bilingual signs with **Polish language** in a small area southeast of Lithuania.",
+        "Note that this is by no means very common, but it can help with getting very close guesses if you do see bilingual Polish-Lithuanian signs in an otherwise obvious Lithuanian setting."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "145f2c4053ce",
+          "src": "https://www.plonkit.net/images/lithuania/Polish_in_Lithuania.png",
+          "path": "lt/145f2c4053ce.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/lithuania",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "lt-lm-2997",
-      "step": 0,
-      "order": 2,
+      "step": 3,
+      "order": 0,
       "family": "other",
       "title": "Lithuania Fatty",
       "text": [
@@ -72,7 +931,10 @@
       "images": [
         {
           "id": "c9e7784aae3c",
-          "src": "https://learnablemeta.com/images/90/eQN8yFPtKqff4CyGDfLPepwrCV5yGohRVEAm.avif"
+          "src": "https://learnablemeta.com/images/90/eQN8yFPtKqff4CyGDfLPepwrCV5yGohRVEAm.avif",
+          "path": "lt/c9e7784aae3c.webp",
+          "width": 1000,
+          "height": 500
         }
       ],
       "locations": [],
@@ -88,63 +950,9 @@
       }
     },
     {
-      "id": "lt-lm-8363",
-      "step": 0,
-      "order": 3,
-      "family": "guardrail",
-      "title": "Guardrail: Guardrail",
-      "text": [
-        "Lithuania has normal A-type guardrails with **orange reflectors**.",
-        "**NOTE:** Estonia has no reflectors. Latvia has red or white reflectors. For a good overview of European guardrails, see this infographic."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "48463bb4af62",
-          "src": "https://learnablemeta.com/images/186/joZxqDZLTX8uVwvCDEkPcmrFGSFPEbv3CLfm.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8365",
-      "step": 0,
-      "order": 4,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Lithuanian bollards are **wedge-shaped**.",
-        "They have an **orange reflector** on the front, and a white reflector on the back. Both reflectors are rectangular. You may find this thin version as well.",
-        "**NOTE:** Estonian and Latvian bollards look different."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8bd868834bbc",
-          "src": "https://learnablemeta.com/images/186/NR5aISjklxUgfwLmIdNPISKF03S2Xxle7sD8.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lt-lm-8366",
-      "step": 0,
-      "order": 5,
+      "step": 3,
+      "order": 1,
       "family": "sign",
       "kind": "other",
       "title": "Sign: KM Marker",
@@ -156,90 +964,10 @@
       "images": [
         {
           "id": "7d07c270442b",
-          "src": "https://learnablemeta.com/images/186/nxCjm3bhdiD6r1iY6aZg2RWbTB6m3CbqCCz7.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8367",
-      "step": 0,
-      "order": 6,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Sign Border",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Lithuanian signs have a relatively **thin red border**, with a **thin white outline** around it (it generally feels way thinner than the Latvian one)"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7d764e0c73fa",
-          "src": "https://learnablemeta.com/images/186/xzgKkf0oDmkhcpmZDRjgf6anrVxf6jUzjZFn.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8368",
-      "step": 0,
-      "order": 7,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Sign",
-      "text": [
-        "Lithuanian pedestrian signs have **3 stripes**. The shape of the pedestrian has a relatively low level of detail and unlike Estonia, the head is **not attached** to the figure.",
-        "**NOTE:** Both Russia and Ukraine share the same design. Estonian signs also have 3 stripes, but the pedestrian looks more detailed."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e6e2e7b5bca8",
-          "src": "https://learnablemeta.com/images/186/lt5NKnAATi4LIUnCNx06CA4PGTFNwm5nhgnx.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "RU",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8369",
-      "step": 0,
-      "order": 8,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street Names",
-      "text": [
-        "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs and Google Maps.",
-        "This word is almost entirely unique to Lithuanian. However, very rarely, you might see ‘gatve’ (abbreviated as gat.) in the Latvian capital of Riga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "88f3973cb0cb",
-          "src": "https://learnablemeta.com/images/186/hkx6twYhk1IclSZhzk0KuiS5yjiUt2gkU9Fz.avif",
-          "giveaway": true
+          "src": "https://learnablemeta.com/images/186/nxCjm3bhdiD6r1iY6aZg2RWbTB6m3CbqCCz7.avif",
+          "path": "lt/7d07c270442b.webp",
+          "width": 1000,
+          "height": 563
         }
       ],
       "locations": [],
@@ -252,8 +980,8 @@
     },
     {
       "id": "lt-lm-8370",
-      "step": 0,
-      "order": 9,
+      "step": 3,
+      "order": 2,
       "family": "other",
       "title": "City Names",
       "text": [
@@ -263,7 +991,10 @@
       "images": [
         {
           "id": "ba4a35872c37",
-          "src": "https://learnablemeta.com/images/186/gt7Ky6gE5sI1SMWWOLLoHIeVmC9ZqLkecouj.avif"
+          "src": "https://learnablemeta.com/images/186/gt7Ky6gE5sI1SMWWOLLoHIeVmC9ZqLkecouj.avif",
+          "path": "lt/ba4a35872c37.webp",
+          "width": 1000,
+          "height": 563
         }
       ],
       "locations": [],
@@ -271,96 +1002,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-9742",
-      "step": 0,
-      "order": 10,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: bus stop sign",
-      "text": [
-        "Lithuanian bus stop signs have this design.",
-        "The bus has four windows. This is mostly useful to distinguish it from the Latvian bus stop sign, which has five windows.",
-        "Note however, that Estonia has the same bus stop signs as Lithuania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "29a36bc9c707",
-          "src": "https://learnablemeta.com/images/497/VIWTI9sqLPr3QOb0np84QqIQI0Y3KFxcxo8n.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67b8db19c812bf41d49b730e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-12960",
-      "step": 0,
-      "order": 11,
-      "family": "pole",
-      "title": "Pole: Pole Tops",
-      "text": [
-        "Pictured here are some typical Lithuanian poletops.",
-        "They often have **short horizontal rods**, on which the insulators are placed.",
-        "In some poletops, the insulators are arranged in a **trident-like shape**, with one on top, and two on each side.",
-        "**NOTE:** These poletops are not unique to Lithuania, they can also be found in other post-soviet countries but are by far most common in Lithuania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b233751c8d39",
-          "src": "https://learnablemeta.com/images/186/Lc46dueBu1tFKHOYDBppMG6wytmZFvqJSfM8.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-22620",
-      "step": 0,
-      "order": 12,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Lithuanian bollards are wedge-shaped.",
-        "They have an orange reflector on the front, and a white reflector on the back. Both reflectors are rectangular. You may find this thin version as well.",
-        "**NOTE:** Estonian and Latvian bollards look different.",
-        "**NOTE:** All nothern EU Bollards"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c465850ccce5",
-          "src": "https://learnablemeta.com/images/739/BXTJshOI4palt991tPQk0yLn0JoKgR3Fcuxc.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lt-lm-23779",
-      "step": 0,
-      "order": 13,
+      "step": 3,
+      "order": 3,
       "family": "sign",
       "kind": "other",
       "title": "Sign: G",
@@ -374,95 +1022,10 @@
         {
           "id": "b05903816bd4",
           "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23833",
-      "step": 0,
-      "order": 14,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Lithuanian bollards are wedge-shaped.",
-        "They have an orange reflector on the front, and a white reflector on the back.",
-        "Both reflectors are rectangular.",
-        "You may find this thin version as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "10a5dfd3aca2",
-          "src": "https://learnablemeta.com/images/768/ElE70o4ZW5pUkWQMG9ZnhoS3VhzYHf9yQz49.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23834",
-      "step": 0,
-      "order": 15,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Lithuania uses white chevrons with red arrows.",
-        "The small single chevrons (pictured here) usually have a red outline on the edge of the sign.",
-        "**--- NOTE:**",
-        "Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "05bbc5c49ce0",
-          "src": "https://learnablemeta.com/images/768/So0mS9pPDVEhE2f4orEg0zc7KlmJcsGHNSbj.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "PL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23839",
-      "step": 0,
-      "order": 16,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thin Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Lithuanian signs have a relatively thin red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11c425ea0cea",
-          "src": "https://learnablemeta.com/images/768/AWho8tvwAhUQvaV4jArK7hGLs68sfYlNqYeL.avif"
-        },
-        {
-          "id": "9f4cefa853fa",
-          "src": "https://learnablemeta.com/images/768/E8FqBfs8XtZmNJMAtp533incAV7uxgjiZ4TY.avif"
+          "giveaway": true,
+          "path": "lt/b05903816bd4.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -475,8 +1038,8 @@
     },
     {
       "id": "lt-lm-23840",
-      "step": 0,
-      "order": 17,
+      "step": 3,
+      "order": 4,
       "family": "guardrail",
       "title": "Guardrail: Orange Reflectors",
       "text": [
@@ -489,7 +1052,10 @@
       "images": [
         {
           "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif"
+          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
+          "path": "lt/942d3cffc941.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -497,90 +1063,6 @@
         "EE",
         "LV"
       ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23843",
-      "step": 0,
-      "order": 18,
-      "family": "pole",
-      "title": "Pole: Square Poles",
-      "text": [
-        "Lithuanian poles are usually square and concrete, and often feature a diagonal support beam.",
-        "**--- NOTE:**",
-        "While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f59cac41f438",
-          "src": "https://learnablemeta.com/images/768/AiSaYhXD6Mz0aIAoMeZ2wNwq9K1iVZMECNnQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23845",
-      "step": 0,
-      "order": 19,
-      "family": "pole",
-      "title": "Pole: Pole Tops",
-      "text": [
-        "Pictured here are some typical Lithuanian poletops.",
-        "They often have short horizontal rods, on which the insulators are placed.",
-        "In some poletops, the insulators are arranged in a trident-like shape, with one on top, and two on each side.",
-        "**--- NOTE:**",
-        "**These poletops are not unique to Lithuania:**",
-        "They can also be found in the other post-Soviet countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "829a0cf9e196",
-          "src": "https://learnablemeta.com/images/768/6ZuUKqQwABnvoX8nGGUIgWJH3ksKpj7KQPfI.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23851",
-      "step": 0,
-      "order": 20,
-      "family": "vegetation",
-      "title": "Vegetation: Less Forest Cover",
-      "text": [
-        "Lithuania has less forest cover than the other two Baltic countries.",
-        "As a result, the landscape appears more open and agricultural.",
-        "Your mileage may vary depending on the round however, so use this meta with some caution."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e998c05f6bc2",
-          "src": "https://learnablemeta.com/images/768/msPfJwlQGvMdHmrQByNksIFo18JIxEOrZ2NR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
@@ -589,8 +1071,8 @@
     },
     {
       "id": "lt-lm-23853",
-      "step": 0,
-      "order": 21,
+      "step": 3,
+      "order": 5,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Kilometre Markers",
@@ -604,11 +1086,17 @@
       "images": [
         {
           "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif"
+          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
+          "path": "lt/7585b0f60b26.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "1315d142e031",
-          "src": "https://learnablemeta.com/images/768/Y9mGpAX6SWgZjBwE8nQKqr6o3MTIsSoVBtsL.avif"
+          "src": "https://learnablemeta.com/images/768/Y9mGpAX6SWgZjBwE8nQKqr6o3MTIsSoVBtsL.avif",
+          "path": "lt/1315d142e031.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -620,67 +1108,9 @@
       }
     },
     {
-      "id": "lt-lm-50404",
-      "step": 0,
-      "order": 22,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Lithuanian bollards are wedge-shaped.",
-        "They have an orange reflector on the front, and a white reflector on the back.",
-        "Both reflectors are rectangular.",
-        "You may find this thin version as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "10a5dfd3aca2",
-          "src": "https://learnablemeta.com/images/768/ElE70o4ZW5pUkWQMG9ZnhoS3VhzYHf9yQz49.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50405",
-      "step": 0,
-      "order": 23,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Lithuania uses white chevrons with red arrows.",
-        "The small single chevrons (pictured here) usually have a red outline on the edge of the sign.",
-        "**--- NOTE:**",
-        "Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "05bbc5c49ce0",
-          "src": "https://learnablemeta.com/images/768/So0mS9pPDVEhE2f4orEg0zc7KlmJcsGHNSbj.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "PL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lt-lm-50406",
-      "step": 0,
-      "order": 24,
+      "step": 3,
+      "order": 6,
       "family": "guardrail",
       "title": "Guardrail: Orange Reflectors",
       "text": [
@@ -693,7 +1123,10 @@
       "images": [
         {
           "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif"
+          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
+          "path": "lt/942d3cffc941.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -701,94 +1134,6 @@
         "EE",
         "LV"
       ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50407",
-      "step": 0,
-      "order": 25,
-      "family": "pole",
-      "title": "Pole: Square Poles",
-      "text": [
-        "Lithuanian poles are usually square and concrete, and often feature a diagonal support beam.",
-        "**--- NOTE:**",
-        "While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f59cac41f438",
-          "src": "https://learnablemeta.com/images/768/AiSaYhXD6Mz0aIAoMeZ2wNwq9K1iVZMECNnQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50408",
-      "step": 0,
-      "order": 26,
-      "family": "pole",
-      "title": "Pole: Pole Tops",
-      "text": [
-        "Pictured here are some typical Lithuanian poletops.",
-        "They often have short horizontal rods, on which the insulators are placed.",
-        "In some poletops, the insulators are arranged in a trident-like shape, with one on top, and two on each side.",
-        "**--- NOTE:**",
-        "**These poletops are not unique to Lithuania:**",
-        "They can also be found in the other post-Soviet countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "829a0cf9e196",
-          "src": "https://learnablemeta.com/images/768/6ZuUKqQwABnvoX8nGGUIgWJH3ksKpj7KQPfI.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50409",
-      "step": 0,
-      "order": 27,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thin Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Lithuanian signs have a relatively thin red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11c425ea0cea",
-          "src": "https://learnablemeta.com/images/768/AWho8tvwAhUQvaV4jArK7hGLs68sfYlNqYeL.avif"
-        },
-        {
-          "id": "4300e3ac0721",
-          "src": "https://learnablemeta.com/images/851/u1LyccACoOH4kpFgBgXZME9H07YaShtbnUcg.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
@@ -797,8 +1142,8 @@
     },
     {
       "id": "lt-lm-50411",
-      "step": 0,
-      "order": 28,
+      "step": 3,
+      "order": 7,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Kilometre Markers",
@@ -812,11 +1157,17 @@
       "images": [
         {
           "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif"
+          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
+          "path": "lt/7585b0f60b26.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "2d3e1b8cc941",
-          "src": "https://learnablemeta.com/images/851/Xf2AFK0it6klfV31qz1gbBA1YiX9e09QDhWY.avif"
+          "src": "https://learnablemeta.com/images/851/Xf2AFK0it6klfV31qz1gbBA1YiX9e09QDhWY.avif",
+          "path": "lt/2d3e1b8cc941.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -829,8 +1180,8 @@
     },
     {
       "id": "lt-lm-50412",
-      "step": 0,
-      "order": 29,
+      "step": 3,
+      "order": 8,
       "family": "sign",
       "kind": "other",
       "title": "Sign: G",
@@ -844,33 +1195,10 @@
         {
           "id": "b05903816bd4",
           "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50413",
-      "step": 0,
-      "order": 30,
-      "family": "vegetation",
-      "title": "Vegetation: Less Forest Cover",
-      "text": [
-        "Lithuania has less forest cover than the other two Baltic countries.",
-        "As a result, the landscape appears more open and agricultural.",
-        "Your mileage may vary depending on the round however, so use this meta with some caution."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e998c05f6bc2",
-          "src": "https://learnablemeta.com/images/768/msPfJwlQGvMdHmrQByNksIFo18JIxEOrZ2NR.avif"
+          "giveaway": true,
+          "path": "lt/b05903816bd4.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -883,8 +1211,8 @@
     },
     {
       "id": "lt-lm-51085",
-      "step": 0,
-      "order": 31,
+      "step": 3,
+      "order": 9,
       "family": "sign",
       "kind": "other",
       "title": "Sign: G",
@@ -898,69 +1226,14 @@
         {
           "id": "b05903816bd4",
           "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "lt/b05903816bd4.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
       "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51151",
-      "step": 0,
-      "order": 32,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Lithuanian bollards are wedge-shaped.",
-        "They have an orange reflector on the front, and a white reflector on the back.",
-        "Both reflectors are rectangular.",
-        "You may find this thin version as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "10a5dfd3aca2",
-          "src": "https://learnablemeta.com/images/768/ElE70o4ZW5pUkWQMG9ZnhoS3VhzYHf9yQz49.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51152",
-      "step": 0,
-      "order": 33,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Lithuania uses white chevrons with red arrows.",
-        "The small single chevrons (pictured here) usually have a red outline on the edge of the sign.",
-        "**--- NOTE:**",
-        "Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "05bbc5c49ce0",
-          "src": "https://learnablemeta.com/images/768/So0mS9pPDVEhE2f4orEg0zc7KlmJcsGHNSbj.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "PL"
-      ],
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
@@ -969,8 +1242,8 @@
     },
     {
       "id": "lt-lm-51153",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 10,
       "family": "guardrail",
       "title": "Guardrail: Orange Reflectors",
       "text": [
@@ -983,7 +1256,10 @@
       "images": [
         {
           "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif"
+          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
+          "path": "lt/942d3cffc941.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -991,94 +1267,6 @@
         "EE",
         "LV"
       ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51154",
-      "step": 0,
-      "order": 35,
-      "family": "pole",
-      "title": "Pole: Square Poles",
-      "text": [
-        "Lithuanian poles are usually square and concrete, and often feature a diagonal support beam.",
-        "**--- NOTE:**",
-        "While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f59cac41f438",
-          "src": "https://learnablemeta.com/images/768/AiSaYhXD6Mz0aIAoMeZ2wNwq9K1iVZMECNnQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51155",
-      "step": 0,
-      "order": 36,
-      "family": "pole",
-      "title": "Pole: Pole Tops",
-      "text": [
-        "Pictured here are some typical Lithuanian poletops.",
-        "They often have short horizontal rods, on which the insulators are placed.",
-        "In some poletops, the insulators are arranged in a trident-like shape, with one on top, and two on each side.",
-        "**--- NOTE:**",
-        "**These poletops are not unique to Lithuania:**",
-        "They can also be found in the other post-Soviet countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "829a0cf9e196",
-          "src": "https://learnablemeta.com/images/768/6ZuUKqQwABnvoX8nGGUIgWJH3ksKpj7KQPfI.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51156",
-      "step": 0,
-      "order": 37,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thin Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Lithuanian signs have a relatively thin red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11c425ea0cea",
-          "src": "https://learnablemeta.com/images/768/AWho8tvwAhUQvaV4jArK7hGLs68sfYlNqYeL.avif"
-        },
-        {
-          "id": "d0e6c4d52746",
-          "src": "https://learnablemeta.com/images/853/J691j5Lm2jxnVu6hKrOgpeiFH1boxThuag0p.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
@@ -1087,8 +1275,8 @@
     },
     {
       "id": "lt-lm-51158",
-      "step": 0,
-      "order": 38,
+      "step": 3,
+      "order": 11,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Kilometre Markers",
@@ -1102,11 +1290,17 @@
       "images": [
         {
           "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif"
+          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
+          "path": "lt/7585b0f60b26.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "8fdf532a9d74",
-          "src": "https://learnablemeta.com/images/853/9SxcaeAtuX9OdYigngfDKpI4BrVAemVvvAR8.avif"
+          "src": "https://learnablemeta.com/images/853/9SxcaeAtuX9OdYigngfDKpI4BrVAemVvvAR8.avif",
+          "path": "lt/8fdf532a9d74.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -1114,101 +1308,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51159",
-      "step": 0,
-      "order": 39,
-      "family": "vegetation",
-      "title": "Vegetation: Less Forest Cover",
-      "text": [
-        "Lithuania has less forest cover than the other two Baltic countries.",
-        "As a result, the landscape appears more open and agricultural.",
-        "Your mileage may vary depending on the round however, so use this meta with some caution."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e998c05f6bc2",
-          "src": "https://learnablemeta.com/images/768/msPfJwlQGvMdHmrQByNksIFo18JIxEOrZ2NR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-66747",
-      "step": 0,
-      "order": 40,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Lithuania uses white chevrons with red arrows.",
-        "The small single chevrons (pictured here) usually have a red outline on the edge of the sign.",
-        "**--- NOTE:**",
-        "Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b61d377d5953",
-          "src": "https://learnablemeta.com/images/914/CdJI0FtlVcEvlpgoPzu3l6uw72nKugCxUPBR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "PL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-66800",
-      "step": 0,
-      "order": 41,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Lithuania uses white chevrons with red arrows.",
-        "The small single chevrons (pictured here) usually have a red outline on the edge of the sign.",
-        "**--- NOTE:**",
-        "Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b61d377d5953",
-          "src": "https://learnablemeta.com/images/914/CdJI0FtlVcEvlpgoPzu3l6uw72nKugCxUPBR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LV",
-        "PL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67eab303672cc28159c731e3",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lt-lm-104518",
-      "step": 0,
-      "order": 42,
+      "step": 3,
+      "order": 12,
       "family": "architecture",
       "title": "Architecture: Light Colored Bricks",
       "text": [
@@ -1220,7 +1326,10 @@
       "images": [
         {
           "id": "2fabb89a9a39",
-          "src": "https://learnablemeta.com/images/1072/Sx65Di7fO7JPzthECwEBWzdsIR7CkIKYFg4R.avif"
+          "src": "https://learnablemeta.com/images/1072/Sx65Di7fO7JPzthECwEBWzdsIR7CkIKYFg4R.avif",
+          "path": "lt/2fabb89a9a39.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -1235,8 +1344,8 @@
     },
     {
       "id": "lt-lm-472836",
-      "step": 0,
-      "order": 43,
+      "step": 3,
+      "order": 13,
       "family": "pole",
       "title": "Pole: concrete support beam",
       "text": [
@@ -1247,7 +1356,10 @@
       "images": [
         {
           "id": "56378e860ebc",
-          "src": "https://learnablemeta.com/images/1955/1750241686373-Oy2.avif"
+          "src": "https://learnablemeta.com/images/1955/1750241686373-Oy2.avif",
+          "path": "lt/56378e860ebc.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1262,36 +1374,9 @@
       }
     },
     {
-      "id": "lt-lm-472838",
-      "step": 0,
-      "order": 44,
-      "family": "pole",
-      "title": "Pole: pole tops",
-      "text": [
-        "Pictured here are some typical Lithuanian poletops.",
-        "They often have short horizontal rods, on which the insulators are placed.",
-        "In some poletops, the insulators are arranged in a trident-like shape, with one on top, and two on each side.",
-        "Note that these poletops are not unique to Lithuania: they can also be found in the other post-Soviet countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "20c9a0fa129e",
-          "src": "https://learnablemeta.com/images/1955/1750241697073-RTf.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lt-lm-515564",
-      "step": 0,
-      "order": 45,
+      "step": 3,
+      "order": 14,
       "family": "guardrail",
       "title": "Guardrail: A-Type with orange reflectors",
       "text": [
@@ -1302,11 +1387,17 @@
       "images": [
         {
           "id": "8afbccf41c27",
-          "src": "https://learnablemeta.com/images/3660/1755389276548-k8b.avif"
+          "src": "https://learnablemeta.com/images/3660/1755389276548-k8b.avif",
+          "path": "lt/8afbccf41c27.webp",
+          "width": 800,
+          "height": 356
         },
         {
           "id": "05a6c9618d60",
-          "src": "https://learnablemeta.com/images/3660/1755389281808-98o.avif"
+          "src": "https://learnablemeta.com/images/3660/1755389281808-98o.avif",
+          "path": "lt/05a6c9618d60.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1322,8 +1413,8 @@
     },
     {
       "id": "lt-lm-740357",
-      "step": 0,
-      "order": 46,
+      "step": 3,
+      "order": 15,
       "family": "architecture",
       "title": "Architecture: Kaunas house number",
       "text": [
@@ -1333,7 +1424,10 @@
       "images": [
         {
           "id": "58dfb1e4d242",
-          "src": "https://learnablemeta.com/images/4588/1777488599421-JeA.avif"
+          "src": "https://learnablemeta.com/images/4588/1777488599421-JeA.avif",
+          "path": "lt/58dfb1e4d242.webp",
+          "width": 455,
+          "height": 606
         }
       ],
       "locations": [],
@@ -1346,8 +1440,8 @@
     },
     {
       "id": "lt-lm-740358",
-      "step": 0,
-      "order": 47,
+      "step": 3,
+      "order": 16,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Vilnius street sign",
@@ -1358,7 +1452,10 @@
       "images": [
         {
           "id": "69857b5eeae7",
-          "src": "https://learnablemeta.com/images/4588/1777489180606-qlt.avif"
+          "src": "https://learnablemeta.com/images/4588/1777489180606-qlt.avif",
+          "path": "lt/69857b5eeae7.webp",
+          "width": 800,
+          "height": 300
         }
       ],
       "locations": [],
@@ -1371,8 +1468,8 @@
     },
     {
       "id": "lt-lm-783064",
-      "step": 0,
-      "order": 48,
+      "step": 3,
+      "order": 17,
       "family": "language",
       "title": "Language: Lithuanian",
       "text": [
@@ -1388,15 +1485,24 @@
       "images": [
         {
           "id": "eeb0b2f40bc3",
-          "src": "https://learnablemeta.com/images/9388/1785590310910-vnt.avif"
+          "src": "https://learnablemeta.com/images/9388/1785590310910-vnt.avif",
+          "path": "lt/eeb0b2f40bc3.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "d1fb337baf5b",
-          "src": "https://learnablemeta.com/images/9388/1785590318751-Em6.avif"
+          "src": "https://learnablemeta.com/images/9388/1785590318751-Em6.avif",
+          "path": "lt/d1fb337baf5b.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "d419ced6c257",
-          "src": "https://learnablemeta.com/images/9388/1785678084230-bbT.avif"
+          "src": "https://learnablemeta.com/images/9388/1785678084230-bbT.avif",
+          "path": "lt/d419ced6c257.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],

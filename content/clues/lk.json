@@ -1,28 +1,130 @@
 {
   "country": "LK",
   "name": "Sri Lanka",
-  "sourceUrl": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-  "fetchedAt": "2026-11-10T06:21:08.202Z",
+  "sourceUrl": "https://www.plonkit.net/sri-lanka",
+  "updatedAt": "2026-03-02T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Sri Lanka"
+    },
+    {
+      "title": "Regional and province-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "lk-lm-63",
+      "id": "lk-oQcO",
       "step": 0,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Gen4 low cam",
+      "order": 1,
+      "family": "plate",
+      "title": "Plate: Vehicles in Sri Lanka have long white front plates and…",
       "text": [
-        "All the Gen4 coverage taken in Sri Lanka is low-cam(gen3 coverage in Sri Lanka is not low cam), the only two other countries with low-cam is Japan and Switzerland but they look different. You can recognize lowcam because of wide blur of the street view car and lower vantage point compared to normal camera."
+        "Vehicles in Sri Lanka have **long white front** plates and **short yellow rear** plates."
       ],
       "tags": [],
       "images": [
         {
+          "id": "0a44f5c08355",
+          "src": "https://www.plonkit.net/images/sri-lanka/Sri_Lanka_License_Plate.png",
+          "path": "lk/0a44f5c08355.webp",
+          "width": 600,
+          "height": 193
+        },
+        {
+          "id": "94cb6ec5cd68",
+          "src": "https://learnablemeta.com/images/681/ks4VyNE6umQJeKilVsUsXzvyvMQs6Lod8S8m.avif",
+          "path": "lk/94cb6ec5cd68.webp",
+          "width": 1000,
+          "height": 318
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-Vtwe",
+      "step": 0,
+      "order": 2,
+      "family": "car",
+      "title": "Google car: In most Generation 3 coverage",
+      "text": [
+        "In most Generation 3 coverage, you will be able to see the **front of the Google car** partially through the blur: it is visible as blue-white-red patches, reminiscent of the French flag. The red patch is usually most visually distinct.",
+        "NOTE: This car is unique to Sri Lanka. Coverage in Ghana has a similar front of the car visible, but this coverage also has a roof rack."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "40c5a66e102c",
+          "src": "https://www.plonkit.net/images/sri-lanka/Gen_3_car2.png",
+          "path": "lk/40c5a66e102c.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "aa782c1f4df1",
+          "src": "https://learnablemeta.com/images/681/mKuDtISe6To4hVJe6GbEI5cyu1gDfhW9p6ZG.avif",
+          "path": "lk/aa782c1f4df1.webp",
+          "width": 1000,
+          "height": 562
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "GH"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-QMG3",
+      "step": 0,
+      "order": 3,
+      "family": "car",
+      "title": "Google car: All Generation 4 coverage is low-cam",
+      "text": [
+        "All Generation 4 coverage is **low-cam**. This means that the camera on the Google car is intentionally set up lower than in most other countries. This can be recognized in two ways:",
+        "- The car blur is significantly bigger. Generally, the bigger car blur is the most consistent way to recognize low-cam.",
+        "- Roads look wider and objects around you are seen from a lower angle.",
+        "Note that Sri Lanka’s Generation 3 coverage is made with a normal height camera!",
+        "NOTE: All coverage in Japan and Switzerland is low-cam. However, landscape should be sufficient to tell these apart from Sri Lanka."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "59788d7c12b0",
+          "src": "https://www.plonkit.net/images/sri-lanka/Gen_4_coverage.png",
+          "path": "lk/59788d7c12b0.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
           "id": "d727430d0255",
-          "src": "https://learnablemeta.com/images/XNjqqh51Ud4eNk5qp5TBHM9L5tne3swlFxkk.avif"
+          "src": "https://learnablemeta.com/images/XNjqqh51Ud4eNk5qp5TBHM9L5tne3swlFxkk.avif",
+          "path": "lk/d727430d0255.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "27577708a47d",
+          "src": "https://learnablemeta.com/images/681/484Xe2PfPBl2y1HX2xK9cVG2V9M6fQFADVpl.avif",
+          "path": "lk/27577708a47d.webp",
+          "width": 1000,
+          "height": 562
         }
       ],
       "locations": [],
@@ -31,15 +133,756 @@
         "JP"
       ],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-obMz",
+      "step": 0,
+      "order": 4,
+      "family": "language",
+      "title": "Language: In Sri Lanka, you will see two scripts: Sinhala and Tamil",
+      "text": [
+        "In Sri Lanka, you will see two scripts: **Sinhala** and **Tamil**. You will also sometimes see English, written in Latin script.",
+        "Sinhala is most common, and can be found throughout the entire country. It has a very curvy, ‘rounded’ look.",
+        "Tamil is more regionally limited. It has straighter lines. For an exact distribution, see the region-guessing section.",
+        "NOTE: Sinhala is unique to Sri Lanka. However, Tamil can also be found in the Indian state of Tamil Nadu."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "779ba5efe048",
+          "src": "https://www.plonkit.net/images/sri-lanka/Sri_Lanka_scripts.png",
+          "path": "lk/779ba5efe048.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-AYFb",
+      "step": 0,
+      "order": 5,
+      "family": "pole",
+      "title": "Pole: Sri Lanka typically uses concrete utility poles",
+      "text": [
+        "Sri Lanka typically uses **concrete utility poles**. Two pole types are common and distinctive:",
+        "- [Square poles](https://goo.gl/maps/i36FFgx1jfjK7pf77) with small pinholes in the sides. These pinholes are limited to the top part of the pole.",
+        "- Poles with large [see-through holes](https://goo.gl/maps/UZTouXphP9iE3Wh9A) in the lower half of the pole (“holey poles“). These poles are unique to Sri Lanka.",
+        "NOTE: The square poles with small pinholes can look very similar to those found in Thailand. However, in Thailand the pinholes extend all the way to the bottom of the pole."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "fdc71841adeb",
+          "src": "https://www.plonkit.net/images/sri-lanka/Utility_poles.png"
+        },
+        {
+          "id": "ece34d5aa548",
+          "src": "https://learnablemeta.com/images/1955/1749642010598-GzE.avif",
+          "path": "lk/ece34d5aa548.webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "id": "7aa608694a57",
+          "src": "https://learnablemeta.com/images/1955/1749642017945-xep.avif",
+          "path": "lk/7aa608694a57.webp",
+          "width": 800,
+          "height": 450
+        },
+        {
+          "id": "fc9090fd1973",
+          "src": "https://learnablemeta.com/images/1/1754395658076-Zeq.avif",
+          "path": "lk/fc9090fd1973.webp",
+          "width": 800,
+          "height": 451
+        },
+        {
+          "id": "9b33b79a8078",
+          "src": "https://learnablemeta.com/images/1/1754395663183-O11.avif",
+          "path": "lk/9b33b79a8078.webp",
+          "width": 800,
+          "height": 734
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "TH"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-Yl3z",
+      "step": 0,
+      "order": 6,
+      "family": "bollard",
+      "title": "Bollard: These short, wide stone bollards are unique to Sri Lanka",
+      "text": [
+        "These short, wide **stone bollards** are unique to Sri Lanka. They have a tapered shape, with a black base and a white top."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "4999648ba103",
+          "src": "https://www.plonkit.net/images/sri-lanka/Bollard.png",
+          "path": "lk/4999648ba103.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "62520a90d4d5",
+          "src": "https://learnablemeta.com/images/681/mPDCknxl0lPovv7P2VmuCk43fHnNqfltItfP.avif",
+          "path": "lk/62520a90d4d5.webp",
+          "width": 1000,
+          "height": 562
+        },
+        {
+          "id": "ea2ad24050ed",
+          "src": "https://learnablemeta.com/images/739/OZen87cc2O2TRqEjGVtUFLM1lhdsTzQQtCLJ.avif",
+          "path": "lk/ea2ad24050ed.webp",
+          "width": 1000,
+          "height": 627
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-YaPp",
+      "step": 0,
+      "order": 7,
+      "family": "sign",
+      "kind": "route",
+      "title": "Route marker: Tall, white concrete waystones with an indented section…",
+      "text": [
+        "Tall, white concrete waystones with an indented section near the bottom containing a yellow road number, are unique to Sri Lanka."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "5fd211a18cb8",
+          "src": "https://www.plonkit.net/images/sri-lanka/Screenshot__28246_29.png",
+          "path": "lk/5fd211a18cb8.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-mWPv",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Sri Lanka commonly uses black and white striped signposts",
+      "text": [
+        "Sri Lanka commonly uses **black and white** striped signposts.",
+        "NOTE: Within South and Southeast Asia, such signposts are also found in Bangladesh, Bhutan, India, Nepal and Malaysia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "63e8373acce5",
+          "src": "https://www.plonkit.net/images/sri-lanka/Signpost.png",
+          "path": "lk/63e8373acce5.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "579d4ee88c31",
+          "src": "https://learnablemeta.com/images/681/oIXswBkkyoHr6bMq9elQilrNfVRsC8R1eVJb.avif",
+          "path": "lk/579d4ee88c31.webp",
+          "width": 1000,
+          "height": 561
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "BD",
+        "BT",
+        "IN",
+        "MY",
+        "NP"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-7b7h",
+      "step": 0,
+      "order": 9,
+      "family": "line",
+      "title": "Road line: Rural roads often have outside lines",
+      "text": [
+        "Rural roads often have **outside lines, but no middle lines**. In the absence of other clues, this can sometimes be a way to decide a tough 50-50.",
+        "NOTE: Most small roads lack road lines entirely."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4053e1a126ed",
+          "src": "https://www.plonkit.net/images/sri-lanka/Outside_line_no_middle_line.png",
+          "path": "lk/4053e1a126ed.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "2b75053bb2e7",
+          "src": "https://learnablemeta.com/images/503/b9iZl06K5YZqHRPSyxsW5LSp7V0tlo1Wukkh.avif",
+          "path": "lk/2b75053bb2e7.webp",
+          "width": 1000,
+          "height": 560
+        },
+        {
+          "id": "0ce7d7285a3f",
+          "src": "https://learnablemeta.com/images/681/yAdCztqd6elgIkd7vODPdaXbTA48Dj2QeL2E.avif",
+          "path": "lk/0ce7d7285a3f.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-HCRR",
+      "step": 0,
+      "order": 10,
+      "family": "vegetation",
+      "title": "Vegetation: Sri Lanka is a tropical country",
+      "text": [
+        "Sri Lanka is a **tropical** country. It usually has very lush, green vegetation. It is densely populated and many parts are covered in a patchwork of agricultural fields."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9452438da2d4",
+          "src": "https://www.plonkit.net/images/sri-lanka/Tropical_landscape.png",
+          "path": "lk/9452438da2d4.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-l3FA",
+      "step": 0,
+      "order": 11,
+      "family": "landscape",
+      "title": "Landscape: Many parts of Sri Lanka have reddish soil",
+      "text": [
+        "Many parts of Sri Lanka have **reddish soil**.",
+        "Less commonly, you may encounter [white, sandy soil](https://goo.gl/maps/AcNaEq3fgrBK4M7p7)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "89ed99cf7d40",
+          "src": "https://www.plonkit.net/images/sri-lanka/Red_soil.png",
+          "path": "lk/89ed99cf7d40.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-fnRY",
+      "step": 0,
+      "order": 12,
+      "family": "vegetation",
+      "title": "Vegetation: Palm trees are very common in Sri Lanka",
+      "text": [
+        "**Palm trees** are very common in Sri Lanka, more so than many other Asian countries.",
+        "NOTE: Palm trees are also very common in the Philippines."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "206a7def0639",
+          "src": "https://www.plonkit.net/images/sri-lanka/Palm_trees.png",
+          "path": "lk/206a7def0639.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "PH"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-A0Tf",
+      "step": 0,
+      "order": 13,
+      "family": "architecture",
+      "title": "Architecture: Houses often have orange or red tiled roofs",
+      "text": [
+        "Houses often have **orange or red tiled roofs**. Due to wear and tear, these tiles often have an almost brown tint to them.",
+        "NOTE: Similar roofs are also common in parts of Indonesia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9413873a5525",
+          "src": "https://www.plonkit.net/images/sri-lanka/Tiled_roofs.png",
+          "path": "lk/9413873a5525.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "6447eb94ad6f",
+          "src": "https://learnablemeta.com/images/1072/SZ1qmpA3EgGg7XWzvX1IOlcJcspCVOaOXl9f.avif",
+          "path": "lk/6447eb94ad6f.webp",
+          "width": 1000,
+          "height": 561
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ID"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-I2B3",
+      "step": 0,
+      "order": 14,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: The country is majority Buddhist",
+      "text": [
+        "The country is majority **Buddhist**: 70% of the population practise this religion. Throughout the country, you will often see signs of the religion, including temples, Buddha statues, [stupas](https://en.wikipedia.org/wiki/Stupa) and the [Buddhist flag](https://en.wikipedia.org/wiki/Buddhist_flag).",
+        "NOTE: Thailand, Cambodia and Laos are also majority Buddhist."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d642ff8b00cd",
+          "src": "https://www.plonkit.net/images/sri-lanka/Buddhism.png",
+          "path": "lk/d642ff8b00cd.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "KH",
+        "LA",
+        "TH"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-CFoL",
+      "step": 0,
+      "order": 15,
+      "family": "other",
+      "title": "A substantial minority of the population adhere to other…",
+      "text": [
+        "A substantial minority of the population adhere to **other religions**: Hinduism (13%), Islam (10%) and Christianity (7%). These religions have strong regional distribution patterns; see the region-guessing section for more information."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b70be0267262",
+          "src": "https://www.plonkit.net/images/sri-lanka/Other_religions.png",
+          "path": "lk/b70be0267262.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-5SaV",
+      "step": 0,
+      "order": 16,
+      "family": "architecture",
+      "title": "Architecture: This style of tuktuk is common in Sri Lanka",
+      "text": [
+        "This style of **tuktuk** is common in Sri Lanka: it has a bulky shape and a black roof. They are usually coloured green, yellow or red, though other colours appear as well."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1c6a4343f3e4",
+          "src": "https://www.plonkit.net/images/sri-lanka/Tukuk2.png",
+          "path": "lk/1c6a4343f3e4.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-2p9M",
+      "step": 0,
+      "order": 17,
+      "family": "coverage",
+      "title": "Coverage: Google used a weird",
+      "text": [
+        "Google used a weird, low-quality camera in Sri Lanka. This camera is known as the official Ari (or “Shitcam”). It has a wide circular car blur and often somewhat brownish colours. A good map will not usually include this coverage, but it is good to be aware of its existence, in order to not be caught off-guard by it.",
+        "NOTE: Other tropical countries with shitcam include India, Cambodia, Ecuador and to a lesser extent Bangladesh."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f52565a2ce2d",
+          "src": "https://www.plonkit.net/images/sri-lanka/lk_shit.png",
+          "giveaway": true,
+          "location": {
+            "pano": "eAv7FLuQ5zvB6ikB4b7jeQ",
+            "lat": 6.957306,
+            "lng": 80.168333,
+            "heading": 197.55,
+            "pitch": 0.65,
+            "fov": 90,
+            "source": "plonkit"
+          },
+          "path": "lk/f52565a2ce2d.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "eAv7FLuQ5zvB6ikB4b7jeQ",
+          "lat": 6.957306,
+          "lng": 80.168333,
+          "heading": 197.55,
+          "pitch": 0.65,
+          "fov": 90,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "BD",
+        "EC",
+        "IN",
+        "KH"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-UbLa",
+      "step": 1,
+      "order": 0,
+      "family": "other",
+      "title": "Sri Lankan telephone numbers have 10 digits",
+      "text": [
+        "Sri Lankan telephone numbers have 10 digits.",
+        "The first three digits of landline phone numbers are the **area code**. The first digit of that area code is always a 0, while the remaining two digits are shown on the map.",
+        "Mobile phone numbers always start with 07 and are not associated with any particular region.",
+        "_You can click on the image to enlarge it. Image credit: Maccem._"
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9f17ac6465f7",
+          "src": "https://www.plonkit.net/images/sri-lanka/Sri_area_codes.png",
+          "giveaway": true,
+          "path": "lk/9f17ac6465f7.webp",
+          "width": 600,
+          "height": 848
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-yZrO",
+      "step": 1,
+      "order": 1,
+      "family": "architecture",
+      "title": "Architecture: These maps shows the distribution of each of Sri Lanka’s…",
+      "text": [
+        "These maps shows the distribution of each of Sri Lanka’s **four main religions**. This can help with region-guessing when you spot a house of worship or other symbol associated with one of the religions.",
+        "- Buddhism is found in most of the country but is mostly absent from the north and some parts of the east coast.",
+        "- Hinduism is predominantly found in the north and parts of the east, as well as around the town of Nuwara Eliya in the central mountains.",
+        "- Islam is strongest on the east coast, but not a majority in any district.",
+        "- Christianity is mostly confined to the northwest, and is strongest around the town of Mannar.",
+        "_You can click on the image to enlarge it._"
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4860ec3db387",
+          "src": "https://www.plonkit.net/images/sri-lanka/Religion-map-Sri-Lanka_darkmode.png",
+          "giveaway": true,
+          "path": "lk/4860ec3db387.webp",
+          "width": 1000,
+          "height": 1040
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-1YKV",
+      "step": 1,
+      "order": 2,
+      "family": "language",
+      "title": "Language: The presence of the Tamil script is strongly correlated…",
+      "text": [
+        "The presence of the **Tamil script** is strongly correlated with the distribution of Hinduism (though not all Tamils are Hindu and vice versa).",
+        "There are two groups that use the Tamil script:",
+        "- Native Sri Lankan Tamils, who predominantly live in the north and the east.",
+        "- Indian Tamils, who mostly live in and around the central Nuwara Eliya district.",
+        "Note that it is not uncommon to find bilingual Sinhala and Tamil signs far outside the area where Tamil is the predominant language. However, Tamil-only signage can be a strong indicator for one of the Tamil-majority areas.",
+        "_You can click on the image to enlarge it._"
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "86fb41e0d9ce",
+          "src": "https://www.plonkit.net/images/sri-lanka/Tamil.png",
+          "path": "lk/86fb41e0d9ce.webp",
+          "width": 1000,
+          "height": 706
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-wS9v",
+      "step": 1,
+      "order": 3,
+      "family": "landscape",
+      "title": "Landscape: This map shows Sri Lanka’s topography",
+      "text": [
+        "This map shows Sri Lanka’s **topography**. Hills and mountains are strongly concentrated in the central-southern part of the country.",
+        "_You can click on the image to enlarge it._"
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1142b4e69444",
+          "src": "https://www.plonkit.net/images/sri-lanka/Elevation-map.png",
+          "giveaway": true,
+          "path": "lk/1142b4e69444.webp",
+          "width": 600,
+          "height": 837
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-wbsP",
+      "step": 1,
+      "order": 4,
+      "family": "vegetation",
+      "title": "Vegetation: The southwest of Sri Lanka has a more wet climate that is…",
+      "text": [
+        "The southwest of Sri Lanka has a more **wet climate** that is characterised by lush, dense vegetation. Deep green tones dominate the landscape."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "523680b377ba",
+          "src": "https://www.plonkit.net/images/sri-lanka/Wet_climate.png",
+          "path": "lk/523680b377ba.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-JSpS",
+      "step": 1,
+      "order": 5,
+      "family": "vegetation",
+      "title": "Vegetation: Conversely, the rest of the country has a slightly more dry…",
+      "text": [
+        "Conversely, the rest of the country has a slightly more **dry climate**. The vegetation is often lower and more open. The landscape usually has a mix of brown and green tones.",
+        "Note that the difference is not extreme, as the landscape in Sri Lanka never truly gets downright arid. However, with some practise, you can often learn to tell the difference. Your mileage may also vary depending on the season, local forest cover, or coverage type (Generation 3 often tends to make the landscape look more arid than it really is)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7b44911b7d32",
+          "src": "https://www.plonkit.net/images/sri-lanka/Dry_climate.png",
+          "path": "lk/7b44911b7d32.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-5c1p",
+      "step": 1,
+      "order": 6,
+      "family": "other",
+      "title": "Tea plantations are found in the central and southwestern…",
+      "text": [
+        "**Tea plantations** are found in the central and southwestern parts of the country. They are most common in the area just west of Nuwara Eliya.",
+        "Tea plants look like small, compact shrubs with bright green leaves. They are usually planted in organised rows or clusters on hillsides."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1a2d695cf840",
+          "src": "https://www.plonkit.net/images/sri-lanka/Tea_plantations2.png",
+          "path": "lk/1a2d695cf840.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lk-52lk",
+      "step": 2,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: Horton Plains National Park has a very distinct and bait…",
+      "text": [
+        "**Horton Plains National Park **has a very distinct and bait landscape, consisting of hilly plains covered in long grass. In the distance, you can see forests, but most of the park’s roads meander through a wide open landscape."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "78902a1faf70",
+          "src": "https://www.plonkit.net/images/sri-lanka/Horton_Plains_NP.png",
+          "path": "lk/78902a1faf70.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/sri-lanka",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "lk-lm-305",
-      "step": 0,
-      "order": 1,
+      "step": 3,
+      "order": 0,
       "family": "car",
       "title": "Google car: Unique car",
       "text": [
@@ -49,7 +892,10 @@
       "images": [
         {
           "id": "6001e8b85d7d",
-          "src": "https://learnablemeta.com/images/yhIkzvtjxiVGKU5KtJobMPsVra5mK4xiCxZI.avif"
+          "src": "https://learnablemeta.com/images/yhIkzvtjxiVGKU5KtJobMPsVra5mK4xiCxZI.avif",
+          "path": "lk/6001e8b85d7d.webp",
+          "width": 1000,
+          "height": 645
         }
       ],
       "locations": [],
@@ -61,35 +907,9 @@
       }
     },
     {
-      "id": "lk-lm-10170",
-      "step": 0,
-      "order": 2,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Rural roads often have outside lines, but no middle lines.",
-        "In the absence of other clues, this can sometimes be a way to decide a tough 50-50.",
-        "**NOTE:** Most small roads lack road lines entirely."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2b75053bb2e7",
-          "src": "https://learnablemeta.com/images/503/b9iZl06K5YZqHRPSyxsW5LSp7V0tlo1Wukkh.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67bcfa50de249626b4a3e177",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lk-lm-15336",
-      "step": 0,
-      "order": 3,
+      "step": 3,
+      "order": 1,
       "family": "landscape",
       "title": "Landscape: Horton Plains National Park",
       "text": [
@@ -99,7 +919,10 @@
       "images": [
         {
           "id": "f85858b2ec8a",
-          "src": "https://learnablemeta.com/images/664/xxUnBXRDtK6DR44QZwu4a8dczSQXTWRXmBTt.avif"
+          "src": "https://learnablemeta.com/images/664/xxUnBXRDtK6DR44QZwu4a8dczSQXTWRXmBTt.avif",
+          "path": "lk/f85858b2ec8a.webp",
+          "width": 1000,
+          "height": 485
         }
       ],
       "locations": [],
@@ -112,8 +935,8 @@
     },
     {
       "id": "lk-lm-15337",
-      "step": 0,
-      "order": 4,
+      "step": 3,
+      "order": 2,
       "family": "vegetation",
       "title": "Vegetation: Drier Climate",
       "text": [
@@ -124,7 +947,10 @@
       "images": [
         {
           "id": "0b9d6cf7b6d2",
-          "src": "https://learnablemeta.com/images/664/m3wGJfwVriz2Roe5klzTbBquoIzHzw3zhMb6.avif"
+          "src": "https://learnablemeta.com/images/664/m3wGJfwVriz2Roe5klzTbBquoIzHzw3zhMb6.avif",
+          "path": "lk/0b9d6cf7b6d2.webp",
+          "width": 1000,
+          "height": 484
         }
       ],
       "locations": [],
@@ -137,8 +963,8 @@
     },
     {
       "id": "lk-lm-15338",
-      "step": 0,
-      "order": 5,
+      "step": 3,
+      "order": 3,
       "family": "vegetation",
       "title": "Vegetation: Southern Climate",
       "text": [
@@ -148,7 +974,10 @@
       "images": [
         {
           "id": "eec0e74bdbcd",
-          "src": "https://learnablemeta.com/images/664/cIAz1WUWmi9ZpavmQkR7IqXPwphiTGEX3u6w.avif"
+          "src": "https://learnablemeta.com/images/664/cIAz1WUWmi9ZpavmQkR7IqXPwphiTGEX3u6w.avif",
+          "path": "lk/eec0e74bdbcd.webp",
+          "width": 1000,
+          "height": 483
         }
       ],
       "locations": [],
@@ -160,38 +989,9 @@
       }
     },
     {
-      "id": "lk-lm-15824",
-      "step": 0,
-      "order": 6,
-      "family": "car",
-      "title": "Google car: Gen 4 Lowcam",
-      "text": [
-        "All Generation 4 coverage is low-cam.",
-        "**This can be recognized in two ways:**",
-        "The car blur is significantly bigger.",
-        "Roads look wider and objects around you are seen from a lower angle.",
-        "**--- NOTE:**",
-        "Sri Lanka’s Generation 3 coverage is made with a normal height camera!"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "27577708a47d",
-          "src": "https://learnablemeta.com/images/681/484Xe2PfPBl2y1HX2xK9cVG2V9M6fQFADVpl.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lk-lm-15825",
-      "step": 0,
-      "order": 7,
+      "step": 3,
+      "order": 4,
       "family": "coverage",
       "title": "Coverage: Shitcam",
       "text": [
@@ -205,96 +1005,16 @@
       "images": [
         {
           "id": "2009fd86a048",
-          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif"
+          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif",
+          "path": "lk/2009fd86a048.webp",
+          "width": 1000,
+          "height": 561
         }
       ],
       "locations": [],
       "lookalikes": [
         "IN",
         "KH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15826",
-      "step": 0,
-      "order": 8,
-      "family": "car",
-      "title": "Google car: Gen 3 French Car",
-      "text": [
-        "**In most Generation 3 coverage, you will be able to see the front of the Google car partially through the blur:**",
-        "It is visible as blue-white-red patches, reminiscent of the French flag.",
-        "The red patch is usually most visually distinct.",
-        "**--- NOTE:**",
-        "This car is unique to Sri Lanka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa782c1f4df1",
-          "src": "https://learnablemeta.com/images/681/mKuDtISe6To4hVJe6GbEI5cyu1gDfhW9p6ZG.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15828",
-      "step": 0,
-      "order": 9,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Vehicles in Sri Lanka have long white front plates and short yellow rear plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "94cb6ec5cd68",
-          "src": "https://learnablemeta.com/images/681/ks4VyNE6umQJeKilVsUsXzvyvMQs6Lod8S8m.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15829",
-      "step": 0,
-      "order": 10,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Striped Signposts",
-      "text": [
-        "Sri Lanka commonly uses black and white striped signposts.",
-        "**--- NOTE:**",
-        "Within South and Southeast Asia, such signposts are also found in Bangladesh, India and Malaysia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "579d4ee88c31",
-          "src": "https://learnablemeta.com/images/681/oIXswBkkyoHr6bMq9elQilrNfVRsC8R1eVJb.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "MY"
       ],
       "credit": {
         "source": "Learnable Meta",
@@ -304,8 +1024,8 @@
     },
     {
       "id": "lk-lm-15830",
-      "step": 0,
-      "order": 11,
+      "step": 3,
+      "order": 5,
       "family": "other",
       "title": "Mushroom Insulator",
       "text": [
@@ -315,7 +1035,10 @@
       "images": [
         {
           "id": "52dab45840dd",
-          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif"
+          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif",
+          "path": "lk/52dab45840dd.webp",
+          "width": 1000,
+          "height": 628
         }
       ],
       "locations": [],
@@ -323,94 +1046,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15831",
-      "step": 0,
-      "order": 12,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Rural roads often have outside lines, but no middle lines.",
-        "In the absence of other clues, this can sometimes be a way to decide a tough 50-50.",
-        "**--- NOTE:**",
-        "Most small roads lack road lines entirely."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0ce7d7285a3f",
-          "src": "https://learnablemeta.com/images/681/yAdCztqd6elgIkd7vODPdaXbTA48Dj2QeL2E.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15832",
-      "step": 0,
-      "order": 13,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "These short, wide stone bollards are unique to Sri Lanka.",
-        "They have a tapered shape, with a black base and a white top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "62520a90d4d5",
-          "src": "https://learnablemeta.com/images/681/mPDCknxl0lPovv7P2VmuCk43fHnNqfltItfP.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15975",
-      "step": 0,
-      "order": 14,
-      "family": "car",
-      "title": "Google car: Gen 4 Lowcam",
-      "text": [
-        "All Generation 4 coverage is low-cam.",
-        "**This can be recognized in two ways:**",
-        "The car blur is significantly bigger.",
-        "Roads look wider and objects around you are seen from a lower angle.",
-        "**--- NOTE:**",
-        "Sri Lanka’s Generation 3 coverage is made with a normal height camera!"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "27577708a47d",
-          "src": "https://learnablemeta.com/images/681/484Xe2PfPBl2y1HX2xK9cVG2V9M6fQFADVpl.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lk-lm-15976",
-      "step": 0,
-      "order": 15,
+      "step": 3,
+      "order": 6,
       "family": "coverage",
       "title": "Coverage: Shitcam",
       "text": [
@@ -424,7 +1066,10 @@
       "images": [
         {
           "id": "2009fd86a048",
-          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif"
+          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif",
+          "path": "lk/2009fd86a048.webp",
+          "width": 1000,
+          "height": 561
         }
       ],
       "locations": [],
@@ -439,92 +1084,9 @@
       }
     },
     {
-      "id": "lk-lm-15977",
-      "step": 0,
-      "order": 16,
-      "family": "car",
-      "title": "Google car: Gen 3 French Car",
-      "text": [
-        "**In most Generation 3 coverage, you will be able to see the front of the Google car partially through the blur:**",
-        "It is visible as blue-white-red patches, reminiscent of the French flag.",
-        "The red patch is usually most visually distinct.",
-        "**--- NOTE:**",
-        "This car is unique to Sri Lanka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa782c1f4df1",
-          "src": "https://learnablemeta.com/images/681/mKuDtISe6To4hVJe6GbEI5cyu1gDfhW9p6ZG.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15979",
-      "step": 0,
-      "order": 17,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Vehicles in Sri Lanka have long white front plates and short yellow rear plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "94cb6ec5cd68",
-          "src": "https://learnablemeta.com/images/681/ks4VyNE6umQJeKilVsUsXzvyvMQs6Lod8S8m.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15980",
-      "step": 0,
-      "order": 18,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Striped Signposts",
-      "text": [
-        "Sri Lanka commonly uses black and white striped signposts.",
-        "**--- NOTE:**",
-        "Within South and Southeast Asia, such signposts are also found in Bangladesh, India and Malaysia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "579d4ee88c31",
-          "src": "https://learnablemeta.com/images/681/oIXswBkkyoHr6bMq9elQilrNfVRsC8R1eVJb.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "MY"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lk-lm-15981",
-      "step": 0,
-      "order": 19,
+      "step": 3,
+      "order": 7,
       "family": "other",
       "title": "Mushroom Insulator",
       "text": [
@@ -534,59 +1096,10 @@
       "images": [
         {
           "id": "52dab45840dd",
-          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15982",
-      "step": 0,
-      "order": 20,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Rural roads often have outside lines, but no middle lines.",
-        "In the absence of other clues, this can sometimes be a way to decide a tough 50-50.",
-        "**--- NOTE:**",
-        "Most small roads lack road lines entirely."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0ce7d7285a3f",
-          "src": "https://learnablemeta.com/images/681/yAdCztqd6elgIkd7vODPdaXbTA48Dj2QeL2E.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-15983",
-      "step": 0,
-      "order": 21,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "These short, wide stone bollards are unique to Sri Lanka.",
-        "They have a tapered shape, with a black base and a white top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "62520a90d4d5",
-          "src": "https://learnablemeta.com/images/681/mPDCknxl0lPovv7P2VmuCk43fHnNqfltItfP.avif"
+          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif",
+          "path": "lk/52dab45840dd.webp",
+          "width": 1000,
+          "height": 628
         }
       ],
       "locations": [],
@@ -599,8 +1112,8 @@
     },
     {
       "id": "lk-lm-51342",
-      "step": 0,
-      "order": 22,
+      "step": 3,
+      "order": 8,
       "family": "other",
       "title": "Mushroom Insulator",
       "text": [
@@ -610,95 +1123,10 @@
       "images": [
         {
           "id": "52dab45840dd",
-          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-51429",
-      "step": 0,
-      "order": 23,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Striped Signposts",
-      "text": [
-        "Sri Lanka commonly uses black and white striped signposts.",
-        "**--- NOTE:**",
-        "Within South and Southeast Asia, such signposts are also found in Bangladesh, India and Malaysia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "579d4ee88c31",
-          "src": "https://learnablemeta.com/images/681/oIXswBkkyoHr6bMq9elQilrNfVRsC8R1eVJb.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BD",
-        "IN",
-        "MY"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-51430",
-      "step": 0,
-      "order": 24,
-      "family": "car",
-      "title": "Google car: Gen 4 Lowcam",
-      "text": [
-        "All Generation 4 coverage is low-cam.",
-        "**This can be recognized in two ways:**",
-        "The car blur is significantly bigger.",
-        "Roads look wider and objects around you are seen from a lower angle.",
-        "**--- NOTE:**",
-        "Sri Lanka’s Generation 3 coverage is made with a normal height camera!"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "27577708a47d",
-          "src": "https://learnablemeta.com/images/681/484Xe2PfPBl2y1HX2xK9cVG2V9M6fQFADVpl.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-51432",
-      "step": 0,
-      "order": 25,
-      "family": "car",
-      "title": "Google car: Gen 3 French Car",
-      "text": [
-        "**In most Generation 3 coverage, you will be able to see the front of the Google car partially through the blur:**",
-        "It is visible as blue-white-red patches, reminiscent of the French flag.",
-        "The red patch is usually most visually distinct.",
-        "**--- NOTE:**",
-        "This car is unique to Sri Lanka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa782c1f4df1",
-          "src": "https://learnablemeta.com/images/681/mKuDtISe6To4hVJe6GbEI5cyu1gDfhW9p6ZG.avif"
+          "src": "https://learnablemeta.com/images/681/FWQt9YNMpQATJJ4TL3UlelO6wvaXS0Ax58q6.avif",
+          "path": "lk/52dab45840dd.webp",
+          "width": 1000,
+          "height": 628
         }
       ],
       "locations": [],
@@ -711,8 +1139,8 @@
     },
     {
       "id": "lk-lm-51434",
-      "step": 0,
-      "order": 26,
+      "step": 3,
+      "order": 9,
       "family": "coverage",
       "title": "Coverage: Shitcam",
       "text": [
@@ -726,7 +1154,10 @@
       "images": [
         {
           "id": "2009fd86a048",
-          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif"
+          "src": "https://learnablemeta.com/images/681/C96OazlsoaIOuiDllUr2zP6WAanhiD3Bphvv.avif",
+          "path": "lk/2009fd86a048.webp",
+          "width": 1000,
+          "height": 561
         }
       ],
       "locations": [],
@@ -741,189 +1172,9 @@
       }
     },
     {
-      "id": "lk-lm-51435",
-      "step": 0,
-      "order": 27,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Rural roads often have outside lines, but no middle lines.",
-        "In the absence of other clues, this can sometimes be a way to decide a tough 50-50.",
-        "**--- NOTE:**",
-        "Most small roads lack road lines entirely."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0ce7d7285a3f",
-          "src": "https://learnablemeta.com/images/681/yAdCztqd6elgIkd7vODPdaXbTA48Dj2QeL2E.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-51436",
-      "step": 0,
-      "order": 28,
-      "family": "plate",
-      "title": "Plate: License Plates",
-      "text": [
-        "Vehicles in Sri Lanka have long white front plates and short yellow rear plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "94cb6ec5cd68",
-          "src": "https://learnablemeta.com/images/681/ks4VyNE6umQJeKilVsUsXzvyvMQs6Lod8S8m.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-51438",
-      "step": 0,
-      "order": 29,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "These short, wide stone bollards are unique to Sri Lanka.",
-        "They have a tapered shape, with a black base and a white top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "62520a90d4d5",
-          "src": "https://learnablemeta.com/images/681/mPDCknxl0lPovv7P2VmuCk43fHnNqfltItfP.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-104461",
-      "step": 0,
-      "order": 30,
-      "family": "architecture",
-      "title": "Architecture: Orange / Red Tiled Roofs",
-      "text": [
-        "Houses often have orange or red tiled roofs.",
-        "Due to wear and tear, these tiles often have an almost brown tint to them.",
-        "**--- NOTE:**",
-        "Similar roofs are also common in parts of Indonesia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6447eb94ad6f",
-          "src": "https://learnablemeta.com/images/1072/SZ1qmpA3EgGg7XWzvX1IOlcJcspCVOaOXl9f.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ID"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-438782",
-      "step": 0,
-      "order": 31,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "These short, wide stone bollards are unique to Sri Lanka. They have a tapered shape, with a black base and a white top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ea2ad24050ed",
-          "src": "https://learnablemeta.com/images/739/OZen87cc2O2TRqEjGVtUFLM1lhdsTzQQtCLJ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-469010",
-      "step": 0,
-      "order": 32,
-      "family": "pole",
-      "title": "Pole: concrete square pole",
-      "text": [
-        "Square poles with small pinholes in the sides. These pinholes are limited to the top part of the pole.",
-        "NOTE: The square poles with small pinholes can look very similar to those found in Thailand. However, in Thailand the pinholes extend all the way to the bottom of the pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ece34d5aa548",
-          "src": "https://learnablemeta.com/images/1955/1749642010598-GzE.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lk-lm-469012",
-      "step": 0,
-      "order": 33,
-      "family": "pole",
-      "title": "Pole: concrete holey pole",
-      "text": [
-        "Poles with large see-through holes in the lower half of the pole (“holey poles“). These poles are unique to Sri Lanka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7aa608694a57",
-          "src": "https://learnablemeta.com/images/1955/1749642017945-xep.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lk-lm-473221",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 10,
       "family": "other",
       "title": "Sri Lanka",
       "text": [
@@ -937,7 +1188,10 @@
         {
           "id": "8f5109fe8338",
           "src": "https://learnablemeta.com/images/1398/1750281111130-oYk.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "lk/8f5109fe8338.webp",
+          "width": 566,
+          "height": 800
         }
       ],
       "locations": [],
@@ -949,43 +1203,9 @@
       }
     },
     {
-      "id": "lk-lm-503238",
-      "step": 0,
-      "order": 35,
-      "family": "pole",
-      "title": "Pole: Pole",
-      "text": [
-        "Sri Lanka typically uses concrete utility poles. Two pole types are common and distinctive:",
-        "Square poles with small pinholes in the sides. These pinholes are limited to the top part of the pole.",
-        "Poles with large see-through holes in the lower half of the pole (“holey poles“). These poles are unique to Sri Lanka.",
-        "They also commonly have those 3 big insulators on top of the pole shown on the second image.",
-        "**NOTE:** The square poles with small pinholes can look very similar to those found in Thailand. However, in Thailand the pinholes extend all the way to the bottom of the pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fc9090fd1973",
-          "src": "https://learnablemeta.com/images/1/1754395658076-Zeq.avif"
-        },
-        {
-          "id": "9b33b79a8078",
-          "src": "https://learnablemeta.com/images/1/1754395663183-O11.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lk-lm-634442",
-      "step": 0,
-      "order": 36,
+      "step": 3,
+      "order": 11,
       "family": "plate",
       "title": "Plate: Sri Lanka",
       "text": [
@@ -995,7 +1215,10 @@
       "images": [
         {
           "id": "902c5ad7248f",
-          "src": "https://learnablemeta.com/images/5431/1766447245073-D6n.avif"
+          "src": "https://learnablemeta.com/images/5431/1766447245073-D6n.avif",
+          "path": "lk/902c5ad7248f.webp",
+          "width": 800,
+          "height": 258
         }
       ],
       "locations": [],

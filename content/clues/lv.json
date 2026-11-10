@@ -1,47 +1,733 @@
 {
   "country": "LV",
   "name": "Latvia",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/latvia",
+  "updatedAt": "2026-04-10T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Latvia"
+    },
+    {
+      "title": "Regional and municipality-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "lv-lm-67",
+      "id": "lv-ZHtQ",
       "step": 0,
-      "order": 0,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
+      "order": 1,
+      "family": "plate",
+      "title": "Plate: Latvian licence plates are long and white",
       "text": [
-        "Half-circle/flat curved shape bollards with a rectangular reflector on the front and two circular reflectors on the back are common. The reflectors can be white or orange, and sometimes these bollards have numbers on them.",
-        "Estonian bollards might look similar, but they have a rounded shape and will never have numbers on them."
+        "Latvian **licence plates** are long and white, with the standard blue European strip on the left."
       ],
       "tags": [],
       "images": [
         {
-          "id": "ecf4ad6a4a72",
-          "src": "https://learnablemeta.com/images/1/dc0gvNIKVbMEQc4ZoJQOVKwY75cPq8dojJ1F.avif"
-        },
-        {
-          "id": "41c12686c0cd",
-          "src": "https://learnablemeta.com/images/1/cICSrBKIcnMjNHLLrnKxrAhIiyBjp74yGoFV.avif"
+          "id": "4a8cba736116",
+          "src": "https://www.plonkit.net/images/latvia/Latvia_License_Plate.png",
+          "path": "lv/4a8cba736116.webp",
+          "width": 600,
+          "height": 263
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-uPlz",
+      "step": 0,
+      "order": 2,
+      "family": "bollard",
+      "title": "Bollard: Latvian bollards have a thin",
+      "text": [
+        "Latvian bollards have a **thin, slightly curved shape**.",
+        "They have a rectangular reflector on the front, and two circular reflectors on the back. The reflectors can be white or orange. The black strip is slightly angled. Bollards often have numbers below the front reflector.",
+        "NOTE: Estonian and Lithuanian bollards look different.",
+        "!![This infographic](/images/latvia/nordics_bollards.png) shows the main similarities and differences between the bollards of the Baltic and Nordic countries."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "acc4f468a577",
+          "src": "https://www.plonkit.net/images/latvia/Bollard.png",
+          "path": "lv/acc4f468a577.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "ecf4ad6a4a72",
+          "src": "https://learnablemeta.com/images/1/dc0gvNIKVbMEQc4ZoJQOVKwY75cPq8dojJ1F.avif",
+          "path": "lv/ecf4ad6a4a72.webp",
+          "width": 1000,
+          "height": 570
+        },
+        {
+          "id": "41c12686c0cd",
+          "src": "https://learnablemeta.com/images/1/cICSrBKIcnMjNHLLrnKxrAhIiyBjp74yGoFV.avif",
+          "path": "lv/41c12686c0cd.webp",
+          "width": 1000,
+          "height": 555
+        },
+        {
+          "id": "31bdfc5d8f09",
+          "src": "https://learnablemeta.com/images/186/rInIvvqueYlwr3tmPJdqXU1vt0lVMGmcRxLH.avif",
+          "path": "lv/31bdfc5d8f09.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "c055283a5ee0",
+          "src": "https://learnablemeta.com/images/768/sGHi4IHfXfm7p1BKo2AEonrSo6FOVQjOKeWA.avif",
+          "path": "lv/c055283a5ee0.webp",
+          "width": 1000,
+          "height": 561
+        },
+        {
+          "id": "84e84f89f9da",
+          "src": "https://learnablemeta.com/images/739/MBJW80ESckC3Y3IOOfgG8TbCdia7jebPkGwv.avif",
+          "path": "lv/84e84f89f9da.webp",
+          "width": 1000,
+          "height": 570
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-Ligx",
+      "step": 0,
+      "order": 3,
+      "family": "pole",
+      "title": "Pole: Latvian poles have distinctive poletops",
+      "text": [
+        "Latvian poles have distinctive poletops, with **hook-shaped insulators**, that are arranged in an alternating manner: left-right-left (or vice versa).",
+        "NOTE: These poletops are much more rare in the other two Baltic countries. They can however appear in some other European countries."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "886d17f7e47c",
+          "src": "https://www.plonkit.net/images/latvia/Poletop.png",
+          "path": "lv/886d17f7e47c.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "99a30b14f6a7",
+          "src": "https://learnablemeta.com/images/186/LJdmDLoKKABqBFWIFAX20Cqh5KDpcPqglGhr.avif",
+          "path": "lv/99a30b14f6a7.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "e1af939ceb39",
+          "src": "https://learnablemeta.com/images/768/k3bo6hvoK29Vwxrp6LoylCA47dpIEOSwG8j1.avif",
+          "path": "lv/e1af939ceb39.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-xypN",
+      "step": 0,
+      "order": 4,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Latvia uses white chevrons with red arrows",
+      "text": [
+        "Latvia uses white chevrons with red arrows.",
+        "NOTE: Many other European countries, including Lithuania and Poland, use the same chevrons.",
+        "!!However, Estonia, Russia and Ukraine use chevrons with the opposite colour scheme: red with white arrows."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c052e80bfa17",
+          "src": "https://www.plonkit.net/images/latvia/Chevron.png",
+          "path": "lv/c052e80bfa17.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "c428e83f0ad1",
+          "src": "https://learnablemeta.com/images/768/Dk4baIe93EPciXSUHF6EcW0pR7DlnggpAptr.avif",
+          "path": "lv/c428e83f0ad1.webp",
+          "width": 1000,
+          "height": 562
+        },
+        {
+          "id": "56da2945fc66",
+          "src": "https://learnablemeta.com/images/914/LjkhNxNXQfIIYHkUrSF8pr8OVYxo8LVwyynt.avif",
+          "path": "lv/56da2945fc66.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LT",
+        "PL",
+        "RU",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-CK38",
+      "step": 0,
+      "order": 5,
+      "family": "other",
+      "title": "All Baltic countries use the same blue kilometre marker",
+      "text": [
+        "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
+        "In Latvia, the marker will be **parallel** to the road. It only has a number on one side.",
+        "For a quick overview of all three Baltic countries, see [this infographic](/images/latvia/baltics_kmmarkerinfographic.png)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "52ed097ab809",
+          "src": "https://www.plonkit.net/images/latvia/KM_sign.png",
+          "path": "lv/52ed097ab809.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-15Re",
+      "step": 0,
+      "order": 6,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Each Baltic country has a slightly different border for its…",
+      "text": [
+        "Each Baltic country has a slightly different border for its warning and speed signs.",
+        "Latvian signs have a **thick** red border, with a **thin white outline** around it."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "2edb855bdc33",
+          "src": "https://www.plonkit.net/images/latvia/Latvian_Signs.png",
+          "path": "lv/2edb855bdc33.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "dd84e02c4c74",
+          "src": "https://learnablemeta.com/images/186/dYkMVc5ZhfjIhRfLTXujhF4TblouKqzmt5lI.avif",
+          "path": "lv/dd84e02c4c74.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "59898fafbdb6",
+          "src": "https://learnablemeta.com/images/768/XIQjyLzLbOp43ZKZnwy9JFeNjc7e2oP81lgI.avif",
+          "path": "lv/59898fafbdb6.webp",
+          "width": 1000,
+          "height": 559
+        },
+        {
+          "id": "fb8e758faeca",
+          "src": "https://learnablemeta.com/images/768/KdJqAHKdlytVmeIXCxDxgGi7Zpmn86XjmVLx.avif",
+          "path": "lv/fb8e758faeca.webp",
+          "width": 1000,
+          "height": 983
+        },
+        {
+          "id": "ef59d205e2dd",
+          "src": "https://learnablemeta.com/images/851/alMt6Rle7653jyG6DOfX4XlQihCvtOHtQSFU.avif",
+          "path": "lv/ef59d205e2dd.webp",
+          "width": 1000,
+          "height": 983
+        },
+        {
+          "id": "ebe0b111a17e",
+          "src": "https://learnablemeta.com/images/853/k54KUYIxN7w10joFiPoemBGBdr4EmmFazi5K.avif",
+          "path": "lv/ebe0b111a17e.webp",
+          "width": 1000,
+          "height": 983
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-xps4",
+      "step": 0,
+      "order": 7,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Latvian pedestrian signs have five stripes",
+      "text": [
+        "Latvian pedestrian signs have **five stripes**, which is unique within the Baltics. Uniquely, the pedestrian has noticeably **long legs** compared to pedestrian signs in other European countries.",
+        "The other two Baltic countries have three stripes on their pedestrian signs."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3ad0c259d477",
+          "src": "https://www.plonkit.net/images/latvia/Pedestrian_sign.png",
+          "path": "lv/3ad0c259d477.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "836eae4df01a",
+          "src": "https://learnablemeta.com/images/186/OmrD9TUaZUoyvcNhdFJU2s6MJ1Snr5zP2hFJ.avif",
+          "path": "lv/836eae4df01a.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "c595c164a560",
+          "src": "https://learnablemeta.com/images/186/gzJGfwCqwTLGGNsNWNCIJk7SHpvTjOiJZfFa.avif",
+          "path": "lv/c595c164a560.webp",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-RplU",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "stop",
+      "title": "Stop sign: Latvian bus stop signs have this design",
+      "text": [
+        "Latvian bus stop signs have this design.",
+        "Most importantly, the bus has **five windows**. Within the Baltics, this is unique to Latvia. The other two Baltic countries have four windows."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b3686bd5c77e",
+          "src": "https://www.plonkit.net/images/latvia/Bus_stop_sign.png",
+          "path": "lv/b3686bd5c77e.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "4f5a40851c82",
+          "src": "https://learnablemeta.com/images/497/8EASWidq8igmiWVk2NeNnjtywYSnBnSqX3wp.avif",
+          "path": "lv/4f5a40851c82.webp",
+          "width": 1000,
+          "height": 599
+        },
+        {
+          "id": "11d6deefe856",
+          "src": "https://learnablemeta.com/images/768/vUiysEGn8W2y5ZqlztFLaO8AGaBuyOmDgBiQ.avif",
+          "path": "lv/11d6deefe856.webp",
+          "width": 1000,
+          "height": 561
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-T9gT",
+      "step": 0,
+      "order": 9,
+      "family": "guardrail",
+      "title": "Guardrail: Latvia has normal A-type guardrails with white or red…",
+      "text": [
+        "Latvia has normal A-type guardrails with **white or red reflectors**.",
+        "NOTE: Estonia has no reflectors. Lithuania has orange reflectors. For a good overview of European guardrails, see [this infographic](/images/latvia/europeguardrail.png)."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "7e68987b9ac8",
+          "src": "https://www.plonkit.net/images/latvia/Guardrail.png",
+          "path": "lv/7e68987b9ac8.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "5721bb7da3a3",
+          "src": "https://learnablemeta.com/images/186/nm0Qh3apSPaZPkkG3DPYbYerlCECLWzs8lJx.avif",
+          "path": "lv/5721bb7da3a3.webp",
+          "width": 1000,
+          "height": 563
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-q1yp",
+      "step": 0,
+      "order": 10,
+      "family": "language",
+      "title": "Language: Latvian belongs to the Baltic languages",
+      "text": [
+        "**Latvian** belongs to the Baltic languages. The other major member of this branch is Lithuanian, to which it is closely related.",
+        "Within the Baltic languages, the following letters are unique to Latvian:",
+        "- Vowels with a macron (horizontal stripe): Ā Ē Ī.",
+        "- Consonants with a small hook: Ģ Ķ Ļ Ņ.",
+        "NOTE: Estonian is not a member of the Baltic languages(despite the name), and therefore looks significantly different."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b56743621134",
+          "src": "https://www.plonkit.net/images/latvia/Latvian_language.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-pjGP",
+      "step": 0,
+      "order": 11,
+      "family": "other",
+      "title": "The Latvian word for street is iela",
+      "text": [
+        "The Latvian word for street is **iela**. This word is unique to Latvian.",
+        "Very rarely, you might see ‘gatve’ in Riga (abbreviated as gat.). This word is also the standard word for street in Lithuania (usually abbreviated as g.)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e3995367f6c8",
+          "src": "https://www.plonkit.net/images/latvia/Iela.png",
+          "path": "lv/e3995367f6c8.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-94iJ",
+      "step": 0,
+      "order": 12,
+      "family": "architecture",
+      "title": "Architecture: Latvian house numbers are often shaped like tall rectangles…",
+      "text": [
+        "Latvian house numbers are often shaped like **tall rectangles** and can be found in [several colours](https://www.google.com/maps/@56.6568307,23.7457261,3a,15y,38.74h,91.25t/data=!3m6!1e1!3m4!1sP7bXCAylAr5ghFSDKp9l1g!2e0!7i16384!8i8192?entry=ttu).",
+        "NOTE: This is not common in Estonia or Lithuania."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "89d36f9b637f",
+          "src": "https://www.plonkit.net/images/latvia/lv_housenumber.png",
+          "location": {
+            "pano": "mlkqmcNiQQjg3uWHytAaYg",
+            "lat": 57.177445,
+            "lng": 26.7603386,
+            "heading": 165.76,
+            "pitch": -1.14,
+            "fov": 15,
+            "source": "plonkit"
+          },
+          "path": "lv/89d36f9b637f.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "mlkqmcNiQQjg3uWHytAaYg",
+          "lat": 57.177445,
+          "lng": 26.7603386,
+          "heading": 165.76,
+          "pitch": -1.14,
+          "fov": 15,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "EE",
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-k1bL",
+      "step": 0,
+      "order": 13,
+      "family": "architecture",
+      "title": "Architecture: Latvian architecture generally consists of a combination of…",
+      "text": [
+        "Latvian architecture generally consists of a combination of **wood** and **white brick**, typically with somewhat steep **corrugated metal roofs**. Slightly modern houses with **pastel coloured stone walls** and houses with a combination of wood with another material, particularly white brick, are also common."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "dd8e1ac2d739",
+          "src": "https://www.plonkit.net/images/latvia/Latvia_architecture.png",
+          "path": "lv/dd8e1ac2d739.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "177b087307ae",
+          "src": "https://learnablemeta.com/images/1072/n3h4dfOdI3Z6bzc6pEt35CHYZD3fELXKgnV0.avif",
+          "path": "lv/177b087307ae.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-6Wew",
+      "step": 0,
+      "order": 14,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Latvian directional signs are blue with white text",
+      "text": [
+        "Latvian directional signs are blue with white text.",
+        "NOTE: The arrow on Latvian signs is more stylized than in [Estonia](https://goo.gl/maps/eW7AJWdVriTfsprx7) and [Lithuania](https://goo.gl/maps/17A5xxGivFmbs4ae8), where the back part of the arrowhead is vertical."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7acdecd8337a",
+          "src": "https://www.plonkit.net/images/latvia/lv_directionalsign.png",
+          "path": "lv/7acdecd8337a.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "55d421f4f553",
+          "src": "https://learnablemeta.com/images/4588/1777483736621-p27.avif",
+          "path": "lv/55d421f4f553.webp",
+          "width": 800,
+          "height": 331
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-BB6n",
+      "step": 0,
+      "order": 15,
+      "family": "car",
+      "title": "Google car: A red generation 4 Google car can be found in Latvia",
+      "text": [
+        "A red generation 4 Google car can be found in Latvia.",
+        "NOTE: It can also be found in a few other European countries, including Lithuania, but not Estonia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e2306c29ef1d",
+          "src": "https://www.plonkit.net/images/latvia/Screenshot%20(607).png",
+          "path": "lv/e2306c29ef1d.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-eZ93",
+      "step": 0,
+      "order": 16,
+      "family": "car",
+      "title": "Google car: A black generation 4 Google car can also be found in Latvia",
+      "text": [
+        "A black generation 4 Google car can also be found in Latvia.",
+        "NOTE: It can also be found in many other European countries, including Lithuania, but not Estonia."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "20ed232f40f0",
+          "src": "https://www.plonkit.net/images/latvia/Screenshot%20(610).png",
+          "path": "lv/20ed232f40f0.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "LT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-PA6J",
+      "step": 1,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: The area south of Jelgava is characterised by a wide open…",
+      "text": [
+        "The area south of Jelgava is characterised by a **wide open landscape** with considerably less forest and more fields than most of the rest of Latvia."
+      ],
+      "region": "Jelgava",
+      "tags": [],
+      "images": [
+        {
+          "id": "e30ff90e3c72",
+          "src": "https://www.plonkit.net/images/latvia/South_of_Jelgava.png",
+          "path": "lv/e30ff90e3c72.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "lv-b4Ic",
+      "step": 2,
+      "order": 0,
+      "family": "architecture",
+      "title": "Architecture: The historic downtown area of Riga is characterised by…",
+      "text": [
+        "The historic downtown area of Riga is characterised by majestic [**art nouveau**](https://en.wikipedia.org/wiki/Art_Nouveau)** architecture**, that is in places reminiscent of the architecture in Vienna. This is unique within Latvia, and even within the entire Baltics."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8ae6859fe052",
+          "src": "https://www.plonkit.net/images/latvia/Downtown_Riga.png",
+          "path": "lv/8ae6859fe052.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/latvia",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "lv-lm-69",
-      "step": 0,
-      "order": 1,
+      "step": 3,
+      "order": 0,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Street name ending - iela",
@@ -52,7 +738,10 @@
       "images": [
         {
           "id": "b74929837719",
-          "src": "https://learnablemeta.com/images/waBOLydq3NjEjEJ3gQuNupFGhbaSkR7142iV.avif"
+          "src": "https://learnablemeta.com/images/waBOLydq3NjEjEJ3gQuNupFGhbaSkR7142iV.avif",
+          "path": "lv/b74929837719.webp",
+          "width": 1000,
+          "height": 407
         }
       ],
       "locations": [],
@@ -65,8 +754,8 @@
     },
     {
       "id": "lv-lm-296",
-      "step": 0,
-      "order": 2,
+      "step": 3,
+      "order": 1,
       "family": "pole",
       "title": "Pole: Hook pole",
       "text": [
@@ -76,7 +765,10 @@
       "images": [
         {
           "id": "d8102f058a28",
-          "src": "https://learnablemeta.com/images/0EzPeAN0pULlPSJn9UbeEqH2xab1rt351m7S.avif"
+          "src": "https://learnablemeta.com/images/0EzPeAN0pULlPSJn9UbeEqH2xab1rt351m7S.avif",
+          "path": "lv/d8102f058a28.webp",
+          "width": 1000,
+          "height": 787
         }
       ],
       "locations": [],
@@ -89,8 +781,8 @@
     },
     {
       "id": "lv-lm-2996",
-      "step": 0,
-      "order": 3,
+      "step": 3,
+      "order": 2,
       "family": "other",
       "title": "Long Leg Latvia",
       "text": [
@@ -100,7 +792,10 @@
       "images": [
         {
           "id": "8352d5b2f4e9",
-          "src": "https://learnablemeta.com/images/90/UnFJL6BXECI7oqTTNePPTt3Te55CBCYFPF1K.avif"
+          "src": "https://learnablemeta.com/images/90/UnFJL6BXECI7oqTTNePPTt3Te55CBCYFPF1K.avif",
+          "path": "lv/8352d5b2f4e9.webp",
+          "width": 1000,
+          "height": 998
         }
       ],
       "locations": [],
@@ -116,60 +811,9 @@
       }
     },
     {
-      "id": "lv-lm-8357",
-      "step": 0,
-      "order": 4,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Latvian bollards have a **thin**, **slightly curved** shape.",
-        "They have a rectangular reflector on the front, and two circular reflectors on the back. The reflectors can be white or orange. The black strip is slightly angled. Bollards often have numbers below the front reflector.",
-        "**NOTE:** Estonian and Lithuanian bollards look different."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "31bdfc5d8f09",
-          "src": "https://learnablemeta.com/images/186/rInIvvqueYlwr3tmPJdqXU1vt0lVMGmcRxLH.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-8358",
-      "step": 0,
-      "order": 5,
-      "family": "pole",
-      "title": "Pole: Pole Top",
-      "text": [
-        "Latvian poles have distinctive poletops, with **hook-shaped insulators**, that are arranged in an **alternating** manner: left-right-left (or vice versa).",
-        "**NOTE:** These poletops are much more rare in the other two Baltic countries. They can however appear in some other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "99a30b14f6a7",
-          "src": "https://learnablemeta.com/images/186/LJdmDLoKKABqBFWIFAX20Cqh5KDpcPqglGhr.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lv-lm-8359",
-      "step": 0,
-      "order": 6,
+      "step": 3,
+      "order": 3,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: Bus Stop",
@@ -181,84 +825,10 @@
       "images": [
         {
           "id": "7fe63f9b269d",
-          "src": "https://learnablemeta.com/images/186/JvdBsopCm0EbWjw9hPn39iWpvApj6B7Sgu83.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-8360",
-      "step": 0,
-      "order": 7,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Sign Border",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Latvian signs have a **thick red border**, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dd84e02c4c74",
-          "src": "https://learnablemeta.com/images/186/dYkMVc5ZhfjIhRfLTXujhF4TblouKqzmt5lI.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-8361",
-      "step": 0,
-      "order": 8,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Signs",
-      "text": [
-        "Latvian pedestrian signs have **five stripes**, which is unique within the Baltics. Uniquely, the pedestrian has noticeably long legs compared to pedestrian signs in other European countries.",
-        "The other two Baltic countries have three stripes on their pedestrian signs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "836eae4df01a",
-          "src": "https://learnablemeta.com/images/186/OmrD9TUaZUoyvcNhdFJU2s6MJ1Snr5zP2hFJ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-8362",
-      "step": 0,
-      "order": 9,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street Name",
-      "text": [
-        "The Latvian word for street is **iela**. This word is unique to Latvian."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c595c164a560",
-          "src": "https://learnablemeta.com/images/186/gzJGfwCqwTLGGNsNWNCIJk7SHpvTjOiJZfFa.avif"
+          "src": "https://learnablemeta.com/images/186/JvdBsopCm0EbWjw9hPn39iWpvApj6B7Sgu83.avif",
+          "path": "lv/7fe63f9b269d.webp",
+          "width": 1000,
+          "height": 563
         }
       ],
       "locations": [],
@@ -271,8 +841,8 @@
     },
     {
       "id": "lv-lm-8364",
-      "step": 0,
-      "order": 10,
+      "step": 3,
+      "order": 4,
       "family": "other",
       "title": "KM Marker",
       "text": [
@@ -283,7 +853,10 @@
       "images": [
         {
           "id": "7b89274338aa",
-          "src": "https://learnablemeta.com/images/186/6N5q2g4hYNsFpDTcE99ltXkoC2M3n3gtu51l.avif"
+          "src": "https://learnablemeta.com/images/186/6N5q2g4hYNsFpDTcE99ltXkoC2M3n3gtu51l.avif",
+          "path": "lv/7b89274338aa.webp",
+          "width": 1000,
+          "height": 563
         }
       ],
       "locations": [],
@@ -291,67 +864,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-8372",
-      "step": 0,
-      "order": 11,
-      "family": "guardrail",
-      "title": "Guardrail: Guardrail",
-      "text": [
-        "Latvia has normal A-type guardrails with **white or red reflectors**.",
-        "NOTE: Estonia has no reflectors. Lithuania has orange reflectors. For a good overview of European guardrails, see this infographic."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5721bb7da3a3",
-          "src": "https://learnablemeta.com/images/186/nm0Qh3apSPaZPkkG3DPYbYerlCECLWzs8lJx.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-9741",
-      "step": 0,
-      "order": 12,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Latvia bus stop sign",
-      "text": [
-        "Latvian bus stop signs have this design.",
-        "Most importantly, the bus has five windows. Within the Baltics, this is unique to Latvia. The other two Baltic countries have four windows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4f5a40851c82",
-          "src": "https://learnablemeta.com/images/497/8EASWidq8igmiWVk2NeNnjtywYSnBnSqX3wp.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67b8db19c812bf41d49b730e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lv-lm-23778",
-      "step": 0,
-      "order": 13,
+      "step": 3,
+      "order": 5,
       "family": "other",
       "title": "Iela",
       "text": [
@@ -363,7 +882,10 @@
       "images": [
         {
           "id": "0eb7546165dd",
-          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif"
+          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif",
+          "path": "lv/0eb7546165dd.webp",
+          "width": 1000,
+          "height": 562
         }
       ],
       "locations": [],
@@ -375,44 +897,9 @@
       }
     },
     {
-      "id": "lv-lm-23829",
-      "step": 0,
-      "order": 14,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Latvia uses white chevrons with red arrows.",
-        "**--- NOTE:**",
-        "Many other European countries, including Lithuania and Poland, use the same chevrons.",
-        "**However, Estonia, Russia and Ukraine use chevrons with the opposite colour scheme:**",
-        "Red with white arrows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c428e83f0ad1",
-          "src": "https://learnablemeta.com/images/768/Dk4baIe93EPciXSUHF6EcW0pR7DlnggpAptr.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LT",
-        "PL",
-        "RU",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lv-lm-23835",
-      "step": 0,
-      "order": 15,
+      "step": 3,
+      "order": 6,
       "family": "guardrail",
       "title": "Guardrail: White & Red Reflectors",
       "text": [
@@ -425,7 +912,10 @@
       "images": [
         {
           "id": "2a0ef4ce11f0",
-          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif"
+          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif",
+          "path": "lv/2a0ef4ce11f0.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -440,66 +930,9 @@
       }
     },
     {
-      "id": "lv-lm-23841",
-      "step": 0,
-      "order": 16,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Bus Stop Sign",
-      "text": [
-        "The bus has five windows.",
-        "Within the Baltics, this is unique to Latvia.",
-        "The other two Baltic countries have four windows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11d6deefe856",
-          "src": "https://learnablemeta.com/images/768/vUiysEGn8W2y5ZqlztFLaO8AGaBuyOmDgBiQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-23860",
-      "step": 0,
-      "order": 17,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thick Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Latvian signs have a thick red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59898fafbdb6",
-          "src": "https://learnablemeta.com/images/768/XIQjyLzLbOp43ZKZnwy9JFeNjc7e2oP81lgI.avif"
-        },
-        {
-          "id": "fb8e758faeca",
-          "src": "https://learnablemeta.com/images/768/KdJqAHKdlytVmeIXCxDxgGi7Zpmn86XjmVLx.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lv-lm-23904",
-      "step": 0,
-      "order": 18,
+      "step": 3,
+      "order": 7,
       "family": "other",
       "title": "Kilometre Markers",
       "text": [
@@ -512,11 +945,17 @@
       "images": [
         {
           "id": "09aa445c70fc",
-          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif"
+          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif",
+          "path": "lv/09aa445c70fc.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "0125b3d28c44",
-          "src": "https://learnablemeta.com/images/768/gTZ5Sz7qoUuxC66BvPwk1wAcBoLnsudcqqUr.avif"
+          "src": "https://learnablemeta.com/images/768/gTZ5Sz7qoUuxC66BvPwk1wAcBoLnsudcqqUr.avif",
+          "path": "lv/0125b3d28c44.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -524,183 +963,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-23905",
-      "step": 0,
-      "order": 19,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Latvian bollards have a thin, slightly curved shape.",
-        "They have a rectangular reflector on the front, and two circular reflectors on the back.",
-        "The reflectors can be white or orange.",
-        "The black strip is slightly angled.",
-        "Bollards often have numbers below the front reflector."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c055283a5ee0",
-          "src": "https://learnablemeta.com/images/768/sGHi4IHfXfm7p1BKo2AEonrSo6FOVQjOKeWA.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-23920",
-      "step": 0,
-      "order": 20,
-      "family": "pole",
-      "title": "Pole: Hook Poles",
-      "text": [
-        "Latvian poles have distinctive poletops, with hook-shaped insulators, that are arranged in an alternating manner: left-right-left (or vice versa).",
-        "**--- NOTE:**",
-        "These poletops are much more rare in the other two Baltic countries.",
-        "They can however appear in some other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e1af939ceb39",
-          "src": "https://learnablemeta.com/images/768/k3bo6hvoK29Vwxrp6LoylCA47dpIEOSwG8j1.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-25641",
-      "step": 0,
-      "order": 21,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Half-circle/flat curved shape bollards with a rectangular reflector on the front and two circular reflectors on the back are common. The reflectors can be white or orange, and sometimes these bollards have numbers on them.",
-        "Estonian bollards might look similar, but they have a rounded shape and will never have numbers on them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "84e84f89f9da",
-          "src": "https://learnablemeta.com/images/739/MBJW80ESckC3Y3IOOfgG8TbCdia7jebPkGwv.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-50396",
-      "step": 0,
-      "order": 22,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Latvian bollards have a thin, slightly curved shape.",
-        "They have a rectangular reflector on the front, and two circular reflectors on the back.",
-        "The reflectors can be white or orange.",
-        "The black strip is slightly angled.",
-        "Bollards often have numbers below the front reflector."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c055283a5ee0",
-          "src": "https://learnablemeta.com/images/768/sGHi4IHfXfm7p1BKo2AEonrSo6FOVQjOKeWA.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-50397",
-      "step": 0,
-      "order": 23,
-      "family": "pole",
-      "title": "Pole: Hook Poles",
-      "text": [
-        "Latvian poles have distinctive poletops, with hook-shaped insulators, that are arranged in an alternating manner: left-right-left (or vice versa).",
-        "**--- NOTE:**",
-        "These poletops are much more rare in the other two Baltic countries.",
-        "They can however appear in some other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e1af939ceb39",
-          "src": "https://learnablemeta.com/images/768/k3bo6hvoK29Vwxrp6LoylCA47dpIEOSwG8j1.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-50399",
-      "step": 0,
-      "order": 24,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Latvia uses white chevrons with red arrows.",
-        "**--- NOTE:**",
-        "Many other European countries, including Lithuania and Poland, use the same chevrons.",
-        "**However, Estonia, Russia and Ukraine use chevrons with the opposite colour scheme:**",
-        "Red with white arrows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c428e83f0ad1",
-          "src": "https://learnablemeta.com/images/768/Dk4baIe93EPciXSUHF6EcW0pR7DlnggpAptr.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LT",
-        "PL",
-        "RU",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lv-lm-50400",
-      "step": 0,
-      "order": 25,
+      "step": 3,
+      "order": 8,
       "family": "guardrail",
       "title": "Guardrail: White & Red Reflectors",
       "text": [
@@ -713,7 +982,10 @@
       "images": [
         {
           "id": "2a0ef4ce11f0",
-          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif"
+          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif",
+          "path": "lv/2a0ef4ce11f0.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -729,8 +1001,8 @@
     },
     {
       "id": "lv-lm-50401",
-      "step": 0,
-      "order": 26,
+      "step": 3,
+      "order": 9,
       "family": "other",
       "title": "Kilometre Markers",
       "text": [
@@ -743,11 +1015,17 @@
       "images": [
         {
           "id": "09aa445c70fc",
-          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif"
+          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif",
+          "path": "lv/09aa445c70fc.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "834392dd020c",
-          "src": "https://learnablemeta.com/images/851/CfFetn0XF96kiilJBgbfvFipuJmTjTYRpF8l.avif"
+          "src": "https://learnablemeta.com/images/851/CfFetn0XF96kiilJBgbfvFipuJmTjTYRpF8l.avif",
+          "path": "lv/834392dd020c.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -760,8 +1038,8 @@
     },
     {
       "id": "lv-lm-50402",
-      "step": 0,
-      "order": 27,
+      "step": 3,
+      "order": 10,
       "family": "other",
       "title": "Iela",
       "text": [
@@ -773,64 +1051,10 @@
       "images": [
         {
           "id": "0eb7546165dd",
-          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-50403",
-      "step": 0,
-      "order": 28,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Bus Stop Sign",
-      "text": [
-        "The bus has five windows.",
-        "Within the Baltics, this is unique to Latvia.",
-        "The other two Baltic countries have four windows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11d6deefe856",
-          "src": "https://learnablemeta.com/images/768/vUiysEGn8W2y5ZqlztFLaO8AGaBuyOmDgBiQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-50410",
-      "step": 0,
-      "order": 29,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thick Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Latvian signs have a thick red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59898fafbdb6",
-          "src": "https://learnablemeta.com/images/768/XIQjyLzLbOp43ZKZnwy9JFeNjc7e2oP81lgI.avif"
-        },
-        {
-          "id": "ef59d205e2dd",
-          "src": "https://learnablemeta.com/images/851/alMt6Rle7653jyG6DOfX4XlQihCvtOHtQSFU.avif"
+          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif",
+          "path": "lv/0eb7546165dd.webp",
+          "width": 1000,
+          "height": 562
         }
       ],
       "locations": [],
@@ -843,8 +1067,8 @@
     },
     {
       "id": "lv-lm-51084",
-      "step": 0,
-      "order": 30,
+      "step": 3,
+      "order": 11,
       "family": "other",
       "title": "Iela",
       "text": [
@@ -856,101 +1080,14 @@
       "images": [
         {
           "id": "0eb7546165dd",
-          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif"
+          "src": "https://learnablemeta.com/images/768/QIetgwmQAcRpz0N6gLk8VeLjERz5OLUK7qQP.avif",
+          "path": "lv/0eb7546165dd.webp",
+          "width": 1000,
+          "height": 562
         }
       ],
       "locations": [],
       "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-51144",
-      "step": 0,
-      "order": 31,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Latvian bollards have a thin, slightly curved shape.",
-        "They have a rectangular reflector on the front, and two circular reflectors on the back.",
-        "The reflectors can be white or orange.",
-        "The black strip is slightly angled.",
-        "Bollards often have numbers below the front reflector."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c055283a5ee0",
-          "src": "https://learnablemeta.com/images/768/sGHi4IHfXfm7p1BKo2AEonrSo6FOVQjOKeWA.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-51145",
-      "step": 0,
-      "order": 32,
-      "family": "pole",
-      "title": "Pole: Hook Poles",
-      "text": [
-        "Latvian poles have distinctive poletops, with hook-shaped insulators, that are arranged in an alternating manner: left-right-left (or vice versa).",
-        "**--- NOTE:**",
-        "These poletops are much more rare in the other two Baltic countries.",
-        "They can however appear in some other European countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e1af939ceb39",
-          "src": "https://learnablemeta.com/images/768/k3bo6hvoK29Vwxrp6LoylCA47dpIEOSwG8j1.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-51147",
-      "step": 0,
-      "order": 33,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Latvia uses white chevrons with red arrows.",
-        "**--- NOTE:**",
-        "Many other European countries, including Lithuania and Poland, use the same chevrons.",
-        "**However, Estonia, Russia and Ukraine use chevrons with the opposite colour scheme:**",
-        "Red with white arrows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c428e83f0ad1",
-          "src": "https://learnablemeta.com/images/768/Dk4baIe93EPciXSUHF6EcW0pR7DlnggpAptr.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LT",
-        "PL",
-        "RU",
-        "UA"
-      ],
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
@@ -959,8 +1096,8 @@
     },
     {
       "id": "lv-lm-51148",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 12,
       "family": "guardrail",
       "title": "Guardrail: White & Red Reflectors",
       "text": [
@@ -973,7 +1110,10 @@
       "images": [
         {
           "id": "2a0ef4ce11f0",
-          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif"
+          "src": "https://learnablemeta.com/images/768/MyPKnaaprUJwQSUyHSfa5tkEOXCnttC50902.avif",
+          "path": "lv/2a0ef4ce11f0.webp",
+          "width": 1000,
+          "height": 560
         }
       ],
       "locations": [],
@@ -989,8 +1129,8 @@
     },
     {
       "id": "lv-lm-51149",
-      "step": 0,
-      "order": 35,
+      "step": 3,
+      "order": 13,
       "family": "other",
       "title": "Kilometre Markers",
       "text": [
@@ -1003,11 +1143,17 @@
       "images": [
         {
           "id": "09aa445c70fc",
-          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif"
+          "src": "https://learnablemeta.com/images/768/iPMl6Cd4a2DbE2XnPEth0BX2Zh3kWxneY0gN.avif",
+          "path": "lv/09aa445c70fc.webp",
+          "width": 1000,
+          "height": 560
         },
         {
           "id": "c9334b89925c",
-          "src": "https://learnablemeta.com/images/853/tZgGRN2PqHOXBdySXyEjMmxJ04nNZ1OyJiTk.avif"
+          "src": "https://learnablemeta.com/images/853/tZgGRN2PqHOXBdySXyEjMmxJ04nNZ1OyJiTk.avif",
+          "path": "lv/c9334b89925c.webp",
+          "width": 1000,
+          "height": 655
         }
       ],
       "locations": [],
@@ -1015,125 +1161,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-51150",
-      "step": 0,
-      "order": 36,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Bus Stop Sign",
-      "text": [
-        "The bus has five windows.",
-        "Within the Baltics, this is unique to Latvia.",
-        "The other two Baltic countries have four windows."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "11d6deefe856",
-          "src": "https://learnablemeta.com/images/768/vUiysEGn8W2y5ZqlztFLaO8AGaBuyOmDgBiQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-51157",
-      "step": 0,
-      "order": 37,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thick Red Border Signs",
-      "text": [
-        "Each Baltic country has a slightly different border for its warning and speed signs.",
-        "Latvian signs have a thick red border, with a thin white outline around it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "59898fafbdb6",
-          "src": "https://learnablemeta.com/images/768/XIQjyLzLbOp43ZKZnwy9JFeNjc7e2oP81lgI.avif"
-        },
-        {
-          "id": "ebe0b111a17e",
-          "src": "https://learnablemeta.com/images/853/k54KUYIxN7w10joFiPoemBGBdr4EmmFazi5K.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-66793",
-      "step": 0,
-      "order": 38,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Latvia uses white chevrons with red arrows.",
-        "**--- NOTE:**",
-        "Many other European countries, including Lithuania and Poland, use the same chevrons."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56da2945fc66",
-          "src": "https://learnablemeta.com/images/914/LjkhNxNXQfIIYHkUrSF8pr8OVYxo8LVwyynt.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LT",
-        "PL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lv-lm-104517",
-      "step": 0,
-      "order": 39,
-      "family": "architecture",
-      "title": "Architecture: White Bricks & Corrugated Roofs",
-      "text": [
-        "Latvian architecture generally consists of a combination of wood and white brick, typically with somewhat steep corrugated metal roofs.",
-        "Slightly modern houses with pastel coloured stone walls and houses with a combination of wood with another material, particularly white brick, are also common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "177b087307ae",
-          "src": "https://learnablemeta.com/images/1072/n3h4dfOdI3Z6bzc6pEt35CHYZD3fELXKgnV0.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "lv-lm-472837",
-      "step": 0,
-      "order": 40,
+      "step": 3,
+      "order": 14,
       "family": "pole",
       "title": "Pole: hook-shaped insulators",
       "text": [
@@ -1144,7 +1178,10 @@
       "images": [
         {
           "id": "a598e638600b",
-          "src": "https://learnablemeta.com/images/1955/1750241657952-vzH.avif"
+          "src": "https://learnablemeta.com/images/1955/1750241657952-vzH.avif",
+          "path": "lv/a598e638600b.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1157,8 +1194,8 @@
     },
     {
       "id": "lv-lm-515565",
-      "step": 0,
-      "order": 41,
+      "step": 3,
+      "order": 15,
       "family": "guardrail",
       "title": "Guardrail: A-Type with red or white reflectors",
       "text": [
@@ -1169,11 +1206,17 @@
       "images": [
         {
           "id": "6f21bd1f428b",
-          "src": "https://learnablemeta.com/images/3660/1755389202351-vLq.avif"
+          "src": "https://learnablemeta.com/images/3660/1755389202351-vLq.avif",
+          "path": "lv/6f21bd1f428b.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "b431bd4565b8",
-          "src": "https://learnablemeta.com/images/3660/1755389207520-lLH.avif"
+          "src": "https://learnablemeta.com/images/3660/1755389207520-lLH.avif",
+          "path": "lv/b431bd4565b8.webp",
+          "width": 800,
+          "height": 356
         }
       ],
       "locations": [],
@@ -1189,8 +1232,8 @@
     },
     {
       "id": "lv-lm-556772",
-      "step": 0,
-      "order": 42,
+      "step": 3,
+      "order": 16,
       "family": "other",
       "title": "Electricity marker",
       "text": [
@@ -1200,7 +1243,10 @@
       "images": [
         {
           "id": "efa5edd3c16e",
-          "src": "https://learnablemeta.com/images/1/1759646674102-1pR.avif"
+          "src": "https://learnablemeta.com/images/1/1759646674102-1pR.avif",
+          "path": "lv/efa5edd3c16e.webp",
+          "width": 757,
+          "height": 605
         }
       ],
       "locations": [],
@@ -1212,34 +1258,9 @@
       }
     },
     {
-      "id": "lv-lm-741986",
-      "step": 0,
-      "order": 43,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Riga street sign",
-      "text": [
-        "Riga street signs are dark blue or black with white text and a white frame and commonly end with iela."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "55d421f4f553",
-          "src": "https://learnablemeta.com/images/4588/1777483736621-p27.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "lv-lm-741987",
-      "step": 0,
-      "order": 44,
+      "step": 3,
+      "order": 17,
       "family": "other",
       "title": "Riga Transport",
       "text": [
@@ -1249,7 +1270,10 @@
       "images": [
         {
           "id": "b91ebf605d9e",
-          "src": "https://learnablemeta.com/images/4588/1777484385286-FLF.avif"
+          "src": "https://learnablemeta.com/images/4588/1777484385286-FLF.avif",
+          "path": "lv/b91ebf605d9e.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1262,8 +1286,8 @@
     },
     {
       "id": "lv-lm-783082",
-      "step": 0,
-      "order": 45,
+      "step": 3,
+      "order": 18,
       "family": "language",
       "title": "Language: Latvian",
       "text": [
@@ -1277,11 +1301,17 @@
       "images": [
         {
           "id": "3875f0f453d6",
-          "src": "https://learnablemeta.com/images/9388/1785589973154-sWW.avif"
+          "src": "https://learnablemeta.com/images/9388/1785589973154-sWW.avif",
+          "path": "lv/3875f0f453d6.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "cf9d7b9e7b9c",
-          "src": "https://learnablemeta.com/images/9388/1785589981943-0io.avif"
+          "src": "https://learnablemeta.com/images/9388/1785589981943-0io.avif",
+          "path": "lv/cf9d7b9e7b9c.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],

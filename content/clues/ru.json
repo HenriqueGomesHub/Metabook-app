@@ -1,29 +1,253 @@
 {
   "country": "RU",
   "name": "Russia",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/russia",
+  "updatedAt": "2026-08-08T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Russia"
+    },
+    {
+      "title": "Regional clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "ru-lm-59",
+      "id": "ru-B27i",
       "step": 0,
-      "order": 0,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Black sock sign post",
+      "order": 1,
+      "family": "plate",
+      "title": "Plate: Russian licence plates are fully white with black text",
       "text": [
-        "White signposts painted black at the bottom are very common in both Russia and Kazakhstan. However, Kazakhstan's entire coverage was done with a pickup truck, making it easy to rule out, indicating you're in Russia."
+        "Russian licence plates are **fully white** with black text.",
+        "NOTE: Most European counterparts will feature a blue strip on the left hand side."
       ],
-      "tags": [],
+      "tags": [
+        "license plates"
+      ],
       "images": [
+        {
+          "id": "58a309226594",
+          "src": "https://www.plonkit.net/images/russia/licenceplate.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-dbaI",
+      "step": 0,
+      "order": 2,
+      "family": "language",
+      "title": "Language: The Russian language uses the Cyrillic script",
+      "text": [
+        "The Russian language uses the **Cyrillic script**, and contains the special letters Ы, Э, Ё and Ъ.",
+        "Ё is also used in Mongolian and Ъ is used in Bulgarian.",
+        "NOTE: You may rarely come across Russian in both [Ukraine](https://www.google.com/maps/@46.7466337,33.3598742,3a,15y,252.53h,96.14t/data=!3m6!1e1!3m4!1snFUnRbez3yFUVjnKG9azVg!2e0!7i13312!8i6656?entry=ttu) and eastern [Estonia](https://www.google.com/maps/@59.3779623,28.1969594,3a,15y,61.93h,93.19t,1.18r/data=!3m7!1e1!3m5!1sLI0Eu3YxRqFjCr2pUN2tAw!2e0!5s20230901T000000!7i16384!8i8192?entry=ttu)."
+      ],
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "3c89a629c236",
+          "src": "https://www.plonkit.net/images/russia/cyrillic.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-aRud",
+      "step": 0,
+      "order": 3,
+      "family": "language",
+      "title": "Language: The Russian word for street is улица",
+      "text": [
+        "The Russian word for street is **улица** (ulitsa), sometimes abbreviated **ул.** (ul.).",
+        "NOTE: Bulgarian and most other Slavic languages also use улица / ulica. The Ukrainian word however is вулиця (vulytsya), abbreviated вул. (vul.)."
+      ],
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "549876786ec1",
+          "src": "https://www.plonkit.net/images/russia/ulitsa.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-cqfa",
+      "step": 0,
+      "order": 4,
+      "family": "language",
+      "title": "Language: The Russian word for city is город",
+      "text": [
+        "The Russian word for city is **город** (gorod), abbreviated **г.** (g.).",
+        "NOTE: The Ukrainian word is місто (misto), abbreviated м. (m.)."
+      ],
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "fa7e8c0ea56a",
+          "src": "https://www.plonkit.net/images/russia/gorod.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-zEsz",
+      "step": 0,
+      "order": 5,
+      "family": "bollard",
+      "title": "Bollard: Russia has three main types of bollards",
+      "text": [
+        "Russia has three main types of bollards: a very thin type being attached to a stick, one with a black top section and a red vertical reflector below and a German-style bollard."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "bcaa8632d544",
+          "src": "https://www.plonkit.net/images/russia/bollards.png"
+        },
+        {
+          "id": "46dc3eef3313",
+          "src": "https://learnablemeta.com/images/768/xBQsGGx5S40FzfNO9a9IfDVKsOECcUJpgMcE.avif"
+        },
+        {
+          "id": "9b4e8639a05f",
+          "src": "https://learnablemeta.com/images/739/L4T8Pwb3Pa1iio1MB56uYaMOdqjTGbqdGepR.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-h2Gm",
+      "step": 0,
+      "order": 6,
+      "family": "bollard",
+      "title": "Bollard: Near intersections in Russia you will commonly see a very…",
+      "text": [
+        "Near intersections in Russia you will commonly see a very **large number of bollards**."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "cde5ce760e4c",
+          "src": "https://www.plonkit.net/images/russia/bollardspam.png"
+        },
+        {
+          "id": "ce58d9f2bbf8",
+          "src": "https://learnablemeta.com/images/1/1754322893915-s4p.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-wbja",
+      "step": 0,
+      "order": 7,
+      "family": "bollard",
+      "title": "Bollard: Along with containing a large number of bollards",
+      "text": [
+        "Along with containing a large number of bollards, many intersections are **unusually wide** compared to other countries."
+      ],
+      "tags": [
+        "bollard",
+        "roadline"
+      ],
+      "images": [
+        {
+          "id": "5842946f1252",
+          "src": "https://www.plonkit.net/images/russia/bigintersections.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-bXD0",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Signposts in Russia often have black painted bottoms",
+      "text": [
+        "Signposts in Russia often have **black painted bottoms**.",
+        "NOTE: This is also common in Kazakhstan."
+      ],
+      "tags": [
+        "chevron/sign"
+      ],
+      "images": [
+        {
+          "id": "1536dce06620",
+          "src": "https://www.plonkit.net/images/russia/blacksocks.png"
+        },
         {
           "id": "6f41d279a57f",
           "src": "https://learnablemeta.com/images/vWjrvxAvCFPRfqdPZH2oER664J1c41jCtTMG.avif"
+        },
+        {
+          "id": "bfcec2c316a7",
+          "src": "https://learnablemeta.com/images/768/zc2HVTN61XbnrhpMiDZcaty218GKfcUYaCKc.avif"
         }
       ],
       "locations": [],
@@ -31,22 +255,1383 @@
         "KZ"
       ],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
-      "id": "ru-lm-340",
+      "id": "ru-PVJx",
       "step": 0,
-      "order": 1,
-      "family": "bollard",
-      "title": "Bollard: Eastern bollard",
+      "order": 9,
+      "family": "pole",
+      "title": "Pole: Russia mainly uses square concrete poles",
       "text": [
-        "This unique very thin type of bollard that is attached to a stick is almost exclusively found in eastern part of Russia (east of Omsk +/-). Russia has a lot more different designs of bollards that you can find anywhere(even in eastern part)"
+        "Russia mainly uses **square concrete poles**. ",
+        "NOTE: Square concrete poles can be seen in other post-Soviet countries, such as Ukraine, Lithuania, Estonia, Georgia, Kazakhstan, and Kyrgyzstan."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "4326b0a1b80e",
+          "src": "https://www.plonkit.net/images/russia/Russian_pole.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "EE",
+        "GE",
+        "KG",
+        "KZ",
+        "LT",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-mXjR",
+      "step": 0,
+      "order": 10,
+      "family": "pole",
+      "title": "Pole: You can often see concrete support blocks at the bottom of…",
+      "text": [
+        "You can often see **concrete support blocks** at the bottom of utility poles, with wooden poles often being raised above ground by the support.",
+        "NOTE: [Similar blocks](https://www.google.com/maps/@48.4300351,17.7728644,3a,32.5y,3.03h,74.13t/data=!3m6!1e1!3m4!1sQ_utNdLPQAxCA1f1l0Jgnw!2e0!7i16384!8i8192?entry=ttu) are found in several Central and Eastern European countries."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "c369809d10b5",
+          "src": "https://www.plonkit.net/images/russia/polebottomblocks.png",
+          "location": {
+            "pano": "OIMbE783tISrhr8eII12Bg",
+            "lat": 52.1956702,
+            "lng": 109.8450814,
+            "heading": 292.18,
+            "pitch": -5.41,
+            "fov": 16.4,
+            "source": "plonkit"
+          }
+        }
+      ],
+      "locations": [
+        {
+          "pano": "OIMbE783tISrhr8eII12Bg",
+          "lat": 52.1956702,
+          "lng": 109.8450814,
+          "heading": 292.18,
+          "pitch": -5.41,
+          "fov": 16.4,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-zl6d",
+      "step": 0,
+      "order": 11,
+      "family": "car",
+      "title": "Google car: Three Generation 3 Street View cars are commonly found in…",
+      "text": [
+        "Three Generation 3 Street View cars are commonly found in Russia. The two most useful ones for recognising Russia are a black and a [white](https://goo.gl/maps/MmC3SpuSmhV5ezux9) car, both with a long antenna. You may also see a [short antenna](https://goo.gl/maps/x1ryuJiJL9VjkEWx6) without a visible car.",
+        "NOTE: Short antenna without a visible car in Generation 3 is common in Europe. Both black and white cars with long antenna can show up in Generation 3 Europe, but are not as common."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "a40b5da42d3d",
+          "src": "https://www.plonkit.net/images/russia/gen3car.png"
+        },
+        {
+          "id": "64d8724f9d68",
+          "src": "https://learnablemeta.com/images/768/iD93PdDkbRUrUbAEg6JHRnVFK6hzwC8up8fO.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-jZWe",
+      "step": 0,
+      "order": 12,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Russian pedestrian signs have a simply drawn person and…",
+      "text": [
+        "Russian pedestrian signs have a simply drawn person and **three stripes**. Signs will commonly have a **bright yellow border**.",
+        "NOTE: Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design."
       ],
       "tags": [],
       "images": [
+        {
+          "id": "503b96d52545",
+          "src": "https://www.plonkit.net/images/russia/pedestriansign.png"
+        },
+        {
+          "id": "b261408cd8ab",
+          "src": "https://learnablemeta.com/images/768/hANAEfqAGvVYb1AproV7zOVDTmZRWcqzS95q.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "KG",
+        "KZ",
+        "LT",
+        "MN",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-LVQ6",
+      "step": 0,
+      "order": 13,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Russian pedestrian crossings contain alternating white and…",
+      "text": [
+        "Russian pedestrian crossings contain alternating **white and yellow stripes**.",
+        "NOTE: This is also common in Kazakhstan."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4bd681fd808d",
+          "src": "https://www.plonkit.net/images/russia/zebrapath.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "KZ"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-YqxG",
+      "step": 0,
+      "order": 14,
+      "family": "guardrail",
+      "title": "Guardrail: Black and white striped guardrails",
+      "text": [
+        "**Black and white striped guardrails**, kerbs and bridge barriers are common in russia."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "9d39c645e70a",
+          "src": "https://www.plonkit.net/images/russia/blackandwhiteguardrail.png",
+          "location": {
+            "pano": "ixMXGbP7YBNyBRqbEbn4fQ",
+            "lat": 53.0086641,
+            "lng": 46.0641101,
+            "heading": 253.72,
+            "pitch": -30.27,
+            "fov": 43.6,
+            "source": "plonkit"
+          }
+        }
+      ],
+      "locations": [
+        {
+          "pano": "ixMXGbP7YBNyBRqbEbn4fQ",
+          "lat": 53.0086641,
+          "lng": 46.0641101,
+          "heading": 253.72,
+          "pitch": -30.27,
+          "fov": 43.6,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ssZ0",
+      "step": 0,
+      "order": 15,
+      "family": "architecture",
+      "title": "Architecture: The vast majority of urban housing in Russia are large…",
+      "text": [
+        "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete. [Newer buildings](https://goo.gl/maps/qSWTTiaLytipTyBd7) in wealthier areas appear more modern."
+      ],
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "6f073f3f27da",
+          "src": "https://www.plonkit.net/images/russia/urbanapartmentblock.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-vyBb",
+      "step": 0,
+      "order": 16,
+      "family": "architecture",
+      "title": "Architecture: Rural housing in Russia consists mostly of a basic wooden…",
+      "text": [
+        "Rural housing in Russia consists mostly of a **basic wooden structure** with metal roofs."
+      ],
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "99e7fe88be57",
+          "src": "https://www.plonkit.net/images/russia/suburbanhousing.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-tnNR",
+      "step": 0,
+      "order": 17,
+      "family": "architecture",
+      "title": "Architecture: This style of richly decorated window frames is commonly…",
+      "text": [
+        "This style of **richly decorated window frames** is commonly found on traditional Russian homes, especially on log cabins. They are often painted blue."
+      ],
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "6f5242387040",
+          "src": "https://www.plonkit.net/images/russia/windows.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-OYvI",
+      "step": 0,
+      "order": 18,
+      "family": "other",
+      "title": "In urban areas, you can sometimes see pipes which are…",
+      "text": [
+        "In urban areas, you can sometimes see **pipes** which are exposed above the ground and are held up by other vertical pipes.",
+        "NOTE: This also occurs in Georgia and Ukraine, but in Ukraine it is less common."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "44ad82854230",
+          "src": "https://www.plonkit.net/images/russia/Russia_Pipes.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "GE",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-EAAw",
+      "step": 0,
+      "order": 19,
+      "family": "pole",
+      "title": "Pole: Black & white-striped pole shields are common along highways",
+      "text": [
+        "**Black & white-striped pole shields** are common along highways, especially in European Russia."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "e8bb15a3f260",
+          "src": "https://www.plonkit.net/images/russia/blackandwhitepolemarking.png",
+          "location": {
+            "pano": "W5Exi0Es9MruYHen7ZQPLQ",
+            "lat": 56.1332327,
+            "lng": 29.6543334,
+            "heading": 43.78,
+            "pitch": -8.16,
+            "fov": 16,
+            "source": "plonkit"
+          }
+        },
+        {
+          "id": "84f44a44a574",
+          "src": "https://learnablemeta.com/images/1955/1750703898445-LEq.avif"
+        }
+      ],
+      "locations": [
+        {
+          "pano": "W5Exi0Es9MruYHen7ZQPLQ",
+          "lat": 56.1332327,
+          "lng": 29.6543334,
+          "heading": 43.78,
+          "pitch": -8.16,
+          "fov": 16,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-WkyB",
+      "step": 1,
+      "order": 1,
+      "family": "vegetation",
+      "title": "Vegetation: Birch trees, identified by their white peeling bark, have a…",
+      "text": [
+        "Birch trees, identified by their white peeling bark, have a wide range in Russia. Notably they are almost never found far south or far north in the western part of the country."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "26d7199841a7",
+          "src": "https://www.plonkit.net/images/russia/birchtree.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-LP1h",
+      "step": 1,
+      "order": 2,
+      "family": "vegetation",
+      "title": "Vegetation: Birches very close together",
+      "text": [
+        "Birches very close together, as well as forests consisting of **only birches**, are indicative of areas east of the Urals, most commonly between Chelyabinsk Oblast and Novosibirsk Oblast."
+      ],
+      "region": "Chelyabinsk, Novosibirsk",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "cc61b84cca9a",
+          "src": "https://www.plonkit.net/images/russia/clusteredbirches.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-FB0Q",
+      "step": 1,
+      "order": 3,
+      "family": "vegetation",
+      "title": "Vegetation: Siberian larches are one of the dominant tree species in…",
+      "text": [
+        "Siberian larches are one of the dominant tree species in much of eastern Russia, recognized by their unique **needle-like leaves**. Generally speaking, they become more prevalent the further east you go in the country, as well as at high elevations."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "9195b96f18a8",
+          "src": "https://www.plonkit.net/images/russia/siberianlarches.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-SdNy",
+      "step": 1,
+      "order": 4,
+      "family": "vegetation",
+      "title": "Vegetation: Spruce trees are an evergreen tree that can be identified…",
+      "text": [
+        "Spruce trees are an **evergreen tree** that can be identified by their dense and droopy or parallel branches, and generally are darker in color than most trees. ",
+        "A similar evergreen tree, a [caucasian fir](https://maps.app.goo.gl/1XKsGPrBJaZiuSXn9), exists in the Caucasus Mountains. It has much more well organized and straighter branches.",
+        "NOTE: Larches have branches which point up and are less dense. Some [larches](https://maps.app.goo.gl/jmi4vRoWbfEr8TD37) can look very similar, but can be thought of as having much more unruly branches and look less “healthy”. Nonetheless, use with caution, especially on rounds that look eastern."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "8751606bd940",
+          "src": "https://www.plonkit.net/images/russia/Russian_Spruce.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-8PIl",
+      "step": 1,
+      "order": 5,
+      "family": "vegetation",
+      "title": "Vegetation: Giant butterbur (commonly referred to as Sakhalin cabbage)…",
+      "text": [
+        "[Giant butterbur](https://en.wikipedia.org/wiki/Petasites_japonicus) (commonly referred to as Sakhalin cabbage) is very common in Sakhalin Oblast, particularly in the southern half. Related plants can very rarely be found in [Adygea](https://goo.gl/maps/wWv1UwyS1XfNpC4v6)."
+      ],
+      "region": "Sakhalin",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "e7cdfb0424b7",
+          "src": "https://www.plonkit.net/images/russia/sakhalincabbage.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-OKfi",
+      "step": 1,
+      "order": 6,
+      "family": "vegetation",
+      "title": "Vegetation: This type of white flower",
+      "text": [
+        "This type of white flower ([heracleum sosnowskyi](https://en.wikipedia.org/wiki/Heracleum_sosnowskyi)) is most commonly found around Moscow, Komi Republic, and Perm Krai."
+      ],
+      "region": "Moscow, Komi, Perm",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "0ae10033451d",
+          "src": "https://www.plonkit.net/images/russia/sosnowskyshogweed.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-mt14",
+      "step": 1,
+      "order": 7,
+      "family": "vegetation",
+      "title": "Vegetation: Large amounts of the pink or red flower fireweed",
+      "text": [
+        "Large amounts of the pink or red flower fireweed ([Chamaenerion angustifolium](https://en.wikipedia.org/wiki/Chamaenerion_angustifolium)) typically indicates a northern region of Russia. Similarly, most places north of Moscow commonly have fireweed."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "7c5471854f98",
+          "src": "https://www.plonkit.net/images/russia/fireweed.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-jeND",
+      "step": 1,
+      "order": 8,
+      "family": "vegetation",
+      "title": "Vegetation: Sunflowers are common along the border with Ukraine as well…",
+      "text": [
+        "**Sunflowers **are common along the border with Ukraine as well as more eastern oblasts like Ulyanovsk, Samara, and northern Orenburg."
+      ],
+      "region": "Ulyanovsk, Samara, Orenburg",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "e66e99989fad",
+          "src": "https://www.plonkit.net/images/russia/ru_sunflower.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-MFON",
+      "step": 1,
+      "order": 9,
+      "family": "vegetation",
+      "title": "Vegetation: Blue-pod lupines appear very commonly in northern Vladimir…",
+      "text": [
+        "[Blue-pod lupines](https://en.wikipedia.org/wiki/Lupinus_polyphyllus) appear very commonly in northern Vladimir Oblast, eastern Ivanovo Oblast, and southwestern Kostroma Oblast. It can also be found less commonly elsewhere in Kirov Oblast and towards the Baltics."
+      ],
+      "region": "Vladimir, Ivanovo, Kostroma",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "e1ed9d302aa6",
+          "src": "https://www.plonkit.net/images/russia/vladimirflowers.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-eHxy",
+      "step": 1,
+      "order": 10,
+      "family": "vegetation",
+      "title": "Vegetation: The black poplar is commonly found south",
+      "text": [
+        "The **black poplar** is commonly found south, near the border with Ukraine, as well as toward the western border with Kazakhstan."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "18bbb30ddde9",
+          "src": "https://www.plonkit.net/images/russia/blackpoplar.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "KZ",
+        "UA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-2mXt",
+      "step": 1,
+      "order": 11,
+      "family": "vegetation",
+      "title": "Vegetation: The Russian olive is typically found along the Kazakhstan…",
+      "text": [
+        "The [Russian olive](https://en.wikipedia.org/wiki/Elaeagnus_angustifolia) is typically found along the Kazakhstan border."
+      ],
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "2c36f6b22be5",
+          "src": "https://www.plonkit.net/images/russia/russianolive.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "KZ"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-lb3J",
+      "step": 1,
+      "order": 12,
+      "family": "vegetation",
+      "title": "Vegetation: Lined oak trees, often with a single white stripe around…",
+      "text": [
+        "**Lined oak trees**, often with a single white stripe around the trunk, are extremely common in Kaliningrad."
+      ],
+      "region": "Kaliningrad",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "798f17d19cab",
+          "src": "https://www.plonkit.net/images/russia/kaliningradtrees.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-pyqm",
+      "step": 1,
+      "order": 13,
+      "family": "vegetation",
+      "title": "Vegetation: Sparsely planted larches along the road with open rolling…",
+      "text": [
+        "Sparsely **planted larches** along the road with open rolling fields is common in Tatarstan and adjacent federal subjects."
+      ],
+      "region": "Tatarstan",
+      "tags": [
+        "vegetation"
+      ],
+      "images": [
+        {
+          "id": "be253090dfb3",
+          "src": "https://www.plonkit.net/images/russia/tatartrees.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-i2zA",
+      "step": 1,
+      "order": 14,
+      "family": "landscape",
+      "title": "Landscape: Sandy roadsides are common in Khanty-Mansi and…",
+      "text": [
+        "**Sandy roadsides** are common in Khanty-Mansi and Yamalo-Nenets and adjacent subjects, as well as areas around [Nizhny Novgorod ](https://goo.gl/maps/NSDDrfNaFFCQPF8z5)on the Volga river. Other notable areas are [Karelia](https://goo.gl/maps/qw6yxjAp1TvUTT7S8), [Murmansk](https://goo.gl/maps/t4fzZ21q1MZrQLzG6), and [western Sakha](https://goo.gl/maps/QHWgEJ1kwRXxAEPu7). Beware, however, that sandy roadsides can less commonly be found near rivers in other regions."
+      ],
+      "region": "Khanty-Mansi, Yamalo-Nenets, Nizhny Novgorod",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "51796580043d",
+          "src": "https://www.plonkit.net/images/russia/sandyroads.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-r4Fx",
+      "step": 1,
+      "order": 15,
+      "family": "landscape",
+      "title": "Landscape: Red soil is common in the highlighted areas",
+      "text": [
+        "**Red soil** is common in the highlighted areas, notably around Izhevsk and Perm, much of Arkhangelsk Oblast, Leningrad Oblast, and Pskov Oblast, and near Volgograd and Astrakhan. Note that this map is by no means exhaustive; red soil can be found almost anywhere in the country near water or iron mines."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "7bc203b53ff9",
+          "src": "https://www.plonkit.net/images/russia/redsoil.png",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-K6A7",
+      "step": 1,
+      "order": 16,
+      "family": "landscape",
+      "title": "Landscape: The Kamchatka peninsula has unique grey gravelly soil",
+      "text": [
+        "The Kamchatka peninsula has unique **grey gravelly soil**, as well as the largest number of **volcanoes** of any region in Russia. They are frequently seen across the peninsula, and in some places can appear quite close such as in [Klyuchi](https://goo.gl/maps/2JTY8XjBELQ2Q2tT8)."
+      ],
+      "region": "Kamchatka",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "3bf234192411",
+          "src": "https://www.plonkit.net/images/russia/kamchatkalandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-Ja8F",
+      "step": 1,
+      "order": 17,
+      "family": "landscape",
+      "title": "Landscape: Extremely gravelly and sometimes dark soil appears as you…",
+      "text": [
+        "Extremely gravelly and sometimes [dark](https://goo.gl/maps/DqAozgnTPiGBAj7g8) soil appears as you approach the mountains east of Yakutsk, starting around Keskil."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "afdb06baf30f",
+          "src": "https://www.plonkit.net/images/russia/eastofyakutsksoil.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-4aKj",
+      "step": 1,
+      "order": 18,
+      "family": "landscape",
+      "title": "Landscape: Lush and diverse forests in a hilly landscape characterises…",
+      "text": [
+        "**Lush** and diverse forests in a **hilly** landscape characterises the noticeably warmer region around Vladivostok. Most of the coverage is overcast and has a white car with a long antenna. Further south, near the tri-border, you will find a more open [rolling hill landscape](https://goo.gl/maps/ErMpfen9KCE4HGHE7)."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "745bb4bb453e",
+          "src": "https://www.plonkit.net/images/russia/vladivostokarea.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-KNFH",
+      "step": 1,
+      "order": 19,
+      "family": "coverage",
+      "title": "Coverage: The eastern half of the Kolyma Highway going to Magadan…",
+      "text": [
+        "The eastern half of the Kolyma Highway going to Magadan features a lot of tall **hills** and **mountains**, usually shrouded in a **haze**. Most of the roads are unpaved and feature **dark gravelly soil**. The haze is not present in the western half."
+      ],
+      "region": "Magadan",
+      "tags": [
+        "coverage",
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "da8a552561ae",
+          "src": "https://www.plonkit.net/images/russia/magadanlandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-YXiH",
+      "step": 1,
+      "order": 20,
+      "family": "landscape",
+      "title": "Landscape: A presence of Siberian larches and large mountains on a…",
+      "text": [
+        "A presence of Siberian larches and large mountains on a mostly paved, but sometimes [wide-gravel road](https://goo.gl/maps/ztavuzTw3BXAyNMv6) indicates the main road south of Yakutsk, with [Generation 4 white car](https://goo.gl/maps/4VP2UsVh2FrsQjBg8) appearing north of Berkakit."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "6341656ea312",
+          "src": "https://www.plonkit.net/images/russia/roadtoyakutsk.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-QkQy",
+      "step": 1,
+      "order": 21,
+      "family": "coverage",
+      "title": "Coverage: Very hazy coverage is found east and south of Mirny",
+      "text": [
+        "Very **hazy coverage** is found east and south of Mirny, especially along the Vilyuy river. The colour of the haze varies, but it is often orange or [white](https://goo.gl/maps/QMfuHapbJnFYAyop6)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "749c07501a3b",
+          "src": "https://www.plonkit.net/images/russia/sakhahaze.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-epdP",
+      "step": 1,
+      "order": 22,
+      "family": "landscape",
+      "title": "Landscape: The landscape in Buryatia is very unique",
+      "text": [
+        "The landscape in Buryatia is very unique, containing open grassy landscape with shrubs and mountains. It is lusher near Baikal, but the mountains persist."
+      ],
+      "region": "Buryatia",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "17072ca2dcc0",
+          "src": "https://www.plonkit.net/images/russia/buryatialandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-UwoE",
+      "step": 1,
+      "order": 23,
+      "family": "coverage",
+      "title": "Coverage: This forest fire haze is found near Lake Gusinoye",
+      "text": [
+        "This **forest fire haze** is found near Lake Gusinoye, southwest of Ulan-Ude in Buryatia. While similar to the haze found near [Mirny](https://maps.app.goo.gl/kZY7oWKZW3bHoFp5A), the Buryatia haze coverage can typically be recognised by the **open rolling landscape**, which is not found near Mirny."
+      ],
+      "region": "Buryatia",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "6a0721579a34",
+          "src": "https://www.plonkit.net/images/russia/buryatiahaze.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-K40M",
+      "step": 1,
+      "order": 24,
+      "family": "car",
+      "title": "Google car: The main road of Altai Republic has a black car long…",
+      "text": [
+        "The main road of Altai Republic has a black car long antenna driving north **through the Altai Mountains**, often with **foggy or rainy** coverage."
+      ],
+      "region": "Altai",
+      "tags": [
+        "coverage",
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "c370d9b588fe",
+          "src": "https://www.plonkit.net/images/russia/altairepublic.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-SZCQ",
+      "step": 1,
+      "order": 25,
+      "family": "landscape",
+      "title": "Landscape: Dry steppe mountains with a long antenna will usually…",
+      "text": [
+        "**Dry steppe mountains** with a long antenna will usually indicate the Tuva Republic. The south part of the main road in the [Altai Republic](https://goo.gl/maps/C7aWe5KJWyT8Sa3W6) and Tuva can appear similarly dry, so things such as driving direction and cloudiness can be used to distinguish them."
+      ],
+      "region": "Tuva",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "0e65cb6d8121",
+          "src": "https://www.plonkit.net/images/russia/tuva.png"
+        },
+        {
+          "id": "a4b8877bd5a6",
+          "src": "https://learnablemeta.com/images/664/HeFueEzetTGNtX7ceTVQrR2JhbmWY22UJCWd.avif"
+        },
+        {
+          "id": "6d7e8be4e9a7",
+          "src": "https://learnablemeta.com/images/664/w5hjTdpVvMbJK9QxghitrJ4uf1hStO6cHbgI.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-grzn",
+      "step": 1,
+      "order": 26,
+      "family": "landscape",
+      "title": "Landscape: The landscape in the far north can be recognised by the…",
+      "text": [
+        "The landscape in the far north can be recognised by the relatively **flat** landscape, with **very low vegetation**."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "9f91d5e4481e",
+          "src": "https://www.plonkit.net/images/russia/tundra.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-91yN",
+      "step": 1,
+      "order": 27,
+      "family": "landscape",
+      "title": "Landscape: The coverage in Omsk Oblast is some of the most…",
+      "text": [
+        "The coverage in Omsk Oblast is some of the most recognizable in Russia. It is typically summer Generation 4 and has a distinct landscape consisting of green agricultural fields, which are interrupted by isolated patches of (primarily) birch forest.",
+        "Note that in Generation 3, this landscape can be seen in a much larger area of Russia.",
+        "NOTE: This combination of coverage and landscape spills over slightly into the neighbouring Tyumen and Novosibirsk Oblasts (in the south, and near Tatarsk, respectively)."
+      ],
+      "region": "Omsk",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "f777c64c0779",
+          "src": "https://www.plonkit.net/images/russia/omsklandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-TE6r",
+      "step": 1,
+      "order": 28,
+      "family": "landscape",
+      "title": "Landscape: The area west of the Caspian Sea can often be recognised by…",
+      "text": [
+        "The area west of the Caspian Sea can often be recognised by its extremely **dry and flat landscape**, especially in Kalmykia, Astrakhan Oblast, and Dagestan."
+      ],
+      "region": "Kalmykia, Astrakhan, Dagestan",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "751aaf5bef47",
+          "src": "https://www.plonkit.net/images/russia/desertsteppes.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-sPRH",
+      "step": 1,
+      "order": 29,
+      "family": "landscape",
+      "title": "Landscape: Grassy fields, with bushy vegetation, in early spring…",
+      "text": [
+        "**Grassy fields**, with **bushy vegetation**, in early spring Generation 4 coverage is typical for Dagestan. The landscape can either be completely [flat](https://goo.gl/maps/aagmDRf8TAcokMkn9) or [mountainous](https://goo.gl/maps/ZbWrv4FiuSGLBzHq9). [These flowers](https://maps.app.goo.gl/P26tJd6Lf73upk4G8) are also quite common in the Generation 4 Dagestan coverage."
+      ],
+      "region": "Dagestan",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "2e7c8f38fdd9",
+          "src": "https://www.plonkit.net/images/russia/dagestanlandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-mZpj",
+      "step": 1,
+      "order": 30,
+      "family": "landscape",
+      "title": "Landscape: The Caucasus mountain range is one of the largest mountain…",
+      "text": [
+        "The **Caucasus mountain range** is one of the largest mountain ranges in Russia. The tallest mountain in Russia, [Mount Elbrus](https://goo.gl/maps/v1yAcshzeyBme85y8), can be found on the border of the Kabardino-Balkarian Republic and Karachay-Cherkessia."
+      ],
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "4db2881132e7",
+          "src": "https://www.plonkit.net/images/russia/caucasusmountains.png"
+        },
+        {
+          "id": "3000aa30f6b4",
+          "src": "https://learnablemeta.com/images/664/6oWjapwhvqdbvTdKDFfc8bnDu5meineLByAA.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ABdR",
+      "step": 1,
+      "order": 31,
+      "family": "landscape",
+      "title": "Landscape: Rocks along the road are extremely common throughout most…",
+      "text": [
+        "**Rocks** along the road are extremely common throughout most of Karelia and Murmansk Oblast. They can also be found in Perm Krai and Buryatia but are less common and smaller in size."
+      ],
+      "region": "Karelia, Murmansk",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "5f14da93046a",
+          "src": "https://www.plonkit.net/images/russia/kareliamurmanskrocks.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-LBZi",
+      "step": 1,
+      "order": 32,
+      "family": "landscape",
+      "title": "Landscape: An open, hilly landscape with low shrubbery and fireweed…",
+      "text": [
+        "An open, hilly landscape with low shrubbery and [fireweed](https://goo.gl/maps/jQxpJeqbas286g7i7) usually indicates Murmansk. The lower the shrubbery, the more north it generally is."
+      ],
+      "region": "Murmansk",
+      "tags": [
+        "landscape"
+      ],
+      "images": [
+        {
+          "id": "31df594afecf",
+          "src": "https://www.plonkit.net/images/russia/murmansklandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-XM6p",
+      "step": 1,
+      "order": 34,
+      "family": "other",
+      "title": "This is a map of Russian area codes",
+      "text": [
+        "This is a map of Russian **area codes**. Notably, area codes starting with 8 are in the west, codes starting with 3 are fairly central and codes starting with 4 are either east or around Moscow."
+      ],
+      "tags": [
+        "moving info"
+      ],
+      "images": [
+        {
+          "id": "a3b22db13b76",
+          "src": "https://www.plonkit.net/images/russia/areacodes.png",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-X2he",
+      "step": 1,
+      "order": 35,
+      "family": "car",
+      "title": "Google car: In Generation 3 coverage you will somewhat commonly find…",
+      "text": [
+        "In Generation 3 coverage you will somewhat commonly find unblurred licence plates, featuring a **regional code** on the right side. The codes are generally ordered alphabetically within each [type of federal subject](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia#Types), starting at republics and ending with autonomous okrugs. Therefore, the [Republic of Adygea](https://maps.app.goo.gl/PhX9zVnMQfBCvHQi7) will be represented by 01, and the [Amur Oblast](https://maps.app.goo.gl/AXNwmSJ1vio1pRCo7) by 28, both being the first alphabetical subjects of republics and oblasts respectively. If you encounter a [three digit code](https://maps.app.goo.gl/BiQGFQEG51Xxc7fc7), the second and third digit will form the regional code, in this case 123 becomes 23, for Krasnodar Krai. You may also find the codes written out on the back of [trucks](https://maps.app.goo.gl/NVQNyKpSUXZ3i4LG6) and [vans](https://www.google.com/maps/@56.6511783,66.3012014,3a,15y,5.71h,78.8t/data=!3m6!1e1!3m4!1s8nSDptPKXAhrtGZE6nzskg!2e0!7i13312!8i6656?entry=ttu)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "69aefb5f7166",
+          "src": "https://www.plonkit.net/images/russia/ru_licenceplatecodes.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-NFlW",
+      "step": 1,
+      "order": 36,
+      "family": "other",
+      "title": "These are the bus stops unique to specific federal subjects…",
+      "text": [
+        "These are the bus stops unique to specific federal subjects in Russia. Notably common and memorable ones include Krasnoyarsk Krai, Chuvashia, Tatarstan, and Mari El Republic."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "69ecf347f0a3",
+          "src": "https://www.plonkit.net/images/russia/busstops.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-F3DF",
+      "step": 1,
+      "order": 37,
+      "family": "language",
+      "title": "Language: Japanese-made cars with the steering wheel on the right…",
+      "text": [
+        "Japanese-made cars with the **steering wheel on the right** become more common the further east you go, generally starting around Novosibirsk."
+      ],
+      "region": "Novosibirsk",
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "dfb56eccf491",
+          "src": "https://www.plonkit.net/images/russia/japanesecars.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-4DR5",
+      "step": 1,
+      "order": 38,
+      "family": "bollard",
+      "title": "Bollard: Russian bollards that appear very thin and attached to a…",
+      "text": [
+        "Russian bollards that appear very thin and attached to a stick are usually found in the eastern part of the country, starting around Omsk. Note that [ordinary Russian bollards](https://goo.gl/maps/RnBNJE9kGwChsj9G7) are still plentiful in this part of the country."
+      ],
+      "region": "Omsk",
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "721ee2e3db06",
+          "src": "https://www.plonkit.net/images/russia/Eastern_bollard.png"
+        },
         {
           "id": "c2edea7d8d9b",
           "src": "https://learnablemeta.com/images/WTgIECCm55jGixicNpSqGaSfnnMWhSRKVPTz.avif"
@@ -55,15 +1640,1805 @@
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-hjXS",
+      "step": 1,
+      "order": 39,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: This black traffic sign bottom is primarily found in…",
+      "text": [
+        "This **black traffic sign bottom** is primarily found in Stavropol and Chechnya, as well as western Dagestan. Rarely, exceptions can be found in other southern federal subjects such as [Kabardino Balkaria](https://goo.gl/maps/XeKf78CHzYCEtTQX8), but these will typically be uncolored."
+      ],
+      "region": "Stavropol, Dagestan",
+      "tags": [
+        "chevron/sign"
+      ],
+      "images": [
+        {
+          "id": "a4da93b108dd",
+          "src": "https://www.plonkit.net/images/russia/southtrafficsignbottom.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-EN2b",
+      "step": 1,
+      "order": 40,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Clips on edges of signposts are found in Leningrad and St",
+      "text": [
+        "**Clips** on edges of signposts are found in Leningrad and St. Petersburg, and very rarely in Pskov, Novgorod or elsewhere."
+      ],
+      "region": "Leningrad",
+      "tags": [
+        "chevron/sign"
+      ],
+      "images": [
+        {
+          "id": "f8019395c4e7",
+          "src": "https://www.plonkit.net/images/russia/leningradstpetersburgpedestriansign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-PJiO",
+      "step": 1,
+      "order": 41,
+      "family": "line",
+      "title": "Road line: Outer dashed road lines are usually found throughout Kursk…",
+      "text": [
+        "**Outer dashed road lines** are usually found throughout Kursk Oblast. An exception can be found in [Tuva Republic](https://goo.gl/maps/h6GYSQrhjBXDWJD39). Rarer exceptions include [the Republic of Karelia](https://goo.gl/maps/PvQvkaH63nHGqvD17), [Primorsky Krai](https://goo.gl/maps/6pXTrSNjaNmVToYF8) and [Khabarovsk Krai](https://goo.gl/maps/34mpJJfXMNBqKnJm9)."
+      ],
+      "region": "Kursk",
+      "tags": [
+        "roadline"
+      ],
+      "images": [
+        {
+          "id": "152ef5dafc9c",
+          "src": "https://www.plonkit.net/images/russia/kurskroadlines.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-trOH",
+      "step": 1,
+      "order": 42,
+      "family": "line",
+      "title": "Road line: As you go further north in Russia",
+      "text": [
+        "As you go further north in Russia, some roads are made out of several **concrete blocks**. It is notably common in the Komi Republic, Nenets, and Yamalo-Nenets."
+      ],
+      "tags": [
+        "roadline"
+      ],
+      "images": [
+        {
+          "id": "9da847385068",
+          "src": "https://www.plonkit.net/images/russia/concreteroads.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-sKGo",
+      "step": 1,
+      "order": 43,
+      "family": "language",
+      "title": "Language: Some republics of Russia with minority languages use…",
+      "text": [
+        "Some republics of Russia with minority languages use bilingual town entry and directional signs, such as in Bashkortostan and Tatarstan displaying Bashkir and Tatar respectively."
+      ],
+      "region": "Bashkortostan, Tatarstan",
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "5f23a368c39a",
+          "src": "https://www.plonkit.net/images/russia/bilingual.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-aGiM",
+      "step": 1,
+      "order": 44,
+      "family": "language",
+      "title": "Language: Town names written in both the Cyrillic and Latin alphabets…",
+      "text": [
+        "**Town names** written in both the Cyrillic and **Latin** alphabets are common near the Baltic border and around Moscow, and to a lesser extent in federal subjects on the Finnish border."
+      ],
+      "region": "Moscow",
+      "tags": [
+        "language"
+      ],
+      "images": [
+        {
+          "id": "c4d6a67a84a0",
+          "src": "https://www.plonkit.net/images/russia/latintownnames.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-BhB9",
+      "step": 1,
+      "order": 45,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: These brown signs, pointing to typical tourist attractions,…",
+      "text": [
+        "These **brown signs**, pointing to typical tourist attractions, are common in Moscow Oblast and the oblasts bordering it. However, they can also less commonly be seen in city centres or near tourist attractions of [other regions](https://www.google.com/maps/@61.821949,34.3074923,3a,17.8y,22.25h,94.58t/data=!3m6!1e1!3m4!1stZhKu0HYudsYXdctQ9_AyQ!2e0!7i16384!8i8192?entry=ttu)."
+      ],
+      "region": "Moscow",
+      "tags": [
+        "chevron/sign"
+      ],
+      "images": [
+        {
+          "id": "be2af74406d4",
+          "src": "https://www.plonkit.net/images/russia/browntouristsigns.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-Jm4W",
+      "step": 1,
+      "order": 47,
+      "family": "architecture",
+      "title": "Architecture: Buildings made of white limestone brick are indicative of…",
+      "text": [
+        "Buildings made of **white limestone brick** are indicative of Dagestan, as well as adjacent regions.",
+        "NOTE: Brick architecture is more consistent the more brick structures you can see in the round."
+      ],
+      "region": "Dagestan",
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "6774bdb201b3",
+          "src": "https://www.plonkit.net/images/russia/limestonebrick.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-l2qi",
+      "step": 1,
+      "order": 48,
+      "family": "architecture",
+      "title": "Architecture: Buildings made almost entirely of red brick are mostly…",
+      "text": [
+        "Buildings made almost entirely of **red brick** are mostly found in the south, with Magnitogorsk, Orsk, and Omsk being notable exceptions.",
+        "NOTE: This clue is more consistent the more brick structures you can see in the round."
+      ],
+      "region": "Omsk",
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "29db61b8cbf1",
+          "src": "https://www.plonkit.net/images/russia/redbrick.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-O53i",
+      "step": 1,
+      "order": 49,
+      "family": "architecture",
+      "title": "Architecture: While mosques can be found everywhere in Russia",
+      "text": [
+        "While mosques can be found everywhere in Russia, they are by far most common in areas with a Muslim majority, mainly in much of south Russia as well as Tatarstan and Bashkortostan."
+      ],
+      "region": "Tatarstan, Bashkortostan",
+      "tags": [
+        "architecture",
+        "language"
+      ],
+      "images": [
+        {
+          "id": "c92bddc4aa77",
+          "src": "https://www.plonkit.net/images/russia/mosque.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-jLBa",
+      "step": 1,
+      "order": 50,
+      "family": "architecture",
+      "title": "Architecture: Historical buildings in Mari El often have a unique…",
+      "text": [
+        "Historical buildings in Mari El often have a unique architecture style. You will frequently see design patterns that include **green roofs**, red brick sprinkled with white stone details. [Local churches](https://www.google.com/maps/@56.2884468,46.2917123,3a,42.4y,279.05h,107.04t/data=!3m7!1e1!3m5!1s5uTfNmrvJwCTQn0915srvw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D5uTfNmrvJwCTQn0915srvw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D9.734652%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?entry=ttu) commonly feature a similar style."
+      ],
+      "region": "Mari El",
+      "tags": [
+        "architecture"
+      ],
+      "images": [
+        {
+          "id": "ea756c018e6e",
+          "src": "https://www.plonkit.net/images/russia/30.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-fV2M",
+      "step": 1,
+      "order": 53,
+      "family": "coverage",
+      "title": "Coverage: This is the full coverage map of Russia",
+      "text": [
+        "This is the full coverage map of Russia. It can be helpful to know areas where there isn’t any coverage. The coverage is notably very sparse in the east and north.",
+        "You can check out the extent of the official coverage[ on this website](https://sv-map.netlify.app/#base=roadmap&cov=official&zoom=4&center=63.09475846224108%2C101.77734375000001)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "4980c03e4bd4",
+          "src": "https://www.plonkit.net/images/russia/ru_coverage1.png",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-JN8Z",
+      "step": 1,
+      "order": 54,
+      "family": "car",
+      "title": "Google car: White car long antenna is found in many places",
+      "text": [
+        "[White car long antenna](https://maps.app.goo.gl/szUNXBWMYPjJ6jMA6) is found in many places, most commonly in [southern Chelyabinsk](https://maps.app.goo.gl/u2ofsEtYhTK1kxpr9), on [snow coverage around Novosibirsk](https://goo.gl/maps/WT1mwvr1mZH9Nsy88), and in the [Far East](https://maps.app.goo.gl/UcNfar31Lf4yD8pD7) beginning in [Amur Oblast](https://maps.app.goo.gl/uJivjvnTnNdf4LHq5).",
+        "NOTE: While [Kamchatka](https://goo.gl/maps/vbKvMrHXtE7anj636) technically has a silver car (with a B type antenna), it often appears white and is part of the small group of exceptions to black and white."
+      ],
+      "region": "Chelyabinsk, Novosibirsk, Amur",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "e149bb3d8af1",
+          "src": "https://www.plonkit.net/images/russia/ru_whitecar.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-HjJe",
+      "step": 1,
+      "order": 55,
+      "family": "car",
+      "title": "Google car: The A-type short antenna has its highest ridge on the right",
+      "text": [
+        "The [A-type short antenna](https://maps.app.goo.gl/13hZAJw2TiAoyFP17) has its highest ridge on the right. Notable areas for this antenna are around [Kaluga](https://maps.app.goo.gl/JvchV2vn13QwiTG57), [Orenburg](https://maps.app.goo.gl/nYa3htnmJtm9RUEc9), and [Krasnodar](https://maps.app.goo.gl/48JHYVMTGEwN7XCu8)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "3c75a9e4324a",
+          "src": "https://www.plonkit.net/images/russia/2.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-dzLd",
+      "step": 1,
+      "order": 56,
+      "family": "car",
+      "title": "Google car: The B-type short antenna has its highest ridge on the left",
+      "text": [
+        "The [B-type short antenna](https://maps.app.goo.gl/otoKbscwAem4eCh89) has its highest ridge on the left. This antenna is wide-ranging, but it is most notably found near [Nizhny Novgorod](https://maps.app.goo.gl/6nmWkEgaUkHRydZt5), [Elista](https://maps.app.goo.gl/sb6XLo7VMBzFQiiu8), and [Yekaterinburg](https://maps.app.goo.gl/3VHAgPgQ6EWcbjys8) and [Tyumen](https://maps.app.goo.gl/rcYGf1PeEnWmD1Sc6)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "3aab4fb3e230",
+          "src": "https://www.plonkit.net/images/russia/3.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-FXIF",
+      "step": 1,
+      "order": 57,
+      "family": "car",
+      "title": "Google car: The B-type pronounced antenna is the same as the B-type…",
+      "text": [
+        "The [B-type pronounced antenna](https://maps.app.goo.gl/WwzMFjRSbmQUgBHB9) is the same as the B-type antenna but the ridge is more “rectangular”. This antenna is fairly limited, only being found commonly in [Moscow Oblast](https://maps.app.goo.gl/tziG6gD8RNd8ByJN8), [Kurgan Oblast](https://maps.app.goo.gl/HMFY2AUsYsPMmEFm6), [near Krasnoyarsk](https://maps.app.goo.gl/Wv94BFV16DXcfnVx6), and [southwest Krasnodar](https://maps.app.goo.gl/9hM7GWG3Mk7AazpJ7)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "0f144eb29365",
+          "src": "https://www.plonkit.net/images/russia/4.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-xPyY",
+      "step": 1,
+      "order": 58,
+      "family": "car",
+      "title": "Google car: The C-type short antenna can be thought of as a low A-type…",
+      "text": [
+        "The [C-type short antenna](https://maps.app.goo.gl/7WisPoWqAk3itE7eA) can be thought of as a low A-type or a “twisting antenna” with the ridges being further from the top. It is found [north](https://maps.app.goo.gl/snkxCqnaS1bZc1hY9) and [east](https://maps.app.goo.gl/6gMAwy8bad7C9J2dA) of Moscow, with the furthest south being [Rostov Oblast](https://maps.app.goo.gl/GjFfAVgNQaRzLKkL7)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "33f73ebc9575",
+          "src": "https://www.plonkit.net/images/russia/5.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-fDEc",
+      "step": 1,
+      "order": 59,
+      "family": "car",
+      "title": "Google car: The blurred short antenna is visibly blurrier than any of…",
+      "text": [
+        "The [blurred short antenna](https://maps.app.goo.gl/8uWV4EHvPCH1dZKUA) is visibly blurrier than any of the other short antennas. It is mainly found in two major clusters around [Ufa](https://maps.app.goo.gl/rgZgng4EcRjznQuP6) and from [Stavropol](https://maps.app.goo.gl/7d5Q8kbPNPQPDMuGA) to [Makhachkala](https://maps.app.goo.gl/ujH4F6CZZc3qeSRN7)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "63f16c5461bb",
+          "src": "https://www.plonkit.net/images/russia/6.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-RADI",
+      "step": 1,
+      "order": 60,
+      "family": "car",
+      "title": "Google car: The A-type long antenna has its highest ridge on the right…",
+      "text": [
+        "The [A-type long antenna](https://maps.app.goo.gl/PuGiesP9DAUdSiRKA) has its highest ridge on the right side. Notable areas include [Leningrad Oblast](https://maps.app.goo.gl/4GDjJxHqF2cerU1RA), [Republic of Karelia](https://maps.app.goo.gl/MN3ZHGme7BvopS7h9), and [Vologda Oblast](https://maps.app.goo.gl/KRnogy4K1mUbL9y99). Almost all the white car long antenna coverage is A-type, so checking for A-type can also help confirm car colour."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "d5d4d7bc61f5",
+          "src": "https://www.plonkit.net/images/russia/7.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-lyOi",
+      "step": 1,
+      "order": 61,
+      "family": "car",
+      "title": "Google car: The B-type long antenna has its highest ridge on the left…",
+      "text": [
+        "The [B-type long antenna](https://maps.app.goo.gl/xiJHmjsXcMQyQZ1d9) has its highest ridge on the left side. Notable areas include [Yaroslav](https://maps.app.goo.gl/ZdC9XJiP3NKKA9QA6) to [Vladimir](https://maps.app.goo.gl/wEscjWspwirDVd696), [Tula Oblast](https://maps.app.goo.gl/ajNom88LdYrKfRAX6), and much of the coverage near [Tuva](https://maps.app.goo.gl/icUb6qp4Y8MzFd2P7) and [Irkutsk](https://maps.app.goo.gl/UmZN7hTvhWZv6yKk8).",
+        "NOTE: There are two other long antenna types, referred to as [CA](https://maps.app.goo.gl/eMwfHi2kLMyXc8u27) and [CB](https://maps.app.goo.gl/tDHKLKq8ENnxfWKEA), but due to their relative lack of usefulness they will not be covered here."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "b7b673f9460e",
+          "src": "https://www.plonkit.net/images/russia/8.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-AsJS",
+      "step": 1,
+      "order": 62,
+      "family": "car",
+      "title": "Google car: Blurred long antenna is visibly blurrier than other long…",
+      "text": [
+        "[Blurred long antenna](https://maps.app.goo.gl/uqSetFHbhpcz8xoy9) is visibly blurrier than other long antenna cars, and is a strong clue for [Sakhalin](https://maps.app.goo.gl/NZW6zaBoyGu7Wn6u7) and [various](https://maps.app.goo.gl/zcueGiDZjMNgD5PZA) [roads](https://maps.app.goo.gl/UyHPvXwew65N9W1C8) in the east, as well as much of [Khanty-Mansi](https://maps.app.goo.gl/Vpwb7fPXkVYdxHmYA). On the other end there exists a blurred antenna in far western [Bryansk Oblast](https://maps.app.goo.gl/nKJyHgpuCi95BtWu7) and some of [Tula Oblast](https://maps.app.goo.gl/44N5R9CyPjxWu2RL9)."
+      ],
+      "region": "Sakhalin, Khanty-Mansi",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "da60b7bd2b00",
+          "src": "https://www.plonkit.net/images/russia/9.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-U8sf",
+      "step": 1,
+      "order": 63,
+      "family": "car",
+      "title": "Google car: The tilted short antenna is visibly tilted to the left and…",
+      "text": [
+        "The [tilted short antenna](https://maps.app.goo.gl/9dsW6TyNZJ1vTVo69) is visibly tilted to the left and can be found primarily on a diagonal from [St. Petersburg](https://maps.app.goo.gl/uYJumDRfPtDcYF8i7) down to [Volgograd](https://maps.app.goo.gl/HcLrcfJw396hVA3k6), with exceptions in [Stavropol](https://maps.app.goo.gl/xnVy4Amy7TYgydFG6) and [Ufa.](https://maps.app.goo.gl/3ndyQtC4AoWqDXns5) Since the ridge is on the same side, it can sometimes appear as the A-type short antenna."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "9c4d35b996b8",
+          "src": "https://www.plonkit.net/images/russia/10.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-4Mgv",
+      "step": 1,
+      "order": 64,
+      "family": "coverage",
+      "title": "Coverage: A large, red brake light is common in Kaliningrad, however…",
+      "text": [
+        "A large, red brake light is common in Kaliningrad, however it can also be found in some [older coverage](https://goo.gl/maps/bms7QA2bzAr5VLBX8) in western Russia."
+      ],
+      "region": "Kaliningrad",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "0936484581a6",
+          "src": "https://www.plonkit.net/images/russia/11.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-suQF",
+      "step": 1,
+      "order": 65,
+      "family": "car",
+      "title": "Google car: Autumn Generation 3 coverage is common in Kaliningrad",
+      "text": [
+        "Autumn Generation 3 coverage is common in Kaliningrad, Bryansk, Tula, and Belgorod in western Russia, but Kaliningrad only has autumn coverage."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "854e63c8916e",
+          "src": "https://www.plonkit.net/images/russia/12.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-uO7t",
+      "step": 1,
+      "order": 66,
+      "family": "car",
+      "title": "Google car: In Generation 4 coverage",
+      "text": [
+        "In Generation 4 coverage, **significant snow on the ground** is most commonly seen in Saratov Oblast and Eastern Voronezh Oblast."
+      ],
+      "region": "Saratov, Voronezh",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "5f34c0f5aa59",
+          "src": "https://www.plonkit.net/images/russia/Voronezh.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-0522",
+      "step": 1,
+      "order": 67,
+      "family": "car",
+      "title": "Google car: Generation 4 coverage is quite extensive and is found in…",
+      "text": [
+        "**Generation 4** coverage is quite extensive and is found in most federal subjects in the country. Notably, areas like the Altai mountains and most of the Far East lack Generation 4 completely. Knowing where Generation 4 can be found isn’t the most helpful at the beginner level; other clues like season and car are more important. The dark red signifies areas where all of the coverage is Generation 4."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "8f45e57d5747",
+          "src": "https://www.plonkit.net/images/russia/Gen_4_proportion_lines_3.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-iFTC",
+      "step": 1,
+      "order": 68,
+      "family": "car",
+      "title": "Google car: Winter Generation 4 is most common in the south of Russia",
+      "text": [
+        "[Winter Generation 4](https://maps.app.goo.gl/tKFTbt1t6mYGmF1CA) is most common in the south of Russia, ranging from [Ryazan](https://www.google.com/maps/@54.521468,41.2920492,3a,75y,136.68h,90.82t,1.58r/data=!3m6!1e1!3m4!1s8GGSJc8bRgrChfct0st5lg!2e0!7i16384!8i8192?entry=ttu) all the way down to [Kabardino-Balkaria](https://maps.app.goo.gl/sqbQHZkc1aXttg8G9) and [Dagestan](https://maps.app.goo.gl/eSpNpPM7VYWquBPN7). Winter can appear differently depending on the month (and even time of month the coverage was taken) which can be used to further regionguess."
+      ],
+      "region": "Ryazan, Kabardino-Balkaria, Dagestan",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "92338c7df0d3",
+          "src": "https://www.plonkit.net/images/russia/14.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-lQl1",
+      "step": 1,
+      "order": 69,
+      "family": "car",
+      "title": "Google car: Spring Generation 4 is common in several distinct places",
+      "text": [
+        "[Spring Generation 4](https://maps.app.goo.gl/mxR9jx12qcpoqiX47) is common in several distinct places, such as around [Kemerovo](https://maps.app.goo.gl/AYpeDSAXjY4DTcfHA) and [Krasnoyarsk](https://maps.app.goo.gl/6XmSQBo12yhE4peS7), [Orenburg](https://maps.app.goo.gl/gGk8Qr7GFamJkEUj9) and [Kamyshin](https://maps.app.goo.gl/Xzo5rBpi1mDngfmw7), around [Lipetsk](https://maps.app.goo.gl/5rDYMi3imMh6wZ9S6), and in [Moscow city](https://maps.app.goo.gl/CzcoMF9KbXZqerCWA). Differentiating these places typically comes down to landscape, as they tend to be fairly distinct."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "c53750510d74",
+          "src": "https://www.plonkit.net/images/russia/15.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-zTYx",
+      "step": 1,
+      "order": 70,
+      "family": "car",
+      "title": "Google car: Summer Generation 4 is the most common coverage in…",
+      "text": [
+        "[Summer Generation 4](https://maps.app.goo.gl/87VXQczGm3HeChX18) is the most common coverage in generation 4. It is pretty much everywhere except in the south and some of the east, but can be further subdivided by car colour."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "a6334caeaac7",
+          "src": "https://www.plonkit.net/images/russia/16.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-7siN",
+      "step": 1,
+      "order": 71,
+      "family": "car",
+      "title": "Google car: Autumn Generation 4 is quite rare and only found around…",
+      "text": [
+        "[Autumn Generation 4](https://maps.app.goo.gl/4ePdHYjvkycsZWMP6) is quite rare and only found around [Kazan](https://maps.app.goo.gl/CuYMZ5RFdFKH4CFX7) and a few roads in [Murmansk](https://maps.app.goo.gl/FVbne7gzizSc2mdu8), as well as some of [Ulan-Ude](https://maps.app.goo.gl/cGxwLd6k866DgMRr9)."
+      ],
+      "region": "Murmansk",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "9c6706d502af",
+          "src": "https://www.plonkit.net/images/russia/17.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-SwXM",
+      "step": 1,
+      "order": 72,
+      "family": "car",
+      "title": "Google car: Generation 4 red car is the most common generation 4 car…",
+      "text": [
+        "[Generation 4 red car](https://maps.app.goo.gl/XZNnHtvtZbyWYqt99) is the most common generation 4 car meta, found primarily east around [Khanty-Mansi](https://maps.app.goo.gl/urkHYCZryyhY8kxdA), as well as along the main highways down to [Irkutsk](https://maps.app.goo.gl/xm2khKQjsmjipnq9A) and [Ulan-Ude](https://maps.app.goo.gl/camcQ4mEZpFN61Um9). There is also a sizable patch near [Penza](https://maps.app.goo.gl/V1cagu4DLNtD9pGq5) and [Tatarstan](https://maps.app.goo.gl/vitVoMssWGjKgixL6), as well as [Rostov-on-Don](https://maps.app.goo.gl/YCTYFcj5NZ1efTRN9)."
+      ],
+      "region": "Khanty-Mansi, Irkutsk",
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "d76ad501c63e",
+          "src": "https://www.plonkit.net/images/russia/18.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-KOU6",
+      "step": 1,
+      "order": 73,
+      "family": "car",
+      "title": "Google car: Generation 4 white car is found in the May coverage near…",
+      "text": [
+        "[Generation 4 white car](https://maps.app.goo.gl/ysyGKt4TvtWbGAHC7) is found in the May coverage near [Lipetsk](https://maps.app.goo.gl/FS32oVQjxE4G5bu57), in [Moscow city](https://maps.app.goo.gl/YtkYaj1V3t1P5nqk9), and most notably across all the coverage north of Berkatit in the [Sakha Republic](https://maps.app.goo.gl/vE7pUiAVqX3rvTAg7) and [Magadan](https://maps.app.goo.gl/AGFGntoW6UFFcPm79)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "b98c806bb3c6",
+          "src": "https://www.plonkit.net/images/russia/19.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-Ohdq",
+      "step": 1,
+      "order": 74,
+      "family": "car",
+      "title": "Google car: Generation 4 black car is found mostly near Moscow",
+      "text": [
+        "[Generation 4 black car](https://maps.app.goo.gl/hV1BDavTfgWjBezk8) is found mostly near [Moscow](https://maps.app.goo.gl/d3GSjMCXAaZiwfBp9), [Tver](https://maps.app.goo.gl/UqwBFR7gry7wDpZy9), and [Voronezh](https://maps.app.goo.gl/p5YktDMBB7Mksd8SA), with some also existing in [Tatarstan](https://maps.app.goo.gl/w6tJLmTsuvTsMHvJ6) and less commonly in the south."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "1d8226c93671",
+          "src": "https://www.plonkit.net/images/russia/20.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-leH6",
+      "step": 2,
+      "order": 0,
+      "family": "coverage",
+      "title": "Coverage: Vorkuta in far northern Komi Republic has dead-looking…",
+      "text": [
+        "Vorkuta in far northern Komi Republic has **dead-looking winter coverage**, sometimes with reddish soil. The apartment blocks will typically have large [northern apartment block foundations](https://goo.gl/maps/cUdFrbUXmuiUCWyE9)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "6926bbd91270",
+          "src": "https://www.plonkit.net/images/russia/21.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-z9D5",
+      "step": 2,
+      "order": 1,
+      "family": "coverage",
+      "title": "Coverage: Sovetskaya Gavan and Vanino in eastern Khabarovsk have…",
+      "text": [
+        "Sovetskaya Gavan and Vanino in eastern Khabarovsk have winter coverage, somewhat similar to Vorkuta.",
+        "NOTE: While Vorkuta and Vanino have similar coverage types, Vorkuta is noticeably flatter, having lower vegetation and a more barren landscape."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "a1e347577644",
+          "src": "https://www.plonkit.net/images/russia/24.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-wOuI",
+      "step": 2,
+      "order": 2,
+      "family": "landscape",
+      "title": "Landscape: The road to Okha in northern Sakhalin is unpaved",
+      "text": [
+        "The road to Okha in northern Sakhalin is unpaved, revealing its very **sandy soil**. The road is surrounded by **short, stunted bushes and trees**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "28ccbeee6cda",
+          "src": "https://www.plonkit.net/images/russia/28.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-UcDG",
+      "step": 2,
+      "order": 3,
+      "family": "landscape",
+      "title": "Landscape: The Khabarovsk-Vanino road has a mountainous landscape with…",
+      "text": [
+        "The Khabarovsk-Vanino road has a **mountainous landscape** with very **sunny coverage**. It also drives west with a black car with a blurred, long antenna, which helps to confirm."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8a5ef1b4d03e",
+          "src": "https://www.plonkit.net/images/russia/25.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-Om12",
+      "step": 2,
+      "order": 4,
+      "family": "coverage",
+      "title": "Coverage: The Jewish Autonomous Oblast effectively has one road of…",
+      "text": [
+        "The Jewish Autonomous Oblast effectively has one road of coverage, outside of Birobidzhan. The west side has highly **rainy and foggy** coverage."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1b3092904dea",
+          "src": "https://www.plonkit.net/images/russia/22.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ZovR",
+      "step": 2,
+      "order": 5,
+      "family": "coverage",
+      "title": "Coverage: On the east side of the Jewish Autonomous Oblast",
+      "text": [
+        "On the east side of the Jewish Autonomous Oblast, the coverage turns from rainy to **wet** after the rain."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e5fffe6791ab",
+          "src": "https://www.plonkit.net/images/russia/23.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-FyT4",
+      "step": 2,
+      "order": 6,
+      "family": "coverage",
+      "title": "Coverage: Sunset coverage, with the sun very close to the horizon,…",
+      "text": [
+        "**Sunset coverage**, with the sun very close to the horizon, with an eastern-looking landscape will be the P-297 in Amur Oblast, roughly between the towns of Never and Sivaki."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "ff6959065c3f",
+          "src": "https://www.plonkit.net/images/russia/38.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-IeTE",
+      "step": 2,
+      "order": 7,
+      "family": "landscape",
+      "title": "Landscape: Olkhon Island on Lake Baikal has a single road",
+      "text": [
+        "Olkhon Island on Lake Baikal has a single road, driving on rolling **sandy hills during sunset**. You can often see Lake Baikal directly with a mountain ridge across the bay."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "81494c0e6577",
+          "src": "https://www.plonkit.net/images/russia/27.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-aHVz",
+      "step": 2,
+      "order": 8,
+      "family": "landscape",
+      "title": "Landscape: Tunkinsky National Park in western Buryatia is a very green…",
+      "text": [
+        "Tunkinsky National Park in western Buryatia is a very green **river basin** with tall, **jagged mountains** to the north. In comparison to most of Buryatia, it is much greener."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f895f2ac9015",
+          "src": "https://www.plonkit.net/images/russia/26.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-KHIG",
+      "step": 2,
+      "order": 9,
+      "family": "car",
+      "title": "Google car: In the desert-like region west of the Caspian Sea",
+      "text": [
+        "In the desert-like region west of the Caspian Sea, this completely flat and rural Generation 4 coverage on small poorly-tracked dirt roads can only be found in northern Dagestan and southwestern Astrakhan Oblast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "a2773ba05857",
+          "src": "https://www.plonkit.net/images/russia/ruralgen4desert.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ys4b",
+      "step": 2,
+      "order": 10,
+      "family": "vegetation",
+      "title": "Vegetation: Tropical plants in Russia such as palm trees are only found…",
+      "text": [
+        "**Tropical plants** in Russia such as palm trees are only found on the Black Sea, most commonly around Sochi."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f1715fd9c335",
+          "src": "https://www.plonkit.net/images/russia/ru_tropicalplants.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-xTY6",
+      "step": 2,
+      "order": 11,
+      "family": "coverage",
+      "title": "Coverage: Kamchatka trekkers encompass a majority of the trekkers…",
+      "text": [
+        "Kamchatka trekkers encompass a majority of the trekkers present in Russia. They can be recognized using the same clues to recognize Kamchatka normally."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3f92bd38fd16",
+          "src": "https://www.plonkit.net/images/russia/29.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-tmTL",
+      "step": 2,
+      "order": 13,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: These blue signs are only found in Moscow and usually…",
+      "text": [
+        "These blue signs are only found in Moscow and usually feature **English translations** of important tourist points."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "64fa00789cb3",
+          "src": "https://www.plonkit.net/images/russia/31.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-wFmP",
+      "step": 2,
+      "order": 14,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: St",
+      "text": [
+        "St. Petersburg street signs include a **transliteration** of the street name on a black background. They are primarily found downtown."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d15165cc711b",
+          "src": "https://www.plonkit.net/images/russia/32.png"
+        },
+        {
+          "id": "9d9978eed952",
+          "src": "https://learnablemeta.com/images/4588/1777500252051-J6M.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ZPuK",
+      "step": 2,
+      "order": 15,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Saransk has an exclusive circular street sign design with…",
+      "text": [
+        "Saransk has an exclusive circular street sign design with the street name being written in up to **4 different languages**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "946704b83424",
+          "src": "https://www.plonkit.net/images/russia/saransksign.png"
+        },
+        {
+          "id": "0f9db9956042",
+          "src": "https://learnablemeta.com/images/4588/1777499952437-E31.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-vEQX",
+      "step": 2,
+      "order": 16,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Tatar bilingual signs use “урамы”",
+      "text": [
+        "**Tatar bilingual signs** use “урамы” (ур., abbreviated) for street instead of “улица” and are unsurprisingly found in Tatarstan."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c03cffb888ec",
+          "src": "https://www.plonkit.net/images/russia/34.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-O98Q",
+      "step": 2,
+      "order": 17,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Bashkir bilingual signs are found in Bashkortostan and use…",
+      "text": [
+        "**Bashkir bilingual signs** are found in Bashkortostan and use “урамы” for street, the same as Tatar, but are often not abbreviated."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "07f5aafad37e",
+          "src": "https://www.plonkit.net/images/russia/33.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-mcGi",
+      "step": 2,
+      "order": 18,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Chuvash bilingual signs, found in Chuvashia, use “урамӗ”…",
+      "text": [
+        "**Chuvash bilingual signs**, found in Chuvashia, use “урамӗ” for street."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1d3f3f46fef4",
+          "src": "https://www.plonkit.net/images/russia/35.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-BBhW",
+      "step": 2,
+      "order": 19,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Mari bilingual signs, found in Mari El, use “урем” for…",
+      "text": [
+        "**Mari bilingual signs**, found in Mari El, use “урем” for street."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "294014e7b9f8",
+          "src": "https://www.plonkit.net/images/russia/36.png"
+        },
+        {
+          "id": "1164b3bef849",
+          "src": "https://learnablemeta.com/images/4588/1777500066388-KXR.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-eXFX",
+      "step": 2,
+      "order": 20,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Komi bilingual signs, found in the Komi Republic, use…",
+      "text": [
+        "**Komi bilingual signs**, found in the Komi Republic, use “улича” for street."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4222cc18ad9a",
+          "src": "https://www.plonkit.net/images/russia/37.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-ENMg",
+      "step": 2,
+      "order": 22,
+      "family": "pole",
+      "title": "Pole: These alternating red and white poles are mainly found in…",
+      "text": [
+        "These **alternating red and white** poles are mainly found in Ulyanovsk city, but also less commonly in the [greater Nizhny Novgorod area](https://goo.gl/maps/JNLBV3L6cogEaBiCA) as well as somewhat randomly elsewhere in the country."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "c48474176fe4",
+          "src": "https://www.plonkit.net/images/russia/ulyanovskpole.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-920v",
+      "step": 2,
+      "order": 23,
+      "family": "pole",
+      "title": "Pole: These striped red and white poles are found mostly in…",
+      "text": [
+        "These **striped red and white** poles are found mostly in Saransk, but also in a few other cities in Mordovia."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "1ae6f189c0fa",
+          "src": "https://www.plonkit.net/images/russia/saranskpole.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-gi5v",
+      "step": 2,
+      "order": 24,
+      "family": "pole",
+      "title": "Pole: Yellow pole plates attached by a metal band are commonly…",
+      "text": [
+        "**Yellow pole plates** attached by a **metal band** are commonly found in Tatarstan. They are found on the majority of poles, but not all."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "cf550313dfa3",
+          "src": "https://www.plonkit.net/images/russia/39.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-OENY",
+      "step": 2,
+      "order": 25,
+      "family": "car",
+      "title": "Google car: On the main road of Murmansk in generation 4",
+      "text": [
+        "On the main road of Murmansk in generation 4, as well as some roads in Karelia covered in 2018, the vast majority of signposts will have **two yellow bands** wrapped around them."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "560d3c23d932",
+          "src": "https://www.plonkit.net/images/russia/murmanskpoleband.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-I6aA",
+      "step": 2,
+      "order": 26,
+      "family": "other",
+      "title": "Cobblestone pavement is notably common in Kaliningrad",
+      "text": [
+        "**Cobblestone pavement** is notably common in [Kaliningrad](https://maps.app.goo.gl/cAtPVWR2WxLiyS8V8), [Nizhny Tagil](https://maps.app.goo.gl/iUD3LBhJYxSxdHFeA) in Sverdlovsk, and [Kizel](https://goo.gl/maps/2rLUZD6Rvei7qWwXA) in Perm Krai."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f76e5dafb9be",
+          "src": "https://www.plonkit.net/images/russia/ru_cobblestones.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-LPj1",
+      "step": 2,
+      "order": 27,
+      "family": "pole",
+      "title": "Pole: Extended insulator bars on poles are notably found in…",
+      "text": [
+        "**Extended insulator bars** on poles are notably found in southern Chelyabinsk Oblast and [eastern Orenburg Oblast](https://goo.gl/maps/ahe7wDESrVMJiZDD6), as well as [southern Kemerovo Oblast](https://goo.gl/maps/nSDobcgFvaTL8EPt5)."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "a13c905f4967",
+          "src": "https://www.plonkit.net/images/russia/40.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-Ht2R",
+      "step": 2,
+      "order": 28,
+      "family": "pole",
+      "title": "Pole: Utility poles with a mesh framework are usually found in…",
+      "text": [
+        "Utility poles with a **mesh framework** are usually found in Petrozavodsk, but can much less commonly be found in cities like [Tolyatti](https://goo.gl/maps/QeRuT92WeXEavqv48)."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "7d9eb0e61efa",
+          "src": "https://www.plonkit.net/images/russia/42.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-2n7S",
+      "step": 2,
+      "order": 29,
+      "family": "pole",
+      "title": "Pole: These red painted poles are only found in Murom",
+      "text": [
+        "These **red painted** poles are only found in Murom."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "2a1e723e9bc5",
+          "src": "https://www.plonkit.net/images/russia/43.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-y5RK",
+      "step": 2,
+      "order": 30,
+      "family": "pole",
+      "title": "Pole: An angled extended insulator bar on the pole as shown is…",
+      "text": [
+        "An **angled extended insulator bar** on the pole as shown is found in Chita."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "0af133ed2115",
+          "src": "https://www.plonkit.net/images/russia/44.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-344J",
+      "step": 2,
+      "order": 31,
+      "family": "bollard",
+      "title": "Bollard: This unique bollard, with a grey rectangle and double red…",
+      "text": [
+        "This unique bollard, with a **grey rectangle** and **double red reflectors**, is specific to the P100 in Kostroma Oblast."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "d5e9c1f742c1",
+          "src": "https://www.plonkit.net/images/russia/45.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-kMlj",
+      "step": 2,
+      "order": 32,
+      "family": "pole",
+      "title": "Pole: Pedestrian signs with a U-shaped hook attached to a pole…",
+      "text": [
+        "Pedestrian signs with a **U-shaped hook** attached to a pole are unique to Chelyabinsk."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "205776bd9766",
+          "src": "https://www.plonkit.net/images/russia/46.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-PzBt",
+      "step": 2,
+      "order": 33,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: This distinct decorative design of pedestrian sign holders…",
+      "text": [
+        "This **distinct decorative design** of pedestrian sign holders is specific to Pskov Oblast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f78bfb7857a8",
+          "src": "https://www.plonkit.net/images/russia/47.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-kBRg",
+      "step": 2,
+      "order": 34,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: The city of Nizhnevartovsk has these unique hanging…",
+      "text": [
+        "The city of Nizhnevartovsk has these unique **hanging pedestrian signs**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "a92860d27a55",
+          "src": "https://www.plonkit.net/images/russia/48.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-24Ka",
+      "step": 2,
+      "order": 35,
+      "family": "other",
+      "title": "Rounded rectangular fences with a line through the middle…",
+      "text": [
+        "Rounded rectangular fences with a **line** through the middle are unique to Chelyabinsk Oblast and eastern Orenburg Oblast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "67752351dc7c",
+          "src": "https://www.plonkit.net/images/russia/41.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-aWaE",
+      "step": 2,
+      "order": 36,
+      "family": "other",
+      "title": "This fence with a thin rounded rectangular design at the…",
+      "text": [
+        "This fence with a **thin rounded rectangular design** at the top is found in the cities of Syzran, Tolyatti, and Samara. In [Tolyatti](https://maps.app.goo.gl/vUyLBVMdoH3SfSpE9) it will commonly be painted yellow."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "6e224f4aa14a",
+          "src": "https://www.plonkit.net/images/russia/49.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ru-3ve1",
+      "step": 2,
+      "order": 37,
+      "family": "other",
+      "title": "Decoratively designed fences usually with a bright orange…",
+      "text": [
+        "Decoratively designed fences usually with a **bright orange** colour are unique to Irkutsk."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "18c474030633",
+          "src": "https://www.plonkit.net/images/russia/50.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/russia",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "ru-lm-3002",
-      "step": 0,
-      "order": 2,
+      "step": 3,
+      "order": 0,
       "family": "other",
       "title": "Russia",
       "text": [
@@ -90,8 +3465,8 @@
     },
     {
       "id": "ru-lm-9123",
-      "step": 0,
-      "order": 3,
+      "step": 3,
+      "order": 1,
       "family": "language",
       "title": "Language: Novosibirsk",
       "text": [
@@ -116,8 +3491,8 @@
     },
     {
       "id": "ru-lm-9124",
-      "step": 0,
-      "order": 4,
+      "step": 3,
+      "order": 2,
       "family": "language",
       "title": "Language: Yekaterinburg",
       "text": [
@@ -142,8 +3517,8 @@
     },
     {
       "id": "ru-lm-9125",
-      "step": 0,
-      "order": 5,
+      "step": 3,
+      "order": 3,
       "family": "language",
       "title": "Language: Murmansk",
       "text": [
@@ -168,8 +3543,8 @@
     },
     {
       "id": "ru-lm-9126",
-      "step": 0,
-      "order": 6,
+      "step": 3,
+      "order": 4,
       "family": "language",
       "title": "Language: Magadan",
       "text": [
@@ -194,8 +3569,8 @@
     },
     {
       "id": "ru-lm-9154",
-      "step": 0,
-      "order": 7,
+      "step": 3,
+      "order": 5,
       "family": "language",
       "title": "Language: Yakutsk",
       "text": [
@@ -220,8 +3595,8 @@
     },
     {
       "id": "ru-lm-9155",
-      "step": 0,
-      "order": 8,
+      "step": 3,
+      "order": 6,
       "family": "language",
       "title": "Language: Moscow (Moskva)",
       "text": [
@@ -246,8 +3621,8 @@
     },
     {
       "id": "ru-lm-9156",
-      "step": 0,
-      "order": 9,
+      "step": 3,
+      "order": 7,
       "family": "language",
       "title": "Language: Kazan",
       "text": [
@@ -272,8 +3647,8 @@
     },
     {
       "id": "ru-lm-9157",
-      "step": 0,
-      "order": 10,
+      "step": 3,
+      "order": 8,
       "family": "language",
       "title": "Language: Nizhny Novgorod",
       "text": [
@@ -298,8 +3673,8 @@
     },
     {
       "id": "ru-lm-9158",
-      "step": 0,
-      "order": 11,
+      "step": 3,
+      "order": 9,
       "family": "language",
       "title": "Language: Chelyabinsk",
       "text": [
@@ -324,8 +3699,8 @@
     },
     {
       "id": "ru-lm-9159",
-      "step": 0,
-      "order": 12,
+      "step": 3,
+      "order": 10,
       "family": "language",
       "title": "Language: Tyumen",
       "text": [
@@ -350,8 +3725,8 @@
     },
     {
       "id": "ru-lm-9160",
-      "step": 0,
-      "order": 13,
+      "step": 3,
+      "order": 11,
       "family": "language",
       "title": "Language: Omsk",
       "text": [
@@ -376,8 +3751,8 @@
     },
     {
       "id": "ru-lm-9161",
-      "step": 0,
-      "order": 14,
+      "step": 3,
+      "order": 12,
       "family": "language",
       "title": "Language: Tomsk",
       "text": [
@@ -402,8 +3777,8 @@
     },
     {
       "id": "ru-lm-9162",
-      "step": 0,
-      "order": 15,
+      "step": 3,
+      "order": 13,
       "family": "language",
       "title": "Language: Surgut",
       "text": [
@@ -428,8 +3803,8 @@
     },
     {
       "id": "ru-lm-9197",
-      "step": 0,
-      "order": 16,
+      "step": 3,
+      "order": 14,
       "family": "language",
       "title": "Language: Krasnoyarsk",
       "text": [
@@ -454,8 +3829,8 @@
     },
     {
       "id": "ru-lm-9263",
-      "step": 0,
-      "order": 17,
+      "step": 3,
+      "order": 15,
       "family": "language",
       "title": "Language: Bratsk",
       "text": [
@@ -480,8 +3855,8 @@
     },
     {
       "id": "ru-lm-9273",
-      "step": 0,
-      "order": 18,
+      "step": 3,
+      "order": 16,
       "family": "language",
       "title": "Language: Irkutsk",
       "text": [
@@ -506,8 +3881,8 @@
     },
     {
       "id": "ru-lm-9274",
-      "step": 0,
-      "order": 19,
+      "step": 3,
+      "order": 17,
       "family": "language",
       "title": "Language: Ulan-Ude",
       "text": [
@@ -532,8 +3907,8 @@
     },
     {
       "id": "ru-lm-9275",
-      "step": 0,
-      "order": 20,
+      "step": 3,
+      "order": 18,
       "family": "language",
       "title": "Language: Chita",
       "text": [
@@ -558,8 +3933,8 @@
     },
     {
       "id": "ru-lm-9276",
-      "step": 0,
-      "order": 21,
+      "step": 3,
+      "order": 19,
       "family": "language",
       "title": "Language: Vladivostok",
       "text": [
@@ -584,8 +3959,8 @@
     },
     {
       "id": "ru-lm-9277",
-      "step": 0,
-      "order": 22,
+      "step": 3,
+      "order": 20,
       "family": "language",
       "title": "Language: Ufa",
       "text": [
@@ -610,8 +3985,8 @@
     },
     {
       "id": "ru-lm-9278",
-      "step": 0,
-      "order": 23,
+      "step": 3,
+      "order": 21,
       "family": "language",
       "title": "Language: Perm",
       "text": [
@@ -636,8 +4011,8 @@
     },
     {
       "id": "ru-lm-9279",
-      "step": 0,
-      "order": 24,
+      "step": 3,
+      "order": 22,
       "family": "language",
       "title": "Language: Mirny",
       "text": [
@@ -662,8 +4037,8 @@
     },
     {
       "id": "ru-lm-9280",
-      "step": 0,
-      "order": 25,
+      "step": 3,
+      "order": 23,
       "family": "language",
       "title": "Language: Volgograd",
       "text": [
@@ -688,8 +4063,8 @@
     },
     {
       "id": "ru-lm-9281",
-      "step": 0,
-      "order": 26,
+      "step": 3,
+      "order": 24,
       "family": "language",
       "title": "Language: Astrakhan",
       "text": [
@@ -714,8 +4089,8 @@
     },
     {
       "id": "ru-lm-9282",
-      "step": 0,
-      "order": 27,
+      "step": 3,
+      "order": 25,
       "family": "language",
       "title": "Language: Krasnodar",
       "text": [
@@ -740,8 +4115,8 @@
     },
     {
       "id": "ru-lm-9283",
-      "step": 0,
-      "order": 28,
+      "step": 3,
+      "order": 26,
       "family": "language",
       "title": "Language: St Petersburg",
       "text": [
@@ -766,8 +4141,8 @@
     },
     {
       "id": "ru-lm-9284",
-      "step": 0,
-      "order": 29,
+      "step": 3,
+      "order": 27,
       "family": "language",
       "title": "Language: Sochi",
       "text": [
@@ -792,8 +4167,8 @@
     },
     {
       "id": "ru-lm-9285",
-      "step": 0,
-      "order": 30,
+      "step": 3,
+      "order": 28,
       "family": "language",
       "title": "Language: Kurgan",
       "text": [
@@ -818,8 +4193,8 @@
     },
     {
       "id": "ru-lm-9286",
-      "step": 0,
-      "order": 31,
+      "step": 3,
+      "order": 29,
       "family": "language",
       "title": "Language: Voronezh",
       "text": [
@@ -844,8 +4219,8 @@
     },
     {
       "id": "ru-lm-9287",
-      "step": 0,
-      "order": 32,
+      "step": 3,
+      "order": 30,
       "family": "language",
       "title": "Language: Saransk",
       "text": [
@@ -870,8 +4245,8 @@
     },
     {
       "id": "ru-lm-9288",
-      "step": 0,
-      "order": 33,
+      "step": 3,
+      "order": 31,
       "family": "language",
       "title": "Language: Yaroslavl",
       "text": [
@@ -896,8 +4271,8 @@
     },
     {
       "id": "ru-lm-9875",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 32,
       "family": "language",
       "title": "Language: Novy Urengoy",
       "text": [
@@ -922,8 +4297,8 @@
     },
     {
       "id": "ru-lm-9876",
-      "step": 0,
-      "order": 35,
+      "step": 3,
+      "order": 33,
       "family": "language",
       "title": "Language: Makhachkala",
       "text": [
@@ -948,8 +4323,8 @@
     },
     {
       "id": "ru-lm-9877",
-      "step": 0,
-      "order": 36,
+      "step": 3,
+      "order": 34,
       "family": "language",
       "title": "Language: Kursk",
       "text": [
@@ -974,8 +4349,8 @@
     },
     {
       "id": "ru-lm-9878",
-      "step": 0,
-      "order": 37,
+      "step": 3,
+      "order": 35,
       "family": "language",
       "title": "Language: Samara",
       "text": [
@@ -1000,8 +4375,8 @@
     },
     {
       "id": "ru-lm-9879",
-      "step": 0,
-      "order": 38,
+      "step": 3,
+      "order": 36,
       "family": "language",
       "title": "Language: Ulyanovsk",
       "text": [
@@ -1026,8 +4401,8 @@
     },
     {
       "id": "ru-lm-9880",
-      "step": 0,
-      "order": 39,
+      "step": 3,
+      "order": 37,
       "family": "language",
       "title": "Language: Arkhangelsk",
       "text": [
@@ -1052,8 +4427,8 @@
     },
     {
       "id": "ru-lm-9881",
-      "step": 0,
-      "order": 40,
+      "step": 3,
+      "order": 38,
       "family": "language",
       "title": "Language: Syktyvkar",
       "text": [
@@ -1078,8 +4453,8 @@
     },
     {
       "id": "ru-lm-9886",
-      "step": 0,
-      "order": 41,
+      "step": 3,
+      "order": 39,
       "family": "language",
       "title": "Language: Kirov",
       "text": [
@@ -1104,8 +4479,8 @@
     },
     {
       "id": "ru-lm-9888",
-      "step": 0,
-      "order": 42,
+      "step": 3,
+      "order": 40,
       "family": "language",
       "title": "Language: Orenburg",
       "text": [
@@ -1130,8 +4505,8 @@
     },
     {
       "id": "ru-lm-9889",
-      "step": 0,
-      "order": 43,
+      "step": 3,
+      "order": 41,
       "family": "language",
       "title": "Language: Novokuznetsk",
       "text": [
@@ -1156,8 +4531,8 @@
     },
     {
       "id": "ru-lm-9891",
-      "step": 0,
-      "order": 44,
+      "step": 3,
+      "order": 42,
       "family": "language",
       "title": "Language: Abakan",
       "text": [
@@ -1182,8 +4557,8 @@
     },
     {
       "id": "ru-lm-9898",
-      "step": 0,
-      "order": 45,
+      "step": 3,
+      "order": 43,
       "family": "language",
       "title": "Language: Khabarovsk",
       "text": [
@@ -1208,8 +4583,8 @@
     },
     {
       "id": "ru-lm-9899",
-      "step": 0,
-      "order": 46,
+      "step": 3,
+      "order": 44,
       "family": "language",
       "title": "Language: Smolensk",
       "text": [
@@ -1234,8 +4609,8 @@
     },
     {
       "id": "ru-lm-13426",
-      "step": 0,
-      "order": 47,
+      "step": 3,
+      "order": 45,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Izhevsk sign",
@@ -1261,8 +4636,8 @@
     },
     {
       "id": "ru-lm-13427",
-      "step": 0,
-      "order": 48,
+      "step": 3,
+      "order": 46,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Nizhny Tagil sign",
@@ -1288,8 +4663,8 @@
     },
     {
       "id": "ru-lm-13428",
-      "step": 0,
-      "order": 49,
+      "step": 3,
+      "order": 47,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Yuzhno-Sakhalinsk sign",
@@ -1315,8 +4690,8 @@
     },
     {
       "id": "ru-lm-13430",
-      "step": 0,
-      "order": 50,
+      "step": 3,
+      "order": 48,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Sharya sign",
@@ -1342,8 +4717,8 @@
     },
     {
       "id": "ru-lm-13434",
-      "step": 0,
-      "order": 51,
+      "step": 3,
+      "order": 49,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Shakhty sign",
@@ -1369,8 +4744,8 @@
     },
     {
       "id": "ru-lm-13435",
-      "step": 0,
-      "order": 52,
+      "step": 3,
+      "order": 50,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Tayshet sign",
@@ -1396,8 +4771,8 @@
     },
     {
       "id": "ru-lm-13437",
-      "step": 0,
-      "order": 53,
+      "step": 3,
+      "order": 51,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Pyatigorsk sign",
@@ -1423,8 +4798,8 @@
     },
     {
       "id": "ru-lm-13438",
-      "step": 0,
-      "order": 54,
+      "step": 3,
+      "order": 52,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Lipetsk sign",
@@ -1450,8 +4825,8 @@
     },
     {
       "id": "ru-lm-13439",
-      "step": 0,
-      "order": 55,
+      "step": 3,
+      "order": 53,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Biysk sign",
@@ -1477,8 +4852,8 @@
     },
     {
       "id": "ru-lm-13441",
-      "step": 0,
-      "order": 56,
+      "step": 3,
+      "order": 54,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Kuznetsk sign",
@@ -1504,8 +4879,8 @@
     },
     {
       "id": "ru-lm-13565",
-      "step": 0,
-      "order": 57,
+      "step": 3,
+      "order": 55,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Oryol sign",
@@ -1531,8 +4906,8 @@
     },
     {
       "id": "ru-lm-13566",
-      "step": 0,
-      "order": 58,
+      "step": 3,
+      "order": 56,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Kiselyovsk sign",
@@ -1558,8 +4933,8 @@
     },
     {
       "id": "ru-lm-13567",
-      "step": 0,
-      "order": 59,
+      "step": 3,
+      "order": 57,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Beryozovsky sign",
@@ -1584,43 +4959,9 @@
       }
     },
     {
-      "id": "ru-lm-23787",
-      "step": 0,
-      "order": 60,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Signs",
-      "text": [
-        "Russian pedestrian signs have a simply drawn person and three stripes.",
-        "Signs will commonly have a bright yellow border.",
-        "**--- NOTE:**",
-        "Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b261408cd8ab",
-          "src": "https://learnablemeta.com/images/768/hANAEfqAGvVYb1AproV7zOVDTmZRWcqzS95q.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KG",
-        "KZ",
-        "LT",
-        "MN",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-23788",
-      "step": 0,
-      "order": 61,
+      "step": 3,
+      "order": 58,
       "family": "bollard",
       "title": "Bollard: Wide Intersections",
       "text": [
@@ -1642,62 +4983,9 @@
       }
     },
     {
-      "id": "ru-lm-23880",
-      "step": 0,
-      "order": 62,
-      "family": "car",
-      "title": "Google car: Gen 3 Cars",
-      "text": [
-        "Three Generation 3 Street View cars are commonly found in Russia.",
-        "The two most useful ones for recognising Russia are a black and a white car, both with a long antenna.",
-        "You may also see a short antenna without a visible car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64d8724f9d68",
-          "src": "https://learnablemeta.com/images/768/iD93PdDkbRUrUbAEg6JHRnVFK6hzwC8up8fO.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-23881",
-      "step": 0,
-      "order": 63,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "**Russia has three main types of bollards:**",
-        "A very thin type being attached to a stick.",
-        "One with a black top section.",
-        "A red vertical reflector below and a German-style bollard."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "46dc3eef3313",
-          "src": "https://learnablemeta.com/images/768/xBQsGGx5S40FzfNO9a9IfDVKsOECcUJpgMcE.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-23884",
-      "step": 0,
-      "order": 64,
+      "step": 3,
+      "order": 59,
       "family": "architecture",
       "title": "Architecture: Large Apartments",
       "text": [
@@ -1720,38 +5008,9 @@
       }
     },
     {
-      "id": "ru-lm-23886",
-      "step": 0,
-      "order": 65,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Painted Signposts",
-      "text": [
-        "Signposts in Russia often have black painted bottoms.",
-        "**--- NOTE:**",
-        "This is also common in Kazakhstan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bfcec2c316a7",
-          "src": "https://learnablemeta.com/images/768/zc2HVTN61XbnrhpMiDZcaty218GKfcUYaCKc.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-23890",
-      "step": 0,
-      "order": 66,
+      "step": 3,
+      "order": 60,
       "family": "architecture",
       "title": "Architecture: Rural Housing",
       "text": [
@@ -1774,8 +5033,8 @@
     },
     {
       "id": "ru-lm-23908",
-      "step": 0,
-      "order": 67,
+      "step": 3,
+      "order": 61,
       "family": "other",
       "title": "Decorated Windows",
       "text": [
@@ -1798,57 +5057,9 @@
       }
     },
     {
-      "id": "ru-lm-24426",
-      "step": 0,
-      "order": 68,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Russia has three main types of bollards: a very thin type being attached to a stick, one with a black top section and a red vertical reflector below and a German-style bollard."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b4e8639a05f",
-          "src": "https://learnablemeta.com/images/739/L4T8Pwb3Pa1iio1MB56uYaMOdqjTGbqdGepR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24617",
-      "step": 0,
-      "order": 69,
-      "family": "landscape",
-      "title": "Landscape: Altai Mountains",
-      "text": [
-        "The main road of Altai Republic has a black car long antenna driving north through the Altai Mountains, often with foggy or rainy coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a4b8877bd5a6",
-          "src": "https://learnablemeta.com/images/664/HeFueEzetTGNtX7ceTVQrR2JhbmWY22UJCWd.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-24618",
-      "step": 0,
-      "order": 70,
+      "step": 3,
+      "order": 62,
       "family": "landscape",
       "title": "Landscape: Buryatia",
       "text": [
@@ -1871,8 +5082,8 @@
     },
     {
       "id": "ru-lm-24619",
-      "step": 0,
-      "order": 71,
+      "step": 3,
+      "order": 63,
       "family": "car",
       "title": "Google car: Caspian Sea Desert",
       "text": [
@@ -1894,33 +5105,9 @@
       }
     },
     {
-      "id": "ru-lm-24620",
-      "step": 0,
-      "order": 72,
-      "family": "landscape",
-      "title": "Landscape: Caucasus Mountains",
-      "text": [
-        "The Caucasus mountain range is one of the largest mountain ranges in Russia. The tallest mountain in Russia, Mount Elbrus, can be found on the border of the Kabardino-Balkarian Republic and Karachay-Cherkessia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3000aa30f6b4",
-          "src": "https://learnablemeta.com/images/664/6oWjapwhvqdbvTdKDFfc8bnDu5meineLByAA.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-24621",
-      "step": 0,
-      "order": 73,
+      "step": 3,
+      "order": 64,
       "family": "landscape",
       "title": "Landscape: Kamchatka",
       "text": [
@@ -1943,8 +5130,8 @@
     },
     {
       "id": "ru-lm-24622",
-      "step": 0,
-      "order": 74,
+      "step": 3,
+      "order": 65,
       "family": "landscape",
       "title": "Landscape: Far North",
       "text": [
@@ -1967,8 +5154,8 @@
     },
     {
       "id": "ru-lm-24623",
-      "step": 0,
-      "order": 75,
+      "step": 3,
+      "order": 66,
       "family": "vegetation",
       "title": "Vegetation: Dagestan Fields",
       "text": [
@@ -1991,8 +5178,8 @@
     },
     {
       "id": "ru-lm-24624",
-      "step": 0,
-      "order": 76,
+      "step": 3,
+      "order": 67,
       "family": "landscape",
       "title": "Landscape: Caspian Sea Area",
       "text": [
@@ -2015,8 +5202,8 @@
     },
     {
       "id": "ru-lm-24625",
-      "step": 0,
-      "order": 77,
+      "step": 3,
+      "order": 68,
       "family": "landscape",
       "title": "Landscape: Murmansk Area",
       "text": [
@@ -2039,8 +5226,8 @@
     },
     {
       "id": "ru-lm-24626",
-      "step": 0,
-      "order": 78,
+      "step": 3,
+      "order": 69,
       "family": "vegetation",
       "title": "Vegetation: Vladivostok Area",
       "text": [
@@ -2063,8 +5250,8 @@
     },
     {
       "id": "ru-lm-24627",
-      "step": 0,
-      "order": 79,
+      "step": 3,
+      "order": 70,
       "family": "landscape",
       "title": "Landscape: Olkhon Island",
       "text": [
@@ -2087,8 +5274,8 @@
     },
     {
       "id": "ru-lm-24628",
-      "step": 0,
-      "order": 80,
+      "step": 3,
+      "order": 71,
       "family": "landscape",
       "title": "Landscape: Kolyma Highway",
       "text": [
@@ -2111,8 +5298,8 @@
     },
     {
       "id": "ru-lm-24629",
-      "step": 0,
-      "order": 81,
+      "step": 3,
+      "order": 72,
       "family": "coverage",
       "title": "Coverage: Omsk",
       "text": [
@@ -2135,8 +5322,8 @@
     },
     {
       "id": "ru-lm-24630",
-      "step": 0,
-      "order": 82,
+      "step": 3,
+      "order": 73,
       "family": "landscape",
       "title": "Landscape: Tunkinsky National Park",
       "text": [
@@ -2158,94 +5345,9 @@
       }
     },
     {
-      "id": "ru-lm-24631",
-      "step": 0,
-      "order": 83,
-      "family": "landscape",
-      "title": "Landscape: Tuva Steppe Mountains",
-      "text": [
-        "Dry steppe mountains with a long antenna will usually indicate the Tuva Republic."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6d7e8be4e9a7",
-          "src": "https://learnablemeta.com/images/664/w5hjTdpVvMbJK9QxghitrJ4uf1hStO6cHbgI.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50462",
-      "step": 0,
-      "order": 84,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Signs",
-      "text": [
-        "Russian pedestrian signs have a simply drawn person and three stripes.",
-        "Signs will commonly have a bright yellow border.",
-        "**--- NOTE:**",
-        "Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b261408cd8ab",
-          "src": "https://learnablemeta.com/images/768/hANAEfqAGvVYb1AproV7zOVDTmZRWcqzS95q.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KG",
-        "KZ",
-        "LT",
-        "MN",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50463",
-      "step": 0,
-      "order": 85,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "**Russia has three main types of bollards:**",
-        "A very thin type being attached to a stick.",
-        "One with a black top section.",
-        "A red vertical reflector below and a German-style bollard."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "46dc3eef3313",
-          "src": "https://learnablemeta.com/images/768/xBQsGGx5S40FzfNO9a9IfDVKsOECcUJpgMcE.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-50464",
-      "step": 0,
-      "order": 86,
+      "step": 3,
+      "order": 74,
       "family": "bollard",
       "title": "Bollard: Wide Intersections",
       "text": [
@@ -2267,64 +5369,9 @@
       }
     },
     {
-      "id": "ru-lm-50465",
-      "step": 0,
-      "order": 87,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Painted Signposts",
-      "text": [
-        "Signposts in Russia often have black painted bottoms.",
-        "**--- NOTE:**",
-        "This is also common in Kazakhstan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bfcec2c316a7",
-          "src": "https://learnablemeta.com/images/768/zc2HVTN61XbnrhpMiDZcaty218GKfcUYaCKc.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50466",
-      "step": 0,
-      "order": 88,
-      "family": "car",
-      "title": "Google car: Gen 3 Cars",
-      "text": [
-        "Three Generation 3 Street View cars are commonly found in Russia.",
-        "The two most useful ones for recognising Russia are a black and a white car, both with a long antenna.",
-        "You may also see a short antenna without a visible car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64d8724f9d68",
-          "src": "https://learnablemeta.com/images/768/iD93PdDkbRUrUbAEg6JHRnVFK6hzwC8up8fO.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-50467",
-      "step": 0,
-      "order": 89,
+      "step": 3,
+      "order": 75,
       "family": "architecture",
       "title": "Architecture: Large Apartments",
       "text": [
@@ -2348,8 +5395,8 @@
     },
     {
       "id": "ru-lm-50468",
-      "step": 0,
-      "order": 90,
+      "step": 3,
+      "order": 76,
       "family": "architecture",
       "title": "Architecture: Rural Housing",
       "text": [
@@ -2372,8 +5419,8 @@
     },
     {
       "id": "ru-lm-50469",
-      "step": 0,
-      "order": 91,
+      "step": 3,
+      "order": 77,
       "family": "other",
       "title": "Decorated Windows",
       "text": [
@@ -2396,43 +5443,9 @@
       }
     },
     {
-      "id": "ru-lm-51192",
-      "step": 0,
-      "order": 92,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Signs",
-      "text": [
-        "Russian pedestrian signs have a simply drawn person and three stripes.",
-        "Signs will commonly have a bright yellow border.",
-        "**--- NOTE:**",
-        "Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b261408cd8ab",
-          "src": "https://learnablemeta.com/images/768/hANAEfqAGvVYb1AproV7zOVDTmZRWcqzS95q.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KG",
-        "KZ",
-        "LT",
-        "MN",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-51193",
-      "step": 0,
-      "order": 93,
+      "step": 3,
+      "order": 78,
       "family": "bollard",
       "title": "Bollard: Wide Intersections",
       "text": [
@@ -2454,91 +5467,9 @@
       }
     },
     {
-      "id": "ru-lm-51208",
-      "step": 0,
-      "order": 94,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "**Russia has three main types of bollards:**",
-        "A very thin type being attached to a stick.",
-        "One with a black top section.",
-        "A red vertical reflector below and a German-style bollard."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "46dc3eef3313",
-          "src": "https://learnablemeta.com/images/768/xBQsGGx5S40FzfNO9a9IfDVKsOECcUJpgMcE.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51209",
-      "step": 0,
-      "order": 95,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Painted Signposts",
-      "text": [
-        "Signposts in Russia often have black painted bottoms.",
-        "**--- NOTE:**",
-        "This is also common in Kazakhstan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bfcec2c316a7",
-          "src": "https://learnablemeta.com/images/768/zc2HVTN61XbnrhpMiDZcaty218GKfcUYaCKc.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51210",
-      "step": 0,
-      "order": 96,
-      "family": "car",
-      "title": "Google car: Gen 3 Cars",
-      "text": [
-        "Three Generation 3 Street View cars are commonly found in Russia.",
-        "The two most useful ones for recognising Russia are a black and a white car, both with a long antenna.",
-        "You may also see a short antenna without a visible car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64d8724f9d68",
-          "src": "https://learnablemeta.com/images/768/iD93PdDkbRUrUbAEg6JHRnVFK6hzwC8up8fO.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-51211",
-      "step": 0,
-      "order": 97,
+      "step": 3,
+      "order": 79,
       "family": "architecture",
       "title": "Architecture: Large Apartments",
       "text": [
@@ -2562,8 +5493,8 @@
     },
     {
       "id": "ru-lm-51212",
-      "step": 0,
-      "order": 98,
+      "step": 3,
+      "order": 80,
       "family": "architecture",
       "title": "Architecture: Rural Housing",
       "text": [
@@ -2586,8 +5517,8 @@
     },
     {
       "id": "ru-lm-51213",
-      "step": 0,
-      "order": 99,
+      "step": 3,
+      "order": 81,
       "family": "other",
       "title": "Decorated Windows",
       "text": [
@@ -2611,8 +5542,8 @@
     },
     {
       "id": "ru-lm-104532",
-      "step": 0,
-      "order": 100,
+      "step": 3,
+      "order": 82,
       "family": "other",
       "title": "Decorated Window Frames",
       "text": [
@@ -2636,8 +5567,8 @@
     },
     {
       "id": "ru-lm-104533",
-      "step": 0,
-      "order": 101,
+      "step": 3,
+      "order": 83,
       "family": "architecture",
       "title": "Architecture: Dagestan - Limestone Bricks",
       "text": [
@@ -2660,8 +5591,8 @@
     },
     {
       "id": "ru-lm-104602",
-      "step": 0,
-      "order": 102,
+      "step": 3,
+      "order": 84,
       "family": "architecture",
       "title": "Architecture: Rural Housing",
       "text": [
@@ -2684,8 +5615,8 @@
     },
     {
       "id": "ru-lm-104611",
-      "step": 0,
-      "order": 103,
+      "step": 3,
+      "order": 85,
       "family": "architecture",
       "title": "Architecture: Rectangular Apartments",
       "text": [
@@ -2709,8 +5640,8 @@
     },
     {
       "id": "ru-lm-104617",
-      "step": 0,
-      "order": 104,
+      "step": 3,
+      "order": 86,
       "family": "architecture",
       "title": "Architecture: South - Red Bricks",
       "text": [
@@ -2733,8 +5664,8 @@
     },
     {
       "id": "ru-lm-128308",
-      "step": 0,
-      "order": 105,
+      "step": 3,
+      "order": 87,
       "family": "other",
       "title": "Decorated Window Frames",
       "text": [
@@ -2758,8 +5689,8 @@
     },
     {
       "id": "ru-lm-395107",
-      "step": 0,
-      "order": 106,
+      "step": 3,
+      "order": 88,
       "family": "other",
       "title": "Russia",
       "text": [
@@ -2781,57 +5712,9 @@
       }
     },
     {
-      "id": "ru-lm-476087",
-      "step": 0,
-      "order": 107,
-      "family": "pole",
-      "title": "Pole: pole shields",
-      "text": [
-        "Black &#x26; white-striped pole shields are common along highways, especially in European Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "84f44a44a574",
-          "src": "https://learnablemeta.com/images/1955/1750703898445-LEq.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-501593",
-      "step": 0,
-      "order": 108,
-      "family": "bollard",
-      "title": "Bollard: Bollard spam",
-      "text": [
-        "Near intersections in Russia you will commonly see a very large number of bollards."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ce58d9f2bbf8",
-          "src": "https://learnablemeta.com/images/1/1754322893915-s4p.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-634055",
-      "step": 0,
-      "order": 109,
+      "step": 3,
+      "order": 89,
       "family": "plate",
       "title": "Plate: Russia",
       "text": [
@@ -2854,84 +5737,9 @@
       }
     },
     {
-      "id": "ru-lm-740322",
-      "step": 0,
-      "order": 110,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Kazan street sign",
-      "text": [
-        "Kazan has this extremely unique street sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0f9db9956042",
-          "src": "https://learnablemeta.com/images/4588/1777499952437-E31.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-740323",
-      "step": 0,
-      "order": 111,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Moscow street sign",
-      "text": [
-        "Moscow street signs are blue with white text, their bigger than any other russian city street sign and are commonly spread throughout the city. The house numbers are also as big and sometimes the street signs can have different shapes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1164b3bef849",
-          "src": "https://learnablemeta.com/images/4588/1777500066388-KXR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-740325",
-      "step": 0,
-      "order": 112,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: St Petersburg street sign",
-      "text": [
-        "St. Petersburg street signs include a transliteration of the street name on a black background with a unique logo on top with fancy borders. There is always another sign under it with a number written on in. They are primarily found downtown."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9d9978eed952",
-          "src": "https://learnablemeta.com/images/4588/1777500252051-J6M.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ru-lm-783067",
-      "step": 0,
-      "order": 113,
+      "step": 3,
+      "order": 90,
       "family": "language",
       "title": "Language: Russian",
       "text": [

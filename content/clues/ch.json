@@ -1,17 +1,1647 @@
 {
   "country": "CH",
   "name": "Switzerland",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/switzerland",
+  "updatedAt": "2025-11-08T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Switzerland"
+    },
+    {
+      "title": "Regional and canton-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "ch-lm-58",
+      "id": "ch-srYV",
       "step": 0,
+      "order": 1,
+      "family": "coverage",
+      "title": "Coverage: By far the most important way to recognize Switzerland",
+      "text": [
+        "By far the most important way to recognize Switzerland, is that all car coverage is **low-cam**. This means that the camera on the Google car is intentionally set up lower than in most other countries. This can be recognized in two ways:",
+        "- The car blur is significantly bigger.",
+        "- Roads look wider and objects around you are seen from a lower angle.",
+        "Generally, the bigger car blur is the most consistent way to recognize low-cam.",
+        "NOTE: The only other countries that always have low-cam are [Japan](https://www.google.com/maps/@35.8415638,139.9145236,3a,75y,305.11h,83.84t/data=!3m7!1e1!3m5!1sLyYnyrI7fgLeL5Ev09XeJg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DLyYnyrI7fgLeL5Ev09XeJg%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D33.088177%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192) and [Liechtenstein](https://maps.app.goo.gl/jn7cXhtXQRG6Hd9a6)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3bde559ff933",
+          "src": "https://www.plonkit.net/images/switzerland/Lowcam.png",
+          "location": {
+            "pano": "L38SiHkSPvfSwnNyIC-FWw",
+            "lat": 47.0331656,
+            "lng": 7.7057612,
+            "heading": 90.57,
+            "pitch": -4.09,
+            "fov": 75,
+            "source": "plonkit"
+          }
+        }
+      ],
+      "locations": [
+        {
+          "pano": "L38SiHkSPvfSwnNyIC-FWw",
+          "lat": 47.0331656,
+          "lng": 7.7057612,
+          "heading": 90.57,
+          "pitch": -4.09,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "JP",
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-wLZ9",
+      "step": 0,
+      "order": 2,
+      "family": "plate",
+      "title": "Plate: Swiss licence plates differ substantially from other…",
+      "text": [
+        "Swiss **licence plates** differ substantially from other European plates. They are fully white and lack the blue strip found in most other European countries.",
+        "**Front plates** are extremely short compared to most in Europe.",
+        "**Rear plates** can be either long or tall. In both cases the red country emblem can be seen on the left, while the canton emblem can be seen on the right."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "899a2d406d6f",
+          "src": "https://www.plonkit.net/images/switzerland/Switzerland_License_Plate.png",
+          "path": "ch/899a2d406d6f.webp",
+          "width": 600,
+          "height": 353
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-lPuj",
+      "step": 0,
+      "order": 3,
+      "family": "bollard",
+      "title": "Bollard: Swiss bollards are black-and-white with white or grey…",
+      "text": [
+        "Swiss bollards are **black-and-white **with white or grey reflectors. They can be either wedge-shaped or cylindrical with a rounded top.",
+        "NOTE: Liechtenstein uses almost identical [round bollards](https://maps.app.goo.gl/JJSg67HrDHerzv8c7)."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "3850d1d8da4e",
+          "src": "https://www.plonkit.net/images/switzerland/ch_bollard.png",
+          "location": {
+            "pano": "FZCUXqe-KLDmbKXcEj8DAQ",
+            "lat": 47.1206954,
+            "lng": 8.0692266,
+            "heading": 114.81,
+            "pitch": -21.69,
+            "fov": 50.4,
+            "source": "plonkit"
+          },
+          "path": "ch/3850d1d8da4e.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "29aa213d8c9e",
+          "src": "https://learnablemeta.com/images/739/3LUnvg3J19PIZ6JvHfVAE3QlIk33tVY6jEhH.avif",
+          "path": "ch/29aa213d8c9e.webp",
+          "width": 1000,
+          "height": 563
+        },
+        {
+          "id": "b4c9f5cbd859",
+          "src": "https://learnablemeta.com/images/847/CBjYqZaLpCT4sg7iVxATfdmDZghTIgnjRe8i.avif",
+          "path": "ch/b4c9f5cbd859.webp",
+          "width": 1000,
+          "height": 561
+        }
+      ],
+      "locations": [
+        {
+          "pano": "FZCUXqe-KLDmbKXcEj8DAQ",
+          "lat": 47.1206954,
+          "lng": 8.0692266,
+          "heading": 114.81,
+          "pitch": -21.69,
+          "fov": 50.4,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-9CSb",
+      "step": 0,
+      "order": 4,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: The colour of directional signs indicates which type of…",
+      "text": [
+        "The colour of **directional signs** indicates which type of road you are on. Main road signs will be blue, while side roads are white.",
+        "Major place names will frequently appear on blue signs, while smaller places tend to be on white signs. However, you can still find large city names on a [white sign](https://goo.gl/maps/pfJ2QNrPFmB7q6xN9)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "1485ce1fcb8b",
+          "src": "https://www.plonkit.net/images/switzerland/ch_directionsigns.png",
+          "location": {
+            "pano": "yf3QMjATwhRqmzdohNSaBg",
+            "lat": 47.5258076,
+            "lng": 8.2439528,
+            "heading": 3.77,
+            "pitch": 13.89,
+            "fov": 33.4,
+            "source": "plonkit"
+          },
+          "path": "ch/1485ce1fcb8b.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "yf3QMjATwhRqmzdohNSaBg",
+          "lat": 47.5258076,
+          "lng": 8.2439528,
+          "heading": 3.77,
+          "pitch": 13.89,
+          "fov": 33.4,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-e1U8",
+      "step": 0,
+      "order": 5,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Swiss pedestrian signs have seven stripes",
+      "text": [
+        "Swiss pedestrian signs have **seven stripes**, making it almost unique for Europe. Furthermore, rather than the typical European square shape, the signs appear as tall blue rectangles.",
+        "NOTE: Liechtenstein uses identical signs."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8f983b750379",
+          "src": "https://www.plonkit.net/images/switzerland/ch_pedestrian_sign.png",
+          "location": {
+            "pano": "qb-1uwoO4jwFuYpDwvxJHw",
+            "lat": 47.4740255,
+            "lng": 8.0507911,
+            "heading": 355.26,
+            "pitch": 1.13,
+            "fov": 15,
+            "source": "plonkit"
+          },
+          "path": "ch/8f983b750379.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "afcc1e3e469f",
+          "src": "https://learnablemeta.com/images/847/IIp6dK2bI7PsAZXlCjiHXGkkGaDT6PUm6cu9.avif",
+          "path": "ch/afcc1e3e469f.webp",
+          "width": 1000,
+          "height": 488
+        }
+      ],
+      "locations": [
+        {
+          "pano": "qb-1uwoO4jwFuYpDwvxJHw",
+          "lat": 47.4740255,
+          "lng": 8.0507911,
+          "heading": 355.26,
+          "pitch": 1.13,
+          "fov": 15,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-WZTx",
+      "step": 0,
+      "order": 6,
+      "family": "line",
+      "title": "Road line: Long dashed yellow road lines are a good clue for…",
+      "text": [
+        "**Long dashed yellow** road lines are a good clue for Switzerland.",
+        "NOTE: These road lines are also common in Liechtenstein."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "628b267f561a",
+          "src": "https://www.plonkit.net/images/switzerland/Screenshot__28505_29.png",
+          "path": "ch/628b267f561a.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-K1Ul",
+      "step": 0,
+      "order": 7,
+      "family": "sign",
+      "kind": "pedestrian",
+      "title": "Pedestrian sign: Pedestrian crossings are typically painted yellow and…",
+      "text": [
+        "Pedestrian crossings are typically painted **yellow** and exclusive to Switzerland and [Liechtenstein](https://maps.app.goo.gl/WLYNNkZAGCz7rDLg8) within Europe."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "58b838e35aca",
+          "src": "https://www.plonkit.net/images/switzerland/ch_pedestrian_crossing.png",
+          "location": {
+            "pano": "EmvYucUMah0tD2Wdu_uceg",
+            "lat": 47.3350065,
+            "lng": 8.3040221,
+            "heading": 82.36,
+            "pitch": -13.81,
+            "fov": 43.1,
+            "source": "plonkit"
+          },
+          "path": "ch/58b838e35aca.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "EmvYucUMah0tD2Wdu_uceg",
+          "lat": 47.3350065,
+          "lng": 8.3040221,
+          "heading": 82.36,
+          "pitch": -13.81,
+          "fov": 43.1,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-PEET",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Swiss road signs commonly have a round",
+      "text": [
+        "Swiss road signs commonly have a round, grey **metal border** around them.",
+        "NOTE: [Liechtenstein](https://maps.app.goo.gl/wbSfjB8xPexuUkqZA) uses almost identical directional signs. Somewhat similar metal borders are found on some directional signs in [Denmark](https://goo.gl/maps/gQWu5BCRsga8WkiS7)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "f491a3f0568c",
+          "src": "https://www.plonkit.net/images/switzerland/ch_sign_border.png",
+          "location": {
+            "pano": "U3eCl7BNYcUSYHIvg1UGVg",
+            "lat": 47.3121463,
+            "lng": 7.664027,
+            "heading": 318.41,
+            "pitch": 4.17,
+            "fov": 15,
+            "source": "plonkit"
+          },
+          "path": "ch/f491a3f0568c.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "U3eCl7BNYcUSYHIvg1UGVg",
+          "lat": 47.3121463,
+          "lng": 7.664027,
+          "heading": 318.41,
+          "pitch": 4.17,
+          "fov": 15,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "DK",
+        "LI"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-waGu",
+      "step": 0,
+      "order": 9,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Town entry signs in Switzerland are usually white or blue",
+      "text": [
+        "Town entry signs in Switzerland are usually **white or blue**, with a **metal frame** around them.",
+        "NOTE: On the back of these signs you may often find the distance to larger, nearby cities. Furthermore, the abbreviation for the canton can often be seen on the bottom of the sign, especially when the town is situated near a canton border."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7846c757b164",
+          "src": "https://www.plonkit.net/images/switzerland/ch_townsign.png",
+          "location": {
+            "pano": "4XnqWNUCKp_qOwcpTiSQow",
+            "lat": 47.3848991,
+            "lng": 8.3864539,
+            "heading": 352.81,
+            "pitch": -7.41,
+            "fov": 15,
+            "source": "plonkit"
+          },
+          "path": "ch/7846c757b164.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "4XnqWNUCKp_qOwcpTiSQow",
+          "lat": 47.3848991,
+          "lng": 8.3864539,
+          "heading": 352.81,
+          "pitch": -7.41,
+          "fov": 15,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-JMIW",
+      "step": 0,
+      "order": 10,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Chevrons are black with a white arrow",
+      "text": [
+        "**Chevrons** are black with a white arrow. You may also rarely find chevrons that are [white with a black arrow](https://goo.gl/maps/S8YmmUW2vnbEQryN9).",
+        "NOTE: Austrian chevrons are red and white, or red and yellow."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "40e3055a16e0",
+          "src": "https://www.plonkit.net/images/switzerland/ch_chevron.png",
+          "path": "ch/40e3055a16e0.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "195bcfc25458",
+          "src": "https://learnablemeta.com/images/914/MaLeS95tJpdGfNyia8LIQTafP33rFIWAFy8g.avif",
+          "path": "ch/195bcfc25458.webp",
+          "width": 1000,
+          "height": 457
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-FOTA",
+      "step": 0,
+      "order": 11,
+      "family": "landscape",
+      "title": "Landscape: While the southern half of Switzerland is extremely…",
+      "text": [
+        "While the southern half of Switzerland is extremely mountainous, with long, thin valleys between the mountains, the northern half mostly consists of large farmlands on either flat ground or rolling hills, typically with forested hills in the distance."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "252e175d1306",
+          "src": "https://www.plonkit.net/images/switzerland/ch_landscape.png",
+          "location": {
+            "pano": "9Vt7SJCsIPinVJwzLnYu0Q",
+            "lat": 46.8798706,
+            "lng": 6.9758277,
+            "heading": 112.06,
+            "pitch": -6.18,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/252e175d1306.webp",
+          "width": 600,
+          "height": 338
+        }
+      ],
+      "locations": [
+        {
+          "pano": "9Vt7SJCsIPinVJwzLnYu0Q",
+          "lat": 46.8798706,
+          "lng": 6.9758277,
+          "heading": 112.06,
+          "pitch": -6.18,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-aYNF",
+      "step": 0,
+      "order": 12,
+      "family": "architecture",
+      "title": "Architecture: Swiss and Alpine architecture in general largely consists…",
+      "text": [
+        "Swiss and Alpine architecture in general largely consists of **stone buildings** painted in light and warm colours, often combined with wooden parts and details. Roofs are typically tiled and of a gable type. It is extremely common for windows to have wooden shutters which open horizontally in two parts."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "603b69320dc0",
+          "src": "https://www.plonkit.net/images/switzerland/ch_houses.png",
+          "location": {
+            "pano": "lWFjS6yGA9-2QV4XLynz5A",
+            "lat": 46.7025897,
+            "lng": 8.8493444,
+            "heading": 330,
+            "pitch": 15.97,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/603b69320dc0.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "aa89a95496d0",
+          "src": "https://learnablemeta.com/images/1072/WonGUnL5y7s1VRuOe3FmRdSQvHItjWtsXsQ9.avif",
+          "path": "ch/aa89a95496d0.webp",
+          "width": 1000,
+          "height": 560
+        }
+      ],
+      "locations": [
+        {
+          "pano": "lWFjS6yGA9-2QV4XLynz5A",
+          "lat": 46.7025897,
+          "lng": 8.8493444,
+          "heading": 330,
+          "pitch": 15.97,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-kRj5",
+      "step": 0,
+      "order": 13,
+      "family": "sign",
+      "kind": "stop",
+      "title": "Stop sign: These bus stop signs",
+      "text": [
+        "These bus stop signs, with thick **metal signposts** going around them, are unique to Switzerland."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9d0f5bb14f49",
+          "src": "https://www.plonkit.net/images/switzerland/ch_busstop.png",
+          "location": {
+            "pano": "hCh6zuSyYj-_gO_0yJ39CA",
+            "lat": 47.4822109,
+            "lng": 8.4443509,
+            "heading": 119.57,
+            "pitch": -3.1,
+            "fov": 45.2,
+            "source": "plonkit"
+          },
+          "path": "ch/9d0f5bb14f49.webp",
+          "width": 600,
+          "height": 338
+        },
+        {
+          "id": "531e1f003c2f",
+          "src": "https://learnablemeta.com/images/497/VvpxJRPo6rByy4TJNxRDJpmLc11t9tyMVIQR.avif",
+          "path": "ch/531e1f003c2f.webp",
+          "width": 1000,
+          "height": 580
+        }
+      ],
+      "locations": [
+        {
+          "pano": "hCh6zuSyYj-_gO_0yJ39CA",
+          "lat": 47.4822109,
+          "lng": 8.4443509,
+          "heading": 119.57,
+          "pitch": -3.1,
+          "fov": 45.2,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-Oo4G",
+      "step": 1,
+      "order": 0,
+      "family": "language",
+      "title": "Language: Switzerland has four official languages",
+      "text": [
+        "Switzerland has **four official languages**: German, French, Italian and [Romansh](https://en.wikipedia.org/wiki/Romansh_language), which are spoken in the regions shown. Note that some areas, mostly near the region borders, are bilingual.",
+        "NOTE: Unlike Germany and Austria, Swiss German does not use the letter **ß**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "920273bebf21",
+          "src": "https://www.plonkit.net/images/switzerland/ch_languages.png",
+          "path": "ch/920273bebf21.webp",
+          "width": 600,
+          "height": 337
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "AT",
+        "DE"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-ARS4",
+      "step": 1,
+      "order": 1,
+      "family": "sign",
+      "kind": "speed",
+      "title": "Speed sign: The text on the speed limit signs varies depending on the…",
+      "text": [
+        "The text on the **speed limit signs** varies depending on the official languages in the region."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4c967600bcfe",
+          "src": "https://www.plonkit.net/images/switzerland/ch_speedsigns.png",
+          "path": "ch/4c967600bcfe.webp",
+          "width": 600,
+          "height": 337
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-hhwq",
+      "step": 1,
+      "order": 2,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: Cantons are the first-level administrative division of…",
+      "text": [
+        "**Cantons** are the first-level administrative division of Switzerland. It is very common to find the two-letter abbreviation for the canton that you are in, as seen on some town entry signs. As such, remembering these can be a great asset when region-guessing Switzerland.",
+        "NOTE: If you happen to come across an [unblurred licence plate](https://maps.app.goo.gl/yi7rVDEFGXqwZaWSA), the first two letters will correspond to the canton that it is registered in."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3688b59d47ba",
+          "src": "https://www.plonkit.net/images/switzerland/ch_cantons.png",
+          "path": "ch/3688b59d47ba.webp",
+          "width": 600,
+          "height": 385
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-EEdr",
+      "step": 1,
+      "order": 3,
+      "family": "other",
+      "title": "The first digits of Swiss postal codes are a good way to…",
+      "text": [
+        "The first digits of Swiss postal codes are a good way to regionguess the country. The general pattern is that the numbers increase from the west to east."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "a034530bda0b",
+          "src": "https://www.plonkit.net/images/switzerland/2_digit_postcode_switzerland.png",
+          "path": "ch/a034530bda0b.webp",
+          "width": 600,
+          "height": 600
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-efcd",
+      "step": 1,
+      "order": 4,
+      "family": "landscape",
+      "title": "Landscape: Elevation is an important part of region-guessing…",
+      "text": [
+        "**Elevation** is an important part of region-guessing Switzerland. The southern half of Switzerland is extremely mountainous, while the northern half mostly has smaller mountains and hills."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7c4664862edb",
+          "src": "https://www.plonkit.net/images/switzerland/ch_elevation.png",
+          "path": "ch/7c4664862edb.webp",
+          "width": 600,
+          "height": 382
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-nUOq",
+      "step": 1,
+      "order": 5,
+      "family": "landscape",
+      "title": "Landscape: A fairly flat landscape with a long chain of medium-sized",
+      "text": [
+        "A fairly flat landscape with a long chain of medium-sized, forested mountains northwest means you are likely south of the Jura Mountains."
+      ],
+      "region": "Jura",
+      "tags": [],
+      "images": [
+        {
+          "id": "780a4fd80b01",
+          "src": "https://www.plonkit.net/images/switzerland/Jura_Mountains_hint.png",
+          "path": "ch/780a4fd80b01.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-9xai",
+      "step": 1,
+      "order": 6,
+      "family": "landscape",
+      "title": "Landscape: Exposed limestone rocks, protruding from forested hills,…",
+      "text": [
+        "**Exposed limestone rocks**, protruding from forested hills, are commonly found in the Jura mountains."
+      ],
+      "region": "Jura",
+      "tags": [],
+      "images": [
+        {
+          "id": "7c437dd0feca",
+          "src": "https://www.plonkit.net/images/switzerland/ch_juralimestone.png",
+          "path": "ch/7c437dd0feca.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-vKu1",
+      "step": 1,
+      "order": 7,
+      "family": "landscape",
+      "title": "Landscape: Rock walls are mainly found in the Jura mountains",
+      "text": [
+        "**Rock walls** are mainly found in the Jura mountains, but can also be found in the Alps, particularly in the Italian speaking parts."
+      ],
+      "region": "Jura",
+      "tags": [],
+      "images": [
+        {
+          "id": "a33ab003d530",
+          "src": "https://www.plonkit.net/images/switzerland/ch_rockwalls.png",
+          "path": "ch/a33ab003d530.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-pdKy",
+      "step": 1,
+      "order": 8,
+      "family": "architecture",
+      "title": "Architecture: Not unexpectedly, seeing typical Italian architecture in…",
+      "text": [
+        "Not unexpectedly, seeing typical **Italian architecture** in Switzerland should imply that you are in the Italian-speaking areas in the south, principally the canton of Ticino.",
+        "The architectural style is characterized by, typically very smooth, orange-yellow stone walls with multiple floors and orange or brownish tiled roofs. Green and brown Italian-style window shutters are common."
+      ],
+      "region": "Ticino",
+      "tags": [],
+      "images": [
+        {
+          "id": "cd14504c9d74",
+          "src": "https://www.plonkit.net/images/switzerland/ch_italyhouses.png",
+          "location": {
+            "pano": "wObHjWiP9BgTVd5gZW9RKA",
+            "lat": 46.0108569,
+            "lng": 8.9033604,
+            "heading": 9.62,
+            "pitch": 13.2,
+            "fov": 84.4,
+            "source": "plonkit"
+          },
+          "path": "ch/cd14504c9d74.webp",
+          "width": 800,
+          "height": 393
+        },
+        {
+          "id": "aa5ecdc4868b",
+          "src": "https://learnablemeta.com/images/1072/xMHR0MEFl4mcMpzQkBi9rwcnd4kbR0CHvQuQ.avif",
+          "path": "ch/aa5ecdc4868b.webp",
+          "width": 1000,
+          "height": 483
+        }
+      ],
+      "locations": [
+        {
+          "pano": "wObHjWiP9BgTVd5gZW9RKA",
+          "lat": 46.0108569,
+          "lng": 8.9033604,
+          "heading": 9.62,
+          "pitch": 13.2,
+          "fov": 84.4,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-6CVU",
+      "step": 1,
+      "order": 9,
+      "family": "architecture",
+      "title": "Architecture: Large houses with thick roofs",
+      "text": [
+        "Large houses with thick roofs, which are shaped like an **arch** **underneath**, are common around Bern."
+      ],
+      "region": "Bern",
+      "tags": [],
+      "images": [
+        {
+          "id": "d957d9fd9eab",
+          "src": "https://www.plonkit.net/images/switzerland/ch_architecturebern.png",
+          "path": "ch/d957d9fd9eab.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-YE3t",
+      "step": 1,
+      "order": 10,
+      "family": "other",
+      "title": "Elaborate timber frames, which are commonly painted red,…",
+      "text": [
+        "**Elaborate timber frames**, which are commonly painted red, are found in the northeast.",
+        "NOTE: [Simpler timber frames](https://maps.app.goo.gl/8cAS5uQ6KW7MVwux9) in other colours can be found in other parts of the country."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "44154b99a881",
+          "src": "https://www.plonkit.net/images/switzerland/ch_timberframes.png",
+          "path": "ch/44154b99a881.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-jQTD",
+      "step": 1,
+      "order": 11,
+      "family": "architecture",
+      "title": "Architecture: Around Appenzell, most houses will consist of a large…",
+      "text": [
+        "Around Appenzell, most houses will consist of a large living house connected to a long barn, such that the roof of the living house and the barn are at a **90° angle**.",
+        "The front facade of the living house will often be divided into small squares, with each window being perfectly contained within a square."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "34bfd93e868a",
+          "src": "https://www.plonkit.net/images/switzerland/ch_appenzellarchitecture.png",
+          "path": "ch/34bfd93e868a.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-KVPw",
+      "step": 1,
+      "order": 12,
+      "family": "architecture",
+      "title": "Architecture: In the canton of Graubünden",
+      "text": [
+        "In the canton of Graubünden, you will often come across houses entirely made of stone, with, most commonly white, **decorative painted details** around windows and the edges of the house."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e02d707069e5",
+          "src": "https://www.plonkit.net/images/switzerland/ch_graubundenarchitecture.png",
+          "path": "ch/e02d707069e5.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-JkUC",
+      "step": 1,
+      "order": 13,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: These large town entry signs can sometimes be found in the…",
+      "text": [
+        "These **large** town entry signs can sometimes be found in the canton of Vaud."
+      ],
+      "region": "Vaud",
+      "tags": [],
+      "images": [
+        {
+          "id": "a78400d1cc51",
+          "src": "https://www.plonkit.net/images/switzerland/ch_vaudtownsign.png",
+          "location": {
+            "pano": "HN58HK9l7gR1RsPQO_cIKg",
+            "lat": 46.8013643,
+            "lng": 6.7330986,
+            "heading": 136.22,
+            "pitch": -1.44,
+            "fov": 22.1,
+            "source": "plonkit"
+          },
+          "path": "ch/a78400d1cc51.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "HN58HK9l7gR1RsPQO_cIKg",
+          "lat": 46.8013643,
+          "lng": 6.7330986,
+          "heading": 136.22,
+          "pitch": -1.44,
+          "fov": 22.1,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-H9pK",
+      "step": 1,
+      "order": 14,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Olive green infrastructure, particularly signposts, sign…",
+      "text": [
+        "**Olive green infrastructure**, particularly signposts, sign borders and sign backs, are found in Basel-Landschaft."
+      ],
+      "region": "Basel-Landschaft",
+      "tags": [],
+      "images": [
+        {
+          "id": "4e152bc6209f",
+          "src": "https://www.plonkit.net/images/switzerland/ch_baselolivegreen.png",
+          "path": "ch/4e152bc6209f.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-DapV",
+      "step": 1,
+      "order": 15,
+      "family": "bollard",
+      "title": "Bollard: In the canton of Valais",
+      "text": [
+        "In the canton of Valais, you will often see thick wooden bollards, which can either be **square-shaped** or **cylindrical**."
+      ],
+      "region": "Valais",
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "245e8713abeb",
+          "src": "https://www.plonkit.net/images/switzerland/ch_thickwoodenbollard.png",
+          "path": "ch/245e8713abeb.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-V7Ou",
+      "step": 1,
+      "order": 16,
+      "family": "bollard",
+      "title": "Bollard: In place of bollards",
+      "text": [
+        "In place of bollards, reflectors in the canton of Glarus will often be **attached to fences** following the road."
+      ],
+      "region": "Glarus",
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "9c5da3c2dfc7",
+          "src": "https://www.plonkit.net/images/switzerland/ch_fencereflectors.png",
+          "path": "ch/9c5da3c2dfc7.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-XO5x",
+      "step": 1,
+      "order": 17,
+      "family": "other",
+      "title": "In Geneva and in the valley between Martigny and Lake Geneva",
+      "text": [
+        "In Geneva and in the valley between Martigny and Lake Geneva, you can find bike path symbols painted on the road with a **simplified person** on top of two **disconnected wheels**.",
+        "NOTE: This stands in contrast to the rest of the country, where the symbol will be a [somewhat detailed bike](https://maps.app.goo.gl/1zfGBch8koTPW4pLA)."
+      ],
+      "region": "Geneva",
+      "tags": [],
+      "images": [
+        {
+          "id": "464212e4caac",
+          "src": "https://www.plonkit.net/images/switzerland/ch_genevabikesymbol.png",
+          "path": "ch/464212e4caac.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-e2jj",
+      "step": 1,
+      "order": 18,
+      "family": "other",
+      "title": "You may find several different types of road dividers…",
+      "text": [
+        "You may find several different types of **road dividers** across the country, distributed as seen in this graphic.",
+        "_This image was provided by quarksauce. You can click on the image to enlarge it._"
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7c23830d3366",
+          "src": "https://www.plonkit.net/images/switzerland/Reflectors_wide.png",
+          "path": "ch/7c23830d3366.webp",
+          "width": 1200,
+          "height": 421
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-fLRI",
+      "step": 2,
+      "order": 0,
+      "family": "landscape",
+      "title": "Landscape: If the area around your location appears hilly",
+      "text": [
+        "If the area around your location appears hilly, but not mountainous, and you manage to catch a glimpse of a large lake to the south, with **tall mountains** on the other side, then you are very likely north of Lake Geneva."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "cba836935df3",
+          "src": "https://www.plonkit.net/images/switzerland/ch_lakegeneva.png",
+          "location": {
+            "pano": "F1vZiFG-Z3XOqOV7nTjvyw",
+            "lat": 46.5544469,
+            "lng": 6.4426351,
+            "heading": 146.94,
+            "pitch": 1.25,
+            "fov": 40,
+            "source": "plonkit"
+          },
+          "path": "ch/cba836935df3.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "F1vZiFG-Z3XOqOV7nTjvyw",
+          "lat": 46.5544469,
+          "lng": 6.4426351,
+          "heading": 146.94,
+          "pitch": 1.25,
+          "fov": 40,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-xSSR",
+      "step": 2,
+      "order": 1,
+      "family": "landscape",
+      "title": "Landscape: Seeing a wide lake to the northeast",
+      "text": [
+        "Seeing a wide lake to the northeast, situated in a landscape with relatively low elevation, means you should be looking at **Lake Constance **(on some Maps labelled as the Bodensee).",
+        "NOTE: Due to the low-lying landscape, you will probably be fairly close to the shore if you see the lake."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "cd41aac04be5",
+          "src": "https://www.plonkit.net/images/switzerland/ch_bodensee.png",
+          "giveaway": true,
+          "location": {
+            "pano": "emCvlHdt6OltXYRWwdbfTw",
+            "lat": 47.579076,
+            "lng": 9.3187153,
+            "heading": 32.49,
+            "pitch": -0.45,
+            "fov": 71.9,
+            "source": "plonkit"
+          },
+          "path": "ch/cd41aac04be5.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "emCvlHdt6OltXYRWwdbfTw",
+          "lat": 47.579076,
+          "lng": 9.3187153,
+          "heading": 32.49,
+          "pitch": -0.45,
+          "fov": 71.9,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-hdVS",
+      "step": 2,
+      "order": 2,
+      "family": "vegetation",
+      "title": "Vegetation: The valley of Martigny has the highest density of fruit…",
+      "text": [
+        "The valley of Martigny has the highest density of **fruit plantations** in the country. It can easily be recognized by the many small fruit trees in combination with the wide, flat valley with large mountains on either side."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d6dc15a0ce17",
+          "src": "https://www.plonkit.net/images/switzerland/ch_martignyfruits1.png",
+          "location": {
+            "pano": "arsDGHXPAK7ICHL7Gm7wLA",
+            "lat": 46.1357039,
+            "lng": 7.1359628,
+            "heading": 46.7,
+            "pitch": -3.01,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/d6dc15a0ce17.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "arsDGHXPAK7ICHL7Gm7wLA",
+          "lat": 46.1357039,
+          "lng": 7.1359628,
+          "heading": 46.7,
+          "pitch": -3.01,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-1rvx",
+      "step": 2,
+      "order": 3,
+      "family": "vegetation",
+      "title": "Vegetation: Apart from the valley of Martigny",
+      "text": [
+        "Apart from the valley of Martigny, the most likely area to find **fruit trees** is near Lake Constance, followed by the area northwest of Lake Geneva."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7e04f097ae74",
+          "src": "https://www.plonkit.net/images/switzerland/ch_fruittrees.png",
+          "location": {
+            "pano": "qAvLZr6snnOTxogUnHky7g",
+            "lat": 47.568453,
+            "lng": 9.2361495,
+            "heading": 20.37,
+            "pitch": 5.07,
+            "fov": 71.8,
+            "source": "plonkit"
+          },
+          "path": "ch/7e04f097ae74.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "qAvLZr6snnOTxogUnHky7g",
+          "lat": 47.568453,
+          "lng": 9.2361495,
+          "heading": 20.37,
+          "pitch": 5.07,
+          "fov": 71.8,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-q9q8",
+      "step": 2,
+      "order": 4,
+      "family": "coverage",
+      "title": "Coverage: In the canton of Graubünden",
+      "text": [
+        "In the canton of Graubünden, you can find this unique and easily recognizable **train coverage** on the tracks of the “Bernina Express.” It runs around most of the canton, all the way down to Tirano in Italy."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d379b7dd9ba2",
+          "src": "https://www.plonkit.net/images/switzerland/ch_traintrekker_copy.png",
+          "location": {
+            "pano": "JPgRwnmgScEvpjUS7AteBg",
+            "lat": 46.8073564,
+            "lng": 9.3392194,
+            "heading": 59.7,
+            "pitch": 0.91,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/d379b7dd9ba2.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "JPgRwnmgScEvpjUS7AteBg",
+          "lat": 46.8073564,
+          "lng": 9.3392194,
+          "heading": 59.7,
+          "pitch": 0.91,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [
+        "IT"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-JZSb",
+      "step": 2,
+      "order": 5,
+      "family": "car",
+      "title": "Google car: Generation 2 coverage is very limited in Switzerland",
+      "text": [
+        "**Generation 2** coverage is very limited in Switzerland. It can be found mostly near the border between the cantons of Bern and Valais, and on a few very short stretches in Schaffhausen.",
+        "NOTE: This does not include the many ski resorts with Generation 2 snow coverage, which can be found throughout the southern half of the country."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "57c795dbfd8f",
+          "src": "https://www.plonkit.net/images/switzerland/ch_gen2.png",
+          "location": {
+            "pano": "wJus2sEl7-vFz2c7l6waZA",
+            "lat": 46.4284643,
+            "lng": 7.8183143,
+            "heading": 287.59,
+            "pitch": 29.4,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/57c795dbfd8f.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "wJus2sEl7-vFz2c7l6waZA",
+          "lat": 46.4284643,
+          "lng": 7.8183143,
+          "heading": 287.59,
+          "pitch": 29.4,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-5c2b",
+      "step": 2,
+      "order": 6,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: These blue street signs",
+      "text": [
+        "These blue street signs, with **rounded edges** on the sides, are unique to the city of Sankt Gallen."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "86fcc2e6d118",
+          "src": "https://www.plonkit.net/images/switzerland/ch_stgallen_streetsign.png",
+          "location": {
+            "pano": "Z4wB-pIims-wOTG28uQiAQ",
+            "lat": 47.4357403,
+            "lng": 9.3928237,
+            "heading": 326.13,
+            "pitch": 7.57,
+            "fov": 15.7,
+            "source": "plonkit"
+          },
+          "path": "ch/86fcc2e6d118.webp",
+          "width": 800,
+          "height": 393
+        },
+        {
+          "id": "ab37f55be22d",
+          "src": "https://learnablemeta.com/images/4588/1777543157585-OVG.avif",
+          "path": "ch/ab37f55be22d.webp",
+          "width": 535,
+          "height": 284
+        }
+      ],
+      "locations": [
+        {
+          "pano": "Z4wB-pIims-wOTG28uQiAQ",
+          "lat": 47.4357403,
+          "lng": 9.3928237,
+          "heading": 326.13,
+          "pitch": 7.57,
+          "fov": 15.7,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-bd1S",
+      "step": 2,
+      "order": 7,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Large blue street signs",
+      "text": [
+        "Large blue street signs, attached to a **low double signpost**, similar to directional signs in [Denmark](https://maps.app.goo.gl/234Fd9GSuZQRtH47A), are found in Basel."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "334eaa12d9d1",
+          "src": "https://www.plonkit.net/images/switzerland/ch_baselstreetsigns.png",
+          "path": "ch/334eaa12d9d1.webp",
+          "width": 800,
+          "height": 393
+        },
+        {
+          "id": "4e70184da4ad",
+          "src": "https://learnablemeta.com/images/4588/1777542944105-GJW.avif",
+          "path": "ch/4e70184da4ad.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "DK"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-pzZV",
+      "step": 2,
+      "order": 8,
+      "family": "architecture",
+      "title": "Architecture: Downtown Bern can be recognized by this specific…",
+      "text": [
+        "Downtown Bern can be recognized by this **specific architecture**. Grey toned buildings, typically with four floors and large, somewhat rounded openings lined up on the ground floor are common."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7b18e7144c4d",
+          "src": "https://www.plonkit.net/images/switzerland/ch_bern.png",
+          "location": {
+            "pano": "J5ORCfNf0VoySkwxhwhiSQ",
+            "lat": 46.9479948,
+            "lng": 7.4501508,
+            "heading": 98.68,
+            "pitch": 13.83,
+            "fov": 75,
+            "source": "plonkit"
+          },
+          "path": "ch/7b18e7144c4d.webp",
+          "width": 800,
+          "height": 393
+        }
+      ],
+      "locations": [
+        {
+          "pano": "J5ORCfNf0VoySkwxhwhiSQ",
+          "lat": 46.9479948,
+          "lng": 7.4501508,
+          "heading": 98.68,
+          "pitch": 13.83,
+          "fov": 75,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/switzerland",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "ch-lm-58",
+      "step": 3,
       "order": 0,
       "family": "coverage",
       "title": "Coverage: Low cam",
@@ -23,7 +1653,10 @@
       "images": [
         {
           "id": "2ea0d7946314",
-          "src": "https://learnablemeta.com/images/MaDF5r8rI0sQEPgwncg47IT6AVaUKTeoYrnt.avif"
+          "src": "https://learnablemeta.com/images/MaDF5r8rI0sQEPgwncg47IT6AVaUKTeoYrnt.avif",
+          "path": "ch/2ea0d7946314.webp",
+          "width": 1000,
+          "height": 563
         }
       ],
       "locations": [],
@@ -39,7 +1672,7 @@
     },
     {
       "id": "ch-lm-2231",
-      "step": 0,
+      "step": 3,
       "order": 1,
       "family": "sign",
       "kind": "speed",
@@ -51,7 +1684,10 @@
       "images": [
         {
           "id": "ebe9768174bd",
-          "src": "https://learnablemeta.com/images/5/Lzb57qkj1ncdemnM1PrVWqN9L7qTwcGBKQaJ.avif"
+          "src": "https://learnablemeta.com/images/5/Lzb57qkj1ncdemnM1PrVWqN9L7qTwcGBKQaJ.avif",
+          "path": "ch/ebe9768174bd.webp",
+          "width": 1000,
+          "height": 618
         }
       ],
       "locations": [],
@@ -66,7 +1702,7 @@
     },
     {
       "id": "ch-lm-2234",
-      "step": 0,
+      "step": 3,
       "order": 2,
       "family": "sign",
       "kind": "speed",
@@ -78,7 +1714,10 @@
       "images": [
         {
           "id": "0ff81d09ca6d",
-          "src": "https://learnablemeta.com/images/5/PNKp6LTEuoxIwVBc9g3zqfBemT2ObddWYhu7.avif"
+          "src": "https://learnablemeta.com/images/5/PNKp6LTEuoxIwVBc9g3zqfBemT2ObddWYhu7.avif",
+          "path": "ch/0ff81d09ca6d.webp",
+          "width": 1000,
+          "height": 618
         }
       ],
       "locations": [],
@@ -93,7 +1732,7 @@
     },
     {
       "id": "ch-lm-2235",
-      "step": 0,
+      "step": 3,
       "order": 3,
       "family": "language",
       "title": "Language: Romansh",
@@ -112,7 +1751,10 @@
       "images": [
         {
           "id": "a5133b516f13",
-          "src": "https://learnablemeta.com/images/5/z6AqWoaa0c8L6ITYfU6CwsTWmNQGJU8RlafS.avif"
+          "src": "https://learnablemeta.com/images/5/z6AqWoaa0c8L6ITYfU6CwsTWmNQGJU8RlafS.avif",
+          "path": "ch/a5133b516f13.webp",
+          "width": 1000,
+          "height": 618
         }
       ],
       "locations": [],
@@ -124,60 +1766,70 @@
       }
     },
     {
-      "id": "ch-lm-9746",
-      "step": 0,
+      "id": "ch-lm-49884",
+      "step": 3,
       "order": 4,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: bus stop signs",
+      "family": "coverage",
+      "title": "Coverage: Lowcam",
       "text": [
-        "These bus stop signs, with thick metal signposts going around them, are unique to Switzerland."
+        "By far the most important way to recognize Switzerland, is that all car coverage is low-cam.",
+        "This means that the camera on the Google car is intentionally set up lower than in most other countries.",
+        "**--- THIS CAN BE RECOGNIZED IN TWO WAYS:**",
+        "The car blur is significantly bigger.",
+        "Roads look wider and objects around you are seen from a lower angle."
       ],
       "tags": [],
       "images": [
         {
-          "id": "531e1f003c2f",
-          "src": "https://learnablemeta.com/images/497/VvpxJRPo6rByy4TJNxRDJpmLc11t9tyMVIQR.avif"
+          "id": "1c6f333c8af4",
+          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif",
+          "path": "ch/1c6f333c8af4.webp",
+          "width": 1000,
+          "height": 580
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67b8db19c812bf41d49b730e",
+        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
-      "id": "ch-lm-19916",
-      "step": 0,
+      "id": "ch-lm-50237",
+      "step": 3,
       "order": 5,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
+      "family": "coverage",
+      "title": "Coverage: Lowcam",
       "text": [
-        "Swiss bollards are black-and-white with white or grey reflectors. They can be either wedge-shaped or cylindrical with a rounded top.",
-        "**NOTE:** Liechtenstein uses almost identical round bollards."
+        "By far the most important way to recognize Switzerland, is that all car coverage is low-cam.",
+        "This means that the camera on the Google car is intentionally set up lower than in most other countries.",
+        "**--- THIS CAN BE RECOGNIZED IN TWO WAYS:**",
+        "The car blur is significantly bigger.",
+        "Roads look wider and objects around you are seen from a lower angle."
       ],
       "tags": [],
       "images": [
         {
-          "id": "29aa213d8c9e",
-          "src": "https://learnablemeta.com/images/739/3LUnvg3J19PIZ6JvHfVAE3QlIk33tVY6jEhH.avif"
+          "id": "1c6f333c8af4",
+          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif",
+          "path": "ch/1c6f333c8af4.webp",
+          "width": 1000,
+          "height": 580
         }
       ],
       "locations": [],
-      "lookalikes": [
-        "LI"
-      ],
+      "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
+        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
-      "id": "ch-lm-49884",
-      "step": 0,
+      "id": "ch-lm-50890",
+      "step": 3,
       "order": 6,
       "family": "coverage",
       "title": "Coverage: Lowcam",
@@ -192,165 +1844,10 @@
       "images": [
         {
           "id": "1c6f333c8af4",
-          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-49885",
-      "step": 0,
-      "order": 7,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Swiss bollards are black-and-white with white or grey reflectors.",
-        "They can be either wedge-shaped or cylindrical with a rounded top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b4c9f5cbd859",
-          "src": "https://learnablemeta.com/images/847/CBjYqZaLpCT4sg7iVxATfdmDZghTIgnjRe8i.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-49886",
-      "step": 0,
-      "order": 8,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Sign",
-      "text": [
-        "Swiss pedestrian signs have seven stripes, making it almost unique for Europe.",
-        "Furthermore, rather than the typical European square shape, the signs appear as tall blue rectangles."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "afcc1e3e469f",
-          "src": "https://learnablemeta.com/images/847/IIp6dK2bI7PsAZXlCjiHXGkkGaDT6PUm6cu9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50233",
-      "step": 0,
-      "order": 9,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Sign",
-      "text": [
-        "Swiss pedestrian signs have seven stripes, making it almost unique for Europe.",
-        "Furthermore, rather than the typical European square shape, the signs appear as tall blue rectangles."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "afcc1e3e469f",
-          "src": "https://learnablemeta.com/images/847/IIp6dK2bI7PsAZXlCjiHXGkkGaDT6PUm6cu9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50237",
-      "step": 0,
-      "order": 10,
-      "family": "coverage",
-      "title": "Coverage: Lowcam",
-      "text": [
-        "By far the most important way to recognize Switzerland, is that all car coverage is low-cam.",
-        "This means that the camera on the Google car is intentionally set up lower than in most other countries.",
-        "**--- THIS CAN BE RECOGNIZED IN TWO WAYS:**",
-        "The car blur is significantly bigger.",
-        "Roads look wider and objects around you are seen from a lower angle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1c6f333c8af4",
-          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50241",
-      "step": 0,
-      "order": 11,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Swiss bollards are black-and-white with white or grey reflectors.",
-        "They can be either wedge-shaped or cylindrical with a rounded top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b4c9f5cbd859",
-          "src": "https://learnablemeta.com/images/847/CBjYqZaLpCT4sg7iVxATfdmDZghTIgnjRe8i.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50890",
-      "step": 0,
-      "order": 12,
-      "family": "coverage",
-      "title": "Coverage: Lowcam",
-      "text": [
-        "By far the most important way to recognize Switzerland, is that all car coverage is low-cam.",
-        "This means that the camera on the Google car is intentionally set up lower than in most other countries.",
-        "**--- THIS CAN BE RECOGNIZED IN TWO WAYS:**",
-        "The car blur is significantly bigger.",
-        "Roads look wider and objects around you are seen from a lower angle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1c6f333c8af4",
-          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif"
+          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif",
+          "path": "ch/1c6f333c8af4.webp",
+          "width": 1000,
+          "height": 580
         }
       ],
       "locations": [],
@@ -358,144 +1855,13 @@
       "credit": {
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50891",
-      "step": 0,
-      "order": 13,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Swiss bollards are black-and-white with white or grey reflectors.",
-        "They can be either wedge-shaped or cylindrical with a rounded top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b4c9f5cbd859",
-          "src": "https://learnablemeta.com/images/847/CBjYqZaLpCT4sg7iVxATfdmDZghTIgnjRe8i.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-50892",
-      "step": 0,
-      "order": 14,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Pedestrian Sign",
-      "text": [
-        "Swiss pedestrian signs have seven stripes, making it almost unique for Europe.",
-        "Furthermore, rather than the typical European square shape, the signs appear as tall blue rectangles."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "afcc1e3e469f",
-          "src": "https://learnablemeta.com/images/847/IIp6dK2bI7PsAZXlCjiHXGkkGaDT6PUm6cu9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-66752",
-      "step": 0,
-      "order": 15,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Chevrons are black with a white arrow.",
-        "You may also rarely find chevrons that are white with a black arrow.",
-        "**--- NOTE:**",
-        "Austrian chevrons are red and white, or red and yellow."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "195bcfc25458",
-          "src": "https://learnablemeta.com/images/914/MaLeS95tJpdGfNyia8LIQTafP33rFIWAFy8g.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-104547",
-      "step": 0,
-      "order": 16,
-      "family": "architecture",
-      "title": "Architecture: Alpine & Stone Buildings",
-      "text": [
-        "Swiss and Alpine architecture in general largely consists of stone buildings painted in light and warm colours, often combined with wooden parts and details.",
-        "Roofs are typically tiled and of a gable type.",
-        "It is extremely common for windows to have wooden shutters which open horizontally in two parts."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa89a95496d0",
-          "src": "https://learnablemeta.com/images/1072/WonGUnL5y7s1VRuOe3FmRdSQvHItjWtsXsQ9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ch-lm-104548",
-      "step": 0,
-      "order": 17,
-      "family": "architecture",
-      "title": "Architecture: Ticino - Italian Architecture",
-      "text": [
-        "Not unexpectedly, seeing typical Italian architecture in Switzerland should imply that you are in the Italian-speaking areas in the south, principally the canton of Ticino.",
-        "The architectural style is characterized by, typically very smooth, orange-yellow stone walls with multiple floors and orange or brownish tiled roofs.",
-        "Green and brown Italian-style window shutters are common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aa5ecdc4868b",
-          "src": "https://learnablemeta.com/images/1072/xMHR0MEFl4mcMpzQkBi9rwcnd4kbR0CHvQuQ.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "ch-lm-104549",
-      "step": 0,
-      "order": 18,
+      "step": 3,
+      "order": 7,
       "family": "architecture",
       "title": "Architecture: Bern - Arch Shapes",
       "text": [
@@ -505,7 +1871,10 @@
       "images": [
         {
           "id": "df9b003385cc",
-          "src": "https://learnablemeta.com/images/1072/FkRZO2lpsb7ZxF3TWdTEzTvTYlR3YQYmUfwo.avif"
+          "src": "https://learnablemeta.com/images/1072/FkRZO2lpsb7ZxF3TWdTEzTvTYlR3YQYmUfwo.avif",
+          "path": "ch/df9b003385cc.webp",
+          "width": 1000,
+          "height": 484
         }
       ],
       "locations": [],
@@ -518,8 +1887,8 @@
     },
     {
       "id": "ch-lm-104550",
-      "step": 0,
-      "order": 19,
+      "step": 3,
+      "order": 8,
       "family": "other",
       "title": "Northeast - Elaborate Timber Frames",
       "text": [
@@ -531,7 +1900,10 @@
       "images": [
         {
           "id": "3a345cbfafad",
-          "src": "https://learnablemeta.com/images/1072/yD8Wqaq9hsrrntSKUcl1BXvrj87jkR7WN9nh.avif"
+          "src": "https://learnablemeta.com/images/1072/yD8Wqaq9hsrrntSKUcl1BXvrj87jkR7WN9nh.avif",
+          "path": "ch/3a345cbfafad.webp",
+          "width": 1000,
+          "height": 482
         }
       ],
       "locations": [],
@@ -544,8 +1916,8 @@
     },
     {
       "id": "ch-lm-104551",
-      "step": 0,
-      "order": 20,
+      "step": 3,
+      "order": 9,
       "family": "architecture",
       "title": "Architecture: Graubünden - Decorative Details",
       "text": [
@@ -555,7 +1927,10 @@
       "images": [
         {
           "id": "04b33184a1cd",
-          "src": "https://learnablemeta.com/images/1072/mq2aoDM2CW85uxmFHzqqwXNyJAjpOEvntDpN.avif"
+          "src": "https://learnablemeta.com/images/1072/mq2aoDM2CW85uxmFHzqqwXNyJAjpOEvntDpN.avif",
+          "path": "ch/04b33184a1cd.webp",
+          "width": 1000,
+          "height": 485
         }
       ],
       "locations": [],
@@ -568,8 +1943,8 @@
     },
     {
       "id": "ch-lm-104624",
-      "step": 0,
-      "order": 21,
+      "step": 3,
+      "order": 10,
       "family": "architecture",
       "title": "Architecture: Appenzell - Barn Connections",
       "text": [
@@ -580,7 +1955,10 @@
       "images": [
         {
           "id": "1699690b362b",
-          "src": "https://learnablemeta.com/images/1072/q305lqH7puXEaSswfd52fKSTcb25veafl5DV.avif"
+          "src": "https://learnablemeta.com/images/1072/q305lqH7puXEaSswfd52fKSTcb25veafl5DV.avif",
+          "path": "ch/1699690b362b.webp",
+          "width": 1000,
+          "height": 484
         }
       ],
       "locations": [],
@@ -593,8 +1971,8 @@
     },
     {
       "id": "ch-lm-128313",
-      "step": 0,
-      "order": 22,
+      "step": 3,
+      "order": 11,
       "family": "architecture",
       "title": "Architecture: Graubünden - Decorative Details",
       "text": [
@@ -604,7 +1982,10 @@
       "images": [
         {
           "id": "04b33184a1cd",
-          "src": "https://learnablemeta.com/images/1072/mq2aoDM2CW85uxmFHzqqwXNyJAjpOEvntDpN.avif"
+          "src": "https://learnablemeta.com/images/1072/mq2aoDM2CW85uxmFHzqqwXNyJAjpOEvntDpN.avif",
+          "path": "ch/04b33184a1cd.webp",
+          "width": 1000,
+          "height": 485
         }
       ],
       "locations": [],
@@ -617,8 +1998,8 @@
     },
     {
       "id": "ch-lm-128315",
-      "step": 0,
-      "order": 23,
+      "step": 3,
+      "order": 12,
       "family": "architecture",
       "title": "Architecture: Bern - Arch Shapes",
       "text": [
@@ -628,7 +2009,10 @@
       "images": [
         {
           "id": "df9b003385cc",
-          "src": "https://learnablemeta.com/images/1072/FkRZO2lpsb7ZxF3TWdTEzTvTYlR3YQYmUfwo.avif"
+          "src": "https://learnablemeta.com/images/1072/FkRZO2lpsb7ZxF3TWdTEzTvTYlR3YQYmUfwo.avif",
+          "path": "ch/df9b003385cc.webp",
+          "width": 1000,
+          "height": 484
         }
       ],
       "locations": [],
@@ -641,8 +2025,8 @@
     },
     {
       "id": "ch-lm-295798",
-      "step": 0,
-      "order": 24,
+      "step": 3,
+      "order": 13,
       "family": "bollard",
       "title": "Bollard: Valais Bollards",
       "text": [
@@ -652,7 +2036,10 @@
       "images": [
         {
           "id": "ceb8e29b1fd7",
-          "src": "https://learnablemeta.com/images/1262/sRyU6encGCahmdMN8P5qkCYjgqzJ0zhNApBX.avif"
+          "src": "https://learnablemeta.com/images/1262/sRyU6encGCahmdMN8P5qkCYjgqzJ0zhNApBX.avif",
+          "path": "ch/ceb8e29b1fd7.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -665,8 +2052,8 @@
     },
     {
       "id": "ch-lm-295802",
-      "step": 0,
-      "order": 25,
+      "step": 3,
+      "order": 14,
       "family": "bollard",
       "title": "Bollard: Glarus Bollards",
       "text": [
@@ -676,7 +2063,10 @@
       "images": [
         {
           "id": "e0bd93919a1f",
-          "src": "https://learnablemeta.com/images/1262/bgG3cn9BzSOsC0SUhlYXQOxsCLzW16P6jAmQ.avif"
+          "src": "https://learnablemeta.com/images/1262/bgG3cn9BzSOsC0SUhlYXQOxsCLzW16P6jAmQ.avif",
+          "path": "ch/e0bd93919a1f.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -689,8 +2079,8 @@
     },
     {
       "id": "ch-lm-295810",
-      "step": 0,
-      "order": 26,
+      "step": 3,
+      "order": 15,
       "family": "other",
       "title": "Timber Frames",
       "text": [
@@ -701,7 +2091,10 @@
       "images": [
         {
           "id": "27fca023da85",
-          "src": "https://learnablemeta.com/images/1262/cJASQmL4P3wYahU8BDbAEsH1mNX9kbWSsikj.avif"
+          "src": "https://learnablemeta.com/images/1262/cJASQmL4P3wYahU8BDbAEsH1mNX9kbWSsikj.avif",
+          "path": "ch/27fca023da85.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -714,8 +2107,8 @@
     },
     {
       "id": "ch-lm-295812",
-      "step": 0,
-      "order": 27,
+      "step": 3,
+      "order": 16,
       "family": "architecture",
       "title": "Architecture: Arch Roofs",
       "text": [
@@ -725,7 +2118,10 @@
       "images": [
         {
           "id": "18a470a79cba",
-          "src": "https://learnablemeta.com/images/1262/9ZrTQmQkVYSWydhDgpaCDdvUR5v7OjyZx44Z.avif"
+          "src": "https://learnablemeta.com/images/1262/9ZrTQmQkVYSWydhDgpaCDdvUR5v7OjyZx44Z.avif",
+          "path": "ch/18a470a79cba.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -738,8 +2134,8 @@
     },
     {
       "id": "ch-lm-295824",
-      "step": 0,
-      "order": 28,
+      "step": 3,
+      "order": 17,
       "family": "other",
       "title": "Cycling Paints",
       "text": [
@@ -750,7 +2146,10 @@
       "images": [
         {
           "id": "bb88c5b33699",
-          "src": "https://learnablemeta.com/images/1262/IUHIAGG8oi8cswjemCDVa7sUR5MBHeklDRdE.avif"
+          "src": "https://learnablemeta.com/images/1262/IUHIAGG8oi8cswjemCDVa7sUR5MBHeklDRdE.avif",
+          "path": "ch/bb88c5b33699.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -763,8 +2162,8 @@
     },
     {
       "id": "ch-lm-295825",
-      "step": 0,
-      "order": 29,
+      "step": 3,
+      "order": 18,
       "family": "landscape",
       "title": "Landscape: Lake Geneva",
       "text": [
@@ -774,7 +2173,10 @@
       "images": [
         {
           "id": "55ea35144427",
-          "src": "https://learnablemeta.com/images/1262/K5L3dw2IL9G29Cgzd2Y684i36hg7sFOctbPO.avif"
+          "src": "https://learnablemeta.com/images/1262/K5L3dw2IL9G29Cgzd2Y684i36hg7sFOctbPO.avif",
+          "path": "ch/55ea35144427.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -787,8 +2189,8 @@
     },
     {
       "id": "ch-lm-295842",
-      "step": 0,
-      "order": 30,
+      "step": 3,
+      "order": 19,
       "family": "architecture",
       "title": "Architecture: Appenzell Architecture",
       "text": [
@@ -798,7 +2200,10 @@
       "images": [
         {
           "id": "d7f36ee7dc61",
-          "src": "https://learnablemeta.com/images/1262/Y1JLgTcCGkIRADfI0ihSL2MemHyE9bgOD7vQ.avif"
+          "src": "https://learnablemeta.com/images/1262/Y1JLgTcCGkIRADfI0ihSL2MemHyE9bgOD7vQ.avif",
+          "path": "ch/d7f36ee7dc61.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -811,8 +2216,8 @@
     },
     {
       "id": "ch-lm-295850",
-      "step": 0,
-      "order": 31,
+      "step": 3,
+      "order": 20,
       "family": "landscape",
       "title": "Landscape: Rock Walls",
       "text": [
@@ -822,7 +2227,10 @@
       "images": [
         {
           "id": "eb54cbfacfd6",
-          "src": "https://learnablemeta.com/images/1262/mZjpSgXDOn4lhkWNz6ZYg23ADNCGf7XHYFuM.avif"
+          "src": "https://learnablemeta.com/images/1262/mZjpSgXDOn4lhkWNz6ZYg23ADNCGf7XHYFuM.avif",
+          "path": "ch/eb54cbfacfd6.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -835,8 +2243,8 @@
     },
     {
       "id": "ch-lm-295851",
-      "step": 0,
-      "order": 32,
+      "step": 3,
+      "order": 21,
       "family": "architecture",
       "title": "Architecture: Italian architecture",
       "text": [
@@ -846,7 +2254,10 @@
       "images": [
         {
           "id": "792fc59292da",
-          "src": "https://learnablemeta.com/images/1262/hL0jYs86VE8YOaCmndaLs5OL0Q6QKzCapSPk.avif"
+          "src": "https://learnablemeta.com/images/1262/hL0jYs86VE8YOaCmndaLs5OL0Q6QKzCapSPk.avif",
+          "path": "ch/792fc59292da.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -859,8 +2270,8 @@
     },
     {
       "id": "ch-lm-295859",
-      "step": 0,
-      "order": 33,
+      "step": 3,
+      "order": 22,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: St",
@@ -871,7 +2282,10 @@
       "images": [
         {
           "id": "2bfd4e9547fa",
-          "src": "https://learnablemeta.com/images/1262/gCS6oYWWjVWlYHaslQGzRyt7NVfpeTNEMwOa.avif"
+          "src": "https://learnablemeta.com/images/1262/gCS6oYWWjVWlYHaslQGzRyt7NVfpeTNEMwOa.avif",
+          "path": "ch/2bfd4e9547fa.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -884,8 +2298,8 @@
     },
     {
       "id": "ch-lm-295861",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 23,
       "family": "landscape",
       "title": "Landscape: Limestone Rocks",
       "text": [
@@ -895,7 +2309,10 @@
       "images": [
         {
           "id": "5ce4971bd39b",
-          "src": "https://learnablemeta.com/images/1262/HRjW4ekuT8MbFZPKcdBxbiA85ro62PFF5SYJ.avif"
+          "src": "https://learnablemeta.com/images/1262/HRjW4ekuT8MbFZPKcdBxbiA85ro62PFF5SYJ.avif",
+          "path": "ch/5ce4971bd39b.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -908,8 +2325,8 @@
     },
     {
       "id": "ch-lm-295863",
-      "step": 0,
-      "order": 35,
+      "step": 3,
+      "order": 24,
       "family": "coverage",
       "title": "Coverage: Train Coverage",
       "text": [
@@ -919,7 +2336,10 @@
       "images": [
         {
           "id": "cd4e8c565ea7",
-          "src": "https://learnablemeta.com/images/1262/nPMT8QnQyEB8AnF2QvuylHxU9WBK2pUllHpQ.avif"
+          "src": "https://learnablemeta.com/images/1262/nPMT8QnQyEB8AnF2QvuylHxU9WBK2pUllHpQ.avif",
+          "path": "ch/cd4e8c565ea7.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -934,8 +2354,8 @@
     },
     {
       "id": "ch-lm-295865",
-      "step": 0,
-      "order": 36,
+      "step": 3,
+      "order": 25,
       "family": "landscape",
       "title": "Landscape: Lake of Constance",
       "text": [
@@ -945,7 +2365,10 @@
       "images": [
         {
           "id": "3b05032c22d5",
-          "src": "https://learnablemeta.com/images/1262/2o5L6HASrXc6xJWWZhvs6UkKmPnR2mcVWDnj.avif"
+          "src": "https://learnablemeta.com/images/1262/2o5L6HASrXc6xJWWZhvs6UkKmPnR2mcVWDnj.avif",
+          "path": "ch/3b05032c22d5.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -958,8 +2381,8 @@
     },
     {
       "id": "ch-lm-295870",
-      "step": 0,
-      "order": 37,
+      "step": 3,
+      "order": 26,
       "family": "vegetation",
       "title": "Vegetation: Fruit PLantations",
       "text": [
@@ -969,7 +2392,10 @@
       "images": [
         {
           "id": "1b45007e00a9",
-          "src": "https://learnablemeta.com/images/1262/IF1LC7FR81TyK4hK0re5bitBeoWLKEIJjyrw.avif"
+          "src": "https://learnablemeta.com/images/1262/IF1LC7FR81TyK4hK0re5bitBeoWLKEIJjyrw.avif",
+          "path": "ch/1b45007e00a9.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -982,8 +2408,8 @@
     },
     {
       "id": "ch-lm-295885",
-      "step": 0,
-      "order": 38,
+      "step": 3,
+      "order": 27,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Basel Street Signs",
@@ -994,7 +2420,10 @@
       "images": [
         {
           "id": "baee0506d733",
-          "src": "https://learnablemeta.com/images/1262/ppvMDclKQUfSrUoBsAlN360yle6X8HRX7xQ1.avif"
+          "src": "https://learnablemeta.com/images/1262/ppvMDclKQUfSrUoBsAlN360yle6X8HRX7xQ1.avif",
+          "path": "ch/baee0506d733.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -1009,8 +2438,8 @@
     },
     {
       "id": "ch-lm-295887",
-      "step": 0,
-      "order": 39,
+      "step": 3,
+      "order": 28,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Town Entry Signs",
@@ -1021,7 +2450,10 @@
       "images": [
         {
           "id": "7c9808c6eb25",
-          "src": "https://learnablemeta.com/images/1262/nBXYVMaxpFRy6zJuN4XAxHufyRGWT0Fp0IEI.avif"
+          "src": "https://learnablemeta.com/images/1262/nBXYVMaxpFRy6zJuN4XAxHufyRGWT0Fp0IEI.avif",
+          "path": "ch/7c9808c6eb25.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -1034,8 +2466,8 @@
     },
     {
       "id": "ch-lm-295892",
-      "step": 0,
-      "order": 40,
+      "step": 3,
+      "order": 29,
       "family": "architecture",
       "title": "Architecture: Stone Houses",
       "text": [
@@ -1045,7 +2477,10 @@
       "images": [
         {
           "id": "c4e42d35b3e3",
-          "src": "https://learnablemeta.com/images/1262/rVkH0ZOpAU455pO4X6tdkb6SYrDRs477UfMU.avif"
+          "src": "https://learnablemeta.com/images/1262/rVkH0ZOpAU455pO4X6tdkb6SYrDRs477UfMU.avif",
+          "path": "ch/c4e42d35b3e3.webp",
+          "width": 1000,
+          "height": 491
         }
       ],
       "locations": [],
@@ -1057,37 +2492,9 @@
       }
     },
     {
-      "id": "ch-lm-558212",
-      "step": 0,
-      "order": 41,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Geneva street sign",
-      "text": [
-        "If you know your in Switzerland and you see these dark blue street signs with Rue written on it, The only city that has these is Geneva.",
-        "NOTE: This design can commonly be found in France so make sure to confirm your in switzerland."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ab37f55be22d",
-          "src": "https://learnablemeta.com/images/4588/1777543157585-OVG.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ch-lm-634025",
-      "step": 0,
-      "order": 42,
+      "step": 3,
+      "order": 30,
       "family": "plate",
       "title": "Plate: Switzerland",
       "text": [
@@ -1099,7 +2506,10 @@
       "images": [
         {
           "id": "a30eb54a1fc5",
-          "src": "https://learnablemeta.com/images/5431/1766262972444-znF.avif"
+          "src": "https://learnablemeta.com/images/5431/1766262972444-znF.avif",
+          "path": "ch/a30eb54a1fc5.webp",
+          "width": 800,
+          "height": 471
         }
       ],
       "locations": [],
@@ -1111,36 +2521,9 @@
       }
     },
     {
-      "id": "ch-lm-740382",
-      "step": 0,
-      "order": 43,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Basel street sign",
-      "text": [
-        "Large blue street signs, attached to a low double signpost, similar to directional signs in Denmark, are found in Basel."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4e70184da4ad",
-          "src": "https://learnablemeta.com/images/4588/1777542944105-GJW.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "ch-lm-740383",
-      "step": 0,
-      "order": 44,
+      "step": 3,
+      "order": 31,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Zurich street sign",
@@ -1151,7 +2534,10 @@
       "images": [
         {
           "id": "3296fe259ca9",
-          "src": "https://learnablemeta.com/images/4588/1777543329050-VVD.avif"
+          "src": "https://learnablemeta.com/images/4588/1777543329050-VVD.avif",
+          "path": "ch/3296fe259ca9.webp",
+          "width": 745,
+          "height": 324
         }
       ],
       "locations": [],
@@ -1164,8 +2550,8 @@
     },
     {
       "id": "ch-lm-783095",
-      "step": 0,
-      "order": 45,
+      "step": 3,
+      "order": 32,
       "family": "language",
       "title": "Language: German",
       "text": [
@@ -1178,17 +2564,26 @@
         {
           "id": "96ec123fd946",
           "src": "https://learnablemeta.com/images/9388/1785616912834-Bju.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/96ec123fd946.webp",
+          "width": 727,
+          "height": 405
         },
         {
           "id": "96e5155c0b5b",
           "src": "https://learnablemeta.com/images/9388/1788271167794-eZv.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/96e5155c0b5b.webp",
+          "width": 597,
+          "height": 302
         },
         {
           "id": "b0293bd4da47",
           "src": "https://learnablemeta.com/images/9388/1788271184338-lk1.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/b0293bd4da47.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1204,8 +2599,8 @@
     },
     {
       "id": "ch-lm-783096",
-      "step": 0,
-      "order": 46,
+      "step": 3,
+      "order": 33,
       "family": "language",
       "title": "Language: French",
       "text": [
@@ -1217,12 +2612,18 @@
         {
           "id": "821cb3379d14",
           "src": "https://learnablemeta.com/images/9388/1785616331297-d8G.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/821cb3379d14.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "cef7e8b8b13b",
           "src": "https://learnablemeta.com/images/9388/1785616348546-hg4.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/cef7e8b8b13b.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1235,8 +2636,8 @@
     },
     {
       "id": "ch-lm-783097",
-      "step": 0,
-      "order": 47,
+      "step": 3,
+      "order": 34,
       "family": "language",
       "title": "Language: Italian",
       "text": [
@@ -1248,12 +2649,18 @@
         {
           "id": "00b04fc45e34",
           "src": "https://learnablemeta.com/images/9388/1785617675729-HVh.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/00b04fc45e34.webp",
+          "width": 800,
+          "height": 450
         },
         {
           "id": "965c1a5e13b7",
           "src": "https://learnablemeta.com/images/9388/1785617680738-Ca8.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/965c1a5e13b7.webp",
+          "width": 800,
+          "height": 450
         }
       ],
       "locations": [],
@@ -1268,8 +2675,8 @@
     },
     {
       "id": "ch-lm-791259",
-      "step": 0,
-      "order": 48,
+      "step": 3,
+      "order": 35,
       "family": "architecture",
       "title": "Architecture: Roof Features - Low-Pitched Roofs",
       "text": [
@@ -1279,7 +2686,10 @@
       "images": [
         {
           "id": "5e033ad93b3e",
-          "src": "https://learnablemeta.com/images/9751/1787734070191-EPN.avif"
+          "src": "https://learnablemeta.com/images/9751/1787734070191-EPN.avif",
+          "path": "ch/5e033ad93b3e.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1292,8 +2702,8 @@
     },
     {
       "id": "ch-lm-791260",
-      "step": 0,
-      "order": 49,
+      "step": 3,
+      "order": 36,
       "family": "architecture",
       "title": "Architecture: Roof Features - Bump Finials",
       "text": [
@@ -1304,7 +2714,10 @@
         {
           "id": "9906d8d6a586",
           "src": "https://learnablemeta.com/images/9751/1787733936818-UuB.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/9906d8d6a586.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1317,8 +2730,8 @@
     },
     {
       "id": "ch-lm-791261",
-      "step": 0,
-      "order": 50,
+      "step": 3,
+      "order": 37,
       "family": "architecture",
       "title": "Architecture: Roof Features - Front Chimneys",
       "text": [
@@ -1328,7 +2741,10 @@
       "images": [
         {
           "id": "bd9a8419c1a7",
-          "src": "https://learnablemeta.com/images/9751/1787734018697-HJk.avif"
+          "src": "https://learnablemeta.com/images/9751/1787734018697-HJk.avif",
+          "path": "ch/bd9a8419c1a7.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1341,8 +2757,8 @@
     },
     {
       "id": "ch-lm-791262",
-      "step": 0,
-      "order": 51,
+      "step": 3,
+      "order": 38,
       "family": "architecture",
       "title": "Architecture: Roof Features - Balcony Gables",
       "text": [
@@ -1352,7 +2768,10 @@
       "images": [
         {
           "id": "86d009748fef",
-          "src": "https://learnablemeta.com/images/9751/1787734163895-Gmy.avif"
+          "src": "https://learnablemeta.com/images/9751/1787734163895-Gmy.avif",
+          "path": "ch/86d009748fef.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -1365,8 +2784,8 @@
     },
     {
       "id": "ch-lm-791263",
-      "step": 0,
-      "order": 52,
+      "step": 3,
+      "order": 39,
       "family": "architecture",
       "title": "Architecture: Wall Features - Devant Huis",
       "text": [
@@ -1376,7 +2795,10 @@
       "images": [
         {
           "id": "0ba36415ea3b",
-          "src": "https://learnablemeta.com/images/9751/1787734204453-k67.avif"
+          "src": "https://learnablemeta.com/images/9751/1787734204453-k67.avif",
+          "path": "ch/0ba36415ea3b.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1389,8 +2811,8 @@
     },
     {
       "id": "ch-lm-791364",
-      "step": 0,
-      "order": 53,
+      "step": 3,
+      "order": 40,
       "family": "architecture",
       "title": "Architecture: Wall Features - Arched Gates",
       "text": [
@@ -1401,7 +2823,10 @@
         {
           "id": "d5c416d5d204",
           "src": "https://learnablemeta.com/images/9751/1787739171756-Fmi.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/d5c416d5d204.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1414,8 +2839,8 @@
     },
     {
       "id": "ch-lm-791365",
-      "step": 0,
-      "order": 54,
+      "step": 3,
+      "order": 41,
       "family": "architecture",
       "title": "Architecture: Roof Features - Tent Roofs",
       "text": [
@@ -1425,7 +2850,10 @@
       "images": [
         {
           "id": "c8b8fd0debbc",
-          "src": "https://learnablemeta.com/images/9751/1787739305170-YnN.avif"
+          "src": "https://learnablemeta.com/images/9751/1787739305170-YnN.avif",
+          "path": "ch/c8b8fd0debbc.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1438,8 +2866,8 @@
     },
     {
       "id": "ch-lm-791366",
-      "step": 0,
-      "order": 55,
+      "step": 3,
+      "order": 42,
       "family": "architecture",
       "title": "Architecture: Roof Features - Thick Arched Gables",
       "text": [
@@ -1449,7 +2877,10 @@
       "images": [
         {
           "id": "d50ac81b4a27",
-          "src": "https://learnablemeta.com/images/9751/1787739261752-NcD.avif"
+          "src": "https://learnablemeta.com/images/9751/1787739261752-NcD.avif",
+          "path": "ch/d50ac81b4a27.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1462,8 +2893,8 @@
     },
     {
       "id": "ch-lm-791367",
-      "step": 0,
-      "order": 56,
+      "step": 3,
+      "order": 43,
       "family": "architecture",
       "title": "Architecture: Wall Features - Pale Yellow Bricks",
       "text": [
@@ -1473,7 +2904,10 @@
       "images": [
         {
           "id": "e62933309542",
-          "src": "https://learnablemeta.com/images/9751/1787739215417-fWC.avif"
+          "src": "https://learnablemeta.com/images/9751/1787739215417-fWC.avif",
+          "path": "ch/e62933309542.webp",
+          "width": 800,
+          "height": 388
         }
       ],
       "locations": [],
@@ -1486,8 +2920,8 @@
     },
     {
       "id": "ch-lm-791368",
-      "step": 0,
-      "order": 57,
+      "step": 3,
+      "order": 44,
       "family": "architecture",
       "title": "Architecture: Roof Features - Undulating Gable Arches",
       "text": [
@@ -1497,7 +2931,10 @@
       "images": [
         {
           "id": "0d9606e6a0f9",
-          "src": "https://learnablemeta.com/images/9751/1787739752261-ESz.avif"
+          "src": "https://learnablemeta.com/images/9751/1787739752261-ESz.avif",
+          "path": "ch/0d9606e6a0f9.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1510,8 +2947,8 @@
     },
     {
       "id": "ch-lm-791590",
-      "step": 0,
-      "order": 58,
+      "step": 3,
+      "order": 45,
       "family": "architecture",
       "title": "Architecture: Wall Features - Subtle Window Roofs",
       "text": [
@@ -1522,7 +2959,10 @@
         {
           "id": "e979f945cf2c",
           "src": "https://learnablemeta.com/images/9751/1787772843423-bRk.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/e979f945cf2c.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1535,8 +2975,8 @@
     },
     {
       "id": "ch-lm-791591",
-      "step": 0,
-      "order": 59,
+      "step": 3,
+      "order": 46,
       "family": "architecture",
       "title": "Architecture: Wall Features - Light Colored Mortar",
       "text": [
@@ -1546,7 +2986,10 @@
       "images": [
         {
           "id": "c8d128ca2134",
-          "src": "https://learnablemeta.com/images/9751/1787773120062-6VH.avif"
+          "src": "https://learnablemeta.com/images/9751/1787773120062-6VH.avif",
+          "path": "ch/c8d128ca2134.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -1559,8 +3002,8 @@
     },
     {
       "id": "ch-lm-791592",
-      "step": 0,
-      "order": 60,
+      "step": 3,
+      "order": 47,
       "family": "architecture",
       "title": "Architecture: Wall Features - Window Roofs",
       "text": [
@@ -1571,7 +3014,10 @@
         {
           "id": "4cc6dcbe7219",
           "src": "https://learnablemeta.com/images/9751/1787772794720-zDo.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/4cc6dcbe7219.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -1584,8 +3030,8 @@
     },
     {
       "id": "ch-lm-791593",
-      "step": 0,
-      "order": 61,
+      "step": 3,
+      "order": 48,
       "family": "other",
       "title": "Wall Features - Wooden Shingle Wall Cladding",
       "text": [
@@ -1595,7 +3041,10 @@
       "images": [
         {
           "id": "cc77f2138ce7",
-          "src": "https://learnablemeta.com/images/9751/1787772969329-Vie.avif"
+          "src": "https://learnablemeta.com/images/9751/1787772969329-Vie.avif",
+          "path": "ch/cc77f2138ce7.webp",
+          "width": 800,
+          "height": 390
         }
       ],
       "locations": [],
@@ -1608,8 +3057,8 @@
     },
     {
       "id": "ch-lm-791594",
-      "step": 0,
-      "order": 62,
+      "step": 3,
+      "order": 49,
       "family": "other",
       "title": "Wall Features - Colorful Shingle Wall Cladding",
       "text": [
@@ -1619,7 +3068,10 @@
       "images": [
         {
           "id": "844a8c837144",
-          "src": "https://learnablemeta.com/images/9751/1787772929543-X3A.avif"
+          "src": "https://learnablemeta.com/images/9751/1787772929543-X3A.avif",
+          "path": "ch/844a8c837144.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1632,8 +3084,8 @@
     },
     {
       "id": "ch-lm-791595",
-      "step": 0,
-      "order": 63,
+      "step": 3,
+      "order": 50,
       "family": "architecture",
       "title": "Architecture: Roof Features - Metal Panel Roofs",
       "text": [
@@ -1643,7 +3095,10 @@
       "images": [
         {
           "id": "3431cc93fde6",
-          "src": "https://learnablemeta.com/images/9751/1787773161180-Mph.avif"
+          "src": "https://learnablemeta.com/images/9751/1787773161180-Mph.avif",
+          "path": "ch/3431cc93fde6.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1656,8 +3111,8 @@
     },
     {
       "id": "ch-lm-791596",
-      "step": 0,
-      "order": 64,
+      "step": 3,
+      "order": 51,
       "family": "architecture",
       "title": "Architecture: Roof Features - Gable-End Chimneys",
       "text": [
@@ -1667,7 +3122,10 @@
       "images": [
         {
           "id": "dfcff0baad77",
-          "src": "https://learnablemeta.com/images/9751/1787773211785-SHh.avif"
+          "src": "https://learnablemeta.com/images/9751/1787773211785-SHh.avif",
+          "path": "ch/dfcff0baad77.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1680,8 +3138,8 @@
     },
     {
       "id": "ch-lm-791597",
-      "step": 0,
-      "order": 65,
+      "step": 3,
+      "order": 52,
       "family": "architecture",
       "title": "Architecture: Roof Features - Flap Roofs",
       "text": [
@@ -1692,7 +3150,10 @@
         {
           "id": "df76f645b005",
           "src": "https://learnablemeta.com/images/9751/1787773007345-VrP.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/df76f645b005.webp",
+          "width": 800,
+          "height": 389
         }
       ],
       "locations": [],
@@ -1705,8 +3166,8 @@
     },
     {
       "id": "ch-lm-791598",
-      "step": 0,
-      "order": 66,
+      "step": 3,
+      "order": 53,
       "family": "architecture",
       "title": "Architecture: Roof Features - Downward Pointing Finials",
       "text": [
@@ -1717,7 +3178,10 @@
         {
           "id": "56cbe5410d46",
           "src": "https://learnablemeta.com/images/9751/1787772884918-oCr.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/56cbe5410d46.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1730,8 +3194,8 @@
     },
     {
       "id": "ch-lm-791599",
-      "step": 0,
-      "order": 67,
+      "step": 3,
+      "order": 54,
       "family": "architecture",
       "title": "Architecture: Wall Features - Rectangular Panel Houses",
       "text": [
@@ -1743,7 +3207,10 @@
       "images": [
         {
           "id": "49417adf6eb4",
-          "src": "https://learnablemeta.com/images/9751/1787773049924-1eF.avif"
+          "src": "https://learnablemeta.com/images/9751/1787773049924-1eF.avif",
+          "path": "ch/49417adf6eb4.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1756,8 +3223,8 @@
     },
     {
       "id": "ch-lm-791737",
-      "step": 0,
-      "order": 68,
+      "step": 3,
+      "order": 55,
       "family": "architecture",
       "title": "Architecture: Wall Features - Timber Frame Houses West",
       "text": [
@@ -1769,12 +3236,18 @@
         {
           "id": "29bea69ffffe",
           "src": "https://learnablemeta.com/images/9751/1787824411878-aoo.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/29bea69ffffe.webp",
+          "width": 800,
+          "height": 382
         },
         {
           "id": "b2fee8102638",
           "src": "https://learnablemeta.com/images/9751/1787824424019-XlG.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/b2fee8102638.webp",
+          "width": 790,
+          "height": 442
         }
       ],
       "locations": [],
@@ -1787,8 +3260,8 @@
     },
     {
       "id": "ch-lm-791738",
-      "step": 0,
-      "order": 69,
+      "step": 3,
+      "order": 56,
       "family": "architecture",
       "title": "Architecture: Roof Features - Valsot Flat Roofs",
       "text": [
@@ -1798,7 +3271,10 @@
       "images": [
         {
           "id": "de9df8483c75",
-          "src": "https://learnablemeta.com/images/9751/1787825507752-eOg.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825507752-eOg.avif",
+          "path": "ch/de9df8483c75.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1811,8 +3287,8 @@
     },
     {
       "id": "ch-lm-791739",
-      "step": 0,
-      "order": 70,
+      "step": 3,
+      "order": 57,
       "family": "architecture",
       "title": "Architecture: Wall Features - Timber Frame Houses East",
       "text": [
@@ -1824,12 +3300,18 @@
         {
           "id": "dd837e74fe2f",
           "src": "https://learnablemeta.com/images/9751/1787824495813-TJK.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/dd837e74fe2f.webp",
+          "width": 800,
+          "height": 382
         },
         {
           "id": "58d8352ed671",
           "src": "https://learnablemeta.com/images/9751/1787824527300-1QN.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/58d8352ed671.webp",
+          "width": 792,
+          "height": 442
         }
       ],
       "locations": [],
@@ -1842,8 +3324,8 @@
     },
     {
       "id": "ch-lm-791740",
-      "step": 0,
-      "order": 71,
+      "step": 3,
+      "order": 58,
       "family": "architecture",
       "title": "Architecture: Roof Features - Ticino Slates",
       "text": [
@@ -1853,7 +3335,10 @@
       "images": [
         {
           "id": "9c63900271cc",
-          "src": "https://learnablemeta.com/images/9751/1787824688949-c2t.avif"
+          "src": "https://learnablemeta.com/images/9751/1787824688949-c2t.avif",
+          "path": "ch/9c63900271cc.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -1866,8 +3351,8 @@
     },
     {
       "id": "ch-lm-791741",
-      "step": 0,
-      "order": 72,
+      "step": 3,
+      "order": 59,
       "family": "architecture",
       "title": "Architecture: Roof Features - Slate Roofs",
       "text": [
@@ -1877,7 +3362,10 @@
       "images": [
         {
           "id": "042aa852ebd6",
-          "src": "https://learnablemeta.com/images/9751/1787824605815-wTX.avif"
+          "src": "https://learnablemeta.com/images/9751/1787824605815-wTX.avif",
+          "path": "ch/042aa852ebd6.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1890,8 +3378,8 @@
     },
     {
       "id": "ch-lm-791742",
-      "step": 0,
-      "order": 73,
+      "step": 3,
+      "order": 60,
       "family": "architecture",
       "title": "Architecture: Wall Features - Sgraffito",
       "text": [
@@ -1901,7 +3389,10 @@
       "images": [
         {
           "id": "ec087a16ca83",
-          "src": "https://learnablemeta.com/images/9751/1787825397432-RsQ.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825397432-RsQ.avif",
+          "path": "ch/ec087a16ca83.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -1914,8 +3405,8 @@
     },
     {
       "id": "ch-lm-791743",
-      "step": 0,
-      "order": 74,
+      "step": 3,
+      "order": 61,
       "family": "architecture",
       "title": "Architecture: Wall Features - Sgraffito Val Müstair",
       "text": [
@@ -1925,7 +3416,10 @@
       "images": [
         {
           "id": "8f9fe63e4043",
-          "src": "https://learnablemeta.com/images/9751/1787825448361-PyL.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825448361-PyL.avif",
+          "path": "ch/8f9fe63e4043.webp",
+          "width": 800,
+          "height": 382
         }
       ],
       "locations": [],
@@ -1938,8 +3432,8 @@
     },
     {
       "id": "ch-lm-791744",
-      "step": 0,
-      "order": 75,
+      "step": 3,
+      "order": 62,
       "family": "architecture",
       "title": "Architecture: Wall Features - Tall & Narrow Houses",
       "text": [
@@ -1950,7 +3444,10 @@
       "images": [
         {
           "id": "fd5c8a3b0148",
-          "src": "https://learnablemeta.com/images/9751/1787825678041-C0c.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825678041-C0c.avif",
+          "path": "ch/fd5c8a3b0148.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -1963,8 +3460,8 @@
     },
     {
       "id": "ch-lm-791745",
-      "step": 0,
-      "order": 76,
+      "step": 3,
+      "order": 63,
       "family": "architecture",
       "title": "Architecture: Wall Features - Structural Curve Houses",
       "text": [
@@ -1974,7 +3471,10 @@
       "images": [
         {
           "id": "dfd68c707330",
-          "src": "https://learnablemeta.com/images/9751/1787825778314-LVE.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825778314-LVE.avif",
+          "path": "ch/dfd68c707330.webp",
+          "width": 800,
+          "height": 383
         }
       ],
       "locations": [],
@@ -1987,8 +3487,8 @@
     },
     {
       "id": "ch-lm-791746",
-      "step": 0,
-      "order": 77,
+      "step": 3,
+      "order": 64,
       "family": "architecture",
       "title": "Architecture: Wall Features - Decorative Carvings",
       "text": [
@@ -2004,7 +3504,10 @@
       "images": [
         {
           "id": "9ffba06dba56",
-          "src": "https://learnablemeta.com/images/9751/1787825647867-nDU.avif"
+          "src": "https://learnablemeta.com/images/9751/1787825647867-nDU.avif",
+          "path": "ch/9ffba06dba56.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -2017,8 +3520,8 @@
     },
     {
       "id": "ch-lm-791747",
-      "step": 0,
-      "order": 78,
+      "step": 3,
+      "order": 65,
       "family": "architecture",
       "title": "Architecture: Roof Features - Diamond-Shaped Slates",
       "text": [
@@ -2028,7 +3531,10 @@
       "images": [
         {
           "id": "c9408da37476",
-          "src": "https://learnablemeta.com/images/9751/1787824649848-2Ug.avif"
+          "src": "https://learnablemeta.com/images/9751/1787824649848-2Ug.avif",
+          "path": "ch/c9408da37476.webp",
+          "width": 800,
+          "height": 383
         }
       ],
       "locations": [],
@@ -2041,8 +3547,8 @@
     },
     {
       "id": "ch-lm-791749",
-      "step": 0,
-      "order": 79,
+      "step": 3,
+      "order": 66,
       "family": "architecture",
       "title": "Architecture: Wall Features - Timber & White-Plastered Walls",
       "text": [
@@ -2052,7 +3558,10 @@
       "images": [
         {
           "id": "7b7315a8cf17",
-          "src": "https://learnablemeta.com/images/9751/1787826601032-p0U.avif"
+          "src": "https://learnablemeta.com/images/9751/1787826601032-p0U.avif",
+          "path": "ch/7b7315a8cf17.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -2065,8 +3574,8 @@
     },
     {
       "id": "ch-lm-791750",
-      "step": 0,
-      "order": 80,
+      "step": 3,
+      "order": 67,
       "family": "architecture",
       "title": "Architecture: Barns - Undulating Gable Arches",
       "text": [
@@ -2078,7 +3587,10 @@
       "images": [
         {
           "id": "17f02cd3cdf4",
-          "src": "https://learnablemeta.com/images/9751/1787844106154-fyH.avif"
+          "src": "https://learnablemeta.com/images/9751/1787844106154-fyH.avif",
+          "path": "ch/17f02cd3cdf4.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -2091,8 +3603,8 @@
     },
     {
       "id": "ch-lm-791751",
-      "step": 0,
-      "order": 81,
+      "step": 3,
+      "order": 68,
       "family": "other",
       "title": "Barns - Tiled-Gable Barns",
       "text": [
@@ -2103,7 +3615,10 @@
       "images": [
         {
           "id": "254edf5732b0",
-          "src": "https://learnablemeta.com/images/9751/1787850307364-eHi.avif"
+          "src": "https://learnablemeta.com/images/9751/1787850307364-eHi.avif",
+          "path": "ch/254edf5732b0.webp",
+          "width": 800,
+          "height": 389
         }
       ],
       "locations": [],
@@ -2116,8 +3631,8 @@
     },
     {
       "id": "ch-lm-791752",
-      "step": 0,
-      "order": 82,
+      "step": 3,
+      "order": 69,
       "family": "architecture",
       "title": "Architecture: Barns - Low-Pitched Roofs",
       "text": [
@@ -2128,7 +3643,10 @@
       "images": [
         {
           "id": "e8df2ff949c5",
-          "src": "https://learnablemeta.com/images/9751/1787843991999-8kx.avif"
+          "src": "https://learnablemeta.com/images/9751/1787843991999-8kx.avif",
+          "path": "ch/e8df2ff949c5.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -2141,8 +3659,8 @@
     },
     {
       "id": "ch-lm-791753",
-      "step": 0,
-      "order": 83,
+      "step": 3,
+      "order": 70,
       "family": "architecture",
       "title": "Architecture: Barns - Tent-Roof Barns",
       "text": [
@@ -2152,7 +3670,10 @@
       "images": [
         {
           "id": "d368c00058ad",
-          "src": "https://learnablemeta.com/images/9751/1787844145202-oid.avif"
+          "src": "https://learnablemeta.com/images/9751/1787844145202-oid.avif",
+          "path": "ch/d368c00058ad.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -2165,8 +3686,8 @@
     },
     {
       "id": "ch-lm-791754",
-      "step": 0,
-      "order": 84,
+      "step": 3,
+      "order": 71,
       "family": "architecture",
       "title": "Architecture: Barns - Cyborg House-Barns",
       "text": [
@@ -2176,7 +3697,10 @@
       "images": [
         {
           "id": "104630ed6530",
-          "src": "https://learnablemeta.com/images/9751/1787844210209-jry.avif"
+          "src": "https://learnablemeta.com/images/9751/1787844210209-jry.avif",
+          "path": "ch/104630ed6530.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -2189,8 +3713,8 @@
     },
     {
       "id": "ch-lm-791755",
-      "step": 0,
-      "order": 85,
+      "step": 3,
+      "order": 72,
       "family": "architecture",
       "title": "Architecture: Roof Features - Tiled House Gables",
       "text": [
@@ -2200,7 +3724,10 @@
       "images": [
         {
           "id": "aa9daa185ac8",
-          "src": "https://learnablemeta.com/images/9751/1787850753683-0rc.avif"
+          "src": "https://learnablemeta.com/images/9751/1787850753683-0rc.avif",
+          "path": "ch/aa9daa185ac8.webp",
+          "width": 800,
+          "height": 388
         }
       ],
       "locations": [],
@@ -2213,8 +3740,8 @@
     },
     {
       "id": "ch-lm-791756",
-      "step": 0,
-      "order": 86,
+      "step": 3,
+      "order": 73,
       "family": "architecture",
       "title": "Architecture: Barns - Flap-Roof Barns",
       "text": [
@@ -2225,7 +3752,10 @@
         {
           "id": "539f412418d7",
           "src": "https://learnablemeta.com/images/9751/1787852776725-kL8.avif",
-          "giveaway": true
+          "giveaway": true,
+          "path": "ch/539f412418d7.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -2238,8 +3768,8 @@
     },
     {
       "id": "ch-lm-791757",
-      "step": 0,
-      "order": 87,
+      "step": 3,
+      "order": 74,
       "family": "architecture",
       "title": "Architecture: Barns - Bulky Barns",
       "text": [
@@ -2250,7 +3780,10 @@
       "images": [
         {
           "id": "c7734a14bad8",
-          "src": "https://learnablemeta.com/images/9751/1787852723112-Y0p.avif"
+          "src": "https://learnablemeta.com/images/9751/1787852723112-Y0p.avif",
+          "path": "ch/c7734a14bad8.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -2263,8 +3796,8 @@
     },
     {
       "id": "ch-lm-791758",
-      "step": 0,
-      "order": 88,
+      "step": 3,
+      "order": 75,
       "family": "architecture",
       "title": "Architecture: Barns - Attached Barns",
       "text": [
@@ -2274,7 +3807,10 @@
       "images": [
         {
           "id": "327368005105",
-          "src": "https://learnablemeta.com/images/9751/1787852856399-VUr.avif"
+          "src": "https://learnablemeta.com/images/9751/1787852856399-VUr.avif",
+          "path": "ch/327368005105.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -2287,8 +3823,8 @@
     },
     {
       "id": "ch-lm-791759",
-      "step": 0,
-      "order": 89,
+      "step": 3,
+      "order": 76,
       "family": "architecture",
       "title": "Architecture: Barns - Traverse Roof Barns",
       "text": [
@@ -2298,7 +3834,10 @@
       "images": [
         {
           "id": "26ae0d8a37b0",
-          "src": "https://learnablemeta.com/images/9751/1787852669875-KfL.avif"
+          "src": "https://learnablemeta.com/images/9751/1787852669875-KfL.avif",
+          "path": "ch/26ae0d8a37b0.webp",
+          "width": 800,
+          "height": 384
         }
       ],
       "locations": [],
@@ -2311,8 +3850,8 @@
     },
     {
       "id": "ch-lm-791760",
-      "step": 0,
-      "order": 90,
+      "step": 3,
+      "order": 77,
       "family": "other",
       "title": "Barns - X-Barns",
       "text": [
@@ -2322,7 +3861,10 @@
       "images": [
         {
           "id": "da74dd82b10b",
-          "src": "https://learnablemeta.com/images/9751/1787852813591-DVF.avif"
+          "src": "https://learnablemeta.com/images/9751/1787852813591-DVF.avif",
+          "path": "ch/da74dd82b10b.webp",
+          "width": 800,
+          "height": 383
         }
       ],
       "locations": [],
@@ -2335,8 +3877,8 @@
     },
     {
       "id": "ch-lm-791822",
-      "step": 0,
-      "order": 91,
+      "step": 3,
+      "order": 78,
       "family": "other",
       "title": "Barns - Corner Barns",
       "text": [
@@ -2346,7 +3888,10 @@
       "images": [
         {
           "id": "c337349c0855",
-          "src": "https://learnablemeta.com/images/9751/1787855283839-svO.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855283839-svO.avif",
+          "path": "ch/c337349c0855.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -2359,8 +3904,8 @@
     },
     {
       "id": "ch-lm-791823",
-      "step": 0,
-      "order": 92,
+      "step": 3,
+      "order": 79,
       "family": "architecture",
       "title": "Architecture: Barns - Valais Huts",
       "text": [
@@ -2370,7 +3915,10 @@
       "images": [
         {
           "id": "c5151bb5f646",
-          "src": "https://learnablemeta.com/images/9751/1787855154272-mEO.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855154272-mEO.avif",
+          "path": "ch/c5151bb5f646.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -2383,8 +3931,8 @@
     },
     {
       "id": "ch-lm-791824",
-      "step": 0,
-      "order": 93,
+      "step": 3,
+      "order": 80,
       "family": "other",
       "title": "Barns - Raccards",
       "text": [
@@ -2394,7 +3942,10 @@
       "images": [
         {
           "id": "384cc143a102",
-          "src": "https://learnablemeta.com/images/9751/1787855333700-sAu.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855333700-sAu.avif",
+          "path": "ch/384cc143a102.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -2407,8 +3958,8 @@
     },
     {
       "id": "ch-lm-791825",
-      "step": 0,
-      "order": 94,
+      "step": 3,
+      "order": 81,
       "family": "other",
       "title": "Barns - Grisons Huts",
       "text": [
@@ -2418,7 +3969,10 @@
       "images": [
         {
           "id": "df6a61ccbd19",
-          "src": "https://learnablemeta.com/images/9751/1787855234535-uYS.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855234535-uYS.avif",
+          "path": "ch/df6a61ccbd19.webp",
+          "width": 800,
+          "height": 386
         }
       ],
       "locations": [],
@@ -2431,8 +3985,8 @@
     },
     {
       "id": "ch-lm-791826",
-      "step": 0,
-      "order": 95,
+      "step": 3,
+      "order": 82,
       "family": "architecture",
       "title": "Architecture: Barns - Ticino Huts",
       "text": [
@@ -2442,7 +3996,10 @@
       "images": [
         {
           "id": "f73fa72d8571",
-          "src": "https://learnablemeta.com/images/9751/1787855195625-pxp.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855195625-pxp.avif",
+          "path": "ch/f73fa72d8571.webp",
+          "width": 800,
+          "height": 389
         }
       ],
       "locations": [],
@@ -2455,8 +4012,8 @@
     },
     {
       "id": "ch-lm-791827",
-      "step": 0,
-      "order": 96,
+      "step": 3,
+      "order": 83,
       "family": "other",
       "title": "Barns - Barn Lofts",
       "text": [
@@ -2474,8 +4031,8 @@
     },
     {
       "id": "ch-lm-791828",
-      "step": 0,
-      "order": 97,
+      "step": 3,
+      "order": 84,
       "family": "architecture",
       "title": "Architecture: Religious Shrines -Ticino Cappellittas",
       "text": [
@@ -2485,7 +4042,10 @@
       "images": [
         {
           "id": "6211faa16b72",
-          "src": "https://learnablemeta.com/images/9751/1787855710810-XG5.avif"
+          "src": "https://learnablemeta.com/images/9751/1787855710810-XG5.avif",
+          "path": "ch/6211faa16b72.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -2498,8 +4058,8 @@
     },
     {
       "id": "ch-lm-791829",
-      "step": 0,
-      "order": 98,
+      "step": 3,
+      "order": 85,
       "family": "other",
       "title": "Churches - Onion-Shaped Clock Churches",
       "text": [
@@ -2509,7 +4069,10 @@
       "images": [
         {
           "id": "2200540be9ac",
-          "src": "https://learnablemeta.com/images/9751/1787857429369-aYC.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857429369-aYC.avif",
+          "path": "ch/2200540be9ac.webp",
+          "width": 800,
+          "height": 385
         }
       ],
       "locations": [],
@@ -2522,8 +4085,8 @@
     },
     {
       "id": "ch-lm-791830",
-      "step": 0,
-      "order": 99,
+      "step": 3,
+      "order": 86,
       "family": "other",
       "title": "Churches - Multi-Spire Churches",
       "text": [
@@ -2533,7 +4096,10 @@
       "images": [
         {
           "id": "0379d0cdc5d4",
-          "src": "https://learnablemeta.com/images/9751/1787857167282-57E.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857167282-57E.avif",
+          "path": "ch/0379d0cdc5d4.webp",
+          "width": 800,
+          "height": 383
         }
       ],
       "locations": [],
@@ -2546,8 +4112,8 @@
     },
     {
       "id": "ch-lm-791831",
-      "step": 0,
-      "order": 100,
+      "step": 3,
+      "order": 87,
       "family": "other",
       "title": "Churches - Onion-Dome Churches",
       "text": [
@@ -2557,7 +4123,10 @@
       "images": [
         {
           "id": "629276a6a3ae",
-          "src": "https://learnablemeta.com/images/9751/1787857491208-0Kf.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857491208-0Kf.avif",
+          "path": "ch/629276a6a3ae.webp",
+          "width": 800,
+          "height": 382
         }
       ],
       "locations": [],
@@ -2570,8 +4139,8 @@
     },
     {
       "id": "ch-lm-791832",
-      "step": 0,
-      "order": 101,
+      "step": 3,
+      "order": 88,
       "family": "other",
       "title": "Churches - Rooster Church Steeples",
       "text": [
@@ -2581,7 +4150,10 @@
       "images": [
         {
           "id": "97ba88734533",
-          "src": "https://learnablemeta.com/images/9751/1787857223118-rim.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857223118-rim.avif",
+          "path": "ch/97ba88734533.webp",
+          "width": 800,
+          "height": 381
         }
       ],
       "locations": [],
@@ -2594,8 +4166,8 @@
     },
     {
       "id": "ch-lm-791833",
-      "step": 0,
-      "order": 102,
+      "step": 3,
+      "order": 89,
       "family": "other",
       "title": "Churches - Simple Triangular Gable Churches",
       "text": [
@@ -2605,7 +4177,10 @@
       "images": [
         {
           "id": "3292e5512349",
-          "src": "https://learnablemeta.com/images/9751/1787857286331-x63.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857286331-x63.avif",
+          "path": "ch/3292e5512349.webp",
+          "width": 800,
+          "height": 387
         }
       ],
       "locations": [],
@@ -2618,8 +4193,8 @@
     },
     {
       "id": "ch-lm-791834",
-      "step": 0,
-      "order": 103,
+      "step": 3,
+      "order": 90,
       "family": "other",
       "title": "Churches - Multi-Triangle Gable Churches",
       "text": [
@@ -2629,7 +4204,10 @@
       "images": [
         {
           "id": "91bb344d4e60",
-          "src": "https://learnablemeta.com/images/9751/1787857352026-QrC.avif"
+          "src": "https://learnablemeta.com/images/9751/1787857352026-QrC.avif",
+          "path": "ch/91bb344d4e60.webp",
+          "width": 800,
+          "height": 383
         }
       ],
       "locations": [],

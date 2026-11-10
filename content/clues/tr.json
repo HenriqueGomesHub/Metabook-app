@@ -1,70 +1,1759 @@
 {
   "country": "TR",
   "name": "Turkey",
-  "sourceUrl": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-  "fetchedAt": "2026-11-10T06:21:02.147Z",
+  "sourceUrl": "https://www.plonkit.net/turkey",
+  "updatedAt": "2026-09-15T00:00:00.000Z",
+  "fetchedAt": "2026-10-23T05:32:47.000Z",
   "steps": [
+    {
+      "title": "Identifying Turkey"
+    },
+    {
+      "title": "Region-specific clues"
+    },
+    {
+      "title": "Spotlight"
+    },
     {
       "title": "Learnable Meta"
     }
   ],
   "clues": [
     {
-      "id": "tr-lm-135",
+      "id": "tr-ryy2",
       "step": 0,
-      "order": 0,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Stop signs",
+      "order": 1,
+      "family": "plate",
+      "title": "Plate: Turkey uses the same licence plates as most of Europe",
       "text": [
-        "All stop signs in Turkey feature the text \"DUR,\" making them unique to the country. No other country uses this stop sign."
+        "Turkey uses the same licence plates as most of Europe: they are long and white, with a **blue strip** on the left."
       ],
       "tags": [],
       "images": [
         {
-          "id": "273f1cd0038a",
-          "src": "https://learnablemeta.com/images/muwAq1kFXNTKF9LwAap3QB2qTlAj7opmvsc0.avif"
+          "id": "e652b9150b0d",
+          "src": "https://www.plonkit.net/images/turkey/tr_licenceplate.png"
         }
       ],
       "locations": [],
       "lookalikes": [],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
-      "id": "tr-lm-150",
+      "id": "tr-qs57",
       "step": 0,
-      "order": 1,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
+      "order": 2,
+      "family": "language",
+      "title": "Language: The Turkish language has a fairly unique look",
       "text": [
-        "Turkish bollards are white and rectangular with a red reflector on the front, making them quite unique. Similar bollards exist in Romania but are very rare. Australian bollards typically have a reflector on the back and a slightly different design(also they drive left in Australia/NZ comparing it to Turkey)"
+        "The Turkish language has a fairly unique look. It uses the following special characters:",
+        "- Ç ç and Ş ş with a [cedilla](https://en.wikipedia.org/wiki/Cedilla) (“hook” below the letter).",
+        "- Ö ö and Ü ü with an [umlaut](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) (two dots).",
+        "- Ğ ğ with a [breve](https://en.wikipedia.org/wiki/Breve).",
+        "- Dotless I ı. This letter in particular is noteworthy, as it is essentially unique to Turkish. In case you are confused: this is similar to the letter i, but without a dot when written in lowercase.",
+        "- Capital İ with a dot."
       ],
       "tags": [],
       "images": [
         {
+          "id": "845477f44f48",
+          "src": "https://www.plonkit.net/images/turkey/tr_language.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-qrJL",
+      "step": 0,
+      "order": 3,
+      "family": "bollard",
+      "title": "Bollard: Turkish bollards have a simple design",
+      "text": [
+        "Turkish **bollards** have a simple design: rectangular, plain white, and with a red reflector on the front. They are thin when seen from the side.",
+        "There is a rare [yellow](https://maps.app.goo.gl/TDsyYaBcT9Hpmbpk9) version, seen in some areas with high snowfall.",
+        "NOTE: Romania has similar bollards. However, bollards are relatively rare in Romania."
+      ],
+      "tags": [
+        "bollard"
+      ],
+      "images": [
+        {
+          "id": "c9d9e093fc04",
+          "src": "https://www.plonkit.net/images/turkey/tr_bollard.png"
+        },
+        {
           "id": "9ba6427d314d",
           "src": "https://learnablemeta.com/images/dhND6DZsdvgRzZCgqFibdykPglV8D1pX8ocU.avif"
+        },
+        {
+          "id": "18ffe5b467cf",
+          "src": "https://learnablemeta.com/images/665/HwlqrrQpjmDeTWSTDLyIL5nSfud3H0TFS2l9.avif"
+        },
+        {
+          "id": "5f12879c23c5",
+          "src": "https://learnablemeta.com/images/739/g2MUCBOivFlpErAuf4KGEGq4Zkg9pXksuHrB.avif"
         }
       ],
       "locations": [],
       "lookalikes": [
-        "AU",
         "RO"
       ],
       "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-D1EC",
+      "step": 0,
+      "order": 4,
+      "family": "line",
+      "title": "Road line: The colour of Turkish road lines is somewhat inconsistent",
+      "text": [
+        "The colour of Turkish road lines is somewhat inconsistent. Most roads simply have white road lines. However, it is not uncommon to see yellow road lines. These roads can have [fully yellow lines](https://goo.gl/maps/NDYQg17SRma1M8VY9), or a [combination of yellow and white lines](https://goo.gl/maps/kVzg32BeNHnxXNhb8)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c902ea5845ce",
+          "src": "https://www.plonkit.net/images/turkey/tr_roadlines.png"
+        },
+        {
+          "id": "1c517f8df7ee",
+          "src": "https://learnablemeta.com/images/503/e1gbRlQe2bP5tc84LNbwVmdSuvrQRNIsN67O.avif"
+        },
+        {
+          "id": "038358b6d10e",
+          "src": "https://learnablemeta.com/images/665/R5NOgXdXa4Te3TkoKj4b3ycIoM52S4Vmsqon.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-p55d",
+      "step": 0,
+      "order": 5,
+      "family": "other",
+      "title": "Many roads have pavement with a grainy “salt and pepper”…",
+      "text": [
+        "Many roads have pavement with a grainy “**salt and pepper**” texture."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "760e0b08552b",
+          "src": "https://www.plonkit.net/images/turkey/tr_saltandpepper.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-DDP9",
+      "step": 0,
+      "order": 6,
+      "family": "other",
+      "title": "Divided highways are extremely common",
+      "text": [
+        "**Divided highways** are extremely common, especially compared to other Mediterranean countries."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d4825bd92475",
+          "src": "https://www.plonkit.net/images/turkey/tr_divided.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-QOm1",
+      "step": 0,
+      "order": 7,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Turkish chevrons are typically red on white",
+      "text": [
+        "Turkish chevrons are typically **red on white**. Beware that there are some other [regional variants](https://goo.gl/maps/c53U4ydsoRYVxGhk9).",
+        "Usually, the tip of the arrow does not touch the edge of the chevron. Some chevrons have a [neon yellow border](https://goo.gl/maps/h52NSmYxDJA77zVD8)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "08e0c06ce8b4",
+          "src": "https://www.plonkit.net/images/turkey/tr_chevron.png"
+        },
+        {
+          "id": "1da27e2d763a",
+          "src": "https://learnablemeta.com/images/665/fHUwu7uitfGwHjUCbbv3eaFxG2lTPRHjRDHy.avif"
+        },
+        {
+          "id": "0179342a34d4",
+          "src": "https://learnablemeta.com/images/914/sPIV4zJ5sND5IuiYu9IZNzVUVifojP4lInqc.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-qFBV",
+      "step": 0,
+      "order": 8,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: On intersections, you can often find this distinctive black…",
+      "text": [
+        "On intersections, you can often find this distinctive **black and yellow** chevron, with multiple arrows that point upward."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "bba9c3ee9516",
+          "src": "https://www.plonkit.net/images/turkey/tr_chevron2.png"
+        },
+        {
+          "id": "96aeae3d3256",
+          "src": "https://learnablemeta.com/images/914/wAjH333nNKZ07SjVticmr2I5wBdvA55CbWz8.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-ccW4",
+      "step": 0,
+      "order": 9,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Sometimes, you can see these narrow chevrons that have a…",
+      "text": [
+        "Sometimes, you can see these **narrow chevrons** that have a red and white colour scheme.",
+        "NOTE: Almost identical chevrons can be found in [South Africa](https://www.google.com/maps/@-31.9255787,26.9327084,3a,15y,260.14h,77.09t/data=!3m7!1e1!3m5!1safeEbQeUOh2C-t3z0hfx6Q!2e0!5s20230401T000000!7i16384!8i8192?entry=ttu)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "147ca122bedd",
+          "src": "https://www.plonkit.net/images/turkey/tr_chevron1.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "ZA"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-9RlL",
+      "step": 0,
+      "order": 10,
+      "family": "sign",
+      "kind": "direction",
+      "title": "Direction sign: Direction signs use a very distinct font that can often be…",
+      "text": [
+        "Direction signs use a very distinct font that can often be recognised by the noticeably **wide letter spaces**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "bf3313e7b147",
+          "src": "https://www.plonkit.net/images/turkey/tr_directionalsigns.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-4XWl",
+      "step": 0,
+      "order": 11,
+      "family": "pole",
+      "title": "Pole: Snow poles usually feature a colour sequence of…",
+      "text": [
+        "Snow poles usually feature a colour sequence of black-orange-black-white from top to bottom, with small red reflectors."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "1c0aaf509499",
+          "src": "https://www.plonkit.net/images/turkey/tr_snowpole.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-eM9J",
+      "step": 0,
+      "order": 12,
+      "family": "sign",
+      "kind": "stop",
+      "title": "Stop sign: Stop signs have the word “DUR” written on them",
+      "text": [
+        "Stop signs have the word “**DUR**” written on them. This is unique to Turkey."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "5e0b67d14e06",
+          "src": "https://www.plonkit.net/images/turkey/tr_dur.png"
+        },
+        {
+          "id": "273f1cd0038a",
+          "src": "https://learnablemeta.com/images/muwAq1kFXNTKF9LwAap3QB2qTlAj7opmvsc0.avif"
+        },
+        {
+          "id": "dbf60416e149",
+          "src": "https://learnablemeta.com/images/665/l03tAdyKWM8e4VuL2Os3zjejw0o602IUt4hU.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-DPuZ",
+      "step": 0,
+      "order": 13,
+      "family": "guardrail",
+      "title": "Guardrail: Turkey uses both main types of guardrails",
+      "text": [
+        "Turkey uses both main types of guardrails:",
+        "- A-type guardrails, which have **rounded** edges.",
+        "- B-type guardrails, which have **square** edges.",
+        "While most Mediterranean countries use the A-type, B-type can help solve some tough 50-50s. Furthermore, seeing [both types](https://www.google.com/maps/@38.7634071,36.9889726,3a,75y,279.13h,72.18t/data=!3m6!1e1!3m4!1s-lWzgc6PumTFgOVCosSYkQ!2e0!7i16384!8i8192?entry=ttu) will exclude all southern European and Middle Eastern countries, other than Montenegro and Israel & the West Bank. For a full overview of which guardrails are found in which European country, see [this infographic](/images/turkey/europeguardrail.png)."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "8e5e02e31472",
+          "src": "https://www.plonkit.net/images/turkey/tr_guardrails.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "IL",
+        "ME"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-N5vS",
+      "step": 0,
+      "order": 14,
+      "family": "pole",
+      "title": "Pole: Metal poles, either in the shape of a ladder or with a mesh…",
+      "text": [
+        "Metal poles, either in the shape of a **ladder** or with a **mesh** pattern, are extremely common in Turkey."
+      ],
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "fc4c7ca320f2",
+          "src": "https://www.plonkit.net/images/turkey/tr_pole.png"
+        },
+        {
+          "id": "42d736cf9fe3",
+          "src": "https://learnablemeta.com/images/1955/1750621995850-NJs.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-eWbd",
+      "step": 0,
+      "order": 15,
+      "family": "car",
+      "title": "Google car: In the Generation 3 coverage",
+      "text": [
+        "In the **Generation 3** coverage, the Google car **never has an antenna**."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "54acdd7cb918",
+          "src": "https://www.plonkit.net/images/turkey/tr_gen3noantenna.png"
+        },
+        {
+          "id": "e647cfea1309",
+          "src": "https://learnablemeta.com/images/665/ie0mSP6JT84HrUoiLkYNLvb05fO3oz3APQpK.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-Ce1R",
+      "step": 0,
+      "order": 16,
+      "family": "car",
+      "title": "Google car: The Generation 4 coverage in Turkey typically features a…",
+      "text": [
+        "The **Generation 4** coverage in Turkey typically features a **white Google car**. Usually, only a tiny sliver of the back of the car is visible. The car can have a short antenna, or [no antenna](https://goo.gl/maps/cDZNhkcAjdTX5zw89) at all."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "a5e396fa1c8a",
+          "src": "https://www.plonkit.net/images/turkey/tr_gen4car.png"
+        },
+        {
+          "id": "ecdcdd799dba",
+          "src": "https://learnablemeta.com/images/665/pWD7KaLTunZGIrPrHksmXc7T39zlIle3gCuR.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-EjNo",
+      "step": 0,
+      "order": 17,
+      "family": "car",
+      "title": "Google car: A grey pickup truck can be found in some Generation 4…",
+      "text": [
+        "A **grey pickup truck** can be found in some Generation 4 coverage.",
+        "NOTE: Similar pickup trucks can also be found in a few other countries. Most relevantly in [Georgia](https://maps.app.goo.gl/x7eAbxAkPQHsJFEZ8) but it is also found in [Senegal](https://maps.app.goo.gl/qVLNzZSjP3uTWXcg8), [Rwanda](https://maps.app.goo.gl/XAwvwbthLQEbbY1n8), [Kenya](https://maps.app.goo.gl/ggiEBc94DWL7BQwp7), [Ghana ](https://maps.app.goo.gl/LN64SQFrKaRJLLoaA)and [Paraguay](https://maps.app.goo.gl/Yyuyeus81T3fYH9k8)."
+      ],
+      "tags": [
+        "coverage"
+      ],
+      "images": [
+        {
+          "id": "35923a9602be",
+          "src": "https://www.plonkit.net/images/turkey/tr_pickuptruck.png"
+        },
+        {
+          "id": "9b4cc3b3ad93",
+          "src": "https://learnablemeta.com/images/665/aY74PbtwgnDgUDtMu8sOikGMhHdMw667gEBs.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "GE",
+        "GH",
+        "KE",
+        "PY",
+        "RW",
+        "SN"
+      ],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-bo5u",
+      "step": 0,
+      "order": 18,
+      "family": "car",
+      "title": "Google car: Turkey also has Generation 4 “smallcam” coverage",
+      "text": [
+        "Turkey also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c6a9242296fc",
+          "src": "https://www.plonkit.net/images/turkey/Turkey_Smallcam.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-y8wc",
+      "step": 0,
+      "order": 19,
+      "family": "landscape",
+      "title": "Landscape: The Turkish landscape ranges from arid in the southeast to…",
+      "text": [
+        "The Turkish landscape ranges from arid in the [southeast](https://goo.gl/maps/LjNc6hYmCyfbay51A) to a Mediterranean landscape in the [southwest](https://goo.gl/maps/gEzXWMtN6TYYx4GG7). In the [north](https://goo.gl/maps/odAj9owBhLGwSmBH7) you will often find a more forested and lush landscape. The most typical landscape is semi-arid, either rolling or flat, with vast agricultural fields, containing very limited vegetation other than crops.",
+        "Beware that Turkey is a very naturally diverse country with many landscapes that are not mentioned in this tip."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "34399dd80457",
+          "src": "https://www.plonkit.net/images/turkey/tr_landscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-q9pP",
+      "step": 0,
+      "order": 20,
+      "family": "other",
+      "title": "Tall and somewhat square apartment blocks are very common…",
+      "text": [
+        "Tall and somewhat square **apartment blocks** are very common in Turkey."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "be67e0559d0d",
+          "src": "https://www.plonkit.net/images/turkey/tr_apartmentblocks.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-2P4G",
+      "step": 0,
+      "order": 21,
+      "family": "other",
+      "title": "Turkey is a Muslim-majority country",
+      "text": [
+        "Turkey is a Muslim-majority country, and as such mosques can be found in most towns. In particular, tall [**minarets**](https://en.wikipedia.org/wiki/Minaret) are extremely common and a good clue for the country."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "6bed90df6e2a",
+          "src": "https://www.plonkit.net/images/turkey/tr_mosque.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-CuUl",
+      "step": 0,
+      "order": 22,
+      "family": "other",
+      "title": "Brick pavement is very common in urban areas",
+      "text": [
+        "**Brick pavement** is very common in urban areas, and the bricks will typically have the shape shown in the image."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9fc8be46fa10",
+          "src": "https://www.plonkit.net/images/turkey/tr_brickpavement.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-vhPr",
+      "step": 1,
+      "order": 0,
+      "family": "other",
+      "title": "Turkish area codes follow a fairly easy to learn pattern…",
+      "text": [
+        "Turkish **area codes** follow a fairly easy to learn pattern and can be very useful to get the general region. Most notably, the first digit of area codes are ordered from 2 in the west to 4 in the east.",
+        "NOTE: Phone codes starting with 5 are not regional."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "69eefa9aeef0",
+          "src": "https://www.plonkit.net/images/turkey/tr_areacodes_nobg.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-pFHY",
+      "step": 1,
+      "order": 1,
+      "family": "sign",
+      "kind": "route",
+      "title": "Route marker: Turkey has three main types of numbered roads",
+      "text": [
+        "Turkey has three main types of numbered roads. The largest type are the [**O-roads**](https://goo.gl/maps/WeocadhrmCAqWDWc6), which on kilometre markers feature an O followed by a hyphen and the road number. The second largest type are the **D-roads**, which omit the “D” on kilometre markers and instead only feature a 3-digit road number, followed by the road section number on the top and the kilometre at the bottom. The section number will generally increase to the southeast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "65b5a811c1e4",
+          "src": "https://www.plonkit.net/images/turkey/tr_droads.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-Zdx7",
+      "step": 1,
+      "order": 2,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: The third type of roads are provincial roads",
+      "text": [
+        "The third type of roads are provincial roads. While these generally aren’t labelled on the map, they can still be used to regionguess since the kilometre markers feature the [**provincial code**](https://sites.google.com/site/roadnumberingsystems/home/countries/turkey?authuser=0) as the first two digits on the sign. These codes generally increase alphabetically from 01 to 76 with some newer regions being unordered. Shown in the image is a road from the Afyon Province (03)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7d36156d7ca5",
+          "src": "https://www.plonkit.net/images/turkey/tr_provinceroads.png",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-3Nhk",
+      "step": 1,
+      "order": 3,
+      "family": "car",
+      "title": "Google car: Generation 4 truck coverage is mainly found in the far east…",
+      "text": [
+        "Generation 4 **truck coverage** is mainly found in the far east of the country and along the southern coast, with smaller pockets in the west and around Kastamonu.",
+        "For a more detailed look, see this [document](https://docs.google.com/document/d/1VJQSEVVZxJHJebLwgQ2aEoS6ML0MENral7g-IiCnRlg/)."
+      ],
+      "region": "Kastamonu",
+      "tags": [],
+      "images": [
+        {
+          "id": "52a16ca4e4ee",
+          "src": "https://www.plonkit.net/images/turkey/turkeytruckdistibution_credit_to_vols_jezuz.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-pPdr",
+      "step": 1,
+      "order": 4,
+      "family": "other",
+      "title": "Northern Turkey tends to be significantly lusher and more…",
+      "text": [
+        "Northern Turkey tends to be significantly **lusher** and **more forested** than the rest of the country."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d6095797dc0b",
+          "src": "https://www.plonkit.net/images/turkey/tr_northlandscape.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-os4B",
+      "step": 1,
+      "order": 5,
+      "family": "landscape",
+      "title": "Landscape: In the northeast you will find uncultivated grasslands in…",
+      "text": [
+        "In the northeast you will find **uncultivated grasslands** in valleys surrounded by round hills. Trees are very limited in the region. In Generation 3 the area has an extremely distinct look, with deep green grass covering the hills. It is significantly more difficult to recognise in Generation 4, where the grass has a more arid look."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "00781c4fc149",
+          "src": "https://www.plonkit.net/images/turkey/tr_northeast.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-l81d",
+      "step": 1,
+      "order": 6,
+      "family": "other",
+      "title": "Turkish pines (pinus brutia) are mainly found near the…",
+      "text": [
+        "**Turkish pines** ([pinus brutia](https://en.wikipedia.org/wiki/Pinus_brutia)) are mainly found near the Mediterranean coast.",
+        "NOTE: Turkish pines can appear very similar to [Aleppo pines](https://en.wikipedia.org/wiki/Pinus_halepensis), which are uncommon in Turkey, but are often found in [other Mediterranean countries](https://www.google.com/maps/@41.0385689,0.4753459,3a,48.5y,144.08h,92.16t/data=!3m6!1e1!3m4!1shQfy4LKJz9mGqNx8fa89MA!2e0!7i13312!8i6656?entry=ttu)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4bba577ba8fe",
+          "src": "https://www.plonkit.net/images/turkey/tr_pines.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-Imt4",
+      "step": 1,
+      "order": 7,
+      "family": "other",
+      "title": "Tea plantations are common in the province of Rize",
+      "text": [
+        "**Tea plantations** are common in the province of Rize."
+      ],
+      "region": "Rize",
+      "tags": [],
+      "images": [
+        {
+          "id": "f4f177476175",
+          "src": "https://www.plonkit.net/images/turkey/tr_rizetea.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-qZq7",
+      "step": 1,
+      "order": 8,
+      "family": "vegetation",
+      "title": "Vegetation: Olive trees are mainly found on the Mediterranean coast",
+      "text": [
+        "**Olive trees** are mainly found on the Mediterranean coast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "787156dd6933",
+          "src": "https://www.plonkit.net/images/turkey/tr_olives.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-ioW2",
+      "step": 1,
+      "order": 9,
+      "family": "other",
+      "title": "Sunflowers are mainly found in northwestern Turkey",
+      "text": [
+        "**Sunflowers** are mainly found in northwestern Turkey."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3442dc6c2198",
+          "src": "https://www.plonkit.net/images/turkey/tr_sunflowers.png",
+          "location": {
+            "pano": "8JwvYfrDtSsWI3zM6RnQlw",
+            "lat": 40.1570685,
+            "lng": 34.6725306,
+            "heading": 268.05,
+            "pitch": -9.88,
+            "fov": 47.7,
+            "source": "plonkit"
+          }
+        }
+      ],
+      "locations": [
+        {
+          "pano": "8JwvYfrDtSsWI3zM6RnQlw",
+          "lat": 40.1570685,
+          "lng": 34.6725306,
+          "heading": 268.05,
+          "pitch": -9.88,
+          "fov": 47.7,
+          "source": "plonkit"
+        }
+      ],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-hyYZ",
+      "step": 1,
+      "order": 10,
+      "family": "other",
+      "title": "A majority of all vineyards in Turkey can be found in a…",
+      "text": [
+        "A majority of all **vineyards** in Turkey can be found in a region east of Izmir."
+      ],
+      "region": "İzmir",
+      "tags": [],
+      "images": [
+        {
+          "id": "5c166efa591d",
+          "src": "https://www.plonkit.net/images/turkey/tr_wine.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-yVok",
+      "step": 1,
+      "order": 11,
+      "family": "other",
+      "title": "Cotton is mainly found in the region surrounding the city…",
+      "text": [
+        "**Cotton** is mainly found in the region surrounding the city of Şanlıurfa."
+      ],
+      "region": "Şanlıurfa",
+      "tags": [],
+      "images": [
+        {
+          "id": "d90ab3b5d633",
+          "src": "https://www.plonkit.net/images/turkey/tr_cotton.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-cb18",
+      "step": 1,
+      "order": 12,
+      "family": "landscape",
+      "title": "Landscape: Lake Van is by far the biggest lake in Turkey and has a…",
+      "text": [
+        "Lake Van is by far the biggest lake in Turkey and has a semi-arid landscape, being surrounded by dry grassy hills and occasional trees and [agricultural fields](https://goo.gl/maps/LCwckUWMg8zV8yrX7) near the shore."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c72792a597b3",
+          "src": "https://www.plonkit.net/images/turkey/tr_lakevan.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-jAbk",
+      "step": 1,
+      "order": 13,
+      "family": "other",
+      "title": "Dark, volcanic rocks are commonly found between the cities…",
+      "text": [
+        "Dark, **volcanic rocks** are commonly found between the cities of Şanlıurfa and Diyarbakır."
+      ],
+      "region": "Şanlıurfa, Diyarbakır",
+      "tags": [],
+      "images": [
+        {
+          "id": "7bbf284f3194",
+          "src": "https://www.plonkit.net/images/turkey/tr_blackstones.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-fxRl",
+      "step": 1,
+      "order": 14,
+      "family": "other",
+      "title": "River valleys surrounded by steep",
+      "text": [
+        "River valleys surrounded by steep, **barren and rocky cliff sides** can be found between the cities of Erzurum and Artvin and in the [southeast](https://goo.gl/maps/zDhSPCWVAnGq3Ms18) near the city of Hakkâri."
+      ],
+      "region": "Erzurum, Artvin, Hakkâri",
+      "tags": [],
+      "images": [
+        {
+          "id": "99b20b7dc132",
+          "src": "https://www.plonkit.net/images/turkey/tr_aridrockyvalleys.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-wAF5",
+      "step": 1,
+      "order": 15,
+      "family": "architecture",
+      "title": "Architecture: Tiled roofs are mostly found in the western two thirds of…",
+      "text": [
+        "**Tiled roofs** are mostly found in the western two thirds of the country.",
+        "Note that for this and the following roof-related tips to be reliable, the majority of all visible roofs should preferably be of that type."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "e41b9355a8ee",
+          "src": "https://www.plonkit.net/images/turkey/tr_tiledroofs.png"
+        },
+        {
+          "id": "e80879fa7157",
+          "src": "https://learnablemeta.com/images/1072/ry89j57NPWCIeflTBBYHZbWt7MwPQyslgTnv.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-lAmr",
+      "step": 1,
+      "order": 16,
+      "family": "architecture",
+      "title": "Architecture: Flat roofs are mostly found in the southeast and to a…",
+      "text": [
+        "**Flat roofs** are mostly found in the southeast and to a lesser extent along the south coast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "03cce28701e3",
+          "src": "https://www.plonkit.net/images/turkey/tr_flatroofs.png"
+        },
+        {
+          "id": "a8aed8ec5318",
+          "src": "https://learnablemeta.com/images/1072/5OcS4uDLEcByqF6EYYWGNHKIxQoEQ4d2wV4X.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-hFfd",
+      "step": 1,
+      "order": 17,
+      "family": "architecture",
+      "title": "Architecture: Metal roofs are most common in the east",
+      "text": [
+        "**Metal roofs** are most common in the east."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4bd2d725f027",
+          "src": "https://www.plonkit.net/images/turkey/tr_metalroofs.png"
+        },
+        {
+          "id": "5414320b063a",
+          "src": "https://learnablemeta.com/images/1072/vFFMIzAs5SnM6WdJyAz3lA70QZoWYhOv3dKs.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-RsRd",
+      "step": 1,
+      "order": 18,
+      "family": "architecture",
+      "title": "Architecture: Sheet metal roofs shaped like low pyramids are mainly found…",
+      "text": [
+        "Sheet metal roofs shaped like **low pyramids** are mainly found far east, particularly in the general area surrounding Lake Van."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "c622e7ec46d0",
+          "src": "https://www.plonkit.net/images/turkey/tr_pyramidmetalroof.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-aoIU",
+      "step": 1,
+      "order": 19,
+      "family": "architecture",
+      "title": "Architecture: Many buildings in the Nevşehir Province are built by large",
+      "text": [
+        "Many buildings in the Nevşehir Province are built by large, light and unevenly coloured, **sandstone bricks**."
+      ],
+      "region": "Nevşehir",
+      "tags": [],
+      "images": [
+        {
+          "id": "124b16995159",
+          "src": "https://www.plonkit.net/images/turkey/tr_nevsehirbrick.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-n73Y",
+      "step": 1,
+      "order": 20,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Yellow on black chevrons are mainly found in and around the…",
+      "text": [
+        "**Yellow on black chevrons** are mainly found in and around the Balıkesir Province in the west and in the [Kars Province](https://www.google.com/maps/@40.7194663,43.1857553,3a,15y,58.93h,86.15t/data=!3m6!1e1!3m4!1scyws6VGByT2Y02WeHnA4dw!2e0!7i16384!8i8192?entry=ttu) in the far east. Beware that you may very rarely find them [elsewhere](https://goo.gl/maps/bQYsRcd5eqHj3x1h7)."
+      ],
+      "region": "Balıkesir, Kars",
+      "tags": [],
+      "images": [
+        {
+          "id": "ab1dab79d6cf",
+          "src": "https://www.plonkit.net/images/turkey/tr_chevronyellowonblack.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-niOS",
+      "step": 1,
+      "order": 21,
+      "family": "sign",
+      "kind": "chevron",
+      "title": "Chevron: Black on yellow chevrons are mainly found north of Izmir",
+      "text": [
+        "**Black on yellow chevrons** are mainly found north of Izmir."
+      ],
+      "region": "İzmir",
+      "tags": [],
+      "images": [
+        {
+          "id": "28e709c136fc",
+          "src": "https://www.plonkit.net/images/turkey/tr_chevronblackonyellow.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-BSFD",
+      "step": 1,
+      "order": 22,
+      "family": "guardrail",
+      "title": "Guardrail: Four-lane divided highways with no divider",
+      "text": [
+        "Four-lane divided highways with **no divider**, other than double middle road lines, are almost exclusively found in the eastern half of the country.",
+        "Beware that divided highways with [clear dividers](https://goo.gl/maps/SLzhkGpReMShmtDt9), such as guardrails, can still be found in the east."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "ee81eaba8714",
+          "src": "https://www.plonkit.net/images/turkey/tr_eastdivider.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-m6mB",
+      "step": 1,
+      "order": 23,
+      "family": "other",
+      "title": "Vertical water tanks can be found in most of Turkey",
+      "text": [
+        "**Vertical water tanks** can be found in most of Turkey, but are notably uncommon along the south and west coast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "3bc3597c4c7e",
+          "src": "https://www.plonkit.net/images/turkey/tr_watertankvertical.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-5jfy",
+      "step": 1,
+      "order": 24,
+      "family": "other",
+      "title": "Horizontal water tanks placed on top of vertical water…",
+      "text": [
+        "Horizontal water tanks placed **on top of** vertical water tanks are primarily found in a line following the south coast and going up to Elâzığ."
+      ],
+      "region": "Elazığ",
+      "tags": [],
+      "images": [
+        {
+          "id": "2a6b7a07962c",
+          "src": "https://www.plonkit.net/images/turkey/tr_watertankhorizontalvertical.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-sLHs",
+      "step": 1,
+      "order": 25,
+      "family": "other",
+      "title": "Square water tanks with angled corners are found in the…",
+      "text": [
+        "**Square water tanks** with angled corners are found in the south, approximately from İskenderun to Sanliurfa."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "bf937bf8ccc8",
+          "src": "https://www.plonkit.net/images/turkey/tr_watertanksquare.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-cf7P",
+      "step": 1,
+      "order": 26,
+      "family": "other",
+      "title": "White spherical water tanks can be found in the southeast",
+      "text": [
+        "White **spherical water tanks** can be found in the southeast, mainly south of Batman."
+      ],
+      "region": "Batman",
+      "tags": [],
+      "images": [
+        {
+          "id": "23e7936a85e6",
+          "src": "https://www.plonkit.net/images/turkey/tr_watertanksphere.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-cKHH",
+      "step": 1,
+      "order": 27,
+      "family": "pole",
+      "title": "Pole: In the European part of Turkey",
+      "text": [
+        "In the European part of Turkey, except Istanbul, utility poles, and other electrical infrastructure, will have a 6 digit code, which is often seen on a small pole plate under the yellow electricity warning plate."
+      ],
+      "region": "Istanbul",
+      "tags": [
+        "pole"
+      ],
+      "images": [
+        {
+          "id": "9e0293dee822",
+          "src": "https://www.plonkit.net/images/turkey/Turkey%20European%20Pole%20Plates.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-ZAFL",
+      "step": 1,
+      "order": 28,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street signs in the Ankara Province are blue with a small…",
+      "text": [
+        "Street signs in the Ankara Province are blue with a small **round top**. Similar street signs can very rarely be found in [Giresun](https://goo.gl/maps/aVtMnDJsqJ1ms4jf6).",
+        "Beware that some [newer street signs](https://www.google.com/maps/@39.9941773,32.8704415,3a,15y,27.52h,88.69t/data=!3m7!1e1!3m5!1sHNDiTJyKaZv36GFlgPI6wg!2e0!5s20221101T000000!7i16384!8i8192?entry=ttu) are red."
+      ],
+      "region": "Ankara",
+      "tags": [],
+      "images": [
+        {
+          "id": "f2750d350840",
+          "src": "https://www.plonkit.net/images/turkey/tr_ankarastreetsign.png"
+        },
+        {
+          "id": "f3f27f90589d",
+          "src": "https://learnablemeta.com/images/4588/1777548214364-m60.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-wPss",
+      "step": 1,
+      "order": 29,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street signs in the Izmir Province are dark blue",
+      "text": [
+        "Street signs in the Izmir Province are dark blue, noticeably **bulge outwards** and very commonly have the **emblem** of Izmir in white at the top of the sign."
+      ],
+      "region": "İzmir",
+      "tags": [],
+      "images": [
+        {
+          "id": "bc04d00f2f11",
+          "src": "https://www.plonkit.net/images/turkey/tr_izmirstreetsign.png"
+        },
+        {
+          "id": "b0bb6d292e33",
+          "src": "https://learnablemeta.com/images/4588/1777549824745-mjV.avif"
+        },
+        {
+          "id": "a2ed1f846518",
+          "src": "https://learnablemeta.com/images/4588/1777550230907-7F8.avif"
+        },
+        {
+          "id": "1371a156ea8e",
+          "src": "https://learnablemeta.com/images/4588/1777550012977-XiN.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-G6h2",
+      "step": 1,
+      "order": 30,
+      "family": "other",
+      "title": "If you find yourself surrounded by greenhouses",
+      "text": [
+        "If you find yourself surrounded by **greenhouses**, you are likely to be along the south coast west of Adana."
+      ],
+      "region": "Adana",
+      "tags": [],
+      "images": [
+        {
+          "id": "5fe96cfe2c0c",
+          "src": "https://www.plonkit.net/images/turkey/tr_greenhouses.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-7HDD",
+      "step": 2,
+      "order": 0,
+      "family": "architecture",
+      "title": "Architecture: Around the city of Bodrum you will commonly find this type…",
+      "text": [
+        "Around the city of Bodrum you will commonly find this type of **whitewashed buildings** with flat roofs, often combined with [blue details](https://goo.gl/maps/jcmMEtAFzgkLEf466) or [unpainted stone walls](https://goo.gl/maps/GvWo5wWdFEorZkaP8)."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9397e8eb8702",
+          "src": "https://www.plonkit.net/images/turkey/tr_greekarchitecture.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-X02u",
+      "step": 2,
+      "order": 1,
+      "family": "other",
+      "title": "Göreme, west of Kayseri, can be recognised by the tall…",
+      "text": [
+        "Göreme, west of Kayseri, can be recognised by the tall **sandstone monoliths** with ancient dwellings carved into them."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "ef654e7c88ad",
+          "src": "https://www.plonkit.net/images/turkey/tr_g_C3_B6reme.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-QuGQ",
+      "step": 2,
+      "order": 2,
+      "family": "landscape",
+      "title": "Landscape: Mount Ararat, labelled as Ağrı Dağı on Google Maps, is a…",
+      "text": [
+        "[Mount Ararat](https://en.wikipedia.org/wiki/Mount_Ararat), labelled as Ağrı Dağı on Google Maps, is a dormant volcano in far eastern Turkey and the **tallest mountain** in the country. It is often seen together with Küçük Ağrı, a smaller volcano to the southeast."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "6785c9312885",
+          "src": "https://www.plonkit.net/images/turkey/tr_mountararat.png",
+          "giveaway": true
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-mWDO",
+      "step": 2,
+      "order": 3,
+      "family": "other",
+      "title": "Banana plants are found around the city of Alanya",
+      "text": [
+        "**Banana plants** are found around the city of Alanya."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "940f8e35cf02",
+          "src": "https://www.plonkit.net/images/turkey/tr_banana.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-h0ZV",
+      "step": 2,
+      "order": 4,
+      "family": "car",
+      "title": "Google car: Road D525 south of Söke is a completely straight road going…",
+      "text": [
+        "Road D525 south of Söke is a completely straight road going south-south-west to north-north-east with winter Generation 3 coverage. Along the road you will typically find a large amount of reed."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "de7fe2a6b07d",
+          "src": "https://www.plonkit.net/images/turkey/tr_d525.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-eLMh",
+      "step": 2,
+      "order": 5,
+      "family": "line",
+      "title": "Road line: Along the western shore of Lake Beyşehir and Lake Eğirdir…",
+      "text": [
+        "Along the western shore of Lake Beyşehir and [Lake Eğirdir](https://goo.gl/maps/9R4Hc6UMzMLLTn7g6) you can find this small single lane road with jagged, exposed rock and [Turkish pines](https://en.m.wikipedia.org/wiki/Pinus_brutia) to the west. These two can be differentiated by the road west of Lake Eğirdir having a middle road line."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "4e3797e877af",
+          "src": "https://www.plonkit.net/images/turkey/tr_lakebeysehir.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-5hkj",
+      "step": 2,
+      "order": 6,
+      "family": "sign",
+      "kind": "other",
+      "title": "Sign: These light blue and grey touristic signs which are either…",
+      "text": [
+        "These light blue and grey **touristic signs** which are either arrow shaped or rectangular with a half circle on the top can be found on the island of Bozcaada."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "2ad3809fe6e2",
+          "src": "https://www.plonkit.net/images/turkey/tr_bozcaadasign.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-bl0n",
+      "step": 2,
+      "order": 7,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Red street signs with a coloured bottom strip are found in…",
+      "text": [
+        "Red street signs with a coloured bottom strip are found in several cities. In the bottom right corner, you can find a white arrow and some numbers. If this arrow is pointing in **both directions** and has a **single arrowhead**, rather than [double](https://goo.gl/maps/Fd5tuzksA3NY8YsF7), then you are almost certainly in Istanbul.",
+        "Beware that simple arrows pointing in only one direction can be found in both [Istanbul](https://goo.gl/maps/6uFmLFqcEn2bT7vL9) and in [other cities](https://goo.gl/maps/BBU6aeQ2BoBN38YH8). However, if you see such signs in combination with [red house numbers](https://goo.gl/maps/kjNkwByQZ7rNaQXdA), then you should be in Istanbul."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "0006fc637a8b",
+          "src": "https://www.plonkit.net/images/turkey/tr_streetsignistanbul.png"
+        },
+        {
+          "id": "bf990353497d",
+          "src": "https://learnablemeta.com/images/4588/1777550141458-3N0.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-xnIM",
+      "step": 2,
+      "order": 8,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street signs in Trabzon and Yalvaç are red and oval-shaped",
+      "text": [
+        "Street signs in Trabzon and [Yalvaç](https://goo.gl/maps/vZmpbacvJeyzbMWc9) are **red** and **oval-shaped**. [House numbers](https://goo.gl/maps/96X34Wg24K87jPG4A) also feature the same design."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d36c415435f3",
+          "src": "https://www.plonkit.net/images/turkey/tr_streetsigntrabzon.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-NL3Y",
+      "step": 2,
+      "order": 9,
+      "family": "guardrail",
+      "title": "Guardrail: Street signs in Bursa are green",
+      "text": [
+        "Street signs in Bursa are **green**, and generally have slightly **extruded letters**, meaning the signs are not completely flat.",
+        "NOTE: Several other types of infrastructure in Bursa, such as [fences](https://goo.gl/maps/EHzDyAUKLCQySbyB7) and [guardrails](https://goo.gl/maps/nF72j1rxibsT8weR8), may also be coloured green."
+      ],
+      "tags": [
+        "guardrail"
+      ],
+      "images": [
+        {
+          "id": "77f5bb037cf8",
+          "src": "https://www.plonkit.net/images/turkey/tr_streetsignbursa.png"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
+      }
+    },
+    {
+      "id": "tr-l1rB",
+      "step": 2,
+      "order": 10,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street signs in Bolu are also green",
+      "text": [
+        "Street signs in Bolu are also **green**, but are **completely flat** and lack any kind of border."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "492b25a5eb47",
+          "src": "https://www.plonkit.net/images/turkey/tr_streetsignbolu.png"
+        },
+        {
+          "id": "79fb0782166b",
+          "src": "https://learnablemeta.com/images/4588/1777549001228-dbp.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Plonk It",
+        "url": "https://www.plonkit.net/turkey",
+        "licence": "CC BY-NC-SA 4.0"
       }
     },
     {
       "id": "tr-lm-2585",
-      "step": 0,
-      "order": 2,
+      "step": 3,
+      "order": 0,
       "family": "bollard",
       "title": "Bollard: Bollard codes",
       "text": [
@@ -96,8 +1785,8 @@
     },
     {
       "id": "tr-lm-2984",
-      "step": 0,
-      "order": 3,
+      "step": 3,
+      "order": 1,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Extra Height Turkey",
@@ -120,34 +1809,9 @@
       }
     },
     {
-      "id": "tr-lm-10166",
-      "step": 0,
-      "order": 4,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "The colour of Turkish road lines is somewhat inconsistent.",
-        "Most roads simply have white road lines. However, it is not uncommon to see yellow road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1c517f8df7ee",
-          "src": "https://learnablemeta.com/images/503/e1gbRlQe2bP5tc84LNbwVmdSuvrQRNIsN67O.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67bcfa50de249626b4a3e177",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-12977",
-      "step": 0,
-      "order": 5,
+      "step": 3,
+      "order": 2,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: Dur",
@@ -171,8 +1835,8 @@
     },
     {
       "id": "tr-lm-15307",
-      "step": 0,
-      "order": 6,
+      "step": 3,
+      "order": 3,
       "family": "landscape",
       "title": "Landscape: Mount Ararat",
       "text": [
@@ -196,8 +1860,8 @@
     },
     {
       "id": "tr-lm-15308",
-      "step": 0,
-      "order": 7,
+      "step": 3,
+      "order": 4,
       "family": "other",
       "title": "Steep Valleys",
       "text": [
@@ -220,8 +1884,8 @@
     },
     {
       "id": "tr-lm-15309",
-      "step": 0,
-      "order": 8,
+      "step": 3,
+      "order": 5,
       "family": "landscape",
       "title": "Landscape: Far East Grassland",
       "text": [
@@ -244,8 +1908,8 @@
     },
     {
       "id": "tr-lm-15310",
-      "step": 0,
-      "order": 9,
+      "step": 3,
+      "order": 6,
       "family": "landscape",
       "title": "Landscape: Lake Van",
       "text": [
@@ -268,8 +1932,8 @@
     },
     {
       "id": "tr-lm-15311",
-      "step": 0,
-      "order": 10,
+      "step": 3,
+      "order": 7,
       "family": "other",
       "title": "North",
       "text": [
@@ -291,19 +1955,19 @@
       }
     },
     {
-      "id": "tr-lm-15409",
-      "step": 0,
-      "order": 11,
-      "family": "car",
-      "title": "Google car: Gen 3 No Antenna",
+      "id": "tr-lm-15410",
+      "step": 3,
+      "order": 8,
+      "family": "other",
+      "title": "Apartment Blocks",
       "text": [
-        "In the Generation 3 coverage, the Google car never has an antenna."
+        "Tall and somewhat square apartment blocks are very common in Turkey."
       ],
       "tags": [],
       "images": [
         {
-          "id": "e647cfea1309",
-          "src": "https://learnablemeta.com/images/665/ie0mSP6JT84HrUoiLkYNLvb05fO3oz3APQpK.avif"
+          "id": "8635f091b11f",
+          "src": "https://learnablemeta.com/images/665/ieGYrFLVyOg2SptpWzCv6KKeT1uK3X73Sv9A.avif"
         }
       ],
       "locations": [],
@@ -315,8 +1979,80 @@
       }
     },
     {
-      "id": "tr-lm-15410",
-      "step": 0,
+      "id": "tr-lm-15453",
+      "step": 3,
+      "order": 9,
+      "family": "other",
+      "title": "Salt & Pepper Roads",
+      "text": [
+        "Many roads have pavement with a grainy “salt and pepper” texture."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d44d4b05b76c",
+          "src": "https://learnablemeta.com/images/665/GPedUZaI2t4Qp0wAa2EJljkkF6AEjFI0VvUa.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
+      "id": "tr-lm-15857",
+      "step": 3,
+      "order": 10,
+      "family": "other",
+      "title": "Apartment Blocks",
+      "text": [
+        "Tall and somewhat square apartment blocks are very common in Turkey."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "8635f091b11f",
+          "src": "https://learnablemeta.com/images/665/ieGYrFLVyOg2SptpWzCv6KKeT1uK3X73Sv9A.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
+      "id": "tr-lm-15900",
+      "step": 3,
+      "order": 11,
+      "family": "other",
+      "title": "Salt & Pepper Roads",
+      "text": [
+        "Many roads have pavement with a grainy “salt and pepper” texture."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d44d4b05b76c",
+          "src": "https://learnablemeta.com/images/665/GPedUZaI2t4Qp0wAa2EJljkkF6AEjFI0VvUa.avif"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
+      "id": "tr-lm-51326",
+      "step": 3,
       "order": 12,
       "family": "other",
       "title": "Apartment Blocks",
@@ -334,572 +2070,14 @@
       "lookalikes": [],
       "credit": {
         "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15447",
-      "step": 0,
-      "order": 13,
-      "family": "car",
-      "title": "Google car: Gen 4 White Car",
-      "text": [
-        "The Generation 4 coverage in Turkey typically features a white Google car.",
-        "Usually, only a tiny sliver of the back of the car is visible.",
-        "The car can have a short antenna, or no antenna at all."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ecdcdd799dba",
-          "src": "https://learnablemeta.com/images/665/pWD7KaLTunZGIrPrHksmXc7T39zlIle3gCuR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15448",
-      "step": 0,
-      "order": 14,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Turkish bollards have a simple design: rectangular, plain white, and with a red reflector on the front.",
-        "They are thin when seen from the side.",
-        "**--- NOTE:**",
-        "Romania has similar bollards.",
-        "However, bollards are relatively rare in Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ffe5b467cf",
-          "src": "https://learnablemeta.com/images/665/HwlqrrQpjmDeTWSTDLyIL5nSfud3H0TFS2l9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15451",
-      "step": 0,
-      "order": 15,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Turkish chevrons are typically red on white.",
-        "Beware that there are some other regional variants.",
-        "Usually, the tip of the arrow does not touch the edge of the chevron.",
-        "Some chevrons have a neon yellow border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1da27e2d763a",
-          "src": "https://learnablemeta.com/images/665/fHUwu7uitfGwHjUCbbv3eaFxG2lTPRHjRDHy.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15453",
-      "step": 0,
-      "order": 16,
-      "family": "other",
-      "title": "Salt & Pepper Roads",
-      "text": [
-        "Many roads have pavement with a grainy “salt and pepper” texture."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d44d4b05b76c",
-          "src": "https://learnablemeta.com/images/665/GPedUZaI2t4Qp0wAa2EJljkkF6AEjFI0VvUa.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15454",
-      "step": 0,
-      "order": 17,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "A grey pickup truck can be found in some Generation 4 coverage.",
-        "**--- NOTE:**",
-        "Similar pickup trucks can also be found in Senegal and Kenya."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b4cc3b3ad93",
-          "src": "https://learnablemeta.com/images/665/aY74PbtwgnDgUDtMu8sOikGMhHdMw667gEBs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KE",
-        "SN"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15455",
-      "step": 0,
-      "order": 18,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Stop Sign",
-      "text": [
-        "Stop signs have the word “DUR” written on them.",
-        "This is unique to Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dbf60416e149",
-          "src": "https://learnablemeta.com/images/665/l03tAdyKWM8e4VuL2Os3zjejw0o602IUt4hU.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15458",
-      "step": 0,
-      "order": 19,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "The colour of Turkish road lines is somewhat inconsistent.",
-        "Most roads simply have white road lines.",
-        "However, it is not uncommon to see yellow road lines.",
-        "These roads can have fully yellow lines, or a combination of yellow and white lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "038358b6d10e",
-          "src": "https://learnablemeta.com/images/665/R5NOgXdXa4Te3TkoKj4b3ycIoM52S4Vmsqon.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15856",
-      "step": 0,
-      "order": 20,
-      "family": "car",
-      "title": "Google car: Gen 3 No Antenna",
-      "text": [
-        "In the Generation 3 coverage, the Google car never has an antenna."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e647cfea1309",
-          "src": "https://learnablemeta.com/images/665/ie0mSP6JT84HrUoiLkYNLvb05fO3oz3APQpK.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15857",
-      "step": 0,
-      "order": 21,
-      "family": "other",
-      "title": "Apartment Blocks",
-      "text": [
-        "Tall and somewhat square apartment blocks are very common in Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8635f091b11f",
-          "src": "https://learnablemeta.com/images/665/ieGYrFLVyOg2SptpWzCv6KKeT1uK3X73Sv9A.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15894",
-      "step": 0,
-      "order": 22,
-      "family": "car",
-      "title": "Google car: Gen 4 White Car",
-      "text": [
-        "The Generation 4 coverage in Turkey typically features a white Google car.",
-        "Usually, only a tiny sliver of the back of the car is visible.",
-        "The car can have a short antenna, or no antenna at all."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ecdcdd799dba",
-          "src": "https://learnablemeta.com/images/665/pWD7KaLTunZGIrPrHksmXc7T39zlIle3gCuR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15895",
-      "step": 0,
-      "order": 23,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Turkish bollards have a simple design: rectangular, plain white, and with a red reflector on the front.",
-        "They are thin when seen from the side.",
-        "**--- NOTE:**",
-        "Romania has similar bollards.",
-        "However, bollards are relatively rare in Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ffe5b467cf",
-          "src": "https://learnablemeta.com/images/665/HwlqrrQpjmDeTWSTDLyIL5nSfud3H0TFS2l9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15898",
-      "step": 0,
-      "order": 24,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Turkish chevrons are typically red on white.",
-        "Beware that there are some other regional variants.",
-        "Usually, the tip of the arrow does not touch the edge of the chevron.",
-        "Some chevrons have a neon yellow border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1da27e2d763a",
-          "src": "https://learnablemeta.com/images/665/fHUwu7uitfGwHjUCbbv3eaFxG2lTPRHjRDHy.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15900",
-      "step": 0,
-      "order": 25,
-      "family": "other",
-      "title": "Salt & Pepper Roads",
-      "text": [
-        "Many roads have pavement with a grainy “salt and pepper” texture."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d44d4b05b76c",
-          "src": "https://learnablemeta.com/images/665/GPedUZaI2t4Qp0wAa2EJljkkF6AEjFI0VvUa.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15901",
-      "step": 0,
-      "order": 26,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "A grey pickup truck can be found in some Generation 4 coverage.",
-        "**--- NOTE:**",
-        "Similar pickup trucks can also be found in Senegal and Kenya."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b4cc3b3ad93",
-          "src": "https://learnablemeta.com/images/665/aY74PbtwgnDgUDtMu8sOikGMhHdMw667gEBs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KE",
-        "SN"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15902",
-      "step": 0,
-      "order": 27,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Stop Sign",
-      "text": [
-        "Stop signs have the word “DUR” written on them.",
-        "This is unique to Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dbf60416e149",
-          "src": "https://learnablemeta.com/images/665/l03tAdyKWM8e4VuL2Os3zjejw0o602IUt4hU.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-15905",
-      "step": 0,
-      "order": 28,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "The colour of Turkish road lines is somewhat inconsistent.",
-        "Most roads simply have white road lines.",
-        "However, it is not uncommon to see yellow road lines.",
-        "These roads can have fully yellow lines, or a combination of yellow and white lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "038358b6d10e",
-          "src": "https://learnablemeta.com/images/665/R5NOgXdXa4Te3TkoKj4b3ycIoM52S4Vmsqon.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-25414",
-      "step": 0,
-      "order": 29,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Turkish bollards are white and rectangular with a red reflector on the front, making them quite unique. Similar bollards exist in Romania but are very rare. Australian bollards typically have a reflector on the back and a slightly different design."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5f12879c23c5",
-          "src": "https://learnablemeta.com/images/739/g2MUCBOivFlpErAuf4KGEGq4Zkg9pXksuHrB.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51326",
-      "step": 0,
-      "order": 30,
-      "family": "other",
-      "title": "Apartment Blocks",
-      "text": [
-        "Tall and somewhat square apartment blocks are very common in Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8635f091b11f",
-          "src": "https://learnablemeta.com/images/665/ieGYrFLVyOg2SptpWzCv6KKeT1uK3X73Sv9A.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51327",
-      "step": 0,
-      "order": 31,
-      "family": "car",
-      "title": "Google car: Gen 3 No Antenna",
-      "text": [
-        "In the Generation 3 coverage, the Google car never has an antenna."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e647cfea1309",
-          "src": "https://learnablemeta.com/images/665/ie0mSP6JT84HrUoiLkYNLvb05fO3oz3APQpK.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51333",
-      "step": 0,
-      "order": 32,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "The colour of Turkish road lines is somewhat inconsistent.",
-        "Most roads simply have white road lines.",
-        "However, it is not uncommon to see yellow road lines.",
-        "These roads can have fully yellow lines, or a combination of yellow and white lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "038358b6d10e",
-          "src": "https://learnablemeta.com/images/665/R5NOgXdXa4Te3TkoKj4b3ycIoM52S4Vmsqon.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51376",
-      "step": 0,
-      "order": 33,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "A grey pickup truck can be found in some Generation 4 coverage.",
-        "**--- NOTE:**",
-        "Similar pickup trucks can also be found in Senegal and Kenya."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b4cc3b3ad93",
-          "src": "https://learnablemeta.com/images/665/aY74PbtwgnDgUDtMu8sOikGMhHdMw667gEBs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KE",
-        "SN"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       }
     },
     {
       "id": "tr-lm-51377",
-      "step": 0,
-      "order": 34,
+      "step": 3,
+      "order": 13,
       "family": "other",
       "title": "Salt & Pepper Roads",
       "text": [
@@ -921,172 +2099,9 @@
       }
     },
     {
-      "id": "tr-lm-51378",
-      "step": 0,
-      "order": 35,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Stop Sign",
-      "text": [
-        "Stop signs have the word “DUR” written on them.",
-        "This is unique to Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dbf60416e149",
-          "src": "https://learnablemeta.com/images/665/l03tAdyKWM8e4VuL2Os3zjejw0o602IUt4hU.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51379",
-      "step": 0,
-      "order": 36,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Turkish chevrons are typically red on white.",
-        "Beware that there are some other regional variants.",
-        "Usually, the tip of the arrow does not touch the edge of the chevron.",
-        "Some chevrons have a neon yellow border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1da27e2d763a",
-          "src": "https://learnablemeta.com/images/665/fHUwu7uitfGwHjUCbbv3eaFxG2lTPRHjRDHy.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51380",
-      "step": 0,
-      "order": 37,
-      "family": "car",
-      "title": "Google car: Gen 4 White Car",
-      "text": [
-        "The Generation 4 coverage in Turkey typically features a white Google car.",
-        "Usually, only a tiny sliver of the back of the car is visible.",
-        "The car can have a short antenna, or no antenna at all."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ecdcdd799dba",
-          "src": "https://learnablemeta.com/images/665/pWD7KaLTunZGIrPrHksmXc7T39zlIle3gCuR.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-51382",
-      "step": 0,
-      "order": 38,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Turkish bollards have a simple design: rectangular, plain white, and with a red reflector on the front.",
-        "They are thin when seen from the side.",
-        "**--- NOTE:**",
-        "Romania has similar bollards.",
-        "However, bollards are relatively rare in Romania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ffe5b467cf",
-          "src": "https://learnablemeta.com/images/665/HwlqrrQpjmDeTWSTDLyIL5nSfud3H0TFS2l9.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RO"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-66778",
-      "step": 0,
-      "order": 39,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Intersection Chevrons",
-      "text": [
-        "On intersections, you can often find this distinctive black and yellow chevron, with multiple arrows that point upward."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96aeae3d3256",
-          "src": "https://learnablemeta.com/images/914/wAjH333nNKZ07SjVticmr2I5wBdvA55CbWz8.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-66798",
-      "step": 0,
-      "order": 40,
-      "family": "sign",
-      "kind": "chevron",
-      "title": "Chevron: Chevrons",
-      "text": [
-        "Turkish chevrons are typically red on white.",
-        "Beware that there are some other regional variants.",
-        "Usually, the tip of the arrow does not touch the edge of the chevron.",
-        "Some chevrons have a neon yellow border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0179342a34d4",
-          "src": "https://learnablemeta.com/images/914/sPIV4zJ5sND5IuiYu9IZNzVUVifojP4lInqc.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e9d357fe7b4d840ed563cf",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-104466",
-      "step": 0,
-      "order": 41,
+      "step": 3,
+      "order": 14,
       "family": "architecture",
       "title": "Architecture: Nevşehir - Sandstone Bricks",
       "text": [
@@ -1108,82 +2123,9 @@
       }
     },
     {
-      "id": "tr-lm-104566",
-      "step": 0,
-      "order": 42,
-      "family": "architecture",
-      "title": "Architecture: West - Tiled Roofs",
-      "text": [
-        "Tiled roofs are mostly found in the western two thirds of the country.",
-        "Note that for this and the following roof-related tips to be reliable, the majority of all visible roofs should preferably be of that type."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e80879fa7157",
-          "src": "https://learnablemeta.com/images/1072/ry89j57NPWCIeflTBBYHZbWt7MwPQyslgTnv.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-104567",
-      "step": 0,
-      "order": 43,
-      "family": "architecture",
-      "title": "Architecture: South Coast - Flat Roofs",
-      "text": [
-        "Flat roofs are mostly found in the southeast and to a lesser extent along the south coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a8aed8ec5318",
-          "src": "https://learnablemeta.com/images/1072/5OcS4uDLEcByqF6EYYWGNHKIxQoEQ4d2wV4X.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-104571",
-      "step": 0,
-      "order": 44,
-      "family": "architecture",
-      "title": "Architecture: East - Metal Roofs",
-      "text": [
-        "Metal roofs are most common in the east."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5414320b063a",
-          "src": "https://learnablemeta.com/images/1072/vFFMIzAs5SnM6WdJyAz3lA70QZoWYhOv3dKs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-104572",
-      "step": 0,
-      "order": 45,
+      "step": 3,
+      "order": 15,
       "family": "architecture",
       "title": "Architecture: Lake Van - Pyramid Shapes",
       "text": [
@@ -1206,8 +2148,8 @@
     },
     {
       "id": "tr-lm-104573",
-      "step": 0,
-      "order": 46,
+      "step": 3,
+      "order": 16,
       "family": "other",
       "title": "Apartment Blocks",
       "text": [
@@ -1230,8 +2172,8 @@
     },
     {
       "id": "tr-lm-128261",
-      "step": 0,
-      "order": 47,
+      "step": 3,
+      "order": 17,
       "family": "other",
       "title": "Central - Vertical Water Tanks",
       "text": [
@@ -1254,8 +2196,8 @@
     },
     {
       "id": "tr-lm-128262",
-      "step": 0,
-      "order": 48,
+      "step": 3,
+      "order": 18,
       "family": "other",
       "title": "South Coast - Horizontal Water Tanks",
       "text": [
@@ -1278,8 +2220,8 @@
     },
     {
       "id": "tr-lm-128263",
-      "step": 0,
-      "order": 49,
+      "step": 3,
+      "order": 19,
       "family": "other",
       "title": "South - Square Water Tanks",
       "text": [
@@ -1302,8 +2244,8 @@
     },
     {
       "id": "tr-lm-128264",
-      "step": 0,
-      "order": 50,
+      "step": 3,
+      "order": 20,
       "family": "other",
       "title": "Batman - Spherical Water Tanks",
       "text": [
@@ -1326,8 +2268,8 @@
     },
     {
       "id": "tr-lm-128267",
-      "step": 0,
-      "order": 51,
+      "step": 3,
+      "order": 21,
       "family": "other",
       "title": "Batman - Spherical Water Tanks",
       "text": [
@@ -1349,82 +2291,9 @@
       }
     },
     {
-      "id": "tr-lm-128319",
-      "step": 0,
-      "order": 52,
-      "family": "architecture",
-      "title": "Architecture: South Coast - Flat Roofs",
-      "text": [
-        "Flat roofs are mostly found in the southeast and to a lesser extent along the south coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a8aed8ec5318",
-          "src": "https://learnablemeta.com/images/1072/5OcS4uDLEcByqF6EYYWGNHKIxQoEQ4d2wV4X.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-128326",
-      "step": 0,
-      "order": 53,
-      "family": "architecture",
-      "title": "Architecture: East - Metal Roofs",
-      "text": [
-        "Metal roofs are most common in the east."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5414320b063a",
-          "src": "https://learnablemeta.com/images/1072/vFFMIzAs5SnM6WdJyAz3lA70QZoWYhOv3dKs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-128327",
-      "step": 0,
-      "order": 54,
-      "family": "architecture",
-      "title": "Architecture: West - Tiled Roofs",
-      "text": [
-        "Tiled roofs are mostly found in the western two thirds of the country.",
-        "Note that for this and the following roof-related tips to be reliable, the majority of all visible roofs should preferably be of that type."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e80879fa7157",
-          "src": "https://learnablemeta.com/images/1072/ry89j57NPWCIeflTBBYHZbWt7MwPQyslgTnv.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-361824",
-      "step": 0,
-      "order": 55,
+      "step": 3,
+      "order": 22,
       "family": "other",
       "title": "Turkey",
       "text": [
@@ -1451,33 +2320,9 @@
       }
     },
     {
-      "id": "tr-lm-474141",
-      "step": 0,
-      "order": 56,
-      "family": "pole",
-      "title": "Pole: metal pole",
-      "text": [
-        "Metal poles, either in the shape of a ladder or with a mesh pattern, are extremely common in Turkey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "42d736cf9fe3",
-          "src": "https://learnablemeta.com/images/1955/1750621995850-NJs.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-515563",
-      "step": 0,
-      "order": 57,
+      "step": 3,
+      "order": 23,
       "family": "guardrail",
       "title": "Guardrail: A & B-Type with red reflectors",
       "text": [
@@ -1510,8 +2355,8 @@
     },
     {
       "id": "tr-lm-640684",
-      "step": 0,
-      "order": 58,
+      "step": 3,
+      "order": 24,
       "family": "coverage",
       "title": "Coverage: Car Meta - Truck Coverage",
       "text": [
@@ -1534,8 +2379,8 @@
     },
     {
       "id": "tr-lm-640685",
-      "step": 0,
-      "order": 59,
+      "step": 3,
+      "order": 25,
       "family": "landscape",
       "title": "Landscape: Landscape - Lush",
       "text": [
@@ -1558,8 +2403,8 @@
     },
     {
       "id": "tr-lm-640686",
-      "step": 0,
-      "order": 60,
+      "step": 3,
+      "order": 26,
       "family": "landscape",
       "title": "Landscape: Landscape - Grassland",
       "text": [
@@ -1582,8 +2427,8 @@
     },
     {
       "id": "tr-lm-640687",
-      "step": 0,
-      "order": 61,
+      "step": 3,
+      "order": 27,
       "family": "vegetation",
       "title": "Vegetation: Vegetation - Turkish Pine",
       "text": [
@@ -1607,8 +2452,8 @@
     },
     {
       "id": "tr-lm-640688",
-      "step": 0,
-      "order": 62,
+      "step": 3,
+      "order": 28,
       "family": "other",
       "title": "Agriculture - Tea",
       "text": [
@@ -1631,8 +2476,8 @@
     },
     {
       "id": "tr-lm-640689",
-      "step": 0,
-      "order": 63,
+      "step": 3,
+      "order": 29,
       "family": "vegetation",
       "title": "Vegetation: Agriculture - Olive",
       "text": [
@@ -1655,8 +2500,8 @@
     },
     {
       "id": "tr-lm-640690",
-      "step": 0,
-      "order": 64,
+      "step": 3,
+      "order": 30,
       "family": "other",
       "title": "Agriculture - Sunflower",
       "text": [
@@ -1679,8 +2524,8 @@
     },
     {
       "id": "tr-lm-640691",
-      "step": 0,
-      "order": 65,
+      "step": 3,
+      "order": 31,
       "family": "other",
       "title": "Agriculture - Vineyard",
       "text": [
@@ -1703,8 +2548,8 @@
     },
     {
       "id": "tr-lm-640692",
-      "step": 0,
-      "order": 66,
+      "step": 3,
+      "order": 32,
       "family": "landscape",
       "title": "Landscape: Landscape - Lake Van",
       "text": [
@@ -1727,8 +2572,8 @@
     },
     {
       "id": "tr-lm-640693",
-      "step": 0,
-      "order": 67,
+      "step": 3,
+      "order": 33,
       "family": "landscape",
       "title": "Landscape: Landscape - Volcanic Rocks",
       "text": [
@@ -1751,8 +2596,8 @@
     },
     {
       "id": "tr-lm-640694",
-      "step": 0,
-      "order": 68,
+      "step": 3,
+      "order": 34,
       "family": "landscape",
       "title": "Landscape: Landscape - Cliff Valley",
       "text": [
@@ -1775,8 +2620,8 @@
     },
     {
       "id": "tr-lm-640695",
-      "step": 0,
-      "order": 69,
+      "step": 3,
+      "order": 35,
       "family": "architecture",
       "title": "Architecture: Architecture - Flat Roof",
       "text": [
@@ -1799,8 +2644,8 @@
     },
     {
       "id": "tr-lm-640696",
-      "step": 0,
-      "order": 70,
+      "step": 3,
+      "order": 36,
       "family": "architecture",
       "title": "Architecture: Architecture - Tiled Roof",
       "text": [
@@ -1823,8 +2668,8 @@
     },
     {
       "id": "tr-lm-640697",
-      "step": 0,
-      "order": 71,
+      "step": 3,
+      "order": 37,
       "family": "architecture",
       "title": "Architecture: Architecture - Pyramid Metal Roof",
       "text": [
@@ -1847,8 +2692,8 @@
     },
     {
       "id": "tr-lm-640698",
-      "step": 0,
-      "order": 72,
+      "step": 3,
+      "order": 38,
       "family": "architecture",
       "title": "Architecture: Architecture - Sandstone",
       "text": [
@@ -1871,8 +2716,8 @@
     },
     {
       "id": "tr-lm-640699",
-      "step": 0,
-      "order": 73,
+      "step": 3,
+      "order": 39,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: Infrastructure - Chevron - Yellow on Black",
@@ -1896,8 +2741,8 @@
     },
     {
       "id": "tr-lm-640700",
-      "step": 0,
-      "order": 74,
+      "step": 3,
+      "order": 40,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: Infrastructure - Chevron Black on Yellow",
@@ -1921,8 +2766,8 @@
     },
     {
       "id": "tr-lm-640701",
-      "step": 0,
-      "order": 75,
+      "step": 3,
+      "order": 41,
       "family": "line",
       "title": "Road line: Infrastructure - Highway without Divider",
       "text": [
@@ -1945,8 +2790,8 @@
     },
     {
       "id": "tr-lm-640702",
-      "step": 0,
-      "order": 76,
+      "step": 3,
+      "order": 42,
       "family": "other",
       "title": "Agriculture - Cotton",
       "text": [
@@ -1969,8 +2814,8 @@
     },
     {
       "id": "tr-lm-640703",
-      "step": 0,
-      "order": 77,
+      "step": 3,
+      "order": 43,
       "family": "architecture",
       "title": "Architecture: Architecture - Metal Roof",
       "text": [
@@ -1993,8 +2838,8 @@
     },
     {
       "id": "tr-lm-641919",
-      "step": 0,
-      "order": 78,
+      "step": 3,
+      "order": 44,
       "family": "other",
       "title": "Infrastructure - Watertank - Vertical",
       "text": [
@@ -2017,8 +2862,8 @@
     },
     {
       "id": "tr-lm-641920",
-      "step": 0,
-      "order": 79,
+      "step": 3,
+      "order": 45,
       "family": "other",
       "title": "Infrastructure - Watertank - Horizontal on top of Vertical",
       "text": [
@@ -2041,8 +2886,8 @@
     },
     {
       "id": "tr-lm-641921",
-      "step": 0,
-      "order": 80,
+      "step": 3,
+      "order": 46,
       "family": "other",
       "title": "Infrastructure - Watertank - Octagonal",
       "text": [
@@ -2065,8 +2910,8 @@
     },
     {
       "id": "tr-lm-641922",
-      "step": 0,
-      "order": 81,
+      "step": 3,
+      "order": 47,
       "family": "other",
       "title": "Infrastructure - Watertank - Spherical",
       "text": [
@@ -2089,8 +2934,8 @@
     },
     {
       "id": "tr-lm-641923",
-      "step": 0,
-      "order": 82,
+      "step": 3,
+      "order": 48,
       "family": "pole",
       "title": "Pole: Infrastructure - European Poleplate",
       "text": [
@@ -2113,8 +2958,8 @@
     },
     {
       "id": "tr-lm-641924",
-      "step": 0,
-      "order": 83,
+      "step": 3,
+      "order": 49,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Infrastructure - Streetsign - Ankara",
@@ -2139,8 +2984,8 @@
     },
     {
       "id": "tr-lm-641925",
-      "step": 0,
-      "order": 84,
+      "step": 3,
+      "order": 50,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Infrastructure - Streetsign - Izmir",
@@ -2164,8 +3009,8 @@
     },
     {
       "id": "tr-lm-641926",
-      "step": 0,
-      "order": 85,
+      "step": 3,
+      "order": 51,
       "family": "other",
       "title": "Agriculture - Greenhouse",
       "text": [
@@ -2188,8 +3033,8 @@
     },
     {
       "id": "tr-lm-641927",
-      "step": 0,
-      "order": 86,
+      "step": 3,
+      "order": 52,
       "family": "architecture",
       "title": "Architecture: Architecture - Bodrum Architecture",
       "text": [
@@ -2212,8 +3057,8 @@
     },
     {
       "id": "tr-lm-641928",
-      "step": 0,
-      "order": 87,
+      "step": 3,
+      "order": 53,
       "family": "landscape",
       "title": "Landscape: Landscape - Göreme Monoliths",
       "text": [
@@ -2236,8 +3081,8 @@
     },
     {
       "id": "tr-lm-641929",
-      "step": 0,
-      "order": 88,
+      "step": 3,
+      "order": 54,
       "family": "landscape",
       "title": "Landscape: Landscape - Mount Ararat",
       "text": [
@@ -2261,8 +3106,8 @@
     },
     {
       "id": "tr-lm-641930",
-      "step": 0,
-      "order": 89,
+      "step": 3,
+      "order": 55,
       "family": "other",
       "title": "Agriculture - Banana",
       "text": [
@@ -2285,8 +3130,8 @@
     },
     {
       "id": "tr-lm-641931",
-      "step": 0,
-      "order": 90,
+      "step": 3,
+      "order": 56,
       "family": "coverage",
       "title": "Coverage: Coverage Meta - E99 south of Sanliurfa",
       "text": [
@@ -2309,8 +3154,8 @@
     },
     {
       "id": "tr-lm-641932",
-      "step": 0,
-      "order": 91,
+      "step": 3,
+      "order": 57,
       "family": "coverage",
       "title": "Coverage: Coverage Meta - D525 south of Söke",
       "text": [
@@ -2333,8 +3178,8 @@
     },
     {
       "id": "tr-lm-641933",
-      "step": 0,
-      "order": 92,
+      "step": 3,
+      "order": 58,
       "family": "landscape",
       "title": "Landscape: Landscape - Lake Beysehir",
       "text": [
@@ -2357,8 +3202,8 @@
     },
     {
       "id": "tr-lm-641934",
-      "step": 0,
-      "order": 93,
+      "step": 3,
+      "order": 59,
       "family": "landscape",
       "title": "Landscape: Landscape - Lake Egirdir",
       "text": [
@@ -2381,8 +3226,8 @@
     },
     {
       "id": "tr-lm-641935",
-      "step": 0,
-      "order": 94,
+      "step": 3,
+      "order": 60,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Infrastructure - Bozcaada Tourist Sign",
@@ -2406,8 +3251,8 @@
     },
     {
       "id": "tr-lm-641936",
-      "step": 0,
-      "order": 95,
+      "step": 3,
+      "order": 61,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Infrastructure - Streetsign - Istanbul",
@@ -2432,8 +3277,8 @@
     },
     {
       "id": "tr-lm-641937",
-      "step": 0,
-      "order": 96,
+      "step": 3,
+      "order": 62,
       "family": "sign",
       "kind": "other",
       "title": "Sign: Infrastructure - Red Oval Sign",
@@ -2457,8 +3302,8 @@
     },
     {
       "id": "tr-lm-641938",
-      "step": 0,
-      "order": 97,
+      "step": 3,
+      "order": 63,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Infrastructure - Streetsign - Bursa",
@@ -2483,8 +3328,8 @@
     },
     {
       "id": "tr-lm-641939",
-      "step": 0,
-      "order": 98,
+      "step": 3,
+      "order": 64,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Infrastructure - Streetsign - Bolu",
@@ -2508,8 +3353,8 @@
     },
     {
       "id": "tr-lm-740287",
-      "step": 0,
-      "order": 99,
+      "step": 3,
+      "order": 65,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: Antalya street sign",
@@ -2533,8 +3378,8 @@
     },
     {
       "id": "tr-lm-740288",
-      "step": 0,
-      "order": 100,
+      "step": 3,
+      "order": 66,
       "family": "landscape",
       "title": "Landscape: Antalya Mountains",
       "text": [
@@ -2556,162 +3401,9 @@
       }
     },
     {
-      "id": "tr-lm-740298",
-      "step": 0,
-      "order": 101,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Eskişehir street sign",
-      "text": [
-        "Eskişehir has 2 street signs, both blue, but the one on top has 2 white lines on the top and bottom. The bottom one has 3 intersections with text in each one. The street sign on the top is more common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b0bb6d292e33",
-          "src": "https://learnablemeta.com/images/4588/1777549824745-mjV.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-740407",
-      "step": 0,
-      "order": 102,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Bursa street sign",
-      "text": [
-        "Street signs in Bursa are green, and generally have slightly extruded letters, meaning the signs are not completely flat.",
-        "NOTE: Several other types of infrastructure in Bursa, such as fences and guardrails, may also be coloured green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "79fb0782166b",
-          "src": "https://learnablemeta.com/images/4588/1777549001228-dbp.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-740408",
-      "step": 0,
-      "order": 103,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Izmir street sign",
-      "text": [
-        "Street signs in the Izmir Province are dark blue, noticeably bulge outwards and very commonly have the emblem of Izmir in white at the top of the sign."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a2ed1f846518",
-          "src": "https://learnablemeta.com/images/4588/1777550230907-7F8.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-740409",
-      "step": 0,
-      "order": 104,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Ankara street sign",
-      "text": [
-        "Street signs in the Ankara Province are blue with a small round top. Similar street signs can very rarely be found in Giresun .",
-        "Beware that some newer street signs are red."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f3f27f90589d",
-          "src": "https://learnablemeta.com/images/4588/1777548214364-m60.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-740410",
-      "step": 0,
-      "order": 105,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Istanbul street sign",
-      "text": [
-        "Red street signs with a coloured bottom strip are found in several cities. In the bottom right corner, you can find a white arrow and some numbers. If this arrow is pointing in both directions and has a single arrowhead, rather than double, then you are almost certainly in Istanbul.",
-        "Beware that simple arrows pointing in only one direction can be found in both Istanbul and in other cities. However, if you see such signs in combination with red house numbers , then you should be in Istanbul."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bf990353497d",
-          "src": "https://learnablemeta.com/images/4588/1777550141458-3N0.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "tr-lm-740411",
-      "step": 0,
-      "order": 106,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Gaziantep street sign",
-      "text": [
-        "Gaziantep street signs are blue and oval shaped with a white edge inside it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1371a156ea8e",
-          "src": "https://learnablemeta.com/images/4588/1777550012977-XiN.avif"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
       "id": "tr-lm-783118",
-      "step": 0,
-      "order": 107,
+      "step": 3,
+      "order": 67,
       "family": "language",
       "title": "Language: Turkish",
       "text": [
