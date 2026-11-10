@@ -1,0 +1,508 @@
+{
+  "name": "pack",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 40,
+    "name": "pack",
+    "countries": "all",
+    "steps": [
+      "pack"
+    ],
+    "packWidth": 1024,
+    "v": 2
+  },
+  "startedAt": "2026-11-10T02:23:18.349Z",
+  "finishedAt": "2026-11-10T02:24:30.895Z",
+  "commit": "ca883669d3003e4ffe2387cf540199cfaa007131",
+  "countries": [
+    "al",
+    "ad",
+    "at",
+    "be",
+    "ba",
+    "bg",
+    "hr",
+    "cy",
+    "cz",
+    "dk",
+    "ee",
+    "fi",
+    "fr",
+    "de",
+    "gr",
+    "hu",
+    "is",
+    "ie",
+    "it",
+    "lv",
+    "lt",
+    "lu",
+    "mt",
+    "mc",
+    "me",
+    "nl",
+    "mk",
+    "no",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "sm",
+    "rs",
+    "sk",
+    "si",
+    "es",
+    "se",
+    "ch",
+    "ua",
+    "gb",
+    "li",
+    "fo",
+    "gi",
+    "im",
+    "je",
+    "jp",
+    "kr",
+    "th",
+    "kh",
+    "tw",
+    "sg",
+    "my",
+    "id",
+    "ph",
+    "lk",
+    "mn",
+    "kz",
+    "kg",
+    "il",
+    "jo",
+    "ae",
+    "qa",
+    "tr",
+    "bt",
+    "in",
+    "bd",
+    "la",
+    "lb",
+    "hk",
+    "mo",
+    "za",
+    "bw",
+    "sz",
+    "ls",
+    "ke",
+    "ug",
+    "ng",
+    "gh",
+    "sn",
+    "tn",
+    "rw",
+    "mg",
+    "re",
+    "us",
+    "ca",
+    "mx",
+    "br",
+    "ar",
+    "cl",
+    "co",
+    "pe",
+    "bo",
+    "ec",
+    "uy",
+    "py",
+    "gt",
+    "cr",
+    "pa",
+    "do",
+    "pr",
+    "vi",
+    "cw",
+    "gl",
+    "au",
+    "nz",
+    "gu",
+    "mp",
+    "as",
+    "ge",
+    "xk",
+    "na",
+    "np",
+    "om",
+    "bm",
+    "cx",
+    "cc",
+    "st",
+    "pm"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "pack",
+      "ms": 72544,
+      "countries": {
+        "im": {
+          "counts": {
+            "packed": 41,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "nz": {
+          "counts": {
+            "packed": 3,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ad": {
+          "counts": {
+            "packed": 28,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "es": {
+          "counts": {
+            "packed": 14,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cy": {
+          "counts": {
+            "packed": 20,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "lt": {
+          "counts": {
+            "packed": 48,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "rs": {
+          "counts": {
+            "packed": 20,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "sk": {
+          "counts": {
+            "packed": 11,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "pl": {
+          "counts": {
+            "packed": 25,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "kz": {
+          "counts": {
+            "packed": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fi": {
+          "counts": {
+            "packed": 7,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "us": {
+          "counts": {
+            "packed": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fo": {
+          "counts": {
+            "packed": 30,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "la": {
+          "counts": {
+            "packed": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ch": {
+          "counts": {
+            "packed": 48,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cz": {
+          "counts": {
+            "packed": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "lu": {
+          "counts": {
+            "packed": 39,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "th": {
+          "counts": {
+            "packed": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "it": {
+          "counts": {
+            "packed": 19,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "tn": {
+          "counts": {
+            "packed": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "li": {
+          "counts": {
+            "packed": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "hr": {
+          "counts": {
+            "packed": 40,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "de": {
+          "counts": {
+            "packed": 44,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "mx": {
+          "counts": {
+            "packed": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "at": {
+          "counts": {
+            "packed": 18,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "fr": {
+          "counts": {
+            "packed": 9,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "se": {
+          "counts": {
+            "packed": 12,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "pt": {
+          "counts": {
+            "packed": 24,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "tr": {
+          "counts": {
+            "packed": 3,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "tw": {
+          "counts": {
+            "packed": 44,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "jp": {
+          "counts": {
+            "packed": 39,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "gb": {
+          "counts": {
+            "packed": 24,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cl": {
+          "counts": {
+            "packed": 15,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "hu": {
+          "counts": {
+            "packed": 40,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "sg": {
+          "counts": {
+            "packed": 27,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "nl": {
+          "counts": {
+            "packed": 28,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ro": {
+          "counts": {
+            "packed": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cr": {
+          "counts": {
+            "packed": 19,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "be": {
+          "counts": {
+            "packed": 47,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "gr": {
+          "counts": {
+            "packed": 32,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "lv": {
+          "counts": {
+            "packed": 23,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "kh": {
+          "counts": {
+            "packed": 12,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "dk": {
+          "counts": {
+            "packed": 48,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ie": {
+          "counts": {
+            "packed": 22,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "me": {
+          "counts": {
+            "packed": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "no": {
+          "counts": {
+            "packed": 6,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "mk": {
+          "counts": {
+            "packed": 3,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ec": {
+          "counts": {
+            "packed": 10,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "si": {
+          "counts": {
+            "packed": 25,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ee": {
+          "counts": {
+            "packed": 7,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
