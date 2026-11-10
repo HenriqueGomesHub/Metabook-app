@@ -1,9 +1,12 @@
 // Approved candidates → content/media/<code>.json: moves each photo to approved/ and appends a
-// MediaItem. Idempotent: rows already in content/media are skipped, and a photo already in
-// approved/ is not moved again. It never marks rows collected; mark-collected.mjs does that once
+// MediaItem. A row with a crop is cropped instead (images.mjs settings) and uploaded to approved/,
+// and its MediaItem gets the cropped size and preview; its candidate file is left in place, so an
+// interrupted run can always redo the crop. Idempotent: rows already in content/media are skipped,
+// and an uncropped photo already in approved/ is not moved again. It never marks rows collected; mark-collected.mjs does that once
 // the commit is pushed, so a failed run is retried in full. Rejected and pending rows are left alone.
 // CLI: node tools/content/collect.mjs [--countries pl,lt]
 import { basename, join } from 'node:path';
+import { cropImage, describeImage } from './images.mjs';
 import { CONTENT, isMain, loadPool, parseArgs, readJson, resolveCountries, writeJson } from './lib/common.mjs';
 
 /** Table row → MediaItem (optional fields only when set). */
@@ -36,6 +39,21 @@ export function captionNamesCountry(caption, country, pool = loadPool()) {
 }
 
 /**
+ * Crops a candidate into approved/ → { width, height, preview } of the cropped photo. It works
+ * from the candidate whenever it is there (re-uploading over any earlier attempt, so the crop is
+ * always the row's current one); without it, an earlier run's upload is described as it is.
+ */
+export async function approveCropped(storage, row, to) {
+  if (await storage.exists(row.storage_path)) {
+    const { webp, ...size } = await cropImage(await storage.download(row.storage_path), row.crop);
+    await storage.upload(to, webp);
+    return size;
+  }
+  if (await storage.exists(to)) return describeImage(await storage.download(to));
+  throw new Error(`${row.storage_path} not found`);
+}
+
+/**
  * Returns { <code>: { counts: { collected, present, skipped, failed }, errors, skipped } } for the
  * countries touched. `present`: already in content/media; `skipped`: caption names the country.
  */
@@ -61,7 +79,8 @@ export async function collect({ storage, queue, countries, contentDir = CONTENT,
         entry.skipped.push(`${row.source_url}: caption names the country`);
         continue;
       }
-      if (!(await storage.exists(item.url))) await storage.move(row.storage_path, item.url);
+      if (row.crop) Object.assign(item, await approveCropped(storage, row, item.url));
+      else if (!(await storage.exists(item.url))) await storage.move(row.storage_path, item.url);
       writeJson(path, [...items, item]);
       entry.counts.collected++;
     } catch (error) {

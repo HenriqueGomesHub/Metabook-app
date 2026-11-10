@@ -44,6 +44,11 @@ export function createStorage({
 
     exists,
 
+    /** The bytes of a file in the public bucket. */
+    async download(path) {
+      return Buffer.from(await (await request(`${base}/object/public/${BUCKET}/${path}`, {}, { timeoutMs: 120_000 })).arrayBuffer());
+    },
+
     /** Moves a file; a file already at `to` (an earlier, interrupted run) counts as moved. */
     async move(from, to) {
       try {
