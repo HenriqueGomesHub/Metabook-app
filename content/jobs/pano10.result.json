@@ -1,0 +1,135 @@
+{
+  "name": "pano10",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano10",
+    "countries": [
+      "nz",
+      "pe",
+      "pl",
+      "pt",
+      "re",
+      "ro"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:12:43.302Z",
+  "finishedAt": "2026-11-10T02:16:31.102Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "nz",
+    "pe",
+    "pl",
+    "pt",
+    "re",
+    "ro"
+  ],
+  "errorCount": 2,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 227798,
+      "countries": {
+        "nz": {
+          "ok": true,
+          "ms": 24574,
+          "counts": {
+            "boxes": 58,
+            "urbanSkipped": 1,
+            "panoramas": 1,
+            "views": 3,
+            "viewsDropped": 1,
+            "alreadyQueued": 0,
+            "queued": 3,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "pe": {
+          "ok": true,
+          "ms": 21717,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "pl": {
+          "ok": true,
+          "ms": 60294,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 7,
+            "views": 25,
+            "viewsDropped": 3,
+            "alreadyQueued": 0,
+            "queued": 25,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "pt": {
+          "ok": true,
+          "ms": 90274,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 6,
+            "views": 24,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 24,
+            "failed": 0
+          },
+          "errors": [
+            "The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ]
+        },
+        "re": {
+          "ok": false,
+          "ms": 32,
+          "errors": [
+            "re not found in Natural Earth admin-0 (50m)"
+          ]
+        },
+        "ro": {
+          "ok": true,
+          "ms": 30886,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 1,
+            "views": 4,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 4,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
