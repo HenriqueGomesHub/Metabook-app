@@ -22,6 +22,23 @@ const PAD = 8;
 const TOLERANCE = 0.6;
 /** Natural Earth leaves iso_a2 "-99" for some countries; match their admin-0 code instead. */
 const ADM0_A3 = { XK: 'KOS' };
+/**
+ * Territories GeoGuessr players treat as part of a country: their admin-1 regions are merged into
+ * one region of that country's map (Natural Earth keeps Åland as its own admin-0 with 16 municipalities).
+ */
+export const ABSORB = {
+  FI: { from: 'AX', properties: { name: 'Åland', name_en: 'Åland', iso_3166_2: 'FI-01', type_en: 'Autonomous region' } },
+};
+
+/** The absorbed territory's features → one feature with a MultiPolygon of all their polygons. */
+export function absorbed(iso, admin1) {
+  const rule = ABSORB[iso];
+  if (!rule) return [];
+  const parts = admin1.filter((f) => f.properties.iso_a2 === rule.from);
+  if (parts.length === 0) return [];
+  const polygons = parts.flatMap((f) => (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates));
+  return [{ type: 'Feature', properties: { ...rule.properties }, geometry: { type: 'MultiPolygon', coordinates: polygons } }];
+}
 
 const round = (n) => Math.round(n * 10) / 10;
 
@@ -410,6 +427,7 @@ export function buildRegionMap(code, admin1, places = []) {
   const iso = code.toUpperCase();
   const features = admin1
     .filter((f) => f.properties.iso_a2 === iso || (ADM0_A3[iso] && f.properties.adm0_a3 === ADM0_A3[iso]))
+    .concat(absorbed(iso, admin1))
     .map((f) => ({ ...f, geometry: rewind(f.geometry) }));
   if (features.length === 0) throw new Error(`${iso} has no admin-1 regions in Natural Earth`);
   const layout = iso === 'US' ? usLayout(features) : insetLayout(features, EXCLUDE[iso]);

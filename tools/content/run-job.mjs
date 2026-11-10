@@ -10,7 +10,7 @@ import { readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
-export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review'];
+export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review', 'rereview', 'rename'];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
 
 const NAME = /^[\w-]+$/;
@@ -126,7 +126,7 @@ export async function runJob(job, { steps = [], onStep } = {}) {
       result = all.ok ? all.report : { all };
     } else if (step === 'pack') {
       const { pack } = await import('./pack.mjs');
-      const all = await timed(async () => ({ report: await pack({ ...(await getClients()), countries }) }));
+      const all = await timed(async () => ({ report: await pack({ ...(await getClients()), countries, ...(job.packWidth && { maxWidth: job.packWidth }) }) }));
       result = all.ok ? all.report : { all };
     } else if (step === 'review') {
       // review files name candidates by id, so every country's entries apply
@@ -134,6 +134,16 @@ export async function runJob(job, { steps = [], onStep } = {}) {
       const { applyReviews } = await import('./review.mjs');
       const all = await timed(async () => ({ report: await applyReviews({ queue: createQueue() }) }));
       result = all.ok ? all.report : { all };
+    } else if (step === 'rereview') {
+      const { createQueue } = await import('./queue.mjs');
+      const { applyRereviews } = await import('./review.mjs');
+      const all = await timed(async () => ({ report: await applyRereviews({ queue: createQueue(), ...(job.reviewDir && { dir: join(CONTENT, job.reviewDir) }) }) }));
+      result = all.ok ? all.report : { all };
+    } else if (step === 'rename') {
+      // job.rename = { from: 'ax', to: 'fi' }: a territory now counted as part of its country
+      const { createQueue } = await import('./queue.mjs');
+      const all = await timed(async () => ({ counts: { moved: await createQueue().renameCountry(job.rename.from, job.rename.to) } }));
+      result = { all };
     } else if (step === 'generate') {
       const { loadInput, writeGenerated } = await import('./generate.mjs');
       const input = loadInput();

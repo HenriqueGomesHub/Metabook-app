@@ -1,0 +1,162 @@
+{
+  "name": "bh8",
+  "job": {
+    "subjects": [
+      "bollard"
+    ],
+    "perSubject": 20,
+    "name": "bh8",
+    "countries": [
+      "lt",
+      "lu",
+      "lv",
+      "me",
+      "mk",
+      "mn"
+    ],
+    "steps": [
+      "mapillary"
+    ],
+    "budgetMinutes": 5
+  },
+  "startedAt": "2026-11-10T01:37:13.269Z",
+  "finishedAt": "2026-11-10T01:49:28.031Z",
+  "commit": "a75a6848145822ea0782b2154b996ac9118bfc86",
+  "countries": [
+    "lt",
+    "lu",
+    "lv",
+    "me",
+    "mk",
+    "mn"
+  ],
+  "errorCount": 8,
+  "steps": [
+    {
+      "step": "mapillary",
+      "ms": 734760,
+      "countries": {
+        "lt": {
+          "ok": true,
+          "ms": 121853,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 20,
+              "alreadyQueued": 0,
+              "queued": 20,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 20
+              }
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=25.25985%2C54.68157%2C25.27985%2C54.70157&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "lu": {
+          "ok": true,
+          "ms": 274954,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 15,
+              "alreadyQueued": 0,
+              "queued": 15,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 15
+              }
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=5.99507%2C49.62469%2C6.01507%2C49.64469&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=6.1005%2C49.57389%2C6.1205%2C49.59389&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=6.00751%2C49.63011%2C6.02751%2C49.65011&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=6.11045%2C49.56717%2C6.13045%2C49.58717&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "lv": {
+          "ok": true,
+          "ms": 153491,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 20,
+              "alreadyQueued": 0,
+              "queued": 20,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 20
+              }
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=24.27325%2C56.91888%2C24.29325%2C56.93888&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=24.35344%2C57.08956%2C24.37344%2C57.10956&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "me": {
+          "ok": true,
+          "ms": 77742,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 14,
+              "alreadyQueued": 0,
+              "queued": 14,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 14
+              }
+            }
+          },
+          "errors": []
+        },
+        "mk": {
+          "ok": true,
+          "ms": 87573,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 11,
+              "alreadyQueued": 0,
+              "queued": 11,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 11
+              }
+            }
+          },
+          "errors": [
+            "bollard: HTTP 500 for https://graph.mapillary.com/images?bbox=21.4953%2C41.98503%2C21.5153%2C42.00503&is_pano=false&fields=id%2Cthumb_2048_url%2Ccomputed_geometry%2Cgeometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight%2Cis_pano&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "mn": {
+          "ok": true,
+          "ms": 19122,
+          "counts": {
+            "bollard": {
+              "boxes": 80,
+              "found": 1,
+              "alreadyQueued": 0,
+              "queued": 1,
+              "failed": 0,
+              "bySubject": {
+                "bollard": 1
+              }
+            }
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1286 cards, 233 tips, 6 chapters, 120 facts files, 0 photos"
+    ]
+  }
+}
