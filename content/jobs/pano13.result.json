@@ -1,0 +1,90 @@
+{
+  "name": "pano13",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano13",
+    "countries": [
+      "ua",
+      "us",
+      "uy"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:13:01.759Z",
+  "finishedAt": "2026-11-10T02:14:03.188Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "ua",
+    "us",
+    "uy"
+  ],
+  "errorCount": 0,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 61427,
+      "countries": {
+        "ua": {
+          "ok": true,
+          "ms": 23732,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "us": {
+          "ok": true,
+          "ms": 22478,
+          "counts": {
+            "boxes": 71,
+            "urbanSkipped": 1,
+            "panoramas": 1,
+            "views": 4,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 4,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "uy": {
+          "ok": true,
+          "ms": 15184,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
