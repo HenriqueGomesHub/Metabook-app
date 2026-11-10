@@ -1,0 +1,75 @@
+/* /round: one narrow column that also fits the extension's side panel (360 px) */
+
+.round {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+}
+
+.round-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.round-head .kicker {
+  margin: 0;
+}
+
+.round-title {
+  margin: 0;
+  font-size: clamp(24px, 7vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.round-sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+.round-missed {
+  color: var(--warn);
+}
+
+.round-clues {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.round-clue {
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.round-actions,
+.round-save {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.round-actions > * {
+  flex: 1 1 120px;
+}
+
+.round-graded {
+  margin: 4px 0 0;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.round-error {
+  color: var(--warn);
+  font-size: 14px;
+}
