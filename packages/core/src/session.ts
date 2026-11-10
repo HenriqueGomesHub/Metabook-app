@@ -58,10 +58,14 @@ function mix<T>(reviews: T[], fresh: T[]): T[] {
   return out;
 }
 
+/** What a card is about for spacing: its clue family, else its type. */
+const topicOf = (card: Card): string => card.subject ?? card.type;
+
 /**
  * Reorders so no type runs longer than MAX_RUN and no two cards of one clue are back to back,
  * staying as close to the input order as possible. Picks are checked against the remaining counts
- * so a dominant type is not stranded at the end; keeping siblings apart comes first.
+ * so a dominant type is not stranded at the end; keeping siblings apart comes first. Where it can,
+ * the next card also differs from the last in family (bollard, pole…) and country.
  */
 export function interleave(cards: Card[]): Card[] {
   const rest = [...cards];
@@ -69,6 +73,7 @@ export function interleave(cards: Card[]): Card[] {
   let runType: CardType | undefined;
   let runLength = 0;
   let lastClue: string | undefined;
+  let last: Card | undefined;
 
   while (rest.length) {
     const counts = new Map<CardType, number>();
@@ -82,10 +87,29 @@ export function interleave(cards: Card[]): Card[] {
       });
     const fits = (card: Card) => nextRun(card.type) <= MAX_RUN;
     const apart = (card: Card) => lastClue === undefined || clueOf(card) !== lastClue;
+    const newTopic = (card: Card) => !last || topicOf(card) !== topicOf(last);
+    const newCountry = (card: Card) => !last || card.country !== last.country;
+    const good = (card: Card) => apart(card) && fits(card) && feasibleAfter(card.type);
+    const topics = new Map<string, number>();
+    for (const card of rest) topics.set(topicOf(card), (topics.get(topicOf(card)) ?? 0) + 1);
+    /** after this card, every family can still be kept apart from its own kind */
+    const topicRoom = (card: Card) =>
+      [...topics].every(([topic, count]) => {
+        const left = topic === topicOf(card) ? count - 1 : count;
+        const others = rest.length - 1 - left;
+        return left <= others + (topic === topicOf(card) ? 0 : 1);
+      });
 
     const index = [
-      rest.findIndex((card) => apart(card) && fits(card) && feasibleAfter(card.type)),
+      rest.findIndex((card) => good(card) && newTopic(card) && topicRoom(card) && newCountry(card)),
+      rest.findIndex((card) => good(card) && newTopic(card) && topicRoom(card)),
+      rest.findIndex((card) => good(card) && newTopic(card)),
+      rest.findIndex(good),
+      rest.findIndex((card) => apart(card) && fits(card) && newTopic(card) && topicRoom(card)),
+      rest.findIndex((card) => apart(card) && fits(card) && newTopic(card)),
+      rest.findIndex((card) => apart(card) && newTopic(card) && topicRoom(card)),
       rest.findIndex((card) => apart(card) && fits(card)),
+      rest.findIndex((card) => apart(card) && newTopic(card)),
       rest.findIndex(apart),
       0,
     ].find((i) => i >= 0) as number;
@@ -93,6 +117,7 @@ export function interleave(cards: Card[]): Card[] {
     runLength = nextRun(card.type);
     runType = card.type;
     lastClue = clueOf(card);
+    last = card;
     out.push(card);
   }
   return out;
