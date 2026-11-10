@@ -116,7 +116,11 @@
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The newer Gen 4 coverage uses a smallcam, mounted lower than usual. You see a fairly big round blur with a small bump at the front, sometimes see-through. Most of the Balkans has it."
+      "summary": "The newer Gen 4 coverage uses a smallcam, mounted lower than usual. You see a fairly big round blur with a small bump at the front, sometimes see-through. Most of the Balkans has it.",
+      "sameAs": [
+        "AL",
+        "ME"
+      ]
     },
     {
       "id": "mk-jQXp",
@@ -1436,25 +1440,37 @@
           "id": "fc1efcd0bbb2",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_236.jpg",
           "role": "example",
-          "caption": "Utility pole"
+          "caption": "Utility pole",
+          "path": "mk/fc1efcd0bbb2.webp",
+          "width": 800,
+          "height": 1280
         },
         {
           "id": "671564199290",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_237.jpg",
           "role": "example",
-          "caption": "Utility pole"
+          "caption": "Utility pole",
+          "path": "mk/671564199290.webp",
+          "width": 800,
+          "height": 1280
         },
         {
           "id": "72b51c6634e3",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_408.jpg",
           "role": "example",
-          "caption": "Utility pole"
+          "caption": "Utility pole",
+          "path": "mk/72b51c6634e3.webp",
+          "width": 800,
+          "height": 1280
         },
         {
           "id": "5e52693f4c8f",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_409.jpg",
           "role": "example",
-          "caption": "Utility pole"
+          "caption": "Utility pole",
+          "path": "mk/5e52693f4c8f.webp",
+          "width": 800,
+          "height": 1280
         }
       ],
       "locations": [],
@@ -1750,7 +1766,12 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/stop",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "BA",
+        "ME",
+        "RS"
+      ]
     },
     {
       "id": "mk-gh-signs-yield",
@@ -1780,7 +1801,8 @@
           "caption": "Sign design: give way sign",
           "path": "mk/f41f785424b3.webp",
           "width": 1024,
-          "height": 906
+          "height": 906,
+          "dupeOf": "8bcadd293153"
         }
       ],
       "locations": [],
@@ -1790,7 +1812,37 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/yield",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "AL",
+        "AR",
+        "BD",
+        "BG",
+        "BM",
+        "ES",
+        "FI",
+        "GB",
+        "GE",
+        "HR",
+        "JO",
+        "KG",
+        "KZ",
+        "LA",
+        "LK",
+        "LT",
+        "ME",
+        "MN",
+        "MO",
+        "OM",
+        "PT",
+        "RU",
+        "SE",
+        "ST",
+        "UA",
+        "UG",
+        "VN",
+        "ZA"
+      ]
     },
     {
       "id": "mk-gh-signs-chevrons",
@@ -1821,7 +1873,25 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/chevrons",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "AE",
+        "AT",
+        "BE",
+        "BG",
+        "CY",
+        "CZ",
+        "DE",
+        "FO",
+        "HR",
+        "HU",
+        "JO",
+        "LK",
+        "PL",
+        "SI",
+        "SK",
+        "XK"
+      ]
     },
     {
       "id": "mk-gh-signs-pedestrian",
@@ -1839,7 +1909,10 @@
           "id": "8ab58608d0b3",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/signs/signs_1815.svg",
           "role": "example",
-          "caption": "Sign design: pedestrian crossing sign"
+          "caption": "Sign design: pedestrian crossing sign",
+          "path": "mk/8ab58608d0b3.webp",
+          "width": 1024,
+          "height": 1024
         },
         {
           "id": "66fb9135b34a",
@@ -1894,7 +1967,19 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/pedestrian",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "BO",
+        "DE",
+        "GE",
+        "GR",
+        "IL",
+        "IN",
+        "LU",
+        "RS",
+        "SI",
+        "SK"
+      ]
     },
     {
       "id": "mk-gh-signs-speed",
@@ -1933,7 +2018,8 @@
           "caption": "Sign design: speed limit 30",
           "path": "mk/f9e8a9517c04.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "7822b767e4a7",
@@ -1951,7 +2037,8 @@
           "caption": "Sign design: speed limit 40",
           "path": "mk/6a0a4d1a8bb4.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "aa4edfaf3283",
@@ -1960,7 +2047,8 @@
           "caption": "Sign design: speed limit 50",
           "path": "mk/aa4edfaf3283.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "ab3c780cfb47",
@@ -1969,7 +2057,8 @@
           "caption": "Sign design: speed limit 60",
           "path": "mk/ab3c780cfb47.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "7822b767e4a7"
         },
         {
           "id": "93b690bb1400",
@@ -1978,7 +2067,8 @@
           "caption": "Sign design: speed limit 70",
           "path": "mk/93b690bb1400.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "f8fe68a638c5",
@@ -1996,7 +2086,8 @@
           "caption": "Sign design: speed limit 120",
           "path": "mk/29278c3d546a.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "f8fe68a638c5"
         },
         {
           "id": "dc0f74a0b843",
@@ -2023,7 +2114,8 @@
           "caption": "Sign design: speed limit 80 Old",
           "path": "mk/02256b4b84bf.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "dc0f74a0b843"
         },
         {
           "id": "f0346bee5e56",
@@ -2041,7 +2133,8 @@
           "caption": "Sign design: speed limit 80",
           "path": "mk/6ebde8d620d7.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "8f4d12ae1942",
@@ -2050,7 +2143,8 @@
           "caption": "Sign design: speed limit 130",
           "path": "mk/8f4d12ae1942.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "f8fe68a638c5"
         },
         {
           "id": "95d266999238",
@@ -2068,7 +2162,8 @@
           "caption": "Sign design: speed limit 40",
           "path": "mk/41a27d457ab0.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "abf6f335cf1f"
         },
         {
           "id": "776f06d38a79",
@@ -2086,7 +2181,8 @@
           "caption": "Sign design: speed limit 20 Construction",
           "path": "mk/61d258b74c79.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "95d266999238"
         },
         {
           "id": "8d0af4d44434",
@@ -2095,7 +2191,8 @@
           "caption": "Sign design: speed limit 30 Construction",
           "path": "mk/8d0af4d44434.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "95d266999238"
         },
         {
           "id": "50ad3496e647",
@@ -2149,7 +2246,8 @@
           "caption": "Sign design: speed limit 50 Old",
           "path": "mk/4ab4b42cfa24.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "95d266999238"
         }
       ],
       "locations": [],
@@ -2159,7 +2257,15 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/speed",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "AL",
+        "EE",
+        "IT",
+        "MN",
+        "PH",
+        "SI"
+      ]
     },
     {
       "id": "mk-gh-signs-railwaycrossing",
@@ -2307,7 +2413,22 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/railwayCrossing",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "BW",
+        "CZ",
+        "GH",
+        "GR",
+        "HR",
+        "LK",
+        "LS",
+        "MY",
+        "NA",
+        "SI",
+        "SK",
+        "SZ",
+        "ZA"
+      ]
     },
     {
       "id": "mk-gh-signs-river",
@@ -2699,7 +2820,12 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "ME",
+        "RS",
+        "SI"
+      ]
     },
     {
       "id": "mk-gh-lines-white-white",

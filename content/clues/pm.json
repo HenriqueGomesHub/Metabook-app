@@ -589,7 +589,10 @@
           "id": "4f5cf43f623b",
           "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_402.jpg",
           "role": "example",
-          "caption": "Utility pole"
+          "caption": "Utility pole",
+          "path": "pm/4f5cf43f623b.webp",
+          "width": 800,
+          "height": 1280
         }
       ],
       "locations": [],
@@ -690,7 +693,11 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/stop",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "FR",
+        "MC"
+      ]
     },
     {
       "id": "pm-gh-signs-yield",
@@ -730,7 +737,22 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/yield",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "BW",
+        "CW",
+        "FR",
+        "IS",
+        "KE",
+        "LS",
+        "MC",
+        "NA",
+        "NL",
+        "RE",
+        "SN",
+        "SZ",
+        "ZA"
+      ]
     },
     {
       "id": "pm-gh-signs-pedestrian",
@@ -770,7 +792,13 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/pedestrian",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "ES",
+        "FR",
+        "MC",
+        "RE"
+      ]
     },
     {
       "id": "pm-gh-signs-speed",
@@ -809,7 +837,8 @@
           "caption": "Sign design: speed limit 70",
           "path": "pm/50b80ab12b7c.webp",
           "width": 1024,
-          "height": 1024
+          "height": 1024,
+          "dupeOf": "aa2ef333f8f7"
         },
         {
           "id": "0818c34ac588",
@@ -837,7 +866,14 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/speed",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "FR",
+        "IS",
+        "RE",
+        "SN",
+        "TN"
+      ]
     },
     {
       "id": "pm-gh-signs-backofsigns",
@@ -1001,7 +1037,10 @@
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
         "licence": "GeoHints; used with credit for personal study"
-      }
+      },
+      "sameAs": [
+        "FR"
+      ]
     }
   ]
 }
