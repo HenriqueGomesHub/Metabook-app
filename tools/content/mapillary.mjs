@@ -11,6 +11,7 @@ export const BOX_SIDE = 0.02;
 const MIN_SPACING_KM = 10;
 const MAX_PER_BOX = 3;
 const IMAGE_FIELDS = 'id,thumb_2048_url,computed_geometry,geometry,creator,captured_at,width,height,is_pano';
+const PANO_FIELDS = 'id,thumb_original_url,computed_compass_angle,compass_angle,computed_geometry,creator,captured_at,width,height';
 export const LICENCE = 'CC BY-SA 4.0';
 const LICENCE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/';
 
@@ -68,6 +69,9 @@ export function createGraph(token = process.env.MAPILLARY_TOKEN) {
   return {
     images: (bbox, limit = 10) =>
       get('images', { bbox: bbox.join(','), is_pano: 'false', fields: IMAGE_FIELDS, limit: String(limit) }),
+    /** 360° panoramas (equirectangular) in a box, for panoviews.mjs */
+    panoramas: (bbox, limit = 10) =>
+      get('images', { bbox: bbox.join(','), is_pano: 'true', fields: PANO_FIELDS, limit: String(limit) }),
     poles: (bbox, limit = 10) =>
       get('map_features', {
         bbox: bbox.join(','),

@@ -10,7 +10,7 @@ import { readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
-export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review', 'rereview', 'rename'];
+export const STEPS = ['facts', 'commons', 'mapillary', 'panoviews', 'regions', 'collect', 'generate', 'pack', 'review', 'rereview', 'rename'];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
 
 const NAME = /^[\w-]+$/;
@@ -116,6 +116,14 @@ export async function runJob(job, { steps = [], onStep } = {}) {
         // one budget per country and step, shared by its subjects
         const deadline = Date.now() + budgetMs;
         return eachSubject(subjects, (subject) => runMapillary(code, subject, { storage, queue, cap: job.perSubject, deadline }));
+      });
+    } else if (step === 'panoviews') {
+      // roadside views cut from 360° panoramas, filed as 'bollard'; job.perSubject panoramas per country
+      const { DEFAULT_BUDGET_MINUTES, runPanoviews } = await import('./panoviews.mjs');
+      const budgetMs = (job.budgetMinutes ?? DEFAULT_BUDGET_MINUTES) * 60_000;
+      result = await eachCountry(countries, async (code) => {
+        const { storage, queue } = await getClients();
+        return runPanoviews(code, { storage, queue, cap: job.perSubject, deadline: Date.now() + budgetMs });
       });
     } else if (step === 'regions') {
       const { buildRegions } = await import('./regions.mjs');
