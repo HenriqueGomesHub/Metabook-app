@@ -7,7 +7,7 @@ import { describe, it } from 'node:test';
 import sharp from 'sharp';
 import { runClueImages } from '../clueimages.mjs';
 import { buildClues, countryLookup } from '../clues.mjs';
-import { CATEGORIES, buildGeoHints, geohintsCountry, geohintsImageLinks, itemCaption, loadGeoHints, readLabels } from '../geohints.mjs';
+import { CATEGORIES, buildGeoHints, geohintsCountry, geohintsImageLinks, itemCaption, loadGeoHints, parseLines, readLabels } from '../geohints.mjs';
 import { isSvg, rasteriseSvg } from '../images.mjs';
 import { loadPool, mediaId } from '../lib/common.mjs';
 
@@ -185,5 +185,87 @@ describe('SVG sign designs', () => {
     assert.deepEqual(result.counts, { copied: 1, already: 0, failed: 0 });
     assert.deepEqual(uploads, [['pl/abc.webp', 1024]]);
     assert.deepEqual(JSON.parse(readFileSync(join(dir, 'pl.json'), 'utf8')).clues[0].images[0], { id: 'abc', src: `${IMG}/signs_1.svg`, path: 'pl/abc.webp', width: 1024, height: 614 });
+  });
+});
+
+const LINES_TEXT = `GeoHints Shop
+Wanna start your own bollard and sign collection?
+shop.geohints.com →
++
+−
+Lines
+Hover over a country
+Outside: Yellow | Inside: White
+
+no data
+
+ Leaflet
+Australia
+Botswana
+Palestine
+Outside: White | Inside: White
++
+−
+Lines
+Hover over a country
+Outside: White | Inside: White
+
+no data
+
+ Leaflet
+Australia
+Liechtenstein
+Liechtenstein
+Outside: White | Inside: White and yellow
+Turkey
+Outside: Red | Inside: White
+Namibia
+Outside: Red | Inside: White
+Namibia
+Africa
+Botswana
+Asia
+Turkey`;
+
+describe('parseLines', () => {
+  it('groups countries by line type, skipping UI strings, repeats and the continent index', () => {
+    assert.deepEqual(parseLines(LINES_TEXT), [
+      { type: 'Outside: Yellow | Inside: White', countries: ['Australia', 'Botswana', 'Palestine'] },
+      { type: 'Outside: White | Inside: White', countries: ['Australia', 'Liechtenstein'] },
+      { type: 'Outside: White | Inside: White and yellow', countries: ['Turkey'] },
+      { type: 'Outside: Red | Inside: White', countries: ['Namibia'] },
+    ]);
+  });
+
+  it('builds one text clue per country and type, sameAs the rest of the group', () => {
+    const lines = parseLines(LINES_TEXT);
+    const { clues, unmatched } = buildGeoHints({ items: [], lines }, { lookup, poolCodes });
+    assert.deepEqual(unmatched, { Palestine: 1 });
+    const au = clues.get('AU').find((c) => c.id === 'au-gh-lines-yellow-white');
+    assert.equal(au.family, 'line');
+    assert.equal(au.title, 'Road lines: yellow edges, white centre');
+    assert.deepEqual(au.images, []);
+    assert.deepEqual(au.sameAs, ['BW']);
+    assert.deepEqual(clues.get('AU').map((c) => c.id), ['au-gh-lines-yellow-white', 'au-gh-lines-white-white']);
+    assert.equal(clues.get('TR')[0].id, 'tr-gh-lines-white-white-and-yellow');
+    assert.equal(clues.get('TR')[0].title, 'Road lines: white edges, white and yellow centre');
+    assert.equal(clues.get('TR')[0].sameAs, undefined);
+    assert.deepEqual(au.credit, { source: 'GeoHints', url: 'https://geohints.com/meta/lines', licence: 'GeoHints; used with credit for personal study' });
+  });
+});
+
+describe('utility poles from more.json', () => {
+  it('adds them as the pole category with its own title', () => {
+    const dir = sources();
+    writeFileSync(join(dir, 'more.json'), JSON.stringify({ poles: [{ t: ['Botswana'], img: `${IMG}/utilityPoles/pole_1.jpg`, maps: 'https://goo.gl/maps/x' }, { t: ['Czech Republic', 'Old'], img: `${IMG}/utilityPoles/pole_2.jpg`, maps: 'https://goo.gl/maps/y' }], lines: { text: '' } }));
+    const geohints = loadGeoHints(dir);
+    assert.deepEqual(geohints.items.map((i) => i.country), ['Botswana', 'Czech Republic']);
+    const { clues } = buildGeoHints(geohints, { lookup, poolCodes });
+    const bw = clues.get('BW')[0];
+    assert.equal(bw.id, 'bw-gh-utilitypoles');
+    assert.equal(bw.family, 'pole');
+    assert.equal(bw.title, 'Pole: more examples');
+    assert.equal(bw.images[0].src, `${IMG}/utilityPoles/pole_1.jpg`);
+    assert.equal(clues.get('CZ')[0].id, 'cz-gh-utilitypoles');
   });
 });

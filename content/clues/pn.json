@@ -360,9 +360,36 @@
       "summary": "A dock marked The Landing, full of small ATVs, at the eastern end of the village."
     },
     {
-      "id": "pn-gh-signs-yield",
+      "id": "pn-gh-utilitypoles",
       "step": 3,
       "order": 0,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 1 utility pole from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "da4a85be3afd",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_317.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "pn-gh-signs-yield",
+      "step": 3,
+      "order": 1,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -390,7 +417,7 @@
     {
       "id": "pn-gh-signs-pedestrian",
       "step": 3,
-      "order": 1,
+      "order": 2,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",

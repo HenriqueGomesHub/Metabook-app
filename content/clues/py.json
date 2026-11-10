@@ -10,9 +10,42 @@
   ],
   "clues": [
     {
-      "id": "py-gh-licenseplates",
+      "id": "py-gh-utilitypoles",
       "step": 0,
       "order": 0,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 2 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "62cf54170370",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_400.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "4d078b0f90fc",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_401.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "py-gh-licenseplates",
+      "step": 0,
+      "order": 1,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -39,7 +72,7 @@
     {
       "id": "py-gh-googlevehicles-cars",
       "step": 0,
-      "order": 1,
+      "order": 2,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -78,7 +111,7 @@
     {
       "id": "py-gh-signs-stop",
       "step": 0,
-      "order": 2,
+      "order": 3,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -112,7 +145,7 @@
     {
       "id": "py-gh-signs-yield",
       "step": 0,
-      "order": 3,
+      "order": 4,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -146,7 +179,7 @@
     {
       "id": "py-gh-signs-pedestrian",
       "step": 0,
-      "order": 4,
+      "order": 5,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -198,7 +231,7 @@
     {
       "id": "py-gh-signs-speed",
       "step": 0,
-      "order": 5,
+      "order": 6,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -232,7 +265,7 @@
     {
       "id": "py-gh-signs-roadnumbering",
       "step": 0,
-      "order": 6,
+      "order": 7,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -260,7 +293,7 @@
     {
       "id": "py-gh-signs-busstop",
       "step": 0,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -282,6 +315,69 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "py-gh-lines-white-yellow",
+      "step": 0,
+      "order": 9,
+      "family": "line",
+      "title": "Road lines: white edges, yellow centre",
+      "text": [
+        "The road markings here are white at the edges and yellow in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and yellow in the centre.",
+      "sameAs": [
+        "AL",
+        "AR",
+        "AS",
+        "AT",
+        "BO",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "ES",
+        "FI",
+        "GR",
+        "GT",
+        "GU",
+        "ID",
+        "JP",
+        "KE",
+        "KH",
+        "KR",
+        "LB",
+        "MP",
+        "MX",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PR",
+        "QA",
+        "RU",
+        "RW",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UG",
+        "US",
+        "VN"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

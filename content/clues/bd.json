@@ -3409,9 +3409,54 @@
       }
     },
     {
-      "id": "bd-gh-sceneries",
+      "id": "bd-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 4 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "70ba751f729b",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_180.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "ed784a96ae45",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_181.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "f6be7f7f28f1",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_179.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "edc7bb1e7f0c",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_384.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "bd-gh-sceneries",
+      "step": 4,
+      "order": 2,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -3450,7 +3495,7 @@
     {
       "id": "bd-gh-licenseplates",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -3477,7 +3522,7 @@
     {
       "id": "bd-gh-googlevehicles-cars",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -3558,7 +3603,7 @@
     {
       "id": "bd-gh-googlevehicles-boats",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "car",
       "title": "Google car: boats",
       "text": [
@@ -3621,7 +3666,7 @@
     {
       "id": "bd-gh-googlevehicles-motorcycles",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "car",
       "title": "Google car: motorcycles",
       "text": [
@@ -3654,7 +3699,7 @@
     {
       "id": "bd-gh-rifts",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "coverage",
       "title": "Coverage: rifts",
       "text": [
@@ -3699,7 +3744,7 @@
     {
       "id": "bd-gh-postboxes",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "other",
       "title": "Post boxes",
       "text": [
@@ -3732,7 +3777,7 @@
     {
       "id": "bd-gh-signs-stop",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -3760,7 +3805,7 @@
     {
       "id": "bd-gh-signs-yield",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -3788,7 +3833,7 @@
     {
       "id": "bd-gh-signs-chevrons",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -3816,7 +3861,7 @@
     {
       "id": "bd-gh-signs-pedestrian",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -3850,7 +3895,7 @@
     {
       "id": "bd-gh-signs-speed",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -3932,7 +3977,7 @@
     {
       "id": "bd-gh-signs-railwaycrossing",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: railway crossings",
@@ -4014,7 +4059,7 @@
     {
       "id": "bd-gh-signs-directions",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -4048,7 +4093,7 @@
     {
       "id": "bd-gh-signs-signposts",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -4076,7 +4121,7 @@
     {
       "id": "bd-gh-signs-roadnumbering",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -4110,6 +4155,111 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/roadNumbering",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "bd-gh-lines-white-white",
+      "step": 4,
+      "order": 18,
+      "family": "line",
+      "title": "Road lines: white edges, white centre",
+      "text": [
+        "The road markings here are white at the edges and white in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and white in the centre.",
+      "sameAs": [
+        "AD",
+        "AL",
+        "AR",
+        "AT",
+        "AU",
+        "BA",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "BT",
+        "CH",
+        "CL",
+        "CW",
+        "CX",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FO",
+        "FR",
+        "GB",
+        "GE",
+        "GH",
+        "GI",
+        "GL",
+        "GR",
+        "HR",
+        "HU",
+        "ID",
+        "IM",
+        "IN",
+        "IS",
+        "IT",
+        "JP",
+        "KE",
+        "KG",
+        "KR",
+        "KZ",
+        "LA",
+        "LI",
+        "LK",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "ME",
+        "MG",
+        "MK",
+        "MN",
+        "MT",
+        "MX",
+        "MY",
+        "NL",
+        "NZ",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "QA",
+        "RE",
+        "RO",
+        "RS",
+        "RU",
+        "RW",
+        "SE",
+        "SG",
+        "SI",
+        "SK",
+        "SM",
+        "SN",
+        "ST",
+        "TN",
+        "TR",
+        "UA",
+        "UG",
+        "UY",
+        "VN",
+        "XK"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }
