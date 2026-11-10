@@ -1,0 +1,133 @@
+{
+  "name": "pano2",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano2",
+    "countries": [
+      "bg",
+      "ca",
+      "ch",
+      "cl",
+      "cr",
+      "cx"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:13:01.954Z",
+  "finishedAt": "2026-11-10T02:17:08.233Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "bg",
+    "ca",
+    "ch",
+    "cl",
+    "cr",
+    "cx"
+  ],
+  "errorCount": 1,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 246278,
+      "countries": {
+        "bg": {
+          "ok": true,
+          "ms": 26141,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ca": {
+          "ok": true,
+          "ms": 22561,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ch": {
+          "ok": true,
+          "ms": 107748,
+          "counts": {
+            "boxes": 69,
+            "urbanSkipped": 0,
+            "panoramas": 12,
+            "views": 48,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 48,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cl": {
+          "ok": true,
+          "ms": 38723,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 4,
+            "views": 15,
+            "viewsDropped": 1,
+            "alreadyQueued": 0,
+            "queued": 15,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cr": {
+          "ok": true,
+          "ms": 51037,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 5,
+            "views": 19,
+            "viewsDropped": 1,
+            "alreadyQueued": 0,
+            "queued": 19,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "cx": {
+          "ok": false,
+          "ms": 33,
+          "errors": [
+            "cx not found in Natural Earth admin-0 (50m)"
+          ]
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
