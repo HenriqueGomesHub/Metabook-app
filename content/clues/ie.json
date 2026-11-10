@@ -36,7 +36,8 @@
           "src": "https://www.plonkit.net/images/ireland/ireland_plate.png",
           "path": "ie/c82fe3ab68e3.webp",
           "width": 600,
-          "height": 252
+          "height": 252,
+          "role": "example"
         },
         {
           "id": "9c7010ebabae",
@@ -215,7 +216,8 @@
           },
           "path": "ie/302aa5a0caa8.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "cdddf7e475ca",
@@ -271,7 +273,9 @@
           },
           "path": "ie/4fe32af4d241.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Green road signs with Irish names in italics above the English names"
         }
       ],
       "locations": [
@@ -320,7 +324,8 @@
           },
           "path": "ie/be4ae8aee8a7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "561668932b57",
@@ -395,7 +400,8 @@
           },
           "path": "ie/4a8553acffd1.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "58a9eeac5c12",
@@ -460,7 +466,8 @@
           },
           "path": "ie/efcccfeb8bc3.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "987677561db6",
@@ -525,7 +532,8 @@
           },
           "path": "ie/c8729b6f14b3.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "5b6e27c1f075",
@@ -809,7 +817,9 @@
           },
           "path": "ie/65bc8d1c0bdc.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A red circle marks the metal step rods on the wooden pole"
         }
       ],
       "locations": [
@@ -855,7 +865,8 @@
           "src": "https://www.plonkit.net/images/ireland/Screenshot%20(1129).png",
           "path": "ie/3d02598e2370.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -901,7 +912,8 @@
           },
           "path": "ie/217e3deff855.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -957,7 +969,8 @@
           },
           "path": "ie/dbf56c862e8a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1009,7 +1022,9 @@
           },
           "path": "ie/809485426a0b.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -1046,15 +1061,7 @@
         "- Roads starting with 8 or 9 are newer roads that are mostly not limited to a certain region (though about half of the 8s are in the Dublin metro area)."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "0b7c530686e9",
-          "src": "https://www.plonkit.net/images/ireland/Ireland-road-numbers2.png",
-          "path": "ie/0b7c530686e9.webp",
-          "width": 600,
-          "height": 642
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1174,7 +1181,15 @@
           },
           "path": "ie/65b97236a9de.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1277,7 +1292,15 @@
           },
           "path": "ie/5a4e35d12dc0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1465,7 +1488,10 @@
           "src": "https://learnablemeta.com/images/1955/1750626070822-Bcr.avif",
           "path": "ie/ff3b77428659.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "comparison",
+          "caption": "Wooden pole tops compared by flag: Ireland, UK and France; the Irish pole has a slanted top",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -1501,22 +1527,7 @@
         "NOTE: The UK only uses A-Type guardrails."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "4b5509864935",
-          "src": "https://learnablemeta.com/images/3660/1755387345894-wdy.avif",
-          "path": "ie/4b5509864935.webp",
-          "width": 800,
-          "height": 147
-        },
-        {
-          "id": "824d8f4b3ef6",
-          "src": "https://learnablemeta.com/images/3660/1755387354400-CUX.avif",
-          "path": "ie/824d8f4b3ef6.webp",
-          "width": 800,
-          "height": 356
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "DE",
@@ -1553,10 +1564,10 @@
         {
           "id": "05e1695f9d23",
           "src": "https://learnablemeta.com/images/4588/1777474330140-v4L.avif",
-          "giveaway": true,
           "path": "ie/05e1695f9d23.webp",
           "width": 800,
-          "height": 412
+          "height": 412,
+          "role": "example"
         }
       ],
       "locations": [],

@@ -36,7 +36,8 @@
           "src": "https://www.plonkit.net/images/colombia/Colombia_License_Plate.png",
           "path": "co/70915c862339.webp",
           "width": 600,
-          "height": 143
+          "height": 143,
+          "role": "example"
         },
         {
           "id": "28ec63b27158",
@@ -90,7 +91,8 @@
           },
           "path": "co/41f4af20910b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d9d332b7830f",
@@ -156,7 +158,8 @@
           },
           "path": "co/823eabf34b95.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -212,7 +215,9 @@
           },
           "path": "co/ef1cfcd9cbba.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Tall green kilometre marker labelled Pr 28 beside a short stone marker, centre"
         }
       ],
       "locations": [
@@ -261,7 +266,8 @@
           },
           "path": "co/748dea561aa6.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -357,7 +363,9 @@
           },
           "path": "co/79f7c79edcba.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Pastel yellow taxi with a printed licence plate, marked by the arrow"
         }
       ],
       "locations": [
@@ -414,7 +422,9 @@
           },
           "path": "co/63a6488c7828.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Three concrete poles; the one at right is labelled octagonal"
         }
       ],
       "locations": [
@@ -500,15 +510,7 @@
         "Coverage in Colombia is mainly found in the **north and west**. The islands of Providencia and San Andrés, northwest of the mainland, also have coverage."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "258b9a646ed3",
-          "src": "https://www.plonkit.net/images/colombia/co_verage.png",
-          "path": "co/258b9a646ed3.webp",
-          "width": 600,
-          "height": 706
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -640,14 +642,23 @@
           },
           "path": "co/31e4a1f5d3df.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "fce7052479d6",
           "src": "https://learnablemeta.com/images/DYiHaWiXLpCiTpwgr5t0OzGAhMq0GHTTQ1G0.avif",
           "path": "co/fce7052479d6.webp",
           "width": 984,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [
@@ -885,7 +896,15 @@
           },
           "path": "co/1f462caf8848.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -934,7 +953,15 @@
           },
           "path": "co/744d1d5c8f7a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1029,7 +1056,15 @@
           },
           "path": "co/31de0e1af7e2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.56,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1311,7 +1346,16 @@
           "src": "https://learnablemeta.com/images/698/oqCv6MDqdNkqixgl7GYnBl9OhRUaKiuy6yYb.avif",
           "path": "co/679631334c16.webp",
           "width": 448,
-          "height": 1000
+          "height": 1000,
+          "role": "example",
+          "caption": "The grey Gen 4 car's blur at the bottom of a coverage map screenshot",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.76,
+            "w": 1,
+            "h": 0.24
+          }
         }
       ],
       "locations": [],
@@ -1339,7 +1383,16 @@
           "src": "https://learnablemeta.com/images/698/btx3tGmoD9INjJdAcPjczWHgtDYQBAU1Yj4Q.avif",
           "path": "co/03ef83027bed.webp",
           "width": 452,
-          "height": 1000
+          "height": 1000,
+          "role": "example",
+          "caption": "The white Gen 4 car's blur at the bottom of a coverage map screenshot",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.76,
+            "w": 1,
+            "h": 0.24
+          }
         }
       ],
       "locations": [],
@@ -1367,7 +1420,15 @@
           "src": "https://learnablemeta.com/images/698/yqJVe9M3ntRwUTnf823WddpX1eVPjhmhmfSw.avif",
           "path": "co/b5845d8c9841.webp",
           "width": 1000,
-          "height": 988
+          "height": 988,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.47,
+            "y": 0.81,
+            "w": 0.53,
+            "h": 0.19
+          }
         }
       ],
       "locations": [],
@@ -1507,7 +1568,8 @@
           "src": "https://learnablemeta.com/images/698/0BUywo427XM73wjRu8Z6HuPXuzbK7gOL8gKJ.avif",
           "path": "co/a4e577144e61.webp",
           "width": 1000,
-          "height": 743
+          "height": 743,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1535,7 +1597,8 @@
           "src": "https://learnablemeta.com/images/698/MkcEvuTX248mlmfQVD2Lz5IIZ6YneieQtIS0.avif",
           "path": "co/bdd6defcd57a.webp",
           "width": 1000,
-          "height": 786
+          "height": 786,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1682,7 +1745,8 @@
           "src": "https://learnablemeta.com/images/698/gnP2eEVxFEAeOWvYG0i0TCgASroqwffFgGYW.avif",
           "path": "co/b6b12a8bdf26.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1710,7 +1774,8 @@
           "src": "https://learnablemeta.com/images/698/SIPjGF5smM8W4IpMF0PZ6DLoQPMtlXgMTnmA.avif",
           "path": "co/3b037633e0f8.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1920,7 +1985,8 @@
           "src": "https://learnablemeta.com/images/698/3j9KoQ2DtkWbZlvl84JX1qv915DAzOHZlrxz.avif",
           "path": "co/6fab5240eb3d.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1948,7 +2014,8 @@
           "src": "https://learnablemeta.com/images/698/JK9yQFM1xha0OMmCBQ9R1pDEBEORtamy8XdZ.avif",
           "path": "co/d0c3a0a31c4c.webp",
           "width": 1000,
-          "height": 547
+          "height": 547,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1976,7 +2043,8 @@
           "src": "https://learnablemeta.com/images/698/3fuuHNYIsP5zPhdBAU6E2dgK8Tk1o2dP0IFM.avif",
           "path": "co/0208c4762909.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2004,7 +2072,8 @@
           "src": "https://learnablemeta.com/images/698/07VG6MWzgZadr32J931a1ZDCmrHCWx7kyd8U.avif",
           "path": "co/add43780543f.webp",
           "width": 1000,
-          "height": 637
+          "height": 637,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2116,7 +2185,8 @@
           "src": "https://learnablemeta.com/images/698/REziDV7EZOyboat2D6iQu1Y9WXeRdrCI1O5X.avif",
           "path": "co/427415e39fa4.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2172,7 +2242,8 @@
           "src": "https://learnablemeta.com/images/698/rWq9gA3m7Bo6Esd33ApwgohdIEOIyOJ9a2Jf.avif",
           "path": "co/3b72469e25f2.webp",
           "width": 1000,
-          "height": 569
+          "height": 569,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2200,7 +2271,8 @@
           "src": "https://learnablemeta.com/images/698/05xmHqOKHNItqVNEpSX5xuYW8qOEWKtEZ0tF.avif",
           "path": "co/41ccc931026f.webp",
           "width": 1000,
-          "height": 537
+          "height": 537,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2228,7 +2300,8 @@
           "src": "https://learnablemeta.com/images/698/zqueCVsUAh8ejFkbUI8bNGP7ELCuIVKd56fu.avif",
           "path": "co/886b01b645e3.webp",
           "width": 1000,
-          "height": 553
+          "height": 553,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2256,7 +2329,8 @@
           "src": "https://learnablemeta.com/images/698/0Mpc7RqiUPM3H1rr6xQtVnj8KPGwTKzbugcn.avif",
           "path": "co/6f899bca3411.webp",
           "width": 1000,
-          "height": 573
+          "height": 573,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2284,7 +2358,15 @@
           "src": "https://learnablemeta.com/images/698/mbWKrS50qSAnM5mWRh6b3mq0IBjAlZL9IGg3.avif",
           "path": "co/a3afd6822685.webp",
           "width": 1000,
-          "height": 428
+          "height": 428,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.48,
+            "y": 0,
+            "w": 0.5,
+            "h": 0.8
+          }
         }
       ],
       "locations": [],
@@ -2312,7 +2394,15 @@
           "src": "https://learnablemeta.com/images/698/Srh0Rb302A8zncJeOal46YL4M4Ts6Hrv5WvB.avif",
           "path": "co/8d7043433feb.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.5,
+            "y": 0.03,
+            "w": 0.48,
+            "h": 0.62
+          }
         }
       ],
       "locations": [],
@@ -2652,7 +2742,8 @@
           "src": "https://learnablemeta.com/images/259/KuXDdibIoZwabbmpeR8TE5UfrnUaOgAPS3CT.avif",
           "path": "co/8cad21e3e152.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2680,7 +2771,8 @@
           "src": "https://learnablemeta.com/images/698/kvJOm9ZODBPqb4nGxRD6sHNlR5ihqqU67LXp.avif",
           "path": "co/067b28767dee.webp",
           "width": 475,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2764,7 +2856,15 @@
           "src": "https://learnablemeta.com/images/1955/1750240051315-Aqp.avif",
           "path": "co/cd9d2653eda2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2792,7 +2892,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239930745-NEn.avif",
           "path": "co/e993244de9e3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2820,7 +2928,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239954457-sKh.avif",
           "path": "co/596c2b75566e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2848,7 +2964,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239968427-H16.avif",
           "path": "co/c222f3c46297.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2876,7 +3000,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239982942-v1p.avif",
           "path": "co/73d6762fbc04.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2904,7 +3036,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239907779-aH5.avif",
           "path": "co/716374b47d8a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -2988,7 +3128,15 @@
           "src": "https://learnablemeta.com/images/1955/1750239973107-C8G.avif",
           "path": "co/13d62e3219ed.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3044,7 +3192,15 @@
           "src": "https://learnablemeta.com/images/1955/1750620782795-5lv.avif",
           "path": "co/91c4a0ef23fc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3072,14 +3228,16 @@
           "src": "https://learnablemeta.com/images/698/1771601412906-8JE.avif",
           "path": "co/4ebdd84faefa.webp",
           "width": 800,
-          "height": 463
-        },
-        {
-          "id": "1a1e52f7f29e",
-          "src": "https://learnablemeta.com/images/698/1771601416567-oR0.avif",
-          "path": "co/1a1e52f7f29e.webp",
-          "width": 599,
-          "height": 537
+          "height": 463,
+          "role": "annotated",
+          "caption": "Cloudy sky with a small camera rift marked by an arrow",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.2,
+            "w": 1,
+            "h": 0.58
+          }
         }
       ],
       "locations": [],
@@ -3208,7 +3366,9 @@
           "src": "https://learnablemeta.com/images/698/1771600877469-6TG.avif",
           "path": "co/e80c226ded1c.webp",
           "width": 768,
-          "height": 381
+          "height": 381,
+          "role": "example",
+          "caption": "Banana plantation rows with blue bags beside a dirt track under a cloudy sky"
         }
       ],
       "locations": [],
@@ -3292,7 +3452,8 @@
           "src": "https://learnablemeta.com/images/698/1771600844032-cQ4.avif",
           "path": "co/6af7b81eea5c.webp",
           "width": 800,
-          "height": 464
+          "height": 464,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -3377,7 +3538,16 @@
           "src": "https://learnablemeta.com/images/698/1771601384797-bu1.avif",
           "path": "co/ad73e3f9c758.webp",
           "width": 673,
-          "height": 372
+          "height": 372,
+          "role": "annotated",
+          "caption": "A red arrow points to the thin vertical stalk on top of the lopsided pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0.42,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [],

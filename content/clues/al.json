@@ -38,7 +38,9 @@
           "src": "https://www.plonkit.net/images/albania/albania_plate.png",
           "path": "al/779f17c421e6.webp",
           "width": 600,
-          "height": 125
+          "height": 125,
+          "role": "comparison",
+          "caption": "Albanian plates: standard 2011 onwards (top) and 1995-2011 (bottom)"
         },
         {
           "id": "7f4e6441b8cf",
@@ -92,7 +94,9 @@
           },
           "path": "al/00e70b6eeb49.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four views of the same road: panned down, back, front and a good front blur"
         }
       ],
       "locations": [
@@ -150,7 +154,8 @@
           },
           "path": "al/e6b561c7f6bc.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -205,7 +210,8 @@
           },
           "path": "al/8937c22af571.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "a20ad9cc975d",
@@ -276,7 +282,8 @@
           },
           "path": "al/6dac58a72506.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c9f9d747aaf9",
@@ -345,7 +352,8 @@
           },
           "path": "al/4625267a05a4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c5f8156dbc70",
@@ -410,7 +418,8 @@
           },
           "path": "al/11ce11af4691.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "9eafc947b5aa",
@@ -493,7 +502,8 @@
           },
           "path": "al/e85ebc50d1f8.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -551,7 +561,9 @@
           },
           "path": "al/8845c0c1dca9.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "annotated",
+          "caption": "Stop sign on the road; the red circle zooms in on the letter S, which has short, angled ends"
         }
       ],
       "locations": [
@@ -605,7 +617,8 @@
           },
           "path": "al/9713ee4c2944.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "e59cf3fa5782",
@@ -620,7 +633,8 @@
           "src": "https://learnablemeta.com/images/768/KGmfU9RAIVKMIvu9bYaOuYUM9zdxEn4J8YOu.avif",
           "path": "al/29eb63b6e643.webp",
           "width": 1000,
-          "height": 633
+          "height": 633,
+          "role": "example"
         }
       ],
       "locations": [
@@ -678,7 +692,8 @@
           },
           "path": "al/8012e4dd214b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "4a55982e9043",
@@ -732,7 +747,9 @@
           "src": "https://www.plonkit.net/images/albania/Albanian.png",
           "path": "al/34091bc771d7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Albanian text with the letters Ë and Ç shown large"
         }
       ],
       "locations": [],
@@ -774,7 +791,9 @@
           },
           "path": "al/39ce2058e833.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Street name plate reading RRUGA, Albanian for street"
         }
       ],
       "locations": [
@@ -1054,7 +1073,9 @@
           },
           "path": "al/434119d47512.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Silver Mercedes sedan with a large Mercedes logo overlaid at lower left"
         }
       ],
       "locations": [
@@ -1089,16 +1110,7 @@
         "_You can click on the image to enlarge it. You can also use [this Maps layer](https://www.google.com/maps/d/u/0/viewer?ll=41.11823444009704%2C20.361213161801423&mid=1y5ixAA3bq5FNQrDNfpzSF5Hv80K-BkM&z=8) to look at the coverage in more detail (credits to icraig1205)._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "71b5521423bc",
-          "src": "https://www.plonkit.net/images/albania/Rift_coverage.png",
-          "giveaway": true,
-          "path": "al/71b5521423bc.webp",
-          "width": 1000,
-          "height": 1238
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1463,7 +1475,15 @@
           },
           "path": "al/4a8a2d700bba.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.8,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1513,7 +1533,16 @@
           },
           "path": "al/72a1cd722beb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Triple guardrail on a divided highway; circle zooms in on the rails",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1562,7 +1591,16 @@
           },
           "path": "al/f69389ec34f0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Plain concrete block median; circle zooms in on the blocks",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1611,7 +1649,16 @@
           },
           "path": "al/dc27e917b3e3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Concrete blocks with grass between; circle zooms in on the median",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1660,7 +1707,16 @@
           },
           "path": "al/793916d8d801.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Basic double guardrail on flat land; circle zooms in on the rails",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1711,7 +1767,15 @@
           },
           "path": "al/6315a2a58a9d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1760,7 +1824,16 @@
           },
           "path": "al/d93d4ff273d9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Double guardrail with an extra-tall fence; circle zooms in on the rails",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [

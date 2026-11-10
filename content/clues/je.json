@@ -116,7 +116,16 @@
           "src": "https://www.plonkit.net/images/jersey/Jersey_License_Plate.png",
           "path": "je/0fd682c7a030.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Black car with a yellow rear plate, right",
+          "giveaway": true,
+          "crop": {
+            "x": 0.57,
+            "y": 0,
+            "w": 0.43,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -160,7 +169,8 @@
           },
           "path": "je/bc583c75341e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -215,7 +225,9 @@
           },
           "path": "je/8724a97156a4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Street signs with French-style names"
         }
       ],
       "locations": [
@@ -481,7 +493,9 @@
           },
           "path": "je/67f76042bf1b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red arrow points to the yellow give-way line painted across the road at the junction"
         }
       ],
       "locations": [
@@ -526,7 +540,6 @@
         {
           "id": "b808d4d42417",
           "src": "https://www.plonkit.net/images/jersey/Cycling_route_signs.png",
-          "giveaway": true,
           "location": {
             "pano": "wMoF1JQeK-8vmJOyRNdpvQ",
             "lat": 49.2091141,
@@ -538,7 +551,8 @@
           },
           "path": "je/b808d4d42417.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -587,7 +601,9 @@
           },
           "path": "je/a6bac05f8a04.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Children crossing warning sign hanging off-centre on its post; red circle zooms in on a sign at top left"
         }
       ],
       "locations": [
@@ -627,15 +643,7 @@
         "_You can click on the graphic to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "ad8a8c630487",
-          "src": "https://www.plonkit.net/images/jersey/Parish_Specific_Street_Name_Signs.png",
-          "path": "je/ad8a8c630487.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -717,7 +725,15 @@
           },
           "path": "je/56200ab8e056.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.63,
+            "h": 1
+          }
         }
       ],
       "locations": [

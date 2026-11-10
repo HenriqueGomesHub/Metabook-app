@@ -39,7 +39,9 @@
           "src": "https://www.plonkit.net/images/france/1_licenceplate2.png",
           "path": "fr/101aff96c7c8.webp",
           "width": 600,
-          "height": 192
+          "height": 192,
+          "role": "comparison",
+          "caption": "French plates: standard, and pre-2009 front and rear"
         },
         {
           "id": "0515f54fcce1",
@@ -92,7 +94,9 @@
           "src": "https://www.plonkit.net/images/france/1_language.png",
           "path": "fr/fafab7f2c5a0.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example",
+          "caption": "French text sample with accents"
         }
       ],
       "locations": [],
@@ -142,14 +146,9 @@
           },
           "path": "fr/03e9804611cc.webp",
           "width": 600,
-          "height": 338
-        },
-        {
-          "id": "6a9d342159a7",
-          "src": "https://learnablemeta.com/images/5/cZuSXR1xu4VXduboN18G9HbVabrTUs4iR8s2.avif",
-          "path": "fr/6a9d342159a7.webp",
-          "width": 1000,
-          "height": 913
+          "height": 338,
+          "role": "example",
+          "caption": "Blue street plate reading RUE DES SOEURS MACARON"
         }
       ],
       "locations": [
@@ -203,14 +202,16 @@
           },
           "path": "fr/6722ba5c59d0.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "acfdbe690f59",
           "src": "https://learnablemeta.com/images/iywMqsL43EI7XVn0Whl0j0S8zZ5XeCx0vlQB.avif",
           "path": "fr/acfdbe690f59.webp",
           "width": 1000,
-          "height": 576
+          "height": 576,
+          "role": "example"
         },
         {
           "id": "43220c9280b2",
@@ -284,7 +285,8 @@
           },
           "path": "fr/a843bc37c59f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -333,7 +335,8 @@
           },
           "path": "fr/a09235f2eb72.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -383,14 +386,16 @@
           },
           "path": "fr/c75a6ad88c13.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "da2bb0bed639",
           "src": "https://learnablemeta.com/images/310/zQMW4EuPkRYU9svGattQzFWfV1VQRS77XIC1.avif",
           "path": "fr/da2bb0bed639.webp",
           "width": 950,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         },
         {
           "id": "62dd956cccd2",
@@ -405,7 +410,16 @@
           "src": "https://learnablemeta.com/images/847/VdAaws63hnT7GPgrBnkCxMX8yvtCOUNOj2T1.avif",
           "path": "fr/d5017c625de6.webp",
           "width": 1000,
-          "height": 667
+          "height": 667,
+          "role": "comparison",
+          "caption": "Ladder poles compared: left has no dots and metal brackets, right has red dots at every rung",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.2,
+            "w": 1,
+            "h": 0.8
+          }
         },
         {
           "id": "84930fa2b0c8",
@@ -491,14 +505,16 @@
           },
           "path": "fr/35fd8970cde1.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "f2c506879c01",
           "src": "https://learnablemeta.com/images/1955/1750621001567-iUw.avif",
           "path": "fr/f2c506879c01.webp",
           "width": 800,
-          "height": 428
+          "height": 428,
+          "role": "example"
         }
       ],
       "locations": [
@@ -548,7 +564,9 @@
           },
           "path": "fr/8996e0b30a43.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Blue paint dots on a wooden pole (left) and a metal pole (right)"
         }
       ],
       "locations": [
@@ -598,14 +616,18 @@
           },
           "path": "fr/e4899360f65b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A red circle zooms in on the diamond top with three wires"
         },
         {
           "id": "b586476bc953",
           "src": "https://learnablemeta.com/images/847/q0BJ2lUSGS3eNlS8Mjks3jnlICNRcAuukTeI.avif",
           "path": "fr/b586476bc953.webp",
           "width": 1000,
-          "height": 489
+          "height": 489,
+          "role": "annotated",
+          "caption": "A red circle zooms in on the diamond top with three wires"
         }
       ],
       "locations": [
@@ -659,7 +681,8 @@
           },
           "path": "fr/67038daf29f2.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -709,7 +732,9 @@
           },
           "path": "fr/6e9e6891f15b.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -759,7 +784,8 @@
           },
           "path": "fr/7a034b37d3ed.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "1aa7c80b78d8",
@@ -819,7 +845,8 @@
           },
           "path": "fr/277d6d138a27.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -869,7 +896,8 @@
           },
           "path": "fr/80fcb5536fd2.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -920,7 +948,8 @@
           },
           "path": "fr/927921299618.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "61b699cd28e8",
@@ -988,7 +1017,9 @@
           },
           "path": "fr/e05c04695491.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Yield sign with a red circle zooming in on the flat rectangular post behind it, right"
         },
         {
           "id": "880187aae4a1",
@@ -1071,14 +1102,16 @@
           },
           "path": "fr/7c182fb3d856.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "4a5620f9cd58",
           "src": "https://learnablemeta.com/images/847/PfYNOcS687nDsjKD4VBXr5Z91JA3LsYczUyF.avif",
           "path": "fr/4a5620f9cd58.webp",
           "width": 1000,
-          "height": 408
+          "height": 408,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1129,7 +1162,8 @@
           },
           "path": "fr/2fce8d0d131e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "622417cf40fd",
@@ -1204,7 +1238,8 @@
           },
           "path": "fr/356b9b037e48.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1254,7 +1289,8 @@
           },
           "path": "fr/2dfea8d099a7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1303,7 +1339,8 @@
           },
           "path": "fr/1f2b3a6f8ed9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d6a330c478ae",
@@ -1368,21 +1405,27 @@
           },
           "path": "fr/65af9203b4d0.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circle zooms in on a centre dash made of two offset blocks"
         },
         {
           "id": "0be5fe83ff04",
           "src": "https://learnablemeta.com/images/AK26BkDXOdZHmzuzDIsMoJea7QlyZwEUGs4E.avif",
           "path": "fr/0be5fe83ff04.webp",
           "width": 1000,
-          "height": 951
+          "height": 951,
+          "role": "annotated",
+          "caption": "Red circle zooms in on a centre dash made of two offset blocks"
         },
         {
           "id": "3200f2768ff9",
           "src": "https://learnablemeta.com/images/505/VDuNfLu4UJuMS5IeVvdQRmSLlOGMvWgQbspd.avif",
           "path": "fr/3200f2768ff9.webp",
           "width": 1000,
-          "height": 481
+          "height": 481,
+          "role": "annotated",
+          "caption": "Red circle zooms in on a centre dash made of two offset blocks"
         },
         {
           "id": "0acfedd2dc08",
@@ -1440,7 +1483,8 @@
           },
           "path": "fr/a33c03e4bbea.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "278758b205d3",
@@ -1514,7 +1558,8 @@
           },
           "path": "fr/547e9ccdd331.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1580,7 +1625,8 @@
           },
           "path": "fr/e56fed402355.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1643,7 +1689,8 @@
           },
           "path": "fr/de8556c4e6ce.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1809,7 +1856,9 @@
           },
           "path": "fr/b4fd1bb1d712.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Peugeot, Renault and Citroën cars parked side by side, each with its brand logo and name overlaid"
         }
       ],
       "locations": [
@@ -1912,15 +1961,7 @@
       "tags": [
         "moving info"
       ],
-      "images": [
-        {
-          "id": "531f8f798a14",
-          "src": "https://www.plonkit.net/images/france/2_postcodes.png",
-          "path": "fr/531f8f798a14.webp",
-          "width": 600,
-          "height": 577
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1960,7 +2001,9 @@
           },
           "path": "fr/4b47f0d7678a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "comparison",
+          "caption": "Road sign department logos from four French departments, each labelled with its department name"
         }
       ],
       "locations": [
@@ -2011,7 +2054,14 @@
           },
           "path": "fr/084140631c25.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2062,7 +2112,16 @@
           },
           "path": "fr/35d34043b182.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Catalan-style red and yellow stripes on flags and street plates; a red circle at lower left highlights a sign",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2163,7 +2222,16 @@
           },
           "path": "fr/93b3ede94864.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Dark green posts and sign backs, seen from behind",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2214,7 +2282,16 @@
           },
           "path": "fr/f5960a45aeb2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Green sticker on the dark green back of a road sign",
+          "giveaway": true,
+          "crop": {
+            "x": 0.34,
+            "y": 0,
+            "w": 0.34,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2267,7 +2344,14 @@
           },
           "path": "fr/7694bf117c69.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2318,7 +2402,15 @@
           },
           "path": "fr/95204b8ac6df.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2370,7 +2462,15 @@
           },
           "path": "fr/ee43d4af39f3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2421,7 +2521,15 @@
           },
           "path": "fr/f9b437858e95.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2472,7 +2580,16 @@
           },
           "path": "fr/23f23f6273bc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Blank direction signs with burgundy red parts; the red circle zooms in on another sign, left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2523,7 +2640,15 @@
           },
           "path": "fr/87bc46bb583a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2576,7 +2701,15 @@
           },
           "path": "fr/e67b2401c113.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3604,7 +3737,15 @@
           },
           "path": "fr/4a7211ec7a7a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3659,7 +3800,15 @@
           },
           "path": "fr/caa441f8f5f6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3709,7 +3858,15 @@
           },
           "path": "fr/19d86ac075d1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3760,7 +3917,10 @@
           },
           "path": "fr/0292b69c16bc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Occitan street plates (Carrièra) from Toulouse and Avignon, labelled Languedocian and Provençal",
+          "giveaway": true
         }
       ],
       "locations": [
@@ -3810,7 +3970,15 @@
           },
           "path": "fr/49a65520d8f6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3867,14 +4035,15 @@
           },
           "path": "fr/653258183830.webp",
           "width": 800,
-          "height": 393
-        },
-        {
-          "id": "f7467063c6ee",
-          "src": "https://learnablemeta.com/images/5/8GOlAsLniYSCe6OlQPRigUA2pR6yBfuBhh86.avif",
-          "path": "fr/f7467063c6ee.webp",
-          "width": 1000,
-          "height": 887
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3925,7 +4094,15 @@
           },
           "path": "fr/fa4c8376291b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3960,16 +4137,7 @@
       "tags": [
         "language"
       ],
-      "images": [
-        {
-          "id": "9bc9086c66e2",
-          "src": "https://www.plonkit.net/images/france/2_majortoponyms.png",
-          "giveaway": true,
-          "path": "fr/9bc9086c66e2.webp",
-          "width": 600,
-          "height": 400
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -3992,15 +4160,7 @@
       "tags": [
         "language"
       ],
-      "images": [
-        {
-          "id": "cfd4ef7ca690",
-          "src": "https://www.plonkit.net/images/france/3_rivertoponyms.webp",
-          "path": "fr/cfd4ef7ca690.webp",
-          "width": 600,
-          "height": 603
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -4347,7 +4507,9 @@
           },
           "path": "fr/5139fbfba69e.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "annotated",
+          "caption": "Street signs labelled Lyon, Paris and Marseille, each showing its arrondissement (Arr) number"
         }
       ],
       "locations": [
@@ -4398,7 +4560,15 @@
           },
           "path": "fr/ba733570ea3d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "60dee0a0da92",
@@ -4463,7 +4633,15 @@
           },
           "path": "fr/da1a64a67b39.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "58fe0d4658a7",
@@ -4521,7 +4699,15 @@
           },
           "path": "fr/6a94c2bfe137.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "c0f6414c6a04",
@@ -4579,7 +4765,15 @@
           },
           "path": "fr/a3e54736df40.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "bf9b654d70ff",
@@ -4637,7 +4831,15 @@
           },
           "path": "fr/9a7114d765d0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "4233bf2b47f5",
@@ -4695,14 +4897,23 @@
           },
           "path": "fr/451cafab5f0a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         },
         {
           "id": "aca899b9bbcd",
           "src": "https://learnablemeta.com/images/4588/1777469933346-tkB.avif",
           "path": "fr/aca899b9bbcd.webp",
           "width": 800,
-          "height": 658
+          "height": 658,
+          "role": "example"
         },
         {
           "id": "eda2c28cb94b",
@@ -4761,7 +4972,15 @@
           },
           "path": "fr/83080df720c9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4812,7 +5031,15 @@
           },
           "path": "fr/ce632ef6728c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4862,7 +5089,15 @@
           },
           "path": "fr/93b1b904731e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4910,15 +5145,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "952d136010a2",
-          "src": "https://www.plonkit.net/images/france/3_gen3antenna.jpeg",
-          "path": "fr/952d136010a2.webp",
-          "width": 800,
-          "height": 686
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -4976,8 +5203,7 @@
           "src": "https://learnablemeta.com/images/1068/QndpUHNqbdsfQTv2SGjPjttQMTI8B5T0t40d.avif",
           "path": "fr/5a2e1368778a.webp",
           "width": 1000,
-          "height": 857,
-          "dupeOf": "952d136010a2"
+          "height": 857
         }
       ],
       "locations": [],
@@ -4999,15 +5225,7 @@
         "Different dialects of Occitan use different words for 'road'. **Carriera** can be found in South Central France."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "b0575d36b770",
-          "src": "https://learnablemeta.com/images/1068/PLKJtnri53DP7wc0M9a8Rqc2WdBQtgbaUlWH.avif",
-          "path": "fr/b0575d36b770.webp",
-          "width": 1000,
-          "height": 875
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -5033,8 +5251,7 @@
           "src": "https://learnablemeta.com/images/1068/dwdxRgbqpxp4CtwmIrTm6o8J7GVVIl9nNPKE.avif",
           "path": "fr/552009709b4b.webp",
           "width": 1000,
-          "height": 875,
-          "dupeOf": "b0575d36b770"
+          "height": 875
         }
       ],
       "locations": [],
@@ -5064,7 +5281,7 @@
           "path": "fr/f6787f586b9c.webp",
           "width": 1000,
           "height": 857,
-          "dupeOf": "952d136010a2"
+          "dupeOf": "5a2e1368778a"
         }
       ],
       "locations": [],
@@ -5094,7 +5311,7 @@
           "path": "fr/32e4b907e867.webp",
           "width": 1000,
           "height": 857,
-          "dupeOf": "952d136010a2"
+          "dupeOf": "5a2e1368778a"
         }
       ],
       "locations": [],
@@ -5122,15 +5339,7 @@
           "src": "https://learnablemeta.com/images/1068/d5wBw32TQ4vbhhhtLUpsJmAWHQFuZp48GK2H.avif",
           "path": "fr/20ee330f69dc.webp",
           "width": 1000,
-          "height": 666,
-          "dupeOf": "9bc9086c66e2"
-        },
-        {
-          "id": "6ba288a306ef",
-          "src": "https://learnablemeta.com/images/1068/e96odwSBXgBRBKAVzDUdx5yNpxP03epu1C4J.avif",
-          "path": "fr/6ba288a306ef.webp",
-          "width": 731,
-          "height": 1000
+          "height": 666
         }
       ],
       "locations": [],
@@ -5154,19 +5363,12 @@
       "tags": [],
       "images": [
         {
-          "id": "539b3b9c8177",
-          "src": "https://learnablemeta.com/images/1068/AVDjl8KeboTce804PMXIk2NmzCuhydWxW13j.avif",
-          "path": "fr/539b3b9c8177.webp",
-          "width": 809,
-          "height": 1000
-        },
-        {
           "id": "e6fd83cb2016",
           "src": "https://learnablemeta.com/images/1068/W0u4qedRR1AiwhECvVJd9wIlfqgI4izoo0VP.avif",
           "path": "fr/e6fd83cb2016.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5195,14 +5397,7 @@
           "path": "fr/e3b5927866fc.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
-        },
-        {
-          "id": "0250e5e44b23",
-          "src": "https://learnablemeta.com/images/1068/Mt2J6sgTFkRNHbxGIjurhEQbdewqTWyaKhFK.avif",
-          "path": "fr/0250e5e44b23.webp",
-          "width": 802,
-          "height": 1000
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5226,19 +5421,12 @@
       "tags": [],
       "images": [
         {
-          "id": "01073e9899ca",
-          "src": "https://learnablemeta.com/images/1068/g08spURHBbl7hXQbqclu4l835XGu15HKpT6w.avif",
-          "path": "fr/01073e9899ca.webp",
-          "width": 901,
-          "height": 1000
-        },
-        {
           "id": "eaa043dedef0",
           "src": "https://learnablemeta.com/images/1068/zBQUboP7MvhfFFIn8zyHH6JRaqPdmydXvN51.avif",
           "path": "fr/eaa043dedef0.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5267,15 +5455,14 @@
           "path": "fr/2452951c8285.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         },
         {
           "id": "3e3e03f29d30",
           "src": "https://learnablemeta.com/images/1068/yDlWvBtHnS5ltbRPhFbmWI1EhSZuf9TZrDII.avif",
           "path": "fr/3e3e03f29d30.webp",
           "width": 798,
-          "height": 1000,
-          "dupeOf": "024237a193ce"
+          "height": 1000
         }
       ],
       "locations": [],
@@ -5304,14 +5491,7 @@
           "path": "fr/7210a1cb2218.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
-        },
-        {
-          "id": "024237a193ce",
-          "src": "https://learnablemeta.com/images/1068/WklyaR659uIXpTfZyRZ5otEqdPLK5dQ73xyJ.avif",
-          "path": "fr/024237a193ce.webp",
-          "width": 870,
-          "height": 1000
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5340,14 +5520,7 @@
           "path": "fr/2d160ab720bc.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
-        },
-        {
-          "id": "252f62ae8a67",
-          "src": "https://learnablemeta.com/images/1068/YY9SexTDhnoeS56gyG9FxQeltOfjpzqVVDm5.avif",
-          "path": "fr/252f62ae8a67.webp",
-          "width": 909,
-          "height": 1000
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5371,19 +5544,12 @@
       "tags": [],
       "images": [
         {
-          "id": "7c3a37e3d3be",
-          "src": "https://learnablemeta.com/images/1068/8nkBO6DOwBTNrfpMaCPGAVUeV6KYkDWgC8pC.avif",
-          "path": "fr/7c3a37e3d3be.webp",
-          "width": 927,
-          "height": 1000
-        },
-        {
           "id": "344922e6e78a",
           "src": "https://learnablemeta.com/images/1068/qlmmE6y3LlV91Jf9Rz1Cceh0G9aDqHD53Q3b.avif",
           "path": "fr/344922e6e78a.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5411,8 +5577,7 @@
           "src": "https://learnablemeta.com/images/1068/CuxLwlUocDHPhw4VDNsz4r8EH8gGSb0FbfvO.avif",
           "path": "fr/a3977edf712c.webp",
           "width": 927,
-          "height": 1000,
-          "dupeOf": "7c3a37e3d3be"
+          "height": 1000
         },
         {
           "id": "3e7847b8b5cc",
@@ -5420,7 +5585,7 @@
           "path": "fr/3e7847b8b5cc.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5449,7 +5614,7 @@
           "path": "fr/1e729c0ad3e9.webp",
           "width": 927,
           "height": 1000,
-          "dupeOf": "7c3a37e3d3be"
+          "dupeOf": "a3977edf712c"
         },
         {
           "id": "b6422a0b4bed",
@@ -5457,7 +5622,7 @@
           "path": "fr/b6422a0b4bed.webp",
           "width": 1000,
           "height": 666,
-          "dupeOf": "9bc9086c66e2"
+          "dupeOf": "20ee330f69dc"
         }
       ],
       "locations": [],
@@ -5479,15 +5644,7 @@
         "Knowing basic toponymy in France is crucial for regionguessing, particularly suffixes. -caux can be found in Seine-Maritime"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "7f95f5749c44",
-          "src": "https://learnablemeta.com/images/1068/drYWVrGoRqBsKFu562pid4IBFdEBQdLOicGL.avif",
-          "path": "fr/7f95f5749c44.webp",
-          "width": 1000,
-          "height": 756
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -5513,8 +5670,7 @@
           "src": "https://learnablemeta.com/images/1068/5qlOWO3y3IBk5wRP1qfRmld1PUwddib21maj.avif",
           "path": "fr/8ff4ac03bf11.webp",
           "width": 1000,
-          "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "height": 756
         }
       ],
       "locations": [],
@@ -5543,7 +5699,7 @@
           "path": "fr/2328114d80b6.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5572,7 +5728,7 @@
           "path": "fr/ec34d5da858b.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5601,7 +5757,7 @@
           "path": "fr/60ead56f6b77.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5630,7 +5786,7 @@
           "path": "fr/6ecde6c91d14.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5659,7 +5815,7 @@
           "path": "fr/b488337d1020.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5688,7 +5844,7 @@
           "path": "fr/ddf7ee30e59b.webp",
           "width": 1000,
           "height": 756,
-          "dupeOf": "7f95f5749c44"
+          "dupeOf": "8ff4ac03bf11"
         }
       ],
       "locations": [],
@@ -5716,7 +5872,10 @@
           "src": "https://learnablemeta.com/images/1955/1750619852590-FPB.avif",
           "path": "fr/a87d83e8cb11.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "comparison",
+          "caption": "Wooden pole tops compared by flag: Ireland, UK and France, with the French pole having a spiked cone top",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -5785,7 +5944,8 @@
           "src": "https://learnablemeta.com/images/1068/1753732215722-h21.avif",
           "path": "fr/e804d664fa08.webp",
           "width": 481,
-          "height": 218
+          "height": 218,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5921,7 +6081,8 @@
           "src": "https://learnablemeta.com/images/4588/1777469493651-xYs.avif",
           "path": "fr/be20133427cd.webp",
           "width": 430,
-          "height": 324
+          "height": 324,
+          "role": "example"
         }
       ],
       "locations": [],

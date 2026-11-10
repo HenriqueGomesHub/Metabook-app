@@ -48,7 +48,8 @@
           },
           "path": "cl/83ced0c06fcf.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example"
         },
         {
           "id": "d5755d6a3702",
@@ -123,7 +124,8 @@
           },
           "path": "cl/6c5650573627.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example"
         }
       ],
       "locations": [
@@ -180,21 +182,24 @@
           },
           "path": "cl/fcb273bdf02a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "9d886aa34b62",
           "src": "https://learnablemeta.com/images/1/9Z7k4MBA7lnNcSmiZ18E8Xv36kXO2RTebjhQ.avif",
           "path": "cl/9d886aa34b62.webp",
           "width": 1000,
-          "height": 782
-        },
-        {
-          "id": "2c4c951451e4",
-          "src": "https://learnablemeta.com/images/1/KRdG0g9sEwUzLLA5isDATys0RK21akF3RVxN.avif",
-          "path": "cl/2c4c951451e4.webp",
-          "width": 1000,
-          "height": 557
+          "height": 782,
+          "role": "example",
+          "caption": "A square concrete pole with indented sides, right",
+          "giveaway": true,
+          "crop": {
+            "x": 0.54,
+            "y": 0,
+            "w": 0.46,
+            "h": 1
+          }
         },
         {
           "id": "3968c4d55c9c",
@@ -255,7 +260,10 @@
           "src": "https://www.plonkit.net/images/chile/Chile_License_Plate.png",
           "path": "cl/fd81a074e610.webp",
           "width": 600,
-          "height": 188
+          "height": 188,
+          "role": "comparison",
+          "caption": "Chilean plates: white standard (top) and orange commercial or taxi (bottom)",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -304,14 +312,18 @@
           },
           "path": "cl/d4123921baf1.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red box marks the slot at the top of the post under a blue motorway sign"
         },
         {
           "id": "4a63ec6fe4f1",
           "src": "https://learnablemeta.com/images/611/6vXG6quL8xmEEhP2FYXO5uxsoD5PP4z5XA7t.avif",
           "path": "cl/4a63ec6fe4f1.webp",
           "width": 1000,
-          "height": 502
+          "height": 502,
+          "role": "annotated",
+          "caption": "Red box marks the slot at the top of the post under a blue motorway sign"
         },
         {
           "id": "477c3b2859fe",
@@ -370,7 +382,8 @@
           },
           "path": "cl/98d20534bf4f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -427,7 +440,8 @@
           },
           "path": "cl/85c5f64c7dcb.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "8dde6f7f8706",
@@ -495,7 +509,8 @@
           },
           "path": "cl/9b5f92597517.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1413,14 +1428,30 @@
           },
           "path": "cl/06b2edc85026.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.86,
+            "h": 1
+          }
         },
         {
           "id": "d49ebe98b872",
           "src": "https://learnablemeta.com/images/798/DMxGYMxJoVHEMckC289vdbuCN4svKFfCm6VH.avif",
           "path": "cl/d49ebe98b872.webp",
           "width": 1000,
-          "height": 505
+          "height": 505,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.85,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1470,7 +1501,15 @@
           },
           "path": "cl/9b44359895cd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.86,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1517,7 +1556,15 @@
           },
           "path": "cl/4189a9e8d76b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1564,7 +1611,15 @@
           },
           "path": "cl/bc1215757a7a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.83,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1612,7 +1667,15 @@
           },
           "path": "cl/10d00237cc59.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.17,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2495,7 +2558,15 @@
           },
           "path": "cl/2b715d4844fd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.86,
+            "h": 1
+          }
         },
         {
           "id": "dcd43404131a",
@@ -2896,21 +2967,38 @@
           },
           "path": "cl/88f5190ea708.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.84,
+            "h": 1
+          }
         },
         {
           "id": "3f8543f79f79",
           "src": "https://learnablemeta.com/images/798/bQUGSkX4uslgyJadVcdfmn1yc5MXvze0xeX4.avif",
           "path": "cl/3f8543f79f79.webp",
           "width": 1000,
-          "height": 508
+          "height": 508,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.86,
+            "h": 1
+          }
         },
         {
           "id": "dca9f3ca1067",
           "src": "https://learnablemeta.com/images/798/JO5IRzyTPFCxZVE5mujf4zlC77LnI8FI0cf1.avif",
           "path": "cl/dca9f3ca1067.webp",
           "width": 1000,
-          "height": 474
+          "height": 474,
+          "role": "example"
         }
       ],
       "locations": [
@@ -2959,7 +3047,15 @@
           },
           "path": "cl/66787aac5e6d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.85,
+            "h": 1
+          }
         },
         {
           "id": "6fa9fe161ac6",
@@ -3014,7 +3110,15 @@
           },
           "path": "cl/fe45ae38a3a5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3061,7 +3165,15 @@
           },
           "path": "cl/a41575a51c7f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.82,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3108,7 +3220,15 @@
           },
           "path": "cl/da9f2732f52e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.83,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3156,7 +3276,15 @@
           },
           "path": "cl/6758fded2e2b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3298,7 +3426,15 @@
           },
           "path": "cl/793f11ffa525.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.82,
+            "h": 1
+          }
         },
         {
           "id": "5113b03daa5e",

@@ -35,7 +35,9 @@
           "src": "https://www.plonkit.net/images/mongolia/1._licenceplate.jpeg",
           "path": "mn/8b05d627ab0a.webp",
           "width": 600,
-          "height": 445
+          "height": 445,
+          "role": "comparison",
+          "caption": "Mongolian plates: standard long and short"
         }
       ],
       "locations": [],
@@ -64,7 +66,9 @@
           "src": "https://www.plonkit.net/images/mongolia/1._language.png",
           "path": "mn/852212909576.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Mongolian Cyrillic text sample with extra letters Ө and Ү"
         }
       ],
       "locations": [],
@@ -111,7 +115,8 @@
           },
           "path": "mn/8e71b1db8b60.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -207,14 +212,16 @@
           },
           "path": "mn/9e1c9d34c203.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c3767a5f76dc",
           "src": "https://learnablemeta.com/images/665/lcawuesk6TwoXDdLKLWlM104rsAaccMCYvrc.avif",
           "path": "mn/c3767a5f76dc.webp",
           "width": 1000,
-          "height": 450
+          "height": 450,
+          "role": "example"
         },
         {
           "id": "2ccf924b9aa2",
@@ -273,7 +280,8 @@
           },
           "path": "mn/cedfcaa2ac67.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -495,16 +503,7 @@
         "_You can click on the map to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "881205da88e8",
-          "src": "https://www.plonkit.net/images/mongolia/Mongolia_Coverage_Map.png",
-          "giveaway": true,
-          "path": "mn/881205da88e8.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -532,8 +531,7 @@
           "giveaway": true,
           "path": "mn/5660567e8908.webp",
           "width": 800,
-          "height": 450,
-          "dupeOf": "881205da88e8"
+          "height": 450
         }
       ],
       "locations": [],
@@ -702,7 +700,15 @@
           },
           "path": "mn/90a7d87a60a9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.56,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -955,7 +961,15 @@
           },
           "path": "mn/213dcfae9632.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1004,7 +1018,15 @@
           },
           "path": "mn/a5bd73c32cb7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1346,7 +1368,15 @@
           },
           "path": "mn/44e0020ba8a6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1563,7 +1593,9 @@
           "giveaway": true,
           "path": "mn/c13b9ad0f137.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "comparison",
+          "caption": "Four spare tyre types in coloured boxes, matched by colour to their zones on the map"
         }
       ],
       "locations": [],
@@ -1600,7 +1632,15 @@
           },
           "path": "mn/617d64ce614c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 0.63
+          }
         }
       ],
       "locations": [
@@ -1679,7 +1719,16 @@
           },
           "path": "mn/f594e93df3d4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Two red circles mark the red tent straps at the front of the Google car",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 0.62
+          }
         }
       ],
       "locations": [
@@ -1728,7 +1777,16 @@
           },
           "path": "mn/5011c5381bf7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle at left zooms in on the snorkel beside the blue tent",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 0.63
+          }
         }
       ],
       "locations": [
@@ -1776,7 +1834,15 @@
           },
           "path": "mn/24e47574a6bf.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.6
+          }
         }
       ],
       "locations": [
@@ -1824,7 +1890,15 @@
           },
           "path": "mn/6e9f7c17b34d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 0.62
+          }
         }
       ],
       "locations": [
@@ -1871,7 +1945,15 @@
           },
           "path": "mn/9460a569b3b9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 0.62
+          }
         }
       ],
       "locations": [
@@ -2015,7 +2097,15 @@
           },
           "path": "mn/d8240671fc92.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 0.6
+          }
         }
       ],
       "locations": [
@@ -2062,7 +2152,15 @@
           },
           "path": "mn/790c9b41681c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 0.62
+          }
         }
       ],
       "locations": [
@@ -2109,7 +2207,15 @@
           },
           "path": "mn/1f84f1377cbd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2156,7 +2262,15 @@
           },
           "path": "mn/5de8738c07dd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.59,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2489,7 +2603,15 @@
           },
           "path": "mn/a1d4170bdb8d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2633,7 +2755,16 @@
           },
           "path": "mn/e0cc42bb7345.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circles highlight the overcast sky and a smoke stack above a concrete road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.58
+          }
         }
       ],
       "locations": [
@@ -2872,7 +3003,16 @@
           },
           "path": "mn/ad4080561476.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Circles mark a sailboat-shaped lamp post and a nearby lamp on a street",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2919,7 +3059,15 @@
           },
           "path": "mn/674b46a3175c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2966,7 +3114,16 @@
           },
           "path": "mn/b630c5240abd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle marks the dark tent roll on the front of the car at a dusty junction at sunset",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3204,7 +3361,15 @@
           },
           "path": "mn/7610cad4b3fe.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3536,7 +3701,15 @@
           },
           "path": "mn/2016efa81635.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.56,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3728,7 +3901,15 @@
           },
           "path": "mn/088cba26aa7e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3909,7 +4090,16 @@
           "src": "https://learnablemeta.com/images/3/ZZyPnOHghCC9lWvMyrixtXy9Ybsz4TstSzuP.avif",
           "path": "mn/09562a2ee260.webp",
           "width": 1000,
-          "height": 595
+          "height": 595,
+          "role": "example",
+          "caption": "Four thumbnails of a road going from sunset into night",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.2
+          }
         }
       ],
       "locations": [],
@@ -3937,7 +4127,16 @@
           "src": "https://learnablemeta.com/images/3/nAuBJHjXLaENV4QSgQKKSEC1H1B9tnzMT8nz.avif",
           "path": "mn/a158c42dd850.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Tent on the car roof with two neat straps and no knots",
+          "giveaway": true,
+          "crop": {
+            "x": 0.43,
+            "y": 0.31,
+            "w": 0.57,
+            "h": 0.69
+          }
         }
       ],
       "locations": [],
@@ -3965,7 +4164,16 @@
           "src": "https://learnablemeta.com/images/3/APH35b1mgaLQFsbtSwBSVqD1xN8ZFdB4olYs.avif",
           "path": "mn/6be8f2131e00.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange circle marks the messy knot on the left of the two tent straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.455,
+            "y": 0,
+            "w": 0.545,
+            "h": 0.53
+          }
         }
       ],
       "locations": [],
@@ -3993,7 +4201,16 @@
           "src": "https://learnablemeta.com/images/3/x7q4L6WqMljwhI3AYadvHOuylzxd1eplxSyk.avif",
           "path": "mn/f42db5d8bd7e.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange arrow points to the messy clump on one of the two tent straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.49,
+            "y": 0,
+            "w": 0.51,
+            "h": 0.51
+          }
         }
       ],
       "locations": [],
@@ -4021,7 +4238,16 @@
           "src": "https://learnablemeta.com/images/3/6SwaSKz553m3f2IPFElQm1cpZBkGVaLMobrX.avif",
           "path": "mn/e1749d172839.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange arrow points to the messy knot and loose loop on the tent straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.49,
+            "h": 0.5
+          }
         }
       ],
       "locations": [],
@@ -4049,7 +4275,16 @@
           "src": "https://learnablemeta.com/images/3/l5V5qDzIqWtO7sFEeQt8OCoQcYes6JPGKVbo.avif",
           "path": "mn/38ddf7e2af95.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Tent on the car roof with four neat straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.45,
+            "y": 0.43,
+            "w": 0.55,
+            "h": 0.57
+          }
         }
       ],
       "locations": [],
@@ -4077,7 +4312,16 @@
           "src": "https://learnablemeta.com/images/3/AZDCIIfj47COV28QEqugGokGgaR37vGJXx8W.avif",
           "path": "mn/3d509e8bb477.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Open tent on the car roof with four straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.45,
+            "y": 0.43,
+            "w": 0.55,
+            "h": 0.57
+          }
         }
       ],
       "locations": [],
@@ -4105,7 +4349,16 @@
           "src": "https://learnablemeta.com/images/3/As2IjWVlfPXuCq5pYQqIj17r7RBMZkfoMw3S.avif",
           "path": "mn/b9eae6b37122.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Open tent with four straps meeting at the left",
+          "giveaway": true,
+          "crop": {
+            "x": 0.46,
+            "y": 0.38,
+            "w": 0.54,
+            "h": 0.62
+          }
         }
       ],
       "locations": [],
@@ -4133,7 +4386,16 @@
           "src": "https://learnablemeta.com/images/3/vVNmxqcL20EHW7NPa0JTLQH5KtiTPSEwY5hR.avif",
           "path": "mn/88b9bb2eb25d.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Open tent on the car roof with only two straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.44,
+            "y": 0.38,
+            "w": 0.56,
+            "h": 0.62
+          }
         }
       ],
       "locations": [],
@@ -4217,7 +4479,16 @@
           "src": "https://learnablemeta.com/images/3/16kjc0lmF27iqpIrbSOPLwqcWFXpQlCAWWgv.avif",
           "path": "mn/e81d6bfeccc0.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange circles mark two knots on the left of the tent straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.42,
+            "y": 0.39,
+            "w": 0.58,
+            "h": 0.61
+          }
         }
       ],
       "locations": [],
@@ -4245,7 +4516,16 @@
           "src": "https://learnablemeta.com/images/3/PYdbeadAZUajwKQdUk5o6wBJxSVjdHaXYeLr.avif",
           "path": "mn/bf7c3b8a23ec.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange circles mark two knots on the right of four straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.5,
+            "w": 0.45,
+            "h": 0.5
+          }
         }
       ],
       "locations": [],
@@ -4273,7 +4553,16 @@
           "src": "https://learnablemeta.com/images/3/FB1lHc117Da5l8yVkeUlfj7N9X2VL8MywDOh.avif",
           "path": "mn/c89c40ffbca3.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange circle and dotted line mark a single knot slightly right of centre",
+          "giveaway": true,
+          "crop": {
+            "x": 0.45,
+            "y": 0.39,
+            "w": 0.55,
+            "h": 0.61
+          }
         }
       ],
       "locations": [],
@@ -4301,7 +4590,16 @@
           "src": "https://learnablemeta.com/images/3/UbDTppfgV654gY34bSRtjDDLF7ulbfeUwtPW.avif",
           "path": "mn/8ec7d48f4b27.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "annotated",
+          "caption": "Orange circles mark a knot in the centre of four tent straps",
+          "giveaway": true,
+          "crop": {
+            "x": 0.5,
+            "y": 0.47,
+            "w": 0.5,
+            "h": 0.53
+          }
         }
       ],
       "locations": [],
@@ -4329,7 +4627,16 @@
           "src": "https://learnablemeta.com/images/3/lKrLPpVAtbSqVik2q52nqTnYBVIPQSipJrlR.avif",
           "path": "mn/45696511c1d9.webp",
           "width": 1000,
-          "height": 627
+          "height": 627,
+          "role": "example",
+          "caption": "Four thumbnails of a road going from sunset into night",
+          "giveaway": true,
+          "crop": {
+            "x": 0.65,
+            "y": 0,
+            "w": 0.35,
+            "h": 1
+          }
         }
       ],
       "locations": [],

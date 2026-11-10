@@ -37,7 +37,10 @@
           "src": "https://www.plonkit.net/images/brazil/Brazil_License_Plate.png",
           "path": "br/cf58492adad2.webp",
           "width": 600,
-          "height": 283
+          "height": 283,
+          "role": "comparison",
+          "caption": "Brazilian plates: standard, standard from 2018 and red commercial",
+          "giveaway": true
         },
         {
           "id": "febbf22e5666",
@@ -75,7 +78,9 @@
           "src": "https://www.plonkit.net/images/brazil/Portuguese.png",
           "path": "br/64eadc967564.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Portuguese text with the characters ã, o and ç shown large"
         }
       ],
       "locations": [],
@@ -180,7 +185,9 @@
           },
           "path": "br/6f5b85458ecf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Rectangular concrete poles, one with a white-painted base; the red arrow points at the second pole"
         },
         {
           "id": "3a2581cdd2d5",
@@ -189,13 +196,6 @@
           "width": 1000,
           "height": 557,
           "dupeOf": "6f5b85458ecf"
-        },
-        {
-          "id": "72c807adab0b",
-          "src": "https://learnablemeta.com/images/1/9a673uVB5sn4t4X2NLKfMUgRBcJ6eZstu3qY.avif",
-          "path": "br/72c807adab0b.webp",
-          "width": 1000,
-          "height": 782
         },
         {
           "id": "02a294525d56",
@@ -260,7 +260,8 @@
           },
           "path": "br/03e89d6e54a7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "a0a26f411029",
@@ -321,7 +322,8 @@
           },
           "path": "br/44ee76a9a1f2.webp",
           "width": 600,
-          "height": 295
+          "height": 295,
+          "role": "example"
         }
       ],
       "locations": [
@@ -371,14 +373,16 @@
           },
           "path": "br/501ac564226e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "dc249c1d74af",
           "src": "https://learnablemeta.com/images/zxYGkVjl3hDI0pPkrVLIjb2pNYo6HrrNDOA1.avif",
           "path": "br/dc249c1d74af.webp",
           "width": 1000,
-          "height": 751
+          "height": 751,
+          "role": "example"
         },
         {
           "id": "7268e18a079d",
@@ -443,7 +447,8 @@
           },
           "path": "br/7dfaa5b4962f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d438b55bce39",
@@ -702,7 +707,9 @@
           "src": "https://www.plonkit.net/images/brazil/gen3.png",
           "path": "br/172e09969cdd.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example",
+          "caption": "A coiled stubby antenna on the white car blur at the centre"
         }
       ],
       "locations": [],
@@ -744,7 +751,8 @@
           "src": "https://www.plonkit.net/images/brazil/gen4.png",
           "path": "br/2966707291cf.webp",
           "width": 600,
-          "height": 600
+          "height": 600,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -784,7 +792,9 @@
           },
           "path": "br/a0994f11901c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -826,16 +836,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "3f3dffc7dce4",
-          "src": "https://www.plonkit.net/images/brazil/br_coverage.png",
-          "giveaway": true,
-          "path": "br/3f3dffc7dce4.webp",
-          "width": 600,
-          "height": 600
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -919,15 +920,7 @@
       "tags": [
         "moving info"
       ],
-      "images": [
-        {
-          "id": "129cfa680168",
-          "src": "https://www.plonkit.net/images/brazil/cepcodes.png",
-          "path": "br/129cfa680168.webp",
-          "width": 600,
-          "height": 600
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -2167,7 +2160,14 @@
           "giveaway": true,
           "path": "br/aaa39ba8b864.webp",
           "width": 600,
-          "height": 600
+          "height": 600,
+          "role": "example",
+          "crop": {
+            "x": 0.03,
+            "y": 0.5,
+            "w": 0.3,
+            "h": 0.49
+          }
         },
         {
           "id": "bb946ce7cf35",
@@ -2184,8 +2184,7 @@
           "giveaway": true,
           "path": "br/7ab18e123687.webp",
           "width": 1000,
-          "height": 562,
-          "dupeOf": "d8ea372f543e"
+          "height": 562
         }
       ],
       "locations": [],
@@ -2215,7 +2214,15 @@
           "src": "https://www.plonkit.net/images/brazil/Brazil_Pole_Wooden.png",
           "path": "br/8bac67d495c1.webp",
           "width": 600,
-          "height": 600
+          "height": 600,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.04,
+            "y": 0.5,
+            "w": 0.28,
+            "h": 0.49
+          }
         },
         {
           "id": "644fd1ec948b",
@@ -2223,7 +2230,7 @@
           "path": "br/644fd1ec948b.webp",
           "width": 1000,
           "height": 562,
-          "dupeOf": "d8ea372f543e"
+          "dupeOf": "7ab18e123687"
         },
         {
           "id": "2ad8efbed0d0",
@@ -2257,15 +2264,7 @@
         "important",
         "pole"
       ],
-      "images": [
-        {
-          "id": "d8ea372f543e",
-          "src": "https://www.plonkit.net/images/brazil/br_polesupport.png",
-          "path": "br/d8ea372f543e.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -2303,7 +2302,15 @@
           },
           "path": "br/2d701f2839e1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2352,7 +2359,15 @@
           },
           "path": "br/ebb0711caf96.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "91658fdfac3f",
@@ -2410,7 +2425,15 @@
           },
           "path": "br/cee41d184b21.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         },
         {
           "id": "56c55953a823",
@@ -2468,7 +2491,15 @@
           },
           "path": "br/8ad7abc8efac.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2518,14 +2549,23 @@
           },
           "path": "br/4fbe99c50519.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "d7253bafde00",
           "src": "https://learnablemeta.com/images/37/WbRqY2tgB2Eq89NGVnKNqqonmftXrfaQ6cL0.avif",
           "path": "br/d7253bafde00.webp",
           "width": 1000,
-          "height": 369
+          "height": 369,
+          "role": "example"
         }
       ],
       "locations": [
@@ -2575,7 +2615,15 @@
           },
           "path": "br/1d27cf629575.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2625,14 +2673,23 @@
           },
           "path": "br/8bb0aec58511.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "0a02b2f34c86",
           "src": "https://learnablemeta.com/images/37/n9KhFvMHfT75zfahsjSxUbD2iizTLnId1520.avif",
           "path": "br/0a02b2f34c86.webp",
           "width": 1000,
-          "height": 461
+          "height": 461,
+          "role": "example"
         }
       ],
       "locations": [
@@ -2682,7 +2739,15 @@
           },
           "path": "br/589eddc2d5ab.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2733,14 +2798,23 @@
           },
           "path": "br/20a1c5372648.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "f13441b06b16",
           "src": "https://learnablemeta.com/images/1/cocjgLWyAgFE6IEc71uu2nKX4VR6OhkoNUuc.avif",
           "path": "br/f13441b06b16.webp",
           "width": 1000,
-          "height": 713
+          "height": 713,
+          "role": "example"
         }
       ],
       "locations": [
@@ -2791,7 +2865,14 @@
           },
           "path": "br/caca3cdea742.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2841,7 +2922,15 @@
           },
           "path": "br/47b6a27bfdd1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "569874d6bffd",
@@ -2900,7 +2989,15 @@
           },
           "path": "br/7233ba0a8ea4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2951,7 +3048,15 @@
           },
           "path": "br/e73bf315bb4c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3001,7 +3106,15 @@
           },
           "path": "br/9059240915b4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "9a24f9234a5e",
@@ -3059,7 +3172,15 @@
           },
           "path": "br/1a1871258544.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3109,7 +3230,15 @@
           },
           "path": "br/f0a596a117aa.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3159,7 +3288,15 @@
           },
           "path": "br/9be1fd72a3ce.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3208,7 +3345,15 @@
           },
           "path": "br/fab2c5e555bc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3258,7 +3403,15 @@
           },
           "path": "br/895684487275.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3308,7 +3461,15 @@
           },
           "path": "br/d46a22f9af91.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3358,7 +3519,15 @@
           },
           "path": "br/15574189e258.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3408,7 +3577,16 @@
           },
           "path": "br/a6e66c1fd475.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A pole with black double-UFO insulators arranged in a trident on top",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3457,7 +3635,15 @@
           },
           "path": "br/2c0782d504a6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3507,7 +3693,15 @@
           },
           "path": "br/77b6f9067f9e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3701,7 +3895,15 @@
           },
           "path": "br/5ebdea8b9d4d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3928,7 +4130,15 @@
           },
           "path": "br/a9d85ae3a910.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3978,7 +4188,15 @@
           },
           "path": "br/84d721bc7a64.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4028,7 +4246,15 @@
           },
           "path": "br/b4d318562d7b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4078,7 +4304,15 @@
           },
           "path": "br/5e8bc4f27e45.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4129,7 +4363,15 @@
           },
           "path": "br/68a04e58e51a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4184,7 +4426,15 @@
           },
           "path": "br/1337e341b89d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4344,7 +4594,15 @@
           },
           "path": "br/b454e37fadc4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4395,7 +4653,14 @@
           },
           "path": "br/a4d1023a13de.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4444,7 +4709,16 @@
           },
           "path": "br/8f999b2802f0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Round spherical nests sit on the top crossbar of the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4600,7 +4874,15 @@
           },
           "path": "br/ccd1f20b2d51.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4650,7 +4932,15 @@
           },
           "path": "br/af9440190e25.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4700,7 +4990,15 @@
           },
           "path": "br/cf651764c257.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4749,7 +5047,16 @@
           },
           "path": "br/da79628bec08.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A square yellow ID plate on a concrete pole, three letters then numbers",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4798,7 +5105,15 @@
           },
           "path": "br/3304ed72821f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4988,7 +5303,15 @@
           },
           "path": "br/cea08d09426a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5036,7 +5359,16 @@
           },
           "path": "br/f7a4b8263e45.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A white numbered plaque on the street lamp pole at left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5085,7 +5417,16 @@
           },
           "path": "br/fe37ec2eaec9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A zig-zag bent streetlight pole with a yellow lamp head",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5134,7 +5475,16 @@
           },
           "path": "br/463f313b4590.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A grey pole painted with blue and red stripes near the top",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5183,7 +5533,15 @@
           },
           "path": "br/64b9535cd3c4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5230,7 +5588,15 @@
           },
           "path": "br/bebdcd778a02.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5279,7 +5645,15 @@
           },
           "path": "br/e0c2d1f8f166.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5326,7 +5700,15 @@
           },
           "path": "br/422278f0ba95.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5364,7 +5746,15 @@
           "src": "https://learnablemeta.com/images/Wtg5HZTdWksc5DKoQlx6Cg9VBLGEgw5t6s4c.avif",
           "path": "br/1eaeb1c7bf30.webp",
           "width": 1000,
-          "height": 621
+          "height": 621,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.61,
+            "y": 0,
+            "w": 0.26,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -5392,7 +5782,16 @@
           "src": "https://learnablemeta.com/images/b0xPqkrkcUu15lrvoaM8u2u1BDrdg6FzV0PK.avif",
           "path": "br/902cfc010f76.webp",
           "width": 1000,
-          "height": 621
+          "height": 621,
+          "role": "example",
+          "caption": "A QR code sticker on the wooden pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0.72,
+            "y": 0,
+            "w": 0.28,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -5532,7 +5931,8 @@
           "src": "https://learnablemeta.com/images/37/Mn2l2ISBR8Q8R3buC7wV9UrfagmyJymGo40p.avif",
           "path": "br/3dac8ccefb1b.webp",
           "width": 1000,
-          "height": 779
+          "height": 779,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5728,7 +6128,9 @@
           "src": "https://learnablemeta.com/images/37/s1zQv99xW2KZSL8VYdZkqluCfaSjx3iPH5wl.avif",
           "path": "br/0d7b9f5945ba.webp",
           "width": 1000,
-          "height": 674
+          "height": 674,
+          "role": "example",
+          "caption": "Close-up of a small black square ID on a concrete pole, right"
         }
       ],
       "locations": [],
@@ -5812,7 +6214,9 @@
           "src": "https://learnablemeta.com/images/37/krCASn8eA2K4RCsRVFmj8PVyWBDG7erLGdbT.avif",
           "path": "br/42f30f7c0025.webp",
           "width": 1000,
-          "height": 855
+          "height": 855,
+          "role": "example",
+          "caption": "Concrete pole stamped with black ID digits L 1990 3.45"
         }
       ],
       "locations": [],
@@ -5840,7 +6244,8 @@
           "src": "https://learnablemeta.com/images/37/u2bffQHJ5mvjQA1cyeOfiBKPMgcEjcnTPCCX.avif",
           "path": "br/8e829052284d.webp",
           "width": 929,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5868,7 +6273,9 @@
           "src": "https://learnablemeta.com/images/37/SLC3ekisHuAK0SkTnjyeFA11LDdyA0G2nNeU.avif",
           "path": "br/d91b7769f958.webp",
           "width": 1000,
-          "height": 945
+          "height": 945,
+          "role": "example",
+          "caption": "White painted ID with an arrow on a dark concrete pole"
         }
       ],
       "locations": [],
@@ -5896,7 +6303,8 @@
           "src": "https://learnablemeta.com/images/37/aU3jRQiQsMdtDzh24sZQR6vfDrC1JA2uAvy0.avif",
           "path": "br/9d35530f550f.webp",
           "width": 1000,
-          "height": 671
+          "height": 671,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6036,7 +6444,9 @@
           "src": "https://learnablemeta.com/images/37/1ohxv7uCEDgJHxmB3JmIwfja2NSlqc3bOx5Q.avif",
           "path": "br/d2228aa373cc.webp",
           "width": 910,
-          "height": 1000
+          "height": 1000,
+          "role": "example",
+          "caption": "A large orange ID plate hanging on the pole"
         }
       ],
       "locations": [],
@@ -6064,7 +6474,9 @@
           "src": "https://learnablemeta.com/images/37/5mk5RpI9ZdqsUTugYf2TZJKtPAuzVzIIBUwK.avif",
           "path": "br/b1cbe75bd6c6.webp",
           "width": 897,
-          "height": 1000
+          "height": 1000,
+          "role": "annotated",
+          "caption": "A red circle marks the first digit of the white ID plate on the pole"
         }
       ],
       "locations": [],
@@ -6120,7 +6532,8 @@
           "src": "https://learnablemeta.com/images/37/Kh6YBDyy7My5zDWgA4QX8z8GT35QWAd2rYcZ.avif",
           "path": "br/d65feae41abe.webp",
           "width": 1000,
-          "height": 810
+          "height": 810,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6149,7 +6562,16 @@
           "src": "https://learnablemeta.com/images/37/i0FTOWLnigrFdkFtV6e8PWCjeuZw2NS5dPbc.avif",
           "path": "br/386c9a5fd836.webp",
           "width": 1000,
-          "height": 821
+          "height": 821,
+          "role": "example",
+          "caption": "A streetlamp with a two-part housing against the sky",
+          "giveaway": true,
+          "crop": {
+            "x": 0.02,
+            "y": 0.01,
+            "w": 0.45,
+            "h": 0.4
+          }
         }
       ],
       "locations": [],
@@ -6178,7 +6600,9 @@
           "src": "https://learnablemeta.com/images/37/nSeHdKMXeiVx4kLn5kaqb9NBaqbxsYHVEc5R.avif",
           "path": "br/4b3046427f3d.webp",
           "width": 1000,
-          "height": 456
+          "height": 456,
+          "role": "annotated",
+          "caption": "Red circle marks the seam of a two-part lamp, shown on two lamps"
         }
       ],
       "locations": [],
@@ -6206,7 +6630,8 @@
           "src": "https://learnablemeta.com/images/37/pZwwtKkQ4gcw1c7tmaDGob3dR3eXhJmsPXdL.avif",
           "path": "br/06fa22c65763.webp",
           "width": 1000,
-          "height": 962
+          "height": 962,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6234,7 +6659,8 @@
           "src": "https://learnablemeta.com/images/37/FCifpoph98sVTmNQmK6eQcte2SGE64bFOM5H.avif",
           "path": "br/9b26332f7d3e.webp",
           "width": 1000,
-          "height": 733
+          "height": 733,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6262,7 +6688,9 @@
           "src": "https://learnablemeta.com/images/37/00PPw4LjtfBvYDQWYuO8d4ZxMN4XbSo7d1p5.avif",
           "path": "br/879c3e76cdb7.webp",
           "width": 1000,
-          "height": 765
+          "height": 765,
+          "role": "annotated",
+          "caption": "Yellow ID plates on poles; the note says such IDs are used state-wide"
         }
       ],
       "locations": [],
@@ -6290,7 +6718,9 @@
           "src": "https://learnablemeta.com/images/37/Q34Qx3sasqAxd66r0Og1wrL63ZdFKLIViCS0.avif",
           "path": "br/5f1aed8ea14f.webp",
           "width": 534,
-          "height": 1000
+          "height": 1000,
+          "role": "example",
+          "caption": "The electricity company name engraved vertically on a concrete pole"
         }
       ],
       "locations": [],
@@ -6502,7 +6932,9 @@
           "src": "https://learnablemeta.com/images/63/89Uy8oBrqS0LLNdJe2ghKZfhSmxlhrTA5bB8.avif",
           "path": "br/e3842160c3c8.webp",
           "width": 1000,
-          "height": 480
+          "height": 480,
+          "role": "annotated",
+          "caption": "Red circles mark the ID plate above the lamp attachment on two poles"
         }
       ],
       "locations": [],
@@ -6587,7 +7019,8 @@
           "src": "https://learnablemeta.com/images/63/NbJY42kN4PPshPaOQTNA7xo2r1RoiFkJ5SZo.avif",
           "path": "br/2f47648d05b1.webp",
           "width": 1000,
-          "height": 606
+          "height": 606,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6615,7 +7048,8 @@
           "src": "https://learnablemeta.com/images/63/Ew3BUaAxPxH9k5YWtAbuni6mZR6T20xw1cfu.avif",
           "path": "br/7787088d937f.webp",
           "width": 1000,
-          "height": 533
+          "height": 533,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6644,7 +7078,8 @@
           "src": "https://learnablemeta.com/images/63/0RkJcHaIx0379f13fBcOZ0IXsw8Ms7TFETwX.avif",
           "path": "br/877be6f8ca52.webp",
           "width": 382,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6847,7 +7282,8 @@
           "src": "https://learnablemeta.com/images/63/B8BUBnjQrxviYJZy3yn2KRG6ojL9mqrNrhIj.avif",
           "path": "br/0f54c838b3e8.webp",
           "width": 1000,
-          "height": 262
+          "height": 262,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6875,7 +7311,8 @@
           "src": "https://learnablemeta.com/images/63/6vw0mZqO0kMx7mHJvvLYpWM8XKFRVp4ipdYm.avif",
           "path": "br/e828fb9f78c7.webp",
           "width": 295,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -6994,7 +7431,9 @@
           "src": "https://learnablemeta.com/images/63/Br3CuwEhguIUspFWdOKakqgjYnc2UgnGnkWq.avif",
           "path": "br/9a2df6182d96.webp",
           "width": 1000,
-          "height": 761
+          "height": 761,
+          "role": "example",
+          "caption": "Internet ad flyers stuck on concrete poles"
         }
       ],
       "locations": [],
@@ -7022,7 +7461,9 @@
           "src": "https://learnablemeta.com/images/63/KWdXeeuRVKPGZcVit1Dd7U8aI5lw0fVhuqCl.avif",
           "path": "br/d969f76a5150.webp",
           "width": 1000,
-          "height": 911
+          "height": 911,
+          "role": "example",
+          "caption": "A blue city plaque tilted on a pole"
         }
       ],
       "locations": [],
@@ -7078,7 +7519,8 @@
           "src": "https://learnablemeta.com/images/63/UqOFPwZWnZIfP0jFIhv9ANpl96zeVhyACYAS.avif",
           "path": "br/6469121e20c6.webp",
           "width": 1000,
-          "height": 540
+          "height": 540,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7218,7 +7660,8 @@
           "src": "https://learnablemeta.com/images/63/fzH0PR4Wx1rXW5MrfhXOXjLMDeJIQAis0Av4.avif",
           "path": "br/bb8442873d6c.webp",
           "width": 1000,
-          "height": 524
+          "height": 524,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7246,7 +7689,8 @@
           "src": "https://learnablemeta.com/images/63/ABUEbl0SAUaWku1ZfEa75LdYDoZwVp3HACtb.avif",
           "path": "br/09b978741c2b.webp",
           "width": 1000,
-          "height": 420
+          "height": 420,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7274,7 +7718,8 @@
           "src": "https://learnablemeta.com/images/63/6Tt4g2zMevlocKMTnATx73m81Roy8RXofFFQ.avif",
           "path": "br/fffc6fb1d439.webp",
           "width": 455,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7330,7 +7775,8 @@
           "src": "https://learnablemeta.com/images/63/UMwBlohiuaNpzr6zAsRI2HTnmqP54XUP6PkW.avif",
           "path": "br/e3e8d5276ccf.webp",
           "width": 692,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7358,7 +7804,8 @@
           "src": "https://learnablemeta.com/images/63/HZ7dIW79KNz20zzIPgIZCvJtpDbv8WCSbVcq.avif",
           "path": "br/ff55feebd791.webp",
           "width": 1000,
-          "height": 793
+          "height": 793,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7414,7 +7861,8 @@
           "src": "https://learnablemeta.com/images/63/Cim9CRBZYWe2z3sdg3cgPVzppxv6H4lSUXqc.avif",
           "path": "br/9dcf2a68f977.webp",
           "width": 1000,
-          "height": 880
+          "height": 880,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7751,7 +8199,8 @@
           "src": "https://learnablemeta.com/images/63/OH9oXOnxDTPyt70BJn7ePybMFewFDEo9avN1.avif",
           "path": "br/487a7af68a07.webp",
           "width": 1000,
-          "height": 689
+          "height": 689,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7779,7 +8228,8 @@
           "src": "https://learnablemeta.com/images/63/c5kBNjhsF34Bqynuou79w6Y6mPn7ZhNdquHY.avif",
           "path": "br/0fb305cf8877.webp",
           "width": 558,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7842,7 +8292,8 @@
           "src": "https://learnablemeta.com/images/63/SUnxiMWvnaiM2jvJwTGYezpjW7bnPlE0FWw0.avif",
           "path": "br/0e109f6b42a7.webp",
           "width": 1000,
-          "height": 622
+          "height": 622,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7870,7 +8321,15 @@
           "src": "https://learnablemeta.com/images/63/PGpxfsAEl0QYRb5hqNC4FjdEiPMvnuRgaL9Q.avif",
           "path": "br/ca785fede08a.webp",
           "width": 1000,
-          "height": 505
+          "height": 505,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -7927,7 +8386,8 @@
           "src": "https://learnablemeta.com/images/63/ExQ99O0Y2jYb1Lfk8dj5xYWq41z4bwymZMzB.avif",
           "path": "br/8b5bf5aba254.webp",
           "width": 882,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7999,7 +8459,7 @@
           "path": "br/e1822a99c41c.webp",
           "width": 1000,
           "height": 556,
-          "dupeOf": "d8ea372f543e"
+          "dupeOf": "7ab18e123687"
         }
       ],
       "locations": [],
@@ -8027,21 +8487,8 @@
           "src": "https://learnablemeta.com/images/63/00Z4JmGXKR1gZKIJjVe6XtwbazeVvFjWW1qB.avif",
           "path": "br/34dadb185175.webp",
           "width": 1000,
-          "height": 545
-        },
-        {
-          "id": "e60780ed90a8",
-          "src": "https://learnablemeta.com/images/63/94sW3pDrnrTtc65QpSxyubmveEpLXWS0GEbq.avif",
-          "path": "br/e60780ed90a8.webp",
-          "width": 967,
-          "height": 1000
-        },
-        {
-          "id": "900828046c88",
-          "src": "https://learnablemeta.com/images/63/ZLeDHP3rnAaiYpiO158Uzeq1Je23wTOTLR8f.avif",
-          "path": "br/900828046c88.webp",
-          "width": 1000,
-          "height": 871
+          "height": 545,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8149,25 +8596,12 @@
       "tags": [],
       "images": [
         {
-          "id": "7abc525306be",
-          "src": "https://learnablemeta.com/images/63/WYxDnLVS9W2Wyb5FdgNXUEF3aGhiNhGtTJHs.avif",
-          "path": "br/7abc525306be.webp",
-          "width": 1000,
-          "height": 662
-        },
-        {
-          "id": "7b1e3ee92f69",
-          "src": "https://learnablemeta.com/images/63/t4XzdvBfUkvJI4FlkgE8pTM3bL9l5mEfjkkM.avif",
-          "path": "br/7b1e3ee92f69.webp",
-          "width": 997,
-          "height": 1000
-        },
-        {
           "id": "0b2a017e281a",
           "src": "https://learnablemeta.com/images/63/xPN5lbLBjgpyLmuBoWpVrIHjBmo8eCfiMNi7.avif",
           "path": "br/0b2a017e281a.webp",
           "width": 1000,
-          "height": 525
+          "height": 525,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8277,25 +8711,12 @@
       "tags": [],
       "images": [
         {
-          "id": "61c0a58b6145",
-          "src": "https://learnablemeta.com/images/63/BPpwoYIWJgEv0SFMCyBGjJO29YOzfn0FUxfs.avif",
-          "path": "br/61c0a58b6145.webp",
-          "width": 879,
-          "height": 1000
-        },
-        {
-          "id": "f0d00c580b34",
-          "src": "https://learnablemeta.com/images/63/D0XYbusEUW1wIyDtaPlrsoUe0GTSKZHtJ2DY.avif",
-          "path": "br/f0d00c580b34.webp",
-          "width": 1000,
-          "height": 945
-        },
-        {
           "id": "f1a07fb75077",
           "src": "https://learnablemeta.com/images/63/aChEQOvTMh0OS3ULjZCo6b0dfCnDT7azHabJ.avif",
           "path": "br/f1a07fb75077.webp",
           "width": 1000,
-          "height": 521
+          "height": 521,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8366,21 +8787,8 @@
           "src": "https://learnablemeta.com/images/63/8feNDKSRPJ4zkhDDVVkea6mkkBl8uxmQ2GCd.avif",
           "path": "br/3276f4ff1507.webp",
           "width": 1000,
-          "height": 581
-        },
-        {
-          "id": "361a75695b77",
-          "src": "https://learnablemeta.com/images/63/lPRbP3pooiXI8JemQcj7jFNK0UpJMcJeln68.avif",
-          "path": "br/361a75695b77.webp",
-          "width": 1000,
-          "height": 987
-        },
-        {
-          "id": "da93b4fd4003",
-          "src": "https://learnablemeta.com/images/63/sNlvH8dEssVtlKJjmKAIgocxbpTcaKfatbIb.avif",
-          "path": "br/da93b4fd4003.webp",
-          "width": 968,
-          "height": 1000
+          "height": 581,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8446,28 +8854,12 @@
       "tags": [],
       "images": [
         {
-          "id": "f51e1b71e44c",
-          "src": "https://learnablemeta.com/images/63/FYEBajErN9YA0Nv7yFejQNLlz6LS2oJvN5Cl.avif",
-          "giveaway": true,
-          "path": "br/f51e1b71e44c.webp",
-          "width": 854,
-          "height": 1000
-        },
-        {
-          "id": "5b9ffa39c283",
-          "src": "https://learnablemeta.com/images/63/o3ywMctj2IO7mYJFOCdGRg82Dm9sZsZ308O3.avif",
-          "giveaway": true,
-          "path": "br/5b9ffa39c283.webp",
-          "width": 1000,
-          "height": 546
-        },
-        {
           "id": "e029275c205f",
           "src": "https://learnablemeta.com/images/63/r8toX17w9an2xGBd1fjGacyybOYlT5rBAZuE.avif",
-          "giveaway": true,
           "path": "br/e029275c205f.webp",
           "width": 1000,
-          "height": 548
+          "height": 548,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8747,7 +9139,8 @@
           "src": "https://learnablemeta.com/images/63/TfsC3Ujkmdd4iPDkCFjWGPkHTG5ThQGHS9Xl.avif",
           "path": "br/058bf36c11f4.webp",
           "width": 1000,
-          "height": 678
+          "height": 678,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -8771,25 +9164,12 @@
       "tags": [],
       "images": [
         {
-          "id": "d4756cbf930f",
-          "src": "https://learnablemeta.com/images/63/81Wxw4uY70OIbgQj8wvHhQcR8tBp5rWzxKRE.avif",
-          "path": "br/d4756cbf930f.webp",
-          "width": 1000,
-          "height": 983
-        },
-        {
           "id": "459ce55bae2a",
           "src": "https://learnablemeta.com/images/63/9e2VEApV0W1ApPsAYG2kMjerJuFiFaFB0BYB.avif",
           "path": "br/459ce55bae2a.webp",
           "width": 1000,
-          "height": 537
-        },
-        {
-          "id": "dc78ca0222fc",
-          "src": "https://learnablemeta.com/images/63/TP8dGC127THuPYHCxZMl4ji0ChZaYchXhhL4.avif",
-          "path": "br/dc78ca0222fc.webp",
-          "width": 1000,
-          "height": 970
+          "height": 537,
+          "role": "example"
         }
       ],
       "locations": [],

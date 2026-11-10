@@ -45,7 +45,8 @@
           },
           "path": "gh/0f5655ff015b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -94,7 +95,8 @@
           },
           "path": "gh/dc1d98f925b9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -133,7 +135,9 @@
           "src": "https://www.plonkit.net/images/ghana/Ghana_License_Plate.png",
           "path": "gh/6566717b7f13.webp",
           "width": 600,
-          "height": 525
+          "height": 525,
+          "role": "comparison",
+          "caption": "Ghanaian plates: standard white and yellow commercial"
         }
       ],
       "locations": [],
@@ -272,14 +276,16 @@
           },
           "path": "gh/190dfcfadafd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "6b60a8d97d6e",
           "src": "https://learnablemeta.com/images/502/wCgELUWbOofCCMMUVsMwSAQPBKqVbIMV79Vg.avif",
           "path": "gh/6b60a8d97d6e.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example"
         },
         {
           "id": "cf7b173f0fff",
@@ -337,14 +343,16 @@
           },
           "path": "gh/b588b2f217cd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "daad29ea4cf3",
           "src": "https://learnablemeta.com/images/662/k6smzqsU9qlKOvb9Mm0jBrAJaQZd2kiFY9tD.avif",
           "path": "gh/daad29ea4cf3.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example"
         },
         {
           "id": "f88fba971efd",
@@ -453,14 +461,16 @@
           },
           "path": "gh/036431d2dc1d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "e42d2dec4c51",
           "src": "https://learnablemeta.com/images/662/o7CjnjmPZ1x81xQne82S4wCaQ9yF9cMeOgCc.avif",
           "path": "gh/e42d2dec4c51.webp",
           "width": 1000,
-          "height": 560
+          "height": 560,
+          "role": "example"
         }
       ],
       "locations": [
@@ -494,15 +504,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "9e5bdd737b97",
-          "src": "https://www.plonkit.net/images/ghana/GhanaAllCov.jpg",
-          "path": "gh/9e5bdd737b97.webp",
-          "width": 800,
-          "height": 800
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -530,8 +532,7 @@
           "src": "https://www.plonkit.net/images/ghana/GhanaGen4.jpg",
           "path": "gh/926640356697.webp",
           "width": 800,
-          "height": 800,
-          "dupeOf": "9e5bdd737b97"
+          "height": 800
         }
       ],
       "locations": [],
@@ -592,7 +593,10 @@
           "src": "https://www.plonkit.net/images/ghana/The_Tape_Lore.png",
           "path": "gh/ba3447384106.webp",
           "width": 800,
-          "height": 492
+          "height": 492,
+          "role": "comparison",
+          "caption": "Three kinds of front tape on the antenna base, each with a map of where it occurs",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -908,7 +912,15 @@
           },
           "path": "gh/c9bdbc272251.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -956,7 +968,15 @@
           },
           "path": "gh/2b61d5928d9a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1154,7 +1174,15 @@
           },
           "path": "gh/afa1284ccd36.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1295,7 +1323,15 @@
           },
           "path": "gh/42a4233048e9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1343,7 +1379,16 @@
           },
           "path": "gh/88d9071c552b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle and arrow point to the black right mirror showing in the blur on a red dirt track",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [

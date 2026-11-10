@@ -38,14 +38,23 @@
           "src": "https://www.plonkit.net/images/malaysia/Malaysia_License_Plate.png",
           "path": "my/1b6530cb1f68.webp",
           "width": 600,
-          "height": 299
+          "height": 299,
+          "role": "example"
         },
         {
           "id": "a46693014fcf",
           "src": "https://learnablemeta.com/images/311/esv3J2h6G4jwFptKiNMvVSkPLX1D1BrtNI1w.avif",
           "path": "my/a46693014fcf.webp",
           "width": 1000,
-          "height": 416
+          "height": 416,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.5,
+            "y": 0.22,
+            "w": 0.5,
+            "h": 0.78
+          }
         },
         {
           "id": "ed68a8c48c0b",
@@ -96,7 +105,8 @@
           },
           "path": "my/2611692faa46.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "487235e556d8",
@@ -231,14 +241,16 @@
           },
           "path": "my/6c354f727b4b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d80c318895cf",
           "src": "https://learnablemeta.com/images/681/WawJg0MVoFztQS8cyKUHGMKwY8MjqPHvKPez.avif",
           "path": "my/d80c318895cf.webp",
           "width": 1000,
-          "height": 546
+          "height": 546,
+          "role": "example"
         }
       ],
       "locations": [
@@ -286,21 +298,24 @@
           },
           "path": "my/d3daf5a2bb98.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "2427565b134f",
           "src": "https://learnablemeta.com/images/310/zcAy230lwDQdWMVbdogSPmYe2XCCKYDKQzwz.avif",
           "path": "my/2427565b134f.webp",
           "width": 930,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         },
         {
           "id": "11c2b50c137e",
           "src": "https://learnablemeta.com/images/681/5M3cCexA18rvDacfOtRICFtOMlmyE3lRFu8n.avif",
           "path": "my/11c2b50c137e.webp",
           "width": 1000,
-          "height": 518
+          "height": 518,
+          "role": "example"
         }
       ],
       "locations": [
@@ -350,14 +365,16 @@
           },
           "path": "my/765b6d6dc7e5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "be3e35bd8d4a",
           "src": "https://learnablemeta.com/images/681/6hMrvh7NfpsH3w19lUa8vPjv6pEzBcOc0lJE.avif",
           "path": "my/be3e35bd8d4a.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "role": "example"
         },
         {
           "id": "edeb51003cb1",
@@ -413,7 +430,8 @@
           },
           "path": "my/66b17da8c5a6.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "67e0d2eba863",
@@ -514,7 +532,9 @@
           "src": "https://www.plonkit.net/images/malaysia/my_language.png",
           "path": "my/255bd7bd125a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Malay text sample in Latin script"
         }
       ],
       "locations": [],
@@ -611,7 +631,8 @@
           },
           "path": "my/8f0f38766a34.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "e72fca5de943",
@@ -714,35 +735,8 @@
         "NOTE: Sabah also has A roads, but only the A2 and A7."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "6f28f6bc85e6",
-          "src": "https://www.plonkit.net/images/malaysia/my_roads.png",
-          "location": {
-            "pano": "fp67Bt3b5aZYgidMruCPng",
-            "lat": 5.4063534,
-            "lng": 100.4899332,
-            "heading": 187.26,
-            "pitch": 3.4,
-            "fov": 34.4,
-            "source": "plonkit"
-          },
-          "path": "my/6f28f6bc85e6.webp",
-          "width": 800,
-          "height": 298
-        }
-      ],
-      "locations": [
-        {
-          "pano": "fp67Bt3b5aZYgidMruCPng",
-          "lat": 5.4063534,
-          "lng": 100.4899332,
-          "heading": 187.26,
-          "pitch": 3.4,
-          "fov": 34.4,
-          "source": "plonkit"
-        }
-      ],
+      "images": [],
+      "locations": [],
       "lookalikes": [],
       "credit": {
         "source": "Plonk It",
@@ -790,15 +784,7 @@
         "Malaysian postal codes are useful to know, since they can be found on most street signs in the country. "
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "89493c026885",
-          "src": "https://www.plonkit.net/images/malaysia/malaysia_postal_codes_new.png",
-          "path": "my/89493c026885.webp",
-          "width": 800,
-          "height": 481
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -836,7 +822,15 @@
           },
           "path": "my/76e26a9abb6c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.44,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -934,7 +928,15 @@
           },
           "path": "my/2c4e847d69c3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1078,14 +1080,23 @@
           },
           "path": "my/da61c92e9f96.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         },
         {
           "id": "369d8ef3b86b",
           "src": "https://learnablemeta.com/images/vQRpUOxPqf1HwoD7cDvPtWVZwe7V8ZgbwqOn.avif",
           "path": "my/369d8ef3b86b.webp",
           "width": 1000,
-          "height": 846
+          "height": 846,
+          "role": "example"
         },
         {
           "id": "79ca25c22c17",
@@ -1149,14 +1160,30 @@
           },
           "path": "my/e7d81fb960ac.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.52,
+            "h": 1
+          }
         },
         {
           "id": "f64383490d59",
           "src": "https://learnablemeta.com/images/1/DomJ52GIx3NHkH1jgbc6wGfeecenMtysZ7ZG.avif",
           "path": "my/f64383490d59.webp",
           "width": 1000,
-          "height": 518
+          "height": 518,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.52,
+            "h": 1
+          }
         },
         {
           "id": "dfbacf8de218",
@@ -1408,14 +1435,23 @@
           },
           "path": "my/61a3f8da2f7e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "cd8baccbab25",
           "src": "https://learnablemeta.com/images/Mv0na4pbQBth8oZ00eqZHC2Gykohb8jQIQn3.avif",
           "path": "my/cd8baccbab25.webp",
           "width": 1000,
-          "height": 504
+          "height": 504,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1464,7 +1500,15 @@
           },
           "path": "my/824b824c651c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.77,
+            "h": 0.58
+          }
         }
       ],
       "locations": [
@@ -1513,7 +1557,15 @@
           },
           "path": "my/8a89b14eda41.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1655,7 +1707,16 @@
           },
           "path": "my/520ecb727086.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A grey car blur on a forest road with a long thin antenna at the front",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 0.74
+          }
         }
       ],
       "locations": [

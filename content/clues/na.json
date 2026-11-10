@@ -36,7 +36,9 @@
           "src": "https://www.plonkit.net/images/namibia/0.png",
           "path": "na/6ab8042b89ed.webp",
           "width": 600,
-          "height": 161
+          "height": 161,
+          "role": "comparison",
+          "caption": "Namibian plates: regular yellow and vanity white"
         }
       ],
       "locations": [],
@@ -79,7 +81,9 @@
           },
           "path": "na/a45b083b2779.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "White pickup seen from above on a two-lane road; the warning icon at top left shows two-way traffic"
         }
       ],
       "locations": [
@@ -127,7 +131,9 @@
           },
           "path": "na/292f77c6661c.webp",
           "width": 600,
-          "height": 235
+          "height": 235,
+          "role": "annotated",
+          "caption": "Red circle marks the short antenna leaning left on the white pickup"
         }
       ],
       "locations": [
@@ -183,7 +189,8 @@
           },
           "path": "na/f1353eb1a81a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -225,7 +232,8 @@
           "src": "https://www.plonkit.net/images/namibia/5.png",
           "path": "na/c341e91bc818.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -319,21 +327,24 @@
           },
           "path": "na/1104e191a1ed.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "883e6f6fa561",
           "src": "https://learnablemeta.com/images/739/wSb4tTxp2ToB2u9i7uE3UZZ4ykKXjfVU6Ku4kLwmBWVGZyEC.avif",
           "path": "na/883e6f6fa561.webp",
           "width": 673,
-          "height": 444
+          "height": 444,
+          "role": "example"
         },
         {
           "id": "18236dfe7778",
           "src": "https://learnablemeta.com/images/739/1749130442985-h8d.avif",
           "path": "na/18236dfe7778.webp",
           "width": 555,
-          "height": 401
+          "height": 401,
+          "role": "example"
         }
       ],
       "locations": [
@@ -413,15 +424,7 @@
         "The coverage in Namibia is mostly limited to main roads, with only sparse coverage on minor roads."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "d78192adef6d",
-          "src": "https://www.plonkit.net/images/namibia/10.png",
-          "path": "na/d78192adef6d.webp",
-          "width": 800,
-          "height": 800
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -446,15 +449,7 @@
         "NOTE: The blurred car strongly correlates with a 2024 copyright. Use with caution."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "99683ad44ec8",
-          "src": "https://www.plonkit.net/images/namibia/12A.png",
-          "path": "na/99683ad44ec8.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -476,15 +471,7 @@
         "Three-digit road numbers (e.g. [D203](https://maps.app.goo.gl/HJnq9L8fJT87JCJB6)) are found in the far south. As you move further north, you will encounter four-digit numbers beginning with 1, 2 and finally 3."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "e392864aff28",
-          "src": "https://www.plonkit.net/images/namibia/Namibia_D-Roads_Infographic.png",
-          "path": "na/e392864aff28.webp",
-          "width": 800,
-          "height": 800
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -760,7 +747,15 @@
           },
           "path": "na/bc3513093a0d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1467,7 +1462,15 @@
           },
           "path": "na/82bf6ff0581c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2133,7 +2136,16 @@
           },
           "path": "na/ab9b41258333.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "White bollard circled in red at the left edge of a sandy gravel road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2700,7 +2712,15 @@
           },
           "path": "na/3341232b6437.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3722,7 +3742,8 @@
           "src": "https://learnablemeta.com/images/1955/1751805677804-STz.avif",
           "path": "na/99ba342c5977.webp",
           "width": 363,
-          "height": 217
+          "height": 217,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -3805,7 +3826,8 @@
           "src": "https://learnablemeta.com/images/1955/1751805639097-1CR.avif",
           "path": "na/cf0233b1989f.webp",
           "width": 800,
-          "height": 462
+          "height": 462,
+          "role": "example"
         }
       ],
       "locations": [],

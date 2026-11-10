@@ -46,7 +46,8 @@
           },
           "path": "ls/d08bc43585ba.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -164,7 +165,9 @@
           "src": "https://www.plonkit.net/images/lesotho/Lesotho_License_Plate.png",
           "path": "ls/d52a7ef4e705.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -255,7 +258,8 @@
           },
           "path": "ls/c71fe6878ed8.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "0eb3cf3e8138",
@@ -600,15 +604,7 @@
         "Coverage in Lesotho is **very sparse**, particularly in the southeastern half, where it’s mostly limited to yellow roads. All urban coverage is found in the northwest."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "a24a0b238903",
-          "src": "https://www.plonkit.net/images/lesotho/ls_coverage.png",
-          "path": "ls/a24a0b238903.webp",
-          "width": 800,
-          "height": 800
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -893,7 +889,16 @@
           },
           "path": "ls/1d845cfa7b59.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Dirt road in the hills; the red circle at top left magnifies a white pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "42c06e7c0115",

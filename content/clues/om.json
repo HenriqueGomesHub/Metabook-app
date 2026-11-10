@@ -101,7 +101,8 @@
           },
           "path": "om/ccd97b05b499.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -139,14 +140,18 @@
           "src": "https://www.plonkit.net/images/oman/3.png",
           "path": "om/8ac32944f2d2.webp",
           "width": 600,
-          "height": 133
+          "height": 133,
+          "role": "comparison",
+          "caption": "Omani plates: yellow private and red non-private"
         },
         {
           "id": "89296e6bcf21",
           "src": "https://learnablemeta.com/images/665/jzQ3CIQmuB89gmHSFxEncKqZQxy3Col0K71u.avif",
           "path": "om/89296e6bcf21.webp",
           "width": 1000,
-          "height": 219
+          "height": 219,
+          "role": "comparison",
+          "caption": "Omani plates: yellow private and red non-private"
         }
       ],
       "locations": [],
@@ -183,7 +188,8 @@
           },
           "path": "om/499419cf05d1.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -222,7 +228,9 @@
           "src": "https://www.plonkit.net/images/oman/5.png",
           "path": "om/a1f6ede3490e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Arabic text sample"
         }
       ],
       "locations": [],
@@ -265,7 +273,8 @@
           },
           "path": "om/ee7750aeaaea.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "de73bc257a22",
@@ -447,7 +456,8 @@
           },
           "path": "om/8129b77f9a1c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -503,7 +513,8 @@
           },
           "path": "om/4f97d5e1928b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ae5095041611",
@@ -565,7 +576,8 @@
           },
           "path": "om/21f88464041c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -626,7 +638,8 @@
           },
           "path": "om/afd1dc1e3edc.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "543a9d68b266",
@@ -1782,7 +1795,16 @@
           },
           "path": "om/f2cbdee7ba0c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circles mark white-and-red chevron stickers on a grey rubbish bin",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.84,
+            "h": 0.6
+          }
         }
       ],
       "locations": [
@@ -1877,7 +1899,15 @@
           },
           "path": "om/0525959452ca.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1925,7 +1955,15 @@
           },
           "path": "om/1d6993d8680e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2113,7 +2151,15 @@
           },
           "path": "om/2ecd673a6b16.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2404,7 +2450,15 @@
           },
           "path": "om/d50ac59d74dd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2780,7 +2834,15 @@
           },
           "path": "om/42803be3c5b0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3109,7 +3171,16 @@
           },
           "path": "om/bace0bf369a0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Two views of an overcast desert road split by a red line; the blue 42 label is the road number",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3205,7 +3276,15 @@
           },
           "path": "om/e95fde5b2a68.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [

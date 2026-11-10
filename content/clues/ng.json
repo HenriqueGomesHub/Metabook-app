@@ -44,7 +44,8 @@
           },
           "path": "ng/30692d93c72e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ecc9134d3ab4",
@@ -99,7 +100,8 @@
           },
           "path": "ng/31338361e77e.webp",
           "width": 600,
-          "height": 264
+          "height": 264,
+          "role": "example"
         }
       ],
       "locations": [
@@ -137,7 +139,15 @@
           "src": "https://www.plonkit.net/images/nigeria/0HpTmNo.png",
           "path": "ng/07831e8679f3.webp",
           "width": 600,
-          "height": 149
+          "height": 149,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 0.8
+          }
         },
         {
           "id": "02495b2f3b41",
@@ -184,7 +194,8 @@
           },
           "path": "ng/c7a094248424.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "fee3fadaa67e",
@@ -255,7 +266,8 @@
           },
           "path": "ng/dd661240e7f3.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -415,7 +427,8 @@
           },
           "path": "ng/ba91ce5c6242.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -511,16 +524,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "9e4823d8db56",
-          "src": "https://www.plonkit.net/images/nigeria/ng_coveragemap.png",
-          "giveaway": true,
-          "path": "ng/9e4823d8db56.webp",
-          "width": 600,
-          "height": 467
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -541,15 +545,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "d6496d074381",
-          "src": "https://www.plonkit.net/images/nigeria/Nigeria%20gen%203.png",
-          "path": "ng/d6496d074381.webp",
-          "width": 600,
-          "height": 478
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -576,8 +572,7 @@
           "src": "https://www.plonkit.net/images/nigeria/kQMqK8d.png",
           "path": "ng/d3d29522936b.webp",
           "width": 600,
-          "height": 478,
-          "dupeOf": "d6496d074381"
+          "height": 478
         }
       ],
       "locations": [],
@@ -1145,7 +1140,15 @@
           },
           "path": "ng/7f7b1c4febb7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1335,7 +1338,9 @@
           "giveaway": true,
           "path": "ng/5f57adadabd9.webp",
           "width": 600,
-          "height": 360
+          "height": 360,
+          "role": "comparison",
+          "caption": "Five different follow cars on a map, outlined by area where each appears"
         },
         {
           "id": "2c047f97aa9b",

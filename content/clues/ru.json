@@ -38,7 +38,8 @@
           "src": "https://www.plonkit.net/images/russia/licenceplate.png",
           "path": "ru/58a309226594.webp",
           "width": 600,
-          "height": 263
+          "height": 263,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -70,7 +71,9 @@
           "src": "https://www.plonkit.net/images/russia/cyrillic.png",
           "path": "ru/3c89a629c236.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example",
+          "caption": "Russian text with the letters Ы Э Ё Ъ shown large"
         }
       ],
       "locations": [],
@@ -119,7 +122,9 @@
           },
           "path": "ru/549876786ec1.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Street sign reading улица КРАСНОАРМЕЙСКАЯ, with a red circle enlarging the word улица"
         }
       ],
       "locations": [
@@ -175,7 +180,9 @@
           },
           "path": "ru/fa7e8c0ea56a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Yellow shop sign reading МО г. КРАСНОДАР, with a circle enlarging the г. abbreviation for city"
         }
       ],
       "locations": [
@@ -230,7 +237,8 @@
           },
           "path": "ru/bcaa8632d544.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "46dc3eef3313",
@@ -295,7 +303,8 @@
           },
           "path": "ru/cde5ce760e4c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ce58d9f2bbf8",
@@ -353,7 +362,8 @@
           },
           "path": "ru/5842946f1252.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -404,14 +414,16 @@
           },
           "path": "ru/1536dce06620.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "6f41d279a57f",
           "src": "https://learnablemeta.com/images/vWjrvxAvCFPRfqdPZH2oER664J1c41jCtTMG.avif",
           "path": "ru/6f41d279a57f.webp",
           "width": 357,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         },
         {
           "id": "bfcec2c316a7",
@@ -474,7 +486,9 @@
           },
           "path": "ru/4326b0a1b80e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A square concrete pole in the sky; the red circle zooms in on it, left"
         }
       ],
       "locations": [
@@ -539,7 +553,8 @@
           },
           "path": "ru/c369809d10b5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -589,7 +604,9 @@
           },
           "path": "ru/a40b5da42d3d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Car blurs labelled black car long antenna, white car long antenna and short antenna"
         },
         {
           "id": "64d8724f9d68",
@@ -646,7 +663,8 @@
           },
           "path": "ru/503b96d52545.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "b261408cd8ab",
@@ -716,7 +734,8 @@
           },
           "path": "ru/4bd681fd808d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -770,7 +789,8 @@
           },
           "path": "ru/9d39c645e70a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1021,7 +1041,8 @@
           },
           "path": "ru/e8bb15a3f260.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "84f44a44a574",
@@ -1991,7 +2012,15 @@
           },
           "path": "ru/da8a552561ae.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2089,7 +2118,15 @@
           },
           "path": "ru/749c07501a3b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2189,7 +2226,15 @@
           },
           "path": "ru/6a0721579a34.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2240,7 +2285,15 @@
           },
           "path": "ru/c370d9b588fe.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2727,15 +2780,7 @@
         "In Generation 3 coverage you will somewhat commonly find unblurred licence plates, featuring a **regional code** on the right side. The codes are generally ordered alphabetically within each [type of federal subject](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia#Types), starting at republics and ending with autonomous okrugs. Therefore, the [Republic of Adygea](https://maps.app.goo.gl/PhX9zVnMQfBCvHQi7) will be represented by 01, and the [Amur Oblast](https://maps.app.goo.gl/AXNwmSJ1vio1pRCo7) by 28, both being the first alphabetical subjects of republics and oblasts respectively. If you encounter a [three digit code](https://maps.app.goo.gl/BiQGFQEG51Xxc7fc7), the second and third digit will form the regional code, in this case 123 becomes 23, for Krasnodar Krai. You may also find the codes written out on the back of [trucks](https://maps.app.goo.gl/NVQNyKpSUXZ3i4LG6) and [vans](https://www.google.com/maps/@56.6511783,66.3012014,3a,15y,5.71h,78.8t/data=!3m6!1e1!3m4!1s8nSDptPKXAhrtGZE6nzskg!2e0!7i13312!8i6656?entry=ttu)."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "69aefb5f7166",
-          "src": "https://www.plonkit.net/images/russia/ru_licenceplatecodes.png",
-          "path": "ru/69aefb5f7166.webp",
-          "width": 800,
-          "height": 629
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -2801,7 +2846,15 @@
           },
           "path": "ru/dfb56eccf491.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2851,14 +2904,23 @@
           },
           "path": "ru/721ee2e3db06.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "c2edea7d8d9b",
           "src": "https://learnablemeta.com/images/WTgIECCm55jGixicNpSqGaSfnnMWhSRKVPTz.avif",
           "path": "ru/c2edea7d8d9b.webp",
           "width": 815,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [
@@ -2909,7 +2971,15 @@
           },
           "path": "ru/a4da93b108dd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2960,7 +3030,15 @@
           },
           "path": "ru/f8019395c4e7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3010,7 +3088,15 @@
           },
           "path": "ru/152ef5dafc9c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3059,7 +3145,15 @@
           },
           "path": "ru/9da847385068.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3109,7 +3203,15 @@
           },
           "path": "ru/5f23a368c39a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3159,7 +3261,15 @@
           },
           "path": "ru/c4d6a67a84a0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3210,7 +3320,15 @@
           },
           "path": "ru/be2af74406d4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3448,16 +3566,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "4980c03e4bd4",
-          "src": "https://www.plonkit.net/images/russia/ru_coverage1.png",
-          "giveaway": true,
-          "path": "ru/4980c03e4bd4.webp",
-          "width": 800,
-          "height": 353
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -3487,8 +3596,7 @@
           "src": "https://www.plonkit.net/images/russia/ru_whitecar.png",
           "path": "ru/e149bb3d8af1.webp",
           "width": 800,
-          "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "height": 353
         }
       ],
       "locations": [],
@@ -3519,7 +3627,7 @@
           "path": "ru/3c75a9e4324a.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -3549,8 +3657,7 @@
           "src": "https://www.plonkit.net/images/russia/3.png",
           "path": "ru/3aab4fb3e230.webp",
           "width": 800,
-          "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "height": 353
         }
       ],
       "locations": [],
@@ -3581,7 +3688,7 @@
           "path": "ru/0f144eb29365.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "3aab4fb3e230"
         }
       ],
       "locations": [],
@@ -3612,7 +3719,7 @@
           "path": "ru/33f73ebc9575.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -3643,7 +3750,7 @@
           "path": "ru/63f16c5461bb.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "3aab4fb3e230"
         }
       ],
       "locations": [],
@@ -3667,15 +3774,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "d5d4d7bc61f5",
-          "src": "https://www.plonkit.net/images/russia/7.png",
-          "path": "ru/d5d4d7bc61f5.webp",
-          "width": 800,
-          "height": 353
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -3705,7 +3804,7 @@
           "path": "ru/b7b673f9460e.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "d5d4d7bc61f5"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -3736,8 +3835,7 @@
           "src": "https://www.plonkit.net/images/russia/9.png",
           "path": "ru/da60b7bd2b00.webp",
           "width": 800,
-          "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "height": 353
         }
       ],
       "locations": [],
@@ -3768,7 +3866,7 @@
           "path": "ru/9c4d35b996b8.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "d5d4d7bc61f5"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -3808,7 +3906,15 @@
           },
           "path": "ru/0936484581a6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3857,7 +3963,15 @@
           },
           "path": "ru/854e63c8916e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3907,7 +4021,15 @@
           },
           "path": "ru/5f34c0f5aa59.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3941,15 +4063,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "8f45e57d5747",
-          "src": "https://www.plonkit.net/images/russia/Gen_4_proportion_lines_3.png",
-          "path": "ru/8f45e57d5747.webp",
-          "width": 800,
-          "height": 353
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -3979,7 +4093,7 @@
           "path": "ru/92338c7df0d3.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -4010,7 +4124,7 @@
           "path": "ru/c53750510d74.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -4040,8 +4154,7 @@
           "src": "https://www.plonkit.net/images/russia/16.png",
           "path": "ru/a6334caeaac7.webp",
           "width": 800,
-          "height": 353,
-          "dupeOf": "8f45e57d5747"
+          "height": 353
         }
       ],
       "locations": [],
@@ -4073,7 +4186,7 @@
           "path": "ru/9c6706d502af.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -4098,15 +4211,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "d76ad501c63e",
-          "src": "https://www.plonkit.net/images/russia/18.png",
-          "path": "ru/d76ad501c63e.webp",
-          "width": 800,
-          "height": 353
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -4128,15 +4233,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "b98c806bb3c6",
-          "src": "https://www.plonkit.net/images/russia/19.png",
-          "path": "ru/b98c806bb3c6.webp",
-          "width": 800,
-          "height": 353
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -4165,7 +4262,7 @@
           "path": "ru/1d8226c93671.webp",
           "width": 800,
           "height": 353,
-          "dupeOf": "4980c03e4bd4"
+          "dupeOf": "e149bb3d8af1"
         }
       ],
       "locations": [],
@@ -4202,7 +4299,15 @@
           },
           "path": "ru/6926bbd91270.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4250,7 +4355,15 @@
           },
           "path": "ru/a1e347577644.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4391,7 +4504,15 @@
           },
           "path": "ru/1b3092904dea.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4438,7 +4559,15 @@
           },
           "path": "ru/e5fffe6791ab.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4485,7 +4614,15 @@
           },
           "path": "ru/ff6959065c3f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4626,7 +4763,15 @@
           },
           "path": "ru/a2773ba05857.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.55,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4720,7 +4865,15 @@
           },
           "path": "ru/3f92bd38fd16.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4768,7 +4921,15 @@
           },
           "path": "ru/64fa00789cb3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4816,7 +4977,15 @@
           },
           "path": "ru/d15165cc711b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "9d9978eed952",
@@ -4872,14 +5041,23 @@
           },
           "path": "ru/946704b83424.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         },
         {
           "id": "0f9db9956042",
           "src": "https://learnablemeta.com/images/4588/1777499952437-E31.avif",
           "path": "ru/0f9db9956042.webp",
           "width": 496,
-          "height": 530
+          "height": 530,
+          "role": "example"
         }
       ],
       "locations": [
@@ -4927,7 +5105,15 @@
           },
           "path": "ru/c03cffb888ec.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4975,7 +5161,15 @@
           },
           "path": "ru/07f5aafad37e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5023,7 +5217,15 @@
           },
           "path": "ru/1d3f3f46fef4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5071,14 +5273,23 @@
           },
           "path": "ru/294014e7b9f8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "1164b3bef849",
           "src": "https://learnablemeta.com/images/4588/1777500066388-KXR.avif",
           "path": "ru/1164b3bef849.webp",
           "width": 800,
-          "height": 485
+          "height": 485,
+          "role": "example"
         }
       ],
       "locations": [
@@ -5126,7 +5337,15 @@
           },
           "path": "ru/4222cc18ad9a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.55
+          }
         }
       ],
       "locations": [
@@ -5175,7 +5394,15 @@
           },
           "path": "ru/c48474176fe4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5224,7 +5451,15 @@
           },
           "path": "ru/1ae6f189c0fa.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5273,7 +5508,16 @@
           },
           "path": "ru/cf550313dfa3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Pole in a field; the red circle zooms in on yellow plates on a metal band",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.52
+          }
         }
       ],
       "locations": [
@@ -5320,7 +5564,16 @@
           },
           "path": "ru/560d3c23d932.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle zooms in on a roadside pole with two yellow bands",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5416,7 +5669,15 @@
           },
           "path": "ru/a13c905f4967.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5465,7 +5726,16 @@
           },
           "path": "ru/7d9eb0e61efa.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A mesh-framework utility pole on a lawn",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5514,7 +5784,15 @@
           },
           "path": "ru/2a1e723e9bc5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5563,7 +5841,15 @@
           },
           "path": "ru/0af133ed2115.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5612,7 +5898,16 @@
           },
           "path": "ru/d5e9c1f742c1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Thin pole on a roadside; the red circle at top left magnifies another pole with red reflectors",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5661,7 +5956,16 @@
           },
           "path": "ru/205776bd9766.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Pedestrian sign; the red circle zooms in on the U-shaped hook that holds it, top left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5709,7 +6013,15 @@
           },
           "path": "ru/f78bfb7857a8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5757,7 +6069,15 @@
           },
           "path": "ru/a92860d27a55.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5984,7 +6304,9 @@
           "src": "https://learnablemeta.com/images/425/0xo2ogmYmVyQCptmmLEcIcZ1R2GQ9BIDs1fU.avif",
           "path": "ru/469f5f9ae0d0.webp",
           "width": 1000,
-          "height": 544
+          "height": 544,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Kemerovo and Novosibirsk, in Cyrillic"
         }
       ],
       "locations": [],
@@ -6014,7 +6336,9 @@
           "src": "https://learnablemeta.com/images/425/OBdtGxBHrTCyrjxWw4vAizHzj4AHikVoglyq.avif",
           "path": "ru/6e331261d3e4.webp",
           "width": 1000,
-          "height": 657
+          "height": 657,
+          "role": "example",
+          "caption": "Blue direction sign listing Achit, Perm and Yekaterinburg in Cyrillic with distances"
         }
       ],
       "locations": [],
@@ -6044,7 +6368,9 @@
           "src": "https://learnablemeta.com/images/425/jLppyCMLYfqnayavFQf50ZbtwVllr5F28WZG.avif",
           "path": "ru/4314fa1dc8ad.webp",
           "width": 1000,
-          "height": 707
+          "height": 707,
+          "role": "example",
+          "caption": "Blue direction sign listing Pulozero, Olenegorsk and Murmansk in Cyrillic with distances"
         }
       ],
       "locations": [],
@@ -6074,7 +6400,9 @@
           "src": "https://learnablemeta.com/images/425/KzdYuw9jDdk6ctzTphumyUJAdsW9FBAUYOdh.avif",
           "path": "ru/9c1bb0356506.webp",
           "width": 1000,
-          "height": 759
+          "height": 759,
+          "role": "example",
+          "caption": "Tall blue and red stele with МАГАДАН written vertically, in Cyrillic"
         }
       ],
       "locations": [],
@@ -6104,7 +6432,9 @@
           "src": "https://learnablemeta.com/images/425/nV5WMadRTuBf1Nx1VohQMoax2pnRk6qAPcd6.avif",
           "path": "ru/e4ee3b993c6f.webp",
           "width": 1000,
-          "height": 590
+          "height": 590,
+          "role": "example",
+          "caption": "Blue direction sign listing Chita, Yakutsk and Magadan with distances, Cyrillic"
         }
       ],
       "locations": [],
@@ -6134,7 +6464,9 @@
           "src": "https://learnablemeta.com/images/425/lTB0DUJnBwyftk3bgFVVOrwd89JAir0WKv7B.avif",
           "path": "ru/928a71724c8a.webp",
           "width": 1000,
-          "height": 658
+          "height": 658,
+          "role": "example",
+          "caption": "Blue direction sign listing Yelets, Oryol, Moscow and Rostov-on-Don, Cyrillic"
         }
       ],
       "locations": [],
@@ -6164,7 +6496,9 @@
           "src": "https://learnablemeta.com/images/425/IROWGLqplKDVJDLpXS0yGptJJpzsuW5VqROc.avif",
           "path": "ru/d02b6b597997.webp",
           "width": 1000,
-          "height": 659
+          "height": 659,
+          "role": "example",
+          "caption": "Blue direction sign listing Volzhsk, Kazan, Zvenigovo and Cheboksary, Cyrillic"
         }
       ],
       "locations": [],
@@ -6194,7 +6528,9 @@
           "src": "https://learnablemeta.com/images/425/rYzUWioSkgRTTXtSot6fpeDH2jHiNAgo5FQJ.avif",
           "path": "ru/7e7eee89ac03.webp",
           "width": 1000,
-          "height": 767
+          "height": 767,
+          "role": "example",
+          "caption": "White direction sign with Moscow and Nizhny Novgorod on blue tabs, Cyrillic"
         }
       ],
       "locations": [],
@@ -6224,7 +6560,9 @@
           "src": "https://learnablemeta.com/images/425/zYSETsTMJ8VROx8RwqoMxleGXZlvH3FsZZS0.avif",
           "path": "ru/967e0b411bf3.webp",
           "width": 1000,
-          "height": 637
+          "height": 637,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Kurgan and Chelyabinsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6254,7 +6592,9 @@
           "src": "https://learnablemeta.com/images/425/BEY5V7q8O6Yzghz1WEpY1K0cTKjPEkDJph68.avif",
           "path": "ru/d055ac5c05ab.webp",
           "width": 1000,
-          "height": 673
+          "height": 673,
+          "role": "example",
+          "caption": "Blue direction sign listing N. Tavda, Velizhany and Tyumen, Cyrillic"
         }
       ],
       "locations": [],
@@ -6284,7 +6624,9 @@
           "src": "https://learnablemeta.com/images/425/nPxnRCMuKORL2w5xMqLraUQUT9D3WrSqeYNU.avif",
           "path": "ru/ffcdef0ce023.webp",
           "width": 1000,
-          "height": 617
+          "height": 617,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Novosibirsk and Omsk with distances, Cyrillic"
         }
       ],
       "locations": [],
@@ -6314,7 +6656,9 @@
           "src": "https://learnablemeta.com/images/425/Dg0ws9FeVJoCeFr8QjeiUlEfUO21VZFOZM8L.avif",
           "path": "ru/a471790121c5.webp",
           "width": 1000,
-          "height": 698
+          "height": 698,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Tomsk and Yurga, Cyrillic"
         }
       ],
       "locations": [],
@@ -6344,7 +6688,9 @@
           "src": "https://learnablemeta.com/images/425/TGNDfiaiBLS5dgog45XNMaNMMZR89NR6aoJA.avif",
           "path": "ru/394a97b9f45a.webp",
           "width": 1000,
-          "height": 640
+          "height": 640,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Surgut and Singapai, Cyrillic"
         }
       ],
       "locations": [],
@@ -6374,7 +6720,9 @@
           "src": "https://learnablemeta.com/images/425/WGQ9XYoctLoCGSpir6Red24tvQUc9cHxXrKg.avif",
           "path": "ru/e29a550b6147.webp",
           "width": 1000,
-          "height": 647
+          "height": 647,
+          "role": "example",
+          "caption": "Blue direction sign pointing to B. Ulyuy and Krasnoyarsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6404,7 +6752,9 @@
           "src": "https://learnablemeta.com/images/425/ZQ00wr6Hmq3LOFudrCVLF01X6X760ook7RWg.avif",
           "path": "ru/08fd112ee46a.webp",
           "width": 1000,
-          "height": 583
+          "height": 583,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Krasnoyarsk and Bratsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6434,7 +6784,9 @@
           "src": "https://learnablemeta.com/images/425/2uxFbXtfTWWoPhvAjgfZugTAj7WCOn7toBHp.avif",
           "path": "ru/6fcf3f843c81.webp",
           "width": 1000,
-          "height": 588
+          "height": 588,
+          "role": "example",
+          "caption": "Beige direction sign pointing to Irkutsk and Ulan-Ude on blue tabs, Cyrillic"
         }
       ],
       "locations": [],
@@ -6464,7 +6816,9 @@
           "src": "https://learnablemeta.com/images/425/PJmVlgA41XrlgvBaNqtaC19e2VwO3mzKAMK8.avif",
           "path": "ru/40e748e91e6c.webp",
           "width": 1000,
-          "height": 857
+          "height": 857,
+          "role": "example",
+          "caption": "White direction sign with Ulan-Ude and Turuntaevo on blue tabs, Cyrillic"
         }
       ],
       "locations": [],
@@ -6494,7 +6848,9 @@
           "src": "https://learnablemeta.com/images/425/qVogkiARL1icdmFqPbIfhNqxjSOUeqoyn4wI.avif",
           "path": "ru/422129093f86.webp",
           "width": 1000,
-          "height": 617
+          "height": 617,
+          "role": "example",
+          "caption": "Dark blue direction sign pointing to Chita and Irkutsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6524,7 +6880,9 @@
           "src": "https://learnablemeta.com/images/425/bMgJymfdvo0nBIjjAVdRCAn9R4ohmsX6FQLH.avif",
           "path": "ru/716a4132b61b.webp",
           "width": 1000,
-          "height": 690
+          "height": 690,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Vladivostok and Ussuriysk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6554,7 +6912,9 @@
           "src": "https://learnablemeta.com/images/425/ZDvOq0IkXI4noMWtzBHCMA75cbqTie5Jfhhf.avif",
           "path": "ru/2b03b2b94dd7.webp",
           "width": 1000,
-          "height": 513
+          "height": 513,
+          "role": "example",
+          "caption": "Blue sign reading УФА 48 with a diagonal arrow, Cyrillic"
         }
       ],
       "locations": [],
@@ -6584,7 +6944,9 @@
           "src": "https://learnablemeta.com/images/425/6uBCANycok7FczgRP3KAxd8kS3Z8BgiQfSDX.avif",
           "path": "ru/cf741b5345b4.webp",
           "width": 1000,
-          "height": 676
+          "height": 676,
+          "role": "example",
+          "caption": "Blue direction sign listing Perm, Krasnokamsk, Nytva, B. Sosnova and Ochyor, Cyrillic"
         }
       ],
       "locations": [],
@@ -6614,7 +6976,9 @@
           "src": "https://learnablemeta.com/images/425/0anIJn9tfVWCxVt2qZRsn8iYIbRslhVFUuuR.avif",
           "path": "ru/a56e0cdd83f0.webp",
           "width": 1000,
-          "height": 562
+          "height": 562,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Mirny and Lensk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6644,7 +7008,9 @@
           "src": "https://learnablemeta.com/images/425/F5FF6CrYKBLaoSr9uh5hePAZRTKeyyrWW5rv.avif",
           "path": "ru/5ccab34a2f38.webp",
           "width": 1000,
-          "height": 583
+          "height": 583,
+          "role": "example",
+          "caption": "Blue sign under a bridge pointing ahead to Volgograd, Cyrillic"
         }
       ],
       "locations": [],
@@ -6674,7 +7040,9 @@
           "src": "https://learnablemeta.com/images/425/PhQ2sLAjdOkylERcCdDggWybxxdFQ6FVSIFe.avif",
           "path": "ru/b32919b98b4b.webp",
           "width": 1000,
-          "height": 699
+          "height": 699,
+          "role": "example",
+          "caption": "Blue direction sign listing Ilinka, Astrakhan and Makhachkala, Cyrillic"
         }
       ],
       "locations": [],
@@ -6704,7 +7072,9 @@
           "src": "https://learnablemeta.com/images/425/uMG6feoxIHg6ZBYzn7ZpHVe50bgK1WP064YE.avif",
           "path": "ru/527513c63028.webp",
           "width": 1000,
-          "height": 660
+          "height": 660,
+          "role": "example",
+          "caption": "Large blue direction sign listing Krasnodar, Kerch, Novorossiysk, Sochi, Rostov-on-Don and Moscow, Cyrillic"
         }
       ],
       "locations": [],
@@ -6734,7 +7104,9 @@
           "src": "https://learnablemeta.com/images/425/XPBWxE0K5zqtPv7GGkP5KKuYjDdMdzT1moW4.avif",
           "path": "ru/5019beb87c0e.webp",
           "width": 1000,
-          "height": 538
+          "height": 538,
+          "role": "example",
+          "caption": "Light blue sign pointing to Moscow and St Petersburg on the M10, Cyrillic"
         }
       ],
       "locations": [],
@@ -6764,7 +7136,9 @@
           "src": "https://learnablemeta.com/images/425/TnoIjk55BiA7TZLl5Ko3BlEVljonL1ObCLMU.avif",
           "path": "ru/f7f6cb630ce5.webp",
           "width": 1000,
-          "height": 689
+          "height": 689,
+          "role": "example",
+          "caption": "White direction sign pointing to Sochi and Dzhubga, with Latin transliterations"
         }
       ],
       "locations": [],
@@ -6794,7 +7168,9 @@
           "src": "https://learnablemeta.com/images/425/8UGZ1Ue1jRnGD4Kulre58hjVxCWs1x8iZ4Iq.avif",
           "path": "ru/ad7533b0f9ff.webp",
           "width": 1000,
-          "height": 533
+          "height": 533,
+          "role": "example",
+          "caption": "Small blue sign pointing right to Kurgan, Cyrillic"
         }
       ],
       "locations": [],
@@ -6824,7 +7200,9 @@
           "src": "https://learnablemeta.com/images/425/DU3vXh5PbUJ9Xcqol4X5fjqaR9xS7rv3JnTj.avif",
           "path": "ru/62d9cd344ede.webp",
           "width": 1000,
-          "height": 564
+          "height": 564,
+          "role": "example",
+          "caption": "Dark blue direction sign pointing to Voronezh and Kursk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6854,7 +7232,9 @@
           "src": "https://learnablemeta.com/images/425/pJk6m3Q0YqzAcJldC4o50ItPcVAjpyKq89jx.avif",
           "path": "ru/f96785bad8f6.webp",
           "width": 1000,
-          "height": 627
+          "height": 627,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Saransk and Ulyanovsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -6884,7 +7264,9 @@
           "src": "https://learnablemeta.com/images/425/DX3wxU6WMPJnDa1amvtVc79fop9BNRh9vo5M.avif",
           "path": "ru/63f3cf282ad7.webp",
           "width": 1000,
-          "height": 653
+          "height": 653,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Moscow and Yaroslavl, Cyrillic"
         }
       ],
       "locations": [],
@@ -6914,7 +7296,9 @@
           "src": "https://learnablemeta.com/images/425/igzZ6xrYX1Oq1nymwgY8zp3rvE1f6pk3Wc3b.avif",
           "path": "ru/352f80aebdec.webp",
           "width": 1000,
-          "height": 702
+          "height": 702,
+          "role": "example",
+          "caption": "Blue direction sign listing Novy Urengoy, Nadym and Korotchaevo, Cyrillic"
         }
       ],
       "locations": [],
@@ -6944,7 +7328,9 @@
           "src": "https://learnablemeta.com/images/425/ZYMYMaZRCsgBsiTx3xKL3MZafNJbr6z7tV3V.avif",
           "path": "ru/eb67fde6f0c1.webp",
           "width": 1000,
-          "height": 867
+          "height": 867,
+          "role": "example",
+          "caption": "Blue direction sign listing Pyatigorsk, Makhachkala, Vladikavkaz and Tbilisi, Cyrillic"
         }
       ],
       "locations": [],
@@ -6974,7 +7360,9 @@
           "src": "https://learnablemeta.com/images/425/g2kKACdFzcGsG375DPyqS6D34IiADC1iViLd.avif",
           "path": "ru/5f2172f07264.webp",
           "width": 1000,
-          "height": 648
+          "height": 648,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Kursk, Dyakonovo and Suzha, Cyrillic"
         }
       ],
       "locations": [],
@@ -7004,7 +7392,9 @@
           "src": "https://learnablemeta.com/images/425/0hYXxI2Ce1PdIATC9r7h1h6h57Go1WlYBXFs.avif",
           "path": "ru/b89c00669b07.webp",
           "width": 1000,
-          "height": 638
+          "height": 638,
+          "role": "example",
+          "caption": "Blue direction sign listing Bugulma, Ufa and Samara with distances, Cyrillic"
         }
       ],
       "locations": [],
@@ -7034,7 +7424,9 @@
           "src": "https://learnablemeta.com/images/425/viHtNPJou5kQ0lqzyaLLCBauL8fnHvBcfc7V.avif",
           "path": "ru/3068ef9c91e2.webp",
           "width": 1000,
-          "height": 551
+          "height": 551,
+          "role": "example",
+          "caption": "Blue direction sign listing Ulyanovsk, Karsun and Inza, Cyrillic"
         }
       ],
       "locations": [],
@@ -7064,7 +7456,9 @@
           "src": "https://learnablemeta.com/images/425/RbeDv67g0zviVvbgGJqMjAVwQ3a923nOAKDK.avif",
           "path": "ru/6a6517ab81ef.webp",
           "width": 1000,
-          "height": 737
+          "height": 737,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Arkhangelsk and Moscow, Cyrillic"
         }
       ],
       "locations": [],
@@ -7094,7 +7488,9 @@
           "src": "https://learnablemeta.com/images/425/HzQXx3TMjmFNjcXMVmvhDlCuFFnTfr6nvUoK.avif",
           "path": "ru/fcaeca84ed3c.webp",
           "width": 1000,
-          "height": 829
+          "height": 829,
+          "role": "example",
+          "caption": "White direction sign listing Tsentr, Shor, Obyachevo, Kirov and Syktyvkar, Cyrillic"
         }
       ],
       "locations": [],
@@ -7124,7 +7520,9 @@
           "src": "https://learnablemeta.com/images/425/a3qOYCOvoFknGBg1Kn0bmQ0PlCzLNzKu7CzQ.avif",
           "path": "ru/ef4c7f724853.webp",
           "width": 1000,
-          "height": 575
+          "height": 575,
+          "role": "example",
+          "caption": "Blue direction sign listing Darovskoy, Kirov and Syktyvkar with distances, Cyrillic"
         }
       ],
       "locations": [],
@@ -7154,7 +7552,9 @@
           "src": "https://learnablemeta.com/images/425/iD8TodGQzIUfwn495Yi4imDSCM6NqanFB7V4.avif",
           "path": "ru/ee741f0ff89c.webp",
           "width": 1000,
-          "height": 723
+          "height": 723,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Ufa and Orenburg, Cyrillic"
         }
       ],
       "locations": [],
@@ -7184,7 +7584,9 @@
           "src": "https://learnablemeta.com/images/425/QzS4V57h7lHGQ8WwPJym4Q6LV5zi5SOOXu4u.avif",
           "path": "ru/0cf2280373cb.webp",
           "width": 1000,
-          "height": 534
+          "height": 534,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Biysk, Kuzedeevo and Novokuznetsk, Cyrillic"
         }
       ],
       "locations": [],
@@ -7214,7 +7616,9 @@
           "src": "https://learnablemeta.com/images/425/zFK091VWbo8tFO4RYneDgQ63lfoVi49kkmgL.avif",
           "path": "ru/fbcaec249d1c.webp",
           "width": 1000,
-          "height": 752
+          "height": 752,
+          "role": "example",
+          "caption": "Blue direction sign listing Krasnoyarsk, Sayanogorsk and Abakan, Cyrillic"
         }
       ],
       "locations": [],
@@ -7244,7 +7648,9 @@
           "src": "https://learnablemeta.com/images/425/4Qc67xctF0alsUNi2wlcdJQ1A7xM98Tpuz1h.avif",
           "path": "ru/0e3b47536757.webp",
           "width": 1000,
-          "height": 453
+          "height": 453,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Khabarovsk and Komsomolsk-on-Amur, Cyrillic"
         }
       ],
       "locations": [],
@@ -7274,7 +7680,9 @@
           "src": "https://learnablemeta.com/images/425/KmSLidLUtuxzhDAZuDDmM5QEquewME3Ri0AM.avif",
           "path": "ru/a0a40ad4e8e2.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "role": "example",
+          "caption": "Blue direction sign pointing to Gnezdovo and Smolensk, Cyrillic"
         }
       ],
       "locations": [],
@@ -7305,7 +7713,8 @@
           "src": "https://learnablemeta.com/images/425/W2Ads6bLwzn7vOgDcs9A7CG1u9DfeMDNmZq5.avif",
           "path": "ru/9942c5ed1c8a.webp",
           "width": 1000,
-          "height": 554
+          "height": 554,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7336,7 +7745,8 @@
           "src": "https://learnablemeta.com/images/425/ukGGNtePQC9T6kqV7Wcq09oJDw2vJ7nFB0EY.avif",
           "path": "ru/c8c501a4cdac.webp",
           "width": 1000,
-          "height": 545
+          "height": 545,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7367,7 +7777,8 @@
           "src": "https://learnablemeta.com/images/425/jbLXLTuD31I3RENvubMQzPz3XyNgR2klrGE4.avif",
           "path": "ru/0e11bff65216.webp",
           "width": 1000,
-          "height": 492
+          "height": 492,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7398,7 +7809,8 @@
           "src": "https://learnablemeta.com/images/425/NEcsRUTXaUbkKff4yhnWbip7bjBhEIMn7VMY.avif",
           "path": "ru/1d0bc2152b13.webp",
           "width": 1000,
-          "height": 559
+          "height": 559,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7429,7 +7841,8 @@
           "src": "https://learnablemeta.com/images/425/SmzN8ETqmUe8VeuIgpNhxNc77PBSu0IUWjrM.avif",
           "path": "ru/124f7ea7288c.webp",
           "width": 1000,
-          "height": 585
+          "height": 585,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7460,7 +7873,8 @@
           "src": "https://learnablemeta.com/images/425/6nnxLov6JChfSPvk2JTOm5gqsUYOtddNaITg.avif",
           "path": "ru/ca7380eb9b6e.webp",
           "width": 1000,
-          "height": 558
+          "height": 558,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7491,7 +7905,8 @@
           "src": "https://learnablemeta.com/images/425/Hu0C2nCgzGagUIL1Kx2uBaJdpEcbaeVW4KRI.avif",
           "path": "ru/08cd9f6845fd.webp",
           "width": 1000,
-          "height": 832
+          "height": 832,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7522,7 +7937,8 @@
           "src": "https://learnablemeta.com/images/425/i5vtBizskEgbEyCKQF1ZWaRwsudzbo0EU3L7.avif",
           "path": "ru/31fb2ab82a21.webp",
           "width": 1000,
-          "height": 847
+          "height": 847,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7553,7 +7969,8 @@
           "src": "https://learnablemeta.com/images/425/qDXmygvOIlkWme20Ftm1wVIpgkTb0qyi0pe7.avif",
           "path": "ru/533bc5f7e8ee.webp",
           "width": 1000,
-          "height": 528
+          "height": 528,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7584,7 +8001,8 @@
           "src": "https://learnablemeta.com/images/425/axL3fr9mO64UKT9UfHmNYcx3ehfA59HQ6XvL.avif",
           "path": "ru/4c16c53b8317.webp",
           "width": 1000,
-          "height": 745
+          "height": 745,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7615,7 +8033,8 @@
           "src": "https://learnablemeta.com/images/425/HKj9rE4pNnoPdDI3fvJXZVxceM1C8WbHMVfo.avif",
           "path": "ru/f36fcdd6b234.webp",
           "width": 927,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7646,7 +8065,8 @@
           "src": "https://learnablemeta.com/images/425/Dpch7asOx7zdBn8T8MkeX0MOhHxzmW0xO87O.avif",
           "path": "ru/deedd1b4b935.webp",
           "width": 1000,
-          "height": 700
+          "height": 700,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -7677,7 +8097,8 @@
           "src": "https://learnablemeta.com/images/425/09rWkijKgKRINDF21QQbn0CdUmZJo20FXXoc.avif",
           "path": "ru/37523d9235ff.webp",
           "width": 1000,
-          "height": 561
+          "height": 561,
+          "role": "example"
         }
       ],
       "locations": [],

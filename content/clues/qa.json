@@ -35,7 +35,10 @@
           "src": "https://www.plonkit.net/images/qatar/Qatar_License_Plate.png",
           "path": "qa/2622dd79cd11.webp",
           "width": 600,
-          "height": 363
+          "height": 363,
+          "role": "comparison",
+          "caption": "Qatari plates: standard, black commercial and blue police",
+          "giveaway": true
         },
         {
           "id": "fee9b8b178f8",
@@ -81,7 +84,8 @@
           },
           "path": "qa/7893bb7c35a2.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -240,14 +244,18 @@
           },
           "path": "qa/0c2d839189ed.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Round pole with three insulators and diagonal braces, marked by the red circle at left"
         },
         {
           "id": "9acf74531fa2",
           "src": "https://learnablemeta.com/images/665/qiLEz13eCASfaS9kOotPfftWWmHYQH4ksyBH.avif",
           "path": "qa/9acf74531fa2.webp",
           "width": 1000,
-          "height": 522
+          "height": 522,
+          "role": "annotated",
+          "caption": "Round pole with three insulators and diagonal braces, marked by the red circle at left"
         }
       ],
       "locations": [
@@ -295,14 +303,16 @@
           },
           "path": "qa/e689eabfa624.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ce632ca3163e",
           "src": "https://learnablemeta.com/images/665/54jMP6qS9uCzYr3CHdpcSlodR1vv1USrt1SD.avif",
           "path": "qa/ce632ca3163e.webp",
           "width": 1000,
-          "height": 525
+          "height": 525,
+          "role": "example"
         },
         {
           "id": "78a5cafd6e67",
@@ -357,7 +367,15 @@
           },
           "path": "qa/b3ed8dd8fe4a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -405,7 +423,8 @@
           },
           "path": "qa/f02bcf068d92.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "8d3c32aeef81",
@@ -445,16 +464,7 @@
         "Qatar is pretty well covered, with almost every main road and some side roads having coverage. Only the south and west lack coverage at the moment."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "a4721b92fc1f",
-          "src": "https://www.plonkit.net/images/qatar/Qatar_Coverage_Map_.png",
-          "giveaway": true,
-          "path": "qa/a4721b92fc1f.webp",
-          "width": 800,
-          "height": 1234
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -475,15 +485,7 @@
         "Qatar is divided into municipalities, further divided into **numbered zones**, which can be seen on [street signs](https://goo.gl/maps/M8fdWeriuhXw3Meu5). This infographic shows which number corresponds to each zone."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "f72accc8761e",
-          "src": "https://www.plonkit.net/images/qatar/zones-of-qatar-2020-PSA.JPG",
-          "path": "qa/f72accc8761e.webp",
-          "width": 800,
-          "height": 562
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -518,7 +520,16 @@
           },
           "path": "qa/3c0bb47a7205.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle marks the very short antenna at the left of the road ahead",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.77,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -566,7 +577,16 @@
           },
           "path": "qa/aa7b847d1d8f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Large red circle marks the fairly long antenna at the left of the road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.77,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -613,7 +633,15 @@
           },
           "path": "qa/b958ca6dffdc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.77,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1041,7 +1069,15 @@
           },
           "path": "qa/7f8b4266dc80.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.77,
+            "h": 1
+          }
         }
       ],
       "locations": [

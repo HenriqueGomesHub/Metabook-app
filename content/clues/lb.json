@@ -35,7 +35,10 @@
           "src": "https://www.plonkit.net/images/lebanon/lb_licenceplates.png",
           "path": "lb/a41e8ee52785.webp",
           "width": 600,
-          "height": 699
+          "height": 699,
+          "role": "comparison",
+          "caption": "Lebanese plates: standard, standard short and red taxi",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -63,7 +66,9 @@
           "src": "https://www.plonkit.net/images/lebanon/lb_arabic.png",
           "path": "lb/0186f5faf0f5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Arabic text sample"
         }
       ],
       "locations": [],
@@ -100,7 +105,8 @@
           },
           "path": "lb/0f43cea40e31.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         }
       ],
       "locations": [
@@ -147,7 +153,8 @@
           },
           "path": "lb/3d062ea115c9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -243,7 +250,8 @@
           },
           "path": "lb/aa8d16c1847c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -332,16 +340,7 @@
       ],
       "region": "Beirut",
       "tags": [],
-      "images": [
-        {
-          "id": "02410aaae265",
-          "src": "https://www.plonkit.net/images/lebanon/Lebanon_Coverage_Map.png",
-          "giveaway": true,
-          "path": "lb/02410aaae265.webp",
-          "width": 600,
-          "height": 785
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -423,7 +422,15 @@
           },
           "path": "lb/c3736b994c7e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -555,8 +562,7 @@
           "src": "https://www.plonkit.net/images/lebanon/lb_trekkercoverage.png",
           "path": "lb/a342c7ec1c10.webp",
           "width": 600,
-          "height": 785,
-          "dupeOf": "02410aaae265"
+          "height": 785
         }
       ],
       "locations": [],
@@ -640,7 +646,15 @@
           },
           "path": "lb/ed3e80c2c3c8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.42,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -969,7 +983,15 @@
           },
           "path": "lb/ef230ea7f420.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.42,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1110,7 +1132,15 @@
           },
           "path": "lb/26bc51ff190c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.42,
+            "h": 1
+          }
         }
       ],
       "locations": [

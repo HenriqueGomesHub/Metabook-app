@@ -36,7 +36,9 @@
           "src": "https://www.plonkit.net/images/argentina/Argentina_License_Plate.png",
           "path": "ar/21254ae6f0dc.webp",
           "width": 600,
-          "height": 241
+          "height": 241,
+          "role": "example",
+          "giveaway": true
         },
         {
           "id": "fcd634bc53c7",
@@ -98,7 +100,8 @@
           },
           "path": "ar/710d8991133a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -153,7 +156,9 @@
           },
           "path": "ar/63a70147b39c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four views of the same road: panned down, back, front and a good front blur"
         }
       ],
       "locations": [
@@ -211,7 +216,9 @@
           },
           "path": "ar/9175906956a6.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Round concrete poles; the red circle magnifies the top of a pole with alternating insulators"
         },
         {
           "id": "7c6f7e07d38f",
@@ -277,7 +284,8 @@
           },
           "path": "ar/9ffdc79c8749.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -326,7 +334,8 @@
           },
           "path": "ar/fb02e3a4748d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "606809a0feff",
@@ -341,7 +350,8 @@
           "src": "https://learnablemeta.com/images/611/jwkLuMTfzF5r7WlHtSICKGWKZqV47D5UrOls.avif",
           "path": "ar/9555b68b80d7.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "role": "example"
         },
         {
           "id": "6087684e7631",
@@ -396,14 +406,16 @@
           },
           "path": "ar/57b0b34f0ccf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "93bb75ad2c83",
           "src": "https://learnablemeta.com/images/508/fkCk82F5UxltbdTlvLp48UDbk9a0OA9ELKVl.avif",
           "path": "ar/93bb75ad2c83.webp",
           "width": 1000,
-          "height": 598
+          "height": 598,
+          "role": "example"
         },
         {
           "id": "089ea68bf679",
@@ -457,7 +469,6 @@
         {
           "id": "3c51dfae0ed2",
           "src": "https://www.plonkit.net/images/argentina/kmmarker.png",
-          "giveaway": true,
           "location": {
             "pano": "cwF8KNseAHiQEZO4A5KY8w",
             "lat": -30.767618,
@@ -469,7 +480,8 @@
           },
           "path": "ar/3c51dfae0ed2.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -519,7 +531,9 @@
           },
           "path": "ar/c43b069f119d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Guardrail with a small yellow and red rectangular reflector on the rail, marked by the arrow and label"
         }
       ],
       "locations": [
@@ -1832,7 +1846,15 @@
           },
           "path": "ar/9e781b5698b8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         },
         {
           "id": "180a0be8ba9e",
@@ -1893,7 +1915,16 @@
           },
           "path": "ar/21fd43cdfb0c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Wooden pole with a single side insulator, magnified in the red circle at top left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1943,7 +1974,16 @@
           },
           "path": "ar/d1ce3564e5ef.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Concrete pole with a white sticker of digits, magnified in the red circle at top left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2040,7 +2080,16 @@
           },
           "path": "ar/57cd22003a54.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A yellow junction sign with chevrons at the bottom",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2316,7 +2365,15 @@
           },
           "path": "ar/8ab2f9718a7e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2514,7 +2571,15 @@
           },
           "path": "ar/cea519f3a212.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2863,7 +2928,15 @@
           },
           "path": "ar/5c74a26cbcc7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2977,7 +3050,8 @@
           "src": "https://learnablemeta.com/images/iklofsfUFV6mDtBk1YnbOCPSVNwruGwLkmjP.avif",
           "path": "ar/f9f931a443de.webp",
           "width": 337,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -3057,7 +3131,15 @@
           "src": "https://learnablemeta.com/images/3/l0UJFFccNoy5zAu1wxkYfaMVG7Z5dIfRZVcK.avif",
           "path": "ar/4b767a5b8c54.webp",
           "width": 1000,
-          "height": 539
+          "height": 539,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3561,7 +3643,15 @@
           "src": "https://learnablemeta.com/images/100/Iu9SyYA7Z3nkW0FbPJM1OfxCd8G6M61AzRq6.avif",
           "path": "ar/92ecd0066e93.webp",
           "width": 1000,
-          "height": 508
+          "height": 508,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.46,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3589,7 +3679,15 @@
           "src": "https://learnablemeta.com/images/100/Lirn8jieIZAWJ914lehm8xLO5IzdtZQ2ie2n.avif",
           "path": "ar/ad1fe19dc23f.webp",
           "width": 1000,
-          "height": 506
+          "height": 506,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.52,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3617,7 +3715,15 @@
           "src": "https://learnablemeta.com/images/100/zy2MFF9iVkGEP8N7V96VO8YZOmkgu3r4agIS.avif",
           "path": "ar/c74be9350bd2.webp",
           "width": 1000,
-          "height": 490
+          "height": 490,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3729,7 +3835,15 @@
           "src": "https://learnablemeta.com/images/1955/1751796844164-xQu.avif",
           "path": "ar/05a7a9b934da.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3785,7 +3899,15 @@
           "src": "https://learnablemeta.com/images/1955/1751796857408-bBQ.avif",
           "path": "ar/b4d131d52b52.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3925,7 +4047,15 @@
           "src": "https://learnablemeta.com/images/1955/1751796862535-BhF.avif",
           "path": "ar/b397043ef318.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3953,7 +4083,15 @@
           "src": "https://learnablemeta.com/images/1955/1751796871928-QnV.avif",
           "path": "ar/1cf96359d16f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [],

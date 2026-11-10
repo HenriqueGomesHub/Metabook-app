@@ -75,7 +75,9 @@
           },
           "path": "gu/ab9cf671c376.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circles and an arrow mark the antenna and roof rack inside the fully blurred patch"
         },
         {
           "id": "f20300af202e",
@@ -141,7 +143,8 @@
           },
           "path": "gu/19d31154a61f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "476ffd30c79b",
@@ -205,7 +208,8 @@
           },
           "path": "gu/697dd5505b74.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -360,7 +364,9 @@
           },
           "path": "gu/7948249256dd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Shopfronts with Japanese, Chinese, Korean and Russian lettering beside English"
         }
       ],
       "locations": [
@@ -397,15 +403,7 @@
         "Coverage in Guam is fairly limited, particularly in the southern half, where there is almost no coverage inland."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "2abf47f0aeef",
-          "src": "https://www.plonkit.net/images/guam/gu_coverage.png",
-          "path": "gu/2abf47f0aeef.webp",
-          "width": 600,
-          "height": 738
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -535,7 +533,15 @@
           },
           "path": "gu/263731120791.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
