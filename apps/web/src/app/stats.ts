@@ -1,4 +1,12 @@
-import { buildSession, isClueCard, mastery, parseMapKey } from '@metabook/core';
+import {
+  activeCountries,
+  buildSession,
+  isClueCard,
+  learnMoreSession,
+  mastery,
+  parseMapKey,
+  practiseMoreSession,
+} from '@metabook/core';
 import type { Card, CardType, Review, Session } from '@metabook/core';
 import type { AppSnapshot } from './AppData';
 import { tagLabel } from './labels';
@@ -23,31 +31,68 @@ function startOfDay(date: Date, offsetDays = 0): Date {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate() + offsetDays);
 }
 
-/**
- * Today's session, with the daily caps reduced by what was already reviewed and introduced
- * earlier today so repeat sessions don't hand out a fresh batch of new cards.
- */
-export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Session {
+/** What was reviewed today: cards seen before today, and cards first answered today. */
+function today(data: AppSnapshot, now: Date) {
   const dayStart = startOfDay(now).getTime();
   const firstReview = new Map<string, number>();
   for (const review of data.reviews) {
-    if (!firstReview.has(review.cardId))
-      firstReview.set(review.cardId, Date.parse(review.reviewedAt));
+    const at = Date.parse(review.reviewedAt);
+    if (at < (firstReview.get(review.cardId) ?? Infinity)) firstReview.set(review.cardId, at);
   }
   const reviewedToday = new Set(
     data.reviews.filter((r) => Date.parse(r.reviewedAt) >= dayStart).map((r) => r.cardId),
   );
   const introduced = [...reviewedToday].filter((id) => (firstReview.get(id) ?? 0) >= dayStart);
-  // text-only clue cards are for the Clue quiz, never the daily session
-  const cards = data.content.cards.filter((card) => !isClueCard(card));
+  return { reviews: reviewedToday.size - introduced.length, introduced };
+}
+
+/** The cards the daily session draws from: text-only clue cards are for the Clue quiz. */
+const sessionCards = (data: AppSnapshot): Card[] =>
+  data.content.cards.filter((card) => !isClueCard(card));
+
+/**
+ * Today's session, with the daily caps reduced by what was already reviewed and introduced
+ * earlier today so repeat sessions don't hand out a fresh batch of new cards.
+ */
+export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Session {
+  const done = today(data, now);
+  const cards = sessionCards(data);
   return buildSession({
     cards: type ? cards.filter((card) => card.type === type) : cards,
     states: data.states,
     confusions: data.confusions,
     settings: data.settings,
-    doneToday: { reviews: reviewedToday.size - introduced.length, newCards: introduced.length },
+    doneToday: { reviews: done.reviews, newCards: done.introduced.length },
+    introducedToday: done.introduced,
     now,
   });
+}
+
+/** "Learn more": new cards past today's limit, without changing the settings. */
+export function learnMore(data: AppSnapshot, now: Date): Session {
+  return learnMoreSession({
+    cards: sessionCards(data),
+    states: data.states,
+    settings: data.settings,
+    introducedToday: today(data, now).introduced,
+  });
+}
+
+/** "Practise more": the weakest seen cards, reviewed ahead of time. */
+export function practiseMore(data: AppSnapshot, now: Date): Session {
+  return practiseMoreSession({ cards: sessionCards(data), states: data.states, now });
+}
+
+/** How much is left to learn, and the countries being introduced now. */
+export function curriculum(data: AppSnapshot): { newAvailable: number; learningNow: string[] } {
+  const cards = sessionCards(data);
+  const newAvailable = cards.filter(
+    (card) => (data.states[card.id]?.state ?? 'new') === 'new',
+  ).length;
+  return {
+    newAvailable,
+    learningNow: activeCountries(cards, data.states, data.settings.focusCountries),
+  };
 }
 
 /** For each of the last 14 local days (oldest first), whether any review happened. */

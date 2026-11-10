@@ -50,6 +50,27 @@ describe('ClueImageUrls', () => {
     expect(sign).toHaveBeenCalledTimes(2);
   });
 
+  it('does not sign a path again while its batch is on the way', async () => {
+    let release: (value: Record<string, string>) => void = () => undefined;
+    const sign = vi.fn(
+      (paths: string[]) =>
+        new Promise<Record<string, string>>((resolve) => {
+          release = () => resolve(Object.fromEntries(paths.map((p) => [p, `https://s/${p}`])));
+        }),
+    );
+    const urls = new ClueImageUrls(sign);
+    const first = urls.url(stored);
+    await tick();
+    const second = urls.url(stored);
+    await tick();
+    release({});
+    expect(await Promise.all([first, second])).toEqual([
+      'https://s/pl/b.webp',
+      'https://s/pl/b.webp',
+    ]);
+    expect(sign).toHaveBeenCalledTimes(1);
+  });
+
   it('falls back to the original URL when a path cannot be signed', async () => {
     const urls = new ClueImageUrls(async () => {
       throw new Error('bucket missing');

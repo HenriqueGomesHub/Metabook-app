@@ -89,6 +89,20 @@
   color: var(--muted);
 }
 
+.today-more {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.today-avail {
+  margin: 24px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);

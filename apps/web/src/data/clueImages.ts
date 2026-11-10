@@ -21,6 +21,8 @@ interface Entry {
  */
 export class ClueImageUrls {
   private readonly cache = new Map<string, Entry>();
+  /** paths whose batch went out and has not come back */
+  private readonly inflight = new Map<string, Promise<string | null>>();
   private queue = new Map<string, ((url: string | null) => void)[]>();
   private timer: ReturnType<typeof setTimeout> | undefined;
 
@@ -45,10 +47,14 @@ export class ClueImageUrls {
   }
 
   private request(path: string): Promise<string | null> {
-    return new Promise((resolve) => {
+    const sent = this.inflight.get(path);
+    if (sent) return sent;
+    const request = new Promise<string | null>((resolve) => {
       this.queue.set(path, [...(this.queue.get(path) ?? []), resolve]);
       this.timer ??= setTimeout(() => void this.flush(), 0);
     });
+    this.inflight.set(path, request);
+    return request;
   }
 
   private async flush() {
@@ -66,6 +72,7 @@ export class ClueImageUrls {
     for (const path of paths) {
       const url = signed[path] ?? null;
       this.cache.set(path, { url, expires });
+      this.inflight.delete(path);
       for (const resolve of batch.get(path) ?? []) resolve(url);
     }
   }
@@ -104,11 +111,18 @@ export function useClueImageUrl(image: ClueImage | undefined): string | undefine
   return url;
 }
 
-/** Warms the browser cache for the images an upcoming card shows. */
+const preloaded = new Set<string>();
+
+/**
+ * Warms the browser cache for the images upcoming cards show. Paths asked for in one call are
+ * signed in one batch; each URL is fetched once.
+ */
 export function preloadClueImages(repo: Signing, images: ClueImage[]) {
   const resolver = clueImageUrls(repo);
   for (const image of images) {
     void resolver.url(image).then((url) => {
+      if (preloaded.has(url)) return;
+      preloaded.add(url);
       const img = new Image();
       img.decoding = 'async';
       img.src = url;
