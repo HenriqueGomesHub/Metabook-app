@@ -103,7 +103,7 @@ describe('clueCards', () => {
     expect(live[0]?.prompt).toEqual({
       kind: 'embed',
       value:
-        'https://www.google.com/maps/embed?pb=!4v0!6m8!1m7!1sbrPano000000000000000A!2m2!1d-23.55!2d-46.63!3f10!4f0!5f0.7820865974627469',
+        'https://www.google.com/maps/embed?pb=!4v0!6m8!1m7!1sbrPano000000000000000A!2m2!1d-23.55!2d-46.63!3f10!4f0!5f1',
     });
     expect(streetViewEmbedUrl({ ...BR_POLE.locations[1]! })).toBeUndefined();
   });

@@ -1,19 +1,20 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { CLUE_COUNTRIES, CLUE_NAMES, CLUE_POOL } from './__fixtures__/clues';
-import { clueCards, usableImage } from './clueCards';
+import { clueCards } from './clueCards';
+import { quizImages } from './clues';
 import type { ClueCountry } from './clues';
 import { clueTexts, expandCatalogue, slimCatalogue } from './clueSlim';
 import type { PoolCountry } from './types';
 
-/** What the slim form drops: text on clues with a drillable image, and tags. */
+/** What the slim form drops: text on clues with a quiz image, and tags. */
 const withoutText = (countries: ClueCountry[]): ClueCountry[] =>
   countries.map((country) => ({
     ...country,
     clues: country.clues.map((clue) => ({
       ...clue,
       tags: [],
-      text: clue.images.some(usableImage) ? [] : clue.text,
+      text: quizImages(clue).length > 0 ? [] : clue.text,
     })),
   }));
 

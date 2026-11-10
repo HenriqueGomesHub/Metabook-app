@@ -3,13 +3,16 @@
 // credit) and leaves out the clue text, which the app loads per country when a clue is read. Text
 // stays in for clues with no image a drill may show: they become text cards, whose question is the
 // text. `expandCatalogue(slimCatalogue(x))` equals `x` with those fields emptied.
-// Self-contained (type imports only) so the web app's Vite config can run it at build time.
+// Imports only clues.ts (itself import-free) so the web app's Vite config can run it at build time.
+import { quizImages } from './clues';
 import type { Clue, ClueCountry, ClueCredit, ClueImage, ClueLocation, CropBox } from './clues';
 
 /** [pano ('' when none), lat, lng, heading, pitch, fov, source] */
 type SlimLocation = [string, number, number, number, number, number, ClueLocation['source']];
+/** The image review's fields, when any is set. */
+type SlimImageExtra = Pick<ClueImage, 'role' | 'caption' | 'dupeOf'>;
 /**
- * [id, src, path, width, height, crop, giveaway, location]: path 1 = "<country>/<id>.webp",
+ * [id, src, path, width, height, crop, giveaway, location, extra?]: path 1 = "<country>/<id>.webp",
  * 0 = none; 0 also marks an absent width, height, crop or location.
  */
 type SlimImage = [
@@ -21,6 +24,7 @@ type SlimImage = [
   [number, number, number, number] | 0,
   0 | 1,
   SlimLocation | 0,
+  SlimImageExtra?,
 ];
 /** A clue location: the index of the image carrying the same spot, else the spot itself. */
 type SlimClueLocation = number | SlimLocation;
@@ -28,6 +32,9 @@ interface SlimExtra {
   region?: string;
   kind?: Clue['kind'];
   text?: string[];
+  summary?: string;
+  sameAs?: string[];
+  differs?: Clue['differs'];
 }
 /** [id, step, order, family, title, images, locations, lookalikes, credit index, extra] */
 type SlimClue = [
@@ -69,9 +76,6 @@ const lengthen = (src: string) => {
   return hit ? hit[1] + src.slice(hit[0].length) : src;
 };
 
-/** Same test as `usableImage` in clueCards (kept here so this file has no runtime imports). */
-const drillable = (image: ClueImage) => !image.giveaway || !!image.crop;
-
 const slimLocation = (l: ClueLocation): SlimLocation => [
   l.pano ?? '',
   l.lat,
@@ -100,16 +104,29 @@ export function slimCatalogue(countries: ClueCountry[]): SlimCountry[] {
       return index;
     };
     const clues = country.clues.map((clue): SlimClue => {
-      const images = clue.images.map((image): SlimImage => [
-        image.id,
-        shorten(image.src),
-        image.path === undefined ? 0 : image.path === `${folder}/${image.id}.webp` ? 1 : image.path,
-        image.width ?? 0,
-        image.height ?? 0,
-        image.crop ? [image.crop.x, image.crop.y, image.crop.w, image.crop.h] : 0,
-        image.giveaway ? 1 : 0,
-        image.location ? slimLocation(image.location) : 0,
-      ]);
+      const images = clue.images.map((image): SlimImage => {
+        const slim: SlimImage = [
+          image.id,
+          shorten(image.src),
+          image.path === undefined
+            ? 0
+            : image.path === `${folder}/${image.id}.webp`
+              ? 1
+              : image.path,
+          image.width ?? 0,
+          image.height ?? 0,
+          image.crop ? [image.crop.x, image.crop.y, image.crop.w, image.crop.h] : 0,
+          image.giveaway ? 1 : 0,
+          image.location ? slimLocation(image.location) : 0,
+        ];
+        const extra: SlimImageExtra = {
+          ...(image.role !== undefined && { role: image.role }),
+          ...(image.caption !== undefined && { caption: image.caption }),
+          ...(image.dupeOf !== undefined && { dupeOf: image.dupeOf }),
+        };
+        if (Object.keys(extra).length > 0) slim.push(extra);
+        return slim;
+      });
       const locations = clue.locations.map((location): SlimClueLocation => {
         const index = clue.images.findIndex(
           (image) => image.location && sameLocation(image.location, location),
@@ -119,7 +136,10 @@ export function slimCatalogue(countries: ClueCountry[]): SlimCountry[] {
       const extra: SlimExtra = {
         ...(clue.region !== undefined && { region: clue.region }),
         ...(clue.kind !== undefined && { kind: clue.kind }),
-        ...(!clue.images.some(drillable) && { text: clue.text }),
+        ...(quizImages(clue).length === 0 && { text: clue.text }),
+        ...(clue.summary !== undefined && { summary: clue.summary }),
+        ...(clue.sameAs !== undefined && { sameAs: clue.sameAs }),
+        ...(clue.differs !== undefined && { differs: clue.differs }),
       };
       return [
         clue.id,
@@ -147,7 +167,7 @@ export function slimCatalogue(countries: ClueCountry[]): SlimCountry[] {
   });
 }
 
-/** The catalogue back from `slimCatalogue`: text only on clues without a drillable image, no tags. */
+/** The catalogue back from `slimCatalogue`: text only on clues without a quiz image, no tags. */
 export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
   return slim.map((country) => {
     const folder = country.country.toLowerCase();
@@ -161,7 +181,7 @@ export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
       clues: country.clues.map(
         ([id, step, order, family, title, slimImages, locations, lookalikes, credit, extra]) => {
           const images = slimImages.map(
-            ([imageId, src, path, width, height, crop, giveaway, location]): ClueImage => ({
+            ([imageId, src, path, width, height, crop, giveaway, location, more]): ClueImage => ({
               id: imageId,
               src: lengthen(src),
               ...(path !== 0 ? { path: path === 1 ? `${folder}/${imageId}.webp` : path } : {}),
@@ -172,6 +192,7 @@ export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
                 : {}),
               ...(giveaway ? { giveaway: true } : {}),
               ...(location ? { location: expandLocation(location) } : {}),
+              ...more,
             }),
           );
           return {
@@ -183,6 +204,9 @@ export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
             title,
             text: (extra && extra.text) || [],
             ...(extra && extra.region !== undefined && { region: extra.region }),
+            ...(extra && extra.summary !== undefined && { summary: extra.summary }),
+            ...(extra && extra.sameAs !== undefined && { sameAs: extra.sameAs }),
+            ...(extra && extra.differs !== undefined && { differs: extra.differs }),
             tags: [],
             images,
             locations: locations.map((l) =>

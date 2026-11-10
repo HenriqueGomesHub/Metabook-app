@@ -1,7 +1,8 @@
 // Turns the clue catalogue (content/clues) into cards. Pure and deterministic: card ids come from
 // clueCardIds, and every shuffle is seeded by the card id, so the same catalogue always yields the
-// same cards with the same options.
-import { clueCardIds } from './clues';
+// same cards with the same default options. Each showing redraws the options from the card's wider
+// pool (see showing.ts), so a card that comes back does not show the same four answers again.
+import { clueCardIds, quizImages } from './clues';
 import type {
   Clue,
   ClueCountry,
@@ -42,9 +43,6 @@ export interface ClueCardInput {
   pool: PoolCountry[];
   names?: CountryNames[];
 }
-
-/** An image a drill may show: not a giveaway, unless a crop hides what gives it away. */
-export const usableImage = (image: ClueImage): boolean => !image.giveaway || !!image.crop;
 
 /**
  * Clue images with the admin's crops applied and hidden images left out. An override without a
@@ -106,15 +104,31 @@ export function clueSummary(clue: Pick<Clue, 'text'>): string {
 
 const same = (a: string, b: string) => a.toUpperCase() === b.toUpperCase();
 
+/** The embed's zoom when a spot has no usable field of view. */
+const DEFAULT_ZOOM = 0.7820865974627469;
+
+/**
+ * The share embed's `!5f` value for a field of view: a zoom level, not degrees. Zoom 0 is a 180°
+ * view and each level halves it, so zoom = log2(180 / fov), fov clamped to 10..120°.
+ */
+export function streetViewZoom(fov: number | undefined): number {
+  if (fov === undefined || !Number.isFinite(fov) || fov <= 0) return DEFAULT_ZOOM;
+  const clamped = Math.min(120, Math.max(10, fov));
+  return Math.round(Math.log2(180 / clamped) * 1000) / 1000;
+}
+
 /** The Google share-embed URL for a Street View spot; it only works inside an iframe. */
 export function streetViewEmbedUrl(location: ClueLocation): string | undefined {
   if (!location.pano) return undefined;
-  const { pano, lat, lng, heading, pitch } = location;
+  const { pano, lat, lng, heading, pitch, fov } = location;
   return (
     'https://www.google.com/maps/embed?pb=!4v0!6m8!1m7' +
-    `!1s${pano}!2m2!1d${lat}!2d${lng}!3f${heading}!4f${pitch}!5f0.7820865974627469`
+    `!1s${pano}!2m2!1d${lat}!2d${lng}!3f${heading}!4f${pitch}!5f${streetViewZoom(fov)}`
   );
 }
+
+/** Distractor pool size past the lookalikes: each showing picks from these. */
+const POOL_EXTRA = 6;
 
 interface Context {
   pool: PoolCountry[];
@@ -123,30 +137,58 @@ interface Context {
   families: Map<ClueFamily, Set<string>>;
   /** per family, per country: the image a Which clue card shows for that country */
   showcase: Map<ClueFamily, Map<string, { clue: Clue; image: ClueImage }>>;
+  /**
+   * Per family, per country: the countries where that family's clue looks the same, both ways
+   * round (Albania's bollard lists Italy, so Italy's bollard cards leave out Albania too).
+   */
+  sameAs: Map<ClueFamily, Map<string, Set<string>>>;
 }
 
 function context(input: ClueCardInput): Context {
   const families = new Map<ClueFamily, Set<string>>();
   const showcase = new Map<ClueFamily, Map<string, { clue: Clue; image: ClueImage }>>();
+  const sameAs = new Map<ClueFamily, Map<string, Set<string>>>();
+  const link = (family: ClueFamily, a: string, b: string) => {
+    if (!sameAs.has(family)) sameAs.set(family, new Map());
+    const byCountry = sameAs.get(family)!;
+    if (!byCountry.has(a)) byCountry.set(a, new Set());
+    byCountry.get(a)!.add(b);
+  };
   for (const country of [...input.clues].sort((a, b) => a.country.localeCompare(b.country))) {
     const code = country.country.toUpperCase();
     for (const clue of [...country.clues].sort(byStep)) {
       if (!families.has(clue.family)) families.set(clue.family, new Set());
       families.get(clue.family)!.add(code);
-      const image = clue.images.find(usableImage);
+      for (const other of resolveCodes(clue.sameAs ?? [], input.pool)) {
+        if (other === code) continue;
+        link(clue.family, code, other);
+        link(clue.family, other, code);
+      }
+      const image = quizImages(clue)[0];
       if (!image) continue;
       if (!showcase.has(clue.family)) showcase.set(clue.family, new Map());
       const shown = showcase.get(clue.family)!;
       if (!shown.has(code)) shown.set(code, { clue, image });
     }
   }
-  return { pool: input.pool, names: input.names ?? [], families, showcase };
+  return { pool: input.pool, names: input.names ?? [], families, showcase, sameAs };
 }
 
+/** Countries a clue cannot tell apart from its own: never offered against it. */
+function lookTheSame(clue: Clue, code: string, ctx: Context): Set<string> {
+  const linked = ctx.sameAs.get(clue.family)?.get(code) ?? new Set<string>();
+  return new Set([...linked, ...resolveCodes(clue.sameAs ?? [], ctx.pool)]);
+}
+
+/** The clue's lookalikes and the countries it "differs" from, as pool codes. */
+const closeCodes = (clue: Clue, pool: PoolCountry[]) =>
+  resolveCodes([...clue.lookalikes, ...(clue.differs ?? []).map((d) => d.country)], pool);
+
 /**
- * Other pool countries in distractor order: the clue's lookalikes, then same-continent countries
- * that have a clue of the same family, then the rest of the continent, then everywhere else. Each
- * tier is shuffled by `seed`; no country appears twice.
+ * Other pool countries in distractor order: the clue's lookalikes and "differs" countries, then
+ * same-continent countries that have a clue of the same family, then the rest of the continent,
+ * then everywhere else. Each tier is shuffled by `seed`; no country appears twice, and countries
+ * where the clue looks the same (sameAs) are left out. `close` counts the first tier.
  */
 function rankOthers(
   self: PoolCountry,
@@ -154,9 +196,12 @@ function rankOthers(
   ctx: Context,
   seed: string,
   allowed: (c: PoolCountry) => boolean = () => true,
-): PoolCountry[] {
-  const others = ctx.pool.filter((c) => c.in_pool && c.code !== self.code && allowed(c));
-  const lookalikes = resolveCodes(clue.lookalikes, ctx.pool).flatMap((code) =>
+): PoolCountry[] & { close?: number } {
+  const twins = lookTheSame(clue, self.code, ctx);
+  const others = ctx.pool.filter(
+    (c) => c.in_pool && c.code !== self.code && !twins.has(c.code) && allowed(c),
+  );
+  const lookalikes = [...new Set(closeCodes(clue, ctx.pool))].flatMap((code) =>
     others.filter((c) => c.code === code),
   );
   const sharing = ctx.families.get(clue.family) ?? new Set<string>();
@@ -176,18 +221,24 @@ function rankOthers(
       `${seed}:far`,
     ),
   ];
-  return [...new Set([...lookalikes, ...tiers.flat()])];
+  const ranked: PoolCountry[] & { close?: number } = [...new Set([...lookalikes, ...tiers.flat()])];
+  ranked.close = lookalikes.length;
+  return ranked;
 }
 
-/** The answer and three distractor names, shuffled by the card id. */
+/**
+ * The answer and three distractor names, shuffled by the card id (the first showing), and the
+ * wider pool later showings draw from.
+ */
 function countryOptions(self: PoolCountry, clue: Clue, ctx: Context, seed: string, prompt = '') {
   const unnamed = (c: PoolCountry) =>
     !prompt ||
     !namedIn(prompt, [c.name, ...(ctx.names.find((n) => same(n.code, c.code))?.demonym ?? [])]);
-  const picks = rankOthers(self, clue, ctx, seed, unnamed)
-    .slice(0, CHOICES - 1)
-    .map((c) => c.name);
-  return seededShuffle([self.name, ...picks], `${seed}:order`);
+  const ranked = rankOthers(self, clue, ctx, seed, unnamed);
+  const close = ranked.close ?? 0;
+  const distractors = ranked.slice(0, close + POOL_EXTRA).map((c) => c.name);
+  const options = seededShuffle([self.name, ...distractors.slice(0, CHOICES - 1)], `${seed}:order`);
+  return { options, pool: { distractors, close } };
 }
 
 /** Cards for every clue of every country in `input.clues`, in country, step and clue order. */
@@ -216,17 +267,20 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     credit: clue.credit,
   };
   const cards: Card[] = [];
-  const usable = clue.images.filter(usableImage);
+  // distinct example photos only, at most MAX_SPOT_PER_CLUE: comparison and annotated pictures,
+  // duplicates and uncropped giveaways stay in Learn and on the answer screen
+  const usable = quizImages(clue);
 
   // Spot it: one per image a drill may show
   for (const image of usable) {
     const id = clueCardIds.spot(clue.id, image.id);
+    const { options, pool } = countryOptions(country, clue, ctx, id);
     cards.push({
       ...base,
       id,
       type: 'spot',
       answer: country.name,
-      options: countryOptions(country, clue, ctx, id),
+      options,
       prompt: {
         kind: 'image',
         value: image.src,
@@ -234,25 +288,26 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
         credit: clue.credit.source,
         creditUrl: clue.credit.url,
       },
-      clue: { id: clue.id, image },
+      clue: { id: clue.id, image, ...pool },
     });
   }
 
-  // Which clue: this country's image among three other countries' of the same family
+  // Which clue: this country's image among three other countries' of the same family, never one
+  // from a country where the clue looks the same
   const first = usable[0];
   const shown = ctx.showcase.get(clue.family);
   if (first && shown && WHICH_FAMILIES.includes(clue.family)) {
     const id = clueCardIds.which(clue.id);
-    const others = rankOthers(country, clue, ctx, id, (c) => shown.has(c.code))
+    const ranked = rankOthers(country, clue, ctx, id, (c) => shown.has(c.code));
+    const closeSet = new Set(ranked.slice(0, ranked.close ?? 0).map((c) => c.code));
+    const alternates = ranked
       .map((c) => ({ country: c.code, ...shown.get(c.code)! }))
       .filter((o) => o.image.id !== first.id)
-      .slice(0, CHOICES - 1);
-    if (others.length === CHOICES - 1) {
+      .slice(0, CHOICES - 1 + POOL_EXTRA)
+      .map((o) => ({ country: o.country, clueId: o.clue.id, image: o.image }));
+    if (alternates.length >= CHOICES - 1) {
       const choices = seededShuffle(
-        [
-          { country: country.code, clueId: clue.id, image: first },
-          ...others.map((o) => ({ country: o.country, clueId: o.clue.id, image: o.image })),
-        ],
+        [{ country: country.code, clueId: clue.id, image: first }, ...alternates.slice(0, 3)],
         `${id}:order`,
       );
       cards.push({
@@ -262,7 +317,13 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
         answer: first.id,
         options: choices.map((c) => c.image.id),
         prompt: { kind: 'text', value: `Which is the ${country.name} ${noun}?` },
-        clue: { id: clue.id, image: first, choices },
+        clue: {
+          id: clue.id,
+          image: first,
+          choices,
+          alternates,
+          close: alternates.filter((a) => closeSet.has(a.country)).length,
+        },
       });
     }
   }
@@ -272,35 +333,36 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     const url = streetViewEmbedUrl(location);
     if (!url) return;
     const id = clueCardIds.live(clue.id, index);
+    const { options, pool } = countryOptions(country, clue, ctx, id);
     cards.push({
       ...base,
       id,
       type: 'live',
       answer: country.name,
-      options: countryOptions(country, clue, ctx, id),
+      options,
       prompt: { kind: 'embed', value: url },
-      clue: { id: clue.id, location },
+      clue: { id: clue.id, location, ...pool },
     });
   });
 
   // Text: a clue with nothing to show becomes a Clue quiz question, unless it names the country
   if (usable.length === 0) {
-    const summary = clueSummary(clue);
     const names = ctx.names.find((n) => same(n.code, country.code));
-    const leaks = namesCountry(clue.text.map(plainText).join(' '), country, names, {
-      code: false,
-    });
-    if (summary && !leaks) {
+    const leaks = (text: string) => namesCountry(text, country, names, { code: false });
+    // the reviewed plain-language summary when it does not name the country, else the text's
+    const summary = clue.summary && !leaks(clue.summary) ? clue.summary.trim() : clueSummary(clue);
+    if (summary && !leaks(clue.text.map(plainText).join(' ')) && !leaks(summary)) {
       const id = clueCardIds.text(clue.id);
+      const { options, pool } = countryOptions(country, clue, ctx, id, summary);
       cards.push({
         ...base,
         id,
         type: 'meta',
         tags: [...base.tags, CLUE_TAG],
         answer: country.name,
-        options: countryOptions(country, clue, ctx, id, summary),
+        options,
         prompt: { kind: 'text', value: summary },
-        clue: { id: clue.id },
+        clue: { id: clue.id, ...pool },
       });
     }
   }

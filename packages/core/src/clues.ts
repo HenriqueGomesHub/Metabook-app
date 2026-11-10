@@ -144,9 +144,64 @@ export const clueCardIds = {
   text: (clueId: string) => `clue:${clueId}:text`,
 };
 
-/** The card that stands for the clue as a whole: its first image's Spot it card, else its text card. */
+/** An image a drill may show: not a giveaway, unless a crop hides what gives it away. */
+export const usableImage = (image: ClueImage): boolean => !image.giveaway || !!image.crop;
+
+/** An example photo of the clue (or not reviewed yet): comparison and annotated images are not. */
+export const isExampleImage = (image: ClueImage): boolean =>
+  !image.role || image.role === 'example';
+
+/** Spot it cards made from one clue at most; its other photos only show in Learn and answers. */
+export const MAX_SPOT_PER_CLUE = 2;
+
+/** The original file name of an image URL, without folder, query or extension. */
+function fileName(src: string): string {
+  const last = src.split(/[?#]/)[0]?.split('/').pop() ?? '';
+  let name = last;
+  try {
+    name = decodeURIComponent(last);
+  } catch {
+    // keep the raw name
+  }
+  return name.toLowerCase().replace(/\.[a-z0-9]+$/, '');
+}
+
+const hostOf = (src: string) => /^[a-z]+:\/\/([^/]+)/i.exec(src)?.[1]?.toLowerCase() ?? '';
+
+/**
+ * Best-effort test for the same picture stored twice before the image review marks `dupeOf`: same
+ * pixel size and either the same original file name, or copies on two different sites (Learnable
+ * Meta re-hosts Plonk It pictures at the same size under a new name).
+ */
+function samePicture(a: ClueImage, b: ClueImage): boolean {
+  if (!a.width || !a.height || a.width !== b.width || a.height !== b.height) return false;
+  return fileName(a.src) === fileName(b.src) || hostOf(a.src) !== hostOf(b.src);
+}
+
+/** A clue's images without duplicates: those marked `dupeOf`, and repeats of an earlier picture. */
+export function distinctImages(images: readonly ClueImage[]): ClueImage[] {
+  const out: ClueImage[] = [];
+  for (const image of images) {
+    if (image.dupeOf) continue;
+    if (out.some((kept) => samePicture(kept, image))) continue;
+    out.push(image);
+  }
+  return out;
+}
+
+/**
+ * The images a quiz (Spot it, Which clue) may show of a clue, in order: distinct example photos
+ * that do not give the answer away, at most MAX_SPOT_PER_CLUE.
+ */
+export function quizImages(clue: Pick<Clue, 'images'>): ClueImage[] {
+  return distinctImages(clue.images)
+    .filter((image) => isExampleImage(image) && usableImage(image))
+    .slice(0, MAX_SPOT_PER_CLUE);
+}
+
+/** The card that stands for the clue as a whole: its first quiz image's Spot it card, else its text card. */
 export function primaryCardId(clue: Pick<Clue, 'id' | 'images'>): string {
-  const first = clue.images[0];
+  const first = quizImages(clue)[0];
   return first ? clueCardIds.spot(clue.id, first.id) : clueCardIds.text(clue.id);
 }
 
@@ -159,6 +214,15 @@ export interface CardClue {
   location?: ClueLocation;
   /** Which clue: the images to pick from, in display order; option ids are their image ids */
   choices?: { country: string; clueId: string; image: ClueImage }[];
+  /**
+   * Country-name cards: the wider distractor pool each showing draws from (see showing.ts), in
+   * rank order; the first `close` are the clue's lookalikes and "differs" countries. Countries the
+   * clue looks the same in (`sameAs`, either way round) are never in it.
+   */
+  distractors?: string[];
+  close?: number;
+  /** Which clue: other countries' images each showing draws its three from, in rank order */
+  alternates?: { country: string; clueId: string; image: ClueImage }[];
 }
 
 /** A correction to one clue image, kept in `clue_image_overrides` and applied over the catalogue. */
