@@ -81,12 +81,15 @@ describe('Area codes outside Brazil', () => {
     fireEvent.click(await screen.findByRole('button', { name: 'Hauts-de-Seine' }));
     expect(await screen.findByText('Right: it also covers Hauts-de-Seine')).toBeTruthy();
     expect(screen.getByRole('heading', { name: 'Paris' })).toBeTruthy();
+    // the answer names the code's group from content/areacodes/patterns.json
+    expect(screen.getByText(/= Île-de-France/).textContent).toBe('1 = Île-de-France');
   });
 
   it('drills area codes per country through practice, a span counting as right', async () => {
     const repo = mount('/session?type=areacode&country=FR');
     fireEvent.click(await screen.findByRole('button', { name: 'Seine-Saint-Denis' }));
     expect(await screen.findByText(/Mainly Paris; it also covers Seine-Saint-Denis/)).toBeTruthy();
+    expect(screen.getByText(/= Île-de-France/)).toBeTruthy();
     await waitFor(() =>
       expect(repo.reviews[0]).toMatchObject({ cardId: 'ddd:fr:1', correct: true }),
     );
@@ -99,11 +102,12 @@ describe('Area codes outside Brazil', () => {
     expect(repo.confusions[0]).toMatchObject({ picked: 'fr:35', truth: 'fr:75' });
   });
 
-  it('offers the drill per country from the Drills tile', async () => {
+  it('opens each country’s pattern page from the Drills tile', async () => {
     mount('/drills');
     const chips = await screen.findByRole('navigation', { name: 'Area codes by country' });
     expect(within(chips).getByRole('link', { name: 'France' }).getAttribute('href')).toBe(
-      '/session?type=areacode&country=FR',
+      '/areacodes/fr?via=drill',
     );
+    expect(document.querySelector('a.tile[href="/areacodes?via=drill"]')).toBeTruthy();
   });
 });

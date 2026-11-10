@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AreaCodeGame } from '../screens/AreaCodeGame';
+import { AreaCodeIntro, AreaCodes } from '../screens/AreaCodes';
 import { Atlas } from '../screens/Atlas';
 import { Blocks } from '../screens/Blocks';
 import { Country } from '../screens/Country';
@@ -32,6 +33,8 @@ export const router = createBrowserRouter([
           { path: '/drills', element: <Drills /> },
           { path: '/games', element: <Games /> },
           { path: '/games/areacode/:country', element: <AreaCodeGame /> },
+          { path: '/areacodes', element: <AreaCodes /> },
+          { path: '/areacodes/:country', element: <AreaCodeIntro /> },
           { path: '/atlas', element: <Atlas /> },
           { path: '/atlas/:country', element: <Country /> },
           { path: '/review', element: <Review /> },

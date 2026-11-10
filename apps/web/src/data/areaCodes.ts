@@ -1,4 +1,10 @@
-import type { Card, PoolCountry } from '@metabook/core';
+import type {
+  AreaCodePattern,
+  AreaCodePatterns,
+  Card,
+  PlacedCode,
+  PoolCountry,
+} from '@metabook/core';
 
 /**
  * content/areacodes/<code>.json: a country's telephone area codes, each on a region of its
@@ -71,4 +77,56 @@ export function areaCodeCountries(cards: Card[], pool: PoolCountry[]): string[] 
   return codes.sort(
     (a, b) => Number(b === 'BR') - Number(a === 'BR') || name(a).localeCompare(name(b)),
   );
+}
+
+// content/areacodes/patterns.json: which countries' codes follow a regional pattern (small, bundled)
+const patternFile = import.meta.glob<AreaCodePatterns>(
+  '../../../../content/areacodes/patterns.json',
+  {
+    eager: true,
+    import: 'default',
+  },
+);
+
+/** Each country's area-code pattern, by upper-case pool code. */
+export const AREA_CODE_PATTERNS: AreaCodePatterns = Object.values(patternFile)[0] ?? {};
+
+export const patternOf = (country: string): AreaCodePattern | undefined =>
+  AREA_CODE_PATTERNS[country.toUpperCase()];
+
+/** A country's codes on their regions, from its area-code cards. */
+export function placedCodes(cards: Card[], country: string): (PlacedCode & { spans?: string[] })[] {
+  return cards
+    .filter((card) => card.type === 'areacode' && card.country === country)
+    .map((card) => ({
+      code: card.prompt.value,
+      region: card.answer,
+      ...(card.spans && { spans: card.spans }),
+    }));
+}
+
+/** Rough GeoGuessr weight: how often a country comes up, most first. */
+const IMPORTANCE = ['BR', 'RU', 'US', 'ID', 'AU', 'CA', 'MX', 'FR', 'ZA', 'ES', 'IT', 'TR', 'PH'];
+
+/**
+ * Countries with area-code cards in two lists: those whose codes follow a regional pattern and
+ * those to learn one by one (no pattern, or none written yet), each by GeoGuessr weight then name.
+ */
+export function areaCodeSections(
+  cards: Card[],
+  pool: PoolCountry[],
+  patterns: AreaCodePatterns = AREA_CODE_PATTERNS,
+): { pattern: string[]; memorise: string[] } {
+  const name = (code: string) => pool.find((c) => c.code === code)?.name ?? code;
+  const rank = (code: string) => {
+    const i = IMPORTANCE.indexOf(code);
+    return i < 0 ? IMPORTANCE.length : i;
+  };
+  const codes = areaCodeCountries(cards, pool).sort(
+    (a, b) => rank(a) - rank(b) || name(a).localeCompare(name(b)),
+  );
+  return {
+    pattern: codes.filter((code) => patterns[code]?.kind === 'pattern'),
+    memorise: codes.filter((code) => patterns[code]?.kind !== 'pattern'),
+  };
 }

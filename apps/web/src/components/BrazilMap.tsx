@@ -1,4 +1,3 @@
-import type { Card } from '@metabook/core';
 import { brStates, brStatesByCode } from '../data/content';
 import { CountryMap } from './CountryMap';
 import type { MapReveal } from './CountryMap';
@@ -18,18 +17,6 @@ const CALLOUTS: Record<string, [number, number]> = {
 };
 
 export const stateByCode = brStatesByCode;
-
-/** First digits of each state's area codes, from the area-code cards. */
-export function digitGroups(cards: Card[]): Map<string, Set<string>> {
-  const map = new Map<string, Set<string>>();
-  for (const card of cards) {
-    if (card.type !== 'areacode') continue;
-    const set = map.get(card.answer) ?? new Set<string>();
-    set.add(card.prompt.value.charAt(0));
-    map.set(card.answer, set);
-  }
-  return map;
-}
 
 /** States sharing a first area-code digit with `answer`, tinted on reveal. */
 export function groupOf(answer: string, digits: Map<string, Set<string>>): Set<string> {
