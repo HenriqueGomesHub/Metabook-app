@@ -39,3 +39,13 @@ export interface Status {
   lastError?: string;
   parse?: ParseStatus;
 }
+
+/** Most recently captured round, shown in the side panel. region/lat/lng are optional (the result screen is not known to expose them). */
+export interface LastRound {
+  truth: string;
+  guess: string;
+  region?: string;
+  lat?: number;
+  lng?: number;
+  at: string;
+}

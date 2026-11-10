@@ -5,6 +5,7 @@ import {
   getStatus,
   markSeen,
   patchStatus,
+  setLastRound,
   setQueue,
 } from '../src/storage';
 import { SUPABASE_URL_RE, sendBatch, type SendResult } from '../src/ingest';
@@ -54,6 +55,7 @@ async function onContent(message: ContentMessage) {
   }
   if (!(await markSeen(message.gameKey))) return;
   await patchStatus({ parse: { ok: true, at: now } });
+  await setLastRound({ truth: message.round.truth.country, guess: message.round.guess.country, at: now });
   await setQueue([...(await getQueue()), message.round]);
   await flush();
 }
@@ -86,3 +88,6 @@ chrome.runtime.onMessage.addListener((raw: unknown, sender) => {
   }
   return;
 });
+
+/** Toolbar icon opens the side panel (there is no popup). */
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(() => undefined);

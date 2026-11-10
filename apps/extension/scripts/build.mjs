@@ -18,25 +18,28 @@ function hostPermission() {
   return `${url.origin}${url.pathname}`;
 }
 
+const appUrl = new URL((loadEnv().VITE_METABOOK_APP_URL ?? '').trim() || 'https://metabook-app.vercel.app');
+if (appUrl.protocol !== 'https:') throw new Error('VITE_METABOOK_APP_URL must be https');
+
 const common = {
   bundle: true,
   target: 'chrome120',
   legalComments: 'none',
-  define: { __INGEST_URL__: JSON.stringify(ingestUrl) },
+  define: { __INGEST_URL__: JSON.stringify(ingestUrl), __APP_URL__: JSON.stringify(appUrl.origin) },
   logLevel: 'info',
 };
 const entries = [
   { entryPoints: [`${root}entrypoints/content.ts`], outfile: `${dist}/content.js`, format: 'iife', ...common },
   { entryPoints: [`${root}entrypoints/background.ts`], outfile: `${dist}/background.js`, format: 'iife', ...common },
-  { entryPoints: [`${root}entrypoints/popup.ts`], outfile: `${dist}/popup.js`, format: 'iife', ...common },
+  { entryPoints: [`${root}entrypoints/sidepanel.ts`], outfile: `${dist}/sidepanel.js`, format: 'iife', ...common },
 ];
 
 async function copyStatic() {
   const manifest = JSON.parse(await readFile(`${root}manifest.base.json`, 'utf8'));
   manifest.host_permissions = [hostPermission()];
   await writeFile(`${dist}/manifest.json`, `${JSON.stringify(manifest, null, 2)}\n`);
-  await cp(`${root}entrypoints/popup.html`, `${dist}/popup.html`);
-  await cp(`${root}entrypoints/popup.css`, `${dist}/popup.css`);
+  await cp(`${root}entrypoints/sidepanel.html`, `${dist}/sidepanel.html`);
+  await cp(`${root}entrypoints/sidepanel.css`, `${dist}/sidepanel.css`);
 }
 
 await rm(dist, { recursive: true, force: true });
