@@ -2,7 +2,9 @@ import type { Card } from '@metabook/core';
 import type { CSSProperties } from 'react';
 import { label } from '../app/labels';
 import { useRegionMap } from '../app/useRegionMaps';
-import { BrazilMap, digitGroups, groupOf } from './BrazilMap';
+import { regionKeys } from '@metabook/core';
+import { patternOf, placedCodes } from '../data/areaCodes';
+import { BrazilMap, groupOf } from './BrazilMap';
 import { CountryMap } from './CountryMap';
 
 /**
@@ -27,8 +29,12 @@ export function AreaCodeMap({
   onHover(code: string | null): void;
   className?: string;
 }) {
-  const own = cards.filter((card) => card.type === 'areacode' && card.country === country);
-  const digits = digitGroups(own);
+  // regions sharing the answer's group: the first significant digit(s), so Italy's "06" is a 6
+  const digits = new Map(
+    [...regionKeys(country, placedCodes(cards, country), patternOf(country)?.digits ?? 1)].map(
+      ([region, keys]) => [region, new Set(keys)],
+    ),
+  );
   const tinted = reveal && { ...reveal, group: groupOf(reveal.answer, digits) };
   const isBrazil = country === 'BR';
   const map = useRegionMap(isBrazil ? 'br' : country);

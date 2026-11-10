@@ -38,6 +38,16 @@
   font-weight: 600;
 }
 
+.game-head h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.game-head h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .game-head p {
   margin: 2px 0 0;
   font-size: 14px;

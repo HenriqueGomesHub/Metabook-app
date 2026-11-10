@@ -1,0 +1,360 @@
+{
+  "BR": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "First digit = region: 1 São Paulo down to 9 the Amazon",
+    "summary": "The first digit tells you the region: 1 São Paulo state, 2 Rio and Espírito Santo, 3 Minas Gerais, 4 Paraná and Santa Catarina, 5 Rio Grande do Sul, 6 the Centre-West with Tocantins, Rondônia and Acre, 7 Bahia and Sergipe, 8 the rest of the North-East, 9 the far North and Maranhão.",
+    "groups": [
+      { "key": "1", "label": "São Paulo" },
+      { "key": "2", "label": "Rio de Janeiro & Espírito Santo" },
+      { "key": "3", "label": "Minas Gerais" },
+      { "key": "4", "label": "Paraná & Santa Catarina" },
+      { "key": "5", "label": "Rio Grande do Sul" },
+      { "key": "6", "label": "the Centre-West, Tocantins, Rondônia & Acre" },
+      { "key": "7", "label": "Bahia & Sergipe" },
+      { "key": "8", "label": "Pernambuco, Alagoas, Paraíba, Rio Grande do Norte, Ceará & Piauí" },
+      { "key": "9", "label": "Pará, Amazonas, Amapá, Roraima & Maranhão" }
+    ],
+    "tip": "A state's capital usually ends in 1: 11 São Paulo, 21 Rio, 31 Belo Horizonte, 41 Curitiba, 51 Porto Alegre, 61 Brasília, 71 Salvador, 81 Recife, 91 Belém.",
+    "areas": { "the Centre-West": ["DF", "GO", "MT", "MS"] }
+  },
+  "RU": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "3 Urals & Siberia, 4 Moscow & the Far East, 8 west & south",
+    "summary": "The first digit splits Russia in three: 3 the Urals and Siberia, 4 Moscow and Central Russia but also the Far East, 8 the North-West, the Volga and the South. The second digit narrows it: 49x around Moscow, 81x St Petersburg and the north, 86x–87x the Caucasus, 38x–39x Siberia, 41x–42x the Far East.",
+    "groups": [
+      { "key": "3", "label": "the Urals & Siberia, plus Crimea" },
+      { "key": "4", "label": "Moscow & Central Russia, Kaliningrad & the Far East" },
+      { "key": "8", "label": "the North-West, the Volga & the South with the Caucasus" }
+    ],
+    "tip": "4 is the tricky one: 47x–49x sit around Moscow (495 and 499 are the city), while 41x–42x are on the Pacific side.",
+    "areas": {
+      "the Urals": ["BA", "CHE", "KGN", "KHM", "ORE", "PER", "SVE", "TYU", "UD", "YAN"],
+      "Siberia": ["AL", "ALT", "BU", "IRK", "KEM", "KK", "KYA", "NVS", "OMS", "TOM", "TY", "ZAB"],
+      "Crimea": ["43"],
+      "Moscow": ["MOS", "MOW"],
+      "Central Russia": ["BEL", "BRY", "IVA", "KLU", "KOS", "KRS", "LIP", "ORL", "RYA", "SMO", "TAM", "TUL", "TVE", "VLA", "VOR", "YAR"],
+      "the Far East": ["AMU", "CHU", "KAM", "KHA", "MAG", "PRI", "SA", "SAK", "YEV"],
+      "the North-West": ["ARK", "KR", "KO", "LEN", "MUR", "NGR", "PSK", "SPE", "VLG", "NEN"],
+      "the Volga": ["CU", "KIR", "ME", "MO", "NIZ", "PNZ", "SAM", "SAR", "TA", "ULY"],
+      "the South with the Caucasus": ["40", "AD", "AST", "CE", "DA", "IN", "KB", "KC", "KDA", "KL", "ROS", "SE", "STA", "VGG"]
+    }
+  },
+  "ID": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "One digit per island group: Java 2–3 to Papua 9",
+    "summary": "After the 0 the first digit is the island group: 02 western and central Java, 03 East Java, Bali and Nusa Tenggara, 04 Sulawesi, 05 Kalimantan, 06 northern Sumatra, 07 the rest of Sumatra, 09 Maluku and Papua.",
+    "groups": [
+      { "key": "2", "label": "Jakarta, Banten, West Java, Central Java & Yogyakarta" },
+      { "key": "3", "label": "East Java, Bali & Nusa Tenggara" },
+      { "key": "4", "label": "Sulawesi" },
+      { "key": "5", "label": "Kalimantan" },
+      { "key": "6", "label": "Aceh & North Sumatra" },
+      { "key": "7", "label": "the rest of Sumatra, the Riau Islands & Bangka Belitung" },
+      { "key": "9", "label": "Maluku & Papua" }
+    ],
+    "tip": "The digits hop west to east like a ferry route: Java 2–3, Sulawesi 4, Borneo 5, Sumatra 6–7, then 9 for the far east. 08 is for mobiles, never a place.",
+    "areas": {
+      "Nusa Tenggara": ["NB", "NT"],
+      "Sulawesi": ["GO", "SA", "SG", "SN", "SR", "ST"],
+      "Kalimantan": ["KB", "KI", "KS", "KT"],
+      "the rest of Sumatra": ["BE", "JA", "LA", "RI", "SB", "SS"],
+      "Bangka Belitung": ["BB"],
+      "Maluku": ["MA", "MU"],
+      "Papua": ["PA", "PB"]
+    }
+  },
+  "AU": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "Four codes, four zones: 02 NSW, 03 VIC, 07 QLD, 08 the rest",
+    "summary": "Australia has just four codes, one per big zone: 02 New South Wales and the ACT, 03 Victoria and Tasmania, 07 Queensland, 08 Western Australia, South Australia and the Northern Territory.",
+    "groups": [
+      { "key": "2", "label": "New South Wales & the ACT" },
+      { "key": "3", "label": "Victoria & Tasmania" },
+      { "key": "7", "label": "Queensland" },
+      { "key": "8", "label": "Western Australia, South Australia & the Northern Territory" }
+    ],
+    "tip": "Numbers starting 04 are mobiles and say nothing about the place.",
+    "areas": { "the ACT": ["ACT"] }
+  },
+  "MX": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "55 Mexico City, 6 north-west, 8 north-east, 9 south-east",
+    "summary": "The first digit gives the zone: 55 Mexico City, 6 the north-west, 8 the north-east, 9 the south-east, 2 Puebla, Oaxaca and Veracruz, 3 the west around Guadalajara, 4 the Bajío, 7 the centre-south (Guerrero, Morelos, Hidalgo). Border states mix two digits.",
+    "groups": [
+      { "key": "2", "label": "Puebla, Tlaxcala, Oaxaca & Veracruz" },
+      { "key": "3", "label": "Jalisco, Colima, Nayarit & Michoacán" },
+      { "key": "4", "label": "Guanajuato, Querétaro, Aguascalientes, Zacatecas, San Luis Potosí, Jalisco & Michoacán" },
+      { "key": "5", "label": "Mexico City & the State of Mexico" },
+      { "key": "6", "label": "Baja California, Baja California Sur, Sonora, Sinaloa, Chihuahua & Durango" },
+      { "key": "7", "label": "Guerrero, Morelos, Hidalgo, the State of Mexico, Michoacán & Veracruz" },
+      { "key": "8", "label": "Nuevo León, Coahuila & Tamaulipas, plus one Baja California Sur code" },
+      { "key": "9", "label": "Yucatán, Quintana Roo, Campeche, Tabasco, Chiapas, Oaxaca & Veracruz" }
+    ],
+    "tip": "Only the three biggest cities have two-digit codes: 55 Mexico City, 33 Guadalajara, 81 Monterrey.",
+    "areas": { "Mexico City": ["DIF"] }
+  },
+  "FR": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "Five zones clockwise from Paris: 01 to 05",
+    "summary": "France has five zones and the digit after the 0 names them: 01 Paris and Île-de-France, 02 the north-west, 03 the north-east, 04 the south-east and Corsica, 05 the south-west.",
+    "groups": [
+      { "key": "1", "label": "Île-de-France" },
+      { "key": "2", "label": "the North-West" },
+      { "key": "3", "label": "the North-East" },
+      { "key": "4", "label": "the South-East & Corsica" },
+      { "key": "5", "label": "the South-West" }
+    ],
+    "tip": "Read it like a clock from Paris: 02 top left, 03 top right, 04 bottom right, 05 bottom left. 06 and 07 are mobiles.",
+    "areas": {
+      "Île-de-France": ["75", "77", "78", "91", "92", "93", "94", "95"],
+      "the North-West": ["44", "14", "18", "22", "27", "28", "29", "35", "36", "37", "41", "45", "49", "50", "53", "56", "61", "72", "76", "85"],
+      "the North-East": ["51", "02", "08", "10", "21", "25", "39", "52", "54", "55", "57", "58", "59", "60", "62", "67", "68", "70", "71", "80", "88", "89", "90"],
+      "the South-East": ["38", "01", "03", "04", "05", "06", "07", "11", "13", "15", "26", "30", "34", "42", "43", "48", "63", "66", "69", "73", "74", "83", "84"],
+      "Corsica": ["2A", "2B"],
+      "the South-West": ["33", "09", "12", "16", "17", "19", "23", "24", "31", "32", "40", "46", "47", "64", "65", "79", "81", "82", "86", "87"]
+    }
+  },
+  "ZA": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "011 Joburg, 021 Cape Town, 031 Durban, 041 Gqeberha",
+    "summary": "After the 0 the first digit gives the area: 01 the north (Johannesburg 011, Pretoria 012), 02 the Western Cape (Cape Town 021), 03 KwaZulu-Natal (Durban 031), 04 the Eastern Cape and the Garden Route (Gqeberha 041, George 044), 05 the Free State and Northern Cape (Bloemfontein 051, Kimberley 053).",
+    "groups": [
+      { "key": "1", "label": "Gauteng, Limpopo, Mpumalanga & North West" },
+      { "key": "2", "label": "Western Cape & part of the Northern Cape" },
+      { "key": "3", "label": "KwaZulu-Natal" },
+      { "key": "4", "label": "Eastern Cape & the Garden Route in the Western Cape" },
+      { "key": "5", "label": "Free State & the Northern Cape" }
+    ],
+    "tip": "The Western and Northern Cape each use two digits, so 02/04 and 02/05 both point west."
+  },
+  "ES": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "After the 9: 1 Madrid, 3 Barcelona, 5 Andalusia…",
+    "summary": "Skip the leading 9 (or 8, used for newer lines): the next digit is the area. 1 Madrid, 3 Barcelona, 5 Andalusia, 6 Valencia and Murcia, 8 Galicia, Asturias and the north-west, 4 the Basque Country and the north, 7 Aragon, the Balearics and Catalonia outside Barcelona, 2 Extremadura, the west of the Meseta and the Canaries.",
+    "groups": [
+      { "key": "1", "label": "Madrid" },
+      { "key": "2", "label": "Extremadura, the Canaries, Toledo, Ciudad Real, Ávila, Salamanca & Segovia" },
+      { "key": "3", "label": "Barcelona" },
+      { "key": "4", "label": "the Basque Country, Navarre, Cantabria, La Rioja, Burgos & Guadalajara" },
+      { "key": "5", "label": "Andalusia, Ceuta & Melilla" },
+      { "key": "6", "label": "the Valencian Community, Murcia, Albacete & Cuenca" },
+      { "key": "7", "label": "the rest of Catalonia, Aragon, the Balearic Islands, Palencia & Soria" },
+      { "key": "8", "label": "Galicia, Asturias, León, Valladolid & Zamora" }
+    ],
+    "tip": "91 Madrid and 93 Barcelona are the only two-digit codes; every other province has three digits (95x Andalusia, 96x Valencia…). Castile is split between 2, 4, 7 and 8.",
+    "areas": {
+      "Madrid": ["M"],
+      "Extremadura": ["BA", "CC"],
+      "the Canaries": ["GC", "TF"],
+      "the Basque Country": ["BI", "SS", "VI"],
+      "Andalusia": ["AL", "CA", "CO", "GR", "H", "J", "MA", "SE"],
+      "the Valencian Community": ["A", "CS", "V"],
+      "the rest of Catalonia": ["GI", "L", "T"],
+      "Aragon": ["HU", "TE", "Z"],
+      "Galicia": ["C", "LU", "OR", "PO"]
+    }
+  },
+  "IT": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "Runs down the boot: 01 north-west to 09 Sicily",
+    "summary": "After the 0 the first digit runs down the boot: 01 the north-west, 02 Milan, 03 the rest of Lombardy, 04 the north-east, 05 Emilia-Romagna and Tuscany, 06 Rome, 07 central Italy and Sardinia, 08 the south (Naples, Bari), 09 Sicily and Calabria.",
+    "groups": [
+      { "key": "1", "label": "most of Piedmont, Aosta Valley & Liguria" },
+      { "key": "2", "label": "Milan" },
+      { "key": "3", "label": "the rest of Lombardy, with Novara & Verbano-Cusio-Ossola" },
+      { "key": "4", "label": "Veneto, Friuli & Trentino-South Tyrol" },
+      { "key": "5", "label": "Emilia-Romagna & Tuscany" },
+      { "key": "6", "label": "Rome" },
+      { "key": "7", "label": "Lazio, Marche, Umbria & Sardinia" },
+      { "key": "8", "label": "Campania, Abruzzo, Molise, most of Puglia & Matera" },
+      { "key": "9", "label": "Sicily, Calabria, Potenza, Taranto & part of Salerno" }
+    ],
+    "tip": "Big cities get the short codes: 02 Milan, 06 Rome, 010 Genoa, 011 Turin, 051 Bologna, 055 Florence, 081 Naples, 091 Palermo.",
+    "areas": {
+      "Piedmont": ["AL", "AT", "BI", "CN", "TO", "VC"],
+      "Aosta Valley": ["AO"],
+      "Liguria": ["GE", "IM", "SP", "SV"],
+      "the rest of Lombardy": ["BG", "BS", "CO", "CR", "LC", "LO", "MB", "MN", "PV", "SO", "VA"],
+      "Veneto": ["BL", "PD", "RO", "TV", "VE", "VI", "VR"],
+      "Friuli": ["GO", "PN", "TS", "UD"],
+      "Trentino-South Tyrol": ["BZ", "TN"],
+      "Emilia-Romagna": ["BO", "FC", "FE", "MO", "PC", "PR", "RA", "RE", "RN"],
+      "Tuscany": ["AR", "FI", "GR", "LI", "LU", "MS", "PI", "PO", "PT", "SI"],
+      "Lazio": ["FR", "LT", "RI", "RM", "VT"],
+      "Marche": ["AN", "AP", "FM", "MC", "PU"],
+      "Umbria": ["PG"],
+      "Sardinia": ["CA", "NU", "OG", "OR", "OT", "SS"],
+      "Campania": ["AV", "BN", "CE", "NA", "SA"],
+      "Abruzzo": ["AQ", "PE", "TE"],
+      "Molise": ["CB", "IS"],
+      "Puglia": ["BA", "BR", "BT", "FG", "LE"],
+      "Sicily": ["AG", "CL", "CT", "EN", "ME", "PA", "RG", "SR", "TP"],
+      "Calabria": ["CS", "CZ", "KR", "RC", "VV"]
+    }
+  },
+  "TR": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "West to east: 02, 03, 04",
+    "summary": "After the 0 the first digit splits Turkey west to east: 2 the west (Istanbul 212/216, İzmir 232, Antalya 242), 3 central Anatolia, the western Black Sea and the eastern Mediterranean (Ankara 312, Adana 322), 4 the east and the eastern Black Sea (Diyarbakır 412, Erzurum 442, Trabzon 462).",
+    "groups": [
+      { "key": "2", "label": "the West: Marmara, the Aegean & the western Mediterranean" },
+      { "key": "3", "label": "Central Anatolia, the western Black Sea & the eastern Mediterranean" },
+      { "key": "4", "label": "Eastern Anatolia & the eastern Black Sea" }
+    ],
+    "tip": "The second digit narrows it: 021x is Istanbul, 031x Ankara, 046x the Trabzon coast.",
+    "areas": {
+      "the West: Marmara, the Aegean & the western Mediterranean": ["03", "07", "09", "10", "11", "15", "16", "17", "20", "22", "26", "32", "34", "35", "39", "41", "43", "45", "48", "54", "59", "64", "77"],
+      "Central Anatolia, the western Black Sea & the eastern Mediterranean": ["01", "05", "06", "14", "18", "19", "27", "31", "33", "37", "38", "40", "42", "46", "50", "51", "55", "57", "58", "60", "66", "67", "68", "70", "71", "74", "78", "79", "80", "81"],
+      "Eastern Anatolia & the eastern Black Sea": ["02", "04", "08", "12", "13", "21", "23", "24", "25", "28", "29", "30", "36", "44", "47", "49", "52", "53", "56", "61", "62", "63", "65", "69", "72", "73", "75", "76"]
+    }
+  },
+  "PH": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "2 Manila, 4 & 7 Luzon, 3 Visayas, 6 & 8 Mindanao",
+    "summary": "Drop the 0 and the first digit is the island zone: 2 Metro Manila, 4 southern and central Luzon, 7 northern Luzon, 5 Bicol and Eastern Visayas, 3 Western and Central Visayas, 6 western Mindanao and Sulu, 8 eastern and northern Mindanao.",
+    "groups": [
+      { "key": "2", "label": "Metro Manila & Rizal" },
+      { "key": "3", "label": "Western & Central Visayas" },
+      { "key": "4", "label": "southern & central Luzon, Mindoro & Palawan" },
+      { "key": "5", "label": "Bicol & Eastern Visayas" },
+      { "key": "6", "label": "western Mindanao & Sulu" },
+      { "key": "7", "label": "northern Luzon" },
+      { "key": "8", "label": "eastern & northern Mindanao" }
+    ],
+    "tip": "Manila is the only one-digit code (02); Cebu is 032 and Davao 082.",
+    "areas": {
+      "Western & Central Visayas": ["BOH", "CAP", "CEB", "ILI", "NEC", "NER", "LAP", "MDE", "GUI", "BCD", "SIG", "AKL", "ANT"],
+      "southern & central Luzon": ["BTG", "BUL", "CAV", "LAG", "PAM", "QUE", "ZMB", "AUR", "MAD", "ROM", "NUE", "TAR", "BAN"],
+      "Mindoro": ["MDC", "MDR"],
+      "Bicol": ["ALB", "CAS", "SOR", "CAT", "CAN", "MAS"],
+      "Eastern Visayas": ["LEY", "WSA", "BIL", "SLE", "EAS", "NSA"],
+      "western Mindanao": ["LAN", "NCO", "ZAN", "ZAS", "BAS", "ZSI", "LAS", "MAG", "SUK", "TAW"],
+      "northern Luzon": ["BEN", "CAG", "ILN", "LUN", "PAN", "ABR", "APA", "IFU", "KAL", "MOU", "ILS", "BTN", "ISA", "NUV", "QUI"],
+      "eastern & northern Mindanao": ["AGN", "COM", "DAS", "DAV", "MSR", "SCO", "SUR", "SAR", "AGS", "SUN", "DAO", "BUK", "CAM", "MSC"]
+    }
+  },
+  "CO": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "60 + one digit per zone: 601 Bogotá, 604 Medellín",
+    "summary": "Every landline starts with 60 and the third digit is the zone: 601 Bogotá, 602 the south-west (Cali), 604 Antioquia (Medellín), 605 the Caribbean coast, 606 the Coffee Axis, 607 the Santanders, 608 everywhere else (the east, the south and San Andrés).",
+    "groups": [
+      { "key": "1", "label": "Bogotá & Cundinamarca" },
+      { "key": "2", "label": "Valle del Cauca, Cauca & Nariño" },
+      { "key": "4", "label": "Antioquia, Córdoba & Chocó" },
+      { "key": "5", "label": "the Caribbean coast" },
+      { "key": "6", "label": "the Coffee Axis" },
+      { "key": "7", "label": "Santander, Norte de Santander & Arauca" },
+      { "key": "8", "label": "the east, the south & San Andrés" }
+    ],
+    "tip": "The third digit is the old one-digit code with 60 put in front, which is why there is no 603.",
+    "areas": {
+      "the Caribbean coast": ["ATL", "BOL", "CES", "LAG", "MAG", "SUC"],
+      "the Coffee Axis": ["CAL", "QUI", "RIS"],
+      "the east, the south": ["AMA", "BOY", "CAQ", "CAS", "GUA", "GUV", "HUI", "MET", "PUT", "TOL", "VAU", "VID"],
+      "San Andrés": ["SAP"]
+    }
+  },
+  "PE": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "1 Lima, 7 north coast, 5 south, 8 Cusco",
+    "summary": "The first digit gives the zone: 1 Lima, 4 the north-centre (Trujillo, Áncash), 7 the north coast and Cajamarca, 6 the central highlands and the Amazon, 5 the south (Arequipa, Puno, Tacna), 8 Cusco and the south-east.",
+    "groups": [
+      { "key": "1", "label": "Lima & Callao" },
+      { "key": "4", "label": "La Libertad, Áncash, San Martín & Amazonas" },
+      { "key": "5", "label": "Arequipa, Ica, Moquegua, Tacna & Puno" },
+      { "key": "6", "label": "Junín, Huánuco, Pasco, Ayacucho, Huancavelica, Loreto & Ucayali" },
+      { "key": "7", "label": "Piura, Tumbes, Lambayeque & Cajamarca" },
+      { "key": "8", "label": "Cusco, Apurímac & Madre de Dios" }
+    ],
+    "tip": "Lima is the only one-digit code (1); Cusco is 84, Arequipa 54.",
+    "areas": { "Cusco": ["CUS"] }
+  },
+  "CL": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "North to south: 5, 3, 2 Santiago, 7, 4, 6",
+    "summary": "The first digit, north to south: 5 the desert north, 3 Valparaíso, 2 Santiago, 7 O'Higgins and Maule, 4 Ñuble, Biobío and Araucanía, 6 Los Ríos down to Magallanes.",
+    "groups": [
+      { "key": "2", "label": "Santiago" },
+      { "key": "3", "label": "Valparaíso" },
+      { "key": "4", "label": "Ñuble, Biobío & Araucanía" },
+      { "key": "5", "label": "Arica, Tarapacá, Antofagasta, Atacama & Coquimbo" },
+      { "key": "6", "label": "Los Ríos, Los Lagos, Aysén & Magallanes" },
+      { "key": "7", "label": "O'Higgins & Maule" }
+    ],
+    "tip": "Santiago is the only one-digit code (2); the far ends of the country are 5 (north) and 6 (south).",
+    "areas": { "Arica": ["AP"], "Magallanes": ["MA"] }
+  },
+  "PL": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "12 Kraków, 22 Warsaw, 58 Gdańsk, 61 Poznań, 71 Wrocław",
+    "summary": "The first digit gives the area: 1 the south-east (Kraków 12), 2 Warsaw, 3 Silesia (Katowice 32), 4 Łódź and Radom, 5 the north (Gdańsk 58), 6 the west (Poznań 61), 7 Lower Silesia and Opole (Wrocław 71), 8 the east (Lublin 81, Białystok 85), 9 the north-west (Szczecin 91).",
+    "groups": [
+      { "key": "1", "label": "Lesser Poland, Podkarpackie & Świętokrzyskie" },
+      { "key": "2", "label": "Warsaw (Masovia)" },
+      { "key": "3", "label": "Silesia" },
+      { "key": "4", "label": "Łódź & Radom (Masovia)" },
+      { "key": "5", "label": "Pomerania, Kuyavia & Warmia-Masuria" },
+      { "key": "6", "label": "Greater Poland & Lubusz" },
+      { "key": "7", "label": "Lower Silesia & Opole" },
+      { "key": "8", "label": "Lublin, Podlaskie & eastern Warmia-Masuria" },
+      { "key": "9", "label": "West Pomerania & northern Lubusz" }
+    ],
+    "tip": "Polish landlines still start with these two digits even though you no longer dial them separately.",
+    "areas": {
+      "Warsaw": ["MZ"],
+      "Radom": ["MZ"],
+      "Masovia": ["MZ"],
+      "Silesia": ["SL"],
+      "Lower Silesia": ["DS"],
+      "Pomerania": ["PM"],
+      "West Pomerania": ["ZP"],
+      "Kuyavia": ["KP"],
+      "Warmia-Masuria": ["WN"]
+    }
+  },
+  "UA": {
+    "kind": "pattern",
+    "digits": 1,
+    "hook": "Moves east: 03 west, 04 Kyiv, 05 centre-east, 06 Donbas",
+    "summary": "After the 0 the first digit moves east: 03 the west (Lviv 032), 04 Kyiv and the centre-north plus Odesa (044, 048), 05 the centre-east and south (Dnipro 056, Kharkiv 057), 06 Zaporizhzhia and the Donbas.",
+    "groups": [
+      { "key": "3", "label": "Lviv, Volyn, Rivne, Ternopil, Khmelnytskyi, Ivano-Frankivsk, Zakarpattia & Chernivtsi" },
+      { "key": "4", "label": "Kyiv, Zhytomyr, Chernihiv, Cherkasy, Vinnytsia & Odesa" },
+      { "key": "5", "label": "Dnipropetrovsk, Kharkiv, Poltava, Sumy, Kirovohrad, Mykolaiv & Kherson" },
+      { "key": "6", "label": "Zaporizhzhia, Donetsk & Luhansk" }
+    ],
+    "tip": "Kyiv is 044; Odesa (048) is the odd one out, a 04 code down on the south coast.",
+    "areas": { "Kyiv": ["30", "32"], "Odesa": ["51"] }
+  },
+  "US": {
+    "kind": "memorise",
+    "digits": 1,
+    "hook": "Every first digit turns up coast to coast",
+    "summary": "US area codes were handed out with no regional order: in 1947 the busiest cities got the quickest codes to dial (212 New York, 213 Los Angeles, 312 Chicago, 313 Detroit), and every first digit turns up all over the country.",
+    "groups": [],
+    "tip": "The US is hard to learn by pattern. Learn the big-city codes one by one if you want the extra edge."
+  },
+  "CA": {
+    "kind": "memorise",
+    "digits": 1,
+    "hook": "Same plan as the US: codes scatter across provinces",
+    "summary": "Canada shares the US numbering plan, and a province's codes spread over many first digits: Ontario alone has codes starting with every digit from 2 to 9.",
+    "groups": [],
+    "tip": "The original codes are worth knowing: 416 Toronto, 514 Montreal, 604 Vancouver, 403 Alberta, 902 the Maritimes."
+  }
+}

@@ -12,7 +12,7 @@ import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { ICONS } from '../components/icons';
 import { Status } from '../components/Status';
-import { areaCodeCountries } from '../data/areaCodes';
+import { areaCodeSections } from '../data/areaCodes';
 import './games/games.css';
 
 const WEAK_MASTERY = 0.6;
@@ -56,6 +56,17 @@ interface Tile {
   chips?: { label: string; to: string }[];
 }
 
+function areaCodeTile(cards: Card[], pool: AppSnapshot['content']['pool']): Partial<Tile> {
+  const { pattern, memorise } = areaCodeSections(cards, pool);
+  return {
+    to: '/areacodes?via=drill',
+    chips: [...pattern, ...memorise].map((code) => ({
+      label: label(code),
+      to: `/areacodes/${code.toLowerCase()}?via=drill`,
+    })),
+  };
+}
+
 export function Drills() {
   const { data, error } = useAppData();
   return data ? <DrillsView data={data} /> : <Status error={error} />;
@@ -77,12 +88,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           to: `/session?type=${type}`,
           ...CARD_TYPES[type],
           count: holds(ofType, TYPE_NOUNS[type]),
-          ...(type === 'areacode' && {
-            chips: areaCodeCountries(ofType, data.content.pool).map((code) => ({
-              label: label(code),
-              to: `/session?type=areacode&country=${code}`,
-            })),
-          }),
+          // area codes open on the page that says which countries' codes have a pattern
+          ...(type === 'areacode' && areaCodeTile(ofType, data.content.pool)),
           mastery: mastery(
             ofType.map((card) => card.id),
             data.states,

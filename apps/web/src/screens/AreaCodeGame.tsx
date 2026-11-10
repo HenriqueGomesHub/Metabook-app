@@ -10,6 +10,7 @@ import { AreaCodeMap } from '../components/AreaCodeMap';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Medal } from '../components/Medal';
+import { PatternHint } from '../components/PatternHint';
 import { CloseButton } from '../components/Chip';
 import { Status } from '../components/Status';
 import { TipBox } from '../components/TipBox';
@@ -310,6 +311,7 @@ function Play({
                       : `You picked ${pickedState?.name ?? picked}`}
                 </p>
                 <h2 className="headline">{answerState.name}</h2>
+                <PatternHint card={card} cards={all} />
               </div>
               <dl className="ddd-figures">
                 {result.km !== undefined && (

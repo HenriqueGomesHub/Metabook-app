@@ -1,0 +1,206 @@
+/* Area codes: the landing page and a country's pattern intro */
+
+.ac-section {
+  margin-bottom: 48px;
+}
+
+.ac-section h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.ac-section > p {
+  margin: 6px 0 18px;
+}
+
+.ac-countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ac-country {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.ac-country:hover,
+.ac-country:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.ac-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ac-hook {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.ac-meta {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.ac-intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 28px 120px;
+}
+
+.ac-intro-head {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.ac-intro-head h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.ac-summary {
+  margin: 14px 0 0;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.ac-note {
+  margin: 12px 0 0;
+  color: var(--warn);
+}
+
+.ac-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(260px, 2fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.ac-map {
+  margin: 0;
+  padding: 16px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.ac-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ac-side-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.ac-legend,
+.ac-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ac-legend li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.35;
+}
+
+.ac-swatch {
+  flex: none;
+  min-width: 52px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: var(--font-headline), sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #12110f;
+}
+
+.ac-examples b {
+  display: inline-block;
+  min-width: 44px;
+  font-family: var(--font-headline), sans-serif;
+}
+
+.ac-tip {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--raise);
+  line-height: 1.5;
+}
+
+.ac-tip .kicker {
+  display: block;
+}
+
+.ac-small {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.ac-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 860px) {
+  .ac-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ac-intro {
+    padding: 8px 16px 96px;
+  }
+
+  .ac-intro-head h1 {
+    font-size: 30px;
+  }
+
+  .ac-summary {
+    font-size: 16px;
+  }
+
+  .ac-map {
+    padding: 8px;
+  }
+}

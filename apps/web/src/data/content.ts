@@ -94,9 +94,10 @@ const cards = import.meta.glob<Card[]>(
 const loadGenerated = async () => (await import('./generatedCards')).generatedCards;
 const tips = import.meta.glob<Tip[]>('../../../../content/tips/*.json', { import: 'default' });
 // Telephone area codes per country (content/areacodes/<code>.json); none is fine.
-const areaCodes = import.meta.glob<AreaCodeFile>('../../../../content/areacodes/*.json', {
-  import: 'default',
-});
+const areaCodes = import.meta.glob<AreaCodeFile>(
+  ['../../../../content/areacodes/*.json', '!../../../../content/areacodes/patterns.json'],
+  { import: 'default' },
+);
 const loadClues = async () => (await import('./allClues')).allClues;
 
 const loadAll = async <T>(files: Record<string, () => Promise<T[]>>): Promise<T[]> =>
