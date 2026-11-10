@@ -137,7 +137,7 @@ export async function runJob(job, { steps = [], onStep } = {}) {
     } else if (step === 'rereview') {
       const { createQueue } = await import('./queue.mjs');
       const { applyRereviews } = await import('./review.mjs');
-      const all = await timed(async () => ({ report: await applyRereviews({ queue: createQueue() }) }));
+      const all = await timed(async () => ({ report: await applyRereviews({ queue: createQueue(), ...(job.reviewDir && { dir: join(CONTENT, job.reviewDir) }) }) }));
       result = all.ok ? all.report : { all };
     } else if (step === 'generate') {
       const { loadInput, writeGenerated } = await import('./generate.mjs');

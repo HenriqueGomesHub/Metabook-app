@@ -266,18 +266,7 @@
  },
  {
   "id": "3b928521-2451-4a05-8042-2fd43b39ade9",
-  "uses": [
-   {
-    "subject": "bollard",
-    "crop": {
-     "x": 0,
-     "y": 0.55,
-     "w": 0.7,
-     "h": 0.45
-    },
-    "note": "Short green flexible posts along the lane divider."
-   }
-  ]
+  "reject": "Only green flexible lane-divider wands on the road, not a roadside delineator"
  },
  {
   "id": "dd5444b4-14df-4a81-adb5-0934dbc8a9b7",
@@ -297,18 +286,7 @@
  },
  {
   "id": "c3186c5d-e904-4256-bd7f-3b20fcf6ba21",
-  "uses": [
-   {
-    "subject": "bollard",
-    "crop": {
-     "x": 0.45,
-     "y": 0.55,
-     "w": 0.5,
-     "h": 0.45
-    },
-    "note": "White numbered kilometre marker post beside the grass verge."
-   }
-  ]
+  "reject": "Only a numbered kilometre marker stone; no reference bollard and no other clue"
  },
  {
   "id": "032c0bc7-5879-4372-ab97-6506101d1dee",
@@ -404,18 +382,7 @@
  },
  {
   "id": "72dd29a9-cbee-4ebd-a34c-cd9a2d7d8d1d",
-  "uses": [
-   {
-    "subject": "bollard",
-    "crop": {
-     "x": 0.35,
-     "y": 0.3,
-     "w": 0.5,
-     "h": 0.7
-    },
-    "note": "Orange flexible posts with white reflective bands along a cycle lane."
-   }
-  ]
+  "reject": "Only orange flexible cycle-lane wands, not a roadside delineator"
  },
  {
   "id": "28716e3f-b218-4064-9bc1-48d94b475e8e",
@@ -480,18 +447,7 @@
  },
  {
   "id": "2feca3b6-5fbb-4705-a49c-a3df12d724bf",
-  "uses": [
-   {
-    "subject": "bollard",
-    "crop": {
-     "x": 0.25,
-     "y": 0.55,
-     "w": 0.5,
-     "h": 0.45
-    },
-    "note": "Short yellow posts beside a black-and-yellow painted kerb."
-   }
-  ]
+  "reject": "Only short yellow kerb posts, not a roadside delineator"
  },
  {
   "id": "5ae2e16d-1c59-46e0-b285-a86a37928533",

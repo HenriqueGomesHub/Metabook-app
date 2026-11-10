@@ -105,16 +105,6 @@
      "h": 0.85
     },
     "note": "Blue bus stop sign on a pole beside a bus"
-   },
-   {
-    "subject": "other",
-    "crop": {
-     "x": 0.45,
-     "y": 0.2,
-     "w": 0.5,
-     "h": 0.78
-    },
-    "note": "Red wooden bus shelter with a yellow bus sign and timetable"
    }
   ]
  },
@@ -461,11 +451,11 @@
     "subject": "bollard",
     "crop": {
      "x": 0,
-     "y": 0.1,
-     "w": 0.6,
-     "h": 0.9
+     "y": 0.45,
+     "w": 0.3,
+     "h": 0.45
     },
-    "note": "Red and white striped posts at a narrow bridge entrance"
+    "note": "Red and white painted concrete block beside the bridge approach"
    },
    {
     "subject": "sign",
@@ -574,18 +564,7 @@
  },
  {
   "id": "6590a6cd-ae6a-4977-8060-f4d75cdc057d",
-  "uses": [
-   {
-    "subject": "bollard",
-    "crop": {
-     "x": 0.1,
-     "y": 0.35,
-     "w": 0.4,
-     "h": 0.5
-    },
-    "note": "Red and white striped post at a crossing"
-   }
-  ]
+  "reject": "Only a red-and-white striped pole at a crossing, not a roadside delineator"
  },
  {
   "id": "264daec6-911e-4e19-9758-d6dec7888bf3",
