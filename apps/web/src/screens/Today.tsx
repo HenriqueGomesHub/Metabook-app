@@ -1,17 +1,17 @@
 import { activePairs, blockProgress, LEARN_MORE } from '@metabook/core';
-import type { CardType } from '@metabook/core';
 import { useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
-import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { activeBlock } from '../app/dataActions';
 import { label, pairLabel } from '../app/labels';
 import {
+  countryProgress,
   curriculum,
   mapsOf,
   pairScope,
   practisedDays,
+  sessionMix,
   streakLength,
   todaySession,
   weakestGroup,
@@ -20,13 +20,14 @@ import { useRegionMaps } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
+import { Icon } from '../components/icons';
+import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { preloadClueImages } from '../data/clueImages';
 
 const SECONDS_PER_CARD = 8;
 /** Cards of today's queue whose images are signed and fetched while Today shows. */
 const PRELOAD = 5;
-const MIX_COLOURS = ['#eeeae2', '#a3c49a', '#bdb8ad', '#8e897f', '#66625a', '#46433d', '#3a3832'];
 
 export function Today() {
   const { data, error } = useAppData();
@@ -65,17 +66,14 @@ function TodayView({ data }: { data: AppSnapshot }) {
     return () => window.removeEventListener('keydown', onKey);
   }, [empty, queue.length, navigate]);
 
-  const counts = new Map<CardType, number>();
   let fresh = 0;
   for (const item of queue) {
     const card = cardsById.get(item.cardId);
-    if (!card) continue;
-    counts.set(card.type, (counts.get(card.type) ?? 0) + 1);
-    if ((data.states[card.id]?.state ?? 'new') === 'new') fresh++;
+    if (card && (data.states[card.id]?.state ?? 'new') === 'new') fresh++;
   }
-  const mix = TYPE_ORDER.filter((type) => counts.has(type))
-    .map((type) => ({ type, count: counts.get(type) as number }))
-    .sort((a, b) => b.count - a.count);
+  const reviews = queue.length - fresh;
+  const mix = sessionMix(queue, data.content.cards);
+  const progress = countryProgress(data, learningNow);
 
   const minutes = Math.max(1, Math.round((queue.length * SECONDS_PER_CARD) / 60));
   const seenAny = Object.values(data.states).some((state) => state.state !== 'new');
@@ -88,10 +86,10 @@ function TodayView({ data }: { data: AppSnapshot }) {
   useRegionMaps(mapsOf(confusion ? [confusion.picked, confusion.truth] : []));
   const weakest = weakestGroup(data, now);
   const activeBlockLine = activeBlock(data);
-  const progress = activeBlockLine && blockProgress(activeBlockLine, data.blockDays, now);
+  const blockState = activeBlockLine && blockProgress(activeBlockLine, data.blockDays, now);
   const block =
-    activeBlockLine && progress && !progress.finished
-      ? { ...progress, minutes: activeBlockLine.minutesPerDay }
+    activeBlockLine && blockState && !blockState.finished
+      ? { ...blockState, minutes: activeBlockLine.minutesPerDay }
       : null;
 
   return (
@@ -114,7 +112,7 @@ function TodayView({ data }: { data: AppSnapshot }) {
         />
       ) : (
         <div className="today-grid">
-          <section className="rise d1">
+          <section className="today-main rise d1">
             <p className="today-kicker">Due today</p>
             <div className="today-count headline">{queue.length}</div>
             <p className="today-sub">
@@ -148,43 +146,67 @@ function TodayView({ data }: { data: AppSnapshot }) {
                 )}
               </div>
             )}
-            <p className="today-avail">
-              {newAvailable.toLocaleString('en')} new available
-              {learningNow.length > 0 && (
-                <>
-                  <br />
-                  Learning now: {learningNow.map((code) => label(code)).join(', ')}
-                </>
-              )}
-            </p>
           </section>
 
           <div className="today-side rise d2">
-            <section className="panel">
-              <div>
-                <div className="panel-row panel-title">
-                  <span>Today’s mix</span>
-                  <span className="muted small">
-                    {queue.length - fresh} review · {fresh} new
-                  </span>
-                </div>
-                <div className="mix">
-                  {mix.map(({ type, count }, i) => (
-                    <div key={type} style={{ flex: count, background: MIX_COLOURS[i] }} />
-                  ))}
-                </div>
-                <ul className="mix-legend">
-                  {mix.map(({ type, count }, i) => (
-                    <li key={type}>
-                      <span className="swatch" style={{ background: MIX_COLOURS[i] }} />
-                      {CARD_TYPES[type].label}
-                      <span className="muted">{count}</span>
+            <section className="panel" aria-labelledby="today-mix">
+              <div className="panel-row panel-title">
+                <span id="today-mix">In today’s session</span>
+                <span className="muted small">
+                  {reviews} review · {fresh} new
+                </span>
+              </div>
+              {mix.length > 0 ? (
+                <ul className="mix-groups">
+                  {mix.map((group) => (
+                    <li key={group.key}>
+                      <Icon name={group.icon} size={20} />
+                      <span className="mix-name">{group.label}</span>
+                      <span className="mix-count">{group.count}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              ) : (
+                <p className="muted small">Nothing queued.</p>
+              )}
+
+              {progress.length > 0 && (
+                <>
+                  <div className="rule" />
+                  <div>
+                    <div className="panel-row panel-title">
+                      <span>Learning now</span>
+                      <span className="muted small">clue cards introduced</span>
+                    </div>
+                    <ul className="country-progress">
+                      {progress.map(({ code, seen, total }) => (
+                        <li key={code}>
+                          <span className="country-progress-name">{label(code)}</span>
+                          <ProgressBar
+                            value={seen}
+                            max={Math.max(1, total)}
+                            label={`${label(code)}: ${seen} of ${total} clue cards introduced`}
+                          />
+                          <span className="muted small country-progress-count">
+                            {seen}/{total}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
+
               <div className="rule" />
               <dl className="facts">
+                <div>
+                  <dt>Reviews due</dt>
+                  <dd>{reviews}</dd>
+                </div>
+                <div>
+                  <dt>New</dt>
+                  <dd>{newAvailable.toLocaleString('en')} new available</dd>
+                </div>
                 <div>
                   <dt>Weakest</dt>
                   <dd>{weakest ?? <span className="muted">Nothing yet</span>}</dd>

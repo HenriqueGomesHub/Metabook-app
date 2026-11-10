@@ -7,9 +7,11 @@ import {
   parseMapKey,
   practiseMoreSession,
 } from '@metabook/core';
-import type { Card, CardType, Review, Session } from '@metabook/core';
+import type { Card, CardType, Review, Session, SessionItem } from '@metabook/core';
+import type { IconName } from '../components/icons';
 import type { AppSnapshot } from './AppData';
-import { tagLabel } from './labels';
+import { CARD_TYPES } from './cardTypes';
+import { SUBJECTS, tagLabel } from './labels';
 
 const FALLBACK_MEDIAN_MS = 6000;
 const STREAK_DAYS = 14;
@@ -96,6 +98,64 @@ export function curriculum(data: AppSnapshot): { newAvailable: number; learningN
     newAvailable,
     learningNow: activeCountries(cards, data.states, data.settings.focusCountries),
   };
+}
+
+/** One line of Today's breakdown: a clue family, or a kind of card not made from clues. */
+export interface MixGroup {
+  key: string;
+  label: string;
+  icon: IconName;
+  count: number;
+}
+
+const TYPE_ICONS: Partial<Record<CardType, IconName>> = {
+  flag: 'flag',
+  script: 'script',
+  lookalike: 'lookalike',
+  region: 'region',
+  areacode: 'areacode',
+  plate: 'plate',
+  live: 'streetview',
+  meta: 'clue',
+};
+
+/** What a queue holds, by family (bollards, poles…) or kind of card, largest first. */
+export function sessionMix(items: SessionItem[], cards: Card[]): MixGroup[] {
+  const byId = new Map(cards.map((card) => [card.id, card]));
+  const groups = new Map<string, MixGroup>();
+  for (const item of items) {
+    const card = byId.get(item.cardId);
+    if (!card) continue;
+    const group: Omit<MixGroup, 'count'> = card.map
+      ? { key: 'where', label: 'Where in the country', icon: 'where' }
+      : card.clue && card.subject
+        ? {
+            key: card.subject,
+            label: card.subject === 'other' ? 'Other' : SUBJECTS[card.subject].label,
+            icon: card.subject,
+          }
+        : {
+            key: card.type,
+            label: CARD_TYPES[card.type].label,
+            icon: TYPE_ICONS[card.type] ?? 'other',
+          };
+    const hit = groups.get(group.key);
+    groups.set(group.key, { ...group, count: (hit?.count ?? 0) + 1 });
+  }
+  return [...groups.values()].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+/** How far each country's clue cards have been introduced: seen of all its daily-session cards. */
+export function countryProgress(
+  data: AppSnapshot,
+  codes: string[],
+): { code: string; seen: number; total: number }[] {
+  const cards = sessionCards(data).filter((card) => card.clue);
+  return codes.map((code) => {
+    const own = cards.filter((card) => card.country === code);
+    const seen = own.filter((card) => (data.states[card.id]?.state ?? 'new') !== 'new').length;
+    return { code, seen, total: own.length };
+  });
 }
 
 /** For each of the last 14 local days (oldest first), whether any review happened. */

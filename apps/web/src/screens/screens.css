@@ -48,8 +48,8 @@
   padding: 64px 56px 160px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
-  gap: 96px;
-  align-items: end;
+  gap: 64px;
+  align-items: start;
 }
 
 .today-kicker {
@@ -96,13 +96,6 @@
   margin-top: 20px;
 }
 
-.today-avail {
-  margin: 24px 0 0;
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-
 .panel {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -130,42 +123,80 @@
   font-weight: 400;
 }
 
-.mix {
-  display: flex;
-  gap: 3px;
-  height: 10px;
-}
-
-.mix > div {
-  border-radius: 5px;
-  transform-origin: left;
-  animation: grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.45s both;
-}
-
-.mix-legend {
+.mix-groups {
   list-style: none;
-  margin: 20px 0 0;
+  margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 14px 20px;
-  font-size: 14px;
-}
-
-.mix-legend li {
-  display: flex;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
   gap: 8px;
 }
 
-.mix-legend .muted {
-  margin-left: auto;
+.mix-groups li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1px solid var(--line-soft);
+  font-size: 14px;
 }
 
-.swatch {
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
+.mix-groups .icon {
+  flex: none;
+  color: var(--muted);
+}
+
+.mix-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mix-count {
+  margin-left: auto;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.country-progress {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.country-progress li {
+  display: grid;
+  grid-template-columns: minmax(0, 8em) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.country-progress .progress {
+  height: 6px;
+  border-radius: 3px;
+}
+
+.country-progress .progress > div {
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.country-progress-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.country-progress-count {
+  font-variant-numeric: tabular-nums;
 }
 
 .rule {
@@ -754,8 +785,18 @@ figure {
   }
 
   .today-grid {
-    gap: 56px;
+    gap: 40px;
     padding-top: 24px;
+    padding-bottom: 120px;
+  }
+
+  .today-sub {
+    margin: 16px 0 24px;
+  }
+
+  .panel {
+    padding: 20px 16px;
+    gap: 20px;
   }
 
   .session-bar {

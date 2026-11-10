@@ -7,6 +7,7 @@ import { MemoryRepository } from '../test/MemoryRepository';
 import { fakeAuth } from '../test/renderScreens';
 import { Country } from './Country';
 import { Session } from './Session';
+import { Today } from './Today';
 
 // A catalogue with the review's fields: Albania's bollard looks the same as Italy's, Greece's
 // can be told apart, one picture is a comparison with a caption and one is a duplicate.
@@ -35,6 +36,7 @@ function mount(path: string) {
           <Route element={<AuthGate />}>
             <Route path="/atlas/:country" element={<Country />} />
             <Route path="/session" element={<Session />} />
+            <Route path="/" element={<Today />} />
           </Route>
         </Routes>
       </MemoryRouter>
@@ -105,5 +107,17 @@ describe('Spot it with lookalikes', () => {
         .closest('li')?.textContent,
     ).toMatch(/Italy/);
     await waitFor(() => expect(within(dialog).getByText('Bollards')).toBeTruthy());
+  });
+});
+
+describe('Today', () => {
+  it('shows what the session holds by family, and the countries being learnt', async () => {
+    mount('/');
+    const mix = await screen.findByRole('region', { name: 'In today’s session' });
+    expect(within(mix).getByText('Bollards').nextElementSibling?.textContent).toMatch(/^\d+$/);
+    const bars = within(mix).getAllByRole('progressbar', { name: /clue cards introduced/ });
+    expect(bars.length).toBeGreaterThan(0);
+    expect(within(mix).getByText('Reviews due')).toBeTruthy();
+    expect(screen.getByRole('link', { name: /Start session/ })).toBeTruthy();
   });
 });
