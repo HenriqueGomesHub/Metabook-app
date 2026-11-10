@@ -1310,9 +1310,54 @@
       }
     },
     {
-      "id": "lb-gh-architecture",
+      "id": "lb-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 4 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "712fc8547365",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_283.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "4546b39b4982",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_284.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "8fdf06370a18",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_285.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "37958b155c69",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_286.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "lb-gh-architecture",
+      "step": 4,
+      "order": 2,
       "family": "architecture",
       "title": "Architecture: more examples",
       "text": [
@@ -1339,7 +1384,7 @@
     {
       "id": "lb-gh-nature",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "vegetation",
       "title": "Vegetation: plants and trees",
       "text": [
@@ -1366,7 +1411,7 @@
     {
       "id": "lb-gh-licenseplates",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -1399,7 +1444,7 @@
     {
       "id": "lb-gh-googlevehicles-cars",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -1438,7 +1483,7 @@
     {
       "id": "lb-gh-sidewalks",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -1465,7 +1510,7 @@
     {
       "id": "lb-gh-signs-stop",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -1499,7 +1544,7 @@
     {
       "id": "lb-gh-signs-yield",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -1533,7 +1578,7 @@
     {
       "id": "lb-gh-signs-chevrons",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -1567,7 +1612,7 @@
     {
       "id": "lb-gh-signs-pedestrian",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -1613,7 +1658,7 @@
     {
       "id": "lb-gh-signs-speed",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -1653,6 +1698,69 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/speed",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "lb-gh-lines-white-yellow",
+      "step": 4,
+      "order": 12,
+      "family": "line",
+      "title": "Road lines: white edges, yellow centre",
+      "text": [
+        "The road markings here are white at the edges and yellow in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and yellow in the centre.",
+      "sameAs": [
+        "AL",
+        "AR",
+        "AS",
+        "AT",
+        "BO",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "ES",
+        "FI",
+        "GR",
+        "GT",
+        "GU",
+        "ID",
+        "JP",
+        "KE",
+        "KH",
+        "KR",
+        "MP",
+        "MX",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PR",
+        "PY",
+        "QA",
+        "RU",
+        "RW",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UG",
+        "US",
+        "VN"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

@@ -967,9 +967,48 @@
       "summary": "In the north-west tip of the capital: very narrow streets, colourful buildings, Gothic, Renaissance and Baroque styles, and some brick streets."
     },
     {
-      "id": "pr-gh-sceneries",
+      "id": "pr-gh-utilitypoles",
       "step": 4,
       "order": 0,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 3 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "511a2a10094c",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_106.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "f346899778ac",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_214.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "156834445828",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_105.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "pr-gh-sceneries",
+      "step": 4,
+      "order": 1,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -1008,7 +1047,7 @@
     {
       "id": "pr-gh-licenseplates",
       "step": 4,
-      "order": 1,
+      "order": 2,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -1047,7 +1086,7 @@
     {
       "id": "pr-gh-googlevehicles-cars",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -1092,7 +1131,7 @@
     {
       "id": "pr-gh-postboxes",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "other",
       "title": "Post boxes",
       "text": [
@@ -1119,7 +1158,7 @@
     {
       "id": "pr-gh-sidewalks",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -1146,7 +1185,7 @@
     {
       "id": "pr-gh-signs-stop",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -1174,7 +1213,7 @@
     {
       "id": "pr-gh-signs-yield",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -1208,7 +1247,7 @@
     {
       "id": "pr-gh-signs-chevrons",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -1236,7 +1275,7 @@
     {
       "id": "pr-gh-signs-pedestrian",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -1270,7 +1309,7 @@
     {
       "id": "pr-gh-signs-speed",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -1370,7 +1409,7 @@
     {
       "id": "pr-gh-signs-backofsigns",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "back",
       "title": "Sign back: design",
@@ -1398,7 +1437,7 @@
     {
       "id": "pr-gh-signs-directions",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -1426,7 +1465,7 @@
     {
       "id": "pr-gh-signs-signposts",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -1454,7 +1493,7 @@
     {
       "id": "pr-gh-signs-roadnumbering",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -1494,7 +1533,7 @@
     {
       "id": "pr-gh-signs-streetnames",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -1534,7 +1573,7 @@
     {
       "id": "pr-gh-signs-busstop",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -1556,6 +1595,69 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "pr-gh-lines-white-yellow",
+      "step": 4,
+      "order": 17,
+      "family": "line",
+      "title": "Road lines: white edges, yellow centre",
+      "text": [
+        "The road markings here are white at the edges and yellow in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and yellow in the centre.",
+      "sameAs": [
+        "AL",
+        "AR",
+        "AS",
+        "AT",
+        "BO",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "ES",
+        "FI",
+        "GR",
+        "GT",
+        "GU",
+        "ID",
+        "JP",
+        "KE",
+        "KH",
+        "KR",
+        "LB",
+        "MP",
+        "MX",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PY",
+        "QA",
+        "RU",
+        "RW",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UG",
+        "US",
+        "VN"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

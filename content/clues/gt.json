@@ -1534,9 +1534,48 @@
       }
     },
     {
-      "id": "gt-gh-architecture",
+      "id": "gt-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 3 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "9cdabe196cda",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_124.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "67e3e7b112c7",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_153.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "986e5e83f69d",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_220.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "gt-gh-architecture",
+      "step": 4,
+      "order": 2,
       "family": "architecture",
       "title": "Architecture: more examples",
       "text": [
@@ -1563,7 +1602,7 @@
     {
       "id": "gt-gh-nature",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "vegetation",
       "title": "Vegetation: plants and trees",
       "text": [
@@ -1590,7 +1629,7 @@
     {
       "id": "gt-gh-sceneries",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -1629,7 +1668,7 @@
     {
       "id": "gt-gh-licenseplates",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -1662,7 +1701,7 @@
     {
       "id": "gt-gh-googlevehicles-cars",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -1701,7 +1740,7 @@
     {
       "id": "gt-gh-googlevehicles-boats",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "car",
       "title": "Google car: boats",
       "text": [
@@ -1752,7 +1791,7 @@
     {
       "id": "gt-gh-signs-stop",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -1786,7 +1825,7 @@
     {
       "id": "gt-gh-signs-yield",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -1814,7 +1853,7 @@
     {
       "id": "gt-gh-signs-chevrons",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -1842,7 +1881,7 @@
     {
       "id": "gt-gh-signs-pedestrian",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -1870,7 +1909,7 @@
     {
       "id": "gt-gh-signs-speed",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -1934,7 +1973,7 @@
     {
       "id": "gt-gh-signs-directions",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -1980,7 +2019,7 @@
     {
       "id": "gt-gh-signs-signposts",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: posts",
@@ -2008,7 +2047,7 @@
     {
       "id": "gt-gh-signs-roadnumbering",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -2042,7 +2081,7 @@
     {
       "id": "gt-gh-signs-streetnames",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -2076,7 +2115,7 @@
     {
       "id": "gt-gh-signs-citysigns",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: town names",
@@ -2104,7 +2143,7 @@
     {
       "id": "gt-gh-signs-busstop",
       "step": 4,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -2138,6 +2177,69 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "gt-gh-lines-white-yellow",
+      "step": 4,
+      "order": 19,
+      "family": "line",
+      "title": "Road lines: white edges, yellow centre",
+      "text": [
+        "The road markings here are white at the edges and yellow in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are white at the edges and yellow in the centre.",
+      "sameAs": [
+        "AL",
+        "AR",
+        "AS",
+        "AT",
+        "BO",
+        "BR",
+        "CA",
+        "CL",
+        "CO",
+        "CR",
+        "DO",
+        "EC",
+        "ES",
+        "FI",
+        "GR",
+        "GU",
+        "ID",
+        "JP",
+        "KE",
+        "KH",
+        "KR",
+        "LB",
+        "MP",
+        "MX",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PR",
+        "PY",
+        "QA",
+        "RU",
+        "RW",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "UG",
+        "US",
+        "VN"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }

@@ -21,6 +21,7 @@ const MAX_LIST = 12;
  */
 export const CATEGORIES = [
   { path: 'bollards', family: 'bollard', title: 'Bollard: more examples', noun: 'Bollard', plural: 'Bollards', layout: 'region' },
+  { path: 'utilityPoles', family: 'pole', title: 'Pole: more examples', noun: 'Utility pole', plural: 'Utility poles', layout: 'region', more: 'poles' },
   { path: 'architecture', family: 'architecture', title: 'Architecture: more examples', noun: 'House', plural: 'Buildings', layout: 'mapped' },
   { path: 'nature', family: 'vegetation', title: 'Vegetation: plants and trees', noun: 'Plant', plural: 'Plants', layout: 'species' },
   { path: 'sceneries', family: 'landscape', title: 'Landscape: scenery', noun: 'Scenery', plural: 'Landscapes', layout: 'region' },
@@ -73,20 +74,64 @@ export function geohintsCountry(name, lookup, poolCodes) {
   return code && poolCodes.has(code) ? { code } : undefined;
 }
 
-/** Reads content/sources/geohints (or a copy) → { fetchedAt, items: [{ category, country, t, img, maps }] }. */
+/**
+ * Reads content/sources/geohints (or a copy) → { fetchedAt, items: [{ category, country, t, img, maps }],
+ * lines: [{ type, countries }] }. more.json holds pages fetched later: { poles: [{ t, img, maps }], lines: { text } }.
+ */
 export function loadGeoHints(dir = GEOHINTS_DIR) {
   const data = readJson(join(dir, 'data.json'), { cats: {} });
   const signs = readJson(join(dir, 'signs.json'), { cats: {} });
+  const more = readJson(join(dir, 'more.json'), {});
   const items = [];
   for (const category of CATEGORIES) {
     const key = `/meta/${category.path}`;
+    for (const x of category.more ? (more[category.more] ?? []) : []) if (x?.t?.[0]) items.push({ category, country: x.t[0], t: x.t.slice(1), img: x.img, maps: x.maps });
     if (category.family === 'sign') {
       for (const x of signs.cats?.[key] ?? []) if (x?.country) items.push({ category, country: x.country, t: x.t ?? [], img: x.img, maps: x.maps });
     } else {
       for (const x of data.cats?.[key]?.items ?? []) if (x?.t?.[0]) items.push({ category, country: x.t[0], t: x.t.slice(1), img: x.img, maps: x.maps });
     }
   }
-  return { fetchedAt: signs.fetchedAt ?? data.fetchedAt ?? '', items: items.filter((i) => /^https?:\/\//.test(i.img ?? '') && !/\/logos\/logo\.svg$/.test(i.img)) };
+  return {
+    fetchedAt: signs.fetchedAt ?? data.fetchedAt ?? '',
+    items: items.filter((i) => /^https?:\/\//.test(i.img ?? '') && !/\/logos\/logo\.svg$/.test(i.img)),
+    lines: parseLines(more.lines?.text ?? ''),
+  };
+}
+
+const LINE_TYPE = /^Outside:\s*(.+?)\s*\|\s*Inside:\s*(.+?)\s*$/;
+// the page's continent index follows the colour sections
+const CONTINENTS = new Set(['Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America']);
+const LINE_UI = new Set(['+', '−', 'Lines', 'Hover over a country', 'no data', 'Leaflet', 'GeoHints Shop']);
+
+/**
+ * The innerText of geohints.com/meta/lines → [{ type: "Outside: Yellow | Inside: White", countries }].
+ * A type line is followed by the countries using it (the first sections repeat the type line after the map's
+ * UI strings); a type seen twice is merged, countries are listed once, in page order.
+ */
+export function parseLines(text) {
+  const groups = new Map();
+  let current;
+  for (const raw of String(text).split('\n')) {
+    const line = raw.replace(/\u200c/g, '').trim();
+    if (!line || LINE_UI.has(line)) continue;
+    if (CONTINENTS.has(line)) break;
+    const m = LINE_TYPE.exec(line);
+    if (m) {
+      const type = `Outside: ${m[1]} | Inside: ${m[2]}`;
+      if (!groups.has(type)) groups.set(type, []);
+      current = groups.get(type);
+    } else if (current && !current.includes(line)) current.push(line);
+  }
+  return [...groups].map(([type, countries]) => ({ type, countries }));
+}
+
+/** "Outside: Yellow | Inside: White and yellow" → { outer: "yellow", inner: "white and yellow", slug }. */
+export function lineType(type) {
+  const m = LINE_TYPE.exec(type);
+  const outer = m[1].toLowerCase();
+  const inner = m[2].toLowerCase();
+  return { outer, inner, slug: `${outer}-${inner}`.replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '') };
 }
 
 /** Every link of a GeoHints image (all are Google Maps links), sorted. */
@@ -197,7 +242,7 @@ export function clueText(category, items) {
  * `regionNamesOf(code)` → the country's region names (content/maps); `locate(link)` → the Street View
  * spot of an image link ({ pano?, lat, lng, heading, pitch, fov }) or undefined.
  */
-export function buildGeoHints({ items }, { lookup, poolCodes, locate = () => undefined, regionNamesOf = () => [] }) {
+export function buildGeoHints({ items, lines = [] }, { lookup, poolCodes, locate = () => undefined, regionNamesOf = () => [] }) {
   const unmatched = {};
   const groups = new Map(); // "<code> <slug>" → { code, category, items: [] }
   const regionTest = new Map();
@@ -258,7 +303,33 @@ export function buildGeoHints({ items }, { lookup, poolCodes, locate = () => und
       credit: { source: 'GeoHints', url: `${GEOHINTS}/meta/${category.path}`, licence: LICENCE },
     });
   }
-  const rank = (clue) => CATEGORIES.findIndex((c) => clue.credit.url.endsWith(`/meta/${c.path}`));
+  for (const group of lines) {
+    const { outer, inner, slug } = lineType(group.type);
+    const codes = [];
+    for (const name of group.countries) {
+      const target = geohintsCountry(name, lookup, poolCodes);
+      if (!target) unmatched[name] = (unmatched[name] ?? 0) + 1;
+      else if (!codes.includes(target.code)) codes.push(target.code);
+    }
+    for (const code of codes) {
+      if (!clues.has(code)) clues.set(code, []);
+      const sameAs = codes.filter((c) => c !== code).sort();
+      clues.get(code).push({
+        id: `${code.toLowerCase()}-gh-lines-${slug}`,
+        family: 'line',
+        title: `Road lines: ${outer} edges, ${inner} centre`,
+        text: [`The road markings here are ${outer} at the edges and ${inner} in the centre.`],
+        tags: [],
+        images: [],
+        locations: [],
+        lookalikes: [],
+        summary: `Road lines are ${outer} at the edges and ${inner} in the centre.`,
+        ...(sameAs.length && { sameAs }),
+        credit: { source: 'GeoHints', url: `${GEOHINTS}/meta/lines`, licence: LICENCE },
+      });
+    }
+  }
+  const rank = (clue) => (clue.family === 'line' ? CATEGORIES.length : CATEGORIES.findIndex((c) => clue.credit.url.endsWith(`/meta/${c.path}`)));
   for (const list of clues.values()) list.sort((a, b) => rank(a) - rank(b));
   return { clues, unmatched };
 }

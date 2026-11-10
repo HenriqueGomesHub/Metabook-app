@@ -1428,9 +1428,42 @@
       }
     },
     {
-      "id": "jo-gh-sceneries",
+      "id": "jo-gh-utilitypoles",
       "step": 4,
       "order": 1,
+      "family": "pole",
+      "title": "Pole: more examples",
+      "text": [
+        "GeoHints shows 2 utility poles from here."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "94122b660213",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_274.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        },
+        {
+          "id": "3270b5f8dda1",
+          "src": "https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/utilityPoles/pole_275.jpg",
+          "role": "example",
+          "caption": "Utility pole"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Utility poles you can see here.",
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/utilityPoles",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "jo-gh-sceneries",
+      "step": 4,
+      "order": 2,
       "family": "landscape",
       "title": "Landscape: scenery",
       "text": [
@@ -1469,7 +1502,7 @@
     {
       "id": "jo-gh-licenseplates",
       "step": 4,
-      "order": 2,
+      "order": 3,
       "family": "plate",
       "title": "Plate: more examples",
       "text": [
@@ -1496,7 +1529,7 @@
     {
       "id": "jo-gh-googlevehicles-cars",
       "step": 4,
-      "order": 3,
+      "order": 4,
       "family": "car",
       "title": "Google car: more examples",
       "text": [
@@ -1529,7 +1562,7 @@
     {
       "id": "jo-gh-followcars",
       "step": 4,
-      "order": 4,
+      "order": 5,
       "family": "car",
       "title": "Google car: follow cars",
       "text": [
@@ -1562,7 +1595,7 @@
     {
       "id": "jo-gh-postboxes",
       "step": 4,
-      "order": 5,
+      "order": 6,
       "family": "other",
       "title": "Post boxes",
       "text": [
@@ -1601,7 +1634,7 @@
     {
       "id": "jo-gh-sidewalks",
       "step": 4,
-      "order": 6,
+      "order": 7,
       "family": "other",
       "title": "Sidewalks",
       "text": [
@@ -1628,7 +1661,7 @@
     {
       "id": "jo-gh-signs-stop",
       "step": 4,
-      "order": 7,
+      "order": 8,
       "family": "sign",
       "kind": "stop",
       "title": "Stop sign: design",
@@ -1662,7 +1695,7 @@
     {
       "id": "jo-gh-signs-yield",
       "step": 4,
-      "order": 8,
+      "order": 9,
       "family": "sign",
       "kind": "giveway",
       "title": "Give way sign: design",
@@ -1690,7 +1723,7 @@
     {
       "id": "jo-gh-signs-chevrons",
       "step": 4,
-      "order": 9,
+      "order": 10,
       "family": "sign",
       "kind": "chevron",
       "title": "Chevron: design",
@@ -1718,7 +1751,7 @@
     {
       "id": "jo-gh-signs-pedestrian",
       "step": 4,
-      "order": 10,
+      "order": 11,
       "family": "sign",
       "kind": "pedestrian",
       "title": "Pedestrian sign: design",
@@ -1776,7 +1809,7 @@
     {
       "id": "jo-gh-signs-speed",
       "step": 4,
-      "order": 11,
+      "order": 12,
       "family": "sign",
       "kind": "speed",
       "title": "Speed sign: design",
@@ -1846,7 +1879,7 @@
     {
       "id": "jo-gh-signs-animalwarning",
       "step": 4,
-      "order": 12,
+      "order": 13,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: animals",
@@ -1874,7 +1907,7 @@
     {
       "id": "jo-gh-signs-railwaycrossing",
       "step": 4,
-      "order": 13,
+      "order": 14,
       "family": "sign",
       "kind": "warning",
       "title": "Warning sign: railway crossings",
@@ -1914,7 +1947,7 @@
     {
       "id": "jo-gh-signs-backofsigns",
       "step": 4,
-      "order": 14,
+      "order": 15,
       "family": "sign",
       "kind": "back",
       "title": "Sign back: design",
@@ -1942,7 +1975,7 @@
     {
       "id": "jo-gh-signs-directions",
       "step": 4,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "direction",
       "title": "Direction sign: design",
@@ -1982,7 +2015,7 @@
     {
       "id": "jo-gh-signs-roadnumbering",
       "step": 4,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "route",
       "title": "Route marker: design",
@@ -2016,7 +2049,7 @@
     {
       "id": "jo-gh-signs-streetnames",
       "step": 4,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: design",
@@ -2068,7 +2101,7 @@
     {
       "id": "jo-gh-signs-busstop",
       "step": 4,
-      "order": 18,
+      "order": 19,
       "family": "sign",
       "kind": "other",
       "title": "Sign: bus stops",
@@ -2090,6 +2123,61 @@
       "credit": {
         "source": "GeoHints",
         "url": "https://geohints.com/meta/signs/busStop",
+        "licence": "GeoHints; used with credit for personal study"
+      }
+    },
+    {
+      "id": "jo-gh-lines-yellow-white",
+      "step": 4,
+      "order": 20,
+      "family": "line",
+      "title": "Road lines: yellow edges, white centre",
+      "text": [
+        "The road markings here are yellow at the edges and white in the centre."
+      ],
+      "tags": [],
+      "images": [],
+      "locations": [],
+      "lookalikes": [],
+      "summary": "Road lines are yellow at the edges and white in the centre.",
+      "sameAs": [
+        "AE",
+        "AU",
+        "BW",
+        "CH",
+        "CL",
+        "ES",
+        "FR",
+        "GB",
+        "GI",
+        "HU",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "JE",
+        "KZ",
+        "LK",
+        "LS",
+        "LT",
+        "ME",
+        "MX",
+        "MY",
+        "NA",
+        "NG",
+        "NP",
+        "NZ",
+        "OM",
+        "PT",
+        "RU",
+        "SG",
+        "SZ",
+        "TR",
+        "ZA"
+      ],
+      "credit": {
+        "source": "GeoHints",
+        "url": "https://geohints.com/meta/lines",
         "licence": "GeoHints; used with credit for personal study"
       }
     }
