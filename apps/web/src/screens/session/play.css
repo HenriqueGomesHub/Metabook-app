@@ -107,6 +107,25 @@
   overflow: auto;
 }
 
+/* Clue quiz: the question is the text itself, on a card sized to it rather than a photo frame */
+
+.play-main .clue-scene {
+  width: min(100cqw, 720px);
+  aspect-ratio: auto;
+  max-height: 100cqh;
+}
+
+.clue-lead {
+  display: block;
+  margin-bottom: 12px;
+  font-family: var(--font-text);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
 /* Photo prompts: shimmer while loading, then fade in; credit pill over the corner */
 
 .photo {

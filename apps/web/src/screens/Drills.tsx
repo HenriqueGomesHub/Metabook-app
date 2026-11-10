@@ -1,4 +1,4 @@
-import { mastery } from '@metabook/core';
+import { isClueCard, mastery } from '@metabook/core';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
@@ -19,10 +19,12 @@ export function Drills() {
 
 function DrillsView({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
+  // text-only clue cards are drilled in the Clue quiz alone, never as "Where is this?"
+  const cards = useMemo(() => data.content.cards.filter((card) => !isClueCard(card)), [data]);
   const tiles = useMemo(
     () =>
       TYPE_ORDER.flatMap((type) => {
-        const ids = data.content.cards.filter((card) => card.type === type).map((card) => card.id);
+        const ids = cards.filter((card) => card.type === type).map((card) => card.id);
         if (ids.length === 0) return [];
         return [
           {
@@ -33,11 +35,11 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           },
         ];
       }),
-    [data, now],
+    [data, cards, now],
   );
   // regions-map cards across every country
   const whereTile = useMemo(() => {
-    const ids = data.content.cards.filter((card) => card.map).map((card) => card.id);
+    const ids = cards.filter((card) => card.map).map((card) => card.id);
     if (ids.length === 0) return [];
     return [
       {
@@ -49,6 +51,21 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         mastery: mastery(ids, data.states, now),
       },
     ];
+  }, [data, cards, now]);
+  // text questions on country facts ("Which country has: …?"), for those who want them
+  const clueTile = useMemo(() => {
+    const ids = data.content.cards.filter(isClueCard).map((card) => card.id);
+    if (ids.length === 0) return [];
+    return [
+      {
+        key: 'clue',
+        to: '/session?clue=1',
+        label: 'Clue quiz',
+        blurb: 'Which country has this? Text questions on country facts',
+        icon: CARD_TYPES.meta.icon,
+        mastery: mastery(ids, data.states, now),
+      },
+    ];
   }, [data, now]);
   // one tile per meta subject that has cards, e.g. Bollards across every country; a subject
   // named like a type tile (Plates) is already covered by it
@@ -56,7 +73,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
     () =>
       SUBJECT_ORDER.flatMap((subject) => {
         if (tiles.some((tile) => tile.label === SUBJECTS[subject].label)) return [];
-        const ids = data.content.cards
+        const ids = cards
           .filter((card) => card.subject === subject && !card.map)
           .map((card) => card.id);
         if (ids.length === 0) return [];
@@ -70,10 +87,10 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           },
         ];
       }),
-    [data, now, tiles],
+    [data, cards, now, tiles],
   );
 
-  const allTiles = [...tiles, ...whereTile, ...subjectTiles];
+  const allTiles = [...tiles, ...whereTile, ...subjectTiles, ...clueTile];
 
   return (
     <div className="page">

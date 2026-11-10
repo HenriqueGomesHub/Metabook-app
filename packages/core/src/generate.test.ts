@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { generateCards, resolveRegion } from './generate';
+import { generateCards, isClueCard, resolveRegion } from './generate';
 import type {
   CountryFacts,
   FactNote,
@@ -196,6 +196,17 @@ describe('generateCards', () => {
     expect(cards.some((c) => c.id === 'gen:pl:drive')).toBe(false);
   });
 
+  it('tags text-only fact and note cards as clue-text, and no photo or map card', () => {
+    const cards = generateCards('PL', { pool, facts: [plFacts], media });
+    const clues = cards.filter(isClueCard);
+    expect(clues.length).toBeGreaterThan(0);
+    for (const card of cards) {
+      const textFact = card.prompt.kind === 'text' && !card.map && card.type !== 'photo-choice';
+      expect(isClueCard(card)).toBe(textFact);
+    }
+    expect(clues.map((c) => c.id)).toContain('gen:pl:tld');
+  });
+
   it('makes a driving-side card only for left-driving countries, with right-driving options', () => {
     const input = {
       pool,
@@ -367,9 +378,15 @@ describe('where cards', () => {
 describe('hideRegionName', () => {
   it('masks the state name, its short form and accented spellings', async () => {
     const { hideRegionName } = await import('./generate');
-    expect(hideRegionName('Sugarcane is most common in Tucumán.', 'Tucumán')).toBe('Sugarcane is most common in this area.');
-    expect(hideRegionName('Łódź has red tiles.', 'Łódź Voivodeship')).toBe('This area has red tiles.');
-    expect(hideRegionName('Masovian has wide poles.', 'Masovian Voivodeship')).toBe('This area has wide poles.');
+    expect(hideRegionName('Sugarcane is most common in Tucumán.', 'Tucumán')).toBe(
+      'Sugarcane is most common in this area.',
+    );
+    expect(hideRegionName('Łódź has red tiles.', 'Łódź Voivodeship')).toBe(
+      'This area has red tiles.',
+    );
+    expect(hideRegionName('Masovian has wide poles.', 'Masovian Voivodeship')).toBe(
+      'This area has wide poles.',
+    );
     expect(hideRegionName('Yellow poles here.', 'Texas')).toBe('Yellow poles here.');
   });
   it('drops the card when another spelling still names the answer', async () => {
@@ -400,7 +417,16 @@ describe('hideRegionName', () => {
     const { hideRegionName } = await import('./generate');
     expect(hideRegionName('Only the Masovian plains are flat.', 'Masovian')).toBeUndefined();
     expect(hideRegionName('Masovian’s poles are grey.', 'Masovian')).toBeUndefined();
-    for (const word of ['state', 'province', 'region', 'peninsula', 'coast', 'roads', 'island', 'poles']) {
+    for (const word of [
+      'state',
+      'province',
+      'region',
+      'peninsula',
+      'coast',
+      'roads',
+      'island',
+      'poles',
+    ]) {
       expect(hideRegionName(`Texas ${word} has it.`, 'Texas')).toBeUndefined();
     }
     expect(hideRegionName('Texas has it.', 'Texas')).toBe('This area has it.');

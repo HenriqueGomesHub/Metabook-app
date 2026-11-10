@@ -1,4 +1,4 @@
-import { answerKey, mastery, medalFor } from '@metabook/core';
+import { answerKey, isClueCard, mastery, medalFor } from '@metabook/core';
 import type { Card, MetaSubject } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -12,6 +12,7 @@ import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { pct, WEAK } from './atlas/format';
+import { LearnList } from './atlas/LearnList';
 import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
 
@@ -58,7 +59,9 @@ function CountryView({
   const country = data.content.pool.find((c) => c.code === code);
 
   const view = useMemo(() => {
-    const cards = data.content.cards.filter((card) => card.country === code);
+    const all = data.content.cards.filter((card) => card.country === code);
+    // text-only clue cards are read in the Learn list (and quizzed in the Clue quiz), not drilled
+    const cards = all.filter((card) => !isClueCard(card));
     const ids = cards.map((card) => card.id);
     const byChapter = (chapter: string): Card[] => cards.filter((card) => card.chapter === chapter);
     const written = data.content.chapters
@@ -118,7 +121,7 @@ function CountryView({
       };
     });
     // regions-map cards record map-scoped keys ("ca:NL"), so look cards up by those
-    const cardByAnswer = new Map(cards.map((card) => [answerKey(card, card.answer), card]));
+    const cardByAnswer = new Map(all.map((card) => [answerKey(card, card.answer), card]));
     const misses = data.confusions
       .filter((c) => cardByAnswer.has(c.truth) && c.count > 0)
       .sort((a, b) => b.count - a.count)
@@ -297,6 +300,7 @@ function CountryView({
               })}
             </nav>
           )}
+          <LearnList code={code} name={country.name} />
         </section>
 
         <aside className="country-side rise d3">
