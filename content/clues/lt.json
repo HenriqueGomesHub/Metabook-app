@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Lithuanian licence plates are long and white",
+      "title": "Plate: long white with blue EU strip",
       "text": [
         "Lithuanian **licence plates** are long and white, with the standard blue European strip on the left."
       ],
@@ -44,14 +44,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with the standard blue European strip on the left."
     },
     {
       "id": "lt-SYjp",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Lithuanian bollards are wedge-shaped",
+      "title": "Bollard: wedge, orange front, white back",
       "text": [
         "Lithuanian bollards are **wedge-shaped**.",
         "They have an orange reflector on the front, and a white reflector on the back. Both reflectors are rectangular. You may find this [thin version](https://maps.app.goo.gl/ePfgVj54LmwVbQX68) as well.",
@@ -126,14 +127,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wedge-shaped bollard with a rectangular orange reflector on the front and a white one on the back. A thinner version also exists.",
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonian bollards look different"
+        },
+        {
+          "country": "LV",
+          "how": "Latvian bollards look different"
+        }
+      ]
     },
     {
       "id": "lt-N6PY",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Lithuanian poles are usually square and concrete",
+      "title": "Pole: square concrete with diagonal brace",
       "text": [
         "Lithuanian poles are usually square and concrete, and often feature a **diagonal support beam**.",
         "NOTE: While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia."
@@ -186,14 +198,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete poles, often with a diagonal support beam. Seen sometimes in Estonia and rarely in Latvia, but most common here.",
+      "sameAs": [
+        "EE",
+        "LV"
+      ]
     },
     {
       "id": "lt-RWCn",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Pictured here are some typical Lithuanian poletops",
+      "title": "Pole: short rods or trident-style insulators",
       "text": [
         "Pictured here are some typical Lithuanian poletops.",
         "- They often have **short horizontal rods**, on which the insulators are placed.",
@@ -242,7 +259,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poletops often have short horizontal rods holding the insulators, or insulators in a trident shape: one on top, two at each side. Other post-Soviet countries have these too."
     },
     {
       "id": "lt-Uc6g",
@@ -250,7 +268,7 @@
       "order": 5,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Lithuania uses white chevrons with red arrows",
+      "title": "Chevron: white with red arrows, red edge",
       "text": [
         "Lithuania uses **white chevrons with red arrows**. The small single chevrons (pictured here) usually have a **red outline** on the edge of the sign.",
         "NOTE: Many other European countries, including Latvia and Poland, use the same chevrons (though without the red outline).",
@@ -313,7 +331,26 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White chevrons with red arrows. The small single ones usually have a red outline on the edge. Latvia and Poland use the same without the outline, while Estonia, Russia and Ukraine use red with white arrows.",
+      "sameAs": [
+        "LV",
+        "PL"
+      ],
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonian chevrons are red with white arrows"
+        },
+        {
+          "country": "RU",
+          "how": "Russian chevrons are red with white arrows"
+        },
+        {
+          "country": "UA",
+          "how": "Ukrainian chevrons are red with white arrows"
+        }
+      ]
     },
     {
       "id": "lt-0iED",
@@ -321,7 +358,7 @@
       "order": 6,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: All Baltic countries use the same blue kilometre marker",
+      "title": "Km marker: blue, L-shaped, 45° to the road",
       "text": [
         "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
         "In Lithuania, the marker will be at a **45° angle** towards the road. The sign itself has an L-shape.",
@@ -362,7 +399,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All three Baltic countries use the same blue kilometre marker, but here it is L-shaped and sits at a 45° angle to the road.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Marker sits at a different angle to the road"
+        },
+        {
+          "country": "EE",
+          "how": "Marker sits at a different angle to the road"
+        }
+      ]
     },
     {
       "id": "lt-q5r2",
@@ -370,7 +418,7 @@
       "order": 7,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Each Baltic country has a slightly different border for its…",
+      "title": "Sign: thin red border, thin white outline",
       "text": [
         "Each Baltic country has a slightly different border for its warning and speed signs.",
         "Lithuanian signs have a relatively **thin** red border, with a **thin white outline** around it."
@@ -449,14 +497,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warning and speed signs have a fairly thin red border with a thin white outline around it. Each Baltic country has a slightly different border."
     },
     {
       "id": "lt-koWn",
       "step": 0,
       "order": 8,
       "family": "guardrail",
-      "title": "Guardrail: Lithuania has normal A-type guardrails with orange…",
+      "title": "Guardrail: A-type with orange reflectors",
       "text": [
         "Lithuania has normal A-type guardrails with **orange reflectors**.",
         "NOTE: Estonia has no reflectors. Latvia has red or white reflectors. For a good overview of European guardrails, see [this infographic](/images/lithuania/europeguardrail.png)."
@@ -509,7 +558,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Normal A-type guardrail with orange reflectors.",
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonian guardrails have no reflectors"
+        },
+        {
+          "country": "LV",
+          "how": "Latvian guardrail reflectors are red or white"
+        }
+      ]
     },
     {
       "id": "lt-tXGz",
@@ -517,7 +577,7 @@
       "order": 9,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Lithuanian pedestrian signs have 3 stripes",
+      "title": "Sign: pedestrian, 3 stripes, simple figure",
       "text": [
         "Lithuanian pedestrian signs have **3 stripes**. The shape of the pedestrian has a relatively low level of detail.",
         "NOTE: Both [Russia](https://www.google.com/maps/@55.7423905,37.5885686,3a,15y,227.43h,93.29t/data=!3m7!1e1!3m5!1sM2IafnQY_X5LJKXlumRVzQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DM2IafnQY_X5LJKXlumRVzQ%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D122.40399%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?entry=ttu) and [Ukraine](https://goo.gl/maps/KBnV7gubZHs349dc8) share the same design.** **[Estonian](https://goo.gl/maps/5vqjNxsfM1wHnxSw5) signs also have 3 stripes, but the pedestrian looks more detailed.",
@@ -569,7 +629,22 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossing sign with 3 stripes and a fairly simple figure. Russia and Ukraine have the same design, while Estonia has a more detailed figure.",
+      "sameAs": [
+        "RU",
+        "UA"
+      ],
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonian figure is more detailed"
+        },
+        {
+          "country": "LV",
+          "how": "Latvian signs have 5 stripes"
+        }
+      ]
     },
     {
       "id": "lt-sIcK",
@@ -577,7 +652,7 @@
       "order": 10,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Lithuanian bus stop signs have this design",
+      "title": "Sign: bus stop, bus with four windows",
       "text": [
         "Lithuanian bus stop signs have this design.",
         "The bus has **four windows**. This is mostly useful to distinguish it from the Latvian bus stop sign, which has five windows.",
@@ -627,14 +702,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stop sign showing a bus with four windows, unlike Latvia's five. Estonia's sign is the same as here.",
+      "sameAs": [
+        "EE"
+      ],
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Latvian bus has five windows"
+        }
+      ]
     },
     {
       "id": "lt-5P5C",
       "step": 0,
       "order": 11,
       "family": "language",
-      "title": "Language: Lithuanian belongs to the Baltic languages",
+      "title": "Language: Ą Ę Į Ų, dotted Ė, Y",
       "text": [
         "**Lithuanian** belongs to the Baltic languages. The other major member of this branch is Latvian, to which it is closely related.",
         "Within the Baltic languages, the following letters are unique to Lithuanian:",
@@ -656,7 +741,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Baltic language, closely related to Latvian. Hooked vowels Ą Ę Į Ų, the dotted Ė and the letter Y are unique to it. Estonian looks very different.",
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonian is not Baltic and looks very different"
+        }
+      ]
     },
     {
       "id": "lt-5FSb",
@@ -664,7 +756,7 @@
       "order": 12,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: The Lithuanian word for street is gatve",
+      "title": "Sign: street word \"gatvė\", short \"g.\"",
       "text": [
         "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs and Google Maps.",
         "This word is almost entirely unique to Lithuanian. However, very rarely, you might see ‘gatve’ (abbreviated as gat.) in the Latvian capital of Riga."
@@ -721,14 +813,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The word for street is gatvė, often shortened to g. It is almost unique to this country, though Riga rarely has \"gat.\"."
     },
     {
       "id": "lt-94Uf",
       "step": 0,
       "order": 13,
       "family": "other",
-      "title": "Many Lithuanian place names end in -ai",
+      "title": "Place names: many end in -ai",
       "text": [
         "Many Lithuanian place names end in **-ai**."
       ],
@@ -767,14 +860,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many place names end in -ai."
     },
     {
       "id": "lt-nVmi",
       "step": 0,
       "order": 14,
       "family": "architecture",
-      "title": "Architecture: Lithuanian architecture primarily consists of light…",
+      "title": "Houses: light brick",
       "text": [
         "Lithuanian architecture primarily consists of light coloured brick buildings, usually with somewhat steep corrugated metal roofs. Wooden buildings are also fairly common, however less so than in Estonia. Pastel painted stone buildings are somewhat common, especially in newer suburbs."
       ],
@@ -815,7 +909,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly light-coloured brick buildings with fairly steep corrugated metal roofs. Wooden houses are fairly common but less than in Estonia, and pastel stone buildings appear in newer suburbs.",
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonia has even more wooden buildings"
+        }
+      ]
     },
     {
       "id": "lt-GkfG",
@@ -823,7 +924,7 @@
       "order": 15,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Lithuanian directional signs are blue with white text",
+      "title": "Sign: blue direction sign",
       "text": [
         "Lithuanian directional signs are blue with white text.",
         "NOTE: The arrow on [Latvian](https://goo.gl/maps/g3aqkLH6yjQwrCSF7) signs is more stylized than in [Estonia](https://goo.gl/maps/eW7AJWdVriTfsprx7) and Lithuania, where the back part of the arrowhead is vertical."
@@ -865,14 +966,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue direction signs with white text. The arrowhead has a vertical back, as in Estonia, while Latvia's arrow is more stylised.",
+      "sameAs": [
+        "EE"
+      ],
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Latvian arrow is more stylised"
+        }
+      ]
     },
     {
       "id": "lt-3bOZ",
       "step": 0,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: Lithuania's historical state flag",
+      "title": "Flag: knight on horseback, dark red",
       "text": [
         "Lithuania's **historical state flag**, known as the _Vytis_, depicts a mounted knight on a dark red background. It can sometimes be seen on both private and public buildings."
       ],
@@ -911,14 +1022,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A historical flag showing a mounted knight on a dark red background, seen on private and public buildings."
     },
     {
       "id": "lt-8k76",
       "step": 0,
       "order": 17,
       "family": "vegetation",
-      "title": "Vegetation: Lithuania has less forest cover than the other two Baltic…",
+      "title": "Vegetation: more open, less forest",
       "text": [
         "Lithuania has **less forest cover** than the other two Baltic countries. As a result, the landscape appears more open and agricultural. Your mileage may vary depending on the round however, so use this meta with some caution."
       ],
@@ -965,14 +1077,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Less forest than the other Baltic countries, so the land looks more open and farmed. It varies by round, so use with caution."
     },
     {
       "id": "lt-fAPZ",
       "step": 0,
       "order": 18,
       "family": "car",
-      "title": "Google car: In Generation 3 coverage",
+      "title": "Google car: random small blurs in Gen 3",
       "text": [
         "In Generation 3 coverage, you will often see **random small blurs**. These blurs look similar to the ones that are used to blur out licence plates or faces, but instead they cover seemingly random parts of the image – often on direction signs.",
         "NOTE: This is also common in the Russian oblast of Kaliningrad, just to the southwest of Lithuania.",
@@ -1016,14 +1129,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In older Gen 3 coverage, small random blurs cover parts of the image, often direction signs. They look like face or plate blurs. Neighbouring Kaliningrad has them too; Estonia and Latvia usually don't.",
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Random blurs are not typical there"
+        },
+        {
+          "country": "LV",
+          "how": "Random blurs are not typical there"
+        }
+      ]
     },
     {
       "id": "lt-YZaL",
       "step": 0,
       "order": 19,
       "family": "car",
-      "title": "Google car: A black generation 4 Google car can be found in Lithuania",
+      "title": "Google car: black Gen 4",
       "text": [
         "A black generation 4 Google car can be found in Lithuania.",
         "NOTE: It can also be found in a few other European countries, including Latvia, but not Estonia."
@@ -1066,14 +1190,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black Gen 4 car. Latvia and a few other European countries have it too, but Estonia does not.",
+      "sameAs": [
+        "LV"
+      ],
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonia has no black Gen 4 car"
+        }
+      ]
     },
     {
       "id": "lt-NpdU",
       "step": 0,
       "order": 20,
       "family": "car",
-      "title": "Google car: A red generation 4 Google car can also be found in Lithuania",
+      "title": "Google car: red Gen 4",
       "text": [
         "A red generation 4 Google car can also be found in Lithuania.",
         "NOTE: It can also be found in a few other European countries, including Latvia, but not Estonia."
@@ -1116,14 +1250,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A red Gen 4 car. Latvia and a few other European countries have it too, but Estonia does not.",
+      "sameAs": [
+        "LV"
+      ],
+      "differs": [
+        {
+          "country": "EE",
+          "how": "Estonia has no red Gen 4 car"
+        }
+      ]
     },
     {
       "id": "lt-mtfw",
       "step": 1,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Lithuania is overall a fairly flat country",
+      "title": "Landscape: flat, hills only southeast and west",
       "text": [
         "Lithuania is overall a fairly flat country, with no hills over 300 metres. However, you can sometimes distinguish the **hilly areas** from the more flat areas. The biggest hills are in the southeast, with some hills in the central part of the west."
       ],
@@ -1144,14 +1288,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fairly flat with no hills over 300 metres. The biggest hills are in the southeast, with some in the central west."
     },
     {
       "id": "lt-FSkc",
       "step": 1,
       "order": 1,
       "family": "pole",
-      "title": "Pole: Metal pole tags are predominantly found in the eastern part…",
+      "title": "Pole: metal pole tags in the east",
       "text": [
         "**Metal pole tags** are predominantly found in the eastern part of the country.",
         "_For more information on Lithuanian pole stickers and car metas, please see this [document](https://docs.google.com/document/d/1IzsTIUFuTojmx2x4KtWyxB5ZZcoPcLtiNSE2w4fSXYo/edit?tab=t.0)._"
@@ -1193,14 +1338,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Metal tags on poles are mostly found in the eastern part of the country."
     },
     {
       "id": "lt-oTsA",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: The Curonian Spit is a long thin sand-dune spit) south of…",
+      "title": "Landscape: sand spit, pines, windswept trees",
       "text": [
         "The Curonian Spit is a long thin sand-dune [spit](https://en.wikipedia.org/wiki/Spit_(landform)) south of Klaipeda, that separates the Curonian Lagoon from the Baltic Sea. The main road on this spit, **road 167**, has a recognizable combination of landscape and road direction:",
         "- The road runs in an approximate north-south direction and has Generation 4 coverage.",
@@ -1238,14 +1384,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A long thin sand-dune spit. The main road runs roughly north to south with Gen 4 coverage, surrounded by forest of pines, often slightly windswept."
     },
     {
       "id": "lt-evbw",
       "step": 2,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: On the Curonian Spit you can also find wooden",
+      "title": "Houses: red wooden Scandinavian-style",
       "text": [
         "On the Curonian Spit you can also find wooden, and often red, **Scandinavian looking houses**."
       ],
@@ -1284,7 +1431,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the sand spit you also see wooden, often red, houses that look Scandinavian."
     },
     {
       "id": "lt-1lsP",
@@ -1292,7 +1440,7 @@
       "order": 2,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Rarely, you can see bilingual signs with Polish language in…",
+      "title": "Sign: bilingual with Polish",
       "text": [
         "Rarely, you can see bilingual signs with **Polish language** in a small area southeast of Lithuania.",
         "Note that this is by no means very common, but it can help with getting very close guesses if you do see bilingual Polish-Lithuanian signs in an otherwise obvious Lithuanian setting."
@@ -1332,14 +1480,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/lithuania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rare bilingual signs with Polish in a small area in the southeast. Not common, but it gets you a close guess if the rest looks clearly Lithuanian."
     },
     {
       "id": "lt-lm-2997",
       "step": 3,
       "order": 0,
       "family": "other",
-      "title": "Lithuania Fatty",
+      "title": "Sign: pedestrian, chunky figure, vivid blue",
       "text": [
         "**3 Zebra Stripes**: Estonia, Lithuania, Russia, Ukraine. > Cross off Estonia and Russia (detailed guy in Estonia, Yellow borders in Russia) and you're left with Lithuania and Ukraine. Lithuania's guy is a liiittle bit more **fat** in the torso than Ukraine and the blue is generally more vibrant than Ukraine."
       ],
@@ -1363,492 +1512,29 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8366",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: KM Marker",
-      "text": [
-        "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
-        "In Lithuania, the marker will be at a **45° angle** towards the road. The sign itself has an L-shape."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Among 3-stripe pedestrian signs, rule out Estonia (detailed figure) and Russia (yellow borders). The figure here is a bit fatter in the torso than Ukraine's, and the blue is more vivid.",
+      "differs": [
         {
-          "id": "7d07c270442b",
-          "src": "https://learnablemeta.com/images/186/nxCjm3bhdiD6r1iY6aZg2RWbTB6m3CbqCCz7.avif",
-          "path": "lt/7d07c270442b.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "3b779debadea"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-8370",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "City Names",
-      "text": [
-        "Many Lithuanian place names end in -ai."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ba4a35872c37",
-          "src": "https://learnablemeta.com/images/186/gt7Ky6gE5sI1SMWWOLLoHIeVmC9ZqLkecouj.avif",
-          "path": "lt/ba4a35872c37.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "1f7f314c94a9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23779",
-      "step": 3,
-      "order": 3,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: G",
-      "text": [
-        "The Lithuanian word for street is gatve, often abbreviated as g. on signs and Google Maps.",
-        "This word is almost entirely unique to Lithuanian.",
-        "However, very rarely, you might see gat. in the Latvian capital of Riga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b05903816bd4",
-          "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true,
-          "path": "lt/b05903816bd4.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "680869990554"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23840",
-      "step": 3,
-      "order": 4,
-      "family": "guardrail",
-      "title": "Guardrail: Orange Reflectors",
-      "text": [
-        "Lithuania has normal A-type guardrails with orange reflectors.",
-        "**--- NOTE:**",
-        "Estonia has no reflectors.",
-        "Latvia has red or white reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
-          "path": "lt/942d3cffc941.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "bea93b2771f4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-23853",
-      "step": 3,
-      "order": 5,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Kilometre Markers",
-      "text": [
-        "All Baltic countries use the same blue kilometre marker.",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Lithuania, the marker will be at a 45° angle towards the road.",
-        "The sign itself has an L-shape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
-          "path": "lt/7585b0f60b26.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "3b779debadea"
+          "country": "UA",
+          "how": "Ukrainian figure is slimmer, blue less vivid"
         },
         {
-          "id": "1315d142e031",
-          "src": "https://learnablemeta.com/images/768/Y9mGpAX6SWgZjBwE8nQKqr6o3MTIsSoVBtsL.avif",
-          "path": "lt/1315d142e031.webp",
-          "width": 1000,
-          "height": 655
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50406",
-      "step": 3,
-      "order": 6,
-      "family": "guardrail",
-      "title": "Guardrail: Orange Reflectors",
-      "text": [
-        "Lithuania has normal A-type guardrails with orange reflectors.",
-        "**--- NOTE:**",
-        "Estonia has no reflectors.",
-        "Latvia has red or white reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
-          "path": "lt/942d3cffc941.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "bea93b2771f4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50411",
-      "step": 3,
-      "order": 7,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Kilometre Markers",
-      "text": [
-        "All Baltic countries use the same blue kilometre marker.",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Lithuania, the marker will be at a 45° angle towards the road.",
-        "The sign itself has an L-shape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
-          "path": "lt/7585b0f60b26.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "3b779debadea"
+          "country": "EE",
+          "how": "Estonian figure is more detailed"
         },
         {
-          "id": "2d3e1b8cc941",
-          "src": "https://learnablemeta.com/images/851/Xf2AFK0it6klfV31qz1gbBA1YiX9e09QDhWY.avif",
-          "path": "lt/2d3e1b8cc941.webp",
-          "width": 1000,
-          "height": 655,
-          "dupeOf": "1315d142e031"
+          "country": "RU",
+          "how": "Russian signs have yellow borders"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-50412",
-      "step": 3,
-      "order": 8,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: G",
-      "text": [
-        "The Lithuanian word for street is gatve, often abbreviated as g. on signs and Google Maps.",
-        "This word is almost entirely unique to Lithuanian.",
-        "However, very rarely, you might see gat. in the Latvian capital of Riga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b05903816bd4",
-          "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true,
-          "path": "lt/b05903816bd4.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "680869990554"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51085",
-      "step": 3,
-      "order": 9,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: G",
-      "text": [
-        "The Lithuanian word for street is gatve, often abbreviated as g. on signs and Google Maps.",
-        "This word is almost entirely unique to Lithuanian.",
-        "However, very rarely, you might see gat. in the Latvian capital of Riga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b05903816bd4",
-          "src": "https://learnablemeta.com/images/768/c9nJDkIqtzFDjScc9wMPoJWCupV6pUGKRY1D.avif",
-          "giveaway": true,
-          "path": "lt/b05903816bd4.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "680869990554"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51153",
-      "step": 3,
-      "order": 10,
-      "family": "guardrail",
-      "title": "Guardrail: Orange Reflectors",
-      "text": [
-        "Lithuania has normal A-type guardrails with orange reflectors.",
-        "**--- NOTE:**",
-        "Estonia has no reflectors.",
-        "Latvia has red or white reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "942d3cffc941",
-          "src": "https://learnablemeta.com/images/768/poz1HSu8jSxl1a37KhbwggPXJAzHs6lQhQVr.avif",
-          "path": "lt/942d3cffc941.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "bea93b2771f4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-51158",
-      "step": 3,
-      "order": 11,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Kilometre Markers",
-      "text": [
-        "All Baltic countries use the same blue kilometre marker.",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Lithuania, the marker will be at a 45° angle towards the road.",
-        "The sign itself has an L-shape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7585b0f60b26",
-          "src": "https://learnablemeta.com/images/768/bkSbupEfM4zgVqb9MuVTFu2zD0M8XDWe1Lxz.avif",
-          "path": "lt/7585b0f60b26.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "3b779debadea"
-        },
-        {
-          "id": "8fdf532a9d74",
-          "src": "https://learnablemeta.com/images/853/9SxcaeAtuX9OdYigngfDKpI4BrVAemVvvAR8.avif",
-          "path": "lt/8fdf532a9d74.webp",
-          "width": 1000,
-          "height": 655,
-          "dupeOf": "1315d142e031"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-104518",
-      "step": 3,
-      "order": 12,
-      "family": "architecture",
-      "title": "Architecture: Light Colored Bricks",
-      "text": [
-        "Lithuanian architecture primarily consists of light coloured brick buildings, usually with somewhat steep corrugated metal roofs.",
-        "Wooden buildings are also fairly common, however less so than in Estonia.",
-        "Pastel painted stone buildings are somewhat common, especially in newer suburbs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2fabb89a9a39",
-          "src": "https://learnablemeta.com/images/1072/Sx65Di7fO7JPzthECwEBWzdsIR7CkIKYFg4R.avif",
-          "path": "lt/2fabb89a9a39.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "da0dec6e333c"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-472836",
-      "step": 3,
-      "order": 13,
-      "family": "pole",
-      "title": "Pole: concrete support beam",
-      "text": [
-        "Lithuanian poles are usually square and concrete, and often feature a diagonal support beam.",
-        "NOTE: While most common in Lithuania, these are also found from time to time in Estonia, and on rare occasions in Latvia. In Estonia and Latvia wooden poles with a support beam are much more common."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56378e860ebc",
-          "src": "https://learnablemeta.com/images/1955/1750241686373-Oy2.avif",
-          "path": "lt/56378e860ebc.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "ded77ad088ba"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-515564",
-      "step": 3,
-      "order": 14,
-      "family": "guardrail",
-      "title": "Guardrail: A-Type with orange reflectors",
-      "text": [
-        "Lithuania has normal A-type guardrails with orange reflectors.",
-        "NOTE: Estonia has no reflectors. Latvia has red or white reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8afbccf41c27",
-          "src": "https://learnablemeta.com/images/3660/1755389276548-k8b.avif",
-          "path": "lt/8afbccf41c27.webp",
-          "width": 800,
-          "height": 356
-        },
-        {
-          "id": "05a6c9618d60",
-          "src": "https://learnablemeta.com/images/3660/1755389281808-98o.avif",
-          "path": "lt/05a6c9618d60.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "bea93b2771f4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EE",
-        "LV"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "lt-lm-740357",
       "step": 3,
       "order": 15,
       "family": "architecture",
-      "title": "Architecture: Kaunas house number",
+      "title": "House numbers: very big with curvy lines",
       "text": [
         "Kaunas house numbers are very big, with curvy lines above and under the numbers."
       ],
@@ -1868,7 +1554,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "House numbers are very large, with curvy lines above and below the digits."
     },
     {
       "id": "lt-lm-740358",
@@ -1876,7 +1563,7 @@
       "order": 16,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Vilnius street sign",
+      "title": "Street sign: white, black text, black frame",
       "text": [
         "Vilnius street signs are white with black text and a black frame in it. The house number has the same design and is often next to the street name."
       ],
@@ -1896,56 +1583,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "lt-lm-783064",
-      "step": 3,
-      "order": 17,
-      "family": "language",
-      "title": "Language: Lithuanian",
-      "text": [
-        "Lithuanian is a Baltic language closely related to Latvian. Within the Baltic languages, the following letters are unique to Lithuanian:",
-        "Vowels with small hooks: **Ą Ę Į Ų** (Latvian uses similar hooks under some consonants).",
-        "**Ė** with a single dot.",
-        "**Y** (also in Estonian, but only in loan words).",
-        "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs.",
-        "Lithuanian place names often end in **-ai**.",
-        "NOTE: Estonian is not a part of the Baltic language family (despite the name), but rather a Finnic language related to Finnish."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "eeb0b2f40bc3",
-          "src": "https://learnablemeta.com/images/9388/1785590310910-vnt.avif",
-          "path": "lt/eeb0b2f40bc3.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "d1fb337baf5b",
-          "src": "https://learnablemeta.com/images/9388/1785590318751-Em6.avif",
-          "path": "lt/d1fb337baf5b.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "680869990554"
-        },
-        {
-          "id": "d419ced6c257",
-          "src": "https://learnablemeta.com/images/9388/1785678084230-bbT.avif",
-          "path": "lt/d419ced6c257.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "1f7f314c94a9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Street signs are white with black text inside a black frame. The house number has the same design and often sits next to the street name."
     }
   ]
 }

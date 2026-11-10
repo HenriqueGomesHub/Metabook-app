@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Licence plates in Belgium use red text",
+      "title": "Plate: red characters",
       "text": [
         "Licence plates in Belgium use** red text**. You can recognise this distinct colour even through the blur."
       ],
@@ -60,14 +60,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plates use red letters and numbers. You can spot the colour even through the blur."
     },
     {
       "id": "be-LF07",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Belgium uses white bollards with a yellow rectangular…",
+      "title": "Bollard: white with yellow rectangle, or brown",
       "text": [
         "Belgium uses **white** bollards with a **yellow rectangular reflector **on the front and [white ](https://goo.gl/maps/dsvrRBcicD5XmBN59)on the back. A second type of bollard is [dark brown](https://goo.gl/maps/Wefn7bM6gmvjQ7DY7) with two red stripes at the top. Occasionally, other bollards can be seen.",
         "NOTE: Denmark uses similar white bollards, but they have a red stripe at the top and the reflector is not rectangular. The dark brown bollard with two red stripes can also be seen in the Netherlands."
@@ -128,14 +129,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white bollard with a yellow rectangular reflector on the front, white on the back, or a dark brown one with two red stripes on top. The brown type also appears in the Netherlands.",
+      "differs": [
+        {
+          "country": "DK",
+          "how": "Danish white bollards have a red top stripe and a non-rectangular reflector"
+        }
+      ]
     },
     {
       "id": "be-aGFv",
       "step": 0,
       "order": 3,
       "family": "guardrail",
-      "title": "Guardrail: Belgium uses A-type guardrails with yellow reflectors",
+      "title": "Guardrail: A-type with yellow reflectors",
       "text": [
         "Belgium uses A-type guardrails with **yellow **reflectors.",
         "NOTE: In Europe, only Spain, Andorra, and Belgium use these reflectors. For a good overview of European guardrails, see [this infographic](https://images.squarespace-cdn.com/content/v1/60f6054f4e76b03092956de8/930bd2e7-57fa-4807-8e8a-733ba5a702a8/europeguardrail.png?format=2500w)."
@@ -180,14 +188,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A-type guardrail with yellow reflectors. In Europe only Spain, Andorra and Belgium use yellow ones.",
+      "sameAs": [
+        "AD",
+        "ES"
+      ]
     },
     {
       "id": "be-UD8T",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: Most poles in Belgium are concrete",
+      "title": "Pole: square concrete, tiny holes, metal bands",
       "text": [
         "Most poles in Belgium are concrete, square shaped, and have tiny holes running up them. They often have** small metal wrappings** around them. The second most common type of pole has [**oval-shaped holes**](https://goo.gl/maps/XVRAYg1wmhNJQxg17). You can find many different types of concrete poles in Belgium.",
         "NOTE: The small metal wrappings can be found in France as well."
@@ -247,7 +260,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete poles with tiny holes running up them and small metal wrappings. The second most common type has oval holes. France has the metal wrappings too."
     },
     {
       "id": "be-rJDM",
@@ -255,7 +269,7 @@
       "order": 5,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs in Belgium are most often blue or white",
+      "title": "Sign: blue or white direction signs",
       "text": [
         "Directional signs in Belgium are most often blue or [white](https://goo.gl/maps/xWnWdzWmbcPDPTE4A)."
       ],
@@ -294,7 +308,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs are most often blue or white."
     },
     {
       "id": "be-ahrj",
@@ -302,7 +317,7 @@
       "order": 6,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Road signs often have an additional small blue sign",
+      "title": "Sign: small extra blue plate under road signs",
       "text": [
         "Road signs often have an additional **small blue sign**. In other European countries, these small signs are usually just white."
       ],
@@ -349,7 +364,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road signs often carry an extra small blue plate. Other European countries usually use white ones."
     },
     {
       "id": "be-Bf5S",
@@ -357,7 +373,7 @@
       "order": 7,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Belgium uses pedestrian crossing signs without any stripes",
+      "title": "Sign: crossing with two dotted lines",
       "text": [
         "Belgium uses pedestrian crossing signs without any stripes, but with **two horizontal dotted lines**. The man on the sign has a **square head**.",
         "NOTE: France and the Netherlands use a pedestrian sign with a regular zebra crossing with five vertical stripes."
@@ -400,14 +416,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The pedestrian crossing sign has no stripes, just two horizontal dotted lines, and the man has a square head. France and the Netherlands show a zebra crossing with five stripes.",
+      "differs": [
+        {
+          "country": "FR",
+          "how": "Sign shows a zebra crossing with five stripes"
+        },
+        {
+          "country": "NL",
+          "how": "Sign shows a zebra crossing with five stripes"
+        }
+      ]
     },
     {
       "id": "be-IlY6",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "Kilometre markers in Belgium are often green",
+      "title": "Kilometre marker: green, sometimes red text",
       "text": [
         "Kilometre markers in Belgium are often green, but can have [red text](https://goo.gl/maps/s18C6tj6L1qZXbVZ6) as well."
       ],
@@ -446,7 +473,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Kilometre markers are often green, and can have red text."
     },
     {
       "id": "be-73Bz",
@@ -454,7 +482,7 @@
       "order": 9,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Belgium uses white chevrons",
+      "title": "Chevron: white with a red arrow",
       "text": [
         "Belgium uses white chevrons, with a red arrow.",
         "NOTE: The Netherlands also uses this chevron. You will not see these in France."
@@ -505,14 +533,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White chevrons with a red arrow. The Netherlands uses the same one, but France does not.",
+      "sameAs": [
+        "NL"
+      ],
+      "differs": [
+        {
+          "country": "FR",
+          "how": "France does not use this chevron"
+        }
+      ]
     },
     {
       "id": "be-ecIc",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "A lot of rural roads in Belgium are made out of concrete…",
+      "title": "Road: rural roads made of concrete slabs",
       "text": [
         "A lot of rural roads in Belgium are made out of **concrete slabs**, almost like you would see in the Philippines or Thailand.",
         "NOTE: The Netherlands almost never uses concrete slabs for roads."
@@ -556,14 +594,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many country roads are made of concrete slabs, like in the Philippines or Thailand. The Netherlands almost never does this.",
+      "differs": [
+        {
+          "country": "NL",
+          "how": "Almost never has concrete slab roads"
+        }
+      ]
     },
     {
       "id": "be-nGOp",
       "step": 0,
       "order": 11,
       "family": "line",
-      "title": "Road line: Belgium uses all white road lines",
+      "title": "Road lines: all white, bike lanes on both sides",
       "text": [
         "Belgium uses all **white **road lines. These can be continuous or broken. Roads are often accompanied by** bike lanes** on both sides.",
         "NOTE: Bikes and cycling lanes are most common in the Netherlands, but they can be often seen in Belgium as well."
@@ -613,14 +658,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All road lines are white, continuous or broken, and roads often have a bike lane on each side. This is even more common in the Netherlands."
     },
     {
       "id": "be-xzJZ",
       "step": 0,
       "order": 12,
       "family": "architecture",
-      "title": "Architecture: A lot of houses in Belgium are made of distinctive red…",
+      "title": "Houses: red brick",
       "text": [
         "A lot of houses in Belgium are made of distinctive **red bricks**.",
         "NOTE: This is more common in the North and West of the country."
@@ -660,14 +706,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many houses are built of distinctive red brick, more so in the north and west."
     },
     {
       "id": "be-Qz6K",
       "step": 0,
       "order": 13,
       "family": "architecture",
-      "title": "Architecture: Houses in the South of the country use a lot of stone",
+      "title": "Houses: grey stone, French look",
       "text": [
         "Houses in the South of the country use a lot of stone, have gray tones and generally look more French."
       ],
@@ -706,7 +753,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south, houses use a lot of stone, have grey tones and look more French."
     },
     {
       "id": "be-3Ooh",
@@ -714,7 +762,7 @@
       "order": 14,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signposts in Belgium are often orange",
+      "title": "Signposts: orange posts and orange backs",
       "text": [
         "Signposts in Belgium are often **orange**. The backs of signs are also sometimes orange. This is unique to Belgium."
       ],
@@ -753,7 +801,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signposts are often orange, and the backs of signs are sometimes orange too. This is unique."
     },
     {
       "id": "be-5jYM",
@@ -761,7 +810,7 @@
       "order": 15,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street name signs in Belgium are very diverse",
+      "title": "Street sign: varied, short and tall",
       "text": [
         "Street name signs in Belgium are very diverse, and often unique to a city. Most common colours are **white **and **dark** **blue**. They often have the** town or city name** written on them.",
         "NOTE: These signs often have variable designs, but most of them are fairly short and tall. In comparison, Dutch street signs are almost always much longer than they are tall."
@@ -801,7 +850,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs vary a lot by city, mostly white or dark blue, and usually carry the town name. They are fairly short and tall, while Dutch ones are much longer than tall.",
+      "differs": [
+        {
+          "country": "NL",
+          "how": "Street signs are much longer than they are tall"
+        }
+      ]
     },
     {
       "id": "be-5MIw",
@@ -809,7 +865,7 @@
       "order": 16,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Town entry signs in Belgium are white with a black border",
+      "title": "Sign: town entry white with black border",
       "text": [
         "**Town entry signs** in Belgium are white with a black border. They also mention the name of the city or municipality in bold, black text."
       ],
@@ -848,7 +904,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town entry signs are white with a black border and the town name in bold black text."
     },
     {
       "id": "be-3xpW",
@@ -856,7 +913,7 @@
       "order": 17,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Priority signs in Belgium have an orange diamond and are…",
+      "title": "Sign: small priority sign with orange diamond",
       "text": [
         "Priority signs in Belgium have an **orange **diamond and are much **smaller **than in other countries."
       ],
@@ -903,7 +960,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The priority road sign has an orange diamond and is much smaller than elsewhere."
     },
     {
       "id": "be-9KhQ",
@@ -911,7 +969,7 @@
       "order": 18,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Bus stops are always marked by yellow signposts",
+      "title": "Bus stop: yellow signposts and roofs",
       "text": [
         "Bus stops are always marked by **yellow signposts**. Bus shelters often have **yellow roofs**."
       ],
@@ -950,14 +1008,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stops are always marked by yellow signposts, and bus shelters often have yellow roofs."
     },
     {
       "id": "be-npN9",
       "step": 0,
       "order": 19,
       "family": "pole",
-      "title": "Pole: Traffic lights are most often supported by black-and-yellow…",
+      "title": "Pole: striped traffic light poles",
       "text": [
         "Traffic lights are most often supported by black-and-yellow or red-and-white **striped poles**.",
         "NOTE: The regional differences are discussed in Step 2."
@@ -999,7 +1058,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic lights are mostly held by black-and-yellow or red-and-white striped poles. Which one you see depends on the region."
     },
     {
       "id": "be-n3uG",
@@ -1007,7 +1067,7 @@
       "order": 20,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Belgium uses these red water hydrants signs with the letter…",
+      "title": "Sign: red water hydrant sign with letter H",
       "text": [
         "Belgium uses these **red** water hydrants signs with the letter **H **on top.",
         "NOTE: You can also find these in Germany."
@@ -1049,14 +1109,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A red hydrant sign with the letter H on top. Germany has these too.",
+      "sameAs": [
+        "DE"
+      ]
     },
     {
       "id": "be-6eFr",
       "step": 0,
       "order": 21,
       "family": "other",
-      "title": "Almost all roads",
+      "title": "Road: gutters on both sides",
       "text": [
         "Almost all roads (big or small) in Belgium use **gutters **on both sides. This is much less common in neighbouring countries."
       ],
@@ -1095,14 +1159,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nearly all roads, big or small, have gutters on both sides. This is much rarer in neighbouring countries."
     },
     {
       "id": "be-by58",
       "step": 0,
       "order": 22,
       "family": "line",
-      "title": "Road line: Belgian bicycle paths have short dashed outer lines",
+      "title": "Road lines: short dashed edges on bike paths",
       "text": [
         "Belgian bicycle paths have short dashed outer lines."
       ],
@@ -1141,14 +1206,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bicycle paths are edged with short dashed lines."
     },
     {
       "id": "be-u60n",
       "step": 0,
       "order": 23,
       "family": "architecture",
-      "title": "Architecture: After Germany, Belgium is the next country in which you can…",
+      "title": "Houses: many blurred",
       "text": [
         "After Germany, Belgium is the next country in which you can find the most **blurred houses.**"
       ],
@@ -1189,14 +1255,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of houses are blurred. Only Germany has more blurred houses.",
+      "differs": [
+        {
+          "country": "DE",
+          "how": "Germany blurs even more houses"
+        }
+      ]
     },
     {
       "id": "be-uyob",
       "step": 0,
       "order": 24,
       "family": "coverage",
-      "title": "Coverage: Coverage with a red car and a long antenna can rarely be…",
+      "title": "Google car: red car with long antenna",
       "text": [
         "Coverage with a** red car** and a **long antenna **can rarely be seen in Belgium.",
         "NOTE: This is much more common in Ukraine."
@@ -1238,14 +1311,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A red car with a long antenna is rarely seen here. It is far more common in Ukraine.",
+      "differs": [
+        {
+          "country": "UA",
+          "how": "Much more common there"
+        }
+      ]
     },
     {
       "id": "be-0VLo",
       "step": 0,
       "order": 25,
       "family": "car",
-      "title": "Google car: Belgium also has Generation 4 “smallcam” coverage",
+      "title": "Google car: low smallcam, wide round blur",
       "text": [
         "Belgium also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Western Europe also has smallcam."
@@ -1285,14 +1365,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The newer Gen 4 smallcam sits lower than normal and has a big round blur with a small bump at the front. It can be see-through. Most of Western Europe has it."
     },
     {
       "id": "be-vR5K",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Belgium is generally flat in the northwest of the country",
+      "title": "Landscape: flat northwest, hillier southeast",
       "text": [
         "Belgium is generally **flat **in the northwest of the country, especially near the coast. The further [south east](https://goo.gl/maps/P9sjaiMA1DEcR4VY9) you go, the **hillier**."
       ],
@@ -1331,14 +1412,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat in the northwest, especially near the coast, and gets hillier the further southeast you go."
     },
     {
       "id": "be-U0Ti",
       "step": 1,
       "order": 1,
       "family": "language",
-      "title": "Language: Belgium has 3 official languages",
+      "title": "Language: Dutch, French or German by region",
       "text": [
         "Belgium has 3 official languages.",
         "- **Dutch **(Flemish), spoken in **Flanders**, the Northern part of Belgium. There is an abundance of letters and combinations like z, w, ee and ij.",
@@ -1362,7 +1444,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dutch in the north (lots of z, w, ee, ij), French in the south (ç, é, è, à), and German in a small eastern area (ä, ü, ö, ß)."
     },
     {
       "id": "be-Wopz",
@@ -1370,7 +1453,7 @@
       "order": 2,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Brussels, the capital of Belgium, is bilingual",
+      "title": "Sign: both French and Dutch on signs",
       "text": [
         "Brussels, the capital of Belgium, is **bilingual**. You will see both French and Dutch on signs."
       ],
@@ -1409,7 +1492,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital is bilingual, so signs show both French and Dutch."
     },
     {
       "id": "be-t75X",
@@ -1417,7 +1501,7 @@
       "order": 3,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Bus stop signs in Flanders",
+      "title": "Bus stop sign: white top or yellow top",
       "text": [
         "Bus stop signs in Flanders (and Brussels) have a **white rectangle** at the top. In Wallonia they will have a [**yellow top**](https://goo.gl/maps/RXMysmC593bvR99HA)."
       ],
@@ -1472,7 +1556,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stop signs have a white rectangle at the top in the north and in Brussels, and a yellow top in the south."
     },
     {
       "id": "be-m1Lx",
@@ -1480,7 +1565,7 @@
       "order": 4,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: In Flanders (and Brussels), 95% of warning signs have a…",
+      "title": "Warning sign: thick red outline, no white edge",
       "text": [
         "In Flanders (and Brussels), 95% of warning signs have a **thick red outline**, without a white border. Contrarily, you will most often find warning signs with a [**small white outline**](https://goo.gl/maps/UAv4N67VDRvvcSjJ7) in Wallonia.",
         "NOTE: The signs found in Flanders are the same as the Spanish ones."
@@ -1520,14 +1605,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north and Brussels, 95% of warning signs have a thick red outline with no white border. In the south they usually have a thin white edge. The northern ones match Spain's.",
+      "sameAs": [
+        "ES"
+      ]
     },
     {
       "id": "be-rJaC",
       "step": 1,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Traffic lights held up by yellow-and-black poles are unique…",
+      "title": "Pole: yellow-and-black traffic light poles",
       "text": [
         "Traffic lights held up by **yellow-and-black** poles are unique to Flanders. In contrast, Wallonia and Brussels frequently use a **red-and-white** design."
       ],
@@ -1568,14 +1657,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic lights on yellow-and-black poles are only found in the north. The south and Brussels often use red-and-white poles."
     },
     {
       "id": "be-EGhx",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Phone codes in Belgium are very useful to determine the…",
+      "title": "Phone numbers: area code after the 0",
       "text": [
         "Phone codes in Belgium are very useful to determine the region you are in. They are **9 **digits long. The 1 or 2 number(s) after the leading 0 indicate the area code.",
         "0**X** XXX XX XX (Brussels, Antwerp, Liege, Ghent.)",
@@ -1599,7 +1689,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers have 9 digits, and the one or two digits after the 0 give the area. Big cities use 0X XXX XX XX, other towns 0XX XX XX XX. Mobiles start with 04 and have 10 digits."
     },
     {
       "id": "be-VtiH",
@@ -1607,7 +1698,7 @@
       "order": 7,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: As mentioned before, municipality names are often mentioned…",
+      "title": "Street sign: municipality name on the sign",
       "text": [
         "As mentioned before, **municipality names** are often mentioned on street signs, usually in smaller font than the street name. The map shows a selection of recognizable street signs in the bigger cities.",
         "NOTE: Of the big cities, **Bruges **(Brugge) is an exception to the rule of signs usually mentioning the municipality name.",
@@ -1630,14 +1721,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs often show the municipality name in smaller type than the street. One big tourist city is an exception and usually leaves it out."
     },
     {
       "id": "be-Iq0Z",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: The Ardennes, located in the southeast part of Belgium,…",
+      "title": "Landscape: steep hills, dense forests, valleys",
       "text": [
         "The Ardennes, located in the southeast part of Belgium, have a very distinct landscape. You can see a lot of **steep hills**, dense **forests, **and **valleys**.",
         "NOTE: The Ardennes extend partially into France, Luxembourg, and Germany."
@@ -1682,14 +1774,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A hilly, wooded area with valleys in the southeast. The same hills continue into France, Luxembourg and Germany.",
+      "differs": [
+        {
+          "country": "LU",
+          "how": "Same hill range continues into Luxembourg"
+        },
+        {
+          "country": "FR",
+          "how": "Same hill range continues into France"
+        },
+        {
+          "country": "DE",
+          "how": "Same hill range continues into Germany"
+        }
+      ]
     },
     {
       "id": "be-0Xu1",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: The coastal plain is extremely flat and consists of…",
+      "title": "Landscape: very flat polders with waterways",
       "text": [
         "The coastal plain is extremely flat and consists of so-called **polders**, which are man-made fields at or below sea level, surrounded by many waterways. This landscape is situated near the North Sea coast, as well as near the western part of the border with the Netherlands, particularly around Antwerp.",
         "NOTE: This part of Belgium is especially often confused with the Netherlands. Carefully look around for clues to distinguish the two countries if you find yourself in this landscape."
@@ -1731,14 +1838,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Extremely flat reclaimed fields at or below sea level, cut by many canals, near the North Sea and the western Netherlands border. Often confused with the Netherlands, so look for other clues.",
+      "differs": [
+        {
+          "country": "NL",
+          "how": "Very similar landscape, use signs or road lines"
+        }
+      ]
     },
     {
       "id": "be-6AkT",
       "step": 1,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: Many parts of the Belgian North Sea coast are lined by…",
+      "title": "Coast: wall of apartment blocks, dunes",
       "text": [
         "Many parts of the Belgian **North Sea coast** are lined by apartment blocks, in a manner that is often derisively referred to as a “wall” of buildings by locals.",
         "Near the coast, you will also sometimes be able to spot a [dune landscape](https://goo.gl/maps/oM2uuPVVeUfEZt839), with low bushes, long grass and sandy soil."
@@ -1778,7 +1892,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Much of the North Sea coast is lined with apartment blocks like a wall. You may also see dunes with low bushes and long grass."
     },
     {
       "id": "be-fihD",
@@ -1786,7 +1901,7 @@
       "order": 0,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Baarle-Hertog, located north-east of Antwerp, is composed…",
+      "title": "Border: small white crosses on the ground",
       "text": [
         "Baarle-Hertog, located north-east of Antwerp, is composed of several exclaves and enclaves of Belgium and the Netherlands. You can often see the country's borders in this city (indicated by **small white crosses**). Street name signs tell you whether you are in Belgium or The Netherlands."
       ],
@@ -1827,695 +1942,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "be-lm-2233",
-      "step": 3,
-      "order": 0,
-      "family": "other",
-      "title": "French Speaking Belgium",
-      "text": [
-        "You can see French in the southern part of Belgium (Wallonia) and both French and Flemish in the the capital of Brussels."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "A town made of many mixed pieces of two countries shows small white crosses on the ground at borders. Street name signs tell you which country you are in.",
+      "differs": [
         {
-          "id": "5a922075e415",
-          "src": "https://learnablemeta.com/images/5/gyQI0Vu9t6gjKnDfHXVEfOzRmoHHXB7Snjx5.avif",
-          "path": "be/5a922075e415.webp",
-          "width": 1000,
-          "height": 802
+          "country": "NL",
+          "how": "Street name signs show the Dutch side"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67351d4f0a423a025a67fa36",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-24564",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Ardennes",
-      "text": [
-        "The Ardennes, located in the southeast part of Belgium, have a very distinct landscape. You can see a lot of steep hills, dense forests, and valleys.",
-        "NOTE: The Ardennes extend partially into France, Luxembourg, and Germany."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6fb7d3520f9f",
-          "src": "https://learnablemeta.com/images/664/FTbZtW6zXvD2WzgKA9eqXYgCMROWKPMCHngS.avif",
-          "path": "be/6fb7d3520f9f.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "723262fa7d1f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE",
-        "FR",
-        "LU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-24565",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Coastal Plain",
-      "text": [
-        "The coastal plain is extremely flat and consists of so-called polders, which are man-made fields at or below sea level, surrounded by many waterways. This landscape is situated near the North Sea coast, as well as near the western part of the border with the Netherlands, particularly around Antwerp.",
-        "NOTE: This part of Belgium is especially often confused with the Netherlands."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "422cc37e9467",
-          "src": "https://learnablemeta.com/images/664/7w2kXvSgAtDKck3JVb3EOjkPD7ikqUIFmEnA.avif",
-          "path": "be/422cc37e9467.webp",
-          "width": 1000,
-          "height": 481,
-          "dupeOf": "ea8cc93ba5f6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-49860",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Double Gutters",
-      "text": [
-        "Almost all roads (big or small) in Belgium use gutters on both sides.",
-        "This is much less common in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "709e40f2c552",
-          "src": "https://learnablemeta.com/images/847/ew9S3z50XA0O46wsEXd0ZIJMGETmVEDM2UKL.avif",
-          "path": "be/709e40f2c552.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "7c50a23daa90"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-49862",
-      "step": 3,
-      "order": 4,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Belgium uses A-type guardrails with yellow reflectors.",
-        "**--- NOTE:**",
-        "In Europe, only Spain, Andorra, and Belgium use these reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a3c46d34c94b",
-          "src": "https://learnablemeta.com/images/847/L82ofERwxWLnh3shijYQLFIXSJCzyzEVg42B.avif",
-          "path": "be/a3c46d34c94b.webp",
-          "width": 1000,
-          "height": 564,
-          "dupeOf": "a31d9d005737"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-49863",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "A lot of rural roads in Belgium are made out of concrete slabs, almost like you would see in the Philippines or Thailand.",
-        "**--- NOTE:**",
-        "The Netherlands almost never uses concrete slabs for roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e63dba563c4b",
-          "src": "https://learnablemeta.com/images/847/MY4KrliG66vsKZUUzuAIfgzRsGewom2WQfWD.avif",
-          "path": "be/e63dba563c4b.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "d293c4e0a032"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NL",
-        "PH",
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50220",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "A lot of rural roads in Belgium are made out of concrete slabs, almost like you would see in the Philippines or Thailand.",
-        "**--- NOTE:**",
-        "The Netherlands almost never uses concrete slabs for roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e63dba563c4b",
-          "src": "https://learnablemeta.com/images/847/MY4KrliG66vsKZUUzuAIfgzRsGewom2WQfWD.avif",
-          "path": "be/e63dba563c4b.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "d293c4e0a032"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NL",
-        "PH",
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50222",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Double Gutters",
-      "text": [
-        "Almost all roads (big or small) in Belgium use gutters on both sides.",
-        "This is much less common in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "709e40f2c552",
-          "src": "https://learnablemeta.com/images/847/ew9S3z50XA0O46wsEXd0ZIJMGETmVEDM2UKL.avif",
-          "path": "be/709e40f2c552.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "7c50a23daa90"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50250",
-      "step": 3,
-      "order": 8,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Belgium uses A-type guardrails with yellow reflectors.",
-        "**--- NOTE:**",
-        "In Europe, only Spain, Andorra, and Belgium use these reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a3c46d34c94b",
-          "src": "https://learnablemeta.com/images/847/L82ofERwxWLnh3shijYQLFIXSJCzyzEVg42B.avif",
-          "path": "be/a3c46d34c94b.webp",
-          "width": 1000,
-          "height": 564,
-          "dupeOf": "a31d9d005737"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50866",
-      "step": 3,
-      "order": 9,
-      "family": "other",
-      "title": "Double Gutters",
-      "text": [
-        "Almost all roads (big or small) in Belgium use gutters on both sides.",
-        "This is much less common in neighbouring countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "709e40f2c552",
-          "src": "https://learnablemeta.com/images/847/ew9S3z50XA0O46wsEXd0ZIJMGETmVEDM2UKL.avif",
-          "path": "be/709e40f2c552.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "7c50a23daa90"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50868",
-      "step": 3,
-      "order": 10,
-      "family": "guardrail",
-      "title": "Guardrail: Yellow Reflectors",
-      "text": [
-        "Belgium uses A-type guardrails with yellow reflectors.",
-        "**--- NOTE:**",
-        "In Europe, only Spain, Andorra, and Belgium use these reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a3c46d34c94b",
-          "src": "https://learnablemeta.com/images/847/L82ofERwxWLnh3shijYQLFIXSJCzyzEVg42B.avif",
-          "path": "be/a3c46d34c94b.webp",
-          "width": 1000,
-          "height": 564,
-          "dupeOf": "a31d9d005737"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-50869",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "A lot of rural roads in Belgium are made out of concrete slabs, almost like you would see in the Philippines or Thailand.",
-        "**--- NOTE:**",
-        "The Netherlands almost never uses concrete slabs for roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e63dba563c4b",
-          "src": "https://learnablemeta.com/images/847/MY4KrliG66vsKZUUzuAIfgzRsGewom2WQfWD.avif",
-          "path": "be/e63dba563c4b.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "d293c4e0a032"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NL",
-        "PH",
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-104486",
-      "step": 3,
-      "order": 12,
-      "family": "architecture",
-      "title": "Architecture: Red Bricks",
-      "text": [
-        "A lot of houses in Belgium are made of distinctive red bricks.",
-        "**--- NOTE:**",
-        "This is more common in the North and West of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "876fe822a4d2",
-          "src": "https://learnablemeta.com/images/1072/39szzn3BCG3JdXzHTTyaX5ET4iDIRJ1NCSy1.avif",
-          "path": "be/876fe822a4d2.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "58c4487a3e1e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-104487",
-      "step": 3,
-      "order": 13,
-      "family": "architecture",
-      "title": "Architecture: South - Gray Tone Stones",
-      "text": [
-        "Houses in the South of the country use a lot of stone, have gray tones and generally look more French."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "416d4d7720d2",
-          "src": "https://learnablemeta.com/images/1072/zK9uPIosAIbPMe23MnJ56WqJgNR6NrWfl3bb.avif",
-          "path": "be/416d4d7720d2.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "b337e4384d3b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-128292",
-      "step": 3,
-      "order": 14,
-      "family": "architecture",
-      "title": "Architecture: Red Bricks",
-      "text": [
-        "A lot of houses in Belgium are made of distinctive red bricks.",
-        "**--- NOTE:**",
-        "This is more common in the North and West of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "876fe822a4d2",
-          "src": "https://learnablemeta.com/images/1072/39szzn3BCG3JdXzHTTyaX5ET4iDIRJ1NCSy1.avif",
-          "path": "be/876fe822a4d2.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "58c4487a3e1e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-128293",
-      "step": 3,
-      "order": 15,
-      "family": "architecture",
-      "title": "Architecture: South - Gray Tone Stones",
-      "text": [
-        "Houses in the South of the country use a lot of stone, have gray tones and generally look more French."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "416d4d7720d2",
-          "src": "https://learnablemeta.com/images/1072/zK9uPIosAIbPMe23MnJ56WqJgNR6NrWfl3bb.avif",
-          "path": "be/416d4d7720d2.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "b337e4384d3b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-441795",
-      "step": 3,
-      "order": 16,
-      "family": "other",
-      "title": "Belgium Lego Man",
-      "text": [
-        "Horizontal Zebra stripe: Austria, Belgium, Greece, Poland, Serbia. > LEGO MAN: Belgium."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ff801b20c291",
-          "src": "https://learnablemeta.com/images/90/eN26jtjOukB20U6X9XQMpWIj7HSTDcotb8v1.avif",
-          "path": "be/ff801b20c291.webp",
-          "width": 996,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AT",
-        "GR",
-        "PL",
-        "RS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-515553",
-      "step": 3,
-      "order": 17,
-      "family": "guardrail",
-      "title": "Guardrail: A-Type with yellow reflectors",
-      "text": [
-        "Belgium uses A-type guardrails with yellow reflectors.",
-        "NOTE: In Europe, only Spain, Andorra, and Belgium use these reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a57c6b28a1a0",
-          "src": "https://learnablemeta.com/images/3660/1755386372159-nYQ.avif",
-          "path": "be/a57c6b28a1a0.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "795be9eba638"
-        },
-        {
-          "id": "2a9a414b1ed5",
-          "src": "https://learnablemeta.com/images/3660/1755386404208-JDX.avif",
-          "path": "be/2a9a414b1ed5.webp",
-          "width": 800,
-          "height": 356
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AD",
-        "ES"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-558152",
-      "step": 3,
-      "order": 18,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Brussels",
-      "text": [
-        "Brussels street signs have dutch and french written on them aswell as the city names on the top with a logo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e08c5e1819c3",
-          "src": "https://learnablemeta.com/images/4588/1777394453888-Q7j.avif",
-          "path": "be/e08c5e1819c3.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "57dea1d87b2e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-558156",
-      "step": 3,
-      "order": 19,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Antwerp",
-      "text": [
-        "Antwerp street signs have the name Antwerpen written on them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a4fdee9cc100",
-          "src": "https://learnablemeta.com/images/4588/1777394301723-SJ8.avif",
-          "path": "be/a4fdee9cc100.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "57dea1d87b2e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-634023",
-      "step": 3,
-      "order": 20,
-      "family": "plate",
-      "title": "Plate: Belgium",
-      "text": [
-        "Licence plates in Belgium use red text. You can recognise this distinct colour even through the blur."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8175d30f3fc8",
-          "src": "https://learnablemeta.com/images/5431/1766259878076-GMF.avif",
-          "path": "be/8175d30f3fc8.webp",
-          "width": 800,
-          "height": 199,
-          "dupeOf": "aa4e61e2274e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-740452",
-      "step": 3,
-      "order": 21,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Ghent",
-      "text": [
-        "Ghent street signs have the name Gent written on them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c5848acfab62",
-          "src": "https://learnablemeta.com/images/4588/1777394563934-a9P.avif",
-          "path": "be/c5848acfab62.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "57dea1d87b2e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "be-lm-783088",
       "step": 3,
       "order": 22,
       "family": "language",
-      "title": "Language: Dutch (Flemish)",
+      "title": "Language: Dutch with ij, ieuw, oe and straat",
       "text": [
         "Dutch, often referred to as Flemish within Belgium, is a Germanic language. In Belgium, Dutch is spoken in the northern Flanders region, and alongside French in the capital city of Brussels.",
         "Dutch features a lot of double vowels. Typical letter clusters are **ij, ieuw** and **oe**. “**IJ**“ written as one capitalised letter is also unique to the language.",
@@ -2555,50 +1996,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "be-lm-783089",
-      "step": 3,
-      "order": 23,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Brussels (bilingual city)",
-      "text": [
-        "Brussels is the capital city of Belgium and officially bilingual in French and Dutch (Flemish). Brussels street signs include both the French **rue** and Dutch **straat**."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Dutch has many double vowels and letter groups like ij, ieuw and oe. The word for street is straat. It is the main language of the north and shares Brussels with French.",
+      "differs": [
         {
-          "id": "fa5ee1f91db7",
-          "src": "https://learnablemeta.com/images/9388/1785095054197-iyS.avif",
-          "path": "be/fa5ee1f91db7.webp",
-          "width": 486,
-          "height": 402
-        },
-        {
-          "id": "4ce97371646b",
-          "src": "https://learnablemeta.com/images/9388/1785095258396-7dX.avif",
-          "path": "be/4ce97371646b.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "428f23851300"
+          "country": "NL",
+          "how": "Same language, so use other clues"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "be-lm-783090",
       "step": 3,
       "order": 24,
       "family": "language",
-      "title": "Language: French",
+      "title": "Language: French with rue and accents",
       "text": [
         "French is a Romance language closely related to languages like Catalan, Spanish and Italian. In Belgium, French is spoken in the southern Wallonia region, and alongside Dutch in the capital city of Brussels.",
         "The French word for street is **rue**.",
@@ -2649,7 +2061,14 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "French uses accents like é, à, è, â, ê, ç and the ending -ux. The word for street is rue. It is spoken in the south and, with Dutch, in Brussels.",
+      "differs": [
+        {
+          "country": "FR",
+          "how": "Same language, so use other clues"
+        }
+      ]
     }
   ]
 }

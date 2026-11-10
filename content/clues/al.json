@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Albanian licence plates either have blue strips on both…",
+      "title": "Plate: red strip on left, or blue both sides",
       "text": [
         "Albanian licence plates either have **blue strips** on both sides or a single **red strip** on the left side.",
         "NOTE: Albania is the only European country with red on the left side of the licence plate. Furthermore, Italian licence plates also have blue strips on both sides, however Italian front plates are distinctly shorter."
@@ -55,14 +55,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plates have either a single red strip on the left or blue strips on both sides. Red on the left is unique in Europe. Italian plates also have blue on both sides, but the front plates are clearly shorter.",
+      "differs": [
+        {
+          "country": "IT",
+          "how": "Italian front plates are distinctly shorter"
+        }
+      ]
     },
     {
       "id": "al-i4Ky",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: All Generation 4 coverage in Albania was taken using a…",
+      "title": "Google car: low Gen 4 with big round blur",
       "text": [
         "All Generation 4 coverage in Albania was taken using a “smallcam” camera, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of the Balkans and southern Europe have Smallcam."
@@ -104,14 +111,23 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Gen 4 camera mounted lower than usual, with a fairly big round blur and a small bump at the front. The blur can be see-through and hard to spot. Much of the Balkans and southern Europe has it.",
+      "sameAs": [
+        "GR",
+        "HR",
+        "IT",
+        "ME",
+        "MK",
+        "RS"
+      ]
     },
     {
       "id": "al-iM5P",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: ‘Rifts’ can rarely be seen in Albanian generation 3 coverage",
+      "title": "Google car: sky rifts from poor stitching",
       "text": [
         "‘**Rifts**’ can rarely be seen in Albanian generation 3 coverage, due to poor stitching.",
         "NOTE: Rifts are also equally common in Montenegro, and can rarely be seen in various other countries."
@@ -155,14 +171,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rarely, Gen 3 coverage shows odd breaks in the sky where the images were badly stitched together. Montenegro has them just as often.",
+      "sameAs": [
+        "ME"
+      ]
     },
     {
       "id": "al-z0A7",
       "step": 0,
       "order": 4,
       "family": "bollard",
-      "title": "Bollard: Albanian bollards have a black top with a red and grey…",
+      "title": "Bollard: black top, red reflector",
       "text": [
         "Albanian bollards have a **black top** with a red and grey reflector. The bottom is painted white.",
         "NOTE: Italy uses the same kind of bollards."
@@ -222,14 +242,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White post with a black top and a red-and-grey reflector. Same as Italy, so it narrows it to Albania or Italy.",
+      "sameAs": [
+        "IT"
+      ]
     },
     {
       "id": "al-vH1O",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: These pole tops, with an upside down triangle shape, are a…",
+      "title": "Pole: upside-down triangle top",
       "text": [
         "These pole tops, with an **upside down triangle** shape, are a good clue for Albania.",
         "NOTE: Serbia, Czechia, Slovakia and Romania use similar pole tops."
@@ -284,14 +308,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poletop shaped like an upside-down triangle. Serbia, Czechia, Slovakia and Romania use similar tops, so check other clues.",
+      "sameAs": [
+        "CZ",
+        "RO",
+        "RS",
+        "SK"
+      ]
     },
     {
       "id": "al-NXsL",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Other, more simple Albanian pole tops will often have…",
+      "title": "Pole: simple top with horizontal bars",
       "text": [
         "Other, more simple Albanian pole tops will often have **horizontal bars**.",
         "NOTE: If you are not sure between Montenegro or Albania and see these poles, guess Albania."
@@ -343,7 +374,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Simpler poletops with horizontal bars. If you can't pick between Albania and Montenegro, guess Albania.",
+      "sameAs": [
+        "ME"
+      ]
     },
     {
       "id": "al-83ib",
@@ -351,7 +386,7 @@
       "order": 7,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Albanian chevrons are white on black",
+      "title": "Chevron: white on black",
       "text": [
         "Albanian chevrons are **white on black**.",
         "NOTE: Within southern Europe this chevron is also used by Italy, Greece, and Spain.",
@@ -415,7 +450,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White arrows on black chevrons. Italy, Greece and Spain use the same. Montenegro uses two different ones: black on white and red on yellow.",
+      "sameAs": [
+        "ES",
+        "GR",
+        "IT"
+      ],
+      "differs": [
+        {
+          "country": "ME",
+          "how": "Montenegro uses black on white or red on yellow"
+        }
+      ]
     },
     {
       "id": "al-Ndso",
@@ -423,7 +470,7 @@
       "order": 8,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: The backs of road signs are often painted black",
+      "title": "Sign: backs of road signs painted black",
       "text": [
         "The backs of road signs are often painted **black**.",
         "NOTE: This is also common in Italy and Romania."
@@ -468,7 +515,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The backs of road signs are often painted black. Italy and Romania do this too.",
+      "sameAs": [
+        "IT",
+        "RO"
+      ]
     },
     {
       "id": "al-QA4i",
@@ -476,7 +528,7 @@
       "order": 9,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: The “S” on Albanian stop signs feature a distinct shape",
+      "title": "Stop sign: S with short, angled ends",
       "text": [
         "The “S” on Albanian stop signs feature a **distinct shape**; the ends of the S are quite short and have the same angle as the middle, rather than being vertical. This is also sometimes seen on [directional signs](https://www.google.com/maps/@41.4762807,19.7144537,3a,15y,293.79h,86.16t/data=!3m6!1e1!3m4!1s0Xem3meAWDPpNUbSfeuE5A!2e0!7i13312!8i6656?entry=ttu).",
         "NOTE: Italian [stops signs](https://goo.gl/maps/366KjYZAnUyXk4YZ6) and [directional signs](https://goo.gl/maps/EKJL6bTozCYSMke28) have the same feature."
@@ -518,7 +570,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The S on stop signs has short ends at the same angle as the middle, instead of vertical ends. Direction signs sometimes have it too. Italian stop and direction signs share this.",
+      "sameAs": [
+        "IT"
+      ]
     },
     {
       "id": "al-IKcR",
@@ -526,7 +582,7 @@
       "order": 10,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: The numbers on speed signs are written in a bold font",
+      "title": "Sign: speed limit with bold numbers",
       "text": [
         "The numbers on speed signs are written in a **bold font**.",
         "NOTE: The font is much thinner on speed signs in [Montenegro](https://goo.gl/maps/fvWn6neYoBsnP6J18)."
@@ -585,14 +641,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The numbers on speed limit signs are written in a bold font. Montenegro's are much thinner.",
+      "differs": [
+        {
+          "country": "ME",
+          "how": "Montenegrin speed signs use a much thinner font"
+        }
+      ]
     },
     {
       "id": "al-nISa",
       "step": 0,
       "order": 11,
       "family": "guardrail",
-      "title": "Guardrail: These flat and wide guardrail endings that bend away from…",
+      "title": "Guardrail: flat wide ends bending away",
       "text": [
         "These **flat and wide** guardrail endings that bend away from the road can often be found in Albania.",
         "NOTE: The same endings are found in Italy."
@@ -644,14 +707,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat, wide guardrail ends that bend away from the road are common. Italy has the same ends.",
+      "sameAs": [
+        "IT"
+      ]
     },
     {
       "id": "al-92gY",
       "step": 0,
       "order": 12,
       "family": "language",
-      "title": "Language: Albanian is not very closely related to any other European…",
+      "title": "Language: letters Ë and Ç",
       "text": [
         "**Albanian** is not very closely related to any other European languages, and therefore has a fairly distinct look.",
         "Words often contain the letter Ë, ë, and sometimes Ç ç."
@@ -674,14 +741,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Albanian is not closely related to other European languages, so it looks distinct. Words often have the letter Ë and sometimes Ç. Kosovo uses it too.",
+      "sameAs": [
+        "XK"
+      ]
     },
     {
       "id": "al-Utnq",
       "step": 0,
       "order": 13,
       "family": "language",
-      "title": "Language: The Albanian word for street is rruga",
+      "title": "Sign: street word \"rruga\"",
       "text": [
         "The Albanian word for street is **rruga**."
       ],
@@ -722,14 +793,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Albanian word for street is rruga."
     },
     {
       "id": "al-imi2",
       "step": 0,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: Albania is generally a mountainous country",
+      "title": "Landscape: green mountains",
       "text": [
         "Albania is generally a **mountainous** country, with a **Mediterranean** climate and vegetation. In between the hills and mountains, you can sometimes find more flat, agricultural valleys. The mountains are usually quite green, sometimes with patches of exposed rock visible."
       ],
@@ -770,14 +842,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly mountainous with a Mediterranean climate and plants. Flat farming valleys sit between the hills. Mountains are usually green with patches of bare rock."
     },
     {
       "id": "al-Ver8",
       "step": 0,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Albania has a lot of exposed red soil next to roads",
+      "title": "Roadside: lots of exposed red soil",
       "text": [
         "Albania has a lot of **exposed red soil** next to roads.",
         "NOTE: This is less common in Montenegro. Greece on the other hand also has a fair amount of similar-looking red soil, especially closer to the Albanian border."
@@ -822,14 +895,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plenty of bare red soil beside the road. Less common in Montenegro. Greece has similar soil, especially near the Albanian border.",
+      "sameAs": [
+        "GR"
+      ],
+      "differs": [
+        {
+          "country": "ME",
+          "how": "Red roadside soil is less common there"
+        }
+      ]
     },
     {
       "id": "al-2MxO",
       "step": 0,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: You will see a lot of cylinder-shaped water tanks on the…",
+      "title": "Houses: cylinder water tanks on roofs",
       "text": [
         "You will see a lot of **cylinder-shaped water tanks** on the roofs of buildings.",
         "NOTE: This is less common in Montenegro.",
@@ -875,14 +958,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lots of cylinder-shaped water tanks sit on rooftops. Less common in Montenegro. Parts of Turkey have many similar tanks.",
+      "sameAs": [
+        "TR"
+      ],
+      "differs": [
+        {
+          "country": "ME",
+          "how": "Roof water tanks are less common there"
+        }
+      ]
     },
     {
       "id": "al-NGnJ",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Albania has a lot of Italian-style buildings",
+      "title": "Houses: Italian-style, pastel",
       "text": [
         "Albania has a lot of **Italian-style buildings**: pastel colours, orange tiled roofs, and blocky shapes with lots of balconies."
       ],
@@ -931,14 +1024,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many Italian-style buildings: pastel colours, orange tiled roofs, and blocky shapes with lots of balconies."
     },
     {
       "id": "al-LCAs",
       "step": 0,
       "order": 18,
       "family": "language",
-      "title": "Language: Mercedes is the most popular car brand in Albania",
+      "title": "Cars: Mercedes sedans everywhere",
       "text": [
         "**Mercedes** is the most popular car brand in Albania, by quite a margin. The specific style of sedan pictured here is particularly common."
       ],
@@ -979,14 +1073,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mercedes is by far the most popular car brand, and the sedan style shown is especially common."
     },
     {
       "id": "al-dFse",
       "step": 1,
       "order": 0,
       "family": "car",
-      "title": "Google car: There are two types of car and camera meta in generation 3…",
+      "title": "Google car: long antenna with rifts",
       "text": [
         "There are two types of car and camera meta in generation 3 Albania:",
         "- Coverage where the Google car has a long antenna and you can see rifts in the sky.",
@@ -1010,14 +1105,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 has two car versions. One has a long antenna and shows rifts in the sky. The other has a short antenna and no rifts."
     },
     {
       "id": "al-yEQq",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Albania is generally a very mountainous country",
+      "title": "Landscape: very mountainous, flat in the west",
       "text": [
         "Albania is generally a very mountainous country. This map shows the elevation and relief.",
         "- Low-lying areas are mostly concentrated in the west, around Shkodër, Tirana and Vlorë. This part of the country is characterised by agricultural flatlands and low, undulating hills. Note that the highland plateau around Korçë in the southeast is also very flat.",
@@ -1043,14 +1139,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very mountainous. Flat farmland and low hills are mostly in the west, and a flat highland plateau sits in the southeast. The highest, sometimes almost alpine, mountains are in the far north and far south."
     },
     {
       "id": "al-F6zP",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: The road leading into Theth National Park can typically be…",
+      "title": "Landscape: tall jagged bare mountains",
       "text": [
         "The road leading into Theth National Park can typically be recognised by the **tall, jagged mountains**, often with bare mountainsides."
       ],
@@ -1091,14 +1188,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the road into a national park in the north, look for tall, jagged mountains with bare slopes."
     },
     {
       "id": "al-F8jb",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The road by the eastern part of the Montenegrin border goes…",
+      "title": "Landscape: valley with fully bare cliffs",
       "text": [
         "The road by the eastern part of the Montenegrin border goes in a valley with tall, **fully exposed cliff sides** along the road."
       ],
@@ -1139,14 +1237,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road in a valley with tall, completely bare cliff sides along it, near the eastern edge of the Montenegrin border."
     },
     {
       "id": "al-sQLY",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Maja e Papingut is a massive mountain in the south of…",
+      "title": "Landscape: massive mountain with sheer cliff top",
       "text": [
         "Maja e Papingut is a **massive mountain** in the south of Albania, with an almost completely vertical cliffside near the top. It can be seen from several nearby roads."
       ],
@@ -1187,14 +1286,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south, a huge mountain with an almost vertical cliff near the top, visible from several nearby roads."
     },
     {
       "id": "al-QFIu",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: A wide, almost dried out river valley going southeast to…",
+      "title": "Landscape: wide, nearly dry river valley",
       "text": [
         "A wide, almost **dried out river valley** going southeast to northwest, can be seen along the SH71 between Pishaj and Kokel."
       ],
@@ -1235,14 +1335,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A wide, almost dried-out river valley running southeast to northwest, seen along one road in the south."
     },
     {
       "id": "al-A9yo",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The large Bay of Vlorë can be seen on many parts of the SH4…",
+      "title": "Landscape: big bay with peninsula and small island",
       "text": [
         "The large **Bay of Vlorë** can be seen on many parts of the SH4 between Vlorë and Orikum. It can be recognized by the large Karaburun peninsula jutting out into the ocean from the south, and the small Sazan island just to its north."
       ],
@@ -1283,14 +1384,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large bay with a long peninsula sticking out from the south and a small island just north of it, seen along a coastal road."
     },
     {
       "id": "al-3Ve1",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: A couple of small roads northwest of Vlorë can be…",
+      "title": "Landscape: coastal-looking Aleppo pine forest",
       "text": [
         "A couple of small roads northwest of Vlorë can be recognised by the very coastal-looking **Aleppo pine forest**."
       ],
@@ -1331,14 +1433,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A couple of small roads in the southwest run through very coastal-looking Aleppo pine forest."
     },
     {
       "id": "al-CS4O",
       "step": 2,
       "order": 6,
       "family": "line",
-      "title": "Road line: On the SH4 between Levan and Tepelenë and right by the…",
+      "title": "Road lines: double outer lines with wide gap",
       "text": [
         "On the SH4 between Levan and Tepelenë and right by the Greek border, you may see **double outer road lines** with a wide gap between them."
       ],
@@ -1379,14 +1482,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On one stretch of road near the Greek border you may see double outer lines with a wide gap between them."
     },
     {
       "id": "al-uBm9",
       "step": 2,
       "order": 8,
       "family": "guardrail",
-      "title": "Guardrail: Albania only has a few divided highways covered on Street…",
+      "title": "Guardrail: triple guardrail on a divided highway",
       "text": [
         "Albania only has a few divided highways covered on Street View. All of these and how to differentiate them will be covered in the tips below.",
         "The most easily recognisable divided highway is the A1 between Fushë Milot and Thumanë, which is the only one with a **triple guardrail**."
@@ -1428,14 +1532,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Few divided highways are covered. The easiest to recognise is one section of the A1 highway, the only one divided by a triple guardrail."
     },
     {
       "id": "al-LNw7",
       "step": 2,
       "order": 9,
       "family": "guardrail",
-      "title": "Guardrail: The sections of the SH2 between Durrës and Tirana and of…",
+      "title": "Median: plain concrete blocks",
       "text": [
         "The sections of the SH2 between Durrës and Tirana and of the SH4 between Lushnjë and Rrogozhinë are both divided by **simple concrete blocks**."
       ],
@@ -1476,14 +1581,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two stretches of highway are divided by simple concrete blocks."
     },
     {
       "id": "al-oT18",
       "step": 2,
       "order": 10,
       "family": "guardrail",
-      "title": "Guardrail: In Tirana, Durrës and on the A3 and SH3 south of Tirana you…",
+      "title": "Median: concrete blocks with grass between",
       "text": [
         "In Tirana, Durrës and on the A3 and SH3 south of Tirana you can find highways which are divided by concrete blocks, with **grass and greenery **in between."
       ],
@@ -1524,14 +1630,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some highways around the big cities and south of the capital are divided by concrete blocks with grass and greenery between them."
     },
     {
       "id": "al-kR9B",
       "step": 2,
       "order": 11,
       "family": "guardrail",
-      "title": "Guardrail: Most of the SH4 between Durrës and Fier is divided by a…",
+      "title": "Guardrail: basic double guardrail, flat land",
       "text": [
         "Most of the SH4 between Durrës and Fier is divided by a **basic double guardrail**. The road does not go through any mountains."
       ],
@@ -1572,14 +1679,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided road with a plain double guardrail, running through flat land with no mountains."
     },
     {
       "id": "al-FWHl",
       "step": 2,
       "order": 12,
       "family": "guardrail",
-      "title": "Guardrail: The E851 is the only divided road with a basic double…",
+      "title": "Guardrail: basic double guardrail through mountains",
       "text": [
         "The E851 is the only divided road with a basic double guardrail that goes directly **through mountains**.",
         "NOTE: A section of the A3 goes through the mountains but is either divided by a double guardrail with a [fence](https://goo.gl/maps/sEhkf36gQT4r56yMA) above, or with [concrete blocks](https://goo.gl/maps/59RXBrWohChLHePS9)."
@@ -1622,14 +1730,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only divided road with a plain double guardrail that goes directly through mountains. A mountain section of another highway has a fence above its guardrail or concrete blocks instead."
     },
     {
       "id": "al-0xYV",
       "step": 2,
       "order": 13,
       "family": "guardrail",
-      "title": "Guardrail: The A2 north of Vlorë can be recognised by the fairly flat…",
+      "title": "Guardrail: double with extra-tall fence, flat",
       "text": [
         "The A2 north of Vlorë can be recognised by the fairly flat surroundings combined with the double guardrail with an **extra tall fence** dividing the highway."
       ],
@@ -1670,14 +1779,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A highway in fairly flat land, divided by a double guardrail topped with an extra-tall fence."
     },
     {
       "id": "al-Wxzu",
       "step": 2,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: The city of Lezhë can often be recognised by the old castle…",
+      "title": "Landscape: old castle on a tall hill",
       "text": [
         "The city of Lezhë can often be recognised by the **old castle** at the top of a tall hill."
       ],
@@ -1718,14 +1828,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A town you can often recognise by an old castle at the top of a tall hill."
     },
     {
       "id": "al-TwNX",
       "step": 2,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Gjirokaster is a city situated on the western hillside of a…",
+      "title": "Landscape: town on west side of a wide valley",
       "text": [
         "Gjirokaster is a city situated on the **western hillside** of a wide valley."
       ],
@@ -1766,514 +1877,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/albania",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "al-lm-15247",
-      "step": 3,
-      "order": 0,
-      "family": "landscape",
-      "title": "Landscape: Theth National Park",
-      "text": [
-        "The road leading into Theth National Park can typically be recognised by the tall, jagged mountains, often with bare mountainsides."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f56abb7b42f8",
-          "src": "https://learnablemeta.com/images/664/b3N1KWkH1IY0rNKROzq4FKuH5VUpbWOhuCQO.avif",
-          "path": "al/f56abb7b42f8.webp",
-          "width": 1000,
-          "height": 482,
-          "dupeOf": "faaebc67694e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-15248",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Bay of Vlore",
-      "text": [
-        "The large Bay of Vlorë can be seen on many parts of the SH4 between Vlorë and Orikum. It can be recognized by the large Karaburun peninsula jutting out into the ocean from the south, and the small Sazan island just to its north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64432844b869",
-          "src": "https://learnablemeta.com/images/664/pnDP4NuhrSnLOX1x9SfpzM8uVKSeYKzXEdam.avif",
-          "path": "al/64432844b869.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "88235cec961e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-23757",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "RRUGA",
-      "text": [
-        "The Albanian word for street is rruga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3359ac25e575",
-          "src": "https://learnablemeta.com/images/768/Cvhf9InS6IVxF1ppodTJRs88f6d9a3fAfXv3.avif",
-          "path": "al/3359ac25e575.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "39ce2058e833"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-23794",
-      "step": 3,
-      "order": 3,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "Rifts can commonly be seen in Albanian coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also equally common in Montenegro, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4b2c542c9e1a",
-          "src": "https://learnablemeta.com/images/768/ICLdk284n9gR2FvOXbsfZnunSBjUpzJOStss.avif",
-          "path": "al/4b2c542c9e1a.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "e6b561c7f6bc"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-23801",
-      "step": 3,
-      "order": 4,
-      "family": "architecture",
-      "title": "Architecture: Water Tanks",
-      "text": [
-        "You will see a lot of cylinder-shaped water tanks on the roofs of buildings.",
-        "**--- NOTE:**",
-        "This is less common in Montenegro.",
-        "Some parts of Turkey also have a lot of similar-looking water tanks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bdb6521dd384",
-          "src": "https://learnablemeta.com/images/768/11GIDe1ZotgOxZrCzV25gMLqsuJL7PdXv5Y3.avif",
-          "path": "al/bdb6521dd384.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6da6a3d6e8bd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "TR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-50190",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "Rifts can commonly be seen in Albanian coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also equally common in Montenegro, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4b2c542c9e1a",
-          "src": "https://learnablemeta.com/images/768/ICLdk284n9gR2FvOXbsfZnunSBjUpzJOStss.avif",
-          "path": "al/4b2c542c9e1a.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "e6b561c7f6bc"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-50194",
-      "step": 3,
-      "order": 6,
-      "family": "architecture",
-      "title": "Architecture: Water Tanks",
-      "text": [
-        "You will see a lot of cylinder-shaped water tanks on the roofs of buildings.",
-        "**--- NOTE:**",
-        "This is less common in Montenegro.",
-        "Some parts of Turkey also have a lot of similar-looking water tanks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bdb6521dd384",
-          "src": "https://learnablemeta.com/images/768/11GIDe1ZotgOxZrCzV25gMLqsuJL7PdXv5Y3.avif",
-          "path": "al/bdb6521dd384.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6da6a3d6e8bd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "TR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-50195",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "RRUGA",
-      "text": [
-        "The Albanian word for street is rruga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3359ac25e575",
-          "src": "https://learnablemeta.com/images/768/Cvhf9InS6IVxF1ppodTJRs88f6d9a3fAfXv3.avif",
-          "path": "al/3359ac25e575.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "39ce2058e833"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-51066",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "RRUGA",
-      "text": [
-        "The Albanian word for street is rruga."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3359ac25e575",
-          "src": "https://learnablemeta.com/images/768/Cvhf9InS6IVxF1ppodTJRs88f6d9a3fAfXv3.avif",
-          "path": "al/3359ac25e575.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "39ce2058e833"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-51094",
-      "step": 3,
-      "order": 9,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "Rifts can commonly be seen in Albanian coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also equally common in Montenegro, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4b2c542c9e1a",
-          "src": "https://learnablemeta.com/images/768/ICLdk284n9gR2FvOXbsfZnunSBjUpzJOStss.avif",
-          "path": "al/4b2c542c9e1a.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "e6b561c7f6bc"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-51098",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: Water Tanks",
-      "text": [
-        "You will see a lot of cylinder-shaped water tanks on the roofs of buildings.",
-        "**--- NOTE:**",
-        "This is less common in Montenegro.",
-        "Some parts of Turkey also have a lot of similar-looking water tanks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bdb6521dd384",
-          "src": "https://learnablemeta.com/images/768/11GIDe1ZotgOxZrCzV25gMLqsuJL7PdXv5Y3.avif",
-          "path": "al/bdb6521dd384.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6da6a3d6e8bd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "TR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-104482",
-      "step": 3,
-      "order": 11,
-      "family": "architecture",
-      "title": "Architecture: Cylinder Water Tanks",
-      "text": [
-        "You will see a lot of cylinder-shaped water tanks on the roofs of buildings.",
-        "**--- NOTE:**",
-        "This is less common in Montenegro.",
-        "Some parts of Turkey also have a lot of similar-looking water tanks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6684675faa97",
-          "src": "https://learnablemeta.com/images/1072/V1xq4kUd6WpFSCV2xvw9wrWJil5tkx4JBP3u.avif",
-          "path": "al/6684675faa97.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6da6a3d6e8bd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "TR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-128289",
-      "step": 3,
-      "order": 12,
-      "family": "architecture",
-      "title": "Architecture: Cylinder Water Tanks",
-      "text": [
-        "You will see a lot of cylinder-shaped water tanks on the roofs of buildings.",
-        "**--- NOTE:**",
-        "This is less common in Montenegro.",
-        "Some parts of Turkey also have a lot of similar-looking water tanks."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6684675faa97",
-          "src": "https://learnablemeta.com/images/1072/V1xq4kUd6WpFSCV2xvw9wrWJil5tkx4JBP3u.avif",
-          "path": "al/6684675faa97.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6da6a3d6e8bd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "TR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-474346",
-      "step": 3,
-      "order": 13,
-      "family": "pole",
-      "title": "Pole: horizontal bars",
-      "text": [
-        "Other, more simple Albanian pole tops will often have horizontal bars.",
-        "NOTE: If you are not sure between Montenegro or Albania and see these poles, guess Albania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "08890550bac3",
-          "src": "https://learnablemeta.com/images/1955/1750625988179-i0X.avif",
-          "path": "al/08890550bac3.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "4625267a05a4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-474347",
-      "step": 3,
-      "order": 14,
-      "family": "pole",
-      "title": "Pole: triangle top",
-      "text": [
-        "These pole tops, with an upside down triangle shape, are a good clue for Albania.",
-        "NOTE: Serbia, Czechia, Slovakia and Romania use similar pole tops."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9cfaf3eb5b6c",
-          "src": "https://learnablemeta.com/images/1955/1750625977198-KWw.avif",
-          "path": "al/9cfaf3eb5b6c.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "6dac58a72506"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CZ",
-        "RO",
-        "RS",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-634028",
-      "step": 3,
-      "order": 15,
-      "family": "plate",
-      "title": "Plate: Albania",
-      "text": [
-        "Albanian licence plates either have blue strips on both sides or a single red strip on the left side.",
-        "NOTE: Albania is the only European country with red on the left side of the licence plate. Furthermore, Italian licence plates also have blue strips on both sides, however Italian front plates are distinctly shorter."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d5a760a8fa3b",
-          "src": "https://learnablemeta.com/images/5431/1766259565496-OTd.avif",
-          "path": "al/d5a760a8fa3b.webp",
-          "width": 800,
-          "height": 167,
-          "dupeOf": "779f17c421e6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A town built on the western hillside of a wide valley."
     },
     {
       "id": "al-lm-740896",
       "step": 3,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Tiranë mountains",
+      "title": "Landscape: big mountain range to the east",
       "text": [
         "Tiranë has a big mountain range in the east, combined with gen 3 and double blue stripes on the license plates, 100% Tiranë."
       ],
@@ -2293,49 +1905,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "al-lm-783120",
-      "step": 3,
-      "order": 17,
-      "family": "language",
-      "title": "Language: Albanian",
-      "text": [
-        "Albanian belongs to its own branch of the Indo-European languages, and is thus not closely related to any other European language. The use of letter **Ë ë** is a distinct feature for Albanian. Sometimes, you'll find the letter **Ç ç** too.",
-        "The Albanian word for street is **rruga**.",
-        "NOTE: Albanian is also the majority language in Kosovo, and recognized as a minority language in North Macedonia and Montenegro."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "74f710d32cbb",
-          "src": "https://learnablemeta.com/images/9388/1785092457137-nwa.avif",
-          "path": "al/74f710d32cbb.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "34091bc771d7"
-        },
-        {
-          "id": "1e3167eb0e64",
-          "src": "https://learnablemeta.com/images/9388/1785092466625-WES.avif",
-          "path": "al/1e3167eb0e64.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "39ce2058e833"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ME",
-        "MK",
-        "XK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The capital has a large mountain range to its east. Combined with Gen 3 coverage and plates with blue strips on both sides, it is a sure sign."
     }
   ]
 }

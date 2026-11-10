@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: This unique car was used for all street view coverage in…",
+      "title": "Google car: white hood, striped metal bars",
       "text": [
         "This unique car was used for all street view coverage in the Dominican Republic. It can be recognized by the two metal bars, the **thick black stripes** on them, as well as the white hood visible at the front.",
         "NOTE: These stripes can also be found on one of the Mongolian cars, but the landscape should allow you to tell them apart.",
@@ -68,14 +68,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white hood at the front and two metal roof bars with thick black stripes. Guatemala and Curaçao have similar bars but no thick stripes.",
+      "differs": [
+        {
+          "country": "GT",
+          "how": "Metal bars but no thick black stripes"
+        },
+        {
+          "country": "CW",
+          "how": "Metal bars but no thick black stripes"
+        }
+      ]
     },
     {
       "id": "do-CWXA",
       "step": 0,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Most electricity poles are square and concrete",
+      "title": "Pole: square concrete with reverse L top",
       "text": [
         "Most electricity poles are **square and concrete**, with a reverse “L” shape at the top. Less commonly, round or octagonal poles are used.",
         "NOTE: Within the Americas, only the Dominican Republic, Puerto Rico and Uruguay use square poles."
@@ -120,14 +131,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most electricity poles are square concrete with a reverse L shape at the top. In the Americas only Puerto Rico and Uruguay also use square poles.",
+      "sameAs": [
+        "PR",
+        "UY"
+      ]
     },
     {
       "id": "do-FOlT",
       "step": 0,
       "order": 3,
       "family": "plate",
-      "title": "Plate: DR licence plates are somewhat reminiscent of New Jersey…",
+      "title": "Plate: yellow top, white bottom",
       "text": [
         "DR licence plates are somewhat reminiscent of New Jersey plates, being pale **yellow **at the top and **white **at the bottom.",
         "NOTE: The Dominican Republic is the only part of Latin America, apart from Puerto Rico and Panama, where front plates are not required."
@@ -151,14 +167,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plates are pale yellow on top and white below, a bit like New Jersey. Cars show no front plate, which only Puerto Rico and Panama also do in Latin America.",
+      "sameAs": [
+        "PA",
+        "PR"
+      ]
     },
     {
       "id": "do-bzLa",
       "step": 0,
       "order": 4,
       "family": "other",
-      "title": "Roads in the Dominican Republic are often made of this…",
+      "title": "Road: smooth, unusually dark asphalt",
       "text": [
         "Roads in the Dominican Republic are often made of this **smooth** **asphalt**, which has a noticeably darker colour than in other countries."
       ],
@@ -197,7 +218,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads are often smooth asphalt that looks noticeably darker than in other countries."
     },
     {
       "id": "do-jcOp",
@@ -205,7 +227,7 @@
       "order": 5,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Despite being located in Central America",
+      "title": "Sign: Spanish PARE stop, yellow posts",
       "text": [
         "Despite being located in Central America, stop signs in DR contain the South American “PARE”. Moreover, many signs are attached to **yellow signposts**.",
         "NOTE: ‘PARE’ is also used in all of South America as well as Puerto Rico."
@@ -247,14 +269,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs say PARE, the South American wording, and many signs sit on yellow posts. Puerto Rico and all of South America use PARE too.",
+      "sameAs": [
+        "PR"
+      ]
     },
     {
       "id": "do-DC2k",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Street View coverage in the Dominican Republic is very…",
+      "title": "Coverage: only two cities",
       "text": [
         "Street View coverage in the Dominican Republic is **very limited**. Only the capital Santo Domingo and the Northern city of Santiago de los Caballeros are covered."
       ],
@@ -275,14 +301,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is very limited. Only the capital, Santo Domingo, and the northern city of Santiago are covered."
     },
     {
       "id": "do-pfJU",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: If you have mountains to the North",
+      "title": "Landscape: mountains to the north",
       "text": [
         "If you have **mountains to the North**, you will always be in Santiago de los Caballeros.",
         "NOTE: Although some parts of Santo Domingo are hilly, you will never see proper mountains like this one."
@@ -323,14 +350,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "If you can see real mountains to the north, you are in Santiago. Some parts of Santo Domingo are hilly, but they never have mountains like this."
     },
     {
       "id": "do-EOjT",
       "step": 1,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Yellow traffic light poles are typically found in the city…",
+      "title": "Pole: yellow traffic light poles",
       "text": [
         "**Yellow traffic light poles** are typically found in the city of Santiago de los Caballeros.",
         "NOTE: This only applies to traffic light poles - yellow signposts are common in both cities."
@@ -373,14 +401,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow poles that hold traffic lights point to Santiago. Plain yellow signposts appear in both cities, so only the light poles count."
     },
     {
       "id": "do-6BE0",
       "step": 1,
       "order": 3,
       "family": "architecture",
-      "title": "Architecture: As the capital and largest city",
+      "title": "City: tall buildings and wide avenues",
       "text": [
         "As the capital and largest city, Santo Domingo has a **more developed downtown **area, with tall buildings and wide avenues."
       ],
@@ -420,7 +449,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A more developed downtown with tall buildings and wide avenues points to the capital, Santo Domingo."
     },
     {
       "id": "do-jtB1",
@@ -428,7 +458,7 @@
       "order": 4,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street name signs in Santo Domingo often contain the…",
+      "title": "Sign: street names with the letters ADN",
       "text": [
         "Street name signs in Santo Domingo often contain the letters **“ADN”**, a reference to the Distrito Nacional, which the city is located in."
       ],
@@ -468,14 +498,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs often include the letters ADN. That is a short form of the national district around the capital, so it means Santo Domingo."
     },
     {
       "id": "do-ftK6",
       "step": 1,
       "order": 5,
       "family": "pole",
-      "title": "Pole: These black-and-purple pole markings are only found on…",
+      "title": "Pole: black and purple markings",
       "text": [
         "These **black-and-purple **pole markings are only found on poles in the Santo Domingo area."
       ],
@@ -517,14 +548,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with black-and-purple painted markings are only found around the capital, Santo Domingo."
     },
     {
       "id": "do-npXt",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: This type of landscape is found on the outskirts of Santo…",
+      "title": "Landscape: pale dirt, dry green scrub",
       "text": [
         "This type of landscape is found on the outskirts of Santo Domingo. It is characterised by narrow dirt tracks, whitish dirt, **dried green shrubbery** and debris next to the road."
       ],
@@ -564,14 +596,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Narrow dirt tracks, whitish soil, dried green bushes and rubbish by the road. This look is found on the edges of the capital, Santo Domingo."
     },
     {
       "id": "do-2Vae",
       "step": 2,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: A small portion of the coverage in Santo Domingo was taken…",
+      "title": "Coverage: photos taken late in the evening",
       "text": [
         "A small portion of the coverage in Santo Domingo was taken **late in the evening**. Similar imagery does not exist in Santiago de los Caballeros."
       ],
@@ -610,189 +643,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/dominican-republic",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "do-lm-316",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Unique car",
-      "text": [
-        "A Street View car with a white front and a roof rack filled with thick black rubber stripes is unique to the Dominican Republic. Only the capital Santo Domingo and the Northern city of Santiago de los Caballeros are covered.",
-        "With this landscape - similar cars can be found in Guatemala and Curaçao, but they lack the thick black stripes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f4a72d4d8a24",
-          "src": "https://learnablemeta.com/images/VZEhXwRmUJmZ5QC763iaBdNc6H2ZbWVbx9v5.avif",
-          "path": "do/f4a72d4d8a24.webp",
-          "width": 1000,
-          "height": 748
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CW",
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "do-lm-13836",
-      "step": 3,
-      "order": 1,
-      "family": "coverage",
-      "title": "Coverage: Unique Car",
-      "text": [
-        "This unique car was used for all street view coverage in the Dominican Republic.",
-        "It can be recognized by the two metal bars, the thick black stripes on them, as well as the white hood visible at the front."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "72610f099007",
-          "src": "https://learnablemeta.com/images/620/6CqmDXXQ67CwVZztFKfc0sUUosFQOvfpowsR.avif",
-          "path": "do/72610f099007.webp",
-          "width": 1000,
-          "height": 707
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cbbe79df46dccadd041a6d",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "do-lm-17949",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Santo Domingo Outskirts",
-      "text": [
-        "This type of landscape is found on the outskirts of Santo Domingo. It is characterised by narrow dirt tracks, whitish dirt, dried green shrubbery and debris next to the road."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "26d2688b2f89",
-          "src": "https://learnablemeta.com/images/664/od5HNYAKnwI4mREmDPmyuppSnql3Uy60y6VR.avif",
-          "path": "do/26d2688b2f89.webp",
-          "width": 1000,
-          "height": 510,
-          "dupeOf": "464638917996"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "do-lm-19540",
-      "step": 3,
-      "order": 3,
-      "family": "coverage",
-      "title": "Coverage: roofrack black + thick black stripes",
-      "text": [
-        "This unique car was used for all street view coverage in the Dominican Republic. It can be recognized by the two metal bars, the thick black stripes on them, as well as the white hood visible at the front.",
-        "NOTE: These stripes can also be found on one of the Mongolian cars, but the landscape should allow you to tell them apart.",
-        "Within the Americas, you will also see metal bars in Guatemala and Curaçao. However, they will not have thick black stripes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7cb772896976",
-          "src": "https://learnablemeta.com/images/715/Ux6KmaMhQWvYPBxXtj4oYWeYthjYaxExT0Rr.avif",
-          "path": "do/7cb772896976.webp",
-          "width": 1000,
-          "height": 716,
-          "dupeOf": "f4a72d4d8a24"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "CW",
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d80b615b04e85c524a7fd0",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "do-lm-51240",
-      "step": 3,
-      "order": 4,
-      "family": "coverage",
-      "title": "Coverage: Unique Car",
-      "text": [
-        "This unique car was used for all street view coverage in the Dominican Republic.",
-        "It can be recognized by the two metal bars, the thick black stripes on them, as well as the white hood visible at the front."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "72610f099007",
-          "src": "https://learnablemeta.com/images/620/6CqmDXXQ67CwVZztFKfc0sUUosFQOvfpowsR.avif",
-          "path": "do/72610f099007.webp",
-          "width": 1000,
-          "height": 707,
-          "dupeOf": "72610f099007"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "do-lm-634047",
-      "step": 3,
-      "order": 5,
-      "family": "plate",
-      "title": "Plate: Dominican Republic",
-      "text": [
-        "DR licence plates are somewhat reminiscent of New Jersey plates, being pale yellow at the top and white at the bottom.",
-        "NOTE: The Dominican Republic is the only part of Latin America, apart from Puerto Rico and Panama, where front plates are not required.",
-        "Could be usefull in nmpz or if you forgot the Dominican Republic google car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7484acef2eea",
-          "src": "https://learnablemeta.com/images/5431/1766260482786-YRe.avif",
-          "path": "do/7484acef2eea.webp",
-          "width": 800,
-          "height": 191,
-          "dupeOf": "16513eda3670"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "PA",
-        "PR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A small part of the capital's coverage was shot late in the evening. Santiago has no coverage like this, so a dusk image means Santo Domingo."
     }
   ]
 }

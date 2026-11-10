@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Estonian licence plates are long and white",
+      "title": "Plate: long white, blue EU strip on left",
       "text": [
         "Estonian **licence plates** are long and white, with the standard blue European strip on the left."
       ],
@@ -44,14 +44,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with the standard blue European strip on the left."
     },
     {
       "id": "ee-N6Ec",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Estonian bollards have a round",
+      "title": "Bollard: round baton shape",
       "text": [
         "Estonian bollards have a **round, baton-like shape**.",
         "They have a rectangular reflector on the front and two circular reflectors on the back. The reflectors can be white or orange.",
@@ -142,14 +143,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round, baton-like bollard with a rectangular reflector on the front and two round ones on the back, white or orange. Latvian and Lithuanian bollards look different.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Thin, slightly curved shape with numbers"
+        },
+        {
+          "country": "LT",
+          "how": "Different bollard shape"
+        }
+      ]
     },
     {
       "id": "ee-UV37",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Estonia uses a variety of different poles and poletops",
+      "title": "Pole: mixed types, round wooden most common",
       "text": [
         "Estonia uses a variety of different poles and poletops. Of the three Baltic countries, it has the least consistent utility poles.",
         "**Round wooden** poles are the most common, sometimes with diagonal supports."
@@ -191,14 +203,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mix of pole types, the least consistent of the three Baltic countries. Round wooden poles are most common, sometimes with diagonal supports."
     },
     {
       "id": "ee-ZNTy",
       "step": 0,
       "order": 4,
       "family": "pole",
-      "title": "Pole: You can additionally find a fair amount of square concrete…",
+      "title": "Pole: square concrete with diagonal supports",
       "text": [
         "You can additionally find a fair amount of **square concrete** poles, often also with diagonal supports. These are similar to those found in Lithuania."
       ],
@@ -249,14 +262,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A fair number of square concrete poles, often with diagonal braces. Lithuania has similar ones."
     },
     {
       "id": "ee-KNav",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Trident pole tops are somewhat common",
+      "title": "Pole: trident top, 1 insulator up, 2 sideways",
       "text": [
         "**Trident pole tops** are somewhat common: This pole top features one insulator on top, and two to the side."
       ],
@@ -305,14 +319,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A fairly common pole top with one insulator on top and two on the sides, like a trident."
     },
     {
       "id": "ee-KPZE",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Most wooden poles have a small metal cap on top",
+      "title": "Pole: small metal cap on wooden poles",
       "text": [
         "Most wooden poles have a small **metal cap on top**, similar to those found in the Nordic countries.",
         "NOTE: Alongside the Nordic countries of Sweden, Finland and Norway, these caps can also sometimes be found in Latvia."
@@ -359,14 +374,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most wooden poles have a small metal cap on top, like in Nordic countries. Latvia sometimes has them too.",
+      "sameAs": [
+        "FI",
+        "NO",
+        "SE"
+      ]
     },
     {
       "id": "ee-bdr3",
       "step": 0,
       "order": 7,
       "family": "line",
-      "title": "Road line: Outer road lines sometimes consist of short dashes",
+      "title": "Road lines: outer edge in short dashes",
       "text": [
         "Outer road lines sometimes consist of **short dashes**.",
         "NOTE: Lithuania also sometimes has short dashes.",
@@ -434,7 +455,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Outer road lines sometimes made of short dashes. Lithuania sometimes has them, and Sweden mostly uses them.",
+      "sameAs": [
+        "LT",
+        "SE"
+      ]
     },
     {
       "id": "ee-eXbS",
@@ -442,7 +468,7 @@
       "order": 8,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Estonia uses red chevrons with white arrows",
+      "title": "Chevron: red with white arrows",
       "text": [
         "Estonia uses **red chevrons with white arrows.**",
         "NOTE: Russia and Ukraine use the same chevrons.",
@@ -510,14 +536,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red chevrons with white arrows. Russia and Ukraine use the same. Latvia and Lithuania use the opposite: white with red arrows.",
+      "sameAs": [
+        "RU",
+        "UA"
+      ],
+      "differs": [
+        {
+          "country": "LV",
+          "how": "White chevrons with red arrows"
+        },
+        {
+          "country": "LT",
+          "how": "White chevrons with red arrows"
+        }
+      ]
     },
     {
       "id": "ee-YCqH",
       "step": 0,
       "order": 9,
       "family": "other",
-      "title": "All Baltic countries use the same blue kilometre marker",
+      "title": "Marker: blue km post perpendicular to road",
       "text": [
         "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
         "In Estonia, the marker will be **perpendicular** to the road. It has numbers on both sides of the marker.",
@@ -558,7 +599,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All Baltic countries use the same blue kilometre marker. Here it sits perpendicular to the road with numbers on both sides.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Marker is parallel to the road, one-sided number"
+        }
+      ]
     },
     {
       "id": "ee-hkpv",
@@ -566,7 +614,7 @@
       "order": 10,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Each Baltic country has a slightly different border for its…",
+      "title": "Sign: thin red border, no white outline",
       "text": [
         "Each Baltic country has a slightly different border for its warning and speed signs.",
         "Estonian signs have a **thin** red border, with **no white outline** around it (the red border extends all the way to the edge of the sign)."
@@ -645,14 +693,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warning and speed signs have a thin red border that runs right to the edge, with no white outline.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Thick red border with thin white outline"
+        }
+      ]
     },
     {
       "id": "ee-ZYAH",
       "step": 0,
       "order": 11,
       "family": "guardrail",
-      "title": "Guardrail: Estonia has normal A-type guardrails with no reflectors",
+      "title": "Guardrail: A-type with no reflectors",
       "text": [
         "Estonia has normal A-type guardrails with **no reflectors**.",
         "NOTE: The other two Baltic countries can have reflectors on their guardrails. For a good overview of European guardrails, see [this infographic](/images/estonia/europeguardrail.png)."
@@ -702,7 +757,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Normal A-type guardrails with no reflectors at all. The other two Baltic countries can have them.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "White or red reflectors"
+        },
+        {
+          "country": "LT",
+          "how": "Orange reflectors"
+        }
+      ]
     },
     {
       "id": "ee-Kvsf",
@@ -710,7 +776,7 @@
       "order": 12,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Estonian pedestrian signs have 3 stripes",
+      "title": "Sign: pedestrian sign, 3 stripes, shoes and neck",
       "text": [
         "Estonian pedestrian signs have **3 stripes**. The shape of the pedestrian has a relatively high level of detail, detailing **shoes** and an **attached head**.",
         "NOTE: Lithuanian signs also have 3 stripes, but the pedestrian looks less detailed.",
@@ -759,7 +825,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian sign with 3 stripes and a detailed figure with shoes and a separate head. Lithuania has 3 stripes too but a plainer figure.",
+      "differs": [
+        {
+          "country": "LT",
+          "how": "Also 3 stripes, but a less detailed figure"
+        },
+        {
+          "country": "LV",
+          "how": "5 stripes"
+        }
+      ]
     },
     {
       "id": "ee-DexW",
@@ -767,7 +844,7 @@
       "order": 13,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Estonian bus stop signs have this design",
+      "title": "Sign: bus stop sign with 4 windows",
       "text": [
         "Estonian bus stop signs have this design.",
         "The bus has **four windows**. This is mostly useful to distinguish it from the Latvian bus stop sign, which has five windows.",
@@ -818,7 +895,17 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The bus on the bus stop sign has four windows. Latvia has five, but Lithuania has the identical sign.",
+      "sameAs": [
+        "LT"
+      ],
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Bus has five windows"
+        }
+      ]
     },
     {
       "id": "ee-Amwu",
@@ -826,7 +913,7 @@
       "order": 14,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: These blue and white signpost wrappings are very common in…",
+      "title": "Sign: blue and white signpost wrappings",
       "text": [
         "These **blue and white** signpost wrappings are very common in Estonia.",
         "NOTE: They are also common in Finland and Sweden."
@@ -869,14 +956,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue and white wrapping around signposts is very common. Finland and Sweden have them too.",
+      "sameAs": [
+        "FI",
+        "SE"
+      ]
     },
     {
       "id": "ee-XXzb",
       "step": 0,
       "order": 15,
       "family": "language",
-      "title": "Language: Estonian belongs to the Finnic languages",
+      "title": "Language: Ä Ö Ü Õ, related to Finnish",
       "text": [
         "**Estonian** belongs to the Finnic languages, a branch of the Uralic language family. It is closely related to Finnish.",
         "Within the Baltic languages, the following letters are unique to Estonian:",
@@ -900,14 +992,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A Finnic language close to Finnish. Look for Ä, Ö, Ü and especially Õ. Latvian and Lithuanian are unrelated and look very different."
     },
     {
       "id": "ee-9WKW",
       "step": 0,
       "order": 16,
       "family": "other",
-      "title": "The Estonian words for street and road are tänav and tee",
+      "title": "Language: street is \"tänav\" (tn), road is \"tee\"",
       "text": [
         "The Estonian words for street and road are **tänav** and **tee**, respectively. These words are unique to Estonian. Tänav is often abbreviated as ‘tn’.",
         "Many streets, especially in urban areas, have a simple name that completely lacks the tänav and or tee suffix.",
@@ -948,14 +1041,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs end in tänav (often tn) or tee. Many urban streets have no suffix. Finnish -tie looks similar.",
+      "differs": [
+        {
+          "country": "FI",
+          "how": "Finnish uses -tie, with an i"
+        }
+      ]
     },
     {
       "id": "ee-VLAz",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: It is fairly common to find oval-shaped blue house numbers…",
+      "title": "House numbers: oval blue plates",
       "text": [
         "It is fairly common to find **oval-shaped** blue house numbers in Estonia.",
         "NOTE: This is not common in the other Baltic countries, but can also be found in [Russia](https://www.google.com/maps/@59.0913517,28.1667574,3a,15y,304.49h,91.94t/data=!3m7!1e1!3m5!1sTX_XXjOnF4tmR0_rySvAQQ!2e0!5s20130601T000000!7i13312!8i6656?entry=ttu)."
@@ -997,14 +1097,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Oval blue house numbers are fairly common. Rare in the other Baltic countries, but also seen in Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "ee-N5Yh",
       "step": 0,
       "order": 18,
       "family": "architecture",
-      "title": "Architecture: Estonian architecture generally consists of a combination…",
+      "title": "Houses: wood and white brick, steep metal roofs",
       "text": [
         "Estonian architecture generally consists of a combination of wood and white brick, typically with somewhat steep corrugated metal roofs. Painted stone walls are also somewhat common. While wooden buildings can be found in all three Baltic countries, they are more common in Estonia."
       ],
@@ -1043,7 +1147,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wood and white brick, with steep corrugated metal roofs and sometimes painted stone walls. Wooden buildings exist in all Baltic countries but are most common here."
     },
     {
       "id": "ee-0aRY",
@@ -1051,7 +1156,7 @@
       "order": 19,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs in Estonia are blue with white text and a…",
+      "title": "Sign: blue direction sign, white text and outline",
       "text": [
         "Directional signs in Estonia are blue with white text and a white outline.",
         "NOTE: In [Finland](https://maps.app.goo.gl/SsE9X8eTamwvhp1T6), the arrow is built into the white border instead of being an icon inside the border. The arrow on [Latvian](https://goo.gl/maps/g3aqkLH6yjQwrCSF7) signs is more stylized than in Estonia and [Lithuania](https://goo.gl/maps/17A5xxGivFmbs4ae8), where the back part of the arrowhead is vertical."
@@ -1101,14 +1206,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue direction signs with white text and a white outline. In Finland the arrow is part of the border. Latvia has a more stylised arrow.",
+      "differs": [
+        {
+          "country": "FI",
+          "how": "Arrow is built into the white border"
+        },
+        {
+          "country": "LV",
+          "how": "More stylised arrow"
+        }
+      ]
     },
     {
       "id": "ee-SRyp",
       "step": 0,
       "order": 20,
       "family": "car",
-      "title": "Google car: Generation 3 coverage in Estonia often has a slight green…",
+      "title": "Google car: Gen 3 with green tint (\"green blur\")",
       "text": [
         "Generation 3 coverage in Estonia often has a slight green tint to part of the panorama, which is referred to as “**green blur**” by the community.",
         "For many players, this green blur can be hard to identify at first. The location shown in this tip’s image is a fairly extreme example. To familiarise you with how it might look in-game, here are some more examples where it is fairly visible: [1](https://goo.gl/maps/wRwNJGnT6JyKTjyx9), [2](https://goo.gl/maps/ivTZffp9bnQfVCaU6), [3](https://goo.gl/maps/qpR7tU68UehPT8Rr6), [4](https://goo.gl/maps/r8tN2ahKmzEhUsG18).",
@@ -1154,14 +1270,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Older Gen 3 coverage often has a slight green tint over part of the picture. Latvia and Lithuania rarely do, but it also appears in Sweden, often on one island.",
+      "differs": [
+        {
+          "country": "LV",
+          "how": "Usually no green tint"
+        },
+        {
+          "country": "LT",
+          "how": "Usually no green tint"
+        }
+      ]
     },
     {
       "id": "ee-xf22",
       "step": 0,
       "order": 21,
       "family": "car",
-      "title": "Google car: The Generation 3 coverage in Estonia is more extensive than…",
+      "title": "Google car: Gen 3 on very thin rural roads",
       "text": [
         "The Generation 3 coverage in Estonia is more extensive than the other two Baltic countries, meaning that a lot of **very rural roads** are covered. As a result, if you are considering guessing in one of the Baltic countries, and your location is Generation 3 on a very thin and rural road, you are slightly more likely to be in Estonia.",
         "Of course, use caution. This meta has many variables, and is not always reliable. Only use it as a last resort in no-info Baltic roulette rounds, when you have no better clues available."
@@ -1201,14 +1328,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage reaches many tiny rural roads here, more than in the other Baltics. Use it only as a last resort when guessing between them."
     },
     {
       "id": "ee-ki6y",
       "step": 1,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Estonia is a fairly flat country throughout",
+      "title": "Landscape: flat, hilly only in the south-east",
       "text": [
         "Estonia is a fairly flat country throughout, with only 10% of the country being higher than 100 metres, and the highest point being 318 metres tall.",
         "Still, the **hilly parts** can sometimes be recognizable. The hilliest areas are in the southeast, and the southern half of Lääne-Viru County. Note that the colours of this map are highly exaggerated to show the location of the hills more clearly."
@@ -1230,7 +1358,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly flat: just 10% of land is above 100 m and the highest point is 318 m. The hilliest parts are the south-east and the southern half of one northern county."
     },
     {
       "id": "ee-lh3B",
@@ -1238,7 +1367,7 @@
       "order": 1,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Estonia has a large Russian minority",
+      "title": "Sign: Russian Cyrillic next to local language",
       "text": [
         "Estonia has a large Russian minority. In most of Ida-Viru County, they form a majority. As a result, you will sometimes see bilingual signs with **Russian Cyrillic** and Estonian in the region in and around Narva.",
         "Note that the majority of signs will still be in Estonian. You may occasionally see Cyrillic in other places."
@@ -1278,14 +1407,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-east around the border town there is a large Russian minority, so some bilingual signs use Cyrillic. Most signs are still local, with Cyrillic occasionally elsewhere."
     },
     {
       "id": "ee-nAUS",
       "step": 2,
       "order": 0,
       "family": "architecture",
-      "title": "Architecture: The old town of Tallinn looks very different from any other…",
+      "title": "Houses: preserved medieval old town",
       "text": [
         "The old town of Tallinn looks very different from any other urban area in Estonia. It is an almost perfectly preserved historic area, with lots of **medieval and renaissance-era buildings**. In places, it can look a lot like cities in central Europe."
       ],
@@ -1324,14 +1454,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital old town is an almost perfectly preserved area of medieval and Renaissance buildings. In places it looks like central European cities."
     },
     {
       "id": "ee-BgPO",
       "step": 2,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Kihnu is a small island off the coast that has recognizable…",
+      "title": "Coverage: late-autumn Gen 4, dark moody sky",
       "text": [
         "Kihnu is a small island off the coast that has recognizable coverage:",
         "- All coverage is Generation 4, taken during **late autumn** (recognizable by the fallen brown leaves on the ground).",
@@ -1374,781 +1505,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/estonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "ee-lm-88",
-      "step": 3,
-      "order": 0,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street name ending - tee",
-      "text": [
-        "In Estonia, the words for street and road are \"tänav\" and \"tee,\" respectively. If you see street signs ending in \"tee\" or \"tn\" (with \"tänav\" often abbreviated as 'tn'), you know you're in Estonia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e7fa9c984799",
-          "src": "https://learnablemeta.com/images/PX8LfdXjSvWjKRVW0kQH3zghRjflYpFYKvpC.avif",
-          "path": "ee/e7fa9c984799.webp",
-          "width": 1000,
-          "height": 861
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-89",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street name ending - tn",
-      "text": [
-        "In Estonia, the words for street and road are \"tänav\" and \"tee,\" respectively. If you see street signs ending in \"tee\" or \"tn\" (with \"tänav\" often abbreviated as 'tn'), you know you're in Estonia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "146e5c1871c6",
-          "src": "https://learnablemeta.com/images/QqdawcKZYPUvaiCpcKmsNnBIRywSLzI7L86H.avif",
-          "path": "ee/146e5c1871c6.webp",
-          "width": 1000,
-          "height": 861,
-          "dupeOf": "e7fa9c984799"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-2990",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Estonia Detailed 3 Stripes",
-      "text": [
-        "**3 Zebra Stripes**: Estonia, Lithuania, Russia, Ukraine. **Neck / Shoes / Detailed outline** is unique to Estonia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b93f8d6889e3",
-          "src": "https://learnablemeta.com/images/90/A5DRyi2oDF3wHsho68vcPTdhJUq6aoU8mCPq.avif",
-          "path": "ee/b93f8d6889e3.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LT",
-        "RU",
-        "UA"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-8349",
-      "step": 3,
-      "order": 3,
-      "family": "line",
-      "title": "Road line: Short Dashes",
-      "text": [
-        "Outer road lines sometimes consist of **short dashes**.",
-        "**NOTE:** Lithuania also sometimes has short dashes.",
-        "Be careful not to confuse this with Sweden which also uses short dashes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a17b68ad3845",
-          "src": "https://learnablemeta.com/images/186/t008Yfaw2c9TsyZRVws9sIegLus95TOGR13Q.avif",
-          "path": "ee/a17b68ad3845.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "9e8342ad42bb"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "LT",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-8351",
-      "step": 3,
-      "order": 4,
-      "family": "other",
-      "title": "KM Markers",
-      "text": [
-        "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
-        "In Estonia, the marker will be **perpendicular** to the road. It has numbers on both sides of the marker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ac638f2110bf",
-          "src": "https://learnablemeta.com/images/186/TBKGTC8kHhfWlCBnBMMDgBkzeBf37GkVVS0U.avif",
-          "path": "ee/ac638f2110bf.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "d1913de4bf60"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-8355",
-      "step": 3,
-      "order": 5,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Blue&White Wrappings",
-      "text": [
-        "These blue and white signpost wrappings are very common in Estonia.",
-        "**NOTE:** They are also common in Finland and Sweden."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "027a8a77b633",
-          "src": "https://learnablemeta.com/images/186/vVjZoNqiAXLD0iBpzUnHNvqoAvcnYzQQXVxc.avif",
-          "path": "ee/027a8a77b633.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "723db2ee48ce"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-8356",
-      "step": 3,
-      "order": 6,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Street Names",
-      "text": [
-        "The Estonian words for street and road are **tänav** and **tee**, respectively. These words are unique to Estonian. Tänav is often abbreviated as **‘tn’**.",
-        "Many streets, especially in urban areas, have a simple name that completely lacks the tänav and or tee suffix."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3199f4e9bb19",
-          "src": "https://learnablemeta.com/images/186/qvQAg1sVjnWGD16kjc31pPagjrCIHzIKUkyT.avif",
-          "path": "ee/3199f4e9bb19.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "50dc60a1cb33"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-8371",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Thin Roads",
-      "text": [
-        "Within Estonia it is fairly common to see **very narrow dirt roads**, more common than in the other baltic countries.",
-        "**NOTE:** Preferably use this when no other metas are available."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "be7cf062b025",
-          "src": "https://learnablemeta.com/images/186/OtHQIWYaDbyXz8H5dNkrEaca28yPSD1dohgW.avif",
-          "path": "ee/be7cf062b025.webp",
-          "width": 1000,
-          "height": 828
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-23765",
-      "step": 3,
-      "order": 8,
-      "family": "guardrail",
-      "title": "Guardrail: No Reflectors",
-      "text": [
-        "Estonia has normal A-type guardrails with no reflectors.",
-        "**--- NOTE:**",
-        "The other two Baltic countries can have reflectors on their guardrails."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9906f739b63d",
-          "src": "https://learnablemeta.com/images/768/nYC5hq0mLP0JtqI9mYPAKVXmdNDc4U7gfvFF.avif",
-          "path": "ee/9906f739b63d.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-23766",
-      "step": 3,
-      "order": 9,
-      "family": "other",
-      "title": "Tee & Tn",
-      "text": [
-        "The Estonian words for street and road are tänav and tee, respectively.",
-        "These words are unique to Estonian.",
-        "Tänav is often abbreviated as ‘tn’.",
-        "**--- NOTE:**",
-        "The Finnish suffix -tie, meaning street, can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f74592c79213",
-          "src": "https://learnablemeta.com/images/768/7n3Yj8xejdojmWEz3G94qQvKouQeIf4CB6tW.avif",
-          "path": "ee/f74592c79213.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "50dc60a1cb33"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-23808",
-      "step": 3,
-      "order": 10,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "**All Baltic countries use the same blue kilometre marker.**",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Estonia, the marker will be perpendicular to the road.",
-        "It has numbers on both sides of the marker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cbc5424f0ed5",
-          "src": "https://learnablemeta.com/images/768/QZNVEm7s8m9O24daIBUErtUkF9mSzFb2X6RM.avif",
-          "path": "ee/cbc5424f0ed5.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "d1913de4bf60"
-        },
-        {
-          "id": "b8749e6040ef",
-          "src": "https://learnablemeta.com/images/768/8gyJII7mWuiikADNInl6MeU40jXssQkG7kgS.avif",
-          "path": "ee/b8749e6040ef.webp",
-          "width": 1000,
-          "height": 655
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-23809",
-      "step": 3,
-      "order": 11,
-      "family": "pole",
-      "title": "Pole: Metal Cap",
-      "text": [
-        "Most wooden poles have a small metal cap on top, similar to those found in the Nordic countries.",
-        "**--- NOTE:**",
-        "Alongside the Nordic countries of Sweden, Finland and Norway, these caps can also sometimes be found in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "239db9ecc303",
-          "src": "https://learnablemeta.com/images/768/xqQ9q70t7nmA5D7NnhgfpyzpOVFpIXL5pBZM.avif",
-          "path": "ee/239db9ecc303.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "2726eb6972c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "LV",
-        "NO",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-50213",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "**All Baltic countries use the same blue kilometre marker.**",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Estonia, the marker will be perpendicular to the road.",
-        "It has numbers on both sides of the marker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cbc5424f0ed5",
-          "src": "https://learnablemeta.com/images/768/QZNVEm7s8m9O24daIBUErtUkF9mSzFb2X6RM.avif",
-          "path": "ee/cbc5424f0ed5.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "d1913de4bf60"
-        },
-        {
-          "id": "47be8bab5b60",
-          "src": "https://learnablemeta.com/images/851/zVya0fQKTjfTGlFKgw1A6tC6RYcVCffEs9fO.avif",
-          "path": "ee/47be8bab5b60.webp",
-          "width": 1000,
-          "height": 655,
-          "dupeOf": "b8749e6040ef"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-50214",
-      "step": 3,
-      "order": 13,
-      "family": "other",
-      "title": "Tee & Tn",
-      "text": [
-        "The Estonian words for street and road are tänav and tee, respectively.",
-        "These words are unique to Estonian.",
-        "Tänav is often abbreviated as ‘tn’.",
-        "**--- NOTE:**",
-        "The Finnish suffix -tie, meaning street, can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f74592c79213",
-          "src": "https://learnablemeta.com/images/768/7n3Yj8xejdojmWEz3G94qQvKouQeIf4CB6tW.avif",
-          "path": "ee/f74592c79213.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "50dc60a1cb33"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-50215",
-      "step": 3,
-      "order": 14,
-      "family": "pole",
-      "title": "Pole: Metal Cap",
-      "text": [
-        "Most wooden poles have a small metal cap on top, similar to those found in the Nordic countries.",
-        "**--- NOTE:**",
-        "Alongside the Nordic countries of Sweden, Finland and Norway, these caps can also sometimes be found in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "239db9ecc303",
-          "src": "https://learnablemeta.com/images/768/xqQ9q70t7nmA5D7NnhgfpyzpOVFpIXL5pBZM.avif",
-          "path": "ee/239db9ecc303.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "2726eb6972c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "LV",
-        "NO",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-50355",
-      "step": 3,
-      "order": 15,
-      "family": "guardrail",
-      "title": "Guardrail: No Reflectors",
-      "text": [
-        "Estonia has normal A-type guardrails with no reflectors.",
-        "**--- NOTE:**",
-        "The other two Baltic countries can have reflectors on their guardrails."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9906f739b63d",
-          "src": "https://learnablemeta.com/images/768/nYC5hq0mLP0JtqI9mYPAKVXmdNDc4U7gfvFF.avif",
-          "path": "ee/9906f739b63d.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "9906f739b63d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-51071",
-      "step": 3,
-      "order": 16,
-      "family": "guardrail",
-      "title": "Guardrail: No Reflectors",
-      "text": [
-        "Estonia has normal A-type guardrails with no reflectors.",
-        "**--- NOTE:**",
-        "The other two Baltic countries can have reflectors on their guardrails."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9906f739b63d",
-          "src": "https://learnablemeta.com/images/768/nYC5hq0mLP0JtqI9mYPAKVXmdNDc4U7gfvFF.avif",
-          "path": "ee/9906f739b63d.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "9906f739b63d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-51072",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "Tee & Tn",
-      "text": [
-        "The Estonian words for street and road are tänav and tee, respectively.",
-        "These words are unique to Estonian.",
-        "Tänav is often abbreviated as ‘tn’.",
-        "**--- NOTE:**",
-        "The Finnish suffix -tie, meaning street, can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f74592c79213",
-          "src": "https://learnablemeta.com/images/768/7n3Yj8xejdojmWEz3G94qQvKouQeIf4CB6tW.avif",
-          "path": "ee/f74592c79213.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "50dc60a1cb33"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-51114",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "**All Baltic countries use the same blue kilometre marker.**",
-        "However, they can be distinguished from each other by their angle relative to the road.",
-        "In Estonia, the marker will be perpendicular to the road.",
-        "It has numbers on both sides of the marker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cbc5424f0ed5",
-          "src": "https://learnablemeta.com/images/768/QZNVEm7s8m9O24daIBUErtUkF9mSzFb2X6RM.avif",
-          "path": "ee/cbc5424f0ed5.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "d1913de4bf60"
-        },
-        {
-          "id": "11f3072295f7",
-          "src": "https://learnablemeta.com/images/853/fJ9noE3bagYePocXoU7Cq2lx61gotwtAP25d.avif",
-          "path": "ee/11f3072295f7.webp",
-          "width": 1000,
-          "height": 655,
-          "dupeOf": "b8749e6040ef"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-51115",
-      "step": 3,
-      "order": 19,
-      "family": "pole",
-      "title": "Pole: Metal Cap",
-      "text": [
-        "Most wooden poles have a small metal cap on top, similar to those found in the Nordic countries.",
-        "**--- NOTE:**",
-        "Alongside the Nordic countries of Sweden, Finland and Norway, these caps can also sometimes be found in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "239db9ecc303",
-          "src": "https://learnablemeta.com/images/768/xqQ9q70t7nmA5D7NnhgfpyzpOVFpIXL5pBZM.avif",
-          "path": "ee/239db9ecc303.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "2726eb6972c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "LV",
-        "NO",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-104498",
-      "step": 3,
-      "order": 20,
-      "family": "architecture",
-      "title": "Architecture: Wood & White Brick",
-      "text": [
-        "Estonian architecture generally consists of a combination of wood and white brick, typically with somewhat steep corrugated metal roofs.",
-        "Painted stone walls are also somewhat common.",
-        "While wooden buildings can be found in all three Baltic countries, they are more common in Estonia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "64abac6a1e46",
-          "src": "https://learnablemeta.com/images/1072/Wg5TRlOaJxI1DLygC6FVcchKd7yiM4xfWSbz.avif",
-          "path": "ee/64abac6a1e46.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "c106830787f1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-472839",
-      "step": 3,
-      "order": 21,
-      "family": "pole",
-      "title": "Pole: trident",
-      "text": [
-        "Trident pole tops are somewhat common: This pole top features one insulator on top, and two to the side."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1e61612de3a1",
-          "src": "https://learnablemeta.com/images/1955/1750241582018-aMo.avif",
-          "path": "ee/1e61612de3a1.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5cd411f7ce5d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-472840",
-      "step": 3,
-      "order": 22,
-      "family": "pole",
-      "title": "Pole: metal cap on top",
-      "text": [
-        "Most wooden poles have a small metal cap on top, similar to those found in the Nordic countries.",
-        "NOTE: Alongside the Nordic countries of Sweden, Finland and Norway, these caps can also sometimes be found in Latvia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "805757b7f78f",
-          "src": "https://learnablemeta.com/images/1955/1750241539460-zom.avif",
-          "path": "ee/805757b7f78f.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "2726eb6972c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "LV",
-        "NO",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-515566",
-      "step": 3,
-      "order": 23,
-      "family": "guardrail",
-      "title": "Guardrail: A-Type w/o reflectors",
-      "text": [
-        "Estonia has normal A-type guardrails with no reflectors.",
-        "NOTE: The other two Baltic countries can have reflectors on their guardrails."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "daa34456868e",
-          "src": "https://learnablemeta.com/images/3660/1755386904638-R4A.avif",
-          "path": "ee/daa34456868e.webp",
-          "width": 800,
-          "height": 356
-        },
-        {
-          "id": "029a81af7fa3",
-          "src": "https://learnablemeta.com/images/3660/1755386919285-oBM.avif",
-          "path": "ee/029a81af7fa3.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On one small island, all coverage is Gen 4 in late autumn (fallen brown leaves) with dark clouds near sunset. If you see both, guess there. Near Tartu also has some autumn coverage."
     },
     {
       "id": "ee-lm-740900",
@@ -2156,7 +1514,7 @@
       "order": 24,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Tartu street sign",
+      "title": "Sign: black street sign, white frame",
       "text": [
         "Tartu street signs are black with white text and a white frame in it + the corners have dots."
       ],
@@ -2176,47 +1534,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ee-lm-783081",
-      "step": 3,
-      "order": 25,
-      "family": "language",
-      "title": "Language: Estonian",
-      "text": [
-        "Estonian is a Finnic language closely related to Finnish. It is **not** related to Latvian or Lithuanian. Within the Baltic languages, the following letters are unique to Estonian:",
-        "Vowels with umlauts (two dots): **Ä, Ö**, and **Ü**. Ä and Ö also exist in Finnish, but not Ü.",
-        "**Õ** with a tilde. This letter is one of the best ways to identify Estonian. Portuguese also uses it however, but mixing up Estonian and Portuguese is hard because they are otherwise very different.",
-        "The Estonian word for street is **tänav**, very commonly abbreviated as **tn**.",
-        "The Estonian word for road is **tee**. This is unlike Finnish which uses **tie**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a4a1396644da",
-          "src": "https://learnablemeta.com/images/9388/1785130665166-Vye.avif",
-          "path": "ee/a4a1396644da.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "625a9cde2e10"
-        },
-        {
-          "id": "9147c2e23c12",
-          "src": "https://learnablemeta.com/images/9388/1785130676499-gdl.avif",
-          "path": "ee/9147c2e23c12.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "50dc60a1cb33"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Street signs are black with white text inside a white frame, and dots in the corners. Seen in the second-largest city."
     }
   ]
 }

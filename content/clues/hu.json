@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Hungary uses long white standard European licence plates",
+      "title": "Plate: long white, yellow for taxis",
       "text": [
         "Hungary uses **long white** standard European licence plates. Taxi licence plates are **yellow.**",
         "In July of 2022, Hungary switched to this new character format, which contains the coat of arms.",
@@ -46,14 +46,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white EU-style plates. Taxis have yellow plates, newer electric cars green ones. Since July 2022 the new format includes the coat of arms."
     },
     {
       "id": "hu-PvaK",
       "step": 0,
       "order": 2,
       "family": "bollard",
-      "title": "Bollard: Hungarian bollards are black-and-white",
+      "title": "Bollard: black-white wedge, red reflector",
       "text": [
         "Hungarian bollards are black-and-white, wedge-shaped, and typically have a **red** reflector at the front, and a white reflector at the back. [Blue reflectors](https://www.google.com/maps/@47.826971,20.8472466,3a,15y,282.66h,79.6t/data=!3m6!1e1!3m4!1s9lVB-fYRUINpTrMAYWvYZg!2e0!7i16384!8i8192) are also somewhat common.",
         "NOTE: [Croatian bollards](https://www.google.se/maps/@44.9117293,15.1630293,3a,17.5y,144.5h,72.84t/data=!3m6!1e1!3m4!1sQHfQsXnyjPhm0AakdfHr0A!2e0!7i16384!8i8192) are very similar. They do, however, typically have the reflector closer to the top, and appear somewhat [thinner](https://www.google.se/maps/@44.9122903,15.1621345,3a,48.7y,222.73h,52.12t/data=!3m6!1e1!3m4!1sbWEK8Fssx79YL61MpgzMqg!2e0!7i16384!8i8192) than in Hungary."
@@ -118,14 +119,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black and white wedge-shaped bollard with a red reflector at the front and a white one at the back. Blue reflectors are also fairly common.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "Croatian reflector sits higher up and the bollard looks thinner"
+        }
+      ]
     },
     {
       "id": "hu-dM2y",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: The most common type of utility pole in Hungary is a…",
+      "title": "Pole: concrete with thin holes down to the",
       "text": [
         "The most common type of utility pole in Hungary is a **concrete holey pole**, with relatively thin holes going all the way down to the ground. Wooden poles are also somewhat common.",
         "NOTE: In eastern Europe, Poland and Romania also commonly use holey poles. [Polish holey poles](https://www.google.com/maps/@49.9926761,18.7114721,3a,55.1y,130.81h,98.23t/data=!3m6!1e1!3m4!1sHtPKStzKxeiHUY1s-iNu-w!2e0!7i16384!8i8192) typically do not have holes down by the ground, and tend to be relatively thin. [Romanian holey poles](https://goo.gl/maps/QyJwGvUuzdnJLVBv5) normally either have much wider, or much taller holes."
@@ -193,7 +201,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common pole is concrete with a row of thin holes running all the way to the ground. Wooden poles are also fairly common.",
+      "differs": [
+        {
+          "country": "PL",
+          "how": "Polish holey poles have no holes near the ground and are thinner"
+        },
+        {
+          "country": "RO",
+          "how": "Romanian holes are much wider or much taller"
+        }
+      ]
     },
     {
       "id": "hu-Vhaj",
@@ -201,7 +220,7 @@
       "order": 4,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Hungarian chevrons are white on red",
+      "title": "Chevron: white on red",
       "text": [
         "Hungarian chevrons are **white on red**.",
         "[Black-and-white](https://www.google.com/maps/@47.2517674,16.9392096,3a,37.6y,261.49h,65.38t/data=!3m7!1e1!3m5!1s_Vx5ThXqoem-sKrW96OMFw!2e0!5s20111101T000000!7i13312!8i6656) chevrons may also be seen, but are considerably less common."
@@ -257,14 +276,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White arrows on a red background. Black-and-white chevrons also appear but are much less common."
     },
     {
       "id": "hu-g7PT",
       "step": 0,
       "order": 5,
       "family": "language",
-      "title": "Language: The Hungarian language has a unique look",
+      "title": "Language: long words, double acute accents",
       "text": [
         "The **Hungarian language** has a unique look, with a very large number of [acute accents](https://en.wikipedia.org/wiki/Acute_accent), [umlauts](https://en.wikipedia.org/wiki/Umlaut_(diacritic)) over o’s, and long words. The letters \"Ő\" and \"Ű\", with double acute accents, are unique to the language.",
         "NOTE: Hungarian is also spoken in some parts of neighbouring countries: notably there are large Hungarian-speaking communities in central Romania and southern Slovakia."
@@ -288,7 +308,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very distinct look with many acute accents, umlauts over o and u, and long words. The letters Ő and Ű with double accents only exist in this language. It is also spoken in central Romania and southern Slovakia.",
+      "differs": [
+        {
+          "country": "RO",
+          "how": "Hungarian is also spoken in central Romania"
+        },
+        {
+          "country": "SK",
+          "how": "Hungarian is also spoken in southern Slovakia"
+        }
+      ]
     },
     {
       "id": "hu-3LxD",
@@ -296,7 +327,7 @@
       "order": 6,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Hungarian street names typically end with the word “utca”",
+      "title": "Sign: street names ending in -utca or -út",
       "text": [
         "Hungarian street names typically end with the word “**utca**”. The word “út” is also used for bigger roads. These two words are unique to Hungarian, and translate to “street.”"
       ],
@@ -335,14 +366,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street names usually end in \"utca\", and bigger roads use \"út\". Both words mean street and exist only in this language."
     },
     {
       "id": "hu-eBWy",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "These green kilometre markers can be seen along most…",
+      "title": "Road: green kilometre markers",
       "text": [
         "These **green kilometre markers** can be seen along most Hungarian roads.",
         "On highways, the numbers correspond to the ones seen on the map in small yellow boxes near exits."
@@ -383,7 +415,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Green kilometre markers stand along most roads. On highways, the numbers match the small yellow boxes near exits on the map."
     },
     {
       "id": "hu-N7yw",
@@ -391,7 +424,7 @@
       "order": 8,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Hungarian sign posts commonly appear to be abnormally tall",
+      "title": "Sign: posts taller than the camera",
       "text": [
         "Hungarian sign posts commonly appear to be **abnormally tall**, often taller than the Street View camera."
       ],
@@ -438,7 +471,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sign posts often look very tall, frequently taller than the Street View camera."
     },
     {
       "id": "hu-bxAw",
@@ -446,7 +480,7 @@
       "order": 9,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Hungarian signs are usually bolted to the sign post using…",
+      "title": "Sign: four bolts in a tall rectangle",
       "text": [
         "Hungarian signs are usually bolted to the sign post using **four bolts**, going through the sign, in the shape of a tall rectangle.",
         "NOTE: This is not common in any other Eastern European countries."
@@ -494,7 +528,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs are bolted to the post with four bolts forming a tall rectangle. This is not common in other Eastern European countries."
     },
     {
       "id": "hu-Tbty",
@@ -502,7 +537,7 @@
       "order": 10,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Hungarian pedestrian crossing signs have five stripes",
+      "title": "Sign: pedestrian crossing, five stripes",
       "text": [
         "Hungarian pedestrian crossing signs have **five stripes**. The person is wearing a **belt**. There is also a second, less common, type with four stripes and the person holding a bag.",
         "The belt is located noticeably **low** on the person’s body, almost as if the person is sagging his pants. This is unique to Hungary.",
@@ -546,7 +581,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A five-stripe crossing sign with a person wearing a belt set noticeably low, as if sagging his trousers. A rarer type has four stripes and a person holding a bag. Croatia and Slovakia also have five stripes and a belt.",
+      "sameAs": [
+        "HR",
+        "SK"
+      ]
     },
     {
       "id": "hu-s2B8",
@@ -554,7 +594,7 @@
       "order": 11,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Apart from European highways",
+      "title": "Sign: road numbers in shields, green or blue M",
       "text": [
         "Apart from European highways, there are two types of numbered roads in Hungary; roads marked with **green signs**, and highways beginning with the letter ‘**M**’, marked with **blue signs**. These road numbers are contained within a small shield shape on the sign."
       ],
@@ -593,7 +633,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Besides European roads, numbered roads have green signs, and highways starting with M have blue signs. The number sits in a small shield shape."
     },
     {
       "id": "hu-XwNR",
@@ -601,7 +642,7 @@
       "order": 12,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Most directional signs are green",
+      "title": "Sign: green direction signs, blue on M roads",
       "text": [
         "Most directional signs are green, having a white inner border and a green outer border. Directional signs on M-numbered highways are blue, having a white inner border and a blue outer border."
       ],
@@ -640,14 +681,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most direction signs are green with a white inner border. Those on M-numbered highways are blue."
     },
     {
       "id": "hu-jEV4",
       "step": 0,
       "order": 13,
       "family": "car",
-      "title": "Google car: It is somewhat common to see a small",
+      "title": "Google car: small grey flag on antenna",
       "text": [
         "It is somewhat common to see a small, grey flag on the antenna of Generation 3 Google cars in Hungary.",
         "NOTE: This is also seen in the Czech Republic, Slovakia, Romania and Bulgaria."
@@ -692,14 +734,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On older Gen 3 cars (blurrier, softer colours) a small grey flag on the antenna is fairly common. Czechia, Slovakia, Romania and Bulgaria have it too.",
+      "sameAs": [
+        "BG",
+        "CZ",
+        "RO",
+        "SK"
+      ]
     },
     {
       "id": "hu-1skP",
       "step": 0,
       "order": 14,
       "family": "car",
-      "title": "Google car: A white generation 4 Google car can also rarely be found in…",
+      "title": "Google car: rare white Gen 4",
       "text": [
         "A white generation 4 Google car can also rarely be found in Hungary.",
         "NOTE: It can also be found in other European countries."
@@ -739,14 +788,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white newer-generation car (Gen 4) can rarely be found. It also exists in other European countries."
     },
     {
       "id": "hu-s76v",
       "step": 0,
       "order": 15,
       "family": "car",
-      "title": "Google car: A black generation 4 car that will never have an antenna…",
+      "title": "Google car: black Gen 4, never an antenna",
       "text": [
         "A black generation 4 car that will never have an antenna can be found in Hungary.",
         "NOTE: A black car can be found in many European countries, though it will often have an antenna visible."
@@ -786,14 +836,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black newer-generation car (Gen 4) that never has an antenna. Black cars exist in many European countries, but they usually show an antenna."
     },
     {
       "id": "hu-GR8q",
       "step": 0,
       "order": 16,
       "family": "car",
-      "title": "Google car: The majority of Generation 3 coverage in Hungary was taken…",
+      "title": "Google car: grey, dead winter look (Gen 3)",
       "text": [
         "The majority of Generation 3 coverage in Hungary was taken **during winter**, resulting in very grey, dead looking coverage.",
         "NOTE: This is also common in the Czech Republic and Bulgaria."
@@ -836,14 +887,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most older Gen 3 coverage was taken in winter, so it looks grey and lifeless. Czechia and Bulgaria have the same look.",
+      "sameAs": [
+        "BG",
+        "CZ"
+      ]
     },
     {
       "id": "hu-94Xz",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: Hungarian houses are typically made of stone",
+      "title": "Houses: light stone, red tiled roofs",
       "text": [
         "Hungarian houses are typically made of stone, painted in a light colour and almost always with **red tiled roofs**. Suburban houses are typically only one storeyed, while more central houses may be taller. Houses in town and city centres are often fairly old but well-kept."
       ],
@@ -890,14 +946,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stone houses in light colours, almost always with red tiled roofs. Suburban houses are mostly one storey, central ones can be taller. Town centres are old but well kept."
     },
     {
       "id": "hu-NJDC",
       "step": 0,
       "order": 18,
       "family": "line",
-      "title": "Road line: While Hungarian road lines are all-white",
+      "title": "Road lines: white, yellow on bike lanes",
       "text": [
         "While Hungarian road lines are all-white, lines on **bicycle lanes** are typically **yellow**."
       ],
@@ -944,14 +1001,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road lines are all white, except bicycle lane lines, which are usually yellow."
     },
     {
       "id": "hu-1y8d",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Hungarian phone numbers consist of either 8 or 10 digits",
+      "title": "Phone numbers: 8 or 10 digits, area code inside",
       "text": [
         "Hungarian phone numbers consist of either 8 or 10 digits. If the number has 8 digits, the first and second digit is the **area code**. And if the number has 10 digits, the third and fourth digit is the area code. The only exception is Budapest, where only the first or third digit, being a 1, respectively is the area code.",
         "NOTE: Area codes whose second digit is 0 or 1 are not region specific."
@@ -972,14 +1030,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers have 8 or 10 digits. The area code is the first two digits (8-digit numbers) or the third and fourth (10-digit ones). The capital's code is just a single 1. Area codes with a second digit of 0 or 1 are not tied to a region."
     },
     {
       "id": "hu-ktc7",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "The first digit of Hungarian numbered roads are ordered in…",
+      "title": "Road numbers: first digit circles the capital",
       "text": [
         "The first digit of Hungarian **numbered roads** are ordered in a circle, centred around Budapest. Remembering this system should make it quite easy to find any numbered road."
       ],
@@ -1000,14 +1059,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The first digit of numbered roads is arranged in a circle around the capital, so learning that pattern lets you place any numbered road."
     },
     {
       "id": "hu-zgXE",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Many Hungarian town names use local prefixes",
+      "title": "Town names: local prefixes (infographic)",
       "text": [
         "Many Hungarian town names use **local prefixes**, the most common of which are shown in this infographic. Note that some rare exceptions exist.",
         "_You can click on the image to enlarge it._"
@@ -1028,7 +1088,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many town names begin with a local prefix that points to a region. Study the infographic for the most common ones; a few exceptions exist."
     },
     {
       "id": "hu-xpQW",
@@ -1036,7 +1097,7 @@
       "order": 3,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: If you see a street sign with a thick metal frame around it",
+      "title": "Sign: street names in a thick metal frame",
       "text": [
         "If you see a street sign with a **thick metal frame** around it, you are very likely to be in the **western** parts of the country."
       ],
@@ -1075,14 +1136,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A street sign in a thick metal frame points to the western part of the country."
     },
     {
       "id": "hu-8FCa",
       "step": 1,
       "order": 4,
       "family": "pole",
-      "title": "Pole: If you see a blue or green street sign shaped like an arrow",
+      "title": "Sign: blue or green arrow street signs on poles",
       "text": [
         "If you see a **blue** or **green** street sign shaped like an **arrow**, attached to a utility pole or street light, you are likely to be in the county of Szabolcs-Szatmár-Bereg.",
         "NOTE: Blue arrow-shaped street signs can also be found in [Dunakeszi](https://www.google.com/maps/@47.6290186,19.1549932,3a,29.7y,151.87h,90.55t/data=!3m6!1e1!3m4!1se_1iRMK0jnxi0R13E9x-8A!2e0!7i16384!8i8192), north of Budapest. However, those are attached to blue sign posts."
@@ -1125,14 +1187,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue or green arrow-shaped street signs attached to utility poles or street lights suggest the far northeast county. Blue arrow signs near the capital in the north are on blue posts."
     },
     {
       "id": "hu-Ad5o",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: While the southeastern parts of Hungary are extremely flat",
+      "title": "Landscape: flat southeast",
       "text": [
         "While the southeastern parts of Hungary are extremely flat, with almost no noticeable hills, the northern and western parts mainly consist of **forested hills and mountains**. The tallest mountains are found in the north, while the southwestern mountains are generally slightly lower."
       ],
@@ -1179,14 +1242,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The southeast is extremely flat with hardly any hills. The north and west are forested hills and mountains, tallest in the north and lower in the southwest."
     },
     {
       "id": "hu-C5sq",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Lake Balaton is one of the largest lakes on mainland Europe",
+      "title": "Landscape: big lake, hotels, hilly shore",
       "text": [
         "Lake Balaton is one of the largest lakes on mainland Europe, and the **only large lake** visible on street view in Hungary. The area surrounding the lake is moderately hilly, fairly built up and a big tourist destination, with a much higher density of small hotels than almost anywhere else in the country."
       ],
@@ -1225,14 +1289,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only large lake visible in Street View. The shores are moderately hilly, fairly built-up tourist areas with many more small hotels than almost anywhere else."
     },
     {
       "id": "hu-d5CC",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Unlike most of the Hungarian plains",
+      "title": "Landscape: barren wet natural grassland",
       "text": [
         "Unlike most of the Hungarian plains, which is almost entirely cultivated land, the Puszta, centred around Hortobágy National Park, mainly consists of barren and wet, natural grasslands."
       ],
@@ -1271,7 +1336,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Unlike the mostly farmed plains, this area around a national park is barren and wet, natural grassland."
     },
     {
       "id": "hu-gMof",
@@ -1279,7 +1345,7 @@
       "order": 0,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: This infographic showcases ten of the largest towns and…",
+      "title": "Sign: unique street signs in big towns",
       "text": [
         "This infographic showcases ten of the largest towns and cities with **unique street signs**, and explains what makes them unique.",
         "_You can click on the image to enlarge it._"
@@ -1300,14 +1366,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An infographic of ten large towns whose street signs look unique, and what makes each one different."
     },
     {
       "id": "hu-ZEB9",
       "step": 2,
       "order": 1,
       "family": "bollard",
-      "title": "Bollard: The road east of Tornanadaska",
+      "title": "Landscape: snowy road, bollards",
       "text": [
         "The road east of Tornanadaska, right by the border to Slovakia, can be easily recognized by the **snow **on and along the road, combined with the bollards and the railway right next to the road."
       ],
@@ -1350,183 +1417,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/hungary",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "hu-lm-8",
-      "step": 3,
-      "order": 0,
-      "family": "other",
-      "title": "Kilometer markers",
-      "text": [
-        "These green kilometre markers can be seen along most Hungarian roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9aa16536e210",
-          "src": "https://learnablemeta.com/images/AndhdyT3Vrutugi7ekSQwyhKK0ECtSc5Y9X6.avif",
-          "path": "hu/9aa16536e210.webp",
-          "width": 1000,
-          "height": 841
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-2994",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Flat-Arm-on-Outside Hungary",
-      "text": [
-        "**White Belt**: Croatia, Portugal, Germany, Hungary. > **Pointed Shoes**: Germany, Hungary. > Germany **Belt**: Above hip. Hungary **Belt**: Bottom of hip. Germany **arm**: Flat side on left. Hungary **arm**: Flat side on right."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a3072de7e211",
-          "src": "https://learnablemeta.com/images/90/mvmePdDKbTaD2piAaFPc2Rn9LJV8Zqg0om4R.avif",
-          "path": "hu/a3072de7e211.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DE",
-        "HR",
-        "PT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-23917",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "These green kilometre markers can be seen along most Hungarian roads.",
-        "On highways, the numbers correspond to the ones seen on the map in small yellow boxes near exits."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b862c58e690c",
-          "src": "https://learnablemeta.com/images/768/GaPelN8hioFlAD7JeaRVfIYgzpkcHXUo8wSH.avif",
-          "giveaway": true,
-          "path": "hu/b862c58e690c.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "74d0b12678b8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-24578",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Puszta Grasslands",
-      "text": [
-        "Unlike most of the Hungarian plains, which is almost entirely cultivated land, the Puszta, centred around Hortobágy National Park, mainly consists of barren and wet, natural grasslands."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8e46977d03ed",
-          "src": "https://learnablemeta.com/images/664/RQwrtxTWQw9EdDFotELW5NdAvUBOirh4tmq7.avif",
-          "path": "hu/8e46977d03ed.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "b3cf1cf5874a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-50394",
-      "step": 3,
-      "order": 4,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "These green kilometre markers can be seen along most Hungarian roads.",
-        "On highways, the numbers correspond to the ones seen on the map in small yellow boxes near exits."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b862c58e690c",
-          "src": "https://learnablemeta.com/images/768/GaPelN8hioFlAD7JeaRVfIYgzpkcHXUo8wSH.avif",
-          "giveaway": true,
-          "path": "hu/b862c58e690c.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "74d0b12678b8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-51142",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Kilometre Markers",
-      "text": [
-        "These green kilometre markers can be seen along most Hungarian roads.",
-        "On highways, the numbers correspond to the ones seen on the map in small yellow boxes near exits."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b862c58e690c",
-          "src": "https://learnablemeta.com/images/768/GaPelN8hioFlAD7JeaRVfIYgzpkcHXUo8wSH.avif",
-          "giveaway": true,
-          "path": "hu/b862c58e690c.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "74d0b12678b8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The road east of Tornanadaska, next to the Slovakian border, stands out by snow on and beside the road, bollards, and a railway running right next to it."
     },
     {
       "id": "hu-lm-740386",
@@ -1534,7 +1426,7 @@
       "order": 6,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Budapest street sign",
+      "title": "Sign: district in Roman numerals plus Kerület",
       "text": [
         "Budapest street signs have a district number in roman numerals followed by ''Kerület''."
       ],
@@ -1555,7 +1447,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the capital, street signs show a district number in Roman numerals followed by \"Kerület\"."
     },
     {
       "id": "hu-lm-740388",
@@ -1563,7 +1456,7 @@
       "order": 7,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Győr street sign",
+      "title": "Sign: street name with big diagonal corners",
       "text": [
         "Győr has large diagional corners."
       ],
@@ -1584,7 +1477,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Győr, street signs have large diagonal corners."
     },
     {
       "id": "hu-lm-741737",
@@ -1592,7 +1486,7 @@
       "order": 8,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Kecskemét street sign",
+      "title": "Sign: blue text, angular corners",
       "text": [
         "Kecskemét has blue text with angular corners."
       ],
@@ -1613,48 +1507,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "hu-lm-783102",
-      "step": 3,
-      "order": 9,
-      "family": "language",
-      "title": "Language: Hungarian",
-      "text": [
-        "Hungarian is a Ugric language that is unrelated to all its surrounding languages. It has a unique look, with a large number of acute accents (**Á, É, Í, Ó, Ú**), umlauts (**Ö, Ü**), and long words. The letters **Ő** and **Ű**, with **double** acute accents, are unique to the language.",
-        "The Hungarian name for street is **utca**. The word **út** is also used for bigger roads. No other language shares this name.",
-        "NOTE: Hungarian is widely spoken is parts of neighboring countries, notably Romania and Slovakia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bedd74afc175",
-          "src": "https://learnablemeta.com/images/9388/1785139217516-mqE.avif",
-          "path": "hu/bedd74afc175.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "c951ce390afd"
-        },
-        {
-          "id": "3fed0614e80e",
-          "src": "https://learnablemeta.com/images/9388/1785139226913-rT0.avif",
-          "path": "hu/3fed0614e80e.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "dcaef4ef4907"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RO",
-        "SK"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Kecskemét, street signs have blue text and angular corners."
     }
   ]
 }

@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Senegal is the only African country to use fully blue…",
+      "title": "Plate: fully blue plate",
       "text": [
         "Senegal is the only African country to use fully **blue** licence plates. A newer version exists in Generation 4 which looks like the standard **European** licence plate which is white with a blue strip on the left."
       ],
@@ -60,14 +60,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only African country with fully blue licence plates. Newer plates in Gen 4 coverage look like the standard European plate: white with a blue strip on the left."
     },
     {
       "id": "sn-9fep",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: A silver or white truck cab is visible in the Generation 4…",
+      "title": "Google car: silver or white truck cab (Gen 4)",
       "text": [
         "A **silver** or **white** truck cab is visible in the Generation 4 coverage. Several variants of each exist, most of which are region or road specific. The most useful and recognizable ones will be shown in the spotlight section. For a complete overview, see [this document](https://docs.google.com/spreadsheets/d/1JdyJNoOkksLAdGnJ_scA17K1pHV3THHERY-Y05B6rKI/edit#gid=0) by Lupus.",
         "In the area around Dakar and Thies you can also find a [black](https://maps.app.goo.gl/M993iFkmA7pFDR2k7) pick up truck.",
@@ -116,14 +117,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage shows a silver or white truck cab, in several variants that are mostly tied to certain regions or roads. Near the capital there is also a black pick-up. The car can be fully blurred, so check the landscape too."
     },
     {
       "id": "sn-8e0Q",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: A Google Car with a visible roof rack and the right side…",
+      "title": "Google car: roof rack and right mirror, Gen 3",
       "text": [
         "A Google Car with a visible **roof rack** and the right side mirror is seen in Generation 3 coverage. **Rifts** can also be seen in the sky.",
         "NOTE: This specific Google Car with the right side mirror visible is unique to Senegal. Roof racks and rifts however can be seen in various other countries."
@@ -163,14 +165,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Gen 3 coverage you can see the roof rack and the right side mirror, plus rifts in the sky. The visible mirror is unique to this country, but roof racks and rifts appear elsewhere."
     },
     {
       "id": "sn-NOh2",
       "step": 0,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: Senegal drives on the right",
+      "title": "Driving side: right",
       "text": [
         "Senegal drives on the **right**.",
         "NOTE: This is mostly useful to distinguish it from Kenya, which drives on the left. The other countries with coverage in Africa that drive on the right are Ghana, Nigeria, Rwanda and Tunisia."
@@ -216,14 +219,27 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the right. Useful against Kenya, which drives on the left. Ghana, Nigeria, Rwanda and Tunisia also drive on the right.",
+      "sameAs": [
+        "GH",
+        "NG",
+        "RW",
+        "TN"
+      ],
+      "differs": [
+        {
+          "country": "KE",
+          "how": "Kenya drives on the left"
+        }
+      ]
     },
     {
       "id": "sn-7wNV",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Being a former French colony",
+      "title": "Road items: French-style bollards, poles, signs",
       "text": [
         "Being a former French colony, Senegal uses French infrastructure such as **bollards**, **poles**, **signs** and **road** **lines**."
       ],
@@ -272,14 +288,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "As a former French colony, it uses French-style bollards, poles, signs and road lines.",
+      "sameAs": [
+        "FR"
+      ]
     },
     {
       "id": "sn-GNSK",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: The official and most common language seen in Senegal is…",
+      "title": "Language: French",
       "text": [
         "The official and most common language seen in Senegal is French.",
         "NOTE: The other sub-Saharan countries with street view coverage use English (Rwanda being a minor exception to this – however landscape should be sufficient to always tell the difference)."
@@ -302,7 +322,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The main language on signs is French. Other sub-Saharan countries with coverage use English, apart from Rwanda, where the landscape tells them apart.",
+      "differs": [
+        {
+          "country": "RW",
+          "how": "Rwanda also has some French but looks very different"
+        }
+      ]
     },
     {
       "id": "sn-wdji",
@@ -310,7 +337,7 @@
       "order": 7,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: The road number and the distance to the nearest towns can…",
+      "title": "Km marker: white with red top, towns listed",
       "text": [
         "The road number and the distance to the nearest towns can be seen on these white **kilometre markers** with a red top.",
         "NOTE: The town that is the furthest distance away is usually the largest."
@@ -350,7 +377,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White kilometre markers with a red top, showing the road number and distances to nearby towns. The farthest town listed is usually the largest."
     },
     {
       "id": "sn-lPzT",
@@ -358,7 +386,7 @@
       "order": 8,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Most town entry signs in Senegal are white and feature a…",
+      "title": "Sign: white town sign, thick pink outline",
       "text": [
         "Most town entry signs in Senegal are white and feature a **thick pink** outline. The town is also written in a bold, black font."
       ],
@@ -397,14 +425,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most town entry signs are white with a thick pink outline and the town name in bold black letters."
     },
     {
       "id": "sn-t5k7",
       "step": 0,
       "order": 9,
       "family": "other",
-      "title": "These simple black lamps with a solar panel at the top are…",
+      "title": "Street lamps: black with solar panel on top",
       "text": [
         "These simple **black lamps** with a **solar panel** at the top are commonly seen in Senegal."
       ],
@@ -443,14 +472,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Simple black lamp posts with a solar panel on top are common."
     },
     {
       "id": "sn-S2AA",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "Yellow-orange taxis with black fenders can commonly be seen…",
+      "title": "Taxis: yellow-orange with black fenders",
       "text": [
         "**Yellow-orange** taxis with **black fenders** can commonly be seen in Senegal."
       ],
@@ -489,14 +519,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow-orange taxis with black fenders are common."
     },
     {
       "id": "sn-n0Eo",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: This is a coverage map of Senegal",
+      "title": "Coverage: mostly west, few side roads in east",
       "text": [
         "This is a **coverage map** of Senegal. Most of the coverage is west of Touba, with very few roads apart from main roads covered in the east.",
         "_You can click on the image to enlarge it. Alternatively, you can look at the coverage in more detail [on this site](https://sv-map.netlify.app#base=roadmap&cov=official&zoom=8&center=14.549025564638553%2C-14.287719726562502)._"
@@ -518,14 +549,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most coverage is in the west. In the east only the main roads are covered."
     },
     {
       "id": "sn-ERgE",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The landscape north of The Gambia and for Senegal generally…",
+      "title": "Landscape: flat, dry savannah, short pale trees",
       "text": [
         "The landscape north of The Gambia and for Senegal generally is a **flat, arid, savannah-desert** landscape with sparse trees. The trees themselves will be somewhat short and have leaves that are faded in colour."
       ],
@@ -572,14 +604,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat, dry savannah-desert with sparse, fairly short trees whose leaves are faded in colour. This is the look for most of the country."
     },
     {
       "id": "sn-6ZX7",
       "step": 1,
       "order": 2,
       "family": "vegetation",
-      "title": "Vegetation: The vegetation in the region south of The Gambia is more…",
+      "title": "Vegetation: lush and green, palms near coast",
       "text": [
         "The vegetation in the region south of The Gambia is more lush and green compared to the rest of Senegal, and palm trees can be seen closer to the coast.",
         "NOTE: Coverage toward the west will also be [especially tropical](https://goo.gl/maps/52g1NQ7hwGZtNejD8). In addition, make sure not to confuse the south with some coverage near Dakar, which can look deceivingly green. However, here the vegetation will look a lot more [low and coastal](https://goo.gl/maps/oouBBYadRN3oiSRi8)."
@@ -619,14 +652,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far south, vegetation is much greener and more lush than elsewhere, with palm trees near the coast. Don't confuse it with the greenish coast near the capital, where plants look lower."
     },
     {
       "id": "sn-0GE3",
       "step": 1,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: Diourbel Region is the only region in Senegal with…",
+      "title": "Coverage: sandy road with sparse trees",
       "text": [
         "Diourbel Region is the only region in Senegal with extensive **rural coverage**. The coverage in the region will look like this, with the Google Car driving on a sandy road with sparse trees. Some of the coverage extends to the west in the Thies region up to Babou.",
         "NOTE: The sand in the coverage around Touba tends to be more [grassy](https://goo.gl/maps/BWCDdy4HBumDShTx9)."
@@ -667,14 +701,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only region with plenty of rural coverage: the car drives on sandy roads with sparse trees. Sand near the big holy city is more grassy."
     },
     {
       "id": "sn-nmqJ",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: A very slightly rolling landscape consisting of vegetated…",
+      "title": "Landscape: gently rolling vegetated dunes",
       "text": [
         "A **very slightly rolling** landscape consisting of vegetated sand dunes can be seen along the northwestern coast."
       ],
@@ -721,14 +756,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very slightly rolling land of vegetated sand dunes along the northwest coast."
     },
     {
       "id": "sn-WDIx",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: A dry landscape with slight hills can mostly be seen around…",
+      "title": "Landscape: dry with slight hills",
       "text": [
         "A **dry** landscape with **slight hills** can mostly be seen around Bakel, but also south to Nayé."
       ],
@@ -783,14 +819,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A dry landscape with slight hills, mostly in the far east and a bit south of it."
     },
     {
       "id": "sn-FeHb",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: A greener landscape with larger hills can be seen around…",
+      "title": "Landscape: greener with bigger hills",
       "text": [
         "A **greener** landscape with **larger hills** can be seen around Kedougou and Mako."
       ],
@@ -846,14 +883,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southeast: a greener landscape with larger hills."
     },
     {
       "id": "sn-aMed",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Irrigated rice fields can sometimes be seen in the region…",
+      "title": "Fields: irrigated rice",
       "text": [
         "**Irrigated rice fields** can sometimes be seen in the region between St Louis and Richard Toll."
       ],
@@ -892,14 +930,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Irrigated rice fields can sometimes be seen in the north, between two towns near the river."
     },
     {
       "id": "sn-OEuy",
       "step": 1,
       "order": 8,
       "family": "car",
-      "title": "Google car: The silver Generation 4 car with a long antenna at the…",
+      "title": "Google car: silver Gen 4",
       "text": [
         "The silver Generation 4 car with a **long antenna** at the front left can be seen on many roads, but none past the eastern border of Diourbel Region.",
         "NOTE: The antenna is visible even if the car is [blurred](https://goo.gl/maps/kPSPK8pH463oWffJ7)."
@@ -948,14 +987,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Silver Gen 4 truck with a long antenna at the front left, found on many roads but not past the eastern edge of one central region. The antenna shows even when the car is blurred."
     },
     {
       "id": "sn-dxl9",
       "step": 1,
       "order": 9,
       "family": "car",
-      "title": "Google car: The regular Generation 4 white car is most commonly found…",
+      "title": "Google car: plain white Gen 4",
       "text": [
         "The regular Generation 4 **white car** is most commonly found south of The Gambia, but can also be found on the northeastern coast and a small region between Kaolack and Saly."
       ],
@@ -995,7 +1035,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The regular white Gen 4 car is mostly in the south, but also on the northeast coast and in one small western area."
     },
     {
       "id": "sn-niwG",
@@ -1003,7 +1044,7 @@
       "order": 1,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Divided highways are found between Dakar and Touba",
+      "title": "Road: divided highway, no road number",
       "text": [
         "**Divided highways** are found between Dakar and Touba. The two divided highways are between Dakar and Touba, and between Dakar and Saly.",
         "NOTE: On Google Maps, the road shows as a yellow road but without road number. There are also no divided highways in Generation 3."
@@ -1044,14 +1085,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Divided highways only exist between the capital and the holy city, and between the capital and a coastal town. On Google Maps they are yellow roads with no number, and none exist in Gen 3."
     },
     {
       "id": "sn-cfOC",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "The N1 between Tambacounda and Nayé generally runs in a…",
+      "title": "Road: runs northeast, railway alongside",
       "text": [
         "The N1 between Tambacounda and Nayé generally runs in a **northeast east** direction. A **railway** runs parallel to the road. The railway is to the south of the road between Tambacounda to just before Youpe Amadi, and is to the north from Youpe Amadi to Bellé."
       ],
@@ -1090,14 +1132,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road running roughly northeast with a railway beside it. The railway is south of the road at first, then switches to the north."
     },
     {
       "id": "sn-0Upt",
       "step": 2,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: Hazy coverage with a low sun through a sometimes…",
+      "title": "Coverage: hazy, low sun, some farmland",
       "text": [
         "**Hazy** coverage with a **low sun** through a sometimes agricultural landscape can be seen on the N2 between St. Louis and Richard Toll."
       ],
@@ -1144,14 +1187,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Hazy coverage with a low sun, passing through partly farmed land, on the main road in the far north."
     },
     {
       "id": "sn-L65q",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The N2 between Richard Toll and Matam is a wide road going…",
+      "title": "Landscape: wide road, desert",
       "text": [
         "The N2 between Richard Toll and Matam is a wide road going through a flat desert landscape with very sparse trees. It can be recognized by the **bright blue skies** with **no clouds**. The road itself goes west-east and northwest-southeast.",
         "NOTE: The higher the sun is, the more east you are."
@@ -1191,14 +1235,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A wide road through flat desert with very few trees and bright blue, cloudless skies. The higher the sun, the further east you are."
     },
     {
       "id": "sn-2NXs",
       "step": 2,
       "order": 5,
       "family": "other",
-      "title": "Distinct, tall patches of bright yellow grass can be seen…",
+      "title": "Roadside: tall bright yellow grass patches",
       "text": [
         "Distinct, tall patches of **bright yellow grass** can be seen along the N3, mostly to the east in the Matam Region."
       ],
@@ -1237,14 +1282,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Distinct tall patches of bright yellow grass beside the road, mostly in the east."
     },
     {
       "id": "sn-irXP",
       "step": 2,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: The road northeast of Kedougou to the Malian border can be…",
+      "title": "Coverage: hazy bushfire smoke",
       "text": [
         "The road northeast of Kedougou to the Malian border can be recognized by the **hazy bushfire** coverage. Smoke trails can sometimes be seen in the distance. The road is paved south of Saraya."
       ],
@@ -1283,14 +1329,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road in the southeast with hazy bushfire coverage, sometimes smoke trails in the distance. It is paved in the southern part."
     },
     {
       "id": "sn-QgQm",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: A flat, slightly marshy landscape with low vegetation can…",
+      "title": "Landscape: flat, slightly marshy, low plants",
       "text": [
         "A flat, **slightly marshy** landscape with low vegetation can be seen on a few sections of roads in the Saloum River Delta."
       ],
@@ -1329,14 +1376,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A flat, slightly marshy landscape with low vegetation on a few roads in a river delta."
     },
     {
       "id": "sn-Ilre",
       "step": 2,
       "order": 8,
       "family": "coverage",
-      "title": "Coverage: The Kola-Velingara road between Saré Amirou and Badion is a…",
+      "title": "Coverage: dirt road in evening light",
       "text": [
         "The Kola-Velingara road between Saré Amirou and Badion is a dirt road that can be recognized by the **late afternoon** to **evening** coverage. The coverage gets later toward the west."
       ],
@@ -1375,14 +1423,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A dirt road shot in late afternoon to evening light, getting later towards the west."
     },
     {
       "id": "sn-kDY5",
       "step": 2,
       "order": 9,
       "family": "vegetation",
-      "title": "Vegetation: The white road in the Forest of Thies can be recognized by…",
+      "title": "Road: bright orange dirt, dry brown hills, haze",
       "text": [
         "The white road in the Forest of Thies can be recognized by the **dry**,** slightly hilly** landscape with brown vegetation. The road itself is made of bright orange dirt. There is also a noticeably haze in the coverage."
       ],
@@ -1429,14 +1478,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white-looking road of bright orange dirt through a dry, slightly hilly landscape with brown vegetation and noticeable haze."
     },
     {
       "id": "sn-UFZN",
       "step": 2,
       "order": 11,
       "family": "architecture",
-      "title": "Architecture: Dakar is the largest and capital city of Senegal",
+      "title": "City: dense, tall modern buildings",
       "text": [
         "Dakar is the **largest** and **capital city** of Senegal. It can be recognized by the denseness of the city and taller, more modern buildings."
       ],
@@ -1475,14 +1525,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital is the biggest city, with dense streets and taller, more modern buildings."
     },
     {
       "id": "sn-z3L1",
       "step": 2,
       "order": 12,
       "family": "other",
-      "title": "The infamous Great Mosque of Touba can be recognized by the…",
+      "title": "Landmark: mosque with five tall minarets",
       "text": [
         "The [**infamous**](https://youtu.be/r6PWu8A72oI?t=697)** Great Mosque of Touba** can be recognized by the five tall minarets, which can be seen from [afar](https://goo.gl/maps/MnTgaEw4r6mCQm9U9)."
       ],
@@ -1521,361 +1572,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/senegal",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "sn-lm-134",
-      "step": 3,
-      "order": 0,
-      "family": "pole",
-      "title": "Pole: French infrastructure",
-      "text": [
-        "Senegal used to be French colony so you will see similar ladder poles/bollards/lines that you would normally find in France."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a25de9e7d260",
-          "src": "https://learnablemeta.com/images/Os82JQXrXIwjOADnlkumfBNS69FL2U0MPya2.avif",
-          "path": "sn/a25de9e7d260.webp",
-          "width": 1000,
-          "height": 564,
-          "dupeOf": "c335b1cf8b84"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-10159",
-      "step": 3,
-      "order": 1,
-      "family": "line",
-      "title": "Road line: Roadlines",
-      "text": [
-        "Being a former French colony, Senegal uses French infrastructure such as bollards, poles, signs and road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c2010edee2f8",
-          "src": "https://learnablemeta.com/images/502/3fk1xSEo9PEzBFUVyTETAsLetmAHgGXeqvve.avif",
-          "path": "sn/c2010edee2f8.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "c335b1cf8b84"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67bcfa50de249626b4a3e177",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-13082",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Landscape South",
-      "text": [
-        "The vegetation in the region south of The Gambia is more lush and green compared to the rest of Senegal, and palm trees can be seen closer to the coast.",
-        "**NOTE:**",
-        "Coverage toward the west will also be especially tropical.",
-        "In addition, make sure not to confuse the south with some coverage near Dakar, which can look deceivingly green.",
-        "However, here the vegetation will look a lot more low and coastal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b939c10664a",
-          "src": "https://learnablemeta.com/images/544/H7VXrAeB9uJROn5A7WIAJc6VJK6CgMdicSA6.avif",
-          "path": "sn/9b939c10664a.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "9bf8f0d69ec2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-13086",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Irrigated Rice Fields",
-      "text": [
-        "Irrigated rice fields can sometimes be seen in the region between St Louis and Richard Toll."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9c6aea59c8fb",
-          "src": "https://learnablemeta.com/images/544/tt9DJOhIUEhBhVcGeL3HLJGMz88pS0v04NPj.avif",
-          "path": "sn/9c6aea59c8fb.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "2f5add011e71"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-13088",
-      "step": 3,
-      "order": 4,
-      "family": "car",
-      "title": "Google car: White Car",
-      "text": [
-        "The regular Generation 4 white car is most commonly found south of The Gambia, but can also be found on the northeastern coast and a small region between Kaolack and Saly."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "99af5b234c94",
-          "src": "https://learnablemeta.com/images/544/YLdglLpbI6xzCSnImTgeqJ10sVFWVLn2XXZz.avif",
-          "path": "sn/99af5b234c94.webp",
-          "width": 1000,
-          "height": 488,
-          "dupeOf": "b6c50f8176e8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-13089",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Diourbel Region",
-      "text": [
-        "Diourbel Region is the only region in Senegal with extensive rural coverage.",
-        "The coverage in the region will look like this, with the Google Car driving on a sandy road with sparse trees.",
-        "Some of the coverage extends to the west in the Thies region up to Babou.",
-        "**NOTE:**",
-        "The sand in the coverage around Touba tends to be more grassy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7bb43b77af93",
-          "src": "https://learnablemeta.com/images/544/NMfmet6RhCwaild6Mt27Bldait9tQr9oxgy1.avif",
-          "path": "sn/7bb43b77af93.webp",
-          "width": 1000,
-          "height": 489,
-          "dupeOf": "694ae8e67252"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c522f15b3081106fb2f2f3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15119",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Solar Panel Lamps",
-      "text": [
-        "These simple black lamps with a solar panel at the top are commonly seen in Senegal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "03b65669d555",
-          "src": "https://learnablemeta.com/images/662/0VUOlijbNvQrdCTNT3g2tZpeMsi3ylY5ZRH7.avif",
-          "path": "sn/03b65669d555.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "64860fa1a28a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cf5988a23c1c056ae785f2",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15141",
-      "step": 3,
-      "order": 7,
-      "family": "bollard",
-      "title": "Bollard: French Infrastructure",
-      "text": [
-        "Being a former French colony, Senegal uses French infrastructure such as bollards, poles, signs and road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d47d7923cd7f",
-          "src": "https://learnablemeta.com/images/662/ChPR6pSHushCGP0xKZrPep3cmoZBZlk6LWgw.avif",
-          "path": "sn/d47d7923cd7f.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "c335b1cf8b84"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cf5988a23c1c056ae785f2",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15277",
-      "step": 3,
-      "order": 8,
-      "family": "landscape",
-      "title": "Landscape: Rolling Coast",
-      "text": [
-        "A very slightly rolling landscape consisting of vegetated sand dunes can be seen along the northwestern coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "27c0c32c76d9",
-          "src": "https://learnablemeta.com/images/664/mbfPzQpsW1q2L15HSczxtNWuJPQNsmBaZwLj.avif",
-          "path": "sn/27c0c32c76d9.webp",
-          "width": 1000,
-          "height": 493,
-          "dupeOf": "add65a588168"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15278",
-      "step": 3,
-      "order": 9,
-      "family": "coverage",
-      "title": "Coverage: Diourbel",
-      "text": [
-        "Diourbel Region is the only region in Senegal with extensive rural coverage. The coverage in the region will look like this, with the Google Car driving on a sandy road with sparse trees. Some of the coverage extends to the west in the Thies region up to Babou.",
-        "NOTE: The sand in the coverage around Touba tends to be more grassy."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e27c34785fb1",
-          "src": "https://learnablemeta.com/images/664/tyqcySNOgqmiBevKYM98EVXNjC6KWUwMCQZb.avif",
-          "path": "sn/e27c34785fb1.webp",
-          "width": 1000,
-          "height": 498
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15280",
-      "step": 3,
-      "order": 10,
-      "family": "vegetation",
-      "title": "Vegetation: South",
-      "text": [
-        "The vegetation in the region south of The Gambia is more lush and green compared to the rest of Senegal, and palm trees can be seen closer to the coast.",
-        "NOTE: Coverage toward the west will also be especially tropical. In addition, make sure not to confuse the south with some coverage near Dakar, which can look deceivingly green. However, here the vegetation will look a lot more low and coastal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5ea474f63caf",
-          "src": "https://learnablemeta.com/images/664/GLgFEmDrPvcYKefmYHyEzkdTgrKJBTFAeMOM.avif",
-          "path": "sn/5ea474f63caf.webp",
-          "width": 1000,
-          "height": 493,
-          "dupeOf": "9bf8f0d69ec2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-15281",
-      "step": 3,
-      "order": 11,
-      "family": "landscape",
-      "title": "Landscape: North",
-      "text": [
-        "The landscape north of The Gambia and for Senegal generally is a flat, arid, savannah-desert landscape with sparse trees. The trees themselves will be somewhat short and have leaves that are faded in colour."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2f556d840139",
-          "src": "https://learnablemeta.com/images/664/MSQNCvCU4YtXNs7XRoRzJlZ0zGe9rL2ZwukR.avif",
-          "path": "sn/2f556d840139.webp",
-          "width": 1000,
-          "height": 499,
-          "dupeOf": "0c14fc1a0b25"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A famous mosque in the holy city has five tall minarets and can be seen from far away."
     },
     {
       "id": "sn-lm-22659",
       "step": 3,
       "order": 12,
       "family": "bollard",
-      "title": "Bollard: French Bollards",
+      "title": "Bollard: round white post, pointed top, band",
       "text": [
         "The Senegal/French bollard is extremely recognizable and appears very often. It is a round white post with a pointed top and a reflector band going all the way around. The band can be grey or red. Some rare variations have a fully red top."
       ],
@@ -1896,299 +1601,18 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-50995",
-      "step": 3,
-      "order": 13,
-      "family": "bollard",
-      "title": "Bollard: French Infrastructure",
-      "text": [
-        "Being a former French colony, Senegal uses French infrastructure such as bollards, poles, signs and road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d47d7923cd7f",
-          "src": "https://learnablemeta.com/images/662/ChPR6pSHushCGP0xKZrPep3cmoZBZlk6LWgw.avif",
-          "path": "sn/d47d7923cd7f.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "c335b1cf8b84"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-51006",
-      "step": 3,
-      "order": 14,
-      "family": "other",
-      "title": "Solar Panel Lamps",
-      "text": [
-        "These simple black lamps with a solar panel at the top are commonly seen in Senegal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "03b65669d555",
-          "src": "https://learnablemeta.com/images/662/0VUOlijbNvQrdCTNT3g2tZpeMsi3ylY5ZRH7.avif",
-          "path": "sn/03b65669d555.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "64860fa1a28a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-56217",
-      "step": 3,
-      "order": 15,
-      "family": "line",
-      "title": "Road line: White Dashed Outers",
-      "text": [
-        "Being a former French colony, Senegal uses French infrastructure such as bollards, poles, signs and road lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ea4b03a793",
-          "src": "https://learnablemeta.com/images/863/NpDEQixJ1sOXPlBqdZVoUMhy8i2ihKMSf5sv.avif",
-          "path": "sn/18ea4b03a793.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "c335b1cf8b84"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446355",
-      "step": 3,
-      "order": 16,
-      "family": "sign",
-      "kind": "route",
-      "title": "Route marker: Divided highways",
-      "text": [
-        "Divided highways are found between Dakar and Touba. The two divided highways are between Dakar and Touba, and between Dakar and Saly.",
-        "NOTE: On Google Maps, the road shows as a yellow road but without road number. There are also no divided highways in Generation 3."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "944a7b7adefa",
-          "src": "https://learnablemeta.com/images/1601/2TO8C3XlkQ1xZNnWkXkJz0oVs8LtsguEy58Js2ZoOdigpYXY.avif",
-          "giveaway": true,
-          "path": "sn/944a7b7adefa.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "6641cf651595"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446356",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "N1 between Tambacounda and Nayé",
-      "text": [
-        "The N1 between Tambacounda and Nayé generally runs in a northeast east direction. A railway runs parallel to the road. The railway is to the south of the road between Tambacounda to just before Youpe Amadi, and is to the north from Youpe Amadi to Bellé."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "623403ef0380",
-          "src": "https://learnablemeta.com/images/1601/veNukGZn8NtYv3sUsG74z3dhu41svLFyS1Rxg8rWSkRf2shI.avif",
-          "path": "sn/623403ef0380.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "fcd1e441a90f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446358",
-      "step": 3,
-      "order": 18,
-      "family": "landscape",
-      "title": "Landscape: N2 between Richard Toll and Matam",
-      "text": [
-        "The N2 between Richard Toll and Matam is a wide road going through a flat desert landscape with very sparse trees. It can be recognized by the bright blue skies with no clouds. The road itself goes east-west and northeast-southwest.",
-        "NOTE: The higher the sun is, the more east you are."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a24974166337",
-          "src": "https://learnablemeta.com/images/1601/EBaWi5z4oEn9c27psoz9IBOP9RBPnpAv2oflaO9SSc86Lohj.avif",
-          "path": "sn/a24974166337.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "ea62ae3cb371"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446359",
-      "step": 3,
-      "order": 19,
-      "family": "other",
-      "title": "N3",
-      "text": [
-        "Distinct, tall patches of bright yellow grass can be seen along the N3, mostly to the east in the Matam Region."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4eb352d10c09",
-          "src": "https://learnablemeta.com/images/1601/H5YqOnmoFcotvSej7Tg1qVTM1txnEPKrPVd9dpzbN8i8v80t.avif",
-          "path": "sn/4eb352d10c09.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "e48a8dc6d9d1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446361",
-      "step": 3,
-      "order": 20,
-      "family": "coverage",
-      "title": "Coverage: Kedougou-Malian border road",
-      "text": [
-        "The road northeast of Kedougou to the Malian border can be recognized by the hazy bushfire coverage. Smoke trails can sometimes be seen in the distance. The road is paved south of Saraya.",
-        "NOTE: The car is always blurred."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a7131eb05260",
-          "src": "https://learnablemeta.com/images/1601/Ac1qqA2qmfyGv3i2mMf3rulnr0T77AgDsIaXSf3Y0frqHdrH.avif",
-          "path": "sn/a7131eb05260.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "586017bdcd4e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446362",
-      "step": 3,
-      "order": 21,
-      "family": "landscape",
-      "title": "Landscape: Saloum River Delta",
-      "text": [
-        "A flat, slightly marshy landscape with low vegetation can be seen on a few sections of roads in the Saloum River Delta."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a6dd16202a1",
-          "src": "https://learnablemeta.com/images/1601/surUJtwdGR4MbBCAhmV5cjEfkbOK9lO4JARX15FI8m1iOEgu.avif",
-          "path": "sn/3a6dd16202a1.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "865381f9be4b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446363",
-      "step": 3,
-      "order": 22,
-      "family": "coverage",
-      "title": "Coverage: Kola-Velingara road",
-      "text": [
-        "The Kola-Velingara road between Saré Amirou and Badion is a dirt road that can be recognized by the late afternoon to evening coverage. The coverage gets later toward the west."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4af21abc90a4",
-          "src": "https://learnablemeta.com/images/1601/CPFLwsAPqrS4RQLRNJqpMJMZWBYLUBZpxBv4DBC1G559DZQk.avif",
-          "path": "sn/4af21abc90a4.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "b65a4686c8aa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Very common round white post with a pointed top and a reflector band all the way round, grey or red. A rare version has a fully red top. It is the French-style bollard.",
+      "sameAs": [
+        "FR"
+      ]
     },
     {
       "id": "sn-lm-446365",
       "step": 3,
       "order": 23,
       "family": "car",
-      "title": "Google car: Box",
+      "title": "Google car: silver Gen 4 with box on back right",
       "text": [
         "The silver Generation 4 car with a box in the back right of the cab can mainly be seen on the road between Richard Toll and Louga, and the N3 between Tiourene and Matam. It can also be seen on the dirt road hugging the Mauritanian border, from Matam to Gassamberi. Finally, it can be seen on a few roads near Diolotène."
       ],
@@ -2208,14 +1632,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Silver Gen 4 truck with a box at the back right of the cab. Seen mainly on roads in the north and along the dirt road beside the northern border, plus a few other roads."
     },
     {
       "id": "sn-lm-446366",
       "step": 3,
       "order": 24,
       "family": "car",
-      "title": "Google car: Left stain",
+      "title": "Google car: silver Gen 4, stain back left",
       "text": [
         "The silver Generation 4 car with a stain at the back left of the cab can be seen on the N2 from Richard Toll to Matam and Bakel to Nayé. It can also be seen on the N1 between Tambacounda and Nayé."
       ],
@@ -2235,14 +1660,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Silver Gen 4 truck with a stain at the back left of the cab, seen in the north and east."
     },
     {
       "id": "sn-lm-446367",
       "step": 3,
       "order": 25,
       "family": "architecture",
-      "title": "Architecture: Dirty roof",
+      "title": "Google car: silver Gen 4, stain and dirty roof",
       "text": [
         "The silver Generation 4 car with a stain at the back left and a dirty roof can mainly be seen on the N1 between Kaffrine and Tambacounda, and the N7 between Tambacounda and Kedougou. It can also be seen between Dahra and Diakhao."
       ],
@@ -2262,14 +1688,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Silver Gen 4 truck with a stain at the back left and a dirty roof, seen mainly on main roads in the centre and southeast."
     },
     {
       "id": "sn-lm-446368",
       "step": 3,
       "order": 26,
       "family": "car",
-      "title": "Google car: Red cloth",
+      "title": "Google car: silver Gen 4, red cloth front left",
       "text": [
         "The silver Generation 4 car with a red cloth at the front left can be seen on this eastern road between Ouro Sogui and Bakel."
       ],
@@ -2289,14 +1716,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Silver Gen 4 truck with a red cloth at the front left, seen on one road in the northeast."
     },
     {
       "id": "sn-lm-446369",
       "step": 3,
       "order": 27,
       "family": "car",
-      "title": "Google car: Antenna down",
+      "title": "Google car: white Gen 4, antenna folded flat",
       "text": [
         "The white Generation 4 car but with the antenna down, parallel to the car’s roof, can be found on the N6 between Ziguinchor and Kolda."
       ],
@@ -2316,14 +1744,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White Gen 4 car with the antenna laid down parallel to the roof, seen on one road in the south."
     },
     {
       "id": "sn-lm-446370",
       "step": 3,
       "order": 28,
       "family": "car",
-      "title": "Google car: Dirty back",
+      "title": "Google car: white Gen 4, dirty back",
       "text": [
         "The white Generation 4 car with a noticeably dirty back can be seen on the road going north of Kolda, up to Katonfara."
       ],
@@ -2343,91 +1772,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446371",
-      "step": 3,
-      "order": 29,
-      "family": "architecture",
-      "title": "Architecture: Dakar",
-      "text": [
-        "Dakar is the largest and capital city of Senegal. It can be recognized by the denseness of the city and taller, more modern buildings."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b3a03c6ec944",
-          "src": "https://learnablemeta.com/images/1601/PXKxB1Y4xUHawSkAFG4XMSiX38SShOu89ze3lDWLxY2xUZSY.avif",
-          "path": "sn/b3a03c6ec944.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "75c77ac45599"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-446372",
-      "step": 3,
-      "order": 30,
-      "family": "other",
-      "title": "Great Mosque of Touba",
-      "text": [
-        "The infamous Great Mosque of Touba can be recognized by the five tall minarets, which can be seen from afar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a5ee3870aabf",
-          "src": "https://learnablemeta.com/images/1601/6fAdyVwieigGaN7lcN9x4ti4MIa4BRjqVlUlaaIPZsmfaDAc.avif",
-          "path": "sn/a5ee3870aabf.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "661b7e25351b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/683a309d365e25bcef7e845c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "sn-lm-634033",
-      "step": 3,
-      "order": 31,
-      "family": "plate",
-      "title": "Plate: Senegal",
-      "text": [
-        "Senegal is the only African country to use fully blue licence plates. A newer version exists in Generation 4 which looks like the standard European licence plate which is white with a blue strip on the left."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e70cb6fa5384",
-          "src": "https://learnablemeta.com/images/5431/1766262922651-D21.avif",
-          "path": "sn/e70cb6fa5384.webp",
-          "width": 800,
-          "height": 170,
-          "dupeOf": "c3c26bda1960"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White Gen 4 car with a noticeably dirty back, seen on a road in the south."
     }
   ]
 }

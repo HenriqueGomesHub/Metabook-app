@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: When blurred, the standard Kazakh licence plates are mostly…",
+      "title": "Plate: white with a hint of blue on the left",
       "text": [
         "When blurred, the standard Kazakh licence plates are mostly white, with a small hint of blue on the left side."
       ],
@@ -44,14 +44,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Through the blur, plates look mostly white with a small bit of blue on the left side."
     },
     {
       "id": "kz-GFIL",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: Kazakhstan uses both Cyrillic and Latin alphabets",
+      "title": "Language: Cyrillic and Latin, Kazakh letters",
       "text": [
         "Kazakhstan uses both Cyrillic and Latin alphabets.",
         "Though sometimes, Russian is used monolingually.",
@@ -74,14 +75,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs use Cyrillic and Latin letters, and sometimes only Russian. Kazakh has extra letters such as Ә, Ғ, Қ, Ң, Ө, Ұ, Ү, Һ and І. Its Latin text can look like Turkish."
     },
     {
       "id": "kz-tn7H",
       "step": 0,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: All of the coverage in Kazakhstan was taken with a white…",
+      "title": "Google car: white pickup, visible or blurred",
       "text": [
         "All of the coverage in Kazakhstan was taken with a white pickup truck, which can either be fully visible or mostly blurred."
       ],
@@ -120,14 +122,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All coverage uses a white pickup truck, either fully visible or mostly blurred."
     },
     {
       "id": "kz-RN95",
       "step": 0,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Kazakhstan is a big and diverse country",
+      "title": "Landscape: big, empty, flat and open",
       "text": [
         "Kazakhstan is a big and diverse country, which features a plethora of distinct landscapes like [deserts](https://goo.gl/maps/DWJvw2JjfZTTF2ER9), [grassy steppes](https://goo.gl/maps/FtuwHnxx1cACr5HU9), [mountain passes](https://goo.gl/maps/dnJR7qdEBDQLUkUC9), and [birch forests](https://goo.gl/maps/NTfW9tkDsF2mVbqT8).",
         "Most strikingly, most of the rural coverage in Kazakhstan is in a very empty, open and mostly flat landscape."
@@ -175,14 +178,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A huge country with deserts, grassy steppe, mountain passes and birch forests. Most rural coverage is very empty, open and mostly flat."
     },
     {
       "id": "kz-V4BR",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: A lot of Kazakh infrastructure",
+      "title": "Infrastructure: looks like Russia",
       "text": [
         "A lot of Kazakh infrastructure, from pedestrian signs, poles, houses, to bollards, is very similar to what you see in Russia."
       ],
@@ -226,7 +230,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian signs, poles, houses and bollards all look very similar to Russia's, so look for other clues to separate them.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "kz-hnfg",
@@ -234,7 +242,7 @@
       "order": 6,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Like Russia, Kazakhstan uses yellow and white stripes on…",
+      "title": "Sign: yellow-white crossing stripes",
       "text": [
         "Like Russia, Kazakhstan uses **yellow and white stripes** on their pedestrian crossings. However, unlike Russia the stripes often have white dashes on either side. Sometimes, you can find the [dashes](https://goo.gl/maps/sXKtyw86YGYSEKLY9) without the stripes."
       ],
@@ -283,7 +291,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossings use yellow and white stripes as in Russia, but here there are often white dashes on both sides. Sometimes you see just the dashes.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian stripes have no white dashes beside them"
+        }
+      ]
     },
     {
       "id": "kz-tkTf",
@@ -291,7 +306,7 @@
       "order": 7,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street Signs in Kazakhstan are often attached to buildings…",
+      "title": "Street sign: blue, on buildings, QR code",
       "text": [
         "Street Signs in Kazakhstan are often attached to buildings and are **blue **in colour, with white intricate patterns on the top and bottom. They are usually **bilingual or trilingual** and can also contain a **QR code**.",
         "NOTE: They are often inconsistent, with many designs being found in a single city."
@@ -331,14 +346,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue street signs fixed to buildings with white patterns at the top and bottom. They are often in two or three languages and may have a QR code. Designs vary even within one city."
     },
     {
       "id": "kz-O76W",
       "step": 0,
       "order": 8,
       "family": "bollard",
-      "title": "Bollard: Kazakhstan uses a variety of post-Soviet style bollards",
+      "title": "Bollard: post-Soviet type, 90-degree pair",
       "text": [
         "Kazakhstan uses a variety of post-Soviet style bollards, as well as ones that resemble Turkish bollards. Notably, the bollards seemingly consisting of two thin bollards attached at a **90° angle** are unique to Kazakhstan."
       ],
@@ -395,14 +411,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mixed post-Soviet style bollards, some like Turkish ones. The standout is a bollard made of two thin posts joined at a right angle, found only here."
     },
     {
       "id": "kz-jwH7",
       "step": 0,
       "order": 9,
       "family": "vegetation",
-      "title": "Vegetation: The bottom of tree trunks are very often painted white",
+      "title": "Plants: tree trunks painted white at the base",
       "text": [
         "The bottom of tree trunks are very often **painted white**.",
         "NOTE: This is common in several eastern European countries, as well as in parts of Russia."
@@ -444,7 +461,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The bottom of tree trunks is very often painted white. This is also common in several eastern European countries and parts of Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "kz-PuS7",
@@ -452,7 +473,7 @@
       "order": 10,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Unlike neighbouring countries, Kazakhstan primarily uses…",
+      "title": "Chevron: yellow and black",
       "text": [
         "Unlike neighbouring countries, Kazakhstan primarily uses **yellow and black** chevrons, except on T Intersections, where you will find the more generic [red and white chevrons](https://goo.gl/maps/PBScqLGeZf5WhaJa7)."
       ],
@@ -499,14 +520,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve chevrons are mostly yellow and black, unlike neighbouring countries. At T-junctions they are the usual red and white."
     },
     {
       "id": "kz-2N2f",
       "step": 0,
       "order": 11,
       "family": "other",
-      "title": "Gas pipes are extremely common in Kazakh cities",
+      "title": "Pipes: gas pipes running above ground in towns",
       "text": [
         "Gas pipes are extremely common in Kazakh cities."
       ],
@@ -545,14 +567,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gas pipes running along buildings and streets are extremely common in towns and cities."
     },
     {
       "id": "kz-k30n",
       "step": 0,
       "order": 12,
       "family": "other",
-      "title": "This ornamental pattern known as the koshkar-muiz can be…",
+      "title": "Ornament: ram's-horn pattern",
       "text": [
         "This **ornamental pattern** known as the koshkar-muiz can be found as part of decorations in all kinds of settings in Kazakhstan."
       ],
@@ -591,14 +614,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A decorative pattern called koshkar-muiz (ram's horns) appears on all kinds of decorations."
     },
     {
       "id": "kz-uMOg",
       "step": 0,
       "order": 13,
       "family": "other",
-      "title": "Many cities and towns in Kazakhstan have these entrance arcs",
+      "title": "Entrance arcs: ornate arches at town entrances",
       "text": [
         "Many cities and towns in Kazakhstan have these entrance arcs, which are often quite intricate and ornate."
       ],
@@ -637,14 +661,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many towns have an arch at the entrance, often quite detailed and ornate."
     },
     {
       "id": "kz-6NZ7",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in Kazakhstan is fairly limited",
+      "title": "Coverage: main roads and cities only",
       "text": [
         "Coverage in Kazakhstan is fairly limited. While most major roads and cities are covered, coverage on small rural roads is fairly uncommon. As such, knowing which roads have coverage can help narrow down the guess."
       ],
@@ -664,14 +689,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most major roads and cities are covered, but small rural roads rarely are. Knowing which roads have coverage helps narrow your guess."
     },
     {
       "id": "kz-MhXe",
       "step": 1,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Kazakhstan can easily be divided into coverage regions…",
+      "title": "Coverage: season tells you the region",
       "text": [
         "Kazakhstan can easily be divided into coverage regions based on the season.",
         "- **Summer **in **western **and** central **Kazakhstan.",
@@ -694,14 +720,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage season hints at where you are: summer in the west and centre, autumn in the northeast, winter in the southeast."
     },
     {
       "id": "kz-UPTe",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Driving directions can help you narrow down your options…",
+      "title": "Driving direction on rural roads",
       "text": [
         "**Driving directions** can help you narrow down your options when you are on a rural road."
       ],
@@ -723,14 +750,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On a rural road, the direction the car is driving can help you narrow down where you are."
     },
     {
       "id": "kz-m4nO",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Kazakh area codes are useful to learn",
+      "title": "Phone numbers: area codes run east to west",
       "text": [
         "Kazakh area codes are useful to learn, and they generally follow an east to west pattern along three horizontal lines."
       ],
@@ -750,14 +778,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes follow an east-to-west pattern along three horizontal bands. Worth learning."
     },
     {
       "id": "kz-WT7C",
       "step": 1,
       "order": 4,
       "family": "plate",
-      "title": "Plate: You can occasionally spot licence plate codes on the back…",
+      "title": "Plate: region code on trucks and buses",
       "text": [
         "You can occasionally spot licence plate codes on the back of [trucks](https://maps.app.goo.gl/tKZW4WNWfm8LC6Bf8) and [buses](https://goo.gl/maps/ShsB6GNeCf3cp4gB6). The codes themselves follow an alphabetical order, with smaller numbers corresponding to regions that start with earlier letters. Note that cars do travel, and as such not all codes are reliable. Buses and smaller utility vehicles are the most reliable."
       ],
@@ -777,14 +806,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The region code is sometimes visible on the back of trucks and buses. Codes follow alphabetical order of the regions. Buses and small utility vehicles are the most reliable, since cars travel."
     },
     {
       "id": "kz-TwXs",
       "step": 1,
       "order": 5,
       "family": "language",
-      "title": "Language: While rarely possible, being able to read the letters under…",
+      "title": "Street sign: letters under the QR code",
       "text": [
         "While rarely possible, being able to read the letters under a QR code on a street sign will give you the region."
       ],
@@ -805,14 +835,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "If you can read the letters under the QR code on a street sign, they tell you the region. This is rarely possible."
     },
     {
       "id": "kz-6CPu",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Kazakhstan is a generally flat country",
+      "title": "Landscape: mostly flat, so hills help",
       "text": [
         "Kazakhstan is a generally flat country, so getting locations that are hilly or mountainous are useful for narrowing the options.",
         "For example, the region around Karaganda is often either [quite hilly](https://goo.gl/maps/FjDGLgLundGni8JW9), or you can see [hills in the distance](https://goo.gl/maps/SCZGbpzayibTNtp18).",
@@ -836,14 +867,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The country is mostly flat, so hills or mountains help narrow it down. Hills near Karaganda and Aktobe, and bigger mountains in the south or east."
     },
     {
       "id": "kz-0CRH",
       "step": 1,
       "order": 8,
       "family": "vegetation",
-      "title": "Vegetation: These lush birch forests next to green fields are common in…",
+      "title": "Vegetation: lush birch forests by green fields",
       "text": [
         "These **lush birch forests** next to green fields are common in northern Kazakhstan.",
         "NOTE: This landscape often appears very similar to that found in and around [Omsk Oblast](https://goo.gl/maps/GSSXj16AyYgmrd2L8) in Russia."
@@ -893,14 +925,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lush birch forests beside green fields are common in the north. They look very like the area around Omsk in Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "kz-p3lc",
       "step": 1,
       "order": 9,
       "family": "other",
-      "title": "Vast grassy green plains are found in northwestern…",
+      "title": "Landscape: vast green plains",
       "text": [
         "**Vast grassy green plains** are found in northwestern Kazakhstan. They are especially common in Akmola and Kostanay regions."
       ],
@@ -939,14 +975,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Huge green grass plains in the northwest, especially in Akmola and Kostanay regions."
     },
     {
       "id": "kz-362d",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: Sandy and shrubby desert-like landscapes are common in…",
+      "title": "Landscape: sandy shrubby desert in the southwest",
       "text": [
         "**Sandy **and shrubby **desert-like** landscapes are common in southwestern Kazakhstan."
       ],
@@ -993,14 +1030,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sandy, shrubby desert-like land is common in the southwest."
     },
     {
       "id": "kz-gVH6",
       "step": 1,
       "order": 11,
       "family": "landscape",
-      "title": "Landscape: Tall mountains, which are often snow-capped, can be seen in…",
+      "title": "Landscape: tall snow-capped mountains",
       "text": [
         "**Tall mountains**, which are often **snow-capped**, can be seen in southeastern Kazakhstan."
       ],
@@ -1047,14 +1085,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall mountains, often with snow on top, point to the southeast."
     },
     {
       "id": "kz-uMS6",
       "step": 1,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: The East Kazakhstan Region is hilly and forested",
+      "title": "Vegetation: hilly forest with autumn colours",
       "text": [
         "The East Kazakhstan Region is **hilly **and **forested**. It was covered in october, so you will see **fall colours** on the vegetation. The town of [Ridder](https://goo.gl/maps/i5kesJk8N1Nm9tJK9) itself is flat, but surrounded by hazy mountains."
       ],
@@ -1094,14 +1133,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Hilly, forested land with autumn colours, shot in October, in the far east. One town there is flat but ringed by hazy mountains."
     },
     {
       "id": "kz-YIaa",
       "step": 1,
       "order": 13,
       "family": "coverage",
-      "title": "Coverage: Snow coverage can be found in southeastern Kazakhstan",
+      "title": "Coverage: snow in the southeast",
       "text": [
         "**Snow **coverage can be found in **southeastern **Kazakhstan, especially east of Almaty."
       ],
@@ -1141,14 +1181,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Snow-covered coverage is found in the southeast, especially east of Almaty."
     },
     {
       "id": "kz-YYgc",
       "step": 1,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: The landscape in southern Kazakhstan near Uzbekistan is…",
+      "title": "Landscape: dry shrubby hills, orange grass",
       "text": [
         "The landscape in southern Kazakhstan near Uzbekistan is hilly and quite **dry and shrubby**, with a lot of [orange looking grass](https://goo.gl/maps/NMh2NNtw2fLihzkD6). The landscape consists of [dry but grassy rolling hills](https://goo.gl/maps/HVEEsWWCgeKeFyMv7) or [dead flat agricultural land](https://goo.gl/maps/rYuF4Q74ka7y5KXz5) near Zhetisay.",
         "NOTE: These [red and white KM markers](https://goo.gl/maps/55J3nhF75bSt4K7G6) that look like Kyrgyz ones, are only found near Zhetisay."
@@ -1188,14 +1229,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south near Uzbekistan: hilly, dry and shrubby with orange-looking grass, or dead flat farmland near Zhetisay. Red-and-white kilometre markers like Kyrgyz ones are only found near Zhetisay.",
+      "differs": [
+        {
+          "country": "KG",
+          "how": "Red-and-white KM markers here only appear near Zhetisay"
+        }
+      ]
     },
     {
       "id": "kz-7vOg",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Grassy green rolling hills can be found in southern…",
+      "title": "Landscape: grassy green rolling hills",
       "text": [
         "**Grassy** **green rolling hills** can be found in southern Kazakhstan. They are especially common just north of Bishkek."
       ],
@@ -1242,14 +1290,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grassy green rolling hills in the south, especially just north of the Kyrgyz capital."
     },
     {
       "id": "kz-1BP4",
       "step": 1,
       "order": 16,
       "family": "vegetation",
-      "title": "Vegetation: Around Semey, you can find small clusters or entire forests…",
+      "title": "Vegetation: pine forests with autumn colours",
       "text": [
         "Around Semey, you can find small clusters or entire forests** **consisting mostly of **pine trees** and some deciduous trees, which will have **fall colours**."
       ],
@@ -1288,14 +1337,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small groups or whole forests of mostly pine with some leafy trees showing autumn colours, around the city of Semey."
     },
     {
       "id": "kz-cODv",
       "step": 1,
       "order": 18,
       "family": "line",
-      "title": "Road line: The divided section of the E38 goes southeast to northwest…",
+      "title": "Road: divided asphalt, all white lines",
       "text": [
         "The divided section of the **E38** goes **southeast to northwest** from Shymkent to Kyzylorda. The road is made of **asphalt**, and it has **all white road lines**. The landscape varies quite a lot; in the south, it is very [green](https://goo.gl/maps/71g8LgQkJqC4mYJF6) and in the north, it gets [dry, sandy, and shrubby](https://goo.gl/maps/StZ6q6CejmVpK7yg8).",
         "Driving direction: Both ways"
@@ -1336,14 +1386,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided asphalt road running southeast to northwest with all white lines. It is green in the south and gets dry, sandy and shrubby in the north. Seen in both directions."
     },
     {
       "id": "kz-kDlO",
       "step": 1,
       "order": 19,
       "family": "landscape",
-      "title": "Landscape: The section of the M36 going from Karaganda to Almaty can…",
+      "title": "Road: under construction, yellow lines",
       "text": [
         "The section of the **M36 **going from Karaganda to Almaty can often be recognised by the road being under construction, with a second lane being built. Yellow lines are common. As for the landscape, it’s a wintery dry [steppe](https://en.wikipedia.org/wiki/Steppe), which looks noticeably [orange-brown](https://goo.gl/maps/7KVHpuL59rVgZVNt9).",
         "Driving direction: **South **from Karaganda."
@@ -1384,14 +1435,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road being widened, with yellow lines and a winter-dry, orange-brown steppe. The car drives south from Karaganda."
     },
     {
       "id": "kz-dgAW",
       "step": 1,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: Between Karaganda and Astana",
+      "title": "Road: divided highway, yellow edge lines",
       "text": [
         "Between Karaganda and Astana, the **M36 **is now a divided highway, with **yellow outer lines**. The landscape consists of a grassy, sometimes hilly, steppe with an occasional row of trees along the road. Note that the general **southeast to northwest** road angle is important.",
         "Driving direction: Both ways"
@@ -1432,14 +1484,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided highway with yellow outer lines, running southeast to northwest through grassy, sometimes hilly steppe with occasional tree rows. Seen both ways."
     },
     {
       "id": "kz-iVpz",
       "step": 1,
       "order": 21,
       "family": "landscape",
-      "title": "Landscape: The P4/A17 from Astana to Pavlodar is a divided road",
+      "title": "Road: divided east-west, hilly steppe",
       "text": [
         "The** P4/A17** from Astana to Pavlodar is a divided road, generally going **east to west**, through a **hilly steppe landscape** similar to the M36, but is generally less vegetated**. **Most of the road has **outer yellow lines**.",
         "Driving direction: Both ways"
@@ -1480,14 +1533,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided road running east to west through hilly, less green steppe, mostly with yellow outer lines. Seen both ways."
     },
     {
       "id": "kz-kPVj",
       "step": 1,
       "order": 22,
       "family": "landscape",
-      "title": "Landscape: The roads from Kyzylagash to Druzhba feature a unique hilly…",
+      "title": "Landscape: hazy dead hills",
       "text": [
         "The roads from Kyzylagash to Druzhba feature a unique hilly landscape, which looks **hazy** and [dead](https://goo.gl/maps/n1VjdBCmbX9VsuD7A). On most sections, you will see small mountains either [south](https://goo.gl/maps/71N7jRTVjSDqnhyf8) or [east](https://maps.app.goo.gl/FqttjKAp8RPKJzJ69) of the road.",
         "Driving direction: **East **from Kyzylagash."
@@ -1527,14 +1581,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A hilly landscape that looks hazy and lifeless, with small mountains to the south or east of the road. The car drives east."
     },
     {
       "id": "kz-67Pc",
       "step": 1,
       "order": 23,
       "family": "landscape",
-      "title": "Landscape: The A26 goes from Kandyagash to the intersection of M32/E38",
+      "title": "Road: very bad quality, grey skies",
       "text": [
         "The **A26 **goes from Kandyagash to the intersection of M32/E38.",
         "It has very **bad road quality** throughout, ranging from [poor grainy pavement](https://goo.gl/maps/SutyRPAen8GPgGXP7), to [completely unpaved](https://goo.gl/maps/vAPBAKKBSqP1cY4y5). Apart from the northernmost section, the weather is either cloudy or overcast.",
@@ -1576,14 +1631,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road with poor pavement ranging from grainy to completely unpaved, mostly cloudy or overcast, through flat, semi-dry grass plains. Mostly driving north."
     },
     {
       "id": "kz-ULz4",
       "step": 1,
       "order": 24,
       "family": "landscape",
-      "title": "Landscape: The section of the A1 going from Astana to Shchuchinsk is a…",
+      "title": "Road: 6-lane divided highway, quite green",
       "text": [
         "The section of the **A1 **going from Astana to Shchuchinsk is a **6-lane divided highway**. The landscape around is generally **quite green**, with trees and grassy plains or hills.",
         "Driving direction: Both ways"
@@ -1623,14 +1679,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A 6-lane divided highway through quite green land with trees, grass plains or hills. Seen in both directions."
     },
     {
       "id": "kz-538W",
       "step": 1,
       "order": 25,
       "family": "line",
-      "title": "Road line: The A17 going to Ulytau Region can be recognised by the bad…",
+      "title": "Road: crumbling edges, single white middle line",
       "text": [
         "The **A17 **going to Ulytau Region can be recognised by the **bad pavement quality**, where the edges of the road are almost crumbling away, along with the **single white middle road line**, which can be dashed or solid. The landscape itself is a grassy steppe, with some fall coloured trees occasionally lining the roads.",
         "[West of Atasu](https://goo.gl/maps/TdENdhe3WB985Lhi8), the sun is distinctly low on the horizon.",
@@ -1672,14 +1729,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bad pavement with edges almost crumbling, and one white middle line, solid or dashed. Grassy steppe, some autumn trees, a low sun in the west. A short stretch east of the town has new pavement with a red tint."
     },
     {
       "id": "kz-qqrg",
       "step": 1,
       "order": 26,
       "family": "line",
-      "title": "Road line: The road north of Zhezqazghan has no road lines",
+      "title": "Road: no lines, very dry red-orange land",
       "text": [
         "The road north of Zhezqazghan has no road lines. The landscape is **very dry, desolate**, with very limited vegetation** **and slightly hilly. The soil can look very red or orange at times.",
         "The weather is sunny, with a lot of [cumulus clouds](https://en.wikipedia.org/wiki/Cumulus_cloud).",
@@ -1720,14 +1778,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road with no road lines through very dry, empty, slightly hilly land with red or orange soil, sunny with cumulus clouds. The car drives north."
     },
     {
       "id": "kz-iCTz",
       "step": 1,
       "order": 27,
       "family": "line",
-      "title": "Road line: The R260 road is mostly paved",
+      "title": "Road: cracked paving, no lines, overcast steppe",
       "text": [
         "The **R260 **road is mostly paved, but not in the best condition; many cracks can be seen, and it** **mostly lacks road lines. The weather is **overcast** and the landscape is a **slightly hilly steppe**, consisting of somewhat yellow grass and reddish soil, which is very evident when the road is [unpaved](https://goo.gl/maps/TdSkNVCsQwfzuWvQ7).",
         "The **R217 **is very similar, but the road is in [better condition](https://goo.gl/maps/gkFt8pTBsvfWYnuq5) and mostly has very [faded dashed white middle road lines](https://goo.gl/maps/sYN29uJEyzQKdJjt7), which are often quite difficult to see. The further east you go, the more [sparse](https://goo.gl/maps/J4zjwGopGaSfr1N3A) the cloud cover gets.",
@@ -1768,14 +1827,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly paved but cracked road, almost without lines, under overcast skies, in slightly hilly steppe with yellow grass and red soil. A similar road is in better shape with faded dashed white middle lines."
     },
     {
       "id": "kz-7F8W",
       "step": 1,
       "order": 29,
       "family": "pole",
-      "title": "Pole: These regions/cities have the most useful pole paints you…",
+      "title": "Poles: painted bands differ by region",
       "text": [
         "These regions/cities have the most useful pole paints you can learn.",
         "The descriptions will be written from top to bottom:",
@@ -1814,14 +1874,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pole paint colours (top to bottom) identify regions: west red-white-black, Atyrau blue-white-black, Akmola thin red then white then thin black, Kostanay thin turquoise and yellow, Petropavl white and grey, Taraz red-yellow-black, Kyzylorda thin yellow-red then white."
     },
     {
       "id": "kz-OjvE",
       "step": 1,
       "order": 30,
       "family": "pole",
-      "title": "Pole: These pole paints are less useful than the above hint",
+      "title": "Poles: more painted bands by city",
       "text": [
         "These pole paints are less useful than the above hint, but still worth learning if you want to master Kazakhstan.",
         "The descriptions will be written from top to bottom:",
@@ -1850,14 +1911,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Less useful pole paints: Rudny red-yellow-red over white, Kokshetau light blue bottom, Shchuchinsk thin red and yellow, Ekibastuz blue and white, Shymkent thin yellow-red then green, Kentau blue-yellow-red then blue and black."
     },
     {
       "id": "kz-Jgrt",
       "step": 1,
       "order": 31,
       "family": "architecture",
-      "title": "Architecture: These are the most useful to learn bus stops",
+      "title": "Bus stops: city-specific designs",
       "text": [
         "These are the most useful to learn bus stops.",
         "- Atyrau has a **modern design**, with white and** lime/neon green** walls. The bus stop name is prominently written on top.",
@@ -1882,14 +1944,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Useful stops: Atyrau modern white and neon green, Kostanay simple brown with a blue-yellow crest, Petropavl brown with an upward-angled roof, Karaganda old turquoise with a curved roof, Zhezqazghan very wide blue with two sections."
     },
     {
       "id": "kz-IyXt",
       "step": 1,
       "order": 32,
       "family": "other",
-      "title": "These cities have buses worth learning",
+      "title": "Buses: city-specific colours",
       "text": [
         "These cities have buses worth learning.",
         "- Aktobe uses **orange and black** buses.",
@@ -1912,7 +1975,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Aktobe orange and black, Zhezqazghan orange and white, Astana white-black-green electric, Karaganda turquoise, Semey light green and white, Almaty fully green with white patterns. Taraz buses look similar but say Taraz."
     },
     {
       "id": "kz-Dsyl",
@@ -1920,7 +1984,7 @@
       "order": 33,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: These street signs attached to buildings are generally…",
+      "title": "Street signs on buildings: city styles",
       "text": [
         "These street signs attached to buildings are generally quite inconsistent, but there are some worth knowing.",
         "- Aktobe has compact signs where half of the space is taken by the QR code.",
@@ -1944,14 +2008,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Designs vary, but a few are worth knowing: Aktobe's has half the sign taken by a QR code, Petropavl's is white with a blue semicircle, Astana's is a generic design, and Zhetisay's looks generic but is not found in two other southern cities."
     },
     {
       "id": "kz-yBGD",
       "step": 1,
       "order": 34,
       "family": "architecture",
-      "title": "Architecture: Yellow boxes connected to the gas pipes are common outside…",
+      "title": "Houses: yellow boxes on gas pipes",
       "text": [
         "**Yellow boxes **connected to the gas pipes are common outside houses in Shymkent, Turkistan, and Taldykorgan."
       ],
@@ -1991,14 +2056,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow boxes on the gas pipes outside houses are common in three southern towns."
     },
     {
       "id": "kz-W4LU",
       "step": 1,
       "order": 35,
       "family": "other",
-      "title": "Turkistan consistently uses these thin grey lamps with two…",
+      "title": "Lamps: thin grey with two small lights",
       "text": [
         "Turkistan consistently uses these **thin grey lamps** with** two small light sources** near the end."
       ],
@@ -2038,14 +2104,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Thin grey lamps with two small light sources near the end are used throughout one southern city."
     },
     {
       "id": "kz-1MSo",
       "step": 1,
       "order": 36,
       "family": "other",
-      "title": "Lamps in Kulsary have a sizable blue photocell on the top",
+      "title": "Lamps: sizable blue sensor on top",
       "text": [
         "Lamps in Kulsary have a sizable **blue photocell** on the top."
       ],
@@ -2084,14 +2151,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lamps with a big blue light sensor on top are found in the western town of Kulsary."
     },
     {
       "id": "kz-DEVq",
       "step": 1,
       "order": 37,
       "family": "other",
-      "title": "Some lamps in Uralsk have this very unique design",
+      "title": "Lamps: three lamps in a rising row",
       "text": [
         "Some lamps in Uralsk have this very unique design, with **3 separate lamps** in an **ascending pattern**."
       ],
@@ -2130,14 +2198,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some lamps have three separate lights in an ascending pattern, in the western city of Uralsk."
     },
     {
       "id": "kz-2bcA",
       "step": 1,
       "order": 38,
       "family": "architecture",
-      "title": "Architecture: East of Aktobe, there is a vertical line of dirt on the…",
+      "title": "Houses: dirt line on the right of the roof",
       "text": [
         "East of Aktobe, there is a **vertical line of dirt** on the right side of the roof."
       ],
@@ -2177,14 +2246,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A vertical line of dirt on the right side of a roof, east of Aktobe."
     },
     {
       "id": "kz-iCsU",
       "step": 2,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in dense baltic pine forests can be found north of…",
+      "title": "Coverage: dense pine forests",
       "text": [
         "Coverage in dense **baltic pine forests** can be found north of Shchuchinsk, which is north of Astana.",
         "NOTE: Baltic pines can be found in other parts of the country."
@@ -2224,14 +2294,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage in dense pine forests is found north of the town Shchuchinsk, north of Astana. Pines also grow in other parts of the country."
     },
     {
       "id": "kz-riSN",
       "step": 2,
       "order": 1,
       "family": "vegetation",
-      "title": "Vegetation: Parts of Oskemen have hazy forest fire coverage",
+      "title": "Coverage: hazy forest-fire smoke",
       "text": [
         "Parts of Oskemen have **hazy forest fire coverage**."
       ],
@@ -2270,14 +2341,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Parts of the eastern city Oskemen have coverage with hazy forest-fire smoke."
     },
     {
       "id": "kz-Zys3",
       "step": 2,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: In southern Almaty City",
+      "title": "Coverage: snowy mountains in a southern city",
       "text": [
         "In southern Almaty City, there is **snow** coverage **in the mountains**."
       ],
@@ -2316,14 +2388,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south of the biggest city there is snow-covered mountain coverage."
     },
     {
       "id": "kz-qp33",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The Altyn Emel National Park is a barren grassland with…",
+      "title": "Landscape: barren grass",
       "text": [
         "The Altyn Emel National Park is a barren grassland with snowy mountains in all directions. Some parts are [very snowy](https://goo.gl/maps/7K5s7XqLSKzpMLvEA). And in the eastern section, there is a small [curvy mountain pass](https://goo.gl/maps/8rJPLHV5Zs7DxQC87)."
       ],
@@ -2362,14 +2435,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A barren grassland with snowy mountains in every direction, some parts very snowy. In the east there is a small curvy mountain pass. This is a national park in the southeast."
     },
     {
       "id": "kz-F1Ro",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: The only May coverage in Kazakhstan is found in the Almaty…",
+      "title": "Coverage: only May coverage, sunny",
       "text": [
         "The only **May coverage** in Kazakhstan is found in the Almaty exclave of Alataou, which is east of Almaty proper. All of the coverage is sunny and the mountains are visible to the south."
       ],
@@ -2408,14 +2482,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only coverage shot in May is in a small area east of the biggest city. It is all sunny, with mountains visible to the south."
     },
     {
       "id": "kz-LH5C",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: A small ridge of hills is visible to the north in a lot of…",
+      "title": "Landscape: ridge of hills to the north",
       "text": [
         "A small ridge of **hills **is visible to the **north **in a lot of Taldykorgan coverage."
       ],
@@ -2454,14 +2529,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low ridge of hills is visible to the north in much of the coverage of the southeastern town Taldykorgan."
     },
     {
       "id": "kz-AQeC",
       "step": 2,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: Near the Turkmenistan border in southwest Kazakhstan",
+      "title": "Road: unpaved sandy desert road, blinding bright",
       "text": [
         "Near the Turkmenistan border in southwest Kazakhstan, you will find this **unpaved sandy desert road. **The landscape is almost blindingly bright from the sand."
       ],
@@ -2500,717 +2576,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/kazakhstan",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "kz-lm-15371",
-      "step": 3,
-      "order": 0,
-      "family": "landscape",
-      "title": "Landscape: Uzbek Border",
-      "text": [
-        "The landscape in southern Kazakhstan near Uzbekistan is hilly and quite dry and shrubby, with a lot of orange looking grass. The landscape consists of dry but grassy rolling hills or dead flat agricultural land near Zhetisay.",
-        "NOTE: These red and white KM markers that look like Kyrgyz ones, are only found near Zhetisay."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "02095ebfa2ce",
-          "src": "https://learnablemeta.com/images/664/S8dXJA9KzZddi92U6EeafpOVKoycdkYkORkH.avif",
-          "path": "kz/02095ebfa2ce.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "58a9a4ea05c0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15375",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Autumn Hills",
-      "text": [
-        "The East Kazakhstan Region is hilly and forested. It was covered in october, so you will see fall colours on the vegetation. The town of Ridder itself is flat, but surrounded by hazy mountains."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8cf21ada1bfd",
-          "src": "https://learnablemeta.com/images/664/AV4HzS6Bt0k5zSGJEoAvDZI5rNsJIhX68Djr.avif",
-          "path": "kz/8cf21ada1bfd.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "89d53ef77182"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15377",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Green Plains",
-      "text": [
-        "Vast grassy green plains are found in northwestern Kazakhstan. They are especially common in Akmola and Kostanay regions."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7cf3afb7c683",
-          "src": "https://learnablemeta.com/images/664/8fx740i8SgbE9diZUf608z6aZSfbmXZLU5Eb.avif",
-          "path": "kz/7cf3afb7c683.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "5a5e06ea2ac1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15450",
-      "step": 3,
-      "order": 3,
-      "family": "coverage",
-      "title": "Coverage: Car",
-      "text": [
-        "All of the coverage in Kazakhstan was taken with a white pickup truck, which can either be fully visible or mostly blurred."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "40a293d18ce6",
-          "src": "https://learnablemeta.com/images/665/20YbghwRXUUXCZA00V0uSSG1tp93ChlfOas9.avif",
-          "path": "kz/40a293d18ce6.webp",
-          "width": 1000,
-          "height": 439,
-          "dupeOf": "b282ea2e7927"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15456",
-      "step": 3,
-      "order": 4,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Russian Infrastructure",
-      "text": [
-        "A lot of Kazakh infrastructure, from pedestrian signs, poles, houses, to bollards, is very similar to what you see in Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5d8e890f79a",
-          "src": "https://learnablemeta.com/images/665/cH8rdW9yiXMGffkjNrCutZIvhVhgUwg6Jxbk.avif",
-          "path": "kz/b5d8e890f79a.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "5d88c67331e7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15457",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Gas Pipes",
-      "text": [
-        "Gas pipes are extremely common in Kazakh cities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6dd19356c30e",
-          "src": "https://learnablemeta.com/images/665/gM5F5XnmOWUl7QVocETmCzIj1cGn55tbHinM.avif",
-          "path": "kz/6dd19356c30e.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "b50ee78c5175"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15897",
-      "step": 3,
-      "order": 6,
-      "family": "coverage",
-      "title": "Coverage: Car",
-      "text": [
-        "All of the coverage in Kazakhstan was taken with a white pickup truck, which can either be fully visible or mostly blurred."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "40a293d18ce6",
-          "src": "https://learnablemeta.com/images/665/20YbghwRXUUXCZA00V0uSSG1tp93ChlfOas9.avif",
-          "path": "kz/40a293d18ce6.webp",
-          "width": 1000,
-          "height": 439,
-          "dupeOf": "b282ea2e7927"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15903",
-      "step": 3,
-      "order": 7,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Russian Infrastructure",
-      "text": [
-        "A lot of Kazakh infrastructure, from pedestrian signs, poles, houses, to bollards, is very similar to what you see in Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5d8e890f79a",
-          "src": "https://learnablemeta.com/images/665/cH8rdW9yiXMGffkjNrCutZIvhVhgUwg6Jxbk.avif",
-          "path": "kz/b5d8e890f79a.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "5d88c67331e7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-15904",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "Gas Pipes",
-      "text": [
-        "Gas pipes are extremely common in Kazakh cities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6dd19356c30e",
-          "src": "https://learnablemeta.com/images/665/gM5F5XnmOWUl7QVocETmCzIj1cGn55tbHinM.avif",
-          "path": "kz/6dd19356c30e.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "b50ee78c5175"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-51304",
-      "step": 3,
-      "order": 9,
-      "family": "coverage",
-      "title": "Coverage: Car",
-      "text": [
-        "All of the coverage in Kazakhstan was taken with a white pickup truck, which can either be fully visible or mostly blurred."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "40a293d18ce6",
-          "src": "https://learnablemeta.com/images/665/20YbghwRXUUXCZA00V0uSSG1tp93ChlfOas9.avif",
-          "path": "kz/40a293d18ce6.webp",
-          "width": 1000,
-          "height": 439,
-          "dupeOf": "b282ea2e7927"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-51311",
-      "step": 3,
-      "order": 10,
-      "family": "other",
-      "title": "Gas Pipes",
-      "text": [
-        "Gas pipes are extremely common in Kazakh cities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6dd19356c30e",
-          "src": "https://learnablemeta.com/images/665/gM5F5XnmOWUl7QVocETmCzIj1cGn55tbHinM.avif",
-          "path": "kz/6dd19356c30e.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "b50ee78c5175"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-51316",
-      "step": 3,
-      "order": 11,
-      "family": "sign",
-      "kind": "pedestrian",
-      "title": "Pedestrian sign: Russian Infrastructure",
-      "text": [
-        "A lot of Kazakh infrastructure, from pedestrian signs, poles, houses, to bollards, is very similar to what you see in Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5d8e890f79a",
-          "src": "https://learnablemeta.com/images/665/cH8rdW9yiXMGffkjNrCutZIvhVhgUwg6Jxbk.avif",
-          "path": "kz/b5d8e890f79a.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "5d88c67331e7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470482",
-      "step": 3,
-      "order": 12,
-      "family": "pole",
-      "title": "Pole: Shymkent",
-      "text": [
-        "Shymkent poles have a thin layer of yellow and red, then green."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "91787944e4fc",
-          "src": "https://learnablemeta.com/images/1955/1749989865198-GC9.avif",
-          "path": "kz/91787944e4fc.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470483",
-      "step": 3,
-      "order": 13,
-      "family": "other",
-      "title": "West Kazakhstan",
-      "text": [
-        "West Kazakhstan Region uses red, white, and black paint."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ad090abdf61a",
-          "src": "https://learnablemeta.com/images/1955/1749989813688-iJ5.avif",
-          "path": "kz/ad090abdf61a.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470484",
-      "step": 3,
-      "order": 14,
-      "family": "other",
-      "title": "Kokshetau",
-      "text": [
-        "Kokshetau uses a few designs, but they all have light blue on the bottom, and sometimes, a thin strip, or two, of yellow on top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bad268a84a54",
-          "src": "https://learnablemeta.com/images/1955/1749989846834-2vS.avif",
-          "path": "kz/bad268a84a54.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470485",
-      "step": 3,
-      "order": 15,
-      "family": "pole",
-      "title": "Pole: Kentau",
-      "text": [
-        "Kentau poles have thin layers of blue, yellow, and red, then blue and black below them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ecbd5e35fc35",
-          "src": "https://learnablemeta.com/images/1955/1749989872326-H2J.avif",
-          "path": "kz/ecbd5e35fc35.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470486",
-      "step": 3,
-      "order": 16,
-      "family": "other",
-      "title": "Atyrau Region",
-      "text": [
-        "Atyrau Region uses blue, white, and black paint."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cad9805e60f6",
-          "src": "https://learnablemeta.com/images/1955/1749989807211-ljU.avif",
-          "path": "kz/cad9805e60f6.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470487",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "Akmola Region",
-      "text": [
-        "Akmola region has a very thin layer of red, then white, and a thin layer of black on the bottom."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f95dddbc9247",
-          "src": "https://learnablemeta.com/images/1955/1749989786773-ZOJ.avif",
-          "path": "kz/f95dddbc9247.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470488",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "Kyzylorda lamp posts",
-      "text": [
-        "Kyzylorda lamp posts are white, and have turquoise on the bottom."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c63e179740aa",
-          "src": "https://learnablemeta.com/images/1955/1749989793578-t8P.avif",
-          "path": "kz/c63e179740aa.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470489",
-      "step": 3,
-      "order": 19,
-      "family": "other",
-      "title": "Shchuchinsk",
-      "text": [
-        "Shchuchinsk has a thin layer of red, and yellow."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c4147797e94e",
-          "src": "https://learnablemeta.com/images/1955/1749989854344-zyN.avif",
-          "path": "kz/c4147797e94e.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470490",
-      "step": 3,
-      "order": 20,
-      "family": "other",
-      "title": "Ekibastuz",
-      "text": [
-        "Ekibastuz has a thin layer of blue, and white"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b64f27b7dece",
-          "src": "https://learnablemeta.com/images/1955/1749989878599-OfK.avif",
-          "path": "kz/b64f27b7dece.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470492",
-      "step": 3,
-      "order": 21,
-      "family": "other",
-      "title": "Kostanay",
-      "text": [
-        "Kostanay uses a thin layer of turqoise, and yellow."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6c9cf96a9ca5",
-          "src": "https://learnablemeta.com/images/1955/1749989821526-OQr.avif",
-          "path": "kz/6c9cf96a9ca5.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470493",
-      "step": 3,
-      "order": 22,
-      "family": "other",
-      "title": "Rudny",
-      "text": [
-        "Rudny has red, yellow, red on the top, with white below it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b22ff46e9984",
-          "src": "https://learnablemeta.com/images/1955/1749989836558-90d.avif",
-          "path": "kz/b22ff46e9984.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "583af137e282"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470494",
-      "step": 3,
-      "order": 23,
-      "family": "other",
-      "title": "Petropavl",
-      "text": [
-        "Petropavl has a thin layer of white, and light grey."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "436863363b77",
-          "src": "https://learnablemeta.com/images/1955/1749989769989-su0.avif",
-          "path": "kz/436863363b77.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "kz-lm-470498",
-      "step": 3,
-      "order": 24,
-      "family": "other",
-      "title": "Taraz",
-      "text": [
-        "Taraz has red, yellow, and black."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9c3ada0a8d42",
-          "src": "https://learnablemeta.com/images/1955/1749989778148-daO.avif",
-          "path": "kz/9c3ada0a8d42.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "An unpaved sandy desert road near the Turkmenistan border in the southwest, with a landscape that is almost blindingly bright from the sand."
     }
   ]
 }

@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "line",
-      "title": "Road line: Chilean road lines are either all white",
+      "title": "Road lines: all white or all yellow",
       "text": [
         "Chilean road lines are either **all white**, or **all yellow**:",
         "- All white road lines are most common. Within the Americas, they are a good clue for Chile, though not completely unique.",
@@ -85,14 +85,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lines are either all white (most common) or all yellow (national parks and snowy areas), almost never mixed. All-yellow is essentially unique in the Americas. Argentina also has many all-white roads.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentina also has many all-white roads, but no all-yellow ones"
+        }
+      ]
     },
     {
       "id": "cl-cQZV",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: Chile has a solid white Google Car with no antenna in…",
+      "title": "Google car: plain white, no antenna (older camera)",
       "text": [
         "Chile has a solid **white** Google Car with no antenna in **Generation 3**. There are two variants:",
         "- [A plain white car](https://maps.app.goo.gl/1nNGSJYhdk9Th3c9A) (left).",
@@ -138,14 +145,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the older Gen 3 coverage (blurrier, softer colours): a white car with no antenna, either plain or with a visible black section (that one is unique here). Newer Gen 4 uses a blue car. Peru and Bolivia have plain white cars too.",
+      "sameAs": [
+        "BO",
+        "PE"
+      ]
     },
     {
       "id": "cl-y9xj",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Chile uses square concrete poles with an indent on both…",
+      "title": "Pole: square concrete, indented sides, pinholes",
       "text": [
         "Chile uses square concrete poles with an **indent** on both sides. They are somewhat similar to Brazilian poles, however have fewer horizontal supports in the indent. The upper part typically has small pinholes.",
         "Wooden poles are also fairly common."
@@ -217,14 +229,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete poles with an indent on both sides and small pinholes near the top. Brazilian poles are similar but have more horizontal supports in the indent. Wooden poles are common too.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Brazilian poles have more bars across the indent"
+        }
+      ]
     },
     {
       "id": "cl-SjoP",
       "step": 0,
       "order": 4,
       "family": "plate",
-      "title": "Plate: Regular vehicles have white licence plates",
+      "title": "Plate: white private, orange commercial",
       "text": [
         "Regular vehicles have **white** licence plates, while commercial and taxi vehicles have **orange** plates.",
         "NOTE: Orange plates can also be seen in Ecuador. Brazilian commercial plates are red, but can look similar in some lighting."
@@ -247,7 +266,17 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Normal cars have white plates, taxis and commercial vehicles have orange ones. Ecuador also has orange plates. Brazilian commercial plates are red but can look orange in some light.",
+      "sameAs": [
+        "EC"
+      ],
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Commercial plates are red"
+        }
+      ]
     },
     {
       "id": "cl-dkLn",
@@ -255,7 +284,7 @@
       "order": 5,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Slots can often be seen at the top of signposts",
+      "title": "Sign: slots at the top of signposts",
       "text": [
         "**Slots** can often be seen at the top of signposts."
       ],
@@ -309,7 +338,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signposts often show slots at the top."
     },
     {
       "id": "cl-fmHE",
@@ -317,7 +347,7 @@
       "order": 6,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Chile uses chevrons with a yellow base and black arrows",
+      "title": "Chevron: yellow with black arrows",
       "text": [
         "Chile uses chevrons with a **yellow base **and **black arrows**.",
         "NOTE: Argentina uses white with red arrows."
@@ -361,14 +391,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chevrons are yellow with black arrows. Argentina uses white with red arrows.",
+      "differs": [
+        {
+          "country": "AR",
+          "how": "Argentina's are white with red arrows"
+        }
+      ]
     },
     {
       "id": "cl-tCeP",
       "step": 0,
       "order": 7,
       "family": "bollard",
-      "title": "Bollard: Chilean bollards are similar to Spanish style bollards",
+      "title": "Bollard: Spanish style, white front, orange back",
       "text": [
         "Chilean bollards are similar to **Spanish style** bollards, with a white reflector at the front and a yellow-orange reflector at the back. They are not super common."
       ],
@@ -425,14 +462,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A bollard with a white reflector on the front and a yellow-orange one on the back, like in Spain. Not very common.",
+      "sameAs": [
+        "ES"
+      ]
     },
     {
       "id": "cl-DbSe",
       "step": 0,
       "order": 8,
       "family": "bollard",
-      "title": "Bollard: While regular bollards are somewhat rare in Chile",
+      "title": "Bollard: orange temporary with two white stripes",
       "text": [
         "While regular bollards are somewhat rare in Chile, you may sometimes find this **orange**, temporary bollard, with **two white stripes** at the top."
       ],
@@ -473,14 +514,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Normal bollards are rare, but you may see a temporary orange one with two white stripes at the top."
     },
     {
       "id": "cl-uW2V",
       "step": 0,
       "order": 9,
       "family": "other",
-      "title": "Bridges in Chile often have red painted fence posts",
+      "title": "Bridge: red painted fence posts",
       "text": [
         "Bridges in Chile often have **red painted** fence posts."
       ],
@@ -519,14 +561,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bridges often have red painted fence posts."
     },
     {
       "id": "cl-fFHl",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Shown here is a Köppen climate map of Chile",
+      "title": "Climate: desert north, cold wet far south",
       "text": [
         "Shown here is a **Köppen climate map** of Chile.",
         "Chile is a long and narrow country that spans more than 4,000 kilometres from north to south, meaning that its climate varies significantly due to latitude.",
@@ -550,14 +593,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very long, narrow country: dry desert in the north, a mild Mediterranean climate in the middle around the capital, and cold wet weather in the far south."
     },
     {
       "id": "cl-JwjE",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Chile uses a memorable regional road naming system",
+      "title": "Road numbers: first letter runs A to Y, north to south",
       "text": [
         "Chile uses a memorable regional road naming system, where the first letter increases between [A](https://goo.gl/maps/5sCeUaH9QXJVz6vt9) and [Y](https://goo.gl/maps/gD4ACFHPsD4bqpC37) from **north to south**. For more information on specific regions, see [here](https://sites.google.com/site/roadnumberingsystems/home/countries/chile?pli=1)."
       ],
@@ -577,14 +621,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road names start with a letter that moves through the alphabet from A in the north to Y in the south."
     },
     {
       "id": "cl-GhN0",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Chilean phone codes will sometimes have a two digit area…",
+      "title": "Phone numbers: two-digit area code then seven digits",
       "text": [
         "Chilean phone codes will sometimes have a **two digit** area code in front, followed by seven digits. The patterns of the codes are easily memorable. Most of the central states also have different area codes for specific provinces, which can help you make accurate guesses."
       ],
@@ -604,14 +649,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Numbers sometimes have a two-digit area code followed by seven digits. Central areas also have separate codes per province, which helps with guessing."
     },
     {
       "id": "cl-DDG0",
       "step": 1,
       "order": 4,
       "family": "vegetation",
-      "title": "Vegetation: The Atacama is an extremely arid desert covering the…",
+      "title": "Landscape: extremely dry desert, no plants",
       "text": [
         "The Atacama is an extremely arid desert covering the northern third of Chile. Some parts of it experience the lowest rainfall on the planet. As a result, many locations in this desert are almost completely devoid of any vegetation: you will often just see sand and bare rock without any plants in sight anywhere.",
         "NOTE: The Atacama Desert also covers parts of southern Peru, western Bolivia and northwestern Argentina."
@@ -656,14 +702,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the northern third: sand and bare rock with no plants in sight, one of the driest places on earth. The same desert also covers parts of south Peru, west Bolivia and north-west Argentina.",
+      "sameAs": [
+        "BO",
+        "PE"
+      ]
     },
     {
       "id": "cl-UfwZ",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: The region of Arica y Parinacota can be recognized by the…",
+      "title": "Landscape: smooth sandy eroded mountains, valleys",
       "text": [
         "The region of Arica y Parinacota can be recognized by the **smooth, sandy** mountains that may look **slightly eroded**, or have [bulbous formations](https://goo.gl/maps/SRJ52GEYhEnuRU9G6). Valleys are also common, which are rarely seen in other parts of Chile."
       ],
@@ -726,14 +777,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far north: smooth, sandy mountains that look slightly eroded or have bulbous shapes. Valleys are common, which is rare elsewhere in the country."
     },
     {
       "id": "cl-8vz6",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: These rocky, uneven mountains are most commonly seen in…",
+      "title": "Landscape: rocky uneven mountains",
       "text": [
         "These **rocky, uneven** mountains are most commonly seen in Atacama and northern Coquimbo."
       ],
@@ -796,14 +848,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north: rocky, uneven mountains, most common in the northern desert and the region just south of it."
     },
     {
       "id": "cl-hgxy",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: This brownish red soil can sometimes be seen in Atacama…",
+      "title": "Landscape: brownish-red soil",
       "text": [
         "This **brownish red soil** can sometimes be seen in Atacama region.",
         "NOTE: This is most reliable in Generation 3. This soil can be seen in other regions in Generation 4."
@@ -852,14 +905,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the northern desert: brownish red soil. Most reliable in older Gen 3 coverage; in Gen 4 it appears in other regions too."
     },
     {
       "id": "cl-ylGg",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "Eucalyptus plantations combined with a somewhat dry climate…",
+      "title": "Plants: eucalyptus plantations in a dry climate",
       "text": [
         "**Eucalyptus plantations** combined with a somewhat dry climate are a good indicator that you are in southwestern Valparaíso."
       ],
@@ -899,14 +953,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Eucalyptus plantations with a fairly dry climate point to the south-west of the central coastal region."
     },
     {
       "id": "cl-rsYl",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: The region around Santiago can be recognized by its…",
+      "title": "Landscape: dry hills, scattered plants",
       "text": [
         "The region around Santiago can be recognized by its semi-arid climate, having **dry hills** and scattered vegetation."
       ],
@@ -960,14 +1015,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around the capital: a semi-arid climate with dry hills and scattered vegetation."
     },
     {
       "id": "cl-2h86",
       "step": 1,
       "order": 10,
       "family": "other",
-      "title": "Compared to the area around Santiago",
+      "title": "Landscape: greener than the capital area, vineyards",
       "text": [
         "Compared to the area around Santiago, the Maule region has a similar look. However, it has a **Mediterranean** climate, and is generally greener. **Vineyards** are also commonly seen in this region."
       ],
@@ -1007,14 +1063,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Looks like the capital area but with a Mediterranean climate, generally greener, and many vineyards."
     },
     {
       "id": "cl-1mL6",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "Concepcion pines, scientifically named Pinus radiata, can…",
+      "title": "Plants: pines with puffy needles",
       "text": [
         "Concepcion pines, scientifically named Pinus radiata, can be recognized by their **puffy** needles. They are most commonly found in **Bio Bio**, where the city of Concepcion is located, and less commonly in Ñuble and Araucania."
       ],
@@ -1053,14 +1110,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pine trees (Pinus radiata) with puffy needles. Most common in the south-central coast region, less so a bit north and south of it."
     },
     {
       "id": "cl-dcv9",
       "step": 1,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: Narrow roads with trees on both sides can commonly be seen…",
+      "title": "Landscape: narrow roads with trees on both sides",
       "text": [
         "**Narrow roads** with trees on both sides can commonly be seen in the regions of Bio Bio and Araucania."
       ],
@@ -1100,14 +1158,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Narrow roads with trees on both sides are common in the south-central regions."
     },
     {
       "id": "cl-Jl4B",
       "step": 1,
       "order": 13,
       "family": "other",
-      "title": "Monkey puzzles, scientifically named Araucaria araucana,…",
+      "title": "Plants: monkey puzzle trees",
       "text": [
         "**Monkey puzzles**, scientifically named Araucaria araucana, are found in far eastern Araucania.",
         "NOTE: Monkey puzzles can also be found on the other side of the Argentinian border."
@@ -1148,14 +1207,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Monkey puzzle trees (Araucaria) grow in the far east of the south-central region. They also grow across the border in Argentina.",
+      "sameAs": [
+        "AR"
+      ]
     },
     {
       "id": "cl-Dq9Y",
       "step": 1,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: A rolling, agricultural landscape, comparable to New…",
+      "title": "Landscape: rolling farmland like New Zealand",
       "text": [
         "A **rolling, agricultural** landscape, comparable to New Zealand, can be seen on Isla Grande de Chiloé.",
         "NOTE: Similar looking landscapes exist in some other parts of the country, but usually more level."
@@ -1205,14 +1268,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On a big southern island: rolling farmland that looks like New Zealand. Similar views exist elsewhere in the country but are usually flatter.",
+      "differs": [
+        {
+          "country": "NZ",
+          "how": "Looks like New Zealand but this is flatter in other areas"
+        }
+      ]
     },
     {
       "id": "cl-Gw6y",
       "step": 1,
       "order": 15,
       "family": "other",
-      "title": "Chilean rhubarb can commonly be found on Isla Grande",
+      "title": "Plants: giant cabbage-like leaves (Chilean rhubarb)",
       "text": [
         "**Chilean rhubarb** can commonly be found on Isla Grande, and on the mainland east of it. Chilean rhubarb can be recognized by its large, cabbage-like appearance."
       ],
@@ -1251,14 +1321,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chilean rhubarb has big cabbage-like leaves. Common on the big southern island and the mainland east of it."
     },
     {
       "id": "cl-C3HY",
       "step": 1,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Lush green valleys, with rocky mountains and often overcast…",
+      "title": "Landscape: lush green valleys, rocky peaks, overcast",
       "text": [
         "**Lush green valleys**, with rocky mountains and often overcast coverage, can be seen in southern Los Lagos and northern Aysén."
       ],
@@ -1313,14 +1384,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south: lush green valleys, rocky mountains and often overcast photos."
     },
     {
       "id": "cl-CYSq",
       "step": 1,
       "order": 17,
       "family": "coverage",
-      "title": "Coverage: Southern Aysén can be recognised by autumn coverage",
+      "title": "Coverage: autumn colours in the far south",
       "text": [
         "Southern Aysén can be recognised by **autumn coverage**, having orange and red coloured vegetation. Keep in mind that not all coverage in this region will have fall colours."
       ],
@@ -1367,14 +1439,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far south: orange and red autumn leaves, though not all coverage there has them."
     },
     {
       "id": "cl-nN6I",
       "step": 1,
       "order": 18,
       "family": "line",
-      "title": "Road line: Roadlines with dotted paint are common in Los Ríos and Aysén",
+      "title": "Road lines: dotted paint",
       "text": [
         "Roadlines with **dotted paint** are common in Los Ríos and Aysén."
       ],
@@ -1416,14 +1489,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south: road lines made of dotted paint are common."
     },
     {
       "id": "cl-BUtb",
       "step": 2,
       "order": 1,
       "family": "car",
-      "title": "Google car: The A-31 can be recognised by its high altitude",
+      "title": "Road: high altitude, steep drop to a valley",
       "text": [
         "The A-31 can be recognised by its **high altitude**, with a **steep drop** into a valley to the north. The road also has Gen 3 sunset coverage."
       ],
@@ -1462,14 +1536,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On one northern road: very high altitude with a steep drop into a valley to the north. It also has older Gen 3 sunset coverage."
     },
     {
       "id": "cl-vasL",
       "step": 2,
       "order": 2,
       "family": "car",
-      "title": "Google car: Generation 4 sunset coverage can be seen on Ruta 21 from…",
+      "title": "Coverage: sunset, white dome, pink volcano tops",
       "text": [
         "Generation 4 sunset coverage can be seen on Ruta 21 from Calama to San Francisco de Chiu Chiu. In the west near Calama, the sun has just started to set, causing a giant white dome in the sky. In the east, the sky has a warm **gradient**, and the tops of the volcanoes are seen glowing pink."
       ],
@@ -1508,14 +1583,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Newer Gen 4 sunset coverage on one northern road. Near the west the sun is just setting, making a big white dome in the sky; in the east the sky has a warm gradient and the volcano tops glow pink."
     },
     {
       "id": "cl-90Z1",
       "step": 2,
       "order": 3,
       "family": "car",
-      "title": "Google car: More Generation 4 Sunset coverage can be seen on B-710 and…",
+      "title": "Coverage: sunset on two northern roads",
       "text": [
         "More Generation 4 Sunset coverage can be seen on B-710 and Ruta 5.",
         "On the B-710, a **slight ridge** can be seen to the west, while Ruta 5 is more open. Make sure to use the road angle or other clues before guessing."
@@ -1555,14 +1631,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "More Gen 4 sunset coverage on two roads. One has a slight ridge to the west, the other is more open. Use the road angle or other clues."
     },
     {
       "id": "cl-Zgh9",
       "step": 2,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Ruta 1 is a coastal road that is easily recognized by the…",
+      "title": "Road: coast road, mountain wall east, Pacific west",
       "text": [
         "Ruta 1 is a coastal road that is easily recognized by the **wall of mountains** to the east, and the **Pacific Ocean** to the west. This image shows the various weather conditions faced on the road to help you make closer guesses.",
         "_You can click on the image to enlarge it._"
@@ -1592,14 +1669,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A coastal road with a wall of mountains to the east and the Pacific Ocean to the west. The picture shows the different weather you may see."
     },
     {
       "id": "cl-s7lU",
       "step": 2,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Part of Ruta 41 is located in a valley",
+      "title": "Road: valley, snowy peaks, triple yellow lines",
       "text": [
         "Part of Ruta 41 is located in a valley, with **snowy** mountains seen in the distance. Many trees and vineyards can commonly be seen toward the west. Triple yellow lines can also be seen from [this point](https://goo.gl/maps/C4gxEFDpZX1Uz6er5)."
       ],
@@ -1653,14 +1731,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A valley road with snowy mountains in the distance, many trees and vineyards to the west, and triple yellow lines at some points."
     },
     {
       "id": "cl-0Utw",
       "step": 2,
       "order": 6,
       "family": "other",
-      "title": "These purple flowers, named Large-leaved Lupines, can…",
+      "title": "Plants: purple lupine flowers along the road",
       "text": [
         "These **purple flowers**, named Large-leaved Lupines, can commonly be found along Ruta 240."
       ],
@@ -1699,14 +1778,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large purple lupine flowers are common along one southern road."
     },
     {
       "id": "cl-vcdo",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: All yellow lines on a concrete road are a good indicator…",
+      "title": "Road: all yellow lines on concrete, treeless",
       "text": [
         "**All yellow lines** on a **concrete road** are a good indicator that you are on a paved road in the Magallanes region, in the very south of Chile. The landscape tends to be barren, grassy, and treeless. ",
         "NOTE: Ruta 9 only appears in Generation 3, whereas the other roads only appear in Generation 4 coverage."
@@ -1746,14 +1826,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All-yellow lines on a concrete road point to the far south, with barren, grassy, treeless land. One of these roads only appears in older Gen 3 coverage; the others are Gen 4."
     },
     {
       "id": "cl-mOVz",
       "step": 2,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: A distinct landscape consisting of a line of snow-capped…",
+      "title": "Landscape: snowy line of peaks and two lone volcanoes",
       "text": [
         "A distinct landscape consisting of a line of snow-capped mountains with two other isolated, symmetrical **snow-capped volcanoes** are seen in Lauca National Park. Most of the roads are newly paved and have a smooth, dark look."
       ],
@@ -1792,14 +1873,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In a northern national park: a line of snow-capped mountains plus two isolated, symmetrical snow-capped volcanoes. Roads are newly paved, smooth and dark."
     },
     {
       "id": "cl-jabn",
       "step": 2,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: The northern section of Pampa del Tamarugal National…",
+      "title": "Plants: tamarugo trees lining a mediocre road",
       "text": [
         "The northern section of Pampa del Tamarugal National Reserve can be recognized by the **Tamarugo trees** lining the road. The road itself is mediocre quality, and in a consistent north-west direction."
       ],
@@ -1838,14 +1920,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the northern desert reserve: tamarugo trees line a so-so road that heads steadily north-west."
     },
     {
       "id": "cl-96JZ",
       "step": 2,
       "order": 11,
       "family": "landscape",
-      "title": "Landscape: Alto Loa National Reserve can be recognized by the vast",
+      "title": "Landscape: vast open land, salt pans, snowy volcanoes",
       "text": [
         "Alto Loa National Reserve can be recognized by the vast, open landscape, followed by **salt pans** leading up to snow-capped **volcanoes**. The road running through the reserve is paved."
       ],
@@ -1891,14 +1974,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A vast open landscape, then salt pans leading to snow-capped volcanoes. The road through it is paved."
     },
     {
       "id": "cl-nGYF",
       "step": 2,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: Smooth mountains with a reddish tint are seen in Los…",
+      "title": "Landscape: smooth reddish mountains, salt pans",
       "text": [
         "**Smooth** mountains with a **reddish** tint are seen in Los Flamencos National Reserve. Salt pans are also a common sight. The reserve uses triple yellow lines, with [short dashes](https://goo.gl/maps/Z18RdxWXXB2c1FAr7) in the west."
       ],
@@ -1952,14 +2036,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Smooth, reddish-tinted mountains and salt pans. The reserve uses triple yellow lines, with short dashes in the west."
     },
     {
       "id": "cl-exGJ",
       "step": 2,
       "order": 13,
       "family": "landscape",
-      "title": "Landscape: In the west, Nevado Tres Cruces National Park can be…",
+      "title": "Landscape: salt pans, red sand, snowy mountain pass",
       "text": [
         "In the west, Nevado Tres Cruces National Park can be recognized by the vast, open landscape, followed by **salt pans** leading up to a line of mountains. The sand has a **reddish **tint.",
         "In the east, the Google Car drives up a mountain pass with views of lightly snow-capped volcanoes and **snow **on the side of the road. The roads in the National Park are paved."
@@ -2013,14 +2098,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "West: vast open land, salt pans and reddish sand leading to a line of mountains. East: a mountain pass with lightly snowy volcanoes and snow beside the road. Roads are paved."
     },
     {
       "id": "cl-R9PE",
       "step": 2,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: Llanos de Challe National Park can be recognized by the…",
+      "title": "Landscape: brown roadside dirt, juniper, overcast",
       "text": [
         "Llanos de Challe National Park can be recognized by the **brown** coloured dirt on the roadside, patches of light sand, **juniper** plants, and dark coloured mountains. The sky is overcast in most of the coverage.",
         "NOTE: [Pan de Azúcar National Park](https://goo.gl/maps/QyUDrkEedZ29m21G8) looks similar, however has less vegetation."
@@ -2075,14 +2161,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Brown dirt at the roadside, patches of light sand, juniper plants, dark mountains and mostly overcast skies. A similar park nearby has less vegetation."
     },
     {
       "id": "cl-nARv",
       "step": 2,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: A vast, mostly treeless landscape combined with triple…",
+      "title": "Landscape: vast treeless land, triple yellow lines",
       "text": [
         "A **vast**, mostly treeless landscape combined with triple yellow lines are seen in Alto Bio Bio National Reserve. While the reserve may look dry, there is a distinct cold and **high altitude** feel. [Monkey puzzles](https://goo.gl/maps/j5q5VVZamhkFDLSQ6) are also seen toward the east.",
         "NOTE: Ruta 181 leading up to the reserve also has triple yellow lines, however, is less vast with more vegetation."
@@ -2144,14 +2231,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A vast, mostly treeless land with triple yellow lines and a cold, high-altitude feel even if dry. Monkey puzzle trees appear to the east. The road leading up has triple yellow lines too but is less vast and greener."
     },
     {
       "id": "cl-Imir",
       "step": 2,
       "order": 16,
       "family": "vegetation",
-      "title": "Vegetation: Puyehue National Park can be recognized by the dense…",
+      "title": "Road: dense plants, triple yellow lines, tar snakes",
       "text": [
         "Puyehue National Park can be recognized by the dense vegetation surrounding the road. The pavement itself has triple yellow lines, and **tar snakes** are frequently seen. In the east, many [**dead trees**](https://goo.gl/maps/vvvheTYM3U7XohwK9) can be seen with a lack of leaves."
       ],
@@ -2190,14 +2278,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dense plants beside the road, triple yellow lines and many tar snakes (crack-repair lines). In the east, many leafless dead trees."
     },
     {
       "id": "cl-rTlS",
       "step": 2,
       "order": 18,
       "family": "other",
-      "title": "A slight, sandy ridge with a gradual incline can be seen in…",
+      "title": "Landscape: slight sandy ridge, gradual slope",
       "text": [
         "A **slight, sandy** ridge with a **gradual** incline can be seen in Arica."
       ],
@@ -2236,14 +2325,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A slight, sandy ridge with a gradual slope, in the far-north coastal city."
     },
     {
       "id": "cl-tcEu",
       "step": 2,
       "order": 19,
       "family": "other",
-      "title": "A larger, towering ridge can be seen in Iquique",
+      "title": "Landscape: large towering ridge",
       "text": [
         "A **larger, towering** ridge can be seen in Iquique."
       ],
@@ -2282,14 +2372,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A bigger, towering ridge behind a northern coastal city."
     },
     {
       "id": "cl-Pjto",
       "step": 2,
       "order": 20,
       "family": "other",
-      "title": "A rockier, and more uneven ridge can be seen in Antofagasta",
+      "title": "Landscape: rockier, more uneven ridge",
       "text": [
         "A **rockier**, and more **uneven** ridge can be seen in Antofagasta."
       ],
@@ -2328,14 +2419,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A rockier and more uneven ridge, in a northern coastal city."
     },
     {
       "id": "cl-ejML",
       "step": 2,
       "order": 21,
       "family": "other",
-      "title": "San Pedro de Atacama can be recognized by its clay brick…",
+      "title": "Houses: clay brick walls with triangle tops",
       "text": [
         "San Pedro de Atacama can be recognized by its **clay brick** walls, commonly with triangles at the top."
       ],
@@ -2374,7 +2466,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Clay brick walls, often with triangles at the top, in a northern desert village."
     },
     {
       "id": "cl-jKZj",
@@ -2382,7 +2475,7 @@
       "order": 22,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Orange street signs can be seen at almost every…",
+      "title": "Sign: orange street signs at almost every junction",
       "text": [
         "**Orange street signs** can be seen at almost every intersection in the city of Lanco, and occasionally in the nearby town of Malalhue."
       ],
@@ -2429,14 +2522,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Orange street name signs at nearly every intersection in one small southern city, and occasionally in a nearby town."
     },
     {
       "id": "cl-c7Jz",
       "step": 2,
       "order": 23,
       "family": "landscape",
-      "title": "Landscape: Villa O’Higgins can be recognized by the large mountains…",
+      "title": "Houses: orange-stained wood, mountains to the east",
       "text": [
         "Villa O’Higgins can be recognized by the large **mountains** located immediately to the east. To the west, [snow-capped mountains](https://maps.app.goo.gl/QGUzYaHWvb8PphP99) are seen in the distance. Street signs, fences and many other structures throughout the village are made of orange-stained wood."
       ],
@@ -2489,14 +2583,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A village with large mountains right to the east and snowy peaks far to the west. Street signs, fences and many buildings are orange-stained wood."
     },
     {
       "id": "cl-0n0t",
       "step": 2,
       "order": 25,
       "family": "other",
-      "title": "Orange lamps can most often be seen in Calama and Chañaral",
+      "title": "Streetlight: orange lamps",
       "text": [
         "Orange lamps can most often be seen in Calama and Chañaral, and rarely in Antofagasta.",
         "NOTE: Orange lamps can rarely be found in other smaller cities. Make sure to look out for other clues before guessing."
@@ -2536,14 +2631,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Orange street lamps are most common in two northern cities and rare in a third. They rarely appear in smaller cities, so check other clues."
     },
     {
       "id": "cl-YjE4",
       "step": 2,
       "order": 26,
       "family": "other",
-      "title": "Lamps that look like green domes can be seen in Copiapo",
+      "title": "Streetlight: green dome lamps",
       "text": [
         "Lamps that look like **green domes** can be seen in Copiapo."
       ],
@@ -2582,14 +2678,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lamps shaped like green domes, in one northern city."
     },
     {
       "id": "cl-EIJH",
       "step": 2,
       "order": 27,
       "family": "other",
-      "title": "Lamps in Santiago very commonly have photocells",
+      "title": "Streetlight: lamps with photocells",
       "text": [
         "Lamps in Santiago very commonly have **photocells**. You will rarely find them in other cities such as Valparaiso, Osorno and Loncoche."
       ],
@@ -2628,14 +2725,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital's lamps very often have a light sensor on top. Rarely seen in other cities."
     },
     {
       "id": "cl-nI4v",
       "step": 2,
       "order": 28,
       "family": "other",
-      "title": "Grey lamps with a thin",
+      "title": "Streetlight: grey, thin flat top, rounded underside",
       "text": [
         "Grey lamps with a thin, flat top and a **rounded underside** can be found in Talca."
       ],
@@ -2674,14 +2772,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grey lamps with a thin flat top and a rounded underside, in one central city."
     },
     {
       "id": "cl-DujH",
       "step": 2,
       "order": 29,
       "family": "other",
-      "title": "Blue rectangular lamps with a yellow stripe can be found in…",
+      "title": "Streetlight: blue rectangle with yellow stripe",
       "text": [
         "**Blue rectangular** lamps with a **yellow stripe** can be found in Concepción."
       ],
@@ -2720,14 +2819,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue rectangular lamps with a yellow stripe, in one south-central city."
     },
     {
       "id": "cl-6sv4",
       "step": 2,
       "order": 30,
       "family": "other",
-      "title": "This lamp, with a silver top and grey bottom, can be found…",
+      "title": "Streetlight: silver top, grey bottom",
       "text": [
         "This lamp, with a **silver top** and **grey bottom**, can be found in Puerto Montt and Temuco."
       ],
@@ -2766,14 +2866,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lamps with a silver top and grey bottom, in two southern cities."
     },
     {
       "id": "cl-PgUw",
       "step": 2,
       "order": 32,
       "family": "pole",
-      "title": "Pole: Poles in Arica feature white paint with a black number",
+      "title": "Pole: white with black number vs yellow",
       "text": [
         "Poles in Arica feature **white** paint with a black number, while the other cities in the Atacama Desert feature poles with [**yellow**](https://goo.gl/maps/xfQm8JHGpC6VCDR47) paint. Keep in mind the paint may have faded, making it look white."
       ],
@@ -2828,14 +2929,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far-north city the poles are white with a black number. Other desert cities have yellow poles, but faded paint can look white."
     },
     {
       "id": "cl-YLxR",
       "step": 2,
       "order": 33,
       "family": "pole",
-      "title": "Pole: Round poles with black paint can be seen in the town of El…",
+      "title": "Pole: round black poles",
       "text": [
         "**Round** poles with black paint can be seen in the town of El Salvador."
       ],
@@ -2884,14 +2986,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round poles painted black in one northern mining town."
     },
     {
       "id": "cl-Pt3R",
       "step": 2,
       "order": 35,
       "family": "car",
-      "title": "Google car: The Google car can be seen towing a white and silver…",
+      "title": "Google car: towing white-silver trailer",
       "text": [
         "The Google car can be seen towing a **white and silver trailer** with the word ‘Outback’ south of the Chilean National Zoo in Santiago."
       ],
@@ -2930,14 +3033,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Google car pulls a white and silver trailer with the word Outback, south of a zoo in the capital."
     },
     {
       "id": "cl-69po",
       "step": 2,
       "order": 36,
       "family": "car",
-      "title": "Google car: A grey Toyota Hilux",
+      "title": "Google car: grey pickup, gear, antenna front right",
       "text": [
         "A **grey** Toyota Hilux, with various gear loaded and a **snorkel** on the front right, can be seen from around Baños Morales to [this point](https://goo.gl/maps/SWHeb1yv3ppVSbBTA), where the trekker continues the journey on foot."
       ],
@@ -2976,14 +3080,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A grey Toyota Hilux pickup with gear loaded and a raised antenna pipe on the front right. The walking backpack continues on foot from a certain point."
     },
     {
       "id": "cl-PmJu",
       "step": 2,
       "order": 37,
       "family": "car",
-      "title": "Google car: Conguillio National Park can be recognized by this white…",
+      "title": "Google car: white truck, mirrors, front antenna",
       "text": [
         "Conguillio National Park can be recognized by this **white truck** with visible side mirrors and an antenna on the front right."
       ],
@@ -3022,14 +3127,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white truck with visible side mirrors and an antenna on the front right. It marks one national park."
     },
     {
       "id": "cl-t5nN",
       "step": 2,
       "order": 38,
       "family": "coverage",
-      "title": "Coverage: Puerto Williams, the southernmost town covered by street…",
+      "title": "Google car: white pickup with visible side mirrors",
       "text": [
         "Puerto Williams, the southernmost town covered by street view, can be recognized by this **white** pickup truck with visible side mirrors.",
         "NOTE: The Puerto Williams coverage is located fairly far away from the normal car coverage in Chile. The nearest normal car coverage is in Fuerte Bulnes, near Punta Arenas."
@@ -3069,14 +3175,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white pickup with visible side mirrors in the southernmost town covered. Its coverage is far from the normal car coverage; the nearest is near a southern city."
     },
     {
       "id": "cl-CmTv",
       "step": 2,
       "order": 41,
       "family": "other",
-      "title": "The Atacama Large Millimetre Array can be recognized by the…",
+      "title": "Coverage: many radio telescopes, barren and snowy",
       "text": [
         "The Atacama Large Millimetre Array can be recognized by the many radio telescopes in a barren, snowy environment."
       ],
@@ -3115,14 +3222,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many radio telescopes in a barren, snowy place."
     },
     {
       "id": "cl-rzZ2",
       "step": 2,
       "order": 42,
       "family": "other",
-      "title": "ALMA OSF can be recognized by the large radio telescopes…",
+      "title": "Coverage: big radio telescopes and rural facilities",
       "text": [
         "ALMA OSF can be recognized by the large radio telescopes and rural facilities."
       ],
@@ -3161,14 +3269,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large radio telescopes with plain rural buildings around them."
     },
     {
       "id": "cl-KTxH",
       "step": 2,
       "order": 43,
       "family": "coverage",
-      "title": "Coverage: This horse trekker can be seen to the northeast of San…",
+      "title": "Coverage: horse-mounted camera",
       "text": [
         "This **horse trekker** can be seen to the northeast of San Felipe.",
         "NOTE: A similar trekker can be found on the other side of the border in Argentina."
@@ -3218,14 +3327,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A camera carried on a horse, north-east of a central town. A similar one exists across the border in Argentina.",
+      "sameAs": [
+        "AR"
+      ]
     },
     {
       "id": "cl-kuAd",
       "step": 2,
       "order": 44,
       "family": "landscape",
-      "title": "Landscape: The Torres del Paine area can be recognized by the sharp…",
+      "title": "Coverage: sharp peaks, glacier walkers, orange helmets",
       "text": [
         "The Torres del Paine area can be recognized by the **sharp peaked** mountains, and the trekker walking on a **glacier** along with other people in orange helmets."
       ],
@@ -3264,42 +3377,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "cl-lm-119",
-      "step": 3,
-      "order": 0,
-      "family": "line",
-      "title": "Road line: All yellow lines",
-      "text": [
-        "Within the Americas, all-yellow road lines are essentially unique to Chile. These lines are typically seen in National Parks or areas of high snowfall, as Chile usually uses all-white lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "dfcf19879290",
-          "src": "https://learnablemeta.com/images/F80ZN4hpNtWiOeEOo1QXl5ywCKIC4nyckxOc.avif",
-          "path": "cl/dfcf19879290.webp",
-          "width": 1000,
-          "height": 529,
-          "dupeOf": "83ced0c06fcf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Sharp-peaked mountains and the camera walking on a glacier among other people wearing orange helmets."
     },
     {
       "id": "cl-lm-3090",
       "step": 3,
       "order": 1,
       "family": "other",
-      "title": "Arica/Iquique stick",
+      "title": "Google car: leafy stick on the back",
       "text": [
         "In Arica and Iquique, in the very North of Chile, sometimes there'll be a little stick with a few leaves stuck on the car's back."
       ],
@@ -3319,760 +3405,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-13764",
-      "step": 3,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "Chile has a white Google Car with no antenna in Generation 3.",
-        "There are two variants",
-        "A blue Google Car can be seen in Generation 4.",
-        "**--- NOTE:**",
-        "In Generation 3, a plain white Google Car with no antenna can also be seen in Peru and Bolivia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f9dfebae04dc",
-          "src": "https://learnablemeta.com/images/611/OQzjpEeoHjyTAaRxHhlj3basiA3WtnYYmDtx.avif",
-          "path": "cl/f9dfebae04dc.webp",
-          "width": 1000,
-          "height": 488
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BO",
-        "PE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15206",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Maule",
-      "text": [
-        "Compared to the area around Santiago, the Maule province has a similar look. However, it has a Mediterranean climate, and is generally greener. Vineyards are also commonly seen in this region."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c25798f041ee",
-          "src": "https://learnablemeta.com/images/664/qirVNVY6P0UdTM7kcLjtKTAFFfqmTbQLmggu.avif",
-          "path": "cl/c25798f041ee.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15207",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: Isla Grande de Chiloe",
-      "text": [
-        "A rolling, agricultural landscape, comparable to New Zealand, can be seen on Isla Grande de Chiloé.",
-        "NOTE: Similar looking landscapes exist in some other parts of the country, but usually more level."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5a719443b727",
-          "src": "https://learnablemeta.com/images/664/skWQ5zYU8yNGWZaXgC8cDolevzE2PcRCIHRm.avif",
-          "path": "cl/5a719443b727.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "69ddf8dc1600"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "NZ"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15209",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Aysen Autumn",
-      "text": [
-        "Southern Aysén can be recognised by autumn coverage, having orange and red coloured vegetation. Keep in mind that not all coverage in this region will have fall colours."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "87ec7cd61b85",
-          "src": "https://learnablemeta.com/images/664/gLrcmXBrRSmIJv8OHMAGQGqeOfeqLZyIitmt.avif",
-          "path": "cl/87ec7cd61b85.webp",
-          "width": 1000,
-          "height": 491,
-          "dupeOf": "06b2edc85026"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15210",
-      "step": 3,
-      "order": 6,
-      "family": "landscape",
-      "title": "Landscape: Lauca National Park",
-      "text": [
-        "A distinct landscape consisting of a line of snow-capped mountains with two other isolated, symmetrical snow-capped volcanoes are seen in Lauca National Park. Most of the roads are newly paved and have a smooth, dark look."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4cbc81477372",
-          "src": "https://learnablemeta.com/images/664/THAg6N5G2VR1zbPTbX5Luu4vKFmO70qQN0FL.avif",
-          "path": "cl/4cbc81477372.webp",
-          "width": 1000,
-          "height": 491,
-          "dupeOf": "f0f7625ef1a6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15211",
-      "step": 3,
-      "order": 7,
-      "family": "landscape",
-      "title": "Landscape: Alto Loa National Reserve",
-      "text": [
-        "Alto Loa National Reserve can be recognized by the vast, open landscape, followed by salt pans leading up to snow-capped volcanoes. The reserve does not have any paved roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "da1fa7d7f4ff",
-          "src": "https://learnablemeta.com/images/664/NPWqR2AsG7VNb9Os5pDihOEMfWyoRHHwHdkD.avif",
-          "path": "cl/da1fa7d7f4ff.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "7f69c8309252"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15212",
-      "step": 3,
-      "order": 8,
-      "family": "landscape",
-      "title": "Landscape: Los Flamencos National Reserve",
-      "text": [
-        "Smooth mountains with a reddish tint are seen in Los Flamencos National Reserve. Salt pans are also a common sight. The reserve uses triple yellow lines, with short dashes in the west."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c99a1ffe0ba9",
-          "src": "https://learnablemeta.com/images/664/VSRnU2ZXZp1x0sKvkOZZn6RJEOCYw7pyRxGk.avif",
-          "path": "cl/c99a1ffe0ba9.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "38ba996e7dfb"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15213",
-      "step": 3,
-      "order": 9,
-      "family": "landscape",
-      "title": "Landscape: Nevado des Cruzes National Park",
-      "text": [
-        "In the west, Nevado Tres Cruces National Park can be recognized by the vast, open landscape, followed by salt pans leading up to a line of mountains. The sand has a reddish tint. In the east, the Google Car drives up a mountain pass with views of lightly snow-capped volcanoes and snow on the side of the road. The roads in the National Park are paved in newer coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6920c01cf380",
-          "src": "https://learnablemeta.com/images/664/IDAWghEzD8ceHtTgM07ONWplEnqHW5phZUWH.avif",
-          "path": "cl/6920c01cf380.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15214",
-      "step": 3,
-      "order": 10,
-      "family": "landscape",
-      "title": "Landscape: Llanos des Challe National Park",
-      "text": [
-        "Llanos de Challe National Park can be recognized by the brown coloured dirt on the roadside, patches of light sand, juniper plants, and dark coloured mountains. The sky is overcast in most of the coverage.",
-        "NOTE: Pan de Azúcar National Park looks similar, however has less vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5d2ed1549da",
-          "src": "https://learnablemeta.com/images/664/h2l853aS0RiaPvZcmbZemM3vg5oR49tQsxn2.avif",
-          "path": "cl/b5d2ed1549da.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15215",
-      "step": 3,
-      "order": 11,
-      "family": "landscape",
-      "title": "Landscape: Alto Bio Bio National Reserve",
-      "text": [
-        "A vast, mostly treeless landscape combined with triple yellow lines are seen in Alto Bio Bio National Reserve. While the reserve may look dry, there is a distinct cold and high altitude feel. Monkey puzzles are also seen toward the east.",
-        "NOTE: Ruta 181 leading up to the reserve also has triple yellow lines, however, is less vast with more vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b698e2c3b0fb",
-          "src": "https://learnablemeta.com/images/664/9equO3Q5bh9z0SqWOzcSVmnIWG7IaYtBzL7q.avif",
-          "path": "cl/b698e2c3b0fb.webp",
-          "width": 1000,
-          "height": 488,
-          "dupeOf": "582d5fab937a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-15216",
-      "step": 3,
-      "order": 12,
-      "family": "vegetation",
-      "title": "Vegetation: Puyehue National Park",
-      "text": [
-        "Puyehue National Park can be recognized by the dense vegetation surrounding the road. The pavement itself has triple yellow lines, and tar snakes are frequently seen. In the east, many dead trees can be seen with a lack of leaves."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1587ae2a2071",
-          "src": "https://learnablemeta.com/images/664/S2AgRPAbgnphrdoUHXQhObIp7S7TLTDofgSL.avif",
-          "path": "cl/1587ae2a2071.webp",
-          "width": 1000,
-          "height": 489,
-          "dupeOf": "e4ee1fb7cde8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-51352",
-      "step": 3,
-      "order": 13,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "Chile has a white Google Car with no antenna in Generation 3.",
-        "There are two variants",
-        "A blue Google Car can be seen in Generation 4.",
-        "**--- NOTE:**",
-        "In Generation 3, a plain white Google Car with no antenna can also be seen in Peru and Bolivia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f9dfebae04dc",
-          "src": "https://learnablemeta.com/images/611/OQzjpEeoHjyTAaRxHhlj3basiA3WtnYYmDtx.avif",
-          "path": "cl/f9dfebae04dc.webp",
-          "width": 1000,
-          "height": 488,
-          "dupeOf": "f9dfebae04dc"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BO",
-        "PE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55148",
-      "step": 3,
-      "order": 14,
-      "family": "other",
-      "title": "Infrastructure - Letter Roads",
-      "text": [
-        "Chile uses a memorable regional road naming system, where the first letter increases between A and Y from **north to south.**"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2bd132e4bfd4",
-          "src": "https://learnablemeta.com/images/798/zC8dDCUhGyz0n6bGiiJptP4yZsPLQayBBrO7.avif",
-          "path": "cl/2bd132e4bfd4.webp",
-          "width": 768,
-          "height": 1000,
-          "dupeOf": "ec71a307c98c"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55149",
-      "step": 3,
-      "order": 15,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Atacama Desert",
-      "text": [
-        "The Atacama is an extremely arid desert covering the northern third of Chile. Some parts of it experience the lowest rainfall on the planet. As a result, many locations in this desert are almost completely devoid of any vegetation: you will often just see sand and bare rock without any plants in sight anywhere.",
-        "NOTE: The Atacama Desert also covers parts of southern Peru, western Bolivia and northwestern Argentina."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f5db99014801",
-          "src": "https://learnablemeta.com/images/798/dvGaGi3espDETxWNDAhS5XzuA9Yd6ONum8qb.avif",
-          "path": "cl/f5db99014801.webp",
-          "width": 1000,
-          "height": 487,
-          "dupeOf": "fe4ecdee90d9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AR",
-        "BO",
-        "PE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55153",
-      "step": 3,
-      "order": 16,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Eucalyptus",
-      "text": [
-        "**Eucalyptus plantations** combined with a somewhat dry climate are a good indicator that you are in southwestern Valparaíso."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "65ebbd2101a1",
-          "src": "https://learnablemeta.com/images/798/JQjUXs2RlCBSjZBTHUr8cLHn5V8EXAspT5z3.avif",
-          "path": "cl/65ebbd2101a1.webp",
-          "width": 1000,
-          "height": 496,
-          "dupeOf": "e90c618fde77"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55155",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "Agriculture - Vineyards",
-      "text": [
-        "**Vineyards** are commonly seen in Maule."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bc62037c67d2",
-          "src": "https://learnablemeta.com/images/798/DaU3Wzdc4NGf4rUKH2p6QwY1tdZU9qBLnyPZ.avif",
-          "path": "cl/bc62037c67d2.webp",
-          "width": 1000,
-          "height": 510
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55156",
-      "step": 3,
-      "order": 18,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Maule Landscape",
-      "text": [
-        "Compared to the area around Santiago, the Maule province has a similar look. However, it has a **Mediterranean** climate, and is generally greener."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "92b43fd61dc4",
-          "src": "https://learnablemeta.com/images/798/ULxrDBTzhPBNuEANE7VoeDchRFa5GHD0ykQF.avif",
-          "path": "cl/92b43fd61dc4.webp",
-          "width": 1000,
-          "height": 512
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55157",
-      "step": 3,
-      "order": 19,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Concepcion Pines",
-      "text": [
-        "Concepcion pines, scientifically named Pinus radiata, can be recognized by their **puffy** needles. They are most commonly found in **Bio Bio**, where the city of Concepcion is located, and less commonly in Ñuble and Araucania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6a3a34b67cc8",
-          "src": "https://learnablemeta.com/images/798/4HDylFU9O0HLJrbhJWDVfr9mTEPkLyXdcHgO.avif",
-          "path": "cl/6a3a34b67cc8.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "38b053724128"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55158",
-      "step": 3,
-      "order": 20,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Narrow Roads & Trees",
-      "text": [
-        "**Narrow roads** with trees on both sides can commonly be seen in the provinces of Bio Bio and Araucania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "45ce46f5e00d",
-          "src": "https://learnablemeta.com/images/798/ezSvuk061l6kYynZd27oDavRVGCyGc4c5Ssk.avif",
-          "path": "cl/45ce46f5e00d.webp",
-          "width": 1000,
-          "height": 496,
-          "dupeOf": "6a0f101a5474"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55159",
-      "step": 3,
-      "order": 21,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Monkey Puzzle Tree",
-      "text": [
-        "Monkey puzzles, scientifically named Araucaria araucana, are found in far eastern Araucania.",
-        "NOTE: Monkey puzzles can also be found on the other side of the Argentinian border."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "80ae1ea65173",
-          "src": "https://learnablemeta.com/images/798/YYGhQo21XEX3XSqs9anvr1DgjB4QT5zENxT3.avif",
-          "path": "cl/80ae1ea65173.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "b1f6d435e95b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55161",
-      "step": 3,
-      "order": 22,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Chilean Rhubarb",
-      "text": [
-        "**Chilean rhubarb** can commonly be found on Isla Grande, and on the mainland east of it. Chilean rhubarb can be recognized by its large, cabbage-like appearance."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "31905fc96cff",
-          "src": "https://learnablemeta.com/images/798/uVLwpasWuRKYtYHo3jiVT1YsWbUSHTd0PBds.avif",
-          "path": "cl/31905fc96cff.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "a662dc71d05a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55164",
-      "step": 3,
-      "order": 23,
-      "family": "landscape",
-      "title": "Landscape: Landscape - A-31",
-      "text": [
-        "The A-31 can be recognised by its **high altitude**, with a **steep drop** into a valley to the north. The road also has Gen 3 sunset coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8a7dde70e816",
-          "src": "https://learnablemeta.com/images/798/gt6QEEF298mIdb7Q12vc5IvEi2IB8vamrGB6.avif",
-          "path": "cl/8a7dde70e816.webp",
-          "width": 1000,
-          "height": 511,
-          "dupeOf": "4189a9e8d76b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55166",
-      "step": 3,
-      "order": 24,
-      "family": "coverage",
-      "title": "Coverage: Coverage Meta - Ruta 5",
-      "text": [
-        "More Generation 4 Sunset coverage can be seen on B-710 and Ruta 5.",
-        "On the B-710, a slight ridge can be seen to the west, while Ruta 5 is more open. Make sure to use the road angle or other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1fb695e369aa",
-          "src": "https://learnablemeta.com/images/798/ZapPkfaaRXxpAX9XcwPd62s9YUA2wuktzIAI.avif",
-          "path": "cl/1fb695e369aa.webp",
-          "width": 1000,
-          "height": 879
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55167",
-      "step": 3,
-      "order": 25,
-      "family": "coverage",
-      "title": "Coverage: Coverage Meta - B-710",
-      "text": [
-        "More Generation 4 Sunset coverage can be seen on B-710 and Ruta 5.",
-        "On the B-710, a **slight ridge** can be seen to the west, while Ruta 5 is more open. Make sure to use the road angle or other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "eef32aeff380",
-          "src": "https://learnablemeta.com/images/798/vcJfBNzSdWLel8743OzowldYvHZ4vmVfpn58.avif",
-          "path": "cl/eef32aeff380.webp",
-          "width": 899,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55171",
-      "step": 3,
-      "order": 26,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Purple Flowers",
-      "text": [
-        "These **purple flowers**, named Large-leaved Lupines, can commonly be found along Ruta 240."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "678aaa97a5f4",
-          "src": "https://learnablemeta.com/images/798/kr4XpbsKH4Ku3By0taBLEuoGLLfLwWUGbyEu.avif",
-          "path": "cl/678aaa97a5f4.webp",
-          "width": 1000,
-          "height": 477,
-          "dupeOf": "69691cfdb378"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55172",
-      "step": 3,
-      "order": 27,
-      "family": "landscape",
-      "title": "Landscape: Infrastructure - Ruta 9",
-      "text": [
-        "**All yellow lines** on a **concrete road** are a good indicator that you are on the paved section of Ruta 9, in the very south of Chile. The landscape tends to be barren, grassy, and treeless."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a53813fc421",
-          "src": "https://learnablemeta.com/images/798/rTkTmXO1Caos8oyjrem7zRFTtFdNVKA7Gn8D.avif",
-          "path": "cl/3a53813fc421.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the far north, a small stick with a few leaves is sometimes attached to the back of the car."
     },
     {
       "id": "cl-lm-55173",
       "step": 3,
       "order": 28,
       "family": "landscape",
-      "title": "Landscape: Landscape - Lauca National Park",
+      "title": "Landscape: lone snowy volcano, yareta, feather grass",
       "text": [
         "East of Putre, Ruta 11 enters Lauca National Park which has a flatter landscape, with tall snow-capped mountains in the background, and features unique Andean Plateau vegetation like Peruvian feather grass and the recognizable cushion plant yareta (Azorella compacta). You can also find Chilean bollards lining the road, which are extremely rare.",
         "Lauca can look very similar to other areas in the east Andes of northern Chile, but it’s recognizable for the iconic Volcán Parinacota, a tall snow-capped volcano that stands alone and away from other mountain ridges. It’s visible from basically every location in the park, though it can be shrouded by clouds."
@@ -4107,485 +3448,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55174",
-      "step": 3,
-      "order": 29,
-      "family": "other",
-      "title": "Infrastructure - Silver/Grey Lamp",
-      "text": [
-        "This lamp, with a **silver top** and **grey bottom**, can be found in Puerto Montt and Temuco."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e183dad57d83",
-          "src": "https://learnablemeta.com/images/798/NhGucxSWGiXdY0H0YGOkQ4BDgwzjkwVb3OZx.avif",
-          "path": "cl/e183dad57d83.webp",
-          "width": 1000,
-          "height": 495,
-          "dupeOf": "1ad011a7753a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55185",
-      "step": 3,
-      "order": 30,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Puyehue National Park",
-      "text": [
-        "Puyehue National Park can be recognized by the dense vegetation surrounding the road. The pavement itself has triple yellow lines, and **tar snakes** are frequently seen."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fa15b3a8a012",
-          "src": "https://learnablemeta.com/images/798/bGGYSWyQAzts2opSSRu0gvg4SjMruZx3I8OS.avif",
-          "path": "cl/fa15b3a8a012.webp",
-          "width": 906,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55186",
-      "step": 3,
-      "order": 31,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Puyehue National Park - Dead Trees",
-      "text": [
-        "Puyehue National Park can be recognized by the dense vegetation surrounding the road. The pavement itself has triple yellow lines, and **tar snakes** are frequently seen. In the east, many dead trees can be seen with a lack of leaves."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b5f9404ce1ec",
-          "src": "https://learnablemeta.com/images/798/TofGqRispAkU2DXA1Kb9xvbNezRu66JbPI8q.avif",
-          "path": "cl/b5f9404ce1ec.webp",
-          "width": 1000,
-          "height": 849
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55190",
-      "step": 3,
-      "order": 32,
-      "family": "other",
-      "title": "Infrastructure - Clay Brick Walls",
-      "text": [
-        "San Pedro de Atacama can be recognized by its **clay brick** walls, commonly with triangles at the top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7406f261726c",
-          "src": "https://learnablemeta.com/images/798/FOp7UGMu0a44cIp52DKlWAq4gxBCewmgEjBq.avif",
-          "path": "cl/7406f261726c.webp",
-          "width": 1000,
-          "height": 509,
-          "dupeOf": "388f18de202f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55193",
-      "step": 3,
-      "order": 33,
-      "family": "other",
-      "title": "Infrastructure - Orange Lamps",
-      "text": [
-        "Orange lamps can most often be seen in Calama and Chañaral, and rarely in Antofagasta.",
-        "NOTE: Orange lamps can rarely be found in other smaller cities. Make sure to look out for other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0bb33e18c45b",
-          "src": "https://learnablemeta.com/images/798/PS0b46sF8klT6ZcPuU7SeSr2slWmAGU6MTra.avif",
-          "path": "cl/0bb33e18c45b.webp",
-          "width": 1000,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55194",
-      "step": 3,
-      "order": 34,
-      "family": "other",
-      "title": "Infrastructure - Green Dome Lamps",
-      "text": [
-        "Lamps that look like **green domes** can be seen in Copiapo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "42d8b1c520f8",
-          "src": "https://learnablemeta.com/images/798/nwzQHWG0SuEDWc1QmjZKfu2ktUQsyQ6bE3vk.avif",
-          "path": "cl/42d8b1c520f8.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55195",
-      "step": 3,
-      "order": 35,
-      "family": "other",
-      "title": "Infrastructure - Photocell Lamps",
-      "text": [
-        "Lamps in Santiago very commonly have **photocells**. You will rarely find them in other cities such as Valparaiso, Osorno and Loncoche."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ebcc7550af24",
-          "src": "https://learnablemeta.com/images/798/lijHHg2Rt9Q5Up5Xsp4UxlTjr0Dc7TQ8pL76.avif",
-          "path": "cl/ebcc7550af24.webp",
-          "width": 1000,
-          "height": 504,
-          "dupeOf": "2c3c1e07952e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55196",
-      "step": 3,
-      "order": 36,
-      "family": "other",
-      "title": "Infrastructure - Talca Lamps",
-      "text": [
-        "Grey lamps with a thin, flat top and a **rounded underside** can be found in Talca."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bdc69ae074dc",
-          "src": "https://learnablemeta.com/images/798/BdgGbXtCKNkIwAo4STMGKTLNb6E0DLSyvGqu.avif",
-          "path": "cl/bdc69ae074dc.webp",
-          "width": 1000,
-          "height": 494,
-          "dupeOf": "a3a1e6245d47"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55197",
-      "step": 3,
-      "order": 37,
-      "family": "other",
-      "title": "Infrastructure - Concepcion Lamps",
-      "text": [
-        "**Blue rectangular** lamps with a **yellow stripe** can be found in Concepción."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "adebb492c835",
-          "src": "https://learnablemeta.com/images/798/8URepHluvSfMYMHhI7kgIFNcve2f4Q6KgHD0.avif",
-          "path": "cl/adebb492c835.webp",
-          "width": 1000,
-          "height": 496,
-          "dupeOf": "2d962836af4b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55201",
-      "step": 3,
-      "order": 38,
-      "family": "car",
-      "title": "Google car: Car Meta - Trailer",
-      "text": [
-        "The Google car can be seen towing a **white and silver trailer** with the word ‘Outback’ north of the Chilean National Zoo in Santiago."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d5664c89b75e",
-          "src": "https://learnablemeta.com/images/798/h4WrzUTjXM1t26Q6uAtOqFMFOQJJBUgRuSWX.avif",
-          "path": "cl/d5664c89b75e.webp",
-          "width": 1000,
-          "height": 495,
-          "dupeOf": "fe45ae38a3a5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55202",
-      "step": 3,
-      "order": 39,
-      "family": "car",
-      "title": "Google car: Car Meta - Toyota Hilux",
-      "text": [
-        "A **grey** Toyota Hilux, with various gear loaded and a **snorkel** on the front right, can be seen from around Baños Morales."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b88f574b3dc2",
-          "src": "https://learnablemeta.com/images/798/qibThtJgZSRfj7d9x9SXWN0w9bOncB2q9O3Q.avif",
-          "path": "cl/b88f574b3dc2.webp",
-          "width": 1000,
-          "height": 499,
-          "dupeOf": "a41575a51c7f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55203",
-      "step": 3,
-      "order": 40,
-      "family": "car",
-      "title": "Google car: Car Meta - Conguillo National Park",
-      "text": [
-        "Conguillio National Park can be recognized by this **white truck** with visible side mirrors and an antenna on the front right."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d61ff054b21f",
-          "src": "https://learnablemeta.com/images/798/eVYkgohbFp39p2bpoxA4vFbY0r6WmpJLnBlL.avif",
-          "path": "cl/d61ff054b21f.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55204",
-      "step": 3,
-      "order": 41,
-      "family": "coverage",
-      "title": "Coverage: Car Meta - Puerto Williams",
-      "text": [
-        "Puerto Williams, the southernmost town covered by street view, can be recognized by this **white** pickup truck with visible side mirrors.",
-        "NOTE: The Puerto Williams coverage is located fairly far away from the normal car coverage in Chile. The nearest normal car coverage is in Fuerte Bulnes, near Punta Arenas."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "664d00817593",
-          "src": "https://learnablemeta.com/images/798/JeEcvnHmXyZZIFv8E7j887FDgZOpfMvoy8ww.avif",
-          "path": "cl/664d00817593.webp",
-          "width": 1000,
-          "height": 502,
-          "dupeOf": "6758fded2e2b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55205",
-      "step": 3,
-      "order": 42,
-      "family": "coverage",
-      "title": "Coverage: Trekker - ALMA-OSF",
-      "text": [
-        "ALMA OSF can be recognized by the large radio telescopes and rural facilities."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ea1cfeee8841",
-          "src": "https://learnablemeta.com/images/798/QeHPmGg3dG0zt9dLtfEACXrZPCMbm8x7jodJ.avif",
-          "path": "cl/ea1cfeee8841.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55206",
-      "step": 3,
-      "order": 43,
-      "family": "coverage",
-      "title": "Coverage: Trekker - ACA",
-      "text": [
-        "ACA can be recognized by the many radio telescopes in a barren, snowy environment."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7dafa2b8a3b6",
-          "src": "https://learnablemeta.com/images/798/izp8KrKiCmUytwak1TLeYTW47GKOMJubCydx.avif",
-          "path": "cl/7dafa2b8a3b6.webp",
-          "width": 1000,
-          "height": 512
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55208",
-      "step": 3,
-      "order": 44,
-      "family": "coverage",
-      "title": "Coverage: Trekker - Torres Del Paine",
-      "text": [
-        "The Torres del Paine area can be recognized by the **sharp peaked** mountains, and the trekker walking on a **glacier** along with other people in orange helmets."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0ee667005278",
-          "src": "https://learnablemeta.com/images/798/loHo2V48gyV8bNQ1eFdDQu6x5SeABnVdIZA1.avif",
-          "path": "cl/0ee667005278.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "17ae862db53b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-55209",
-      "step": 3,
-      "order": 45,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Pampa del Tamarugal",
-      "text": [
-        "The northern section of Pampa del Tamarugal National Reserve can be recognized by the **Tamarugo trees** lining the road. The road itself is mediocre quality, and in a consistent north-west direction."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bee6ad88708c",
-          "src": "https://learnablemeta.com/images/798/lcR7ShsvgVR8ePASSFb3TuVvur3hkmFfi7CX.avif",
-          "path": "cl/bee6ad88708c.webp",
-          "width": 1000,
-          "height": 508,
-          "dupeOf": "4401518332be"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A flat high plateau with tall snowy mountains behind, Peruvian feather grass and cushion-shaped yareta plants. Chilean bollards line the road (very rare). A tall snow-capped volcano stands alone, away from other ridges, and is visible almost everywhere in the park."
     },
     {
       "id": "cl-lm-55210",
       "step": 3,
       "order": 46,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Cactus Acido",
+      "title": "Plants: copao cactus",
       "text": [
         "Eulychnia acida, commonly known as cactus ácido or copao, is a cactus species endemic to Chile, where it is primarily distributed in the semi-arid regions of the country. Its range includes: Atacama Region, Coquimbo Region,and Valparaíso Region."
       ],
@@ -4612,101 +3483,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-56212",
-      "step": 3,
-      "order": 47,
-      "family": "line",
-      "title": "Road line: Full White & Yellow",
-      "text": [
-        "Chilean road lines are either all white, or all yellow."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5c91128ee334",
-          "src": "https://learnablemeta.com/images/863/0YYtqlRPiBHI2jkcDAYfEX6LvyvXTd7CNq6u.avif",
-          "path": "cl/5c91128ee334.webp",
-          "width": 1000,
-          "height": 577,
-          "dupeOf": "83ced0c06fcf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e4881c707582065cc35dfe",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-447158",
-      "step": 3,
-      "order": 48,
-      "family": "other",
-      "title": "Chile",
-      "text": [
-        "Chilean phone codes will sometimes have a two digit area code in front, followed by seven digits. The patterns of the codes are easily memorable. Most of the central states also have different area codes for specific provinces, which can help you make accurate guesses."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6a215347bd8a",
-          "src": "https://learnablemeta.com/images/1398/nNOpd07HFZ5LyT5iHsC3Q4LJB9Y4sxkaEl2m6etSKn4ebmDV.avif",
-          "path": "cl/6a215347bd8a.webp",
-          "width": 426,
-          "height": 800,
-          "dupeOf": "d20273ee98af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-634050",
-      "step": 3,
-      "order": 49,
-      "family": "plate",
-      "title": "Plate: Chile",
-      "text": [
-        "Regular vehicles have white licence plates, while commercial and taxi vehicles have orange plates.",
-        "NOTE: Orange plates can also be seen in Ecuador. Brazilian commercial plates are red, but can look similar in some lighting."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2aac7dcf3c5d",
-          "src": "https://learnablemeta.com/images/5431/1766260312814-Gt7.avif",
-          "path": "cl/2aac7dcf3c5d.webp",
-          "width": 800,
-          "height": 250,
-          "dupeOf": "fd81a074e610"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "EC"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A tall cactus (cactus ácido, or copao) found only in this country, in the semi-arid north and north-centre and the central coast."
     },
     {
       "id": "cl-lm-643928",
       "step": 3,
       "order": 50,
       "family": "landscape",
-      "title": "Landscape: Landscape - A11 - Lluta River Valley",
+      "title": "Landscape: green river valley with railway, fan palms",
       "text": [
         "Along the Lluta River, the Ruta 11 passes through a wide valley lined by sloping, sandy mountains that often feature distinctly round rock protrusions. The valley is home to a large amount of agriculture relative to other parts of the Atacama Desert. You’ll often see sizable green fields lined by bushes, trees, or wooden fences, as well as bunches of planted Mexican fan palms. A railroad track also follows the Lluta River on both sides, so if you’re in a green valley next to both a river and a railroad, you’re almost certainly on Ruta 11."
       ],
@@ -4762,14 +3547,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A wide valley with sloping sandy mountains that have round rock bumps, lots of farmland by desert standards, green fields with bushes or wooden fences, planted fan palms, and a railway following the river."
     },
     {
       "id": "cl-lm-643929",
       "step": 3,
       "order": 51,
       "family": "landscape",
-      "title": "Landscape: Landscape - A11 - Barren",
+      "title": "Road: new wide road, yellow barriers, red sand hills",
       "text": [
         "After crossing the Lluta River at Poconchile, the Ruta 11 continues out of the valley and up into the mountains. The road is all newly paved (except for a few small segments with ongoing construction) and is generally quite wide. This section of Ruta 11 features:",
         "Many concrete barriers (which are often painted yellow), double guardrails, and roadside drainage ways.",
@@ -4801,49 +3587,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "cl-lm-643930",
-      "step": 3,
-      "order": 52,
-      "family": "landscape",
-      "title": "Landscape: Landscape - A11 - Shrubby",
-      "text": [
-        "After crossing the Lluta River at Poconchile, the Ruta 11 continues out of the valley and up into the mountains. The road is all newly paved (except for a few small segments with ongoing construction) and is generally quite wide. The landscape is bare of vegetation until around Zapahuira, east of which the landscape becomes open and covered with small green bushes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c0bbe9ae2d60",
-          "src": "https://learnablemeta.com/images/798/1767912423308-auc.avif",
-          "path": "cl/c0bbe9ae2d60.webp",
-          "width": 800,
-          "height": 449
-        },
-        {
-          "id": "81efafaa4718",
-          "src": "https://learnablemeta.com/images/798/1767912429474-mtJ.avif",
-          "path": "cl/81efafaa4718.webp",
-          "width": 800,
-          "height": 291,
-          "dupeOf": "cc9b81da40ff"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A newly paved, wide road climbing out of the valley: concrete barriers (often yellow), double guardrails, drains, sometimes maroon asphalt, and light reddish sand mountains with round bumps. No plants at first, then small green bushes further east."
     },
     {
       "id": "cl-lm-643934",
       "step": 3,
       "order": 53,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Chilean Wine Palm",
+      "title": "Plants: Chilean wine palm",
       "text": [
         "It is endemic to a small area of central Chile between southern Coquimbo, Valparaíso, Santiago, O'Higgins, and northern Maule regions. They are highly concentrated around Viña del Mar."
       ],
@@ -4870,7 +3622,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A palm that grows only in a small central area, most densely around the coastal resort city."
     }
   ]
 }

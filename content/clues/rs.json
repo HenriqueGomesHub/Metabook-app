@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "bollard",
-      "title": "Bollard: Serbia has a few bollard designs",
+      "title": "Bollard: flat post, reflector off-centre",
       "text": [
         "Serbia has a few bollard designs, however most of them will have an **off-centred reflector.** The bollards are usually flat, with no depth to them."
       ],
@@ -73,14 +73,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Several designs exist, but most are flat posts with the reflector off to one side rather than in the middle. Off-centre reflector is the key.",
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austrian reflector sits in the centre"
+        },
+        {
+          "country": "SI",
+          "how": "Slovenian reflector sits in the centre"
+        }
+      ]
     },
     {
       "id": "rs-VSVy",
       "step": 0,
       "order": 2,
       "family": "guardrail",
-      "title": "Guardrail: Serbia uses B-Profile guardrails exclusively",
+      "title": "Guardrail: B-profile (double wave)",
       "text": [
         "Serbia uses **B-Profile** guardrails exclusively.",
         "NOTE: North Macedonia does not use B-Profile guardrails. For a good overview of European guardrails, see [this infographic](/images/serbia/europeguardrail.png)."
@@ -132,7 +143,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Only the B-profile guardrail is used here, the common double-wave shape. North Macedonia does not use it.",
+      "differs": [
+        {
+          "country": "MK",
+          "how": "North Macedonia uses other guardrail profiles"
+        }
+      ]
     },
     {
       "id": "rs-WqwF",
@@ -140,7 +158,7 @@
       "order": 3,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Serbia uses chevrons with a black arrow on a white…",
+      "title": "Chevron: black arrow on white",
       "text": [
         "Serbia uses chevrons with a **black arrow** on a **white** background.",
         "NOTE: Within Europe, these chevrons can also be found in Slovenia, Montenegro and North Macedonia."
@@ -202,14 +220,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve signs with a black arrow on a white background. Slovenia, Montenegro and North Macedonia use the same look.",
+      "sameAs": [
+        "ME",
+        "MK",
+        "SI"
+      ]
     },
     {
       "id": "rs-eWgo",
       "step": 0,
       "order": 4,
       "family": "plate",
-      "title": "Plate: Serbian licence plates are white with a blue strip on the…",
+      "title": "Plate: white with blue strip on left",
       "text": [
         "Serbian licence plates are white with a **blue strip** on the left. Agricultural plates, on vehicles such as tractors, are **green**.",
         "NOTE: Croatian and North Macedonian plates typically do not have a blue strip."
@@ -232,14 +256,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White plates with a blue strip on the left. Tractors and farm vehicles have green plates. Croatian and North Macedonian plates usually have no blue strip.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "Croatian plates usually lack the blue strip"
+        },
+        {
+          "country": "MK",
+          "how": "North Macedonian plates usually lack the blue strip"
+        }
+      ]
     },
     {
       "id": "rs-6jty",
       "step": 0,
       "order": 5,
       "family": "language",
-      "title": "Language: Serbian is a Slavic language which uses both the Cyrillic…",
+      "title": "Language: Ђ, Ћ in Cyrillic text",
       "text": [
         "Serbian is a Slavic language which uses both the **Cyrillic** and Latin script. These letters are unique to Serbian:",
         "- Ђ ђ",
@@ -267,14 +302,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Serbian uses both Cyrillic and Latin script. The letters Ђ and Ћ are only Serbian; Љ, Њ and Џ are shared with Macedonian."
     },
     {
       "id": "rs-C8Jw",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: When written in the Latin script",
+      "title": "Language: Latin letters Č Ć Đ Š Ž",
       "text": [
         "When written in the **Latin** script, Serbian uses the special letters Č, Ć, Đ, Š and Ž. Note that all of these letters may also be found in Croatian and Montenegrin."
       ],
@@ -296,14 +332,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Latin-script Serbian uses Č, Ć, Đ, Š and Ž. Croatian and Montenegrin use all of these letters too.",
+      "sameAs": [
+        "HR",
+        "ME"
+      ]
     },
     {
       "id": "rs-SDu4",
       "step": 0,
       "order": 7,
       "family": "coverage",
-      "title": "Coverage: Serbia has 4 different truck colours that were used in…",
+      "title": "Coverage: four Google car colours",
       "text": [
         "Serbia has **4 different truck colours** that were used in different areas."
       ],
@@ -345,14 +386,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Four different car colours were used here, each in different areas, so car colour can point to a part of the country."
     },
     {
       "id": "rs-V8kh",
       "step": 0,
       "order": 8,
       "family": "car",
-      "title": "Google car: Serbia also has Generation 4 “smallcam” coverage",
+      "title": "Google car: low-mounted camera, big round blur",
       "text": [
         "Serbia also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot. And a short antenna or black blur can be seen on the backside.",
         "NOTE: Most of the Balkans also have Smallcam."
@@ -394,14 +436,23 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low-mounted Gen 4 camera with a big round blur, a small bump at the front and a short antenna or black blur at the back. The blur can be see-through, so it is easy to miss. Most Balkan countries have it.",
+      "sameAs": [
+        "AL",
+        "BA",
+        "HR",
+        "ME",
+        "MK",
+        "SI"
+      ]
     },
     {
       "id": "rs-LpbY",
       "step": 0,
       "order": 9,
       "family": "car",
-      "title": "Google car: Most of the Generation 3 coverage in Serbia was taken by a…",
+      "title": "Google car: no antenna in Gen 3",
       "text": [
         "Most of the Generation 3 coverage in Serbia was taken by a Google car with **no antenna**.",
         "NOTE: Other than North Macedonia, almost all of central and eastern Europe has antenna coverage in Generation 3."
@@ -453,14 +504,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the older Gen 3 coverage was shot by a car with no antenna. Almost all neighbouring central and eastern European countries have an antenna in Gen 3, except North Macedonia.",
+      "sameAs": [
+        "MK"
+      ]
     },
     {
       "id": "rs-mTBk",
       "step": 1,
       "order": 0,
       "family": "car",
-      "title": "Google car: This is a Generation 3 coverage map of Serbia",
+      "title": "Coverage: Gen 3 in north, centre and southeast",
       "text": [
         "This is a Generation 3 coverage map of Serbia. Most of the coverage is in the north in Vojvodina, around Belgrade and in the southeast around Niš. Kosovo does not have any Generation 3 coverage."
       ],
@@ -485,14 +540,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Older Gen 3 coverage is mostly in the north, around the capital and in the southeast. Kosovo has no Gen 3 at all.",
+      "differs": [
+        {
+          "country": "XK",
+          "how": "Kosovo has no Gen 3 coverage"
+        }
+      ]
     },
     {
       "id": "rs-VetX",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: In the north of Serbia in the Vojvodina region",
+      "title": "Landscape: pancake flat plains in the north",
       "text": [
         "In the north of Serbia in the Vojvodina region, from the Hungarian border to Belgrade, the landscape is **extremely flat**, with no hills whatsoever. A slight ridge however can be seen at Fruška Gora National Park.",
         "A more hilly landscape can be seen in the central-southern region. The most mountainous regions of Serbia are found in the southwest and southeast, where the Dinaric Alps, Carpathian and Balkan mountains run through Serbia."
@@ -517,14 +579,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the far north up to the capital, the land is extremely flat with no hills, apart from one small ridge. Hillier in the centre and south; the highest mountains are in the southwest and southeast."
     },
     {
       "id": "rs-w6kX",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Serbia uses 2 digit area codes",
+      "title": "Phone numbers: 2-digit area code, 1 to 3",
       "text": [
         "Serbia uses 2 digit area codes, with the first digit **between 1 and 3**. Area codes starting with 2 are found in the north, area codes starting with 1 are found in central and eastern Serbia. Area codes starting with 3 are found in the south-west."
       ],
@@ -546,63 +609,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "rs-un4M",
-      "step": 1,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Vojvodina, the northern region between the Hungarian border…",
-      "text": [
-        "Vojvodina, the northern region between the Hungarian border and Belgrade, can be recognized by the **flat**, **agricultural landscape**. The landscape will be completely flat with **no hills whatsoever**."
-      ],
-      "region": "Belgrade",
-      "tags": [
-        "landscape"
-      ],
-      "images": [
-        {
-          "id": "55d2c5428ca9",
-          "src": "https://www.plonkit.net/images/serbia/vojvodina.png",
-          "location": {
-            "pano": "dUPULXcBR1MNhKhYv8-5LA",
-            "lat": 45.9867156,
-            "lng": 20.0135995,
-            "heading": 170.7,
-            "pitch": -0.11,
-            "fov": 75,
-            "source": "plonkit"
-          },
-          "path": "rs/55d2c5428ca9.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [
-        {
-          "pano": "dUPULXcBR1MNhKhYv8-5LA",
-          "lat": 45.9867156,
-          "lng": 20.0135995,
-          "heading": 170.7,
-          "pitch": -0.11,
-          "fov": 75,
-          "source": "plonkit"
-        }
-      ],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/serbia",
-        "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes have 2 digits and the first digit is 1, 2 or 3. 2 is the north, 1 is the centre and east, 3 is the southwest."
     },
     {
       "id": "rs-kehq",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: This slight ridge in an otherwise flat landscape can be…",
+      "title": "Landscape: lone low ridge in flat land",
       "text": [
         "This slight **ridge** in an otherwise flat landscape can be seen in Fruška Gora National Park, southwest of Novi Sad."
       ],
@@ -643,14 +658,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A slight ridge rising from otherwise flat land, in a national park southwest of Novi Sad."
     },
     {
       "id": "rs-enVL",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Central-northern Serbia can be recognized by the slight…",
+      "title": "Landscape: gentle rolling hills",
       "text": [
         "Central-northern Serbia can be recognized by the **slight rolling hills**."
       ],
@@ -691,14 +707,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the centre-north, slightly rolling hills."
     },
     {
       "id": "rs-QMqw",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: A similarly rolling landscape can be seen in the southern…",
+      "title": "Landscape: rolling hills, bigger further south",
       "text": [
         "A similarly rolling landscape can be seen in the southern Morava River basin, however **larger hills and mountains** can be seen."
       ],
@@ -739,14 +756,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south, a similar rolling landscape along a river basin, but with larger hills and mountains."
     },
     {
       "id": "rs-RnNO",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: A lush, green, mountainous landscape can be seen in the…",
+      "title": "Landscape: lush green mountains",
       "text": [
         "A **lush**, **green**, **mountainous** landscape can be seen in the south and southeast, along the Bulgarian and Kosovo border."
       ],
@@ -797,14 +815,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south and southeast, along the Bulgarian and Kosovo borders, the land is lush, green and mountainous.",
+      "differs": [
+        {
+          "country": "XK",
+          "how": "Kosovo looks similar next door, so use borders and signs"
+        }
+      ]
     },
     {
       "id": "rs-WCh2",
       "step": 1,
       "order": 8,
       "family": "car",
-      "title": "Google car: Generation 3 Fall coverage can be seen in this region south…",
+      "title": "Coverage: autumn Gen 3 photos",
       "text": [
         "Generation 3 **Fall coverage** can be seen in this region south of Čačak, and a small area around Valjevo."
       ],
@@ -846,14 +871,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage taken in autumn appears south of Čačak and in a small area around Valjevo."
     },
     {
       "id": "rs-8vGG",
       "step": 2,
       "order": 0,
       "family": "car",
-      "title": "Google car: A white Google Car with a short antenna can be seen in Novi…",
+      "title": "Google car: white car, short antenna",
       "text": [
         "A white Google Car with a **short antenna** can be seen in Novi Sad, Kovilj, in and around Belgrade, Niš, and the E75 connecting them.",
         "NOTE: The white car is not always visible."
@@ -895,14 +921,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A white Google car with a short antenna shows up around Novi Sad, Belgrade, Niš and the motorway linking them. The car is not always visible."
     },
     {
       "id": "rs-yQCt",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The distinct Vršac Mountains can be seen east of Vršac near…",
+      "title": "Landscape: mountains rising from flat land",
       "text": [
         "The distinct **Vršac Mountains** can be seen east of Vršac near the Romanian border. The mountains protrude out from a flat landscape and [vineyards](https://goo.gl/maps/e2hLdz6HJw4kWN778) can commonly be seen to the south of the mountains. The [Vršac Castle](https://goo.gl/maps/WzaCRBL14QdDEdre7) can also be seen atop the mountain."
       ],
@@ -943,14 +970,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the Romanian border, a distinct mountain range rises out of flat land, with vineyards to its south and a castle on top."
     },
     {
       "id": "rs-ajNO",
       "step": 2,
       "order": 2,
       "family": "language",
-      "title": "Language: Bilingual signs with Serbian alongside Hungarian can be…",
+      "title": "Language: Serbian and Hungarian together",
       "text": [
         "**Bilingual signs** with Serbian alongside Hungarian can be seen in northern Vojvodina, where there is a Hungarian majority."
       ],
@@ -991,38 +1019,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/serbia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "rs-lm-114",
-      "step": 3,
-      "order": 0,
-      "family": "bollard",
-      "title": "Bollard: Bollard",
-      "text": [
-        "Serbian bollards might look like Austria/Slovenia bollards but reflector will be always off-center. They have couple other designs but reflector will be always off-center."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "865528e01df8",
-          "src": "https://learnablemeta.com/images/Vb1N0pBSkdiXLdgPobd1RnXkXRdpbAGFaetN.avif",
-          "path": "rs/865528e01df8.webp",
-          "width": 1000,
-          "height": 533,
-          "dupeOf": "c75844a269ce"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AT",
-        "SI"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the far north, where many Hungarians live, signs show Serbian next to Hungarian."
     },
     {
       "id": "rs-lm-3003",
@@ -1030,7 +1028,7 @@
       "order": 1,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Switch-up Serbia",
+      "title": "Pedestrian sign: no hat, rounded figure",
       "text": [
         "Serbia has 2 different pedestrian signs. **Horizontal Zebra stripe**: Austria, Belgium, Greece, Poland, Serbia. > **No hat + rounded, non-detailed guy**: Serbia. OR **5 Zebra stripes + rounded guy + no belt + white/silver border + no blue corners**: Serbia, and Slovenia."
       ],
@@ -1063,73 +1061,28 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "rs-lm-24633",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Northern Plains",
-      "text": [
-        "Vojvodina, the northern region between the Hungarian border and Belgrade, can be recognized by the flat, agricultural landscape. The landscape will be completely flat with no hills whatsoever."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5096f5096813",
-          "src": "https://learnablemeta.com/images/664/hdGwU2WCn4reyHI9cmWon4zXEGLaiyRDT3EY.avif",
-          "path": "rs/5096f5096813.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "55d2c5428ca9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "rs-lm-25940",
-      "step": 3,
-      "order": 3,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Serbian bollards might look like Austria/Slovenia bollards but reflector will be always off-center. They have couple other designs but reflector will be always off-center."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ba7828758461",
-          "src": "https://learnablemeta.com/images/739/W2aWcriT7iQYrlx25ZUGoMmWYAxZU6psQngM.avif",
-          "path": "rs/ba7828758461.webp",
-          "width": 1000,
-          "height": 533,
-          "dupeOf": "c75844a269ce"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AT",
+      },
+      "summary": "Two types: a horizontal zebra with a hatless, rounded figure, or five zebra stripes with a rounded figure, no belt and a white or silver border. The second type is shared with Slovenia.",
+      "sameAs": [
         "SI"
       ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      "differs": [
+        {
+          "country": "AT",
+          "how": "Austria's figure is more detailed, has a hat"
+        },
+        {
+          "country": "PL",
+          "how": "Polish figure is more detailed"
+        }
+      ]
     },
     {
       "id": "rs-lm-476093",
       "step": 3,
       "order": 4,
       "family": "pole",
-      "title": "Pole: metal mesh",
+      "title": "Pole: metal ladder or mesh pole in town",
       "text": [
         "Metal poles, either in the shape of a ladder or with a mesh pattern, are common in small town. If you find a random metal pole inside a town, it is probably Serbia."
       ],
@@ -1149,7 +1102,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Metal poles shaped like a ladder or with a mesh pattern are common in small towns. A random metal pole inside a town is likely here."
     },
     {
       "id": "rs-lm-740395",
@@ -1157,7 +1111,7 @@
       "order": 5,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Belgrade street sign",
+      "title": "Sign: street sign with flag-coloured shield",
       "text": [
         "Belgrade street signs have cyrillic and latin written on them, it also has a unique shield icon on the left which has the serbian flag colors in it."
       ],
@@ -1177,52 +1131,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "rs-lm-783071",
-      "step": 3,
-      "order": 6,
-      "family": "language",
-      "title": "Language: Serbian",
-      "text": [
-        "Serbian is the version of Serbo-Croatian official in Serbia. Serbian uses both the Cyrillic and Latin script, and most official road signs use both scripts. Croatian will never use Cyrillic, while Bosnian and Montenegrin might. These letters are unique to Serbo-Croatian (Cyrillic): **Ђ ђ** and **Ћ ћ**.",
-        "These letters are found in Serbo-Croatian and Macedonian: **Љ љ**, **Њ њ** and **Џ џ**. The **J** from Latin is also used in Cyrillic in these languages (in Bulgarian or Russian, **Й** is used instead).",
-        "The Serbo-Croatian word for street is **улица/ulica** (like most Slavic languages)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a764a05ae9c5",
-          "src": "https://learnablemeta.com/images/9388/1785604062364-p5z.avif",
-          "path": "rs/a764a05ae9c5.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "4262c9ee6767"
-        },
-        {
-          "id": "9d153b8925b3",
-          "src": "https://learnablemeta.com/images/9388/1785604131458-39f.avif",
-          "path": "rs/9d153b8925b3.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "567d3da968ee"
-        },
-        {
-          "id": "590d4b595323",
-          "src": "https://learnablemeta.com/images/9388/1785604321661-oA4.avif",
-          "path": "rs/590d4b595323.webp",
-          "width": 190,
-          "height": 122
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Street signs in the capital show Cyrillic and Latin text and a shield on the left in the national flag colours."
     }
   ]
 }

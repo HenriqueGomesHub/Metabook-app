@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Thailand uses large, white licence plates on passenger…",
+      "title": "Plate: large white, yellow for commercial",
       "text": [
         "Thailand uses large, **white** licence plates on **passenger vehicles**, and yellow ones on commercial vehicles.",
         "NOTE: Within Southeast Asia, yellow commercial plates are only found in Thailand. Be careful, however, as Laos uses yellow licence plates for regular vehicles."
@@ -47,14 +47,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Big white plates on private vehicles, yellow on commercial ones. Yellow commercial plates are only found here in Southeast Asia, but Laos uses yellow on normal cars.",
+      "differs": [
+        {
+          "country": "LA",
+          "how": "Laos uses short yellow plates on ordinary cars"
+        }
+      ]
     },
     {
       "id": "th-aRcg",
       "step": 0,
       "order": 2,
       "family": "other",
-      "title": "Thailand drives on the left hand side of the road",
+      "title": "Driving side: left",
       "text": [
         "Thailand drives on the **left hand** side of the road.",
         "NOTE: Cambodia, Vietnam and Laos drive on the right hand side."
@@ -97,14 +104,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the left. Cambodia, Vietnam and Laos drive on the right.",
+      "differs": [
+        {
+          "country": "KH",
+          "how": "Cambodia drives on the right"
+        },
+        {
+          "country": "LA",
+          "how": "Laos drives on the right"
+        }
+      ]
     },
     {
       "id": "th-bTGN",
       "step": 0,
       "order": 3,
       "family": "bollard",
-      "title": "Bollard: The Thai bollard is square shaped with a pointed top",
+      "title": "Bollard: square, pointed top, striped",
       "text": [
         "The Thai bollard is square shaped with a pointed top, and has **black-and-white stripes**.",
         "NOTE: In Southeast Asia, these bollards are also found in Cambodia, Laos and Indonesia."
@@ -165,7 +183,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete bollard with a pointed top and black-and-white stripes. Cambodia, Laos and Indonesia have it too.",
+      "sameAs": [
+        "ID",
+        "KH",
+        "LA"
+      ]
     },
     {
       "id": "th-LKJb",
@@ -173,7 +197,7 @@
       "order": 4,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signposts in Thailand are square and bulky in shape",
+      "title": "Sign: bulky white signpost, black bottom",
       "text": [
         "Signposts in Thailand are square and bulky in shape, usually white, and often have the **bottom painted black**.",
         "NOTE: In Southeast Asia, this design is unique to Thailand."
@@ -229,14 +253,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square, bulky, usually white signposts, often with the bottom painted black. Unique in Southeast Asia."
     },
     {
       "id": "th-V3cL",
       "step": 0,
       "order": 5,
       "family": "other",
-      "title": "Concrete roads are common in Thailand",
+      "title": "Road: concrete with big square slabs",
       "text": [
         "**Concrete roads** are common in Thailand. They often have a large square shaped pattern.",
         "NOTE: In Southeast Asia, these can also be found commonly in the Philippines, and less commonly in Indonesia."
@@ -279,14 +304,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Concrete roads with a large square pattern are common. The Philippines has them too, Indonesia less often.",
+      "sameAs": [
+        "ID",
+        "PH"
+      ]
     },
     {
       "id": "th-w9ag",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Thai poles are square and have small holes running…",
+      "title": "Pole: square with holes up the side",
       "text": [
         "Thai poles are **square **and have small **holes** running vertically up the pole.",
         "NOTE: You will see similar poles in Sri Lanka, Cambodia and Laos. Make sure to look for other clues before guessing."
@@ -347,14 +377,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete poles with small vertical holes. Sri Lanka, Cambodia and Laos have similar ones, so check other clues.",
+      "sameAs": [
+        "KH",
+        "LA",
+        "LK"
+      ]
     },
     {
       "id": "th-zad0",
       "step": 0,
       "order": 7,
       "family": "language",
-      "title": "Language: Thai script is compact and in many fonts has tiny circles…",
+      "title": "Language: compact script with tiny circles",
       "text": [
         "**Thai script** is compact and in many fonts has tiny circles within most letters.",
         "NOTE: The Cambodian (Khmer) script often has longer lines and more accents underneath the lettering, as opposed to the Thai script. The Lao script looks similar to the Thai script. Make sure to check the driving side before guessing."
@@ -375,14 +411,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Compact script with small circles in many letters. Cambodian script has longer lines and more marks underneath. Lao looks similar, so check the driving side.",
+      "differs": [
+        {
+          "country": "KH",
+          "how": "Cambodian script has longer lines, more marks below"
+        },
+        {
+          "country": "LA",
+          "how": "Laos looks similar but drives on the right"
+        }
+      ]
     },
     {
       "id": "th-p3S3",
       "step": 0,
       "order": 8,
       "family": "line",
-      "title": "Road line: Thailand has yellow middle lines",
+      "title": "Road lines: yellow middle lines",
       "text": [
         "Thailand has** yellow middle lines**. These middle lines are either solid or [dashed](https://goo.gl/maps/3skrWJJNZ7JxFzyi7) lines.",
         "NOTE: Malaysia only has white middle lines."
@@ -440,14 +487,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow middle lines, solid or dashed. Malaysia only has white middle lines.",
+      "differs": [
+        {
+          "country": "MY",
+          "how": "Malaysia only has white middle lines"
+        }
+      ]
     },
     {
       "id": "th-pVKM",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Street light poles have red-and-black or black-and-white…",
+      "title": "Pole: red-black or black-white striped base",
       "text": [
         "Street light poles have **red-and-black** or **black-and-white** stripes on the bottom."
       ],
@@ -496,14 +550,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street light poles have red-and-black or black-and-white stripes at the bottom."
     },
     {
       "id": "th-oN48",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "Thailand has very distinct long",
+      "title": "Poles: long thin lamp arms over the road",
       "text": [
         "Thailand has very distinct long, thin **lamp posts** that hang over the side of the road."
       ],
@@ -542,7 +597,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very long, thin lamp posts that hang out over the side of the road."
     },
     {
       "id": "th-1K3M",
@@ -550,7 +606,7 @@
       "order": 11,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs on smaller roads are white",
+      "title": "Sign: white two-part signs, green on highways",
       "text": [
         "Directional signs on smaller roads are **white**, and are composed of two signs: one with an arrow at the bottom, and one with the information at the top. These can have place names. When they do not, you will see them as just the road number with a [Garuda](https://en.wikipedia.org/wiki/Emblem_of_Thailand). Moreover, highway signs are **green**, and frequently feature the place names in Latin script below the Thai name."
       ],
@@ -589,7 +645,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On smaller roads the signs are white, in two parts: an arrow below and info above. Without place names they just show the road number and a Garuda emblem. Highway signs are green, with Latin place names below the local ones."
     },
     {
       "id": "th-ahtf",
@@ -597,7 +654,7 @@
       "order": 12,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Stop signs in Thailand feature the Thai script",
+      "title": "Sign: stop sign in local script, 3 characters",
       "text": [
         "Stop signs in Thailand feature the **Thai script**, instead of Latin.",
         "NOTE: Stop signs in Laos feature the Lao script, similar to Thai, but they have just 2 characters instead of 3."
@@ -639,14 +696,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs use Thai script, not Latin. Laos uses a similar script but has only 2 characters.",
+      "differs": [
+        {
+          "country": "LA",
+          "how": "Lao stop signs have 2 characters, not 3"
+        }
+      ]
     },
     {
       "id": "th-pELn",
       "step": 0,
       "order": 13,
       "family": "other",
-      "title": "These two road markers are generally found in Thailand",
+      "title": "Marker: road markers with white or black Garuda",
       "text": [
         "These two road markers are generally found in Thailand. They will either have a white or a black **Garuda** on them.",
         "NOTE: White Garudas are found on national roads and appear [white](/images/thailand/Thai+roads.png) on the map, while black ones are found on provincial roads and appear [dark blue](/images/thailand/Thai+roads.png) on the map."
@@ -687,14 +751,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road markers carry a white or black Garuda bird emblem. White is on national roads, black on provincial roads."
     },
     {
       "id": "th-SrCQ",
       "step": 0,
       "order": 14,
       "family": "other",
-      "title": "Thailand often has many flags lining the side of its streets",
+      "title": "Flags: many along the street, yellow royal",
       "text": [
         "Thailand often has many flags lining the side of its streets. Aside from the national flag, you can often see [royal flags](https://en.wikipedia.org/wiki/Royal_flags_of_Thailand), which are usually **yellow**."
       ],
@@ -733,7 +798,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Streets are often lined with flags: the national flag and yellow royal flags."
     },
     {
       "id": "th-xPZV",
@@ -741,7 +807,7 @@
       "order": 15,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: These distinctive green signs can be found all around…",
+      "title": "Sign: distinctive green village sign",
       "text": [
         "These distinctive **green **signs can be found all around Thailand, often in small villages.",
         "NOTE: You will not find this sign in any other country."
@@ -781,14 +847,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A distinctive green sign found across the country, often in small villages. It exists in no other country."
     },
     {
       "id": "th-4W5G",
       "step": 0,
       "order": 16,
       "family": "car",
-      "title": "Google car: Most Generation 3 coverage has no visible Street View car",
+      "title": "Google car: Gen 3 with no visible car",
       "text": [
         "Most Generation 3 coverage has **no visible Street View car**.",
         "NOTE: [Vientiane](https://maps.app.goo.gl/E53R9yBhmgzxiKaY8) and some Generation 3 coverage in [Cambodia](https://maps.app.goo.gl/G3n69goD22xopDMg7) will also not have a visible car. [Bike trekkers](https://maps.app.goo.gl/89XmAqRyVAqEU8wK6) and a [white car with a brake light](https://maps.app.goo.gl/SnHxSHmoqq64yXfr6) can rarely be found all throughout the country in Generation 3."
@@ -830,14 +897,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most Gen 3 coverage shows no car. The Laos capital and some Gen 3 in Cambodia also have no car. Rare bike trekkers and a white car with a brake light appear too.",
+      "sameAs": [
+        "KH"
+      ]
     },
     {
       "id": "th-sHFO",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Thai landline phone numbers have 9 digits",
+      "title": "Phone numbers: 9-digit landline, 02 for capital",
       "text": [
         "Thai **landline phone numbers** have 9 digits. The first digits of phone numbers are the area code. The Bangkok area code is 02, the other area codes have three digits. The area codes are grouped, so even just learning the first digit is useful.",
         "NOTE: Mobile phone numbers start with 08 or 09 and have 10 digits. None of these numbers overlap with the area codes. Numbers starting with 06 are also not regional."
@@ -858,14 +929,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Landlines have 9 digits. The capital's area code is 02 and others have three digits. Area codes are grouped, so the first digit helps. Mobiles start with 08 or 09 and have 10 digits, and 06 numbers are not regional."
     },
     {
       "id": "th-aVcK",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "National roads are grouped into four regions based on their…",
+      "title": "Route numbers: first digit shows region",
       "text": [
         "National roads are grouped into four regions based on their **first digit**. Roads beginning with 1 can be found in the north, 2 in the northeast, 3 in the centre and 4 in the south of the country.",
         "NOTE: Large one- and two-digit highways may pass through multiple regions. Remember that this map does not apply to provincial roads. "
@@ -887,7 +959,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "National roads starting with 1 are in the north, 2 the north-east, 3 the centre and 4 the south. Big one- and two-digit highways cross regions, and provincial roads don't follow this."
     },
     {
       "id": "th-03iF",
@@ -895,7 +968,7 @@
       "order": 2,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Waystones and road signs on provincial roads will often…",
+      "title": "Sign: two-letter province code on waystones",
       "text": [
         "Waystones and road signs on provincial roads will often provide a **two-letter abbreviation** of the province in Thai script. They will not appear on waystones or road signs for national roads.",
         "You can use [this](https://super-duper.fr/country/thailand_provinces_en.php) site to view and practice all province abbreviations."
@@ -935,14 +1008,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Waystones and road signs on provincial roads often show a two-letter province abbreviation in Thai script. National roads don't."
     },
     {
       "id": "th-Lj1E",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "These black boxes will often provide a three-letter…",
+      "title": "Boxes: black boxes with 3-letter province code",
       "text": [
         "These **black boxes** will often provide a **three-letter abbreviation** of the province. Two formats are used:",
         "- Starting with the abbreviation followed by 4 numbers",
@@ -985,14 +1059,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black boxes often show a three-letter province code, either starting with it followed by 4 numbers, or starting with TCC-L2 followed by the code. Other boxes may show the subdistrict."
     },
     {
       "id": "th-UnwR",
       "step": 1,
       "order": 4,
       "family": "language",
-      "title": "Language: The majority of Muslims in Thailand live in the very south…",
+      "title": "Religion: Islamic dress and Jawi script",
       "text": [
         "The majority of **Muslims** in Thailand live in the very south of the country. In these areas, you will often see Islamic religious attire, [Jawi script](https://en.wikipedia.org/wiki/Jawi_script), based on the Arabic script, on [signs](https://maps.app.goo.gl/oy83kvBm8XWcc3ZEA) and mosques."
       ],
@@ -1031,14 +1106,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most Muslims live in the very south. There you often see Islamic dress, mosques and Jawi script, based on Arabic, on signs."
     },
     {
       "id": "th-JvSJ",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Thailand has two regions that are relatively flat and dry…",
+      "title": "Landscape: two flat, dry regions",
       "text": [
         "Thailand has two regions that are relatively **flat and dry** compared to other areas. One north of Bangkok, the other more east.",
         "NOTE: The eastern area feels sometimes a bit **drier** than the area north of Bangkok."
@@ -1078,14 +1154,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two relatively flat and dry regions: one north of the capital, one further east. The eastern one can feel drier."
     },
     {
       "id": "th-OGfz",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Tall mountains are most often seen in northwestern Thailand",
+      "title": "Landscape: tall mountains in the north-west",
       "text": [
         "**Tall mountains** are most often seen in northwestern** **Thailand.",
         "NOTE: Some parts of the southern peninsular part are also mountainous."
@@ -1133,14 +1210,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall mountains are most often seen in the north-west, and also parts of the southern peninsula."
     },
     {
       "id": "th-g8on",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: Low, smooth and forested mountains can be found in the…",
+      "title": "Landscape: low smooth forested mountains",
       "text": [
         "Low, smooth and forested mountains can be found in the centre-north of the country."
       ],
@@ -1187,14 +1265,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Low, smooth, forested mountains in the centre-north of the country."
     },
     {
       "id": "th-rOan",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: Steep mountains with a lot of exposed rock are most…",
+      "title": "Landscape: steep rocky mountains, west and south",
       "text": [
         "Steep mountains with a lot of **exposed rock** are most commonly found in the west and on the peninsula."
       ],
@@ -1241,14 +1320,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Steep mountains with a lot of bare rock, most common in the west and on the peninsula."
     },
     {
       "id": "th-tqgy",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: Red soil is most common in the northeast of Thailand",
+      "title": "Soil: red, mostly north-east",
       "text": [
         "**Red soil** is most common in the northeast of Thailand, but can be seen throughout the entire country."
       ],
@@ -1287,14 +1367,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red soil is most common in the north-east, but appears across the whole country."
     },
     {
       "id": "th-MZov",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "Gravel roads can be found all throughout Thailand",
+      "title": "Roads: gravel roads",
       "text": [
         "**Gravel roads** can be found all throughout Thailand, but are most common in the darkly highlighted areas."
       ],
@@ -1333,14 +1414,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gravel roads appear everywhere but are most common in the darkly highlighted areas on the map."
     },
     {
       "id": "th-0BPM",
       "step": 1,
       "order": 13,
       "family": "vegetation",
-      "title": "Vegetation: Rubber wood plantations are typically seen in Thailand",
+      "title": "Plants: rubber trees with small black cups",
       "text": [
         "**Rubber wood plantations** are typically seen in Thailand. Most of them are located in the** **south. You can recognize them by the small, black taps on the bottom of the tree's trunk."
       ],
@@ -1379,14 +1461,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rubber plantations, mostly in the south. Look for small black cups at the bottom of the trunks."
     },
     {
       "id": "th-ZxIl",
       "step": 1,
       "order": 14,
       "family": "other",
-      "title": "A majority of Thailand’s rice cultivation occurs within the…",
+      "title": "Farming: rice within highlighted area",
       "text": [
         "A majority of Thailand’s **rice **cultivation occurs within the highlighted area."
       ],
@@ -1425,14 +1508,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most rice is grown within the highlighted area on the map."
     },
     {
       "id": "th-r6yh",
       "step": 1,
       "order": 15,
       "family": "other",
-      "title": "Rice cultivated during the dry season is most common in the…",
+      "title": "Farming: dry-season rice in the central plains",
       "text": [
         "**Rice** cultivated during the **dry season** is most common in the central plains. The dry season in Thailand can typically be recognized by a haze in the sky due to wildfires."
       ],
@@ -1471,14 +1555,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dry-season rice is most common in the central plains. The dry season often shows as haze in the sky from wildfires."
     },
     {
       "id": "th-5jsO",
       "step": 1,
       "order": 16,
       "family": "other",
-      "title": "During the wet season",
+      "title": "Farming: wet-season rice in the east",
       "text": [
         "During the **wet season**, the majority of **rice **cultivation occurs in the eastern plains."
       ],
@@ -1517,14 +1602,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "During the wet season, most rice is grown in the eastern plains."
     },
     {
       "id": "th-gQgT",
       "step": 1,
       "order": 17,
       "family": "vegetation",
-      "title": "Vegetation: Over 90% of the palm oil in Thailand is produced in the…",
+      "title": "Plants: palm oil plantations, south",
       "text": [
         "Over 90% of the palm oil in Thailand is produced in the south. This means that **palm plantations** are most often seen in southern Thailand."
       ],
@@ -1563,14 +1649,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Over 90% of palm oil is produced in the south, so oil palm plantations show up most there."
     },
     {
       "id": "th-3SeI",
       "step": 1,
       "order": 18,
       "family": "vegetation",
-      "title": "Vegetation: Dense plantations of short or medium sized coconut palms…",
+      "title": "Plants: dense short coconut groves",
       "text": [
         "Dense plantations of** short **or **medium sized coconut palms** are most commonly found west** **of Bangkok."
       ],
@@ -1610,14 +1697,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dense plantations of short or medium coconut palms, mostly west of the capital."
     },
     {
       "id": "th-MmZp",
       "step": 1,
       "order": 19,
       "family": "vegetation",
-      "title": "Vegetation: Slightly less dense plantations of tall coconut palms are…",
+      "title": "Plants: tall coconut plantations, south-west",
       "text": [
         "Slightly less dense plantations of **tall coconut palms **are most common in Prachuap Khiri Khan.",
         "NOTE: The entire peninsula will have many coconut palms, this tip only refers to plantations."
@@ -1658,14 +1746,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Slightly less dense plantations of tall coconut palms, most common in one south-western province. The entire peninsula has many coconut palms, this is about plantations only."
     },
     {
       "id": "th-4yTx",
       "step": 1,
       "order": 20,
       "family": "vegetation",
-      "title": "Vegetation: Large numbers of palmyra palms are typically found near the…",
+      "title": "Plants: palmyra palms near the south-east coast",
       "text": [
         "Large numbers of **palmyra palms** are typically found near the eastern coast of the peninsula, specifically just south of Bangkok as well as in the far south.",
         "NOTE: Lone or small clusters of palmyra palms can be found all throughout the country."
@@ -1706,14 +1795,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large numbers of palmyra palms near the eastern coast of the peninsula, just south of the capital and in the far south. Single or small groups appear everywhere."
     },
     {
       "id": "th-2MMc",
       "step": 1,
       "order": 21,
       "family": "vegetation",
-      "title": "Vegetation: Areca palms are mainly found across the peninsula",
+      "title": "Plants: areca palms on the peninsula",
       "text": [
         "**Areca palms** are mainly found across the peninsula, but are especially common around Ranong."
       ],
@@ -1753,14 +1843,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Areca palms are mainly on the peninsula, especially around one south-western town."
     },
     {
       "id": "th-QXyi",
       "step": 1,
       "order": 22,
       "family": "other",
-      "title": "Sugar cane is mostly grown in central and eastern Thailand",
+      "title": "Farming: sugar cane in the centre and east",
       "text": [
         "**Sugar cane **is mostly grown in central and eastern Thailand."
       ],
@@ -1799,14 +1890,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sugar cane is mostly grown in the centre and east."
     },
     {
       "id": "th-HYNG",
       "step": 1,
       "order": 23,
       "family": "other",
-      "title": "Cassava is a bush-like plant with digitate leaves",
+      "title": "Plants: cassava, bush with fingered leaves",
       "text": [
         "[**Cassava**](https://en.wikipedia.org/wiki/Cassava)** **is a bush-like plant with [digitate leaves](https://en.wikipedia.org/wiki/Glossary_of_leaf_morphology#/media/File:Leaf_morphology.svg). It** **can be found throughout most of Thailand, but is considerably more common in the central and northeastern plains."
       ],
@@ -1845,14 +1937,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cassava is a bush with leaves split like fingers. Found in most of the country, but much more common in the central and north-eastern plains."
     },
     {
       "id": "th-GpFr",
       "step": 1,
       "order": 24,
       "family": "other",
-      "title": "Corn is most commonly found in the north and central…",
+      "title": "Farming: corn in the north and centre",
       "text": [
         "**Corn **is most commonly found in the north and central** **regions of Thailand."
       ],
@@ -1891,14 +1984,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Corn is most commonly seen in the north and central regions."
     },
     {
       "id": "th-USoN",
       "step": 1,
       "order": 25,
       "family": "other",
-      "title": "The most extensive fruit plantations can be found in the…",
+      "title": "Farming: big fruit plantations",
       "text": [
         "The most extensive **fruit plantations** can be found in the valley between Chiang Mai and Lamphun** **as well as eastern Sa Kaeo and Chanthaburi."
       ],
@@ -1937,14 +2031,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The biggest fruit plantations are in a northern valley and in the far eastern provinces."
     },
     {
       "id": "th-7hzC",
       "step": 1,
       "order": 26,
       "family": "vegetation",
-      "title": "Vegetation: Durian plantations are most common around Chanthaburi",
+      "title": "Plants: durian plantations, cone-shaped young",
       "text": [
         "**Durian plantations** are most common around Chanthaburi, but can be found around the peninsula and other areas. When they are young, they can be identified by their cone-shaped appearance. When [fully grown](https://maps.app.goo.gl/3TtjWxAX8eC8m72f7), durian trees can be identified by their dark bark, branches that nearly reach the ground, and oblong leaves with pointed tips."
       ],
@@ -1984,14 +2079,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most common in the south-east but found on the peninsula and elsewhere. Young trees look cone-shaped. Grown ones have dark bark, branches nearly reaching the ground and pointed oblong leaves."
     },
     {
       "id": "th-zUbl",
       "step": 1,
       "order": 27,
       "family": "other",
-      "title": "Pineapple plantations are most commonly found southeast and…",
+      "title": "Farming: pineapple plantations near the capital",
       "text": [
         "**Pineapple plantations **are most commonly found southeast and southwest** **of Bangkok."
       ],
@@ -2031,14 +2127,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pineapple plantations are most common south-east and south-west of the capital."
     },
     {
       "id": "th-eo9N",
       "step": 1,
       "order": 28,
       "family": "other",
-      "title": "Eucalyptus plantations are most common around Sa Kaeo",
+      "title": "Plants: eucalyptus plantations in the east",
       "text": [
         "**Eucalyptus plantations** are most common around Sa Kaeo.",
         "NOTE: Eucalyptus can be found in smaller quantities, such as lining the road, in different areas. This tip is exclusively about dense plantations."
@@ -2079,14 +2176,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dense eucalyptus plantations are most common around one eastern border province. Eucalyptus lining roads can appear elsewhere in small amounts."
     },
     {
       "id": "th-QZgS",
       "step": 1,
       "order": 29,
       "family": "vegetation",
-      "title": "Vegetation: Tectona grandis, also known as teak, is most commonly found…",
+      "title": "Plants: teak, big leaves and yellow flowers",
       "text": [
         "[Tectona grandis](https://en.wikipedia.org/wiki/Teak), also known as **teak**, is most commonly found in high densities in the north. It can be recognized by its large leaves and yellow flowers.",
         "NOTE: Teak trees are often used for decoration along [highways](https://maps.app.goo.gl/8ZVapgFjkxUqz6UB8)."
@@ -2126,14 +2224,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Teak grows in high densities in the north. It has large leaves and yellow flowers, and is often planted as decoration along highways."
     },
     {
       "id": "th-NLmR",
       "step": 1,
       "order": 30,
       "family": "vegetation",
-      "title": "Vegetation: Pine trees, specifically Pinus latteri, or Tenasserim…",
+      "title": "Plants: Tenasserim pines in the north",
       "text": [
         "**Pine trees**, specifically [Pinus latteri](https://en.wikipedia.org/wiki/Pinus_latteri), or Tenasserim pines, are more or less exclusive to the north and northwest of the country."
       ],
@@ -2172,14 +2271,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pine trees of this kind are almost exclusively in the north and north-west."
     },
     {
       "id": "th-wtTr",
       "step": 1,
       "order": 31,
       "family": "other",
-      "title": "Codiaeum variegatum, also known as garden croton, is a…",
+      "title": "Plants: garden croton, yellow-red leaves",
       "text": [
         "[Codiaeum variegatum](https://en.wikipedia.org/wiki/Codiaeum_variegatum), also known as **garden croton**, is a decorative plant recognised by its yellow, orange and red leaves. It is most common around Ranong and other coastal provinces."
       ],
@@ -2218,14 +2318,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A decorative plant with yellow, orange and red leaves, most common around one south-western town and other coastal provinces."
     },
     {
       "id": "th-hzDI",
       "step": 1,
       "order": 33,
       "family": "architecture",
-      "title": "Architecture: Gray corrugated metal roofs are most commonly found in the…",
+      "title": "Houses: grey corrugated metal roofs",
       "text": [
         "**Gray corrugated metal roofs** are most commonly found in the north and south** **of the country, but can occasionally be found throughout the country."
       ],
@@ -2272,14 +2373,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grey corrugated metal roofs are most common in the north and south, but appear everywhere occasionally."
     },
     {
       "id": "th-3oUo",
       "step": 1,
       "order": 35,
       "family": "pole",
-      "title": "Pole: Regular poles with a Chilean style indent are found around…",
+      "title": "Pole: indented concrete near the capital",
       "text": [
         "Regular poles with a Chilean style **indent **are found around Bangkok.",
         "NOTE: Larger and thicker poles with indents are found on [highways](https://maps.app.goo.gl/8tzw2wz1WYcVC83R8) all throughout the country."
@@ -2330,14 +2432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Regular poles with a Chile-style indent around the capital. Larger, thicker indented poles appear on highways everywhere."
     },
     {
       "id": "th-85br",
       "step": 1,
       "order": 36,
       "family": "other",
-      "title": "Wind turbines are most often found on the western side of…",
+      "title": "Landscape: wind turbines in a few places",
       "text": [
         "**Wind turbines** are most often found on the western side of Chaiyaphum and Nakhon Ratchasima as well as the eastern coast of Songkhla and Nakhon Si Thammarat."
       ],
@@ -2376,14 +2479,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wind turbines are mostly on the west side of two north-eastern provinces and on the eastern coast of two southern provinces."
     },
     {
       "id": "th-2tIc",
       "step": 1,
       "order": 37,
       "family": "bollard",
-      "title": "Bollard: This black bollard with three large white reflectors is…",
+      "title": "Bollard: black with three big white reflectors",
       "text": [
         "This **black bollard** with **three large white reflectors** is most frequently seen in Chiang Mai and Mae Hong Son."
       ],
@@ -2425,14 +2529,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black bollard with three large white reflectors, seen mostly in two north-western provinces."
     },
     {
       "id": "th-rjs3",
       "step": 1,
       "order": 38,
       "family": "pole",
-      "title": "Pole: Insulators with 7 or more ridges are found in the southern…",
+      "title": "Pole: insulators with 7+ ridges",
       "text": [
         "Insulators with **7 or more ridges** are found in the southern half of the peninsula, as well as highways in Chiang Rai and Phayao.",
         "NOTE: In the north, you may still find 5 or 6 ridges on insulators, as these are the standard amount throughout the country."
@@ -2475,14 +2580,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Insulators with seven or more ridges are in the southern half of the peninsula and on highways in two northern provinces. Five or six ridges are standard everywhere else."
     },
     {
       "id": "th-3YqS",
       "step": 1,
       "order": 39,
       "family": "pole",
-      "title": "Pole: Poles with only one insulator on the crossbar can be found…",
+      "title": "Pole: single insulator on the crossbar",
       "text": [
         "Poles with only **one insulator **on the crossbar can be found from south on the peninsula to Ranong and Chumphon."
       ],
@@ -2524,14 +2630,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with just one insulator on the crossbar run from the southern peninsula up to two south-western provinces."
     },
     {
       "id": "th-peOM",
       "step": 1,
       "order": 40,
       "family": "pole",
-      "title": "Pole: Conversely, poles with two insulators on the crossbar can…",
+      "title": "Pole: two insulators on the crossbar",
       "text": [
         "Conversely, poles with **two insulators** on the crossbar can be found in the rest of the country."
       ],
@@ -2572,14 +2679,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with two insulators on the crossbar are found in the rest of the country."
     },
     {
       "id": "th-VtmL",
       "step": 2,
       "order": 0,
       "family": "architecture",
-      "title": "Architecture: The island of Phuket is very touristy and wealthy",
+      "title": "Landscape: touristy rich island with resorts",
       "text": [
         "The island of **Phuket **is very touristy and wealthy. You will often see modern buildings, resorts, and heavy traffic among hills."
       ],
@@ -2618,14 +2726,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A wealthy tourist island with modern buildings, resorts and heavy traffic among hills."
     },
     {
       "id": "th-F0Y9",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "Koh Samui and Koh Pha-Ngan are touristy islands with narrow",
+      "title": "Landscape: touristy islands, narrow roads",
       "text": [
         "Koh Samui and Koh Pha-Ngan are touristy islands with **narrow, crowded roads** and a tropical feel."
       ],
@@ -2664,14 +2773,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two touristy islands with narrow, crowded roads and a tropical feel."
     },
     {
       "id": "th-Rqm9",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "Bangkok uses pink and yellow on green taxis",
+      "title": "Taxis: pink, or yellow on green",
       "text": [
         "Bangkok uses **pink **and **yellow on green taxis**.",
         "NOTE: Yellow on green taxis may rarely be seen [elsewhere](https://maps.app.goo.gl/Jf25hEoRKt9tQhvEA), but pink taxis are practically exclusive."
@@ -2711,14 +2821,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital has pink taxis and yellow-on-green ones. Yellow-on-green may rarely appear elsewhere, but pink is practically exclusive."
     },
     {
       "id": "th-ThIf",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "These red trucks, known as songthaews, are transport…",
+      "title": "Vehicles: red pickup-truck buses",
       "text": [
         "These red trucks, known as **songthaews**, are transport vehicles found most commonly in Chiang Mai."
       ],
@@ -2757,7 +2868,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red trucks called songthaews act as transport, most common in one northern city."
     },
     {
       "id": "th-nnts",
@@ -2765,7 +2877,7 @@
       "order": 4,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs with a smaller green section underneath a blue…",
+      "title": "Street sign: small green strip under blue",
       "text": [
         "Street signs with a **smaller** **green section** underneath a blue section are found in Bangkok and Nonthaburi."
       ],
@@ -2804,7 +2916,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs with a smaller green section beneath a blue section, found in the capital and a neighbouring province."
     },
     {
       "id": "th-V83y",
@@ -2812,7 +2925,7 @@
       "order": 5,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs shaped like a helm are exclusive to Pattaya…",
+      "title": "Street sign: helmet-shaped",
       "text": [
         "Street signs shaped like a **helm **are exclusive to Pattaya City."
       ],
@@ -2851,7 +2964,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Helmet-shaped street signs are found only in one seaside city."
     },
     {
       "id": "th-uY5m",
@@ -2859,7 +2973,7 @@
       "order": 6,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Red street signs with golden decorated borders can be found…",
+      "title": "Street sign: red with golden border",
       "text": [
         "**Red street signs** with golden decorated borders can be found in Mueang Chiang Rai.",
         "NOTE: It is possible to see blue street signs with the same border in the city."
@@ -2899,14 +3013,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red street signs with golden decorated borders are in one northern city. Blue ones with the same border also exist there."
     },
     {
       "id": "th-vdHm",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: The Phrao District in Chiang Mai is a fairly flat valley…",
+      "title": "Landscape: flat valley ringed by mountains",
       "text": [
         "The **Phrao District** in Chiang Mai is a fairly flat valley surrounded by mountains in all directions. The valley will commonly grow rice and fruit."
       ],
@@ -2945,14 +3060,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A fairly flat valley surrounded by mountains on every side, commonly growing rice and fruit."
     },
     {
       "id": "th-6EeW",
       "step": 2,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: Doi Luang Chiang Dao is the 3rd tallest mountain in Thailand",
+      "title": "Landscape: third tallest mountain in view",
       "text": [
         "**Doi Luang Chiang Dao** is the 3rd tallest mountain in Thailand. It along with other distinctly shaped mountains can be seen clearly from the Chiang Dao district of Chiang Mai."
       ],
@@ -2991,14 +3107,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The country's third tallest mountain and other distinctly shaped mountains can be seen clearly from one northern district."
     },
     {
       "id": "th-wkCZ",
       "step": 2,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: A large and slightly jagged north-south mountain ridge runs…",
+      "title": "Landscape: jagged north-south ridge to the east",
       "text": [
         "A large and slightly jagged north-south mountain ridge runs through the middle of **Phayao**. It can be seen to the east from afar."
       ],
@@ -3037,14 +3154,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large, slightly jagged north-south ridge runs through the middle of one northern province, visible to the east from afar."
     },
     {
       "id": "th-tgzM",
       "step": 2,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: Rolling hills of corn or sugar cane fields can be found in…",
+      "title": "Landscape: rolling hills of corn and sugar cane",
       "text": [
         "**Rolling hills** of corn or sugar cane fields can be found in the west of the Tak province. In this area, paved roads are often [very brown](https://maps.app.goo.gl/gFH71bddWWbfX9Pz5)."
       ],
@@ -3091,14 +3209,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rolling hills of corn or sugar cane in the west of one province, where paved roads often look very brown."
     },
     {
       "id": "th-KSpq",
       "step": 2,
       "order": 11,
       "family": "landscape",
-      "title": "Landscape: Large north-south mountains can be seen on either side of…",
+      "title": "Landscape: big north-south mountains both sides",
       "text": [
         "**Large north-south mountains** can be seen on either side of the Phetchabun valley."
       ],
@@ -3137,14 +3256,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large north-south mountains on either side of a valley in the north-centre."
     },
     {
       "id": "th-bIyP",
       "step": 2,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: Deep red fields with cassava and rubber trees can be found…",
+      "title": "Soil: deep red fields, cassava and rubber",
       "text": [
         "**Deep red fields** with cassava and rubber trees can be found in Kanchanaburi."
       ],
@@ -3183,14 +3303,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Deep red fields with cassava and rubber trees in one western province."
     },
     {
       "id": "th-fymE",
       "step": 2,
       "order": 13,
       "family": "landscape",
-      "title": "Landscape: These distinctly shaped mountains can be found in…",
+      "title": "Landscape: distinctly shaped mountains, centre",
       "text": [
         "These distinctly shaped mountains can be found in **southwestern Lopburi**."
       ],
@@ -3237,14 +3358,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Distinctly shaped mountains in the south-west of one central province."
     },
     {
       "id": "th-6ONJ",
       "step": 2,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: The northern half of Saraburi consists of large",
+      "title": "Landscape: big bare-rock mountains, east-west",
       "text": [
         "The northern half of Saraburi consists of** large, exposed rock mountains** in an east-west orientation."
       ],
@@ -3291,14 +3413,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The northern half of one central province has large, exposed-rock mountains in an east-west line."
     },
     {
       "id": "th-tWkN",
       "step": 2,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Chaiyaphum features very long and flat mountain ridges that…",
+      "title": "Landscape: very long flat mountain ridges",
       "text": [
         "Chaiyaphum features **very long and flat mountain ridges** that can be seen from nearly anywhere in the province."
       ],
@@ -3337,14 +3460,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very long, flat mountain ridges visible from almost anywhere in one north-eastern province."
     },
     {
       "id": "th-tQaR",
       "step": 2,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: The area around Khao Yai National Park in southern Nakhon…",
+      "title": "Landscape: tourist road with resorts, rocky hills",
       "text": [
         "The area around Khao Yai National Park in southern Nakhon Ratchasima is a **large tourist attraction**. You will see many advertisements, businesses, restaurants, and resorts along otherwise rural roads. Large rocky hills can be seen closer to the border with Nakhon Nayok and Prachin Buri."
       ],
@@ -3383,14 +3507,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near a famous national park, rural roads are lined with ads, restaurants and resorts. Large rocky hills show closer to two neighbouring provinces."
     },
     {
       "id": "th-CKg2",
       "step": 2,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: In northern Nakhon Phanom",
+      "title": "Landscape: jagged limestone peaks, far bank",
       "text": [
         "In northern Nakhon Phanom, along the Mekong River, you will sometimes see **jagged limestone karst mountains** to the northeast. These formations stand on the Lao side and are often visible from long distances."
       ],
@@ -3429,14 +3554,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north-east along the Mekong you sometimes see jagged limestone peaks to the north-east. They stand on the Lao side and are visible from far away.",
+      "differs": [
+        {
+          "country": "LA",
+          "how": "The peaks themselves are in Laos"
+        }
+      ]
     },
     {
       "id": "th-cZKi",
       "step": 2,
       "order": 18,
       "family": "landscape",
-      "title": "Landscape: The province of Mukdahan features many long",
+      "title": "Landscape: long low hills among crop fields",
       "text": [
         "The province of Mukdahan features many **long, low hills** among fields of rice, sugarcane, cassava and rubber trees."
       ],
@@ -3475,14 +3607,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "One north-eastern province has many long, low hills among fields of rice, sugarcane, cassava and rubber trees."
     },
     {
       "id": "th-eYu7",
       "step": 2,
       "order": 19,
       "family": "landscape",
-      "title": "Landscape: Khao Sam Roi Yot National Park in western Prachuap Khiri…",
+      "title": "Landscape: big bare-rock massifs",
       "text": [
         "Khao Sam Roi Yot National Park in western Prachuap Khiri Khan features large, distinct exposed rock mountain massifs. Notably, the mountains can be seen from the [center of the province](https://maps.app.goo.gl/SNn2WAdVCjAdX8mf9)."
       ],
@@ -3521,14 +3654,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large, distinct exposed-rock mountain massifs in a western coastal province, visible from the centre of the province."
     },
     {
       "id": "th-eRwQ",
       "step": 2,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: Khao Sok National Park in northern Phang-nga and western…",
+      "title": "Landscape: tallest steep bare-rock mountains",
       "text": [
         "Khao Sok National Park in northern Phang-nga and western Surat Thani features some of the **tallest and steepest exposed rock mountains** in the south of Thailand. The mountains generally run east-west."
       ],
@@ -3567,14 +3701,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some of the tallest, steepest exposed-rock mountains in the south, running east-west, in a national park."
     },
     {
       "id": "th-M10h",
       "step": 2,
       "order": 21,
       "family": "landscape",
-      "title": "Landscape: Western Krabi and parts of eastern Phang-nga also feature…",
+      "title": "Landscape: large bare-rock mountains, north-south",
       "text": [
         "Western Krabi and parts of eastern Phang-nga also feature **large exposed rock mountains** running north-south."
       ],
@@ -3613,14 +3748,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Western Krabi and parts of eastern Phang-nga have large exposed-rock mountains running north-south."
     },
     {
       "id": "th-GQ8g",
       "step": 2,
       "order": 22,
       "family": "other",
-      "title": "Brown paved roads among fields of sugarcane",
+      "title": "Road: brown paved road among sugarcane and corn",
       "text": [
         "**Brown paved roads** among fields of sugarcane, cassava, and corn can be found in southeastern Nakhon Ratchasima."
       ],
@@ -3659,14 +3795,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Brown paved roads among sugarcane, cassava and corn fields, found in the south-east of one north-eastern province."
     },
     {
       "id": "th-jv6p",
       "step": 2,
       "order": 23,
       "family": "other",
-      "title": "Brown paved roads among fields of bananas",
+      "title": "Road: brown paved road among bananas and durians",
       "text": [
         "**Brown paved roads** among fields of bananas, durians, rubber, and corn can be found in southern Sisaket.",
         "NOTE: Southeastern Nakhon Ratchasima may look [similar](https://maps.app.goo.gl/3px9g5rxuA6NbzzL8) at times."
@@ -3706,14 +3843,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Brown paved roads among bananas, durians, rubber and corn, in the south of one north-eastern province. Another province may look similar."
     },
     {
       "id": "th-govn",
       "step": 2,
       "order": 24,
       "family": "other",
-      "title": "Southern Lopburi features a large",
+      "title": "Fields: north-north-west grid, ridges around",
       "text": [
         "Southern Lopburi features a large, slightly** north-north-west grid** with fields of rice, corn, sugarcane, and cassava. Ridges can often be seen to the north, south and west."
       ],
@@ -3752,14 +3890,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large, slightly north-north-west grid of rice, corn, sugarcane and cassava fields, with ridges often visible to the north, south and west."
     },
     {
       "id": "th-9LG9",
       "step": 2,
       "order": 25,
       "family": "other",
-      "title": "A large, almost perfectly north-south grid can be found in…",
+      "title": "Fields: large almost perfect north-south grid",
       "text": [
         "A large, almost perfectly **north-south** **grid** can be found in central and eastern Pathum Thani."
       ],
@@ -3798,14 +3937,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large, almost perfectly north-south grid in central and eastern parts of one central province."
     },
     {
       "id": "th-7EBY",
       "step": 2,
       "order": 26,
       "family": "architecture",
-      "title": "Architecture: Western Rayong province features a northeast-southwest grid…",
+      "title": "Fields: north-east to south-west grid, industry",
       "text": [
         "Western Rayong province features a **northeast-southwest grid** filled with modern and industrial buildings among fields of rubber trees, cassava, and pineapple."
       ],
@@ -3844,14 +3984,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A north-east to south-west grid with modern and industrial buildings among rubber, cassava and pineapple fields, in the west of one eastern province."
     },
     {
       "id": "th-b81q",
       "step": 2,
       "order": 27,
       "family": "other",
-      "title": "Highway 44 going through Krabi and Surat Thani is a divided…",
+      "title": "Road: four-lane divided with huge gap",
       "text": [
         "Highway 44 going through Krabi and Surat Thani is a **divided four-lane highway** with **very large spacing** in the middle. Often, you will not be able to see the other side of the highway. Rather, a yellow inner line will imply that the road is divided."
       ],
@@ -3890,14 +4031,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided four-lane highway with a very wide gap in the middle. You often can't see the other side, but a yellow inner line shows the road is divided."
     },
     {
       "id": "th-qBp9",
       "step": 2,
       "order": 28,
       "family": "car",
-      "title": "Google car: This rare Google car with a visible mirror is only found in…",
+      "title": "Google car: rare car with a visible mirror",
       "text": [
         "This rare Google car with a **visible mirror** is only found in far southern Thailand.",
         "NOTE: Due to most of the coverage being overwritten by new Generation 4, this car is rarely seen."
@@ -3937,14 +4079,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A rare Google car with a visible mirror, found only in the far south. Most of it was overwritten by Gen 4, so it's rarely seen."
     },
     {
       "id": "th-Cl8a",
       "step": 2,
       "order": 29,
       "family": "car",
-      "title": "Google car: This rare Google car is only found on the island of Ko…",
+      "title": "Google car: bars poking out of the blur",
       "text": [
         "This rare Google car is only found on the island of Ko Sichang. It is recognizable due to the **bar(s) protruding out of the blur**."
       ],
@@ -3983,14 +4126,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A rare Google car found only on one small island, recognisable by bars sticking out of the blur."
     },
     {
       "id": "th-IFUq",
       "step": 2,
       "order": 30,
       "family": "other",
-      "title": "A smudge on the front left of the camera can be seen on the…",
+      "title": "Google car: smudge on front left of camera",
       "text": [
         "A **smudge **on the** front left **of the camera can be seen on the densely forested road going through Khao Yai National Park. This smudge can also be found in nearby areas of Nakhon Nayok and Prachin Buri.",
         "NOTE: Other smudges may rarely exist [elsewhere](https://maps.app.goo.gl/GYwj41y21n9awFLT6) in the country."
@@ -4030,635 +4174,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/thailand",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "th-lm-125",
-      "step": 3,
-      "order": 0,
-      "family": "other",
-      "title": "Concrete road",
-      "text": [
-        "If you're in Southeast Asia and see concrete roads, you're most likely in the Philippines, Thailand, or, much much more rarely, Indonesia. If you're driving on the right side, it will be the Philippines, while driving on the left side indicates Thailand or Indonesia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2742dda0d4a4",
-          "src": "https://learnablemeta.com/images/CZH4jeDvZ8tMIltG6nJxHKA67vMONfvqNg6p.avif",
-          "path": "th/2742dda0d4a4.webp",
-          "width": 1000,
-          "height": 645
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ID",
-        "PH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-12978",
-      "step": 3,
-      "order": 1,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: หยุด",
-      "text": [
-        "Stop signs in Thailand always have the word \"Stop\" written in Thai (หยุด)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "43bee08c413f",
-          "src": "https://learnablemeta.com/images/571/DiQGBFshWrYMWSopNbnsHluK8149DmFHf469.avif",
-          "path": "th/43bee08c413f.webp",
-          "width": 1000,
-          "height": 954
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67c4a232522c482a8f7e9f3b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15312",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Nakhon Vibes",
-      "text": [
-        "Brown paved roads among fields of sugarcane, cassava, and corn can be found in southeastern Nakhon Ratchasima."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cf26dcd82dd1",
-          "src": "https://learnablemeta.com/images/664/jwF7uiTD0CVw6tnQMGnFlbcBpZO9zy3O3VKs.avif",
-          "path": "th/cf26dcd82dd1.webp",
-          "width": 1000,
-          "height": 485,
-          "dupeOf": "6c3a47fb34e6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15313",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Krabi Rocks",
-      "text": [
-        "Western Krabi and parts of eastern Phang-nga also feature large exposed rock mountains running north-south."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1b1d90829cef",
-          "src": "https://learnablemeta.com/images/664/TPJic0RHwdZLsnXuXmo37ULks8TLRX6hFoVB.avif",
-          "path": "th/1b1d90829cef.webp",
-          "width": 1000,
-          "height": 485,
-          "dupeOf": "514543d95577"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15314",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: Khao Sok National Park",
-      "text": [
-        "Khao Sok National Park in northern Phang-nga and western Surat Thani features some of the tallest and steepest exposed rock mountains in the south of Thailand. The mountains generally run east-west."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "03e05734afe7",
-          "src": "https://learnablemeta.com/images/664/ACiz73l4DrJvVF2cA1qMKVGGpdNxKZXVsEBS.avif",
-          "path": "th/03e05734afe7.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "f74bc18b2c78"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15315",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: Khao Sam Roi Yot National Park",
-      "text": [
-        "Khao Sam Roi Yot National Park in western Prachuap Khiri Khan features large, distinct exposed rock mountain massifs. Notably, the mountains can be seen from the center of the province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4db755f3c1b3",
-          "src": "https://learnablemeta.com/images/664/ElF57b0C6Vos6ZvoKKI7tFDgi6OKGsAHNYFT.avif",
-          "path": "th/4db755f3c1b3.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "3ea2ab58f41c"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15316",
-      "step": 3,
-      "order": 6,
-      "family": "landscape",
-      "title": "Landscape: Mukdahan",
-      "text": [
-        "The province of Mukdahan features many long, low hills among fields of rice, sugarcane, cassava and rubber trees."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5e2249574e56",
-          "src": "https://learnablemeta.com/images/664/XQdsowGUmb7J6pTeHTMHbZgzAaaEl3qH9Z5Q.avif",
-          "path": "th/5e2249574e56.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "f9424b2c4878"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15317",
-      "step": 3,
-      "order": 7,
-      "family": "landscape",
-      "title": "Landscape: Chaiyaphum",
-      "text": [
-        "Chaiyaphum features very long and flat mountain ridges that can be seen from nearly anywhere in the province."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f4524cd36f4b",
-          "src": "https://learnablemeta.com/images/664/iSa8EwZuPe8UpHi5KYZt9WYrDuYswktCnsYY.avif",
-          "path": "th/f4524cd36f4b.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "28fc781d6f20"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15320",
-      "step": 3,
-      "order": 8,
-      "family": "landscape",
-      "title": "Landscape: Phetchabun Valley",
-      "text": [
-        "Large north-south mountains can be seen on either side of the Phetchabun valley."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "73f802875c81",
-          "src": "https://learnablemeta.com/images/664/zIC3JtqCdme5hp6qxuDFcGrFSfVcNBeEZAEd.avif",
-          "path": "th/73f802875c81.webp",
-          "width": 1000,
-          "height": 491,
-          "dupeOf": "025f040a288a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15322",
-      "step": 3,
-      "order": 9,
-      "family": "landscape",
-      "title": "Landscape: Doi Luang Chiang Dao",
-      "text": [
-        "Doi Luang Chiang Dao is the 3rd tallest mountain in Thailand. It along with other distinctly shaped mountains can be seen clearly from the Chiang Dao district of Chiang Mai."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "57b6ea38aff0",
-          "src": "https://learnablemeta.com/images/664/L7qur1FBIyzpdabSCALhEwlbTuVPuA3cloF4.avif",
-          "path": "th/57b6ea38aff0.webp",
-          "width": 1000,
-          "height": 493,
-          "dupeOf": "eaad886cc316"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15323",
-      "step": 3,
-      "order": 10,
-      "family": "landscape",
-      "title": "Landscape: Phrao Valley",
-      "text": [
-        "The Phrao District in Chiang Mai is a fairly flat valley surrounded by mountains in all directions. The valley will commonly grow rice and fruit."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "36741deed60b",
-          "src": "https://learnablemeta.com/images/664/gmcKAaqTjfQINEFUR1CVxGYeL4WeuqxcGhHp.avif",
-          "path": "th/36741deed60b.webp",
-          "width": 1000,
-          "height": 493
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15327",
-      "step": 3,
-      "order": 11,
-      "family": "other",
-      "title": "Dry Flatland",
-      "text": [
-        "Thailand has two regions that are relatively flat and dry compared to other areas. One north of Bangkok, the other more east.",
-        "NOTE: The eastern area feels sometimes a bit drier than the area north of Bangkok."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fd39da9532b8",
-          "src": "https://learnablemeta.com/images/664/DtIRiqCH5GBm859wtzXV7KZlC9r0GEmbifpS.avif",
-          "path": "th/fd39da9532b8.webp",
-          "width": 1000,
-          "height": 478,
-          "dupeOf": "7ef88090283f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15840",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "Concrete roads are common in Thailand.",
-        "They often have a large square shaped pattern.",
-        "**--- NOTE:**",
-        "In Southeast Asia, these can also be found commonly in the Philippines, and less commonly in Indonesia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d2eb4b0a1c28",
-          "src": "https://learnablemeta.com/images/681/B83zjICFnCobgkQGvYEgf47an0YLXXLX9nnK.avif",
-          "path": "th/d2eb4b0a1c28.webp",
-          "width": 1000,
-          "height": 500,
-          "dupeOf": "8b09f4c2ad71"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ID",
-        "PH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15842",
-      "step": 3,
-      "order": 13,
-      "family": "other",
-      "title": "Lamp Posts",
-      "text": [
-        "Thailand has very distinct long, thin lamp posts that hang over the side of the road."
-      ],
-      "tags": [],
-      "images": [],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15991",
-      "step": 3,
-      "order": 14,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "Concrete roads are common in Thailand.",
-        "They often have a large square shaped pattern.",
-        "**--- NOTE:**",
-        "In Southeast Asia, these can also be found commonly in the Philippines, and less commonly in Indonesia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d2eb4b0a1c28",
-          "src": "https://learnablemeta.com/images/681/B83zjICFnCobgkQGvYEgf47an0YLXXLX9nnK.avif",
-          "path": "th/d2eb4b0a1c28.webp",
-          "width": 1000,
-          "height": 500,
-          "dupeOf": "8b09f4c2ad71"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ID",
-        "PH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-15993",
-      "step": 3,
-      "order": 15,
-      "family": "other",
-      "title": "Lamp Posts",
-      "text": [
-        "Thailand has very distinct long, thin lamp posts that hang over the side of the road."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56cd56e1a81c",
-          "src": "https://learnablemeta.com/images/682/6CbRz6EaiBJf1JlpSCHuo4LksYeLARYr5Cqo.avif",
-          "path": "th/56cd56e1a81c.webp",
-          "width": 1000,
-          "height": 363
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-51445",
-      "step": 3,
-      "order": 16,
-      "family": "other",
-      "title": "Lamp Posts",
-      "text": [
-        "Thailand has very distinct long, thin lamp posts that hang over the side of the road."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "56cd56e1a81c",
-          "src": "https://learnablemeta.com/images/682/6CbRz6EaiBJf1JlpSCHuo4LksYeLARYr5Cqo.avif",
-          "path": "th/56cd56e1a81c.webp",
-          "width": 1000,
-          "height": 363,
-          "dupeOf": "56cd56e1a81c"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-51448",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "Concrete Roads",
-      "text": [
-        "Concrete roads are common in Thailand.",
-        "They often have a large square shaped pattern.",
-        "**--- NOTE:**",
-        "In Southeast Asia, these can also be found commonly in the Philippines, and less commonly in Indonesia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d2eb4b0a1c28",
-          "src": "https://learnablemeta.com/images/681/B83zjICFnCobgkQGvYEgf47an0YLXXLX9nnK.avif",
-          "path": "th/d2eb4b0a1c28.webp",
-          "width": 1000,
-          "height": 500,
-          "dupeOf": "8b09f4c2ad71"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "ID",
-        "PH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-361826",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "Thailand",
-      "text": [
-        "Thai landline phone numbers have 9 digits. The first digits of phone numbers are the area code. The Bangkok area code is 02, the other area codes have three digits. The area codes are grouped, so even just learning the first digit is useful.",
-        "NOTE: Mobile phone numbers start with 08 or 09 and have 10 digits. None of these numbers overlap with the area codes. Numbers starting with 06 are also not regional."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b92e499bfe5a",
-          "src": "https://learnablemeta.com/images/1398/lr5AIyGqlnOuoXnJb0PpT0H4N0hnTj0XYn09.avif",
-          "path": "th/b92e499bfe5a.webp",
-          "width": 568,
-          "height": 1000,
-          "dupeOf": "384e52161582"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-464187",
-      "step": 3,
-      "order": 19,
-      "family": "pole",
-      "title": "Pole: 2 insulators",
-      "text": [
-        "Conversely, poles with two insulators on the crossbar can be found in the rest of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "01240c5677df",
-          "src": "https://learnablemeta.com/images/1822/1749328887353-THc.avif",
-          "path": "th/01240c5677df.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "eaa4c2d12a43"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-464188",
-      "step": 3,
-      "order": 20,
-      "family": "pole",
-      "title": "Pole: one insulator",
-      "text": [
-        "Poles with only one insulator on the crossbar can be found from south on the peninsula from Ranong and Chumphon."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "abbfe039a89d",
-          "src": "https://learnablemeta.com/images/1822/1749328942042-Z3x.avif",
-          "path": "th/abbfe039a89d.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "ed0f5960616e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "th-lm-464190",
-      "step": 3,
-      "order": 21,
-      "family": "other",
-      "title": "Insulators 7 or more ridges",
-      "text": [
-        "Insulators with 7 or more ridges are found in the southern half of the peninsula, as well as highways in Chiang Rai and Phayao.",
-        "NOTE: In the north, you may still find 5 or 6 ridges on insulators, as these are the standard amount throughout the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "18ba09dfd1fe",
-          "src": "https://learnablemeta.com/images/1822/1749328982871-t4j.avif",
-          "path": "th/18ba09dfd1fe.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "7ceb1aaf962a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A smudge on the front left of the camera appears on a densely forested national park road and in nearby provinces. Other smudges may rarely exist elsewhere."
     }
   ]
 }

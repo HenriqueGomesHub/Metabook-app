@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Coverage in Jordan was taken by a black Google car",
+      "title": "Google car: black, no antenna, no red light",
       "text": [
         "Coverage in Jordan was taken by a **black** Google car, without a red brake light.",
         "NOTE: Jordan is the only Middle Eastern country where a black Google car without an antenna or a red brake light can be found."
@@ -64,14 +64,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A black Google car with no antenna and no red brake light. No other Middle Eastern country has this car."
     },
     {
       "id": "jo-xs0t",
       "step": 0,
       "order": 2,
       "family": "plate",
-      "title": "Plate: Jordanian licence plates are white and can be long or short",
+      "title": "Plate: white, green strip on taxis",
       "text": [
         "Jordanian licence plates are **white** and can be long or short. Commercial transport vehicles, such as taxis, have a distinctive **green strip** on the left.",
         "NOTE: In the Middle East, the green strip is only found in Jordan.",
@@ -104,14 +105,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White plates, long or short. Taxis and other commercial vehicles have a green strip on the left, found only here in the Middle East.",
+      "differs": [
+        {
+          "country": "AE",
+          "how": "UAE has long white plates too, but no green strip"
+        },
+        {
+          "country": "IL",
+          "how": "Israel only uses yellow plates"
+        }
+      ]
     },
     {
       "id": "jo-pOx9",
       "step": 0,
       "order": 3,
       "family": "language",
-      "title": "Language: The official language used in Jordan is Arabic and can be…",
+      "title": "Language: Arabic, little English on shops",
       "text": [
         "The official language used in Jordan is **Arabic** and can be identified by its lines and dots.",
         "NOTE: Unlike the UAE, Jordan does not have English writing on most commercial signs. This can be helpful to distinguish the two countries."
@@ -134,14 +146,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Arabic script (lines and dots), and most shop signs have no English.",
+      "differs": [
+        {
+          "country": "AE",
+          "how": "UAE commercial signs usually include English"
+        }
+      ]
     },
     {
       "id": "jo-VLxu",
       "step": 0,
       "order": 4,
       "family": "line",
-      "title": "Road line: Roads in Jordan typically feature yellow outside and white…",
+      "title": "Road lines: yellow edges, white centre",
       "text": [
         "Roads in Jordan typically feature **yellow outside** and **white middle **lines.",
         "NOTE: Other Middle Eastern countries such as the UAE and Israel can also have these road lines. Make sure to check other clues before guessing."
@@ -200,7 +219,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow lines on the outside and white in the middle. The UAE and Israel can have this too, so check other clues.",
+      "sameAs": [
+        "AE",
+        "IL"
+      ]
     },
     {
       "id": "jo-gP2h",
@@ -208,7 +232,7 @@
       "order": 5,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Jordanian chevrons are white with red arrows",
+      "title": "Chevron: white with red arrows",
       "text": [
         "Jordanian chevrons are **white with red arrows**.",
         "NOTE: You can use chevrons to distinguish between Jordan and Israel: the Israeli chevrons are black with white arrows."
@@ -265,14 +289,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White chevron signs with red arrows.",
+      "differs": [
+        {
+          "country": "IL",
+          "how": "Israeli chevrons are black with white arrows"
+        }
+      ]
     },
     {
       "id": "jo-Ol57",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: These are three common electricity poles that you will find…",
+      "title": "Pole: round concrete, diagonal brace or Y tops",
       "text": [
         "These are three common electricity poles that you will find in Jordan. Rounded concrete poles have either a **diagonal support** or consist of three horizontal **Y pole tops.** You may additionally see thin, two support metal poles with three vertical coils."
       ],
@@ -313,14 +344,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Round concrete poles with a diagonal support or three horizontal Y-shaped tops. Also thin metal poles with two supports and three vertical coils."
     },
     {
       "id": "jo-7uVv",
       "step": 0,
       "order": 7,
       "family": "vegetation",
-      "title": "Vegetation: Jordan is a very arid country",
+      "title": "Landscape: very dry desert, sparse plants",
       "text": [
         "Jordan is a **very arid** country, with limited vegetation and a lot of almost completely lifeless desert. The lushest parts will still only have the look of an [arid Mediterranean landscape](https://maps.app.goo.gl/zvmGEnAftHUVwb6N9)."
       ],
@@ -359,14 +391,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very dry, with little vegetation and a lot of lifeless desert. Even the greenest parts look like a dry Mediterranean landscape."
     },
     {
       "id": "jo-VL43",
       "step": 0,
       "order": 8,
       "family": "architecture",
-      "title": "Architecture: Most buildings in Jordan are made of bright sandstone…",
+      "title": "Houses: bright sandstone brick, flat roofs",
       "text": [
         "Most buildings in Jordan are made of **bright sandstone bricks** and have flat roofs.",
         "NOTE: Similar sandstone bricks are also common in [Jerusalem](https://maps.app.goo.gl/asRSSgsgJHajzb9N6) and in [the West Bank](https://maps.app.goo.gl/MSSFNKXV4ux3cFhq8)."
@@ -416,14 +449,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most buildings are bright sandstone brick with flat roofs. Similar sandstone is common in Jerusalem and the West Bank.",
+      "differs": [
+        {
+          "country": "IL",
+          "how": "Jerusalem and the West Bank also use similar sandstone"
+        }
+      ]
     },
     {
       "id": "jo-sTXB",
       "step": 0,
       "order": 9,
       "family": "other",
-      "title": "On occasion, the road quality in Jordan is reflective of…",
+      "title": "Road: heat-buckled asphalt, warped cracks",
       "text": [
         "On occasion, the road quality in Jordan is reflective of its age. Roads are well travelled and can be in poor condition. The heat has caused the asphalt to buckle, creating **warped cracks** in the road.",
         "NOTE: In general, the road quality as a whole tends to be worse than Israel."
@@ -465,14 +505,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Busy roads in poor shape, where heat has buckled the asphalt into warped cracks. Road quality is generally worse than in Israel.",
+      "differs": [
+        {
+          "country": "IL",
+          "how": "Israeli roads are generally in better shape"
+        }
+      ]
     },
     {
       "id": "jo-FniX",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Jordan only has Street View coverage in the far western…",
+      "title": "Coverage: only far west, ends north of Jerash",
       "text": [
         "Jordan only has Street View coverage in the **far** **western part** of the country. Coverage is limited to bigger towns and main roads in this area.",
         "NOTE: Coverage ends just north of Jerash. Even though Irbid is the second largest city of Jordan, it has zero official coverage. In the south, coverage extends all the way to the coastal town of Aqaba, but not south of it."
@@ -493,14 +540,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage exists only in the far west, on bigger towns and main roads. It stops just north of Jerash (the second-largest city, Irbid, has none) and in the south reaches Aqaba but not beyond."
     },
     {
       "id": "jo-KlNE",
       "step": 1,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Amman is by far the largest city in Jordan with extensive…",
+      "title": "Coverage: hilly big city of medium apartment",
       "text": [
         "**Amman** is by far the largest city in Jordan with extensive coverage. It is a bustling, developed metropolis with a distinct **“big city” feel** to it. It is slightly hilly and most of the city consists of medium-sized apartment blocks."
       ],
@@ -540,14 +588,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital has extensive coverage: a busy, developed, slightly hilly city mostly made of medium-sized apartment blocks."
     },
     {
       "id": "jo-EQ0O",
       "step": 1,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: Highway 15 is the longest divided highway with coverage in…",
+      "title": "Highway: divided road through desert",
       "text": [
         "**Highway 15** is the longest **divided highway** with coverage in Jordan. Most of the road is surrounded by desert landscape. It is also surrounded by rocky hills in the south closer to Aqaba.",
         "NOTE: Highway 35 north of Madaba and highway 40 west of Amman are also divided but do not feature a desert landscape, while the divided highway 80 in the south runs mainly from east to west, making it distinguishable."
@@ -587,14 +636,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The longest divided highway with coverage, mostly in desert, with rocky hills near Aqaba in the south. Highway 35, Highway 40 and Highway 80 are also divided but look different (not desert, or running east-west)."
     },
     {
       "id": "jo-vAGv",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: Highway 35 connecting Amman and Jerash is a divided road…",
+      "title": "Highway: divided, green hills",
       "text": [
         "**Highway 35** connecting Amman and Jerash is a divided road surrounded by hills speckled with green vegetation.",
         "NOTE: Highway 40 west of Amman is also divided and features a similar landscape. However, the **T-shaped** lamppost shown in the image is only found on highway 35 which helps distinguish the two."
@@ -635,14 +685,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided road between Amman and Jerash with hills dotted with green plants. T-shaped lampposts tell it apart from the similar Highway 40."
     },
     {
       "id": "jo-9qcs",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Highway 40 is a recognisable divided road surrounded by low",
+      "title": "Highway: divided, low green shrubs, Y lampposts",
       "text": [
         "**Highway 40** is a recognisable divided** **road surrounded by low, green shrubbery that makes its way west of Amman through the hilly terrain into the sandy area close to the Dead Sea.",
         "NOTE: **Y-shaped **lamp posts as shown in the image can be found along the length of highway 40, making it distinguishable from highway 35 north of Amman."
@@ -683,14 +734,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided road west of Amman with low green shrubs through hills, reaching sandy land near the Dead Sea. Y-shaped lampposts tell it apart from Highway 35."
     },
     {
       "id": "jo-m8Pf",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "The Dead Sea can be found directly west along the northern…",
+      "title": "Landscape: Dead Sea with long flat ridge",
       "text": [
         "The **Dead Sea** can be found directly west along the northern portion of Highway 65.",
         "NOTE: There is a long, flat,** expansive ridge** on the other side, which is useful to differentiate this from other bodies of water."
@@ -730,14 +782,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large body of water west of the road, with a long, flat, wide ridge on the far side. The ridge helps tell it from other lakes."
     },
     {
       "id": "jo-2zSo",
       "step": 1,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: Highway 65 is a single lane",
+      "title": "Highway: single carriageway, sandy stretches",
       "text": [
         "**Highway 65** is a single lane, north to south highway. It features long, sandy stretches of road south of Feifa valley. Now and then, you may encounter overcast coverage on some sections.",
         "NOTE: When on the portion of road near the airport by Aqaba, you can find sunset coverage."
@@ -777,14 +830,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A single-carriageway road running north to south, with long sandy stretches in the south. Some sections have overcast coverage, and near the Aqaba airport there is sunset coverage."
     },
     {
       "id": "jo-NwiC",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Near and in the city of Madaba",
+      "title": "Landscape: flat fields with rich red soil",
       "text": [
         "Near and in the city of Madaba, you will find **flat fields** which are sometimes tilled. They uniquely have the characteristic of **rich, red soil.**",
         "NOTE: The fields continue both north and south of Madaba, along Highway 35."
@@ -825,14 +879,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Flat, sometimes tilled fields with rich red soil, around a town on Highway 35 and continuing north and south of it."
     },
     {
       "id": "jo-Bbns",
       "step": 1,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: This arid rolling hill valley is located near the almost…",
+      "title": "Landscape: dry rolling hills",
       "text": [
         "This arid rolling hill valley is located near the almost dried out river of Wadi al Hasa on Highway 35. The rock is **rounded and smooth,** with a single lane highway running through the center."
       ],
@@ -871,14 +926,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A dry valley of rolling hills with rounded, smooth rock and a single-lane highway through the middle, near an almost dry river."
     },
     {
       "id": "jo-NzDL",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: For a large majority of Highway 80 and its turns",
+      "title": "Highway: divided valley road between big rigid",
       "text": [
         "For a large majority of Highway 80 and its turns, this **divided valley road** is surrounded by **large, rigid mountains.** When turning onto the stretch of road leading to Aqaba, the mountains level off.",
         "NOTE: The road direction of Highway 80 is east to west, as opposed to Highway 15, which runs north to south."
@@ -918,14 +974,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided road in a valley with large, rigid mountains around it. Near the Aqaba turn-off the mountains flatten. It runs east to west, unlike Highway 15, which runs north to south."
     },
     {
       "id": "jo-VYva",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: This long stretch of jagged mountains can be found on the…",
+      "title": "Landscape: long stretch of jagged mountains",
       "text": [
         "This long stretch of **jagged mountains** can be found on the eastern to southern side of Aqaba."
       ],
@@ -965,14 +1022,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A long line of jagged mountains on the eastern and southern side of Aqaba."
     },
     {
       "id": "jo-yMuz",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "In Amman, taxis are yellow and green",
+      "title": "Taxi: yellow and green",
       "text": [
         "In **Amman**, taxis are yellow and green.",
         "NOTE: The colours of taxis can be useful to distinguish between Jordanian cities."
@@ -1012,14 +1070,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Taxis in the capital are yellow and green. Taxi colours can help tell Jordanian cities apart."
     },
     {
       "id": "jo-oqbZ",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "In Aqaba, taxis are olive green on the top and black at the…",
+      "title": "Taxi: olive green top, black bottom",
       "text": [
         "In **Aqaba**, taxis are olive green on the top and black at the bottom."
       ],
@@ -1058,14 +1117,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the southern port city, taxis are olive green on top and black on the bottom."
     },
     {
       "id": "jo-SxAR",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "In Madaba, taxis are yellow with white bumpers",
+      "title": "Taxi: yellow with white bumpers",
       "text": [
         "In **Madaba**, taxis are yellow with white bumpers."
       ],
@@ -1104,14 +1164,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In a town south of the capital, taxis are yellow with white bumpers."
     },
     {
       "id": "jo-033t",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: In some parts of the town of Wadi Musa",
+      "title": "Landscape: bulbous rock formations",
       "text": [
         "In some parts of the town of **Wadi Musa**, unique mountains with distinctive, bulbous rock formations can be seen in the background."
       ],
@@ -1150,14 +1211,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the town by Petra, the background mountains have unusual, bulbous rock formations."
     },
     {
       "id": "jo-IdVo",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: West of the town of Wadi Musa",
+      "title": "Coverage: trekker in red eroded rock city",
       "text": [
         "West of the town of **Wadi Musa**, a collection of trekkers can be found in and around **Petra**, a rock-cut city from antiquity. This trekker coverage features highly eroded reddish rocks, narrow gorges, and occasionally groups of tourists crowding around the archaeological sites.",
         "NOTE: While not likely to appear in competitive or pinpointable maps, these trekkers are a mainstay in many maps, including the default World map."
@@ -1198,188 +1260,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/jordan",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "jo-lm-329",
-      "step": 3,
-      "order": 0,
-      "family": "line",
-      "title": "Road line: Black car meta",
-      "text": [
-        "While driving on the right side, yellow outer lines with white middle lines are commonly found in Jordan, Israel, and the UAE. The black back of the Google car without an antenna can help confirm you’re in Jordan 100%."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "de52b8e0ec5d",
-          "src": "https://learnablemeta.com/images/1nIlCPbAAeyPrNrBrlbuWWTZjDTv6KM3J0yo.avif",
-          "path": "jo/de52b8e0ec5d.webp",
-          "width": 1000,
-          "height": 395
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AE",
-        "IL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "jo-lm-15374",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Madaba Fields",
-      "text": [
-        "Near and in the city of Madaba, you will find flat fields which are sometimes tilled. They uniquely have the characteristic of rich, red soil.",
-        "NOTE: The fields continue both north and south of Madaba, along Highway 35."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "225a206d0b47",
-          "src": "https://learnablemeta.com/images/664/2IiFgrgmBerddWyKZw5WWW1hcKHPH5opvPy7.avif",
-          "path": "jo/225a206d0b47.webp",
-          "width": 1000,
-          "height": 495,
-          "dupeOf": "241a9b64eafd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "jo-lm-15401",
-      "step": 3,
-      "order": 2,
-      "family": "coverage",
-      "title": "Coverage: Black Car",
-      "text": [
-        "Coverage in Jordan was taken by a black Google car, without a red brake light.",
-        "**--- NOTE:**",
-        "Jordan is the only Middle Eastern country where a black Google car without an antenna or a red brake light can be found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "78ba38845079",
-          "src": "https://learnablemeta.com/images/665/kPbYb2VBXuX1FjTCF6UOQR84k2zT66FqXvyG.avif",
-          "path": "jo/78ba38845079.webp",
-          "width": 1000,
-          "height": 404,
-          "dupeOf": "de52b8e0ec5d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cfb3b298062e90c425123e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "jo-lm-15848",
-      "step": 3,
-      "order": 3,
-      "family": "coverage",
-      "title": "Coverage: Black Car",
-      "text": [
-        "Coverage in Jordan was taken by a black Google car, without a red brake light.",
-        "**--- NOTE:**",
-        "Jordan is the only Middle Eastern country where a black Google car without an antenna or a red brake light can be found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "78ba38845079",
-          "src": "https://learnablemeta.com/images/665/kPbYb2VBXuX1FjTCF6UOQR84k2zT66FqXvyG.avif",
-          "path": "jo/78ba38845079.webp",
-          "width": 1000,
-          "height": 404,
-          "dupeOf": "de52b8e0ec5d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "jo-lm-51274",
-      "step": 3,
-      "order": 4,
-      "family": "coverage",
-      "title": "Coverage: Black Car",
-      "text": [
-        "Coverage in Jordan was taken by a black Google car, without a red brake light.",
-        "**--- NOTE:**",
-        "Jordan is the only Middle Eastern country where a black Google car without an antenna or a red brake light can be found."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "78ba38845079",
-          "src": "https://learnablemeta.com/images/665/kPbYb2VBXuX1FjTCF6UOQR84k2zT66FqXvyG.avif",
-          "path": "jo/78ba38845079.webp",
-          "width": 1000,
-          "height": 404,
-          "dupeOf": "de52b8e0ec5d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "jo-lm-104456",
-      "step": 3,
-      "order": 5,
-      "family": "architecture",
-      "title": "Architecture: Sandstone Bricks",
-      "text": [
-        "Most buildings in Jordan are made of bright sandstone bricks and have flat roofs.",
-        "**--- NOTE:**",
-        "Similar sandstone bricks are also common in Jerusalem and in the West Bank."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "19bc3261f3df",
-          "src": "https://learnablemeta.com/images/1072/uxTU0ZIMYUS1JSLzNFZsgFRmTZWuZp3670kP.avif",
-          "path": "jo/19bc3261f3df.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "d3a3ef3d77ee"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Trekker coverage in an ancient rock-cut city: eroded reddish rocks, narrow gorges and groups of tourists. Not common in competitive maps, but a staple of many others, such as the default World map."
     }
   ]
 }

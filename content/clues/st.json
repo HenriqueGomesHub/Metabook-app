@@ -21,7 +21,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: All the coverage was taken with a low quality camera that’s…",
+      "title": "Coverage: dim, hazy low-quality camera",
       "text": [
         "All the coverage was taken with a low quality camera that’s commonly referred to as “Shitcam”. The car will often be completely blurred, with a **very large blur** covering the back and a [somewhat smaller blur](https://goo.gl/maps/YfaEf11wuzdt3NYv8) covering the front.",
         "NOTE: The coverage is a newer variant of shitcam, where the image is dimmer and hazier than the original shitcam primarily found in [India](https://maps.app.goo.gl/3MYW94icKvwhWTc66) and [Nigeria](https://maps.app.goo.gl/eETqUgMHvyiCR4di8)."
@@ -64,14 +64,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very low-quality footage with a huge blur over the back of the car and a smaller blur at the front. It is dimmer and hazier than the similar camera in India and Nigeria.",
+      "differs": [
+        {
+          "country": "IN",
+          "how": "India's version is sharper and brighter"
+        },
+        {
+          "country": "NG",
+          "how": "Nigeria's version is sharper and brighter"
+        }
+      ]
     },
     {
       "id": "st-EmV2",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: Portuguese is the main language used on São Tomé and…",
+      "title": "Language: Portuguese",
       "text": [
         "**Portuguese** is the main language used on São Tomé and Príncipe."
       ],
@@ -91,14 +102,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Portuguese is the main language on signs and shops. It narrows the guess to Portuguese-speaking countries.",
+      "sameAs": [
+        "PT"
+      ]
     },
     {
       "id": "st-8u6S",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: On top of the language",
+      "title": "Pole: ladder pole, Portugal-style signs",
       "text": [
         "On top of the language, the Portuguese influence can also be seen in infrastructure, such as ladder poles and pedestrian signs with the same design as in Portugal."
       ],
@@ -141,14 +156,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ladder-style utility poles and pedestrian signs have the same design as in Portugal, so they look identical to Portuguese ones.",
+      "sameAs": [
+        "PT"
+      ]
     },
     {
       "id": "st-Iix7",
       "step": 0,
       "order": 4,
       "family": "other",
-      "title": "São Tomé and Príncipe are tropical islands",
+      "title": "Landscape: tropical rainforest, bananas",
       "text": [
         "São Tomé and Príncipe are **tropical islands**, which are almost completely covered in rainforests. Banana plants are especially common throughout the islands."
       ],
@@ -187,14 +206,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tropical islands almost fully covered in rainforest, with banana plants everywhere along the roads."
     },
     {
       "id": "st-ij58",
       "step": 0,
       "order": 5,
       "family": "car",
-      "title": "Google car: In many locations, you will notice a slanted antenna…",
+      "title": "Google car: slanted antenna on the side",
       "text": [
         "In many locations, you will notice a **slanted antenna** protruding from the side of the car."
       ],
@@ -233,14 +253,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In many places a slanted antenna sticks out from the side of the Google car."
     },
     {
       "id": "st-0mhZ",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: Some wooden poles are painted blue on the bottom",
+      "title": "Pole: wooden, blue bottom, 'CST'",
       "text": [
         "Some wooden poles are painted **blue **on the bottom. You can also read the letters **CST **on them."
       ],
@@ -281,14 +302,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some wooden poles are painted blue at the bottom and have the letters CST written on them."
     },
     {
       "id": "st-1MAM",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "Taxis and minibuses are painted in a bright yellow colour",
+      "title": "Taxis: bright yellow",
       "text": [
         "Taxis and minibuses are painted in a **bright yellow** colour."
       ],
@@ -327,14 +349,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Taxis and minibuses are painted bright yellow."
     },
     {
       "id": "st-oaFS",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "This desaturated and even dimmer variant of shitcam is most…",
+      "title": "Coverage: extra dim, faded colours",
       "text": [
         "This desaturated and even dimmer variant of shitcam is most common on Príncipe."
       ],
@@ -374,14 +397,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An even dimmer, more washed-out version of the low-quality camera. It is most common on Príncipe, the smaller northern island."
     },
     {
       "id": "st-YviS",
       "step": 1,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: The car used on Príncipe can be recognised by the blue roof…",
+      "title": "Google car: blue roof, silver roof rails",
       "text": [
         "The car used on Príncipe can be recognised by the **blue** roof and silver roof rails.",
         "NOTE: Remember that it can sometimes be blurred out."
@@ -422,14 +446,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On Príncipe the Google car has a blue roof and silver roof rails. It can sometimes be blurred out."
     },
     {
       "id": "st-5DnQ",
       "step": 1,
       "order": 2,
       "family": "architecture",
-      "title": "Architecture: The car used on São Tomé is black with black roof rails",
+      "title": "Google car: black car, black roof rails",
       "text": [
         "The car used on São Tomé is **black** with black roof rails. In most locations, it is blurred out."
       ],
@@ -469,14 +494,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On São Tomé, the bigger island, the Google car is black with black roof rails. It is usually blurred out."
     },
     {
       "id": "st-1vUE",
       "step": 2,
       "order": 0,
       "family": "vegetation",
-      "title": "Vegetation: You can find oil palm plantations in southern São Tomé",
+      "title": "Plants: oil palm plantations",
       "text": [
         "You can find **oil palm plantations** in southern São Tomé."
       ],
@@ -515,14 +541,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the south of São Tomé you can find large oil palm plantations."
     },
     {
       "id": "st-5C59",
       "step": 2,
       "order": 1,
       "family": "pole",
-      "title": "Pole: The town of Trinidade has poles with red and white pole…",
+      "title": "Pole: red and white painted",
       "text": [
         "The town of Trinidade has poles with **red and white** pole paint."
       ],
@@ -563,7 +590,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/sao-tome-and-principe",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The town of Trinidade has poles painted red and white."
     }
   ]
 }

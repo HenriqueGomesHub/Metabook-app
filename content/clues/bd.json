@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Bangladeshi licence plates are either white",
+      "title": "Plate: white, black or turquoise",
       "text": [
         "Bangladeshi licence plates are either **white**, **black** or **turquoise**.",
         "NOTE: The turquoise plate can only be found in Bangladesh."
@@ -45,14 +45,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plates are white, black or turquoise. The turquoise plate exists only in this country."
     },
     {
       "id": "bd-eLme",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: The Bengali script features a continuous horizontal line at…",
+      "title": "Language: Bengali script, line on top, triangle shapes",
       "text": [
         "The Bengali script features a continuous **horizontal line** at the top of each word. It has a similar look to [Devanagari](https://en.wikipedia.org/wiki/Devanagari) (Hindi and Nepali), however it can usually be recognised by the many letters featuring triangular shapes.",
         "NOTE: Bengali is an official language in Bangladesh and parts of eastern India."
@@ -82,14 +83,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bengali writing has a continuous line along the top of each word, like Hindi, but many letters have triangular shapes. It is also official in parts of eastern India.",
+      "sameAs": [
+        "IN"
+      ]
     },
     {
       "id": "bd-OXUJ",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: In Generation 3 coverage",
+      "title": "Google car: Gen 3 red-barred mirror, white or striped",
       "text": [
         "In Generation 3 coverage, these three cars can be seen in Bangladesh: the **red mirror with bars**, **classic white** and **striped white** car.",
         "NOTE: The classic white car is the only car that is not unique to Bangladesh. Make sure to not mix up the striped white with the Cambodian car, since they look similar."
@@ -143,14 +148,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 shows three cars: one with red mirrors with bars, a plain white one, and a striped white one. Only the plain white one exists elsewhere. Don't confuse the striped one with Cambodia's.",
+      "differs": [
+        {
+          "country": "KH",
+          "how": "Cambodia has a similar-looking striped car"
+        }
+      ]
     },
     {
       "id": "bd-cdPX",
       "step": 0,
       "order": 4,
       "family": "car",
-      "title": "Google car: In Generation 4 coverage",
+      "title": "Google car: Gen 4 black car or white car",
       "text": [
         "In Generation 4 coverage, two Street View cars can be seen in Bangladesh: a black car and a white car."
       ],
@@ -197,14 +209,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage shows either a black car or a white car."
     },
     {
       "id": "bd-V57y",
       "step": 0,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: Bangladesh, as well as a variety of other countries, has…",
+      "title": "Coverage: poor-quality black or white car",
       "text": [
         "Bangladesh, as well as a variety of other countries, has received some poor quality coverage, also known as “Shitcam”. The Shitcam car colours are [black](https://www.google.com/maps/@23.6593897,90.4855596,3a,63.7y,83.56h,57.38t/data=!3m6!1e1!3m4!1s1pCZPeT5RHbSzl-lSifVeQ!2e0!7i13312!8i6656?entry=ttu) and [white](https://www.google.com/maps/@23.8892702,90.3897794,3a,63.4y,163.13h,54.23t/data=!3m6!1e1!3m4!1s-PLvXV5yN94xzegYGmO5TQ!2e0!7i13312!8i6656?entry=ttu).",
         "NOTE: Sometimes the car colour can be fully obstructed by a [big circular blur](https://www.google.com/maps/@23.6938128,90.5200604,3a,90y,72.06h,50.06t,0.36r/data=!3m6!1e1!3m4!1se3JEcXu6CviGqaDTACJrhw!2e0!7i13312!8i6656?entry=ttu)."
@@ -244,14 +257,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some coverage is of very poor quality, filmed from a black or white car. Sometimes a big round blur hides the car colour completely."
     },
     {
       "id": "bd-xulk",
       "step": 0,
       "order": 6,
       "family": "other",
-      "title": "Rickshaws are frequently found all around Bangladesh",
+      "title": "Vehicles: rickshaws, especially green auto rickshaws",
       "text": [
         "**Rickshaws** are frequently found all around Bangladesh, especially the green auto rickshaws.",
         "NOTE: They are found in other Asian countries as well."
@@ -291,7 +305,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rickshaws are everywhere, especially green motorised ones. Other Asian countries have them too."
     },
     {
       "id": "bd-kiNu",
@@ -299,7 +314,7 @@
       "order": 7,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signposts in Bangladesh often have black-and-white stripes",
+      "title": "Sign: black-and-white striped signposts",
       "text": [
         "Signposts in Bangladesh often have **black-and-white stripes**.",
         "NOTE: Within Asia, these posts are also found in Sri Lanka, Bhutan, India, Nepal and Malaysia. Make sure to check other clues before guessing."
@@ -353,14 +368,22 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signposts often have black-and-white stripes. Sri Lanka, Bhutan, India, Nepal and Malaysia have them too, so check other clues.",
+      "sameAs": [
+        "BT",
+        "IN",
+        "LK",
+        "MY",
+        "NP"
+      ]
     },
     {
       "id": "bd-TP6E",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "Bodies of water and agricultural fields can be often seen…",
+      "title": "Roadside: water and farm fields",
       "text": [
         "**Bodies of water** and **agricultural fields** can be often seen beside the streets of Bangladesh."
       ],
@@ -399,14 +422,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Ponds, rivers and farm fields line the streets."
     },
     {
       "id": "bd-RhN6",
       "step": 0,
       "order": 9,
       "family": "vegetation",
-      "title": "Vegetation: Streets in Bangladesh are often lined by trees",
+      "title": "Plants: roadside trees with white-painted trunks",
       "text": [
         "Streets in Bangladesh are often lined by trees, which sometimes have **white paint** on the bottom of their trunks."
       ],
@@ -445,14 +469,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Streets are lined with trees, some with white paint on the bottom of the trunk."
     },
     {
       "id": "bd-iyC8",
       "step": 0,
       "order": 10,
       "family": "bollard",
-      "title": "Bollard: Bangladesh uses red-and-white concrete bollards throughout…",
+      "title": "Bollard: red-and-white concrete, round or square",
       "text": [
         "Bangladesh uses **red-and-white** concrete bollards throughout the whole country.",
         "NOTE: They can also be found in a square form instead of a circular form."
@@ -502,14 +527,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red-and-white concrete bollards across the whole country. They can be round or square."
     },
     {
       "id": "bd-DzsR",
       "step": 0,
       "order": 11,
       "family": "architecture",
-      "title": "Architecture: Tin roofs are commonly found in Bangladesh",
+      "title": "Houses: tin roofs",
       "text": [
         "**Tin roofs** are commonly found in Bangladesh.",
         "NOTE: Due to the humid climate, many countries in South and Southeast Asia use tin roofs."
@@ -549,14 +575,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tin roofs are common. Many humid South and Southeast Asian countries use them too."
     },
     {
       "id": "bd-OTxD",
       "step": 0,
       "order": 12,
       "family": "car",
-      "title": "Google car: The Generation 4 coverage in Bangladesh will often have a…",
+      "title": "Google car: Gen 4 with a smoky look",
       "text": [
         "The Generation 4 coverage in Bangladesh will often have a **smoky** feel to it."
       ],
@@ -595,14 +622,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage often has a smoky, hazy feel."
     },
     {
       "id": "bd-xIo2",
       "step": 1,
       "order": 0,
       "family": "architecture",
-      "title": "Architecture: Bangladesh has several distinct roof styles that create an…",
+      "title": "Houses: west has hip roofs, east and centre mixed",
       "text": [
         "Bangladesh has several distinct roof styles that create an **east/west** divide in the country.",
         "The west, particularly the divisions of Rajshahi, Khulna and Dhaka, is dominated by [hip roofs](https://en.wikipedia.org/wiki/Hip_roof) made of sheet metal. The states of Rangpur and Chittagong tend to have mixed roofs."
@@ -642,14 +670,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roof styles split the country in two. The west and centre are mostly hip roofs of sheet metal, while the north and south-east tend to be mixed."
     },
     {
       "id": "bd-y9Ol",
       "step": 1,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: In the east, you will commonly see sheet metal roofs with a…",
+      "title": "Houses: metal roof with triangular window below ridge",
       "text": [
         "In the east, you will commonly see sheet metal roofs with a** triangular \"window\"** just below the ridge of the roof. The state of Sylhet will exclusively have this style, which can also be seen in Chittagong, Mymensingh, eastern Rangpur and northern Dhaka."
       ],
@@ -688,14 +717,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the east, sheet metal roofs have a triangular window just under the ridge. The north-east has only this style. Also seen in the south-east, centre-north and parts of the north."
     },
     {
       "id": "bd-HFxK",
       "step": 1,
       "order": 2,
       "family": "architecture",
-      "title": "Architecture: Tiled roofs are uncommon in Bangladesh",
+      "title": "Houses: rare tiled roofs on the western border",
       "text": [
         "**Tiled roofs** are uncommon in Bangladesh, but the ones you do see are of West Bengal origin, and are thus only found on the Indian border in the state of Khulna."
       ],
@@ -735,14 +765,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tiled roofs are uncommon. The few you see come from the neighbouring Indian region and appear only near the south-west border."
     },
     {
       "id": "bd-p7f4",
       "step": 1,
       "order": 3,
       "family": "car",
-      "title": "Google car: Rice is the main agricultural crop in Bangladesh and is…",
+      "title": "Rice: short green rice barely above water",
       "text": [
         "Rice is the main agricultural crop in Bangladesh and is planted twice a year. The different rice seasons can be told apart by the height and colour of the rice and are very useful for regionguessing.",
         "**Short green rice** that is barely sticking out of the water is known as **early growth rice**. Early growth rice can be seen in the states of** **Khulna, Mymensingh and south of Padma River in Dhaka.",
@@ -783,14 +814,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Early-growth rice is short, green and barely out of the water. Seen in the south-west, centre-north and south of the big river near the capital. Only reliable in Gen 4 coverage."
     },
     {
       "id": "bd-3PQu",
       "step": 1,
       "order": 4,
       "family": "other",
-      "title": "Slightly taller rice, in the middle of growing, which still…",
+      "title": "Rice: medium-height green rice",
       "text": [
         "Slightly taller rice, in the **middle of growing**, which still remains **green**, can be seen in the states of Rangpur, Barishal and Chittagong."
       ],
@@ -830,14 +862,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rice halfway through growing is taller but still green. Found in the north-west, the south and the south-east."
     },
     {
       "id": "bd-axpH",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "Fully-grown rice is characterised by being noticeably taller",
+      "title": "Rice: tall yellow-orange rice with fluffy tips",
       "text": [
         "**Fully-grown rice** is characterised by being noticeably taller, as well as having a** yellow** or **orange colour** and **fluffier tips** - the fluffiness signifies that the rice is ripe. Fully-grown rice is mostly seen in the state of Rajshahi, but it is also present in Rangpur and Chittagong."
       ],
@@ -876,14 +909,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fully grown rice is much taller, yellow or orange, with fluffy tips that show it is ripe. Mostly in the west, also the north-west and south-east."
     },
     {
       "id": "bd-Wghx",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Harvested rice can be identified by its beige or brown…",
+      "title": "Rice: beige, cut-down harvested fields",
       "text": [
         "**Harvested rice** can be identified by its **beige or brown colour** and **shorter, cut down appearance**. It can be seen alongside fully-grown, unharvested rice as well as freshly planted early growth rice in adjacent fields. This is most commonly seen in the states of Sylhet and southern Khulna."
       ],
@@ -922,14 +956,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Harvested rice looks beige or brown and cut short. It sits beside tall rice and fresh seedlings. Most common in the north-east and south-west."
     },
     {
       "id": "bd-tezx",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Rice fields require some rest time",
+      "title": "Rice: empty off-season fields",
       "text": [
         "Rice fields require some **rest time**, so it's natural to come across some off-season **barren, empty fields** without rice altogether. Off-season fields are mostly seen in the state of Dhaka, north of Padma River."
       ],
@@ -968,14 +1003,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rice fields rest between crops, leaving barren empty fields. Mostly seen in the centre, north of the big river."
     },
     {
       "id": "bd-1nr0",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "Vast rice fields with almost nothing else in view can be…",
+      "title": "Landscape: huge rice fields, nothing else in view",
       "text": [
         "Vast rice fields with almost nothing else in view can be seen in the border area between the states of Dhaka, Mymensingh and Sylhet."
       ],
@@ -1015,14 +1051,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Vast rice fields with almost nothing else around, in the border area between the centre, the north-centre and the north-east."
     },
     {
       "id": "bd-wYSL",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: While most of Bangladesh is almost completely flat",
+      "title": "Landscape: tall forested hills in the far south-east",
       "text": [
         "While most of Bangladesh is almost completely flat, in the eastern parts of Chittagong you may find fairly tall, forested and uncultivated **hills**."
       ],
@@ -1069,14 +1106,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most of the country is almost flat, but the far south-east has fairly tall, forested, uncultivated hills."
     },
     {
       "id": "bd-lwsk",
       "step": 1,
       "order": 10,
       "family": "other",
-      "title": "A sizable east-west ridge can be seen on the Indian border…",
+      "title": "Landscape: long east-west ridge on the northern border",
       "text": [
         "A sizable east-west ridge can be seen on the Indian border from the northern parts of Sylhet and eastern Mymensingh. It is often obscured or diminished by heavy haze."
       ],
@@ -1116,14 +1154,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big east-west ridge on the Indian border is visible from the north-east and eastern centre-north. Heavy haze often hides it."
     },
     {
       "id": "bd-CFUU",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "Corn tends to be planted in the west of Bangladesh",
+      "title": "Crops: corn in the west",
       "text": [
         "**Corn** tends to be planted in the west of Bangladesh - large and medium-sized fields can be found in Rajshahi, Rangpur, western Mymensingh and northern Khulna.",
         "Smaller patches of corn can be found in the [south of Barishal](https://maps.app.goo.gl/QG6LM1Zzrf3vgCfo6), usually adjacent to other crops."
@@ -1164,14 +1203,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Corn is planted mostly in the west: large and medium fields in the west, north-west, north-centre and north of the south-west. Small patches also in the far south."
     },
     {
       "id": "bd-oHUw",
       "step": 1,
       "order": 12,
       "family": "coverage",
-      "title": "Coverage: Jute is a tall-growing green crop which gets dried and used…",
+      "title": "Crops: tall green jute in the north-west",
       "text": [
         "[Jute](https://en.wikipedia.org/wiki/Jute) is a tall-growing green crop which gets dried and used in the making of rugs, bags and other goods. Because of when the coverage was taken, jute can almost exclusively be found on Street View in Rangpur. In its dried state it can be found hanging off fences and drying on the roads anywhere in the country."
       ],
@@ -1210,14 +1250,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Jute is a tall green crop, dried for rugs and bags. Because of when it was filmed, it appears almost only in the north-west. Dried jute hangs on fences or dries on roads anywhere."
     },
     {
       "id": "bd-s4b7",
       "step": 1,
       "order": 13,
       "family": "other",
-      "title": "Canola is a low-growing crop with yellow flowers that is…",
+      "title": "Crops: low canola with yellow flowers",
       "text": [
         "**Canola** is a** **low-growing crop with **yellow flowers** that is used to make cooking oil. It is usually planted during the off-season for rice, making it extremely common north of Padma river in the state of Dhaka."
       ],
@@ -1256,14 +1297,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Canola is low with yellow flowers. It is planted after rice, so it is very common in the centre, north of the big river."
     },
     {
       "id": "bd-dQuW",
       "step": 1,
       "order": 14,
       "family": "other",
-      "title": "Tea production in Bangladesh is concentrated in the…",
+      "title": "Landscape: tea gardens in the highlands",
       "text": [
         "**Tea production** in Bangladesh is concentrated in the highlands of southern Sylhet and, rarely, Chittagong."
       ],
@@ -1303,14 +1345,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tea is grown mainly in the highlands of the south of the north-east, and rarely in the south-east."
     },
     {
       "id": "bd-QXjW",
       "step": 1,
       "order": 15,
       "family": "vegetation",
-      "title": "Vegetation: Standalone fruit trees in Bangladesh are most commonly seen…",
+      "title": "Plants: lone fruit trees, orchards at the border",
       "text": [
         "Standalone **fruit trees** in Bangladesh are most commonly seen in the states of Rajshahi and Rangpur.** Fruit orchards** with systematically planted trees, however, are concentrated near the Indian border in both states."
       ],
@@ -1350,14 +1393,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stand-alone fruit trees are most common in the north-west and west. Planned orchards with rows of trees sit near the Indian border in both."
     },
     {
       "id": "bd-SRni",
       "step": 1,
       "order": 16,
       "family": "other",
-      "title": "Sunflower fields are found in the south of Barishal state",
+      "title": "Crops: sunflower fields in the far south",
       "text": [
         "**Sunflower fields** are found in the south of Barishal state."
       ],
@@ -1396,14 +1440,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sunflower fields appear in the south of one southern division."
     },
     {
       "id": "bd-wFYz",
       "step": 1,
       "order": 17,
       "family": "other",
-      "title": "Fields of watermelons can also be found in the south of…",
+      "title": "Crops: watermelon fields in the far south",
       "text": [
         "Fields of **watermelons **can also be found in the south of Barishal."
       ],
@@ -1442,14 +1487,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Watermelon fields also appear in the south of the same southern division."
     },
     {
       "id": "bd-QJgl",
       "step": 1,
       "order": 18,
       "family": "vegetation",
-      "title": "Vegetation: Eucalyptus trees are tall trees with lush crowns and…",
+      "title": "Plants: tall eucalyptus with ivory trunks",
       "text": [
         "**Eucalyptus trees** are** **tall trees with lush crowns and **ivory-coloured trunks**. In Bangladesh they are more common in the north, with** **Rangpur, Rajshahi and Mymensingh being the most likely states."
       ],
@@ -1488,14 +1534,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall trees with lush crowns and ivory-coloured trunks. They are more common in the north, especially the north-west, west and north-centre."
     },
     {
       "id": "bd-ZrT6",
       "step": 1,
       "order": 19,
       "family": "vegetation",
-      "title": "Vegetation: Blossoming trees are tied to coverage and seasonal metas in…",
+      "title": "Plants: trees in blossom, spring coverage",
       "text": [
         "**Blossoming trees** are tied to coverage and seasonal metas in Bangladesh, and are only found in the states where coverage was taken during spring time - Khulna, Mymensingh and southern Dhaka.",
         "NOTE: Beware that this is only accurate in Generation 4 coverage."
@@ -1536,14 +1583,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blossoming trees show up only where coverage was filmed in spring: the south-west, north-centre and southern part of the centre. Only reliable in Gen 4."
     },
     {
       "id": "bd-reel",
       "step": 1,
       "order": 20,
       "family": "vegetation",
-      "title": "Vegetation: Beach Sheoaks (Casuarina equisetifolia) are thin evergreen…",
+      "title": "Plants: thin drooping beach sheoaks on the coast",
       "text": [
         "**Beach Sheoaks **([Casuarina equisetifolia](https://en.wikipedia.org/wiki/Casuarina_equisetifolia)) are thin evergreen trees** **with **thin, long, drooping branchlets. **Like the name suggests, they are mostly observed in coastal regions - along the coast of the Teknaf Peninsula and around Noakhali city in Chittagong."
       ],
@@ -1582,14 +1630,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Thin evergreen trees with long, drooping, thread-like branchlets, mostly along the south-east coast and around one coastal city."
     },
     {
       "id": "bd-e42R",
       "step": 1,
       "order": 21,
       "family": "coverage",
-      "title": "Coverage: For legal reasons, Google has added small labels noting…",
+      "title": "Coverage: Gen 4 with 2022 copyright label",
       "text": [
         "For legal reasons, Google has added small labels noting their copyright on all Street View coverage. These labels contain a year, typically the year when the coverage was released, which can be used to regionguess Bangladesh. Generation 4 coverage with **2022** written on the copyright labels can be found in Mymensingh, Dhaka and less commonly Chittagong.",
         "NOTE: Beware that the copyright labels will rarely get updated to a later year, without any other changes to the coverage."
@@ -1629,14 +1678,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage labelled 2022 is found in the north-centre, the centre and less often the south-east. Labels rarely get updated without other changes."
     },
     {
       "id": "bd-BSuF",
       "step": 1,
       "order": 22,
       "family": "car",
-      "title": "Google car: Similarly, Generation 4 coverage with 2023 written on the…",
+      "title": "Coverage: Gen 4 with 2023 copyright label",
       "text": [
         "Similarly, Generation 4 coverage with **2023** written on the copyright labels can be found in Rangpur, Rajshahi, Khulna, Barishal, Sylhet and less commonly Chittagong.",
         "NOTE: 2024 and 2025 now make up around half of all copyright dates. These can be found all over the country."
@@ -1676,14 +1726,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage labelled 2023 is found in the north-west, west, south-west, south, north-east and less often the south-east. 2024 and 2025 make up about half of all dates and appear everywhere."
     },
     {
       "id": "bd-hqi8",
       "step": 1,
       "order": 23,
       "family": "coverage",
-      "title": "Coverage: Shitcam coverage is only found in and around Dhaka",
+      "title": "Coverage: poor-quality camera only near the capital",
       "text": [
         "**Shitcam coverage** is only found in and around Dhaka."
       ],
@@ -1723,14 +1774,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The poor-quality coverage exists only in and around the capital."
     },
     {
       "id": "bd-YtNI",
       "step": 1,
       "order": 24,
       "family": "car",
-      "title": "Google car: Generation 3 coverage with the white Street View car can be…",
+      "title": "Google car: Gen 3 white car, capital to port city",
       "text": [
         "**Generation 3** coverage with the **white** Street View car can be found in Dhaka, Chattogram as well as on the highway connecting them."
       ],
@@ -1770,14 +1822,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage with the white car is in the capital, the big port city, and the highway between them."
     },
     {
       "id": "bd-vevQ",
       "step": 1,
       "order": 25,
       "family": "car",
-      "title": "Google car: Generation 3 coverage with the striped Street View car can…",
+      "title": "Google car: Gen 3 striped car, west of capital",
       "text": [
         "**Generation 3** coverage with the **striped **Street View car can be found mostly on yellow roads west of Dhaka."
       ],
@@ -1817,14 +1870,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 coverage with the striped car is mostly on yellow roads west of the capital."
     },
     {
       "id": "bd-N0NE",
       "step": 2,
       "order": 0,
       "family": "car",
-      "title": "Google car: In the city of Sylhet there will often be a guard at the…",
+      "title": "Google car: Gen 3, guard holding a hayfork",
       "text": [
         "In the city of Sylhet there will often be a **guard** at the side of the car visible, usually holding a hayfork. Note that this only applies to Generation 3 coverage."
       ],
@@ -1863,14 +1917,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one north-eastern city, a guard often stands by the car, usually holding a hayfork. Only in Gen 3."
     },
     {
       "id": "bd-tfmk",
       "step": 2,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: In the city of Barishal there can also be a guard at the…",
+      "title": "Coverage: guard beside the car in a southern city",
       "text": [
         "In the city of Barishal there can also be a **guard** at the side of the car visible, not to be confused with the Sylhet guard.",
         "NOTE: The [same man](https://maps.app.goo.gl/ZRAD485rKUBixpPU8) can rarely be found elsewhere on trekker coverage."
@@ -1910,14 +1965,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In one southern city, a guard can also stand by the car. Don't mix him up with the north-eastern one. The same man appears rarely in walker coverage elsewhere."
     },
     {
       "id": "bd-Sapn",
       "step": 2,
       "order": 2,
       "family": "coverage",
-      "title": "Coverage: This interesting trekker with a black cover can be found in…",
+      "title": "Coverage: walker camera with black cover",
       "text": [
         "This interesting trekker with a black cover can be found in the city of **Khulna**."
       ],
@@ -1956,14 +2012,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A walker camera with a black cover appears in one south-western city."
     },
     {
       "id": "bd-aF5y",
       "step": 2,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: The trekker with red colour in the mirrors is unique to the…",
+      "title": "Coverage: walker camera with red mirrors",
       "text": [
         "The trekker with **red colour** in the mirrors is unique to the island of Nijhum Dwip."
       ],
@@ -2002,14 +2059,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A walker camera with red colour in its mirrors, found only on one small island."
     },
     {
       "id": "bd-8xfH",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: A scooter trekker, where mostly the left mirror and some…",
+      "title": "Coverage: scooter with left mirror and hair visible",
       "text": [
         "A scooter trekker, where mostly the **left mirror** and some **hair** is visible, can be found on Hatiya Island."
       ],
@@ -2048,14 +2106,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A scooter-mounted camera where mostly the left mirror and some hair are visible, on one southern island."
     },
     {
       "id": "bd-t28E",
       "step": 2,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: A trekker escorted by a security guard is found on Saint…",
+      "title": "Coverage: walker camera escorted by security guard",
       "text": [
         "A trekker escorted by a **security guard** is found on Saint Martin's Island."
       ],
@@ -2094,314 +2153,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "bd-lm-15759",
-      "step": 3,
-      "order": 0,
-      "family": "other",
-      "title": "Rickshaws",
-      "text": [
-        "Rickshaws are frequently found all around Bangladesh, especially the green auto rickshaws.",
-        "**--- NOTE:**",
-        "They are found in other Asian countries as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a897fa611a0e",
-          "src": "https://learnablemeta.com/images/681/NHL226cIoMtwxw05BlAQaY8FBjhnFVPSEuq1.avif",
-          "path": "bd/a897fa611a0e.webp",
-          "width": 1000,
-          "height": 518
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-15760",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Agricultural Fields & Water",
-      "text": [
-        "Bodies of water and agricultural fields can be often seen beside the streets of Bangladesh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6d288608510b",
-          "src": "https://learnablemeta.com/images/681/vfKeAfugQXYmAEJ6DnVPSGnkGNDvYfnVzhGv.avif",
-          "path": "bd/6d288608510b.webp",
-          "width": 1000,
-          "height": 520
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-15761",
-      "step": 3,
-      "order": 2,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Bangladesh, as well as a variety of other countries, has received some poor quality coverage, also known as “Shitcam”.",
-        "The Shitcam car colours are black and white.",
-        "**--- NOTE:**",
-        "Sometimes the car colour can be fully obstructed by a big circular blur.",
-        "**--- TIP:**",
-        "Shitcam is only found around Dhaka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0cba14b8ec4c",
-          "src": "https://learnablemeta.com/images/681/OaBEMtOFbixrS9HJNfc9EgBoGFur62rTz1qu.avif",
-          "path": "bd/0cba14b8ec4c.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "285abce14d65"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-15910",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Rickshaws",
-      "text": [
-        "Rickshaws are frequently found all around Bangladesh, especially the green auto rickshaws.",
-        "**--- NOTE:**",
-        "They are found in other Asian countries as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a897fa611a0e",
-          "src": "https://learnablemeta.com/images/681/NHL226cIoMtwxw05BlAQaY8FBjhnFVPSEuq1.avif",
-          "path": "bd/a897fa611a0e.webp",
-          "width": 1000,
-          "height": 518,
-          "dupeOf": "a897fa611a0e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-15911",
-      "step": 3,
-      "order": 4,
-      "family": "other",
-      "title": "Agricultural Fields & Water",
-      "text": [
-        "Bodies of water and agricultural fields can be often seen beside the streets of Bangladesh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6d288608510b",
-          "src": "https://learnablemeta.com/images/681/vfKeAfugQXYmAEJ6DnVPSGnkGNDvYfnVzhGv.avif",
-          "path": "bd/6d288608510b.webp",
-          "width": 1000,
-          "height": 520,
-          "dupeOf": "6d288608510b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-15912",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Bangladesh, as well as a variety of other countries, has received some poor quality coverage, also known as “Shitcam”.",
-        "The Shitcam car colours are black and white.",
-        "**--- NOTE:**",
-        "Sometimes the car colour can be fully obstructed by a big circular blur.",
-        "**--- TIP:**",
-        "Shitcam is only found around Dhaka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0cba14b8ec4c",
-          "src": "https://learnablemeta.com/images/681/OaBEMtOFbixrS9HJNfc9EgBoGFur62rTz1qu.avif",
-          "path": "bd/0cba14b8ec4c.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "285abce14d65"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-51385",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Rickshaws",
-      "text": [
-        "Rickshaws are frequently found all around Bangladesh, especially the green auto rickshaws.",
-        "**--- NOTE:**",
-        "They are found in other Asian countries as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a897fa611a0e",
-          "src": "https://learnablemeta.com/images/681/NHL226cIoMtwxw05BlAQaY8FBjhnFVPSEuq1.avif",
-          "path": "bd/a897fa611a0e.webp",
-          "width": 1000,
-          "height": 518,
-          "dupeOf": "a897fa611a0e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-51386",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Agricultural Fields & Water",
-      "text": [
-        "Bodies of water and agricultural fields can be often seen beside the streets of Bangladesh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6d288608510b",
-          "src": "https://learnablemeta.com/images/681/vfKeAfugQXYmAEJ6DnVPSGnkGNDvYfnVzhGv.avif",
-          "path": "bd/6d288608510b.webp",
-          "width": 1000,
-          "height": 520,
-          "dupeOf": "6d288608510b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-51387",
-      "step": 3,
-      "order": 8,
-      "family": "coverage",
-      "title": "Coverage: Shitcam",
-      "text": [
-        "Bangladesh, as well as a variety of other countries, has received some poor quality coverage, also known as “Shitcam”.",
-        "The Shitcam car colours are black and white.",
-        "**--- NOTE:**",
-        "Sometimes the car colour can be fully obstructed by a big circular blur.",
-        "**--- TIP:**",
-        "Shitcam is only found around Dhaka."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0cba14b8ec4c",
-          "src": "https://learnablemeta.com/images/681/OaBEMtOFbixrS9HJNfc9EgBoGFur62rTz1qu.avif",
-          "path": "bd/0cba14b8ec4c.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "285abce14d65"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "bd-lm-725902",
-      "step": 3,
-      "order": 9,
-      "family": "plate",
-      "title": "Plate: Bangladesh",
-      "text": [
-        "Bangladeshi licence plates are either white, black or turquoise.",
-        "NOTE: The turquoise plate can only be found in Bangladesh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "903f93140c79",
-          "src": "https://learnablemeta.com/images/5431/1773051558699-iMC.avif",
-          "path": "bd/903f93140c79.webp",
-          "width": 800,
-          "height": 598,
-          "dupeOf": "8d081f1282aa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A walker camera followed by a security guard, on the island at the far southern tip."
     },
     {
       "id": "bd-lm-793338",
       "step": 3,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: Angular Fender Bars Roofed Cycle Rickshaws",
+      "title": "Rickshaw: angular fenders, painted bars on top",
       "text": [
         "Roofed cycle rickshaws with **angular fenders** with **painted metal bars on top** can be found in **Mymensingh Division**. The roof will often be folded back."
       ],
@@ -2421,14 +2181,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Roofed cycle rickshaws with angular fenders and painted metal bars on top, with the roof often folded back. Found in the north-centre division."
     },
     {
       "id": "bd-lm-793339",
       "step": 3,
       "order": 11,
       "family": "other",
-      "title": "Barishal Roofed Cycle Rickshaws",
+      "title": "Rickshaw: ornamented rear axle, heart or circle",
       "text": [
         "Roofed cycle rickshaws with these **distinctive rear axle ornaments** are only found in **Barishal Division**. There are two common variants: a simpler design with an upside-down heart shape in the centre and a more ornate one with a circular design in the centre."
       ],
@@ -2448,14 +2209,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Roofed cycle rickshaws with distinctive ornaments on the rear axle, either a simple upside-down heart or a fancier circle design. Only in the southern division."
     },
     {
       "id": "bd-lm-793340",
       "step": 3,
       "order": 12,
       "family": "other",
-      "title": "Chariotlike Cycle Rickshaws",
+      "title": "Rickshaw: chariot-like big passenger seat",
       "text": [
         "**Chariot-like cycle and auto rickshaws** with this distinctive style of large passenger seat are only found **between Gazipur and Mawna in Dhaka Division.**"
       ],
@@ -2475,14 +2237,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Chariot-like cycle and auto rickshaws with a large passenger seat, found only between two towns in the centre."
     },
     {
       "id": "bd-lm-793341",
       "step": 3,
       "order": 13,
       "family": "other",
-      "title": "Chittagong Roofed Cycle Rickshaws",
+      "title": "Rickshaw: several lines above rear axle",
       "text": [
         "Roofed cycle rickshaws with **multiple lines above the rear axle** can be found in some areas of **southern Chittagong Division** and are particularly common in the city of **Chittagong**."
       ],
@@ -2502,14 +2265,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Roofed cycle rickshaws with multiple lines above the rear axle, in parts of the south-east and very common in its big port city."
     },
     {
       "id": "bd-lm-793342",
       "step": 3,
       "order": 14,
       "family": "other",
-      "title": "Cross Bench Cycle Rickshaws",
+      "title": "Rickshaw: cross bench, blue-red-yellow stripes",
       "text": [
         "Cycle rickshaws with a **cross bench** (oriented perpendicular to the driving direction) and often painted in a **striped blue-red-yellow pattern** can be found **between Tangail and Dhaka.**"
       ],
@@ -2529,14 +2293,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with a bench across the cart, often striped blue, red and yellow. Between two towns in the centre."
     },
     {
       "id": "bd-lm-793343",
       "step": 3,
       "order": 15,
       "family": "other",
-      "title": "Double Rounded Cross Pattern Cycle Rickshaws",
+      "title": "Rickshaw: flatbed with double rounded cross pattern",
       "text": [
         "Flatbed cycle rickshaws with this pattern of quarter circles and semicircles, forming a **‘double rounded cross’ pattern**, can be seen in **eastern Dhaka Division** and across the border in **Khulna Division**, near **Magura**."
       ],
@@ -2556,14 +2321,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Flatbed rickshaws with quarter and semicircles forming a double rounded cross. In the east of the centre and across the border in the south-west."
     },
     {
       "id": "bd-lm-793344",
       "step": 3,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: Jeeps",
+      "title": "Vehicles: jeep-style utility trucks",
       "text": [
         "These **jeep-style utility vehicles** appear predominantly in **Chittagong division**, especially in the **Chittagong Hill Tracts**."
       ],
@@ -2583,14 +2349,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Jeep-style utility vehicles appear mostly in the south-east, especially the hill tracts."
     },
     {
       "id": "bd-lm-793345",
       "step": 3,
       "order": 17,
       "family": "other",
-      "title": "Long Bench Back Bars Cycle Rickshaws",
+      "title": "Rickshaw: long benches, decorative back bars",
       "text": [
         "Cycle rickshaws with **long benches** (oriented parallel to the driving direction) and **decorative metal bars at the back** can be found **north-west of Naogaon**. These rickshaws will not have a cross bench behind the driver's seat."
       ],
@@ -2610,14 +2377,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with long benches along the direction of travel and decorative metal bars at the back, north-west of one town in the north-west. No cross bench behind the driver."
     },
     {
       "id": "bd-lm-793346",
       "step": 3,
       "order": 18,
       "family": "other",
-      "title": "Long Bench Cycle Rickshaws",
+      "title": "Rickshaw: long benches, no rear decoration",
       "text": [
         "Cycle rickshaws with **long benches** (oriented parallel to the driving direction) and **without rear decorations or a cross bench** can be commonly seen in **northern Rajshahi Division** and **south-eastern Rangpur Division**."
       ],
@@ -2637,14 +2405,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with long benches and no rear decoration or cross bench, common in the north of the west and south-east of the north."
     },
     {
       "id": "bd-lm-793347",
       "step": 3,
       "order": 19,
       "family": "other",
-      "title": "Long Plank Cycle Rickshaws",
+      "title": "Rickshaw: flatbed with long planks",
       "text": [
         "Flatbed cycle rickshaws with **long planks, oriented parallel to the driving direction**, can rarely be found all around the country, however they are by far most common in **north-western Rangpur Division** and rarely in **north-western Mymensingh Division**, along the border with India."
       ],
@@ -2666,14 +2435,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Flatbed rickshaws with long planks along the direction of travel. Rare overall, but by far most common in the far north-west, and rarely in the north-centre near India."
     },
     {
       "id": "bd-lm-793348",
       "step": 3,
       "order": 20,
       "family": "other",
-      "title": "Metal Carts and Cycle Rickshaws",
+      "title": "Rickshaw: metal cage-like frames",
       "text": [
         "Pulled carts and cycle rickshaws with **metal cage-like frames** are commonly used in **Sylhet Division** and rarely in **Chittagong Division**."
       ],
@@ -2693,14 +2463,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Pulled carts and cycle rickshaws with metal cage-like frames, common in the north-east and rare in the south-east."
     },
     {
       "id": "bd-lm-793349",
       "step": 3,
       "order": 21,
       "family": "other",
-      "title": "Patgram Cycle Rickshaws",
+      "title": "Rickshaw: U-shaped benches, wooden wheel extensions",
       "text": [
         "Similar cycle rickshaws with **two long benches and a cross bench in a ‘U’ formation** but with **wooden vertical extensions** visible on both sides of rear wheels, are only found **around the town of Patgram in northern Rangpur Division**."
       ],
@@ -2720,14 +2491,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with two long benches and a cross bench in a U shape, plus wooden vertical extensions at both rear wheels. Only around one town in the far north."
     },
     {
       "id": "bd-lm-793350",
       "step": 3,
       "order": 22,
       "family": "other",
-      "title": "Rectangular Frame Cycle Rickshaws",
+      "title": "Rickshaw: flatbed, rectangular metal frame",
       "text": [
         "Additionally, flatbed cycle rickshaws with a **rectangular metal frame** under the driver’s seat, are commonly found in **far north-west Rangpur Division**."
       ],
@@ -2747,14 +2519,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Flatbed rickshaws with a rectangular metal frame under the driver's seat, common in the far north-west."
     },
     {
       "id": "bd-lm-793351",
       "step": 3,
       "order": 23,
       "family": "architecture",
-      "title": "Architecture: St",
+      "title": "Rickshaw: long benches, ridged roof",
       "text": [
         "These cycle rickshaws with **long benches** and **ridged roofs** are only used on **St. Martin’s Island**, in the far south of Bangladesh."
       ],
@@ -2774,14 +2547,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with long benches and ridged roofs, used only on the island at the far southern tip."
     },
     {
       "id": "bd-lm-793352",
       "step": 3,
       "order": 24,
       "family": "other",
-      "title": "Rounded Cross Pattern Cycle Rickshaws",
+      "title": "Rickshaw: flatbed with rounded cross pattern",
       "text": [
         "Flatbed cycle rickshaws with this pattern of corner quarter circles, forming a **‘rounded cross’ pattern** can often be seen in **northern Khulna Division, east of Pabna in Rajshahi Division** and in **central Rajshahi Division**."
       ],
@@ -2801,14 +2575,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Flatbed rickshaws with corner quarter circles forming a rounded cross. Often seen in the north of the south-west and in the west."
     },
     {
       "id": "bd-lm-793353",
       "step": 3,
       "order": 25,
       "family": "architecture",
-      "title": "Architecture: Tunnel-like Roofed Cycle Rickshaws",
+      "title": "Rickshaw: arched tunnel-like roof",
       "text": [
         "Cycle rickshaws with **arched tunnel-like roofs** extending over the driver’s seat are only used in two separate areas near the border with India: **south of Satkhira** and **south of Meherpur**."
       ],
@@ -2830,14 +2605,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with arched, tunnel-like roofs over the driver's seat, used only in two separate areas in the south-west near the border."
     },
     {
       "id": "bd-lm-793354",
       "step": 3,
       "order": 26,
       "family": "other",
-      "title": "U Bench Cycle Rickshaws",
+      "title": "Rickshaw: two long benches and cross bench (U)",
       "text": [
         "Cycle rickshaws with **two long benches and a cross bench in a ‘U’ formation** are commonly found in **eastern Rajshahi Division** and part of **southern Rangpur Division**."
       ],
@@ -2857,14 +2633,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cycle rickshaws with two long benches and a cross bench in a U formation, common in the east of the west and parts of the south of the north."
     },
     {
       "id": "bd-lm-793355",
       "step": 3,
       "order": 27,
       "family": "other",
-      "title": "Wooden Fender Cycle Rickshaws",
+      "title": "Rickshaw: flatbed, wooden extensions over wheels",
       "text": [
         "Flatbed cycle rickshaws with **horizontal wooden extensions** above the rear wheels are most commonly found **north-east of Tangail** and in part of **southern Mymensingh Division**, but can also be seen in **Magura**."
       ],
@@ -2884,14 +2661,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Flatbed rickshaws with horizontal wooden extensions above the rear wheels, mostly north-east of one town in the centre and parts of the north-centre."
     },
     {
       "id": "bd-lm-793358",
       "step": 3,
       "order": 28,
       "family": "architecture",
-      "title": "Architecture: Bent Bar Auto Rickshaws",
+      "title": "Rickshaw: auto rickshaw with bent roof bar",
       "text": [
         "A high proportion of auto rickshaws in **Mymensingh Division** have a **metal bar over the top of the front roof area** with a **slight but noticeable upward bend**. They may or may not have small metal ball shapes on them, either on each side or along the bar. You see similar metal bars in other regions occasionally, but they are normally unbent."
       ],
@@ -2911,14 +2689,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Many auto rickshaws in the north-centre have a metal bar over the front roof with a slight upward bend, sometimes with small metal balls. Other regions have similar bars but straight."
     },
     {
       "id": "bd-lm-793359",
       "step": 3,
       "order": 29,
       "family": "other",
-      "title": "Chittagong Auto Rickshaws",
+      "title": "Rickshaw: auto rickshaw with calligraphy and ornaments",
       "text": [
         "Auto rickshaws in **Chittagong** often feature a variety of decorations and characteristics which are unlikely to appear in other parts of Bangladesh. These include:",
         "**Long lines of Arabic calligraphy** written **above the windshield** *(not just the single word Allah, الله, which is commonplace) *",
@@ -2941,14 +2720,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Auto rickshaws around the south-east port city often have long Arabic calligraphy above the windshield, semicircular grill ornaments, and bulbous cage ornaments beside them. Seeing one or more is a good clue."
     },
     {
       "id": "bd-lm-793360",
       "step": 3,
       "order": 30,
       "family": "other",
-      "title": "Colored Front Auto Rickshaws",
+      "title": "Rickshaw: green auto with front painted another colour",
       "text": [
         "Green auto rickshaws in this part of **western Chittagong Division** will usually have **all or half of the front painted in a different bright solid colour**, such as yellow, red or blue. When half is painted it may be the upper or lower half. While it is possible to rarely find such auto rickshaws elsewhere, they will only constitute a majority in this area."
       ],
@@ -2968,14 +2748,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Green auto rickshaws in part of the south-east often have all or half of the front painted yellow, red or blue. They are a majority only in this area."
     },
     {
       "id": "bd-lm-793361",
       "step": 3,
       "order": 31,
       "family": "other",
-      "title": "Curly Dome Auto Rickshaw Ornaments",
+      "title": "Rickshaw: grill ornament with two curled scrolls",
       "text": [
         "This distinctive grill ornament featuring **two curled scroll shapes** appears **in Chittagong Division** to the north of Chittagong . It remains a fairly-reliable indicator for this region even when positioned elsewhere on the rickshaw , such as on the side above the back wheels."
       ],
@@ -2995,14 +2776,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A grill ornament with two curled scroll shapes appears north of the south-eastern port city. It is a fairly reliable clue even if placed elsewhere on the vehicle."
     },
     {
       "id": "bd-lm-793362",
       "step": 3,
       "order": 32,
       "family": "other",
-      "title": "South Barishal Auto Rickshaws",
+      "title": "Rickshaw: semicircle over onion-dome grill ornament",
       "text": [
         "This **grill ornament** featuring a **semicircle over an onion-dome shape** appears on the front of electric auto rickshaws to the **south of the city of Barishal**, roughly between the Payra and Tetulia rivers."
       ],
@@ -3022,14 +2804,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "This grill ornament, a semicircle over an onion-dome shape, appears on electric auto rickshaws south of one southern city, between two rivers."
     },
     {
       "id": "bd-lm-793363",
       "step": 3,
       "order": 33,
       "family": "architecture",
-      "title": "Architecture: VIP Auto Rickshaw Covers",
+      "title": "Rickshaw: electric auto with VIP roof cover",
       "text": [
         "This **distinctive style of roof covering** is seen on some electric auto rickshaws in **western Rajshahi Division** and **southern Rangpur Division**. The covering usually features **the text ‘VIP’** although custom variants with other initials also exist. The colour scheme can vary but will be two-tone or three-tone."
       ],
@@ -3049,14 +2832,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A distinctive roof cover, usually saying VIP and in two or three colours, on electric auto rickshaws in the west and south of the north."
     },
     {
       "id": "bd-lm-793364",
       "step": 3,
       "order": 34,
       "family": "architecture",
-      "title": "Architecture: Welcome Auto Rickshaws",
+      "title": "Rickshaw: auto with Well Come or Welcome text",
       "text": [
         "**South and east of the city of Sylhet**, you can somewhat commonly see auto rickshaws with **the text ‘Well Come’ or ‘Welcome’** on the side roof area, above or behind the door."
       ],
@@ -3076,7 +2860,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a92eb0eb37f17a9b59bd082",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "South and east of one north-eastern city, you often see auto rickshaws with Well Come or Welcome on the side of the roof."
     }
   ]
 }

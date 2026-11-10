@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Colombian licence plates are typically yellow",
+      "title": "Plate: yellow",
       "text": [
         "Colombian licence plates are typically **yellow**.",
         "NOTE: Within South America, yellow licence plates are almost exclusively found in Colombia."
@@ -61,14 +61,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Colombian plates are typically yellow. In South America yellow plates are almost only found here."
     },
     {
       "id": "co-rkhV",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: In Generation 3 coverage",
+      "title": "Google car: short thick antenna on black car",
       "text": [
         "In Generation 3 coverage, a **short thick antenna** is sometimes visible with a black, white or grey car. In Generation 4 coverage, a white or silver car is commonly found.",
         "NOTE: Within the Americas, you can also find the antenna in Mexico, Ecuador and Brazil. However, Colombia is the only country with this antenna on a black Google car."
@@ -120,7 +121,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Gen 3 a short thick antenna is sometimes visible on a black, white or grey car; in Gen 4 the car is commonly white or silver. Mexico, Ecuador and Brazil have the antenna too, but only here is it on a black car.",
+      "sameAs": [
+        "BR",
+        "EC",
+        "MX"
+      ]
     },
     {
       "id": "co-JMPO",
@@ -128,7 +135,7 @@
       "order": 3,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signposts in Colombia are made of white metal",
+      "title": "Direction sign: white metal posts, cross at back",
       "text": [
         "Signposts in Colombia are made of white metal, and join to form a distinct **cross on the back** of signs.",
         "NOTE: White metal signposts can also be found in Brazil, however these are usually wider."
@@ -170,14 +177,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signposts are white metal and join to form a distinct cross on the back of the sign. Brazil has white metal posts too, but they are usually wider.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Brazilian white metal posts are usually wider"
+        }
+      ]
     },
     {
       "id": "co-45F4",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: Colombia uses two types of kilometre markers",
+      "title": "Kilometre marker: tall green 'Pr' or stone",
       "text": [
         "Colombia uses two types of kilometre markers: a tall green version with the letters “**Pr**” at the top, and the traditional stone marker with black lettering. Both designs are unique to the country.",
         "NOTE: The first two digits at the bottom indicate the road number. In this case, the road number is 90. The last two digits indicate the section of the road, which increase west to east on even numbered highways, and south to north on odd numbered highways.You can use this [resource](https://es.wikipedia.org/wiki/Anexo:Carreteras_nacionales_de_Colombia) to help identify each section."
@@ -217,14 +231,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two types, both unique: a tall green marker with the letters Pr at the top, and a traditional stone one with black lettering. The first two digits at the bottom are the road number and the last two are the road section."
     },
     {
       "id": "co-cSUD",
       "step": 0,
       "order": 5,
       "family": "pole",
-      "title": "Pole: Colombian poles are often marked with unique…",
+      "title": "Pole: black-yellow or black-orange stripes",
       "text": [
         "Colombian poles are often marked with unique **black-and-yellow** or black-and-orange stripes."
       ],
@@ -265,14 +280,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles are often marked with black-and-yellow or black-and-orange stripes."
     },
     {
       "id": "co-uYGd",
       "step": 0,
       "order": 6,
       "family": "other",
-      "title": "Wooden fences are particularly common in Colombia",
+      "title": "Fence: wooden posts, some painted and pointed",
       "text": [
         "**Wooden fences** are particularly common in Colombia.",
         "NOTE: In addition to the unpainted variants, some fence posts are [painted and sharp](https://maps.app.goo.gl/z7gpBcspK4rCWeep8) at the top. These are almost exclusive to Colombia."
@@ -312,14 +328,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden fences are very common. Some posts are painted and sharp at the top, which is almost exclusive to Colombia."
     },
     {
       "id": "co-wre8",
       "step": 0,
       "order": 7,
       "family": "plate",
-      "title": "Plate: Colombian taxis are always this pastel yellow colour",
+      "title": "Taxi: pastel yellow, white plate",
       "text": [
         "Colombian taxis are always this **pastel yellow** colour. As opposed to private vehicles, they have white licence plates, which are often printed on the side and roof. If unblurred, you will often see the city name.",
         "NOTE: Ecuadorian taxis may look similar. However, they use a slightly more saturated yellow and typically have orange plates."
@@ -359,14 +376,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Taxis are always pastel yellow, with white plates often printed on the side and roof, and the city name if unblurred. Ecuadorian taxis are a slightly more saturated yellow with orange plates.",
+      "differs": [
+        {
+          "country": "EC",
+          "how": "Ecuadorian taxis are more saturated yellow with orange plates"
+        }
+      ]
     },
     {
       "id": "co-OUrh",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Colombian poles are generally concrete with a variety of…",
+      "title": "Pole: concrete, often dark, sometimes octagonal",
       "text": [
         "Colombian poles are generally **concrete** with a variety of pole tops.",
         "Moreover, dark-coloured poles are more common in Colombia than in neighbouring countries.",
@@ -412,14 +436,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles are mostly concrete with many kinds of tops, and dark-coloured poles are more common here than next door. Octagonal poles in the Americas are only in Colombia, Mexico and Ecuador.",
+      "sameAs": [
+        "EC",
+        "MX"
+      ]
     },
     {
       "id": "co-2901",
       "step": 0,
       "order": 9,
       "family": "other",
-      "title": "In Colombia, it is particularly common for sidewalks to be…",
+      "title": "Pavement: reddish tiles",
       "text": [
         "In Colombia, it is particularly common for sidewalks to be decorated with **reddish tiles**."
       ],
@@ -458,14 +487,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sidewalks are often decorated with reddish tiles."
     },
     {
       "id": "co-oKQt",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in Colombia is mainly found in the north and west",
+      "title": "Coverage: mostly north and west, plus islands",
       "text": [
         "Coverage in Colombia is mainly found in the **north and west**. The islands of Providencia and San Andrés, northwest of the mainland, also have coverage."
       ],
@@ -485,14 +515,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is mainly in the north and west. The islands of Providencia and San Andrés, northwest of the mainland, are covered too."
     },
     {
       "id": "co-A1PS",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The Northern part of the country is characterised by white",
+      "title": "Landscape: white sandy soil, dry",
       "text": [
         "The Northern part of the country is characterised by **white, sandy soil** and an arid landscape."
       ],
@@ -531,14 +562,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The north has white, sandy soil and a dry, arid landscape."
     },
     {
       "id": "co-mZY9",
       "step": 1,
       "order": 2,
       "family": "vegetation",
-      "title": "Vegetation: East of the Andes lies a vast lowland called Llanos",
+      "title": "Landscape: huge lowland, savanna, seasonal floods",
       "text": [
         "East of the Andes lies a **vast lowland** called Llanos. It is characterised by open tropical grasslands, savannas with scattered trees, small areas of forest and seasonal flooding."
       ],
@@ -577,14 +609,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "East of the Andes is a vast lowland of open grassland and savannah with scattered trees, small forests and seasonal flooding. You may see mountains to the west, but never to the east."
     },
     {
       "id": "co-fexW",
       "step": 1,
       "order": 3,
       "family": "pole",
-      "title": "Pole: These pole markings with one short black strip on the top…",
+      "title": "Pole paint: black ends, long yellow middle",
       "text": [
         "These pole markings with one short black strip on the top and bottom, and a **longer yellow section** in the middle, are most commonly found in the Antioquia department. Sometimes, you can find them in the Cordoba department as well."
       ],
@@ -633,14 +666,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A short black strip at top and bottom with a longer yellow section between. Most common in Antioquia, sometimes in Córdoba."
     },
     {
       "id": "co-D97d",
       "step": 1,
       "order": 4,
       "family": "other",
-      "title": "As a result of slave trade",
+      "title": "People: mostly Afro-Colombian on Pacific coast",
       "text": [
         "As a result of slave trade, the Pacific coast of Colombia is home to an overwhelming majority of **Afro-Colombians**."
       ],
@@ -679,14 +713,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Because of the slave trade, the Pacific coast has an overwhelming majority of Afro-Colombians."
     },
     {
       "id": "co-AsK1",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "Sugar cane is grown along the Cauca river in Valle del…",
+      "title": "Plants: sugar cane fields along a river",
       "text": [
         "**Sugar cane** is grown along the Cauca river in Valle del Cauca and neighbouring departments."
       ],
@@ -726,14 +761,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sugar cane is grown along the Cauca river in Valle del Cauca and neighbouring departments."
     },
     {
       "id": "co-qLYa",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "A camera glitch that makes a part of the image look very…",
+      "title": "Coverage: oversaturated patch in the image",
       "text": [
         "A camera glitch that makes a part of the image look very saturated can be found in southern Colombia."
       ],
@@ -772,14 +808,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A camera glitch makes part of the image look very saturated, found in southern Colombia."
     },
     {
       "id": "co-44Li",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: This landscape is typical of the far Northern province of…",
+      "title": "Landscape: extreme dry, low plants, cacti",
       "text": [
         "This landscape is typical of the far Northern province of La Guajira: **extreme dryness**, low vegetation and occasional cacti.",
         "In addition, you can often recognise the Uribia-Puerto Bolivar road because of this landscape, the straightness and the train track always present to the East."
@@ -819,14 +856,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Typical of La Guajira in the far north: extreme dryness, low vegetation and occasional cacti. The straight Uribia to Puerto Bolívar road has a railway always on its east side."
     },
     {
       "id": "co-4oTi",
       "step": 2,
       "order": 1,
       "family": "line",
-      "title": "Road line: You can recognise the narrow Ruta 90 landbridge between…",
+      "title": "Road: narrow strip between sea and shallow water",
       "text": [
         "You can recognise the narrow Ruta 90 landbridge between Barranquilla and Cienaga thanks to the dashed yellow lines and **shallow bodies of water** next to the road. [Open ocean](https://maps.app.goo.gl/xp7rvZ2T77oh1Cbu7) can often be seen to the north.",
         "NOTE: In the older Generation 3 coverage, you will also see tall mountains in the distance."
@@ -866,14 +904,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The narrow Ruta 90 strip between Barranquilla and Ciénaga has dashed yellow lines, shallow water beside it and open sea often to the north. Older Gen 3 also shows tall mountains in the distance."
     },
     {
       "id": "co-kWTr",
       "step": 2,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Intersections in the coastal city of Barranquilla are…",
+      "title": "Street marker: small concrete post with names",
       "text": [
         "Intersections in the coastal city of Barranquilla are commonly marked by **small concrete poles** (_mojones_) bearing street names. For example, this image was taken at the intersection of Carrera 42 and Calle 68."
       ],
@@ -914,14 +953,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Barranquilla, intersections are marked by small concrete posts (mojones) showing the street names."
     },
     {
       "id": "co-5AfA",
       "step": 2,
       "order": 3,
       "family": "other",
-      "title": "This unique vehicle can be found in and around Leticia",
+      "title": "Google car: unique vehicle, long concrete blocks",
       "text": [
         "This **unique vehicle** can be found in and around Leticia, the Southernmost town in Colombia.",
         "NOTE: The long concrete blocks seen in the bottom left corner are a reliable way of recognising the road North of Leticia."
@@ -961,14 +1001,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A unique vehicle around Leticia, the southernmost town. Long concrete blocks at the bottom left reliably mark the road north of it."
     },
     {
       "id": "co-AbNO",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: Coverage on the Caribbean island of San Andrés was taken by…",
+      "title": "Google car: small white truck, no antenna",
       "text": [
         "Coverage on the Caribbean island of San Andrés was taken by this distinct **white car**."
       ],
@@ -1007,14 +1048,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On San Andrés island the coverage was taken by a small white truck with no antenna."
     },
     {
       "id": "co-FhGC",
       "step": 2,
       "order": 5,
       "family": "other",
-      "title": "The island of Providencia",
+      "title": "Google car: small grey-silver truck, long antenna",
       "text": [
         "The island of Providencia, located roughly 90 kilometres North of San Andrés, is home to this unique **grey truck**."
       ],
@@ -1053,14 +1095,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On Providencia island, about 90 km north of San Andrés, Google used a small grey or silver truck with a long antenna."
     },
     {
       "id": "co-PQZi",
       "step": 2,
       "order": 6,
       "family": "other",
-      "title": "Providencia street lights are green and supported by a…",
+      "title": "Lamp post: green with trapezoid metal support",
       "text": [
         "Providencia **street lights** are green and supported by a trapezoidal sheet of metal underneath.",
         "NOTE: The uniquely shaped [supporting metal](https://www.google.com/maps/@10.9825784,-74.7938269,3a,15.1y,9.87h,107.69t/data=!3m7!1e1!3m5!1sT2K_vf3jLCcKNBdRfnFTbA!2e0!5s20221001T000000!7i16384!8i8192?entry=ttu) piece can also be found in Barranquilla."
@@ -1100,43 +1143,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/colombia",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "co-lm-30",
-      "step": 3,
-      "order": 0,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Colombian cross",
-      "text": [
-        "Signposts in Colombia are made of **white** thin metal and have a distinct cross on the back.",
-        "In the photo, green checkmarks show the \"real\" Colombian cross, and red X's show the ones that aren't right."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2b0f7b51d605",
-          "src": "https://learnablemeta.com/images/1/8Mab5U54QolSpRErChtOxBGiDQquMTd0S7Jn.avif",
-          "path": "co/2b0f7b51d605.webp",
-          "width": 1000,
-          "height": 773
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Green street lights held up by a trapezoidal metal sheet underneath. The same odd-shaped support is also found in Barranquilla."
     },
     {
       "id": "co-lm-2884",
       "step": 3,
       "order": 1,
       "family": "other",
-      "title": "Max north Colombia vibes",
+      "title": "Landscape: dry coast with many cacti",
       "text": [
         "The northern tip of Colombia looks a lot like Tumbes and Piura in Peru, but with more cacti and a different car"
       ],
@@ -1158,695 +1173,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-3092",
-      "step": 3,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Isla de Providencia car",
-      "text": [
-        "On the tiny Isla de Providencia, Google used a small silver truck with a long antenna"
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "The northern tip looks a lot like the dry coast of northern Peru, but with more cacti and a different Google car.",
+      "differs": [
         {
-          "id": "838d3b0f5b50",
-          "src": "https://learnablemeta.com/images/3/RBmF4wyDFzPjyMRk82WArbdHECRoQz3kc61L.avif",
-          "path": "co/838d3b0f5b50.webp",
-          "width": 1000,
-          "height": 549
+          "country": "PE",
+          "how": "Peru has fewer cacti and a different car"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-3093",
-      "step": 3,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: San Andrés car",
-      "text": [
-        "On the small island of San Andrés, Google used a small white truck with no antenna"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "02560144417a",
-          "src": "https://learnablemeta.com/images/3/VSdybKX2qT3fyFgu3iC63TMDzXOWDPabZFVf.avif",
-          "path": "co/02560144417a.webp",
-          "width": 1000,
-          "height": 549
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-13766",
-      "step": 3,
-      "order": 4,
-      "family": "pole",
-      "title": "Pole: Black & Yellow Sticker",
-      "text": [
-        "Colombian poles are often marked with unique black-and-yellow or black-and-orange stripes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aab717612438",
-          "src": "https://learnablemeta.com/images/611/IG7VKkzzdyK1mpavtmRjJ2OeInxtimDNjEb9.avif",
-          "path": "co/aab717612438.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "748dea561aa6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-13784",
-      "step": 3,
-      "order": 5,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Cross",
-      "text": [
-        "Signposts in Colombia are made of white metal, and join to form a distinct cross on the back of signs.",
-        "**--- NOTE:**",
-        "White metal signposts can also be found in Brazil, however these are usually wider."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f03c4dde91d",
-          "src": "https://learnablemeta.com/images/611/KocnrOIcYaUMsB7I9PufRujl0hLj5uYpF2sx.avif",
-          "path": "co/3f03c4dde91d.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "823eabf34b95"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-13800",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Wooden Fences",
-      "text": [
-        "Wooden fences are particularly common in Colombia.",
-        "**--- NOTE:**",
-        "In addition to the unpainted variants, some fence posts are painted and sharp at the top.",
-        "These are almost exclusive to Colombia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "685345067981",
-          "src": "https://learnablemeta.com/images/611/wOO8HgEfjLejwwhyOERtvU1r8lSsoWCmLkL1.avif",
-          "path": "co/685345067981.webp",
-          "width": 1000,
-          "height": 448
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-15217",
-      "step": 3,
-      "order": 7,
-      "family": "landscape",
-      "title": "Landscape: Colombia North",
-      "text": [
-        "The Northern part of the country is characterised by white, sandy soil and an arid landscape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "71fba481a7cd",
-          "src": "https://learnablemeta.com/images/664/Y1f7bh2nUq6qiC8xTjq7gO5JzoPsjW6ZUnjT.avif",
-          "path": "co/71fba481a7cd.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "f34ea0dd912d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-15218",
-      "step": 3,
-      "order": 8,
-      "family": "vegetation",
-      "title": "Vegetation: East of Andes Lowlands",
-      "text": [
-        "East of the Andes lies a vast lowland called Llanos. It is characterised by open tropical grasslands, savannas with scattered trees, small areas of forest and seasonal flooding."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4c84abe3be58",
-          "src": "https://learnablemeta.com/images/664/OJF6hLAzl5DNV2qRxUjXYfD2MODBKPWF0ubJ.avif",
-          "path": "co/4c84abe3be58.webp",
-          "width": 1000,
-          "height": 485,
-          "dupeOf": "fd5aceeb42d2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-15219",
-      "step": 3,
-      "order": 9,
-      "family": "landscape",
-      "title": "Landscape: La Guajira",
-      "text": [
-        "This landscape is typical of the far Northern province of La Guajira: extreme dryness, low vegetation and occasional cacti. In addition, you can often recognise the Uribia-Puerto Bolivar road because of this landscape, the straightness and the train track always present to the East."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "87a224a2e7b6",
-          "src": "https://learnablemeta.com/images/664/AKoOgtddGerozcOQKCiXU4YJ6YOGHeu7IzAM.avif",
-          "path": "co/87a224a2e7b6.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-51461",
-      "step": 3,
-      "order": 10,
-      "family": "sign",
-      "kind": "direction",
-      "title": "Direction sign: Cross",
-      "text": [
-        "Signposts in Colombia are made of white metal, and join to form a distinct cross on the back of signs.",
-        "**--- NOTE:**",
-        "White metal signposts can also be found in Brazil, however these are usually wider."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f03c4dde91d",
-          "src": "https://learnablemeta.com/images/611/KocnrOIcYaUMsB7I9PufRujl0hLj5uYpF2sx.avif",
-          "path": "co/3f03c4dde91d.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "823eabf34b95"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-51462",
-      "step": 3,
-      "order": 11,
-      "family": "pole",
-      "title": "Pole: Black & Yellow Sticker",
-      "text": [
-        "Colombian poles are often marked with unique black-and-yellow or black-and-orange stripes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aab717612438",
-          "src": "https://learnablemeta.com/images/611/IG7VKkzzdyK1mpavtmRjJ2OeInxtimDNjEb9.avif",
-          "path": "co/aab717612438.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "748dea561aa6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-51465",
-      "step": 3,
-      "order": 12,
-      "family": "other",
-      "title": "Wooden Fences",
-      "text": [
-        "Wooden fences are particularly common in Colombia.",
-        "**--- NOTE:**",
-        "In addition to the unpainted variants, some fence posts are painted and sharp at the top.",
-        "These are almost exclusive to Colombia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "685345067981",
-          "src": "https://learnablemeta.com/images/611/wOO8HgEfjLejwwhyOERtvU1r8lSsoWCmLkL1.avif",
-          "path": "co/685345067981.webp",
-          "width": 1000,
-          "height": 448,
-          "dupeOf": "685345067981"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55211",
-      "step": 3,
-      "order": 13,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Northern Landscape",
-      "text": [
-        "The Northern part of the country is characterised by **white, sandy soil** and an arid landscape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8701d7869401",
-          "src": "https://learnablemeta.com/images/698/lqW50fSaEf0J5gr99kq5tJzMy7JjUGLbucwc.avif",
-          "path": "co/8701d7869401.webp",
-          "width": 1000,
-          "height": 510,
-          "dupeOf": "f34ea0dd912d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55212",
-      "step": 3,
-      "order": 14,
-      "family": "landscape",
-      "title": "Landscape: Landscape - East of Andes Landscape",
-      "text": [
-        "East of the Andes lies a **vast lowland** called Llanos. It is characterised by open tropical grasslands, savannas with scattered trees, small areas of forest and seasonal flooding.",
-        "Since it's to the east of the Andes, you may see mountains in the west, but never in the east."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cb680b56330d",
-          "src": "https://learnablemeta.com/images/698/nXGuBmcKnIQ7t1TL7kX1vEbiz8glWhsmUEyY.avif",
-          "path": "co/cb680b56330d.webp",
-          "width": 1000,
-          "height": 514
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55213",
-      "step": 3,
-      "order": 15,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Pole Marking - Antioquia",
-      "text": [
-        "These pole markings with one short black strip on the top and bottom, and a **longer yellow section** in the middle, are most commonly found in the Antioquia department. Sometimes, you can find them in the Cordoba department as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7b57a3b688c",
-          "src": "https://learnablemeta.com/images/698/1gl408dcyYDhVJbRkJT1rNDdCKDG0o6tlriC.avif",
-          "path": "co/f7b57a3b688c.webp",
-          "width": 1000,
-          "height": 501
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55214",
-      "step": 3,
-      "order": 16,
-      "family": "other",
-      "title": "Misc - Afro-Colombians",
-      "text": [
-        "As a result of slave trade, the Pacific coast of Colombia is home to an overwhelming majority of **Afro-Colombians**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "abd16055d4de",
-          "src": "https://learnablemeta.com/images/698/LUn7jWqVDRZ7sHfMesW4VaCZEbU4WHCxQbWj.avif",
-          "path": "co/abd16055d4de.webp",
-          "width": 1000,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55215",
-      "step": 3,
-      "order": 17,
-      "family": "coverage",
-      "title": "Coverage: Coverage Meta - \"Gen 5\" Glitch",
-      "text": [
-        "A camera glitch that makes a part of the image look very saturated can be found in southern Colombia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9bf52012c90c",
-          "src": "https://learnablemeta.com/images/698/WVBRluVDoyi5sbQmmwWYkhjujMuXDOCXmEoA.avif",
-          "path": "co/9bf52012c90c.webp",
-          "width": 1000,
-          "height": 500,
-          "dupeOf": "e77d927beab2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55216",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "Car Meta - Leticia",
-      "text": [
-        "This **unique vehicle** can be found in and around Leticia, the Southernmost town in Colombia.",
-        "NOTE: The long concrete blocks seen in the bottom left corner are a reliable way of recognising the road North of Leticia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6091c9dc6502",
-          "src": "https://learnablemeta.com/images/698/gBCUkwRkBVyyYUxxnOF87wREgVBw2HjAaiAs.avif",
-          "path": "co/6091c9dc6502.webp",
-          "width": 1000,
-          "height": 507,
-          "dupeOf": "e8c63f70b943"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55217",
-      "step": 3,
-      "order": 19,
-      "family": "coverage",
-      "title": "Coverage: Car Meta - San Andres",
-      "text": [
-        "Coverage on the Caribbean island of San Andrés was taken by this distinct **white car**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1c5c1d7a0752",
-          "src": "https://learnablemeta.com/images/698/gxY6zl0v9mKTEt98aqEGG3lxAa2omlr5fIuE.avif",
-          "path": "co/1c5c1d7a0752.webp",
-          "width": 1000,
-          "height": 498,
-          "dupeOf": "31de0e1af7e2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55218",
-      "step": 3,
-      "order": 20,
-      "family": "other",
-      "title": "Car Meta - Providencia",
-      "text": [
-        "The island of Providencia, located roughly 90 kilometres North of San Andrés, is home to this unique **grey truck**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "404e93dae149",
-          "src": "https://learnablemeta.com/images/698/xj44LCtzG1lCzXKVWL2T0Bt7RV7s8h9YvYW4.avif",
-          "path": "co/404e93dae149.webp",
-          "width": 1000,
-          "height": 507,
-          "dupeOf": "212a4d2f9bd9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55219",
-      "step": 3,
-      "order": 21,
-      "family": "other",
-      "title": "Infrastructure - Street Lamps - Providencia",
-      "text": [
-        "Providencia street lights are green and supported by a trapezoidal sheet of metal underneath. (The metal sheet without a green lamp can also be found in Barranquilla)"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9b7bb45d577f",
-          "src": "https://learnablemeta.com/images/698/EjRE2Nt54WxzPRCqlVEGxBdc2OJzKNTRT1sr.avif",
-          "path": "co/9b7bb45d577f.webp",
-          "width": 1000,
-          "height": 495,
-          "dupeOf": "ef1fb7ef122f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55220",
-      "step": 3,
-      "order": 22,
-      "family": "other",
-      "title": "Infrastructure - Street Lamps - Barranquilla",
-      "text": [
-        "The uniquely shaped supporting metal piece can be found in Barranquilla. (Similar to the Providencia design)"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3c79c3681919",
-          "src": "https://learnablemeta.com/images/698/aTxEWE4kauSUh6O8e2XQOiTTeThLybtRUFA3.avif",
-          "path": "co/3c79c3681919.webp",
-          "width": 1000,
-          "height": 724
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55221",
-      "step": 3,
-      "order": 23,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Unique Road - Uribia to Puerto Boliviar",
-      "text": [
-        "You can often recognise the Uribia-Puerto Bolivar road because of La Guajira landscape (**extreme dryness**, low vegetation and occasional cacti), the straightness and the train track always present to the East."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b0411ece5040",
-          "src": "https://learnablemeta.com/images/698/kjhEtv41gswYWPi7MMx05neuqfjWt5lhnnHf.avif",
-          "path": "co/b0411ece5040.webp",
-          "width": 1000,
-          "height": 497,
-          "dupeOf": "493517dbfdf5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55222",
-      "step": 3,
-      "order": 24,
-      "family": "landscape",
-      "title": "Landscape: Landscape - La Guajira",
-      "text": [
-        "This landscape is typical of the far Northern province of La Guajira: **extreme dryness**, low vegetation and occasional cacti."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0bd6e978f9b9",
-          "src": "https://learnablemeta.com/images/698/3dc8ObKOCaLixuuUbXZSDWqzIeIV4jBJTdXc.avif",
-          "path": "co/0bd6e978f9b9.webp",
-          "width": 1000,
-          "height": 579
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55223",
-      "step": 3,
-      "order": 25,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Unique Road - Ruta 90 Landbridge",
-      "text": [
-        "You can recognise the narrow Ruta 90 landbridge between Barranquilla and Cienaga thanks to the dashed yellow lines and **shallow bodies of water** next to the road. Open ocean can often be seen to the north.",
-        "NOTE: In the older Generation 3 coverage, you will also see tall mountains in the distance."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "44d08ca1e766",
-          "src": "https://learnablemeta.com/images/698/bgaLYBIg5RMty1RCtbDP3YmfLecQI84V47vi.avif",
-          "path": "co/44d08ca1e766.webp",
-          "width": 1000,
-          "height": 514
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "co-lm-55224",
       "step": 3,
       "order": 26,
       "family": "other",
-      "title": "Infrastructure - Barichara Pavement",
+      "title": "Pavement: unique cobblestones",
       "text": [
         "This unique cobblestone pavement is found is the historic town of Barichara, Santander."
       ],
@@ -1866,14 +1207,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A unique cobblestone pavement in the historic town of Barichara, in Santander."
     },
     {
       "id": "co-lm-55225",
       "step": 3,
       "order": 27,
       "family": "landscape",
-      "title": "Landscape: Landscape - Swamp Roads",
+      "title": "Road: swampy stretches",
       "text": [
         "The 74, the 78 and a few other roads more north have very swampy parts, you can see on the map where these are by zooming."
       ],
@@ -1894,14 +1236,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Roads 74, 78 and a few others further north have very swampy parts. Zoom the map to see where."
     },
     {
       "id": "co-lm-55226",
       "step": 3,
       "order": 28,
       "family": "landscape",
-      "title": "Landscape: Landscape - Swamp Road + Extremely Sunny",
+      "title": "Road: swamp road in very sunny coverage",
       "text": [
         "If you see a swamp road with extremely sunny coverage, you're probably on the 74 in Sucre."
       ],
@@ -1921,41 +1264,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55227",
-      "step": 3,
-      "order": 29,
-      "family": "other",
-      "title": "Agriculture - Sugarcane",
-      "text": [
-        "Sugarcane will mainly be found in Cauca and Valle de Cauca."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "425497506c34",
-          "src": "https://learnablemeta.com/images/698/Z3RKElY5G3r1LDkIeJpvExVxzdJxDz9fRD81.avif",
-          "path": "co/425497506c34.webp",
-          "width": 1000,
-          "height": 543
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A swamp road with extremely sunny coverage is probably Road 74 in Sucre."
     },
     {
       "id": "co-lm-55228",
       "step": 3,
       "order": 30,
       "family": "landscape",
-      "title": "Landscape: Landscape - Unique Road - 78 west of Pailitas",
+      "title": "Road: low clouds, tall mountain to the east",
       "text": [
         "This road is characterised by low clouds and a towering mountain in the east."
       ],
@@ -1975,14 +1292,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Road 78 west of Pailitas has low clouds and a towering mountain on the east side."
     },
     {
       "id": "co-lm-55229",
       "step": 3,
       "order": 31,
       "family": "car",
-      "title": "Google car: Car Meta - Gen 4 - Grey Car",
+      "title": "Coverage: Gen 4 grey car, patterns on the map",
       "text": [
         "Gen 4 coverage with the grey car is not found north of Montería, has a gap between Bucaramanga and Bogotá, forms a 'staircase' pattern with right angles at Medellín and Bogotá, covers areas around Bucaramanga, and has a missing section around Popayán."
       ],
@@ -2002,14 +1320,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Gen 4 with the grey car is absent north of Montería, has a gap between Bucaramanga and Bogotá, forms a staircase of right angles at Medellín and Bogotá, covers areas around Bucaramanga, and has a missing section around Popayán."
     },
     {
       "id": "co-lm-55230",
       "step": 3,
       "order": 32,
       "family": "car",
-      "title": "Google car: Car Meta - Gen 4 - White Car",
+      "title": "Coverage: Gen 4 white car, patterns on the map",
       "text": [
         "Gen 4 with the white car has no coverage south of Cali, very little around Medellín, and forms a curved pattern around Medellín."
       ],
@@ -2029,14 +1348,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Gen 4 with the white car has no coverage south of Cali, very little around Medellín, and forms a curved pattern around Medellín."
     },
     {
       "id": "co-lm-55231",
       "step": 3,
       "order": 33,
       "family": "car",
-      "title": "Google car: Car Meta - Gen 3 - white/blue striped car",
+      "title": "Coverage: Gen 3 striped car in a straight line",
       "text": [
         "Gen 3 with the white-blue car follows a straight line between Cartagena and Medellín, has partial coverage along Route 80 west of Bosconia, as well as along Route 45 north of Bucaramanga and east of Medellín."
       ],
@@ -2056,14 +1376,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Gen 3 with the white-and-blue car follows a straight line between Cartagena and Medellín, with partial coverage along Route 80 west of Bosconia, and along Route 45 north of Bucaramanga and east of Medellín."
     },
     {
       "id": "co-lm-55232",
       "step": 3,
       "order": 34,
       "family": "other",
-      "title": "Infrastructure - Cauca/Narino Polepaint",
+      "title": "Pole paint: yellow with dark numbers",
       "text": [
         "Yellow with dark numbers"
       ],
@@ -2083,68 +1404,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55233",
-      "step": 3,
-      "order": 35,
-      "family": "other",
-      "title": "Infrastructure - Tolima Poletag",
-      "text": [
-        "Orange tag with white numbers"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "28e7a941d972",
-          "src": "https://learnablemeta.com/images/698/tSLc8Hwf1lcoAkcbswqAxKCfOcRYcQTsTIoc.avif",
-          "path": "co/28e7a941d972.webp",
-          "width": 1000,
-          "height": 797
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55234",
-      "step": 3,
-      "order": 36,
-      "family": "other",
-      "title": "Infrastructure - Huila Polepaint",
-      "text": [
-        "Orange paint with black numbers"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a9b8c3f25927",
-          "src": "https://learnablemeta.com/images/698/UA8dbKWRn5qmCT81EP2THT7wPhsAShKBC4XH.avif",
-          "path": "co/a9b8c3f25927.webp",
-          "width": 1000,
-          "height": 664
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Yellow pole paint with dark numbers, found in Cauca and Nariño."
     },
     {
       "id": "co-lm-55235",
       "step": 3,
       "order": 37,
       "family": "other",
-      "title": "Infrastructure - Valle de Cauca Polepaint",
+      "title": "Pole paint: yellow with black numbers in rows",
       "text": [
         "Yellow, with black numbers. Several digits can be in one row."
       ],
@@ -2164,14 +1432,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Yellow paint with black numbers, with several digits in one row. Found in Valle del Cauca."
     },
     {
       "id": "co-lm-55236",
       "step": 3,
       "order": 38,
       "family": "other",
-      "title": "Infrastructure - Coastal Antioquia Polepaint",
+      "title": "Pole paint: green with yellow numbers",
       "text": [
         "Green paint with yellow numbers"
       ],
@@ -2191,14 +1460,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Green pole paint with yellow numbers, found in coastal Antioquia."
     },
     {
       "id": "co-lm-55237",
       "step": 3,
       "order": 39,
       "family": "other",
-      "title": "Infrastructure - Risaralda/Choco Polepaint",
+      "title": "Pole paint: yellow with red numbers",
       "text": [
         "Yellow paint with red numbers. Found all over Risaralda and the towns of Istmina and Quibdo in Choco."
       ],
@@ -2218,41 +1488,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55238",
-      "step": 3,
-      "order": 40,
-      "family": "other",
-      "title": "Infrastructure - QR-Code Sticker",
-      "text": [
-        "Found in Barranquilla and Santa Marta"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d371595b2e71",
-          "src": "https://learnablemeta.com/images/698/QytRphte5pRiQrg2VKzxlXSan3vMW9vYnND9.avif",
-          "path": "co/d371595b2e71.webp",
-          "width": 381,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Yellow paint with red numbers. Found all over Risaralda and in the towns of Istmina and Quibdó in Chocó."
     },
     {
       "id": "co-lm-55239",
       "step": 3,
       "order": 41,
       "family": "plate",
-      "title": "Plate: Infrastructure - H-shaped lamp attachment",
+      "title": "Lamp: H-shaped attachment plate",
       "text": [
         "H-shaped lamp attachment plates can be found in Bogota."
       ],
@@ -2272,14 +1516,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Lamp attachment plates shaped like an H are found in Bogotá."
     },
     {
       "id": "co-lm-55240",
       "step": 3,
       "order": 42,
       "family": "plate",
-      "title": "Plate: Infrastructure - Rectangular lamp attachment",
+      "title": "Lamp: rectangular attachment plate",
       "text": [
         "Rectangular lamp attachment plates can be found mainly in Medellin, sometimes further North, especially in Monteria and Cucuta."
       ],
@@ -2299,14 +1544,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Rectangular lamp attachment plates are mainly in Medellín, sometimes further north, especially Montería and Cúcuta."
     },
     {
       "id": "co-lm-55241",
       "step": 3,
       "order": 43,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Quindio Wax Palm",
+      "title": "Plants: tall wax palm",
       "text": [
         "This palm is found in mountainous regions of Colombia, mainly in Quindio, as the name suggests."
       ],
@@ -2333,14 +1579,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The wax palm grows in mountain regions, mainly in Quindío, as the name says."
     },
     {
       "id": "co-lm-55242",
       "step": 3,
       "order": 44,
       "family": "other",
-      "title": "Agriculture - Guadua Bamboo",
+      "title": "Plants: guadua bamboo plantations",
       "text": [
         "Guadua Bamboo plantations are found mainly in Caldas, but also in the adjecent Tolima, Quindio and Risaralda."
       ],
@@ -2360,14 +1607,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Guadua bamboo plantations are found mainly in Caldas, but also in neighbouring Tolima, Quindío and Risaralda."
     },
     {
       "id": "co-lm-55243",
       "step": 3,
       "order": 45,
       "family": "vegetation",
-      "title": "Vegetation: Agriculture - Oil Palms",
+      "title": "Plants: oil palm plantations",
       "text": [
         "Oilpalms can be found mainly in Meta and Casanare. They are also very common around the 45 near Fundacion and Aracataca. Sometimes, you can find them in Barrancabermeja."
       ],
@@ -2387,14 +1635,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Oil palms are mainly in Meta and Casanare, very common around Route 45 near Fundación and Aracataca, and sometimes around Barrancabermeja."
     },
     {
       "id": "co-lm-55244",
       "step": 3,
       "order": 46,
       "family": "vegetation",
-      "title": "Vegetation: Agriculture - Aracataca Cut Palms",
+      "title": "Plants: palms with the crown cut off",
       "text": [
         "These palms where the crown has been cut, are very often found near Aracataca and some smaller towns North of it."
       ],
@@ -2414,14 +1663,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Palms whose crown has been cut are very often found near Aracataca and a few smaller towns north of it."
     },
     {
       "id": "co-lm-55245",
       "step": 3,
       "order": 47,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Embalse Calima",
+      "title": "Coverage: large lake, mostly winter",
       "text": [
         "Large lake, mostly winter coverage. A small stretch also has summer coverage."
       ],
@@ -2441,14 +1691,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A large lake (Embalse Calima), mostly with winter coverage and a small stretch of summer coverage."
     },
     {
       "id": "co-lm-55246",
       "step": 3,
       "order": 48,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Stick Meta",
+      "title": "Google car: stick on the camera",
       "text": [
         "This stick on the camera can be found between El Guio and El Boral (near the Cundinamarca-Meta border near Villavicencio)"
       ],
@@ -2468,14 +1719,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A stick attached to the camera is visible between El Guío and El Boral, near the Cundinamarca-Meta border close to Villavicencio."
     },
     {
       "id": "co-lm-55247",
       "step": 3,
       "order": 49,
       "family": "other",
-      "title": "Infrastructure - Megabus",
+      "title": "Bus: green or yellow modern bus on own lane",
       "text": [
         "Green or yellow, modern bus. Often on a dedicated bus lane. Found in Pereira metropolitan area."
       ],
@@ -2502,14 +1754,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Modern green or yellow buses, often on a dedicated lane, are found in the Pereira area."
     },
     {
       "id": "co-lm-55248",
       "step": 3,
       "order": 50,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Colombian Mahogany",
+      "title": "Plants: Colombian mahogany tree",
       "text": [
         "This tree is found mainly around Medellin, but it has been spotted in other random spots."
       ],
@@ -2536,14 +1789,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "This tree is found mainly around Medellín, but has been seen in other random places."
     },
     {
       "id": "co-lm-55249",
       "step": 3,
       "order": 51,
       "family": "other",
-      "title": "Infrastructure - Transmetro",
+      "title": "Bus: white Transmetro bus",
       "text": [
         "White Transmetro buses can be found in Barranquilla."
       ],
@@ -2563,14 +1817,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White Transmetro buses are found in Barranquilla."
     },
     {
       "id": "co-lm-55250",
       "step": 3,
       "order": 52,
       "family": "other",
-      "title": "Infrastructure - Villavicencio Bike Lane Road",
+      "title": "Road: bike lane with eastern-lowland feel",
       "text": [
         "If you see a bike lane, and get East of Andes vibes, you're most likely on the road through Los Tobitos to Villavicencio."
       ],
@@ -2590,14 +1845,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "If you see a bike lane and the land feels like east of the Andes, you're most likely on the road through Los Tobitos to Villavicencio."
     },
     {
       "id": "co-lm-55251",
       "step": 3,
       "order": 53,
       "family": "other",
-      "title": "Infrastructure - Tumaco",
+      "title": "Pavement: plus-shaped stones and puddles",
       "text": [
         "If you see many puddles and a pavement out of '+' shaped stones, you're in Tumaco."
       ],
@@ -2617,14 +1873,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Many puddles and pavement made of plus-shaped stones means Tumaco."
     },
     {
       "id": "co-lm-55252",
       "step": 3,
       "order": 54,
       "family": "other",
-      "title": "Infrastructure - Buenaventura Truck Spam Road",
+      "title": "Road: many trucks",
       "text": [
         "The stretch of the 40 to Buenaventura is an important route for trucks, so if you see many trucks, it's worth a thought."
       ],
@@ -2644,41 +1901,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-55253",
-      "step": 3,
-      "order": 55,
-      "family": "other",
-      "title": "Infrastructure - Spikes",
-      "text": [
-        "These spikes can be found on the 40 and the 62."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fcdbf5d12da8",
-          "src": "https://learnablemeta.com/images/698/dCbDIb036fv5bblvxXAzgQIyEKhSB3JKsiX3.avif",
-          "path": "co/fcdbf5d12da8.webp",
-          "width": 1000,
-          "height": 562
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The stretch of Road 40 to Buenaventura is an important truck route, so lots of trucks is a clue."
     },
     {
       "id": "co-lm-55254",
       "step": 3,
       "order": 56,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - La Florida",
+      "title": "Coverage: rainy, very orange-brown soil",
       "text": [
         "Rainy coverage with very orange-brown soil can be found on this road to La Florida."
       ],
@@ -2698,14 +1929,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Rainy coverage with very orange-brown soil on the road to La Florida."
     },
     {
       "id": "co-lm-55255",
       "step": 3,
       "order": 57,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Grey Car, 2023 copyright",
+      "title": "Coverage: grey car with 2023 copyright",
       "text": [
         "This constellation can be found on the 65 in Caqueta and the 45 in Putumayo."
       ],
@@ -2725,14 +1957,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A grey car with 2023 copyright appears on Road 65 in Caquetá and Road 45 in Putumayo."
     },
     {
       "id": "co-lm-55256",
       "step": 3,
       "order": 58,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Sogamoso Lake",
+      "title": "Coverage: lake with overexposed Gen 4",
       "text": [
         "If you see a lake, paired with an overexposed Gen 4 camera, you're probably on this lake south of Sogamoso."
       ],
@@ -2752,14 +1985,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A lake together with overexposed Gen 4 camera probably means the lake south of Sogamoso."
     },
     {
       "id": "co-lm-55258",
       "step": 3,
       "order": 59,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Double Google Car",
+      "title": "Google car: second Google car visible",
       "text": [
         "A Second Google Car is visible in many random spots. The most prominent spots are the 26 in Cauca, Vda. Chontaduro (near Popoyan) and the road between Pital and Tarqui."
       ],
@@ -2779,14 +2013,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A second Google car shows up in many random spots. Most prominent: Road 26 in Cauca, Vda. Chontaduro near Popayán, and the road between Pital and Tarqui."
     },
     {
       "id": "co-lm-55259",
       "step": 3,
       "order": 60,
       "family": "architecture",
-      "title": "Architecture: Architecture - Straw/Thatched Roofs",
+      "title": "Houses: straw or thatched roofs",
       "text": [
         "Houses with roofs like this are commonly found along the coast, especially near Cartagena and Barranquilla."
       ],
@@ -2806,14 +2041,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Houses with roofs like these are common along the coast, especially near Cartagena and Barranquilla."
     },
     {
       "id": "co-lm-55260",
       "step": 3,
       "order": 61,
       "family": "architecture",
-      "title": "Architecture: Architecture - Guatape",
+      "title": "Houses: bright colours, unique pavement",
       "text": [
         "Bright Colored Houses &#x26; Unique Pavement."
       ],
@@ -2833,14 +2069,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Brightly coloured houses and a unique pavement mark the town of Guatapé."
     },
     {
       "id": "co-lm-55261",
       "step": 3,
       "order": 62,
       "family": "other",
-      "title": "Infrastructure - Tinto Bus",
+      "title": "Bus: red Tinto bus",
       "text": [
         "This red bus drives in the town (not the country) Armenia."
       ],
@@ -2860,14 +2097,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A red bus that only drives in the town of Armenia."
     },
     {
       "id": "co-lm-55262",
       "step": 3,
       "order": 63,
       "family": "coverage",
-      "title": "Coverage: Trekker - Trebal Resort Trekker",
+      "title": "Coverage: trekker with unique pavement, houses",
       "text": [
         "This trekker can be recognized by the unique pavement and houses."
       ],
@@ -2887,14 +2125,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Trebal Resort trekker can be recognised by its unique pavement and houses."
     },
     {
       "id": "co-lm-55263",
       "step": 3,
       "order": 64,
       "family": "other",
-      "title": "Infrastructure - TransLago vans",
+      "title": "Vans: TransLago minivans",
       "text": [
         "TransLogo vans are common throughtout Boyaca Department. You will most often see them on the routes Tunja-Sogamoso and Tunja-Duitama."
       ],
@@ -2914,14 +2153,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "TransLago vans are common across Boyacá, most often on the Tunja to Sogamoso and Tunja to Duitama routes."
     },
     {
       "id": "co-lm-55264",
       "step": 3,
       "order": 65,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Foggy & Rainy Coverage",
+      "title": "Coverage: rain with heavy fog",
       "text": [
         "If you see rainy coverage, combined with strong fog, you're on the 64."
       ],
@@ -2941,14 +2181,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Rainy coverage combined with strong fog means Road 64."
     },
     {
       "id": "co-lm-55265",
       "step": 3,
       "order": 66,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Rainy Coverage",
+      "title": "Coverage: rainy",
       "text": [
         "Rainy coverage is most common on the highways 20, 24, 50 and 64."
       ],
@@ -2968,14 +2209,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Rainy coverage is most common on highways 20, 24, 50 and 64."
     },
     {
       "id": "co-lm-55266",
       "step": 3,
       "order": 67,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Unique Road - Tame to Hato Corozal",
+      "title": "Road: flat, sunset through clouds, mountains NW",
       "text": [
         "On this road, you can see a slight sunset through the clouds. It is pretty flat, with mountains in the Northwest."
       ],
@@ -2995,14 +2237,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On the road from Tame to Hato Corozal you see a slight sunset through the clouds. It is quite flat with mountains to the northwest."
     },
     {
       "id": "co-lm-55267",
       "step": 3,
       "order": 68,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Unique Road - Tame to Arauca",
+      "title": "Road: sunset through the clouds",
       "text": [
         "On this road, you can see a sunset through the clouds. It's not always easy to recognize, however."
       ],
@@ -3022,14 +2265,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On the road from Tame to Arauca you can see a sunset through the clouds, though it is not always easy to recognise."
     },
     {
       "id": "co-lm-55268",
       "step": 3,
       "order": 69,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Double Google Car - Aguachica",
+      "title": "Google car: second car on a side road",
       "text": [
         "This instance of a second google car can be seen on Carrera 4, an offroad of the 45 near Aguachica."
       ],
@@ -3049,14 +2293,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A second Google car can be seen on Carrera 4, a side road off Route 45 near Aguachica."
     },
     {
       "id": "co-lm-55269",
       "step": 3,
       "order": 70,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Double Google Car - Villavicencio",
+      "title": "Google car: second car on east-west road",
       "text": [
         "This instance of a second google car can be seen on the east-west road, directly south of Guayuriba River, which is south of Villavicencio."
       ],
@@ -3076,14 +2321,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A second Google car can be seen on the east-west road just south of the Guayuriba River, south of Villavicencio."
     },
     {
       "id": "co-lm-55270",
       "step": 3,
       "order": 71,
       "family": "landscape",
-      "title": "Landscape: Landscape - Vichada Red Dirt",
+      "title": "Landscape: hazy Gen 4 with red dirt",
       "text": [
         "Vichada is characterize by hazy Gen 4 coverage and Red Dirt."
       ],
@@ -3103,14 +2349,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Vichada area has hazy Gen 4 coverage and red dirt."
     },
     {
       "id": "co-lm-55271",
       "step": 3,
       "order": 72,
       "family": "landscape",
-      "title": "Landscape: Landscape - Santa Rosalia",
+      "title": "Landscape: red-orange dirt in an urban Gen 4 spot",
       "text": [
         "Santa Rosalia is the only town covered in Vichada. So if you see red/orange dirt in an urban Gen 4 loc, you should go there."
       ],
@@ -3130,14 +2377,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Santa Rosalía is the only town covered in Vichada, so red or orange dirt in an urban Gen 4 location points there."
     },
     {
       "id": "co-lm-55272",
       "step": 3,
       "order": 73,
       "family": "landscape",
-      "title": "Landscape: Agriculture - Common Guava",
+      "title": "Plants: common guava trees",
       "text": [
         "Common Guava mostly appears in the valley between the western and the central mountain range in Colombia, but it can also appear in other valleys."
       ],
@@ -3165,14 +2413,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Guava mostly grows in the valley between the western and central mountain ranges, but can appear in other valleys too."
     },
     {
       "id": "co-lm-55273",
       "step": 3,
       "order": 74,
       "family": "other",
-      "title": "Agriculture - Coffee",
+      "title": "Plants: coffee belt",
       "text": [
         "The coffee belt stretches in the valley between Medellin and Cali. In the North, you will only find it near the Venezuelan border.",
         "Olives and Tea have a very similar distribution."
@@ -3200,14 +2449,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The coffee belt runs through the valley between Medellín and Cali. In the north it is only near the Venezuelan border. Olives and tea have a similar spread."
     },
     {
       "id": "co-lm-55274",
       "step": 3,
       "order": 75,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Wide Trees",
+      "title": "Plants: wide trees near fences",
       "text": [
         "These wide trees, usually near fences, are found in Northern regions, especially near Monteria and Sincelejo."
       ],
@@ -3227,14 +2477,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Wide trees, usually near fences, grow in northern regions, especially around Montería and Sincelejo."
     },
     {
       "id": "co-lm-55275",
       "step": 3,
       "order": 76,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Cacti",
+      "title": "Plants: cacti",
       "text": [
         "Cacti are most commonly found in the North near Valledupar. Sometimes they can appear in Huila, too."
       ],
@@ -3254,14 +2505,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Cacti are most common in the north near Valledupar and sometimes appear in Huila."
     },
     {
       "id": "co-lm-55276",
       "step": 3,
       "order": 77,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Kapok Tree",
+      "title": "Plants: kapok tree",
       "text": [
         "The Kapok tree can be found throughout Colombia, but is most common between the central and eastern mountain range."
       ],
@@ -3288,14 +2540,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The kapok tree occurs throughout the country but is most common between the central and eastern mountain ranges."
     },
     {
       "id": "co-lm-298305",
       "step": 3,
       "order": 78,
       "family": "landscape",
-      "title": "Landscape: Landscape - Paramos",
+      "title": "Landscape: treeless alpine, giant rosette plants",
       "text": [
         "Paramos refers to alpine tundra ecosystems located in the mountains. These kinds of regions are easy to guess by how little vegetation grows here. The best clue is these odd looking pants. ( giant rosette plants ).",
         "Note by MB: In my experience, this appears most commonly south of Bogota, still in the capital district."
@@ -3316,14 +2569,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Páramo is alpine tundra in the mountains with very little vegetation. The best clue is the odd giant rosette plants. Most common south of Bogotá, still in the capital district."
     },
     {
       "id": "co-lm-298306",
       "step": 3,
       "order": 79,
       "family": "other",
-      "title": "Infrastructure - Ibague Lamp",
+      "title": "Lamp: red lamp style",
       "text": [
         "This red lamp style is unique to Tolima province.",
         "Note by MB: I only found it in Ibague, not in any other towns in Tolima. Also, the meta is more about the color and the shape of the lamp, not about the arrangement of the lights."
@@ -3344,14 +2598,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A red lamp style unique to Tolima, only seen in Ibagué. The clue is its colour and shape, not the arrangement of lights."
     },
     {
       "id": "co-lm-298307",
       "step": 3,
       "order": 80,
       "family": "landscape",
-      "title": "Landscape: Landscape - Guaviare Orange Road",
+      "title": "Road: orange dust",
       "text": [
         "The only road in Guaviare goes from to Guaviare (city), and continues south up until Vda. El Trueno. It can be recognized by the **orange-looking dust** on the road."
       ],
@@ -3378,14 +2633,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The only road in Guaviare runs south from the city up to Vda. El Trueno and has orange-looking dust on it."
     },
     {
       "id": "co-lm-298308",
       "step": 3,
       "order": 81,
       "family": "bollard",
-      "title": "Bollard: Infrastructure - European Bollard",
+      "title": "Bollard: Spanish-style",
       "text": [
         "This european-style (specifically spanish style bollard) is found in Cundinamarca, but also on the 40 towards Villavicencio."
       ],
@@ -3405,14 +2661,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A Spanish-style bollard found in Cundinamarca and on Road 40 towards Villavicencio."
     },
     {
       "id": "co-lm-298310",
       "step": 3,
       "order": 82,
       "family": "bollard",
-      "title": "Bollard: Infrastructure - Barranquilla Roadbollard",
+      "title": "Bollard: with road names at intersections",
       "text": [
         "In Barranquilla, you can often find this bollard with roadnames on intersections."
       ],
@@ -3432,14 +2689,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Barranquilla you often find this bollard with road names on it at intersections."
     },
     {
       "id": "co-lm-301790",
       "step": 3,
       "order": 83,
       "family": "other",
-      "title": "Infrastructure - Caldas Polepaint",
+      "title": "Pole paint: orange and blue",
       "text": [
         "orange &#x26; blue"
       ],
@@ -3459,14 +2717,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Orange and blue pole paint is found in Caldas."
     },
     {
       "id": "co-lm-301791",
       "step": 3,
       "order": 84,
       "family": "landscape",
-      "title": "Landscape: Landscape - Deep grey & stony soil in Gen 3",
+      "title": "Soil: deep grey and stony",
       "text": [
         "This type of soil can be found in towns near the pacific coast."
       ],
@@ -3486,42 +2745,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-469609",
-      "step": 3,
-      "order": 85,
-      "family": "bollard",
-      "title": "Bollard: Spanish bollard",
-      "text": [
-        "This spanish bollard is mostly found in Cundinamarca, the area surrounding Bogotá, but also on the 40 towards Villavicencio."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0b9e57fa4195",
-          "src": "https://learnablemeta.com/images/739/1749940526210-SAK.avif",
-          "path": "co/0b9e57fa4195.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "f47cebfff40a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Deep grey, stony soil in Gen 3 coverage, found in towns near the Pacific coast."
     },
     {
       "id": "co-lm-472824",
       "step": 3,
       "order": 86,
       "family": "pole",
-      "title": "Pole: Valle del Cauca",
+      "title": "Pole marking: yellow numbers on blue",
       "text": [
         "These pole markings are unique to the department of Valle Del Cauca they are characterised by yellow numbers printed onto a blue background."
       ],
@@ -3541,14 +2773,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Yellow numbers on a blue background are unique to Valle del Cauca."
     },
     {
       "id": "co-lm-472825",
       "step": 3,
       "order": 87,
       "family": "pole",
-      "title": "Pole: Cauca",
+      "title": "Pole marking: blue numbers on yellow",
       "text": [
         "These pole markings are unique to the department of Cauca they are characterised by a only blue numbers printed onto a yellow background."
       ],
@@ -3568,14 +2801,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Blue numbers only on a yellow background are unique to Cauca."
     },
     {
       "id": "co-lm-472826",
       "step": 3,
       "order": 88,
       "family": "pole",
-      "title": "Pole: Narino",
+      "title": "Pole marking: blue numbers with TA or SA, yellow",
       "text": [
         "These pole markings are unique to the department of Nariño. They are characterized by a mix of blue numbers and the letters 'TA' or 'SA' on a yellow background. In the neighboring department, you will also find blue numbers on a yellow background; however, these do not include any letters."
       ],
@@ -3595,14 +2829,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Blue numbers mixed with the letters TA or SA on yellow are unique to Nariño. The next department has blue numbers on yellow without letters."
     },
     {
       "id": "co-lm-472827",
       "step": 3,
       "order": 89,
       "family": "pole",
-      "title": "Pole: Risaralda and Caldas",
+      "title": "Pole marking: orange, blue numbers with a letter",
       "text": [
         "In Risaralda and Caldas, the pole markings have an orange background with blue numbers that start with a letter. Be careful in Huila the markings can look very similar, but the numbers are black."
       ],
@@ -3622,14 +2857,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Risaralda and Caldas, orange background with blue numbers that start with a letter. Huila's look very similar, but the numbers are black."
     },
     {
       "id": "co-lm-472829",
       "step": 3,
       "order": 90,
       "family": "plate",
-      "title": "Plate: Cundinamarca",
+      "title": "Plate: blue horizontal plate starting AP",
       "text": [
         "This Blue Horizontal Plate starting with “AP” with a few numbers can only be found in Cundinamarca."
       ],
@@ -3649,14 +2885,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A blue horizontal plate starting with AP followed by a few numbers is only found in Cundinamarca."
     },
     {
       "id": "co-lm-472830",
       "step": 3,
       "order": 91,
       "family": "pole",
-      "title": "Pole: Bogota and Cundinamarca",
+      "title": "Pole marking: white paint, orange numbers",
       "text": [
         "In the departments of Bogotá and Cundinamarca, you will find these pole markings with white paint and orange vertical numbers."
       ],
@@ -3676,42 +2913,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-472831",
-      "step": 3,
-      "order": 92,
-      "family": "pole",
-      "title": "Pole: Antioquia paint",
-      "text": [
-        "These pole markings with one short black strip on the top and bottom, and a longer yellow section in the middle, are most commonly found in the Antioquia department. Sometimes, you can find them in the Cordoba department as well."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2b427c5af63f",
-          "src": "https://learnablemeta.com/images/1955/1750240012584-1Z8.avif",
-          "path": "co/2b427c5af63f.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "31e4a1f5d3df"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Bogotá and Cundinamarca, poles have white paint with orange vertical numbers."
     },
     {
       "id": "co-lm-472833",
       "step": 3,
       "order": 93,
       "family": "other",
-      "title": "Huila",
+      "title": "Pole marking: orange with black numbers",
       "text": [
         "Hulia has a orange background with black numbers and start with a letter."
       ],
@@ -3731,14 +2941,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Huila has an orange background with black numbers that start with a letter."
     },
     {
       "id": "co-lm-472834",
       "step": 3,
       "order": 94,
       "family": "other",
-      "title": "Cali",
+      "title": "Pole marking: white vertical numbers on black",
       "text": [
         "In the city of Cali and nearby towns you'll find white vertical numbers on a black background."
       ],
@@ -3758,14 +2969,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Cali and nearby towns, white vertical numbers on a black background."
     },
     {
       "id": "co-lm-472835",
       "step": 3,
       "order": 95,
       "family": "pole",
-      "title": "Pole: Tolima",
+      "title": "Pole marking: white numbers on orange sticker",
       "text": [
         "These pole markings are unique to the department of Tolima. They are characterized by white vertical numbers printed on an orange plastic sticker."
       ],
@@ -3785,14 +2997,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "White vertical numbers on an orange plastic sticker are unique to Tolima."
     },
     {
       "id": "co-lm-472842",
       "step": 3,
       "order": 96,
       "family": "other",
-      "title": "orange QR code",
+      "title": "Pole sticker: orange QR code",
       "text": [
         "In the cities of Barranquilla and Santa Marta, you will find orange plastic stickers with a QR code on them."
       ],
@@ -3812,42 +3025,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-473864",
-      "step": 3,
-      "order": 97,
-      "family": "pole",
-      "title": "Pole: polepaint",
-      "text": [
-        "Colombian poles are often marked with unique black-and-yellow or black-and-orange stripes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6f5d2fae38bc",
-          "src": "https://learnablemeta.com/images/1955/1750619762161-r3y.avif",
-          "path": "co/6f5d2fae38bc.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "748dea561aa6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Orange plastic stickers with a QR code are in Barranquilla and Santa Marta."
     },
     {
       "id": "co-lm-473889",
       "step": 3,
       "order": 98,
       "family": "pole",
-      "title": "Pole: Santa Marta paint",
+      "title": "Pole paint: light and dark blue",
       "text": [
         "In Santa Marta you can find these light and dark blue pole paints."
       ],
@@ -3867,43 +3053,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "co-lm-634012",
-      "step": 3,
-      "order": 99,
-      "family": "plate",
-      "title": "Plate: Colombia",
-      "text": [
-        "Colombian licence plates are typically yellow.",
-        "NOTE: Within South America, yellow licence plates are almost exclusively found in Colombia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7502d3fa360e",
-          "src": "https://learnablemeta.com/images/5431/1766260332648-vFC.avif",
-          "path": "co/7502d3fa360e.webp",
-          "width": 800,
-          "height": 191,
-          "dupeOf": "70915c862339"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Light and dark blue pole paint is found in Santa Marta."
     },
     {
       "id": "co-lm-717431",
       "step": 3,
       "order": 100,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Arauca Rift",
+      "title": "Coverage: always cloudy, small camera rift",
       "text": [
         "On the road in Arauca and in the city of Arauca in northeastern Colombia, there is virtually only cloudy, bad weather coverage. Furthermore, there was a small camera glitch where you can see this small rift northeast of the driving direction."
       ],
@@ -3930,14 +3088,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On the road in Arauca and in Arauca city, in the northeast, almost all coverage is cloudy and bad weather. A small camera glitch shows a rift northeast of the driving direction."
     },
     {
       "id": "co-lm-717460",
       "step": 3,
       "order": 101,
       "family": "landscape",
-      "title": "Landscape: Landscape - Pasto Hills",
+      "title": "Landscape: hilly fields with thick hedges",
       "text": [
         "In southern Colombia, around the city of Pasto, there are hilly fields that are unique in that they are bordered by hedges. The hedges are very thick and form very distinctive lines on the hills. It almost gives off a “British” vibe. If you are sure that it is Colombia, this is a very good meta, but such fields with hedges also occur in Ecuador.",
         "!! In very rare cases, such hedges on hills can also occur in other parts of Colombia. !!"
@@ -3967,14 +3126,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the south around Pasto, hilly fields are bordered by thick hedges that form lines on the hills, with a British feel. Very rarely seen elsewhere in Colombia. Ecuador has such fields too, so be sure you are in Colombia.",
+      "differs": [
+        {
+          "country": "EC",
+          "how": "Ecuador also has hedged hilly fields"
+        }
+      ]
     },
     {
       "id": "co-lm-717461",
       "step": 3,
       "order": 102,
       "family": "other",
-      "title": "Agriculture - Banana - Hedge",
+      "title": "Plants: banana plantations behind hedges",
       "text": [
         "In Quindio you will commonly find banana plantations behind hedges."
       ],
@@ -3994,14 +3160,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Quindío, banana plantations are commonly behind hedges."
     },
     {
       "id": "co-lm-717462",
       "step": 3,
       "order": 103,
       "family": "other",
-      "title": "Agriculture - Banana - Small Field / No Hedge",
+      "title": "Plants: small banana fields, no hedge",
       "text": [
         "In the states surrounding Quindio you will find smaller banana plantations along the road not behind hedges."
       ],
@@ -4021,14 +3188,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the states around Quindío, smaller banana plantations lie along the road without hedges."
     },
     {
       "id": "co-lm-717463",
       "step": 3,
       "order": 104,
       "family": "car",
-      "title": "Google car: Agriculture - Banana - Cloudy Gen 3",
+      "title": "Plants: banana plantations in cloudy Gen 3",
       "text": [
         "Large amounts of banana plants in plantations are commonly found in different areas.",
         "Paired with Cloudy Gen 3 Coverage, they're most common in Northwestern Antioquia."
@@ -4049,14 +3217,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Large banana plantations appear in several areas. With cloudy Gen 3 coverage they are most common in northwest Antioquia."
     },
     {
       "id": "co-lm-717464",
       "step": 3,
       "order": 105,
       "family": "landscape",
-      "title": "Landscape: Agriculture - Banana - Dry",
+      "title": "Plants: bananas on dry sandy ground",
       "text": [
         "In Magdalena you will often see banana plantations in a dry sandy/dirty area with mountains to your east."
       ],
@@ -4076,14 +3245,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Magdalena, banana plantations often sit on dry, sandy or dirty ground with mountains to the east."
     },
     {
       "id": "co-lm-717465",
       "step": 3,
       "order": 106,
       "family": "vegetation",
-      "title": "Vegetation: Vegetation - Veracruz Trees",
+      "title": "Plants: tree with a knot atop its trunk",
       "text": [
         "In Colombia you will most commonly find these trees that appear to have a knot on top of their trunk in the dark red areas. The province of Cordoba has the most gen 4 out of the others so if you see these in gen 4 consider Cordoba. (If the area is flat/semi hilly, You can find these trees in the mountains aswell everywhere)"
       ],
@@ -4103,14 +3273,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Trees that look like they have a knot on top of the trunk grow most in dark red areas. Córdoba has the most Gen 4, so seeing them in Gen 4 suggests Córdoba. They also appear in mountains."
     },
     {
       "id": "co-lm-717466",
       "step": 3,
       "order": 107,
       "family": "pole",
-      "title": "Pole: Infrastructure - Valle de Cauca Pole",
+      "title": "Pole top: Valle del Cauca style",
       "text": [
         "If you see these poletops you will find yourself in Valle Del Cauca."
       ],
@@ -4130,14 +3301,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "These particular pole tops mean you are in Valle del Cauca."
     },
     {
       "id": "co-lm-717467",
       "step": 3,
       "order": 108,
       "family": "landscape",
-      "title": "Landscape: Landscape - Guatape Hill",
+      "title": "Landscape: cone-shaped mountain",
       "text": [
         "This striking cone-shaped mountain can often be seen from the surrounding area of Guatape."
       ],
@@ -4157,14 +3329,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A striking cone-shaped mountain, often visible from around Guatapé."
     },
     {
       "id": "co-lm-717468",
       "step": 3,
       "order": 109,
       "family": "other",
-      "title": "Infrastructure - Electricity Counter - Oval",
+      "title": "Electricity meter: tall box with oval windows",
       "text": [
         "Usually pretty tall with oval windows, circle windows might not be as trustworthy.",
         "Very common as there are few plastic counters in this region."
@@ -4185,14 +3358,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Tall meter boxes with oval windows. Round windows are less reliable. Very common here because there are few plastic meters."
     },
     {
       "id": "co-lm-717469",
       "step": 3,
       "order": 110,
       "family": "pole",
-      "title": "Pole: Infrastructure - Sarawak Pole",
+      "title": "Pole: lopsided with a vertical stalk on top",
       "text": [
         "Asymmetrical poles with a \"Sarawak\" extension (a vertical stalk coming out the top), can **often** be found East of Andes. Note that this pole is not 100%, and has been spotted elsewhere."
       ],
@@ -4212,14 +3386,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Asymmetrical poles with a vertical stalk coming out of the top are often found east of the Andes, though not always."
     },
     {
       "id": "co-lm-717470",
       "step": 3,
       "order": 111,
       "family": "other",
-      "title": "Agriculture - Banana",
+      "title": "Plants: banana plantations",
       "text": [
         "In general, banana plantation can be found mostly in Quindio and Magdalena, sometimes in Northwest-Antioquia and Cordoba, and rarely in surrounding provinces of Quindio."
       ],
@@ -4239,7 +3414,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Banana plantations are mainly in Quindío and Magdalena, sometimes in northwest Antioquia and Córdoba, and rarely in provinces around Quindío."
     }
   ]
 }

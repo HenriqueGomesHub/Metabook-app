@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Montenegro uses the standard European plate with a blue…",
+      "title": "Plate: EU plate, coat of arms on red circle",
       "text": [
         "Montenegro uses the standard European plate with a blue strip, and the Montenegro coat of arms on a **red circle**. The red circle is visible through the blur.",
         "NOTE: The white section of Albanian licence plates do not have a red circle."
@@ -47,14 +47,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Standard European plate with a blue strip, but the coat of arms sits on a red circle that shows through the blur. Albanian plates have no red circle.",
+      "differs": [
+        {
+          "country": "AL",
+          "how": "Albanian plates have no red circle on the white part"
+        }
+      ]
     },
     {
       "id": "me-ioMs",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: All Generation 4 coverage in Montenegro was taken using a…",
+      "title": "Google car: low Gen 4 'smallcam'",
       "text": [
         "All Generation 4 coverage in Montenegro was taken using a “smallcam” camera, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of the Balkans and southern Europe have Smallcam."
@@ -96,14 +103,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 camera mounted lower than usual, with a big round blur and a small bump at the front. The blur can be fully see-through. Much of the Balkans and southern Europe has this."
     },
     {
       "id": "me-9laJ",
       "step": 0,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: Montenegro is a small",
+      "title": "Landscape: small, mountainous, narrow roads",
       "text": [
         "Montenegro is a small, **mountainous** country. Inland mountains are lush and green, while most coastal mountains have distinct exposed, light coloured rock. Most roads are also only 1 or 2 lanes wide."
       ],
@@ -152,14 +160,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Inland mountains are lush and green, while coastal mountains show bare, light-coloured rock. Most roads are only one or two lanes wide."
     },
     {
       "id": "me-MYa5",
       "step": 0,
       "order": 4,
       "family": "bollard",
-      "title": "Bollard: The most common bollard is white with a red reflector on…",
+      "title": "Bollard: black top, red reflector front",
       "text": [
         "The most common bollard is white with a red reflector on the front and a white one on the back. The bollard also has a black top.",
         "NOTE: These bollards are also found in Slovenia."
@@ -211,7 +220,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White post with a black top, a red reflector on the front and a white one on the back. Slovenia uses the same bollard.",
+      "sameAs": [
+        "SI"
+      ]
     },
     {
       "id": "me-ESKL",
@@ -219,7 +232,7 @@
       "order": 5,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Montenegro uses black on white or red on yellow chevrons",
+      "title": "Chevron: black on white or red on yellow",
       "text": [
         "Montenegro uses **black on white** or **red on yellow** chevrons.",
         "NOTE: Albania uses white on black chevrons."
@@ -279,14 +292,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chevron signs are black on white, or red on yellow. Albania uses white on black instead.",
+      "differs": [
+        {
+          "country": "AL",
+          "how": "Albanian chevrons are white on black"
+        }
+      ]
     },
     {
       "id": "me-31mF",
       "step": 0,
       "order": 6,
       "family": "guardrail",
-      "title": "Guardrail: Guardrails in Montenegro are often rusted",
+      "title": "Guardrail: often rusty",
       "text": [
         "Guardrails in Montenegro are often **rusted**."
       ],
@@ -335,14 +355,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails are frequently rusty."
     },
     {
       "id": "me-RPvd",
       "step": 0,
       "order": 7,
       "family": "guardrail",
-      "title": "Guardrail: Montenegro is the only Balkan country where you’ll commonly…",
+      "title": "Guardrail: both A-type and B-type",
       "text": [
         "Montenegro is the only Balkan country where you’ll commonly see both [A-type](https://goo.gl/maps/fZCnn3jPH4By45ph7) and [B-type](https://goo.gl/maps/w9hnQsjxxJS2TbT1A) guardrails.",
         "NOTE: For a good overview of European guardrails, see [this infographic](/images/montenegro/europeguardrail.png)."
@@ -384,14 +405,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only Balkan country where you commonly see both A-type and B-type guardrails, two different rail profiles, side by side."
     },
     {
       "id": "me-gPE6",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Montenegro uses simple round concrete or wooden poles",
+      "title": "Pole: simple round concrete or wood",
       "text": [
         "Montenegro uses simple **round concrete** or wooden poles."
       ],
@@ -432,14 +454,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Plain round concrete poles, or wooden ones."
     },
     {
       "id": "me-gh0p",
       "step": 0,
       "order": 9,
       "family": "car",
-      "title": "Google car: ‘Rifts’ can uncommonly be seen in Montenegrin generation 3…",
+      "title": "Google car: 'rifts' (stitching cracks), uncommon",
       "text": [
         "‘**Rifts**’ can uncommonly be seen in Montenegrin generation 3 coverage, due to poor stitching.",
         "NOTE: Rifts are also common in Albania, and can rarely be seen in various other countries."
@@ -483,14 +506,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rifts are visible seams or cracks in the picture caused by poor stitching. They show up now and then in Gen 3 coverage. Albania has them often.",
+      "differs": [
+        {
+          "country": "AL",
+          "how": "Rifts are common in Albania, only occasional here"
+        }
+      ]
     },
     {
       "id": "me-62xq",
       "step": 1,
       "order": 0,
       "family": "car",
-      "title": "Google car: Although rifts are common in generation 3 Montenegro…",
+      "title": "Google car: short antenna by coast, long inland",
       "text": [
         "Although rifts are common in generation 3 Montenegro coverage, coastal rounds **will almost never **have them. By the coast, there will be a [short antenna](https://goo.gl/maps/d7Fvp2NzZw37CxyFA) with no rifts. There will be a [long antenna](https://goo.gl/maps/Zpu6fUJ5o3LkTtxZ6) with rifts inland.",
         "NOTE: An exception to this is the area around the coastal villages of Utjeha and Dobra Voda."
@@ -514,14 +544,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rifts (stitching cracks) are common on Gen 3 inland, where the car has a long antenna. On the coast the car has a short antenna and almost never rifts, except near Utjeha and Dobra Voda."
     },
     {
       "id": "me-vHGt",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Green, agricultural valleys with deforested hills to make…",
+      "title": "Landscape: green farm valleys, cleared hills",
       "text": [
         "Green, **agricultural valleys** with deforested hills to make way for farmland are most commonly seen in the north."
       ],
@@ -562,14 +593,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the north: green farming valleys with hills cleared of trees to make farmland."
     },
     {
       "id": "me-arxV",
       "step": 1,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The Bay of Kotor has a touristy and populated feel to it",
+      "title": "Landscape: touristy bay, swimwear, steep ridge",
       "text": [
         "The Bay of Kotor has a **touristy and populated** feel to it, with many people dressed in swimwear. A distinct [steep, rocky ridge](https://goo.gl/maps/Sj5ENoJMcprLyLzWA) can also be seen."
       ],
@@ -611,14 +643,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A busy, touristy bay with many people in swimwear and a steep rocky ridge above it."
     },
     {
       "id": "me-YLJY",
       "step": 1,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: Dry mountains with a lack of trees are seen around Podgorica",
+      "title": "Landscape: dry treeless mountains, vineyards",
       "text": [
         "**Dry mountains** with a lack of trees are seen around Podgorica, and to the south of it. Vineyards are also commonly seen in this region."
       ],
@@ -667,14 +700,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around the capital and south of it: dry, treeless mountains, with vineyards common."
     },
     {
       "id": "me-59VX",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: Pine forests can be found in the north and a small area…",
+      "title": "Landscape: pine forests, mostly east",
       "text": [
         "**Pine forests** can be found in the north and a small area north of Nikšić, but most commonly in the **east**."
       ],
@@ -716,14 +750,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pine forests in the north and just north of Nikšić, but most common in the east."
     },
     {
       "id": "me-BFX1",
       "step": 1,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Durmitor National Park can be recognized by a distinct…",
+      "title": "Landscape: grassy treeless high mountains",
       "text": [
         "Durmitor National Park can be recognized by a distinct landscape consisting of **grassy, treeless mountains** with a high-altitude feel.",
         "The town of [Žabljak](https://goo.gl/maps/ityFp93bD3WQweCq5) is situated in this national park, and can be recognized by the landscape but also by the [unique](https://goo.gl/maps/1dyUEW1YaCgDS1SU9) [architecture](https://goo.gl/maps/wQFbfwF88LLTbie77)."
@@ -765,14 +800,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A national park with grassy, treeless mountains and a high-altitude feel. The town inside it has unusual architecture."
     },
     {
       "id": "me-cJhu",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Podgorica is the capital and largest city in Montenegro",
+      "title": "City: modern buildings, wide roads",
       "text": [
         "Podgorica is the capital and **largest city** in Montenegro, and can be recognized by the modern buildings, wide roads and modern infrastructure."
       ],
@@ -813,14 +849,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital and biggest city looks modern, with new buildings, wide roads and modern infrastructure."
     },
     {
       "id": "me-9667",
       "step": 2,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: These distinct staircase-like mountainsides can be seen in…",
+      "title": "Landscape: staircase-like mountainsides",
       "text": [
         "These distinct **staircase-like** mountainsides can be seen in the Cemi River Valley."
       ],
@@ -861,14 +898,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mountainsides that look like steps, seen in the Cemi River valley."
     },
     {
       "id": "me-Ifx0",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: Many small islands can be seen within Slansko Lake",
+      "title": "Landscape: lake with many small islands",
       "text": [
         "Many small islands can be seen within **Slansko Lake**."
       ],
@@ -909,14 +947,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A lake dotted with many small islands (Slansko Lake)."
     },
     {
       "id": "me-VuAe",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The Pljevlja Coal Mine can be recognized by the wide",
+      "title": "Landmark: coal mine with gravel wall",
       "text": [
         "The Pljevlja Coal Mine can be recognized by the wide, artificial **wall of gravel**. The mine can often be seen from [afar](https://goo.gl/maps/45CwG7nnsD9NjzXE6)."
       ],
@@ -957,14 +996,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A coal mine recognisable by a wide, artificial wall of gravel, often visible from far away."
     },
     {
       "id": "me-CFIQ",
       "step": 2,
       "order": 4,
       "family": "bollard",
-      "title": "Bollard: The Skadar Lake Bridge can be recognized by the railway and…",
+      "title": "Bollard: stone posts beside a railway bridge",
       "text": [
         "The Skadar Lake Bridge can be recognized by the **railway** and stone bollards next to the road."
       ],
@@ -1006,7 +1046,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/montenegro",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Skadar Lake bridge has a railway next to the road and stone bollards along it."
     },
     {
       "id": "me-lm-23781",
@@ -1014,7 +1055,7 @@
       "order": 0,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Thin Font Signs",
+      "title": "Sign: thin numbers on speed signs",
       "text": [
         "The numbers on speed signs are written in a thin font.",
         "**--- NOTE:**",
@@ -1046,320 +1087,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-23847",
-      "step": 3,
-      "order": 1,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "‘Rifts’ can commonly be seen in Montenegrin coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also common in Albania, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Numbers on speed limit signs are written in a thin font. Albania's are much thicker.",
+      "differs": [
         {
-          "id": "3ab963ab5e72",
-          "src": "https://learnablemeta.com/images/768/eU37LS68NLDcO6QH1twanHy1EvasjMkan0nq.avif",
-          "path": "me/3ab963ab5e72.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "d4591509fbaa"
+          "country": "AL",
+          "how": "Albanian speed sign numbers are much thicker"
         }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-24601",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Durmitor National Park",
-      "text": [
-        "Durmitor National Park can be recognized by a distinct landscape consisting of grassy, treeless mountains with a high-altitude feel."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f2a7fe6fa184",
-          "src": "https://learnablemeta.com/images/664/Wrn1V3PYexkn8xzzNMXXPEZZWj1ki8HmN6vE.avif",
-          "path": "me/f2a7fe6fa184.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "26abd0c25730"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-24602",
-      "step": 3,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Northern Agricultural Valleys",
-      "text": [
-        "Green, agricultural valleys with deforested hills to make way for farmland are most commonly seen in the north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cc0ce10a6ed6",
-          "src": "https://learnablemeta.com/images/664/lfEeq98xzPFEBJN8Q3zNKZnb8GxcSc06q0il.avif",
-          "path": "me/cc0ce10a6ed6.webp",
-          "width": 1000,
-          "height": 487,
-          "dupeOf": "07b92c0c6e9a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-50415",
-      "step": 3,
-      "order": 4,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "‘Rifts’ can commonly be seen in Montenegrin coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also common in Albania, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3ab963ab5e72",
-          "src": "https://learnablemeta.com/images/768/eU37LS68NLDcO6QH1twanHy1EvasjMkan0nq.avif",
-          "path": "me/3ab963ab5e72.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "d4591509fbaa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-50420",
-      "step": 3,
-      "order": 5,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thin Font Signs",
-      "text": [
-        "The numbers on speed signs are written in a thin font.",
-        "**--- NOTE:**",
-        "The font is much thicker on speed signs in Albania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9e5efe1f1075",
-          "src": "https://learnablemeta.com/images/768/AaLJFdt02qn8EefuHbH5J22iNl6wdJ3bqwjF.avif",
-          "path": "me/9e5efe1f1075.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "9e5efe1f1075"
-        },
-        {
-          "id": "2f9e5ab129c1",
-          "src": "https://learnablemeta.com/images/768/Q3LksXVlatT3pFCuG3YZU8sHSfAfJnrXnHxT.avif",
-          "path": "me/2f9e5ab129c1.webp",
-          "width": 1000,
-          "height": 633,
-          "dupeOf": "2f9e5ab129c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-51087",
-      "step": 3,
-      "order": 6,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Thin Font Signs",
-      "text": [
-        "The numbers on speed signs are written in a thin font.",
-        "**--- NOTE:**",
-        "The font is much thicker on speed signs in Albania."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9e5efe1f1075",
-          "src": "https://learnablemeta.com/images/768/AaLJFdt02qn8EefuHbH5J22iNl6wdJ3bqwjF.avif",
-          "path": "me/9e5efe1f1075.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "9e5efe1f1075"
-        },
-        {
-          "id": "2f9e5ab129c1",
-          "src": "https://learnablemeta.com/images/768/Q3LksXVlatT3pFCuG3YZU8sHSfAfJnrXnHxT.avif",
-          "path": "me/2f9e5ab129c1.webp",
-          "width": 1000,
-          "height": 633,
-          "dupeOf": "2f9e5ab129c1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-51161",
-      "step": 3,
-      "order": 7,
-      "family": "coverage",
-      "title": "Coverage: Rifts",
-      "text": [
-        "‘Rifts’ can commonly be seen in Montenegrin coverage, due to poor stitching.",
-        "**--- NOTE:**",
-        "Rifts are also common in Albania, and can rarely be seen in various other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3ab963ab5e72",
-          "src": "https://learnablemeta.com/images/768/eU37LS68NLDcO6QH1twanHy1EvasjMkan0nq.avif",
-          "path": "me/3ab963ab5e72.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "d4591509fbaa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "AL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-515562",
-      "step": 3,
-      "order": 8,
-      "family": "guardrail",
-      "title": "Guardrail: (Rusty) A & B-Type with red reflectors",
-      "text": [
-        "Montenegro is the only Balkan country where you’ll commonly see both A-type and B-type guardrails. Guardrails in Montenegro are often rusted."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6a8ecf639998",
-          "src": "https://learnablemeta.com/images/3660/1755389436024-zhY.avif",
-          "path": "me/6a8ecf639998.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "f401b61022f9"
-        },
-        {
-          "id": "18588ec1fc9e",
-          "src": "https://learnablemeta.com/images/3660/1755389445389-ado.avif",
-          "path": "me/18588ec1fc9e.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "d98926512c76"
-        },
-        {
-          "id": "fe2149a039ac",
-          "src": "https://learnablemeta.com/images/3660/1755389449396-NfD.avif",
-          "path": "me/fe2149a039ac.webp",
-          "width": 800,
-          "height": 356
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "me-lm-634027",
-      "step": 3,
-      "order": 9,
-      "family": "plate",
-      "title": "Plate: Montenegro",
-      "text": [
-        "Montenegro uses the standard European plate with a blue strip, and the Montenegro coat of arms on a red circle. The red circle is visible through the blur.",
-        "NOTE: The white section of Albanian licence plates do not have a red circle."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "03445b6299c1",
-          "src": "https://learnablemeta.com/images/5431/1766261477766-3RK.avif",
-          "path": "me/03445b6299c1.webp",
-          "width": 800,
-          "height": 334,
-          "dupeOf": "d35e3e2ecfb1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "me-lm-787128",
       "step": 3,
       "order": 10,
       "family": "language",
-      "title": "Language: Montenegrin or Serbian",
+      "title": "Language: Latin letters with Ś and Ź",
       "text": [
         "Montenegrin is a South Slavic language and the only version of Serbo-Croatian official in Montenegro. However, Serbian is technically the most widely spoken language in Montenegro, ahead of Montenegrin. For the purpose of this map, these two languages might aswell be the same (they are **that** similar). Both Montenegrin and Serbian are officially written either in Latin or Cyrillic, but Latin is by far the more common script used in Montenegro. Road signs are **not** required to use both scripts, only Latin. Montenegrin uses the letters **Ś** and **Ź** which can not be found in Croatian/Bosnian/Serbian.",
         "The Serbo-Croatian word for street is **ulica**/**улица** (like most Slavic languages)."
@@ -1389,7 +1131,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A South Slavic language, nearly identical to Serbian. Mostly Latin script on signs. The letters Ś and Ź do not exist in Croatian, Bosnian or Serbian. Street is 'ulica'."
     }
   ]
 }

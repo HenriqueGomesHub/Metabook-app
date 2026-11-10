@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "other",
-      "title": "Norway is a very mountainous country",
+      "title": "Landscape: very mountainous with fjords",
       "text": [
         "Norway is a very mountainous country, with many fjords along most of the coast.",
         "NOTE: Finland and Denmark are both mostly flat, while Sweden has a mixture of flat, hilly and mountainous areas."
@@ -68,14 +68,29 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very mountainous, with fjords along most of the coast. Finland and Denmark are mostly flat, and Sweden is a mix of flat, hilly and mountainous.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Mix of flat, hilly and mountainous land"
+        },
+        {
+          "country": "FI",
+          "how": "Mostly flat"
+        },
+        {
+          "country": "DK",
+          "how": "Mostly flat"
+        }
+      ]
     },
     {
       "id": "no-OjhH",
       "step": 0,
       "order": 2,
       "family": "architecture",
-      "title": "Architecture: The vast majority of Norwegian houses are made of wood",
+      "title": "Houses: wooden, red or black, many white",
       "text": [
         "The vast majority of Norwegian houses are made of **wood**. Many houses are painted **red**, which is also typical for Sweden and Finland. **Black** painted houses are also quite common, more so than in Sweden or Finland.",
         "NOTE: While the architecture is very similar to that of Sweden and Finland, there are some small, general differences. Sweden and Finland generally have more red and yellow houses, while Norway generally has more white houses. There is also a larger percentage of wooden houses in suburbs and near town centres in Norway than in Sweden and Finland, which use more brick than Norway."
@@ -134,14 +149,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nearly all houses are wooden. Many are red, and black ones are more common than in Sweden or Finland. Norway has more white houses and fewer brick or yellow ones.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "More red and yellow houses, more brick"
+        },
+        {
+          "country": "FI",
+          "how": "More red and yellow houses, more brick"
+        }
+      ]
     },
     {
       "id": "no-A0UC",
       "step": 0,
       "order": 3,
       "family": "plate",
-      "title": "Plate: Norway has long white licence plates with the standard…",
+      "title": "Plate: long white, green for vans",
       "text": [
         "Norway has long white licence plates with the standard European strip on the left.",
         "Commercial plates are **green**. These are often seen on vans.",
@@ -177,14 +203,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with the European strip on the left. Commercial vehicles, often vans, have green plates. In Europe green plates are most common here but also appear on electric vehicles elsewhere."
     },
     {
       "id": "no-JxsR",
       "step": 0,
       "order": 4,
       "family": "line",
-      "title": "Road line: Smaller Norwegian roads typically have long dashed white…",
+      "title": "Road lines: long dashed edges, yellow centre",
       "text": [
         "Smaller Norwegian roads typically have **long dashed** white outer lines, while larger roads have solid outer lines and **yellow middle lines**. The yellow lines have a distinct tinge of orange.",
         "NOTE: Sweden only has white road lines, and the [dashes](https://www.google.se/maps/@55.8603502,14.0645816,3a,67.7y,310.56h,67.2t/data=!3m6!1e1!3m4!1sxSuRl8lj2S2ldx_vzphffQ!2e0!7i16384!8i8192?shorturl=1) on outer lines are shorter than in Norway. [Finnish](https://www.google.com/maps/@?api=1&map_action=pano&pano=c8FOHjmvgdL7njxYf5Hb6Q&viewpoint=64.117952,26.646979&heading=97.5109375143503&pitch=-14.532690519627238&fov=56.68574773360253&shorturl=1#extra%5Btags%5D=road+lines) outer road lines are always solid, and middle lines can be yellow or white."
@@ -256,14 +283,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small roads have long dashed white edge lines. Larger roads have solid edges and an orange-tinted yellow middle line. Sweden has shorter dashes and only white lines, Finland has solid edges.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Edge dashes are shorter, only white lines"
+        },
+        {
+          "country": "FI",
+          "how": "Solid edge lines, centre line yellow or white"
+        }
+      ]
     },
     {
       "id": "no-zQPw",
       "step": 0,
       "order": 5,
       "family": "line",
-      "title": "Road line: Road lines will often be made up of small dots of paint",
+      "title": "Road lines: made of small dots of paint",
       "text": [
         "Road lines will often be made up of **small dots** of paint."
       ],
@@ -318,14 +356,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road lines are often made of small dots of paint rather than smooth paint."
     },
     {
       "id": "no-u4g0",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: The Norwegian language contains the special letters Æ",
+      "title": "Language: Æ, Ø and Å, \"kk\" spelling",
       "text": [
         "The Norwegian language contains the special letters Æ, Ø and Å.",
         "NOTE: The special letters found in Norwegian can also be found in some of the other Nordic languages:",
@@ -349,14 +388,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Norwegian uses Æ, Ø and Å, the same as Danish. Swedish has Å but not Æ or Ø and spells with \"ck\" where Norwegian uses \"kk\".",
+      "sameAs": [
+        "DK"
+      ],
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Has Å but no Æ or Ø, and spells \"ck\""
+        }
+      ]
     },
     {
       "id": "no-0MXz",
       "step": 0,
       "order": 7,
       "family": "bollard",
-      "title": "Bollard: Norway uses thin, curved rectangular bollards with the…",
+      "title": "Bollard: thin curved, black parallelogram",
       "text": [
         "Norway uses thin, curved rectangular bollards with the reflector inside of a **black** parallelogram."
       ],
@@ -419,14 +468,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A thin, curved rectangular bollard with the reflector inside a black parallelogram."
     },
     {
       "id": "no-Yvvo",
       "step": 0,
       "order": 8,
       "family": "pole",
-      "title": "Pole: Norwegian snow poles are typically orange",
+      "title": "Snow pole: orange, thin white reflector mid-pole",
       "text": [
         "Norwegian snow poles are typically orange, with a **fairly** **thin** white reflector. The reflector is normally toward the **middle** of the pole.",
         "NOTE: [Swedish](https://www.google.se/maps/@61.9908262,14.5790953,3a,39.6y,258.06h,61.21t/data=!3m6!1e1!3m4!1s1qT_52M1QOthv1f9cvsoXw!2e0!7i16384!8i8192) snow poles typically have a wider reflector slightly higher up, and [Finnish](https://www.google.com/maps/@60.4814738,23.2577925,3a,15y,68.45h,69.44t,0.35r/data=!3m6!1e1!3m4!1s7-wUFACQ9NzGxHQu6ngnUw!2e0!7i16384!8i8192) snow poles have their reflector at the very top."
@@ -476,14 +526,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Orange snow poles with a fairly thin white reflector near the middle of the pole. Swedish ones have a wider reflector set higher up.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Wider reflector set higher on the pole"
+        }
+      ]
     },
     {
       "id": "no-6F9C",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: It is also fairly common to find thin wooden snow poles…",
+      "title": "Snow pole: thin wooden with painted reflector",
       "text": [
         "It is also fairly common to find thin **wooden** snow poles with painted reflectors.",
         "NOTE: While wooden snow poles can be found in [other Nordic countries](https://goo.gl/maps/ebwqngpn358DdBpp9), they will typically not have reflectors."
@@ -525,14 +582,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Thin wooden snow poles with painted reflectors are fairly common. In other Nordic countries wooden ones usually have no reflector."
     },
     {
       "id": "no-O5ze",
       "step": 0,
       "order": 10,
       "family": "guardrail",
-      "title": "Guardrail: Guardrails often have wooden posts",
+      "title": "Guardrail: wooden posts",
       "text": [
         "Guardrails often have **wooden posts**.",
         "NOTE: This is not common in Sweden or Finland."
@@ -585,7 +643,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails often have wooden posts, which is uncommon in Sweden and Finland.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Wooden posts are uncommon"
+        },
+        {
+          "country": "FI",
+          "how": "Wooden posts are uncommon"
+        }
+      ]
     },
     {
       "id": "no-hWzL",
@@ -593,7 +662,7 @@
       "order": 11,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Norwegian pedestrian signs typically have four stripes and…",
+      "title": "Sign: pedestrian crossing, four stripes",
       "text": [
         "Norwegian pedestrian signs typically have **four stripes** and a very simply drawn person. Note however, that there is a version with [five stripes](https://www.google.com/maps/@69.6519241,18.9565431,3a,15y,247.79h,95.06t/data=!3m6!1e1!3m4!1sr44nQpcvP6QQiIoQ5x9iPg!2e0!7i16384!8i8192) and a version where the person is more detailed and [wearing a hat](https://www.google.com/maps/@59.9150958,10.7314409,3a,15y,221.76h,97.28t/data=!3m6!1e1!3m4!1sxUjNRfgz1D4jn2MrTFqN3A!2e0!7i16384!8i8192).",
         "NOTE: While [Finnish](https://www.google.com/maps/@61.4993731,23.759534,3a,15y,50.36h,98.09t,359.73r/data=!3m6!1e1!3m4!1sklmrQCHLp2po9CQARyRyMA!2e0!7i16384!8i8192) pedestrian signs have five stripes, Swedish pedestrian signs have four stripes. However, the person on [Swedish](https://www.google.se/maps/@59.8459127,17.6306563,3a,15y,112.66h,95.96t/data=!3m6!1e1!3m4!1s-ODCYQW5xsTcVebPn08xRQ!2e0!7i16384!8i8192) signs is detailed, but without a hat."
@@ -633,7 +702,22 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A crossing sign with four stripes and a very simple drawn person. A five-stripe version and a version with a hat also exist. Finland has five stripes, Sweden four stripes but a more detailed person.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Four stripes but a detailed person without a hat"
+        },
+        {
+          "country": "FI",
+          "how": "Five stripes"
+        },
+        {
+          "country": "BG",
+          "how": "Four stripes too, but not the bold simple person"
+        }
+      ]
     },
     {
       "id": "no-MAXX",
@@ -641,7 +725,7 @@
       "order": 12,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Norwegian directional signs are yellow with a black border",
+      "title": "Direction sign: yellow with black border",
       "text": [
         "Norwegian directional signs are **yellow** with a **black border**. You will commonly see the road number displayed, either in a green box for European highways and major roads, or in a white box, for smaller roads."
       ],
@@ -680,7 +764,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs are yellow with a black border. The road number sits in a green box for European and major roads, or a white box for smaller roads."
     },
     {
       "id": "no-HlLb",
@@ -688,7 +773,7 @@
       "order": 13,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: On smaller roads, it is common to see these blue signs with…",
+      "title": "Sign: blue sign with large white M",
       "text": [
         "On smaller roads, it is common to see these blue signs with a **large white M**.",
         "NOTE: Similar signs can be found in [Sweden](https://goo.gl/maps/DqYAkha51nY72ao49), however the font is distinctly different. The middle point of the M does not extend to the bottom of the letter. There are no similar signs in Finland."
@@ -731,7 +816,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small roads often have blue signs with a large white M. Sweden has similar signs, but its M's middle point does not reach the bottom. Finland has none.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "The M's middle point stops above the bottom"
+        },
+        {
+          "country": "FI",
+          "how": "Has no such signs"
+        }
+      ]
     },
     {
       "id": "no-hUl3",
@@ -739,7 +835,7 @@
       "order": 14,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Norwegian bus stops usually have this small",
+      "title": "Bus stop sign: small blue with a white bus",
       "text": [
         "Norwegian bus stops usually have this small, **blue sign** with a white bus.",
         "NOTE: Sweden has a lot of different bus stops, none of which look like this."
@@ -788,7 +884,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus stops usually have a small blue sign with a white bus. Sweden has many bus stop styles but none like this.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "No bus stop sign like this"
+        }
+      ]
     },
     {
       "id": "no-0UKk",
@@ -796,7 +899,7 @@
       "order": 15,
       "family": "sign",
       "kind": "speed",
-      "title": "Speed sign: White signs with the text “Sone”",
+      "title": "Speed sign: white sign saying \"Sone\"",
       "text": [
         "**White signs** with the text “**Sone**”, generally featuring a speed limit, are common in urban areas."
       ],
@@ -835,7 +938,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White signs that say \"Sone\", usually with a speed limit, are common in towns."
     },
     {
       "id": "no-dZk6",
@@ -843,7 +947,7 @@
       "order": 16,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The most common street name suffixes in Norway are vei and…",
+      "title": "Street sign: names ending in -vei or -gate",
       "text": [
         "The most common street name suffixes in Norway are [**vei**](https://www.google.com/maps/@59.9593416,10.6791889,3a,15y,271.42h,95.43t/data=!3m7!1e1!3m5!1sCK4o9jIF2f-laJXC2Mr2-A!2e0!5s20220501T000000!7i16384!8i8192?entry=ttu) and [**gate**](https://www.google.com/maps/@60.3989197,5.3282393,3a,15y,61.21h,100.75t/data=!3m7!1e1!3m5!1sS3foVfd95KVJKP139aYT3w!2e0!5s20220901T000000!7i16384!8i8192?entry=ttu). While attached to the name, they take the forms [-veien](https://www.google.com/maps/@59.9224766,10.7556273,3a,15y,112.61h,94.04t/data=!3m7!1e1!3m5!1sl5Rng63pEh4G3UgU4do21Q!2e0!5s20230801T000000!7i16384!8i8192?entry=ttu) and [-gata](https://www.google.com/maps/@59.9248979,10.7238512,3a,15y,63.13h,100.43t/data=!3m7!1e1!3m5!1scDDP0zNgkLdGMTV8fFpsyg!2e0!5s20230401T000000!7i16384!8i8192?entry=ttu) or [-gate](https://www.google.com/maps/@58.9672287,5.7464844,3a,15y,147.13h,91.89t/data=!3m6!1e1!3m4!1sk4Il9mVs8YiuVelO7sXz4g!2e0!7i16384!8i8192?entry=ttu).",
         "NOTE: Swedish street names use the suffixes väg or vägen and gata or gatan, where gata is always detached from the name. Danish uses vej and gade."
@@ -883,7 +987,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common street name endings are vei and gate, joined to the name as -veien or -gata."
     },
     {
       "id": "no-0YsK",
@@ -891,7 +996,7 @@
       "order": 17,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street signs will generally be centred on top of sign posts",
+      "title": "Street sign: centred on top of the post",
       "text": [
         "Street signs will generally be **centred** on top of sign posts.",
         "NOTE: Street signs in Sweden will normally be attached either to the side of [sign posts](https://goo.gl/maps/YnsWJyWT27GYkDXGA) or [lamp posts](https://goo.gl/maps/JyeS5LBN8nZDyKrt8)."
@@ -940,7 +1045,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs are mounted centred on top of sign posts. In Sweden they are fixed to the side of posts or lamp posts.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Signs are fixed to the side of posts or lamp posts"
+        }
+      ]
     },
     {
       "id": "no-oDKo",
@@ -948,7 +1060,7 @@
       "order": 18,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Norwegian traffic signs have a red outline and a white…",
+      "title": "Sign: red outline on white background",
       "text": [
         "Norwegian traffic signs have a red outline and a **white background**.",
         "NOTE: Both [Swedish](https://www.google.se/maps/@60.2182208,17.4734016,3a,15y,311.3h,89.49t/data=!3m6!1e1!3m4!1spg1fT6h2pXchIZ0XtF9UHA!2e0!7i16384!8i8192) and [Finnish](https://www.google.com/maps/@65.00534,25.5795144,3a,15y,139.16h,87.81t/data=!3m6!1e1!3m4!1s17sGKjC9XHOAQHw_NCoL_A!2e0!7i16384!8i8192) road signs have a yellow background."
@@ -995,7 +1107,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic signs have a red outline and a white background. Swedish and Finnish ones have a yellow background.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Yellow background"
+        },
+        {
+          "country": "FI",
+          "how": "Yellow background"
+        }
+      ]
     },
     {
       "id": "no-IYC5",
@@ -1003,7 +1126,7 @@
       "order": 19,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: You can also find these road construction signs",
+      "title": "Sign: bright yellow roadworks signs",
       "text": [
         "You can also find these road construction signs, with a **bright yellow** background."
       ],
@@ -1042,7 +1165,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road construction signs have a bright yellow background."
     },
     {
       "id": "no-FI4P",
@@ -1050,7 +1174,7 @@
       "order": 20,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Most smaller road signs will be attached with four visible…",
+      "title": "Sign: four bolts in a tall rectangle",
       "text": [
         "Most smaller road signs will be attached with four visible **sign bolts** in the shape of a tall rectangle. Beware that you may occasionally find [framed signs](https://www.google.com/maps/@58.8495149,5.7367006,3a,21.3y,31.15h,97.95t/data=!3m7!1e1!3m5!1sXRj68ZaFOCOFubBo1k50Nw!2e0!5s20221001T000000!7i16384!8i8192?entry=ttu) instead, particularly in urban settings."
       ],
@@ -1089,7 +1213,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most small road signs are fixed with four visible bolts in a tall rectangle. Framed signs also appear sometimes, mostly in towns."
     },
     {
       "id": "no-Yy1U",
@@ -1097,7 +1222,7 @@
       "order": 21,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Norway uses yellow on black chevrons",
+      "title": "Chevron: yellow on black",
       "text": [
         "Norway uses **yellow on black** chevrons."
       ],
@@ -1152,7 +1277,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curve chevrons are yellow arrows on black."
     },
     {
       "id": "no-raUu",
@@ -1160,7 +1286,7 @@
       "order": 22,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: Small white square signs",
+      "title": "Route marker: small white square sign",
       "text": [
         "Small **white square signs**, displaying the road number on top, and the distance to the closest town, are common to see along medium sized roads.",
         "The road number will be preceded either by an R or an [F](https://www.google.se/maps/@62.2252395,6.269883,3a,15y,195.25h,79.98t/data=!3m6!1e1!3m4!1sz50wFAvEtsVFmAutPi8UBQ!2e0!7i16384!8i8192). F roads show up as Fv on the map and are generally difficult to locate, while R roads lack any letters on the map and are generally more findable."
@@ -1201,14 +1327,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small white square signs showing the road number and the distance to the nearest town are common on medium roads. The number starts with R or F. F roads are hard to locate, R roads are easier."
     },
     {
       "id": "no-qjon",
       "step": 0,
       "order": 23,
       "family": "pole",
-      "title": "Pole: Norwegian poles are normally wooden and often have a small…",
+      "title": "Pole: wooden with small black metal cap",
       "text": [
         "Norwegian poles are normally **wooden** and often have a small black metal cap on the top.",
         "NOTE: This metal cap is also common in both Sweden and Finland."
@@ -1253,14 +1380,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles, often with a small black metal cap on top. Sweden and Finland have this cap too.",
+      "sameAs": [
+        "FI",
+        "SE"
+      ]
     },
     {
       "id": "no-SSKX",
       "step": 0,
       "order": 24,
       "family": "pole",
-      "title": "Pole: Lamps attached to wooden poles in Norway are normally…",
+      "title": "Pole: lamp fixed with one thick bolt",
       "text": [
         "Lamps attached to wooden poles in Norway are normally mounted to the pole with a **thick single bolting**.",
         "NOTE: Sweden and Finland use [double bolting](https://maps.app.goo.gl/JHaTnCsGhkTjLMXJA)."
@@ -1305,14 +1437,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lamps on wooden poles are held by one thick bolting. Sweden and Finland use a double bolting.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Double bolting"
+        },
+        {
+          "country": "FI",
+          "how": "Double bolting"
+        }
+      ]
     },
     {
       "id": "no-jmxl",
       "step": 0,
       "order": 25,
       "family": "architecture",
-      "title": "Architecture: Traditional houses in Norway commonly have grass covered…",
+      "title": "Houses: grass-covered roofs",
       "text": [
         "Traditional houses in Norway commonly have **grass covered roofs**.",
         "NOTE: This is far less common in Sweden and Finland."
@@ -1362,14 +1505,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traditional houses often have grass-covered roofs, which is much less common in Sweden and Finland.",
+      "differs": [
+        {
+          "country": "SE",
+          "how": "Far less common"
+        },
+        {
+          "country": "FI",
+          "how": "Far less common"
+        }
+      ]
     },
     {
       "id": "no-x2Iy",
       "step": 0,
       "order": 26,
       "family": "car",
-      "title": "Google car: Norway has Generation 4 “smallcam” coverage",
+      "title": "Google car: low smallcam, wide round blur",
       "text": [
         "Norway has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Northern Europe also has smallcam."
@@ -1409,7 +1563,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The newer Gen 4 smallcam sits lower than normal with a big round blur and a small bump at the front. It can be see-through. Most of Northern Europe has it."
     },
     {
       "id": "no-HrQE",
@@ -1417,7 +1572,7 @@
       "order": 0,
       "family": "sign",
       "kind": "route",
-      "title": "Route marker: The first digit of Norwegian road numbers are region…",
+      "title": "Route marker: first digit shows the region",
       "text": [
         "The first digit of Norwegian road numbers are region dependent. Note that there are some exceptions among single and two-digit roads.",
         "There are also a small number of roads beginning with a 9: [Road 9](https://www.google.com/maps/@59.1490125,7.5378803,3a,90y,335.95h,90t/data=!3m6!1e1!3m4!1sm_i-7msFFg-8An7jMJ5ngQ!2e0!7i16384!8i8192), going north of Kristiansand, and a couple of [two-digit roads](https://www.google.com/maps/@69.4423175,25.0443757,3a,90y,259.81h,90t/data=!3m6!1e1!3m4!1sFvaSuyx1SNMphpL0enMWzw!2e0!7i16384!8i8192) in the far north.",
@@ -1439,7 +1594,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The first digit of road numbers depends on the region, with some exceptions among one- and two-digit roads. A few roads start with 9. Regional \"Fv\" roads don't follow the pattern."
     },
     {
       "id": "no-4foM",
@@ -1447,7 +1603,7 @@
       "order": 1,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Bilingual signs with Sámi can be found in several northern…",
+      "title": "Sign: bilingual with Sámi letters Á and Đ",
       "text": [
         "Bilingual signs with **Sámi** can be found in several northern areas in Norway. While the Sámi languages are very different from Norwegian, the best way to recognize them are the letters Á, Đ and the use of several vowels in a row, something which is uncommon in Norwegian.",
         "Note that not all signs in these areas will be bilingual."
@@ -1487,14 +1643,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some northern signs are in two languages with Sámi, which has letters like Á and Đ and many vowels in a row. Not all signs there are bilingual."
     },
     {
       "id": "no-HfAL",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "This species of fern",
+      "title": "Plants: tall bracken fern in the south",
       "text": [
         "This species of fern ([Pteridium aquilinum](https://en.wikipedia.org/wiki/Pteridium_aquilinum), also known as bracken) which typically has a fairly tall stem and many wide leaves branching out, is mostly found in the south of Norway. Beware that [other species](https://www.google.com/maps/@69.9525234,19.5216485,3a,22.3y,336.64h,81.92t/data=!3m7!1e1!3m5!1sRk-ap8hooI0Aq3KJMmq_Jg!2e0!5s20180801T000000!7i16384!8i8192?entry=ttu) of ferns can be found further north."
       ],
@@ -1533,14 +1690,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bracken has a fairly tall stem with many wide leaves, and grows mostly in the south. Other ferns grow further north."
     },
     {
       "id": "no-FTW1",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Spruces are mainly found in the southern half of the country",
+      "title": "Trees: spruce in the southern half",
       "text": [
         "**Spruces** are mainly found in the southern half of the country, particularly in the southeast and around Trondheim."
       ],
@@ -1579,14 +1737,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Spruces grow mainly in the southern half, especially in the southeast and around Trondheim."
     },
     {
       "id": "no-RLu2",
       "step": 1,
       "order": 4,
       "family": "other",
-      "title": "Pines are most common in coastal and far inland areas in…",
+      "title": "Trees: pine on the coast and far inland",
       "text": [
         "**Pines** are most common in coastal and far inland areas in the southern half of the country."
       ],
@@ -1625,14 +1784,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pines are most common on the coast and in far inland areas of the southern half."
     },
     {
       "id": "no-Oub6",
       "step": 1,
       "order": 5,
       "family": "other",
-      "title": "Oaks are mainly found in the far south of Norway",
+      "title": "Trees: oak in the far south",
       "text": [
         "**Oaks** are mainly found in the far south of Norway."
       ],
@@ -1671,14 +1831,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Oaks grow mainly in the far south."
     },
     {
       "id": "no-cISF",
       "step": 1,
       "order": 6,
       "family": "other",
-      "title": "Maples are mainly found in the south",
+      "title": "Trees: maple near southern farmland",
       "text": [
         "**Maples** are mainly found in the south, particularly by the farmlands around Oslo."
       ],
@@ -1719,14 +1880,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Maples grow mainly in the south, especially by the farmland around Oslo."
     },
     {
       "id": "no-OM8Z",
       "step": 1,
       "order": 7,
       "family": "other",
-      "title": "Brightly coloured moss is common to find in the area…",
+      "title": "Plants: brightly coloured moss",
       "text": [
         "**Brightly coloured moss** is common to find in the area between Lillehammer and Oppdal."
       ],
@@ -1765,14 +1927,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Brightly coloured moss is common between Lillehammer and Oppdal."
     },
     {
       "id": "no-x4nu",
       "step": 1,
       "order": 8,
       "family": "other",
-      "title": "Large farmlands are mainly found in three areas",
+      "title": "Landscape: big farmland in three areas",
       "text": [
         "Large farmlands are mainly found in **three areas**, the southeast, the area surrounding Trondheim, and south of Stavanger.",
         "_The following clues will explain how to differentiate between the three._"
@@ -1812,14 +1975,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large farmland is found in only three areas: the southeast, around Trondheim and south of Stavanger. The next clues tell them apart."
     },
     {
       "id": "no-7dqj",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: The largest concentration of farmland is found in the…",
+      "title": "Landscape: very flat farmland",
       "text": [
         "The largest concentration of farmland is found in the southeast, in the general vicinity of Oslo. The area is **much flatter** than most of the country, and it is common to get a rolling landscape with smooth, round forested hills in the distance. The area southeast of Oslo is particularly flat."
       ],
@@ -1859,14 +2023,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The biggest farmland area, around Oslo, is much flatter than most of the country, with smooth round forested hills in the distance. The area southeast of Oslo is the flattest."
     },
     {
       "id": "no-Leu7",
       "step": 1,
       "order": 10,
       "family": "landscape",
-      "title": "Landscape: The farmlands surrounding Trondheim are generally very hilly",
+      "title": "Landscape: very hilly farmland, steep and uneven",
       "text": [
         "The farmlands surrounding Trondheim are generally **very hilly**, and the hills are typically both steeper and more uneven than in the southeast."
       ],
@@ -1905,14 +2070,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Farmland around Trondheim is very hilly, with hills steeper and more uneven than in the southeast."
     },
     {
       "id": "no-0DaH",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "Similarly to the southeast",
+      "title": "Landscape: vast grassy fields, round rock walls",
       "text": [
         "Similarly to the southeast, the farmland south of Stavanger is flatter than most of the country. However, the fields look more **vast** and open, and it is very common to see **rock walls** made of large, round rocks. Furthermore, rather than crops, most fields will only contain grass."
       ],
@@ -1951,14 +2117,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Farmland south of Stavanger is flat, with vast open fields of grass rather than crops, and walls built from large round rocks."
     },
     {
       "id": "no-xAUQ",
       "step": 1,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: While fjords can be found along most of the Norwegian coast",
+      "title": "Landscape: deep fjords, tall mountains",
       "text": [
         "While fjords can be found along most of the Norwegian coast, **deep fjords** surrounded by **tall mountains** are most common between Bergen and Trondheim."
       ],
@@ -1998,14 +2165,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Deep fjords with tall mountains around them are most common between Bergen and Trondheim."
     },
     {
       "id": "no-Iw1G",
       "step": 1,
       "order": 13,
       "family": "landscape",
-      "title": "Landscape: Distinct, sharp, rocky mountains with few trees can be seen…",
+      "title": "Landscape: sharp rocky peaks, few trees",
       "text": [
         "Distinct, **sharp, rocky** mountains with few trees can be seen on the Lofoten Archipelago."
       ],
@@ -2044,14 +2212,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sharp, rocky mountains with few trees are typical of the Lofoten islands."
     },
     {
       "id": "no-A94U",
       "step": 1,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: The northeast of Norway can typically be recognized by a…",
+      "title": "Landscape: rolling land, tiny birches",
       "text": [
         "The northeast of Norway can typically be recognized by a somewhat **rolling landscape**, rather than tall mountains, and vegetation mainly consisting of very **small birches** combined with patched grass."
       ],
@@ -2098,14 +2267,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The northeast has rolling land instead of tall mountains, with very small birches and patchy grass."
     },
     {
       "id": "no-hBEv",
       "step": 1,
       "order": 15,
       "family": "vegetation",
-      "title": "Vegetation: Barren highlands, with no trees or bushes, and often with…",
+      "title": "Vegetation: barren highland, no trees or bushes",
       "text": [
         "Barren highlands, with **no trees or bushes**, and often with rocky mountains along the road, are mostly found in the southwest."
       ],
@@ -2144,14 +2314,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Barren highlands with no trees or bushes, often with rocky mountains by the road, are mostly in the southwest."
     },
     {
       "id": "no-xl0F",
       "step": 1,
       "order": 16,
       "family": "other",
-      "title": "Exposed rock, often spotted with small coastal pines and…",
+      "title": "Landscape: bare rock with small coastal pines",
       "text": [
         "**Exposed rock**, often spotted with small coastal pines and bushes, are mainly found on the south coast."
       ],
@@ -2190,14 +2361,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Exposed rock, often dotted with small coastal pines and bushes, is mainly on the south coast."
     },
     {
       "id": "no-HH6f",
       "step": 1,
       "order": 17,
       "family": "vegetation",
-      "title": "Vegetation: Coastal grasslands with little to no other vegetation and…",
+      "title": "Vegetation: coastal grassland",
       "text": [
         "**Coastal grasslands** with little to no other vegetation and only somewhat low, distant mountains can be found by coastal roads in the far north."
       ],
@@ -2236,14 +2408,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coastal grassland with hardly any other plants and low, distant mountains is found on coastal roads in the far north."
     },
     {
       "id": "no-W3mj",
       "step": 1,
       "order": 18,
       "family": "architecture",
-      "title": "Architecture: While completely white wooden houses can be found in the…",
+      "title": "Houses: all-white wooden villages",
       "text": [
         "While completely **white wooden houses** can be found in the entire country, they’re especially common on the southern coast, where you’ll commonly see entire villages made up of them."
       ],
@@ -2290,14 +2463,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White wooden houses exist everywhere, but whole villages of them are especially common on the south coast."
     },
     {
       "id": "no-VlO3",
       "step": 1,
       "order": 19,
       "family": "pole",
-      "title": "Pole: Black snow poles are most commonly found between Bergen and…",
+      "title": "Snow pole: black plastic",
       "text": [
         "**Black snow poles** are most commonly found between Bergen and Trondheim."
       ],
@@ -2338,14 +2512,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black plastic snow poles are regional, most common between Bergen and Trondheim (mostly the west and central areas) and less often elsewhere."
     },
     {
       "id": "no-9ScA",
       "step": 1,
       "order": 20,
       "family": "pole",
-      "title": "Pole: Small, wide black pole plates, with a single line of…",
+      "title": "Pole plate: small wide black, one line of text",
       "text": [
         "Small, **wide black pole plates**, with a single line of letters and digits, can be found in southeastern Norway."
       ],
@@ -2386,14 +2561,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small, wide black pole plates with a single line of letters and numbers are found in the southeast."
     },
     {
       "id": "no-c3nG",
       "step": 1,
       "order": 21,
       "family": "guardrail",
-      "title": "Guardrail: Rusty guardrails are almost exclusively found in coastal…",
+      "title": "Guardrail: rusty",
       "text": [
         "**Rusty guardrails** are almost exclusively found in coastal regions, and particularly on the southern half of the west coast."
       ],
@@ -2434,42 +2610,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "no-9ybH",
-      "step": 1,
-      "order": 22,
-      "family": "other",
-      "title": "Svalbard is an unincorporated archipelago within the…",
-      "text": [
-        "**Svalbard** is an unincorporated archipelago within the Norwegian Kingdom.",
-        "A separate Plonk It guide to Svalbard can be found [here](https://www.plonkit.net/svalbard)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "aba670bbee33",
-          "src": "https://www.plonkit.net/images/norway/no_svalbard.png",
-          "path": "no/aba670bbee33.webp",
-          "width": 600,
-          "height": 631
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/norway",
-        "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rusty guardrails are almost only found in coastal areas, especially the southern half of the west coast."
     },
     {
       "id": "no-NRTp",
       "step": 2,
       "order": 0,
       "family": "pole",
-      "title": "Pole: Fairly large black or red pole plates can be found in Oslo",
+      "title": "Pole plate: fairly large, black or red",
       "text": [
         "Fairly large **black or red pole plates** can be found in Oslo."
       ],
@@ -2518,14 +2667,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fairly large black or red plates on poles are found in the capital."
     },
     {
       "id": "no-8i89",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "Two red stripes going around lamp posts are commonly found…",
+      "title": "Lamp posts: two red stripes",
       "text": [
         "**Two red stripes** going around lamp posts are commonly found in Stavanger."
       ],
@@ -2564,14 +2714,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two red stripes around lamp posts are common in the southwestern city of Stavanger."
     },
     {
       "id": "no-p8gR",
       "step": 2,
       "order": 2,
       "family": "other",
-      "title": "You can find this specific design of green fire hydrants in…",
+      "title": "Fire hydrant: specific green design",
       "text": [
         "You can find this specific design of **green fire hydrants** in Bergen."
       ],
@@ -2610,14 +2761,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A particular green fire hydrant design is found in the west coast city of Bergen."
     },
     {
       "id": "no-wQZ6",
       "step": 2,
       "order": 3,
       "family": "coverage",
-      "title": "Coverage: Along the Russian border you can see this noticeably humid…",
+      "title": "Coverage: humid green road, overcast",
       "text": [
         "Along the Russian border you can see this noticeably humid and green-looking road, with very overcast and occasionally [foggy](https://goo.gl/maps/kJpWE2wYp4YCGQF8A) coverage. The trees are somewhat low and mainly consist of thin birches and pines."
       ],
@@ -2656,7 +2808,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the Russian border the road looks humid and green with very overcast, sometimes foggy coverage. Trees are fairly low, mostly thin birches and pines."
     },
     {
       "id": "no-0l1i",
@@ -2664,7 +2817,7 @@
       "order": 4,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Russian can sometimes be seen alongside Norwegian on signs…",
+      "title": "Language: Russian beside local on signs",
       "text": [
         "**Russian** can sometimes be seen alongside Norwegian on signs near the Russian border. It is mostly found on roads E6 and E105 near Kirkenes."
       ],
@@ -2703,14 +2856,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Russian sometimes appears next to Norwegian on signs near the Russian border, mostly on the E6 and E105 near Kirkenes."
     },
     {
       "id": "no-lXDj",
       "step": 2,
       "order": 5,
       "family": "architecture",
-      "title": "Architecture: The old mining town of Røros can be recognised by the…",
+      "title": "Houses: densely built old wooden town",
       "text": [
         "The old mining town of Røros can be recognised by the **densely built** traditional wooden architecture."
       ],
@@ -2749,75 +2903,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/norway",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "no-lm-43",
-      "step": 3,
-      "order": 0,
-      "family": "line",
-      "title": "Road line: Long outer lines",
-      "text": [
-        "If you see long dashed outer lines, you'll know it's Norway. You can find similar dashed lines with the same climate in Sweden, but they will be half the length, and Finland uses full outer lines.",
-        "(N)orway for normal, (S)weden for short, and (F)inland for full."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ce69da934437",
-          "src": "https://learnablemeta.com/images/rZkP97bl7y9ntbTURnTePsgE3k3wXthM8tgC.avif",
-          "path": "no/ce69da934437.webp",
-          "width": 1000,
-          "height": 923
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-2999",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Norway",
-      "text": [
-        "**4 Zebra Stripes**: Norway, Sweden, Bulgaria. > **Bold, non-detailed person**: only Norway."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "984538d02c58",
-          "src": "https://learnablemeta.com/images/90/WLM9GFF3JZHgXg8SWtQiS5Kgdkezfb0ob5R6.avif",
-          "path": "no/984538d02c58.webp",
-          "width": 1000,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BG",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The old mining town of Røros has densely packed traditional wooden buildings."
     },
     {
       "id": "no-lm-3313",
       "step": 3,
       "order": 2,
       "family": "other",
-      "title": "Snelandia",
+      "title": "Bus: company name \"Snelandia\"",
       "text": [
         "Finnmark has a bus company called Snelandia"
       ],
@@ -2837,14 +2931,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in the far north county of Finnmark are run by a company called Snelandia."
     },
     {
       "id": "no-lm-3314",
       "step": 3,
       "order": 3,
       "family": "other",
-      "title": "Troms",
+      "title": "Bus: blue diamond logo with a small t",
       "text": [
         "Troms bus company uses this blue rombus shaped logo with a lowercase t"
       ],
@@ -2864,14 +2959,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Troms use a blue diamond-shaped logo with a lowercase t."
     },
     {
       "id": "no-lm-3319",
       "step": 3,
       "order": 4,
       "family": "other",
-      "title": "Frammr",
+      "title": "Bus: brand name \"FRAMMR\"",
       "text": [
         "More og Romsdal uses FRAMMR brand buses"
       ],
@@ -2891,14 +2987,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Møre og Romsdal use the FRAMMR brand."
     },
     {
       "id": "no-lm-3320",
       "step": 3,
       "order": 5,
       "family": "other",
-      "title": "Skyss",
+      "title": "Bus: brand name \"Skyss\"",
       "text": [
         "Vestland uses Skyss brand buses"
       ],
@@ -2918,14 +3015,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Vestland use the Skyss brand."
     },
     {
       "id": "no-lm-3321",
       "step": 3,
       "order": 6,
       "family": "other",
-      "title": "Kollektivtrafikk",
+      "title": "Bus: green swoosh logo",
       "text": [
         "Vestfold uses this distinct, green, swoosh-shaped logo"
       ],
@@ -2945,14 +3043,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Vestfold use a distinct green swoosh-shaped logo."
     },
     {
       "id": "no-lm-3322",
       "step": 3,
       "order": 7,
       "family": "other",
-      "title": "Nordland",
+      "title": "Bus: dual \"Nordland\" and \"Reis\" logos",
       "text": [
         "Nordland uses a dual logo bus with the brands Nordland and Reis"
       ],
@@ -2972,14 +3071,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Nordland carry two brands, Nordland and Reis."
     },
     {
       "id": "no-lm-3323",
       "step": 3,
       "order": 8,
       "family": "other",
-      "title": "Atb",
+      "title": "Bus: \"AtB\" logo",
       "text": [
         "Trondelag uses this logo for their AtB bus company"
       ],
@@ -2999,7 +3099,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Trøndelag use the AtB brand."
     },
     {
       "id": "no-lm-3324",
@@ -3007,7 +3108,7 @@
       "order": 9,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Kolumbus",
+      "title": "Bus: green \">\" shaped logo",
       "text": [
         "Rogaland uses Kolumbus buses with this distinct, green greater than sign shaped logo."
       ],
@@ -3027,14 +3128,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Rogaland are Kolumbus, with a green greater-than-sign logo."
     },
     {
       "id": "no-lm-3325",
       "step": 3,
       "order": 10,
       "family": "other",
-      "title": "Farte",
+      "title": "Bus: brand name \"Farte\"",
       "text": [
         "Telemark uses Farte brand buses. If you speak English and have a sense of humor you shouldn't have trouble remembering these."
       ],
@@ -3054,14 +3156,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Telemark use the Farte brand, a name that is easy to remember in English."
     },
     {
       "id": "no-lm-3326",
       "step": 3,
       "order": 11,
       "family": "other",
-      "title": "Agder",
+      "title": "Bus: green circular \"A\" logo",
       "text": [
         "Agder bus company has a **green circular A** logo"
       ],
@@ -3081,14 +3184,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Agder bus company has a green circular A logo."
     },
     {
       "id": "no-lm-3327",
       "step": 3,
       "order": 12,
       "family": "other",
-      "title": "Brakar",
+      "title": "Bus: brand name \"Brakar\"",
       "text": [
         "Buskerud has the Brakar bus company with the shown logo"
       ],
@@ -3108,14 +3212,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses in Buskerud are Brakar, with the logo shown."
     },
     {
       "id": "no-lm-3328",
       "step": 3,
       "order": 13,
       "family": "other",
-      "title": "Innlandstrafikk",
+      "title": "Bus: brand name \"Innlandstrafikk\"",
       "text": [
         "Innlandet has a bus company called Innlandstrafikk."
       ],
@@ -3135,14 +3240,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The bus company in Innlandet is called Innlandstrafikk."
     },
     {
       "id": "no-lm-3329",
       "step": 3,
       "order": 14,
       "family": "other",
-      "title": "Ruter",
+      "title": "Bus: brand name \"Ruter\" with # symbol",
       "text": [
         "Oslo and Akershus use Ruter brand buses. The most distinguishing factor is the hashtag symbol that is always present."
       ],
@@ -3162,730 +3268,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/677210e735752b326ca2db55",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7716",
-      "step": 3,
-      "order": 15,
-      "family": "language",
-      "title": "Language: Language - Sámi Signs",
-      "text": [
-        "Bilingual signs with **Sámi** can be found in several northern areas in Norway. While the Sámi languages are very different from Norwegian, the best way to recognize them are the letters Á, Đ and the use of several vowels in a row, something which is uncommon in Norwegian. Note that not all signs in these areas will be bilingual."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f66d8d52adc4",
-          "src": "https://learnablemeta.com/images/37/R5j8k2IkD94xZi5jy6tQYZaYYvJ9RCXOwSs1.avif",
-          "path": "no/f66d8d52adc4.webp",
-          "width": 1000,
-          "height": 494
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7717",
-      "step": 3,
-      "order": 16,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Bracken",
-      "text": [
-        "This species of fern ( Pteridium aquilinum , also known as **bracken**) which typically has a fairly tall stem and many wide leafs branching out, is mostly found in the south of Norway. Beware that other species of ferns can be found further north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5b5890d947df",
-          "src": "https://learnablemeta.com/images/37/tWSBZOri5RktDqwt8GUgWwN5EYeLv1xoPCtJ.avif",
-          "path": "no/5b5890d947df.webp",
-          "width": 1000,
-          "height": 502
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7718",
-      "step": 3,
-      "order": 17,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Spruce",
-      "text": [
-        "**Spruces** are mainly found in the southern half of the country, particularly in the southeast and around Trondheim."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6f74d9e8c4f7",
-          "src": "https://learnablemeta.com/images/37/yV2RzO3whytD8LilKZ8TDyCCFS6WSWNeWTaV.avif",
-          "path": "no/6f74d9e8c4f7.webp",
-          "width": 1000,
-          "height": 509
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7719",
-      "step": 3,
-      "order": 18,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Pine",
-      "text": [
-        "**Pines** are most common in coastal and far inland areas in the southern half of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "017e6dd7e774",
-          "src": "https://learnablemeta.com/images/37/yaCdy47zxisdQdWW5Z1sRPs13yHcRbQdaywa.avif",
-          "path": "no/017e6dd7e774.webp",
-          "width": 1000,
-          "height": 498
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7720",
-      "step": 3,
-      "order": 19,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Oaks",
-      "text": [
-        "**Oaks** are mainly found in the far south of Norway."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4a34b9615d01",
-          "src": "https://learnablemeta.com/images/37/PM3b5ndNx0usPSwVo09CvyPtqyRqUhJ8kjsG.avif",
-          "path": "no/4a34b9615d01.webp",
-          "width": 1000,
-          "height": 491
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7721",
-      "step": 3,
-      "order": 20,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Maple",
-      "text": [
-        "**Maples** are mainly found in the south, particularly by the farmlands around Oslo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "218f020825e9",
-          "src": "https://learnablemeta.com/images/37/bs65vAEOK94iLfLj0LB8nT0KBbsu6uSS1jsG.avif",
-          "path": "no/218f020825e9.webp",
-          "width": 1000,
-          "height": 508,
-          "dupeOf": "9cb4286b97b2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7722",
-      "step": 3,
-      "order": 21,
-      "family": "vegetation",
-      "title": "Vegetation: Vegetation - Bright Moss",
-      "text": [
-        "**Brightly colored moss** is common to find in the area between **Lillehammer** and **Oppdal**"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "78a054806d6f",
-          "src": "https://learnablemeta.com/images/37/C4ZphDS7jTykxg3MYFoiL3UMsY8jtFa8vyQD.avif",
-          "path": "no/78a054806d6f.webp",
-          "width": 1000,
-          "height": 488,
-          "dupeOf": "7dd7e31a6527"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7723",
-      "step": 3,
-      "order": 22,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Oslo Farmlands",
-      "text": [
-        "The largest concentration of farmland is found in the southeast, in the general vicinity of Oslo. The area is **much flatter** than most of the country, and it is common to get a rolling landscape with smooth, round forested hills in the distance. The area southeast of Oslo is particularly flat."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a9d56d71df3a",
-          "src": "https://learnablemeta.com/images/37/sjzjI7nKKnwQuLPeJNokN8tvU6AYXyAEoNkl.avif",
-          "path": "no/a9d56d71df3a.webp",
-          "width": 1000,
-          "height": 505,
-          "dupeOf": "eb5e7fa131ab"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7724",
-      "step": 3,
-      "order": 23,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Trondheim Farmlands",
-      "text": [
-        "The farmlands surrounding Trondheim are generally **very hilly**, and the hills are typically both steeper and more uneven than in the southeast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6a9076b7b796",
-          "src": "https://learnablemeta.com/images/37/yzCo9dkp7MFBL0qSYBP1tyzMCZ7nhWNCmbYy.avif",
-          "path": "no/6a9076b7b796.webp",
-          "width": 1000,
-          "height": 498
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7725",
-      "step": 3,
-      "order": 24,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Stavanger Farmlands",
-      "text": [
-        "The farmland south of Stavanger is flatter than most of the country. The fields look **vast** and open, and it is very common to see **rock walls** made of large, round rocks. Furthermore, rather than crops, most fields will only contain grass."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "47d35fbf692d",
-          "src": "https://learnablemeta.com/images/37/0Go2zvySu4ODqG4ljU9HulCfJJsxc5prZ8fN.avif",
-          "path": "no/47d35fbf692d.webp",
-          "width": 1000,
-          "height": 493,
-          "dupeOf": "e439fde9980d"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7726",
-      "step": 3,
-      "order": 25,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Deep Fjords",
-      "text": [
-        "While fjords can be found along most of the Norwegian coast, **deep fjords** surrounded by **tall mountains** are most common between **Bergen** and **Trondheim**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "60dd8ca415e5",
-          "src": "https://learnablemeta.com/images/37/5x6659FJ2zkqR9qOVpm1TSWAmvQ28wUgfzg3.avif",
-          "path": "no/60dd8ca415e5.webp",
-          "width": 1000,
-          "height": 499
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7727",
-      "step": 3,
-      "order": 26,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Lofoten Mountains",
-      "text": [
-        "Distinct, **sharp, rocky** mountains with few trees can be seen on the Lofoten Archipelago."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f5b164178009",
-          "src": "https://learnablemeta.com/images/37/uE1Y8EWPCOmEcBAM7NL781kCoxTQgVmhStBS.avif",
-          "path": "no/f5b164178009.webp",
-          "width": 1000,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7728",
-      "step": 3,
-      "order": 27,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Northeastern Landscape",
-      "text": [
-        "The northeast of Norway can typically be recognized by a somewhat **rolling landscape**, rather than tall mountains, and vegetation mainly consisting of very **small birches** combined with patched grass."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8dc6e284959b",
-          "src": "https://learnablemeta.com/images/37/Dt2lUduXW8QF13eKdxghes5ecoDja96n9Fth.avif",
-          "path": "no/8dc6e284959b.webp",
-          "width": 1000,
-          "height": 495
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7729",
-      "step": 3,
-      "order": 28,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Highlands",
-      "text": [
-        "Barren highlands, with **no trees or bushes**, and often with rocky mountains along the road, are mostly found in the southwest."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4af7802c3bd1",
-          "src": "https://learnablemeta.com/images/37/89sWy6p3FY8vgZlGC1QeylRi6k1BKVCdgnIt.avif",
-          "path": "no/4af7802c3bd1.webp",
-          "width": 1000,
-          "height": 504,
-          "dupeOf": "334d465956b0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7730",
-      "step": 3,
-      "order": 29,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Exposed Rock",
-      "text": [
-        "**Exposed rock**, often spotted with small coastal pines and bushes, is mainly found on the south coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4c78a067742e",
-          "src": "https://learnablemeta.com/images/37/05YDNwzldTScSrod81RkqvgduE1Oz9bTIBT2.avif",
-          "path": "no/4c78a067742e.webp",
-          "width": 1000,
-          "height": 507
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7731",
-      "step": 3,
-      "order": 30,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Northern Coastal Grasslands",
-      "text": [
-        "**Coastal grasslands** with little to no other vegetation and only somewhat low, distant mountains can be found by coastal roads in the far north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "538c0658b63b",
-          "src": "https://learnablemeta.com/images/37/rKvugJ5JQIJhR54xUz2FbT2trPtjcwfaLN1o.avif",
-          "path": "no/538c0658b63b.webp",
-          "width": 1000,
-          "height": 495
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7732",
-      "step": 3,
-      "order": 31,
-      "family": "architecture",
-      "title": "Architecture: Architecture - White House Village",
-      "text": [
-        "While completely **white wooden houses** can be found in the entire country, they're especially common on the southern coast, where you'll commonly see entire villages made up of them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ea569e9dc8c1",
-          "src": "https://learnablemeta.com/images/37/m4lEQ9W59H2S5eAYbc49SWyeDmNHj7GRMpzF.avif",
-          "path": "no/ea569e9dc8c1.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7733",
-      "step": 3,
-      "order": 32,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Black Snow Poles",
-      "text": [
-        "**Black plastic snowpoles** are more regional and will mostly be found in Trøndelag, Møre og Romsdal and Vestland, but can also be found in Nordland and more rarely in Innlandet, Buskerud, Rogaland and Telemark"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7869bb889d49",
-          "src": "https://learnablemeta.com/images/37/Ot2v141gPB5RcTkEcNmupmWeOBdHQgHrW0eW.avif",
-          "path": "no/7869bb889d49.webp",
-          "width": 725,
-          "height": 1000
-        },
-        {
-          "id": "0b1584bf2dda",
-          "src": "https://learnablemeta.com/images/37/fNJAcQYg3HbHqtnIt6JrPm81Sqc0Ol5z5muM.avif",
-          "path": "no/0b1584bf2dda.webp",
-          "width": 1000,
-          "height": 699
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7734",
-      "step": 3,
-      "order": 33,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Wide Black ID",
-      "text": [
-        "Small, **wide black pole plates**, with a single line of letters and digits, can be found in southeastern Norway."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "90eebb019cb1",
-          "src": "https://learnablemeta.com/images/37/Dcio9EDavxJL6czhjKec3grDf8awsvx8xwr3.avif",
-          "path": "no/90eebb019cb1.webp",
-          "width": 1000,
-          "height": 500,
-          "dupeOf": "d22f6ce1e4f1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7735",
-      "step": 3,
-      "order": 34,
-      "family": "guardrail",
-      "title": "Guardrail: Infrastructure - Rusty Guardrail",
-      "text": [
-        "**Rusty guardrails** are almost exclusively found in coastal regions, and particularly on the southern half of the west coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a7b82a6ca78f",
-          "src": "https://learnablemeta.com/images/37/E9PPYmAOiey4qq2hH9F5y2JhRVyP1q4fc4qY.avif",
-          "path": "no/a7b82a6ca78f.webp",
-          "width": 1000,
-          "height": 504
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7736",
-      "step": 3,
-      "order": 35,
-      "family": "landscape",
-      "title": "Landscape: Landscape - Russian Border Road",
-      "text": [
-        "Along the Russian border you can see this noticeably humid and green-looking road, with very overcast and occasionally foggy coverage. The trees are somewhat low and mainly consist of thin birches and pines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f4191b4c476e",
-          "src": "https://learnablemeta.com/images/37/3W9R2oU4oK4pKCxbunmt7wxwYG9WLkffYRIL.avif",
-          "path": "no/f4191b4c476e.webp",
-          "width": 1000,
-          "height": 499
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7737",
-      "step": 3,
-      "order": 36,
-      "family": "pole",
-      "title": "Pole: Infrastructure - Oslo Pole Plate",
-      "text": [
-        "Fairly large **black or red pole plates** can be found in Oslo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "722dbbadd6c3",
-          "src": "https://learnablemeta.com/images/37/lYul3G861Ubk1C1VREbU11fGHnEmbok3PScw.avif",
-          "path": "no/722dbbadd6c3.webp",
-          "width": 1000,
-          "height": 490
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7738",
-      "step": 3,
-      "order": 37,
-      "family": "other",
-      "title": "Infrastructure - Two Red Stripes",
-      "text": [
-        "**Two red stripes** going around lamp posts are commonly found in Stavanger."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cca6b767cc3c",
-          "src": "https://learnablemeta.com/images/37/44iHTOcZeYuc6aYJsGLkzNhOEoFdSPaQEJkE.avif",
-          "path": "no/cca6b767cc3c.webp",
-          "width": 1000,
-          "height": 509
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7739",
-      "step": 3,
-      "order": 38,
-      "family": "other",
-      "title": "Infrastructure - Bergen Hydrant",
-      "text": [
-        "You can find this specific design of **green fire hydrants** in Bergen."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b97a56100fa6",
-          "src": "https://learnablemeta.com/images/37/K6JxapMH44zAvqRoyLZ62mIfm3GiR36YhDmD.avif",
-          "path": "no/b97a56100fa6.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7740",
-      "step": 3,
-      "order": 39,
-      "family": "language",
-      "title": "Language: Language - Russian language",
-      "text": [
-        "**Russian** can sometimes be seen alongside Norwegian on signs near the Russian border. It is mostly found on roads E6 and E105 near Kirkenes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2ad2aa78aa0c",
-          "src": "https://learnablemeta.com/images/37/moxHYa1fGlth9PaZYhOSv0qNNY1USdjk4uBD.avif",
-          "path": "no/2ad2aa78aa0c.webp",
-          "width": 1000,
-          "height": 503
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-7741",
-      "step": 3,
-      "order": 40,
-      "family": "architecture",
-      "title": "Architecture: Architecture - Røros Architecture",
-      "text": [
-        "The old mining town of Røros can be recognised by the **densely built** traditional wooden architecture."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c8b7cd0663c0",
-          "src": "https://learnablemeta.com/images/37/pdnjXIdJyU5rg7FKDMGEzvOSPQmfEpxtYqN1.avif",
-          "path": "no/c8b7cd0663c0.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "82336c4301c4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Buses around the capital are Ruter. The most distinctive part is the hashtag symbol that is always shown."
     },
     {
       "id": "no-lm-7742",
       "step": 3,
       "order": 41,
       "family": "pole",
-      "title": "Pole: Infrastructure - Bamboo Snow Pole",
+      "title": "Snow pole: bamboo",
       "text": [
         "**Bamboo** snowpoles are regional and can mostly be found in Innlandet, Akershus, Østfold, Buskerud and Vestfold but can also be found rarely in Trøndelag, Vestland, Agder, Telemark and Rogaland."
       ],
@@ -3912,14 +3303,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Bamboo snow poles are regional, mostly in the inland and east-central counties, and rarely in the west and south."
     },
     {
       "id": "no-lm-7743",
       "step": 3,
       "order": 42,
       "family": "other",
-      "title": "Infrastructure - Small Blue Snowpole",
+      "title": "Snow pole: small and blue",
       "text": [
         "**Small blue snowpoles** can be found around Elverum."
       ],
@@ -3939,14 +3331,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Small blue snow poles are found around the town of Elverum."
     },
     {
       "id": "no-lm-7744",
       "step": 3,
       "order": 43,
       "family": "other",
-      "title": "Infrastructure - Senja Snowpoles",
+      "title": "Snow pole: green plastic",
       "text": [
         "**Green plastic snowpoles** are found mostly around the island of Senja in Troms since the company selling these is also located there. The company also sells other colors less frequently. These can also less commonly be found all over Troms and Finnmark."
       ],
@@ -3966,14 +3359,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Green plastic snow poles are found mostly around the island of Senja in Troms, where the seller is based, and less often across Troms and Finnmark."
     },
     {
       "id": "no-lm-7745",
       "step": 3,
       "order": 44,
       "family": "other",
-      "title": "Infrastructure - Big Wooden Snowpole",
+      "title": "Snow pole: big wooden sticks",
       "text": [
         "**Big wooden sticks** are found on roads that are covered with snow almost the entire year. So far, they've been spotted on the road that runs north of Hardangervidda National Park, on the road west of Jotunheimen and southwest of Valdres Natur-og kulturpark."
       ],
@@ -4000,14 +3394,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Big wooden sticks mark roads that stay snowy almost all year, such as north of Hardangervidda, west of Jotunheimen and southwest of Valdres."
     },
     {
       "id": "no-lm-7746",
       "step": 3,
       "order": 45,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Thick Snow Road",
+      "title": "Road: thick snow beside a skinny road",
       "text": [
         "This road between Aadneram and Nomeland in Agder features a **thick 1m high snow** along the **skinny road**. You will **not find trees** along this road."
       ],
@@ -4041,14 +3436,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A skinny road with about 1 metre of thick snow beside it and no trees. This is the road between Aadneram and Nomeland."
     },
     {
       "id": "no-lm-7747",
       "step": 3,
       "order": 46,
       "family": "landscape",
-      "title": "Landscape: Landscape - 82 (Andoya)",
+      "title": "Road: flat, tabletop hill, short scrub",
       "text": [
         "The 82 on the island of Andoya, which is part of the Lofoten archipelago, is **flat** apart from **one tabletop looking hill**. In generall, the hills on this road are quite unique and recognizable. You will find **short scrubs** along the road. Often, you will be able to see **water**."
       ],
@@ -4084,14 +3480,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A flat road with one hill shaped like a table, short scrub along the road and often water in view, on an island in the far north."
     },
     {
       "id": "no-lm-7748",
       "step": 3,
       "order": 47,
       "family": "landscape",
-      "title": "Landscape: Landscape - E10, East of Narvik",
+      "title": "Road: very green, big treeless mountains",
       "text": [
         "This road is **very green** and usually features **big mountains with no trees**. Right on the Swedish border you will find parts without trees."
       ],
@@ -4126,14 +3523,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A very green road with big mountains that have no trees. Right at the Swedish border there are parts without trees."
     },
     {
       "id": "no-lm-7749",
       "step": 3,
       "order": 48,
       "family": "landscape",
-      "title": "Landscape: Landscape - E10 in Lofoten",
+      "title": "Road: huge mountains, skinny, bridges",
       "text": [
         "This road features **huge mountains**. It is a **skinny road** that has **water to the east**. Lots of sections have **bridges** or **open tunnels**. You will frequently find **fireweed** on the sides of the road. The vegetation on this road has a **yellowish tone**."
       ],
@@ -4168,14 +3566,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A skinny road with huge mountains, water to the east, many bridges and open tunnels, fireweed along the sides and yellowish vegetation."
     },
     {
       "id": "no-lm-7750",
       "step": 3,
       "order": 49,
       "family": "landscape",
-      "title": "Landscape: Landscape - E10 on the border of Troms and Nordland",
+      "title": "Road: valley with treeless mountain range",
       "text": [
         "This road **runs through a valley**. You can see a **big mountain range along the road**, with **no trees on the mountain**. Some sections are **very green**, and some section feature **fireweed**."
       ],
@@ -4210,14 +3609,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A road through a valley with a big mountain range without trees alongside, some very green parts and some with fireweed."
     },
     {
       "id": "no-lm-7751",
       "step": 3,
       "order": 50,
       "family": "landscape",
-      "title": "Landscape: Landscape - Lysevegen",
+      "title": "Road: very windy and skinny with 28 hairpins",
       "text": [
         "Lysevegen is a **very windy and skinny road** with 28 180° turns down the mountain. Notably, there are **big power lines** visible. You can see **huge mountains** in the distance. The coverage is **very cloudy**."
       ],
@@ -4251,14 +3651,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A very windy, skinny road with 28 hairpin turns down a mountain. Big power lines, huge mountains in the distance and very cloudy coverage."
     },
     {
       "id": "no-lm-7752",
       "step": 3,
       "order": 51,
       "family": "landscape",
-      "title": "Landscape: Landscape - End of the World Road",
+      "title": "Road: no trees, small white rocks",
       "text": [
         "This famous road can be identified by the **lack of trees** and the **small white rocks**. The visibility in the coverage is somewhat low. Some sections are very flat, while others can have small hills and lakes."
       ],
@@ -4293,14 +3694,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A famous road with no trees and small white rocks, with fairly low visibility. Some parts are flat, others have small hills and lakes."
     },
     {
       "id": "no-lm-7753",
       "step": 3,
       "order": 52,
       "family": "landscape",
-      "title": "Landscape: Landscape - Atlanterhavsveien",
+      "title": "Road: dark-rock bridges, water on both sides",
       "text": [
         "This road uses **dark rocks** as bridges. You will see **water on both sides of the road**. The coverage features **dark clouds**.",
         "The road includes the famous Storseisundet bridge."
@@ -4343,14 +3745,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A road using dark rocks as bridges, with water on both sides and dark clouds. It includes a famous bridge."
     },
     {
       "id": "no-lm-7754",
       "step": 3,
       "order": 53,
       "family": "landscape",
-      "title": "Landscape: Landscape - Røst Island",
+      "title": "Coverage: flat island, Gen 2, lots of boats",
       "text": [
         "This island has only **Gen 2** coverage. You will see **lots of boats everywhere**. The landscape is **flat** and **islandish** (duh)."
       ],
@@ -4384,14 +3787,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A flat island with only old Gen 2 coverage and lots of boats everywhere."
     },
     {
       "id": "no-lm-7755",
       "step": 3,
       "order": 54,
       "family": "landscape",
-      "title": "Landscape: Landscape - Trollstigen",
+      "title": "Road: very steep, windy, dark rock with moss",
       "text": [
         "Trollstigen leads down a **huge mountain**, and is surrounded by such. The road is **very steep and windy**. The rock is **very dark** and has **green moss** on it. Some sections are cut into the rock, with waterfalls appearing."
       ],
@@ -4425,14 +3829,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A road down a huge mountain, very steep and windy, with very dark rock and green moss. Some parts are cut into the rock, with waterfalls."
     },
     {
       "id": "no-lm-7756",
       "step": 3,
       "order": 55,
       "family": "coverage",
-      "title": "Coverage: Coverage Meta - Snow Road",
+      "title": "Coverage: road completely covered in snow",
       "text": [
         "The road between Atna and Ringebu in Innlandet is **completely covered in snow**. You will find a **winter wonderland with green rocks**"
       ],
@@ -4466,1155 +3871,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-23859",
-      "step": 3,
-      "order": 56,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "Norway is a very mountainous country, with many fjords along most of the coast.",
-        "**--- NOTE:**",
-        "Finland and Denmark are both mostly flat, while Sweden has a mixture of flat, hilly and mountainous areas."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c0e528e54296",
-          "src": "https://learnablemeta.com/images/768/4kNAbe7UFPmgEDNFwLkgp2TxIaIvZnazpahI.avif",
-          "path": "no/c0e528e54296.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "d520348ba363"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DK",
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24605",
-      "step": 3,
-      "order": 57,
-      "family": "vegetation",
-      "title": "Vegetation: Barren Highlands",
-      "text": [
-        "Barren highlands, with no trees or bushes, and often with rocky mountains along the road, are mostly found in the southwest."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "9d5cb5c12d3e",
-          "src": "https://learnablemeta.com/images/664/1WYVBZtudyQ5wnJvS3oZ6LLZ4eowvoz5Jl9F.avif",
-          "path": "no/9d5cb5c12d3e.webp",
-          "width": 1000,
-          "height": 559
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24606",
-      "step": 3,
-      "order": 58,
-      "family": "landscape",
-      "title": "Landscape: Deep Fjords",
-      "text": [
-        "While fjords can be found along most of the Norwegian coast, deep fjords surrounded by tall mountains are most common between Bergen and Trondheim."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e2f3eb1dde2e",
-          "src": "https://learnablemeta.com/images/664/n45w7W4z2FBatHy5X3nNs2dWHCxGAEzELrqH.avif",
-          "path": "no/e2f3eb1dde2e.webp",
-          "width": 1000,
-          "height": 557
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24607",
-      "step": 3,
-      "order": 59,
-      "family": "other",
-      "title": "Farmlands",
-      "text": [
-        "Large farmlands are mainly found in three areas, the southeast, the area surrounding Trondheim, and south of Stavanger."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "91e516b2643e",
-          "src": "https://learnablemeta.com/images/664/fV7KV74yEHk7aG8EA51qrQdYygPZAmQTMKX9.avif",
-          "path": "no/91e516b2643e.webp",
-          "width": 1000,
-          "height": 566
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24608",
-      "step": 3,
-      "order": 60,
-      "family": "other",
-      "title": "Farmlands Trondheim",
-      "text": [
-        "The farmlands surrounding Trondheim are generally very hilly which are often quite steep"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e7ab61d50c6a",
-          "src": "https://learnablemeta.com/images/664/4PEalZnbwHx3fHFQIvKrd1XJY21QvEkAveoK.avif",
-          "path": "no/e7ab61d50c6a.webp",
-          "width": 1000,
-          "height": 558
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24609",
-      "step": 3,
-      "order": 61,
-      "family": "landscape",
-      "title": "Landscape: Lofoten",
-      "text": [
-        "Distinct, sharp, rocky mountains with few trees can be seen on the Lofoten Archipelago."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ee1f2caf3e24",
-          "src": "https://learnablemeta.com/images/664/EH7lUjMXwW4nkUZLeTvS6rrsk01n0CGMN8R1.avif",
-          "path": "no/ee1f2caf3e24.webp",
-          "width": 1000,
-          "height": 553
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24610",
-      "step": 3,
-      "order": 62,
-      "family": "coverage",
-      "title": "Coverage: Russia Border",
-      "text": [
-        "Along the Russian border you can see this noticeably humid and green-looking road, with very overcast and occasionally foggy coverage. The trees are somewhat low and mainly consist of thin birches and pines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c4173a9714f0",
-          "src": "https://learnablemeta.com/images/664/x2MLxWev2YYGLLOWnIsn3D7rsZtFY4Vv5SJj.avif",
-          "path": "no/c4173a9714f0.webp",
-          "width": 1000,
-          "height": 488,
-          "dupeOf": "38eb3e65a0dd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-24611",
-      "step": 3,
-      "order": 63,
-      "family": "vegetation",
-      "title": "Vegetation: Far North Grassland",
-      "text": [
-        "Coastal grasslands with little to no other vegetation and only somewhat low, distant mountains can be found by coastal roads in the far north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "212bd9309b62",
-          "src": "https://learnablemeta.com/images/664/pMGnJDHW6pwOEch6TCVNgAJPf6ws730wOfTr.avif",
-          "path": "no/212bd9309b62.webp",
-          "width": 1000,
-          "height": 489
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-50425",
-      "step": 3,
-      "order": 64,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "Norway is a very mountainous country, with many fjords along most of the coast.",
-        "**--- NOTE:**",
-        "Finland and Denmark are both mostly flat, while Sweden has a mixture of flat, hilly and mountainous areas."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c0e528e54296",
-          "src": "https://learnablemeta.com/images/768/4kNAbe7UFPmgEDNFwLkgp2TxIaIvZnazpahI.avif",
-          "path": "no/c0e528e54296.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "d520348ba363"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DK",
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-51169",
-      "step": 3,
-      "order": 65,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "Norway is a very mountainous country, with many fjords along most of the coast.",
-        "**--- NOTE:**",
-        "Finland and Denmark are both mostly flat, while Sweden has a mixture of flat, hilly and mountainous areas."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c0e528e54296",
-          "src": "https://learnablemeta.com/images/768/4kNAbe7UFPmgEDNFwLkgp2TxIaIvZnazpahI.avif",
-          "path": "no/c0e528e54296.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "d520348ba363"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "DK",
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-515567",
-      "step": 3,
-      "order": 66,
-      "family": "guardrail",
-      "title": "Guardrail: Wooden posts",
-      "text": [
-        "Norway uses A-Type guardrails. Guardrails often have wooden posts.",
-        "NOTE: This is not common in Sweden or Finland."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "07fe930cf6d5",
-          "src": "https://learnablemeta.com/images/3660/1755389749151-ABt.avif",
-          "path": "no/07fe930cf6d5.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "432455f989fc"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "FI",
-        "SE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-556783",
-      "step": 3,
-      "order": 67,
-      "family": "pole",
-      "title": "Pole: Bamboo snow poles",
-      "text": [
-        "Bamboo snow poles are regional and can mostly be found in Innlandet, Akershus, Østfold, Buskerud and Vestfold but can also be found rarely in Trøndelag, Vestland, Agder, Telemark and Rogaland."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0f5d5572c4cd",
-          "src": "https://learnablemeta.com/images/1/1759667281201-oTZ.avif",
-          "path": "no/0f5d5572c4cd.webp",
-          "width": 631,
-          "height": 406
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-634018",
-      "step": 3,
-      "order": 68,
-      "family": "plate",
-      "title": "Plate: Norway",
-      "text": [
-        "Norway has long white licence plates with the standard European strip on the left.",
-        "Commercial plates are green. These are often seen on vans.",
-        "NOTE: Within Europe, green licence plates are most commonly seen in Norway, but can also be found on electric vehicles in several other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "12c002b6cc54",
-          "src": "https://learnablemeta.com/images/5431/1766261931167-nSa.avif",
-          "path": "no/12c002b6cc54.webp",
-          "width": 800,
-          "height": 183,
-          "dupeOf": "a7eb0d3c947c"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-740352",
-      "step": 3,
-      "order": 69,
-      "family": "other",
-      "title": "Stavanger red stripes",
-      "text": [
-        "Two red stripes going around lamp posts are commonly found in Stavanger."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "06e45d953cb4",
-          "src": "https://learnablemeta.com/images/4588/1777490888936-xOg.avif",
-          "path": "no/06e45d953cb4.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "df161c0371b8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-740353",
-      "step": 3,
-      "order": 70,
-      "family": "other",
-      "title": "Bergen fire hydrant",
-      "text": [
-        "You can find this specific design of green fire hydrants in Bergen."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "23d81cce5106",
-          "src": "https://learnablemeta.com/images/4588/1777490780179-zaH.avif",
-          "path": "no/23d81cce5106.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "0355d415a883"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755804",
-      "step": 3,
-      "order": 71,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Sámi",
-      "text": [
-        "Bilingual signs with Sámi can be found in several northern areas in Norway. While the Sámi languages are very different from Norwegian, the best way to recognize them are the letters Á, Đ and the use of several vowels in a row, something which is uncommon in Norwegian.",
-        "Note that not all signs in these areas will be bilingual."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0372596e0fa1",
-          "src": "https://learnablemeta.com/images/8401/1779567956538-mjc.avif",
-          "path": "no/0372596e0fa1.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "e6c5534dc407"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755805",
-      "step": 3,
-      "order": 72,
-      "family": "other",
-      "title": "Bracken",
-      "text": [
-        "This species of fern (Pteridium aquilinum, also known as bracken) which typically has a fairly tall stem and many wide leafs branching out, is mostly found in the south of Norway. Beware that other species of ferns can be found further north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e47b0b97a9ee",
-          "src": "https://learnablemeta.com/images/8401/1779567253411-F4R.avif",
-          "path": "no/e47b0b97a9ee.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "21d6fa810307"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755806",
-      "step": 3,
-      "order": 73,
-      "family": "other",
-      "title": "Spruces",
-      "text": [
-        "Spruces are mainly found in the southern half of the country, particularly in the southeast and around Trondheim."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b6e97717a2b5",
-          "src": "https://learnablemeta.com/images/8401/1779567884094-kc5.avif",
-          "path": "no/b6e97717a2b5.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "006bdc968dad"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755807",
-      "step": 3,
-      "order": 74,
-      "family": "other",
-      "title": "Pines",
-      "text": [
-        "Pines are most common in coastal and far inland areas in the southern half of the country."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "31b135553325",
-          "src": "https://learnablemeta.com/images/8401/1779567787695-UsY.avif",
-          "path": "no/31b135553325.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "7b7bbfe258fd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755808",
-      "step": 3,
-      "order": 75,
-      "family": "other",
-      "title": "Oaks",
-      "text": [
-        "Oaks are mainly found in the far south of Norway."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1c65b4a521ad",
-          "src": "https://learnablemeta.com/images/8401/1779567630449-HGL.avif",
-          "path": "no/1c65b4a521ad.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "1f1d9b78f281"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755809",
-      "step": 3,
-      "order": 76,
-      "family": "other",
-      "title": "Maple",
-      "text": [
-        "Maples are mainly found in the south, particularly by the farmlands around Oslo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "311c6d1c4648",
-          "src": "https://learnablemeta.com/images/8401/1779567509273-VmI.avif",
-          "path": "no/311c6d1c4648.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "9cb4286b97b2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755810",
-      "step": 3,
-      "order": 77,
-      "family": "other",
-      "title": "BrightMoss",
-      "text": [
-        "Brightly coloured moss is common to find in the area between Lillehammer and Oppdal."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "77a4811edf37",
-          "src": "https://learnablemeta.com/images/8401/1779567306833-IDc.avif",
-          "path": "no/77a4811edf37.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "7dd7e31a6527"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755811",
-      "step": 3,
-      "order": 78,
-      "family": "landscape",
-      "title": "Landscape: Vast Farmland",
-      "text": [
-        "Large farmlands are mainly found in three areas, the southeast, the area surrounding Trondheim, and south of Stavanger.",
-        "The following clues will explain how to differentiate between the three.",
-        "The largest concentration of farmland is found in the southeast, in the general vicinity of Oslo. The area is much flatter than most of the country, and it is common to get a rolling landscape with smooth, round forested hills in the distance. The area southeast of Oslo is particularly flat.",
-        "The farmlands surrounding Trondheim are generally very hilly, and the hills are typically both steeper and more uneven than in the southeast.",
-        "Similarly to the southeast, the farmland south of Stavanger is flatter than most of the country. However, the fields look more vast and open, and it is very common to see rock walls made of large, round rocks. Furthermore, rather than crops, most fields will only contain grass."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ee918a25e60e",
-          "src": "https://learnablemeta.com/images/8401/1779567357675-tKp.avif",
-          "path": "no/ee918a25e60e.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "e439fde9980d"
-        },
-        {
-          "id": "d8fe8432bd40",
-          "src": "https://learnablemeta.com/images/8401/1779567366344-zWp.avif",
-          "path": "no/d8fe8432bd40.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "f36918a7e7cb"
-        },
-        {
-          "id": "d6d289a7850c",
-          "src": "https://learnablemeta.com/images/8401/1779567373138-VGC.avif",
-          "path": "no/d6d289a7850c.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "eb5e7fa131ab"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755813",
-      "step": 3,
-      "order": 79,
-      "family": "landscape",
-      "title": "Landscape: LofotenMountains",
-      "text": [
-        "Distinct, sharp, rocky mountains with few trees can be seen on the Lofoten Archipelago."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3b17b7d0b0e6",
-          "src": "https://learnablemeta.com/images/8401/1779567462913-KUg.avif",
-          "path": "no/3b17b7d0b0e6.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "998f9d11af95"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755814",
-      "step": 3,
-      "order": 80,
-      "family": "landscape",
-      "title": "Landscape: NorthEast",
-      "text": [
-        "The northeast of Norway can typically be recognized by a somewhat rolling landscape, rather than tall mountains, and vegetation mainly consisting of very small birches combined with patched grass."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cc798d116a53",
-          "src": "https://learnablemeta.com/images/8401/1779567599748-CPr.avif",
-          "path": "no/cc798d116a53.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "b466f4735381"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755815",
-      "step": 3,
-      "order": 81,
-      "family": "vegetation",
-      "title": "Vegetation: BarrenHighlands",
-      "text": [
-        "Barren highlands, with no trees or bushes, and often with rocky mountains along the road, are mostly found in the southwest."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "bf2e7a9a79e4",
-          "src": "https://learnablemeta.com/images/8401/1779566987304-IN1.avif",
-          "path": "no/bf2e7a9a79e4.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "334d465956b0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755816",
-      "step": 3,
-      "order": 82,
-      "family": "other",
-      "title": "SouthCoast",
-      "text": [
-        "Exposed rock, often spotted with small coastal pines and bushes, are mainly found on the south coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "db43e10f691e",
-          "src": "https://learnablemeta.com/images/8401/1779567857815-2wd.avif",
-          "path": "no/db43e10f691e.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "ff40ada4a949"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755817",
-      "step": 3,
-      "order": 83,
-      "family": "vegetation",
-      "title": "Vegetation: NorthCoast",
-      "text": [
-        "Coastal grasslands with little to no other vegetation and only somewhat low, distant mountains can be found by coastal roads in the far north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8e6687f76c7d",
-          "src": "https://learnablemeta.com/images/8401/1779567538534-cA9.avif",
-          "path": "no/8e6687f76c7d.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "b8b02f601fb2"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755818",
-      "step": 3,
-      "order": 84,
-      "family": "architecture",
-      "title": "Architecture: WhiteHouses",
-      "text": [
-        "While completely white wooden houses can be found in the entire country, they’re especially common on the southern coast, where you’ll commonly see entire villages made up of them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ef8457df5b94",
-          "src": "https://learnablemeta.com/images/8401/1779568000591-JhG.avif",
-          "path": "no/ef8457df5b94.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "6a56a6c4491e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755819",
-      "step": 3,
-      "order": 85,
-      "family": "pole",
-      "title": "Pole: BlackSnowPoles",
-      "text": [
-        "Black snow poles are most commonly found between Bergen and Trondheim. Editors Note: These poles seem to only be visible in Gen 3 coverage. I scanned every applicable remote road in the area and only found 2 locations where these still are the most recent coverage. You shouldn't exclude this area only because you don't see them!"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "881d356d9fbd",
-          "src": "https://learnablemeta.com/images/8401/1779567126900-caA.avif",
-          "path": "no/881d356d9fbd.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "230a363e9354"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755820",
-      "step": 3,
-      "order": 86,
-      "family": "pole",
-      "title": "Pole: BlackPolePlates",
-      "text": [
-        "Small, wide black pole plates, with a single line of letters and digits, can be found in southeastern Norway."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d0ff4da303bd",
-          "src": "https://learnablemeta.com/images/8401/1779567722844-waK.avif",
-          "path": "no/d0ff4da303bd.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "d22f6ce1e4f1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755821",
-      "step": 3,
-      "order": 87,
-      "family": "guardrail",
-      "title": "Guardrail: RustyGuardrails",
-      "text": [
-        "Rusty guardrails are almost exclusively found in coastal regions, and particularly on the southern half of the west coast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "995815bf2ea3",
-          "src": "https://learnablemeta.com/images/8401/1779567822140-BDE.avif",
-          "path": "no/995815bf2ea3.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "04cb5d102a76"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755822",
-      "step": 3,
-      "order": 88,
-      "family": "pole",
-      "title": "Pole: OsloPolePlates",
-      "text": [
-        "Fairly large black or red pole plates can be found in Oslo."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0068e1c0e5b3",
-          "src": "https://learnablemeta.com/images/8401/1779567759819-NsN.avif",
-          "path": "no/0068e1c0e5b3.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "fb6e4b95faf0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755823",
-      "step": 3,
-      "order": 89,
-      "family": "other",
-      "title": "StavangerStripes",
-      "text": [
-        "Two red stripes going around lamp posts are commonly found in Stavanger."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2e3d7abb4195",
-          "src": "https://learnablemeta.com/images/8401/1779567930679-MCG.avif",
-          "path": "no/2e3d7abb4195.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "df161c0371b8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755824",
-      "step": 3,
-      "order": 90,
-      "family": "other",
-      "title": "BergenHydrant",
-      "text": [
-        "You can find this specific design of green fire hydrants in Bergen."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c483ab5dd8a7",
-          "src": "https://learnablemeta.com/images/8401/1779567020190-EUt.avif",
-          "path": "no/c483ab5dd8a7.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "0355d415a883"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755846",
-      "step": 3,
-      "order": 91,
-      "family": "architecture",
-      "title": "Architecture: Røros",
-      "text": [
-        "The old mining town of Røros can be recognised by the densely built traditional wooden architecture. Editors Note: This only applies to the central town"
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f208bd1d1c5c",
-          "src": "https://learnablemeta.com/images/8401/1779621104128-h11.avif",
-          "path": "no/f208bd1d1c5c.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "82336c4301c4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755847",
-      "step": 3,
-      "order": 92,
-      "family": "coverage",
-      "title": "Coverage: RussianBorder",
-      "text": [
-        "Along the Russian border you can see this noticeably humid and green-looking road, with very overcast and occasionally foggy coverage. The trees are somewhat low and mainly consist of thin birches and pines.",
-        "Editors Note: This once again is a bit outdated. The street has been updated in 2025 and is now neither humid nor very overcast. The only exceptions are some side roads around Svanvik. I included this meta nevertheless because some maps might still be using the Gen3 coverage."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a3f9eff0b4a",
-          "src": "https://learnablemeta.com/images/8401/1779621228636-whM.avif",
-          "giveaway": true,
-          "path": "no/3a3f9eff0b4a.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "38eb3e65a0dd"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-755848",
-      "step": 3,
-      "order": 93,
-      "family": "sign",
-      "kind": "other",
-      "title": "Sign: Russian",
-      "text": [
-        "Russian can sometimes be seen alongside Norwegian on signs near the Russian border. It is mostly found on roads E6 and E105 near Kirkenes."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "62451f7c6e12",
-          "src": "https://learnablemeta.com/images/8401/1779621128810-wY9.avif",
-          "path": "no/62451f7c6e12.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "032102aae6ce"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a120704695f9277d134e175",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "no-lm-783080",
-      "step": 3,
-      "order": 94,
-      "family": "language",
-      "title": "Language: Norwegian",
-      "text": [
-        "Norwegian is a North Germanic language closely related to Danish and Swedish. The Norwegian alphabet contains these special letters: **Æ, Ø**, and **Å**.",
-        "NOTE:",
-        "Danish also uses **Æ, Ø**, and **Å**.",
-        "Swedish only uses **Å**. In addition, Swedish uses **Ä** and **Ö**, not found in Norwegian. Norwegian uses more E’s than Swedish, while Swedish uses more A’s. Norwegian uses **kk** where Swedish uses **ck**.",
-        "Faroese uses **Æ and Ø** but not **Å**.",
-        "Icelandic only uses **Æ**.",
-        "The Norwegian word for road is **vei** or **veien** (or **veg/vegen**, depending on spelling). This is unlike Swedish which uses **väg** or **vägen** and Danish which uses **vej**.",
-        "The Norwegian word for street is **gate, gata** or rarely **gaten**. In Swedish it is **gatan** or, sometimes, **gata** aswell. Danish uses **gade**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a47cb2e8977a",
-          "src": "https://learnablemeta.com/images/9388/1785593226615-oEY.avif",
-          "path": "no/a47cb2e8977a.webp",
-          "width": 800,
-          "height": 450
-        },
-        {
-          "id": "fea24fe58c90",
-          "src": "https://learnablemeta.com/images/9388/1785593241701-8Wt.avif",
-          "path": "no/fea24fe58c90.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "94846468dcd5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The road between Atna and Ringebu is fully covered in snow, a winter scene with green rocks."
     }
   ]
 }

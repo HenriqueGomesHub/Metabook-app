@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "other",
-      "title": "Guam is a United States overseas territory",
+      "title": "Territory: counts as the US for streaks",
       "text": [
         "Guam is a United States overseas territory. As such, it is counted as **the US** for country streaks purposes."
       ],
@@ -46,14 +46,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "This is a US overseas territory, so for country streaks it counts as the US."
     },
     {
       "id": "gu-KSIf",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: The entire Google car is blurred",
+      "title": "Google car: fully blurred, antenna and rack",
       "text": [
         "The entire Google car is blurred, however an **antenna** at the front right and a tiny part of the **roof rack** can be seen.",
         "NOTE: You will not see a roof rack on the Northern Mariana Islands Google car."
@@ -103,14 +104,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The whole car is blurred, but you can see an antenna at the front right and a small bit of roof rack. The Northern Mariana Islands car has no roof rack.",
+      "differs": [
+        {
+          "country": "MP",
+          "how": "The Northern Mariana Islands car shows no roof rack"
+        }
+      ]
     },
     {
       "id": "gu-04NE",
       "step": 0,
       "order": 3,
       "family": "pole",
-      "title": "Pole: Poles on Guam are almost always concrete and commonly very…",
+      "title": "Pole: thick concrete poles",
       "text": [
         "Poles on Guam are almost always **concrete** and commonly very thick.",
         "NOTE: Northern Mariana Islands typically have wooden poles."
@@ -162,7 +170,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles are almost always concrete and often very thick. The Northern Mariana Islands usually have wooden poles.",
+      "differs": [
+        {
+          "country": "MP",
+          "how": "Poles there are typically wooden"
+        }
+      ]
     },
     {
       "id": "gu-Gyzt",
@@ -170,7 +185,7 @@
       "order": 4,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Guam uses green street signs",
+      "title": "Sign: green street name signs",
       "text": [
         "Guam uses **green** street signs, unlike the Northern Mariana Islands, which use blue street signs."
       ],
@@ -211,14 +226,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street name signs are green. The Northern Mariana Islands use blue ones instead.",
+      "differs": [
+        {
+          "country": "MP",
+          "how": "Street signs there are blue"
+        }
+      ]
     },
     {
       "id": "gu-a1Iu",
       "step": 0,
       "order": 5,
       "family": "vegetation",
-      "title": "Vegetation: Guam has a tropical climate with a lot of dense and…",
+      "title": "Vegetation: dense, low tropical growth",
       "text": [
         "Guam has a **tropical climate** with a lot of dense and somewhat low vegetation."
       ],
@@ -257,14 +279,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tropical climate with dense, fairly low vegetation."
     },
     {
       "id": "gu-793A",
       "step": 0,
       "order": 6,
       "family": "other",
-      "title": "Both Guam and Northern Mariana Islands often have a very…",
+      "title": "Road: lots of road reflectors",
       "text": [
         "Both Guam and Northern Mariana Islands often have a very **large number** of **road reflectors**."
       ],
@@ -305,14 +328,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Roads often have a very large number of road reflectors. The Northern Mariana Islands do too, so this does not separate them.",
+      "sameAs": [
+        "MP"
+      ]
     },
     {
       "id": "gu-eTI3",
       "step": 0,
       "order": 7,
       "family": "language",
-      "title": "Language: East Asian languages such as Japanese",
+      "title": "Language: Japanese, Chinese, Korean, Russian",
       "text": [
         "**East Asian languages** such as Japanese, Chinese, Korean, and even Russian are common to see in Guam.",
         "NOTE: This is also the case in Northern Mariana Islands."
@@ -354,14 +381,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "East Asian languages like Japanese, Chinese and Korean, and even Russian, are common on signs. The Northern Mariana Islands are the same.",
+      "sameAs": [
+        "MP"
+      ]
     },
     {
       "id": "gu-I0mE",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Coverage in Guam is fairly limited",
+      "title": "Coverage: limited, almost none inland south",
       "text": [
         "Coverage in Guam is fairly limited, particularly in the southern half, where there is almost no coverage inland."
       ],
@@ -381,14 +412,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is fairly limited. The southern half has almost nothing inland."
     },
     {
       "id": "gu-qvj3",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Hills are mostly found on the southern half of the island",
+      "title": "Landscape: hills in the southern half",
       "text": [
         "**Hills** are mostly found on the southern half of the island."
       ],
@@ -427,14 +459,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Hills are mostly found in the southern half of the island."
     },
     {
       "id": "gu-59r8",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Similarly, the northern half of the island is mostly flat",
+      "title": "Landscape: flat northern half",
       "text": [
         "Similarly, the northern half of the island is mostly **flat**."
       ],
@@ -473,7 +506,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The northern half of the island is mostly flat."
     },
     {
       "id": "gu-hxXB",
@@ -481,7 +515,7 @@
       "order": 0,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Some Signposts near the town of Apra View are coloured…",
+      "title": "Sign: yellow signposts near a resort town",
       "text": [
         "Some Signposts near the town of Apra View are coloured **yellow**."
       ],
@@ -520,14 +554,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some signposts near the town of Apra View are painted yellow."
     },
     {
       "id": "gu-D0Zu",
       "step": 2,
       "order": 1,
       "family": "architecture",
-      "title": "Architecture: LeoPalace Resort can be recognised by the white",
+      "title": "Houses: white resort, orange tiled roofs",
       "text": [
         "LeoPalace Resort can be recognised by the white, resort buildings with **orange tiled roofs**, which looks superficially similar to tiled roofs found on [Java](https://goo.gl/maps/E6P4UxfQsHz8wZoe7)."
       ],
@@ -566,164 +601,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/guam",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gu-lm-322",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Unique car",
-      "text": [
-        "The entire Google car is blurred, however an antenna at the front right and a tiny part of the roof rack can be seen. You can confuse it with:",
-        "Puerto Rico(Cars there won't have front plates, signs will be Spanish).",
-        "Northern Mariana Islands(Antenna there will be noticeably closer to the camera but as long you will go Guam/NMI and not Puerto Rico you will get good score."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "17ea8db6877b",
-          "src": "https://learnablemeta.com/images/FlNJVqwzVLr33dlbu0pflGL2OQtDJru7kVt2.avif",
-          "path": "gu/17ea8db6877b.webp",
-          "width": 1000,
-          "height": 545,
-          "dupeOf": "ab9cf671c376"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "MP",
-        "PR"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gu-lm-13867",
-      "step": 3,
-      "order": 1,
-      "family": "other",
-      "title": "Road Reflectors",
-      "text": [
-        "Both Guam and Northern Mariana Islands often have a very large number of road reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a80ebf689cdb",
-          "src": "https://learnablemeta.com/images/621/P89ylKImBUQ3oudmoR4QM9XnVICz7WwimBH6.avif",
-          "path": "gu/a80ebf689cdb.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "8dbd6e924bf5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "MP"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cbdf07d547bc1d1d94b35e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gu-lm-13871",
-      "step": 3,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Car",
-      "text": [
-        "The entire Google car is blurred, however an antenna at the front right and a tiny part of the roof rack can be seen.",
-        "**--- NOTE:**",
-        "You will not see a roof rack on the Northern Mariana Islands Google car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5ca06e3d79b0",
-          "src": "https://learnablemeta.com/images/621/SGpGLAfu6jlt2cBYMxC9pPmLJqKU4dgPKtAA.avif",
-          "path": "gu/5ca06e3d79b0.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "ab9cf671c376"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "MP"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67cbdf07d547bc1d1d94b35e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gu-lm-51287",
-      "step": 3,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: Car",
-      "text": [
-        "The entire Google car is blurred, however an antenna at the front right and a tiny part of the roof rack can be seen.",
-        "**--- NOTE:**",
-        "You will not see a roof rack on the Northern Mariana Islands Google car."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5ca06e3d79b0",
-          "src": "https://learnablemeta.com/images/621/SGpGLAfu6jlt2cBYMxC9pPmLJqKU4dgPKtAA.avif",
-          "path": "gu/5ca06e3d79b0.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "ab9cf671c376"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "MP"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gu-lm-51290",
-      "step": 3,
-      "order": 4,
-      "family": "other",
-      "title": "Road Reflectors",
-      "text": [
-        "Both Guam and Northern Mariana Islands often have a very large number of road reflectors."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a80ebf689cdb",
-          "src": "https://learnablemeta.com/images/621/P89ylKImBUQ3oudmoR4QM9XnVICz7WwimBH6.avif",
-          "path": "gu/a80ebf689cdb.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "8dbd6e924bf5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "MP"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A resort complex with white buildings and orange tiled roofs. It looks a bit like tiled roofs seen in Java."
     }
   ]
 }

@@ -21,7 +21,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Street View coverage in Laos is very limited",
+      "title": "Coverage: only five cities, all Gen 3",
       "text": [
         "Street View coverage in Laos is very **limited**. Only five cities are covered: Vientiane, Vang Vieng, Luang Prabang, Savannakhet, and Pakse.",
         "In addition, all coverage in Laos was taken by a Generation 3 camera.",
@@ -48,14 +48,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is very limited: five cities, all Gen 3. Each looks different: old town with hills and palms, jagged mountains, big capital without roof rack, very flat, or red soil and dry hills."
     },
     {
       "id": "la-lqdo",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: In all cities except for the capital",
+      "title": "Google car: silver, two-bar roof rack",
       "text": [
         "In all cities except for the capital, Vientiane, this Google car will be visible. It is silver-coloured, with a **roof rack** with two metal bars and black side mirrors.",
         "NOTE: A similar car can be found in Guatemala, so be sure to look at the other clues before guessing."
@@ -97,14 +98,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Silver car with a roof rack of two metal bars and black side mirrors. Seen in every city except the capital. Guatemala has a similar car, so check other clues.",
+      "sameAs": [
+        "GT"
+      ]
     },
     {
       "id": "la-LUJM",
       "step": 0,
       "order": 3,
       "family": "other",
-      "title": "Laos drives on the right hand side of the road",
+      "title": "Driving side: right",
       "text": [
         "Laos drives on the **right hand** side of the road.",
         "NOTE: This is mostly useful to distinguish between Thailand, which drives on the left hand side of the road."
@@ -146,14 +151,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Traffic drives on the right. Handy against Thailand next door, which drives on the left.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand drives on the left"
+        }
+      ]
     },
     {
       "id": "la-N7h9",
       "step": 0,
       "order": 4,
       "family": "plate",
-      "title": "Plate: Laotian licence plates are short and yellow",
+      "title": "Plate: short and yellow",
       "text": [
         "Laotian licence plates are short and **yellow**. This distinguishes them from nearby Thailand and Cambodia, who both use white plates on non-commercial vehicles.",
         "Laotian commercial plates are white, and government plates are blue.",
@@ -186,14 +198,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Short yellow plates on normal cars. Thailand and Cambodia use white plates on private cars. Commercial plates here are white and government ones blue.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thai private cars have white plates"
+        },
+        {
+          "country": "KH",
+          "how": "Cambodian private cars have white plates"
+        }
+      ]
     },
     {
       "id": "la-q4i1",
       "step": 0,
       "order": 5,
       "family": "language",
-      "title": "Language: Lao script is compact and curvy",
+      "title": "Language: compact curvy script",
       "text": [
         "**Lao script** is compact and curvy, with some diacritics on top and below characters.",
         "NOTE: It is very similar to Thai script, but (in most fonts) Lao script has fewer straight lines."
@@ -214,14 +237,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Compact, curvy letters with marks above and below. Looks like Thai but with fewer straight lines in most fonts.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thai script has more straight lines"
+        }
+      ]
     },
     {
       "id": "la-p67D",
       "step": 0,
       "order": 6,
       "family": "other",
-      "title": "Laos is a majority Buddhist country",
+      "title": "Religion: Buddhist temples with gold leaf",
       "text": [
         "Laos is a majority **Buddhist** country. Buddhist temples are a common sight. They can be recognized by their ornate decorations, often with gold leaf detailing.",
         "NOTE: Thailand and Cambodia are also majority Buddhist."
@@ -264,14 +294,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mostly Buddhist country, with ornate temples often decorated in gold leaf. Thailand and Cambodia are Buddhist too, so it does not separate them.",
+      "sameAs": [
+        "KH",
+        "TH"
+      ]
     },
     {
       "id": "la-XxPH",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "Striped curbs of various colours",
+      "title": "Road: striped curbs in many colours",
       "text": [
         "**Striped curbs** of various colours, such as red, yellow, or black with white, can be seen throughout Laos."
       ],
@@ -310,7 +345,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Curbs painted in stripes such as red, yellow, or black with white are common."
     },
     {
       "id": "la-3hIR",
@@ -318,7 +354,7 @@
       "order": 8,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Stop signs feature the Lao script",
+      "title": "Sign: stop sign with two characters",
       "text": [
         "**Stop signs** feature the Lao script. Sometimes, the sign features the word ‘stop’ in Latin script below the Lao script.",
         "NOTE: In Laos, stop signs only have **2 characters,** compared to 3 in Thailand."
@@ -360,14 +396,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Stop signs use local script, sometimes with 'stop' in Latin letters below. Here the word has 2 characters, versus 3 in Thailand.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thai stop signs have 3 characters"
+        }
+      ]
     },
     {
       "id": "la-rwz1",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Laos uses square concrete poles",
+      "title": "Pole: square concrete with pinholes",
       "text": [
         "Laos uses **square concrete poles**, with small pinholes on the sides in a row from top to bottom.",
         "NOTE: Similar poles are found in Thailand, Sri Lanka, and less commonly, Cambodia."
@@ -413,14 +456,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete poles with a row of small holes down the sides. Thailand and Sri Lanka use similar poles, Cambodia less often.",
+      "sameAs": [
+        "LK",
+        "TH"
+      ]
     },
     {
       "id": "la-VMbz",
       "step": 0,
       "order": 10,
       "family": "bollard",
-      "title": "Bollard: Laos uses square concrete black and white bollards with one…",
+      "title": "Bollard: square concrete, black and white bands",
       "text": [
         "Laos uses square concrete **black and white bollards** with one or more black bands.",
         "NOTE: Thailand, Indonesia, and rarely Cambodia use similar bollards."
@@ -466,14 +514,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Square concrete bollards painted white with one or more black bands. Thailand, Indonesia and rarely Cambodia use similar ones.",
+      "sameAs": [
+        "ID",
+        "TH"
+      ]
     },
     {
       "id": "la-Iall",
       "step": 0,
       "order": 11,
       "family": "other",
-      "title": "Some lamp posts have diagonal red and white striped…",
+      "title": "Poles: red-white diagonal stripes, not to base",
       "text": [
         "Some lamp posts have **diagonal red and white striped markings** that do not** **go down to the base."
       ],
@@ -512,14 +565,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some lamp posts have diagonal red and white stripes that stop above the base."
     },
     {
       "id": "la-IN2F",
       "step": 0,
       "order": 12,
       "family": "bollard",
-      "title": "Bollard: A red and white painted cuboid concrete bollard can…",
+      "title": "Bollard: red and white concrete block",
       "text": [
         "A **red and white** painted cuboid concrete bollard can sometimes be seen a few metres off the side of the road."
       ],
@@ -560,14 +614,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A red and white painted concrete block sits a few metres off the side of the road."
     },
     {
       "id": "la-sHs4",
       "step": 0,
       "order": 13,
       "family": "other",
-      "title": "Laos has a communist government",
+      "title": "Flags: red hammer and sickle",
       "text": [
         "Laos has a communist government. You can sometimes see red **hammer and sickle flags**."
       ],
@@ -606,14 +661,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A communist country, so you can sometimes see red flags with a hammer and sickle."
     },
     {
       "id": "la-HOpP",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Luang Prabang is located on the Mekong River and surrounded…",
+      "title": "Landscape: big river with low hills",
       "text": [
         "Luang Prabang is located on the [Mekong River](https://goo.gl/maps/kdK5uhvp6kE4E3zc6) and surrounded by low **mountains** and hills (not always visible)."
       ],
@@ -653,14 +709,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A town on a large river (the Mekong) surrounded by low mountains and hills, which are not always visible."
     },
     {
       "id": "la-fIJW",
       "step": 1,
       "order": 2,
       "family": "vegetation",
-      "title": "Vegetation: Palm trees are common in Luang Prabang",
+      "title": "Plants: palm trees in the old royal town",
       "text": [
         "**Palm trees** are common in Luang Prabang."
       ],
@@ -700,14 +757,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Palm trees are common in this town, the former royal capital."
     },
     {
       "id": "la-uXJP",
       "step": 1,
       "order": 3,
       "family": "architecture",
-      "title": "Architecture: Luang Prabang is the former royal capital of Laos and a…",
+      "title": "Houses: old temples, dark wood, French colonial",
       "text": [
         "Luang Prabang is the former royal capital of Laos and a UNESCO heritage site. The city has a lot of **historical architecture**, including several [temples](https://goo.gl/maps/T4rVQMmiqkaFBLhy7). Many buildings make use of traditional [dark wooden](https://goo.gl/maps/E5rWvMQBr5MH7Ar86) architectural elements. There are also some buildings dating back to [French colonial](https://goo.gl/maps/G9NRBCbmvH6QVwem8) rule of Laos."
       ],
@@ -755,7 +813,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A UNESCO heritage town with temples, buildings using traditional dark wood, and some French colonial buildings."
     },
     {
       "id": "la-Vgk1",
@@ -763,7 +822,7 @@
       "order": 4,
       "family": "sign",
       "kind": "back",
-      "title": "Sign back: Within Laos, blue sign backs are only found in Luang Prabang",
+      "title": "Sign back: blue",
       "text": [
         "Within Laos, **blue sign backs** are only found in Luang Prabang."
       ],
@@ -803,14 +862,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue sign backs only occur in this one town, the old royal capital."
     },
     {
       "id": "la-oTVy",
       "step": 1,
       "order": 6,
       "family": "landscape",
-      "title": "Landscape: This rugged mountain range can be seen from almost any…",
+      "title": "Landscape: rugged mountain range everywhere",
       "text": [
         "This **rugged mountain range** can be seen from almost any point in Vang Vieng, and is the most reliable way of recognizing it.",
         "NOTE: Vang Vieng has [very limited coverage](/images/laos/laos_vangviengcoverage.png); by far the least out of all 5 Lao cities. The actual coverage is also south of the Vang Vieng label on the map."
@@ -851,7 +911,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A jagged mountain range is visible from almost anywhere in the town and is the best way to recognise it. Coverage here is tiny and lies south of the map label."
     },
     {
       "id": "la-ootv",
@@ -859,7 +920,7 @@
       "order": 7,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Vang Vieng is also very touristic",
+      "title": "Signs: lots of hotels and guesthouses",
       "text": [
         "Vang Vieng is also very **touristic**: you will see a lot of signs for hotels, guesthouses, and other tourism-related enterprises. In the (very few) rounds that the distinct mountains are blocked by buildings, this is a good way to recognize the town."
       ],
@@ -898,14 +959,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A very touristy town with many hotel and guesthouse signs. Useful in the few rounds where buildings hide the mountains."
     },
     {
       "id": "la-gwui",
       "step": 1,
       "order": 9,
       "family": "car",
-      "title": "Google car: As previously mentioned, the Vientiane area is the only…",
+      "title": "Google car: none visible, rural capital area",
       "text": [
         "As previously mentioned, the Vientiane area is the only part of Laos where the Google car is **not **visible. It also has a considerable amount of rural coverage, especially to its southeast.",
         "NOTE: This may lead to toss-ups with Thailand and Cambodia. Use the driving side (Thailand being left, and Laos and Cambodia right), along with other clues to tell them apart."
@@ -950,14 +1012,25 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The capital area is the only part where the Google car is not visible, and it has a lot of rural coverage. It can be a toss-up with Thailand and Cambodia, so use driving side.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand drives on the left, Laos on the right"
+        },
+        {
+          "country": "KH",
+          "how": "Cambodia drives on the right too, so use other clues"
+        }
+      ]
     },
     {
       "id": "la-KUIb",
       "step": 1,
       "order": 10,
       "family": "coverage",
-      "title": "Coverage: Road 450 east of Vientiane is made entirely of concrete…",
+      "title": "Road: divided highway of concrete blocks",
       "text": [
         "Road 450 east of Vientiane is made entirely of **concrete blocks**. It is also one of the very few divided highways in Laos with coverage."
       ],
@@ -998,14 +1071,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A road east of the capital made entirely of concrete blocks, and one of very few divided highways with coverage."
     },
     {
       "id": "la-vRr8",
       "step": 1,
       "order": 11,
       "family": "other",
-      "title": "The divided highway that passes through Nong Beuak can be…",
+      "title": "Road: divided highway with side street lamps",
       "text": [
         "The divided highway that passes through Nong Beuak can be easily recognized by these **street lamps **that line the sides of the road.",
         "NOTE: These streetlamps can also be found on the divided section of road 13, but it is more urban, and has a different road angle."
@@ -1046,14 +1120,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A divided highway recognisable by street lamps along its sides. The divided part of road 13 has the same lamps but is more urban with a different road angle."
     },
     {
       "id": "la-fEd7",
       "step": 1,
       "order": 12,
       "family": "landscape",
-      "title": "Landscape: The road that goes through the conservation area features…",
+      "title": "Landscape: hilly, dry forest road with curbs",
       "text": [
         "The road that goes through the conservation area features uniquely **hilly **terrain for Laos. Landscape around the road is also very **dry**, and mostly **forested**. Additionally, the road is in good condition with coloured curbs and dashed outer lines.",
         "NOTE: It is the only single lane road that has black and white or yellow and white curbs."
@@ -1094,14 +1169,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A good road through a conservation area: unusually hilly, dry and forested, with coloured curbs and dashed outer lines. The only single road with black-white or yellow-white curbs."
     },
     {
       "id": "la-LsED",
       "step": 1,
       "order": 13,
       "family": "coverage",
-      "title": "Coverage: The only trekker in Laos is a view of the monumental…",
+      "title": "Trekker: huge war memorial arch",
       "text": [
         "The only trekker in Laos is a view of the monumental **Patuxai** arch, a massive war memorial in the middle of Vientiane. Some of the coverage is made with a normal trekker, and some with a [tripod](https://goo.gl/maps/Jhfo521otTgghE1W9)."
       ],
@@ -1141,14 +1217,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The only trekker coverage shows a massive war memorial arch (Patuxai) in the capital, taken on foot or with a tripod."
     },
     {
       "id": "la-04v1",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Savannakhet is very flat",
+      "title": "Landscape: very flat, slightly red soil",
       "text": [
         "Savannakhet is very **flat**: the only mountains that are visible are on the other side of the Mekong river, in Thailand.",
         "It is also recognizable as its soil has a **slight red** tinge, however not as red as Pakse.",
@@ -1193,14 +1270,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very flat, with mountains only visible across the river in Thailand. The soil has a slight red tinge, less red than the south.",
+      "differs": [
+        {
+          "country": "TH",
+          "how": "Thailand has the mountains across the river, Laos is flat"
+        }
+      ]
     },
     {
       "id": "la-QR2a",
       "step": 1,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: The southern city of Pakse is easily recognizable thanks to…",
+      "title": "Landscape: red soil and dry hills",
       "text": [
         "The southern city of Pakse is easily recognizable thanks to the distinct **red **soil.",
         "The vegetation is also uniquely **dry**, with equally [dry hills](https://goo.gl/maps/VRfYqJdVfgmuNvwL6) nearby."
@@ -1240,14 +1324,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Distinct red soil, unusually dry plants and dry hills nearby, in the south."
     },
     {
       "id": "la-ztlX",
       "step": 1,
       "order": 18,
       "family": "coverage",
-      "title": "Coverage: This 1380-metre long bridge crosses the Mekong River next…",
+      "title": "Coverage: 1380 m bridge over big river",
       "text": [
         "This 1380-metre long **bridge **crosses the Mekong River next to the city of Pakse. It is the only major bridge in Laos with coverage."
       ],
@@ -1287,206 +1372,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/laos",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "la-lm-127",
-      "step": 2,
-      "order": 0,
-      "family": "coverage",
-      "title": "Coverage: Vientiane",
-      "text": [
-        "All other Laos coverage was taken with unique google car but if you have a vibe you are in Thailand but you will see yellow plates, ppl are driving on the right etc you will be in capital of Laos - Vientiane."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4a5aa21796a1",
-          "src": "https://learnablemeta.com/images/P8I1ZVZTMIJh3aBy95ydeR6nebAH946CWeGN.avif",
-          "path": "la/4a5aa21796a1.webp",
-          "width": 1000,
-          "height": 516,
-          "dupeOf": "d7df4caca4b6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "la-lm-303",
-      "step": 2,
-      "order": 1,
-      "family": "architecture",
-      "title": "Architecture: Unique car",
-      "text": [
-        "If you are in South East Asia with this roof-rack car you gonna be in one of 4 cities in Laos: Vang Vieng, Luang Prabang, Savannakhet, and Pakse.",
-        "Note: You can find similar car in Guatemala so look around before making a guess."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1468c8cdaf63",
-          "src": "https://learnablemeta.com/images/eeuMGf2U3FU63hiMapiKa9WdG5d5oKIOO5bJ.avif",
-          "giveaway": true,
-          "path": "la/1468c8cdaf63.webp",
-          "width": 1000,
-          "height": 546
-        },
-        {
-          "id": "8bd1ee018836",
-          "src": "https://learnablemeta.com/images/1/XlGqBHCjmr5Qt4WxFotXZNeoRu3Ly5kPcWus.avif",
-          "path": "la/8bd1ee018836.webp",
-          "width": 903,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "la-lm-15795",
-      "step": 2,
-      "order": 2,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "In all cities except for the capital, Vientiane, this Google car will be visible.",
-        "It is silver-coloured, with a roof rack with two metal bars and black side mirrors.",
-        "**--- NOTE:**",
-        "A similar car can be found in Guatemala, so be sure to look at the other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "09b2c26b4457",
-          "src": "https://learnablemeta.com/images/681/LhNjZ2hiLfwtRqb7zeYneJ6Vp10YlA5ny7Z1.avif",
-          "path": "la/09b2c26b4457.webp",
-          "width": 558,
-          "height": 1000
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d36525da55c99ab40fd858",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "la-lm-15946",
-      "step": 2,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "In all cities except for the capital, Vientiane, this Google car will be visible.",
-        "It is silver-coloured, with a roof rack with two metal bars and black side mirrors.",
-        "**--- NOTE:**",
-        "A similar car can be found in Guatemala, so be sure to look at the other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "09b2c26b4457",
-          "src": "https://learnablemeta.com/images/681/LhNjZ2hiLfwtRqb7zeYneJ6Vp10YlA5ny7Z1.avif",
-          "path": "la/09b2c26b4457.webp",
-          "width": 558,
-          "height": 1000,
-          "dupeOf": "09b2c26b4457"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d3a8e0f8589562410519fb",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "la-lm-51410",
-      "step": 2,
-      "order": 4,
-      "family": "car",
-      "title": "Google car: Unique Car",
-      "text": [
-        "In all cities except for the capital, Vientiane, this Google car will be visible.",
-        "It is silver-coloured, with a roof rack with two metal bars and black side mirrors.",
-        "**--- NOTE:**",
-        "A similar car can be found in Guatemala, so be sure to look at the other clues before guessing."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "09b2c26b4457",
-          "src": "https://learnablemeta.com/images/681/LhNjZ2hiLfwtRqb7zeYneJ6Vp10YlA5ny7Z1.avif",
-          "path": "la/09b2c26b4457.webp",
-          "width": 558,
-          "height": 1000,
-          "dupeOf": "09b2c26b4457"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "GT"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "la-lm-634044",
-      "step": 2,
-      "order": 5,
-      "family": "plate",
-      "title": "Plate: Laos",
-      "text": [
-        "Laotian licence plates are short and yellow. This distinguishes them from nearby Thailand and Cambodia, who both use white plates on non-commercial vehicles.",
-        "Laotian commercial plates are white, and government plates are blue.",
-        "NOTE: Thailand uses yellow plates for commercial vehicles, such as taxis."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8d6cfd141f70",
-          "src": "https://learnablemeta.com/images/5431/1766260886851-pDs.avif",
-          "path": "la/8d6cfd141f70.webp",
-          "width": 800,
-          "height": 500,
-          "dupeOf": "9396907e64d8"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "KH",
-        "TH"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A 1380-metre bridge over the Mekong next to the southern city. It is the only major bridge in Laos with coverage."
     }
   ]
 }

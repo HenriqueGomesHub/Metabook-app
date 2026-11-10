@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: The landscape of the Faroe islands is characterised by long",
+      "title": "Landscape: steep green mountains from fjords",
       "text": [
         "The landscape of the Faroe islands is characterised by long, wide fjords with jagged **green mountains** that rise straight out of the water, with rocky ridge lines along the mountainsides. The mountains generally look more imposing and greener than coastal mountains in Iceland, which can often be used to tell them apart."
       ],
@@ -65,14 +65,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long wide fjords with jagged green mountains rising straight out of the water and rocky ridge lines. Looks greener and more imposing than Iceland's coast.",
+      "differs": [
+        {
+          "country": "IS",
+          "how": "Iceland's coastal mountains are less green and less imposing"
+        }
+      ]
     },
     {
       "id": "fo-q4k2",
       "step": 0,
       "order": 2,
       "family": "vegetation",
-      "title": "Vegetation: The Faroe islands have almost no naturally growing trees",
+      "title": "Plants: almost no natural trees",
       "text": [
         "The Faroe islands have **almost** **no naturally growing** trees."
       ],
@@ -111,14 +118,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Almost no trees grow naturally, so bare green hillsides are normal."
     },
     {
       "id": "fo-ddcl",
       "step": 0,
       "order": 3,
       "family": "car",
-      "title": "Google car: The generation 4 coverage was captured with a black pickup…",
+      "title": "Google car: blurred black pickup, front antenna",
       "text": [
         "The generation 4 coverage was captured with a black pickup truck with an antenna on the front. The truck is always blurred.",
         "NOTE: The truck in Iceland does not have a similar antenna."
@@ -160,14 +168,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 coverage uses a black pickup truck, always blurred, with an antenna on the front. Iceland's truck has no similar antenna.",
+      "differs": [
+        {
+          "country": "IS",
+          "how": "Icelandic truck has no front antenna"
+        }
+      ]
     },
     {
       "id": "fo-RbUF",
       "step": 0,
       "order": 4,
       "family": "car",
-      "title": "Google car: All Generation 3 car coverage on the Faroe Islands has a…",
+      "title": "Google car: black car, plain grey roof rack",
       "text": [
         "All Generation 3 car coverage on the Faroe Islands has a black Street View car with a **plain grey roof rack**.",
         "NOTE: No other country with a similar landscape has a car similar to this."
@@ -207,14 +222,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All Gen 3 car coverage is a black car with a plain grey roof rack. No other country with a similar landscape has a car like it."
     },
     {
       "id": "fo-COV6",
       "step": 0,
       "order": 5,
       "family": "architecture",
-      "title": "Architecture: Faroese houses are typically made of wood",
+      "title": "Houses: wood with stone base, grass roofs",
       "text": [
         "Faroese houses are typically made of wood, often with an **above ground basement** made of stone which is painted in a different colour than the wooden part. Roofs will usually be either metal or have **grass on top** (turf)."
       ],
@@ -253,14 +269,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden houses, often on a raised stone basement painted a different colour. Roofs are metal or covered in grass (turf)."
     },
     {
       "id": "fo-q721",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: The Faroese language is most closely related to Icelandic",
+      "title": "Language: Ð and Á letters, plus Ø",
       "text": [
         "The Faroese language is most closely related to Icelandic, with the special letters Á, Ð, Í, Ó, Ú, Ý, Æ and Ø. It differs from Icelandic by using the letter **Ø**, while Icelandic uses É and Þ."
       ],
@@ -280,14 +297,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Uses Á, Ð, Í, Ó, Ú, Ý, Æ and Ø. Seeing Ø separates it from Icelandic, which uses É and Þ instead.",
+      "differs": [
+        {
+          "country": "IS",
+          "how": "Iceland uses É and Þ, not Ø"
+        }
+      ]
     },
     {
       "id": "fo-u8Th",
       "step": 0,
       "order": 7,
       "family": "bollard",
-      "title": "Bollard: Faroese bollards are small wooden sticks that are mainly…",
+      "title": "Bollard: small wooden stick, yellow top",
       "text": [
         "Faroese bollards are small wooden sticks that are mainly painted **yellow **and sometimes** red on the top. **"
       ],
@@ -328,14 +352,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small wooden sticks, mostly painted yellow and sometimes red on top."
     },
     {
       "id": "fo-ggio",
       "step": 0,
       "order": 8,
       "family": "guardrail",
-      "title": "Guardrail: Guardrails on the Faroes have yellow reflectors",
+      "title": "Guardrail: yellow reflectors",
       "text": [
         "Guardrails on the Faroes have yellow reflectors.",
         "NOTE: Yellow reflectors are not found on guardrails in any other northern European countries."
@@ -377,7 +402,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails carry yellow reflectors. No other northern European country does this."
     },
     {
       "id": "fo-AtU1",
@@ -385,7 +411,7 @@
       "order": 9,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Directional signs are yellow with a thin black border and a…",
+      "title": "Sign: yellow direction sign, thin black border",
       "text": [
         "Directional signs are **yellow** with a **thin black border** and a metal frame, very similar to the ones in [Iceland](https://maps.app.goo.gl/5HsMnQt8A7fSwKpo6)."
       ],
@@ -426,14 +452,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow direction signs with a thin black border and a metal frame. Almost the same as Iceland's.",
+      "sameAs": [
+        "IS"
+      ]
     },
     {
       "id": "fo-vpGT",
       "step": 1,
       "order": 0,
       "family": "architecture",
-      "title": "Architecture: Torshavn is by far the biggest town on the islands",
+      "title": "Towns: only place with tall buildings",
       "text": [
         "Torshavn is by far the **biggest town** on the islands, and the only place where you will find buildings taller than three floors. The landscape is somewhat open relative to the rest of the country, particularly to the east."
       ],
@@ -472,14 +502,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The biggest town is the only place with buildings over three floors. The surrounding landscape is fairly open, especially to the east."
     },
     {
       "id": "fo-iisY",
       "step": 2,
       "order": 0,
       "family": "landscape",
-      "title": "Landscape: Klaksvik is the second biggest town in the country by a…",
+      "title": "Landscape: narrow fjord with steep hills",
       "text": [
         "Klaksvik is the second biggest town in the country by a significant margin and can often be recognized by the **narrow fjord** with fairly steep hills going roughly north to south."
       ],
@@ -518,14 +549,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The second biggest town sits by a narrow fjord with steep hills running roughly north to south."
     },
     {
       "id": "fo-awY5",
       "step": 2,
       "order": 1,
       "family": "other",
-      "title": "There are three wind parks visible on the Faroes",
+      "title": "Landmarks: wind parks",
       "text": [
         "There are three **wind parks** visible on the Faroes. The largest one by far is northwest of Torshavn, while the other two are [northeast of Torshavn](https://goo.gl/maps/JzeesXJKHpeXHzXU9) and [east of Vestmanna](https://goo.gl/maps/mMy1JQsEthsYG5z18) respectively."
       ],
@@ -564,14 +596,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Three wind parks exist: the largest northwest of the capital, one northeast of it, and one east of Vestmanna."
     },
     {
       "id": "fo-9qa5",
       "step": 2,
       "order": 2,
       "family": "architecture",
-      "title": "Architecture: The village of Kirkjubøur at the southern tip of the main…",
+      "title": "Houses: black houses with grass roofs",
       "text": [
         "The village of Kirkjubøur at the southern tip of the main island can be recognised by the **black houses**, almost all having **grass roofs**. The town also has a small [church ruin](https://goo.gl/maps/iKdyAK21o3jhrJFh7)."
       ],
@@ -610,14 +643,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A village at the southern tip of the main island has black houses, almost all with grass roofs, plus a small church ruin."
     },
     {
       "id": "fo-Le4A",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: The trekker on Koltur island can typically be recognized by…",
+      "title": "Coverage: low narrow peninsula, island trekker",
       "text": [
         "The trekker on Koltur island can typically be recognized by the narrow and low **peninsula** on the southeastern tip of the island."
       ],
@@ -656,14 +690,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the small island of Koltur, the trekker usually shows a narrow, low peninsula at the island's southeastern tip."
     },
     {
       "id": "fo-MWOi",
       "step": 2,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: The trekker on Eiðiskollur can be recognized by the…",
+      "title": "Coverage: very low clouds around a peninsula",
       "text": [
         "The trekker on Eiðiskollur can be recognized by the extremely **low clouds** surrounding the peninsula."
       ],
@@ -702,14 +737,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The trekker on Eiðiskollur shows extremely low clouds surrounding the peninsula."
     },
     {
       "id": "fo-1Wd7",
       "step": 2,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: The trekker west of Skopun can be recognised by the wide…",
+      "title": "Coverage: wide strait with islands behind",
       "text": [
         "The trekker west of Skopun can be recognised by the **wide strait** to the north with the main islands of the Faroes in the background."
       ],
@@ -748,14 +784,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The trekker west of Skopun looks north over a wide strait with the main islands in the background."
     },
     {
       "id": "fo-V3eT",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: There are two distinct pyramid-shaped mountains to the…",
+      "title": "Landscape: two pyramid mountains, thin snow",
       "text": [
         "There are two distinct **pyramid-shaped mountains** to the south of the trekker on Klakkur, with a very thin layer of snow on top."
       ],
@@ -794,14 +831,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The trekker on Klakkur sees two distinct pyramid-shaped mountains to the south, with a very thin layer of snow."
     },
     {
       "id": "fo-RQyZ",
       "step": 2,
       "order": 8,
       "family": "coverage",
-      "title": "Coverage: The trekker by Gjógv features a view of the village to the…",
+      "title": "Coverage: village below snowy mountains",
       "text": [
         "The trekker by Gjógv features a view of the **village to the south** with snow covered mountains in the background."
       ],
@@ -840,14 +878,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The trekker by Gjógv looks south over the village, with snow-covered mountains behind."
     },
     {
       "id": "fo-XXhd",
       "step": 2,
       "order": 9,
       "family": "other",
-      "title": "A grey boat featuring several people in reflective clothes…",
+      "title": "Boat: grey boat with reflective clothing",
       "text": [
         "A **grey boat** featuring several people in **reflective clothes** and with the text “RIB62” can be seen going to Koltur island."
       ],
@@ -886,284 +925,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/faroe-islands",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "fo-lm-49866",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "The generation 4 coverage was captured with a black pickup truck with an antenna on the front.",
-        "The truck is always blurred.",
-        "**--- NOTE:**",
-        "The truck in Iceland does not have a similar antenna."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4af190423666",
-          "src": "https://learnablemeta.com/images/847/VrWUXjGPxixYZV0YwzAR6TvBqhaSggSX14FW.avif",
-          "path": "fo/4af190423666.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "cf2b779e0a9a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-49867",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "The landscape of the Faroe islands is characterised by long, wide fjords with jagged green mountains that rise straight out of the water, with rocky ridge lines along the mountainsides.",
-        "The mountains generally look more imposing and greener than coastal mountains in Iceland, which can often be used to tell them apart."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d3f0c91abbe2",
-          "src": "https://learnablemeta.com/images/847/sipA9LHOccgzZYNyvXOpSJGDun5GcwXQxVpK.avif",
-          "path": "fo/d3f0c91abbe2.webp",
-          "width": 1000,
-          "height": 557,
-          "dupeOf": "d0ff116f2f44"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-50240",
-      "step": 3,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "The landscape of the Faroe islands is characterised by long, wide fjords with jagged green mountains that rise straight out of the water, with rocky ridge lines along the mountainsides.",
-        "The mountains generally look more imposing and greener than coastal mountains in Iceland, which can often be used to tell them apart."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d3f0c91abbe2",
-          "src": "https://learnablemeta.com/images/847/sipA9LHOccgzZYNyvXOpSJGDun5GcwXQxVpK.avif",
-          "path": "fo/d3f0c91abbe2.webp",
-          "width": 1000,
-          "height": 557,
-          "dupeOf": "d0ff116f2f44"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-50249",
-      "step": 3,
-      "order": 3,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "The generation 4 coverage was captured with a black pickup truck with an antenna on the front.",
-        "The truck is always blurred.",
-        "**--- NOTE:**",
-        "The truck in Iceland does not have a similar antenna."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4af190423666",
-          "src": "https://learnablemeta.com/images/847/VrWUXjGPxixYZV0YwzAR6TvBqhaSggSX14FW.avif",
-          "path": "fo/4af190423666.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "cf2b779e0a9a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-50872",
-      "step": 3,
-      "order": 4,
-      "family": "car",
-      "title": "Google car: Gen 4 Truck",
-      "text": [
-        "The generation 4 coverage was captured with a black pickup truck with an antenna on the front.",
-        "The truck is always blurred.",
-        "**--- NOTE:**",
-        "The truck in Iceland does not have a similar antenna."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4af190423666",
-          "src": "https://learnablemeta.com/images/847/VrWUXjGPxixYZV0YwzAR6TvBqhaSggSX14FW.avif",
-          "path": "fo/4af190423666.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "cf2b779e0a9a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-50873",
-      "step": 3,
-      "order": 5,
-      "family": "landscape",
-      "title": "Landscape: Landscape",
-      "text": [
-        "The landscape of the Faroe islands is characterised by long, wide fjords with jagged green mountains that rise straight out of the water, with rocky ridge lines along the mountainsides.",
-        "The mountains generally look more imposing and greener than coastal mountains in Iceland, which can often be used to tell them apart."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d3f0c91abbe2",
-          "src": "https://learnablemeta.com/images/847/sipA9LHOccgzZYNyvXOpSJGDun5GcwXQxVpK.avif",
-          "path": "fo/d3f0c91abbe2.webp",
-          "width": 1000,
-          "height": 557,
-          "dupeOf": "d0ff116f2f44"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-104499",
-      "step": 3,
-      "order": 6,
-      "family": "architecture",
-      "title": "Architecture: Above Ground Basements",
-      "text": [
-        "Faroese houses are typically made of wood, often with an above ground basement made of stone which is painted in a different colour than the wooden part.",
-        "Roofs will usually be either metal or have grass on top (turf)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "c4f625c3970d",
-          "src": "https://learnablemeta.com/images/1072/3oXURth3OE2eVkvbvJtQeixVnLFnpuaetRu7.avif",
-          "path": "fo/c4f625c3970d.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "ec50d613d063"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-430704",
-      "step": 3,
-      "order": 7,
-      "family": "bollard",
-      "title": "Bollard: Bollards",
-      "text": [
-        "Faroese bollards are **small wooden sticks** that are mainly painted **yellow and sometimes red** on the top."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ffb72cfa37f6",
-          "src": "https://learnablemeta.com/images/739/99npEU0UJzMQ9gRwInJKkpEzKDM1IW6oCa3g.avif",
-          "path": "fo/ffb72cfa37f6.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "9cfd8926a0d4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d85ff8515a6aec219cd249",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "fo-lm-783069",
-      "step": 3,
-      "order": 8,
-      "family": "language",
-      "title": "Language: Faroese",
-      "text": [
-        "Faroese is a North Germanic Language most closely related to Icelandic. It uses the special letters **Á, Ð, Í, Ó, Ú, Ý, Æ** and **Ø**. It differs from Icelandic by using the letter **Ø**, while Icelandic uses **É** and **Þ**."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "62cd0685c14f",
-          "src": "https://learnablemeta.com/images/9388/1785130804263-pPS.avif",
-          "path": "fo/62cd0685c14f.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "454f518663c0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A grey boat with several people in reflective clothes and the text 'RIB62' heads to Koltur island."
     }
   ]
 }

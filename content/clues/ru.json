@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: Russian licence plates are fully white with black text",
+      "title": "Plate: fully white, black text",
       "text": [
         "Russian licence plates are **fully white** with black text.",
         "NOTE: Most European counterparts will feature a blue strip on the left hand side."
@@ -47,14 +47,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Fully white plates with black text and no blue strip on the left like most of Europe."
     },
     {
       "id": "ru-dbaI",
       "step": 0,
       "order": 2,
       "family": "language",
-      "title": "Language: The Russian language uses the Cyrillic script",
+      "title": "Language: Cyrillic with Ы, Э, Ё, Ъ",
       "text": [
         "The Russian language uses the **Cyrillic script**, and contains the special letters Ы, Э, Ё and Ъ.",
         "Ё is also used in Mongolian and Ъ is used in Bulgarian.",
@@ -81,14 +82,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cyrillic script with the letters Ы, Э, Ё and Ъ. Russian also appears rarely in Ukraine and eastern Estonia.",
+      "differs": [
+        {
+          "country": "UA",
+          "how": "Ukrainian has Є, Ґ, І, Ї instead"
+        }
+      ]
     },
     {
       "id": "ru-aRud",
       "step": 0,
       "order": 3,
       "family": "language",
-      "title": "Language: The Russian word for street is улица",
+      "title": "Language: 'улица' means street",
       "text": [
         "The Russian word for street is **улица** (ulitsa), sometimes abbreviated **ул.** (ul.).",
         "NOTE: Bulgarian and most other Slavic languages also use улица / ulica. The Ukrainian word however is вулиця (vulytsya), abbreviated вул. (vul.)."
@@ -130,14 +138,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street is улица, short ул. Bulgarian and most Slavic languages say something similar, but Ukrainian says вулиця.",
+      "differs": [
+        {
+          "country": "UA",
+          "how": "Ukrainian says вулиця, short вул."
+        }
+      ]
     },
     {
       "id": "ru-cqfa",
       "step": 0,
       "order": 4,
       "family": "language",
-      "title": "Language: The Russian word for city is город",
+      "title": "Language: 'город' means city",
       "text": [
         "The Russian word for city is **город** (gorod), abbreviated **г.** (g.).",
         "NOTE: The Ukrainian word is місто (misto), abbreviated м. (m.)."
@@ -179,14 +194,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "City is город, short г. Ukrainian says місто, short м.",
+      "differs": [
+        {
+          "country": "UA",
+          "how": "Ukrainian says місто, short м."
+        }
+      ]
     },
     {
       "id": "ru-zEsz",
       "step": 0,
       "order": 5,
       "family": "bollard",
-      "title": "Bollard: Russia has three main types of bollards",
+      "title": "Bollard: three main types",
       "text": [
         "Russia has three main types of bollards: a very thin type being attached to a stick, one with a black top section and a red vertical reflector below and a German-style bollard."
       ],
@@ -243,14 +265,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Three common bollards: a very thin one on a stick, one with a black top and a red vertical reflector below, and a German-style one."
     },
     {
       "id": "ru-h2Gm",
       "step": 0,
       "order": 6,
       "family": "bollard",
-      "title": "Bollard: Near intersections in Russia you will commonly see a very…",
+      "title": "Roads: lots of bollards at intersections",
       "text": [
         "Near intersections in Russia you will commonly see a very **large number of bollards**."
       ],
@@ -299,14 +322,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Intersections often have a very large number of bollards."
     },
     {
       "id": "ru-wbja",
       "step": 0,
       "order": 7,
       "family": "bollard",
-      "title": "Bollard: Along with containing a large number of bollards",
+      "title": "Roads: unusually wide intersections",
       "text": [
         "Along with containing a large number of bollards, many intersections are **unusually wide** compared to other countries."
       ],
@@ -348,7 +372,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many intersections are unusually wide compared to other countries."
     },
     {
       "id": "ru-bXD0",
@@ -356,7 +381,7 @@
       "order": 8,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Signposts in Russia often have black painted bottoms",
+      "title": "Signposts: black painted bottoms",
       "text": [
         "Signposts in Russia often have **black painted bottoms**.",
         "NOTE: This is also common in Kazakhstan."
@@ -415,14 +440,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signposts often have black painted bottoms. Common in Kazakhstan too.",
+      "sameAs": [
+        "KZ"
+      ]
     },
     {
       "id": "ru-PVJx",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: Russia mainly uses square concrete poles",
+      "title": "Pole: square concrete",
       "text": [
         "Russia mainly uses **square concrete poles**. ",
         "NOTE: Square concrete poles can be seen in other post-Soviet countries, such as Ukraine, Lithuania, Estonia, Georgia, Kazakhstan, and Kyrgyzstan."
@@ -471,14 +500,23 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly square concrete poles. Ukraine, Lithuania, Estonia, Georgia, Kazakhstan and Kyrgyzstan have them too.",
+      "sameAs": [
+        "EE",
+        "GE",
+        "KG",
+        "KZ",
+        "LT",
+        "UA"
+      ]
     },
     {
       "id": "ru-mXjR",
       "step": 0,
       "order": 10,
       "family": "pole",
-      "title": "Pole: You can often see concrete support blocks at the bottom of…",
+      "title": "Pole: concrete support blocks at the base",
       "text": [
         "You can often see **concrete support blocks** at the bottom of utility poles, with wooden poles often being raised above ground by the support.",
         "NOTE: [Similar blocks](https://www.google.com/maps/@48.4300351,17.7728644,3a,32.5y,3.03h,74.13t/data=!3m6!1e1!3m4!1sQ_utNdLPQAxCA1f1l0Jgnw!2e0!7i16384!8i8192?entry=ttu) are found in several Central and Eastern European countries."
@@ -520,14 +558,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles often have concrete support blocks at the bottom, with wooden poles often lifted off the ground by them. Several Central and Eastern European countries have similar blocks."
     },
     {
       "id": "ru-zl6d",
       "step": 0,
       "order": 11,
       "family": "car",
-      "title": "Google car: Three Generation 3 Street View cars are commonly found in…",
+      "title": "Google car: black or white Gen 3, long antenna",
       "text": [
         "Three Generation 3 Street View cars are commonly found in Russia. The two most useful ones for recognising Russia are a black and a [white](https://goo.gl/maps/MmC3SpuSmhV5ezux9) car, both with a long antenna. You may also see a [short antenna](https://goo.gl/maps/x1ryuJiJL9VjkEWx6) without a visible car.",
         "NOTE: Short antenna without a visible car in Generation 3 is common in Europe. Both black and white cars with long antenna can show up in Generation 3 Europe, but are not as common."
@@ -577,7 +616,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 3 mostly has a black or white car with a long antenna, or a short antenna with no visible car. Short antenna alone is common across Europe, and black or white long-antenna cars appear in Europe but less often."
     },
     {
       "id": "ru-jZWe",
@@ -585,7 +625,7 @@
       "order": 12,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Russian pedestrian signs have a simply drawn person and…",
+      "title": "Sign: pedestrian sign, three stripes",
       "text": [
         "Russian pedestrian signs have a simply drawn person and **three stripes**. Signs will commonly have a **bright yellow border**.",
         "NOTE: Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design."
@@ -639,7 +679,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Simple person with three stripes, often with a bright yellow border. Ukraine, Lithuania, Mongolia, Kazakhstan and Kyrgyzstan use the same design.",
+      "sameAs": [
+        "KG",
+        "KZ",
+        "LT",
+        "MN",
+        "UA"
+      ]
     },
     {
       "id": "ru-LVQ6",
@@ -647,7 +695,7 @@
       "order": 13,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Russian pedestrian crossings contain alternating white and…",
+      "title": "Road: crossings with white and yellow stripes",
       "text": [
         "Russian pedestrian crossings contain alternating **white and yellow stripes**.",
         "NOTE: This is also common in Kazakhstan."
@@ -689,14 +737,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossings have alternating white and yellow stripes. Common in Kazakhstan too.",
+      "sameAs": [
+        "KZ"
+      ]
     },
     {
       "id": "ru-YqxG",
       "step": 0,
       "order": 14,
       "family": "guardrail",
-      "title": "Guardrail: Black and white striped guardrails",
+      "title": "Guardrail: black and white stripes",
       "text": [
         "**Black and white striped guardrails**, kerbs and bridge barriers are common in russia."
       ],
@@ -737,14 +789,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black-and-white striped guardrails, kerbs and bridge barriers are common."
     },
     {
       "id": "ru-ssZ0",
       "step": 0,
       "order": 15,
       "family": "architecture",
-      "title": "Architecture: The vast majority of urban housing in Russia are large…",
+      "title": "Houses: big plain concrete apartment blocks",
       "text": [
         "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete. [Newer buildings](https://goo.gl/maps/qSWTTiaLytipTyBd7) in wealthier areas appear more modern."
       ],
@@ -785,14 +838,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most city housing is big rectangular concrete apartment blocks. Newer buildings in wealthier areas look more modern."
     },
     {
       "id": "ru-vyBb",
       "step": 0,
       "order": 16,
       "family": "architecture",
-      "title": "Architecture: Rural housing in Russia consists mostly of a basic wooden…",
+      "title": "Houses: basic wooden houses with metal roofs",
       "text": [
         "Rural housing in Russia consists mostly of a **basic wooden structure** with metal roofs."
       ],
@@ -833,14 +887,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rural housing is mostly basic wooden structures with metal roofs."
     },
     {
       "id": "ru-tnNR",
       "step": 0,
       "order": 17,
       "family": "architecture",
-      "title": "Architecture: This style of richly decorated window frames is commonly…",
+      "title": "Houses: richly decorated window frames, often blue",
       "text": [
         "This style of **richly decorated window frames** is commonly found on traditional Russian homes, especially on log cabins. They are often painted blue."
       ],
@@ -881,14 +936,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Richly decorated window frames on traditional log cabins, often painted blue."
     },
     {
       "id": "ru-OYvI",
       "step": 0,
       "order": 18,
       "family": "other",
-      "title": "In urban areas, you can sometimes see pipes which are…",
+      "title": "Pipes: raised above ground on vertical pipes",
       "text": [
         "In urban areas, you can sometimes see **pipes** which are exposed above the ground and are held up by other vertical pipes.",
         "NOTE: This also occurs in Georgia and Ukraine, but in Ukraine it is less common."
@@ -931,14 +987,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In towns, pipes run exposed above ground, held up by vertical pipes. Georgia and Ukraine have this too, Ukraine less often.",
+      "sameAs": [
+        "GE",
+        "UA"
+      ]
     },
     {
       "id": "ru-EAAw",
       "step": 0,
       "order": 19,
       "family": "pole",
-      "title": "Pole: Black & white-striped pole shields are common along highways",
+      "title": "Pole: black-and-white striped shields on highways",
       "text": [
         "**Black & white-striped pole shields** are common along highways, especially in European Russia."
       ],
@@ -987,14 +1048,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black-and-white striped shields on poles along highways, especially in the European part."
     },
     {
       "id": "ru-WkyB",
       "step": 1,
       "order": 1,
       "family": "vegetation",
-      "title": "Vegetation: Birch trees, identified by their white peeling bark, have a…",
+      "title": "Plants: white peeling birch bark",
       "text": [
         "Birch trees, identified by their white peeling bark, have a wide range in Russia. Notably they are almost never found far south or far north in the western part of the country."
       ],
@@ -1035,14 +1097,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Birches have a wide range but almost never grow in the far south or far north in the west."
     },
     {
       "id": "ru-LP1h",
       "step": 1,
       "order": 2,
       "family": "vegetation",
-      "title": "Vegetation: Birches very close together",
+      "title": "Plants: birches packed tight, birch-only forests",
       "text": [
         "Birches very close together, as well as forests consisting of **only birches**, are indicative of areas east of the Urals, most commonly between Chelyabinsk Oblast and Novosibirsk Oblast."
       ],
@@ -1084,14 +1147,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Birches very close together, and forests of only birch, mean east of the Urals, most common between two central Siberian regions."
     },
     {
       "id": "ru-FB0Q",
       "step": 1,
       "order": 3,
       "family": "vegetation",
-      "title": "Vegetation: Siberian larches are one of the dominant tree species in…",
+      "title": "Plants: Siberian larch, needle leaves",
       "text": [
         "Siberian larches are one of the dominant tree species in much of eastern Russia, recognized by their unique **needle-like leaves**. Generally speaking, they become more prevalent the further east you go in the country, as well as at high elevations."
       ],
@@ -1132,14 +1196,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Siberian larches dominate much of the east, with needle-like leaves. They become more common the further east and at high altitude."
     },
     {
       "id": "ru-SdNy",
       "step": 1,
       "order": 4,
       "family": "vegetation",
-      "title": "Vegetation: Spruce trees are an evergreen tree that can be identified…",
+      "title": "Plants: spruce, dark dense droopy branches",
       "text": [
         "Spruce trees are an **evergreen tree** that can be identified by their dense and droopy or parallel branches, and generally are darker in color than most trees. ",
         "A similar evergreen tree, a [caucasian fir](https://maps.app.goo.gl/1XKsGPrBJaZiuSXn9), exists in the Caucasus Mountains. It has much more well organized and straighter branches.",
@@ -1182,14 +1247,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Spruce is evergreen, dark and dense with droopy or parallel branches. Caucasian fir has straighter, more orderly branches. Larches have upward, less dense, unruly branches and can look similar."
     },
     {
       "id": "ru-8PIl",
       "step": 1,
       "order": 5,
       "family": "vegetation",
-      "title": "Vegetation: Giant butterbur (commonly referred to as Sakhalin cabbage)…",
+      "title": "Plants: giant butterbur, huge round leaves",
       "text": [
         "[Giant butterbur](https://en.wikipedia.org/wiki/Petasites_japonicus) (commonly referred to as Sakhalin cabbage) is very common in Sakhalin Oblast, particularly in the southern half. Related plants can very rarely be found in [Adygea](https://goo.gl/maps/wWv1UwyS1XfNpC4v6)."
       ],
@@ -1231,14 +1297,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Giant butterbur ('Sakhalin cabbage') is very common on the Far East island, mostly in the south half. Related plants rarely appear near the Black Sea."
     },
     {
       "id": "ru-OKfi",
       "step": 1,
       "order": 6,
       "family": "vegetation",
-      "title": "Vegetation: This type of white flower",
+      "title": "Plants: tall white flower heads (hogweed)",
       "text": [
         "This type of white flower ([heracleum sosnowskyi](https://en.wikipedia.org/wiki/Heracleum_sosnowskyi)) is most commonly found around Moscow, Komi Republic, and Perm Krai."
       ],
@@ -1280,14 +1347,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall white flowers of Sosnowsky's hogweed are most common around the capital, in the north-west Komi region and near the Urals."
     },
     {
       "id": "ru-mt14",
       "step": 1,
       "order": 7,
       "family": "vegetation",
-      "title": "Vegetation: Large amounts of the pink or red flower fireweed",
+      "title": "Plants: lots of pink fireweed",
       "text": [
         "Large amounts of the pink or red flower fireweed ([Chamaenerion angustifolium](https://en.wikipedia.org/wiki/Chamaenerion_angustifolium)) typically indicates a northern region of Russia. Similarly, most places north of Moscow commonly have fireweed."
       ],
@@ -1328,14 +1396,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large amounts of pink or red fireweed point to a northern region, and most places north of the capital have it."
     },
     {
       "id": "ru-jeND",
       "step": 1,
       "order": 8,
       "family": "vegetation",
-      "title": "Vegetation: Sunflowers are common along the border with Ukraine as well…",
+      "title": "Plants: sunflowers near Ukraine and the Volga",
       "text": [
         "**Sunflowers **are common along the border with Ukraine as well as more eastern oblasts like Ulyanovsk, Samara, and northern Orenburg."
       ],
@@ -1379,14 +1448,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sunflowers are common along the Ukraine border and in eastern Volga-Urals regions.",
+      "sameAs": [
+        "UA"
+      ]
     },
     {
       "id": "ru-MFON",
       "step": 1,
       "order": 9,
       "family": "vegetation",
-      "title": "Vegetation: Blue-pod lupines appear very commonly in northern Vladimir…",
+      "title": "Plants: blue lupines",
       "text": [
         "[Blue-pod lupines](https://en.wikipedia.org/wiki/Lupinus_polyphyllus) appear very commonly in northern Vladimir Oblast, eastern Ivanovo Oblast, and southwestern Kostroma Oblast. It can also be found less commonly elsewhere in Kirov Oblast and towards the Baltics."
       ],
@@ -1428,14 +1501,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue lupines are very common in a few regions north-east of the capital, less common in Kirov and toward the Baltics."
     },
     {
       "id": "ru-eHxy",
       "step": 1,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: The black poplar is commonly found south",
+      "title": "Plants: black poplar near Ukraine and Kazakhstan",
       "text": [
         "The **black poplar** is commonly found south, near the border with Ukraine, as well as toward the western border with Kazakhstan."
       ],
@@ -1479,14 +1553,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black poplars are common in the south near Ukraine and toward Kazakhstan's border.",
+      "sameAs": [
+        "KZ",
+        "UA"
+      ]
     },
     {
       "id": "ru-2mXt",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: The Russian olive is typically found along the Kazakhstan…",
+      "title": "Plants: Russian olive along the border",
       "text": [
         "The [Russian olive](https://en.wikipedia.org/wiki/Elaeagnus_angustifolia) is typically found along the Kazakhstan border."
       ],
@@ -1529,14 +1608,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Russian olive grows mostly along the Kazakhstan border.",
+      "sameAs": [
+        "KZ"
+      ]
     },
     {
       "id": "ru-lb3J",
       "step": 1,
       "order": 12,
       "family": "vegetation",
-      "title": "Vegetation: Lined oak trees, often with a single white stripe around…",
+      "title": "Plants: lined oaks with a white stripe",
       "text": [
         "**Lined oak trees**, often with a single white stripe around the trunk, are extremely common in Kaliningrad."
       ],
@@ -1578,14 +1661,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Lined oak trees, often with a white stripe around the trunk, are extremely common in the western exclave."
     },
     {
       "id": "ru-pyqm",
       "step": 1,
       "order": 13,
       "family": "vegetation",
-      "title": "Vegetation: Sparsely planted larches along the road with open rolling…",
+      "title": "Plants: sparse planted larches, open fields",
       "text": [
         "Sparsely **planted larches** along the road with open rolling fields is common in Tatarstan and adjacent federal subjects."
       ],
@@ -1627,14 +1711,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sparsely planted larches along the road with open rolling fields are common in one Volga republic and nearby areas."
     },
     {
       "id": "ru-i2zA",
       "step": 1,
       "order": 14,
       "family": "landscape",
-      "title": "Landscape: Sandy roadsides are common in Khanty-Mansi and…",
+      "title": "Soil: sandy roadsides",
       "text": [
         "**Sandy roadsides** are common in Khanty-Mansi and Yamalo-Nenets and adjacent subjects, as well as areas around [Nizhny Novgorod ](https://goo.gl/maps/NSDDrfNaFFCQPF8z5)on the Volga river. Other notable areas are [Karelia](https://goo.gl/maps/qw6yxjAp1TvUTT7S8), [Murmansk](https://goo.gl/maps/t4fzZ21q1MZrQLzG6), and [western Sakha](https://goo.gl/maps/QHWgEJ1kwRXxAEPu7). Beware, however, that sandy roadsides can less commonly be found near rivers in other regions."
       ],
@@ -1676,14 +1761,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sandy roadsides are common in two western Siberian regions, near one Volga city, and in Karelia, the far north-west and western Sakha. They also appear near rivers elsewhere."
     },
     {
       "id": "ru-r4Fx",
       "step": 1,
       "order": 15,
       "family": "landscape",
-      "title": "Landscape: Red soil is common in the highlighted areas",
+      "title": "Soil: red soil in highlighted areas",
       "text": [
         "**Red soil** is common in the highlighted areas, notably around Izhevsk and Perm, much of Arkhangelsk Oblast, Leningrad Oblast, and Pskov Oblast, and near Volgograd and Astrakhan. Note that this map is by no means exhaustive; red soil can be found almost anywhere in the country near water or iron mines."
       ],
@@ -1725,14 +1811,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red soil is common around several western regions and in the south-east. Red soil can appear almost anywhere near water or iron mines."
     },
     {
       "id": "ru-K6A7",
       "step": 1,
       "order": 16,
       "family": "landscape",
-      "title": "Landscape: The Kamchatka peninsula has unique grey gravelly soil",
+      "title": "Landscape: grey gravelly soil, many volcanoes",
       "text": [
         "The Kamchatka peninsula has unique **grey gravelly soil**, as well as the largest number of **volcanoes** of any region in Russia. They are frequently seen across the peninsula, and in some places can appear quite close such as in [Klyuchi](https://goo.gl/maps/2JTY8XjBELQ2Q2tT8)."
       ],
@@ -1774,14 +1861,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Far East peninsula has grey gravelly soil and the most volcanoes in the country, often seen quite close."
     },
     {
       "id": "ru-Ja8F",
       "step": 1,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: Extremely gravelly and sometimes dark soil appears as you…",
+      "title": "Soil: very gravelly dark soil near eastern mountains",
       "text": [
         "Extremely gravelly and sometimes [dark](https://goo.gl/maps/DqAozgnTPiGBAj7g8) soil appears as you approach the mountains east of Yakutsk, starting around Keskil."
       ],
@@ -1822,14 +1910,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Extremely gravelly, sometimes dark soil approaches the mountains east of one far-eastern city."
     },
     {
       "id": "ru-4aKj",
       "step": 1,
       "order": 18,
       "family": "landscape",
-      "title": "Landscape: Lush and diverse forests in a hilly landscape characterises…",
+      "title": "Landscape: lush hilly forests, overcast, white car",
       "text": [
         "**Lush** and diverse forests in a **hilly** landscape characterises the noticeably warmer region around Vladivostok. Most of the coverage is overcast and has a white car with a long antenna. Further south, near the tri-border, you will find a more open [rolling hill landscape](https://goo.gl/maps/ErMpfen9KCE4HGHE7)."
       ],
@@ -1870,14 +1959,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The warm south-east around the port city has lush mixed forests on hills, mostly overcast coverage with a white long-antenna car. Further south, a more open rolling landscape."
     },
     {
       "id": "ru-KNFH",
       "step": 1,
       "order": 19,
       "family": "coverage",
-      "title": "Coverage: The eastern half of the Kolyma Highway going to Magadan…",
+      "title": "Coverage: tall hazy hills, unpaved dark gravel road",
       "text": [
         "The eastern half of the Kolyma Highway going to Magadan features a lot of tall **hills** and **mountains**, usually shrouded in a **haze**. Most of the roads are unpaved and feature **dark gravelly soil**. The haze is not present in the western half."
       ],
@@ -1920,14 +2010,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The eastern half of the Kolyma Highway has tall hills and mountains in haze, unpaved roads and dark gravelly soil. The west half has no haze."
     },
     {
       "id": "ru-YXiH",
       "step": 1,
       "order": 20,
       "family": "landscape",
-      "title": "Landscape: A presence of Siberian larches and large mountains on a…",
+      "title": "Road: larches, big mountains, Gen 4 white car",
       "text": [
         "A presence of Siberian larches and large mountains on a mostly paved, but sometimes [wide-gravel road](https://goo.gl/maps/ztavuzTw3BXAyNMv6) indicates the main road south of Yakutsk, with [Generation 4 white car](https://goo.gl/maps/4VP2UsVh2FrsQjBg8) appearing north of Berkakit."
       ],
@@ -1968,14 +2059,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Siberian larches, large mountains and a mostly paved road, sometimes with wide gravel, mean the main road south of one far-eastern city. A Gen 4 white car appears further north."
     },
     {
       "id": "ru-QkQy",
       "step": 1,
       "order": 21,
       "family": "coverage",
-      "title": "Coverage: Very hazy coverage is found east and south of Mirny",
+      "title": "Coverage: very hazy, orange or white",
       "text": [
         "Very **hazy coverage** is found east and south of Mirny, especially along the Vilyuy river. The colour of the haze varies, but it is often orange or [white](https://goo.gl/maps/QMfuHapbJnFYAyop6)."
       ],
@@ -2016,14 +2108,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very hazy coverage east and south of one diamond-mining town, especially along a river. Haze is often orange or white."
     },
     {
       "id": "ru-epdP",
       "step": 1,
       "order": 22,
       "family": "landscape",
-      "title": "Landscape: The landscape in Buryatia is very unique",
+      "title": "Landscape: open grass, shrubs and mountains",
       "text": [
         "The landscape in Buryatia is very unique, containing open grassy landscape with shrubs and mountains. It is lusher near Baikal, but the mountains persist."
       ],
@@ -2065,14 +2158,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Open grassy land with shrubs and mountains. Lusher near the big lake, but the mountains stay."
     },
     {
       "id": "ru-UwoE",
       "step": 1,
       "order": 23,
       "family": "coverage",
-      "title": "Coverage: This forest fire haze is found near Lake Gusinoye",
+      "title": "Coverage: forest fire haze, open rolling land",
       "text": [
         "This **forest fire haze** is found near Lake Gusinoye, southwest of Ulan-Ude in Buryatia. While similar to the haze found near [Mirny](https://maps.app.goo.gl/kZY7oWKZW3bHoFp5A), the Buryatia haze coverage can typically be recognised by the **open rolling landscape**, which is not found near Mirny."
       ],
@@ -2114,14 +2208,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Forest fire haze near a lake south-west of the republic capital. It resembles the haze near the diamond town but has an open rolling landscape."
     },
     {
       "id": "ru-K40M",
       "step": 1,
       "order": 24,
       "family": "car",
-      "title": "Google car: The main road of Altai Republic has a black car long…",
+      "title": "Google car: black car, long antenna, mountains and fog",
       "text": [
         "The main road of Altai Republic has a black car long antenna driving north **through the Altai Mountains**, often with **foggy or rainy** coverage."
       ],
@@ -2164,14 +2259,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The main road of one southern mountain republic has a black long-antenna car driving north through mountains, often foggy or rainy."
     },
     {
       "id": "ru-SZCQ",
       "step": 1,
       "order": 25,
       "family": "landscape",
-      "title": "Landscape: Dry steppe mountains with a long antenna will usually…",
+      "title": "Landscape: dry steppe mountains, long antenna",
       "text": [
         "**Dry steppe mountains** with a long antenna will usually indicate the Tuva Republic. The south part of the main road in the [Altai Republic](https://goo.gl/maps/C7aWe5KJWyT8Sa3W6) and Tuva can appear similarly dry, so things such as driving direction and cloudiness can be used to distinguish them."
       ],
@@ -2229,14 +2325,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dry steppe mountains with a long antenna usually mean one southern Siberian republic. The south of the neighbouring mountain republic's road looks similar, so use driving direction and clouds."
     },
     {
       "id": "ru-grzn",
       "step": 1,
       "order": 26,
       "family": "landscape",
-      "title": "Landscape: The landscape in the far north can be recognised by the…",
+      "title": "Landscape: flat, very low vegetation, far north",
       "text": [
         "The landscape in the far north can be recognised by the relatively **flat** landscape, with **very low vegetation**."
       ],
@@ -2277,14 +2374,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The far north is relatively flat with very low plants."
     },
     {
       "id": "ru-91yN",
       "step": 1,
       "order": 27,
       "family": "landscape",
-      "title": "Landscape: The coverage in Omsk Oblast is some of the most…",
+      "title": "Landscape: green farm fields with birch patches",
       "text": [
         "The coverage in Omsk Oblast is some of the most recognizable in Russia. It is typically summer Generation 4 and has a distinct landscape consisting of green agricultural fields, which are interrupted by isolated patches of (primarily) birch forest.",
         "Note that in Generation 3, this landscape can be seen in a much larger area of Russia.",
@@ -2328,14 +2426,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "One Siberian region's summer Gen 4 shows green farm fields interrupted by isolated patches of birch forest. In Gen 3 this landscape covers a much larger area."
     },
     {
       "id": "ru-TE6r",
       "step": 1,
       "order": 28,
       "family": "landscape",
-      "title": "Landscape: The area west of the Caspian Sea can often be recognised by…",
+      "title": "Landscape: extremely dry and flat",
       "text": [
         "The area west of the Caspian Sea can often be recognised by its extremely **dry and flat landscape**, especially in Kalmykia, Astrakhan Oblast, and Dagestan."
       ],
@@ -2377,14 +2476,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The area west of the Caspian Sea is extremely dry and flat, especially in the three regions there."
     },
     {
       "id": "ru-sPRH",
       "step": 1,
       "order": 29,
       "family": "landscape",
-      "title": "Landscape: Grassy fields, with bushy vegetation, in early spring…",
+      "title": "Landscape: grass and bushes, early spring Gen 4",
       "text": [
         "**Grassy fields**, with **bushy vegetation**, in early spring Generation 4 coverage is typical for Dagestan. The landscape can either be completely [flat](https://goo.gl/maps/aagmDRf8TAcokMkn9) or [mountainous](https://goo.gl/maps/ZbWrv4FiuSGLBzHq9). [These flowers](https://maps.app.goo.gl/P26tJd6Lf73upk4G8) are also quite common in the Generation 4 Dagestan coverage."
       ],
@@ -2426,14 +2526,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Grassy fields with bushes in early spring Gen 4, either flat or mountainous, with common small flowers, point to one Caucasus republic."
     },
     {
       "id": "ru-mZpj",
       "step": 1,
       "order": 30,
       "family": "landscape",
-      "title": "Landscape: The Caucasus mountain range is one of the largest mountain…",
+      "title": "Landscape: Caucasus mountains, highest peak",
       "text": [
         "The **Caucasus mountain range** is one of the largest mountain ranges in Russia. The tallest mountain in Russia, [Mount Elbrus](https://goo.gl/maps/v1yAcshzeyBme85y8), can be found on the border of the Kabardino-Balkarian Republic and Karachay-Cherkessia."
       ],
@@ -2482,14 +2583,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Caucasus is one of the biggest ranges, with the tallest mountain in the country on the border of two republics."
     },
     {
       "id": "ru-ABdR",
       "step": 1,
       "order": 31,
       "family": "landscape",
-      "title": "Landscape: Rocks along the road are extremely common throughout most…",
+      "title": "Landscape: rocks along the road",
       "text": [
         "**Rocks** along the road are extremely common throughout most of Karelia and Murmansk Oblast. They can also be found in Perm Krai and Buryatia but are less common and smaller in size."
       ],
@@ -2531,14 +2633,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rocks along the road are extremely common in the north-west, and smaller and rarer in the Urals and near the big Siberian lake."
     },
     {
       "id": "ru-LBZi",
       "step": 1,
       "order": 32,
       "family": "landscape",
-      "title": "Landscape: An open, hilly landscape with low shrubbery and fireweed…",
+      "title": "Landscape: open hills, low shrubs, fireweed",
       "text": [
         "An open, hilly landscape with low shrubbery and [fireweed](https://goo.gl/maps/jQxpJeqbas286g7i7) usually indicates Murmansk. The lower the shrubbery, the more north it generally is."
       ],
@@ -2580,14 +2683,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Open hilly land with low shrubs and fireweed usually means the far north-west. The lower the shrubs, the further north."
     },
     {
       "id": "ru-XM6p",
       "step": 1,
       "order": 34,
       "family": "other",
-      "title": "This is a map of Russian area codes",
+      "title": "Phone numbers: area code first digit shows region",
       "text": [
         "This is a map of Russian **area codes**. Notably, area codes starting with 8 are in the west, codes starting with 3 are fairly central and codes starting with 4 are either east or around Moscow."
       ],
@@ -2610,14 +2714,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Area codes starting with 8 are in the west, 3 fairly central, and 4 either east or around the capital."
     },
     {
       "id": "ru-X2he",
       "step": 1,
       "order": 35,
       "family": "car",
-      "title": "Google car: In Generation 3 coverage you will somewhat commonly find…",
+      "title": "Plates: regional code on the right",
       "text": [
         "In Generation 3 coverage you will somewhat commonly find unblurred licence plates, featuring a **regional code** on the right side. The codes are generally ordered alphabetically within each [type of federal subject](https://en.wikipedia.org/wiki/Federal_subjects_of_Russia#Types), starting at republics and ending with autonomous okrugs. Therefore, the [Republic of Adygea](https://maps.app.goo.gl/PhX9zVnMQfBCvHQi7) will be represented by 01, and the [Amur Oblast](https://maps.app.goo.gl/AXNwmSJ1vio1pRCo7) by 28, both being the first alphabetical subjects of republics and oblasts respectively. If you encounter a [three digit code](https://maps.app.goo.gl/BiQGFQEG51Xxc7fc7), the second and third digit will form the regional code, in this case 123 becomes 23, for Krasnodar Krai. You may also find the codes written out on the back of [trucks](https://maps.app.goo.gl/NVQNyKpSUXZ3i4LG6) and [vans](https://www.google.com/maps/@56.6511783,66.3012014,3a,15y,5.71h,78.8t/data=!3m6!1e1!3m4!1s8nSDptPKXAhrtGZE6nzskg!2e0!7i13312!8i6656?entry=ttu)."
       ],
@@ -2637,14 +2742,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In Gen 3 you sometimes see unblurred plates with a regional code on the right, ordered alphabetically within each type of region, so 01 is the first republic and 28 an oblast. Three-digit codes add extra regions."
     },
     {
       "id": "ru-NFlW",
       "step": 1,
       "order": 36,
       "family": "other",
-      "title": "These are the bus stops unique to specific federal subjects…",
+      "title": "Bus stops: shelters unique to regions",
       "text": [
         "These are the bus stops unique to specific federal subjects in Russia. Notably common and memorable ones include Krasnoyarsk Krai, Chuvashia, Tatarstan, and Mari El Republic."
       ],
@@ -2664,14 +2770,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some federal regions have bus stops that are unique to them. Notable ones are in a Siberian territory and three Volga republics."
     },
     {
       "id": "ru-F3DF",
       "step": 1,
       "order": 37,
       "family": "language",
-      "title": "Language: Japanese-made cars with the steering wheel on the right…",
+      "title": "Cars: right-hand-drive Japanese cars in the east",
       "text": [
         "Japanese-made cars with the **steering wheel on the right** become more common the further east you go, generally starting around Novosibirsk."
       ],
@@ -2713,14 +2820,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Right-hand-drive Japanese-made cars become more common going east, starting around the big Siberian city."
     },
     {
       "id": "ru-4DR5",
       "step": 1,
       "order": 38,
       "family": "bollard",
-      "title": "Bollard: Russian bollards that appear very thin and attached to a…",
+      "title": "Bollard: very thin one on a stick, east",
       "text": [
         "Russian bollards that appear very thin and attached to a stick are usually found in the eastern part of the country, starting around Omsk. Note that [ordinary Russian bollards](https://goo.gl/maps/RnBNJE9kGwChsj9G7) are still plentiful in this part of the country."
       ],
@@ -2769,7 +2877,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The very thin bollard on a stick is usually in the east, starting around one Siberian city. Ordinary bollards remain plentiful there."
     },
     {
       "id": "ru-hjXS",
@@ -2777,7 +2886,7 @@
       "order": 39,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: This black traffic sign bottom is primarily found in…",
+      "title": "Signs: black sign bottoms in the south",
       "text": [
         "This **black traffic sign bottom** is primarily found in Stavropol and Chechnya, as well as western Dagestan. Rarely, exceptions can be found in other southern federal subjects such as [Kabardino Balkaria](https://goo.gl/maps/XeKf78CHzYCEtTQX8), but these will typically be uncolored."
       ],
@@ -2819,7 +2928,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black sign bottoms are mostly in two southern regions and west Dagestan. Rare exceptions in other southern regions are usually uncoloured."
     },
     {
       "id": "ru-EN2b",
@@ -2827,7 +2937,7 @@
       "order": 40,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Clips on edges of signposts are found in Leningrad and St",
+      "title": "Signposts: clips on the edges",
       "text": [
         "**Clips** on edges of signposts are found in Leningrad and St. Petersburg, and very rarely in Pskov, Novgorod or elsewhere."
       ],
@@ -2869,14 +2979,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Clips on the edges of signposts are found around the north-west big city and its region, very rarely in neighbouring ones."
     },
     {
       "id": "ru-PJiO",
       "step": 1,
       "order": 41,
       "family": "line",
-      "title": "Road line: Outer dashed road lines are usually found throughout Kursk…",
+      "title": "Road lines: outer dashed lines",
       "text": [
         "**Outer dashed road lines** are usually found throughout Kursk Oblast. An exception can be found in [Tuva Republic](https://goo.gl/maps/h6GYSQrhjBXDWJD39). Rarer exceptions include [the Republic of Karelia](https://goo.gl/maps/PvQvkaH63nHGqvD17), [Primorsky Krai](https://goo.gl/maps/6pXTrSNjaNmVToYF8) and [Khabarovsk Krai](https://goo.gl/maps/34mpJJfXMNBqKnJm9)."
       ],
@@ -2918,14 +3029,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Outer dashed lines are usual in one south-western region. Exceptions in a Siberian republic and, rarely, in the north-west and Far East."
     },
     {
       "id": "ru-trOH",
       "step": 1,
       "order": 42,
       "family": "line",
-      "title": "Road line: As you go further north in Russia",
+      "title": "Roads: concrete block roads in the far north",
       "text": [
         "As you go further north in Russia, some roads are made out of several **concrete blocks**. It is notably common in the Komi Republic, Nenets, and Yamalo-Nenets."
       ],
@@ -2966,14 +3078,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Further north, some roads are made of several concrete blocks, especially in the Komi region and two Arctic districts."
     },
     {
       "id": "ru-sKGo",
       "step": 1,
       "order": 43,
       "family": "language",
-      "title": "Language: Some republics of Russia with minority languages use…",
+      "title": "Language: bilingual signs in two Volga republics",
       "text": [
         "Some republics of Russia with minority languages use bilingual town entry and directional signs, such as in Bashkortostan and Tatarstan displaying Bashkir and Tatar respectively."
       ],
@@ -3015,14 +3128,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town entry and direction signs show Bashkir or Tatar alongside Russian in the two republics."
     },
     {
       "id": "ru-aGiM",
       "step": 1,
       "order": 44,
       "family": "language",
-      "title": "Language: Town names written in both the Cyrillic and Latin alphabets…",
+      "title": "Language: town names in Cyrillic and Latin",
       "text": [
         "**Town names** written in both the Cyrillic and **Latin** alphabets are common near the Baltic border and around Moscow, and to a lesser extent in federal subjects on the Finnish border."
       ],
@@ -3064,7 +3178,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town names in both Cyrillic and Latin are common near the Baltic border, around the capital and, less so, near Finland."
     },
     {
       "id": "ru-BhB9",
@@ -3072,7 +3187,7 @@
       "order": 45,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: These brown signs, pointing to typical tourist attractions,…",
+      "title": "Signs: brown tourist attraction signs",
       "text": [
         "These **brown signs**, pointing to typical tourist attractions, are common in Moscow Oblast and the oblasts bordering it. However, they can also less commonly be seen in city centres or near tourist attractions of [other regions](https://www.google.com/maps/@61.821949,34.3074923,3a,17.8y,22.25h,94.58t/data=!3m6!1e1!3m4!1stZhKu0HYudsYXdctQ9_AyQ!2e0!7i16384!8i8192?entry=ttu)."
       ],
@@ -3114,14 +3229,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Brown signs pointing to tourist attractions are common around the capital and its neighbouring regions, and less often in city centres elsewhere."
     },
     {
       "id": "ru-Jm4W",
       "step": 1,
       "order": 47,
       "family": "architecture",
-      "title": "Architecture: Buildings made of white limestone brick are indicative of…",
+      "title": "Houses: white limestone brick",
       "text": [
         "Buildings made of **white limestone brick** are indicative of Dagestan, as well as adjacent regions.",
         "NOTE: Brick architecture is more consistent the more brick structures you can see in the round."
@@ -3164,14 +3280,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White limestone brick buildings point to one southern republic and adjacent regions. Works better the more brick buildings you see."
     },
     {
       "id": "ru-l2qi",
       "step": 1,
       "order": 48,
       "family": "architecture",
-      "title": "Architecture: Buildings made almost entirely of red brick are mostly…",
+      "title": "Houses: almost entirely red brick",
       "text": [
         "Buildings made almost entirely of **red brick** are mostly found in the south, with Magnitogorsk, Orsk, and Omsk being notable exceptions.",
         "NOTE: This clue is more consistent the more brick structures you can see in the round."
@@ -3214,14 +3331,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Almost entirely red brick buildings are mostly in the south, with three industrial cities as exceptions. Works better the more brick you see."
     },
     {
       "id": "ru-O53i",
       "step": 1,
       "order": 49,
       "family": "architecture",
-      "title": "Architecture: While mosques can be found everywhere in Russia",
+      "title": "Mosques: common in the south and two Volga republics",
       "text": [
         "While mosques can be found everywhere in Russia, they are by far most common in areas with a Muslim majority, mainly in much of south Russia as well as Tatarstan and Bashkortostan."
       ],
@@ -3264,14 +3382,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mosques appear everywhere but are far more common in areas with a Muslim majority: much of the south and two Volga republics."
     },
     {
       "id": "ru-jLBa",
       "step": 1,
       "order": 50,
       "family": "architecture",
-      "title": "Architecture: Historical buildings in Mari El often have a unique…",
+      "title": "Houses: green roofs, red brick with white stone",
       "text": [
         "Historical buildings in Mari El often have a unique architecture style. You will frequently see design patterns that include **green roofs**, red brick sprinkled with white stone details. [Local churches](https://www.google.com/maps/@56.2884468,46.2917123,3a,42.4y,279.05h,107.04t/data=!3m7!1e1!3m5!1s5uTfNmrvJwCTQn0915srvw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3D5uTfNmrvJwCTQn0915srvw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D9.734652%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?entry=ttu) commonly feature a similar style."
       ],
@@ -3313,14 +3432,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Historic buildings in one Volga republic often have green roofs and red brick with white stone details. Local churches share the style."
     },
     {
       "id": "ru-fV2M",
       "step": 1,
       "order": 53,
       "family": "coverage",
-      "title": "Coverage: This is the full coverage map of Russia",
+      "title": "Coverage: map of coverage, sparse in east and north",
       "text": [
         "This is the full coverage map of Russia. It can be helpful to know areas where there isn’t any coverage. The coverage is notably very sparse in the east and north.",
         "You can check out the extent of the official coverage[ on this website](https://sv-map.netlify.app/#base=roadmap&cov=official&zoom=4&center=63.09475846224108%2C101.77734375000001)."
@@ -3344,14 +3464,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The coverage map shows large gaps. Coverage is very sparse in the east and north."
     },
     {
       "id": "ru-JN8Z",
       "step": 1,
       "order": 54,
       "family": "car",
-      "title": "Google car: White car long antenna is found in many places",
+      "title": "Google car: white long-antenna car",
       "text": [
         "[White car long antenna](https://maps.app.goo.gl/szUNXBWMYPjJ6jMA6) is found in many places, most commonly in [southern Chelyabinsk](https://maps.app.goo.gl/u2ofsEtYhTK1kxpr9), on [snow coverage around Novosibirsk](https://goo.gl/maps/WT1mwvr1mZH9Nsy88), and in the [Far East](https://maps.app.goo.gl/UcNfar31Lf4yD8pD7) beginning in [Amur Oblast](https://maps.app.goo.gl/uJivjvnTnNdf4LHq5).",
         "NOTE: While [Kamchatka](https://goo.gl/maps/vbKvMrHXtE7anj636) technically has a silver car (with a B type antenna), it often appears white and is part of the small group of exceptions to black and white."
@@ -3376,14 +3497,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The white long-antenna car appears in southern Chelyabinsk, in snow coverage around one Siberian city and in the Far East from Amur Oblast on. Kamchatka's silver car often looks white."
     },
     {
       "id": "ru-HjJe",
       "step": 1,
       "order": 55,
       "family": "car",
-      "title": "Google car: The A-type short antenna has its highest ridge on the right",
+      "title": "Google car: A-type short antenna, high ridge right",
       "text": [
         "The [A-type short antenna](https://maps.app.goo.gl/13hZAJw2TiAoyFP17) has its highest ridge on the right. Notable areas for this antenna are around [Kaluga](https://maps.app.goo.gl/JvchV2vn13QwiTG57), [Orenburg](https://maps.app.goo.gl/nYa3htnmJtm9RUEc9), and [Krasnodar](https://maps.app.goo.gl/48JHYVMTGEwN7XCu8)."
       ],
@@ -3406,14 +3528,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The A-type short antenna has its highest ridge on the right. Notable around Kaluga, Orenburg and Krasnodar."
     },
     {
       "id": "ru-dzLd",
       "step": 1,
       "order": 56,
       "family": "car",
-      "title": "Google car: The B-type short antenna has its highest ridge on the left",
+      "title": "Google car: B-type short antenna, high ridge left",
       "text": [
         "The [B-type short antenna](https://maps.app.goo.gl/otoKbscwAem4eCh89) has its highest ridge on the left. This antenna is wide-ranging, but it is most notably found near [Nizhny Novgorod](https://maps.app.goo.gl/6nmWkEgaUkHRydZt5), [Elista](https://maps.app.goo.gl/sb6XLo7VMBzFQiiu8), and [Yekaterinburg](https://maps.app.goo.gl/3VHAgPgQ6EWcbjys8) and [Tyumen](https://maps.app.goo.gl/rcYGf1PeEnWmD1Sc6)."
       ],
@@ -3436,14 +3559,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The B-type short antenna has its highest ridge on the left. Wide-ranging, but notable near Nizhny Novgorod, Elista, Yekaterinburg and Tyumen."
     },
     {
       "id": "ru-FXIF",
       "step": 1,
       "order": 57,
       "family": "car",
-      "title": "Google car: The B-type pronounced antenna is the same as the B-type…",
+      "title": "Google car: B-type antenna with rectangular ridge",
       "text": [
         "The [B-type pronounced antenna](https://maps.app.goo.gl/WwzMFjRSbmQUgBHB9) is the same as the B-type antenna but the ridge is more “rectangular”. This antenna is fairly limited, only being found commonly in [Moscow Oblast](https://maps.app.goo.gl/tziG6gD8RNd8ByJN8), [Kurgan Oblast](https://maps.app.goo.gl/HMFY2AUsYsPMmEFm6), [near Krasnoyarsk](https://maps.app.goo.gl/Wv94BFV16DXcfnVx6), and [southwest Krasnodar](https://maps.app.goo.gl/9hM7GWG3Mk7AazpJ7)."
       ],
@@ -3466,14 +3590,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Like the B-type but with a more rectangular ridge. Common near Moscow, Kurgan, Krasnoyarsk and south-west Krasnodar."
     },
     {
       "id": "ru-xPyY",
       "step": 1,
       "order": 58,
       "family": "car",
-      "title": "Google car: The C-type short antenna can be thought of as a low A-type…",
+      "title": "Google car: C-type short antenna, low twisting ridges",
       "text": [
         "The [C-type short antenna](https://maps.app.goo.gl/7WisPoWqAk3itE7eA) can be thought of as a low A-type or a “twisting antenna” with the ridges being further from the top. It is found [north](https://maps.app.goo.gl/snkxCqnaS1bZc1hY9) and [east](https://maps.app.goo.gl/6gMAwy8bad7C9J2dA) of Moscow, with the furthest south being [Rostov Oblast](https://maps.app.goo.gl/GjFfAVgNQaRzLKkL7)."
       ],
@@ -3496,14 +3621,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low A-type or twisting antenna with the ridges further from the top. Found north and east of the capital, furthest south in Rostov Oblast."
     },
     {
       "id": "ru-fDEc",
       "step": 1,
       "order": 59,
       "family": "car",
-      "title": "Google car: The blurred short antenna is visibly blurrier than any of…",
+      "title": "Google car: blurrier short antenna",
       "text": [
         "The [blurred short antenna](https://maps.app.goo.gl/8uWV4EHvPCH1dZKUA) is visibly blurrier than any of the other short antennas. It is mainly found in two major clusters around [Ufa](https://maps.app.goo.gl/rgZgng4EcRjznQuP6) and from [Stavropol](https://maps.app.goo.gl/7d5Q8kbPNPQPDMuGA) to [Makhachkala](https://maps.app.goo.gl/ujH4F6CZZc3qeSRN7)."
       ],
@@ -3526,14 +3652,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A short antenna that is visibly blurrier than the other types. Two clusters: around Ufa, and from Stavropol to Makhachkala."
     },
     {
       "id": "ru-RADI",
       "step": 1,
       "order": 60,
       "family": "car",
-      "title": "Google car: The A-type long antenna has its highest ridge on the right…",
+      "title": "Google car: A-type long antenna, high ridge right",
       "text": [
         "The [A-type long antenna](https://maps.app.goo.gl/PuGiesP9DAUdSiRKA) has its highest ridge on the right side. Notable areas include [Leningrad Oblast](https://maps.app.goo.gl/4GDjJxHqF2cerU1RA), [Republic of Karelia](https://maps.app.goo.gl/MN3ZHGme7BvopS7h9), and [Vologda Oblast](https://maps.app.goo.gl/KRnogy4K1mUbL9y99). Almost all the white car long antenna coverage is A-type, so checking for A-type can also help confirm car colour."
       ],
@@ -3555,14 +3682,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The A-type long antenna has its highest ridge on the right. Notable in the north-west. Almost all white long-antenna cars are A-type."
     },
     {
       "id": "ru-lyOi",
       "step": 1,
       "order": 61,
       "family": "car",
-      "title": "Google car: The B-type long antenna has its highest ridge on the left…",
+      "title": "Google car: B-type long antenna, high ridge left",
       "text": [
         "The [B-type long antenna](https://maps.app.goo.gl/xiJHmjsXcMQyQZ1d9) has its highest ridge on the left side. Notable areas include [Yaroslav](https://maps.app.goo.gl/ZdC9XJiP3NKKA9QA6) to [Vladimir](https://maps.app.goo.gl/wEscjWspwirDVd696), [Tula Oblast](https://maps.app.goo.gl/ajNom88LdYrKfRAX6), and much of the coverage near [Tuva](https://maps.app.goo.gl/icUb6qp4Y8MzFd2P7) and [Irkutsk](https://maps.app.goo.gl/UmZN7hTvhWZv6yKk8).",
         "NOTE: There are two other long antenna types, referred to as [CA](https://maps.app.goo.gl/eMwfHi2kLMyXc8u27) and [CB](https://maps.app.goo.gl/tDHKLKq8ENnxfWKEA), but due to their relative lack of usefulness they will not be covered here."
@@ -3586,14 +3714,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The B-type long antenna has its highest ridge on the left. Notable from Yaroslavl to Vladimir, Tula Oblast and around Tuva and Irkutsk."
     },
     {
       "id": "ru-AsJS",
       "step": 1,
       "order": 62,
       "family": "car",
-      "title": "Google car: Blurred long antenna is visibly blurrier than other long…",
+      "title": "Google car: blurrier long-antenna car",
       "text": [
         "[Blurred long antenna](https://maps.app.goo.gl/uqSetFHbhpcz8xoy9) is visibly blurrier than other long antenna cars, and is a strong clue for [Sakhalin](https://maps.app.goo.gl/NZW6zaBoyGu7Wn6u7) and [various](https://maps.app.goo.gl/zcueGiDZjMNgD5PZA) [roads](https://maps.app.goo.gl/UyHPvXwew65N9W1C8) in the east, as well as much of [Khanty-Mansi](https://maps.app.goo.gl/Vpwb7fPXkVYdxHmYA). On the other end there exists a blurred antenna in far western [Bryansk Oblast](https://maps.app.goo.gl/nKJyHgpuCi95BtWu7) and some of [Tula Oblast](https://maps.app.goo.gl/44N5R9CyPjxWu2RL9)."
       ],
@@ -3617,14 +3746,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A long antenna that is visibly blurrier than others: strong for Sakhalin, roads in the east and much of Khanty-Mansi, but also in far west Bryansk and some of Tula."
     },
     {
       "id": "ru-U8sf",
       "step": 1,
       "order": 63,
       "family": "car",
-      "title": "Google car: The tilted short antenna is visibly tilted to the left and…",
+      "title": "Google car: short antenna tilted left",
       "text": [
         "The [tilted short antenna](https://maps.app.goo.gl/9dsW6TyNZJ1vTVo69) is visibly tilted to the left and can be found primarily on a diagonal from [St. Petersburg](https://maps.app.goo.gl/uYJumDRfPtDcYF8i7) down to [Volgograd](https://maps.app.goo.gl/HcLrcfJw396hVA3k6), with exceptions in [Stavropol](https://maps.app.goo.gl/xnVy4Amy7TYgydFG6) and [Ufa.](https://maps.app.goo.gl/3ndyQtC4AoWqDXns5) Since the ridge is on the same side, it can sometimes appear as the A-type short antenna."
       ],
@@ -3647,14 +3777,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A short antenna visibly tilted to the left, mostly on a diagonal from St. Petersburg to Volgograd, with exceptions around Stavropol and Ufa. It can look like the A-type."
     },
     {
       "id": "ru-4Mgv",
       "step": 1,
       "order": 64,
       "family": "coverage",
-      "title": "Coverage: A large, red brake light is common in Kaliningrad, however…",
+      "title": "Google car: large red brake light",
       "text": [
         "A large, red brake light is common in Kaliningrad, however it can also be found in some [older coverage](https://goo.gl/maps/bms7QA2bzAr5VLBX8) in western Russia."
       ],
@@ -3696,14 +3827,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A large red brake light is common in the western exclave, and appears in some older western coverage."
     },
     {
       "id": "ru-suQF",
       "step": 1,
       "order": 65,
       "family": "car",
-      "title": "Google car: Autumn Generation 3 coverage is common in Kaliningrad",
+      "title": "Coverage: autumn Gen 3 in the west",
       "text": [
         "Autumn Generation 3 coverage is common in Kaliningrad, Bryansk, Tula, and Belgorod in western Russia, but Kaliningrad only has autumn coverage."
       ],
@@ -3744,14 +3876,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Autumn Gen 3 is common in the western exclave, Bryansk, Tula and Belgorod, but the exclave only has autumn coverage."
     },
     {
       "id": "ru-uO7t",
       "step": 1,
       "order": 66,
       "family": "car",
-      "title": "Google car: In Generation 4 coverage",
+      "title": "Coverage: lots of snow on the ground in Gen 4",
       "text": [
         "In Generation 4 coverage, **significant snow on the ground** is most commonly seen in Saratov Oblast and Eastern Voronezh Oblast."
       ],
@@ -3793,14 +3926,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 with plenty of snow on the ground is most common in Saratov and eastern Voronezh."
     },
     {
       "id": "ru-0522",
       "step": 1,
       "order": 67,
       "family": "car",
-      "title": "Google car: Generation 4 coverage is quite extensive and is found in…",
+      "title": "Google car: Gen 4 widespread, not Altai or Far East",
       "text": [
         "**Generation 4** coverage is quite extensive and is found in most federal subjects in the country. Notably, areas like the Altai mountains and most of the Far East lack Generation 4 completely. Knowing where Generation 4 can be found isn’t the most helpful at the beginner level; other clues like season and car are more important. The dark red signifies areas where all of the coverage is Generation 4."
       ],
@@ -3822,14 +3956,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 is found in most regions. The Altai mountains and most of the Far East have none. Season and car matter more than this at a beginner level."
     },
     {
       "id": "ru-iFTC",
       "step": 1,
       "order": 68,
       "family": "car",
-      "title": "Google car: Winter Generation 4 is most common in the south of Russia",
+      "title": "Coverage: winter Gen 4 in the south",
       "text": [
         "[Winter Generation 4](https://maps.app.goo.gl/tKFTbt1t6mYGmF1CA) is most common in the south of Russia, ranging from [Ryazan](https://www.google.com/maps/@54.521468,41.2920492,3a,75y,136.68h,90.82t,1.58r/data=!3m6!1e1!3m4!1s8GGSJc8bRgrChfct0st5lg!2e0!7i16384!8i8192?entry=ttu) all the way down to [Kabardino-Balkaria](https://maps.app.goo.gl/sqbQHZkc1aXttg8G9) and [Dagestan](https://maps.app.goo.gl/eSpNpPM7VYWquBPN7). Winter can appear differently depending on the month (and even time of month the coverage was taken) which can be used to further regionguess."
       ],
@@ -3853,14 +3988,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Winter Gen 4 is most common in the south, from Ryazan down to Kabardino-Balkaria and Dagestan. Its look varies by month."
     },
     {
       "id": "ru-lQl1",
       "step": 1,
       "order": 69,
       "family": "car",
-      "title": "Google car: Spring Generation 4 is common in several distinct places",
+      "title": "Coverage: spring Gen 4 in a few places",
       "text": [
         "[Spring Generation 4](https://maps.app.goo.gl/mxR9jx12qcpoqiX47) is common in several distinct places, such as around [Kemerovo](https://maps.app.goo.gl/AYpeDSAXjY4DTcfHA) and [Krasnoyarsk](https://maps.app.goo.gl/6XmSQBo12yhE4peS7), [Orenburg](https://maps.app.goo.gl/gGk8Qr7GFamJkEUj9) and [Kamyshin](https://maps.app.goo.gl/Xzo5rBpi1mDngfmw7), around [Lipetsk](https://maps.app.goo.gl/5rDYMi3imMh6wZ9S6), and in [Moscow city](https://maps.app.goo.gl/CzcoMF9KbXZqerCWA). Differentiating these places typically comes down to landscape, as they tend to be fairly distinct."
       ],
@@ -3883,14 +4019,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Spring Gen 4 is common around Kemerovo, Krasnoyarsk, Orenburg, Kamyshin, Lipetsk and Moscow city. Landscape tells these apart."
     },
     {
       "id": "ru-zTYx",
       "step": 1,
       "order": 70,
       "family": "car",
-      "title": "Google car: Summer Generation 4 is the most common coverage in…",
+      "title": "Coverage: summer Gen 4",
       "text": [
         "[Summer Generation 4](https://maps.app.goo.gl/87VXQczGm3HeChX18) is the most common coverage in generation 4. It is pretty much everywhere except in the south and some of the east, but can be further subdivided by car colour."
       ],
@@ -3913,14 +4050,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Summer Gen 4 is the most common Gen 4 coverage, almost everywhere except the south and parts of the east. Car colour helps divide it."
     },
     {
       "id": "ru-7siN",
       "step": 1,
       "order": 71,
       "family": "car",
-      "title": "Google car: Autumn Generation 4 is quite rare and only found around…",
+      "title": "Coverage: autumn Gen 4, rare",
       "text": [
         "[Autumn Generation 4](https://maps.app.goo.gl/4ePdHYjvkycsZWMP6) is quite rare and only found around [Kazan](https://maps.app.goo.gl/CuYMZ5RFdFKH4CFX7) and a few roads in [Murmansk](https://maps.app.goo.gl/FVbne7gzizSc2mdu8), as well as some of [Ulan-Ude](https://maps.app.goo.gl/cGxwLd6k866DgMRr9)."
       ],
@@ -3944,14 +4082,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Autumn Gen 4 is rare: around Kazan, a few roads in the far north-west and part of Ulan-Ude."
     },
     {
       "id": "ru-SwXM",
       "step": 1,
       "order": 72,
       "family": "car",
-      "title": "Google car: Generation 4 red car is the most common generation 4 car…",
+      "title": "Google car: red Gen 4 car",
       "text": [
         "[Generation 4 red car](https://maps.app.goo.gl/XZNnHtvtZbyWYqt99) is the most common generation 4 car meta, found primarily east around [Khanty-Mansi](https://maps.app.goo.gl/urkHYCZryyhY8kxdA), as well as along the main highways down to [Irkutsk](https://maps.app.goo.gl/xm2khKQjsmjipnq9A) and [Ulan-Ude](https://maps.app.goo.gl/camcQ4mEZpFN61Um9). There is also a sizable patch near [Penza](https://maps.app.goo.gl/V1cagu4DLNtD9pGq5) and [Tatarstan](https://maps.app.goo.gl/vitVoMssWGjKgixL6), as well as [Rostov-on-Don](https://maps.app.goo.gl/YCTYFcj5NZ1efTRN9)."
       ],
@@ -3974,14 +4113,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common Gen 4 car: mainly in the east around Khanty-Mansi and along main highways to Irkutsk and Ulan-Ude, with patches near Penza, Tatarstan and Rostov-on-Don."
     },
     {
       "id": "ru-KOU6",
       "step": 1,
       "order": 73,
       "family": "car",
-      "title": "Google car: Generation 4 white car is found in the May coverage near…",
+      "title": "Google car: white Gen 4 car",
       "text": [
         "[Generation 4 white car](https://maps.app.goo.gl/ysyGKt4TvtWbGAHC7) is found in the May coverage near [Lipetsk](https://maps.app.goo.gl/FS32oVQjxE4G5bu57), in [Moscow city](https://maps.app.goo.gl/YtkYaj1V3t1P5nqk9), and most notably across all the coverage north of Berkatit in the [Sakha Republic](https://maps.app.goo.gl/vE7pUiAVqX3rvTAg7) and [Magadan](https://maps.app.goo.gl/AGFGntoW6UFFcPm79)."
       ],
@@ -4003,14 +4143,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 white car: May coverage near Lipetsk, in Moscow city, and across all coverage north of Berkakit in Sakha and in Magadan."
     },
     {
       "id": "ru-Ohdq",
       "step": 1,
       "order": 74,
       "family": "car",
-      "title": "Google car: Generation 4 black car is found mostly near Moscow",
+      "title": "Google car: black Gen 4 car",
       "text": [
         "[Generation 4 black car](https://maps.app.goo.gl/hV1BDavTfgWjBezk8) is found mostly near [Moscow](https://maps.app.goo.gl/d3GSjMCXAaZiwfBp9), [Tver](https://maps.app.goo.gl/UqwBFR7gry7wDpZy9), and [Voronezh](https://maps.app.goo.gl/p5YktDMBB7Mksd8SA), with some also existing in [Tatarstan](https://maps.app.goo.gl/w6tJLmTsuvTsMHvJ6) and less commonly in the south."
       ],
@@ -4033,14 +4174,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gen 4 black car: mostly near Moscow, Tver and Voronezh, some in Tatarstan and less often in the south."
     },
     {
       "id": "ru-leH6",
       "step": 2,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: Vorkuta in far northern Komi Republic has dead-looking…",
+      "title": "Coverage: dead winter, raised apartment blocks",
       "text": [
         "Vorkuta in far northern Komi Republic has **dead-looking winter coverage**, sometimes with reddish soil. The apartment blocks will typically have large [northern apartment block foundations](https://goo.gl/maps/cUdFrbUXmuiUCWyE9)."
       ],
@@ -4079,14 +4221,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A far northern mining town in winter, with dead-looking surroundings, sometimes reddish soil, and apartment blocks on large raised foundations."
     },
     {
       "id": "ru-z9D5",
       "step": 2,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: Sovetskaya Gavan and Vanino in eastern Khabarovsk have…",
+      "title": "Coverage: winter at two Far East port towns",
       "text": [
         "Sovetskaya Gavan and Vanino in eastern Khabarovsk have winter coverage, somewhat similar to Vorkuta.",
         "NOTE: While Vorkuta and Vanino have similar coverage types, Vorkuta is noticeably flatter, having lower vegetation and a more barren landscape."
@@ -4126,14 +4269,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two eastern port towns have winter coverage similar to the far northern one, but are less flat and barren, with more plants."
     },
     {
       "id": "ru-wOuI",
       "step": 2,
       "order": 2,
       "family": "landscape",
-      "title": "Landscape: The road to Okha in northern Sakhalin is unpaved",
+      "title": "Road: unpaved sandy road, stunted bushes",
       "text": [
         "The road to Okha in northern Sakhalin is unpaved, revealing its very **sandy soil**. The road is surrounded by **short, stunted bushes and trees**."
       ],
@@ -4172,14 +4316,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The road to the northern island town is unpaved, very sandy, surrounded by short stunted bushes and trees."
     },
     {
       "id": "ru-UcDG",
       "step": 2,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: The Khabarovsk-Vanino road has a mountainous landscape with…",
+      "title": "Road: mountains, sunny, black car with blurred antenna",
       "text": [
         "The Khabarovsk-Vanino road has a **mountainous landscape** with very **sunny coverage**. It also drives west with a black car with a blurred, long antenna, which helps to confirm."
       ],
@@ -4218,14 +4363,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A mountainous road in sunny coverage driving west, with a black car with a blurred long antenna."
     },
     {
       "id": "ru-Om12",
       "step": 2,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: The Jewish Autonomous Oblast effectively has one road of…",
+      "title": "Coverage: one road, rainy and foggy in the west",
       "text": [
         "The Jewish Autonomous Oblast effectively has one road of coverage, outside of Birobidzhan. The west side has highly **rainy and foggy** coverage."
       ],
@@ -4264,14 +4410,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A small Far East region has basically one road of coverage apart from its capital. The west side is very rainy and foggy."
     },
     {
       "id": "ru-ZovR",
       "step": 2,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: On the east side of the Jewish Autonomous Oblast",
+      "title": "Coverage: wet after rain, east side",
       "text": [
         "On the east side of the Jewish Autonomous Oblast, the coverage turns from rainy to **wet** after the rain."
       ],
@@ -4310,14 +4457,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the east side of that region, the coverage changes from rainy to wet after rain."
     },
     {
       "id": "ru-FyT4",
       "step": 2,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: Sunset coverage, with the sun very close to the horizon,…",
+      "title": "Coverage: sunset, eastern landscape",
       "text": [
         "**Sunset coverage**, with the sun very close to the horizon, with an eastern-looking landscape will be the P-297 in Amur Oblast, roughly between the towns of Never and Sivaki."
       ],
@@ -4356,14 +4504,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sunset coverage with the sun very close to the horizon and an eastern landscape is road P-297, between two Far East towns."
     },
     {
       "id": "ru-IeTE",
       "step": 2,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: Olkhon Island on Lake Baikal has a single road",
+      "title": "Landscape: sandy hills at sunset, big lake",
       "text": [
         "Olkhon Island on Lake Baikal has a single road, driving on rolling **sandy hills during sunset**. You can often see Lake Baikal directly with a mountain ridge across the bay."
       ],
@@ -4402,14 +4551,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An island in the big Siberian lake has a single road over rolling sandy hills at sunset, often showing the lake and a mountain ridge across the bay."
     },
     {
       "id": "ru-aHVz",
       "step": 2,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: Tunkinsky National Park in western Buryatia is a very green…",
+      "title": "Landscape: green river basin, jagged mountains north",
       "text": [
         "Tunkinsky National Park in western Buryatia is a very green **river basin** with tall, **jagged mountains** to the north. In comparison to most of Buryatia, it is much greener."
       ],
@@ -4448,14 +4598,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A national park in western Buryatia is a very green river basin with tall jagged mountains to the north, much greener than most of the republic."
     },
     {
       "id": "ru-KHIG",
       "step": 2,
       "order": 9,
       "family": "car",
-      "title": "Google car: In the desert-like region west of the Caspian Sea",
+      "title": "Coverage: flat desert, dirt tracks, Gen 4",
       "text": [
         "In the desert-like region west of the Caspian Sea, this completely flat and rural Generation 4 coverage on small poorly-tracked dirt roads can only be found in northern Dagestan and southwestern Astrakhan Oblast."
       ],
@@ -4494,14 +4645,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Completely flat rural Gen 4 on small, poorly tracked dirt roads in the desert west of the Caspian Sea, only in northern Dagestan and south-west Astrakhan."
     },
     {
       "id": "ru-ys4b",
       "step": 2,
       "order": 10,
       "family": "vegetation",
-      "title": "Vegetation: Tropical plants in Russia such as palm trees are only found…",
+      "title": "Plants: palm trees on the Black Sea",
       "text": [
         "**Tropical plants** in Russia such as palm trees are only found on the Black Sea, most commonly around Sochi."
       ],
@@ -4540,14 +4692,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tropical plants such as palms only grow on the Black Sea coast, most around Sochi."
     },
     {
       "id": "ru-xTY6",
       "step": 2,
       "order": 11,
       "family": "coverage",
-      "title": "Coverage: Kamchatka trekkers encompass a majority of the trekkers…",
+      "title": "Coverage: trekkers mostly on the Far East peninsula",
       "text": [
         "Kamchatka trekkers encompass a majority of the trekkers present in Russia. They can be recognized using the same clues to recognize Kamchatka normally."
       ],
@@ -4586,7 +4739,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most trekkers in the country are on the volcano peninsula, recognisable the same way as the peninsula itself."
     },
     {
       "id": "ru-tmTL",
@@ -4594,7 +4748,7 @@
       "order": 13,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: These blue signs are only found in Moscow and usually…",
+      "title": "Sign: blue sign with English translations",
       "text": [
         "These blue signs are only found in Moscow and usually feature **English translations** of important tourist points."
       ],
@@ -4633,7 +4787,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Blue signs with English translations of tourist points are only in the capital."
     },
     {
       "id": "ru-wFmP",
@@ -4641,7 +4796,7 @@
       "order": 14,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: St",
+      "title": "Street sign: transliteration on black",
       "text": [
         "St. Petersburg street signs include a **transliteration** of the street name on a black background. They are primarily found downtown."
       ],
@@ -4688,7 +4843,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs include a Latin transliteration on a black background, mostly downtown in the northern big city."
     },
     {
       "id": "ru-ZPuK",
@@ -4696,7 +4852,7 @@
       "order": 15,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Saransk has an exclusive circular street sign design with…",
+      "title": "Street sign: circular with up to 4 languages",
       "text": [
         "Saransk has an exclusive circular street sign design with the street name being written in up to **4 different languages**."
       ],
@@ -4742,7 +4898,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "One Volga republic's capital has an exclusive circular street sign with the name in up to four languages."
     },
     {
       "id": "ru-vEQX",
@@ -4750,7 +4907,7 @@
       "order": 16,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Tatar bilingual signs use “урамы”",
+      "title": "Language: Tatar signs say 'урамы'",
       "text": [
         "**Tatar bilingual signs** use “урамы” (ур., abbreviated) for street instead of “улица” and are unsurprisingly found in Tatarstan."
       ],
@@ -4789,7 +4946,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tatar bilingual signs use урамы (short ур.) for street instead of улица, found in Tatarstan."
     },
     {
       "id": "ru-O98Q",
@@ -4797,7 +4955,7 @@
       "order": 17,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Bashkir bilingual signs are found in Bashkortostan and use…",
+      "title": "Language: Bashkir signs say 'урамы'",
       "text": [
         "**Bashkir bilingual signs** are found in Bashkortostan and use “урамы” for street, the same as Tatar, but are often not abbreviated."
       ],
@@ -4836,7 +4994,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bashkir bilingual signs also use урамы for street, but often not abbreviated."
     },
     {
       "id": "ru-mcGi",
@@ -4844,7 +5003,7 @@
       "order": 18,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Chuvash bilingual signs, found in Chuvashia, use “урамӗ”…",
+      "title": "Language: Chuvash signs say 'урамӗ'",
       "text": [
         "**Chuvash bilingual signs**, found in Chuvashia, use “урамӗ” for street."
       ],
@@ -4883,7 +5042,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Chuvash bilingual signs use урамӗ for street."
     },
     {
       "id": "ru-BBhW",
@@ -4891,7 +5051,7 @@
       "order": 19,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Mari bilingual signs, found in Mari El, use “урем” for…",
+      "title": "Language: Mari signs say 'урем'",
       "text": [
         "**Mari bilingual signs**, found in Mari El, use “урем” for street."
       ],
@@ -4937,7 +5097,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mari bilingual signs use урем for street."
     },
     {
       "id": "ru-eXFX",
@@ -4945,7 +5106,7 @@
       "order": 20,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Komi bilingual signs, found in the Komi Republic, use…",
+      "title": "Language: Komi signs say 'улича'",
       "text": [
         "**Komi bilingual signs**, found in the Komi Republic, use “улича” for street."
       ],
@@ -4984,14 +5145,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Komi bilingual signs use улича for street."
     },
     {
       "id": "ru-ENMg",
       "step": 2,
       "order": 22,
       "family": "pole",
-      "title": "Pole: These alternating red and white poles are mainly found in…",
+      "title": "Pole: alternating red and white",
       "text": [
         "These **alternating red and white** poles are mainly found in Ulyanovsk city, but also less commonly in the [greater Nizhny Novgorod area](https://goo.gl/maps/JNLBV3L6cogEaBiCA) as well as somewhat randomly elsewhere in the country."
       ],
@@ -5032,14 +5194,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Alternating red and white poles are mainly in one Volga city, less often around another and randomly elsewhere."
     },
     {
       "id": "ru-920v",
       "step": 2,
       "order": 23,
       "family": "pole",
-      "title": "Pole: These striped red and white poles are found mostly in…",
+      "title": "Pole: striped red and white",
       "text": [
         "These **striped red and white** poles are found mostly in Saransk, but also in a few other cities in Mordovia."
       ],
@@ -5080,14 +5243,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Striped red and white poles are mostly in one republic capital and a few other towns of that republic."
     },
     {
       "id": "ru-gi5v",
       "step": 2,
       "order": 24,
       "family": "pole",
-      "title": "Pole: Yellow pole plates attached by a metal band are commonly…",
+      "title": "Pole: yellow plates on a metal band",
       "text": [
         "**Yellow pole plates** attached by a **metal band** are commonly found in Tatarstan. They are found on the majority of poles, but not all."
       ],
@@ -5128,14 +5292,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow pole plates attached with a metal band are common in one Volga republic, on most but not all poles."
     },
     {
       "id": "ru-OENY",
       "step": 2,
       "order": 25,
       "family": "car",
-      "title": "Google car: On the main road of Murmansk in generation 4",
+      "title": "Signposts: two yellow bands",
       "text": [
         "On the main road of Murmansk in generation 4, as well as some roads in Karelia covered in 2018, the vast majority of signposts will have **two yellow bands** wrapped around them."
       ],
@@ -5174,14 +5339,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "On the main road of the far north-west city in Gen 4, and some roads in Karelia from 2018, most signposts have two yellow bands."
     },
     {
       "id": "ru-I6aA",
       "step": 2,
       "order": 26,
       "family": "other",
-      "title": "Cobblestone pavement is notably common in Kaliningrad",
+      "title": "Roads: cobblestone pavement",
       "text": [
         "**Cobblestone pavement** is notably common in [Kaliningrad](https://maps.app.goo.gl/cAtPVWR2WxLiyS8V8), [Nizhny Tagil](https://maps.app.goo.gl/iUD3LBhJYxSxdHFeA) in Sverdlovsk, and [Kizel](https://goo.gl/maps/2rLUZD6Rvei7qWwXA) in Perm Krai."
       ],
@@ -5220,14 +5386,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cobblestone pavement is notably common in the western exclave, one Urals industrial town and one in the Perm region."
     },
     {
       "id": "ru-LPj1",
       "step": 2,
       "order": 27,
       "family": "pole",
-      "title": "Pole: Extended insulator bars on poles are notably found in…",
+      "title": "Pole: extended insulator bars",
       "text": [
         "**Extended insulator bars** on poles are notably found in southern Chelyabinsk Oblast and [eastern Orenburg Oblast](https://goo.gl/maps/ahe7wDESrVMJiZDD6), as well as [southern Kemerovo Oblast](https://goo.gl/maps/nSDobcgFvaTL8EPt5)."
       ],
@@ -5268,14 +5435,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Extended insulator bars on poles, notably in southern Chelyabinsk, eastern Orenburg and southern Kemerovo."
     },
     {
       "id": "ru-Ht2R",
       "step": 2,
       "order": 28,
       "family": "pole",
-      "title": "Pole: Utility poles with a mesh framework are usually found in…",
+      "title": "Pole: mesh-framework utility poles",
       "text": [
         "Utility poles with a **mesh framework** are usually found in Petrozavodsk, but can much less commonly be found in cities like [Tolyatti](https://goo.gl/maps/QeRuT92WeXEavqv48)."
       ],
@@ -5316,14 +5484,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Utility poles with a mesh framework are usually in Petrozavodsk, much less often in cities like Tolyatti."
     },
     {
       "id": "ru-2n7S",
       "step": 2,
       "order": 29,
       "family": "pole",
-      "title": "Pole: These red painted poles are only found in Murom",
+      "title": "Pole: painted red",
       "text": [
         "These **red painted** poles are only found in Murom."
       ],
@@ -5364,14 +5533,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red painted poles are only in Murom."
     },
     {
       "id": "ru-y5RK",
       "step": 2,
       "order": 30,
       "family": "pole",
-      "title": "Pole: An angled extended insulator bar on the pole as shown is…",
+      "title": "Pole: angled extended insulator bar",
       "text": [
         "An **angled extended insulator bar** on the pole as shown is found in Chita."
       ],
@@ -5412,14 +5582,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "An angled, extended insulator bar on the pole is found in Chita."
     },
     {
       "id": "ru-344J",
       "step": 2,
       "order": 31,
       "family": "bollard",
-      "title": "Bollard: This unique bollard, with a grey rectangle and double red…",
+      "title": "Bollard: grey rectangle with two red reflectors",
       "text": [
         "This unique bollard, with a **grey rectangle** and **double red reflectors**, is specific to the P100 in Kostroma Oblast."
       ],
@@ -5460,14 +5631,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A unique bollard with a grey rectangle and two red reflectors, only on the P100 in Kostroma Oblast."
     },
     {
       "id": "ru-kMlj",
       "step": 2,
       "order": 32,
       "family": "pole",
-      "title": "Pole: Pedestrian signs with a U-shaped hook attached to a pole…",
+      "title": "Sign: pedestrian sign hung on a U-shaped hook",
       "text": [
         "Pedestrian signs with a **U-shaped hook** attached to a pole are unique to Chelyabinsk."
       ],
@@ -5508,7 +5680,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian signs with a U-shaped hook attached to a pole are unique to Chelyabinsk."
     },
     {
       "id": "ru-PzBt",
@@ -5516,7 +5689,7 @@
       "order": 33,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: This distinct decorative design of pedestrian sign holders…",
+      "title": "Sign: decorative pedestrian sign holders",
       "text": [
         "This **distinct decorative design** of pedestrian sign holders is specific to Pskov Oblast."
       ],
@@ -5555,7 +5728,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A distinctive decorative design of pedestrian sign holders is specific to Pskov Oblast."
     },
     {
       "id": "ru-kBRg",
@@ -5563,7 +5737,7 @@
       "order": 34,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: The city of Nizhnevartovsk has these unique hanging…",
+      "title": "Sign: hanging pedestrian signs",
       "text": [
         "The city of Nizhnevartovsk has these unique **hanging pedestrian signs**."
       ],
@@ -5602,14 +5776,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nizhnevartovsk has unique hanging pedestrian signs."
     },
     {
       "id": "ru-24Ka",
       "step": 2,
       "order": 35,
       "family": "other",
-      "title": "Rounded rectangular fences with a line through the middle…",
+      "title": "Fence: rounded rectangles with a middle line",
       "text": [
         "Rounded rectangular fences with a **line** through the middle are unique to Chelyabinsk Oblast and eastern Orenburg Oblast."
       ],
@@ -5648,14 +5823,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rounded rectangular fences with a line through the middle are unique to Chelyabinsk Oblast and eastern Orenburg Oblast."
     },
     {
       "id": "ru-aWaE",
       "step": 2,
       "order": 36,
       "family": "other",
-      "title": "This fence with a thin rounded rectangular design at the…",
+      "title": "Fence: thin rounded rectangle top",
       "text": [
         "This fence with a **thin rounded rectangular design** at the top is found in the cities of Syzran, Tolyatti, and Samara. In [Tolyatti](https://maps.app.goo.gl/vUyLBVMdoH3SfSpE9) it will commonly be painted yellow."
       ],
@@ -5694,14 +5870,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A fence with a thin rounded rectangular design at the top, in Syzran, Tolyatti and Samara. In Tolyatti it is commonly yellow."
     },
     {
       "id": "ru-3ve1",
       "step": 2,
       "order": 37,
       "family": "other",
-      "title": "Decoratively designed fences usually with a bright orange…",
+      "title": "Fence: decorative bright orange",
       "text": [
         "Decoratively designed fences usually with a **bright orange** colour are unique to Irkutsk."
       ],
@@ -5740,14 +5917,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/russia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Decoratively designed fences, usually bright orange, are unique to Irkutsk."
     },
     {
       "id": "ru-lm-3002",
       "step": 3,
       "order": 0,
       "family": "other",
-      "title": "Russia",
+      "title": "Sign: three-stripe pedestrian sign with yellow border",
       "text": [
         "**3 Zebra Stripes**: Estonia, Lithuania, Russia, Ukraine. > Russia is the only one with **yellow borders**."
       ],
@@ -5771,14 +5949,29 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Of the countries with three-stripe pedestrian signs, only Russia has yellow borders.",
+      "differs": [
+        {
+          "country": "UA",
+          "how": "Ukraine's sign has no yellow border"
+        },
+        {
+          "country": "LT",
+          "how": "Lithuania's sign has no yellow border"
+        },
+        {
+          "country": "EE",
+          "how": "Estonia's sign has no yellow border"
+        }
+      ]
     },
     {
       "id": "ru-lm-9123",
       "step": 3,
       "order": 1,
       "family": "language",
-      "title": "Language: Novosibirsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** НОВОСИБИРСК - NOVOSIBIRSK",
         "**Letters:** Н-N | О-O | В-V | О-O | С-S | И-I | Б-B | И-I | Р-R | С-S | К-K",
@@ -5800,14 +5993,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads НОВОСИБИРСК (Novosibirsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9124",
       "step": 3,
       "order": 2,
       "family": "language",
-      "title": "Language: Yekaterinburg",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЕКАТЕРИНБУРГ - YEKATERINBURG",
         "**Letters:** Е-YE | К-K | А-A | Т-T | Е-E | Р-R | И-I | Н-N | Б-B | У-U | Р-R | Г-G",
@@ -5829,14 +6023,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЕКАТЕРИНБУРГ (Yekaterinburg). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9125",
       "step": 3,
       "order": 3,
       "family": "language",
-      "title": "Language: Murmansk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** МУРМАНСК - MURMANSK",
         "**Letters:** М-M | У-U | Р-R | М-M | А-A | Н-N | С-S | К-K",
@@ -5858,14 +6053,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads МУРМАНСК (Murmansk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9126",
       "step": 3,
       "order": 4,
       "family": "language",
-      "title": "Language: Magadan",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** МАГАДАН - MAGADAN",
         "**Letters:** М-M | А-A | Г-G | А-A | Д-D | А-A | Н-N",
@@ -5887,14 +6083,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads МАГАДАН (Magadan). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9154",
       "step": 3,
       "order": 5,
       "family": "language",
-      "title": "Language: Yakutsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЯКУТСК - YAKUTSK",
         "**Letters:** Я-YA | К-K | У-U | Т-T | С-S | К-K",
@@ -5916,14 +6113,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЯКУТСК (Yakutsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9155",
       "step": 3,
       "order": 6,
       "family": "language",
-      "title": "Language: Moscow (Moskva)",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** МОСКВА - MOSKVA",
         "**Letters:** М-M | О-O | С-S | К-K | В-V | А-A",
@@ -5945,14 +6143,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads МОСКВА (Moskva). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9156",
       "step": 3,
       "order": 7,
       "family": "language",
-      "title": "Language: Kazan",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КАЗАНЬ - KAZAN",
         "**Letters:** К-K | А-A | З-Z | А-A | Н-N | Ь-'",
@@ -5974,14 +6173,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КАЗАНЬ (Kazan). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9157",
       "step": 3,
       "order": 8,
       "family": "language",
-      "title": "Language: Nizhny Novgorod",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** НИЖНИЙ НОВГОРОД - NIZHNY NOVGOROD",
         "**Letters:** Н-N | И-I | Ж-ZH | Н-N | И-I | Й-Y | Н-N | О-O | В-V | Г-G | О-O | Р-R | О-O | Д-D",
@@ -6003,14 +6203,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads НИЖНИЙ НОВГОРОД (Nizhny Novgorod). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9158",
       "step": 3,
       "order": 9,
       "family": "language",
-      "title": "Language: Chelyabinsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЧЕЛЯБИНСК - CHELYABINSK",
         "**Letters:** Ч-CH | Е-E | Л-L | Я-YA | Б-B | И-I | Н-N | С-S | К-K",
@@ -6032,14 +6233,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЧЕЛЯБИНСК (Chelyabinsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9159",
       "step": 3,
       "order": 10,
       "family": "language",
-      "title": "Language: Tyumen",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ТЮМЕНЬ - TYUMEN",
         "**Letters:** Т-T | Ю-YU | М-M | Е-E | Н-N | Ь-'",
@@ -6061,14 +6263,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ТЮМЕНЬ (Tyumen). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9160",
       "step": 3,
       "order": 11,
       "family": "language",
-      "title": "Language: Omsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ОМСК - OMSK",
         "**Letters:** О-O | М-M | С-S | К-K",
@@ -6090,14 +6293,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ОМСК (Omsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9161",
       "step": 3,
       "order": 12,
       "family": "language",
-      "title": "Language: Tomsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ТОМСК - TOMSK",
         "**Letters:** Т-T | О-O | М-M | С-S | К-K",
@@ -6119,14 +6323,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ТОМСК (Tomsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9162",
       "step": 3,
       "order": 13,
       "family": "language",
-      "title": "Language: Surgut",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** СУРГУТ - SURGUT",
         "**Letters:** С-S | У-U | Р-R | Г-G | У-U | Т-T",
@@ -6148,14 +6353,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads СУРГУТ (Surgut). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9197",
       "step": 3,
       "order": 14,
       "family": "language",
-      "title": "Language: Krasnoyarsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КРАСНОЯРСК - KRASNOYARSK",
         "**Letters:** К-K | Р-R | А-A | С-S | Н-N | О-O | Я-YA | Р-R | С-S | К-K",
@@ -6177,14 +6383,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КРАСНОЯРСК (Krasnoyarsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9263",
       "step": 3,
       "order": 15,
       "family": "language",
-      "title": "Language: Bratsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** БРАТСК - BRATSK",
         "**Letters:** Б-B | Р-R | А-A | Т-T | С-S | К-K",
@@ -6206,14 +6413,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads БРАТСК (Bratsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9273",
       "step": 3,
       "order": 16,
       "family": "language",
-      "title": "Language: Irkutsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ИРКУТСК - IRKUTSK",
         "**Letters:** И-I | Р-R | К-K | У-U | Т-T | С-S | К-K",
@@ -6235,14 +6443,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ИРКУТСК (Irkutsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9274",
       "step": 3,
       "order": 17,
       "family": "language",
-      "title": "Language: Ulan-Ude",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** УЛАН-УДЭ - ULAN-UDE",
         "**Letters:** У-U | Л-L | А-A | Н-N | У-U | Д-D | Э-E",
@@ -6264,14 +6473,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads УЛАН-УДЭ (Ulan-Ude). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9275",
       "step": 3,
       "order": 18,
       "family": "language",
-      "title": "Language: Chita",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЧИТА - CHITA",
         "**Letters:** Ч-CH | И-I | Т-T | А-A",
@@ -6293,14 +6503,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЧИТА (Chita). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9276",
       "step": 3,
       "order": 19,
       "family": "language",
-      "title": "Language: Vladivostok",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ВЛАДИВОСТОК - VLADIVOSTOK",
         "**Letters:** В-V | Л-L | А-A | Д-D | И-I | В-V | О-O | С-S | Т-T | О-O | К-K",
@@ -6322,14 +6533,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ВЛАДИВОСТОК (Vladivostok). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9277",
       "step": 3,
       "order": 20,
       "family": "language",
-      "title": "Language: Ufa",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** УФА - UFA",
         "**Letters:** У-U | Ф-F | А-A",
@@ -6351,14 +6563,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads УФА (Ufa). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9278",
       "step": 3,
       "order": 21,
       "family": "language",
-      "title": "Language: Perm",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ПЕРМЬ - PERM",
         "**Letters:** П-P | Е-E | Р-R | М-M | Ь-'",
@@ -6380,14 +6593,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ПЕРМЬ (Perm). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9279",
       "step": 3,
       "order": 22,
       "family": "language",
-      "title": "Language: Mirny",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** МИРНЫЙ - MIRNY",
         "**Letters:** М-M | И-I | Р-R | Н-N | Ы-Y | Й-Y",
@@ -6409,14 +6623,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads МИРНЫЙ (Mirny). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9280",
       "step": 3,
       "order": 23,
       "family": "language",
-      "title": "Language: Volgograd",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ВОЛГОГРАД - VOLGOGRAD",
         "**Letters:** В-V | О-O | Л-L | Г-G | О-O | Г-G | Р-R | А-A | Д-D",
@@ -6438,14 +6653,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ВОЛГОГРАД (Volgograd). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9281",
       "step": 3,
       "order": 24,
       "family": "language",
-      "title": "Language: Astrakhan",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** АСТРАХАНЬ - ASTRAKHAN",
         "**Letters:** А-A | С-S | Т-T | Р-R | А-A | Х-KH | А-A | Н-N | Ь-'",
@@ -6467,14 +6683,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads АСТРАХАНЬ (Astrakhan). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9282",
       "step": 3,
       "order": 25,
       "family": "language",
-      "title": "Language: Krasnodar",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КРАСНОДАР - KRASNODAR",
         "**Letters:** К-K | Р-R | А-A | С-S | Н-N | О-O | Д-D | А-A | Р-R",
@@ -6496,14 +6713,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КРАСНОДАР (Krasnodar). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9283",
       "step": 3,
       "order": 26,
       "family": "language",
-      "title": "Language: St Petersburg",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** С.-ПЕТЕРБУРГ - ST.-PETERSBURG",
         "**Letters:** С.-ST. | П-P | Е-E | Т-T | Е-E | Р-R | Б-B | У-U | Р-R | Г-G",
@@ -6525,14 +6743,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads С.-ПЕТЕРБУРГ (St.-Petersburg). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9284",
       "step": 3,
       "order": 27,
       "family": "language",
-      "title": "Language: Sochi",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** СОЧИ - SOCHI",
         "**Letters:** С-S | О-O | Ч-CH | И-I",
@@ -6554,14 +6773,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads СОЧИ (Sochi). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9285",
       "step": 3,
       "order": 28,
       "family": "language",
-      "title": "Language: Kurgan",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КУРГАН - KURGAN",
         "**Letters:** К-K | У-U | Р-R | Г-G | А-A | Н-N",
@@ -6583,14 +6803,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КУРГАН (Kurgan). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9286",
       "step": 3,
       "order": 29,
       "family": "language",
-      "title": "Language: Voronezh",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ВОРОНЕЖ - VORONEZH",
         "**Letters:** В-V | О-O | Р-R | О-O | Н-N | Е-E | Ж-ZH",
@@ -6612,14 +6833,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ВОРОНЕЖ (Voronezh). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9287",
       "step": 3,
       "order": 30,
       "family": "language",
-      "title": "Language: Saransk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** САРАНСК - SARANSK",
         "**Letters:** С-S | А-A | Р-R | А-A | Н-N | С-S | К-K",
@@ -6641,14 +6863,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads САРАНСК (Saransk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9288",
       "step": 3,
       "order": 31,
       "family": "language",
-      "title": "Language: Yaroslavl",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЯРОСЛАВЛЬ - YAROSLAVL",
         "**Letters:** Я-YA | Р-R | О-O | С-S | Л-L | А-A | В-V | Л-L | Ь-'",
@@ -6670,14 +6893,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЯРОСЛАВЛЬ (Yaroslavl). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9875",
       "step": 3,
       "order": 32,
       "family": "language",
-      "title": "Language: Novy Urengoy",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** НОВЫЙ УРЕНГОЙ - NOVY URENGOY",
         "**Letters:** Н-N | О-O | В-V | Ы-Y | Й-Y | У-U | Р-R | Е-E | Н-N | Г-G | О-O | Й-Y",
@@ -6699,14 +6923,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads НОВЫЙ УРЕНГОЙ (Novy Urengoy). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9876",
       "step": 3,
       "order": 33,
       "family": "language",
-      "title": "Language: Makhachkala",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** МАХАЧКАЛА - MAKHACHKALA",
         "**Letters:** М-M | А-A | Х-KH | А-A | Ч-CH | К-K | А-A | Л-L | А-A",
@@ -6728,14 +6953,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads МАХАЧКАЛА (Makhachkala). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9877",
       "step": 3,
       "order": 34,
       "family": "language",
-      "title": "Language: Kursk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КУРСК - KURSK",
         "**Letters:** К-K | У-U | Р-R | С-S | К-K",
@@ -6757,14 +6983,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КУРСК (Kursk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9878",
       "step": 3,
       "order": 35,
       "family": "language",
-      "title": "Language: Samara",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** САМАРА - SAMARA",
         "**Letters:** С-S | А-A | М-M | А-A | Р-R | А-A",
@@ -6786,14 +7013,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads САМАРА (Samara). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9879",
       "step": 3,
       "order": 36,
       "family": "language",
-      "title": "Language: Ulyanovsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** УЛЬЯНОВСК - ULYANOVSK",
         "**Letters:** У-U | Л-L | Ь-' | Я-YA | Н-N | О-O | В-V | С-S | К-K",
@@ -6815,14 +7043,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads УЛЬЯНОВСК (Ulyanovsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9880",
       "step": 3,
       "order": 37,
       "family": "language",
-      "title": "Language: Arkhangelsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** АРХАНГЕЛЬСК - ARKHANGELSK",
         "**Letters:** А-A | Р-R | Х-KH | А-A | Н-N | Г-G | Е-E | Л-L | Ь-' | С-S | К-K",
@@ -6844,14 +7073,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads АРХАНГЕЛЬСК (Arkhangelsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9881",
       "step": 3,
       "order": 38,
       "family": "language",
-      "title": "Language: Syktyvkar",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** СЫКТЫВКАР - SYKTYVKAR",
         "**Letters:** С-S | Ы-Y | К-K | Т-T | Ы-Y | В-V | К-K | А-A | Р-R",
@@ -6873,14 +7103,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads СЫКТЫВКАР (Syktyvkar). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9886",
       "step": 3,
       "order": 39,
       "family": "language",
-      "title": "Language: Kirov",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КИРОВ - KIROV",
         "**Letters:** К-K | И-I | Р-R | О-O | В-V",
@@ -6902,14 +7133,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КИРОВ (Kirov). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9888",
       "step": 3,
       "order": 40,
       "family": "language",
-      "title": "Language: Orenburg",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ОРЕНБУРГ - ORENBURG",
         "**Letters:** О-O | Р-R | Е-E | Н-N | Б-B | У-U | Р-R | Г-G",
@@ -6931,14 +7163,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ОРЕНБУРГ (Orenburg). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9889",
       "step": 3,
       "order": 41,
       "family": "language",
-      "title": "Language: Novokuznetsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** НОВОКУЗНЕЦК - NOVOKUZNETSK",
         "**Letters:** Н-N | О-O | В-V | О-O | К-K | У-U | З-Z | Н-N | Е-E | Ц-TS | К-K",
@@ -6960,14 +7193,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads НОВОКУЗНЕЦК (Novokuznetsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9891",
       "step": 3,
       "order": 42,
       "family": "language",
-      "title": "Language: Abakan",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** АБАКАН - ABAKAN",
         "**Letters:** А-A | Б-B | А-A | К-K | А-A | Н-N",
@@ -6989,14 +7223,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads АБАКАН (Abakan). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9898",
       "step": 3,
       "order": 43,
       "family": "language",
-      "title": "Language: Khabarovsk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ХАБАРОВСК - KHABAROVSK",
         "**Letters:** Х-KH | А-A | Б-B | А-A | Р-R | О-O | В-V | С-S | К-K",
@@ -7018,14 +7253,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ХАБАРОВСК (Khabarovsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-9899",
       "step": 3,
       "order": 44,
       "family": "language",
-      "title": "Language: Smolensk",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** СМОЛЕНСК - SMOLENSK",
         "**Letters:** С-S | М-M | О-O | Л-L | Е-E | Н-N | С-S | К-K",
@@ -7047,7 +7283,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads СМОЛЕНСК (Smolensk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13426",
@@ -7055,7 +7292,7 @@
       "order": 45,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Izhevsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name**: ИЖЕВСК - IZHEVSK",
         "**Letters**: И-I | Ж-ZH | Е-E | В-V | С-S | К-K",
@@ -7077,7 +7314,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ИЖЕВСК (Izhevsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13427",
@@ -7085,7 +7323,7 @@
       "order": 46,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Nizhny Tagil sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** НИЖНИЙ ТАГИЛ - NIZHNIY TAGIL",
         "**Letters:** Н-N | И-I | Ж-ZH | Н-N | И-I | Й-Y | Т-T | А-A | Г-G | И-I | Л-L",
@@ -7107,7 +7345,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads НИЖНИЙ ТАГИЛ (Nizhniy Tagil). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13428",
@@ -7115,7 +7354,7 @@
       "order": 47,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Yuzhno-Sakhalinsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЮЖНО-САХАЛИНСК - YUZHNO-SAKHALINSK",
         "**Letters:** Ю-YU | Ж-ZH | Н-N | О-O | С-S | А-A | Х-KH | А-A | Л-L | И-I | Н-N | С-S | К-K",
@@ -7137,7 +7376,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЮЖНО-САХАЛИНСК (Yuzhno-Sakhalinsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13430",
@@ -7145,7 +7385,7 @@
       "order": 48,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Sharya sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ШАРЬЯ - SHARYA",
         "**Letters:** Ш-SH | А-A | Р-R | Ь-' | Я-YA",
@@ -7167,7 +7407,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ШАРЬЯ (Sharya). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13434",
@@ -7175,7 +7416,7 @@
       "order": 49,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Shakhty sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ШАХТЫ - SHAKHTY",
         "**Letters:** Ш-SH | А-A | Х-KH | Т-T | Ы-Y",
@@ -7197,7 +7438,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ШАХТЫ (Shakhty). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13435",
@@ -7205,7 +7447,7 @@
       "order": 50,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Tayshet sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ТАЙШЕТ - TAYSHET",
         "**Letters:** Т-T | А-A | Й-Y | Ш-SH | Е-E | Т-T",
@@ -7227,7 +7469,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ТАЙШЕТ (Tayshet). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13437",
@@ -7235,7 +7478,7 @@
       "order": 51,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Pyatigorsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ПЯТИГОРСК - PYATIGORSK",
         "**Letters:** П-P | Я-YA | Т-T | И-I | Г-G | О-O | Р-R | С-S | К-K",
@@ -7257,7 +7500,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ПЯТИГОРСК (Pyatigorsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13438",
@@ -7265,7 +7509,7 @@
       "order": 52,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Lipetsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ЛИПЕЦК - LIPETSK",
         "**Letters:** Л-L | И-I | П-P | Е-E | Ц-TS | К-K",
@@ -7287,7 +7531,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ЛИПЕЦК (Lipetsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13439",
@@ -7295,7 +7540,7 @@
       "order": 53,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Biysk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** БИЙСК - BIYSK",
         "**Letters:** Б-B | И-I | Й-Y | С-S | К-K",
@@ -7317,7 +7562,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads БИЙСК (Biysk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13441",
@@ -7325,7 +7571,7 @@
       "order": 54,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Kuznetsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КУЗНЕЦК - KUZNETSK",
         "**Letters:** К-K | У-U | З-Z | Н-N | Е-E | Ц-TS | К-K",
@@ -7347,7 +7593,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КУЗНЕЦК (Kuznetsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13565",
@@ -7355,7 +7602,7 @@
       "order": 55,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Oryol sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** ОРЁЛ - ORYOL",
         "**Letters:** О-O | Р-R | Ё-YO | Л-L",
@@ -7377,7 +7624,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads ОРЁЛ (Oryol). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13566",
@@ -7385,7 +7633,7 @@
       "order": 56,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Kiselyovsk sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** КИСЕЛЁВСК - KISELYOVSK",
         "**Letters:** К-K | И-I | С-S | Е-E | Л-L | Ё-YO | В-V | С-S | К-K",
@@ -7407,7 +7655,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads КИСЕЛЁВСК (Kiselyovsk). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     },
     {
       "id": "ru-lm-13567",
@@ -7415,7 +7664,7 @@
       "order": 57,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Beryozovsky sign",
+      "title": "Language: Cyrillic town name sign",
       "text": [
         "**Name:** БЕРЁЗОВСКИЙ - BERYOZOVSKIY",
         "**Letters:** Б-B | Е-E | Р-R | Ё-YO | З-Z | О-O | В-V | С-S | К-K | И-I | Й-Y",
@@ -7437,957 +7686,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67af2aa7df4bac71b8fd0351",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-23788",
-      "step": 3,
-      "order": 58,
-      "family": "bollard",
-      "title": "Bollard: Wide Intersections",
-      "text": [
-        "Along with containing a large number of bollards, many intersections are unusually wide compared to other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7a35be08bb7",
-          "src": "https://learnablemeta.com/images/768/6DxV5nrs8zTmCXncJZ4lgeoIqbz9gUtK4gBK.avif",
-          "path": "ru/f7a35be08bb7.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "5842946f1252"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-23884",
-      "step": 3,
-      "order": 59,
-      "family": "architecture",
-      "title": "Architecture: Large Apartments",
-      "text": [
-        "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete.",
-        "Newer buildings in wealthier areas appear more modern."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "983c5708b6e0",
-          "src": "https://learnablemeta.com/images/768/40MD40Jph3FbNwgF05hXNUjy86D1H3EAWrk9.avif",
-          "path": "ru/983c5708b6e0.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f073f3f27da"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-23890",
-      "step": 3,
-      "order": 60,
-      "family": "architecture",
-      "title": "Architecture: Rural Housing",
-      "text": [
-        "Rural housing in Russia consists mostly of a basic wooden structure with metal roofs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4209e5d06c3b",
-          "src": "https://learnablemeta.com/images/768/e3V9wRT1zaOvfFhfZmOM5LAFbq2RM3mz5pXe.avif",
-          "path": "ru/4209e5d06c3b.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "99e7fe88be57"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-23908",
-      "step": 3,
-      "order": 61,
-      "family": "other",
-      "title": "Decorated Windows",
-      "text": [
-        "This style of richly decorated window frames is commonly found on traditional Russian homes, especially on log cabins.",
-        "They are often painted blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5c379ed3eb96",
-          "src": "https://learnablemeta.com/images/768/Qn7oTp0ywu5SiVgDGHaTfyfOQyevccGf6FPG.avif",
-          "path": "ru/5c379ed3eb96.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f5242387040"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24618",
-      "step": 3,
-      "order": 62,
-      "family": "landscape",
-      "title": "Landscape: Buryatia",
-      "text": [
-        "The landscape in Buryatia is very unique, containing open grassy landscape with shrubs and mountains. It is lusher near Baikal, but the mountains persist."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "d0e18da6b1ca",
-          "src": "https://learnablemeta.com/images/664/AYzjtxgLi2DXSpKatk8dSCMuRBppd0sLcAgh.avif",
-          "path": "ru/d0e18da6b1ca.webp",
-          "width": 1000,
-          "height": 487,
-          "dupeOf": "17072ca2dcc0"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24619",
-      "step": 3,
-      "order": 63,
-      "family": "car",
-      "title": "Google car: Caspian Sea Desert",
-      "text": [
-        "In the desert-like region west of the Caspian Sea, this completely flat and rural Generation 4 coverage on small poorly-tracked dirt roads can only be found in northern Dagestan and southwestern Astrakhan Oblast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "eca886618b20",
-          "src": "https://learnablemeta.com/images/664/UnLkEkVOISrxr0tgR02mumkLm8knZNFXu59S.avif",
-          "path": "ru/eca886618b20.webp",
-          "width": 1000,
-          "height": 487
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24621",
-      "step": 3,
-      "order": 64,
-      "family": "landscape",
-      "title": "Landscape: Kamchatka",
-      "text": [
-        "The Kamchatka peninsula has unique grey gravelly soil, as well as the largest number of volcanoes of any region in Russia. They are frequently seen across the peninsula, and in some places can appear quite close such as in Klyuchi."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2baa99c04142",
-          "src": "https://learnablemeta.com/images/664/cFJh0w3amtPz9uptiw948L1SH4Vt1DLrqr36.avif",
-          "path": "ru/2baa99c04142.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "3bf234192411"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24622",
-      "step": 3,
-      "order": 65,
-      "family": "landscape",
-      "title": "Landscape: Far North",
-      "text": [
-        "The landscape in the far north can be recognised by the relatively flat landscape, with very low vegetation."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2e6d615a4fe6",
-          "src": "https://learnablemeta.com/images/664/vCShi6gWXmDtkXoW4XhxBTwq3TJbk7QBCm6h.avif",
-          "path": "ru/2e6d615a4fe6.webp",
-          "width": 1000,
-          "height": 481,
-          "dupeOf": "9f91d5e4481e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24623",
-      "step": 3,
-      "order": 66,
-      "family": "vegetation",
-      "title": "Vegetation: Dagestan Fields",
-      "text": [
-        "Grassy fields, with bushy vegetation, in early spring Generation 4 coverage is typical for Dagestan. The landscape can either be completely flat or mountainous."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a8380e1ac33b",
-          "src": "https://learnablemeta.com/images/664/ME9KUGrOaxI93dUXL24wViuQZbKPo9JhnNnC.avif",
-          "path": "ru/a8380e1ac33b.webp",
-          "width": 1000,
-          "height": 480,
-          "dupeOf": "2e7c8f38fdd9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24624",
-      "step": 3,
-      "order": 67,
-      "family": "landscape",
-      "title": "Landscape: Caspian Sea Area",
-      "text": [
-        "The area west of the Caspian Sea can often be recognised by its extremely dry and flat landscape, especially in Kalmykia, Astrakhan Oblast, and Dagestan."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3bb3c59b8529",
-          "src": "https://learnablemeta.com/images/664/yjGTzuJ4Dbi6LYGuyZ70HkyAn2Um9DJlv4B3.avif",
-          "path": "ru/3bb3c59b8529.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "751aaf5bef47"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24625",
-      "step": 3,
-      "order": 68,
-      "family": "landscape",
-      "title": "Landscape: Murmansk Area",
-      "text": [
-        "An open, hilly landscape with low shrubbery and fireweed usually indicates Murmansk. The lower the shrubbery, the more north it generally is."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "637bcf3caa0c",
-          "src": "https://learnablemeta.com/images/664/NrAwPkiVzJ7ZuXeQkToq3q3DDpnsY8n55ne3.avif",
-          "path": "ru/637bcf3caa0c.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "31df594afecf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24626",
-      "step": 3,
-      "order": 69,
-      "family": "vegetation",
-      "title": "Vegetation: Vladivostok Area",
-      "text": [
-        "Lush and diverse forests in a hilly landscape characterises the noticeably warmer region around Vladivostok. Most of the coverage is overcast and has a white car with a long antenna. Further south, near the tri-border, you will find a more open rolling hill landscape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1e46af56f3a0",
-          "src": "https://learnablemeta.com/images/664/EymAczigk1igeCtVIvTvohpnwRK5AIt6wEBg.avif",
-          "path": "ru/1e46af56f3a0.webp",
-          "width": 1000,
-          "height": 482,
-          "dupeOf": "745bb4bb453e"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24627",
-      "step": 3,
-      "order": 70,
-      "family": "landscape",
-      "title": "Landscape: Olkhon Island",
-      "text": [
-        "Olkhon Island on Lake Baikal has a single road, driving on rolling sandy hills during sunset. You can often see Lake Baikal directly with a mountain ridge across the bay."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "69d911a4d9a7",
-          "src": "https://learnablemeta.com/images/664/pATdDzHETHXAvJKJAqzc62KQ8ZjayHUY9dra.avif",
-          "path": "ru/69d911a4d9a7.webp",
-          "width": 1000,
-          "height": 483,
-          "dupeOf": "81494c0e6577"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24628",
-      "step": 3,
-      "order": 71,
-      "family": "landscape",
-      "title": "Landscape: Kolyma Highway",
-      "text": [
-        "The eastern half of the Kolyma Highway going to Magadan features a lot of tall hills and mountains, usually shrouded in a haze. Most of the roads are unpaved and feature dark gravelly soil. The haze is not present in the western half."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0067f8b439b9",
-          "src": "https://learnablemeta.com/images/664/IBN5875GVJZ6HIfgzNlszLgyQNe0BUD2azcF.avif",
-          "path": "ru/0067f8b439b9.webp",
-          "width": 1000,
-          "height": 487,
-          "dupeOf": "da8a552561ae"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24629",
-      "step": 3,
-      "order": 72,
-      "family": "coverage",
-      "title": "Coverage: Omsk",
-      "text": [
-        "The coverage in Omsk Oblast is some of the most recognizable in Russia. It is typically summer Generation 4 and has a distinct landscape consisting of green agricultural fields, which are interrupted by isolated patches of (primarily) birch forest. Note that in Generation 3, this landscape can be seen in a much larger area of Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ca61451539ee",
-          "src": "https://learnablemeta.com/images/664/qCA947dh6ccHqdNqzkQM6RMKshGMwaDbhmOU.avif",
-          "path": "ru/ca61451539ee.webp",
-          "width": 1000,
-          "height": 484
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-24630",
-      "step": 3,
-      "order": 73,
-      "family": "landscape",
-      "title": "Landscape: Tunkinsky National Park",
-      "text": [
-        "Tunkinsky National Park in western Buryatia is a very green river basin with tall, jagged mountains to the north."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ea1a12ec6c80",
-          "src": "https://learnablemeta.com/images/664/tDGKIc6l6YgYcHCMDnUokPGGzUujYhyOU5P5.avif",
-          "path": "ru/ea1a12ec6c80.webp",
-          "width": 1000,
-          "height": 481,
-          "dupeOf": "f895f2ac9015"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50464",
-      "step": 3,
-      "order": 74,
-      "family": "bollard",
-      "title": "Bollard: Wide Intersections",
-      "text": [
-        "Along with containing a large number of bollards, many intersections are unusually wide compared to other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7a35be08bb7",
-          "src": "https://learnablemeta.com/images/768/6DxV5nrs8zTmCXncJZ4lgeoIqbz9gUtK4gBK.avif",
-          "path": "ru/f7a35be08bb7.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "5842946f1252"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50467",
-      "step": 3,
-      "order": 75,
-      "family": "architecture",
-      "title": "Architecture: Large Apartments",
-      "text": [
-        "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete.",
-        "Newer buildings in wealthier areas appear more modern."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "983c5708b6e0",
-          "src": "https://learnablemeta.com/images/768/40MD40Jph3FbNwgF05hXNUjy86D1H3EAWrk9.avif",
-          "path": "ru/983c5708b6e0.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f073f3f27da"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50468",
-      "step": 3,
-      "order": 76,
-      "family": "architecture",
-      "title": "Architecture: Rural Housing",
-      "text": [
-        "Rural housing in Russia consists mostly of a basic wooden structure with metal roofs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4209e5d06c3b",
-          "src": "https://learnablemeta.com/images/768/e3V9wRT1zaOvfFhfZmOM5LAFbq2RM3mz5pXe.avif",
-          "path": "ru/4209e5d06c3b.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "99e7fe88be57"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-50469",
-      "step": 3,
-      "order": 77,
-      "family": "other",
-      "title": "Decorated Windows",
-      "text": [
-        "This style of richly decorated window frames is commonly found on traditional Russian homes, especially on log cabins.",
-        "They are often painted blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5c379ed3eb96",
-          "src": "https://learnablemeta.com/images/768/Qn7oTp0ywu5SiVgDGHaTfyfOQyevccGf6FPG.avif",
-          "path": "ru/5c379ed3eb96.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f5242387040"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51193",
-      "step": 3,
-      "order": 78,
-      "family": "bollard",
-      "title": "Bollard: Wide Intersections",
-      "text": [
-        "Along with containing a large number of bollards, many intersections are unusually wide compared to other countries."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f7a35be08bb7",
-          "src": "https://learnablemeta.com/images/768/6DxV5nrs8zTmCXncJZ4lgeoIqbz9gUtK4gBK.avif",
-          "path": "ru/f7a35be08bb7.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "5842946f1252"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51211",
-      "step": 3,
-      "order": 79,
-      "family": "architecture",
-      "title": "Architecture: Large Apartments",
-      "text": [
-        "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete.",
-        "Newer buildings in wealthier areas appear more modern."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "983c5708b6e0",
-          "src": "https://learnablemeta.com/images/768/40MD40Jph3FbNwgF05hXNUjy86D1H3EAWrk9.avif",
-          "path": "ru/983c5708b6e0.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f073f3f27da"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51212",
-      "step": 3,
-      "order": 80,
-      "family": "architecture",
-      "title": "Architecture: Rural Housing",
-      "text": [
-        "Rural housing in Russia consists mostly of a basic wooden structure with metal roofs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "4209e5d06c3b",
-          "src": "https://learnablemeta.com/images/768/e3V9wRT1zaOvfFhfZmOM5LAFbq2RM3mz5pXe.avif",
-          "path": "ru/4209e5d06c3b.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "99e7fe88be57"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-51213",
-      "step": 3,
-      "order": 81,
-      "family": "other",
-      "title": "Decorated Windows",
-      "text": [
-        "This style of richly decorated window frames is commonly found on traditional Russian homes, especially on log cabins.",
-        "They are often painted blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5c379ed3eb96",
-          "src": "https://learnablemeta.com/images/768/Qn7oTp0ywu5SiVgDGHaTfyfOQyevccGf6FPG.avif",
-          "path": "ru/5c379ed3eb96.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f5242387040"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-104532",
-      "step": 3,
-      "order": 82,
-      "family": "other",
-      "title": "Decorated Window Frames",
-      "text": [
-        "This style of richly decorated window frames is commonly found on traditional Russian homes, especially on log cabins.",
-        "They are often painted blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f2a0aa9e083",
-          "src": "https://learnablemeta.com/images/1072/uNJKhyMIJlm4HGbg4txhHYk4YCZ9wPHRojYx.avif",
-          "path": "ru/3f2a0aa9e083.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f5242387040"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-104533",
-      "step": 3,
-      "order": 83,
-      "family": "architecture",
-      "title": "Architecture: Dagestan - Limestone Bricks",
-      "text": [
-        "Buildings made of white limestone brick are indicative of Dagestan, as well as adjacent regions."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6757557759c5",
-          "src": "https://learnablemeta.com/images/1072/S5hOCNa0Y8Vov5qiuF1QCqAIJ1ec27svAkgl.avif",
-          "path": "ru/6757557759c5.webp",
-          "width": 1000,
-          "height": 483,
-          "dupeOf": "6774bdb201b3"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-104602",
-      "step": 3,
-      "order": 84,
-      "family": "architecture",
-      "title": "Architecture: Rural Housing",
-      "text": [
-        "Rural housing in Russia consists mostly of a basic wooden structure with metal roofs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "341ee9c85017",
-          "src": "https://learnablemeta.com/images/1072/7GSgNwYTtP8Dd1jOoMfN3RTBIyJyrX5SAb3k.avif",
-          "path": "ru/341ee9c85017.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "99e7fe88be57"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-104611",
-      "step": 3,
-      "order": 85,
-      "family": "architecture",
-      "title": "Architecture: Rectangular Apartments",
-      "text": [
-        "The vast majority of urban housing in Russia are large rectangular apartment buildings made of simple concrete.",
-        "Newer buildings in wealthier areas appear more modern."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b041154922a3",
-          "src": "https://learnablemeta.com/images/1072/ZTSnKlELP0Q9Lig9CAT3rkDAtfn5ipcs40iC.avif",
-          "path": "ru/b041154922a3.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "6f073f3f27da"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-104617",
-      "step": 3,
-      "order": 86,
-      "family": "architecture",
-      "title": "Architecture: South - Red Bricks",
-      "text": [
-        "Buildings built almost entirely of red brick are mostly found south, but other notable exceptions include Magnitogorsk, Orsk, and Omsk."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6634d8228899",
-          "src": "https://learnablemeta.com/images/1072/s1OFHiUOawHTEMCOJckrtuTa1jYTusSg2UYl.avif",
-          "path": "ru/6634d8228899.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "29db61b8cbf1"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-128308",
-      "step": 3,
-      "order": 87,
-      "family": "other",
-      "title": "Decorated Window Frames",
-      "text": [
-        "This style of richly decorated window frames is commonly found on traditional Russian homes, especially on log cabins.",
-        "They are often painted blue."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3f2a0aa9e083",
-          "src": "https://learnablemeta.com/images/1072/uNJKhyMIJlm4HGbg4txhHYk4YCZ9wPHRojYx.avif",
-          "path": "ru/3f2a0aa9e083.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "6f5242387040"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-395107",
-      "step": 3,
-      "order": 88,
-      "family": "other",
-      "title": "Russia",
-      "text": [
-        "Notably, area codes starting with 8 are in the west, codes starting with 3 are fairly central and codes starting with 4 are either east (41X-42X) or around Moscow (47X-48X-49X)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "54177e7f3778",
-          "src": "https://learnablemeta.com/images/1398/KY2qcGOjFwnV2RpYAnGZXroiZ2pznxlOvQWX.avif",
-          "path": "ru/54177e7f3778.webp",
-          "width": 1000,
-          "height": 370,
-          "dupeOf": "a3b22db13b76"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6824efee8646292930db9807",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-634055",
-      "step": 3,
-      "order": 89,
-      "family": "plate",
-      "title": "Plate: Russia",
-      "text": [
-        "Russian licence plates are fully white with black text.",
-        "NOTE: Most European counterparts will feature a blue strip on the left hand side."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "5a5e2b55e105",
-          "src": "https://learnablemeta.com/images/5431/1766262648816-9LY.avif",
-          "path": "ru/5a5e2b55e105.webp",
-          "width": 800,
-          "height": 350,
-          "dupeOf": "58a309226594"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ru-lm-783067",
-      "step": 3,
-      "order": 90,
-      "family": "language",
-      "title": "Language: Russian",
-      "text": [
-        "Russian is an East Slavic language related to Ukrainian and Belarusian. Russian uses the Cyrillic script, and contains the special letters **Ы**, **Э**, **Ё** and **Ъ**. **Ё** is also used in Mongolian and **Ъ** is used in Bulgarian (where it's more common).",
-        "The Russian word for street is **улица** (ulitsa), sometimes abbreviated **ул.** (ul.). Most other Slavic languages also use **улица**/**ulica**. The Ukrainian word however is **вулиця** (vulytsya), abbreviated **вул.** (vul.).",
-        "The Russian word for city is **город** (gorod), abbreviated **г.** (g.). The Ukrainian word is instead **місто** (misto), abbreviated **м.** (m.)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "27885c7ff81f",
-          "src": "https://learnablemeta.com/images/9388/1785595426507-isA.avif",
-          "path": "ru/27885c7ff81f.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "3c89a629c236"
-        },
-        {
-          "id": "413dbbf1c7f0",
-          "src": "https://learnablemeta.com/images/9388/1785595777767-i4o.avif",
-          "path": "ru/413dbbf1c7f0.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "549876786ec1"
-        },
-        {
-          "id": "265255f2b767",
-          "src": "https://learnablemeta.com/images/9388/1785595792824-U0U.avif",
-          "path": "ru/265255f2b767.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "fa7e8c0ea56a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The sign reads БЕРЁЗОВСКИЙ (Beryozovskiy). It is written in Cyrillic letters, so place names like this point to Russia or another Cyrillic country."
     }
   ]
 }

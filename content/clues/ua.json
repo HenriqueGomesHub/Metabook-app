@@ -24,7 +24,7 @@
       "step": 0,
       "order": 4,
       "family": "plate",
-      "title": "Plate: Ukraine uses long, white licence plates, with a distinctive…",
+      "title": "Plate: long white, blue-yellow strip",
       "text": [
         "Ukraine uses long, white licence plates, with a distinctive **blue and yellow** strip on the left (the colours of the flag).",
         "You may also come across older plates, where the blue and yellow are difficult to spot.",
@@ -48,14 +48,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long white plates with a blue and yellow strip on the left, the flag colours. Older plates have a strip where the colours are hard to see. Russian plates are all white without a strip.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian plates are all white, no strip"
+        }
+      ]
     },
     {
       "id": "ua-ugIv",
       "step": 0,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: All coverage in Ukraine is Generation 3",
+      "title": "Google car: red Gen 3 car",
       "text": [
         "All coverage in Ukraine is Generation 3. Most of it was made using a **red Google car**. This car is almost unique to Ukraine. It sometimes has an antenna, and sometimes no antenna. Note that the car is not always visible, though at times you will still be able to tell its colour due to the [car blur glitch](https://goo.gl/maps/9Lu9tCUzdXBZahdW7).",
         "NOTE: The car meta can be very useful to tell Ukraine and Russia apart:",
@@ -102,14 +109,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "All coverage is Gen 3, mostly with a red car that sometimes has an antenna and sometimes not. The car is not always visible. Russia never has the red car and often has Gen 4.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russia has no red car, and may have Gen 4 or Gen 2"
+        }
+      ]
     },
     {
       "id": "ua-JmjH",
       "step": 0,
       "order": 6,
       "family": "car",
-      "title": "Google car: More rarely, you can also find several other Google cars in…",
+      "title": "Google car: rare black, white or grey cars",
       "text": [
         "More rarely, you can also find several other Google cars in Ukraine:",
         "- [Black car with a long antenna](https://goo.gl/maps/R1LpZodEBBraGPKT6)",
@@ -135,14 +149,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rarely, other cars show up: black or white with a long antenna, or grey with a short antenna. These also exist in several other countries, including Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "ua-9fKw",
       "step": 0,
       "order": 7,
       "family": "other",
-      "title": "On average, Ukraine has some of the worst roads in Europe",
+      "title": "Road: potholes, cracks, warped pavement",
       "text": [
         "On average, Ukraine has some of the **worst roads** in Europe. Most rural roads have lots of potholes, cracks and warped pavement.",
         "This abysmal road quality can really help with tough 50-50s with Russia, which generally has somewhat better roads."
@@ -184,14 +202,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some of the worst roads in Europe: most rural roads are full of potholes, cracks and warped asphalt. Helps against Russia, which has somewhat better roads.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian roads are generally somewhat better"
+        }
+      ]
     },
     {
       "id": "ua-CdRn",
       "step": 0,
       "order": 8,
       "family": "other",
-      "title": "Many random streetside objects are painted in the colours…",
+      "title": "Objects: painted blue and yellow",
       "text": [
         "Many random streetside objects are painted in the **colours of the Ukrainian flag**: blue and yellow. Most commonly, you will see fences that have this colour."
       ],
@@ -230,14 +255,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Random roadside objects, most often fences, are painted blue and yellow like the flag."
     },
     {
       "id": "ua-sSrn",
       "step": 0,
       "order": 9,
       "family": "language",
-      "title": "Language: The Ukrainian language uses the Cyrillic script",
+      "title": "Language: Cyrillic with Є, Ґ, І, Ї",
       "text": [
         "The Ukrainian language uses the **Cyrillic** script.",
         "These letters are unique to Ukrainian, compared to Russian:",
@@ -263,14 +289,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cyrillic script with the letters Є, Ґ, І and Ї, which Russian does not use. Don't mix Є up with Э, which is Russian and Belarusian.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian has no Є, Ґ, І or Ї"
+        }
+      ]
     },
     {
       "id": "ua-MArz",
       "step": 0,
       "order": 10,
       "family": "other",
-      "title": "The Ukrainian word for street is вулиця",
+      "title": "Language: 'вулиця' means street",
       "text": [
         "The Ukrainian word for street is **вулиця** (vulytsya), abbreviated **вул.** (vul.).",
         "The Russian word is улица, abbreviated ул., without a в at the beginning."
@@ -310,14 +343,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street is вулиця, short вул. In Russian it is улица, short ул., with no в at the start.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian says улица, abbreviated ул."
+        }
+      ]
     },
     {
       "id": "ua-c205",
       "step": 0,
       "order": 11,
       "family": "language",
-      "title": "Language: The Ukrainian word for city is місто",
+      "title": "Language: 'місто' means city",
       "text": [
         "The Ukrainian word for city is **місто** (misto), abbreviated **м.** (m.). It can be used both to differentiate it from other Cyrillic languages and to quickly find the city name in addresses."
       ],
@@ -356,14 +396,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "City is місто, short м. Handy to tell it from other Cyrillic languages and to find the city name in an address.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russian says город, abbreviated г."
+        }
+      ]
     },
     {
       "id": "ua-AXOh",
       "step": 0,
       "order": 14,
       "family": "pole",
-      "title": "Pole: Ukraine primarily uses square concrete poles",
+      "title": "Pole: square concrete, varied tops",
       "text": [
         "Ukraine primarily uses **square concrete poles**. They can have a variety of different pole tops, and sometimes have white paint at the bottom.",
         "These poles are similar to the ones found in other post-Soviet countries like Russia and Lithuania."
@@ -408,14 +455,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Mostly square concrete poles with various tops and sometimes white paint at the bottom. Russia and Lithuania have similar ones.",
+      "sameAs": [
+        "LT",
+        "RU"
+      ]
     },
     {
       "id": "ua-ftY0",
       "step": 0,
       "order": 15,
       "family": "pole",
-      "title": "Pole: Poles often have diagonal support beams",
+      "title": "Pole: diagonal support beams",
       "text": [
         "Poles often have **diagonal support beams**."
       ],
@@ -456,14 +508,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles often have diagonal support beams."
     },
     {
       "id": "ua-3Khl",
       "step": 0,
       "order": 16,
       "family": "pole",
-      "title": "Pole: You can also find wooden poles",
+      "title": "Pole: wooden with concrete base blocks",
       "text": [
         "You can also find wooden poles, sometimes with **concrete support blocks** at their base."
       ],
@@ -504,7 +557,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles also occur, sometimes with concrete support blocks at the base."
     },
     {
       "id": "ua-iXrj",
@@ -512,7 +566,7 @@
       "order": 17,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Ukraine uses a red chevron with white arrows",
+      "title": "Chevron: red with white arrows",
       "text": [
         "Ukraine uses a **red chevron with white arrows**.",
         "Russia and Estonia use the same chevrons."
@@ -563,7 +617,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red chevrons with white arrows. Russia and Estonia use exactly the same.",
+      "sameAs": [
+        "EE",
+        "RU"
+      ]
     },
     {
       "id": "ua-ffx5",
@@ -571,7 +630,7 @@
       "order": 18,
       "family": "sign",
       "kind": "pedestrian",
-      "title": "Pedestrian sign: Ukrainian pedestrian signs have three stripes",
+      "title": "Sign: pedestrian sign, three stripes",
       "text": [
         "Ukrainian pedestrian signs have **three stripes**.",
         "Russia, Estonia and Lithuania also use pedestrian signs with three stripes."
@@ -615,7 +674,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian signs with three stripes. Russia, Estonia and Lithuania also use three stripes.",
+      "sameAs": [
+        "EE",
+        "LT",
+        "RU"
+      ]
     },
     {
       "id": "ua-mASo",
@@ -623,7 +688,7 @@
       "order": 19,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Ukraine uses white town entry signs",
+      "title": "Sign: white town entry signs",
       "text": [
         "Ukraine uses **white** town entry signs."
       ],
@@ -670,14 +735,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Town entry signs are white."
     },
     {
       "id": "ua-9V71",
       "step": 0,
       "order": 20,
       "family": "guardrail",
-      "title": "Guardrail: Guardrails and barriers will often be painted black and…",
+      "title": "Guardrail: painted black and white",
       "text": [
         "Guardrails and barriers will often be painted **black and white**, similar to Russia."
       ],
@@ -720,14 +786,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Guardrails and barriers are often painted black and white, like Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "ua-J6ak",
       "step": 0,
       "order": 21,
       "family": "architecture",
-      "title": "Architecture: In bigger cities and towns",
+      "title": "Houses: grey Soviet apartment blocks",
       "text": [
         "In bigger cities and towns, you will often see big **Soviet-era apartment blocks**. These are often made of light grey brick. They tend to look fairly rundown and poorly maintained. Some are made of [concrete prefab units](https://goo.gl/maps/rEeqXdLgQQ1kjhx39) that are stacked on top of each other.",
         "These apartment buildings are similar to those found in Russian cities. You can also find this style of building in the Baltic countries, but these tend to look better maintained."
@@ -767,14 +837,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Big Soviet-era blocks of light grey brick or stacked concrete panels, usually rundown. Russian cities have the same. The Baltic states have them too, but better kept.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "ua-YsNh",
       "step": 0,
       "order": 22,
       "family": "architecture",
-      "title": "Architecture: Single-family homes are very common in suburbs and small…",
+      "title": "Houses: brick houses behind fences, dirt roads",
       "text": [
         "Single-family homes are very common in **suburbs and small towns**. These neighbourhoods are often heavily vegetated and tend to look rundown. Most roads are unpaved. Buildings are usually made of bricks, often have corrugated roofs, and are invariably surrounded by fences."
       ],
@@ -813,14 +887,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Suburbs and small towns have brick houses, often with corrugated roofs and always behind fences. They look rundown and overgrown, and most roads are unpaved."
     },
     {
       "id": "ua-dZuO",
       "step": 0,
       "order": 25,
       "family": "landscape",
-      "title": "Landscape: This is the stereotypical rural round in Ukraine",
+      "title": "Landscape: typical rural road, fields beyond trees",
       "text": [
         "This is the **stereotypical rural round** in Ukraine:",
         "- Generally bad road quality.",
@@ -864,14 +939,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bad road, flat or gently rolling land, a line of trees or bushes with wide farm fields beyond, almost no buildings or traffic until the next town."
     },
     {
       "id": "ua-G7CF",
       "step": 0,
       "order": 26,
       "family": "coverage",
-      "title": "Coverage: Almost all Ukrainian coverage was made in the summer",
+      "title": "Coverage: almost all summer",
       "text": [
         "Almost all Ukrainian coverage was made in the **summer**, meaning the foliage is green and the people around are dressed for sunny weather.",
         "Five major cities have **autumn** coverage, with distinct fall colours and colder weather. See the region guessing section for more information."
@@ -911,14 +987,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Nearly all coverage is from summer: green leaves, people in summer clothes. Five big cities have autumn coverage with fall colours and colder weather."
     },
     {
       "id": "ua-Hkd1",
       "step": 0,
       "order": 27,
       "family": "vegetation",
-      "title": "Vegetation: These tall poplar trees are common in many parts of the…",
+      "title": "Plants: tall poplar trees",
       "text": [
         "These **tall poplar trees** are common in many parts of the country.",
         "NOTE: They can be found in some regions of Russia, but most of the country completely lacks them."
@@ -960,14 +1037,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall poplars are common in many parts of the country. Some parts of Russia have them, but most of Russia does not.",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Most of Russia lacks tall poplars"
+        }
+      ]
     },
     {
       "id": "ua-wdxm",
       "step": 0,
       "order": 28,
       "family": "coverage",
-      "title": "Coverage: Coverage in Ukraine is mostly limited to urban areas and…",
+      "title": "Coverage: cities, main roads, rural tracks",
       "text": [
         "Coverage in Ukraine is mostly limited to urban areas and the main roads between them. See the region-guessing section for a map.",
         "However, one type of coverage that can sometimes trick people are **ultra-rural tracks** close to cities. This is a decently common type of coverage in Ukraine, despite the general rule that most coverage is either urban or on a main road."
@@ -1008,14 +1092,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Coverage is mostly cities and the main roads between them. Quite common exception: very rural tracks right next to cities."
     },
     {
       "id": "ua-tc2U",
       "step": 1,
       "order": 0,
       "family": "coverage",
-      "title": "Coverage: This is a map of street view coverage in Ukraine",
+      "title": "Coverage: gaps in the south-east and south",
       "text": [
         "This is a map of **street view coverage** in Ukraine. Most coverage between cities is on yellow roads.",
         "Notably, there is almost no coverage in the southeast. The only exception is Donetsk. There is also no coverage south of Odesa in the area near Romania.",
@@ -1040,14 +1125,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most coverage between cities is on main roads. There is almost none in the south-east except one city, and none south of the port city near Romania.",
+      "differs": [
+        {
+          "country": "RO",
+          "how": "Romania has coverage there, this country has none"
+        }
+      ]
     },
     {
       "id": "ua-uPIf",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "Ukrainian landline phone numbers start with a two-digit…",
+      "title": "Phone numbers: 2-digit area code per region",
       "text": [
         "Ukrainian landline phone numbers start with a two-digit **area code**. Each oblast has its own area code. If the third digit is a 2, it refers to a phone number in the oblast’s capital (typically the biggest city).",
         "Mobile phone numbers start with 50, 63, 66-68, 73 or 91-99. They are not unique to a geographic area."
@@ -1068,14 +1160,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Landlines start with a 2-digit area code, one per region. A third digit of 2 means the region's capital. Mobiles start with 50, 63, 66-68, 73 or 91-99 and say nothing about location."
     },
     {
       "id": "ua-VZe4",
       "step": 1,
       "order": 2,
       "family": "language",
-      "title": "Language: The first two letters on Ukrainian licence plates determine…",
+      "title": "Plate: first two letters show the region",
       "text": [
         "The first two letters on Ukrainian licence plates determine in which oblast the vehicle is registered in, making unblurred licence plates very useful for regionguessing. Unlike most regional plates in Europe, they’re not intuitive, so learning the codes beforehand is essential for utilising them.",
         "NOTE: The map shown only applies to the most recent and common plates, with a [blue and yellow strip](https://maps.app.goo.gl/JBdhZAFtT8ad6JXX8). The [older plates](https://maps.app.goo.gl/xT84P2MZ6J22UtxB8) use a regional [number code](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Ukraine#Regional_codes), similar to Russia."
@@ -1099,14 +1192,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The first two letters on blue-and-yellow-strip plates give the registration region, which is handy if the plate is not blurred. The codes are not intuitive, so you must learn them. Older plates use number codes like Russia.",
+      "sameAs": [
+        "RU"
+      ]
     },
     {
       "id": "ua-nLtW",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Oblast-specific second-level internet domains can…",
+      "title": "Domain: region codes like .te.ua",
       "text": [
         "Oblast-specific **second-level internet domains** can occasionally be found in Ukraine. Seen in the image is the domain for Ternopil Oblast (.te.ua). They can typically be used without being memorised, as they’re mostly intuitive. You can however learn them [here](https://en.wikipedia.org/wiki/.ua#Third-level_&_second-level_domains)."
       ],
@@ -1145,14 +1242,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Regional second-level web domains sometimes appear, such as .te.ua. Mostly intuitive from the region name."
     },
     {
       "id": "ua-t7jl",
       "step": 1,
       "order": 4,
       "family": "coverage",
-      "title": "Coverage: May coverage in Ukraine is primarily seen in the western…",
+      "title": "Coverage: May look, yellowish leaves",
       "text": [
         "May coverage in Ukraine is primarily seen in the western half of the country. It can be recognized by looking at the plants, which have a **yellowish tint** on otherwise green leaves.",
         "NOTE: June and July coverage can also be found in the areas highlighted, as well as the rest of the country."
@@ -1192,14 +1290,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "May coverage is mostly in the western half. Look for a yellowish tint on otherwise green leaves. June and July coverage also appears there and elsewhere."
     },
     {
       "id": "ua-TCLY",
       "step": 1,
       "order": 5,
       "family": "coverage",
-      "title": "Coverage: Five major cities were covered in 2011",
+      "title": "Coverage: five cities from 2011, autumn",
       "text": [
         "Five major cities were covered in 2011, years before the rest of the country was covered: Kyiv, Lviv, Kharkiv, Odesa and Donetsk.",
         "This coverage was made during autumn, meaning that the trees have distinct **fall colours** and people are dressed for colder weather.",
@@ -1254,14 +1353,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Five major cities were covered in 2011 in autumn, with fall colours and people in cold-weather clothes. Most of it was overwritten by newer summer coverage in three cities, but it remains in the other two, one of which has no newer coverage at all."
     },
     {
       "id": "ua-pjlN",
       "step": 1,
       "order": 6,
       "family": "coverage",
-      "title": "Coverage: This older 2011 coverage was made with a black or white…",
+      "title": "Google car: black or white car, long antenna",
       "text": [
         "This older 2011 coverage was made with a **black or white Google car**, instead of the standard red one. Both cars have a long antenna.",
         "The [black car](https://goo.gl/maps/5f74GEbvVoWHJbFn9) was used in Donetsk. Note that Donetsk has no newer coverage whatsoever, so never guess in that city if you see a red car.",
@@ -1302,14 +1402,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The old 2011 coverage used a black car in one eastern city (no newer coverage there, so a red car is never there) and a white car, now rare, in three other cities. Both have a long antenna."
     },
     {
       "id": "ua-7Sho",
       "step": 1,
       "order": 7,
       "family": "landscape",
-      "title": "Landscape: The Carpathian Mountains is an area in western Ukraine that…",
+      "title": "Landscape: hilly, forested, curvy roads",
       "text": [
         "The [Carpathian Mountains](https://en.wikipedia.org/wiki/Ukrainian_Carpathians) is an area in western Ukraine that is significantly **hillier** than the rest of the country, in some places bordering on mountainous. It is also much more forested, with very little agriculture, and a lot of pine trees. The roads going through it tend to be more curvy, rather than the straight highways found in the rest of the country."
       ],
@@ -1356,14 +1457,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In the west, a much hillier, sometimes mountainous area, heavily forested with many pines and little farming. Roads are curvy rather than straight highways."
     },
     {
       "id": "ua-clFO",
       "step": 1,
       "order": 8,
       "family": "vegetation",
-      "title": "Vegetation: Forests with Baltic pines",
+      "title": "Plants: tall pines with orange-red bark",
       "text": [
         "Forests with **Baltic pines** ([Pinus sylvestris](https://en.wikipedia.org/wiki/Pinus_sylvestris)) are most commonly found in the north, most often near the border with Belarus. Baltic pines are usually tall and have orange-red bark.",
         "While some of these forests consist solely of this species, many of them are a mix of Baltic pines and broadleaf trees.",
@@ -1404,14 +1506,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Scots pine forests, tall with orange-red bark, mostly in the north near the Belarus border, often mixed with broadleaf trees. The western mountains also have pines, but are hilly while the north is very flat."
     },
     {
       "id": "ua-INTC",
       "step": 1,
       "order": 9,
       "family": "landscape",
-      "title": "Landscape: Towards the south, the climate becomes warmer and drier",
+      "title": "Landscape: warmer, drier, fewer forests",
       "text": [
         "Towards the south, the climate becomes **warmer and drier**. The landscape is more arid. Forests are considerably more rare, and make way for shrubs and open fields. The difference is not extreme, but can become noticeable after some practice."
       ],
@@ -1450,14 +1553,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Towards the south it gets warmer and drier, with fewer forests and more shrubs and open fields. The change is subtle but noticeable with practice."
     },
     {
       "id": "ua-wjAJ",
       "step": 1,
       "order": 10,
       "family": "other",
-      "title": "Sunflowers are grown in most of Ukraine",
+      "title": "Plants: blooming sunflower fields, south and east",
       "text": [
         "Sunflowers are grown in most of Ukraine. However, they only start to bloom as early as late July. Due to the way Ukraine was covered, this means you will usually only see **sunflower fields that are in bloom** in the far south and east of the country.",
         "These fields are most common in Kherson, Mykolaiv and Odesa Oblast. The road T0403 to Nova Kakhovka especially has a lot of them.",
@@ -1498,14 +1602,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Sunflowers only bloom from late July, so blooming fields mostly show in the far south and east. Fields not yet in bloom exist almost everywhere and look like normal crops."
     },
     {
       "id": "ua-AkYz",
       "step": 1,
       "order": 11,
       "family": "language",
-      "title": "Language: The Russian language can be found in Ukraine",
+      "title": "Language: Russian in east and south, Ы and Э",
       "text": [
         "The **Russian language** can be found in Ukraine, particularly in the east and south. While there are several differences between Russian and Ukrainian, these are some of the most noteworthy:",
         "- The letters Ы ы, Э э are only found in Russian.",
@@ -1547,14 +1652,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Russian appears in the east and south. The letters Ы and Э are Russian only. Street is улица (ул.) and city is город (г.).",
+      "differs": [
+        {
+          "country": "RU",
+          "how": "Russia uses Ы, Э, улица, город everywhere"
+        }
+      ]
     },
     {
       "id": "ua-IG9J",
       "step": 2,
       "order": 0,
       "family": "car",
-      "title": "Google car: A leaf can be seen on the back of the Google car from",
+      "title": "Google car: a leaf visible on the back",
       "text": [
         "A **leaf** can be seen on the back of the Google car from: Ternopil to Zolochiv on the H02, Ternopil to Brody on the P39, and from Brody to Dubno on the E40. It can also be seen from Brody to Pochaiv on the P26 and from Dubno to Mlyniv on the E85."
       ],
@@ -1593,14 +1705,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A leaf is visible on the back of the Google car on several roads in the west, around Ternopil, Brody, Dubno and Pochaiv."
     },
     {
       "id": "ua-Vcd1",
       "step": 2,
       "order": 1,
       "family": "coverage",
-      "title": "Coverage: The older 2011 coverage in Odesa was made using a silver…",
+      "title": "Google car: silver car, short antenna",
       "text": [
         "The older 2011 coverage in Odesa was made using a silver car with a **short antenna**, rather than a black or white car with a long antenna. The car may sometimes be fully blurred."
       ],
@@ -1639,14 +1752,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The old 2011 coverage in one southern port city used a silver car with a short antenna, not a black or white one with a long antenna. It may be fully blurred."
     },
     {
       "id": "ua-rOmV",
       "step": 2,
       "order": 2,
       "family": "pole",
-      "title": "Pole: Red soil can be seen on some ultra-rural dirt tracks around…",
+      "title": "Soil: red dirt with Brazilian-style poles",
       "text": [
         "**Red soil** can be seen on some ultra-rural dirt tracks around the iron mine in Kryvyi Rih, due to mining activity. [Brazilian-style poles](https://goo.gl/maps/V7X5h9Sd5TYebmv86) can also be seen, making locations around the mine very convincing bait. The foliage, however, will be significantly less tropical, and a long antenna can be seen."
       ],
@@ -1687,14 +1801,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Around an iron mine, dirt tracks have red soil and Brazilian-style poles, which makes it good bait. The plants are far less tropical, and the car has a long antenna.",
+      "differs": [
+        {
+          "country": "BR",
+          "how": "Less tropical plants, and a long antenna on the car"
+        }
+      ]
     },
     {
       "id": "ua-QxHe",
       "step": 2,
       "order": 3,
       "family": "pole",
-      "title": "Pole: These poles, with a red band across them, are unique to…",
+      "title": "Pole: red band across",
       "text": [
         "These poles, with a **red band** across them, are unique to Kryvyi Rih."
       ],
@@ -1743,14 +1864,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles with a red band across them are unique to one mining city."
     },
     {
       "id": "ua-7ytl",
       "step": 2,
       "order": 4,
       "family": "other",
-      "title": "Bus stop shelters with a vibrant yellow-and-green paint…",
+      "title": "Bus stop: yellow-green with sunflowers",
       "text": [
         "Bus stop shelters with a vibrant **yellow-and-green** paint scheme, featuring sunflowers and the name of a local brand (Оліс), can be found in the Mykolaiv and Kherson oblasts."
       ],
@@ -1789,14 +1911,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bus shelters painted bright yellow and green with sunflowers and a local brand name, Оліс, in the south."
     },
     {
       "id": "ua-p0kA",
       "step": 2,
       "order": 5,
       "family": "other",
-      "title": "Within Ukraine, this visual glitch is unique to the city of…",
+      "title": "Coverage: unique visual glitch, one western city",
       "text": [
         "Within Ukraine, this **visual glitch** is unique to the city of Ivano-Frankivsk."
       ],
@@ -1835,14 +1958,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A particular visual glitch, shown in the image, appears only in one western city within the country."
     },
     {
       "id": "ua-Wve0",
       "step": 2,
       "order": 6,
       "family": "bollard",
-      "title": "Bollard: These “Polish” bollards can be found in the Zakarpattia…",
+      "title": "Bollard: red reflector wrapping all round",
       "text": [
         "These **“Polish” bollards** can be found in the Zakarpattia Oblast. They have a red reflector that wraps around the bollard.",
         "They are identical to the standard bollard used in Poland (hence the name)."
@@ -1894,7 +2018,11 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White post with a red band and reflector that wraps around it, in the far west. It is identical to the standard Polish bollard.",
+      "sameAs": [
+        "PL"
+      ]
     },
     {
       "id": "ua-NPC1",
@@ -1902,7 +2030,7 @@
       "order": 7,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: The area near the border with Hungary is majority Hungarian",
+      "title": "Signs: lots of Hungarian text",
       "text": [
         "The area near the border with Hungary is majority Hungarian. As a result, you will see a lot of signs with **Hungarian language** on it – bilingual or even monolingual."
       ],
@@ -1943,14 +2071,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Near the Hungarian border most people are Hungarian, so many signs are in Hungarian, bilingual or even only Hungarian."
     },
     {
       "id": "ua-0TmA",
       "step": 2,
       "order": 8,
       "family": "architecture",
-      "title": "Architecture: In addition, the villages in this region look similar to…",
+      "title": "Houses: tidy single-storey, orange or diamond roofs",
       "text": [
         "In addition, the villages in this region look similar to **Hungarian architecture**. Settlements are fairly linear and organised, with predominantly single-storey houses that are closer to the street. Many roofs have orange tiles or diamond-shaped slate tiles that are similar to roofs found in central European countries like Hungary, Czechia and Slovakia."
       ],
@@ -1993,14 +2122,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Villages are fairly linear and organised, with single-storey houses close to the street. Roofs are orange tile or diamond-shaped slate, like Hungary, Czechia and Slovakia.",
+      "sameAs": [
+        "CZ",
+        "HU",
+        "SK"
+      ]
     },
     {
       "id": "ua-fmwm",
       "step": 2,
       "order": 9,
       "family": "coverage",
-      "title": "Coverage: Google sent a special car trekker to the Chernobyl…",
+      "title": "Coverage: trekker to an abandoned town",
       "text": [
         "Google sent a special car trekker to the [Chernobyl Exclusion Zone](https://en.wikipedia.org/wiki/Chernobyl_Exclusion_Zone), where the nuclear disaster happened in the 1980s. This car goes from Ivankiv all the way to the **abandoned town** of Pripyat.",
         "On most of the road to Pripyat, you will not really be able to tell that you are inside the Exclusion Zone. However, inside Pripyat you will see completely abandoned and overgrown buildings, giving the place an eerie look."
@@ -2040,14 +2175,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A special trekker covers a road to an abandoned town in an exclusion zone. Most of the road looks normal, but in the town you see completely abandoned, overgrown buildings that look eerie."
     },
     {
       "id": "ua-a4Vs",
       "step": 2,
       "order": 10,
       "family": "car",
-      "title": "Google car: On one side of the road going to Chernobyl",
+      "title": "Google car: yellow Opel flag on antenna",
       "text": [
         "On one side of the road going to Chernobyl, a **yellow flag with an Opel logo** can be seen on the Google car’s antenna."
       ],
@@ -2086,41 +2222,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/ukraine",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "ua-lm-343",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: Red car meta",
-      "text": [
-        "A red Google car, with or without an antenna, in Generation 3 and on crappy roads is always Ukraine. However, the car may not always be visible, so don’t rule out Ukraine if you don’t see it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "17780f4babe0",
-          "src": "https://learnablemeta.com/images/lzbFjhfAUP53Mn99B5haxXsqWSaeoDJSlJ5a.avif",
-          "path": "ua/17780f4babe0.webp",
-          "width": 1000,
-          "height": 556
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On one side of the road to the exclusion zone, a yellow flag with an Opel logo flies from the car's antenna."
     },
     {
       "id": "ua-lm-2985",
       "step": 3,
       "order": 1,
       "family": "other",
-      "title": "Skinny Ukraine",
+      "title": "Sign: three-stripe pedestrian figure, slimmer",
       "text": [
         "**3 Zebra Stripes**: Estonia, Lithuania, Russia, Ukraine. > Cross off Estonia and Russia (detailed guy in Estonia, Yellow borders in Russia) and you're left with Lithuania and Ukraine. Lithuania's guy is a liiittle bit more **fat** in the torso than Ukraine and the blue is generally more vibrant than Ukraine."
       ],
@@ -2144,299 +2254,22 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-23892",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Bad Road Quality",
-      "text": [
-        "On average, Ukraine has some of the worst roads in Europe.",
-        "Most rural roads have lots of potholes, cracks and warped pavement.",
-        "This abysmal road quality can really help with tough 50-50s with Russia, which generally has somewhat better roads."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "Of the three-stripe pedestrian signs, Estonia has a detailed figure and Russia yellow borders. Lithuania's figure is a bit fatter in the torso, with a more vibrant blue.",
+      "differs": [
         {
-          "id": "beebae2598e0",
-          "src": "https://learnablemeta.com/images/768/dc24Tnijk3mHDbYmYTPaegml82bShMW4ZiEF.avif",
-          "path": "ua/beebae2598e0.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "32cc33052f3a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-23913",
-      "step": 3,
-      "order": 3,
-      "family": "coverage",
-      "title": "Coverage: Red Car",
-      "text": [
-        "All coverage in Ukraine is Generation 3.",
-        "Most of it was made using a red Google car.",
-        "This car is almost unique to Ukraine.",
-        "It sometimes has an antenna, and sometimes no antenna.",
-        "**--- NOTE:**",
-        "You will not find the red Generation 3 car in Russia."
-      ],
-      "tags": [],
-      "images": [
+          "country": "LT",
+          "how": "Lithuania's figure is fatter, with more vibrant blue"
+        },
         {
-          "id": "16b77185a954",
-          "src": "https://learnablemeta.com/images/768/6ATRJCkzambhSFHCCZRiIPp1GET48KGzAlyr.avif",
-          "path": "ua/16b77185a954.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "27cf37f43213"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-24651",
-      "step": 3,
-      "order": 4,
-      "family": "landscape",
-      "title": "Landscape: South Fields",
-      "text": [
-        "Towards the south, the climate becomes warm and dry. The landscape is rather arid. Larger Forests are quite rare and make way for shrubs and open fields."
-      ],
-      "tags": [],
-      "images": [
+          "country": "EE",
+          "how": "Estonia's figure is detailed"
+        },
         {
-          "id": "3afd31655bbd",
-          "src": "https://learnablemeta.com/images/664/vQypEjljGB7ehOaj5SKh12UXdZeNwtr8QetX.avif",
-          "path": "ua/3afd31655bbd.webp",
-          "width": 1000,
-          "height": 492,
-          "dupeOf": "228b65dee750"
+          "country": "RU",
+          "how": "Russia's sign has yellow borders"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-50453",
-      "step": 3,
-      "order": 5,
-      "family": "coverage",
-      "title": "Coverage: Red Car",
-      "text": [
-        "All coverage in Ukraine is Generation 3.",
-        "Most of it was made using a red Google car.",
-        "This car is almost unique to Ukraine.",
-        "It sometimes has an antenna, and sometimes no antenna.",
-        "**--- NOTE:**",
-        "You will not find the red Generation 3 car in Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "16b77185a954",
-          "src": "https://learnablemeta.com/images/768/6ATRJCkzambhSFHCCZRiIPp1GET48KGzAlyr.avif",
-          "path": "ua/16b77185a954.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "27cf37f43213"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-50486",
-      "step": 3,
-      "order": 6,
-      "family": "other",
-      "title": "Bad Road Quality",
-      "text": [
-        "On average, Ukraine has some of the worst roads in Europe.",
-        "Most rural roads have lots of potholes, cracks and warped pavement.",
-        "This abysmal road quality can really help with tough 50-50s with Russia, which generally has somewhat better roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "beebae2598e0",
-          "src": "https://learnablemeta.com/images/768/dc24Tnijk3mHDbYmYTPaegml82bShMW4ZiEF.avif",
-          "path": "ua/beebae2598e0.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "32cc33052f3a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-51199",
-      "step": 3,
-      "order": 7,
-      "family": "coverage",
-      "title": "Coverage: Red Car",
-      "text": [
-        "All coverage in Ukraine is Generation 3.",
-        "Most of it was made using a red Google car.",
-        "This car is almost unique to Ukraine.",
-        "It sometimes has an antenna, and sometimes no antenna.",
-        "**--- NOTE:**",
-        "You will not find the red Generation 3 car in Russia."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "16b77185a954",
-          "src": "https://learnablemeta.com/images/768/6ATRJCkzambhSFHCCZRiIPp1GET48KGzAlyr.avif",
-          "path": "ua/16b77185a954.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "27cf37f43213"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-51225",
-      "step": 3,
-      "order": 8,
-      "family": "other",
-      "title": "Bad Road Quality",
-      "text": [
-        "On average, Ukraine has some of the worst roads in Europe.",
-        "Most rural roads have lots of potholes, cracks and warped pavement.",
-        "This abysmal road quality can really help with tough 50-50s with Russia, which generally has somewhat better roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "beebae2598e0",
-          "src": "https://learnablemeta.com/images/768/dc24Tnijk3mHDbYmYTPaegml82bShMW4ZiEF.avif",
-          "path": "ua/beebae2598e0.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "32cc33052f3a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-104552",
-      "step": 3,
-      "order": 9,
-      "family": "architecture",
-      "title": "Architecture: Single Family Homes",
-      "text": [
-        "Single-family homes are very common in suburbs and small towns.",
-        "These neighbourhoods are often heavily vegetated and tend to look rundown.",
-        "Most roads are unpaved.",
-        "Buildings are usually made of bricks, often have corrugated roofs, and are invariably surrounded by fences."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8807729f61b3",
-          "src": "https://learnablemeta.com/images/1072/JgB0qFRh6FIdhZ4n7kY0ifZVEVWwEAYYvKE9.avif",
-          "path": "ua/8807729f61b3.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "16bfa332dbb5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-634039",
-      "step": 3,
-      "order": 10,
-      "family": "plate",
-      "title": "Plate: Ukraine",
-      "text": [
-        "Ukraine uses long, white licence plates, with a distinctive blue and yellow strip on the left (the colours of the flag).",
-        "You may also come across older plates, where the blue and yellow are difficult to spot.",
-        "NOTE: Russia uses fully white licence plates, without a strip on the left."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "abbc6cee1be3",
-          "src": "https://learnablemeta.com/images/5431/1766263063293-DnS.avif",
-          "path": "ua/abbc6cee1be3.webp",
-          "width": 800,
-          "height": 700,
-          "dupeOf": "aac47309a4ea"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RU"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "ua-lm-740283",
@@ -2444,7 +2277,7 @@
       "order": 11,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Lviv streets and street sign",
+      "title": "Street sign: castle logo on the left",
       "text": [
         "Lviv streets have unique cobblestone pavement which really isnt found anywhere else in Ukraine except some smaller cities in the far west. It also has a unique street sign with a castel logo on the left which you can use to confirm Lviv."
       ],
@@ -2464,7 +2297,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A street sign with a castle logo on its left confirms the big western city. That city also has unique cobblestone streets, found elsewhere only in a few small far-western towns."
     },
     {
       "id": "ua-lm-740289",
@@ -2472,7 +2306,7 @@
       "order": 12,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Kharkiv street sign",
+      "title": "Street sign: blue, white line, Latin lower line",
       "text": [
         "Kharkiv street signs are blue with a white line in the middle, top text is written in cyrillic and the bottom is written in latin. The house numbers also have the same design."
       ],
@@ -2492,14 +2326,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Blue signs with a white line in the middle: top text in Cyrillic, bottom text in Latin letters. House numbers use the same design."
     },
     {
       "id": "ua-lm-740324",
       "step": 3,
       "order": 13,
       "family": "architecture",
-      "title": "Architecture: Kyiv vibes",
+      "title": "Houses: many tall buildings",
       "text": [
         "If you know your in Ukraine, and you see many large and tall buildings, your most likely in Kyiv."
       ],
@@ -2519,53 +2354,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "ua-lm-783122",
-      "step": 3,
-      "order": 14,
-      "family": "language",
-      "title": "Language: Ukrainian",
-      "text": [
-        "Ukrainian is an East Slavic language related to Russian and Belarusian. Ukrainian uses the Cyrillic script. These letters are unique to Ukrainian, compared to Russian: **Ґ ґ**, **І і**, **Ї ї** and **Є є** (not to be confused with Э э in Russian and Belarusian).",
-        "The Ukrainian word for street is **вулиця** (vulytsya), abbreviated **вул.** (vul.). The Russian word is **улица** (ulitsa), abbreviated **ул.** (ul.), without a **в** (v) at the beginning.",
-        "The Ukrainian word for city is **місто** (misto), abbreviated **м.** (m.). It can be used both to differentiate it from Russian where the word for city is **город** (gorod), abbreviated **г.** (g.), and to quickly find the city name in addresses."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2ecaaf21d8e0",
-          "src": "https://learnablemeta.com/images/9388/1785621032958-ahN.avif",
-          "path": "ua/2ecaaf21d8e0.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "af7ee6971ccd"
-        },
-        {
-          "id": "a29037aa205d",
-          "src": "https://learnablemeta.com/images/9388/1785621037615-rBY.avif",
-          "path": "ua/a29037aa205d.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "f569d6579088"
-        },
-        {
-          "id": "8b95aded6646",
-          "src": "https://learnablemeta.com/images/9388/1785621048428-Xzp.avif",
-          "path": "ua/8b95aded6646.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "693eddc40f0b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "If you know it's the country and see many large, tall buildings, it is most likely the capital."
     }
   ]
 }

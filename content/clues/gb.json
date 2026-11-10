@@ -24,7 +24,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: UK front plates are white",
+      "title": "Plate: white front, yellow back",
       "text": [
         "UK front plates are **white**, while back plates are **yellow**. Some plates have a blue strip on the left, but most do not.",
         "Additionally, you might see a plate with a **green **[‘Zero Emissions’](/images/united-kingdom/UK_Zero_Emission_License_Plate.png) strip.",
@@ -72,14 +72,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Front plates are white and back plates yellow. Most have no blue strip, some have a green Zero Emissions strip. Irish plates are white front and back with a blue strip.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish plates are white both ends, always with blue strip"
+        }
+      ]
     },
     {
       "id": "gb-uMg6",
       "step": 0,
       "order": 2,
       "family": "other",
-      "title": "The UK drives on the left side of the road",
+      "title": "Driving side: left",
       "text": [
         "The UK drives on the **left side** of the road.",
         "NOTE: The UK, Ireland, Malta and Cyprus are the only European countries that drive on the left."
@@ -123,14 +130,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Drives on the left. Ireland, Malta and Cyprus are the only other European countries that do.",
+      "sameAs": [
+        "IE"
+      ]
     },
     {
       "id": "gb-0Ton",
       "step": 0,
       "order": 3,
       "family": "line",
-      "title": "Road line: Double yellow road lines are often found on the sides of…",
+      "title": "Road lines: double yellow at the edge",
       "text": [
         "**Double yellow road lines** are often found on the sides of marked roads, especially in urban areas. These lines indicate a no stopping zone.",
         "NOTE: These lines can also be found in Ireland."
@@ -188,14 +199,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Double yellow lines along the edge of marked roads, mainly in towns, mean no stopping. Also found in Ireland.",
+      "sameAs": [
+        "IE"
+      ]
     },
     {
       "id": "gb-REyn",
       "step": 0,
       "order": 4,
       "family": "line",
-      "title": "Road line: These middle lines, that consist of long dashes with cat’s…",
+      "title": "Road lines: long dashes with cat's eyes between",
       "text": [
         "These middle lines, that consist of** long dashes **with** cat’s eyes **(reflectors) in the gaps between the dashes, are a good clue for the UK."
       ],
@@ -241,14 +256,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A middle line of long dashes with reflectors (cat's eyes) in the gaps is a good clue."
     },
     {
       "id": "gb-ecrT",
       "step": 0,
       "order": 5,
       "family": "bollard",
-      "title": "Bollard: The most common bollard in the UK looks like this",
+      "title": "Bollard: rounded, black ends, white stripe",
       "text": [
         "The most common **bollard** in the UK looks like this. It has a rounded shape, with a red reflector on the front and a white one on the back. The base and top are black, with a white stripe in the middle."
       ],
@@ -305,14 +321,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The most common bollard: rounded, black base and top with a white stripe in the middle, a red reflector on the front and a white one on the back."
     },
     {
       "id": "gb-WwjT",
       "step": 0,
       "order": 6,
       "family": "pole",
-      "title": "Pole: The UK uses wooden poles",
+      "title": "Pole: wooden with metal step rods",
       "text": [
         "The UK uses **wooden** poles. Pole steps bolted on the side of the pole are very common. These pole steps are shaped like a series of thin horizontal metal rods.",
         "NOTE: Ireland also commonly uses wooden poles with pole steps."
@@ -372,14 +389,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wooden poles, often with thin horizontal metal rods bolted on as steps. Ireland has the same.",
+      "sameAs": [
+        "IE"
+      ]
     },
     {
       "id": "gb-DOaW",
       "step": 0,
       "order": 7,
       "family": "pole",
-      "title": "Pole: Poles in the UK occasionally have a metal crossbar near the…",
+      "title": "Pole: wooden with metal crossbar triangle",
       "text": [
         "Poles in the UK occasionally have a **metal crossbar** near the top with two diagonal supports forming a triangle shape. ",
         "NOTE: Ireland, as well as Sweden and Finland also use similar crossbars on some poles."
@@ -406,7 +427,13 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Poles sometimes have a metal crossbar near the top with two diagonal supports forming a triangle. Ireland, Sweden and Finland have similar ones.",
+      "sameAs": [
+        "FI",
+        "IE",
+        "SE"
+      ]
     },
     {
       "id": "gb-zRI4",
@@ -414,7 +441,7 @@
       "order": 8,
       "family": "sign",
       "kind": "chevron",
-      "title": "Chevron: Chevrons are black with white arrows",
+      "title": "Chevron: black with white arrows",
       "text": [
         "Chevrons are **black with white arrows**.",
         "NOTE: Irish chevrons are black with yellow arrows. French chevrons are blue with white arrows."
@@ -470,7 +497,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black chevrons with white arrows. Irish ones are black with yellow arrows, French ones blue with white.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish chevrons have yellow arrows"
+        },
+        {
+          "country": "FR",
+          "how": "French chevrons are blue with white arrows"
+        }
+      ]
     },
     {
       "id": "gb-MQvy",
@@ -478,7 +516,7 @@
       "order": 9,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: Like most European countries",
+      "title": "Sign: red-bordered triangle warning signs",
       "text": [
         "Like most European countries, the UK uses **triangular warning signs** with a red border and a white background.",
         "NOTE: This is mostly useful to distinguish between the UK and Ireland, as Ireland uses diamond-shaped yellow warning signs (being the only European country to do so)."
@@ -528,7 +566,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Triangular warning signs with a red border and white background, as in most of Europe. Ireland uses yellow diamonds.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish warning signs are yellow diamonds"
+        }
+      ]
     },
     {
       "id": "gb-Vq5E",
@@ -536,7 +581,7 @@
       "order": 10,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Direction signs in the United Kingdom can be blue",
+      "title": "Direction sign: blue, green or white with A or M",
       "text": [
         "Direction signs in the United Kingdom can be **blue, green, or white.** Look for the letters **A** or **M**, as these are the major roads in the country. Smaller roads start with **B**.",
         "NOTE: Irish direction signs are typically bilingual, with Irish names in italics, making them easy to distinguish from the UK ones."
@@ -576,7 +621,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Direction signs can be blue, green or white. A and M are major roads, B smaller ones. Irish signs are bilingual with Irish names in italics.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish signs are bilingual, Irish in italics"
+        }
+      ]
     },
     {
       "id": "gb-WwWL",
@@ -584,7 +636,7 @@
       "order": 11,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: The UK commonly uses these white street signs with black…",
+      "title": "Street sign: low white sign on two posts",
       "text": [
         "The UK commonly uses these **white street signs** with black text, that are positioned low to the ground. They are usually supported by two small posts. Many street signs in suburban areas will have a small cul-de-sac icon.",
         "They can sometimes have [different colours](https://goo.gl/maps/Uc9Wf1fjrpvfSTBM8) or feature small designs, like [coats of arms](https://goo.gl/maps/8Di7Wx8TC3dvs8gKA)."
@@ -631,7 +683,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White street signs with black text, placed low to the ground on two small posts. Suburban ones often have a small cul-de-sac icon. Some have other colours or crests."
     },
     {
       "id": "gb-Bhjy",
@@ -639,7 +692,7 @@
       "order": 12,
       "family": "sign",
       "kind": "giveway",
-      "title": "Give way sign: UK yield signs feature the phrase “GIVE WAY”",
+      "title": "Sign: give way sign says GIVE WAY",
       "text": [
         "UK yield signs feature the phrase “**GIVE WAY**”.",
         "NOTE: [Irish yields signs](https://goo.gl/maps/GAm9QdSeKWWahHny5) just have the word “YIELD”."
@@ -687,14 +740,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yield signs say GIVE WAY. Irish ones say YIELD.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish yield signs say YIELD"
+        }
+      ]
     },
     {
       "id": "gb-UeRJ",
       "step": 0,
       "order": 13,
       "family": "pole",
-      "title": "Pole: The yellow warning stickers on utility poles can be a good…",
+      "title": "Pole: yellow sticker with a person being zapped",
       "text": [
         "The **yellow warning stickers** on utility poles can be a good way to distinguish between the UK and Ireland.",
         "The most important difference is that UK stickers feature a guy getting zapped by a lightning bolt.",
@@ -747,14 +807,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow warning stickers on poles show a person hit by a lightning bolt. Irish ones usually show just a bolt, often with an extra black-outlined sticker below.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish stickers have no zapped person"
+        }
+      ]
     },
     {
       "id": "gb-Qaei",
       "step": 0,
       "order": 14,
       "family": "bollard",
-      "title": "Bollard: This yellow traffic bollard is commonly found in the UK",
+      "title": "Bollard: yellow",
       "text": [
         "This **yellow traffic bollard** is commonly found in the UK."
       ],
@@ -795,14 +862,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A yellow traffic bollard is commonly found."
     },
     {
       "id": "gb-IJy2",
       "step": 0,
       "order": 15,
       "family": "pole",
-      "title": "Pole: Pedestrian crossing signs are almost non-existent in the UK",
+      "title": "Sign: black-white striped post with yellow bulb",
       "text": [
         "Pedestrian crossing signs are almost non-existent in the UK. Instead, pedestrian crossings will often have these distinctive **black and white striped poles**, with a yellow light bulb on top.",
         "NOTE: These signposts are also common in Ireland."
@@ -846,14 +914,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Pedestrian crossings are marked by a black-and-white striped post with a yellow bulb on top, not a sign. Very common in Ireland too.",
+      "sameAs": [
+        "IE"
+      ]
     },
     {
       "id": "gb-QKVV",
       "step": 0,
       "order": 16,
       "family": "other",
-      "title": "Rural metal gates with square corners are very common in…",
+      "title": "Farm gate: square corners",
       "text": [
         "Rural metal gates with **square corners** are very common in the UK.",
         "NOTE: This is mainly useful to distinguish it from [Ireland](https://goo.gl/maps/7LXuTr1R1Fv6L8tg8), where similar gates typically have rounded corners. Gates in [Northern Ireland](https://goo.gl/maps/y1AK7sL8MgoDdmVm9) also typically have rounded corners."
@@ -895,14 +967,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Rural metal gates have square corners. Irish gates usually have rounded corners, and Northern Ireland's do too.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish farm gates have rounded corners"
+        }
+      ]
     },
     {
       "id": "gb-vY5y",
       "step": 0,
       "order": 17,
       "family": "landscape",
-      "title": "Landscape: The British countryside tends to be very green",
+      "title": "Landscape: green fields, hedgerows, low hills",
       "text": [
         "The British countryside tends to be very green, with lots of **hedgerows **lining the road. Low, rolling hills are common throughout most of the country.",
         "NOTE: The Irish countryside looks very similar, so make sure to look at other clues before guessing."
@@ -942,14 +1021,18 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Very green countryside with many hedgerows beside the road and low rolling hills. Ireland looks very similar.",
+      "sameAs": [
+        "IE"
+      ]
     },
     {
       "id": "gb-aUlL",
       "step": 0,
       "order": 18,
       "family": "architecture",
-      "title": "Architecture: Terraced houses (row houses) are very common in the UK",
+      "title": "Houses: terraced and semi-detached rows",
       "text": [
         "**Terraced houses** (row houses) are very common in the UK. This housing type shares walls on both sides with neighbouring homes. You will also see a lot of [semi-detached houses](https://en.wikipedia.org/wiki/Semi-detached), which share just one side wall with another house.",
         "NOTE: [61% of the population](https://ec.europa.eu/eurostat/databrowser/view/ILC_LVHO01__custom_4934075/default/table?lang=en) lives in terraced or semi-detached houses, significantly more than most other European countries. The only European countries where terraced houses are this common are Ireland and the Netherlands."
@@ -1000,14 +1083,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Terraced houses (rows sharing both side walls) and semi-detached houses (sharing one wall) are very common; about 61% of people live in them. Only Ireland and the Netherlands are similar in Europe.",
+      "sameAs": [
+        "IE",
+        "NL"
+      ]
     },
     {
       "id": "gb-78cN",
       "step": 0,
       "order": 19,
       "family": "architecture",
-      "title": "Architecture: Red brick buildings are common in many parts of the UK",
+      "title": "Houses: red brick",
       "text": [
         "**Red brick buildings **are common in many parts of the UK.",
         "NOTE: Red brick architecture is also common in the Netherlands, Belgium, and Denmark, as well as parts of northern France."
@@ -1051,14 +1139,20 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Red brick buildings are common in many parts. Also common in the Netherlands, Belgium, Denmark and parts of northern France.",
+      "sameAs": [
+        "BE",
+        "DK",
+        "NL"
+      ]
     },
     {
       "id": "gb-rwuG",
       "step": 0,
       "order": 20,
       "family": "architecture",
-      "title": "Architecture: Suburbs in UK towns tend to have a recognizable look",
+      "title": "Houses: identical suburban semis, cul-de-sacs",
       "text": [
         "**Suburbs** in UK towns tend to have a recognizable look. They typically feature near-identical houses, often semi-detached, usually with [well-manicured lawns](https://goo.gl/maps/Am191RdWfDF927Rt8). The road layout can be maze-like, with lots of cul-de-sacs and curvy roads."
       ],
@@ -1097,14 +1191,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Suburbs have near-identical, often semi-detached houses with neat lawns and a maze of cul-de-sacs and curvy roads."
     },
     {
       "id": "gb-UmZq",
       "step": 0,
       "order": 21,
       "family": "architecture",
-      "title": "Architecture: Many British buildings have distinct-looking chimneys with…",
+      "title": "Houses: chimney with several round pots",
       "text": [
         "Many British buildings have distinct-looking chimneys with multiple so-called **chimney pots**. These pots are usually round and brick-coloured."
       ],
@@ -1143,14 +1238,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Many buildings have chimneys topped with several round, brick-coloured pots."
     },
     {
       "id": "gb-wdhk",
       "step": 0,
       "order": 22,
       "family": "architecture",
-      "title": "Architecture: Some buildings, both old and new, feature black-and-white…",
+      "title": "Houses: black-and-white timber framing",
       "text": [
         "Some buildings, both old and new, feature [black-and-white](https://en.wikipedia.org/wiki/Black-and-white_Revival_architecture) **timber framing**.",
         "NOTE: This is less common in Ireland."
@@ -1199,14 +1295,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some old and new buildings have black-and-white timber framing. Less common in Ireland.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Less common in Ireland"
+        }
+      ]
     },
     {
       "id": "gb-vT4m",
       "step": 0,
       "order": 23,
       "family": "car",
-      "title": "Google car: The UK has Generation 4 “smallcam” coverage",
+      "title": "Google car: low camera, big round blur",
       "text": [
         "The UK has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1245,14 +1348,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A low-mounted Gen 4 camera with a big round blur and a small bump at the front. The blur can be see-through, which makes it easy to miss."
     },
     {
       "id": "gb-RDtH",
       "step": 1,
       "order": 0,
       "family": "other",
-      "title": "Occasionally, you can find one of the 4 country flags,…",
+      "title": "Flags: the four national flags",
       "text": [
         "Occasionally, you can find one of the **4 country flags**, which will tell you where in the UK you are."
       ],
@@ -1272,14 +1376,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "You sometimes see one of the four national flags, which tells you which part you are in."
     },
     {
       "id": "gb-QHOv",
       "step": 1,
       "order": 1,
       "family": "other",
-      "title": "A- and B-roads are grouped by their first digit",
+      "title": "Route marker: first digit shows the area",
       "text": [
         "**A- and B-roads** are **grouped** by their first digit, for example A380 and B3217 are located in the southwest of the country. Motorways also generally follow this pattern.",
         "Beware that roads starting with any digit from 1 to 8 can also be found in Northern Ireland."
@@ -1300,14 +1405,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A- and B-roads are grouped by first digit, so A380 and B3217 are in the southwest. Motorways follow the pattern. Think of a clock: digits go clockwise from 1 to 9. Roads starting 1 to 8 can also be in Northern Ireland."
     },
     {
       "id": "gb-yII8",
       "step": 1,
       "order": 2,
       "family": "other",
-      "title": "Landline phone numbers in the UK always have nine or ten…",
+      "title": "Phone numbers: area codes, 020 and 028",
       "text": [
         "**Landline phone numbers** in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020.",
@@ -1329,14 +1435,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Landlines have nine or ten digits after the 0, and the first two to four are the area code. Geography is mostly random, but big-city codes are worth learning. All of London uses 020 and all of Northern Ireland 028."
     },
     {
       "id": "gb-xFi3",
       "step": 1,
       "order": 3,
       "family": "other",
-      "title": "Bins in urban areas often have the city name on them",
+      "title": "Bin: city name on it",
       "text": [
         "Bins in urban areas often have the **city name** on them."
       ],
@@ -1375,14 +1482,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Bins in towns often have the city name written on them."
     },
     {
       "id": "gb-rm9B",
       "step": 1,
       "order": 4,
       "family": "landscape",
-      "title": "Landscape: The Scottish Highlands can be distinguished by the…",
+      "title": "Landscape: barren high mountains",
       "text": [
         "The Scottish Highlands can be distinguished by the semi-barren, very **mountainous** landscape.",
         "NOTE: A lot of Generation 4 coverage in the Highlands is from (early) spring, meaning that the vegetation often looks brown and yellow.",
@@ -1423,14 +1531,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Scottish Highlands are semi-barren and very mountainous. Much Gen 4 coverage is from early spring, so plants look brown and yellow. The most mountainous parts of Wales and northern England can look similar."
     },
     {
       "id": "gb-RtMf",
       "step": 1,
       "order": 5,
       "family": "bollard",
-      "title": "Bollard: In Scotland, you can often find these red and white bollards",
+      "title": "Bollard: round red-white with red-grey reflector",
       "text": [
         "In Scotland, you can often find these **red and white bollards**. They are round, bulky, and have a red-and-grey reflector that wraps all the way around.",
         "They are sometimes found in other parts of the UK.",
@@ -1489,7 +1598,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Common in Scotland: a round, bulky red-and-white bollard with a red-and-grey reflector wrapping all the way round, sometimes elsewhere. Looks like a French one but its top is round, not spiked.",
+      "differs": [
+        {
+          "country": "FR",
+          "how": "French bollard top is more spiked"
+        }
+      ]
     },
     {
       "id": "gb-Jiou",
@@ -1497,7 +1613,7 @@
       "order": 6,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: These diamond-shaped ‘Passing Place’ signs are most…",
+      "title": "Sign: diamond Passing Place sign",
       "text": [
         "These** diamond-shaped** **‘Passing Place’ **signs are most commonly found in Scotland."
       ],
@@ -1551,14 +1667,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Diamond-shaped Passing Place signs are mostly found in Scotland."
     },
     {
       "id": "gb-qc5P",
       "step": 1,
       "order": 7,
       "family": "language",
-      "title": "Language: Welsh is a Celtic language that is spoken throughout Wales",
+      "title": "Language: Welsh, many D, W, Y and LL",
       "text": [
         "**Welsh** is a Celtic language that is spoken throughout Wales. Road signs in Wales are usually bilingual English and Welsh. Towns often have Welsh names too.",
         "Welsh uses the letters **D**, **W**, and **Y** much more commonly than English. The double **LL** is also very distinct.",
@@ -1607,14 +1724,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Welsh is spoken across Wales and road signs are usually bilingual. It uses D, W and Y a lot, and the double LL is distinct. Scottish Gaelic and Irish look somewhat similar.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish is a different Celtic language that looks similar"
+        }
+      ]
     },
     {
       "id": "gb-ZTWS",
       "step": 1,
       "order": 8,
       "family": "language",
-      "title": "Language: In Wales, markings on the road are in both English and Welsh",
+      "title": "Road marking: ARAF written in Welsh",
       "text": [
         "In Wales, markings on the road are in both English and Welsh. One of the best examples of this is ‘**Araf**’, which means ‘Slow’. This marking is only found in Wales.",
         "NOTE: Araf is not the only Welsh language marking you can find, it is just the most common. Whenever you see an [obviously non-English](https://goo.gl/maps/zqv7eS2fjFDEjS2f8) marking next to an English one, consider guessing in Wales."
@@ -1654,14 +1778,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Road markings are in English and Welsh. ARAF (Slow) is the most common and only found in Wales. Any clearly non-English marking next to an English one points to Wales."
     },
     {
       "id": "gb-YFrb",
       "step": 1,
       "order": 9,
       "family": "language",
-      "title": "Language: Scottish Gaelic is a Celtic language that is closely…",
+      "title": "Language: Gaelic clusters bh, dh, fh, mh",
       "text": [
         "**Scottish Gaelic** is a Celtic language that is closely related to Irish. They have a very similar look and use accent marks commonly. Common and recognizable letter clusters include bh, dh, fh, mh, ai, ea, eo, and ui.",
         "Scottish Gaelic on road signs is found most commonly in the Scottish Highlands, and is almost always found north of Glasgow.",
@@ -1702,14 +1827,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Scottish Gaelic is closely related to Irish and uses accents. Look for bh, dh, fh, mh, ai, ea, eo and ui. On road signs it is mostly in the Highlands, north of Glasgow, and often in green or yellow text, which Welsh and Irish signs never use.",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Irish signs are never in green or yellow text"
+        }
+      ]
     },
     {
       "id": "gb-zdZe",
       "step": 1,
       "order": 10,
       "family": "architecture",
-      "title": "Architecture: It is common to see houses made of large blocks of…",
+      "title": "Houses: big blocks of sandstone or granite",
       "text": [
         "It is common to see houses made of **large blocks of sandstone or granite **in Scotland. [Granite](https://goo.gl/maps/wYZvi7P1M195vc5N9) buildings are common in Aberdeen, [red sandstone](https://goo.gl/maps/k4HthFRKwCX4hQt8A) is common in Glasgow and Dumfries, and [yellow sandstone](https://goo.gl/maps/7TNfGv5GGmDqErA77) is common in Edinburgh."
       ],
@@ -1784,14 +1916,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Houses of large sandstone or granite blocks are common in Scotland. Granite in Aberdeen, red sandstone in Glasgow and Dumfries, yellow sandstone in Edinburgh."
     },
     {
       "id": "gb-7Dwu",
       "step": 1,
       "order": 11,
       "family": "vegetation",
-      "title": "Vegetation: Cornish palms (_Cordyline australis_) in the UK are most…",
+      "title": "Plants: Cornish palm",
       "text": [
         "Cornish palms (_Cordyline australis_) in the UK are most commonly found in the far **southwest** along the coast and in Jersey. Although, they can rarely be found all along the west coast up to Scotland."
       ],
@@ -1840,14 +1973,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Cornish palms (Cordyline australis) are most common in the far southwest along the coast and in Jersey, and rarely up the west coast to Scotland."
     },
     {
       "id": "gb-C4hI",
       "step": 1,
       "order": 12,
       "family": "other",
-      "title": "These black stickers with yellow text sometimes appear on…",
+      "title": "Lamppost: black sticker with yellow text",
       "text": [
         "These **black stickers with yellow text** sometimes appear on lampposts in Northern Ireland."
       ],
@@ -1886,14 +2020,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black stickers with yellow text sometimes appear on lampposts in Northern Ireland. Wiltshire has the same stickers."
     },
     {
       "id": "gb-lkL1",
       "step": 1,
       "order": 13,
       "family": "pole",
-      "title": "Pole: Warning stickers wrapped all the way around the utility…",
+      "title": "Pole: warning stickers wrapped around the pole",
       "text": [
         "Warning stickers **wrapped** all the way around the utility pole are specific to Northern Ireland."
       ],
@@ -1941,14 +2076,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warning stickers wrapped all the way around the pole are specific to Northern Ireland. Mainland poles usually have one or two stickers."
     },
     {
       "id": "gb-lJbW",
       "step": 1,
       "order": 14,
       "family": "car",
-      "title": "Google car: The Isle of Man is an island in the Irish Sea between the…",
+      "title": "Google car: Gen 2 only on an island",
       "text": [
         "The Isle of Man is an island in the Irish Sea between the United Kingdom and Ireland. There is only **Generation 2** coverage on the island. For country streak purposes, it is counted as part of the United Kingdom.",
         "Plonk It has a more in-depth guide to the Isle of Man [here](https://www.plonkit.net/isle-of-man)."
@@ -1972,14 +2108,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Isle of Man, between Britain and Ireland, only has Gen 2 coverage. It counts as the UK for country streaks."
     },
     {
       "id": "gb-V5YP",
       "step": 1,
       "order": 15,
       "family": "car",
-      "title": "Google car: Jersey is an island in the English Channel between France…",
+      "title": "Google car: Gen 2 only on a Channel island",
       "text": [
         "Jersey is an island in the English Channel between France and England. There is only **Generation 2** coverage on the island. For country streak purposes, it is counted as part of the United Kingdom.",
         "Plonk It has a more in-depth guide to Jersey [here](https://www.plonkit.net/jersey)."
@@ -2003,14 +2140,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Jersey, between France and England, only has Gen 2 coverage. It counts as the UK for country streaks."
     },
     {
       "id": "gb-j4to",
       "step": 1,
       "order": 16,
       "family": "other",
-      "title": "Gibraltar is a British Overseas Territory located at the…",
+      "title": "Coverage: territory bordering Spain",
       "text": [
         "Gibraltar is a British Overseas Territory located at the southern tip of the Iberian Peninsula, bordering Spain. For country streak purposes, the territory is counted as part of the United Kingdom.",
         "Plonk It has a more in-depth guide to Gibraltar [here](https://www.plonkit.net/gibraltar)."
@@ -2034,156 +2172,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gb-5Q6L",
-      "step": 1,
-      "order": 17,
-      "family": "other",
-      "title": "Bermuda is a British Overseas Territory located in the…",
-      "text": [
-        "**Bermuda** is a British Overseas Territory located in the North Atlantic Ocean.",
-        "Plonk It has a more in-depth guide to Bermuda [here](https://www.plonkit.net/bermuda)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b4ccb6beb3bc",
-          "src": "https://www.plonkit.net/images/united-kingdom/bermuda.png",
-          "path": "gb/b4ccb6beb3bc.webp",
-          "width": 600,
-          "height": 337
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BM"
-      ],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/united-kingdom",
-        "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gb-giuq",
-      "step": 1,
-      "order": 18,
-      "family": "other",
-      "title": "The Falkland Islands is a British Overseas Territory…",
-      "text": [
-        "**The Falkland Islands** is a British Overseas Territory located in the South Atlantic Ocean.",
-        "Plonk It has a more in-depth guide to the Falkland Islands [here](https://www.plonkit.net/falkland-islands)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fd48a3a435d7",
-          "src": "https://www.plonkit.net/images/united-kingdom/falklands.png",
-          "path": "gb/fd48a3a435d7.webp",
-          "width": 600,
-          "height": 508
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/united-kingdom",
-        "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gb-wqNg",
-      "step": 1,
-      "order": 19,
-      "family": "other",
-      "title": "South Georgia and the South Sandwich Islands is a British…",
-      "text": [
-        "**South Georgia and the South Sandwich Islands** is a British Overseas Territory located in the South Atlantic Ocean.",
-        "Plonk It has a more in-depth guide to the territory [here](https://www.plonkit.net/south-georgia-sandwich-islands)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2a125d041127",
-          "src": "https://www.plonkit.net/images/united-kingdom/southgeorgia.png",
-          "path": "gb/2a125d041127.webp",
-          "width": 600,
-          "height": 593
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/united-kingdom",
-        "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gb-MrGx",
-      "step": 1,
-      "order": 20,
-      "family": "other",
-      "title": "The Pitcairn Islands is a British Overseas Territory…",
-      "text": [
-        "**The Pitcairn Islands** is a British Overseas Territory located in the South Pacific Ocean.",
-        "Plonk It has a more in-depth guide to the Pitcairn Islands [here](https://www.plonkit.net/pitcairn-islands)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ca7cb93dbd06",
-          "src": "https://www.plonkit.net/images/united-kingdom/pitcairn.png",
-          "path": "gb/ca7cb93dbd06.webp",
-          "width": 600,
-          "height": 337
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/united-kingdom",
-        "licence": "CC BY-NC-SA 4.0"
-      }
-    },
-    {
-      "id": "gb-7RAB",
-      "step": 1,
-      "order": 21,
-      "family": "other",
-      "title": "The British Indian Ocean Territory is a British Overseas…",
-      "text": [
-        "**The British Indian Ocean Territory** is a British Overseas Territory, unsurprisingly located in the Indian Ocean.",
-        "Plonk It has a more in-depth guide to the British Indian Ocean Territory [here](https://www.plonkit.net/british-indian-ocean-territory)."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "970b361cb7ca",
-          "src": "https://www.plonkit.net/images/united-kingdom/biot.png",
-          "path": "gb/970b361cb7ca.webp",
-          "width": 600,
-          "height": 331
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Plonk It",
-        "url": "https://www.plonkit.net/united-kingdom",
-        "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Gibraltar is a British Overseas Territory at the southern tip of Iberia, bordering Spain. It counts as the UK for country streaks."
     },
     {
       "id": "gb-JAl0",
       "step": 2,
       "order": 0,
       "family": "other",
-      "title": "The Lake District is very hilly",
+      "title": "Landscape: very hilly with bare rock, stone walls",
       "text": [
         "The **Lake District** is very hilly, with a lot of exposed rocks and stone walls. It can look like the Scottish Highlands, but Scotland is generally less rocky."
       ],
@@ -2222,7 +2219,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The Lake District is very hilly with lots of exposed rock and stone walls. It can look like the Scottish Highlands, which are usually less rocky."
     },
     {
       "id": "gb-iLwq",
@@ -2230,7 +2228,7 @@
       "order": 1,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: London street signs have a distinct look",
+      "title": "Street sign: black name, red postcode and borough",
       "text": [
         "**London street signs **have a distinct look. They usually feature the street name in black, followed by the postcode and borough in red."
       ],
@@ -2285,7 +2283,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "London signs show the street name in black, followed by the postcode and borough in red."
     },
     {
       "id": "gb-5w6L",
@@ -2293,7 +2292,7 @@
       "order": 2,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Street name signs in Aberdeen and Aberdeenshire typically…",
+      "title": "Street sign: plain blue with white letters",
       "text": [
         "Street name signs in Aberdeen and Aberdeenshire typically feature a simple **blue background** with white lettering.",
         "NOTE: Central Aberdeen uses a different, [black-and-yellow](https://maps.app.goo.gl/dpw9AUQ1e6ieL5U19) design."
@@ -2340,7 +2339,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Street signs in Aberdeen and Aberdeenshire are plain blue with white lettering. Central Aberdeen uses a black-and-yellow design."
     },
     {
       "id": "gb-36tt",
@@ -2348,7 +2348,7 @@
       "order": 3,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Signs with green text underneath the street name",
+      "title": "Street sign: green townland line under the name",
       "text": [
         "Signs with **green text** underneath the street name, indicating the townland, can be found in the western part of Northern Ireland. ",
         "Especially towards the north of the shaded area, there may be a metal [divider](https://maps.app.goo.gl/AzvWFf8dyeHwbrp98) between the two lines."
@@ -2388,7 +2388,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Signs with green text under the street name (the townland) are in western Northern Ireland, sometimes with a metal divider between the two lines in the north."
     },
     {
       "id": "gb-X0Ns",
@@ -2396,7 +2397,7 @@
       "order": 4,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Most street signs in the Wakefield council are black with a…",
+      "title": "Street sign: black, white outline, Rockwell font",
       "text": [
         "Most street signs in the Wakefield council are black with a white outline and letters. They use the Monotype Rockwell Nova font."
       ],
@@ -2435,14 +2436,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most street signs in the Wakefield council area are black with a white outline and letters, in the Monotype Rockwell Nova font."
     },
     {
       "id": "gb-1NDu",
       "step": 2,
       "order": 5,
       "family": "car",
-      "title": "Google car: Some of the Generation 4 coverage in London was taken by a…",
+      "title": "Google car: white electric car, back visible",
       "text": [
         "Some of the Generation 4 coverage in London was taken by a **white electric vehicle**, with this distinct back of the car visible.",
         "NOTE: A similar car was used in [Dublin](https://goo.gl/maps/1qo5Ymw2jADggdGX7) and [Germany](https://goo.gl/maps/za6Ex8aWnE5wsz3C7), so make sure to check out other clues as well."
@@ -2492,14 +2494,19 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Some Gen 4 coverage in London was taken by a white electric car with a distinct back. Similar cars were used in Dublin and Germany.",
+      "sameAs": [
+        "DE",
+        "IE"
+      ]
     },
     {
       "id": "gb-XahW",
       "step": 2,
       "order": 6,
       "family": "pole",
-      "title": "Pole: The majority of poles and signposts in Birmingham have…",
+      "title": "Pole: yellow tape or paint",
       "text": [
         "The majority of poles and signposts in Birmingham have either **yellow tape** or yellow paint wrapped around them. Lampposts will also usually have this yellow sticker."
       ],
@@ -2540,7 +2547,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Most poles and signposts in Birmingham have yellow tape or paint wrapped around them. Lampposts usually have the yellow sticker too."
     },
     {
       "id": "gb-93V0",
@@ -2548,7 +2556,7 @@
       "order": 7,
       "family": "sign",
       "kind": "other",
-      "title": "Sign: Speed signs with green borders with the text “Twenty’s…",
+      "title": "Sign: Twenty’s Plenty speed sign, green border",
       "text": [
         "Speed signs with green borders with the text “**Twenty’s Plenty**” are mostly found in and around Glasgow."
       ],
@@ -2595,7 +2603,8 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Speed signs with a green border and the words Twenty's Plenty are mostly in and around Glasgow."
     },
     {
       "id": "gb-lm-10030",
@@ -2603,7 +2612,7 @@
       "order": 0,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Northern Ireland bus stop signs",
+      "title": "Bus stop: light blue UlsterBus sign",
       "text": [
         "In Northern Ireland, most bus stops will have light blue UlsterBus signs."
       ],
@@ -2623,466 +2632,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/67b8db19c812bf41d49b730e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-24652",
-      "step": 3,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Scotland Highlands",
-      "text": [
-        "The Scottish Highlands can be distinguished by the semi-barren, very mountainous landscape."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1b33da8ba742",
-          "src": "https://learnablemeta.com/images/664/aDkKg4qsbnWwE1mHAF82Zz1Klf317kPqOXEO.avif",
-          "path": "gb/1b33da8ba742.webp",
-          "width": 1000,
-          "height": 490,
-          "dupeOf": "604dff2b9f09"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-24653",
-      "step": 3,
-      "order": 2,
-      "family": "other",
-      "title": "Lake District",
-      "text": [
-        "The Lake District is very hilly, with a lot of exposed rocks and stone walls. It can look like the Scottish Highlands, but Scotland is generally less rocky."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0ddc72edae2c",
-          "src": "https://learnablemeta.com/images/664/We5zu3vJohY6jp7J72GshWQQ2duP1wtNL5lA.avif",
-          "path": "gb/0ddc72edae2c.webp",
-          "width": 1000,
-          "height": 486,
-          "dupeOf": "e5ee33f83112"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67d4b7356d77cefed0f90e35",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-49968",
-      "step": 3,
-      "order": 3,
-      "family": "other",
-      "title": "Square Metal Gates",
-      "text": [
-        "Rural metal gates with square corners are very common in the UK.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from Ireland, where similar gates typically have rounded corners.",
-        "Gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7231ec8d00eb",
-          "src": "https://learnablemeta.com/images/847/pGOiyETaq8Ku5F0of34PLY5g85D21bIdtfP8.avif",
-          "path": "gb/7231ec8d00eb.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "fa182b2a96b7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-49989",
-      "step": 3,
-      "order": 4,
-      "family": "line",
-      "title": "Road line: Cat's Eye",
-      "text": [
-        "These middle lines, that consist of long dashes with cat’s eyes (reflectors) in the gaps between the dashes, are a good clue for the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8c85572268e4",
-          "src": "https://learnablemeta.com/images/847/tCKYoK8i7FsUfPFn8md1g1RY4wX0DGlZEfH5.avif",
-          "path": "gb/8c85572268e4.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "0c451523fddf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e2e25202015392ab133868",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-50327",
-      "step": 3,
-      "order": 5,
-      "family": "other",
-      "title": "Square Metal Gates",
-      "text": [
-        "Rural metal gates with square corners are very common in the UK.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from Ireland, where similar gates typically have rounded corners.",
-        "Gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7231ec8d00eb",
-          "src": "https://learnablemeta.com/images/847/pGOiyETaq8Ku5F0of34PLY5g85D21bIdtfP8.avif",
-          "path": "gb/7231ec8d00eb.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "fa182b2a96b7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-50351",
-      "step": 3,
-      "order": 6,
-      "family": "line",
-      "title": "Road line: Cat's Eye",
-      "text": [
-        "These middle lines, that consist of long dashes with cat’s eyes (reflectors) in the gaps between the dashes, are a good clue for the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8c85572268e4",
-          "src": "https://learnablemeta.com/images/847/tCKYoK8i7FsUfPFn8md1g1RY4wX0DGlZEfH5.avif",
-          "path": "gb/8c85572268e4.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "0c451523fddf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-51060",
-      "step": 3,
-      "order": 7,
-      "family": "other",
-      "title": "Square Metal Gates",
-      "text": [
-        "Rural metal gates with square corners are very common in the UK.",
-        "**--- NOTE:**",
-        "This is mainly useful to distinguish it from Ireland, where similar gates typically have rounded corners.",
-        "Gates in Northern Ireland also typically have rounded corners."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7231ec8d00eb",
-          "src": "https://learnablemeta.com/images/847/pGOiyETaq8Ku5F0of34PLY5g85D21bIdtfP8.avif",
-          "path": "gb/7231ec8d00eb.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "fa182b2a96b7"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-51063",
-      "step": 3,
-      "order": 8,
-      "family": "line",
-      "title": "Road line: Cat's Eye",
-      "text": [
-        "These middle lines, that consist of long dashes with cat’s eyes (reflectors) in the gaps between the dashes, are a good clue for the UK."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "8c85572268e4",
-          "src": "https://learnablemeta.com/images/847/tCKYoK8i7FsUfPFn8md1g1RY4wX0DGlZEfH5.avif",
-          "path": "gb/8c85572268e4.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "0c451523fddf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-104553",
-      "step": 3,
-      "order": 9,
-      "family": "architecture",
-      "title": "Architecture: Identical Look",
-      "text": [
-        "Suburbs in UK towns tend to have a recognizable look.",
-        "They typically feature near-identical houses, often semi-detached, usually with well-manicured lawns.",
-        "The road layout can be maze-like, with lots of cul-de-sacs and curvy roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a365097a97b5",
-          "src": "https://learnablemeta.com/images/1072/BUppHl2SU53Zrz6mSs9Ci0X1lN2HZGGELn0c.avif",
-          "path": "gb/a365097a97b5.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "aa2db46da4a5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-104554",
-      "step": 3,
-      "order": 10,
-      "family": "architecture",
-      "title": "Architecture: Chimney Pots",
-      "text": [
-        "Many British buildings have distinct-looking chimneys with multiple so-called chimney pots.",
-        "These pots are usually round and brick-coloured."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3a998e81edce",
-          "src": "https://learnablemeta.com/images/1072/EIKlmq8DSzCXWaeBcG4tDbt6El7n7wtRl9wA.avif",
-          "path": "gb/3a998e81edce.webp",
-          "width": 1000,
-          "height": 559,
-          "dupeOf": "7ab60c343165"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-104555",
-      "step": 3,
-      "order": 11,
-      "family": "architecture",
-      "title": "Architecture: Timber Framing",
-      "text": [
-        "Some buildings, both old and new, feature black-and-white timber framing.",
-        "**--- NOTE:**",
-        "This is less common in Ireland."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "cf60fbe61324",
-          "src": "https://learnablemeta.com/images/1072/6SGKLsZOSPumjTNmzMuUUY75NE1NO3B5enGP.avif",
-          "path": "gb/cf60fbe61324.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "5e671249fc16"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-104559",
-      "step": 3,
-      "order": 12,
-      "family": "architecture",
-      "title": "Architecture: Red Bricks",
-      "text": [
-        "Red brick buildings are common in many parts of the UK.",
-        "**--- NOTE:**",
-        "Red brick architecture is also common in the Netherlands, Belgium, and Denmark, as well as parts of northern France."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "e17f03281550",
-          "src": "https://learnablemeta.com/images/1072/cPI7wHdijdenEoYm9WhQkaOVUKNQGDJpCapW.avif",
-          "path": "gb/e17f03281550.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "5f7ac8fc787a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "BE",
-        "DK",
-        "NL"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-104561",
-      "step": 3,
-      "order": 13,
-      "family": "architecture",
-      "title": "Architecture: Scotland - Sandstone & Granite",
-      "text": [
-        "It is common to see houses made of large blocks of sandstone or granite in Scotland.",
-        "Granite buildings are common in Aberdeen, red sandstone is common in Glasgow and Dumfries, and yellow sandstone is common in Edinburgh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "daf458b6f984",
-          "src": "https://learnablemeta.com/images/1072/eCHdC9oJAPAMi7WIiu6JitnAFFEB1qXXnXKc.avif",
-          "path": "gb/daf458b6f984.webp",
-          "width": 1000,
-          "height": 483,
-          "dupeOf": "248f8cc27e00"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-128317",
-      "step": 3,
-      "order": 14,
-      "family": "architecture",
-      "title": "Architecture: Identical Look",
-      "text": [
-        "Suburbs in UK towns tend to have a recognizable look.",
-        "They typically feature near-identical houses, often semi-detached, usually with well-manicured lawns.",
-        "The road layout can be maze-like, with lots of cul-de-sacs and curvy roads."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a365097a97b5",
-          "src": "https://learnablemeta.com/images/1072/BUppHl2SU53Zrz6mSs9Ci0X1lN2HZGGELn0c.avif",
-          "path": "gb/a365097a97b5.webp",
-          "width": 1000,
-          "height": 558,
-          "dupeOf": "aa2db46da4a5"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-128328",
-      "step": 3,
-      "order": 15,
-      "family": "architecture",
-      "title": "Architecture: Scotland - Sandstone & Granite",
-      "text": [
-        "It is common to see houses made of large blocks of sandstone or granite in Scotland.",
-        "Granite buildings are common in Aberdeen, red sandstone is common in Glasgow and Dumfries, and yellow sandstone is common in Edinburgh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "daf458b6f984",
-          "src": "https://learnablemeta.com/images/1072/eCHdC9oJAPAMi7WIiu6JitnAFFEB1qXXnXKc.avif",
-          "path": "gb/daf458b6f984.webp",
-          "width": 1000,
-          "height": 483,
-          "dupeOf": "248f8cc27e00"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6801e860fc69941203330ed8",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Northern Ireland, most bus stops have light blue UlsterBus signs."
     },
     {
       "id": "gb-lm-474348",
       "step": 3,
       "order": 16,
       "family": "pole",
-      "title": "Pole: flat pole top",
+      "title": "Pole: wooden pole with flat top",
       "text": [
         "It is sometimes hard to distinguish France, Ireland, and the UK. An easy trick is to focus on the tops of the wooden poles: UK has a flat top"
       ],
@@ -3105,371 +2663,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68459a9bf27b2258fd6b928b",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489941",
-      "step": 3,
-      "order": 17,
-      "family": "other",
-      "title": "A9 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
+      },
+      "summary": "France, Ireland and the UK can be hard to tell apart. Look at the tops of wooden poles: UK ones are flat.",
+      "differs": [
         {
-          "id": "cf0e038cf4af",
-          "src": "https://learnablemeta.com/images/2527/1755985026341-1jx.avif",
-          "path": "gb/cf0e038cf4af.webp",
-          "width": 393,
-          "height": 750
+          "country": "IE",
+          "how": "Irish wooden pole tops are slanted"
         }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489954",
-      "step": 3,
-      "order": 18,
-      "family": "other",
-      "title": "A8 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f9f3635b64c5",
-          "src": "https://learnablemeta.com/images/2527/1755985013537-HGp.avif",
-          "path": "gb/f9f3635b64c5.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489958",
-      "step": 3,
-      "order": 19,
-      "family": "other",
-      "title": "A7 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "85a0e9248b43",
-          "src": "https://learnablemeta.com/images/2527/1755985004943-BFq.avif",
-          "path": "gb/85a0e9248b43.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489960",
-      "step": 3,
-      "order": 20,
-      "family": "other",
-      "title": "A5 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "7e7c4cbac8ed",
-          "src": "https://learnablemeta.com/images/2527/1755984988630-9gh.avif",
-          "path": "gb/7e7c4cbac8ed.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489961",
-      "step": 3,
-      "order": 21,
-      "family": "other",
-      "title": "A6 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "1190676b5990",
-          "src": "https://learnablemeta.com/images/2527/1755984996821-ZWZ.avif",
-          "path": "gb/1190676b5990.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489962",
-      "step": 3,
-      "order": 22,
-      "family": "other",
-      "title": "A1 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "948756c7da1a",
-          "src": "https://learnablemeta.com/images/2527/1755984941875-wdo.avif",
-          "path": "gb/948756c7da1a.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489963",
-      "step": 3,
-      "order": 23,
-      "family": "other",
-      "title": "A2 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "77683bc58189",
-          "src": "https://learnablemeta.com/images/2527/1755984956884-z0L.avif",
-          "path": "gb/77683bc58189.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489964",
-      "step": 3,
-      "order": 24,
-      "family": "other",
-      "title": "A4 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "50043af66cdc",
-          "src": "https://learnablemeta.com/images/2527/1755984980482-P9W.avif",
-          "path": "gb/50043af66cdc.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489965",
-      "step": 3,
-      "order": 25,
-      "family": "other",
-      "title": "A3 Roads",
-      "text": [
-        "The main A-roads in the UK are grouped by their first digit after the A, for example A380 will be located in the southwest of the country.",
-        "Beware that A-roads starting with any digit from 1 to 8 can also be found in Northern Ireland.",
-        "Tip: Imagine the UK as a clock, the digits go clockwise, starting at 1 and ending at 9."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "722bc0255a1e",
-          "src": "https://learnablemeta.com/images/2527/1755984970076-Jr5.avif",
-          "path": "gb/722bc0255a1e.webp",
-          "width": 393,
-          "height": 750,
-          "dupeOf": "cf0e038cf4af"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-489975",
-      "step": 3,
-      "order": 26,
-      "family": "landscape",
-      "title": "Landscape: Scottish Highlands",
-      "text": [
-        "The Scottish Highlands can be distinguished by the semi-barren, very mountainous landscape.",
-        "NOTE: A lot of Generation 4 coverage in the Highlands is from (early) spring, meaning that the vegetation often looks brown and yellow.",
-        "In addition, some of the most mountainous parts of Wales and Northern England can look similar."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f0e4a21cb9c5",
-          "src": "https://learnablemeta.com/images/2527/1755985416664-JZ5.avif",
-          "path": "gb/f0e4a21cb9c5.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "604dff2b9f09"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-490264",
-      "step": 3,
-      "order": 27,
-      "family": "line",
-      "title": "Road line: Wales - ARAF road marking",
-      "text": [
-        "In Wales, markings on the road are in both English and Welsh. One of the best examples of this is ‘Araf’, which means ‘Slow’. This marking is only found in Wales.",
-        "NOTE: Araf is not the only Welsh language marking you can find, it is just the most common. Whenever you see an obviously non-English marking next to an English one, consider guessing in Wales."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fef2d0c6055c",
-          "src": "https://learnablemeta.com/images/2527/1755985456709-IZx.avif",
-          "path": "gb/fef2d0c6055c.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "4dca46910872"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-490307",
-      "step": 3,
-      "order": 28,
-      "family": "other",
-      "title": "Northern Ireland - Black sticker with yellow text",
-      "text": [
-        "These black stickers with yellow text sometimes appear on lampposts in Northern Ireland.",
-        "NOTE: Wiltshire have the same stickers on lamposts, so be aware of that."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fffe53d06caa",
-          "src": "https://learnablemeta.com/images/2527/1755985328355-2Ri.avif",
-          "path": "gb/fffe53d06caa.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "40ce6f8c6f28"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      ]
     },
     {
       "id": "gb-lm-490310",
       "step": 3,
       "order": 29,
       "family": "other",
-      "title": "Isle of Man - Striped kerbs",
+      "title": "Kerb: striped kerbs on main roads",
       "text": [
         "Striped kerbs can sometimes be seen along main roads."
       ],
@@ -3490,129 +2698,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-490311",
-      "step": 3,
-      "order": 30,
-      "family": "car",
-      "title": "Google car: Isle of Man - Gen 2 cam",
-      "text": [
-        "Coverage on the Isle of Man is limited to Generation 2.",
-        "This camera can be recognized by the lower camera quality and circular blur above and below. Colours will also seem slightly off."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0100147b5f57",
-          "src": "https://learnablemeta.com/images/2527/1755985235236-3O8.avif",
-          "path": "gb/0100147b5f57.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "6bf5e9c8a2bf"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IM"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-512907",
-      "step": 3,
-      "order": 31,
-      "family": "other",
-      "title": "Lake District",
-      "text": [
-        "The Lake District is very hilly, with a lot of exposed rocks and stone walls. It can look like the Scottish Highlands, but Scotland is generally less rocky."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "0e5569181b2d",
-          "src": "https://learnablemeta.com/images/2527/1755985270566-HG5.avif",
-          "path": "gb/0e5569181b2d.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "e5ee33f83112"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-512935",
-      "step": 3,
-      "order": 32,
-      "family": "other",
-      "title": "Bin - City name",
-      "text": [
-        "Bins in urban areas often have the city name on them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "17ffcbf88632",
-          "src": "https://learnablemeta.com/images/2527/1755985165840-vEH.avif",
-          "path": "gb/17ffcbf88632.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "1314e13a1cf4"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-512960",
-      "step": 3,
-      "order": 33,
-      "family": "pole",
-      "title": "Pole: Birmingham yellow tape/paint",
-      "text": [
-        "The majority of poles and signposts in Birmingham have either yellow tape or yellow paint wrapped around them. Lampposts will also usually have this yellow sticker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "a37664aaa1eb",
-          "src": "https://learnablemeta.com/images/2527/1755985181615-3Xo.avif",
-          "path": "gb/a37664aaa1eb.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "8271fe577639"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "On the Isle of Man, striped kerbs can sometimes be seen along main roads."
     },
     {
       "id": "gb-lm-513551",
       "step": 3,
       "order": 34,
       "family": "other",
-      "title": "Glasgow pink sticker",
+      "title": "Bin: pink sticker, PEOPLE MAKE GLASGOW",
       "text": [
         "This pink sticker with the text ''PEOPLE MAKE GLASGOW'' can be found on these trash bins in Glasgow."
       ],
@@ -3633,41 +2727,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-513578",
-      "step": 3,
-      "order": 35,
-      "family": "other",
-      "title": "Northern Ireland - Rounded edge gate",
-      "text": [
-        "Gates in Northern Ireland have these rounded edges, unlike mainland UK which have square edges."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "490f8e9e5093",
-          "src": "https://learnablemeta.com/images/2527/1756045795551-d4v.avif",
-          "path": "gb/490f8e9e5093.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A pink sticker saying PEOPLE MAKE GLASGOW is on trash bins in Glasgow."
     },
     {
       "id": "gb-lm-515550",
       "step": 3,
       "order": 36,
       "family": "guardrail",
-      "title": "Guardrail: A-Type w/o reflectors",
+      "title": "Guardrail: only A-type, no reflectors",
       "text": [
         "UK only use A-Type guardrails which makes it useful to differentiate between Ireland and the UK.",
         "NOTE: Ireland uses both A &#x26; B-Type."
@@ -3697,14 +2765,21 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68a123af44444cf936398244",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Only A-type guardrails are used, which helps tell it from Ireland (A and B types).",
+      "differs": [
+        {
+          "country": "IE",
+          "how": "Ireland uses both A and B types"
+        }
+      ]
     },
     {
       "id": "gb-lm-523150",
       "step": 3,
       "order": 37,
       "family": "other",
-      "title": "Cylindrical hay bales",
+      "title": "Landscape: round hay bales on hilly fields",
       "text": [
         "Cylindrical hay bales laying around on these hilly agricultural fields can mostly be found in the region north of Aberdeen. They can very rarely be seen elsewhere in Scotland."
       ],
@@ -3724,14 +2799,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Round hay bales lying on hilly farm fields are mostly found north of Aberdeen and very rarely elsewhere in Scotland."
     },
     {
       "id": "gb-lm-528828",
       "step": 3,
       "order": 38,
       "family": "landscape",
-      "title": "Landscape: Snowdonia",
+      "title": "Wall: dark grey stone, upright top stones",
       "text": [
         "Some roads, mostly in the south and north Snowdonia, have these distinct dark grey stone walls with vertical stones on top of it along the road. The landscape itself is very forested and mountainous, but less forested in the north east.",
         "NOTE: These stone walls can be found elsewhere too, most commonly in North Wales."
@@ -3752,44 +2828,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-528996",
-      "step": 3,
-      "order": 39,
-      "family": "language",
-      "title": "Language: Scotland - Scottish Gaelic",
-      "text": [
-        "Scottish Gaelic is a Celtic language that is closely related to Irish. They have a very similar look and use accent marks commonly. Common and recognizable letter clusters include bh, dh, fh, mh, ai, ea, eo, and ui.",
-        "Scottish Gaelic on road signs is found most commonly in the Scottish Highlands, and is almost always found north of Glasgow.",
-        "NOTE: Scottish Gaelic on road signs will often be in green or yellow text. This will not happen with Welsh or Irish on road signs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "b2d53d031f31",
-          "src": "https://learnablemeta.com/images/2527/1756330822618-0zv.avif",
-          "path": "gb/b2d53d031f31.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "6bd25a1fdc9b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Snowdonia, mostly south and north, roads have dark grey stone walls topped with vertical stones. The area is forested and mountainous, less so in the northeast. Similar walls appear elsewhere in North Wales."
     },
     {
       "id": "gb-lm-530714",
       "step": 3,
       "order": 40,
       "family": "coverage",
-      "title": "Coverage: Boat trekker",
+      "title": "Coverage: boat trekker",
       "text": [
         "Boat trekkers are limited to three locations: the River Thames, which runs through London, Keyhaven Lake, and Loch Ness lake. Each have different boats and very different landscapes."
       ],
@@ -3809,14 +2856,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Boat coverage exists in only three places: the River Thames in London, Keyhaven Lake and Loch Ness. Each has a different boat and landscape."
     },
     {
       "id": "gb-lm-530778",
       "step": 3,
       "order": 41,
       "family": "other",
-      "title": "Glasgow - phone number 0141",
+      "title": "Phone numbers: area code 0141",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3837,14 +2885,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0141 is Glasgow."
     },
     {
       "id": "gb-lm-530779",
       "step": 3,
       "order": 42,
       "family": "other",
-      "title": "Edinburgh - phone number 131",
+      "title": "Phone numbers: area code 0131",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3866,14 +2915,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0131 is Edinburgh."
     },
     {
       "id": "gb-lm-530780",
       "step": 3,
       "order": 43,
       "family": "other",
-      "title": "Northern Ireland - phone number 028",
+      "title": "Phone numbers: area code 028",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3895,14 +2945,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 028 is all of Northern Ireland."
     },
     {
       "id": "gb-lm-530781",
       "step": 3,
       "order": 44,
       "family": "other",
-      "title": "Manchester - phone number 161",
+      "title": "Phone numbers: area code 0161",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3924,14 +2975,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0161 is Manchester."
     },
     {
       "id": "gb-lm-530782",
       "step": 3,
       "order": 45,
       "family": "other",
-      "title": "Leeds - phone number 0113",
+      "title": "Phone numbers: area code 0113",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3953,14 +3005,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0113 is Leeds."
     },
     {
       "id": "gb-lm-530783",
       "step": 3,
       "order": 46,
       "family": "other",
-      "title": "Sheffield - phone number 0114",
+      "title": "Phone numbers: area code 0114",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -3982,14 +3035,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0114 is Sheffield."
     },
     {
       "id": "gb-lm-530784",
       "step": 3,
       "order": 47,
       "family": "other",
-      "title": "Liverpool - phone number 0151",
+      "title": "Phone numbers: area code 0151",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -4011,14 +3065,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0151 is Liverpool."
     },
     {
       "id": "gb-lm-530785",
       "step": 3,
       "order": 48,
       "family": "other",
-      "title": "Birmingham - phone code 0121",
+      "title": "Phone numbers: area code 0121",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -4040,14 +3095,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 0121 is Birmingham."
     },
     {
       "id": "gb-lm-530786",
       "step": 3,
       "order": 49,
       "family": "other",
-      "title": "London - phone number 020",
+      "title": "Phone numbers: area code 020",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -4069,14 +3125,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 020 is London."
     },
     {
       "id": "gb-lm-530788",
       "step": 3,
       "order": 50,
       "family": "other",
-      "title": "Cardiff - phone number 029",
+      "title": "Phone numbers: area code 029",
       "text": [
         "Landline phone numbers in the UK always have nine or ten digits after the 0 trunk code. The first two to four digits after the 0 are the area code. Unfortunately for Geoguessr players, there is not much rhyme or reason to their geographic ordering.",
         "However, the area codes of some large cities are still worth memorising. The most important ones are summarised in this infographic. Notably, all of Northern Ireland uses the phone code 028, and all of London uses 020."
@@ -4098,14 +3155,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The landline area code 029 is Cardiff."
     },
     {
       "id": "gb-lm-542428",
       "step": 3,
       "order": 51,
       "family": "plate",
-      "title": "Plate: Cornwall plate",
+      "title": "Plate: black with a letter and 3 numbers",
       "text": [
         "This very distinctive black plate with a letter followed by 3 numbers is commonly found in Cornwall. The letter and numbers are always either white or yellow, sometimes mixed together."
       ],
@@ -4125,14 +3183,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A distinctive black plate with one letter followed by three numbers, in white or yellow, sometimes mixed. Common in Cornwall."
     },
     {
       "id": "gb-lm-542625",
       "step": 3,
       "order": 52,
       "family": "line",
-      "title": "Road line: Wales - Roadline gap",
+      "title": "Road lines: gaps in the lines",
       "text": [
         "Gaps in roadlines are most commonly found in Wales."
       ],
@@ -4152,41 +3211,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-542626",
-      "step": 3,
-      "order": 53,
-      "family": "pole",
-      "title": "Pole: Northern Ireland warning sticker",
-      "text": [
-        "Warning stickers in Northern Ireland are almost always fully wrapped around the pole. Unlike mainland UK, which commonly uses just 1 or 2 stickers on the pole."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ab95ce75b876",
-          "src": "https://learnablemeta.com/images/2527/1757368652658-n0o.avif",
-          "path": "gb/ab95ce75b876.webp",
-          "width": 800,
-          "height": 393
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Gaps in road lines are most common in Wales."
     },
     {
       "id": "gb-lm-542893",
       "step": 3,
       "order": 54,
       "family": "architecture",
-      "title": "Architecture: Southern Wales valley architecture",
+      "title": "Houses: terraced hillside valley, pastel trim",
       "text": [
         "This valley north-west of Cardiff has a very recognizable look. Featuring many terraced houses and brown stone walls with colorful windows and often have this unique shape made out of pastel around the windows and doors. The towns are build on hills so its always hilly.",
         "NOTE: Similar valleys with the same look can be find elsewhere in Wales but this one is by far the biggest."
@@ -4207,14 +3240,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The big valley northwest of Cardiff has many terraced houses, brown stone walls and colourful windows, often with pastel shapes around windows and doors. The towns are on hills. Similar valleys elsewhere in Wales are smaller."
     },
     {
       "id": "gb-lm-542950",
       "step": 3,
       "order": 55,
       "family": "pole",
-      "title": "Pole: Orange tape",
+      "title": "Pole: orange tape and white sticker with diamond",
       "text": [
         "In Northamptonshire, you can often find orange tape wrapped around poles. A white sticker with blue text and numbers and a diamond shaped icon on it can commonly be seen aswell on the poles."
       ],
@@ -4234,14 +3268,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Northamptonshire, orange tape is often wrapped around poles, plus a white sticker with blue text, numbers and a diamond icon."
     },
     {
       "id": "gb-lm-543004",
       "step": 3,
       "order": 56,
       "family": "other",
-      "title": "Western Isles sticker",
+      "title": "Sticker: colourful pole sticker",
       "text": [
         "These colourful stickers are found in the Western Isles. Their very rarely seen since these islands are mostly rural without lampposts, but they can be seen commonly in Stornoway, and occasionally elsewhere too."
       ],
@@ -4261,14 +3296,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Colourful stickers in the Western Isles, rarely seen as there are few lampposts. They show up in Stornoway and occasionally elsewhere."
     },
     {
       "id": "gb-lm-543005",
       "step": 3,
       "order": 57,
       "family": "pole",
-      "title": "Pole: QR code sticker",
+      "title": "Pole sticker: yellow, 6-digit code and QR code",
       "text": [
         "This distinctive yellow sticker features a 6 number code followed by a QR code. This is a great clue that you are in the counties north of London. As it has consistently only been found in the following counties: Norfolk, Suffolk, Essex, Cambridgeshire, Bedfordshire, Hertfordshire and Buckinghamshire. It is frequently found on rural wooden electricity poles."
       ],
@@ -4288,7 +3324,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A yellow sticker with a 6-digit code then a QR code, found on rural wooden poles in counties north of London: Norfolk, Suffolk, Essex, Cambridgeshire, Bedfordshire, Hertfordshire and Buckinghamshire."
     },
     {
       "id": "gb-lm-543123",
@@ -4296,7 +3333,7 @@
       "order": 58,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Greater Manchester bus stop sign",
+      "title": "Bus stop: M logo, phone code, bee",
       "text": [
         "This busstop sign can be found in Greater Manchester, it has the phone code on it and the M logo on the top left corner with a bunch of other things like a bee on the right. The logo's and phone code can only be seen on one side.",
         "NOTE: A different version can be seen in older coverage, which will be completely white with a huge M logo on it."
@@ -4317,14 +3354,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Greater Manchester bus stop sign has a phone code and an M logo top left, and a bee on the right, on one side only. Older ones are all white with a huge M."
     },
     {
       "id": "gb-lm-543234",
       "step": 3,
       "order": 59,
       "family": "other",
-      "title": "T shape sticker",
+      "title": "Pole sticker: white, numbers in a T shape",
       "text": [
         "A white sticker with numbers forming a T shape, can be found in Pembrokeshire and Carmarthenshire."
       ],
@@ -4344,7 +3382,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with numbers forming a T shape is found in Pembrokeshire and Carmarthenshire."
     },
     {
       "id": "gb-lm-543390",
@@ -4352,7 +3391,7 @@
       "order": 60,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Southampton street sign",
+      "title": "Street sign: says City of Southampton",
       "text": [
         "Street signs in Southampton almost always have the text ''City of Southampton'' written on them. This meta is super easy to know because it literally just says the city name on it and these signs can be find everywhere in the city."
       ],
@@ -4372,14 +3411,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Southampton street signs almost always have the words City of Southampton on them, all over the city."
     },
     {
       "id": "gb-lm-543391",
       "step": 3,
       "order": 61,
       "family": "language",
-      "title": "Language: Suffolk sticker",
+      "title": "Pole sticker: white, blue letters, phone number",
       "text": [
         "This white sticker with blue numbers and letters and commonly a phone number under it can be found in Suffolk."
       ],
@@ -4399,7 +3439,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with blue numbers and letters, often with a phone number below, is found in Suffolk."
     },
     {
       "id": "gb-lm-543392",
@@ -4407,7 +3448,7 @@
       "order": 62,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Liverpool street signs",
+      "title": "Street sign: L at the bottom right",
       "text": [
         "Liverpool street signs often an L on the bottom right corner, standing for Liverpool, towards the centre in the city you will get signs with a unique shape and often have the text ''City of Liverpool'' written on them."
       ],
@@ -4427,7 +3468,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Liverpool street signs often have an L in the bottom right corner. In the centre, signs have a unique shape and often say City of Liverpool."
     },
     {
       "id": "gb-lm-543553",
@@ -4435,7 +3477,7 @@
       "order": 63,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Bristol street sign",
+      "title": "Street sign: BS and a number on the right",
       "text": [
         "Street signs in Bristol will always have ''BS'' with a number written on the right side. This one is easy to remember because BS stands for Bri-Stol."
       ],
@@ -4455,7 +3497,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Bristol street signs always show BS and a number on the right. BS is for Bristol."
     },
     {
       "id": "gb-lm-543554",
@@ -4463,7 +3506,7 @@
       "order": 64,
       "family": "sign",
       "kind": "street",
-      "title": "Street sign: Leeds District street sign",
+      "title": "Street sign: LS and a number on the right",
       "text": [
         "Street signs in Leeds District will always have ''LS'' with a number written on the right side. This one is easy to remember because LS stands for Leed-S."
       ],
@@ -4483,14 +3526,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Leeds street signs always show LS and a number on the right. LS is for Leeds. A different sign only appears in the centre."
     },
     {
       "id": "gb-lm-543680",
       "step": 3,
       "order": 65,
       "family": "landscape",
-      "title": "Landscape: Belfast mountains",
+      "title": "Landscape: wooded hills with towers to the west",
       "text": [
         "Depending where you are in Belfast, you can often see these distinct mountains/hills with lots of trees on it (gets more bald on the top) to the west/north-west, sometimes with 1 or 2 towers on top of it. Hills can also be seen in the east/south east.",
         "If your not sure these mountains are the Belfast mountains, check for clues to confirm your in Northern Ireland and it will 100% be Belfast."
@@ -4511,14 +3555,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In Belfast you often see wooded hills, balder on top, to the west and northwest, sometimes with one or two towers, and hills to the east and southeast. Once you know it's Northern Ireland, it is certainly Belfast."
     },
     {
       "id": "gb-lm-543805",
       "step": 3,
       "order": 66,
       "family": "vegetation",
-      "title": "Vegetation: Shetland Islands",
+      "title": "Landscape: treeless grassy hills, no mountains",
       "text": [
         "You can recognize the Shetland Islands by the very low amount of vegetation and useally no trees at all. Patches of trees can rarely be seen on these islands. You will never see mountains either, its all just hills with mostly grass and some small bushes. Some parts also look like the Faroe Islands."
       ],
@@ -4540,14 +3585,18 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Shetland Islands have very little vegetation, usually no trees, no mountains, only grassy hills with small bushes. Some parts look like the Faroe Islands.",
+      "sameAs": [
+        "FO"
+      ]
     },
     {
       "id": "gb-lm-544405",
       "step": 3,
       "order": 67,
       "family": "other",
-      "title": "Hampshire and West Sussex sticker",
+      "title": "Pole sticker: white, 1-2 numbers, small text",
       "text": [
         "This white sticker with 1 - 2 numbers and lots of small text with a logo under it is found in Hampshire and West Sussex. Sometimes there is also text and a logo above the number, or there is only text without a number."
       ],
@@ -4567,14 +3616,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with one or two numbers and lots of small text with a logo below, found in Hampshire and West Sussex. Sometimes there is text and a logo above, or only text without a number."
     },
     {
       "id": "gb-lm-544553",
       "step": 3,
       "order": 68,
       "family": "other",
-      "title": "Lincolnshire sticker",
+      "title": "Pole sticker: yellow with LCC under the numbers",
       "text": [
         "Yellow stickers with ''LCC'' (which stands for ''Lincolnshire County Council'') written under the numbers can be found in Lincolnshire. ''LCC\" can sometimes be hard to see, if you only see ''CC\" clearly, that also confirms your in Lincolnshire.",
         "NOTE: This doesn’t apply to North Lincolnshire and North East Lincolnshire (Scunthorpe, Grimsby and surrounding areas) which are separate councils."
@@ -4595,14 +3645,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Yellow stickers with LCC (Lincolnshire County Council) under the numbers mean Lincolnshire. If only CC is clear, that also confirms it. North Lincolnshire and North East Lincolnshire are separate councils."
     },
     {
       "id": "gb-lm-545000",
       "step": 3,
       "order": 69,
       "family": "other",
-      "title": "Perth and Kinross sticker",
+      "title": "Pole sticker: white, FAULT and phone number",
       "text": [
         "This white sticker with a black letter and 4 numbers, and has \"FAULT'' with a phone number written under it is found in Perth and Kinross. Most of the times, it has a small frame in the sticker around the text."
       ],
@@ -4622,14 +3673,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with one black letter and four numbers, and FAULT with a phone number below, is found in Perth and Kinross, usually in a small frame."
     },
     {
       "id": "gb-lm-545316",
       "step": 3,
       "order": 70,
       "family": "language",
-      "title": "Language: Cambridgeshire + Coventry + Derby + South Tyneside sticker",
+      "title": "Pole sticker: white with diamond and small text",
       "text": [
         "This white sticker with black letters and numbers and a diamond with small text under it is found in Cambridgeshire, Coventry, Derby and South Tyneside.",
         "Cambridgeshire + Coventry have 6 or less letters/numbers and white space between the text and diamond.",
@@ -4653,14 +3705,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with black letters and numbers and a diamond with small text underneath is found in Cambridgeshire, Coventry, Derby and South Tyneside. Derby always has 7 characters and no gap; South Tyneside has a blue sticker beneath; Peterborough has its own PCC sticker."
     },
     {
       "id": "gb-lm-545436",
       "step": 3,
       "order": 71,
       "family": "landscape",
-      "title": "Landscape: Wales sheep",
+      "title": "Landscape: lots of sheep in hilly hedged fields",
       "text": [
         "Sheep are most common in Wales, but can be found elsewhere too. So if you see a bunch of sheep and its very hilly/mountainous with typical Wale-ish landscape, with many hedgerows and green grassy fields and you have no other clues, you might aswell guess Wales."
       ],
@@ -4680,14 +3733,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Sheep are most common in Wales but can be anywhere. Lots of sheep in hilly or mountainous land with hedgerows and green fields is a fair guess for Wales."
     },
     {
       "id": "gb-lm-545569",
       "step": 3,
       "order": 72,
       "family": "landscape",
-      "title": "Landscape: Hebrides Islands",
+      "title": "Landscape: rocky, treeless, tundra-like",
       "text": [
         "The areas around the Hebrides Islands often have a rocky, treeless tundra-like landscape, but is by far mostly seen in the Western Isles."
       ],
@@ -4707,7 +3761,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Around the Hebrides the land is often rocky, treeless and tundra-like, mostly seen in the Western Isles."
     },
     {
       "id": "gb-lm-545710",
@@ -4715,7 +3770,7 @@
       "order": 73,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: Greater London bus stop sign",
+      "title": "Bus stop: distinct logo on top",
       "text": [
         "This bus stop sign is found in Greater London. It has a very distinct logo on the top half."
       ],
@@ -4735,14 +3790,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Greater London bus stop signs have a very distinct logo on the top half."
     },
     {
       "id": "gb-lm-545782",
       "step": 3,
       "order": 74,
       "family": "landscape",
-      "title": "Landscape: Orkney Islands",
+      "title": "Landscape: treeless open farmland, small hills",
       "text": [
         "The Orkney islands is mostly treeless and open, with vast farmland in many places and mostly small hills."
       ],
@@ -4762,14 +3818,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Orkney Islands are mostly treeless and open with vast farmland and small hills."
     },
     {
       "id": "gb-lm-546439",
       "step": 3,
       "order": 75,
       "family": "architecture",
-      "title": "Architecture: Tudor architecture",
+      "title": "Houses: Tudor black-and-white timber",
       "text": [
         "Tudor architecture, mostly black and white, sometimes with red bricks mixed are mostly found in West Midlands and East Anglia. They can also be found in Wales, mostly towards the England border. They can also be quite common in the south like Kent and Sussex and sometimes parts of Surrey and Oxfordshire. They can very rarely be found in Northern England and almost never in Scotland."
       ],
@@ -4789,14 +3846,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Tudor-style black-and-white buildings, sometimes with red brick, are mainly in the West Midlands and East Anglia, near the Welsh border, and fairly common in the south (Kent, Sussex, parts of Surrey and Oxfordshire). Rare in northern England, almost never in Scotland."
     },
     {
       "id": "gb-lm-546442",
       "step": 3,
       "order": 76,
       "family": "vegetation",
-      "title": "Vegetation: Kielder Forest",
+      "title": "Plants: dense pine forest",
       "text": [
         "The Kielder Forest and some areas around it is filled with dense pine trees. While pine trees can be seen in other places as well, no other region has them in the same abundance as the Kielder Forest."
       ],
@@ -4816,14 +3874,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Kielder Forest and nearby areas are full of dense pine trees, more than anywhere else."
     },
     {
       "id": "gb-lm-546443",
       "step": 3,
       "order": 77,
       "family": "architecture",
-      "title": "Architecture: Cumbria architecture",
+      "title": "Houses: white with black corner frames",
       "text": [
         "In Cumbria, especially around Keswick often has these white houses with black ladder-like frames on the corners, often with black frames around the windows.",
         "NOTE: These frames can be found elsewhere"
@@ -4844,7 +3903,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Around Keswick in Cumbria, white houses often have black ladder-like frames at the corners and black frames around windows. Found elsewhere too."
     },
     {
       "id": "gb-lm-546444",
@@ -4852,7 +3912,7 @@
       "order": 78,
       "family": "sign",
       "kind": "stop",
-      "title": "Stop sign: West Midlands County bus stop sign",
+      "title": "Bus stop: distinct logo on top",
       "text": [
         "This bus stop sign is found in West Midlands County. It has a very distinct logo on the top half."
       ],
@@ -4872,14 +3932,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "West Midlands County bus stop signs have a very distinct logo on the top half."
     },
     {
       "id": "gb-lm-546593",
       "step": 3,
       "order": 79,
       "family": "architecture",
-      "title": "Architecture: Wales architecture",
+      "title": "Houses: stone and pastel with coloured trim",
       "text": [
         "Many Welsh towns have a mix of stone and pastel buildings, often with colorfull paint around doors and windows. This is especially common in the western parts near the coast.",
         "NOTE: South West England can sometimes look similar so check for other clues (if available) to confirm your in Wales."
@@ -4900,14 +3961,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Many Welsh towns mix stone and pastel buildings with colourful paint around doors and windows, especially near the west coast. South West England can look similar."
     },
     {
       "id": "gb-lm-546747",
       "step": 3,
       "order": 80,
       "family": "architecture",
-      "title": "Architecture: Dark red bricks architecture",
+      "title": "Houses: dark red brick, black-white lintels",
       "text": [
         "North West England around Manchester/Lancashire has a lot of dark red bricks. Dark brown, black and white doors are common, aswell as black and white lintels around windows are often seen.",
         "NOTE: Dark red bricks can be found elsewhere too."
@@ -4928,14 +3990,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Around Manchester and Lancashire, lots of dark red brick, dark brown, black and white doors, and black-and-white lintels over windows. Dark red brick appears elsewhere too."
     },
     {
       "id": "gb-lm-549735",
       "step": 3,
       "order": 81,
       "family": "architecture",
-      "title": "Architecture: Newcastle architecture",
+      "title": "Houses: red brick garden walls with garage doors",
       "text": [
         "In urban areas around Newcastle, it’s common to see red brick walls extending from houses to enclose gardens. These walls often include garage doors built into them."
       ],
@@ -4955,14 +4018,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Around Newcastle, red brick walls extend from houses to enclose gardens, often with garage doors built in."
     },
     {
       "id": "gb-lm-549736",
       "step": 3,
       "order": 82,
       "family": "other",
-      "title": "Stone walls",
+      "title": "Wall: very hilly national parks with stone walls",
       "text": [
         "The Lake District, North Pennines, Yorkshire Dales, Nidderdale and Peak District are very hilly and have alot of stone walls. Stone walls can appear in other national parks and places but not as much as these 5 national parks, which have the majority of stone walls.",
         "The Lake District is by far the hilliest, with plenty of exposed rock. Along with the North Pennines and Yorkshire Dales, it sometimes features abandoned-looking barns. Beyond that, I’m not sure how to tell them apart."
@@ -4983,14 +4047,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Lake District, North Pennines, Yorkshire Dales, Nidderdale and Peak District are hilly with most of the stone walls. The Lake District is the hilliest with bare rock; it, the North Pennines and the Dales sometimes have abandoned-looking barns."
     },
     {
       "id": "gb-lm-549737",
       "step": 3,
       "order": 83,
       "family": "landscape",
-      "title": "Landscape: North York Moors",
+      "title": "Landscape: brown rolling moorland",
       "text": [
         "North York Moors has a distinct moorland landscape. Features rolling, mostly brown moorlands, with rough grasses and patches of low vegetation"
       ],
@@ -5010,14 +4075,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The North York Moors have rolling, mostly brown moorland with rough grass and low plants."
     },
     {
       "id": "gb-lm-549738",
       "step": 3,
       "order": 84,
       "family": "architecture",
-      "title": "Architecture: Pennines architecture",
+      "title": "Houses: dark gritstone with black patches",
       "text": [
         "Pennines areas of Yorkshire and Lancashire often have this very distinctive dark gritstone with patches of black on the bricks. Their also more common towards the south."
       ],
@@ -5037,14 +4103,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The Pennine areas of Yorkshire and Lancashire often have dark gritstone with black patches on the bricks, more towards the south."
     },
     {
       "id": "gb-lm-549739",
       "step": 3,
       "order": 85,
       "family": "architecture",
-      "title": "Architecture: Industrial buildings",
+      "title": "Houses: industrial brick, factories, warehouses",
       "text": [
         "Urban areas in the Midlands, especially around the Black Country and Birmingham, often have a very industrial appearance. This region is well known for its history of heavy industry, with factories, warehouses, and old brick buildings."
       ],
@@ -5064,14 +4131,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Midlands towns, especially around the Black Country and Birmingham, look industrial with factories, warehouses and old brick buildings."
     },
     {
       "id": "gb-lm-549740",
       "step": 3,
       "order": 86,
       "family": "landscape",
-      "title": "Landscape: Flat Fens landscape",
+      "title": "Landscape: very flat, dikes, few hedgerows",
       "text": [
         "Eastern England tends to be more flat. The Fens area of reclaimed land has very distinct \"Dutch-like\" landscape. Its typically very flat and open, with straight roads and small dikes, often hedgerows absent. The area around the town Goole also features a similar landscape."
       ],
@@ -5091,14 +4159,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Eastern England is flatter. The Fens, reclaimed land, look Dutch: very flat and open, straight roads and small dikes, hedgerows often absent. The area around Goole is similar."
     },
     {
       "id": "gb-lm-551997",
       "step": 3,
       "order": 87,
       "family": "architecture",
-      "title": "Architecture: Red roofs",
+      "title": "Roofs: red clay pantiles",
       "text": [
         "Eastern UK can have these very distinct red clay pantile roofs, especially on older houses. This is commonly found on the eastern half of the coast from Fife down to East Anglia."
       ],
@@ -5118,14 +4187,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Red clay pantile roofs, especially on older houses, are common along the eastern coast from Fife down to East Anglia."
     },
     {
       "id": "gb-lm-551998",
       "step": 3,
       "order": 88,
       "family": "other",
-      "title": "Gravel front gardens",
+      "title": "Gardens: neat gravel front gardens",
       "text": [
         "Lincolnshire, Norfolk and the Fens commonly have bungalows with neat gravel front gardens."
       ],
@@ -5145,14 +4215,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Lincolnshire, Norfolk and the Fens often have bungalows with neat gravel front gardens."
     },
     {
       "id": "gb-lm-551999",
       "step": 3,
       "order": 89,
       "family": "architecture",
-      "title": "Architecture: Limestone architecture",
+      "title": "Houses: golden limestone",
       "text": [
         "This golden colored Limestone is very common in and around Cotswold, especially towards the north."
       ],
@@ -5172,14 +4243,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Golden limestone is very common in and around the Cotswolds, especially to the north."
     },
     {
       "id": "gb-lm-552001",
       "step": 3,
       "order": 90,
       "family": "architecture",
-      "title": "Architecture: Thatched roofs",
+      "title": "Roofs: thatch",
       "text": [
         "Thatched roofs are the most common in the middle of southern England, especially around Hampshire and Wiltshire."
       ],
@@ -5199,14 +4271,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Thatched roofs are most common in the middle of southern England, especially around Hampshire and Wiltshire."
     },
     {
       "id": "gb-lm-552002",
       "step": 3,
       "order": 91,
       "family": "vegetation",
-      "title": "Vegetation: New Forest landscape",
+      "title": "Landscape: forest mixed with heathland",
       "text": [
         "The New Forest has a distinctive look, with a mix of forest and heathland landscape."
       ],
@@ -5226,14 +4299,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The New Forest has a distinctive look, a mix of forest and heathland."
     },
     {
       "id": "gb-lm-552003",
       "step": 3,
       "order": 92,
       "family": "other",
-      "title": "Weald Hanging tiles",
+      "title": "Houses: hanging tiles on walls",
       "text": [
         "Weald Hanging tiles are the most common in Sussex and Kent. But can sometimes be found elsewhere in the southern half of England."
       ],
@@ -5253,14 +4327,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Weald hanging tiles (tiles covering walls) are most common in Sussex and Kent, sometimes elsewhere in southern England."
     },
     {
       "id": "gb-lm-552004",
       "step": 3,
       "order": 93,
       "family": "architecture",
-      "title": "Architecture: Distinct stone walls",
+      "title": "Wall: pebble or flint with red brick",
       "text": [
         "Houses and walls that are made out of pebble stones or flint stones with red brick build in to them are found in East Anglia, most commonly in Norfolk, they can also be found on the south of Sussex and East Sussex.",
         "These stones can rarely have a different color like yellow or black."
@@ -5281,14 +4356,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Houses and walls of pebbles or flint with red brick built in are found in East Anglia, most commonly Norfolk, and in southern Sussex and East Sussex. The stones can rarely be yellow or black."
     },
     {
       "id": "gb-lm-552005",
       "step": 3,
       "order": 94,
       "family": "architecture",
-      "title": "Architecture: Mansions",
+      "title": "Houses: big gated mansions on leafy roads",
       "text": [
         "Wealthy areas in the UK are often in the Home Counties near London, especially Surrey and Berkshire, where you’ll find big houses and gated mansions along leafy roads."
       ],
@@ -5308,14 +4384,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Wealthy areas near London, especially Surrey and Berkshire, have big houses and gated mansions on leafy roads."
     },
     {
       "id": "gb-lm-554501",
       "step": 3,
       "order": 95,
       "family": "other",
-      "title": "Fife Sticker",
+      "title": "Pole sticker: white, 2 black numbers, small text",
       "text": [
         "This white sticker with 2 black numbers and 3 pieces of small text, 1 above the number and 2 under it, can be found in Fife."
       ],
@@ -5335,14 +4412,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A white sticker with two black numbers and three pieces of small text, one above and two below, is found in Fife."
     },
     {
       "id": "gb-lm-554502",
       "step": 3,
       "order": 96,
       "family": "other",
-      "title": "Ceredigion sticker",
+      "title": "Pole sticker: yellow on another white sticker",
       "text": [
         "This yellow sticker, sometimes white, with 3 numbers and 4 numbers under it can be found in Ceredigion. What makes it extra distinct, is that its pasted on another white sticker behind it."
       ],
@@ -5362,14 +4440,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A yellow (sometimes white) sticker with 3 numbers and 4 numbers beneath, pasted on a white sticker behind it, is found in Ceredigion."
     },
     {
       "id": "gb-lm-555609",
       "step": 3,
       "order": 97,
       "family": "language",
-      "title": "Language: Blue stickers",
+      "title": "Pole sticker: blue stickers",
       "text": [
         "Blue stickers/stickers with blue in them (excluding blue letters/numbers) are found in North Wales.",
         "If you want, you can learn which blue stickers are found in which region:",
@@ -5395,14 +4474,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Stickers with blue (not just blue text) are in North Wales: light blue in Anglesey, green-white-dark blue in Denbighshire, purple-white-light blue in Conwy, generic blue in Flintshire, Wrexham and rarely Gwynedd."
     },
     {
       "id": "gb-lm-555891",
       "step": 3,
       "order": 98,
       "family": "other",
-      "title": "Castle stone walls",
+      "title": "Wall: castle-like stone walls",
       "text": [
         "Stone walls that look like a castle wall are mostly found in North Wales. Especially towards Anglesey and in Anglesey. They can also sometimes be found elsewhere in Wales."
       ],
@@ -5422,14 +4502,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Stone walls that look like castle walls are mostly in North Wales, especially on and towards Anglesey, and sometimes elsewhere in Wales."
     },
     {
       "id": "gb-lm-557137",
       "step": 3,
       "order": 99,
       "family": "other",
-      "title": "Seagull",
+      "title": "Landmark: Gulliver the seagull",
       "text": [
         "This is Gulliver the Seagull. If you see him, you will be in Colwyn Bay."
       ],
@@ -5449,75 +4530,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-558164",
-      "step": 3,
-      "order": 100,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Leeds street sign",
-      "text": [
-        "Street signs in Leeds District will always have ''LS'' with a number written on the right side. This one is easy to remember because LS stands for Leed-S. The street sign in the top left is only found in the center."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "fe4a2094db90",
-          "src": "https://learnablemeta.com/images/4588/1777560527142-TLq.avif",
-          "path": "gb/fe4a2094db90.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "2f0bc1164461"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-634014",
-      "step": 3,
-      "order": 101,
-      "family": "plate",
-      "title": "Plate: United Kingdom",
-      "text": [
-        "UK front plates are white, while back plates are yellow. Some plates have a blue strip on the left, but most do not.",
-        "Additionally, you might see a plate with a green ‘Zero Emissions’ strip.",
-        "NOTE: Ireland uses white front and back plates, always with a blue strip on the left."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "189cdff92cde",
-          "src": "https://learnablemeta.com/images/5431/1766263165640-sAO.avif",
-          "path": "gb/189cdff92cde.webp",
-          "width": 800,
-          "height": 356,
-          "dupeOf": "15b1002287eb"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "IE"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A statue called Gulliver the Seagull means Colwyn Bay."
     },
     {
       "id": "gb-lm-634015",
       "step": 3,
       "order": 102,
       "family": "plate",
-      "title": "Plate: Isle of man",
+      "title": "Plate: white front, yellow rear, red strip",
       "text": [
         "Similar to the United Kingdom, the Isle of Man uses white front licence plates with yellow rears, but with a red strip on the left."
       ],
@@ -5540,159 +4561,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-740326",
-      "step": 3,
-      "order": 103,
-      "family": "sign",
-      "kind": "stop",
-      "title": "Stop sign: Greater Manchester bus stop sign",
-      "text": [
-        "This busstop sign can be found in Greater Manchester, it has the phone code on it and the M logo on the top left corner with a bunch of other things like a bee on the right. The logo's and phone code can only be seen on one side.",
-        "NOTE: A different version can be seen in older coverage, which will be completely white with a huge M logo on it."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "f4e4038b0917",
-          "src": "https://learnablemeta.com/images/4588/1777560848613-iaA.avif",
-          "path": "gb/f4e4038b0917.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "cbf4ea6df71f"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-740327",
-      "step": 3,
-      "order": 104,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Liverpool street sign",
-      "text": [
-        "Liverpool street signs often an L on the bottom right corner, standing for Liverpool, towards the centre in the city you will get signs with a unique shape and often have the text ''City of Liverpool'' written on them."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "6cb467c7ce4d",
-          "src": "https://learnablemeta.com/images/4588/1777560704626-RAr.avif",
-          "path": "gb/6cb467c7ce4d.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "9802bd9a0368"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-740328",
-      "step": 3,
-      "order": 105,
-      "family": "pole",
-      "title": "Pole: Birmingham yellow tape/paint",
-      "text": [
-        "The majority of poles and signposts in Birmingham have either yellow tape or yellow paint wrapped around them. Lampposts will also usually have this yellow sticker."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "620458df4452",
-          "src": "https://learnablemeta.com/images/4588/1777553141595-1TU.avif",
-          "path": "gb/620458df4452.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "8271fe577639"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-740911",
-      "step": 3,
-      "order": 106,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: Bristol street sign",
-      "text": [
-        "Street signs in Bristol will always have ''BS'' with a number written on the right side. This one is easy to remember because BS stands for Bri-Stol."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "daa57e9ce670",
-          "src": "https://learnablemeta.com/images/4588/1777553337255-PoA.avif",
-          "path": "gb/daa57e9ce670.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "3673478d8ff9"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-740912",
-      "step": 3,
-      "order": 107,
-      "family": "landscape",
-      "title": "Landscape: Belfast mountains",
-      "text": [
-        "Depending where you are in Belfast, you can often see these mountains with lots of trees on it (gets more bald on the top) to the west/north-west, sometimes with 1 or 2 towers on top of it. Hills can also be seen in the east/south east.",
-        "If your not sure these mountains are the Belfast mountains, check for clues to confirm your in Northern Ireland and it will 100% be Belfast."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "ca3e50151423",
-          "src": "https://learnablemeta.com/images/4588/1777552852238-oCj.avif",
-          "path": "gb/ca3e50151423.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "ce883ff5659a"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Like the UK, white front and yellow rear plates, but with a red strip on the left."
     },
     {
       "id": "gb-lm-766561",
       "step": 3,
       "order": 108,
       "family": "landscape",
-      "title": "Landscape: South east Northern Ireland region",
+      "title": "Landscape: small hilly area, rock walls",
       "text": [
         "This small region all the way south of ''mourne area of outstanding natural beauty'' features slightly hilly landscape with lots of rockwalls and distinct mountains to the north, further west there will be hedgerows instead of rockwalls but the same mountains can still be seen."
       ],
@@ -5712,14 +4589,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A small region at the far south of the Mournes area is slightly hilly with lots of rock walls and distinct mountains to the north. Further west there are hedgerows instead of walls but the same mountains."
     },
     {
       "id": "gb-lm-766562",
       "step": 3,
       "order": 109,
       "family": "landscape",
-      "title": "Landscape: Flat landscape with big hedgerows",
+      "title": "Landscape: very flat with big hedgerows",
       "text": [
         "It is very common to see big hedgerows in north eastern Anglia, combined with its very flat landscape, most likely will be around that area.",
         "NOTE: Its also common to see just normal hedgerows in this region, having normal hedgrows with flat landscape is still a good clue for this region."
@@ -5740,14 +4618,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Big hedgerows with very flat land point to north-eastern East Anglia. Normal hedgerows with flat land are also a good clue."
     },
     {
       "id": "gb-lm-766564",
       "step": 3,
       "order": 110,
       "family": "other",
-      "title": "Bedford sticker",
+      "title": "Pole sticker: black eagle logo on top",
       "text": [
         "This unique sticker with the black eagle logo on top is found in Bedford and areas around it."
       ],
@@ -5767,14 +4646,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "A unique sticker with a black eagle logo on top is found in Bedford and around it."
     },
     {
       "id": "gb-lm-766662",
       "step": 3,
       "order": 111,
       "family": "landscape",
-      "title": "Landscape: Scottish Highlands - Northern region",
+      "title": "Landscape: hills with few mountains",
       "text": [
         "Within the Scottish Highlands, the northern part of it is much less mountainous than the rest of the highlands. It has mostly just hills, with sometimes a few or less mountains visible in the distance."
       ],
@@ -5794,106 +4674,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-766764",
-      "step": 3,
-      "order": 112,
-      "family": "sign",
-      "kind": "street",
-      "title": "Street sign: West Northern Ireland - Green text",
-      "text": [
-        "Signs with green text underneath the street name, indicating the townland, can be found in the western part of Northern Ireland.",
-        "Especially towards the north of the shaded area, there may be a metal divider between the two lines."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "906444abd129",
-          "src": "https://learnablemeta.com/images/2527/1781979146784-ZkC.avif",
-          "path": "gb/906444abd129.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "133aef98814b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-783070",
-      "step": 3,
-      "order": 113,
-      "family": "language",
-      "title": "Language: Welsh",
-      "text": [
-        "Welsh is a Celtic language spoken throughout Wales. Road signs in Wales are usually bilingual English and Welsh. Towns often have Welsh names too.",
-        "Welsh uses the letters **D, W**, and **Y** much more commonly than English. The double **LL** is also very distinct.",
-        "In Wales, markings on the road are in both English and Welsh. One of the best examples of this is **Araf**, which means Slow. This marking is only found in Wales.",
-        "NOTE: Scottish Gaelic and Irish are both also Celtic languages. They can look somewhat similar to Welsh."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "054e611365ea",
-          "src": "https://learnablemeta.com/images/9388/1785621394979-oTV.avif",
-          "path": "gb/054e611365ea.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "24eb5b986338"
-        },
-        {
-          "id": "857e6fc8cc83",
-          "src": "https://learnablemeta.com/images/9388/1785621402242-AVO.avif",
-          "path": "gb/857e6fc8cc83.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "4dca46910872"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "gb-lm-783073",
-      "step": 3,
-      "order": 114,
-      "family": "language",
-      "title": "Language: Scottish Gaelic",
-      "text": [
-        "Scottish Gaelic is a Celtic language closely related to Irish. They have a very similar look and use accent marks commonly. Common and recognizable letter clusters include **bh, dh, fh, mh, ai, ea, eo**, and **ui**.",
-        "Scottish Gaelic on road signs is found most commonly in the Scottish Highlands, and is almost always found north of Glasgow.",
-        "NOTE: Scottish Gaelic on road signs will often be in green or yellow text. This will not happen with Welsh or Irish on road signs."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "96131cff2eb1",
-          "src": "https://learnablemeta.com/images/9388/1785621228680-zRO.avif",
-          "path": "gb/96131cff2eb1.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "6bd25a1fdc9b"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "The northern Highlands are much less mountainous than the rest, mostly hills, with a few or no mountains in the distance."
     },
     {
       "id": "gb-lm-787158",
@@ -5924,7 +4706,12 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "English is the main language. It is also spoken in Ireland, Malta and Gibraltar in Europe.",
+      "sameAs": [
+        "IE",
+        "MT"
+      ]
     }
   ]
 }

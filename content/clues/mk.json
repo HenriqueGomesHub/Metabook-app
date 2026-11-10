@@ -27,7 +27,7 @@
       "step": 0,
       "order": 1,
       "family": "plate",
-      "title": "Plate: North Macedonian licence plates are white and sometimes…",
+      "title": "Plate: white with a red block on the left",
       "text": [
         "North Macedonian licence plates are **white** and sometimes have the standard European blue strip on the left. They also have a noticeable **red block** near the left side of the licence plate.",
         "NOTE: Serbia will almost always have a blue strip on their licence plates."
@@ -52,14 +52,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "White plates, sometimes with the blue EU strip, always with a clear red block near the left edge. Serbia almost always has the blue strip.",
+      "differs": [
+        {
+          "country": "RS",
+          "how": "Serbian plates almost always have the blue strip"
+        }
+      ]
     },
     {
       "id": "mk-lNYT",
       "step": 0,
       "order": 2,
       "family": "car",
-      "title": "Google car: All Generation 4 coverage in North Macedonia was taken…",
+      "title": "Google car: small low blur, Gen 4 smallcam",
       "text": [
         "All Generation 4 coverage in North Macedonia was taken using a “smallcam” camera, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of the Balkans and southern Europe have Smallcam."
@@ -101,14 +108,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The newer Gen 4 coverage uses a smallcam, mounted lower than usual. You see a fairly big round blur with a small bump at the front, sometimes see-through. Most of the Balkans has it."
     },
     {
       "id": "mk-jQXp",
       "step": 0,
       "order": 3,
       "family": "bollard",
-      "title": "Bollard: North Macedonia uses two types of bollards",
+      "title": "Bollard: thin round or wedge, red reflector",
       "text": [
         "North Macedonia uses two types of bollards. One is rounded and very **thin**, while the other one is wedge-shaped. They both are white and have **red** or **white reflectors**, typically on a black surface.",
         "NOTE: Croatia uses the same wedge-shaped bollard. Hungary has a similar wedge-shaped bollard but with more white space above the black rectangle."
@@ -149,14 +157,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two white bollards: a very thin rounded one and a wedge-shaped one, both with a red or white reflector on a black panel. Croatia has the same wedge.",
+      "sameAs": [
+        "HR"
+      ],
+      "differs": [
+        {
+          "country": "HU",
+          "how": "Hungary's wedge has more white space above the black panel"
+        }
+      ]
     },
     {
       "id": "mk-dKOW",
       "step": 0,
       "order": 4,
       "family": "guardrail",
-      "title": "Guardrail: North Macedonia uses A-Profile guardrails",
+      "title": "Guardrail: A-profile with red reflectors",
       "text": [
         "North Macedonia uses **A-Profile** guardrails, like most of Europe. The guardrails have red reflectors.",
         "NOTE: Serbia uses B-Profile guardrails. For a good overview of European guardrails, see [this infographic](/images/north-macedonia/europeguardrail.png)."
@@ -181,7 +199,14 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The common European A-profile guardrail, with a smooth wave shape and red reflectors. Serbia uses the B-profile instead.",
+      "differs": [
+        {
+          "country": "RS",
+          "how": "Serbia uses B-profile guardrails"
+        }
+      ]
     },
     {
       "id": "mk-Gary",
@@ -189,7 +214,7 @@
       "order": 5,
       "family": "sign",
       "kind": "direction",
-      "title": "Direction sign: Direction signs in North Macedonia are typically yellow…",
+      "title": "Sign: yellow direction signs, two scripts",
       "text": [
         "Direction signs in North Macedonia are typically **yellow **with** biscriptal text**: town names are written in both Latin and Cyrillic script.",
         "NOTE: Serbia, Slovenia, Croatia, and Montenegro have similar signs. Serbia is the only one that will have biscriptal text though."
@@ -217,14 +242,33 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Yellow direction signs write town names in both Latin and Cyrillic letters. Serbia is the only similar country that also does this.",
+      "differs": [
+        {
+          "country": "HR",
+          "how": "No Cyrillic on the sign"
+        },
+        {
+          "country": "SI",
+          "how": "No Cyrillic on the sign"
+        },
+        {
+          "country": "ME",
+          "how": "No Cyrillic on the sign"
+        },
+        {
+          "country": "RS",
+          "how": "Also uses two scripts, so harder to separate"
+        }
+      ]
     },
     {
       "id": "mk-k3sg",
       "step": 0,
       "order": 6,
       "family": "language",
-      "title": "Language: Macedonian is a Slavic language which uses the Cyrillic…",
+      "title": "Language: Cyrillic with Ѓ and Ќ",
       "text": [
         "Macedonian is a Slavic language which uses the **Cyrillic** script. Road signs have Latin on them too, although most other signs are fully in Cyrillic.",
         "The letters ‘**Ѓ**’ and ‘**Ќ**’ are unique to Macedonian. ‘Љ’, ‘Њ’, and ‘Џ’ are only in Serbian and Macedonian."
@@ -247,14 +291,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Macedonian is written in Cyrillic. Road signs add Latin letters, but most other signs are only Cyrillic. Ѓ and Ќ are only used in Macedonian."
     },
     {
       "id": "mk-lY5z",
       "step": 0,
       "order": 7,
       "family": "car",
-      "title": "Google car: There will never be an antenna on the Google car",
+      "title": "Google car: never has an antenna",
       "text": [
         "There will **never be an antenna **on the Google car.",
         "Every other country in Europe will have an antenna sometimes in Generation 3 coverage. For clarity’s sake: this means that cars with no antenna can be found outside North Macedonia.",
@@ -288,14 +333,21 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The older Gen 3 car here never shows an antenna. Other European countries sometimes show one, though car shots with no antenna also exist elsewhere. Serbia rarely has one.",
+      "differs": [
+        {
+          "country": "RS",
+          "how": "Serbia mostly has no antenna but sometimes shows one"
+        }
+      ]
     },
     {
       "id": "mk-NOTA",
       "step": 0,
       "order": 8,
       "family": "landscape",
-      "title": "Landscape: The general landscape of North Macedonia consists of…",
+      "title": "Landscape: dry grass, small hills",
       "text": [
         "The general landscape of North Macedonia consists of relatively **dry grasslands**, and small hills and scattered trees."
       ],
@@ -336,14 +388,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Dry grassland with small hills and a few scattered trees."
     },
     {
       "id": "mk-FsbE",
       "step": 0,
       "order": 9,
       "family": "pole",
-      "title": "Pole: These ‘Greek Lamps’ on utility poles can be found in North…",
+      "title": "Pole: Greek lamps on utility poles",
       "text": [
         "These **‘Greek Lamps’** on utility poles can be found in North Macedonia. They can also be found in various other countries, such as (unsurprisingly) [Greece](https://goo.gl/maps/rSnrVdTGecgndtDG9) or [Serbia](https://goo.gl/maps/VbPpwagrgE3j4Y5r9)."
       ],
@@ -387,7 +440,12 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Small lamps mounted on utility poles, nicknamed Greek lamps. Greece and Serbia have them too.",
+      "sameAs": [
+        "GR",
+        "RS"
+      ]
     },
     {
       "id": "mk-wBz4",
@@ -395,7 +453,7 @@
       "order": 10,
       "family": "sign",
       "kind": "warning",
-      "title": "Warning sign: North Macedonia normally uses yellow-filled in warning signs",
+      "title": "Sign: yellow-filled warning triangles",
       "text": [
         "North Macedonia normally uses **yellow-filled** **in warning signs**. Most of Europe uses white ones.",
         "NOTE: In southeastern Europe, Greece also commonly uses yellow-filled in signs. Slovenia sometimes has yellow-filled signs."
@@ -440,14 +498,24 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Warning signs have a yellow fill inside the red border, while most of Europe uses white. Greece also commonly has yellow ones, and Slovenia sometimes does.",
+      "sameAs": [
+        "GR"
+      ],
+      "differs": [
+        {
+          "country": "SI",
+          "how": "Only sometimes yellow, and not as common"
+        }
+      ]
     },
     {
       "id": "mk-F1TE",
       "step": 1,
       "order": 0,
       "family": "car",
-      "title": "Google car: Generation 3 Coverage is sparse",
+      "title": "Coverage: older Gen 3 only on highways",
       "text": [
         "Generation 3 Coverage is **sparse**, only including some highways and some cities in the country.",
         "The cities of Skopje, Bitola, Kumanovo, Prilep, Tetovo, Veles, Ohrid, and Strumica are the only ones with significant coverage inside the city.",
@@ -471,14 +539,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "The older Gen 3 coverage is sparse, mostly along some highways and in eight main cities such as Skopje, Bitola and Ohrid."
     },
     {
       "id": "mk-3Unt",
       "step": 1,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Skopje is the capital and by far the largest city",
+      "title": "City: large apartment blocks",
       "text": [
         "Skopje is the capital and by far the largest city. If you see any **large apartments **or **buildings**, you are almost guaranteed to be in Skopje."
       ],
@@ -520,14 +589,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Large apartment buildings and tall blocks almost always mean the capital, Skopje, the biggest city by far."
     },
     {
       "id": "mk-IeVN",
       "step": 2,
       "order": 0,
       "family": "language",
-      "title": "Language: Each city has its own city-specific posters with public…",
+      "title": "Obituary posters: each city has its own style",
       "text": [
         "Each city has its own **city-specific **posters with public obituaries. They are commonly found on utility poles.",
         "_You can click on the image to enlarge it._"
@@ -551,14 +621,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Death notice posters on utility poles look different in each city. Learn the colour, direction and cross position for each city."
     },
     {
       "id": "mk-BqvX",
       "step": 2,
       "order": 1,
       "family": "language",
-      "title": "Language: Obituaries in Kumanovo are the most distinct",
+      "title": "Obituary: thick light blue border",
       "text": [
         "Obituaries in Kumanovo are the most distinct. They are the only obituaries to have a** thick light blue border**."
       ],
@@ -600,14 +671,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A death notice poster with a thick light blue border is only found in Kumanovo."
     },
     {
       "id": "mk-RmZb",
       "step": 2,
       "order": 2,
       "family": "language",
-      "title": "Language: Obituaries in Bitola are horizontal and can be either light…",
+      "title": "Obituary: wide, blue, cross breaks the border",
       "text": [
         "Obituaries in Bitola are **horizontal** and can be either light or dark blue. The cross is** in-between **the border, leaving a gap in the rectangle."
       ],
@@ -649,14 +721,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wide (horizontal) posters in light or dark blue, with the cross sitting in a gap of the border. This points to Bitola."
     },
     {
       "id": "mk-GLwG",
       "step": 2,
       "order": 3,
       "family": "language",
-      "title": "Language: Obituaries in Ohrid are horizontal and either red or blue",
+      "title": "Obituary: wide, red or blue, cross under border",
       "text": [
         "Obituaries in Ohrid are **horizontal** and either red or blue. The cross is underneath the border, which is unique to Ohrid when the obituary is red."
       ],
@@ -698,14 +771,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Wide posters in red or blue. A red one with the cross below the border points to Ohrid, since no other city does this."
     },
     {
       "id": "mk-f8ti",
       "step": 2,
       "order": 4,
       "family": "language",
-      "title": "Language: Obituaries in Strumica are vertical and blue",
+      "title": "Obituary: tall, blue, fancy corner pattern",
       "text": [
         "Obituaries in Strumica are vertical and blue. They are the only obituaries to have an **intricate pattern** in the corner of the poster."
       ],
@@ -728,14 +802,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall (vertical) blue posters with an intricate pattern in the corner. Only Strumica has that pattern."
     },
     {
       "id": "mk-CyWV",
       "step": 2,
       "order": 5,
       "family": "language",
-      "title": "Language: Obituaries in Veles are vertical and blue",
+      "title": "Obituary: tall, blue, cross above border",
       "text": [
         "Obituaries in Veles are **vertical and blue**. Veles has the largest variety of obituaries, but will never have the pattern in the corner like the ones seen in Strumica. They are also the only city that will have the cross **above the border** when blue."
       ],
@@ -777,14 +852,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall blue posters, with the cross above the border. Veles has the most variety and never has the corner pattern of Strumica."
     },
     {
       "id": "mk-v0r9",
       "step": 2,
       "order": 6,
       "family": "language",
-      "title": "Language: Obituaries in Prilep are vertical and black",
+      "title": "Obituary: tall, black, open border",
       "text": [
         "Obituaries in Prilep are vertical and black. The border **does not **go completely around the poster, which makes it easy to distinguish."
       ],
@@ -826,14 +902,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall black posters where the border does not fully surround the poster. That gap makes Prilep easy to spot."
     },
     {
       "id": "mk-F1Jf",
       "step": 2,
       "order": 7,
       "family": "language",
-      "title": "Language: Obituaries in Tetovo are vertical and black",
+      "title": "Obituary: tall, black, two cross styles",
       "text": [
         "Obituaries in Tetovo are vertical and black. There are 2 main types found in the city, one with the cross **above** the border and one with a thick cross **in-between** the border."
       ],
@@ -875,14 +952,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Tall black posters, with either a cross above the border or a thick cross inside a gap in it. This points to Tetovo."
     },
     {
       "id": "mk-HFWt",
       "step": 3,
       "order": 0,
       "family": "line",
-      "title": "Road line: If you see black and yellow striped kerbs",
+      "title": "Kerbs: black and yellow stripes",
       "text": [
         "If you see **black and yellow **striped kerbs, you are most likely to be in Strumica.",
         "They are rarely found in Skopje and if you see them around [roundabouts](https://goo.gl/maps/j2jezBcXn9vjeEh46), you will most likely be in Tetovo."
@@ -905,14 +983,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Black and yellow striped kerbs most likely mean Strumica. They are rare in Skopje, and around roundabouts they likely mean Tetovo."
     },
     {
       "id": "mk-Tm7m",
       "step": 3,
       "order": 1,
       "family": "landscape",
-      "title": "Landscape: Ohrid is the only large city located next to a lake",
+      "title": "Landscape: large city beside a lake",
       "text": [
         "Ohrid is the only large city located next to a** lake**."
       ],
@@ -953,14 +1032,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "A big town right next to a lake is Ohrid, the only large city on a lake."
     },
     {
       "id": "mk-BJh9",
       "step": 3,
       "order": 2,
       "family": "pole",
-      "title": "Pole: These long rectangular lamps are only found in the city of…",
+      "title": "Pole: long rectangular lamps",
       "text": [
         "These **long rectangular lamps** are only found in the city of Prilep."
       ],
@@ -1001,14 +1081,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Long, rectangular street lamps are only found in one city, Prilep."
     },
     {
       "id": "mk-kkO5",
       "step": 3,
       "order": 3,
       "family": "landscape",
-      "title": "Landscape: These two extremely rocky hills are visible in some parts…",
+      "title": "Landscape: two very rocky hills",
       "text": [
         "These two **extremely rocky hills** are visible in some parts of the city of Prilep."
       ],
@@ -1049,14 +1130,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "Two bare, very rocky hills that show up in parts of Prilep."
     },
     {
       "id": "mk-oHPQ",
       "step": 3,
       "order": 4,
       "family": "car",
-      "title": "Google car: In GENERATION 3 coverage A green truck is visible behind…",
+      "title": "Google car: green truck behind the car",
       "text": [
         "In GENERATION 3 coverage A** green truck** is visible behind the Google Car for a portion of the E-65. The truck is visible from Kichevo to Arbinovo.",
         "NOTE: This hint is mostly obsolete"
@@ -1079,14 +1161,15 @@
         "source": "Plonk It",
         "url": "https://www.plonkit.net/north-macedonia",
         "licence": "CC BY-NC-SA 4.0"
-      }
+      },
+      "summary": "In older Gen 3 coverage, a green truck is seen behind the car along part of the E-65 road, between two towns in the west. Mostly out of date."
     },
     {
       "id": "mk-lm-2586",
       "step": 4,
       "order": 0,
       "family": "other",
-      "title": "Smudges",
+      "title": "Camera: dirt smudges on the lens",
       "text": [
         "In southern and eastern North Macedonia, some roads have recognizable smudges on the camera: A large dead insect on the R1205, a vertical pattern of about four smudges on the PS27, a central smudge (plus more further south) on the easternmost part of the A3, a brown smudge on the lower left center in the southeast of the country, and on the A1 to Bitola, a single smudge higher up to the left with a short section of two brown smudges center left halfway between Bitola and Prilep"
       ],
@@ -1106,129 +1189,15 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/672a0cbc64529d09fd3b8704",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mk-lm-23858",
-      "step": 4,
-      "order": 1,
-      "family": "landscape",
-      "title": "Landscape: Dry Grasslands",
-      "text": [
-        "The general landscape of North Macedonia consists of relatively dry grasslands, and small hills and scattered trees."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3b5cc0ead6fd",
-          "src": "https://learnablemeta.com/images/768/KwptnNa9nM68TEuobPJF3I897DeTKC5zWB4Z.avif",
-          "path": "mk/3b5cc0ead6fd.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6c0cd2a8ddaa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67dba25477200f1125775785",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mk-lm-50423",
-      "step": 4,
-      "order": 2,
-      "family": "landscape",
-      "title": "Landscape: Dry Grasslands",
-      "text": [
-        "The general landscape of North Macedonia consists of relatively dry grasslands, and small hills and scattered trees."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3b5cc0ead6fd",
-          "src": "https://learnablemeta.com/images/768/KwptnNa9nM68TEuobPJF3I897DeTKC5zWB4Z.avif",
-          "path": "mk/3b5cc0ead6fd.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6c0cd2a8ddaa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e32dde197792448ea33941",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mk-lm-51167",
-      "step": 4,
-      "order": 3,
-      "family": "landscape",
-      "title": "Landscape: Dry Grasslands",
-      "text": [
-        "The general landscape of North Macedonia consists of relatively dry grasslands, and small hills and scattered trees."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "3b5cc0ead6fd",
-          "src": "https://learnablemeta.com/images/768/KwptnNa9nM68TEuobPJF3I897DeTKC5zWB4Z.avif",
-          "path": "mk/3b5cc0ead6fd.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "6c0cd2a8ddaa"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mk-lm-634029",
-      "step": 4,
-      "order": 4,
-      "family": "plate",
-      "title": "Plate: North Macedonia",
-      "text": [
-        "North Macedonian licence plates are white and sometimes have the standard European blue strip on the left. They also have a noticeable red block near the left side of the licence plate.",
-        "NOTE: Serbia will almost always have a blue strip on their licence plates."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2482d58fc828",
-          "src": "https://learnablemeta.com/images/5431/1766261890398-zmu.avif",
-          "path": "mk/2482d58fc828.webp",
-          "width": 800,
-          "height": 175,
-          "dupeOf": "bc46cd7451a6"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [
-        "RS"
-      ],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6946ef780a1e84352720fbda",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "In the south and east, some roads show recognisable smudges on the camera, like a large dead insect on one road or a few brown spots near the left. Learn them for exact routes."
     },
     {
       "id": "mk-lm-740910",
       "step": 4,
       "order": 5,
       "family": "landscape",
-      "title": "Landscape: Skopje mountains",
+      "title": "Landscape: mountains north and south",
       "text": [
         "Skopje has mountains in the north and south, the north mountain is even bigger and you can often see a cross on top of it."
       ],
@@ -1248,51 +1217,8 @@
         "source": "Learnable Meta",
         "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
-    },
-    {
-      "id": "mk-lm-787129",
-      "step": 4,
-      "order": 6,
-      "family": "language",
-      "title": "Language: Macedonian",
-      "text": [
-        "Macedonian is a South Slavic language closely related to Bulgarian. Macedonian uses the Cyrillic script. Road signs have Latin on them too, although most other signs are fully in Cyrillic.",
-        "The letters **Ѓ** and **Ќ** are unique to Macedonian. **Љ**, **Њ**, and **Џ** are only used in Serbo-Croatian and Macedonian (not in Bulgarian). The same goes for the letter **J** (loaned from Latin), where **Й** is used in Bulgarian instead. Bulgarian uses the letter **Ъ** which is not found in Macedonian or Serbo-Croatian.",
-        "The Macedonian word for street is **улица** (ulitsa), like most Slavic languages."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "eaac9a99e856",
-          "src": "https://learnablemeta.com/images/9388/1786287742940-fvT.avif",
-          "path": "mk/eaac9a99e856.webp",
-          "width": 800,
-          "height": 450,
-          "dupeOf": "d03a85fd49ff"
-        },
-        {
-          "id": "4f1fb59e892a",
-          "src": "https://learnablemeta.com/images/9388/1786288030686-zah.avif",
-          "path": "mk/4f1fb59e892a.webp",
-          "width": 280,
-          "height": 206
-        },
-        {
-          "id": "d12b21595c78",
-          "src": "https://learnablemeta.com/images/9388/1786288037898-ROX.avif",
-          "path": "mk/d12b21595c78.webp",
-          "width": 146,
-          "height": 112
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/6a78bba1bf1c20300fc836c4",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      }
+      },
+      "summary": "Mountains stand to the north and south of the capital. The northern one is bigger and often shows a cross on top."
     }
   ]
 }
