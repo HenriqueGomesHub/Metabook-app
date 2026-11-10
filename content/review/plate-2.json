@@ -141,12 +141,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.11,
      "y": 0,
-     "w": 1,
+     "w": 0.89,
      "h": 1
     },
-    "note": "White plate with a blue EU strip on the left, letters and digits, and two round inspection stickers"
+    "note": "White plate with black characters and two round inspection stickers"
    }
   ]
  },
@@ -156,12 +156,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.13,
      "y": 0,
-     "w": 1,
+     "w": 0.87,
      "h": 1
     },
-    "note": "White plate with a blue EU strip, black characters and two round inspection stickers"
+    "note": "White plate, black characters and two round inspection stickers"
    }
   ]
  },
@@ -175,12 +175,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.16,
      "y": 0,
-     "w": 1,
+     "w": 0.84,
      "h": 1
     },
-    "note": "Squarer two-line white plate with a blue EU strip and two round stickers"
+    "note": "Squarer two-line white plate and two round stickers"
    }
   ]
  },
@@ -272,12 +272,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.13,
      "y": 0,
-     "w": 1,
+     "w": 0.87,
      "h": 1
     },
-    "note": "White plate with a red border and a blue EU strip on the left"
+    "note": "White plate with a red border"
    }
   ]
  },
@@ -387,12 +387,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.14,
      "y": 0,
-     "w": 1,
+     "w": 0.86,
      "h": 1
     },
-    "note": "White plate with a blue EU strip, three letters, a dash and three digits"
+    "note": "White plate, three letters, a dash and three digits"
    }
   ]
  },
@@ -414,12 +414,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.16,
      "y": 0.04,
-     "w": 1,
+     "w": 0.84,
      "h": 0.92
     },
-    "note": "White plate with blue characters and a blue strip showing a Nordic cross flag"
+    "note": "White plate with blue characters"
    }
   ]
  },
@@ -429,12 +429,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.16,
      "y": 0.04,
-     "w": 1,
+     "w": 0.84,
      "h": 0.92
     },
-    "note": "White plate with blue characters and a blue strip showing a Nordic cross flag"
+    "note": "White plate with blue characters"
    }
   ]
  },
@@ -460,18 +460,7 @@
  },
  {
   "id": "3e3e6b9f-6abf-490c-b6ff-ee99161aefe9",
-  "uses": [
-   {
-    "subject": "plate",
-    "crop": {
-     "x": 0.12,
-     "y": 0.68,
-     "w": 0.24,
-     "h": 0.18
-    },
-    "note": "White front plate with a blue strip on each side, letters-digits-letters with dashes"
-   }
-  ]
+  "reject": "country code on plate strip cannot be cropped out at this size"
  },
  {
   "id": "69f95faa-3419-473d-b494-217259f2b8d9",
@@ -487,33 +476,11 @@
  },
  {
   "id": "9e8171cd-c493-47af-8e90-858d66d35776",
-  "uses": [
-   {
-    "subject": "plate",
-    "crop": {
-     "x": 0.72,
-     "y": 0.62,
-     "w": 0.24,
-     "h": 0.2
-    },
-    "note": "White front plate with a blue strip on each side, letters-digits-letters with dashes"
-   }
-  ]
+  "reject": "country code on plate strip cannot be cropped out at this size"
  },
  {
   "id": "df48c38d-07b0-4677-8dfa-86297e8e6202",
-  "uses": [
-   {
-    "subject": "plate",
-    "crop": {
-     "x": 0.1,
-     "y": 0.62,
-     "w": 0.24,
-     "h": 0.19
-    },
-    "note": "White front plate with a blue strip on each side, letters-digits-letters with dashes"
-   }
-  ]
+  "reject": "country code on plate strip cannot be cropped out at this size"
  },
  {
   "id": "f1f9c130-2a90-4d5a-9654-8cb325b01311",
@@ -537,12 +504,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.115,
      "y": 0.04,
-     "w": 1,
+     "w": 0.885,
      "h": 0.8
     },
-    "note": "Yellow rear plate with a blue strip on the left and black letters and digits"
+    "note": "Yellow rear plate with black letters and digits"
    }
   ]
  },
@@ -564,12 +531,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.13,
      "y": 0.02,
-     "w": 1,
+     "w": 0.87,
      "h": 0.8
     },
-    "note": "Yellow plate with a blue strip on the left and black letters and digits"
+    "note": "Yellow plate with black letters and digits"
    }
   ]
  },
