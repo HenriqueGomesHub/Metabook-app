@@ -1,6 +1,6 @@
 import { fireEvent, screen, waitFor } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { AlreadyCollected } from '../data/curation';
+import { AlreadyCollected, CropUnavailable } from '../data/curation';
 import type { Candidate, CurationApi } from '../data/curation';
 import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
@@ -19,7 +19,35 @@ const candidate = (id: string, country: string, subject: Candidate['subject']): 
   description: `Roadside post in ${country}`,
   caption: null,
   giveaways: [],
+  width: 1024,
+  height: 768,
+  crop: null,
 });
+
+// jsdom has no PointerEvent; without it fireEvent drops clientX/clientY
+if (!('PointerEvent' in window)) {
+  class PointerEvent extends MouseEvent {
+    pointerId: number;
+    constructor(type: string, init: PointerEventInit = {}) {
+      super(type, init);
+      this.pointerId = init.pointerId ?? 1;
+    }
+  }
+  Object.assign(window, { PointerEvent });
+}
+
+/** Drags across the crop area, laid out as a 100×100 box, from one point to another. */
+function dragCrop(from: [number, number], to: [number, number]) {
+  const stage = screen.getByLabelText(/Crop area/);
+  stage.getBoundingClientRect = () =>
+    ({ left: 0, top: 0, width: 100, height: 100, right: 100, bottom: 100 }) as DOMRect;
+  const at = ([clientX, clientY]: [number, number]) => ({ clientX, clientY, pointerId: 1 });
+  fireEvent.pointerDown(stage, at(from));
+  fireEvent.pointerMove(stage, at(to));
+  fireEvent.pointerUp(stage, at(to));
+}
+
+const drawn = { x: 0.1, y: 0.1, w: 0.5, h: 0.4 };
 
 function fakeApi(
   admin = true,
@@ -30,6 +58,7 @@ function fakeApi(
     listPending: vi.fn(async () => rows),
     decide: vi.fn<CurationApi['decide']>(async () => undefined),
     decideMany: vi.fn<CurationApi['decideMany']>(async (ids) => ids),
+    setCrop: vi.fn<CurationApi['setCrop']>(async () => undefined),
   } satisfies CurationApi;
 }
 
@@ -140,6 +169,70 @@ describe('Curate', () => {
     );
   });
 
+  it('crops and keeps: C opens the crop, Enter saves the crop with approved', async () => {
+    const api = fakeApi();
+    open(api);
+    await current('Poland');
+    fireEvent.keyDown(window, { key: 'c' });
+    dragCrop([10, 10], [60, 50]);
+    expect(screen.getByText('Keeping 50% × 40% of the photo')).toBeTruthy();
+    // the review keys are off while cropping
+    fireEvent.keyDown(window, { key: 'k' });
+    expect(api.decide).not.toHaveBeenCalled();
+    fireEvent.keyDown(window, { key: 'Enter' });
+    await waitFor(() =>
+      expect(api.decide).toHaveBeenCalledWith('a', {
+        status: 'approved',
+        subject: 'bollard',
+        giveaways: [],
+        caption: null,
+        crop: drawn,
+      }),
+    );
+    expect(await current('Lithuania')).toBeTruthy();
+
+    // undo brings it back uncropped
+    fireEvent.keyDown(window, { key: 'u' });
+    await waitFor(() =>
+      expect(api.decide).toHaveBeenLastCalledWith('a', expect.objectContaining({ crop: null })),
+    );
+  });
+
+  it('cancels a crop with Esc, and moves the box with the arrow keys', async () => {
+    const api = fakeApi();
+    open(api);
+    await current('Poland');
+    fireEvent.click(screen.getByRole('button', { name: /^C\s*Crop$/ }));
+    dragCrop([10, 10], [60, 50]);
+    fireEvent.keyDown(window, { key: 'ArrowRight', shiftKey: true });
+    fireEvent.click(screen.getByRole('button', { name: /Crop and keep/ }));
+    await waitFor(() =>
+      expect(api.decide).toHaveBeenCalledWith(
+        'a',
+        expect.objectContaining({ status: 'approved', crop: { ...drawn, x: 0.15 } }),
+      ),
+    );
+    await current('Lithuania');
+    fireEvent.keyDown(window, { key: 'c' });
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.queryByLabelText(/Crop area/)).toBeNull();
+    expect(api.decide).toHaveBeenCalledTimes(1);
+  });
+
+  it('says to run the migration when the crop column is missing', async () => {
+    const api = fakeApi();
+    api.decide.mockRejectedValueOnce(new CropUnavailable());
+    open(api);
+    await current('Poland');
+    fireEvent.keyDown(window, { key: 'c' });
+    dragCrop([10, 10], [60, 50]);
+    fireEvent.keyDown(window, { key: 'Enter' });
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'Run supabase/migrations/0004_crop.sql to enable cropping',
+    );
+    expect(await current('Poland')).toBeTruthy();
+  });
+
   it('filters by country and subject', async () => {
     open(fakeApi());
     await current('Poland');
@@ -196,6 +289,52 @@ describe('Curate grid', () => {
     expect(dialog.textContent).toContain('Ana Ruiz');
     fireEvent.keyDown(window, { key: 'Escape' });
     expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('crops from the large view: saves the crop now, badges the tile and keeps it', async () => {
+    const api = fakeApi(true, many(15));
+    open(api);
+    const tile = (n: number) => screen.getByRole('button', { name: new RegExp(`^Photo ${n},`) });
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.click(tile(1));
+    expect(tile(1).getAttribute('aria-pressed')).toBe('true');
+
+    fireEvent.contextMenu(tile(1));
+    await screen.findByRole('dialog', { name: 'Photo' });
+    fireEvent.keyDown(window, { key: 'c' });
+    dragCrop([10, 10], [60, 50]);
+    fireEvent.click(screen.getByRole('button', { name: /Crop and keep/ }));
+
+    await waitFor(() => expect(api.setCrop).toHaveBeenCalledWith('p1', drawn));
+    expect(api.decide).not.toHaveBeenCalled();
+    await waitFor(() => expect(screen.getAllByTestId('crop-badge')).toHaveLength(1));
+    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(tile(1).getAttribute('aria-label')).toBe('Photo 1, Bollards, cropped');
+    expect(tile(1).getAttribute('aria-pressed')).toBe('false');
+
+    fireEvent.keyDown(window, { key: 'Enter' });
+    await waitFor(() => expect(api.decideMany).toHaveBeenCalledWith(ids(1, 12), 'approved'));
+    await waitFor(() => expect(screen.getByText('3 pending · 12 decided')).toBeTruthy());
+
+    // undo clears the crop (decideMany to pending does it on the server)
+    fireEvent.click(screen.getByRole('button', { name: 'Undo page' }));
+    await waitFor(() => expect(screen.getByText('15 pending')).toBeTruthy());
+    expect(screen.queryByTestId('crop-badge')).toBeNull();
+  });
+
+  it('shows why a grid crop failed and leaves the tile as it was', async () => {
+    const api = fakeApi(true, many(12));
+    api.setCrop.mockRejectedValueOnce(new CropUnavailable());
+    open(api);
+    await screen.findByRole('region', { name: 'Photo grid' });
+    fireEvent.contextMenu(screen.getByRole('button', { name: /^Photo 2,/ }));
+    fireEvent.click(await screen.findByRole('button', { name: /^C\s*Crop$/ }));
+    dragCrop([10, 10], [60, 50]);
+    fireEvent.keyDown(window, { key: 'Enter' });
+    expect((await screen.findByRole('alert')).textContent).toBe(
+      'Run supabase/migrations/0004_crop.sql to enable cropping',
+    );
+    expect(screen.queryByTestId('crop-badge')).toBeNull();
   });
 
   it('keeps the rest: approves unmarked, rejects marked, loads the next page', async () => {
