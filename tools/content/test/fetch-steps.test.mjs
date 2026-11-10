@@ -142,6 +142,10 @@ describe('links', () => {
   it('parses Street View URLs', () => {
     assert.deepEqual(parseMapsUrl(POLAND), { pano: 'SZfQwOcH5qCjpxAWOGmgIg', lat: 48.4892755, lng: 22.8226335, heading: 293.62, pitch: -22.24, fov: 15 });
     assert.deepEqual(parseMapsUrl('https://www.google.se/maps/@47.17,18.80,3a,75y/data=!3m6!1e1'), { lat: 47.17, lng: 18.8, heading: 0, pitch: 0, fov: 75 });
+    assert.deepEqual(
+      parseMapsUrl('https://www.google.com/maps/@?api=1&map_action=pano&pano=_Q0TbU2ITVURhxCovhmDpA&viewpoint=60.230701,19.989345&heading=351.17579232999225&pitch=-4.5&fov=80'),
+      { pano: '_Q0TbU2ITVURhxCovhmDpA', lat: 60.230701, lng: 19.989345, heading: 351.18, pitch: -4.5, fov: 80 },
+    );
     const photosphere = parseMapsUrl('https://www.google.com/maps/@1.5,2.5,3a,75y,10h,90t/data=!3m8!1e1!3m6!1sAF1QipMabcdefghijklmnop!2e10');
     assert.equal(photosphere.pano, undefined);
     assert.equal(photosphere.lat, 1.5);
