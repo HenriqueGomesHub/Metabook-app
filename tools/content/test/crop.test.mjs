@@ -110,7 +110,7 @@ const row = (id, crop) => ({
   crop,
   collected_at: null,
 });
-const queue = (rows) => ({ listApproved: async () => rows });
+const queue = (rows) => ({ listApproved: async () => rows, listApprovedUses: async () => [] });
 const media = (dir) => JSON.parse(readFileSync(join(dir, 'media', 'pl.json'), 'utf8'));
 
 describe('collect with crops', () => {
