@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { mulberry32 } from './random';
 import {
@@ -65,7 +66,7 @@ describe('practice', () => {
     expect(a).toEqual(b);
   });
 
-  it('does not repeat any of the last 3 cards when the pool has more than 4', () => {
+  it('does not repeat any of the last 3 cards in a pool of 6 (gap = pool / 2)', () => {
     const ids = run(start(pool(6)), {}, 300);
     ids.forEach((id, i) => expect(ids.slice(Math.max(0, i - 3), i)).not.toContain(id));
   });
@@ -80,7 +81,10 @@ describe('practice', () => {
     expect(new Set(run(start(pool(1)), {}, 5))).toEqual(new Set(['c0']));
   });
 
-  it('brings a wrong card back within 5 steps and stops forcing it after two rights', () => {
+  // Updated for the learning queue: after its wrong-answer return, a card answered right comes back
+  // after the usual spacing (min(10, pool / 2) cards), not within 5, and graduates on the second
+  // right in a row.
+  it('brings a wrong card back after 3-5 other cards, then spaces it and graduates it', () => {
     const cards = pool(20);
     let target = '';
     let practice = start(cards, {}, 3);
@@ -102,25 +106,30 @@ describe('practice', () => {
       practice = recordPracticeAnswer(next.practice, id, correct);
       if (rights === 2) break;
     }
-    expect(wrongAt).toBeGreaterThanOrEqual(0);
     const comebacks = seen
       .map((id, i) => (id === target && i > wrongAt ? i : -1))
       .filter((i) => i >= 0);
-    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(5);
-    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(3);
-    expect(comebacks[1]! - comebacks[0]!).toBeLessThanOrEqual(5);
-    expect(practice.relearn).toEqual([]);
+    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(4);
+    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(6);
+    expect(comebacks[1]! - comebacks[0]!).toBeGreaterThan(10);
+    expect(practice.learning.map((l) => l.cardId)).not.toContain(target);
+    expect(practice.resting).toContain(target);
   });
 
-  it('keeps a card in the relearn queue while it keeps being answered wrong', () => {
+  it('keeps bringing a card back after 3-5 others while it keeps being answered wrong', () => {
     const ids = run(start(pool(20), {}, 5), {}, 100, (id) => id !== 'c0');
     const hits = ids.map((id, i) => (id === 'c0' ? i : -1)).filter((i) => i >= 0);
     expect(hits.length).toBeGreaterThan(10);
-    hits.slice(1).forEach((h, i) => expect(h - (hits[i] as number)).toBeLessThanOrEqual(5));
+    hits.slice(1).forEach((h, i) => {
+      expect(h - (hits[i] as number)).toBeGreaterThanOrEqual(4);
+      expect(h - (hits[i] as number)).toBeLessThanOrEqual(6);
+    });
   });
 
+  // Pool of 30 and 1.5x (were 10 and 2x): the spacing rule (no repeat within min(10, pool / 2)
+  // cards) now caps how often a weak card can come back, so the weighting shows less.
   it('picks weak cards more often than strong ones', () => {
-    const cards = pool(10);
+    const cards = pool(30);
     const states = Object.fromEntries(
       cards.map((c, i) => [c.id, i < 3 ? weak(c.id) : strong(c.id)]),
     );
@@ -128,24 +137,27 @@ describe('practice', () => {
     const count = (pred: (i: number) => boolean) =>
       ids.filter((id) => pred(Number(id.slice(1)))).length;
     const perWeak = count((i) => i < 3) / 3;
-    const perStrong = count((i) => i >= 3) / 7;
-    expect(perWeak).toBeGreaterThan(perStrong * 2);
+    const perStrong = count((i) => i >= 3) / 27;
+    expect(perWeak).toBeGreaterThan(perStrong * 1.5);
   });
 
-  it('limits unseen cards to about 30% of the draw', () => {
-    const cards = pool(20);
-    const states = Object.fromEntries(cards.slice(0, 10).map((c) => [c.id, weak(c.id)]));
-    const ids = run(start(cards, states, 4), states, 2000);
-    const unseen = ids.filter((id) => Number(id.slice(1)) >= 10).length / ids.length;
-    expect(unseen).toBeGreaterThan(0.15);
-    expect(unseen).toBeLessThan(0.4);
+  // Replaces "limits unseen cards to about 30% of the draw": that cap was the bug (a few seen cards
+  // took 70% of the draws). Known cards are now mixed in at about 25% beside the learning set.
+  it('mixes known cards in at about a quarter while new cards are being learnt', () => {
+    const cards = pool(60);
+    const states = Object.fromEntries(cards.slice(0, 20).map((c) => [c.id, weak(c.id)]));
+    const ids = run(start(cards, states, 4), states, 60, (_, i) => i % 3 !== 0);
+    const known = ids.filter((id) => Number(id.slice(1)) < 20).length / ids.length;
+    expect(known).toBeGreaterThan(0.1);
+    expect(known).toBeLessThan(0.45);
   });
 
   it('favours cards in an active confusion pair', () => {
     const cards = [
       card('flag:a', 'flag', 'AA', 'A'),
       card('flag:b', 'flag', 'BB', 'B'),
-      ...pool(10),
+      // 30 others (was 10), for the same reason as the weak-card test
+      ...pool(30),
     ];
     const confusion: Confusion = {
       picked: 'A',
@@ -184,5 +196,107 @@ describe('practice', () => {
     }
     expect(modes).toEqual({ x: 'recall', y: 'map', z: 'binary' });
     expect(nextPracticeItem(start([card('n')]), {}, now).item.mode).toBe('mcq');
+  });
+});
+
+/** Brazil's 67 area-code cards, as shipped. */
+const areaCodes = (
+  JSON.parse(
+    readFileSync(new URL('../../../content/cards/brazil.json', import.meta.url), 'utf8'),
+  ) as Card[]
+).filter((c) => c.type === 'areacode');
+const codeOf = (id: string) => Number(id.split(':').at(-1));
+
+/**
+ * Practice as the app runs it: each answer is also graded into the card's FSRS state, and the
+ * next draw sees the new state. `right` decides each answer from a seeded rng.
+ */
+function realistic(cards: Card[], seed: number, steps: number, rightShare = 0.85) {
+  const answers = mulberry32(seed * 101);
+  let states: Record<string, CardState> = {};
+  let time = now.getTime();
+  let practice = createPractice({ cards, states, confusions: [], now, rng: mulberry32(seed) });
+  const ids: string[] = [];
+  const wrong: boolean[] = [];
+  for (let i = 0; i < steps; i++) {
+    const at = new Date(time);
+    const next = nextPracticeItem(practice, states, at);
+    const id = next.item.cardId;
+    const correct = answers() < rightShare;
+    ids.push(id);
+    wrong.push(!correct);
+    const state = states[id] ?? newCardState(id, at);
+    states = { ...states, [id]: applyReview(state, correct ? 'good' : 'again', at, 0.9) };
+    practice = recordPracticeAnswer(next.practice, id, correct);
+    time += 8000;
+  }
+  return { ids, wrong, practice };
+}
+
+describe('practice on the 67 Brazilian area codes', () => {
+  it('has the shipped pool', () => expect(areaCodes).toHaveLength(67));
+
+  // Regression: the old draw capped unseen cards at 30% of the weight, so the first four seen
+  // codes took about 70% of the draws and cycled (81, 35, 62, 92, 81, 35, 62, 92...): only 20-34
+  // distinct codes in the first 120 cards, and 76-85 repeats within 10 cards of a right answer.
+  for (const seed of [1, 2, 3, 4, 5]) {
+    it(`covers the pool, spaces repeats and avoids neighbouring codes (seed ${seed})`, () => {
+      const { ids, wrong } = realistic(areaCodes, seed, 300);
+      expect(new Set(ids.slice(0, 120)).size).toBe(67);
+      const last = new Map<string, number>();
+      ids.forEach((id, i) => {
+        const before = last.get(id);
+        if (before !== undefined) {
+          const gap = i - before;
+          if (wrong[before]) expect(gap).toBeGreaterThanOrEqual(3);
+          else expect(gap).toBeGreaterThan(10);
+        }
+        last.set(id, i);
+      });
+      for (let i = 2; i < ids.length; i++) {
+        const run = [ids[i - 2], ids[i - 1], ids[i]].map((id) => codeOf(id as string));
+        const [a, b, c] = run.sort((x, y) => x - y) as [number, number, number];
+        expect(b - a === 1 && c - b === 1).toBe(false);
+      }
+      for (let i = 1; i < ids.length; i++) {
+        expect(Math.abs(codeOf(ids[i] as string) - codeOf(ids[i - 1] as string))).toBeGreaterThan(
+          2,
+        );
+      }
+    });
+  }
+
+  it('brings every wrong card back within 3 to 6 cards', () => {
+    for (const seed of [1, 2, 3]) {
+      const { ids, wrong } = realistic(areaCodes, seed, 300, 0.7);
+      ids.forEach((id, i) => {
+        if (!wrong[i]) return;
+        const back = ids.indexOf(id, i + 1);
+        if (back < 0) return;
+        expect(back - i).toBeGreaterThanOrEqual(3);
+        expect(back - i).toBeLessThanOrEqual(6);
+      });
+    }
+  });
+
+  it('introduces new cards in a random order, not pool order', () => {
+    const { ids } = realistic(areaCodes, 1, 10, 1);
+    const firstFive = ids.slice(0, 5).map(codeOf);
+    const sorted = [...firstFive].sort((a, b) => a - b);
+    expect(firstFive).not.toEqual(sorted);
+    expect(firstFive).not.toEqual(areaCodes.slice(0, 5).map((c) => codeOf(c.id)));
+  });
+
+  it('graduates a card after two rights in a row and then rests it while others remain', () => {
+    const { ids, practice } = realistic(areaCodes, 2, 100, 1);
+    const first = ids[0] as string;
+    const hits = ids.map((id, i) => (id === first ? i : -1)).filter((i) => i >= 0);
+    expect(hits).toHaveLength(2);
+    expect(practice.resting).toContain(first);
+    expect(practice.learning.map((l) => l.cardId)).not.toContain(first);
+  });
+
+  it('is deterministic for a seed', () => {
+    expect(realistic(areaCodes, 9, 150).ids).toEqual(realistic(areaCodes, 9, 150).ids);
   });
 });
