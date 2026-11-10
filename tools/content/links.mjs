@@ -30,6 +30,8 @@ export function parseMapsUrl(url) {
   } catch {
     text = url;
   }
+  const api = apiPano(text);
+  if (api) return api;
   const at = text.match(/@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?),\d+(?:\.\d+)?a((?:,-?\d+(?:\.\d+)?[a-z])*)/);
   if (!at) return undefined;
   const lat = Number(at[1]);
@@ -44,6 +46,28 @@ export function parseMapsUrl(url) {
     heading: round(parts.h ?? 0),
     pitch: round((parts.t ?? 90) - 90),
     fov: round(parts.y ?? 75),
+  };
+}
+
+/** Maps URLs API form: ...?api=1&map_action=pano&pano=<id>&viewpoint=<lat>,<lng>&heading=&pitch=&fov= */
+function apiPano(text) {
+  const query = text.slice(text.indexOf('?') + 1);
+  if (!text.includes('?') || !/(^|&)map_action=pano(&|$)/.test(query)) return undefined;
+  const params = new URLSearchParams(query);
+  const [lat, lng] = (params.get('viewpoint') ?? '').split(',').map(Number);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) return undefined;
+  const pano = params.get('pano') ?? '';
+  const num = (key, fallback) => {
+    const value = params.get(key);
+    return value === null || !Number.isFinite(Number(value)) ? fallback : Number(value);
+  };
+  return {
+    ...(pano.length === 22 && !/^(AF1Qip|CIHM)/.test(pano) && { pano }),
+    lat,
+    lng,
+    heading: round(num('heading', 0)),
+    pitch: round(num('pitch', 0)),
+    fov: round(num('fov', 75)),
   };
 }
 
