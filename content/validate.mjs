@@ -221,7 +221,7 @@ for (const f of jsonFiles('clues').filter((f) => f !== 'index.json')) {
     if (!strings(c.text) || !strings(c.tags)) err(`${cw}: text and tags must be arrays of strings`);
     if (c.region != null && typeof c.region !== 'string') err(`${cw}: region must be a string`);
     if (!strings(c.lookalikes) || !c.lookalikes.every((l) => codes.has(l) && l !== code)) err(`${cw}: lookalikes must be other pool codes`);
-    if (!['Plonk It', 'Learnable Meta'].includes(c.credit?.source) || !isUrl(c.credit?.url) || !c.credit?.licence) err(`${cw}: credit needs source, url and licence`);
+    if (!['Plonk It', 'Learnable Meta', 'GeoHints'].includes(c.credit?.source) || !isUrl(c.credit?.url) || !c.credit?.licence) err(`${cw}: credit needs source, url and licence`);
     if (c.summary != null && !(typeof c.summary === 'string' && c.summary.trim() && c.summary.length <= 300)) err(`${cw}: summary must be 1..300 characters`);
     if (c.sameAs != null && !otherCodes(c.sameAs, code)) err(`${cw}: sameAs must be other pool codes`);
     if (c.differs != null && !(Array.isArray(c.differs) && c.differs.every((d) => codes.has(d?.country) && d.country !== code && typeof d.how === 'string' && d.how.trim()))) err(`${cw}: differs must be [{ country: other pool code, how }]`);

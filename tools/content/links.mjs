@@ -1,9 +1,10 @@
-// Google Maps links of Plonk It images → Street View spots. Short links (goo.gl/maps, maps.app.goo.gl)
+// Google Maps links of Plonk It and GeoHints images → Street View spots. Short links (goo.gl/maps, maps.app.goo.gl)
 // are resolved by following their redirects by hand, one request per second, and cached in
 // content/sources/links.json ({ "<short url>": { url } | { error } }) so re-runs only try the rest.
 // The `clues` step parses the long URLs with parseMapsUrl.
 import { join } from 'node:path';
 import { BROWSER_USER_AGENT, CONTENT, jsonFilesIn, pacer, readJson, sleep, writeJson } from './lib/common.mjs';
+import { geohintsImageLinks } from './geohints.mjs';
 import { PLONKIT_DIR } from './plonkit.mjs';
 
 export const LINKS_PATH = join(CONTENT, 'sources', 'links.json');
@@ -118,11 +119,14 @@ export function plonkitImageLinks(dir = PLONKIT_DIR) {
   return [...links].sort();
 }
 
-/** The `links` step: resolves the short links not in the cache yet, saving the cache every 50. */
-export async function runLinks({ dir = PLONKIT_DIR, path = LINKS_PATH, deadline = Infinity, fetchImpl = fetch, pause = sleep } = {}) {
+/**
+ * The `links` step: resolves the short links not in the cache yet, Plonk It's first, then GeoHints'
+ * (content/sources/geohints, next to `dir`), saving the cache every 50.
+ */
+export async function runLinks({ dir = PLONKIT_DIR, geohintsDir = join(dir, '..', 'geohints'), path = LINKS_PATH, deadline = Infinity, fetchImpl = fetch, pause = sleep } = {}) {
   const cache = readJson(path, {});
   const save = () => writeJson(path, Object.fromEntries(Object.entries(cache).sort(([a], [b]) => a.localeCompare(b))));
-  const todo = plonkitImageLinks(dir).filter((l) => isShortLink(l) && !cache[l]);
+  const todo = [...new Set([...plonkitImageLinks(dir), ...geohintsImageLinks(geohintsDir)])].filter((l) => isShortLink(l) && !cache[l]);
   const wait = pacer(1000, pause);
   const counts = { todo: todo.length, resolved: 0, gone: 0, failed: 0 };
   const errors = [];

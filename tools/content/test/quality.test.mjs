@@ -219,7 +219,7 @@ describe('Learnable Meta merge', () => {
     assert.deepEqual(byId(countries, 'DE', 'de-lm-2').images.map((i) => i.src), [lmSrc('de-cross')], 'the German meta is a German clue of its own');
     assert.deepEqual(byId(countries, 'LU', 'lu-lm-3').images.map((i) => i.src), [lmSrc('lu-cites-de')]);
     assert.equal(byId(countries, 'US', 'us-u1').images.length, 2, "the old slug still counts as the US page");
-    assert.deepEqual(counts, { metasMerged: 2, metasAdded: 2 });
+    assert.deepEqual(counts, { metasMerged: 2, metasAdded: 2, geohintsAdded: 0 });
   });
 });
 

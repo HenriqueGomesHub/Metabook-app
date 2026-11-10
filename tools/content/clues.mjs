@@ -1,4 +1,4 @@
-// The cached sources (content/sources: Plonk It pages, Learnable Meta maps, resolved links) →
+// The cached sources (content/sources: Plonk It pages, Learnable Meta maps, GeoHints, resolved links) →
 // content/clues/<code>.json (ClueCountry, packages/core/src/clues.ts) and content/clues/index.json.
 // Offline and deterministic: the same sources always give the same files.
 // CLI: node tools/content/clues.mjs [--sources <dir>] [--out <dir>]
@@ -6,6 +6,7 @@ import { existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { CONTENT, isMain, jsonFilesIn, loadPool, mediaId, parseArgs, readJson, stripHtml, writeJson } from './lib/common.mjs';
 import { markDupes } from './lib/phash.mjs';
+import { GEOHINTS, GEOHINTS_STEP, buildGeoHints, loadGeoHints } from './geohints.mjs';
 import { LEARNABLE_META } from './learnablemeta.mjs';
 import { isMapsLink, isShortLink, parseMapsUrl } from './links.mjs';
 import { PLONKIT } from './plonkit.mjs';
@@ -291,7 +292,7 @@ export function similarity(a, b) {
 
 // --- sources --------------------------------------------------------------------------------------
 
-/** Reads content/sources (or a copy): Plonk It pages, Learnable Meta maps and resolved links. */
+/** Reads content/sources (or a copy): Plonk It pages, Learnable Meta maps, GeoHints and resolved links. */
 export function loadSources(dir = SOURCES_DIR) {
   const plonkitDir = join(dir, 'plonkit');
   const lmDir = join(dir, 'learnablemeta');
@@ -304,6 +305,7 @@ export function loadSources(dir = SOURCES_DIR) {
       .filter((f) => f !== 'maps.json')
       .map((f) => readJson(join(lmDir, f)))
       .filter((m) => Array.isArray(m?.metas)),
+    geohints: loadGeoHints(join(dir, 'geohints')),
     links: readJson(join(dir, 'links.json'), {}),
   };
 }
@@ -420,9 +422,10 @@ function addMeta(country, { thing, meta, map }, { pool, slugs }) {
 
 /**
  * Sources → { countries: ClueCountry[] (sorted by code), unmatched: { "<meta name prefix>": count },
- * counts }. `only` (upper-case codes) limits the countries built.
+ * geohintsUnmatched: { "<GeoHints country name>": items }, counts }. `only` (upper-case codes) limits
+ * the countries built.
  */
-export function buildClues({ pages, maps, links }, { pool = loadPool(), mapsDir = MAPS_DIR, only } = {}) {
+export function buildClues({ pages, maps, links, geohints = { items: [] } }, { pool = loadPool(), mapsDir = MAPS_DIR, only } = {}) {
   const poolCodes = new Set(pool.map((c) => c.code));
   const wanted = (code) => !only || only.includes(code);
   const byCode = new Map();
@@ -456,8 +459,24 @@ export function buildClues({ pages, maps, links }, { pool = loadPool(), mapsDir 
     counts[addMeta(entry, item, { pool, slugs: slugsOf.get(item.code) ?? new Set() })]++;
   }
 
+  const lookup = countryLookup(pool);
+  const regionNamesOf = (code) => regionNames(code, pool.find((c) => c.code === code).name, mapsDir);
+  const gh = buildGeoHints(geohints, { lookup, poolCodes, locate: (link) => locationOf(link, links), regionNamesOf });
+  let geohintsAdded = 0;
+  for (const code of [...gh.clues.keys()].sort().filter(wanted)) {
+    const entry = country(code, { sourceUrl: GEOHINTS, fetchedAt: geohints.fetchedAt ?? '' });
+    const step = entry.steps.push({ title: GEOHINTS_STEP }) - 1;
+    gh.clues.get(code).forEach(({ id, ...clue }, order) => entry.clues.push({ id, step, order, ...clue }));
+    geohintsAdded += gh.clues.get(code).length;
+  }
+
   const countries = [...byCode.values()].sort((a, b) => a.country.localeCompare(b.country));
-  return { countries, unmatched, counts: { metasMerged: counts.merged, metasAdded: counts.added } };
+  return {
+    countries,
+    unmatched,
+    geohintsUnmatched: gh.unmatched,
+    counts: { metasMerged: counts.merged, metasAdded: counts.added, geohintsAdded },
+  };
 }
 
 /** index.json row for a country. */
@@ -491,7 +510,7 @@ export function writeClues({
   reviewTextDir = REVIEW_TEXT_DIR,
 } = {}) {
   const sources = loadSources(sourcesDir);
-  const { countries, unmatched, counts } = buildClues(sources, { pool, mapsDir, only });
+  const { countries, unmatched, geohintsUnmatched, counts } = buildClues(sources, { pool, mapsDir, only });
   const built = new Set(countries.map((c) => `${c.country.toLowerCase()}.json`));
   if (!only) for (const f of jsonFilesIn(outDir)) if (f !== 'index.json' && !built.has(f)) rmSync(join(outDir, f));
   for (const c of countries) keepCopies(c, readJson(join(outDir, `${c.country.toLowerCase()}.json`)));
@@ -524,6 +543,7 @@ export function writeClues({
       dupes: dupes.within + dupes.sameFile + dupes.crossCountry.filter((p) => p.resolved).length,
     },
     unmatched,
+    geohintsUnmatched,
     reviews,
     dupes: { ...dupes, crossCountry: dupes.crossCountry.slice(0, 300), crossCountryCount: dupes.crossCountry.length },
   };

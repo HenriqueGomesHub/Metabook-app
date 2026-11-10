@@ -84,7 +84,7 @@ export interface ClueImage {
 }
 
 export interface ClueCredit {
-  source: 'Plonk It' | 'Learnable Meta';
+  source: 'Plonk It' | 'Learnable Meta' | 'GeoHints';
   url: string;
   licence: string;
 }
