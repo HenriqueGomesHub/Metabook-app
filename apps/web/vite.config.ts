@@ -48,6 +48,8 @@ export default defineConfig({
         // the ~120 country region maps (assets/<code>-regions-<hash>.js) load on demand: cache
         // each one the first time it is used rather than precaching them all
         globIgnores: ['**/*-regions-*.js'],
+        // the clue catalogue chunk is ~3 MB (about 700 kB gzipped); precache it so drills work offline
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /\/assets\/[a-z]{2}-regions-[\w-]+\.js$/,
