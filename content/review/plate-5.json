@@ -39,12 +39,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.14,
      "y": 0,
-     "w": 1,
+     "w": 0.86,
      "h": 1
     },
-    "note": "Yellow plate with black characters and a blue EU strip on the left"
+    "note": "Yellow plate with black characters split by hyphens"
    }
   ]
  },
@@ -78,12 +78,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.17,
      "y": 0,
-     "w": 1,
+     "w": 0.83,
      "h": 1
     },
-    "note": "Green plate with black letters, a flag and a blue strip on the left"
+    "note": "Green plate with black letters and digits"
    }
   ]
  },
@@ -218,11 +218,11 @@
     "subject": "plate",
     "crop": {
      "x": 0,
-     "y": 0,
+     "y": 0.36,
      "w": 1,
-     "h": 1
+     "h": 0.6
     },
-    "note": "White plate with black embossed letters and digits and a small two-letter code on top"
+    "note": "White plate with black embossed letters and digits split by a dot"
    }
   ]
  },
@@ -356,12 +356,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0.06,
+     "x": 0.16,
      "y": 0.43,
-     "w": 0.88,
+     "w": 0.78,
      "h": 0.24
     },
-    "note": "White plate with black characters and a blue EU strip on the left"
+    "note": "White plate with black letters and digits"
    }
   ]
  },
@@ -383,12 +383,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.11,
      "y": 0,
-     "w": 1,
+     "w": 0.89,
      "h": 1
     },
-    "note": "White plate with black characters, a blue EU strip and a small crest"
+    "note": "White plate with black letters, digits and a small crest"
    }
   ]
  },
@@ -426,18 +426,7 @@
  },
  {
   "id": "634a4204-5769-42ce-b543-90fb87af602d",
-  "uses": [
-   {
-    "subject": "plate",
-    "crop": {
-     "x": 0,
-     "y": 0,
-     "w": 1,
-     "h": 1
-    },
-    "note": "Square two-line motorcycle plate with a blue EU strip"
-   }
-  ]
+  "reject": "country code on plate cannot be cropped out"
  },
  {
   "id": "6ff53e11-ed03-4dcc-9328-3e45ba0f787a",
@@ -521,12 +510,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.13,
      "y": 0,
-     "w": 1,
+     "w": 0.87,
      "h": 1
     },
-    "note": "Grey-white plate with black characters, a blue EU strip and a yellow sticker"
+    "note": "Grey-white plate with black characters and a yellow sticker"
    }
   ]
  },
@@ -536,12 +525,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.14,
      "y": 0,
-     "w": 1,
+     "w": 0.86,
      "h": 1
     },
-    "note": "Plate with black characters split by dots, a blue EU strip and a yellow date sticker"
+    "note": "Plate with black characters split by dots and a yellow date sticker"
    }
   ]
  },
@@ -610,12 +599,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.1,
      "y": 0,
-     "w": 1,
+     "w": 0.9,
      "h": 1
     },
-    "note": "Long white plate with black characters and a blue EU strip"
+    "note": "Long white plate with black letters and digits"
    }
   ]
  },
@@ -625,12 +614,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.14,
      "y": 0.08,
-     "w": 1,
+     "w": 0.86,
      "h": 0.65
     },
-    "note": "White plate with black characters and a blue EU strip"
+    "note": "White plate with black letters and digits"
    }
   ]
  },
@@ -652,12 +641,12 @@
    {
     "subject": "plate",
     "crop": {
-     "x": 0,
+     "x": 0.1,
      "y": 0,
-     "w": 1,
+     "w": 0.9,
      "h": 1
     },
-    "note": "White plate with black characters, a crest and a blue strip on the left"
+    "note": "White plate with black characters and a small crest"
    }
   ]
  },
@@ -677,10 +666,10 @@
     "crop": {
      "x": 0,
      "y": 0,
-     "w": 1,
+     "w": 0.74,
      "h": 1
     },
-    "note": "White plate with black Cyrillic-style letters, digits and a separate region box with a flag"
+    "note": "White plate with black letters and digits"
    }
   ]
  },
@@ -692,10 +681,10 @@
     "crop": {
      "x": 0,
      "y": 0,
-     "w": 1,
+     "w": 0.75,
      "h": 1
     },
-    "note": "White plate with black letters, digits and a separate region box with a flag"
+    "note": "White plate with black letters and digits"
    }
   ]
  },
