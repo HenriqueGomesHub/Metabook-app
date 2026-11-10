@@ -23,6 +23,19 @@ export async function encodeWebp(input, { width = WIDTH, quality = QUALITY } = {
   return { webp: data, width: info.width, height: info.height };
 }
 
+/** True for SVG markup (GeoHints draws many sign designs as SVG). */
+export function isSvg(input) {
+  const head = input.subarray(0, 1024).toString('utf8').replace(/^\uFEFF/, '').trimStart();
+  return /^(<\?xml[^>]*>\s*)?(<!--[\s\S]*?-->\s*)*(<!DOCTYPE svg[^>]*>\s*)?<svg\b/i.test(head);
+}
+
+/** An SVG drawing → a PNG `width` px wide on white (drawn at that size, not scaled up from a small render). */
+export async function rasteriseSvg(input, width = WIDTH) {
+  const { width: drawn = width } = await sharp(input).metadata();
+  const density = Math.min(Math.max((72 * width) / drawn, 1), 2400);
+  return sharp(input, { density }).resize({ width }).flatten({ background: '#ffffff' }).png().toBuffer();
+}
+
 /** → { webp: Buffer, width, height, preview: 'data:image/webp;base64,…' } */
 export async function processImage(input) {
   return { ...(await encodeWebp(input)), preview: await previewOf(input) };

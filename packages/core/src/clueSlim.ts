@@ -65,6 +65,7 @@ export interface SlimCountry {
 const PREFIXES: [string, string][] = [
   ['~l/', 'https://learnablemeta.com/images/'],
   ['~p/', 'https://www.plonkit.net/images/'],
+  ['~g/', 'https://ocsc00skc0wokcs8kw8g8k84.geohints.com/storage/'],
 ];
 
 const shorten = (src: string) => {
