@@ -527,6 +527,7 @@ export function writeClues({
     if (target) slugCountry.set(raw.data.public.slug.toLowerCase(), target.country);
   }
   const dupes = markDupes(countries, readJson(hashesFile, {}), slugCountry);
+  const sameLook = addSameLook(countries, dupes.crossCountry);
 
   for (const c of countries) writeJson(join(outDir, `${c.country.toLowerCase()}.json`), c);
   const index = jsonFilesIn(outDir)
@@ -541,12 +542,35 @@ export function writeClues({
       located: countries.reduce((n, c) => n + c.clues.reduce((m, clue) => m + clue.images.filter((i) => i.location).length, 0), 0),
       ...counts,
       dupes: dupes.within + dupes.sameFile + dupes.crossCountry.filter((p) => p.resolved).length,
+      sameLook,
     },
     unmatched,
     geohintsUnmatched,
     reviews,
     dupes: { ...dupes, crossCountry: dupes.crossCountry.slice(0, 300), crossCountryCount: dupes.crossCountry.length },
   };
+}
+
+/**
+ * The same picture in two countries' clues (an identical sign drawing, say) means the clue looks the same
+ * there: each clue gets the other country in `sameAs`, so the two are never quizzed against each other.
+ * Returns the number of clues that gained a country.
+ */
+export function addSameLook(countries, pairs) {
+  const clues = new Map(countries.flatMap((c) => c.clues.map((clue) => [clue.id, clue])));
+  const touched = new Set();
+  const add = (clueId, other, own) => {
+    const clue = clues.get(clueId);
+    if (!clue || other === own || clue.sameAs?.includes(other)) return;
+    clue.sameAs = [...(clue.sameAs ?? []), other].sort();
+    touched.add(clueId);
+  };
+  for (const p of pairs) {
+    if (p.resolved) continue;
+    add(p.clueId, p.of.country, p.country);
+    add(p.of.clueId, p.country, p.of.country);
+  }
+  return touched.size;
 }
 
 /** Carries the copied-image fields of the previous file over to the same images (same id and src). */

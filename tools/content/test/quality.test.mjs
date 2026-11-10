@@ -305,3 +305,18 @@ describe('reviews in the clues step', () => {
     assert.equal(result.counts.dupes, 1);
   });
 });
+
+it('addSameLook: an identical picture in two countries puts each in the other clue sameAs', async () => {
+  const { addSameLook } = await import('../clues.mjs');
+  const countries = [
+    { country: 'AD', clues: [{ id: 'ad-gh-signs-chevrons' }] },
+    { country: 'ES', clues: [{ id: 'es-gh-signs-chevrons', sameAs: ['PT'] }] },
+  ];
+  const pairs = [
+    { clueId: 'ad-gh-signs-chevrons', country: 'AD', of: { clueId: 'es-gh-signs-chevrons', country: 'ES' }, resolved: false },
+    { clueId: 'ad-gh-signs-chevrons', country: 'AD', of: { clueId: 'es-gh-signs-chevrons', country: 'ES' }, resolved: true },
+  ];
+  assert.equal(addSameLook(countries, pairs), 2);
+  assert.deepEqual(countries[0].clues[0].sameAs, ['ES']);
+  assert.deepEqual(countries[1].clues[0].sameAs, ['AD', 'PT']);
+});
