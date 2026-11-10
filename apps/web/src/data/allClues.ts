@@ -1,16 +1,9 @@
+import { expandCatalogue } from '@metabook/core';
 import type { ClueCountry } from '@metabook/core';
+import catalogue from 'virtual:clue-catalogue';
 
-// Every content/clues/<code>.json is inlined into this module, and content.ts imports it lazily:
-// one request at startup instead of one per country. index.json is the pipeline's summary.
-const files = import.meta.glob<ClueCountry>(
-  ['../../../../content/clues/*.json', '!../../../../content/clues/index.json'],
-  { eager: true, import: 'default' },
-);
+// The clue catalogue without its text (see core's clueSlim and the Vite config), one chunk that
+// content.ts imports lazily. Clue text comes per country from clueText.ts.
 
 /** The clue catalogue, in file-name order; empty until the pipeline has written it. */
-export const allClues: ClueCountry[] = Object.keys(files)
-  .sort()
-  .flatMap((path) => {
-    const country = files[path];
-    return country && Array.isArray(country.clues) ? [country] : [];
-  });
+export const allClues: ClueCountry[] = expandCatalogue(catalogue);
