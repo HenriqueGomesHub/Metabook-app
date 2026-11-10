@@ -1,0 +1,149 @@
+{
+  "name": "pano9",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano9",
+    "countries": [
+      "mx",
+      "my",
+      "na",
+      "nl",
+      "no",
+      "np"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:14:53.998Z",
+  "finishedAt": "2026-11-10T02:19:25.139Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "mx",
+    "my",
+    "na",
+    "nl",
+    "no",
+    "np"
+  ],
+  "errorCount": 6,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 271140,
+      "countries": {
+        "mx": {
+          "ok": true,
+          "ms": 30929,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 2,
+            "views": 8,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 8,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "my": {
+          "ok": true,
+          "ms": 11966,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "na": {
+          "ok": true,
+          "ms": 11406,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "nl": {
+          "ok": true,
+          "ms": 144606,
+          "counts": {
+            "boxes": 20,
+            "urbanSkipped": 0,
+            "panoramas": 7,
+            "views": 28,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 28,
+            "failed": 0
+          },
+          "errors": [
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=5.88286%2C50.81764%2C5.90286%2C50.83764&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=5.47703%2C52.24407%2C5.49703%2C52.26407&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=5.65052%2C52.61344%2C5.67052%2C52.63344&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=5.8%2C51.99544%2C5.82%2C52.01544&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=6.02779%2C52.19022%2C6.04779%2C52.21022&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "no": {
+          "ok": true,
+          "ms": 52098,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 2,
+            "views": 6,
+            "viewsDropped": 2,
+            "alreadyQueued": 0,
+            "queued": 6,
+            "failed": 0
+          },
+          "errors": [
+            "The operation was aborted due to timeout (TimeoutError) for graph.mapillary.com"
+          ]
+        },
+        "np": {
+          "ok": true,
+          "ms": 20103,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
