@@ -130,6 +130,21 @@ export function createQueue({
       return patch(ids, { status, ...(status === 'rejected' && { decided_at: at }) }, { filter: '&status=eq.pending' });
     },
 
+    /** Deletes the still-suggested uses of these candidates (a second review replaces them). */
+    async deleteSuggestedUses(candidateIds) {
+      for (let i = 0; i < candidateIds.length; i += 100) {
+        await call(`?candidate_id=in.(${candidateIds.slice(i, i + 100).join(',')})&status=eq.suggested`, {
+          method: 'DELETE',
+          headers: { Prefer: 'return=minimal' },
+        }, 'media_uses');
+      }
+    },
+
+    /** Moves agent-reviewed candidates to another status (e.g. rejected after a second pass). */
+    async settleReviewed(ids, status, at = new Date().toISOString()) {
+      return patch(ids, { status, decided_at: at }, { filter: '&status=eq.reviewed' });
+    },
+
     /** Inserts suggested uses; one already there (same candidate, subject and crop) is left as it is. */
     async insertUses(uses) {
       for (let i = 0; i < uses.length; i += 500) {

@@ -10,7 +10,7 @@ import { readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
-export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review'];
+export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review', 'rereview'];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
 
 const NAME = /^[\w-]+$/;
@@ -133,6 +133,11 @@ export async function runJob(job, { steps = [], onStep } = {}) {
       const { createQueue } = await import('./queue.mjs');
       const { applyReviews } = await import('./review.mjs');
       const all = await timed(async () => ({ report: await applyReviews({ queue: createQueue() }) }));
+      result = all.ok ? all.report : { all };
+    } else if (step === 'rereview') {
+      const { createQueue } = await import('./queue.mjs');
+      const { applyRereviews } = await import('./review.mjs');
+      const all = await timed(async () => ({ report: await applyRereviews({ queue: createQueue() }) }));
       result = all.ok ? all.report : { all };
     } else if (step === 'generate') {
       const { loadInput, writeGenerated } = await import('./generate.mjs');

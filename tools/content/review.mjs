@@ -107,6 +107,41 @@ export async function applyReviews({ queue, dir = REVIEW_DIR }) {
   return { all: { counts, errors: [], invalid } };
 }
 
+/**
+ * Second pass: each entry in `content/rereview/*.json` is the FINAL list for an agent-reviewed
+ * candidate. Its suggested uses are deleted and replaced; an entry with `reject` (or no uses)
+ * rejects the candidate. Uses the owner already approved or rejected are never touched.
+ */
+export async function applyRereviews({ queue, dir = join(CONTENT, 'rereview') }) {
+  const counts = { entries: 0, rejected: 0, replaced: 0, uses: 0, skipped: 0, invalid: 0 };
+  const invalid = [];
+  const valid = [];
+  const seen = new Set();
+  for (const { file, entry } of readReviews(dir)) {
+    counts.entries++;
+    const problem = entry?.uses?.length === 0 ? null : (entryProblem(entry) ?? (seen.has(entry.id) ? 'duplicate id' : null));
+    if (problem) {
+      counts.invalid++;
+      invalid.push(`${file} ${entry?.id ?? '?'}: ${problem}`);
+      continue;
+    }
+    seen.add(entry.id);
+    valid.push(entry);
+  }
+  const statuses = await queue.statuses(valid.map((e) => e.id));
+  const reviewed = valid.filter((e) => statuses.get(e.id) === 'reviewed');
+  counts.skipped = valid.length - reviewed.length;
+  await queue.deleteSuggestedUses(reviewed.map((e) => e.id));
+  const drop = reviewed.filter((e) => e.reject != null || !e.uses?.length);
+  const keep = reviewed.filter((e) => e.reject == null && e.uses?.length);
+  const rows = keep.flatMap((e) => e.uses.map((use) => toUseRow(e.id, use)));
+  await queue.insertUses(rows);
+  counts.uses = rows.length;
+  counts.replaced = keep.length;
+  counts.rejected = (await queue.settleReviewed(drop.map((e) => e.id), 'rejected')).length;
+  return { all: { counts, errors: [], invalid } };
+}
+
 if (isMain(import.meta)) {
   const { createQueue } = await import('./queue.mjs');
   console.log(JSON.stringify(await applyReviews({ queue: createQueue() }), null, 2));
