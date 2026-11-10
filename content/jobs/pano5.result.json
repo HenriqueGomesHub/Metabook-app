@@ -1,0 +1,144 @@
+{
+  "name": "pano5",
+  "job": {
+    "subjects": [
+      "bollard",
+      "pole",
+      "plate",
+      "sign"
+    ],
+    "perSubject": 12,
+    "name": "pano5",
+    "countries": [
+      "gt",
+      "hk",
+      "hr",
+      "hu",
+      "id",
+      "ie"
+    ],
+    "steps": [
+      "panoviews"
+    ],
+    "budgetMinutes": 6
+  },
+  "startedAt": "2026-11-10T02:13:00.090Z",
+  "finishedAt": "2026-11-10T02:19:07.446Z",
+  "commit": "15d6693731b65547b5c633e327fcc12d01b3abb3",
+  "countries": [
+    "gt",
+    "hk",
+    "hr",
+    "hu",
+    "id",
+    "ie"
+  ],
+  "errorCount": 2,
+  "steps": [
+    {
+      "step": "panoviews",
+      "ms": 367354,
+      "countries": {
+        "gt": {
+          "ok": true,
+          "ms": 20497,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "hk": {
+          "ok": true,
+          "ms": 74722,
+          "counts": {
+            "boxes": 71,
+            "urbanSkipped": 1,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "hr": {
+          "ok": true,
+          "ms": 76680,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 10,
+            "views": 40,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 40,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "hu": {
+          "ok": true,
+          "ms": 116871,
+          "counts": {
+            "boxes": 71,
+            "urbanSkipped": 1,
+            "panoramas": 10,
+            "views": 40,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 40,
+            "failed": 0
+          },
+          "errors": [
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=19.07353%2C47.59846%2C19.09353%2C47.61846&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}",
+            "HTTP 500 for https://graph.mapillary.com/images?bbox=18.99771%2C47.38326%2C19.01771%2C47.40326&is_pano=true&fields=id%2Cthumb_original_url%2Ccomputed_compass_angle%2Ccompass_angle%2Ccomputed_geometry%2Ccreator%2Ccaptured_at%2Cwidth%2Cheight&limit=10: {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+          ]
+        },
+        "id": {
+          "ok": true,
+          "ms": 18425,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 0,
+            "views": 0,
+            "viewsDropped": 0,
+            "alreadyQueued": 0,
+            "queued": 0,
+            "failed": 0
+          },
+          "errors": []
+        },
+        "ie": {
+          "ok": true,
+          "ms": 60124,
+          "counts": {
+            "boxes": 72,
+            "urbanSkipped": 0,
+            "panoramas": 6,
+            "views": 22,
+            "viewsDropped": 2,
+            "alreadyQueued": 0,
+            "queued": 22,
+            "failed": 0
+          },
+          "errors": []
+        }
+      }
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "output": [
+      "OK: 120 pool, 1284 cards, 232 tips, 6 chapters, 119 facts files, 0 photos"
+    ]
+  }
+}
