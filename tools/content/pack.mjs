@@ -28,11 +28,11 @@ export async function eachLimited(items, limit, fn) {
 }
 
 /** A candidate file → { webp, width, height } (width and height of the original). */
-export async function shrink(input) {
+export async function shrink(input, maxWidth = PACK_WIDTH) {
   const { width, height } = await sharp(input).metadata();
   const webp = await sharp(input)
     .rotate()
-    .resize({ width: PACK_WIDTH, withoutEnlargement: true })
+    .resize({ width: maxWidth, withoutEnlargement: true })
     .webp({ quality: QUALITY })
     .toBuffer();
   return { webp, width, height };
@@ -43,7 +43,7 @@ export async function shrink(input) {
  * → { <code>: { counts: { packed, failed }, errors } }; a failed download is recorded and left
  * out of the manifest.
  */
-export async function pack({ storage, queue, countries, outDir = PACK_DIR, concurrency = CONCURRENCY }) {
+export async function pack({ storage, queue, countries, outDir = PACK_DIR, concurrency = CONCURRENCY, maxWidth = PACK_WIDTH }) {
   const rows = (await queue.listPending()).filter((r) => !countries || countries.includes(r.country));
   mkdirSync(join(outDir, 'img'), { recursive: true });
   const report = {};
@@ -51,7 +51,7 @@ export async function pack({ storage, queue, countries, outDir = PACK_DIR, concu
   await eachLimited(rows, concurrency, async (row) => {
     const entry = (report[row.country] ??= { counts: { packed: 0, failed: 0 }, errors: [] });
     try {
-      const { webp, width, height } = await shrink(await storage.download(row.storage_path));
+      const { webp, width, height } = await shrink(await storage.download(row.storage_path), maxWidth);
       writeFileSync(join(outDir, 'img', `${row.id}.webp`), webp);
       entries.push({
         id: row.id,

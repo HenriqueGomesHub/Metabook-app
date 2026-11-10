@@ -126,7 +126,7 @@ export async function runJob(job, { steps = [], onStep } = {}) {
       result = all.ok ? all.report : { all };
     } else if (step === 'pack') {
       const { pack } = await import('./pack.mjs');
-      const all = await timed(async () => ({ report: await pack({ ...(await getClients()), countries }) }));
+      const all = await timed(async () => ({ report: await pack({ ...(await getClients()), countries, ...(job.packWidth && { maxWidth: job.packWidth }) }) }));
       result = all.ok ? all.report : { all };
     } else if (step === 'review') {
       // review files name candidates by id, so every country's entries apply
