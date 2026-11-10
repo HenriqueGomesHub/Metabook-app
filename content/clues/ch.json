@@ -92,7 +92,9 @@
           "src": "https://www.plonkit.net/images/switzerland/Switzerland_License_Plate.png",
           "path": "ch/899a2d406d6f.webp",
           "width": 600,
-          "height": 353
+          "height": 353,
+          "role": "comparison",
+          "caption": "Swiss plates: short front, long rear and high rear"
         }
       ],
       "locations": [],
@@ -132,7 +134,8 @@
           },
           "path": "ch/3850d1d8da4e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "29aa213d8c9e",
@@ -202,7 +205,8 @@
           },
           "path": "ch/1485ce1fcb8b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -251,14 +255,16 @@
           },
           "path": "ch/8f983b750379.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "afcc1e3e469f",
           "src": "https://learnablemeta.com/images/847/IIp6dK2bI7PsAZXlCjiHXGkkGaDT6PUm6cu9.avif",
           "path": "ch/afcc1e3e469f.webp",
           "width": 1000,
-          "height": 488
+          "height": 488,
+          "role": "example"
         }
       ],
       "locations": [
@@ -311,7 +317,8 @@
           },
           "path": "ch/628b267f561a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -364,7 +371,8 @@
           },
           "path": "ch/58b838e35aca.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -418,7 +426,8 @@
           },
           "path": "ch/f491a3f0568c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -479,7 +488,8 @@
           },
           "path": "ch/7846c757b164.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -528,14 +538,16 @@
           },
           "path": "ch/40e3055a16e0.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "195bcfc25458",
           "src": "https://learnablemeta.com/images/914/MaLeS95tJpdGfNyia8LIQTafP33rFIWAFy8g.avif",
           "path": "ch/195bcfc25458.webp",
           "width": 1000,
-          "height": 457
+          "height": 457,
+          "role": "example"
         }
       ],
       "locations": [
@@ -691,14 +703,16 @@
           },
           "path": "ch/9d0f5bb14f49.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "531e1f003c2f",
           "src": "https://learnablemeta.com/images/497/VvpxJRPo6rByy4TJNxRDJpmLc11t9tyMVIQR.avif",
           "path": "ch/531e1f003c2f.webp",
           "width": 1000,
-          "height": 580
+          "height": 580,
+          "role": "example"
         }
       ],
       "locations": [
@@ -731,15 +745,7 @@
         "NOTE: Unlike Germany and Austria, Swiss German does not use the letter **ß**."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "920273bebf21",
-          "src": "https://www.plonkit.net/images/switzerland/ch_languages.png",
-          "path": "ch/920273bebf21.webp",
-          "width": 600,
-          "height": 337
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "AT",
@@ -779,7 +785,10 @@
           "src": "https://www.plonkit.net/images/switzerland/ch_speedsigns.png",
           "path": "ch/4c967600bcfe.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "comparison",
+          "caption": "Swiss speed sign wording by language region: Generell, Limite générale, Limite generale and limita generala",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -803,15 +812,7 @@
         "NOTE: If you happen to come across an [unblurred licence plate](https://maps.app.goo.gl/yi7rVDEFGXqwZaWSA), the first two letters will correspond to the canton that it is registered in."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "3688b59d47ba",
-          "src": "https://www.plonkit.net/images/switzerland/ch_cantons.png",
-          "path": "ch/3688b59d47ba.webp",
-          "width": 600,
-          "height": 385
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1296,7 +1297,16 @@
           },
           "path": "ch/a78400d1cc51.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Town entry signs with a round 50 plate above the place name",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.86,
+            "h": 0.5
+          }
         }
       ],
       "locations": [
@@ -1345,7 +1355,15 @@
           },
           "path": "ch/4e152bc6209f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1395,7 +1413,15 @@
           },
           "path": "ch/245e8713abeb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.63,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1445,7 +1471,15 @@
           },
           "path": "ch/9c5da3c2dfc7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1760,7 +1794,15 @@
           },
           "path": "ch/d379b7dd9ba2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1810,7 +1852,15 @@
           },
           "path": "ch/57c795dbfd8f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.47,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1858,14 +1908,23 @@
           },
           "path": "ch/86fcc2e6d118.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 0.65
+          }
         },
         {
           "id": "ab37f55be22d",
           "src": "https://learnablemeta.com/images/4588/1777543157585-OVG.avif",
           "path": "ch/ab37f55be22d.webp",
           "width": 535,
-          "height": 284
+          "height": 284,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1913,7 +1972,15 @@
           },
           "path": "ch/334eaa12d9d1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "4e70184da4ad",
@@ -2009,15 +2076,7 @@
         "Italian is spoken in the southern part of Switzerland near the border with Italy. Look for speed limit signs that say \"limite generale\"."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "ebe9768174bd",
-          "src": "https://learnablemeta.com/images/5/Lzb57qkj1ncdemnM1PrVWqN9L7qTwcGBKQaJ.avif",
-          "path": "ch/ebe9768174bd.webp",
-          "width": 1000,
-          "height": 618
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "IT"
@@ -2046,8 +2105,7 @@
           "src": "https://learnablemeta.com/images/5/PNKp6LTEuoxIwVBc9g3zqfBemT2ObddWYhu7.avif",
           "path": "ch/0ff81d09ca6d.webp",
           "width": 1000,
-          "height": 618,
-          "dupeOf": "ebe9768174bd"
+          "height": 618
         }
       ],
       "locations": [],
@@ -2086,7 +2144,7 @@
           "path": "ch/a5133b516f13.webp",
           "width": 1000,
           "height": 618,
-          "dupeOf": "ebe9768174bd"
+          "dupeOf": "0ff81d09ca6d"
         }
       ],
       "locations": [],
@@ -2115,7 +2173,8 @@
           "src": "https://learnablemeta.com/images/4588/1777543329050-VVD.avif",
           "path": "ch/3296fe259ca9.webp",
           "width": 745,
-          "height": 324
+          "height": 324,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2143,18 +2202,20 @@
         {
           "id": "96ec123fd946",
           "src": "https://learnablemeta.com/images/9388/1785616912834-Bju.avif",
-          "giveaway": true,
           "path": "ch/96ec123fd946.webp",
           "width": 727,
-          "height": 405
+          "height": 405,
+          "role": "example",
+          "caption": "German text with Ä Ö Ü shown large, using ss instead of ß"
         },
         {
           "id": "96e5155c0b5b",
           "src": "https://learnablemeta.com/images/9388/1788271167794-eZv.avif",
-          "giveaway": true,
           "path": "ch/96e5155c0b5b.webp",
           "width": 597,
-          "height": 302
+          "height": 302,
+          "role": "example",
+          "caption": "Blue street sign reading Kirchenfeldstrasse, spelled with ss"
         },
         {
           "id": "b0293bd4da47",
@@ -2162,8 +2223,7 @@
           "giveaway": true,
           "path": "ch/b0293bd4da47.webp",
           "width": 800,
-          "height": 450,
-          "dupeOf": "920273bebf21"
+          "height": 450
         }
       ],
       "locations": [],
@@ -2216,7 +2276,7 @@
           "path": "ch/cef7e8b8b13b.webp",
           "width": 800,
           "height": 450,
-          "dupeOf": "920273bebf21"
+          "dupeOf": "b0293bd4da47"
         }
       ],
       "locations": [],
@@ -2256,7 +2316,7 @@
           "path": "ch/965c1a5e13b7.webp",
           "width": 800,
           "height": 450,
-          "dupeOf": "920273bebf21"
+          "dupeOf": "b0293bd4da47"
         }
       ],
       "locations": [],

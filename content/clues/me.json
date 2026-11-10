@@ -38,7 +38,8 @@
           "src": "https://www.plonkit.net/images/montenegro/Montenegro_Licence_Plate.png",
           "path": "me/d35e3e2ecfb1.webp",
           "width": 600,
-          "height": 250
+          "height": 250,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -84,7 +85,9 @@
           },
           "path": "me/e32e4d6f2201.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -191,7 +194,8 @@
           },
           "path": "me/ec5474300e89.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ac0eb5ef624c",
@@ -255,7 +259,8 @@
           },
           "path": "me/f13c965ab378.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "f8391b0de3fd",
@@ -328,7 +333,8 @@
           },
           "path": "me/d98926512c76.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "51f21b72352e",
@@ -386,7 +392,8 @@
           },
           "path": "me/f401b61022f9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -435,7 +442,8 @@
           },
           "path": "me/80ba16fce108.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -485,7 +493,9 @@
           },
           "path": "me/d4591509fbaa.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Stitching cracks ('rifts') showing as dark smears in the sky"
         }
       ],
       "locations": [
@@ -528,16 +538,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "8232ddd1fa11",
-          "src": "https://www.plonkit.net/images/montenegro/me_riftmap_v2.png",
-          "giveaway": true,
-          "path": "me/8232ddd1fa11.webp",
-          "width": 600,
-          "height": 671
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1027,7 +1028,15 @@
           },
           "path": "me/81e45fd28dca.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.78,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1068,7 +1077,8 @@
           "src": "https://learnablemeta.com/images/768/Q3LksXVlatT3pFCuG3YZU8sHSfAfJnrXnHxT.avif",
           "path": "me/2f9e5ab129c1.webp",
           "width": 1000,
-          "height": 633
+          "height": 633,
+          "role": "example"
         },
         {
           "id": "9e5efe1f1075",
@@ -1111,18 +1121,20 @@
         {
           "id": "e737f61d127a",
           "src": "https://learnablemeta.com/images/9388/1786290251107-hXB.avif",
-          "giveaway": true,
           "path": "me/e737f61d127a.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example",
+          "caption": "Montenegrin text with Ś and Ź shown large"
         },
         {
           "id": "e0ebca23dc71",
           "src": "https://learnablemeta.com/images/9388/1786290537276-CtR.avif",
-          "giveaway": true,
           "path": "me/e0ebca23dc71.webp",
           "width": 247,
-          "height": 157
+          "height": 157,
+          "role": "example",
+          "caption": "Blue street sign with ulica in Cyrillic and Latin script"
         }
       ],
       "locations": [],

@@ -41,14 +41,24 @@
           "src": "https://www.plonkit.net/images/indonesia/Indonesia_License_Plate_2.png",
           "path": "id/87b231c7d5e6.webp",
           "width": 600,
-          "height": 183
+          "height": 183,
+          "role": "comparison",
+          "caption": "Indonesian plates: new from 2022 (top) and old (bottom)"
         },
         {
           "id": "dbf94feb9e4b",
           "src": "https://learnablemeta.com/images/311/smiJH3HddcCkFgqteubb3UOZskuev6Ds2R8H.avif",
           "path": "id/dbf94feb9e4b.webp",
           "width": 1000,
-          "height": 416
+          "height": 416,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.22,
+            "w": 0.5,
+            "h": 0.78
+          }
         },
         {
           "id": "5af3d0c85914",
@@ -163,7 +173,8 @@
           },
           "path": "id/8e65612acb85.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "f259755614af",
@@ -236,14 +247,18 @@
           },
           "path": "id/bf6bb1ff1527.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A red circle and arrow zoom in on a red-and-white painted pole base"
         },
         {
           "id": "656a9964b34d",
           "src": "https://learnablemeta.com/images/54mbcN3BkrJuSiYzlmlmq3wBUD5plsCo37G1.avif",
           "path": "id/656a9964b34d.webp",
           "width": 1000,
-          "height": 696
+          "height": 696,
+          "role": "annotated",
+          "caption": "A red circle and arrow zoom in on a red-and-white painted pole base"
         },
         {
           "id": "cf37f568fb7e",
@@ -258,7 +273,8 @@
           "src": "https://learnablemeta.com/images/859/v92hJ11jCVSSXDnLCZmvCHr9IlD0kUR1Or4X.avif",
           "path": "id/1d2b066a76a2.webp",
           "width": 1000,
-          "height": 741
+          "height": 741,
+          "role": "example"
         }
       ],
       "locations": [
@@ -308,7 +324,8 @@
           },
           "path": "id/9c3b0016f4ce.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "a1aa4501fb6d",
@@ -423,7 +440,9 @@
           "src": "https://www.plonkit.net/images/indonesia/Indonesian_language.png",
           "path": "id/64be2234b030.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Indonesian text with Dutch-style spelling"
         }
       ],
       "locations": [],
@@ -564,7 +583,9 @@
           },
           "path": "id/fca79ce38d87.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Motorcycle with a front plate, marked by the red arrow"
         },
         {
           "id": "01c790d53223",
@@ -661,16 +682,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "effcc034cf86",
-          "src": "https://www.plonkit.net/images/indonesia/id_coveragemap.png",
-          "giveaway": true,
-          "path": "id/effcc034cf86.webp",
-          "width": 800,
-          "height": 383
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -709,7 +721,9 @@
           },
           "path": "id/af20282e68f0.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "annotated",
+          "caption": "Red ovals circle the regency names (KAB, Kabupaten) on two signs"
         }
       ],
       "locations": [
@@ -825,16 +839,7 @@
       "tags": [
         "moving info"
       ],
-      "images": [
-        {
-          "id": "d45784b22c79",
-          "src": "https://www.plonkit.net/images/indonesia/Indonesian_postal_code_zones_map.png",
-          "giveaway": true,
-          "path": "id/d45784b22c79.webp",
-          "width": 800,
-          "height": 368
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -863,7 +868,10 @@
           "src": "https://www.plonkit.net/images/indonesia/If_you_are_reading_this_have_a_nice_day.png",
           "path": "id/d70b665d9844.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "annotated",
+          "caption": "Green box: even top bar; red box: uneven top bar; blue Mixed box; the map shows where each type is more common",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -903,21 +911,41 @@
           },
           "path": "id/c4d6736e13d3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red arrow points to the extra long support under the top bar",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.55,
+            "h": 1
+          }
         },
         {
           "id": "177ee8abb8c5",
           "src": "https://learnablemeta.com/images/uU4f2U24CjiVkVuv1zCb8lquVloddxfqzVvk.avif",
           "path": "id/177ee8abb8c5.webp",
           "width": 1000,
-          "height": 719
+          "height": 719,
+          "role": "annotated",
+          "caption": "A big red arrow points to the extra long diagonal support under the top bar"
         },
         {
           "id": "45ea2da0196c",
           "src": "https://learnablemeta.com/images/859/FiaojnooCJ2Hg0HS6C8My0BhwXyQkZT0JIrk.avif",
           "path": "id/45ea2da0196c.webp",
           "width": 1000,
-          "height": 505
+          "height": 505,
+          "role": "annotated",
+          "caption": "A red arrow points to the extra long diagonal support under the top bar",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -967,7 +995,16 @@
           },
           "path": "id/e91507794a71.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red box marks the triangle support under the horizontal bar",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1017,7 +1054,16 @@
           },
           "path": "id/f1bc61f5c24f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red circle zooms in on the indent in the side of the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.59,
+            "h": 1
+          }
         },
         {
           "id": "9fe9346a3191",
@@ -1074,7 +1120,15 @@
           },
           "path": "id/dff96a77a80c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1124,14 +1178,32 @@
           },
           "path": "id/a2857bb57e13.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red arrow points to the extra attachment under the top bar",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "9f355e3ca40f",
           "src": "https://learnablemeta.com/images/859/kqtMMiTaeOCKdNNvWtqmx01WJxUspqALOxPv.avif",
           "path": "id/9f355e3ca40f.webp",
           "width": 1000,
-          "height": 483
+          "height": 483,
+          "role": "annotated",
+          "caption": "A red arrow points to the extra attachment under the top bar",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1181,21 +1253,38 @@
           },
           "path": "id/16e08a64088e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         },
         {
           "id": "13bdb9731788",
           "src": "https://learnablemeta.com/images/aVtkY77R1FuyCyP5tB0GzqpLBbdl2jQwoYoK.avif",
           "path": "id/13bdb9731788.webp",
           "width": 1000,
-          "height": 665
+          "height": 665,
+          "role": "example"
         },
         {
           "id": "4118d876fdbe",
           "src": "https://learnablemeta.com/images/859/WWVEDM0VL8t5Ej5UNajfoYHkm4HUuD9QCQra.avif",
           "path": "id/4118d876fdbe.webp",
           "width": 1000,
-          "height": 469
+          "height": 469,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1245,7 +1334,15 @@
           },
           "path": "id/1597a9e5dea3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1295,7 +1392,15 @@
           },
           "path": "id/1d68c8b3df15.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1345,7 +1450,16 @@
           },
           "path": "id/f4e42f88c6f6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red circle zooms in on the blue-green tape on the thin black pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1395,14 +1509,31 @@
           },
           "path": "id/7336ef34184e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A small red circle marks the rectangle attachment on top of the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "2629d0584fb3",
           "src": "https://learnablemeta.com/images/859/YM0MmdASLG2ALdEhdYpDYA4Fbso0as5a6r3L.avif",
           "path": "id/2629d0584fb3.webp",
           "width": 1000,
-          "height": 781
+          "height": 781,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.66
+          }
         }
       ],
       "locations": [
@@ -1452,7 +1583,16 @@
           },
           "path": "id/e3be31f5fe63.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A blue sticker on a concrete pole, centre",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1492,7 +1632,15 @@
           "src": "https://www.plonkit.net/images/indonesia/plonkit%202%20supports%20indonesia.png",
           "path": "id/233c008835f7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -1581,7 +1729,15 @@
           },
           "path": "id/675204ebf1c8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         },
         {
           "id": "53f13cbfa657",
@@ -2683,7 +2839,15 @@
           },
           "path": "id/171bda0b7993.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         },
         {
           "id": "c46fe9ddf5e3",
@@ -2741,7 +2905,14 @@
           },
           "path": "id/be35b2adba15.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2791,7 +2962,15 @@
           },
           "path": "id/15d8652a864b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3037,7 +3216,15 @@
           },
           "path": "id/522bcbef0ff8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3086,7 +3273,16 @@
           },
           "path": "id/a2b3d5fd8e23.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Camera blur seen from the front (left) and back (bottom right), labelled in red",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3153,7 +3349,16 @@
           "src": "https://learnablemeta.com/images/859/HihRoWwt9nL3JUfpkcSrfCraDf1wOy9ywyoj.avif",
           "path": "id/dbf9c9c8a117.webp",
           "width": 1000,
-          "height": 509
+          "height": 509,
+          "role": "example",
+          "caption": "Ground covered by plants with red-tinged leaves",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3583,7 +3788,8 @@
           "src": "https://learnablemeta.com/images/859/0WtdDmjkF0KJxqnCyH7suoOkejLY4vvhAKG6.avif",
           "path": "id/89b153437530.webp",
           "width": 1000,
-          "height": 486
+          "height": 486,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -3611,7 +3817,8 @@
           "src": "https://learnablemeta.com/images/859/fMbkGbTU3EScFeMgGhTNGqBqZjerD36JmPR8.avif",
           "path": "id/a23f8ff28c20.webp",
           "width": 1000,
-          "height": 552
+          "height": 552,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -3891,7 +4098,9 @@
           "src": "https://learnablemeta.com/images/859/fMMp7v9Vax34fENNeZyW19sYcMNDlFZ2XlAS.avif",
           "path": "id/90283d763739.webp",
           "width": 1000,
-          "height": 944
+          "height": 944,
+          "role": "example",
+          "caption": "Concrete pole with KJ in an oval and blue writing"
         }
       ],
       "locations": [],
@@ -3975,7 +4184,8 @@
           "src": "https://learnablemeta.com/images/859/w7LkcwHoija675SpRu0dN9PpIrNTZpyGbIN9.avif",
           "path": "id/81b290ea24e5.webp",
           "width": 1000,
-          "height": 419
+          "height": 419,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -4003,7 +4213,8 @@
           "src": "https://learnablemeta.com/images/859/64IJPigW7Lx2hEeCmi2am5ox0R9wOjHOp3To.avif",
           "path": "id/d2f82b5e4f81.webp",
           "width": 797,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -4171,7 +4382,16 @@
           "src": "https://learnablemeta.com/images/859/2Mii7uhhENE2t5uT6CsrlBYgQT9RvCAYF6X3.avif",
           "path": "id/1761ce17ba54.webp",
           "width": 1000,
-          "height": 628
+          "height": 628,
+          "role": "example",
+          "caption": "Close-ups of a dark blue sticker on poles",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.58
+          }
         }
       ],
       "locations": [],
@@ -4199,7 +4419,16 @@
           "src": "https://learnablemeta.com/images/859/cnJZSzBQ23dWgw1jrbgOtiglWGR8npaK0MfN.avif",
           "path": "id/289d95caaaf2.webp",
           "width": 1000,
-          "height": 674
+          "height": 674,
+          "role": "example",
+          "caption": "Javanese script lettering on a sign above Latin text",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 1,
+            "h": 0.62
+          }
         }
       ],
       "locations": [],
@@ -4648,7 +4877,8 @@
           "src": "https://learnablemeta.com/images/859/HHAe7dzSyJdrfewgSDyVuKOsAHykhVY2wgpZ.avif",
           "path": "id/3173a52579d7.webp",
           "width": 1000,
-          "height": 492
+          "height": 492,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -4732,7 +4962,8 @@
           "src": "https://learnablemeta.com/images/859/o7Ik8sgIeH3JMWNwPFRNb3DdQf1lon4Nq3MX.avif",
           "path": "id/e6ad36b9f6f1.webp",
           "width": 1000,
-          "height": 701
+          "height": 701,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5012,7 +5243,8 @@
           "src": "https://learnablemeta.com/images/859/NecbwhVDTyI95cocr4IRQCVuiKR1IzXyWS4t.avif",
           "path": "id/480c518c7806.webp",
           "width": 1000,
-          "height": 525
+          "height": 525,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5180,7 +5412,8 @@
           "src": "https://learnablemeta.com/images/859/fKjj6SbOfS4C3KLJY5sRApnBHR3YONfqBFRg.avif",
           "path": "id/dc15517d601d.webp",
           "width": 1000,
-          "height": 597
+          "height": 597,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5292,7 +5525,8 @@
           "src": "https://learnablemeta.com/images/859/39p43YTnWrVp7n2ZMXL6tsssFHOE6dj11Mic.avif",
           "path": "id/c4faeec2ee0f.webp",
           "width": 962,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -5376,7 +5610,15 @@
           "src": "https://www.plonkit.net/images/resize/800/80/indonesia/Purple_Camera_Glitch_-_Indonesia.png",
           "path": "id/622bda35601e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [],

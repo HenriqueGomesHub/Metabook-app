@@ -35,7 +35,9 @@
           "src": "https://www.plonkit.net/images/kazakhstan/2.png",
           "path": "kz/6bb9240bbaae.webp",
           "width": 600,
-          "height": 516
+          "height": 516,
+          "role": "comparison",
+          "caption": "Kazakh plates: standard long and short"
         }
       ],
       "locations": [],
@@ -66,7 +68,9 @@
           "src": "https://www.plonkit.net/images/kazakhstan/kz_language.png",
           "path": "kz/22b574febcd8.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example",
+          "caption": "Kazakh text with its special Cyrillic letters, with a Latin version beside it"
         }
       ],
       "locations": [],
@@ -103,7 +107,8 @@
           },
           "path": "kz/b282ea2e7927.webp",
           "width": 600,
-          "height": 265
+          "height": 265,
+          "role": "example"
         }
       ],
       "locations": [
@@ -209,7 +214,8 @@
           },
           "path": "kz/5d88c67331e7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -262,7 +268,8 @@
           },
           "path": "kz/ed951d32225c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "5f7ffcbffa71",
@@ -327,7 +334,8 @@
           },
           "path": "kz/e14f227a56a4.webp",
           "width": 1200,
-          "height": 675
+          "height": 675,
+          "role": "example"
         }
       ],
       "locations": [
@@ -376,7 +384,8 @@
           },
           "path": "kz/2fcceea1110d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c7d81f39df9d",
@@ -493,7 +502,8 @@
           },
           "path": "kz/7964cf2ecd88.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "70c1a08bebb7",
@@ -674,15 +684,7 @@
         "Coverage in Kazakhstan is fairly limited. While most major roads and cities are covered, coverage on small rural roads is fairly uncommon. As such, knowing which roads have coverage can help narrow down the guess."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "0f5239c22c0a",
-          "src": "https://www.plonkit.net/images/kazakhstan/11.png",
-          "path": "kz/0f5239c22c0a.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -705,15 +707,7 @@
         "- **Winter** in the** southeast.**"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "faedfc3d95e6",
-          "src": "https://www.plonkit.net/images/kazakhstan/12.png",
-          "path": "kz/faedfc3d95e6.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -740,8 +734,7 @@
           "giveaway": true,
           "path": "kz/be75b6869f8b.webp",
           "width": 800,
-          "height": 450,
-          "dupeOf": "0f5239c22c0a"
+          "height": 450
         }
       ],
       "locations": [],
@@ -791,15 +784,7 @@
         "You can occasionally spot licence plate codes on the back of [trucks](https://maps.app.goo.gl/tKZW4WNWfm8LC6Bf8) and [buses](https://goo.gl/maps/ShsB6GNeCf3cp4gB6). The codes themselves follow an alphabetical order, with smaller numbers corresponding to regions that start with earlier letters. Note that cars do travel, and as such not all codes are reliable. Buses and smaller utility vehicles are the most reliable."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "9d24b535142f",
-          "src": "https://www.plonkit.net/images/kazakhstan/15.png",
-          "path": "kz/9d24b535142f.webp",
-          "width": 800,
-          "height": 450
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -825,8 +810,7 @@
           "src": "https://www.plonkit.net/images/kazakhstan/16.png",
           "path": "kz/4d7f3ec19dd7.webp",
           "width": 800,
-          "height": 450,
-          "dupeOf": "9d24b535142f"
+          "height": 450
         }
       ],
       "locations": [],
@@ -1162,7 +1146,15 @@
           },
           "path": "kz/8fc8eede0b34.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1367,7 +1359,15 @@
           },
           "path": "kz/d54274c64172.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1710,7 +1710,15 @@
           },
           "path": "kz/7c070d8d2f94.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1759,7 +1767,15 @@
           },
           "path": "kz/1f15963fa8a0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1808,7 +1824,15 @@
           },
           "path": "kz/1f59c2b7ce75.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1853,19 +1877,11 @@
       ],
       "images": [
         {
-          "id": "5099acb4b40b",
-          "src": "https://www.plonkit.net/images/kazakhstan/Kazakhstan_useful_pole_paints_v4.png",
-          "path": "kz/5099acb4b40b.webp",
-          "width": 1000,
-          "height": 563
-        },
-        {
           "id": "8593850a5b0b",
           "src": "https://learnablemeta.com/images/1955/1749989801330-lIe.avif",
           "path": "kz/8593850a5b0b.webp",
           "width": 800,
-          "height": 450,
-          "dupeOf": "5099acb4b40b"
+          "height": 450
         }
       ],
       "locations": [],
@@ -1896,15 +1912,7 @@
       "tags": [
         "pole"
       ],
-      "images": [
-        {
-          "id": "583af137e282",
-          "src": "https://www.plonkit.net/images/kazakhstan/36.png",
-          "path": "kz/583af137e282.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1993,15 +2001,7 @@
         "- Zhetisay also uses a fairly generic design, but it is not found in Turkistan or Shymkent."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "913deb8fd9c1",
-          "src": "https://www.plonkit.net/images/kazakhstan/Kazakhstan_Street_Signs_V3.png",
-          "path": "kz/913deb8fd9c1.webp",
-          "width": 1000,
-          "height": 563
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -2275,7 +2275,15 @@
           },
           "path": "kz/6ec6a6c4db44.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2369,7 +2377,15 @@
           },
           "path": "kz/3ed0e36b74e2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2463,7 +2479,15 @@
           },
           "path": "kz/9fb4fd5e8212.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [

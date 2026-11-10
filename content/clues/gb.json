@@ -37,7 +37,9 @@
           "src": "https://www.plonkit.net/images/united-kingdom/United_Kingdom_License_Plate.png",
           "path": "gb/15b1002287eb.webp",
           "width": 600,
-          "height": 267
+          "height": 267,
+          "role": "comparison",
+          "caption": "British plates: white front and yellow rear, old and new styles"
         },
         {
           "id": "2e698407fd82",
@@ -162,7 +164,9 @@
           },
           "path": "gb/390929577602.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circle and arrow zoom in on the double yellow lines at the road edge"
         },
         {
           "id": "347b7e78bb96",
@@ -230,14 +234,18 @@
           },
           "path": "gb/0c451523fddf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red arrow points to a cat's eye reflector set between the long centre dashes"
         },
         {
           "id": "e13bd3e875bb",
           "src": "https://learnablemeta.com/images/znfxbgYGigjR9pP3xG070NmHtqAzbFseg4OC.avif",
           "path": "gb/e13bd3e875bb.webp",
           "width": 1000,
-          "height": 598
+          "height": 598,
+          "role": "annotated",
+          "caption": "Red arrow points to a cat's eye reflector set between the long centre dashes"
         }
       ],
       "locations": [
@@ -286,7 +294,8 @@
           },
           "path": "gb/361232773704.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d92e412116c6",
@@ -352,7 +361,8 @@
           },
           "path": "gb/1802ef117881.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c39dc048d013",
@@ -414,7 +424,8 @@
           "src": "https://www.plonkit.net/images/united-kingdom/Screenshot%20(1128).png",
           "path": "gb/3b57cb6bfb24.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -462,7 +473,8 @@
           },
           "path": "gb/d33e57b2cbc9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "10a5ad5f10d2",
@@ -537,7 +549,8 @@
           },
           "path": "gb/baae29d0b944.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "096b3019f5c1",
@@ -602,7 +615,8 @@
           },
           "path": "gb/6f9e42056c2f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -657,14 +671,23 @@
           },
           "path": "gb/0635fba2e957.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "58814b43ab05",
           "src": "https://learnablemeta.com/images/2527/1759322844956-rwF.avif",
           "path": "gb/58814b43ab05.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -713,7 +736,8 @@
           },
           "path": "gb/196f8f9f2f93.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "506f22373ff6",
@@ -778,7 +802,8 @@
           },
           "path": "gb/05dd0a46730a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "e6b036f20504",
@@ -843,7 +868,8 @@
           },
           "path": "gb/07d3378ab447.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -893,7 +919,8 @@
           },
           "path": "gb/dc8e20fc1d5e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1329,7 +1356,9 @@
           },
           "path": "gb/b33705616bfb.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -1563,7 +1592,15 @@
           },
           "path": "gb/57a401b72e90.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "e660067716e1",
@@ -1633,14 +1670,24 @@
           },
           "path": "gb/1fd4322ce23a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A white diamond Passing Place sign on a post",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         },
         {
           "id": "b5a9b5461bfe",
           "src": "https://learnablemeta.com/images/G2VNtKCCTY5Q3btjyrJvpky97QCkWlHrOveK.avif",
           "path": "gb/b5a9b5461bfe.webp",
           "width": 1000,
-          "height": 913
+          "height": 913,
+          "role": "example"
         },
         {
           "id": "0513b1374e71",
@@ -1697,7 +1744,15 @@
           },
           "path": "gb/24eb5b986338.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         },
         {
           "id": "5fc3e9346442",
@@ -1759,7 +1814,15 @@
           },
           "path": "gb/4dca46910872.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1808,7 +1871,15 @@
           },
           "path": "gb/6bd25a1fdc9b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2050,14 +2121,30 @@
           },
           "path": "gb/6b3beb634e1c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         },
         {
           "id": "f7970350b0b9",
           "src": "https://learnablemeta.com/images/2527/1757858256408-GZG.avif",
           "path": "gb/f7970350b0b9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2090,15 +2177,7 @@
         "Plonk It has a more in-depth guide to the Isle of Man [here](https://www.plonkit.net/isle-of-man)."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "008af3f176e6",
-          "src": "https://www.plonkit.net/images/united-kingdom/uk_isleofmanlocation.png",
-          "path": "gb/008af3f176e6.webp",
-          "width": 600,
-          "height": 338
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "IE",
@@ -2122,15 +2201,7 @@
         "Plonk It has a more in-depth guide to Jersey [here](https://www.plonkit.net/jersey)."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "ff59b009c217",
-          "src": "https://www.plonkit.net/images/united-kingdom/UK-Jersey.png",
-          "path": "gb/ff59b009c217.webp",
-          "width": 600,
-          "height": 338
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "FR",
@@ -2248,7 +2319,16 @@
           },
           "path": "gb/2cda142a6599.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Churton Street sign with black name, red postcode and the borough name beneath",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         },
         {
           "id": "21636a1b4a4b",
@@ -2313,14 +2393,30 @@
           },
           "path": "gb/71f55a24d9dc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         },
         {
           "id": "944351976f23",
           "src": "https://learnablemeta.com/images/2527/1757975656149-8u1.avif",
           "path": "gb/944351976f23.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2369,7 +2465,15 @@
           },
           "path": "gb/133aef98814b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2417,7 +2521,15 @@
           },
           "path": "gb/377015bf610a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2465,7 +2577,15 @@
           },
           "path": "gb/d1e8e791f198.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         },
         {
           "id": "419b24406983",
@@ -2528,7 +2648,16 @@
           },
           "path": "gb/8271fe577639.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red circle zooms in on the yellow-and-black stripes and sticker on the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2576,7 +2705,15 @@
           },
           "path": "gb/a560745286f8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         },
         {
           "id": "510662ce0f16",
@@ -2623,7 +2760,8 @@
           "src": "https://learnablemeta.com/images/497/hda8EgFBQbC1LokSt8BM7iXPL9osr0y6wfls.avif",
           "path": "gb/3f431e8c4588.webp",
           "width": 672,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2651,7 +2789,10 @@
           "src": "https://learnablemeta.com/images/1955/1750626079343-rOY.avif",
           "path": "gb/ebdc737b5711.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "comparison",
+          "caption": "Wooden pole tops compared by flag: Ireland, UK and France; the UK pole has a flat top",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -2747,14 +2888,8 @@
           "src": "https://learnablemeta.com/images/3660/1755390611842-FUu.avif",
           "path": "gb/73a456162ff2.webp",
           "width": 800,
-          "height": 450
-        },
-        {
-          "id": "19ed5e15cd1d",
-          "src": "https://learnablemeta.com/images/3660/1755390623519-kZV.avif",
-          "path": "gb/19ed5e15cd1d.webp",
-          "width": 800,
-          "height": 356
+          "height": 450,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2847,7 +2982,15 @@
           "src": "https://learnablemeta.com/images/2527/1781909505570-lNQ.avif",
           "path": "gb/b718d947d432.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3174,7 +3317,16 @@
           "src": "https://learnablemeta.com/images/2527/1757335826140-nro.avif",
           "path": "gb/4a7fa774ac5e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Black pole plate with a letter and three numbers, left of centre",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3202,7 +3354,15 @@
           "src": "https://learnablemeta.com/images/2527/1758138648875-9wJ.avif",
           "path": "gb/978fa8c7b0e5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3259,7 +3419,16 @@
           "src": "https://learnablemeta.com/images/2527/1757492980929-VIZ.avif",
           "path": "gb/a59a6ac0e142.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Orange tape and a white sticker with a diamond on a grey pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3315,7 +3484,16 @@
           "src": "https://learnablemeta.com/images/2527/1758733986205-2L6.avif",
           "path": "gb/28f7379db262.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A yellow sticker with a 6-digit code and a QR code on a wooden pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3345,7 +3523,16 @@
           "src": "https://learnablemeta.com/images/2527/1758140964986-cfe.avif",
           "path": "gb/cbf4ea6df71f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Bus stop sign; the red arrow and circle point to the M logo at its top",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3402,7 +3589,15 @@
           "src": "https://learnablemeta.com/images/2527/1757626264940-7yW.avif",
           "path": "gb/9a781cd0dd5e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3430,7 +3625,15 @@
           "src": "https://learnablemeta.com/images/2527/1757629825338-oGX.avif",
           "path": "gb/774bde95b7b8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3459,7 +3662,15 @@
           "src": "https://learnablemeta.com/images/2527/1757628659957-h7M.avif",
           "path": "gb/9802bd9a0368.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3488,7 +3699,15 @@
           "src": "https://learnablemeta.com/images/2527/1757696442392-y7u.avif",
           "path": "gb/3673478d8ff9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3517,7 +3736,15 @@
           "src": "https://learnablemeta.com/images/2527/1757697931561-GxV.avif",
           "path": "gb/2f0bc1164461.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3696,7 +3923,10 @@
           "src": "https://learnablemeta.com/images/2527/1759411038205-Z4y.avif",
           "path": "gb/3336d15afa12.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Pole stickers from different UK areas, each labelled with its region name",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -3781,7 +4011,15 @@
           "src": "https://learnablemeta.com/images/2527/1758143580880-8Xi.avif",
           "path": "gb/66de48ab72d1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3923,7 +4161,15 @@
           "src": "https://learnablemeta.com/images/2527/1758214531182-pNn.avif",
           "path": "gb/6ce44f1676b9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.73,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -4465,7 +4711,10 @@
           "src": "https://learnablemeta.com/images/2527/1759532975343-nVD.avif",
           "path": "gb/c6431694a11b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Blue pole stickers from Anglesey, Flintshire, Wrexham, Denbighshire and Conwy, labelled by area",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -4693,7 +4942,9 @@
           "src": "https://learnablemeta.com/images/9388/1786233598914-Ewl.avif",
           "path": "gb/d50f6aa6331a.webp",
           "width": 800,
-          "height": 451
+          "height": 451,
+          "role": "example",
+          "caption": "English text sample"
         }
       ],
       "locations": [],

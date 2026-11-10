@@ -36,7 +36,8 @@
           "src": "https://www.plonkit.net/images/cambodia/Cambodia_License_Plate.png",
           "path": "kh/209bcd0f3760.webp",
           "width": 600,
-          "height": 319
+          "height": 319,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -78,21 +79,27 @@
           },
           "path": "kh/a7484c640a3b.webp",
           "width": 1000,
-          "height": 1125
+          "height": 1125,
+          "role": "annotated",
+          "caption": "Red circle highlights the thin ridged antenna above the striped car blur"
         },
         {
           "id": "0bea730ed93d",
           "src": "https://learnablemeta.com/images/681/2xSIv1nXghXGttKHpnqMEOIwJofwfK4ouoRq.avif",
           "path": "kh/0bea730ed93d.webp",
           "width": 1000,
-          "height": 882
+          "height": 882,
+          "role": "annotated",
+          "caption": "Red circle highlights the thin ridged antenna above the striped car blur"
         },
         {
           "id": "b8d6e3a1bd05",
           "src": "https://learnablemeta.com/images/681/w8Xaj4x1B7YeoZBE9UHvqNIXCTz902K9V5MM.avif",
           "path": "kh/b8d6e3a1bd05.webp",
           "width": 760,
-          "height": 1000
+          "height": 1000,
+          "role": "comparison",
+          "caption": "Car blur compared between Bangladesh (top) and Cambodia (bottom)"
         }
       ],
       "locations": [
@@ -203,7 +210,9 @@
           "src": "https://www.plonkit.net/images/cambodia/Khmer.png",
           "path": "kh/e09b2e33d6ce.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Khmer script sample"
         }
       ],
       "locations": [],
@@ -257,14 +266,17 @@
           },
           "path": "kh/33ad1ca8dd62.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "annotated",
+          "caption": "Two concrete poles: a ladder pole (left circle) and a round holed pole (right circle)"
         },
         {
           "id": "5d758898828e",
           "src": "https://learnablemeta.com/images/315/92yljLE17BWsIP71K13RXNhLunlkUAjIp5ve.avif",
           "path": "kh/5d758898828e.webp",
           "width": 492,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         },
         {
           "id": "5dc392282e1f",
@@ -340,7 +352,8 @@
           },
           "path": "kh/bb9acfdc69c1.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example"
         },
         {
           "id": "34e810f0bc0d",
@@ -396,7 +409,8 @@
           },
           "path": "kh/aa7c6564ffad.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -447,7 +461,8 @@
           },
           "path": "kh/c70784ab7c68.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -501,7 +516,8 @@
           },
           "path": "kh/fda725444115.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "1340a68a4267",
@@ -840,7 +856,16 @@
           },
           "path": "kh/7b0f75a275b4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Large blue party billboard with Khmer script, right",
+          "giveaway": true,
+          "crop": {
+            "x": 0.5,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -877,7 +902,6 @@
         {
           "id": "3dee2e92e156",
           "src": "https://www.plonkit.net/images/cambodia/kh_shitcam.png",
-          "giveaway": true,
           "location": {
             "pano": "Jbr0tDSHIG15BllEUbn7eA",
             "lat": 11.574002,
@@ -889,7 +913,8 @@
           },
           "path": "kh/3dee2e92e156.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -933,15 +958,7 @@
         "_You can click on the image to enlarge it. You can also view the official street view coverage in more detail on [this site](https://sv-map.netlify.app/#base=roadmap&cov=official2x&zoom=8&center=12.541158630852788%2C104.71069335937501)._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "fe290c5ab96f",
-          "src": "https://www.plonkit.net/images/cambodia/kh_coverage.png",
-          "path": "kh/fe290c5ab96f.webp",
-          "width": 800,
-          "height": 711
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1347,7 +1364,15 @@
           },
           "path": "kh/fd52fbd8df95.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "25e360eeae52",
@@ -1502,7 +1527,15 @@
           },
           "path": "kh/f27480cc6aee.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1554,7 +1587,15 @@
           },
           "path": "kh/46f27083d992.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         },
         {
           "id": "dcfa552b4671",
@@ -1812,7 +1853,16 @@
           },
           "path": "kh/841ccdc13513.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Pole with three beams and insulators on one side; a red box marks the pole top, left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1861,7 +1911,16 @@
           },
           "path": "kh/e4d60dc95ebb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Pole with three beams and insulators on both sides; a red box marks the pole top, left",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1908,7 +1967,15 @@
           },
           "path": "kh/4b3c0e4b1390.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2005,7 +2072,16 @@
           },
           "path": "kh/69ab84ee4e85.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Clinic sign with Chinese writing above the Khmer script",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2100,7 +2176,14 @@
           },
           "path": "kh/55eb7de8ac9d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2139,7 +2222,8 @@
           "src": "https://learnablemeta.com/images/571/BIFTyFMTrqoQngBvfyNZ4gH8WJTLtqMClGWE.avif",
           "path": "kh/7edca0a27782.webp",
           "width": 858,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         }
       ],
       "locations": [],

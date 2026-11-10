@@ -37,7 +37,9 @@
           "src": "https://www.plonkit.net/images/ukraine/Ukraine_License_Plate.png",
           "path": "ua/aac47309a4ea.webp",
           "width": 600,
-          "height": 525
+          "height": 525,
+          "role": "comparison",
+          "caption": "Ukrainian plates: standard and 1995-2004"
         }
       ],
       "locations": [],
@@ -87,7 +89,9 @@
           },
           "path": "ua/27cf37f43213.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Close-up of the car blur: top shows a car with an antenna, bottom a car without one"
         }
       ],
       "locations": [
@@ -138,7 +142,9 @@
           "src": "https://www.plonkit.net/images/ukraine/Other_Ukraine_cars.png",
           "path": "ua/45cd8900ef91.webp",
           "width": 1000,
-          "height": 1000
+          "height": 1000,
+          "role": "annotated",
+          "caption": "Three stacked road shots labelled black long antenna, white long antenna and grey short antenna"
         }
       ],
       "locations": [],
@@ -280,7 +286,9 @@
           "src": "https://www.plonkit.net/images/ukraine/Ukrainian_language.png",
           "path": "ua/af7ee6971ccd.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example",
+          "caption": "Ukrainian text with Є Ґ І Ї shown large"
         }
       ],
       "locations": [],
@@ -377,7 +385,9 @@
           },
           "path": "ua/693eddc40f0b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Yellow shop sign in Ukrainian; a red circle enlarges the abbreviations м. (city) and вул. (street)"
         }
       ],
       "locations": [
@@ -433,7 +443,9 @@
           },
           "path": "ua/c81bf42135fb.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A square concrete pole; the red circle zooms in on its top, left"
         }
       ],
       "locations": [
@@ -489,7 +501,8 @@
           },
           "path": "ua/4fcaf41bfe40.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -538,7 +551,9 @@
           },
           "path": "ua/f6a0c195be12.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A wooden pole with concrete base blocks; the red circle zooms in on the pole, left"
         }
       ],
       "locations": [
@@ -587,7 +602,8 @@
           },
           "path": "ua/022b969b15b7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "7a1b58b7d582",
@@ -651,7 +667,8 @@
           },
           "path": "ua/508762185d92.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -708,7 +725,8 @@
           },
           "path": "ua/826c172a372f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "b4e6ed3cbc61",
@@ -765,7 +783,8 @@
           },
           "path": "ua/729b6c3c91b0.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -968,7 +987,8 @@
           },
           "path": "ua/3fd33e78c95e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1061,7 +1081,6 @@
         {
           "id": "a8e35aa5152b",
           "src": "https://www.plonkit.net/images/ukraine/Ultra-rural.png",
-          "giveaway": true,
           "location": {
             "pano": "rP-kMN59b3d_EMNmAG2hRA",
             "lat": 47.4841313,
@@ -1073,7 +1092,8 @@
           },
           "path": "ua/a8e35aa5152b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1107,16 +1127,7 @@
         "You can view the extent of official coverage on [this site](https://sv-map.netlify.app#base=roadmap&cov=official&zoom=7&center=48.48403316056435%2C33.3325006392799)."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "9359a797909f",
-          "src": "https://www.plonkit.net/images/ukraine/Ukraine_Coverage_Map.png",
-          "giveaway": true,
-          "path": "ua/9359a797909f.webp",
-          "width": 600,
-          "height": 338
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "RO"
@@ -1174,16 +1185,7 @@
         "NOTE: The map shown only applies to the most recent and common plates, with a [blue and yellow strip](https://maps.app.goo.gl/JBdhZAFtT8ad6JXX8). The [older plates](https://maps.app.goo.gl/xT84P2MZ6J22UtxB8) use a regional [number code](https://en.wikipedia.org/wiki/Vehicle_registration_plates_of_Ukraine#Regional_codes), similar to Russia."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "5c4edd62a124",
-          "src": "https://www.plonkit.net/images/ukraine/ua_licenceplatecodes.png",
-          "giveaway": true,
-          "path": "ua/5c4edd62a124.webp",
-          "width": 600,
-          "height": 419
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "RU"
@@ -1271,7 +1273,15 @@
           },
           "path": "ua/a24a0eb8df94.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1320,21 +1330,31 @@
           },
           "path": "ua/94d0a0e33fae.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         },
         {
           "id": "2e5432fa7a8a",
           "src": "https://learnablemeta.com/images/4588/1777550374350-Yys.avif",
           "path": "ua/2e5432fa7a8a.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example"
         },
         {
           "id": "fef04b76f478",
           "src": "https://learnablemeta.com/images/4588/1777550693991-mFL.avif",
           "path": "ua/fef04b76f478.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example"
         }
       ],
       "locations": [
@@ -1383,7 +1403,16 @@
           },
           "path": "ua/960351860f2b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Google car blur close-ups: black car and white car, both labelled long antenna",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1633,7 +1662,15 @@
           },
           "path": "ua/54f7966fb82e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1686,7 +1723,15 @@
           },
           "path": "ua/30a828e44871.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.37,
+            "y": 0,
+            "w": 0.3,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1733,7 +1778,15 @@
           },
           "path": "ua/8f52bea99df6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1782,7 +1835,16 @@
           },
           "path": "ua/c2ce877cac94.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Red dirt path with bushes beside it",
+          "giveaway": true,
+          "crop": {
+            "x": 0.38,
+            "y": 0,
+            "w": 0.3,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1837,7 +1899,16 @@
           },
           "path": "ua/63f07268a53e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A pole with a red band across it",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         },
         {
           "id": "29b6fbfab3e4",
@@ -1989,7 +2060,15 @@
           },
           "path": "ua/fd315ab8bab8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.66,
+            "h": 1
+          }
         },
         {
           "id": "5e0d422ebdda",
@@ -2050,7 +2129,15 @@
           },
           "path": "ua/80087da826a2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2156,7 +2243,15 @@
           },
           "path": "ua/f0275b05ebc0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2203,7 +2298,16 @@
           },
           "path": "ua/7475b9948401.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Circle at top left zooms in on the small yellow flag on the antenna tip",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.67,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2288,7 +2392,8 @@
           "src": "https://learnablemeta.com/images/4588/1777551824182-hXI.avif",
           "path": "ua/dbc97b952e0d.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2317,7 +2422,8 @@
           "src": "https://learnablemeta.com/images/4588/1777550818808-47j.avif",
           "path": "ua/0f6ea17711ee.webp",
           "width": 800,
-          "height": 479
+          "height": 479,
+          "role": "example"
         }
       ],
       "locations": [],

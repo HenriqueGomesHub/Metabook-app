@@ -35,7 +35,8 @@
           "src": "https://www.plonkit.net/images/romania/ro_licenseplate.png",
           "path": "ro/f6b98b1af89d.webp",
           "width": 600,
-          "height": 255
+          "height": 255,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -70,7 +71,9 @@
           "src": "https://www.plonkit.net/images/romania/ro_language.png",
           "path": "ro/46e3d65e5f6c.webp",
           "width": 1000,
-          "height": 563
+          "height": 563,
+          "role": "example",
+          "caption": "Romanian text with Ă Â Î Ș Ț shown large"
         }
       ],
       "locations": [],
@@ -110,14 +113,18 @@
           },
           "path": "ro/d428f138d94e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ec738c942070",
           "src": "https://learnablemeta.com/images/BBHjYQ2tUbiiZxd7AOKeggYCRFRu3mUJ78OF.avif",
           "path": "ro/ec738c942070.webp",
           "width": 1000,
-          "height": 912
+          "height": 912,
+          "role": "comparison",
+          "caption": "Perforated concrete poles compared: Hungary (left), Poland (centre), Romania (right)",
+          "giveaway": true
         },
         {
           "id": "11066e5f46d9",
@@ -196,7 +203,8 @@
           },
           "path": "ro/0d57bcc0cbdf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -251,14 +259,16 @@
           },
           "path": "ro/363fe54d815f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "6117f678b6d2",
           "src": "https://learnablemeta.com/images/768/xA7S4y9anJwhViWQYUjhB5hc8bmTq2MGUgk0.avif",
           "path": "ro/6117f678b6d2.webp",
           "width": 1000,
-          "height": 470
+          "height": 470,
+          "role": "example"
         }
       ],
       "locations": [
@@ -315,7 +325,8 @@
           },
           "path": "ro/ebce5da872bb.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "c2b49886ca94",
@@ -376,7 +387,8 @@
           },
           "path": "ro/98d3909f0612.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -435,7 +447,8 @@
           },
           "path": "ro/b4142a57acc9.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -482,7 +495,8 @@
           },
           "path": "ro/a37b50288c84.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "4e724386b15e",
@@ -537,7 +551,9 @@
           },
           "path": "ro/8b31443c034b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Centre lines compared between two countries, labelled RO (left) and BG (right)"
         },
         {
           "id": "ca5b2631bd18",
@@ -609,7 +625,8 @@
           },
           "path": "ro/ad3d3d158918.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -658,7 +675,8 @@
           },
           "path": "ro/994b446c0023.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -707,7 +725,8 @@
           },
           "path": "ro/67498f7a9f6d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -765,14 +784,16 @@
           },
           "path": "ro/f62be9c88db5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "2f988451c21b",
           "src": "https://learnablemeta.com/images/768/9kGAtk2AmQa3FQqJ5miwRJzS967oggMl9KIs.avif",
           "path": "ro/2f988451c21b.webp",
           "width": 1000,
-          "height": 447
+          "height": 447,
+          "role": "example"
         },
         {
           "id": "88de3a10bb09",
@@ -830,7 +851,8 @@
           },
           "path": "ro/6e6189bfca51.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "94cb07468f82",
@@ -891,7 +913,8 @@
           },
           "path": "ro/25542616a239.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "a41fed1ef86a",
@@ -1436,7 +1459,15 @@
           },
           "path": "ro/051ca4b7ccd8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1570,7 +1601,9 @@
           "src": "https://www.plonkit.net/images/romania/ro_streetsigns.png",
           "path": "ro/85f26dd3c044.webp",
           "width": 600,
-          "height": 481
+          "height": 481,
+          "role": "comparison",
+          "caption": "Romanian street name signs compared: Bucharest sector, Galati and Constanta designs on a map"
         }
       ],
       "locations": [],
@@ -1843,7 +1876,15 @@
           },
           "path": "ro/f29b0541cb34.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1960,7 +2001,9 @@
           "src": "https://learnablemeta.com/images/5/LbzZHrCe7Jywp01rFBGtYygO0D92zta83pq8.avif",
           "path": "ro/69b33cc3b08c.webp",
           "width": 1000,
-          "height": 323
+          "height": 323,
+          "role": "example",
+          "caption": "Romanian text sample"
         }
       ],
       "locations": [],
@@ -1989,10 +2032,10 @@
         {
           "id": "1da3bf47dc6c",
           "src": "https://learnablemeta.com/images/310/hIqn6Q4j25aZzX7byL8SHDRfhcjBeWG4bLd3.avif",
-          "giveaway": true,
           "path": "ro/1da3bf47dc6c.webp",
           "width": 1000,
-          "height": 480
+          "height": 480,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -2020,7 +2063,10 @@
           "src": "https://learnablemeta.com/images/1955/1750621576888-AkP.avif",
           "path": "ro/7a52142dd490.webp",
           "width": 800,
-          "height": 600
+          "height": 600,
+          "role": "annotated",
+          "caption": "Map of Romania with photos of pole tags: county abbreviation on a green tag, and town-name signs",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -2163,7 +2209,8 @@
           "src": "https://learnablemeta.com/images/4588/1777498398151-WEe.avif",
           "path": "ro/7ee94b15f3e4.webp",
           "width": 560,
-          "height": 584
+          "height": 584,
+          "role": "example"
         }
       ],
       "locations": [],

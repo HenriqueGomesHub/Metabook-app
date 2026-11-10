@@ -41,7 +41,9 @@
           "src": "https://www.plonkit.net/images/north-macedonia/North_Macedonia_License_Plate.png",
           "path": "mk/bc46cd7451a6.webp",
           "width": 600,
-          "height": 131
+          "height": 131,
+          "role": "comparison",
+          "caption": "North Macedonian plates: new (top) and old (bottom)"
         }
       ],
       "locations": [],
@@ -89,7 +91,9 @@
           },
           "path": "mk/0a89d26badda.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -130,14 +134,16 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Bollards.png",
           "path": "mk/3e233afc43fb.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "2eef5c6f08c5",
           "src": "https://learnablemeta.com/images/768/QmzUUuRJrCvKRiHO6vZ6EKp1TEbZiHya1rjS.avif",
           "path": "mk/2eef5c6f08c5.webp",
           "width": 1000,
-          "height": 470
+          "height": 470,
+          "role": "example"
         },
         {
           "id": "839c2866e246",
@@ -188,7 +194,8 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Guardrail-FYROM.png",
           "path": "mk/fcb6bf74997f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -228,7 +235,8 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Direction-Signs-FYROM.png",
           "path": "mk/8a65a5a02f9a.webp",
           "width": 600,
-          "height": 375
+          "height": 375,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -282,7 +290,9 @@
           "src": "https://www.plonkit.net/images/north-macedonia/mk_language.png",
           "path": "mk/d03a85fd49ff.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Macedonian Cyrillic text with Ѓ and Ќ shown large"
         }
       ],
       "locations": [],
@@ -314,7 +324,9 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Antenna-FYROM.png",
           "path": "mk/fed34868d892.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "MK (left) shows no antenna on the car blur while BG (right) shows a thin antenna"
         },
         {
           "id": "f2f09bb2b07c",
@@ -418,7 +430,8 @@
           },
           "path": "mk/8ec2f9a352ef.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -476,7 +489,8 @@
           },
           "path": "mk/e26840230f22.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -524,15 +538,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "d176a17e4cdc",
-          "src": "https://www.plonkit.net/images/north-macedonia/mk_coverage.png",
-          "path": "mk/d176a17e4cdc.webp",
-          "width": 800,
-          "height": 696
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -612,7 +618,10 @@
           "src": "https://www.plonkit.net/images/north-macedonia/City-Stickers-FYROM.png",
           "path": "mk/b7a8f8067aa6.webp",
           "width": 800,
-          "height": 450
+          "height": 450,
+          "role": "comparison",
+          "caption": "Obituary posters on poles from different North Macedonian cities, shown with a labelled map",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -652,7 +661,16 @@
           },
           "path": "mk/722cfc343779.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Obituary posters on a pole, circled in red, with a thick light blue border",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -702,7 +720,16 @@
           },
           "path": "mk/642edc9a8f6f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Wide blue obituary poster on a pole, circled and arrowed, with a cross breaking the border",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -752,7 +779,16 @@
           },
           "path": "mk/d159cc6e03bf.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Wide obituary poster on a pole, circled, with the cross under the border",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -793,7 +829,16 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Strumica-Stickers-FYROM.png",
           "path": "mk/645175bbf0be.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Tall blue obituary poster on a pole, circled, with a fancy corner pattern",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -833,7 +878,16 @@
           },
           "path": "mk/09561f9d2fbf.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Tall blue obituary posters on a pole, circled, with the cross above the border",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -883,7 +937,15 @@
           },
           "path": "mk/394c7075f606.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -933,7 +995,15 @@
           },
           "path": "mk/6340ef456c35.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -974,7 +1044,15 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Strumica-Kerbs-FYROM.png",
           "path": "mk/6b17c67cc6f0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -1062,7 +1140,15 @@
           },
           "path": "mk/3cfc2a3b4071.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1152,7 +1238,15 @@
           "src": "https://www.plonkit.net/images/north-macedonia/Green-Truck-FYROM.png",
           "path": "mk/22821abfb42f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.65,
+            "h": 1
+          }
         }
       ],
       "locations": [],

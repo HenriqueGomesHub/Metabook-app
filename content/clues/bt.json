@@ -36,7 +36,8 @@
           "src": "https://www.plonkit.net/images/bhutan/Bhutan_License_Plate.png",
           "path": "bt/dc5d04355c0d.webp",
           "width": 600,
-          "height": 125
+          "height": 125,
+          "role": "example"
         },
         {
           "id": "145c9e152152",
@@ -90,7 +91,8 @@
           },
           "path": "bt/cbbd8ed37361.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -140,7 +142,8 @@
           },
           "path": "bt/cf89019f7b30.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d53ce57e5f56",
@@ -258,7 +261,9 @@
           "src": "https://www.plonkit.net/images/bhutan/Dzongkha.png",
           "path": "bt/c487871919ac.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Dzongkha script sample"
         }
       ],
       "locations": [],
@@ -296,7 +301,8 @@
           },
           "path": "bt/bc65618a3c95.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -392,7 +398,8 @@
           },
           "path": "bt/dc85a476abf8.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "d3d27427d277",
@@ -439,7 +446,6 @@
         {
           "id": "2326711137c7",
           "src": "https://www.plonkit.net/images/bhutan/waystone.png",
-          "giveaway": true,
           "location": {
             "pano": "HF4-bApmbUrU_DcgSWGEhQ",
             "lat": 27.5154908,
@@ -451,7 +457,8 @@
           },
           "path": "bt/2326711137c7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -500,7 +507,10 @@
           },
           "path": "bt/e50550776ec3.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "A blue town shop sign with the town name",
+          "giveaway": true
         }
       ],
       "locations": [
@@ -547,7 +557,8 @@
           },
           "path": "bt/2a4702d0e05b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -596,7 +607,8 @@
           },
           "path": "bt/a023532a9a4f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -641,15 +653,7 @@
         "Most of the Bhutanese street view coverage was taken on the main roads and cities."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "5bf7a174c94d",
-          "src": "https://www.plonkit.net/images/bhutan/bt_coverage.png",
-          "path": "bt/5bf7a174c94d.webp",
-          "width": 800,
-          "height": 533
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -883,7 +887,15 @@
           },
           "path": "bt/35bf7353cd1b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [

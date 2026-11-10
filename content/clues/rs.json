@@ -46,7 +46,8 @@
           },
           "path": "rs/c75844a269ce.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "a3eb6fc099cb",
@@ -114,7 +115,8 @@
           },
           "path": "rs/6b24b505175a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "7e18efcb31bd",
@@ -181,7 +183,8 @@
           },
           "path": "rs/a6e8b2decd3f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "8f85c5f33200",
@@ -247,7 +250,9 @@
           "src": "https://www.plonkit.net/images/serbia/Serbia_Plate.png",
           "path": "rs/e4b3a1ea0925.webp",
           "width": 600,
-          "height": 240
+          "height": 240,
+          "role": "comparison",
+          "caption": "Serbian plates: standard white and green agricultural"
         }
       ],
       "locations": [],
@@ -293,7 +298,9 @@
           "src": "https://www.plonkit.net/images/serbia/rs_cyrillic_fixed.png",
           "path": "rs/4262c9ee6767.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Serbian Cyrillic text with Ђ and Ћ shown large"
         }
       ],
       "locations": [],
@@ -323,7 +330,9 @@
           "src": "https://www.plonkit.net/images/serbia/rs_languagelatin.png",
           "path": "rs/567d3da968ee.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Serbian Latin text with Č Ć Đ Š Ž shown large"
         }
       ],
       "locations": [],
@@ -367,7 +376,8 @@
           },
           "path": "rs/99be1c33eb57.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -417,7 +427,9 @@
           },
           "path": "rs/d6730042ad04.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front)"
         }
       ],
       "locations": [
@@ -475,7 +487,8 @@
           },
           "path": "rs/a6f0ce8c2c30.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "77651a4965d1",
@@ -522,16 +535,7 @@
       "tags": [
         "coverage"
       ],
-      "images": [
-        {
-          "id": "e410fe8a8d04",
-          "src": "https://www.plonkit.net/images/serbia/Serbia_Coverage_Map_.png",
-          "giveaway": true,
-          "path": "rs/e410fe8a8d04.webp",
-          "width": 600,
-          "height": 600
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [
         "XK"
@@ -852,7 +856,15 @@
           },
           "path": "rs/8ae979fbf436.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -902,7 +914,15 @@
           },
           "path": "rs/deb2939f766d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1000,7 +1020,15 @@
           },
           "path": "rs/f85d8d51076a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.76,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1039,14 +1067,17 @@
           "src": "https://learnablemeta.com/images/90/7SvjflOa9kpGhYSxrsiFTnf83nlUtZdyhxzY.avif",
           "path": "rs/f769d2cb6fcc.webp",
           "width": 915,
-          "height": 1000
+          "height": 1000,
+          "role": "example"
         },
         {
           "id": "149fd0fe904a",
           "src": "https://learnablemeta.com/images/90/uI2VYbu8I4wSGLfEEwQLdwTTfsODlXzhvSyK.avif",
           "path": "rs/149fd0fe904a.webp",
           "width": 1000,
-          "height": 1000
+          "height": 1000,
+          "role": "comparison",
+          "caption": "Pedestrian crossing signs compared: Italy, Romania, Serbia and Slovenia"
         }
       ],
       "locations": [],
@@ -1093,7 +1124,8 @@
           "src": "https://learnablemeta.com/images/1955/1750704466714-GcH.avif",
           "path": "rs/7f524320528a.webp",
           "width": 800,
-          "height": 555
+          "height": 555,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1122,7 +1154,8 @@
           "src": "https://learnablemeta.com/images/4588/1777500694373-eR6.avif",
           "path": "rs/10780a979801.webp",
           "width": 637,
-          "height": 548
+          "height": 548,
+          "role": "example"
         }
       ],
       "locations": [],

@@ -48,14 +48,16 @@
           },
           "path": "ca/76a0610d2a3c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "7331955ec4ae",
           "src": "https://learnablemeta.com/images/jGjfCCH7LdsarGMmlAqFQL61mBca9dmhGcGI.avif",
           "path": "ca/7331955ec4ae.webp",
           "width": 1000,
-          "height": 925
+          "height": 925,
+          "role": "example"
         },
         {
           "id": "add4ac00c27f",
@@ -121,7 +123,8 @@
           },
           "path": "ca/cdfcf97a968a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -179,7 +182,9 @@
           },
           "path": "ca/29c875a2a45a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Speed sign in km/h and a shop sign spelled CENTRE, Canadian spelling"
         }
       ],
       "locations": [
@@ -238,14 +243,16 @@
           },
           "path": "ca/5e865211f081.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "e655ae7b389f",
           "src": "https://learnablemeta.com/images/odpOCGrskDqXNiYwwEbm1Z65zrq2zWPzSx6J.avif",
           "path": "ca/e655ae7b389f.webp",
           "width": 1000,
-          "height": 996
+          "height": 996,
+          "role": "example"
         },
         {
           "id": "0c90b3882f41",
@@ -312,7 +319,8 @@
           },
           "path": "ca/6dff902ae1e4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "0f35f5be9652",
@@ -386,7 +394,8 @@
           },
           "path": "ca/d5ee3d9df9b5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "5f16b5fd1cd6",
@@ -452,7 +461,9 @@
           },
           "path": "ca/978406107754.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Gravel blur in Canada (left, two mirror peaks) compared with the United States (right, one peak)"
         }
       ],
       "locations": [
@@ -619,7 +630,8 @@
           },
           "path": "ca/1be129905568.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -673,7 +685,8 @@
           },
           "path": "ca/6d2b885f0f6f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -728,7 +741,8 @@
           },
           "path": "ca/d94088aa0fbd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -781,7 +795,8 @@
           },
           "path": "ca/29f575e3d7da.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -836,7 +851,9 @@
           },
           "path": "ca/5be940e9e083.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Thin metal sign posts with holes, circled in red, beside a stop sign and a wall"
         }
       ],
       "locations": [
@@ -939,7 +956,9 @@
           },
           "path": "ca/4e02bc764fda.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Four panels labelled front panned down, front panned straight, back panned down and good blur (front); the red circle marks a visible mirror panned right"
         }
       ],
       "locations": [
@@ -987,7 +1006,10 @@
           "src": "https://www.plonkit.net/images/canada/ca_license_plates_updated.png.png",
           "path": "ca/6cad28c9c81a.webp",
           "width": 800,
-          "height": 596
+          "height": 596,
+          "role": "comparison",
+          "caption": "Canadian province plates arranged on a map of Canada; red marks provinces needing front plates",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -1028,7 +1050,15 @@
           },
           "path": "ca/2663fb8477fd.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1131,19 +1161,12 @@
       ],
       "images": [
         {
-          "id": "073edbed1f7b",
-          "src": "https://www.plonkit.net/images/canada/Speed_limit_map_Canada4_darkmode.webp",
-          "giveaway": true,
-          "path": "ca/073edbed1f7b.webp",
-          "width": 800,
-          "height": 596
-        },
-        {
           "id": "c374b6f8f38a",
           "src": "https://learnablemeta.com/images/1/1786208542816-b9m.avif",
           "path": "ca/c374b6f8f38a.webp",
           "width": 591,
-          "height": 800
+          "height": 800,
+          "role": "example"
         }
       ],
       "locations": [],
@@ -1185,14 +1208,30 @@
           },
           "path": "ca/6b2044ff7d41.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "5199ad4cbac1",
           "src": "https://learnablemeta.com/images/1/3MEXhOQapC7BU8NWK5nWL9q82slkOaqUqODN.avif",
           "path": "ca/5199ad4cbac1.webp",
           "width": 1000,
-          "height": 491
+          "height": 491,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "36e3c4d8eb33",
@@ -1253,7 +1292,14 @@
           },
           "path": "ca/62422c9e6aa4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "6afef54da5f8",
@@ -1321,7 +1367,15 @@
           },
           "path": "ca/bec97f66a87f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Thin Canadian black-and-white bollard with the red circle magnifying a second pole far down the road",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1372,14 +1426,25 @@
           },
           "path": "ca/495ff7b5e1ea.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Tall white poles with a red or green reflector at the top, beside the guardrail",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "f494bb785fe1",
           "src": "https://learnablemeta.com/images/36yPW2ybMATp2w6NX2s4X8Gob1D4odbJgFi5.avif",
           "path": "ca/f494bb785fe1.webp",
           "width": 1000,
-          "height": 726
+          "height": 726,
+          "role": "example",
+          "caption": "Tall white poles with a red or green reflector at the top, beside the guardrail"
         },
         {
           "id": "89d19b2f55ce",
@@ -1438,7 +1503,16 @@
           },
           "path": "ca/8c87928d388f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A small yellow hydrant marker on a thin pole beside a red fire hydrant",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1489,7 +1563,15 @@
           },
           "path": "ca/4632d631d09c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1540,7 +1622,15 @@
           },
           "path": "ca/f73e8299faf2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1591,7 +1681,15 @@
           },
           "path": "ca/ff0ef68344c9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1641,7 +1739,15 @@
           },
           "path": "ca/2030d0750e66.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1691,7 +1797,16 @@
           },
           "path": "ca/5e6c30951368.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "The inset top-view circle shows the transformer turned 45 degrees from the road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1743,7 +1858,16 @@
           },
           "path": "ca/d3997f95da1f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "The inset top-view circle shows the insulators pointing toward the road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1796,7 +1920,14 @@
           },
           "path": "ca/82ae608ac832.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1846,7 +1977,15 @@
           },
           "path": "ca/f0a25efd40c6.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         },
         {
           "id": "18a1bc2c4652",
@@ -1906,7 +2045,10 @@
           },
           "path": "ca/660fc230fca8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Arrows compare two poles: one has 2 insulators left and 1 right, the other 1 left and 2 right",
+          "giveaway": true
         },
         {
           "id": "c6b3213b996a",
@@ -1964,7 +2106,15 @@
           },
           "path": "ca/a6ac34241c35.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2014,14 +2164,25 @@
           },
           "path": "ca/f6b275553b3e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A yellow label with letters on the wooden pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         },
         {
           "id": "8a932cdcf83c",
           "src": "https://learnablemeta.com/images/Kau4oziR9YP3phs566r6jr5bVRzCCmVpoMEi.avif",
           "path": "ca/8a932cdcf83c.webp",
           "width": 1000,
-          "height": 807
+          "height": 807,
+          "role": "example",
+          "caption": "Close-up of the yellow label with letters on the wooden pole"
         }
       ],
       "locations": [
@@ -2071,7 +2232,16 @@
           },
           "path": "ca/50081a4b2855.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red circle marks a small white number plate on the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2123,7 +2293,14 @@
           },
           "path": "ca/c23b006ac3d3.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2174,7 +2351,14 @@
           },
           "path": "ca/3fd94443d1e9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "3217ac6ad035",
@@ -2235,7 +2419,15 @@
           },
           "path": "ca/ab92f4b75f79.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Green-painted backs of road signs on posts, seen from behind",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.63,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2286,7 +2478,15 @@
           },
           "path": "ca/c9ba3f21a992.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2338,14 +2538,24 @@
           },
           "path": "ca/f17ce0791837.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Green and white striped sticker on the post below the sign back",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "dae320e111fd",
           "src": "https://learnablemeta.com/images/kLKsFe6Kls0SKoKBf4VIvz7VjDq46fuGHmJS.avif",
           "path": "ca/dae320e111fd.webp",
           "width": 900,
-          "height": 1000
+          "height": 1000,
+          "role": "example",
+          "caption": "Green and white striped sticker on the post below the sign back"
         }
       ],
       "locations": [
@@ -2396,14 +2606,25 @@
           },
           "path": "ca/d4ad6517fa4e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red arrow points to white triangles on the sign post",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "71ecbaaad28d",
           "src": "https://learnablemeta.com/images/1/9ZnomclaIg2VOvKBCRWBEPndnMOyHqCXGaNp.avif",
           "path": "ca/71ecbaaad28d.webp",
           "width": 1000,
-          "height": 989
+          "height": 989,
+          "role": "example",
+          "caption": "White triangles on the post below the sign back"
         }
       ],
       "locations": [
@@ -2456,14 +2677,29 @@
           },
           "path": "ca/5e9847d4c9e1.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "65661fbaf080",
           "src": "https://learnablemeta.com/images/1/SloMyxtZMdHyWVOPEbN3iMydqi6ZzyhzMnCw.avif",
           "path": "ca/65661fbaf080.webp",
           "width": 1000,
-          "height": 508
+          "height": 508,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.02,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2517,7 +2753,15 @@
           },
           "path": "ca/e9475427c09b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Stop sign reading both STOP and ARRÊT, left of centre",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2570,7 +2814,16 @@
           },
           "path": "ca/a839a6439056.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Green street signs with English and French wording at a junction",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2625,7 +2878,16 @@
           },
           "path": "ca/e62c18a7c171.webp",
           "width": 1000,
-          "height": 491
+          "height": 491,
+          "role": "example",
+          "caption": "Blue Township Road and Range Road signs on one post",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2731,7 +2993,14 @@
           },
           "path": "ca/52e848ce8ed8.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "498af9507be4",
@@ -2797,7 +3066,16 @@
           },
           "path": "ca/df1e8b8ea9c9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Thin wire fence on small posts beside the road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2848,14 +3126,24 @@
           },
           "path": "ca/b9b7d68f010d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Wooden posts holding three wires, arrows point to posts and wires",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "4142d5f13cff",
           "src": "https://learnablemeta.com/images/pTKCsKN5NWGYGWDqNAwDqLy5NTz8PUyprrqK.avif",
           "path": "ca/4142d5f13cff.webp",
           "width": 1000,
-          "height": 605
+          "height": 605,
+          "role": "annotated",
+          "caption": "Wooden posts holding three wires, arrows point to posts and wires"
         },
         {
           "id": "3d03011aad49",
@@ -2913,7 +3201,16 @@
           },
           "path": "ca/c96fc21f173b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Guardrail with wooden posts that have pyramid-shaped tops; circle zooms in on a post",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         },
         {
           "id": "495b014982ce",
@@ -2971,7 +3268,16 @@
           },
           "path": "ca/d8383756756b.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A small diamond marker on a pole beside a fire hydrant",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3022,7 +3328,16 @@
           },
           "path": "ca/40d393a738ae.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A sign post held upright by a wooden box with black and yellow stripes",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3074,7 +3389,15 @@
           },
           "path": "ca/bae96d06f9a9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3125,7 +3448,14 @@
           },
           "path": "ca/1a6cfc3d77c9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3175,7 +3505,15 @@
           },
           "path": "ca/726df17ab428.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.64,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3257,7 +3595,15 @@
           },
           "path": "ca/465b72fbc8a9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3307,7 +3653,16 @@
           },
           "path": "ca/ec4e9165b693.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red outline marks the rectangular lamp head on the utility pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3358,7 +3713,15 @@
           },
           "path": "ca/57e47e4d7943.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4123,7 +4486,10 @@
           "src": "https://www.plonkit.net/images/canada/ca_flags2.png",
           "path": "ca/80079682c2a6.webp",
           "width": 800,
-          "height": 596
+          "height": 596,
+          "role": "comparison",
+          "caption": "Canadian provincial and territorial flags placed on their provinces on a map",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -4163,7 +4529,15 @@
           },
           "path": "ca/9280f96c5495.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4212,7 +4586,15 @@
           },
           "path": "ca/cf305d90ae6c.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4261,7 +4643,15 @@
           },
           "path": "ca/4ee34f4f8328.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4309,7 +4699,14 @@
           },
           "path": "ca/056c32c6cedb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.41,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4357,7 +4754,9 @@
           },
           "path": "ca/e9263f6aeb19.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "A group of motorcyclists on the road ahead, centre left"
         }
       ],
       "locations": [
@@ -4500,7 +4899,14 @@
           },
           "path": "ca/5e3a7dfdacb5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.44,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4547,7 +4953,15 @@
           },
           "path": "ca/b1e744ecf1da.webp",
           "width": 800,
-          "height": 394
+          "height": 394,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4688,7 +5102,15 @@
           },
           "path": "ca/62e13098a324.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4736,7 +5158,16 @@
           },
           "path": "ca/1b8050f2a6bb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circles mark orange and green signals, a turquoise street sign and a MAXIMUM 30 sign",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4784,7 +5215,15 @@
           },
           "path": "ca/18087c59f47e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.22,
+            "y": 0,
+            "w": 0.4,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4831,7 +5270,15 @@
           },
           "path": "ca/554c1976a773.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4880,7 +5327,14 @@
           },
           "path": "ca/741f359e7f21.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -4929,7 +5383,14 @@
           },
           "path": "ca/58a80b9d557f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5073,7 +5534,14 @@
           },
           "path": "ca/9172879e767f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.61,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -5314,7 +5782,14 @@
           },
           "path": "ca/cccf98574ce0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.62,
+            "h": 1
+          }
         },
         {
           "id": "3d601d3c29f5",
@@ -5362,7 +5837,8 @@
           "src": "https://learnablemeta.com/images/PA6URuNhxsYf70paR5K2aXhar6BDGfvuWCQk.avif",
           "path": "ca/7c8553267105.webp",
           "width": 1000,
-          "height": 933
+          "height": 933,
+          "role": "example"
         }
       ],
       "locations": [],

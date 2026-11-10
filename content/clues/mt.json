@@ -88,7 +88,9 @@
           "src": "https://www.plonkit.net/images/malta/mt_licenceplate.png",
           "path": "mt/d75d50775c9f.webp",
           "width": 600,
-          "height": 476
+          "height": 476,
+          "role": "comparison",
+          "caption": "Maltese plates: long and short"
         }
       ],
       "locations": [],
@@ -338,7 +340,8 @@
           },
           "path": "mt/cbcbeab5a824.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -486,7 +489,9 @@
           },
           "path": "mt/27e574257ff6.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Car dealer window sign in English: import vehicles directly from the UK"
         }
       ],
       "locations": [
@@ -528,7 +533,9 @@
           "src": "https://www.plonkit.net/images/malta/mt_language.png",
           "path": "mt/c8dc57270e78.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Maltese text with the letters Ċ Ġ Ħ Ż shown large"
         }
       ],
       "locations": [],
@@ -567,21 +574,38 @@
           },
           "path": "mt/e40a4cb29519.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         },
         {
           "id": "fad41989af8d",
           "src": "https://learnablemeta.com/images/898/iNdIkzqkqFJYak0Wwa8JgNeU7u5lSddEJCKL.avif",
           "path": "mt/fad41989af8d.webp",
           "width": 1000,
-          "height": 499
+          "height": 499,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         },
         {
           "id": "eadaee800f04",
           "src": "https://learnablemeta.com/images/898/OWMhstGfTCj7ZVufODtFqHlNZXI6eWfWtRCs.avif",
           "path": "mt/eadaee800f04.webp",
           "width": 1000,
-          "height": 395
+          "height": 395,
+          "role": "example"
         }
       ],
       "locations": [
@@ -676,7 +700,15 @@
           },
           "path": "mt/72a591bb51fa.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.74,
+            "h": 1
+          }
         },
         {
           "id": "c415773383d1",
@@ -731,7 +763,15 @@
           },
           "path": "mt/792e3e8adcaa.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         },
         {
           "id": "632b306511e6",

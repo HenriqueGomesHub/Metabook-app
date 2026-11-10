@@ -36,7 +36,10 @@
           "src": "https://www.plonkit.net/images/tunisia/Tunisia_License_Plate.png",
           "path": "tn/9b5d9ed64f06.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Tunisian plates: standard black and military, plus a pickup on the road",
+          "giveaway": true
         }
       ],
       "locations": [],
@@ -75,7 +78,8 @@
           },
           "path": "tn/c7d945bc07ef.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -123,7 +127,8 @@
           },
           "path": "tn/1ff0a2eb545b.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         }
       ],
       "locations": [
@@ -266,7 +271,8 @@
           },
           "path": "tn/c0b11942557e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "83d4c9a350b2",
@@ -321,7 +327,9 @@
           "src": "https://www.plonkit.net/images/tunisia/Tunisia_language_tips.png",
           "path": "tn/dc1d51505f36.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "French text above Arabic text"
         }
       ],
       "locations": [],
@@ -373,7 +381,8 @@
           },
           "path": "tn/d918b4d59878.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "032c0facb0fc",
@@ -533,7 +542,8 @@
           },
           "path": "tn/cfcdf3dec30e.webp",
           "width": 600,
-          "height": 337
+          "height": 337,
+          "role": "example"
         }
       ],
       "locations": [
@@ -582,7 +592,8 @@
           },
           "path": "tn/7f23dcee5767.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "520611e19af8",
@@ -637,15 +648,7 @@
       ],
       "region": "Bizerte",
       "tags": [],
-      "images": [
-        {
-          "id": "e4fb5c0cb8b4",
-          "src": "https://www.plonkit.net/images/tunisia/tn_coverage.png",
-          "path": "tn/e4fb5c0cb8b4.webp",
-          "width": 450,
-          "height": 736
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -728,7 +731,14 @@
           },
           "path": "tn/96d37127127d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -873,7 +883,15 @@
           },
           "path": "tn/3a07b946e6bb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.75,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1433,7 +1451,8 @@
           "src": "https://www.plonkit.net/images/tunisia/Tunisia_trekker_examples.png",
           "path": "tn/7a017dec8055.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "5f77b9c47223",

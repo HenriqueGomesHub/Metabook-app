@@ -36,7 +36,9 @@
           "src": "https://www.plonkit.net/images/kyrgyzstan/Kyrgyzstan_License_Plate.png",
           "path": "kg/d69c883e78e8.webp",
           "width": 600,
-          "height": 235
+          "height": 235,
+          "role": "comparison",
+          "caption": "Kyrgyz plates: standard and 2015 onwards, with a red strip"
         },
         {
           "id": "74dfe4725818",
@@ -94,7 +96,8 @@
           },
           "path": "kg/aa80ede57beb.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -135,7 +138,9 @@
           "src": "https://www.plonkit.net/images/kyrgyzstan/kg_language.png",
           "path": "kg/cc618170db6e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Kyrgyz text in Cyrillic"
         }
       ],
       "locations": [],
@@ -212,7 +217,9 @@
           "src": "https://www.plonkit.net/images/kyrgyzstan/Kyrgyzstan_White_Paint_hint.png",
           "path": "kg/0e4b8766488b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Tree trunks and a pole painted white at the base; red circles mark the painted bases"
         }
       ],
       "locations": [],
@@ -238,28 +245,11 @@
       ],
       "images": [
         {
-          "id": "551df9ca1fc7",
-          "src": "https://www.plonkit.net/images/kyrgyzstan/Kyrgyzstan_Bollards.png",
-          "location": {
-            "pano": "AHBWafoTnOo9VDqfmZHz-w",
-            "lat": 42.134774,
-            "lng": 75.646661,
-            "heading": 327.92,
-            "pitch": -22.07,
-            "fov": 17.53,
-            "source": "plonkit"
-          },
-          "path": "kg/551df9ca1fc7.webp",
-          "width": 600,
-          "height": 338
-        },
-        {
           "id": "69c1d16ff72a",
           "src": "https://learnablemeta.com/images/665/BUm4QtbaGzmnFMR4cjMA4kb5cPfOvtBgp3NH.avif",
           "path": "kg/69c1d16ff72a.webp",
           "width": 1000,
-          "height": 563,
-          "dupeOf": "551df9ca1fc7"
+          "height": 563
         },
         {
           "id": "377c548dfa83",
@@ -267,20 +257,10 @@
           "path": "kg/377c548dfa83.webp",
           "width": 1000,
           "height": 563,
-          "dupeOf": "551df9ca1fc7"
+          "dupeOf": "69c1d16ff72a"
         }
       ],
-      "locations": [
-        {
-          "pano": "AHBWafoTnOo9VDqfmZHz-w",
-          "lat": 42.134774,
-          "lng": 75.646661,
-          "heading": 327.92,
-          "pitch": -22.07,
-          "fov": 17.53,
-          "source": "plonkit"
-        }
-      ],
+      "locations": [],
       "lookalikes": [],
       "credit": {
         "source": "Plonk It",
@@ -400,16 +380,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "167da8764319",
-          "src": "https://www.plonkit.net/images/kyrgyzstan/Kyrgyzstan_Coverage_Map_V4.png",
-          "giveaway": true,
-          "path": "kg/167da8764319.webp",
-          "width": 800,
-          "height": 435
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -430,15 +401,7 @@
         "_You can click on the image to enlarge it._"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "ae8a4bd64488",
-          "src": "https://www.plonkit.net/images/kyrgyzstan/Kyrgyzstan_Driving_Directions_V2.png",
-          "path": "kg/ae8a4bd64488.webp",
-          "width": 800,
-          "height": 435
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -473,7 +436,16 @@
           },
           "path": "kg/bbdfd6bcda5d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circles zoom in on the car's mirror visible at the left of the blur",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -698,7 +670,14 @@
           },
           "path": "kg/48772b6959d0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -792,7 +771,15 @@
           },
           "path": "kg/93e0cbe7ad82.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.55,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -839,7 +826,15 @@
           },
           "path": "kg/56883e1acc31.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.6,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -889,7 +884,16 @@
           },
           "path": "kg/ec6865307c38.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A pole painted yellow, green and white, zoomed in the left circle",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         },
         {
           "id": "1da4f9ea83cb",
@@ -946,7 +950,15 @@
           },
           "path": "kg/a820298c14ce.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.57,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1089,7 +1101,15 @@
           },
           "path": "kg/7ba34bec828f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.56,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1185,7 +1205,15 @@
           },
           "path": "kg/e26dc8d3ab8d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.56,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1234,7 +1262,16 @@
           },
           "path": "kg/b31366ec3090.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A pole with a white bottom and red and yellow stripes, zoomed in the red circle",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.58,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1376,7 +1413,15 @@
           },
           "path": "kg/f2a6d44731e9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1474,7 +1519,15 @@
           },
           "path": "kg/5dda9742d39e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.52,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1808,7 +1861,15 @@
           },
           "path": "kg/22f6fd6b346d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1902,7 +1963,15 @@
           },
           "path": "kg/213192519f42.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1949,7 +2018,15 @@
           },
           "path": "kg/1c18b9f4ae0d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1996,7 +2073,15 @@
           },
           "path": "kg/e1fdb685ffe0.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2562,7 +2647,15 @@
           },
           "path": "kg/910990b99beb.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3201,7 +3294,15 @@
           "src": "https://www.plonkit.net/images/kyrgyzstan/M-107_Section_2.png",
           "path": "kg/ef53f7ede3bc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.54,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3382,7 +3483,16 @@
           },
           "path": "kg/8902daed9d2d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Rocky snow-covered mountain road; the red circle zooms in on a roadside pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.38,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3429,7 +3539,15 @@
           },
           "path": "kg/4c53a80cfb70.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3499,7 +3617,16 @@
           "src": "https://www.plonkit.net/images/kyrgyzstan/EM14_Section_1.png",
           "path": "kg/5d6c33aef4d7.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Road median with yellow-and-black kerbs, left of the road",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.55,
+            "h": 1
+          }
         }
       ],
       "locations": [],
@@ -3536,7 +3663,15 @@
           },
           "path": "kg/ee9f800b96e4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3678,7 +3813,15 @@
           },
           "path": "kg/38ec079251bf.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.53,
+            "h": 1
+          }
         }
       ],
       "locations": [

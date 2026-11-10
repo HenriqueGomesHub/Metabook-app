@@ -33,15 +33,7 @@
         "- **Pakse**: red soil, arid, hills"
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "b5406a07ab94",
-          "src": "https://www.plonkit.net/images/laos/Laos_coverage.png",
-          "path": "la/b5406a07ab94.webp",
-          "width": 600,
-          "height": 714
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -77,7 +69,8 @@
           },
           "path": "la/37a6c87a350e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -178,7 +171,9 @@
           "src": "https://www.plonkit.net/images/laos/Laos_License_Plate.png",
           "path": "la/9396907e64d8.webp",
           "width": 600,
-          "height": 375
+          "height": 375,
+          "role": "comparison",
+          "caption": "Lao plates: standard yellow, white commercial and blue government"
         },
         {
           "id": "000c40942579",
@@ -228,7 +223,9 @@
           "src": "https://www.plonkit.net/images/laos/la_language.png",
           "path": "la/6fb5d6a58d6b.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Lao script text sample"
         }
       ],
       "locations": [],
@@ -375,7 +372,9 @@
           },
           "path": "la/12e2c2f561ef.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Stop signs compared: Laos (left, two characters) and Thailand (right, three characters)"
         }
       ],
       "locations": [
@@ -433,7 +432,9 @@
           },
           "path": "la/4029ab4649cd.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A square concrete pole with pinholes, marked by the red circle and arrow at left"
         }
       ],
       "locations": [
@@ -491,7 +492,8 @@
           },
           "path": "la/7b669e0fd16a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -595,7 +597,8 @@
           },
           "path": "la/6bc7a8b2c56e.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -843,7 +846,15 @@
           },
           "path": "la/c924338c68cc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -940,7 +951,15 @@
           },
           "path": "la/d22a213e7b01.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -990,7 +1009,14 @@
           },
           "path": "la/0d94cedfcf66.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1052,7 +1078,14 @@
           },
           "path": "la/253a68abb337.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.5,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1198,7 +1231,15 @@
           },
           "path": "la/2ddfab0b2bb5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.72,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1353,7 +1394,14 @@
           },
           "path": "la/3cf73a8fee54.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.47,
+            "h": 1
+          }
         }
       ],
       "locations": [

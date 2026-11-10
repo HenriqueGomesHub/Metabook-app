@@ -47,7 +47,8 @@
           },
           "path": "cr/d12dd1f0f042.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -97,7 +98,15 @@
           "src": "https://www.plonkit.net/images/costa-rica/cr_licence_plate_new.png",
           "path": "cr/d1d02e88b31f.webp",
           "width": 600,
-          "height": 150
+          "height": 150,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.26,
+            "w": 0.5,
+            "h": 0.52
+          }
         }
       ],
       "locations": [],
@@ -234,7 +243,9 @@
           "src": "https://www.plonkit.net/images/costa-rica/es_language.png",
           "path": "cr/da4600e0bca3.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Spanish text sample"
         }
       ],
       "locations": [],
@@ -281,7 +292,8 @@
           },
           "path": "cr/13d5e7d1eec4.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -401,7 +413,9 @@
           },
           "path": "cr/84a6bf9fb346.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circles mark the three long silver insulators on the pole"
         }
       ],
       "locations": [
@@ -465,7 +479,9 @@
           },
           "path": "cr/0c79c8443740.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red arrow and numbers mark a low even crossbar with 2 insulators on one side and 1 on the other"
         }
       ],
       "locations": [
@@ -522,7 +538,9 @@
           },
           "path": "cr/c1b78a87ddb6.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "A red circle marks the single insulator on the side at the top of the pole"
         }
       ],
       "locations": [
@@ -571,7 +589,9 @@
           },
           "path": "cr/960bb3daca9a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red circles mark the blue dot on top of each streetlamp"
         }
       ],
       "locations": [
@@ -630,7 +650,9 @@
           },
           "path": "cr/dd865ba4288c.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "annotated",
+          "caption": "Red marks show a thin metal crossbar bent into an L, with insulators at both ends"
         }
       ],
       "locations": [
@@ -688,7 +710,8 @@
           },
           "path": "cr/114ae8285a9a.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -745,7 +768,8 @@
           },
           "path": "cr/583329e5f168.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -878,15 +902,7 @@
         "The provinces are sometimes written on signs, so they are useful to know. We will also refer to them in the clues below."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "b0abb50ae02c",
-          "src": "https://www.plonkit.net/images/costa-rica/cr_provinces",
-          "path": "cr/b0abb50ae02c.webp",
-          "width": 800,
-          "height": 775
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -912,8 +928,7 @@
           "src": "https://www.plonkit.net/images/costa-rica/cr_flags",
           "path": "cr/61a653dc22f6.webp",
           "width": 800,
-          "height": 775,
-          "dupeOf": "b0abb50ae02c"
+          "height": 775
         }
       ],
       "locations": [],
@@ -966,15 +981,7 @@
       "tags": [
         "pole"
       ],
-      "images": [
-        {
-          "id": "9788966f7287",
-          "src": "https://www.plonkit.net/images/costa-rica/cr_polemarkings",
-          "path": "cr/9788966f7287.webp",
-          "width": 800,
-          "height": 775
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1013,7 +1020,15 @@
           },
           "path": "cr/41bc089be9da.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1063,7 +1078,16 @@
           },
           "path": "cr/0c48fcf22105.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "Numbers made of wire on a dark pole, left of the pole in the foreground",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1112,7 +1136,15 @@
           },
           "path": "cr/22f561ea1f81.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1162,7 +1194,15 @@
           },
           "path": "cr/86438475a84f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1212,7 +1252,16 @@
           },
           "path": "cr/f2f1419bfcb2.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "A red circle zooms in on a small black QR sticker on the pole",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1262,7 +1311,15 @@
           },
           "path": "cr/a893cb3324bf.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1312,7 +1369,15 @@
           },
           "path": "cr/a5e30bf633e9.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1363,7 +1428,15 @@
           },
           "path": "cr/2c55876ee8c4.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1413,7 +1486,15 @@
           },
           "path": "cr/40fbb89c8bed.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1507,7 +1588,15 @@
           },
           "path": "cr/f1ddf35399dc.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2346,7 +2435,16 @@
           },
           "path": "cr/623135429805.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "annotated",
+          "caption": "Red circle at top left zooms in on the folded-down antenna on the roof of the white pickup",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2394,7 +2492,15 @@
           },
           "path": "cr/f4c3287b3c0a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2585,7 +2691,15 @@
           },
           "path": "cr/d17e5e6c4ec5.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2773,7 +2887,15 @@
           },
           "path": "cr/4cc0b52e924d.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2915,7 +3037,15 @@
           },
           "path": "cr/0a09225d6403.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2947,16 +3077,7 @@
         "Generation 3 coverage in Costa Rica is **very limited**, consisting of numerous trekkers in and around San José and by the northern west coast. There is also coverage on [Cocos Island](https://goo.gl/maps/RUkuKe4mafK2gbss9), located 500 kilometres southwest of the coast, as well as a boat trekker around [Caño Island](https://goo.gl/maps/CabJDTQ4Cox9ycSQ6) by the southern west coast."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "c90de7cbda30",
-          "src": "https://www.plonkit.net/images/costa-rica/cr_coveragemap.png",
-          "giveaway": true,
-          "path": "cr/c90de7cbda30.webp",
-          "width": 800,
-          "height": 920
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -2991,7 +3112,15 @@
           },
           "path": "cr/2624c99d8154.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.7,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3085,7 +3214,15 @@
           },
           "path": "cr/a7883448ff14.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3229,7 +3366,15 @@
           },
           "path": "cr/04732dfe1e18.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "caption": "An orange footbridge over a highway",
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.4,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3417,7 +3562,15 @@
           },
           "path": "cr/35886602c552.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.4,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3464,7 +3617,15 @@
           },
           "path": "cr/91dc63e0ab7f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.28,
+            "y": 0,
+            "w": 0.43,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3893,7 +4054,15 @@
           },
           "path": "cr/da3a3225d19e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -3940,7 +4109,15 @@
           },
           "path": "cr/2a6b0b094a4f.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0.3,
+            "y": 0,
+            "w": 0.4,
+            "h": 1
+          }
         }
       ],
       "locations": [

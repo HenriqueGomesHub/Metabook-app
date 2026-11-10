@@ -37,7 +37,9 @@
           "src": "https://www.plonkit.net/images/south-korea/licen_plae.png",
           "path": "kr/de2accd09ba4.webp",
           "width": 1000,
-          "height": 464
+          "height": 464,
+          "role": "comparison",
+          "caption": "South Korean plates: green (old), white and yellow (new)"
         }
       ],
       "locations": [],
@@ -75,7 +77,9 @@
           },
           "path": "kr/01436fb49136.webp",
           "width": 600,
-          "height": 506
+          "height": 506,
+          "role": "annotated",
+          "caption": "Google car roof from above in three colours: black (top), white (middle) and silver (bottom)"
         }
       ],
       "locations": [
@@ -123,7 +127,8 @@
           },
           "path": "kr/7f4b1fc19ed0.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -161,7 +166,9 @@
           "src": "https://www.plonkit.net/images/south-korea/kr_script.png",
           "path": "kr/23bbcb64a947.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Korean text in Hangul"
         }
       ],
       "locations": [],
@@ -203,14 +210,16 @@
           },
           "path": "kr/b2158268ba72.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "f8d900cccd01",
           "src": "https://learnablemeta.com/images/7dTk9F6SzOmyF7JejQtwFWISpOCXQDkGzCKG.avif",
           "path": "kr/f8d900cccd01.webp",
           "width": 1000,
-          "height": 995
+          "height": 995,
+          "role": "example"
         },
         {
           "id": "3c3d77a11221",
@@ -275,7 +284,8 @@
           },
           "path": "kr/c008577594cf.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "818f032abb3e",
@@ -377,7 +387,8 @@
           },
           "path": "kr/618b7c97e121.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "ecc3765fb1d5",
@@ -481,7 +492,8 @@
           },
           "path": "kr/d9b0a28fc3fc.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -530,7 +542,8 @@
           },
           "path": "kr/aad040493c5d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -578,7 +591,8 @@
           },
           "path": "kr/402a81dbf548.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -673,7 +687,8 @@
           },
           "path": "kr/34f0fa09330d.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -770,7 +785,8 @@
           },
           "path": "kr/e5f36b4dfcde.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "b635679c3ed2",
@@ -967,16 +983,7 @@
         "South Korea has fairly limited and **very spotty coverage**. Other than large highways, most of the coverage is concentrated in and around major cities."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "5f3e7f39d957",
-          "src": "https://www.plonkit.net/images/south-korea/kr_coveragemap.png",
-          "giveaway": true,
-          "path": "kr/5f3e7f39d957.webp",
-          "width": 600,
-          "height": 650
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -1041,7 +1048,15 @@
           },
           "path": "kr/f8c6ddf55857.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.69,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1089,7 +1104,15 @@
           },
           "path": "kr/a3fc02de1c27.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [

@@ -45,7 +45,8 @@
           },
           "path": "jo/cc8cfa2092c7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -85,7 +86,10 @@
           "src": "https://www.plonkit.net/images/jordan/Jordan_License_Plate.png",
           "path": "jo/1237c85663fa.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "comparison",
+          "caption": "Jordanian plates: standard white and commercial with a green strip",
+          "giveaway": true
         },
         {
           "id": "ac99bb4f79d4",
@@ -135,7 +139,9 @@
           "src": "https://www.plonkit.net/images/jordan/arabic_language.png",
           "path": "jo/208e466f1ee5.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example",
+          "caption": "Arabic text sample"
         }
       ],
       "locations": [],
@@ -181,7 +187,8 @@
           },
           "path": "jo/bfd2dd0c54f7.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "6cd547e2c039",
@@ -253,14 +260,16 @@
           },
           "path": "jo/e280801b06dc.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         },
         {
           "id": "6de692f080cb",
           "src": "https://learnablemeta.com/images/665/gh06wC9nGOZFuQvsIkrS1V8600gLkjTk33f8.avif",
           "path": "jo/6de692f080cb.webp",
           "width": 1000,
-          "height": 457
+          "height": 457,
+          "role": "example"
         },
         {
           "id": "f44ee0c091b5",
@@ -325,7 +334,8 @@
           },
           "path": "jo/3f8fcdee432f.webp",
           "width": 600,
-          "height": 338
+          "height": 338,
+          "role": "example"
         }
       ],
       "locations": [
@@ -525,15 +535,7 @@
         "NOTE: Coverage ends just north of Jerash. Even though Irbid is the second largest city of Jordan, it has zero official coverage. In the south, coverage extends all the way to the coastal town of Aqaba, but not south of it."
       ],
       "tags": [],
-      "images": [
-        {
-          "id": "ef1d4f5c2da8",
-          "src": "https://www.plonkit.net/images/jordan/jo_coverage.png",
-          "path": "jo/ef1d4f5c2da8.webp",
-          "width": 800,
-          "height": 867
-        }
-      ],
+      "images": [],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -569,7 +571,15 @@
           },
           "path": "jo/985ff1317b70.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -617,7 +627,15 @@
           },
           "path": "jo/81c30f50879e.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -811,7 +829,15 @@
           },
           "path": "jo/c7369602581a.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.68,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -1241,7 +1267,14 @@
           },
           "path": "jo/e2d3033df0ec.webp",
           "width": 800,
-          "height": 393
+          "height": 393,
+          "role": "example",
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.71,
+            "h": 1
+          }
         }
       ],
       "locations": [
