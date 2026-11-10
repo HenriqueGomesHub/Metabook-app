@@ -17,6 +17,8 @@ import type { Card, CardState, Confusion } from './types';
  *   be served, weakest first. Across days FSRS decides when it is due again.
  * - Known cards (FSRS review) are mixed in at about KNOWN_SHARE once the learning set is full,
  *   weakest (lowest retrievability) first.
+ * - A Spot it card coming back shows the image of its clue seen longest ago (often another of the
+ *   clue's images), so a repeat is not the same photo again; it is still graded as itself.
  * - Hard rule: a card never comes back within min(10, pool / 2) cards of its last showing, except
  *   a wrong card's return (at least 3). Consecutive cards never have neighbouring numeric prompts
  *   (area codes 11 then 12, or 11 then 17) when anything else can be served.
@@ -71,6 +73,8 @@ export interface PracticeState {
   resting: string[];
   /** new cards introduced since a card last came back after a right answer */
   introsSinceReturn: number;
+  /** step at which each clue image was last shown, by image id */
+  imageShown?: Record<string, number>;
   rng: Rng;
 }
 
@@ -106,7 +110,45 @@ export function createPractice(input: {
     learning: [],
     resting: [],
     introsSinceReturn: 0,
+    imageShown: {},
     rng,
+  };
+}
+
+/** The Spot it cards of the same clue in a pool, the card itself included, in pool order. */
+function spotSiblings(cards: Card[], card: Card): Card[] {
+  const clueId = card.clue?.id;
+  if (card.type !== 'spot' || !clueId) return [card];
+  return cards.filter((c) => c.type === 'spot' && c.clue?.id === clueId && c.clue.image);
+}
+
+/**
+ * The image a Spot it card shows when it comes back: of its clue's images in the pool, the one
+ * shown longest ago (never shown first, pool order breaking ties). Undefined when that is the
+ * card's own image.
+ */
+function rotatedImage(practice: PracticeState, card: Card): string | undefined {
+  if (practice.lastShown[card.id] === undefined) return undefined;
+  const shown = practice.imageShown ?? {};
+  const images = spotSiblings(practice.cards, card).map((c) => c.clue?.image?.id as string);
+  if (images.length < 2) return undefined;
+  const pick = images.reduce((best, id) => ((shown[id] ?? -1) < (shown[best] ?? -1) ? id : best));
+  return pick === card.clue?.image?.id ? undefined : pick;
+}
+
+/**
+ * The card as an item shows it: with `imageId` set, a Spot it card with that sibling image of its
+ * clue in place of its own (answer, options and grading stay the card's).
+ */
+export function cardForItem(item: SessionItem, cards: Card[]): Card | undefined {
+  const card = cards.find((c) => c.id === item.cardId);
+  if (!card || !item.imageId || !card.clue) return card;
+  const sibling = spotSiblings(cards, card).find((c) => c.clue?.image?.id === item.imageId);
+  if (!sibling?.clue?.image) return card;
+  return {
+    ...card,
+    prompt: { ...card.prompt, value: sibling.prompt.value },
+    clue: { ...card.clue, image: sibling.clue.image },
   };
 }
 
@@ -241,12 +283,17 @@ export function nextPracticeItem(
   const { step } = practice;
   const isFresh = practice.fresh.includes(card.id);
   const wasReturn = practice.learning.some((l) => l.cardId === card.id && !l.wrong && l.streak > 0);
+  const imageId = rotatedImage(practice, card);
+  const shownImage = imageId ?? card.clue?.image?.id;
   return {
-    item: { cardId: card.id, mode: modeFor(card, states[card.id]) },
+    item: { cardId: card.id, mode: modeFor(card, states[card.id]), ...(imageId && { imageId }) },
     practice: {
       ...practice,
       step: step + 1,
       lastShown: { ...practice.lastShown, [card.id]: step },
+      imageShown: shownImage
+        ? { ...practice.imageShown, [shownImage]: step }
+        : (practice.imageShown ?? {}),
       introsSinceReturn: isFresh
         ? practice.introsSinceReturn + 1
         : wasReturn

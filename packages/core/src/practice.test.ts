@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { mulberry32 } from './random';
 import {
+  cardForItem,
   createPractice,
   nextPracticeItem,
   recordPracticeAnswer,
@@ -298,5 +299,44 @@ describe('practice on the 67 Brazilian area codes', () => {
 
   it('is deterministic for a seed', () => {
     expect(realistic(areaCodes, 9, 150).ids).toEqual(realistic(areaCodes, 9, 150).ids);
+  });
+});
+
+describe('practice image rotation', () => {
+  /** Spot it cards of one clue with three images, among filler cards. */
+  const spot = (image: string): Card => ({
+    ...card(`clue:pl-1:spot:${image}`, 'spot', 'PL', 'Poland'),
+    prompt: { kind: 'image', value: `https://img/${image}.png` },
+    clue: { id: 'pl-1', image: { id: image, src: `https://img/${image}.png` } },
+  });
+  const cards = [spot('a'), spot('b'), spot('c'), ...pool(12)];
+
+  it('shows a repeat of a Spot it card with the clue image seen longest ago', () => {
+    let practice = start(cards, {}, 3);
+    const shown: { cardId: string; image: string }[] = [];
+    for (let i = 0; i < 120; i++) {
+      const next = nextPracticeItem(practice, {}, now);
+      const shownCard = cardForItem(next.item, cards)!;
+      expect(shownCard.id).toBe(next.item.cardId);
+      if (shownCard.clue?.image) {
+        expect(shownCard.prompt.value).toBe(`https://img/${shownCard.clue.image.id}.png`);
+        shown.push({ cardId: next.item.cardId, image: shownCard.clue.image.id });
+      }
+      practice = recordPracticeAnswer(next.practice, next.item.cardId, i % 3 !== 0);
+    }
+    // the clue's photos never repeat back to back while another one exists
+    shown.forEach((s, i) => i > 0 && expect(s.image).not.toBe(shown[i - 1]!.image));
+    // and repeats of one card do not always show its own photo
+    expect(shown.some((s) => !s.cardId.endsWith(`:${s.image}`))).toBe(true);
+  });
+
+  it('leaves a card with no sibling images as it is', () => {
+    const single = [spot('a'), ...pool(6)];
+    let practice = start(single);
+    for (let i = 0; i < 40; i++) {
+      const next = nextPracticeItem(practice, {}, now);
+      expect(next.item.imageId).toBeUndefined();
+      practice = recordPracticeAnswer(next.practice, next.item.cardId, false);
+    }
   });
 });
