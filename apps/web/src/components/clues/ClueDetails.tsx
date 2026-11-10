@@ -2,6 +2,7 @@ import type { Clue, ClueImage } from '@metabook/core';
 import { useState } from 'react';
 import type { ReactNode } from 'react';
 import { label } from '../../app/labels';
+import { useClueText } from '../../data/clueText';
 import { ClueImg } from './ClueImg';
 import { Credit } from './Credit';
 import { Lightbox } from './Lightbox';
@@ -26,6 +27,7 @@ export function ClueDetails({
   children?: ReactNode;
 }) {
   const [open, setOpen] = useState<ClueImage | null>(null);
+  const text = useClueText(clue);
   return (
     <article className="clue-details">
       <Heading className="clue-title">{clue.title}</Heading>
@@ -45,8 +47,8 @@ export function ClueDetails({
           ))}
         </div>
       )}
-      <div className="clue-text">
-        <Markdown paragraphs={clue.text} />
+      <div className="clue-text" aria-busy={text === undefined}>
+        {text ? <Markdown paragraphs={text} /> : <p className="clue-text-loading">Loading…</p>}
       </div>
       {lookalikes && clue.lookalikes.length > 0 && (
         <p className="clue-lookalikes">

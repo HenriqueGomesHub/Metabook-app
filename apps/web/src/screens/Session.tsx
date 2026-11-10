@@ -1,4 +1,5 @@
 import {
+  cardForItem,
   createPractice,
   isClueCard,
   matchesAnswer,
@@ -17,7 +18,7 @@ import type {
   PracticeState,
   SessionItem,
 } from '@metabook/core';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
@@ -25,7 +26,7 @@ import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
 import { label, scopeOf, SUBJECTS } from '../app/labels';
 import type { Scope as LabelScope } from '../app/labels';
-import { todaySession } from '../app/stats';
+import { learnMore, practiseMore, todaySession } from '../app/stats';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { Chip, CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
@@ -59,8 +60,18 @@ interface Scope {
   clue?: boolean;
 }
 
+/** `more=new`: "Learn more" (new cards past today's limit); `more=ahead`: "Practise more". */
+type More = 'new' | 'ahead';
+
+const SESSIONS: Record<More | 'today', (data: AppSnapshot, now: Date) => { queue: SessionItem[] }> =
+  { today: todaySession, new: learnMore, ahead: practiseMore };
+
+/** Cards preloaded ahead of the one showing. */
+const PRELOAD_AHEAD = 5;
+
 /**
- * `/session` alone runs today's finite, due-based session. Any of `type`, `subject`, `country`,
+ * `/session` alone runs today's finite, due-based session; `more=new` and `more=ahead` run the
+ * extra sessions Today offers once that is done. Any of `type`, `subject`, `country`,
  * `chapter`, `map`, `clue` or `src=clues` starts endless practice over the cards in that scope instead; a scope
  * of one card shows the summary after each answer rather than looping on it. Text-only clue cards
  * only come up in the Clue quiz (`clue=1`).
@@ -79,6 +90,8 @@ export function Session() {
   const map = mapParam === '1' ? true : mapParam === '0' ? false : undefined;
   const clue = params.get('clue') === '1' || undefined;
   const clues = params.get('src') === 'clues' || undefined;
+  const moreParam = params.get('more');
+  const more = moreParam === 'new' || moreParam === 'ahead' ? moreParam : undefined;
   if (!data) return <Status error={error} />;
   const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}`;
   return type || subject || country || chapter || map !== undefined || clue || clues ? (
@@ -88,7 +101,7 @@ export function Session() {
       scope={{ type, subject, country, chapter, map, clue, clues }}
     />
   ) : (
-    <DueRunner data={data} />
+    <DueRunner key={more ?? 'today'} data={data} more={more} />
   );
 }
 
@@ -116,34 +129,40 @@ function backTo(data: AppSnapshot, scope: Scope): string {
   return scope.type || !country ? '/drills' : `/atlas/${country}`;
 }
 
-/** Warms the cache for an upcoming card: clue images through their signed URLs, else the prompt. */
-function preload(repo: Repository, card: Card | undefined) {
-  if (!card) return;
-  const clue = card.clue;
-  if (!clue) return preloadPrompt(card.prompt);
-  const images = clue.choices?.map((c) => c.image) ?? (clue.image ? [clue.image] : []);
-  preloadClueImages(repo, images);
+/**
+ * Warms the cache for upcoming cards: clue images through their signed URLs (one batch for all
+ * the cards), else the prompt.
+ */
+function preload(repo: Repository, upcoming: (Card | undefined)[]) {
+  const images = [];
+  for (const card of upcoming) {
+    if (!card) continue;
+    const clue = card.clue;
+    if (!clue) preloadPrompt(card.prompt);
+    else images.push(...(clue.choices?.map((c) => c.image) ?? (clue.image ? [clue.image] : [])));
+  }
+  if (images.length > 0) preloadClueImages(repo, images);
 }
 
-function DueRunner({ data }: { data: AppSnapshot }) {
+function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
   const { repo } = useAppData();
-  const [queue, setQueue] = useState(() => todaySession(data, new Date()).queue);
+  const [queue, setQueue] = useState(() => SESSIONS[more ?? 'today'](data, new Date()).queue);
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<boolean[]>([]);
   const cards = data.content.cards;
 
   useEffect(() => {
-    const upcoming = queue[index + 1];
+    const byId = new Map(cards.map((c) => [c.id, c]));
     preload(
       repo,
-      cards.find((c) => c.id === upcoming?.cardId),
+      queue.slice(index, index + 1 + PRELOAD_AHEAD).map((item) => byId.get(item.cardId)),
     );
   }, [queue, index, cards, repo]);
 
   const item = queue[index];
   if (!item || !cards.some((c) => c.id === item.cardId)) {
     return queue.length === 0 ? (
-      <CaughtUp />
+      <CaughtUp more={more} />
     ) : (
       <Summary
         kicker="Session done"
@@ -224,6 +243,16 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
   const [results, setResults] = useState<boolean[]>([]);
   const [ended, setEnded] = useState(false);
   const back = backTo(data, scope);
+  const freshAhead = (practice: PracticeState) => {
+    const ahead = new Set(practice.fresh.slice(0, PRELOAD_AHEAD));
+    return pool.filter((c) => ahead.has(c.id));
+  };
+
+  // the first cards' images, signed in one batch while the first card shows
+  useEffect(() => {
+    if (flow) preload(repo, [cardForItem(flow.item, pool), ...freshAhead(flow.practice)]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once, at the start
+  }, []);
 
   if (!flow) {
     return (
@@ -270,10 +299,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       state ? { ...data.states, [state.cardId]: state } : data.states,
       new Date(),
     );
-    preload(
-      repo,
-      pool.find((c) => c.id === upcoming.item.cardId),
-    );
+    preload(repo, [cardForItem(upcoming.item, pool), ...freshAhead(upcoming.practice)]);
     setFlow({ ...flow, practice, upcoming });
   }
 
@@ -351,7 +377,8 @@ function CardRunner({
   const [shown, setShown] = useState<Shown | null>(null);
   const shownAt = useRef(performance.now());
   const cards = data.content.cards;
-  const card = cards.find((c) => c.id === item.cardId) as Card;
+  // a practice repeat may show another image of the card's clue
+  const card = useMemo(() => cardForItem(item, cards) as Card, [item, cards]);
   // Options are drawn once per item; later content changes must not reshuffle them.
   const [options] = useState(() => optionsFor(item, card, cards, Math.random));
 
@@ -528,7 +555,13 @@ function ContrastBar({
   );
 }
 
-function CaughtUp() {
+function CaughtUp({ more }: { more?: More }) {
+  const text =
+    more === 'new'
+      ? 'Every card has been introduced. Keep practising with a drill or a game.'
+      : more === 'ahead'
+        ? 'Nothing studied yet to practise. Start with today’s session.'
+        : 'Nothing is due. Keep practising with a drill or a game.';
   return (
     <div className="session">
       <div className="session-bar rise">
@@ -536,7 +569,7 @@ function CaughtUp() {
       </div>
       <EmptyState
         title="All caught up"
-        text="Nothing is due. Keep practising with a drill or a game."
+        text={text}
         actions={[
           { label: 'Drills', to: '/drills' },
           { label: 'Mini-games', to: '/games' },

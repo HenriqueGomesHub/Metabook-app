@@ -1,4 +1,4 @@
-import { activePairs, blockProgress } from '@metabook/core';
+import { activePairs, blockProgress, LEARN_MORE } from '@metabook/core';
 import type { CardType } from '@metabook/core';
 import { useEffect, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,8 +6,9 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { activeBlock } from '../app/dataActions';
-import { pairLabel } from '../app/labels';
+import { label, pairLabel } from '../app/labels';
 import {
+  curriculum,
   mapsOf,
   pairScope,
   practisedDays,
@@ -20,8 +21,11 @@ import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
+import { preloadClueImages } from '../data/clueImages';
 
 const SECONDS_PER_CARD = 8;
+/** Cards of today's queue whose images are signed and fetched while Today shows. */
+const PRELOAD = 5;
 const MIX_COLOURS = ['#eeeae2', '#a3c49a', '#bdb8ad', '#8e897f', '#66625a', '#46433d', '#3a3832'];
 
 export function Today() {
@@ -31,13 +35,24 @@ export function Today() {
 
 function TodayView({ data }: { data: AppSnapshot }) {
   const navigate = useNavigate();
+  const { repo } = useAppData();
   const now = useMemo(() => new Date(), []);
   const { queue } = useMemo(() => todaySession(data, now), [data, now]);
+  const { newAvailable, learningNow } = useMemo(() => curriculum(data), [data]);
   const cardsById = useMemo(
     () => new Map(data.content.cards.map((card) => [card.id, card])),
     [data.content.cards],
   );
   const empty = data.content.cards.length === 0;
+
+  // the session's first images are ready by the time it starts
+  useEffect(() => {
+    const images = queue.slice(0, PRELOAD).flatMap((item) => {
+      const clue = cardsById.get(item.cardId)?.clue;
+      return clue?.choices?.map((c) => c.image) ?? (clue?.image ? [clue.image] : []);
+    });
+    if (images.length > 0) preloadClueImages(repo, images);
+  }, [queue, cardsById, repo]);
 
   useEffect(() => {
     if (empty || queue.length === 0) return;
@@ -63,6 +78,10 @@ function TodayView({ data }: { data: AppSnapshot }) {
     .sort((a, b) => b.count - a.count);
 
   const minutes = Math.max(1, Math.round((queue.length * SECONDS_PER_CARD) / 60));
+  const seenAny = Object.values(data.states).some((state) => state.state !== 'new');
+  // today's new cards are used up (or nothing is queued) while unseen cards remain
+  const canLearnMore = newAvailable > 0 && fresh === 0;
+  const canPractiseMore = queue.length === 0 && seenAny;
   const days = practisedDays(data.reviews, now);
   const streak = streakLength(days);
   const confusion = activePairs(data.confusions, now)[0];
@@ -115,6 +134,29 @@ function TodayView({ data }: { data: AppSnapshot }) {
             ) : (
               <p className="today-hint">All done for today.</p>
             )}
+            {(canLearnMore || canPractiseMore) && (
+              <div className="today-more">
+                {canLearnMore && (
+                  <LinkButton to="/session?more=new" variant="ghost">
+                    Learn {Math.min(LEARN_MORE, newAvailable)} more
+                  </LinkButton>
+                )}
+                {canPractiseMore && (
+                  <LinkButton to="/session?more=ahead" variant="ghost">
+                    Practise more
+                  </LinkButton>
+                )}
+              </div>
+            )}
+            <p className="today-avail">
+              {newAvailable.toLocaleString('en')} new available
+              {learningNow.length > 0 && (
+                <>
+                  <br />
+                  Learning now: {learningNow.map((code) => label(code)).join(', ')}
+                </>
+              )}
+            </p>
           </section>
 
           <div className="today-side rise d2">

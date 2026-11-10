@@ -12,7 +12,8 @@ vi.mock('../data/content', async (importOriginal) => {
 
 function repoWith(newPerDay: number, seed: ConstructorParameters<typeof MemoryRepository>[0] = {}) {
   const repo = new MemoryRepository(seed);
-  repo.settings = { ...DEFAULT_SETTINGS, newPerDay };
+  // Lithuania first: the curriculum would start with Estonia (no priority, alphabetical)
+  repo.settings = { ...DEFAULT_SETTINGS, newPerDay, focusCountries: ['LT'] };
   return repo;
 }
 
@@ -159,5 +160,22 @@ describe('Practice', () => {
   it('shows an empty state for a scope without cards', async () => {
     renderApp('/session?country=ZZ', repoWith(0));
     expect(await screen.findByRole('region', { name: 'No cards here yet' })).toBeTruthy();
+  });
+
+  it('learns new cards past the daily limit with more=new', async () => {
+    const repo = repoWith(0);
+    renderApp('/session?more=new', repo);
+    expect(await screen.findByText('1 / 3')).toBeTruthy();
+  });
+
+  it('reviews seen cards ahead of time with more=ahead', async () => {
+    const later = { ...dueState('flag:lt'), due: new Date(Date.now() + 86_400_000).toISOString() };
+    const repo = repoWith(0, { cardStates: [later] });
+    renderApp('/session?more=ahead', repo);
+    expect(await screen.findByText('1 / 1')).toBeTruthy();
+    await typeAnswer('Lithuania');
+    await waitFor(() =>
+      expect(repo.reviews[0]).toMatchObject({ cardId: 'flag:lt', correct: true }),
+    );
   });
 });

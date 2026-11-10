@@ -233,7 +233,7 @@ export interface Settings {
 
 export const DEFAULT_SETTINGS: Settings = {
   maxReviewsPerDay: 200,
-  newPerDay: 15,
+  newPerDay: 30,
   desiredRetention: 0.9,
   blockDays: 14,
   blockMinutes: 20,
