@@ -2,6 +2,7 @@ import type {
   BlockDay,
   Card,
   CardState,
+  ClueImageOverride,
   Confusion,
   Review,
   Round,
@@ -14,6 +15,19 @@ import type {
 /** A card or tip edited in the editor; replaces the bundled item with the same id. */
 export type CardOverride =
   { id: string; kind: 'card'; data: Card } | { id: string; kind: 'tip'; data: Tip };
+
+/** A Street View spot the learner keeps, from a round (`saved_spots`). */
+export interface SavedSpot {
+  country: string;
+  clueId?: string;
+  pano?: string;
+  lat: number;
+  lng: number;
+  heading: number;
+  pitch: number;
+  fov: number;
+  note?: string;
+}
 
 export interface Pairing {
   createdAt: string;
@@ -50,6 +64,15 @@ export interface Repository {
   listCardOverrides(): Promise<CardOverride[]>;
   saveCardOverride(override: CardOverride): Promise<void>;
   deleteCardOverride(id: string): Promise<void>;
+
+  /** The admin's corrections to clue images; empty when there are none or they cannot be read. */
+  listClueImageOverrides(): Promise<ClueImageOverride[]>;
+  /**
+   * Signed URLs for paths in the private `clues` bucket, by path. Paths that cannot be signed are
+   * left out (local mode signs none), so callers fall back to the image's original URL.
+   */
+  signClueImages(paths: string[]): Promise<Record<string, string>>;
+  saveSpot(spot: SavedSpot): Promise<void>;
 
   /** Cloud only: metadata of the current extension pairing; null when none or in local mode. */
   getPairing(): Promise<Pairing | null>;

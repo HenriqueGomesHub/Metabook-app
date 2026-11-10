@@ -24,6 +24,8 @@ export function CroppedImage({
   size,
   className,
   loading,
+  onLoad,
+  onError,
 }: {
   src: string;
   crop: Crop | null;
@@ -32,6 +34,8 @@ export function CroppedImage({
   size?: { width: number | null; height: number | null };
   className?: string;
   loading?: 'lazy';
+  onLoad?(): void;
+  onError?(): void;
 }) {
   const [loaded, setLoaded] = useState<{ width: number; height: number } | null>(null);
   const fallback = !!crop && !supportsViewBox;
@@ -42,11 +46,22 @@ export function CroppedImage({
     if (!fallback || known) return;
     const probe = new Image();
     probe.onload = () => setLoaded({ width: probe.naturalWidth, height: probe.naturalHeight });
+    probe.onerror = () => onError?.();
     probe.src = src;
-  }, [fallback, known, src]);
+  }, [fallback, known, src, onError]);
+  const events = { onLoad, onError };
 
   if (!crop || (fallback && !natural)) {
-    return <img className={className} src={src} alt={alt} loading={loading} decoding="async" />;
+    return (
+      <img
+        className={className}
+        src={src}
+        alt={alt}
+        loading={loading}
+        decoding="async"
+        {...events}
+      />
+    );
   }
   if (!fallback) {
     const style = { objectFit: fit, objectViewBox: viewBox(crop) } as CSSProperties;
@@ -58,6 +73,7 @@ export function CroppedImage({
         style={style}
         loading={loading}
         decoding="async"
+        {...events}
       />
     );
   }
@@ -71,7 +87,7 @@ export function CroppedImage({
       viewBox={`${crop.x * width} ${crop.y * height} ${crop.w * width} ${crop.h * height}`}
       preserveAspectRatio={`xMidYMid ${fit === 'cover' ? 'slice' : 'meet'}`}
     >
-      <image href={src} width={width} height={height} />
+      <image href={src} width={width} height={height} {...events} />
     </svg>
   );
 }

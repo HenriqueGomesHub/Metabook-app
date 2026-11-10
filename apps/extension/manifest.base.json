@@ -3,9 +3,10 @@
   "name": "Metabook Companion",
   "version": "0.1.0",
   "description": "Sends finished GeoGuessr round results to your own Metabook. Prototype, not for publishing.",
-  "permissions": ["storage"],
+  "permissions": ["storage", "sidePanel"],
   "background": { "service_worker": "background.js" },
-  "action": { "default_popup": "popup.html" },
+  "action": { "default_title": "Metabook" },
+  "side_panel": { "default_path": "sidepanel.html" },
   "content_scripts": [
     {
       "matches": ["https://www.geoguessr.com/game/*"],

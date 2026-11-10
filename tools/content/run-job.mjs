@@ -3,15 +3,35 @@
 // every step, and any crash (bad job file, imports, ...) is written as { name, fatal, steps } and
 // exits 0, so the workflow's commit step still has something to commit. Only a missing argument
 // exits non-zero.
-// CLI: node tools/content/run-job.mjs content/jobs/pl-test.json
-//      node tools/content/run-job.mjs --name content/jobs/pl-test.json   (prints the job's name)
+// CLI: node tools/content/run-job.mjs content/jobs/clues-fetch.json
+//      node tools/content/run-job.mjs --name content/jobs/clues-fetch.json   (prints the job's name)
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { CONTENT, ROOT, loadPool, resolveCountries, writeJson } from './lib/common.mjs';
 
-export const STEPS = ['facts', 'commons', 'mapillary', 'regions', 'collect', 'generate', 'pack', 'review', 'rereview', 'rename'];
+export const STEPS = [
+  'plonkit',
+  'learnablemeta',
+  'links',
+  'clues',
+  'clueimages',
+  'wipemedia',
+  'facts',
+  'regions',
+  'generate',
+  // photo pipeline before the clue catalogue, no longer used
+  'commons',
+  'mapillary',
+  'collect',
+  'pack',
+  'review',
+  'rereview',
+  'rename',
+];
 const DEFAULT_SUBJECTS = ['bollard', 'pole', 'plate', 'sign'];
+/** The clue steps share one budget per job, so a run ends in time to commit what it has. */
+const DEFAULT_JOB_BUDGET_MINUTES = 80;
 
 const NAME = /^[\w-]+$/;
 
@@ -30,6 +50,7 @@ export function parseJob(text) {
   const job = JSON.parse(text);
   if (!job.name || !NAME.test(job.name)) throw new Error('job.name must be letters, digits, - or _');
   if (job.budgetMinutes != null && !(job.budgetMinutes > 0)) throw new Error('job.budgetMinutes must be a positive number');
+  if (job.refreshDays != null && !(job.refreshDays > 0)) throw new Error('job.refreshDays must be a positive number');
   if (!job.countries) throw new Error('job.countries is required (array of codes or "all")');
   const steps = job.steps ?? [];
   const unknown = steps.filter((s) => !STEPS.includes(s));
@@ -91,10 +112,38 @@ function clients() {
 export async function runJob(job, { steps = [], onStep } = {}) {
   const countries = resolveCountries(job.countries, loadPool());
   const getClients = clients();
+  const deadline = Date.now() + (job.budgetMinutes ?? DEFAULT_JOB_BUDGET_MINUTES) * 60_000;
+  const only = job.countries === 'all' ? undefined : countries;
   for (const step of job.steps) {
     const start = Date.now();
     let result;
-    if (step === 'facts') {
+    if (step === 'plonkit') {
+      const { runPlonkit } = await import('./plonkit.mjs');
+      result = { all: await timed(() => runPlonkit({ deadline, refreshDays: job.refreshDays })) };
+    } else if (step === 'learnablemeta') {
+      const { runLearnableMeta } = await import('./learnablemeta.mjs');
+      result = { all: await timed(() => runLearnableMeta({ deadline, refreshDays: job.refreshDays })) };
+    } else if (step === 'links') {
+      const { runLinks } = await import('./links.mjs');
+      result = { all: await timed(() => runLinks({ deadline })) };
+    } else if (step === 'clues') {
+      const { writeClues } = await import('./clues.mjs');
+      result = { all: await timed(async () => writeClues({ only: only?.map((c) => c.toUpperCase()) })) };
+    } else if (step === 'clueimages') {
+      const { createStorage } = await import('./storage.mjs');
+      const { runClueImages } = await import('./clueimages.mjs');
+      result = {
+        all: await timed(async () => {
+          const storage = createStorage({ bucket: 'clues', isPublic: false });
+          await storage.ensureBucket();
+          return runClueImages({ storage, deadline, only });
+        }),
+      };
+    } else if (step === 'wipemedia') {
+      const { createStorage } = await import('./storage.mjs');
+      const { wipeMedia } = await import('./wipemedia.mjs');
+      result = { all: await timed(() => wipeMedia({ storage: createStorage() })) };
+    } else if (step === 'facts') {
       const { updateFacts } = await import('./wikidata.mjs');
       const all = await timed(async () => ({ countries: await updateFacts(countries) }));
       result = all.ok

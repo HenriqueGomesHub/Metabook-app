@@ -1,46 +1,72 @@
 # Content tools
 
-Fetch facts, photos and region maps into `content/`. They run in GitHub Actions
-(`.github/workflows/content.yml`), because the APIs are not reachable from every machine. Each
-module also has a CLI for local use (`node tools/content/<module>.mjs --help`-style flags in its
-header comment).
+Fetch the clue catalogue (Plonk It and Learnable Meta), facts and region maps into `content/`. They run
+in GitHub Actions (`.github/workflows/content.yml`), because the sites are not reachable from every
+machine. Each module also has a CLI or exported functions for local use.
 
 ## Running a job
 
 1. Write `content/jobs/<name>.json`:
 
    ```json
-   {
-     "name": "pl-test",
-     "countries": ["pl"],
-     "steps": ["facts", "commons", "mapillary", "regions", "generate"],
-     "subjects": ["bollard", "pole", "plate", "sign"],
-     "perSubject": 30
-   }
+   {"name":"clues-fetch","countries":"all","steps":["plonkit","learnablemeta","links","clues"],"budgetMinutes":80}
    ```
 
    - `countries`: lower-case ISO codes from `content/pool.json`, or `"all"` for every `in_pool` country.
-   - `steps`: run in the order given; any of `facts`, `commons`, `mapillary`, `regions`, `collect`, `generate`, `pack`, `review`.
-   - `subjects`: for `commons` and `mapillary` (default `bollard, pole, plate, sign`).
-   - `perSubject`: at most this many **new** photos queued per country and subject (default 40).
-   - `budgetMinutes`: wall-clock budget for the `mapillary` step, per country (default 12). When it runs
-     out, sampling stops and that country's result carries `budgetHit: true`. Graph calls time out after
-     15 s with one retry.
+   - `steps`: run in the order given (see below).
+   - `budgetMinutes`: wall-clock budget shared by the clue steps of one job (default 80, inside the
+     workflow's 90-minute timeout). When it runs out the step stops with `budgetHit: true`; everything
+     done so far is saved and the next run carries on from there. For `mapillary` it is per country.
+   - `refreshDays`: for `plonkit` and `learnablemeta`, re-fetch cached pages older than this many days
+     (default: never re-fetch a cached page).
 
-2. Push it (any branch). The workflow runs the job, then commits `content/` back to the same branch
-   as `content: <name> [skip ci]`. Pull to see it.
-3. Read `content/jobs/<name>.result.json`: per step and country, `ok`, `counts`, `errors` and `ms`,
-   plus `validation` (the output of `content/validate.mjs`). One country failing never stops the others.
-   The file is rewritten after every step (`finishedAt` is `null` until the job is done). If the job
-   itself crashes (bad job file, unknown country, a missing import) the file is
-   `{ name, fatal, steps }` with the steps finished so far, and the run still exits 0 so the results
-   are committed. If the runner dies before `run-job` writes anything, the workflow commits a stub with
-   a `fatal` pointing at the Actions log.
+2. Push it to any branch but `main`. The workflow runs the job, then commits `content/` back to the
+   same branch as `content: <name> [skip ci]`. Pull to see it.
+3. Read `content/jobs/<name>.result.json`: per step, `ok`, `counts`, `errors` and `ms` (global steps
+   report under `all`), plus `validation` (the output of `content/validate.mjs`). The file is rewritten
+   after every step (`finishedAt` is `null` until the job is done). If the job itself crashes the file
+   is `{ name, fatal, steps }` and the run still exits 0 so the results are committed.
 
-To re-run a job, change something in its file (or use **Run workflow** in the Actions tab with the
-file path). Re-runs never duplicate photos: the queue skips anything it has seen, whatever its status.
+To re-run a job, change something in its file (any extra field, e.g. `"run": 2`), or use **Run
+workflow** in the Actions tab with the file path. Jobs pushed together run in parallel, so push
+`clues-images.json` only after `clues-fetch` has committed its clues.
 
-## Steps
+## Clue pipeline
+
+Job files: `clues-fetch` (`plonkit`, `learnablemeta`, `links`, `clues`), then `clues-images`
+(`clueimages`), and once `wipe-media` (`wipemedia`). Field by field description: `content/clues/SCHEMA.md`.
+
+| Step | Does | Needs |
+| --- | --- | --- |
+| `plonkit` | Fetches https://www.plonkit.net/guide and every country page in it (not `spillover-countries`, `maps`, `beginners-guide`, `middle-earth`), one request every 4 s with a browser User-Agent. Each page's `__PRELOADED_DATA__` JSON plus `fetchedAt` goes to `content/sources/plonkit/<slug>.json`, the guide's to `_guide.json`. A page without the JSON (Cloudflare challenge) is retried after 30 s, 60 s, 90 s. Cached pages are skipped. | nothing |
+| `learnablemeta` | Fetches https://learnablemeta.com/api/maps/ into `content/sources/learnablemeta/maps.json` and each map's `/maps/<geoguessrId>/__data.json` (SvelteKit devalue, unflattened with `devalue`) into `<geoguessrId>.json`: `mapName`, `authors`, `metas[{id, name, note, images, locationsCount, footer}]`. One request every 2 s; cached maps are skipped. | nothing |
+| `links` | Resolves every short Google Maps image link of the cached Plonk It pages (goo.gl/maps, maps.app.goo.gl) by following up to 5 redirects by hand, one request per second, into `content/sources/links.json` (`{ "<short url>": { url } \| { error } }`). Cached links are skipped; 429/5xx/network errors are retried on the next run, and 20 failures in a row stop the step. | nothing |
+| `clues` | Offline, from `content/sources`: writes `content/clues/<code>.json` (`ClueCountry`) for every pool country with a Plonk It page or a Learnable Meta meta, and `content/clues/index.json`. Deterministic, so re-runs give clean diffs; image `path`/`width`/`height` from `clueimages` are kept. Metas whose name prefix is no pool country are listed in the result as `unmatched`. Locally: `node tools/content/clues.mjs --sources <dir> --out <dir>`. | nothing |
+| `clueimages` | Copies every clue image without `path` into the private `clues` bucket as `<code>/<image id>.webp` (1280 px wide at most, WebP q78; sharp also reads Learnable Meta's AVIF) and records `path`, `width`, `height`. 0.5 s between downloads per host; failures are listed and retried next run. | Supabase secrets, migration 0006 |
+| `wipemedia` | Deletes every object of the old public `media` bucket (all folders), 100 per request, and reports the counts. | Supabase secrets |
+
+How a clue is built:
+
+- One clue per Plonk It `tip` item (`<code>-<item id>`), steps and order as on the page; other items
+  (summary maps, dividers) are skipped. Family from the Plonk It tags, else the keyword found earliest
+  in the first paragraph, then the whole text, else `other`; a sign's kind from keywords (tagged signs
+  default to `chevron`). Title: family label plus the first clause of the first sentence.
+- `region`: in a regional step only, the first-level region names (from `content/maps`) in the first
+  sentence, at most 3. `lookalikes`: other pool countries named in the text (names and common aliases).
+- Images: `id` = 12 hex chars of sha1(src); `location` from the image's Google Maps link; `giveaway`
+  when the file name says map/summary/region/distribution or the text says "map" (a first guess).
+- Sub-territory pages (Plonk It codes `US-AK`, `US-HI`, `PT-AZ`, `PT-MA`) join their parent country
+  when the pool has no entry of their own: ids `us-ak-<item id>`, `region` = the page title, steps
+  prefixed with it. Pages of countries outside the pool (`UM-MQ`, `AQ`, `CN`…) are skipped.
+- A Learnable Meta meta goes to the country its name starts with ("Germany - Bollard"). When its
+  footer links that country's Plonk It page and the thing's family has a Plonk It clue whose text
+  shares enough words with the note, its images join that clue; otherwise it becomes its own clue
+  `<code>-lm-<meta id>` in a "Learnable Meta" step. Metas repeated across maps count once.
+
+## Older steps
+
+The photo pipeline before the clue catalogue (`commons`, `mapillary`, `collect`, `pack`, `review`,
+`rereview`, `rename`) is still in the code but no longer used; `facts`, `regions` and `generate` are.
 
 | Step | Does | Needs |
 | --- | --- | --- |

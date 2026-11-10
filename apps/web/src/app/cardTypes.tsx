@@ -75,8 +75,18 @@ export const CARD_TYPES: Record<CardType, { label: string; blurb: string; icon: 
       </>
     ),
   },
-  'photo-choice': {
-    label: 'Photo picks',
+  spot: {
+    label: 'Spot it',
+    blurb: 'A clue’s photo: which country?',
+    icon: (
+      <>
+        <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+        <circle cx="12" cy="12" r="3" />
+      </>
+    ),
+  },
+  which: {
+    label: 'Which clue',
     blurb: 'Find the country’s bollard, pole or plate',
     icon: (
       <>
@@ -87,6 +97,20 @@ export const CARD_TYPES: Record<CardType, { label: string; blurb: string; icon: 
       </>
     ),
   },
+  live: {
+    label: 'Live view',
+    blurb: 'The clue’s own Street View spot',
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M3.5 12h17" />
+        <path d="M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5z" />
+      </>
+    ),
+  },
 };
 
 export const TYPE_ORDER = Object.keys(CARD_TYPES) as CardType[];
+
+/** Types made from the clue catalogue; drills group them by clue family instead of by type. */
+export const CLUE_TYPES: readonly CardType[] = ['spot', 'which', 'live'];

@@ -2,6 +2,8 @@ import { DEFAULT_SETTINGS } from '@metabook/core';
 import type {
   BlockDay,
   CardState,
+  ClueImageOverride,
+  CropBox,
   Confusion,
   Review,
   Round,
@@ -10,11 +12,13 @@ import type {
   TrainingBlock,
 } from '@metabook/core';
 import type { SupabaseClient } from '@supabase/supabase-js';
-import type { CardOverride, Pairing, Repository } from './repository';
+import type { CardOverride, Pairing, Repository, SavedSpot } from './repository';
 
 type Row = Record<string, unknown>;
 
 const PAGE = 1000;
+/** signed clue image URLs live an hour; the app re-signs after 50 minutes */
+const SIGNED_SECONDS = 3600;
 
 const toSnake = (key: string) => key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`);
 const toCamel = (key: string) => key.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase());
@@ -141,6 +145,43 @@ export class SupabaseRepository implements Repository {
 
   async deleteCardOverride(id: string): Promise<void> {
     const { error } = await this.client.from('card_overrides').delete().eq('id', id);
+    check(error);
+  }
+
+  async listClueImageOverrides(): Promise<ClueImageOverride[]> {
+    try {
+      const rows = await this.selectAll('clue_image_overrides', 'image_id');
+      return rows.map((row) => ({
+        imageId: String(row.image_id),
+        clueId: String(row.clue_id),
+        crop: (row.crop as CropBox | null) ?? null,
+        hidden: row.hidden === true,
+      }));
+    } catch {
+      // the table arrives with migration 0006; until then there are no overrides
+      return [];
+    }
+  }
+
+  async signClueImages(paths: string[]): Promise<Record<string, string>> {
+    if (paths.length === 0) return {};
+    try {
+      const { data, error } = await this.client.storage
+        .from('clues')
+        .createSignedUrls(paths, SIGNED_SECONDS);
+      if (error || !data) return {};
+      return Object.fromEntries(
+        data.flatMap((item) =>
+          item.path && item.signedUrl && !item.error ? [[item.path, item.signedUrl]] : [],
+        ),
+      );
+    } catch {
+      return {};
+    }
+  }
+
+  async saveSpot(spot: SavedSpot): Promise<void> {
+    const { error } = await this.client.from('saved_spots').insert(toRow(spot));
     check(error);
   }
 

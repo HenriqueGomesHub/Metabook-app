@@ -2,6 +2,7 @@ import { DEFAULT_SETTINGS } from '@metabook/core';
 import type {
   BlockDay,
   CardState,
+  ClueImageOverride,
   Confusion,
   Review,
   Round,
@@ -9,7 +10,7 @@ import type {
   TipView,
   TrainingBlock,
 } from '@metabook/core';
-import type { CardOverride, Repository } from '../data/repository';
+import type { CardOverride, Repository, SavedSpot } from '../data/repository';
 
 const upsert = <T>(items: T[], next: T[], same: (a: T, b: T) => boolean): T[] => [
   ...items.filter((item) => !next.some((n) => same(item, n))),
@@ -27,6 +28,11 @@ export class MemoryRepository implements Repository {
   blocks: TrainingBlock[] = [];
   blockDays: BlockDay[] = [];
   overrides: CardOverride[] = [];
+  clueOverrides: ClueImageOverride[] = [];
+  /** signed URLs by bucket path; paths not listed cannot be signed */
+  signed: Record<string, string> = {};
+  signCalls: string[][] = [];
+  spots: SavedSpot[] = [];
 
   constructor(seed: Partial<Pick<MemoryRepository, 'cardStates' | 'reviews' | 'confusions'>> = {}) {
     Object.assign(this, seed);
@@ -90,6 +96,16 @@ export class MemoryRepository implements Repository {
   }
   async deleteCardOverride(id: string) {
     this.overrides = this.overrides.filter((o) => o.id !== id);
+  }
+  async listClueImageOverrides() {
+    return this.clueOverrides;
+  }
+  async signClueImages(paths: string[]) {
+    this.signCalls.push(paths);
+    return Object.fromEntries(paths.flatMap((p) => (this.signed[p] ? [[p, this.signed[p]]] : [])));
+  }
+  async saveSpot(spot: SavedSpot) {
+    this.spots = [...this.spots, spot];
   }
   async getPairing() {
     return null;

@@ -73,5 +73,5 @@ function cloudAuth(supabase: SupabaseClient): Auth {
 export const mode: Mode = client ? 'cloud' : 'local';
 export const repo: Repository = client ? new SupabaseRepository(client) : new LocalRepository();
 export const auth: Auth = client ? cloudAuth(client) : localAuth;
-/** Photo curation, cloud mode only; whether the user may use it is `curation.isAdmin()`. */
+/** Clue image curation, cloud mode only; whether the user may use it is `curation.isAdmin()`. */
 export const curation: CurationApi | null = client ? supabaseCuration(client) : null;

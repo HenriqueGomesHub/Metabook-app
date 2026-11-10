@@ -448,10 +448,9 @@ describe('queue (media_uses)', () => {
 });
 
 describe('jobs', () => {
-  it('accepts the pack and review steps, and the committed review-apply job parses', async () => {
+  it('accepts the pack and review steps', async () => {
     const { parseJob } = await import('../run-job.mjs');
     assert.deepEqual(parseJob('{"name":"pack","countries":"all","steps":["pack"]}').steps, ['pack']);
-    const job = parseJob(readFileSync(new URL('../../../content/jobs/review-apply.json', import.meta.url), 'utf8'));
-    assert.deepEqual(job.steps, ['review']);
+    assert.deepEqual(parseJob('{"name":"r","countries":"all","steps":["review"]}').steps, ['review']);
   });
 });

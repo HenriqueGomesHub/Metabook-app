@@ -44,8 +44,11 @@ Tip `answer` must equal a card `answer` (country name, region id, UF code) or `d
   missing, plus hand-written `notes` (`FactNote`: `id, subject, text, region?, distinctive?, lookalikes?,
   source, checked, verified`). `region` is free text; `lookalikes` are pool codes or names. Note text can
   become a card prompt, so it should not name the country.
-- `media/<code>.json` - approved photos (`MediaItem[]`), written by the `collect` step; `url` is a path in
-  the Supabase `media` bucket. Every item has a licence, credit and sourceUrl.
+- `clues/<code>.json` - the clue catalogue (`ClueCountry`, `packages/core/src/clues.ts`) from Plonk It and
+  Learnable Meta, plus `clues/index.json` (clue, image and family counts per country). Written by the
+  `clues` and `clueimages` steps, never by hand; fields described in `clues/SCHEMA.md`.
+- `sources/plonkit/`, `sources/learnablemeta/`, `sources/links.json` - the raw pages, maps and resolved
+  Street View links the `clues` step reads (cached by the `plonkit`, `learnablemeta` and `links` steps).
 - `maps/<code>-regions.json` - generated region maps, same shape as `br-states.json`.
 - `cards/generated-<code>.json` - written by `tools/content/generate.mjs` on every run; never edit them.
 - `jobs/<name>.json` - content jobs; the workflow writes `jobs/<name>.result.json`. See `tools/content/README.md`.
@@ -54,8 +57,9 @@ File names and the codes inside facts and media files are lower case (`pl`); car
 codes of `pool.json`.
 - `validate.mjs` - `node content/validate.mjs` checks unique ids, required fields, http(s) sources,
   card.country in pool, options include answer, 2-digit area codes, known chapters; facts (codes, subjects,
-  sources, `checked` dates, lookalikes) and media (licence, credit, sourceUrl, notes); every `card.media` id
-  exists. Also `npm run validate:content`.
+  sources, `checked` dates, lookalikes), media (licence, credit, sourceUrl, notes), every `card.media` id
+  exists, and clues (ids unique across files, country in pool, family and sign kind, credit, image ids,
+  finite location numbers). Also `npm run validate:content`.
 
 ## Sources policy
 Every card and tip carries a `source` URL of the page where it can be checked, and `verified` says whether

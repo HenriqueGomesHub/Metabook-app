@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: 'Job file, e.g. content/jobs/pl-test.json'
+        description: 'Job file, e.g. content/jobs/clues-fetch.json'
         required: true
 
 permissions:
