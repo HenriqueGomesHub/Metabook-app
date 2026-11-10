@@ -2,5 +2,16 @@
   "installCommand": "npm ci",
   "buildCommand": "npm run build -w @metabook/web",
   "outputDirectory": "apps/web/dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "review/**": false,
+      "review-pack": false
+    }
+  }
 }
