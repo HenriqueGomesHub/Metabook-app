@@ -182,11 +182,11 @@ describe('Subjects', () => {
 });
 
 describe('Country', () => {
-  it('lists chapters and links the area-code chapter to its game', async () => {
+  it('lists chapters and links the area-code chapter to its pattern page', async () => {
     mount('/atlas/BR');
     expect(await screen.findByRole('heading', { name: 'Brazil' })).toBeTruthy();
     const link = screen.getByRole('link', { name: /Area codes/ });
-    expect(link.getAttribute('href')).toBe('/games/areacode/br');
+    expect(link.getAttribute('href')).toBe('/areacodes/br');
     expect(screen.getByRole('link', { name: /Study Brazil/ }).getAttribute('href')).toBe(
       '/session?country=BR',
     );
@@ -222,10 +222,10 @@ describe('Country', () => {
 });
 
 describe('Games', () => {
-  it('only links the playable Brazil area-code game', async () => {
+  it('only links the playable Brazil area codes, through their pattern page', async () => {
     mount('/games');
     expect((await screen.findByRole('link', { name: /Brazil/ })).getAttribute('href')).toBe(
-      '/games/areacode/br',
+      '/areacodes/br',
     );
     expect(screen.queryByRole('link', { name: /Japan/ })).toBeNull();
   });

@@ -40,9 +40,7 @@ export function Country() {
 
 function chapterLink(id: string): string {
   const areaCodes = /^([a-z]{2}):areacodes$/.exec(id);
-  return areaCodes
-    ? `/games/areacode/${areaCodes[1]}`
-    : `/session?chapter=${encodeURIComponent(id)}`;
+  return areaCodes ? `/areacodes/${areaCodes[1]}` : `/session?chapter=${encodeURIComponent(id)}`;
 }
 
 function CountryView({
@@ -110,7 +108,7 @@ function CountryView({
         order: chapterList.length + 1,
         title: 'Area codes',
         subtitle: 'See a code, click the region',
-        to: `/games/areacode/${code.toLowerCase()}`,
+        to: `/areacodes/${code.toLowerCase()}`,
         cards: codeCards,
       });
     }
