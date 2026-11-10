@@ -230,6 +230,45 @@ describe('buildSession', () => {
     expect(build(7)).not.toEqual(build(8));
   });
 
+  it('draws new cards from the curriculum: active countries, siblings apart, same all day', () => {
+    const clueCard = (country: string, clue: string, type: CardType, n = 0): Card => ({
+      ...card(`clue:${clue}:${type}:${n}`, type, country),
+      subject: 'bollard',
+      clue: { id: clue },
+    });
+    const cards = ['FR', 'US', 'BR', 'JP', 'RU', 'CA'].flatMap((code) =>
+      [1, 2, 3].flatMap((i) => [
+        clueCard(code, `${code}-${i}`, 'spot'),
+        clueCard(code, `${code}-${i}`, 'spot', 1),
+        clueCard(code, `${code}-${i}`, 'which'),
+      ]),
+    );
+    const morning = new Date(2026, 2, 15, 8);
+    const evening = new Date(2026, 2, 15, 20);
+    const build = (at: Date, introducedToday: string[] = []) =>
+      buildSession({
+        cards,
+        states: {},
+        confusions: [],
+        settings: { ...settings, newPerDay: 12 },
+        introducedToday,
+        now: at,
+      }).queue.map((i) => i.cardId);
+    const queue = build(morning);
+    const byId = new Map(cards.map((c) => [c.id, c]));
+    expect(new Set(queue.map((id) => byId.get(id)?.country))).toEqual(
+      new Set(['US', 'BR', 'RU', 'CA']),
+    );
+    queue.forEach((id, i) => {
+      if (i > 0) expect(byId.get(id)?.clue?.id).not.toBe(byId.get(queue[i - 1]!)?.clue?.id);
+    });
+    // no reshuffle on reload during the day
+    expect(build(evening)).toEqual(queue);
+    // a clue with two cards introduced today gets no third
+    const twice = build(morning, ['clue:US-1:spot:0', 'clue:US-1:which:0']);
+    expect(twice.filter((id) => id.startsWith('clue:US-1:'))).toEqual([]);
+  });
+
   describe('training block', () => {
     const block: TrainingBlock = {
       id: 'b1',

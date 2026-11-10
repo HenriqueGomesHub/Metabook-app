@@ -3,6 +3,7 @@ export * from './clues';
 export * from './answers';
 export * from './blocks';
 export * from './confusions';
+export * from './curriculum';
 export * from './generate';
 export * from './geo';
 export * from './mastery';

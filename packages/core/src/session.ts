@@ -1,5 +1,6 @@
 import { matchesTarget } from './blocks';
 import { activePairs, CONTRAST_STREAK_TO_RESOLVE, isMapKey } from './confusions';
+import { clueOf, pickNewCards } from './curriculum';
 import { mulberry32, shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
 import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } from './types';
@@ -11,6 +12,8 @@ export interface SessionItem {
   mode: SessionMode;
   /** set on contrast rounds: [picked, truth] of the confusion being drilled */
   contrastPair?: [string, string];
+  /** practice: a Spot it card shown with this other image of its clue (see cardForItem) */
+  imageId?: string;
 }
 
 export interface Session {
@@ -56,14 +59,16 @@ function mix<T>(reviews: T[], fresh: T[]): T[] {
 }
 
 /**
- * Reorders so no type runs longer than MAX_RUN, staying as close to the input order as possible.
- * Picks are checked against the remaining counts so a dominant type is not stranded at the end.
+ * Reorders so no type runs longer than MAX_RUN and no two cards of one clue are back to back,
+ * staying as close to the input order as possible. Picks are checked against the remaining counts
+ * so a dominant type is not stranded at the end; keeping siblings apart comes first.
  */
-function interleave(cards: Card[]): Card[] {
+export function interleave(cards: Card[]): Card[] {
   const rest = [...cards];
   const out: Card[] = [];
   let runType: CardType | undefined;
   let runLength = 0;
+  let lastClue: string | undefined;
 
   while (rest.length) {
     const counts = new Map<CardType, number>();
@@ -76,15 +81,18 @@ function interleave(cards: Card[]): Card[] {
         return left <= MAX_RUN * (others + 1) - (t === type ? nextRun(type) : 0);
       });
     const fits = (card: Card) => nextRun(card.type) <= MAX_RUN;
+    const apart = (card: Card) => lastClue === undefined || clueOf(card) !== lastClue;
 
     const index = [
-      rest.findIndex((card) => fits(card) && feasibleAfter(card.type)),
-      rest.findIndex(fits),
+      rest.findIndex((card) => apart(card) && fits(card) && feasibleAfter(card.type)),
+      rest.findIndex((card) => apart(card) && fits(card)),
+      rest.findIndex(apart),
       0,
     ].find((i) => i >= 0) as number;
     const [card] = rest.splice(index, 1) as [Card];
     runLength = nextRun(card.type);
     runType = card.type;
+    lastClue = clueOf(card);
     out.push(card);
   }
   return out;
@@ -129,21 +137,11 @@ function sideOrder(count: number, rng: Rng): (0 | 1)[] {
   return order;
 }
 
-/** Takes cards round-robin across types (stable within a type), with the type order shuffled. */
-function roundRobinByType(cards: Card[], rng: Rng): Card[] {
-  const byType = new Map<CardType, Card[]>();
-  for (const card of cards) byType.set(card.type, [...(byType.get(card.type) ?? []), card]);
-  const queues = shuffle([...byType.values()], rng);
-  const out: Card[] = [];
-  for (let round = 0; out.length < cards.length; round++) {
-    for (const queue of queues) if (queue[round]) out.push(queue[round] as Card);
-  }
-  return out;
-}
-
 /**
  * Today's queue: contrast rounds first, then due reviews (oldest first, capped) mixed with new
- * cards, topped up with weak block-target cards to about 40%, interleaved by type.
+ * cards in curriculum order (block targets first, see curriculum.ts), topped up with weak
+ * block-target cards to about 40%, interleaved by type. Without `rng`, the shuffles are seeded by
+ * the day, so reloading shows the same queue.
  */
 export function buildSession(input: {
   cards: Card[];
@@ -155,6 +153,8 @@ export function buildSession(input: {
   rng?: Rng;
   /** already done today; lowers the daily caps so repeat sessions don't hand out a fresh batch */
   doneToday?: { reviews: number; newCards: number };
+  /** ids of the cards first answered today, for the curriculum's per-clue daily limit */
+  introducedToday?: string[];
 }): Session {
   const { cards, states, confusions, block, now } = input;
   const done = input.doneToday ?? { reviews: 0, newCards: 0 };
@@ -163,12 +163,12 @@ export function buildSession(input: {
     maxReviewsPerDay: Math.max(0, input.settings.maxReviewsPerDay - done.reviews),
     newPerDay: Math.max(0, input.settings.newPerDay - done.newCards),
   };
-  const rng = input.rng ?? mulberry32(now.getTime());
+  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const rng = input.rng ?? mulberry32(startOfToday);
   const isTarget = (card: Card) => block?.targets.some((t) => matchesTarget(card, t)) ?? false;
   const stateOf = (card: Card) => states[card.id];
   const isSeen = (card: Card) => (stateOf(card)?.state ?? 'new') !== 'new';
 
-  const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
   const due = cards
     .filter((card) => isSeen(card) && Date.parse(stateOf(card)?.due ?? '') <= now.getTime())
     .sort((a, b) => (stateOf(a)?.due ?? '').localeCompare(stateOf(b)?.due ?? ''));
@@ -178,16 +178,14 @@ export function buildSession(input: {
   const reviews = due.slice(0, cap);
   const fresh = catchUp
     ? []
-    : [
-        ...roundRobinByType(
-          cards.filter((card) => !isSeen(card) && isTarget(card)),
-          rng,
-        ),
-        ...roundRobinByType(
-          cards.filter((card) => !isSeen(card) && !isTarget(card)),
-          rng,
-        ),
-      ].slice(0, settings.newPerDay);
+    : newCards({
+        cards,
+        states,
+        count: settings.newPerDay,
+        introducedToday: input.introducedToday,
+        focus: settings.focusCountries,
+        isTarget,
+      });
 
   const picked = new Set([...reviews, ...fresh]);
   const total = picked.size;
@@ -207,10 +205,7 @@ export function buildSession(input: {
   const contrastIds = new Set(contrast.map((item) => item.cardId));
   const notContrast = (card: Card) => !contrastIds.has(card.id);
   const ordered = interleave(
-    mix(
-      shuffle([...reviews, ...blockExtras].filter(notContrast), rng),
-      shuffle(fresh.filter(notContrast), rng),
-    ),
+    mix(shuffle([...reviews, ...blockExtras].filter(notContrast), rng), fresh.filter(notContrast)),
   );
   return {
     queue: [
@@ -220,4 +215,73 @@ export function buildSession(input: {
     catchUp,
     remaining: due.length - reviews.length,
   };
+}
+
+/** New cards in curriculum order, block targets first. */
+function newCards(input: {
+  cards: Card[];
+  states: Record<string, CardState>;
+  count: number;
+  introducedToday?: string[];
+  focus?: string[];
+  isTarget(card: Card): boolean;
+}): Card[] {
+  const { cards, isTarget, ...rest } = input;
+  const targets = pickNewCards({ ...rest, cards: cards.filter(isTarget) });
+  const others = pickNewCards({
+    ...rest,
+    cards: cards.filter((card) => !isTarget(card)),
+    count: input.count - targets.length,
+    introducedToday: [...(input.introducedToday ?? []), ...targets.map((card) => card.id)],
+  });
+  return [...targets, ...others];
+}
+
+const asItems = (cards: Card[], states: Record<string, CardState>): SessionItem[] =>
+  interleave(cards).map((card) => ({ cardId: card.id, mode: modeFor(card, states[card.id]) }));
+
+/** New cards past the daily limit learned on request ("Learn 15 more"), like Anki's custom study. */
+export const LEARN_MORE = 15;
+/** Cards in a review-ahead session ("Practise more"). */
+export const PRACTISE_MORE = 20;
+
+/**
+ * "Learn more": `count` new cards beyond today's limit, in curriculum order, without touching the
+ * settings. The per-clue daily limit still holds.
+ */
+export function learnMoreSession(input: {
+  cards: Card[];
+  states: Record<string, CardState>;
+  settings: Pick<Settings, 'focusCountries'>;
+  introducedToday?: string[];
+  count?: number;
+}): Session {
+  const fresh = pickNewCards({
+    cards: input.cards,
+    states: input.states,
+    count: input.count ?? LEARN_MORE,
+    introducedToday: input.introducedToday,
+    focus: input.settings.focusCountries,
+  });
+  return { queue: asItems(fresh, input.states), catchUp: false, remaining: 0 };
+}
+
+/**
+ * "Practise more": a review-ahead session of the `count` seen cards with the lowest
+ * retrievability, for when nothing is due.
+ */
+export function practiseMoreSession(input: {
+  cards: Card[];
+  states: Record<string, CardState>;
+  now: Date;
+  count?: number;
+}): Session {
+  const { states, now } = input;
+  const weakest = input.cards
+    .filter((card) => (states[card.id]?.state ?? 'new') !== 'new')
+    .map((card) => ({ card, r: retrievability(states[card.id] as CardState, now) }))
+    .sort((a, b) => a.r - b.r || a.card.id.localeCompare(b.card.id))
+    .slice(0, input.count ?? PRACTISE_MORE)
+    .map(({ card }) => card);
+  return { queue: asItems(weakest, states), catchUp: false, remaining: 0 };
 }
