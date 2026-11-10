@@ -10,8 +10,9 @@ on:
     paths:
       - 'content/jobs/*.json'
       - '!content/jobs/*.result.json'
-      # the review pack has its own workflow (review-pack.yml)
+      # the review pack and the image sheets have their own workflows (review-pack.yml, review-images.yml)
       - '!content/jobs/pack.json'
+      - '!content/jobs/imagesheets.json'
   workflow_dispatch:
     inputs:
       job:
@@ -47,7 +48,7 @@ jobs:
           else
             files=$(git diff --name-only --diff-filter=AM "$BEFORE" HEAD -- 'content/jobs/*.json')
           fi
-          files=$(printf '%s\n' $files | grep -v -e '\.result\.json$' -e '^content/jobs/pack\.json$' || true)
+          files=$(printf '%s\n' $files | grep -v -e '\.result\.json$' -e '^content/jobs/pack\.json$' -e '^content/jobs/imagesheets\.json$' || true)
           json=$(printf '%s\n' $files | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(JSON.stringify(s.split(/\s+/).filter(Boolean))))")
           echo "files=$json" >> "$GITHUB_OUTPUT"
           echo "Jobs: $json"

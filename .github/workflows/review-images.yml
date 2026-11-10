@@ -1,0 +1,68 @@
+# Builds the image review sheets (tools/content/imagesheets.mjs, step `imagesheets`): 3 x 3 contact
+# sheets of the non-duplicate clue images plus each image at 768 px, force-pushed as the only content
+# of the orphan branch `review-images` (the images are never committed anywhere else). Run it after
+# the `imagedupes` job has committed its `dupeOf` marks.
+# Push content/jobs/imagesheets.json to any branch but main, or run it by hand.
+# Locally: git fetch origin review-images && git worktree add ../review-images review-images
+name: review-images
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - review-images
+    paths:
+      - 'content/jobs/imagesheets.json'
+  workflow_dispatch:
+    inputs:
+      countries:
+        description: 'Country codes (pl,lt) or all'
+        required: false
+        default: 'all'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: review-images
+  cancel-in-progress: true
+
+jobs:
+  sheets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build the sheets
+        env:
+          COUNTRIES: ${{ github.event.inputs.countries }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -n "$COUNTRIES" ] || [ ! -f content/jobs/imagesheets.json ]; then
+            node -e "const c=process.env.COUNTRIES||'all';console.log(JSON.stringify({name:'imagesheets',countries:c==='all'?'all':c.split(','),steps:['imagesheets']}))" > "$RUNNER_TEMP/imagesheets.json"
+            job="$RUNNER_TEMP/imagesheets.json"
+          else
+            job=content/jobs/imagesheets.json
+          fi
+          node tools/content/run-job.mjs "$job"
+          cp "content/jobs/$(node tools/content/run-job.mjs --name "$job").result.json" review-images/result.json || true
+          test -f review-images/manifest.json
+
+      - name: Push the review-images branch
+        run: |
+          git config user.name "metabook-content-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan review-images-build
+          git rm -r -q --cached .
+          git add -f review-images
+          git commit -q -m "review images: $(node -e "console.log(require('./review-images/manifest.json').sheets)") sheets"
+          git push --force origin HEAD:refs/heads/review-images
