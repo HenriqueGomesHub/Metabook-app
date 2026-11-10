@@ -1,0 +1,123 @@
+{
+ "pr-1NMP": {
+  "title": "Landscape: noticeably drier in the south",
+  "summary": "The south of the island often looks clearly drier than the rest."
+ },
+ "pr-2LXU": {
+  "title": "Landscape: flat plains or rolling hills on coasts",
+  "summary": "Both the north and south coasts are mostly flat coastal plains or gentle rolling hills."
+ },
+ "pr-4QdF": {
+  "title": "Coverage: US territory",
+  "summary": "An overseas territory of the United States, so it counts as the US for country streaks."
+ },
+ "pr-8rin": {
+  "title": "Sign: unique highway shields",
+  "summary": "Highway route shields in four styles: primary, primary urban, secondary and tertiary. These shapes do not appear in any other US state or territory.",
+  "differs": [
+   {
+    "country": "US",
+    "how": "No US state uses these shield designs"
+   }
+  ]
+ },
+ "pr-CcDj": {
+  "title": "Landscape: mountains in the middle, highways only",
+  "summary": "The mountains are in the middle of the island, and coverage there is mostly limited to divided highways."
+ },
+ "pr-FSsp": {
+  "title": "Shops: American store chains",
+  "summary": "US chains such as Wal-Mart are very common. This separates it from nearby Latin American countries, where US stores are rare."
+ },
+ "pr-MALI": {
+  "title": "Sign: stop sign says PARE",
+  "summary": "Stop signs read PARE instead of STOP. The same word is used all over South America and in the Dominican Republic.",
+  "differs": [
+   {
+    "country": "US",
+    "how": "US stop signs say STOP"
+   }
+  ]
+ },
+ "pr-Npkn": {
+  "title": "Google car: older camera, antenna front right",
+  "summary": "The older Gen 3 car (blurrier, softer colours) with an antenna at the front right, tipped with a small white dot. Guam and the Northern Marianas cars have a similar antenna, so check other clues.",
+  "differs": [
+   {
+    "country": "GU",
+    "how": "Guam car also has a front-right antenna, so use other clues"
+   }
+  ]
+ },
+ "pr-TIjg": {
+  "title": "Google car: wide blur, antenna, low camera",
+  "summary": "Almost all coverage uses a small low camera: a wide, rounded blur at the bottom and often a visible antenna. It is lower and rounder than the blur of a pickup truck car."
+ },
+ "pr-avsT": {
+  "title": "Sign: Spanish where US signs use English",
+  "summary": "Signs are commonly in Spanish rather than English, which sets it apart from mainland US roads."
+ },
+ "pr-eA8V": {
+  "title": "Coverage: rural roads are big divided highways",
+  "summary": "In the countryside much of the coverage is on large divided highways."
+ },
+ "pr-hatM": {
+  "title": "Architecture: narrow streets, colourful old town",
+  "summary": "In the north-west tip of the capital: very narrow streets, colourful buildings, Gothic, Renaissance and Baroque styles, and some brick streets."
+ },
+ "pr-lm-13831": {
+  "hide": "duplicate of pr-zV2D"
+ },
+ "pr-lm-17950": {
+  "hide": "duplicate of pr-2LXU"
+ },
+ "pr-lm-17951": {
+  "hide": "duplicate of pr-CcDj"
+ },
+ "pr-lm-17952": {
+  "hide": "duplicate of pr-1NMP"
+ },
+ "pr-lm-51248": {
+  "hide": "duplicate of pr-zV2D"
+ },
+ "pr-m45n": {
+  "title": "Houses: concrete, flat roofs, metal gates",
+  "summary": "Most homes are concrete with flat roofs, and metal gates in front are common, especially in towns. Homes elsewhere in Latin America can look similar."
+ },
+ "pr-nXMf": {
+  "title": "Sign: US speed limit sign in Spanish",
+  "summary": "Speed limit signs have the same shape and size as in the mainland US, but the text is always in Spanish.",
+  "differs": [
+   {
+    "country": "US",
+    "how": "US speed signs use English text"
+   }
+  ]
+ },
+ "pr-nsPb": {
+  "title": "Architecture: Victorian-Spanish wood and masonry",
+  "summary": "In the southern city of Ponce, buildings mix Victorian and Spanish Revival styles, typically wood and masonry."
+ },
+ "pr-sbGW": {
+  "title": "Kilometre marker: tall, green, vertical number",
+  "summary": "A tall green marker with km at the top and a large number written vertically below it."
+ },
+ "pr-x00D": {
+  "title": "Plate: rarely a front plate",
+  "summary": "Front plates are not required, so cars without one are the norm. This helps tell it apart from Guam and the Northern Marianas.",
+  "differs": [
+   {
+    "country": "GU",
+    "how": "Guam cars usually have front plates"
+   },
+   {
+    "country": "MP",
+    "how": "Northern Marianas cars usually have front plates"
+   }
+  ]
+ },
+ "pr-zV2D": {
+  "title": "Phone numbers: area code (787)",
+  "summary": "Phone numbers written (787) XXX-XXXX cover the whole island. The code 939 also appears but is much rarer."
+ }
+}
