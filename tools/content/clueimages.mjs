@@ -9,6 +9,18 @@ import { BROWSER_USER_AGENT, jsonFilesIn, pacer, readJson, request, sleep, write
 
 const SAVE_EVERY = 20;
 
+// plonkit.net answers GitHub's runners with a Cloudflare challenge (HTTP 403). The plonkit-learn repo
+// mirrors each tip's image as app/data/img/<slug>/<item id>.webp; pinned to one commit.
+const PLONKIT_MIRROR =
+  'https://raw.githubusercontent.com/aawwdadstumbal-png/plonkit-learn/044e62780bb008bd42e32b7a896d444a9248efa4/app/data/img';
+
+/** The mirror URL for a Plonk It clue's image, or undefined for other sources. */
+export function plonkitMirror(clue) {
+  const m = /^https:\/\/www\.plonkit\.net\/([\w-]+)$/.exec(clue.credit?.url ?? '');
+  if (!m || clue.credit.source !== 'Plonk It') return undefined;
+  return `${PLONKIT_MIRROR}/${m[1]}/${clue.id.slice(clue.id.lastIndexOf('-') + 1)}.webp`;
+}
+
 export async function runClueImages({ storage, dir = CLUES_DIR, deadline = Infinity, only, pause = sleep } = {}) {
   const pacers = new Map();
   const download = async (src) => {
@@ -29,7 +41,7 @@ export async function runClueImages({ storage, dir = CLUES_DIR, deadline = Infin
     const path = join(dir, file);
     const country = readJson(path);
     let unsaved = 0;
-    for (const image of country.clues.flatMap((c) => c.images)) {
+    for (const [clue, image] of country.clues.flatMap((c) => c.images.map((img) => [c, img]))) {
       if (image.path) {
         counts.already++;
         continue;
@@ -41,7 +53,12 @@ export async function runClueImages({ storage, dir = CLUES_DIR, deadline = Infin
       const key = `${code}/${image.id}`;
       try {
         if (!done.has(key)) {
-          const { webp, width, height } = await encodeWebp(await download(image.src), { width: 1280, quality: 78 });
+          const mirror = image.src.startsWith('https://www.plonkit.net/') ? plonkitMirror(clue) : undefined;
+          const input = await download(image.src).catch((error) => {
+            if (!mirror) throw error;
+            return download(mirror);
+          });
+          const { webp, width, height } = await encodeWebp(input, { width: 1280, quality: 78 });
           await storage.upload(`${key}.webp`, webp);
           done.set(key, { path: `${key}.webp`, width, height });
         }
