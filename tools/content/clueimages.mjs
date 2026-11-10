@@ -1,10 +1,11 @@
 // The `clueimages` step: copies every clue image that has no `path` yet into the private Supabase
 // `clues` bucket as <code>/<image id>.webp (at most 1280 px wide, quality 78) and records `path`,
 // `width` and `height` in content/clues/<code>.json. Downloads are 0.5 s apart per host; a failed
-// image is reported and left for the next run, as is everything after the budget runs out.
+// image is reported and left for the next run, as is everything after the budget runs out. SVG
+// drawings (GeoHints sign designs) are rasterised 1024 px wide on white first.
 import { join } from 'node:path';
 import { CLUES_DIR } from './clues.mjs';
-import { encodeWebp } from './images.mjs';
+import { WIDTH, encodeWebp, isSvg, rasteriseSvg } from './images.mjs';
 import { BROWSER_USER_AGENT, jsonFilesIn, pacer, readJson, request, sleep, writeJson } from './lib/common.mjs';
 
 const SAVE_EVERY = 20;
@@ -54,10 +55,11 @@ export async function runClueImages({ storage, dir = CLUES_DIR, deadline = Infin
       try {
         if (!done.has(key)) {
           const mirror = image.src.startsWith('https://www.plonkit.net/') ? plonkitMirror(clue) : undefined;
-          const input = await download(image.src).catch((error) => {
+          const downloaded = await download(image.src).catch((error) => {
             if (!mirror) throw error;
             return download(mirror);
           });
+          const input = isSvg(downloaded) ? await rasteriseSvg(downloaded, WIDTH) : downloaded;
           const { webp, width, height } = await encodeWebp(input, { width: 1280, quality: 78 });
           await storage.upload(`${key}.webp`, webp);
           done.set(key, { path: `${key}.webp`, width, height });
