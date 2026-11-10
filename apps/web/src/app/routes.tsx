@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
           { path: '/session', element: <Session /> },
           { path: '/drills', element: <Drills /> },
           { path: '/games', element: <Games /> },
-          { path: '/games/areacode/br', element: <AreaCodeGame /> },
+          { path: '/games/areacode/:country', element: <AreaCodeGame /> },
           { path: '/atlas', element: <Atlas /> },
           { path: '/atlas/:country', element: <Country /> },
           { path: '/review', element: <Review /> },

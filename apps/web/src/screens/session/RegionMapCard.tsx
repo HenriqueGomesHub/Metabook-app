@@ -1,30 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import type { CSSProperties } from 'react';
 import { label } from '../../app/labels';
+import { useRegionMap } from '../../app/useRegionMaps';
 import { Button } from '../../components/Button';
 import { CountryMap } from '../../components/CountryMap';
-import { loadedRegionMap, loadRegionMap } from '../../data/content';
-import type { RegionMap } from '../../data/content';
 import { Stage } from './Stage';
 import { stateNameFrom } from './verdict';
 import type { CardProps } from './types';
-
-/** The card's regions map: undefined while it loads, null when it could not be loaded. */
-function useRegionMap(country: string): RegionMap | null | undefined {
-  const [map, setMap] = useState<RegionMap | null | undefined>(() => loadedRegionMap(country));
-  useEffect(() => {
-    if (map) return;
-    let live = true;
-    loadRegionMap(country).then(
-      (loaded) => live && setMap(loaded ?? null),
-      () => live && setMap(null),
-    );
-    return () => {
-      live = false;
-    };
-  }, [country, map]);
-  return map;
-}
 
 const NO_GROUP: ReadonlySet<string> = new Set();
 

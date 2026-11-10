@@ -200,7 +200,9 @@ export function weakestGroup(data: AppSnapshot, now: Date): string | null {
 export function pairScope(cards: Card[], picked: string, truth: string): string | undefined {
   const [a, b] = [parseMapKey(picked), parseMapKey(truth)];
   if (a && b && a.map === b.map) return a.map;
-  const areaCodes = new Set(cards.filter((c) => c.type === 'areacode').map((c) => c.answer));
+  const areaCodes = new Set(
+    cards.filter((c) => c.type === 'areacode' && c.country === 'BR').map((c) => c.answer),
+  );
   return areaCodes.has(picked) && areaCodes.has(truth) ? 'br' : undefined;
 }
 

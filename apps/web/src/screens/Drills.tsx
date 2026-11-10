@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, CLUE_TYPES, TYPE_ORDER } from '../app/cardTypes';
-import { FAMILY_NOUNS, SUBJECTS } from '../app/labels';
+import { FAMILY_NOUNS, label, SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { ICONS } from '../components/icons';
 import { Status } from '../components/Status';
+import { areaCodeCountries } from '../data/areaCodes';
+import './games/games.css';
 
 const WEAK_MASTERY = 0.6;
 
@@ -50,6 +52,8 @@ interface Tile {
   count: string;
   mastery: number;
   note?: string;
+  /** a drill per country beside the all-countries one (area codes) */
+  chips?: { label: string; to: string }[];
 }
 
 export function Drills() {
@@ -73,6 +77,12 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           to: `/session?type=${type}`,
           ...CARD_TYPES[type],
           count: holds(ofType, TYPE_NOUNS[type]),
+          ...(type === 'areacode' && {
+            chips: areaCodeCountries(ofType, data.content.pool).map((code) => ({
+              label: label(code),
+              to: `/session?type=areacode&country=${code}`,
+            })),
+          }),
           mastery: mastery(
             ofType.map((card) => card.id),
             data.states,
@@ -199,45 +209,68 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           />
         )}
         <div className="tiles">
-          {allTiles.map(({ key, to, label, blurb, note, icon, count, mastery: pct }) => (
-            <Link key={key} className="tile" to={to}>
-              <div className="tile-top">
-                <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-                  {icon}
-                </svg>
-                <span className="tile-link">
-                  Practice
-                  <svg
-                    className="icon"
-                    viewBox="0 0 24 24"
-                    width="16"
-                    height="16"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m13 6 6 6-6 6" />
-                  </svg>
-                </span>
+          {allTiles.map(
+            ({ key, to, label: name, blurb, note, chips, icon, count, mastery: pct }) => (
+              <div key={key} className="tile-cell">
+                <Link className="tile" to={to}>
+                  <div className="tile-top">
+                    <svg
+                      className="icon"
+                      viewBox="0 0 24 24"
+                      width="28"
+                      height="28"
+                      aria-hidden="true"
+                    >
+                      {icon}
+                    </svg>
+                    <span className="tile-link">
+                      Practice
+                      <svg
+                        className="icon"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        height="16"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m13 6 6 6-6 6" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div>
+                    <div className="tile-name headline">{name}</div>
+                    <div className="tile-blurb">{blurb}</div>
+                    {note && <div className="tile-note">{note}</div>}
+                  </div>
+                  <div className="tile-bar">
+                    <div
+                      className="bar"
+                      role="img"
+                      aria-label={`Mastery ${Math.round(pct * 100)}%`}
+                    >
+                      <div
+                        className={pct < WEAK_MASTERY ? 'weak' : undefined}
+                        style={{ width: `${Math.round(pct * 100)}%` }}
+                      />
+                    </div>
+                    <span className="muted small">
+                      {count}
+                      <span aria-hidden="true"> · {Math.round(pct * 100)}%</span>
+                    </span>
+                  </div>
+                </Link>
+                {chips && chips.length > 1 && (
+                  <nav className="tile-chips" aria-label={`${name} by country`}>
+                    {chips.map((chip) => (
+                      <Link key={chip.to} className="game-chip" to={chip.to}>
+                        {chip.label}
+                      </Link>
+                    ))}
+                  </nav>
+                )}
               </div>
-              <div>
-                <div className="tile-name headline">{label}</div>
-                <div className="tile-blurb">{blurb}</div>
-                {note && <div className="tile-note">{note}</div>}
-              </div>
-              <div className="tile-bar">
-                <div className="bar" role="img" aria-label={`Mastery ${Math.round(pct * 100)}%`}>
-                  <div
-                    className={pct < WEAK_MASTERY ? 'weak' : undefined}
-                    style={{ width: `${Math.round(pct * 100)}%` }}
-                  />
-                </div>
-                <span className="muted small">
-                  {count}
-                  <span aria-hidden="true"> · {Math.round(pct * 100)}%</span>
-                </span>
-              </div>
-            </Link>
-          ))}
+            ),
+          )}
           <Link className="tile tile-games" to="/games">
             <div className="tile-top">
               <svg className="icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">

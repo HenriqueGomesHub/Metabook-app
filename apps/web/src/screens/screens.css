@@ -664,6 +664,23 @@ figure {
   gap: 16px;
 }
 
+.tile-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.tile-cell > .tile {
+  flex: 1;
+}
+
+.tile-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .tile {
   display: flex;
   flex-direction: column;
@@ -688,23 +705,23 @@ figure {
   transform: translateY(-3px);
 }
 
-.tile:nth-child(2) {
+.tile-cell:nth-child(2) > .tile {
   animation-delay: 0.06s;
 }
 
-.tile:nth-child(3) {
+.tile-cell:nth-child(3) > .tile {
   animation-delay: 0.12s;
 }
 
-.tile:nth-child(4) {
+.tile-cell:nth-child(4) > .tile {
   animation-delay: 0.18s;
 }
 
-.tile:nth-child(5) {
+.tile-cell:nth-child(5) > .tile {
   animation-delay: 0.24s;
 }
 
-.tile:nth-child(n + 6) {
+.tile-cell:nth-child(n + 6) > .tile {
   animation-delay: 0.3s;
 }
 

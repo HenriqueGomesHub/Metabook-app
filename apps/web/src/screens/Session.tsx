@@ -494,6 +494,8 @@ function CardRunner({
 }
 
 function isCorrect(item: SessionItem, card: Card, given: string, cards: Card[]): boolean {
+  // an area code that spans a border: the other regions it covers count too
+  if (card.spans?.includes(given)) return true;
   if (item.mode !== 'recall') return given === card.answer;
   const others = cards
     .filter((c) => c.type === card.type && c.answer !== card.answer)

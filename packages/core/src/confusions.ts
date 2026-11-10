@@ -22,10 +22,26 @@ const MAP_SCOPED = /^([a-z]{2}):(.+)$/;
 
 /**
  * The key a confusion stores for one of a card's answers: `<map>:<STATE>` ("ca:NL") on
- * regions-map cards, so a state code never reads as the country with the same code.
+ * regions-map cards and area codes outside Brazil, so a state code never reads as the country with
+ * the same code.
  */
-export function answerKey(card: { map?: string }, answer: string): string {
-  return card.map ? `${card.map}:${answer}` : answer;
+export function answerKey(
+  card: { map?: string; type?: string; country?: string },
+  answer: string,
+): string {
+  const map = card.map ?? areaCodeMap(card);
+  return map ? `${map}:${answer}` : answer;
+}
+
+/**
+ * The regions map an area-code card is answered on, when its answers need scoping: every country
+ * but Brazil, whose area-code answers have always been bare state codes ("SP").
+ */
+export function areaCodeMap(card: { type?: string; country?: string }): string | undefined {
+  if (card.type !== 'areacode' || !card.country || card.country.toUpperCase() === 'BR') {
+    return undefined;
+  }
+  return card.country.toLowerCase();
 }
 
 /** The map and state of a map-scoped key; undefined for plain (country or answer) keys. */

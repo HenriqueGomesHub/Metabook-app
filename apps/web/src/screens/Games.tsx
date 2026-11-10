@@ -6,6 +6,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
+import { areaCodeCountries } from '../data/areaCodes';
 import './games/games.css';
 
 const STRONG = 0.6;
@@ -27,7 +28,6 @@ const GAMES: GameTile[] = [
       <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
     ),
     countries: ['Brazil', 'France', 'Australia', 'Japan', 'Italy', 'Spain', 'Argentina', 'Mexico'],
-    playable: { Brazil: '/games/areacode/br' },
   },
   {
     title: 'Plate codes',
@@ -99,12 +99,37 @@ export function Games() {
 
 function GamesView({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
-  const brazilStrong = useMemo(() => {
-    const ids = data.content.cards
-      .filter((card) => card.type === 'areacode' && card.country === 'BR')
-      .map((card) => card.id);
-    return mastery(ids, data.states, now) >= STRONG;
+  // area codes: every country with a content/areacodes file (Brazil's ship as cards) is playable
+  const areaCodes = useMemo(() => {
+    const codes = areaCodeCountries(data.content.cards, data.content.pool);
+    const name = (code: string) => data.content.pool.find((c) => c.code === code)?.name ?? code;
+    const playable = Object.fromEntries(
+      codes.map((code) => [name(code), `/games/areacode/${code.toLowerCase()}`]),
+    );
+    const strong = new Set(
+      codes
+        .filter((code) => {
+          const ids = data.content.cards
+            .filter((card) => card.type === 'areacode' && card.country === code)
+            .map((card) => card.id);
+          return mastery(ids, data.states, now) >= STRONG;
+        })
+        .map(name),
+    );
+    return { names: codes.map(name), playable, strong };
   }, [data, now]);
+  const games = GAMES.map((game) =>
+    game.title === 'Area codes'
+      ? {
+          ...game,
+          countries: [
+            ...areaCodes.names,
+            ...game.countries.filter((c) => !areaCodes.names.includes(c)),
+          ],
+          playable: areaCodes.playable,
+        }
+      : game,
+  );
 
   return (
     <div className="page">
@@ -117,7 +142,7 @@ function GamesView({ data }: { data: AppSnapshot }) {
           </div>
         </div>
         <div className="games-grid">
-          {GAMES.map((game, i) => {
+          {games.map((game, i) => {
             const playable = game.playable ?? {};
             const open = Object.keys(playable).length > 0;
             return (
@@ -153,15 +178,10 @@ function GamesView({ data }: { data: AppSnapshot }) {
                         </span>
                       );
                     }
+                    const strong = areaCodes.strong.has(name);
                     return (
-                      <Link
-                        key={name}
-                        to={to}
-                        className={brazilStrong ? 'game-chip hot' : 'game-chip'}
-                      >
-                        {brazilStrong && (
-                          <span className="dot" role="img" aria-label="Strong pattern" />
-                        )}
+                      <Link key={name} to={to} className={strong ? 'game-chip hot' : 'game-chip'}>
+                        {strong && <span className="dot" role="img" aria-label="Strong pattern" />}
                         {name}
                       </Link>
                     );

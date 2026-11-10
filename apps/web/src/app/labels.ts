@@ -108,8 +108,8 @@ export function pairLabel(picked: string, truth: string, scope?: Scope): string 
 }
 
 /**
- * Regions-map cards answer with their map's state codes, area codes with Brazilian state codes;
- * everything else is a country name or region id.
+ * Regions-map cards answer with their map's state codes, area codes with the state codes of their
+ * country's map ('br' for Brazil); everything else is a country name or region id.
  */
-export const scopeOf = (card: Pick<Card, 'type' | 'map'> | undefined): Scope =>
-  card?.map ?? (card?.type === 'areacode' ? 'br' : undefined);
+export const scopeOf = (card: Pick<Card, 'type' | 'map' | 'country'> | undefined): Scope =>
+  card?.map ?? (card?.type === 'areacode' ? (card.country ?? 'BR').toLowerCase() : undefined);
