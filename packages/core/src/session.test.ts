@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { answerKey, recordAnswer } from './confusions';
 import { mulberry32 } from './random';
-import { buildSession, modeFor, type SessionItem } from './session';
+import { buildSession, modeFor, requeueMissed, type SessionItem } from './session';
 import {
   DEFAULT_SETTINGS,
   type Card,
@@ -338,7 +338,7 @@ describe('buildSession', () => {
     });
   });
 
-  describe('contrast rounds', () => {
+  describe('contrast questions', () => {
     const cards = [
       card('flag:rs', 'flag', 'RS', 'Serbia'),
       card('flag:bg', 'flag', 'BG', 'Bulgaria'),
@@ -360,40 +360,52 @@ describe('buildSession', () => {
         (i) => i.contrastPair,
       );
 
-    it('injects back-to-back binary rounds using both answers', () => {
+    it('asks one binary question per confused pair, never a block of them', () => {
       const items = contrast(confusion(3));
-      expect(items).toHaveLength(5);
-      expect(items.every((i) => i.mode === 'binary')).toBe(true);
+      expect(items).toHaveLength(1);
+      expect(items[0]?.mode).toBe('binary');
       expect(items[0]?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
-      const ids = items.map((i) => i.cardId);
-      expect(new Set(ids)).toEqual(new Set(['flag:rs', 'flag:bg']));
+      expect(['flag:rs', 'flag:bg']).toContain(items[0]?.cardId);
     });
 
-    it('orders sides randomly, never more than 2 in a row, both sides present', () => {
-      const orders = new Set<string>();
-      for (let seed = 1; seed <= 50; seed++) {
-        const ids = buildSession({
+    it('picks the side at random', () => {
+      const sides = new Set<string>();
+      for (let seed = 1; seed <= 30; seed++) {
+        const item = buildSession({
           cards,
           states: {},
           confusions: [confusion(3)],
           settings,
           now,
           rng: mulberry32(seed),
-        })
-          .queue.filter((i) => i.contrastPair)
-          .map((i) => i.cardId);
-        orders.add(ids.join());
-        expect(new Set(ids).size).toBe(2);
-        for (let i = 2; i < ids.length; i++) {
-          expect(ids[i] === ids[i - 1] && ids[i] === ids[i - 2]).toBe(false);
-        }
+        }).queue.find((i) => i.contrastPair);
+        sides.add(item?.cardId ?? '');
       }
-      expect(orders.size).toBeGreaterThan(1);
-      expect(orders.has('flag:rs,flag:bg,flag:rs,flag:bg,flag:rs')).toBe(true);
+      expect(sides).toEqual(new Set(['flag:rs', 'flag:bg']));
     });
 
-    it('only adds the rounds still needed to reach a streak of 5', () => {
-      expect(contrast(confusion(3, 3))).toHaveLength(2);
+    it('spreads contrast questions through the queue, never first or side by side', () => {
+      const many = Array.from({ length: 12 }, (_, i) =>
+        card(`f${i}`, 'flag', `F${i}`, `Land ${i}`),
+      );
+      const pairs: Confusion[] = [0, 2, 4].map((i) => ({
+        ...confusion(3),
+        picked: `Land ${i}`,
+        truth: `Land ${i + 1}`,
+      }));
+      const queue = buildSession({
+        cards: many,
+        states: {},
+        confusions: pairs,
+        settings,
+        now,
+        rng: rng(),
+      }).queue;
+      const at = queue.flatMap((item, i) => (item.contrastPair ? [i] : []));
+      expect(at).toHaveLength(3);
+      expect(at[0]).toBeGreaterThan(0);
+      for (let i = 1; i < at.length; i++)
+        expect((at[i] as number) - (at[i - 1] as number)).toBeGreaterThan(1);
     });
 
     it('skips pairs below 3 misses, stale, or resolved', () => {
@@ -456,7 +468,7 @@ describe('buildSession', () => {
     });
 
     it('matches by country code too, and skips pairs without cards of a shared type', () => {
-      expect(contrast({ ...confusion(3), picked: 'RS', truth: 'BG' })).toHaveLength(5);
+      expect(contrast({ ...confusion(3), picked: 'RS', truth: 'BG' })).toHaveLength(1);
       expect(contrast({ ...confusion(3), picked: 'RS', truth: 'XX' })).toEqual([]);
     });
   });
@@ -548,5 +560,18 @@ describe('modeFor', () => {
     expect(modeFor(where, seen('w', minutesAgo(1), 5))).toBe('map');
     expect(modeFor(card('r', 'region'), undefined)).toBe('mcq');
     expect(modeFor(card('r', 'region'), seen('r', minutesAgo(1), 5))).toBe('recall');
+  });
+});
+
+describe('requeueMissed', () => {
+  it('sends a missed card to the end of the queue, marked as a retry', () => {
+    const queue: SessionItem[] = [
+      { cardId: 'a', mode: 'mcq' },
+      { cardId: 'b', mode: 'mcq' },
+    ];
+    expect(requeueMissed(queue, queue[0] as SessionItem)).toEqual([
+      ...queue,
+      { cardId: 'a', mode: 'mcq', retry: true },
+    ]);
   });
 });

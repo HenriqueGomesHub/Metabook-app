@@ -60,17 +60,35 @@ describe('Session', () => {
   });
 
   it('advances with Space and ends with a summary', async () => {
-    renderApp('/session', repoWith(2));
-    expect(await screen.findByText('1 / 2')).toBeTruthy();
+    renderApp('/session', repoWith(1));
+    expect(await screen.findByText('1 / 1')).toBeTruthy();
 
-    fireEvent.keyDown(window, { key: '1' });
-    fireEvent.keyDown(window, { key: ' ' });
-    expect(screen.getByText('2 / 2')).toBeTruthy();
-
-    fireEvent.keyDown(window, { key: '1' });
+    fireEvent.click(screen.getByRole('button', { name: /Lithuania/ }));
     fireEvent.keyDown(window, { key: ' ' });
     expect(screen.getByText('Session done')).toBeTruthy();
-    expect(screen.getByText('2 cards')).toBeTruthy();
+    expect(screen.getByText('1 card')).toBeTruthy();
+    expect(screen.getByText('1 right first time')).toBeTruthy();
+  });
+
+  it('asks a missed card again at the end until it is answered right', async () => {
+    renderApp('/session', repoWith(1));
+    expect(await screen.findByText('1 / 1')).toBeTruthy();
+
+    const wrong = () =>
+      screen
+        .getAllByRole('button', { name: /^\d/ })
+        .find((b) => !/Lithuania/.test(b.textContent ?? '')) as HTMLElement;
+    fireEvent.click(wrong());
+    fireEvent.keyDown(window, { key: ' ' });
+    expect(screen.getByText('2 / 2')).toBeTruthy();
+    expect(screen.getByText('Again')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: /Lithuania/ }));
+    fireEvent.keyDown(window, { key: ' ' });
+    expect(screen.getByText('Session done')).toBeTruthy();
+    expect(screen.getByText('0 right first time')).toBeTruthy();
+    expect(screen.getByText('1 fixed on retry')).toBeTruthy();
+    expect(screen.getByText('To look at again')).toBeTruthy();
   });
 
   it('opens the reveal as a non-modal dialog, announces the verdict and focuses Continue', async () => {
@@ -93,7 +111,8 @@ describe('Session', () => {
     expect(screen.getByRole('dialog')).toBe(dialog);
     fireEvent.click(next);
     expect(screen.queryByRole('dialog')).toBeNull();
-    expect(screen.getByText('2 / 2')).toBeTruthy();
+    // the second card, or the first again at the end if it was missed
+    expect(screen.getByText(/^2 \/ [23]$/)).toBeTruthy();
   });
 
   it('names the answer when a choice is wrong', async () => {

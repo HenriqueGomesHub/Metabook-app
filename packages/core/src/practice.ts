@@ -5,18 +5,17 @@ import { modeFor, type SessionItem } from './session';
 import type { Card, CardState, Confusion } from './types';
 
 /**
- * Endless practice as a learning queue, like Anki's learning steps inside one sitting:
+ * A drill: endless practice over every card in its scope, like Anki's learning steps inside one
+ * sitting, in passes:
  *
- * - Cards the learner does not know yet (anything not in FSRS review) are introduced in a random
- *   order, never pool order. A wrong card comes back after 3-5 other cards; a right one after
- *   RIGHT_GAP (at least the spacing rule below); two rights in a row graduate it. At most
- *   LEARNING_SET cards are shaky (missed, or not answered yet) before new ones wait, and while new
- *   cards remain INTROS_PER_RETURN are introduced per returning card, so a big pool is seen once
- *   early on.
- * - A graduated card rests for the rest of the practice: it only comes back when nothing else can
- *   be served, weakest first. Across days FSRS decides when it is due again.
- * - Known cards (FSRS review) are mixed in at about KNOWN_SHARE once the learning set is full,
- *   weakest (lowest retrievability) first.
+ * - A pass serves every card of the pool, in a random order (never pool order). A wrong card comes
+ *   back after 3-5 other cards; a right one after RIGHT_GAP (at least the spacing rule below); two
+ *   rights in a row learn it for the pass. A card already well known is learnt with one right; a
+ *   card in a confusion pair needs three. At most LEARNING_SET cards are shaky (missed, or not
+ *   answered yet) before new ones wait, and while new cards remain INTROS_PER_RETURN are
+ *   introduced per returning card.
+ * - A learnt card rests until the pass ends. Once every card is learnt the next pass starts with
+ *   the whole pool reshuffled, so a drill can go on for as long as the learner likes.
  * - A Spot it card coming back shows the image of its clue seen longest ago (often another of the
  *   clue's images), so a repeat is not the same photo again; it is still graded as itself.
  * - Hard rule: a card never comes back within min(10, pool / 2) cards of its last showing, except
@@ -37,11 +36,14 @@ const RIGHT_GAP = 8;
 /** Up to this many extra cards are added to a right gap, so returns do not line up. */
 const RIGHT_JITTER = 4;
 const GRADUATE_STREAK = 2;
+/** A card in an active confusion pair needs one more right in a row to be learnt for the pass. */
+const CONFUSED_STREAK = 3;
+/** A card already studied counts as well known from this retrievability up. */
+const KNOWN_RECALL = 0.8;
 /** While new cards remain, this many are introduced for each card coming back after a right. */
 const INTROS_PER_RETURN = 2;
 /** ...unless that card has waited this many cards past its due step. */
 const MAX_OVERDUE = 60;
-const KNOWN_SHARE = 0.25;
 /** Never repeat within min(MAX_GAP, pool / 2) cards; a wrong card's return within WRONG_MIN_GAP. */
 const MAX_GAP = 10;
 const WRONG_MIN_GAP = 3;
@@ -69,16 +71,18 @@ export interface PracticeState {
   /** cards not introduced yet, in the random order they will come */
   fresh: string[];
   learning: Learning[];
-  /** graduated cards and known cards answered right: only served once nothing else can be */
+  /** cards learnt this pass: only served once nothing else can be */
   resting: string[];
+  /** cards well known (seen, likely recalled) when the drill started: learnt with one right */
+  known?: string[];
+  /** 1 for the first time through the pool */
+  pass?: number;
   /** new cards introduced since a card last came back after a right answer */
   introsSinceReturn: number;
   /** step at which each clue image was last shown, by image id */
   imageShown?: Record<string, number>;
   rng: Rng;
 }
-
-const isKnown = (state: CardState | undefined) => state?.state === 'review';
 
 export function createPractice(input: {
   cards: Card[];
@@ -98,7 +102,7 @@ export function createPractice(input: {
     .filter((card) => sides.has(card.answer) || sides.has(card.country))
     .map((card) => card.id);
   const fresh = shuffle(
-    cards.filter((card) => !isKnown(states[card.id])).map((card) => card.id),
+    cards.map((card) => card.id),
     rng,
   );
   return {
@@ -109,6 +113,19 @@ export function createPractice(input: {
     fresh,
     learning: [],
     resting: [],
+    // well known, and not in a confusion pair: one right is enough this pass
+    known: cards
+      .filter((card) => {
+        const state = states[card.id];
+        return (
+          state !== undefined &&
+          state.state !== 'new' &&
+          retrievability(state as CardState, now) >= KNOWN_RECALL &&
+          !confused.includes(card.id)
+        );
+      })
+      .map((card) => card.id),
+    pass: 1,
     introsSinceReturn: 0,
     imageShown: {},
     rng,
@@ -237,34 +254,15 @@ function choose(practice: PracticeState, states: Record<string, CardState>, now:
   ) {
     return byId.get(returning.cardId) as Card;
   }
-  const introduced = new Set([...learning.map((l) => l.cardId), ...resting]);
-  const known = cards.filter(
-    (card) =>
-      isKnown(states[card.id]) &&
-      !introduced.has(card.id) &&
-      !practice.fresh.includes(card.id) &&
-      ok(card.id),
-  );
-  const drawKnown = () =>
-    sample(
-      known,
-      known.map((card) => weight(practice, card, states, now)),
-      rng,
-    );
-
-  // 2. known cards at about KNOWN_SHARE once the learning set is full (or nothing new is left)
-  const stable = shaky >= LEARNING_SET || practice.fresh.length === 0;
-  if (known.length > 0 && stable && rng() < KNOWN_SHARE) return drawKnown();
   // 3. a new card while the learning set has room
   if (fresh[0] && shaky < LEARNING_SET) return byId.get(fresh[0]) as Card;
   if (returning) return byId.get(returning.cardId) as Card;
-  // 4. a known card, then a new card past the learning-set size, rather than breaking the gaps
-  if (known.length > 0) return drawKnown();
+  // 4. a new card past the learning-set size, rather than breaking the gaps
   if (fresh[0]) return byId.get(fresh[0]) as Card;
   // 5. a learning card a little early, the one closest to due
   const early = learning.filter((l) => ok(l.cardId)).sort((a, b) => a.due - b.due)[0];
   if (early) return byId.get(early.cardId) as Card;
-  // 6. the pool is exhausted: resting cards, weakest (lowest FSRS retrievability) first
+  // 6. nothing else is spaced enough: resting cards, weakest (lowest FSRS retrievability) first
   const restingCards = ofIds(resting.filter(ok));
   const others = restingCards.length > 0 ? restingCards : cards.filter((card) => ok(card.id));
   if (others.length > 0) {
@@ -279,13 +277,51 @@ function choose(practice: PracticeState, states: Record<string, CardState>, now:
   return oldest.find((card) => card.id !== previous) ?? (oldest[0] as Card);
 }
 
+/**
+ * Once every card of the pool is learnt, the next pass: the whole pool again, reshuffled, with
+ * the cards shown last put at the back so the pass does not open on them.
+ */
+function nextPass(practice: PracticeState): PracticeState {
+  if (practice.fresh.length > 0 || practice.learning.length > 0) return practice;
+  const recent = new Set(
+    Object.entries(practice.lastShown)
+      .filter(([, at]) => practice.step - at <= minGap(practice.cards.length))
+      .map(([id]) => id),
+  );
+  const order = shuffle(
+    practice.cards.map((card) => card.id),
+    practice.rng,
+  );
+  return {
+    ...practice,
+    fresh: [...order.filter((id) => !recent.has(id)), ...order.filter((id) => recent.has(id))],
+    resting: [],
+    introsSinceReturn: 0,
+    pass: (practice.pass ?? 1) + 1,
+  };
+}
+
+/** How far the drill is: its pass and the cards learnt in it, out of the pool. */
+export function practiceProgress(practice: PracticeState): {
+  pass: number;
+  learnt: number;
+  total: number;
+} {
+  return {
+    pass: practice.pass ?? 1,
+    learnt: practice.resting.length,
+    total: practice.cards.length,
+  };
+}
+
 /** The next card to drill. Never runs out for a non-empty pool. */
 export function nextPracticeItem(
-  practice: PracticeState,
+  current: PracticeState,
   states: Record<string, CardState>,
   now: Date,
 ): { item: SessionItem; practice: PracticeState } {
-  if (practice.cards.length === 0) throw new Error('practice pool is empty');
+  if (current.cards.length === 0) throw new Error('practice pool is empty');
+  const practice = nextPass(current);
   const card = choose(practice, states, now);
   const { step } = practice;
   const isFresh = practice.fresh.includes(card.id);
@@ -311,7 +347,12 @@ export function nextPracticeItem(
       learning: isFresh
         ? [
             ...practice.learning,
-            { cardId: card.id, due: step + 1 + RIGHT_GAP, streak: 0, wrong: false },
+            {
+              cardId: card.id,
+              due: step + 1 + RIGHT_GAP,
+              streak: practice.known?.includes(card.id) ? GRADUATE_STREAK - 1 : 0,
+              wrong: false,
+            },
           ]
         : practice.learning,
     },
@@ -347,7 +388,8 @@ export function recordPracticeAnswer(
     };
   }
   const streak = (existing?.streak ?? GRADUATE_STREAK - 1) + 1;
-  if (streak >= GRADUATE_STREAK) {
+  const needed = practice.confused.includes(cardId) ? CONFUSED_STREAK : GRADUATE_STREAK;
+  if (streak >= needed) {
     return { ...practice, learning: others, resting: [...resting, cardId] };
   }
   const wait = Math.max(RIGHT_GAP, gap) + Math.floor(rng() * (RIGHT_JITTER + 1));

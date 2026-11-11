@@ -129,6 +129,14 @@ describe('practice', () => {
 
   // Pool of 30 and 1.5x (were 10 and 2x): the spacing rule (no repeat within min(10, pool / 2)
   // cards) now caps how often a weak card can come back, so the weighting shows less.
+  it('serves every card in each pass before any learnt card comes back', () => {
+    const cards = pool(40);
+    const ids = run(start(cards, {}, 5), {}, 400);
+    // all right: a pass is 2 showings per card, so the first 80 cover the whole pool
+    expect(new Set(ids.slice(0, 80)).size).toBe(40);
+    for (const c of cards) expect(ids.filter((id) => id === c.id).length).toBeGreaterThanOrEqual(8);
+  });
+
   it('picks weak cards more often than strong ones', () => {
     const cards = pool(30);
     const states = Object.fromEntries(
@@ -169,7 +177,8 @@ describe('practice', () => {
     };
     const ids = run(start(cards, {}, 9, [confusion]), {}, 3000);
     const share = (id: string) => ids.filter((x) => x === id).length;
-    expect(share('flag:a')).toBeGreaterThan(share('c0') * 1.4);
+    // three rights in a row to learn it each pass, against two
+    expect(share('flag:a')).toBeGreaterThan(share('c0') * 1.25);
   });
 
   it('ignores map-scoped confusions: state NL boosts neither the Netherlands nor any card', () => {

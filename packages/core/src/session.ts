@@ -14,6 +14,8 @@ export interface SessionItem {
   contrastPair?: [string, string];
   /** practice: a Spot it card shown with this other image of its clue (see cardForItem) */
   imageId?: string;
+  /** a session card coming back after a wrong answer */
+  retry?: boolean;
 }
 
 export interface Session {
@@ -28,7 +30,8 @@ const CATCH_UP_FACTOR = 3;
 const NEW_SHARE = 0.3;
 const BLOCK_SHARE = 0.4;
 const MAX_RUN = 3;
-const MAX_SIDE_RUN = 2;
+/** Contrast questions in one day's session, one per confused pair. */
+const MAX_CONTRAST = 4;
 
 /** How each type is answered once past multiple choice; area codes are recalled on the map. */
 const RECALL_MODES: Partial<Record<CardType, SessionMode>> = {
@@ -138,35 +141,39 @@ function contrastItems(confusion: Confusion, cards: Card[], rng: Rng): SessionIt
     .find((pair): pair is [Card, Card] => pair[1] !== undefined);
   if (!sides) return [];
 
-  const contrastPair: [string, string] = [confusion.picked, confusion.truth];
-  const count = CONTRAST_STREAK_TO_RESOLVE - confusion.contrastStreak;
-  return sideOrder(count, rng).map((side) => ({
-    cardId: (sides[side] as Card).id,
-    mode: 'binary' as const,
-    contrastPair,
-  }));
-}
-
-/** Random side order with at most MAX_SIDE_RUN in a row and both sides present (when count > 1). */
-function sideOrder(count: number, rng: Rng): (0 | 1)[] {
-  const order: (0 | 1)[] = [];
-  for (let i = 0; i < count; i++) {
-    const last = order.at(-1);
-    const runs =
-      order.length >= MAX_SIDE_RUN && order.slice(-MAX_SIDE_RUN).every((s) => s === last);
-    const missing = i === count - 1 && count > 1 && order.every((s) => s === last);
-    if (runs) order.push(last === 0 ? 1 : 0);
-    else if (missing) order.push(last === 0 ? 1 : 0);
-    else order.push(rng() < 0.5 ? 0 : 1);
-  }
-  return order;
+  if (confusion.contrastStreak >= CONTRAST_STREAK_TO_RESOLVE) return [];
+  // one question per pair a day, on a random side: the pair resolves over several days, never
+  // as a block of the same two cards back to back
+  return [
+    {
+      cardId: (sides[rng() < 0.5 ? 0 : 1] as Card).id,
+      mode: 'binary' as const,
+      contrastPair: [confusion.picked, confusion.truth],
+    },
+  ];
 }
 
 /**
- * Today's queue: contrast rounds first, then due reviews (oldest first, capped) mixed with new
+ * Puts each contrast question at an evenly spread place in the queue (never first, never two
+ * together), so a pair is asked once among the other cards.
+ */
+function spreadIn(queue: SessionItem[], extra: SessionItem[]): SessionItem[] {
+  if (extra.length === 0) return queue;
+  const out = [...queue];
+  const step = (queue.length + 1) / (extra.length + 1);
+  extra.forEach((item, i) => {
+    const at = Math.min(out.length, Math.max(1, Math.round(step * (i + 1))) + i);
+    out.splice(at, 0, item);
+  });
+  return out;
+}
+
+/**
+ * Today's queue: due reviews (oldest first, capped) mixed with new
  * cards in curriculum order (block targets first, see curriculum.ts), topped up with weak
- * block-target cards to about 40%, interleaved by type. Without `rng`, the shuffles are seeded by
- * the day, so reloading shows the same queue.
+ * block-target cards to about 40%, interleaved by type, with one question for each confused pair
+ * (at most MAX_CONTRAST) spread through it. Without `rng`, the shuffles are seeded by the day, so
+ * reloading shows the same queue. Missed cards come back at the end (see requeueMissed).
  */
 export function buildSession(input: {
   cards: Card[];
@@ -226,17 +233,19 @@ export function buildSession(input: {
     .slice(0, missing)
     .map(({ card }) => card);
 
-  const contrast = activePairs(confusions, now).flatMap((c) => contrastItems(c, cards, rng));
+  const contrast = activePairs(confusions, now)
+    .flatMap((c) => contrastItems(c, cards, rng))
+    .slice(0, MAX_CONTRAST);
   const contrastIds = new Set(contrast.map((item) => item.cardId));
   const notContrast = (card: Card) => !contrastIds.has(card.id);
   const ordered = interleave(
     mix(shuffle([...reviews, ...blockExtras].filter(notContrast), rng), fresh.filter(notContrast)),
   );
   return {
-    queue: [
-      ...contrast,
-      ...ordered.map((card) => ({ cardId: card.id, mode: modeFor(card, stateOf(card)) })),
-    ],
+    queue: spreadIn(
+      ordered.map((card) => ({ cardId: card.id, mode: modeFor(card, stateOf(card)) })),
+      contrast,
+    ),
     catchUp,
     remaining: due.length - reviews.length,
   };
@@ -260,6 +269,14 @@ function newCards(input: {
     introducedToday: [...(input.introducedToday ?? []), ...targets.map((card) => card.id)],
   });
   return [...targets, ...others];
+}
+
+/**
+ * A session card answered wrong goes to the end of the queue, again and again until it is answered
+ * right, so the session only ends once every card has been got right.
+ */
+export function requeueMissed(queue: SessionItem[], item: SessionItem): SessionItem[] {
+  return [...queue, { ...item, retry: true }];
 }
 
 const asItems = (cards: Card[], states: Record<string, CardState>): SessionItem[] =>
