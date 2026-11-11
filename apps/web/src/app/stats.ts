@@ -3,6 +3,7 @@ import {
   buildSession,
   intakeFor,
   newCardSeconds,
+  reviewSecondsFrom,
   isClueCard,
   learnMoreSession,
   mastery,
@@ -56,7 +57,16 @@ function today(data: AppSnapshot, now: Date) {
     recent.answered++;
     if (review.correct) recent.right++;
   }
-  return { reviews: reviewedToday.size - introduced.length, introduced, recent };
+  // how long this learner's recent reviews took (cards seen before, not first answers)
+  const recentMs = data.reviews
+    .filter(
+      (r) =>
+        Date.parse(r.reviewedAt) >= weekAgo &&
+        firstReview.get(r.cardId) !== Date.parse(r.reviewedAt),
+    )
+    .slice(-300)
+    .map((r) => r.msTaken);
+  return { reviews: reviewedToday.size - introduced.length, introduced, recent, recentMs };
 }
 
 /**
@@ -82,6 +92,7 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     introducedToday: done.introduced,
     intake: intakeFor(done.recent, data.settings.returning),
     newSeconds: newCardSeconds(done.recent, data.settings.returning),
+    reviewSeconds: reviewSecondsFrom(done.recentMs),
     // a returning or clearly strong player gets their new photo cards as quick refreshes
     refresh: data.settings.returning || intakeFor(done.recent) === 3,
     now,
