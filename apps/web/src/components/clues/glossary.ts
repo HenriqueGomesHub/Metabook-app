@@ -36,6 +36,11 @@ export const GLOSSARY: GlossaryEntry[] = [
     'The current camera (from about 2017): the sharpest, most colourful imagery.',
   ),
   entry(
+    'Google car',
+    'Google car',
+    'The car that films Street View. Look straight down to see parts of it (roof rack, antenna, colour), which differ by country.',
+  ),
+  entry(
     'trekkers?',
     'Trekker',
     'Street View taken by a person carrying the camera on a backpack (trails, cities), not a car.',
