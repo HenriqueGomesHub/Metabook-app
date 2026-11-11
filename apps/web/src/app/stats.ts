@@ -4,6 +4,7 @@ import {
   intakeFor,
   newCardSeconds,
   reviewSecondsFrom,
+  scanCardSeconds,
   isClueCard,
   learnMoreSession,
   mastery,
@@ -93,6 +94,7 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     intake: intakeFor(done.recent, data.settings.returning),
     newSeconds: newCardSeconds(done.recent, data.settings.returning),
     reviewSeconds: reviewSecondsFrom(done.recentMs),
+    scanSeconds: scanCardSeconds(done.recent, data.settings.returning),
     // a returning or clearly strong player gets their new photo cards as quick refreshes
     refresh: data.settings.returning || intakeFor(done.recent) === 3,
     now,

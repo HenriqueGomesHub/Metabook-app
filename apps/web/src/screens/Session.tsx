@@ -219,7 +219,10 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
       data={data}
       item={shown}
       onAnswered={(correct) => {
-        setAnswers([...answers, { cardId: item.cardId, correct, retry: item.retry }]);
+        setAnswers([
+          ...answers,
+          { cardId: item.cardId, correct, retry: item.retry, scan: item.mode === 'scan' },
+        ]);
         // wrong: it comes back at the end, until it is answered right
         if (!correct) setQueue((q) => requeueMissed(q, item, cards));
       }}

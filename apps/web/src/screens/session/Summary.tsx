@@ -10,6 +10,8 @@ export interface Answer {
   cardId: string;
   correct: boolean;
   retry?: boolean;
+  /** a Refresh card: "Knew it" (correct) or "New to me", not a question */
+  scan?: boolean;
 }
 
 /** Where a drill stands: its pass and the cards learnt in it. */
@@ -28,7 +30,12 @@ function describe(card: Card): { name: string; kind: string } {
   if (card.type === 'areacode') {
     return { name: `${card.prompt.value} · ${label(card.answer, scopeOf(card))}`, kind };
   }
-  const name = card.clue ? label(card.country) : label(card.answer, scopeOf(card));
+  if (card.type === 'region' && card.clue) {
+    return { name: `${label(card.answer, scopeOf(card))}, ${label(card.country)}`, kind };
+  }
+  const country = card.clue ? label(card.country) : label(card.answer, scopeOf(card));
+  // a regional clue is named by its region ("Oregon, United States"), not only its country
+  const name = card.clue && card.region ? `${card.region}, ${country}` : country;
   return { name, kind };
 }
 
@@ -77,11 +84,12 @@ export function Summary({
     navigate(spaceTo);
   });
 
-  const first = answers.filter((a) => !a.retry);
+  const scans = answers.filter((a) => a.scan);
+  const first = answers.filter((a) => !a.retry && !a.scan);
   const right = first.filter((a) => a.correct).length;
   const score = first.length > 0 ? Math.round((right / first.length) * 100) : 0;
   const byId = new Map(cards.map((c) => [c.id, c]));
-  const missedIds = [...new Set(answers.filter((a) => !a.correct).map((a) => a.cardId))];
+  const missedIds = [...new Set(answers.filter((a) => !a.correct && !a.scan).map((a) => a.cardId))];
   // missed, then answered right later on
   const fixed = missedIds.filter((id) => {
     const firstMiss = answers.findIndex((a) => a.cardId === id && !a.correct);
@@ -102,9 +110,13 @@ export function Summary({
           : 'Keep at it.';
 
   const facts = [
-    `${first.length} ${first.length === 1 ? 'card' : 'cards'}`,
-    `${right} right first time`,
+    ...(first.length > 0
+      ? [`${first.length} ${first.length === 1 ? 'card' : 'cards'}`, `${right} right first time`]
+      : []),
     ...(fixed > 0 ? [`${fixed} fixed on retry`] : []),
+    ...(scans.length > 0
+      ? [`${scans.length} refreshed, ${scans.filter((a) => a.correct).length} known`]
+      : []),
     duration(Date.now() - startedAt),
   ];
 
@@ -113,7 +125,9 @@ export function Summary({
       <div className="summary-head rise">
         <p className="kicker">{kicker}</p>
         {first.length === 0 ? (
-          <h1 className="headline summary-empty">No cards answered</h1>
+          <h1 className="headline summary-empty">
+            {scans.length > 0 ? `${scans.length} refreshed` : 'No cards answered'}
+          </h1>
         ) : (
           <div className="summary-score">
             <svg className="summary-ring" viewBox="0 0 120 120" aria-hidden="true">
@@ -136,7 +150,7 @@ export function Summary({
         {first.length > 0 && <p className="summary-tone headline">{tone}</p>}
       </div>
 
-      {first.length > 0 && (
+      {(first.length > 0 || scans.length > 0) && (
         <ul className="summary-facts rise d1">
           {facts.map((fact) => (
             <li key={fact}>{fact}</li>

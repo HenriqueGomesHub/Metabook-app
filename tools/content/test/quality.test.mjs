@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
 import sharp from 'sharp';
-import { buildClues, writeClues } from '../clues.mjs';
+import { addRegionCodes, buildClues, writeClues } from '../clues.mjs';
 import { hashImage, runImageDupes } from '../imagedupes.mjs';
 import { paginate, runImageSheets, sheetRows } from '../imagesheets.mjs';
 import { loadPool, mediaId } from '../lib/common.mjs';
@@ -319,4 +319,25 @@ it('addSameLook: an identical picture in two countries puts each in the other cl
   assert.equal(addSameLook(countries, pairs), 2);
   assert.deepEqual(countries[0].clues[0].sameAs, ['ES']);
   assert.deepEqual(countries[1].clues[0].sameAs, ['AD', 'PT']);
+});
+
+describe('addRegionCodes', () => {
+  it('gives a regional clue the code of the one map region it names, never a broad one', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'maps-'));
+    writeFileSync(
+      join(dir, 'us-regions.json'),
+      JSON.stringify({ states: [{ code: 'OR', name: 'Oregon' }, { code: 'TX', name: 'Texas' }] }),
+    );
+    const clue = (id, family, region) => ({ id, family, region, images: [] });
+    const countries = [
+      {
+        country: 'US',
+        clues: [clue('a', 'bollard', 'Oregon'), clue('b', 'landscape', 'Texas'), clue('c', 'pole', 'Pacific Northwest')],
+      },
+    ];
+    assert.equal(addRegionCodes(countries, dir), 1);
+    assert.equal(countries[0].clues[0].regionCode, 'OR');
+    assert.equal(countries[0].clues[1].regionCode, undefined);
+    assert.equal(countries[0].clues[2].regionCode, undefined);
+  });
 });

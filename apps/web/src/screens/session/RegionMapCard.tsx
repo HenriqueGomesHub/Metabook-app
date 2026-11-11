@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react';
 import { label } from '../../app/labels';
 import { useRegionMap } from '../../app/useRegionMaps';
 import { Button } from '../../components/Button';
+import { ClueImg } from '../../components/clues/ClueImg';
 import { CountryMap } from '../../components/CountryMap';
 import { Stage } from './Stage';
 import { stateNameFrom } from './verdict';
@@ -84,6 +85,11 @@ export function RegionMapCard({ card, outcome, onAnswer, onSkip, reveal }: CardP
       side={
         <div className="map-prompt">
           <p className="kicker rise">Where in {country}?</p>
+          {card.clue?.image && (
+            <figure className="map-photo pop-in">
+              <ClueImg image={card.clue.image} alt={card.prompt.value} cropped />
+            </figure>
+          )}
           <p className="map-clue pop-in">{card.prompt.value}</p>
           <p className={hovered ? 'code-hover' : 'code-hover idle'} aria-hidden="true">
             {hovered ?? (map ? 'Pick the region on the map' : ' ')}

@@ -104,6 +104,8 @@ export interface Clue {
   text: string[];
   /** set when the clue only applies to part of the country */
   region?: string;
+  /** the region's code on the country's regions map, when `region` is one map region */
+  regionCode?: string;
   tags: string[];
   images: ClueImage[];
   locations: ClueLocation[];
@@ -142,6 +144,8 @@ export const clueCardIds = {
   which: (clueId: string) => `clue:${clueId}:which`,
   live: (clueId: string, index: number) => `clue:${clueId}:live:${index}`,
   text: (clueId: string) => `clue:${clueId}:text`,
+  /** a regional clue placed on its country's map */
+  where: (clueId: string) => `clue:${clueId}:where`,
 };
 
 /** An image a drill may show: not a giveaway, unless a crop hides what gives it away. */
