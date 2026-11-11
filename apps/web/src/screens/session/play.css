@@ -696,3 +696,31 @@ a.credit:hover {
   font-weight: 500;
   line-height: 1.5;
 }
+
+/* Refresh: a known clue shown with its answer */
+.scan-clue {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 4px 0 20px;
+}
+
+.scan-clue .clue-title {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.scan-clue .clue-summary {
+  font-size: 16px;
+}
+
+.scan-actions .scan-knew {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+}
+
+.scan-note {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--faint);
+}

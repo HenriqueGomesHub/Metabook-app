@@ -626,3 +626,31 @@ describe('newCardSeconds', () => {
     expect(newCardSeconds({ answered: 0, right: 0 }, true)).toBeLessThanOrEqual(10);
   });
 });
+
+describe('refresh mode', () => {
+  const spot = (id: string, clue: string, country = 'BR'): Card => ({
+    ...card(id, 'spot', country, 'Brazil'),
+    clue: { id: clue, image: { id: `${id}-img`, src: `https://x/${id}.jpg` } },
+  });
+
+  it('shows new photo cards as refreshes, many more than the usual new cards', () => {
+    const cards = Array.from({ length: 120 }, (_, i) => spot(`s${i}`, `c${i}`));
+    const session = buildSession({
+      cards,
+      states: {},
+      confusions: [],
+      settings: { ...settings, newPerDay: 10, sessionMinutes: 10 },
+      now,
+      rng: rng(),
+      refresh: true,
+    });
+    expect(session.queue.length).toBeGreaterThan(60);
+    expect(session.queue.every((i) => i.mode === 'scan')).toBe(true);
+  });
+
+  it('brings a "New to me" card back as a real question', () => {
+    const cards = [spot('s0', 'c0')];
+    const [retry] = requeueMissed([], { cardId: 's0', mode: 'scan' }, cards);
+    expect(retry).toMatchObject({ cardId: 's0', mode: 'mcq', retry: true });
+  });
+});

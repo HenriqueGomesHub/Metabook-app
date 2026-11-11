@@ -49,6 +49,7 @@ import { useKeys } from './session/useKeys';
 import { verdictFor } from './session/verdict';
 import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
+import { ScanCard } from './session/ScanCard';
 import { Summary } from './session/Summary';
 import type { Answer } from './session/Summary';
 
@@ -506,15 +507,23 @@ function CardRunner({
       given,
       correct,
       picked,
-      msTaken: Math.round(performance.now() - shownAt.current),
+      // "Knew it" on a Refresh card is graded as a fast right answer ("easy")
+      msTaken:
+        item.mode === 'scan' && correct ? 1000 : Math.round(performance.now() - shownAt.current),
       contrastPair: item.contrastPair,
     });
     setOutcome({ given, correct });
-    showTips(otherSide ?? picked);
     onAnswered(correct, state);
+    // a Refresh card already showed its answer: straight on to the next
+    if (item.mode === 'scan') {
+      onNext();
+      return;
+    }
+    showTips(otherSide ?? picked);
   }
 
-  const View = item.mode === 'binary' ? LookalikeCard : viewFor(card);
+  const View =
+    item.mode === 'binary' ? LookalikeCard : item.mode === 'scan' ? ScanCard : viewFor(card);
   const verdict = outcome && verdictFor(card, item, outcome);
   const reveal = verdict && shown && (
     <Reveal
