@@ -95,8 +95,10 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     newSeconds: newCardSeconds(done.recent, data.settings.returning),
     reviewSeconds: reviewSecondsFrom(done.recentMs),
     scanSeconds: scanCardSeconds(done.recent, data.settings.returning),
-    // a returning or clearly strong player gets their new photo cards as quick refreshes
-    refresh: data.settings.returning || intakeFor(done.recent) === 3,
+    // quick refreshes while most new cards are things the learner already knows (85%+ "Knew it"
+    // or right first time): a rusty player who recognises on sight. Once a week of answers shows
+    // otherwise, new cards are asked again, since answering teaches more than seeing.
+    refresh: intakeFor(done.recent, data.settings.returning) === 3,
     now,
   });
 }
