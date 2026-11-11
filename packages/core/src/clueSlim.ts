@@ -30,6 +30,7 @@ type SlimImage = [
 type SlimClueLocation = number | SlimLocation;
 interface SlimExtra {
   region?: string;
+  regionCode?: string;
   kind?: Clue['kind'];
   text?: string[];
   summary?: string;
@@ -136,6 +137,7 @@ export function slimCatalogue(countries: ClueCountry[]): SlimCountry[] {
       });
       const extra: SlimExtra = {
         ...(clue.region !== undefined && { region: clue.region }),
+        ...(clue.regionCode !== undefined && { regionCode: clue.regionCode }),
         ...(clue.kind !== undefined && { kind: clue.kind }),
         ...(quizImages(clue).length === 0 && { text: clue.text }),
         ...(clue.summary !== undefined && { summary: clue.summary }),
@@ -205,6 +207,7 @@ export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
             title,
             text: (extra && extra.text) || [],
             ...(extra && extra.region !== undefined && { region: extra.region }),
+            ...(extra && extra.regionCode !== undefined && { regionCode: extra.regionCode }),
             ...(extra && extra.summary !== undefined && { summary: extra.summary }),
             ...(extra && extra.sameAs !== undefined && { sameAs: extra.sameAs }),
             ...(extra && extra.differs !== undefined && { differs: extra.differs }),

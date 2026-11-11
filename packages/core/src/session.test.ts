@@ -8,6 +8,7 @@ import {
   newCardSeconds,
   modeFor,
   requeueMissed,
+  scanCardSeconds,
   reviewSecondsFrom,
   type SessionItem,
 } from './session';
@@ -661,5 +662,12 @@ describe('reviewSecondsFrom', () => {
     expect(reviewSecondsFrom(Array(40).fill(2000))).toBe(3.5);
     expect(reviewSecondsFrom(Array(40).fill(20000))).toBe(8);
     expect(reviewSecondsFrom([1000])).toBeUndefined();
+  });
+});
+
+describe('scanCardSeconds', () => {
+  it('counts the retry each "New to me" costs', () => {
+    expect(scanCardSeconds({ answered: 50, right: 50 })).toBe(5);
+    expect(scanCardSeconds({ answered: 50, right: 25 })).toBe(13);
   });
 });

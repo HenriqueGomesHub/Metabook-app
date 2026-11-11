@@ -528,6 +528,7 @@ export function writeClues({
   }
   const dupes = markDupes(countries, readJson(hashesFile, {}), slugCountry);
   const sameLook = addSameLook(countries, dupes.crossCountry);
+  const regionCodes = addRegionCodes(countries, mapsDir);
 
   for (const c of countries) writeJson(join(outDir, `${c.country.toLowerCase()}.json`), c);
   const index = jsonFilesIn(outDir)
@@ -543,12 +544,43 @@ export function writeClues({
       ...counts,
       dupes: dupes.within + dupes.sameFile + dupes.crossCountry.filter((p) => p.resolved).length,
       sameLook,
+      regionCodes,
     },
     unmatched,
     geohintsUnmatched,
     reviews,
     dupes: { ...dupes, crossCountry: dupes.crossCountry.slice(0, 300), crossCountryCount: dupes.crossCountry.length },
   };
+}
+
+/**
+ * A regional clue whose region is exactly one region of the country's map gets that region's code
+ * (`regionCode`), so the app can ask it where it belongs: "Where in the US?" on the map, rather
+ * than only "Which country?". Regions that name several map regions, or none, get no code.
+ * Returns the number of clues given a code.
+ */
+const BROAD_FAMILIES = new Set(['landscape', 'vegetation']);
+
+export function addRegionCodes(countries, mapsDir = MAPS_DIR) {
+  const norm = (s) => fold(String(s)).toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+  let given = 0;
+  for (const country of countries) {
+    const file = country.country === 'BR' ? 'br-states.json' : `${country.country.toLowerCase()}-regions.json`;
+    const states = readJson(join(mapsDir, file), { states: [] }).states ?? [];
+    if (states.length === 0) continue;
+    for (const clue of country.clues) {
+      delete clue.regionCode;
+      // landscape and plants run across regions ("the Great Plains, to central Texas"): no single answer
+      if (!clue.region || BROAD_FAMILIES.has(clue.family)) continue;
+      const region = norm(clue.region);
+      const hits = states.filter((s) => norm(s.name ?? '') === region);
+      if (hits.length === 1) {
+        clue.regionCode = hits[0].code;
+        given++;
+      }
+    }
+  }
+  return given;
 }
 
 /**

@@ -724,3 +724,20 @@ a.credit:hover {
   font-size: 13px;
   color: var(--faint);
 }
+
+/* a regional clue placed on its map: its photo above the clue's words */
+.map-photo {
+  margin: 8px 0 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  max-width: 320px;
+  background: var(--surface);
+}
+
+.map-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

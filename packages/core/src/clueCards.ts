@@ -355,6 +355,20 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     }
   }
 
+  // Where in the country: a regional clue is also asked at its own level, on the country's map,
+  // so "Bollard: white rectangle on top" is learnt as Oregon and not only as the US
+  if (clue.regionCode && first) {
+    cards.push({
+      ...base,
+      id: clueCardIds.where(clue.id),
+      type: 'region',
+      map: country.code.toLowerCase(),
+      answer: clue.regionCode,
+      prompt: { kind: 'text', value: clue.title },
+      clue: { id: clue.id, image: first },
+    });
+  }
+
   // Live view: the official Street View spots the clue links to
   clue.locations.forEach((location, index) => {
     const url = streetViewEmbedUrl(location);

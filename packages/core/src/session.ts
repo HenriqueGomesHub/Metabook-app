@@ -42,8 +42,17 @@ const MAX_CONTRAST = 4;
 const REVIEW_SECONDS = 8;
 const RETRY_SECONDS = 14;
 const NEW_SECONDS = 16;
-/** Seconds a Refresh card takes: look, recognise, tap. */
+/** Seconds a Refresh card takes: look, recognise, tap (a "New to me" also costs its retry). */
 const SCAN_SECONDS = 5;
+
+/** Estimated seconds a Refresh card takes this learner, with the retry each "New to me" costs. */
+export function scanCardSeconds(
+  recent: { answered: number; right: number },
+  returning = false,
+): number {
+  const rate = recent.answered >= 20 ? recent.right / recent.answered : returning ? 0.75 : 0.4;
+  return Math.round(SCAN_SECONDS + NEW_SECONDS * (1 - rate));
+}
 /** Refresh cards in one session at most. */
 const MAX_SCAN = 150;
 /** New cards a day even when reviews fill the session, so learning never stops. */
@@ -252,6 +261,8 @@ export function buildSession(input: {
   newSeconds?: number;
   /** estimated seconds per review for this learner (see reviewSecondsFrom) */
   reviewSeconds?: number;
+  /** estimated seconds per Refresh card for this learner (see scanCardSeconds) */
+  scanSeconds?: number;
   /**
    * Refresh mode: new photo cards are shown with their answer ("Knew it" / "New to me") rather
    * than asked, and as many as the session's time holds. For a returning or strong player, most
@@ -306,10 +317,26 @@ export function buildSession(input: {
   }
   const newRoom = Math.max(Math.min(MIN_NEW, newWanted), Math.floor((budget - spent) / newCost));
   // refresh mode: the rest of the time box goes on quick "Knew it / New to me" cards
-  const scanRoom = Math.min(MAX_SCAN, Math.floor((budget - spent) / SCAN_SECONDS));
+  const scanRoom = Math.min(
+    MAX_SCAN,
+    Math.floor((budget - spent) / Math.max(SCAN_SECONDS, input.scanSeconds ?? SCAN_SECONDS)),
+  );
+  // in refresh mode a clue already passed as known is not brought back through its other cards
+  // (its second photo, its four-photo question): only its map question, a new level, still comes
+  const knownClues = new Set<string>();
+  if (input.refresh) {
+    for (const card of cards) {
+      const state = stateOf(card);
+      const clue = clueOf(card);
+      if (clue && state && state.state !== 'new' && state.lapses === 0) knownClues.add(clue);
+    }
+  }
+  const candidates = input.refresh
+    ? cards.filter((c) => c.type === 'region' || !knownClues.has(clueOf(c) ?? ''))
+    : cards;
   const newCount = input.refresh ? Math.max(newRoom, scanRoom) : Math.min(newWanted, newRoom);
   const fresh = newCards({
-    cards,
+    cards: candidates,
     states,
     count: Math.max(0, newCount),
     introducedToday: input.introducedToday,

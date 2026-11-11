@@ -175,3 +175,33 @@ describe('orderRoundClues', () => {
     expect(regionMatches('North', undefined)).toBe(false);
   });
 });
+
+describe('where in the country', () => {
+  it('asks a regional clue with a map region on the map, with its photo', () => {
+    const regional = { ...PL_KASHUBIAN, region: 'Pomerania', regionCode: 'PM' };
+    const countries = CLUE_COUNTRIES.map((c) =>
+      c.country === 'PL'
+        ? { ...c, clues: c.clues.map((clue) => (clue.id === PL_KASHUBIAN.id ? regional : clue)) }
+        : c,
+    );
+    const made = clueCards({ ...input, clues: countries });
+    const where = made.find((c) => c.id === clueCardIds.where(PL_KASHUBIAN.id));
+    if (!regional.images.length) {
+      expect(where).toBeUndefined();
+      return;
+    }
+    expect(where).toMatchObject({
+      type: 'region',
+      map: 'pl',
+      answer: 'PM',
+      prompt: { kind: 'text', value: regional.title },
+      clue: { id: PL_KASHUBIAN.id },
+    });
+    expect(where?.clue?.image).toBeDefined();
+    expect(where?.prompt.value).not.toContain('Pomerania');
+  });
+
+  it('makes no map card for a clue without a region code', () => {
+    expect(cards.some((c) => c.id.endsWith(':where'))).toBe(false);
+  });
+});
