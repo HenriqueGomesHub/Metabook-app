@@ -1,7 +1,7 @@
 // Reviews applied by the `clues` step on every build, so they survive a re-fetch.
 //
 // content/review-images/*.json: arrays of { imageId, role: 'example'|'comparison'|'annotated',
-//   caption?, giveaway?, crop?: {x, y, w, h} (fractions), reject?, country?: 'XX' }. Applies to every
+//   caption?, giveaway?, crop?: {x, y, w, h} (fractions), reject?, noQuiz?, country?: 'XX' }. Applies to every
 //   clue holding the image: sets role, caption, giveaway and crop; `reject` drops the image; a
 //   `country` other than the clue's (the picture shows another country) drops it from that clue.
 //   Files are read in name order; a later entry for the same image wins.
@@ -29,6 +29,7 @@ export function imageEntryProblem(e, codes) {
   if (e.caption != null && !isText(e.caption, CAPTION_MAX)) return `caption must be 1..${CAPTION_MAX} characters`;
   if (e.giveaway != null && typeof e.giveaway !== 'boolean') return 'giveaway must be boolean';
   if (e.reject != null && typeof e.reject !== 'boolean') return 'reject must be boolean';
+  if (e.noQuiz != null && typeof e.noQuiz !== 'boolean') return 'noQuiz must be boolean';
   if (e.crop != null && !validCrop(e.crop)) return 'crop must be fractions {x, y, w, h} inside the image';
   if (e.country != null && !codes.has(String(e.country).toUpperCase())) return `country ${e.country} is not a pool code`;
   return undefined;
@@ -78,6 +79,12 @@ export function applyImageReviews(countries, { entries, files, invalid }) {
         if (e.giveaway === true) image.giveaway = true;
         if (e.giveaway === false) delete image.giveaway;
         if (e.crop) image.crop = { x: e.crop.x, y: e.crop.y, w: e.crop.w, h: e.crop.h };
+        // the answer shows in the picture where no crop can hide it (a plate's country code):
+        // kept for Learn and the answer screen, never quizzed
+        if (e.noQuiz) {
+          image.giveaway = true;
+          delete image.crop;
+        }
         report.applied++;
         return true;
       });
