@@ -28,16 +28,19 @@ const CONCURRENCY = 8;
 
 /**
  * The images to review, in sheet order: one row per image id (its first clue), skipping images
- * without `path`, with `dupeOf`, already reviewed (`role` set), or of other families.
+ * without `path`, with `dupeOf`, already reviewed (`role` set), or of other families. With
+ * `recheck`, the reviewed photos a quiz may show instead (examples, giveaways only when cropped).
  */
-export function sheetRows(countries, families = SHEET_FAMILIES) {
+export function sheetRows(countries, families = SHEET_FAMILIES, { recheck = false } = {}) {
   const rows = [];
   const seen = new Set();
   for (const family of families) {
     for (const country of [...countries].sort((a, b) => a.country.localeCompare(b.country))) {
       for (const clue of country.clues.filter((c) => c.family === family)) {
         for (const image of clue.images) {
-          if (!image.path || image.dupeOf || image.role || seen.has(image.id)) continue;
+          if (!image.path || image.dupeOf || seen.has(image.id)) continue;
+          // a recheck sheet holds the reviewed quiz photos (examples that a drill may show)
+          if (recheck ? (image.role && image.role !== 'example') || (image.giveaway && !image.crop) : image.role) continue;
           seen.add(image.id);
           rows.push({ imageId: image.id, clueId: clue.id, country: country.country, family, title: clue.title, path: image.path, width: image.width, height: image.height });
         }
@@ -88,11 +91,11 @@ export async function sheet(tiles) {
     .toBuffer();
 }
 
-export async function runImageSheets({ storage, dir = CLUES_DIR, outDir = SHEETS_DIR, only, families = SHEET_FAMILIES, concurrency = CONCURRENCY } = {}) {
+export async function runImageSheets({ storage, dir = CLUES_DIR, outDir = SHEETS_DIR, only, families = SHEET_FAMILIES, recheck = false, concurrency = CONCURRENCY } = {}) {
   const countries = jsonFilesIn(dir)
     .filter((f) => f !== 'index.json' && (!only || only.includes(f.replace(/\.json$/, ''))))
     .map((f) => readJson(join(dir, f)));
-  const sheets = paginate(sheetRows(countries, families));
+  const sheets = paginate(sheetRows(countries, families, { recheck }));
   rmSync(outDir, { recursive: true, force: true });
   mkdirSync(join(outDir, 'sheets'), { recursive: true });
   mkdirSync(join(outDir, 'img'), { recursive: true });
