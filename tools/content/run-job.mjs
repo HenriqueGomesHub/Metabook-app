@@ -149,7 +149,7 @@ export async function runJob(job, { steps = [], onStep } = {}) {
         result = { all: await timed(() => runImageDupes({ storage, deadline, only })) };
       } else {
         const { runImageSheets } = await import('./imagesheets.mjs');
-        result = { all: await timed(() => runImageSheets({ storage, only, ...(job.families && { families: job.families }) })) };
+        result = { all: await timed(() => runImageSheets({ storage, only, ...(job.families && { families: job.families }), ...(job.recheck && { recheck: true }) })) };
       }
     } else if (step === 'wipemedia') {
       const { createStorage } = await import('./storage.mjs');
