@@ -138,13 +138,32 @@ export function regionMainKey(
 }
 
 /** The answer-feedback hint for a code, e.g. "4x = Paraná & Santa Catarina"; none without a pattern. */
+/**
+ * For a country whose codes follow no pattern (the US, Canada): the other codes of the same
+ * region, so a code is learnt as one of a small family ("201, 551, 862: New Jersey") rather than
+ * as a lone number. Undefined when the region has no other code.
+ */
+function neighboursHint(code: string, codes: PlacedCode[]): string | undefined {
+  const region = codes.find((c) => c.code === code)?.region;
+  if (!region) return undefined;
+  const others = codes
+    .filter((c) => c.region === region && c.code !== code)
+    .map((c) => c.code)
+    .sort();
+  if (others.length === 0) return undefined;
+  const shown = others.slice(0, NEIGHBOURS_SHOWN);
+  const more = others.length > shown.length ? ` and ${others.length - shown.length} more` : '';
+  return `Same region = ${shown.join(', ')}${more}`;
+}
+const NEIGHBOURS_SHOWN = 6;
+
 export function patternHint(
   country: string,
   code: string,
   pattern: AreaCodePattern | undefined,
   codes: PlacedCode[],
 ): string | undefined {
-  if (!pattern || pattern.kind !== 'pattern') return undefined;
+  if (!pattern || pattern.kind !== 'pattern') return neighboursHint(code, codes);
   const key = patternKey(country, code, pattern.digits);
   const group = pattern.groups.find((g) => g.key === key);
   if (!group) return undefined;

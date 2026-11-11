@@ -1,4 +1,4 @@
-import type { Settings } from '@metabook/core';
+import { DEFAULT_SESSION_MINUTES, type Settings } from '@metabook/core';
 import { useId, useState } from 'react';
 import { Button } from '../../components/Button';
 
@@ -71,6 +71,7 @@ export function SettingsForm({
       ...draft,
       maxReviewsPerDay: clamp(draft.maxReviewsPerDay, 1, 1000),
       newPerDay: clamp(draft.newPerDay, 0, 200),
+      sessionMinutes: clamp(draft.sessionMinutes ?? DEFAULT_SESSION_MINUTES, 5, 120),
       blockDays: clamp(draft.blockDays, 7, 30),
       blockMinutes: clamp(draft.blockMinutes, 10, 60),
     };
@@ -87,6 +88,24 @@ export function SettingsForm({
     <form className="sheet" onSubmit={submit} aria-label="Study settings">
       <h2 className="headline">Study</h2>
       <div className="fields">
+        <NumberField
+          label="Minutes per session"
+          value={draft.sessionMinutes ?? DEFAULT_SESSION_MINUTES}
+          min={5}
+          max={120}
+          onChange={(sessionMinutes) => set({ sessionMinutes })}
+        />
+        <label className="field field-wide field-check">
+          <input
+            type="checkbox"
+            checked={draft.returning ?? false}
+            onChange={(e) => set({ returning: e.target.checked })}
+          />
+          <span>
+            I've played GeoGuessr before: start with more new cards, since most will be a quick
+            refresh
+          </span>
+        </label>
         <NumberField
           label="Reviews per day"
           value={draft.maxReviewsPerDay}

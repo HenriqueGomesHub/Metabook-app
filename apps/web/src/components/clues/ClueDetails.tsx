@@ -1,4 +1,5 @@
 import { clueSummary, distinctImages, plainText } from '@metabook/core';
+import { Glossed } from './Glossed';
 import type { Clue } from '@metabook/core';
 import { useState } from 'react';
 import type { ReactNode } from 'react';
@@ -82,7 +83,7 @@ export function ClueDetails({
         {clue.region && <span className="learn-region">{clue.region}</span>}
       </div>
       {lead ? (
-        <p className="clue-summary">{lead.lead}</p>
+        <Glossed className="clue-summary" text={lead.lead} />
       ) : (
         text === undefined && <p className="clue-summary clue-text-loading">Loading…</p>
       )}

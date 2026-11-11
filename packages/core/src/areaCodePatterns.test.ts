@@ -87,3 +87,17 @@ describe('patternHint', () => {
     expect(patternHint('BR', '41', undefined, codes)).toBeUndefined();
   });
 });
+
+describe('patternHint for a country with no pattern', () => {
+  it('lists the other codes of the same region', () => {
+    const us = { kind: 'memorise' as const, digits: 1, hook: '', summary: '', groups: [] };
+    const codes = [
+      { code: '201', region: 'NJ' },
+      { code: '551', region: 'NJ' },
+      { code: '862', region: 'NJ' },
+      { code: '212', region: 'NY' },
+    ];
+    expect(patternHint('US', '201', us, codes)).toBe('Same region = 551, 862');
+    expect(patternHint('US', '212', us, codes)).toBeUndefined();
+  });
+});

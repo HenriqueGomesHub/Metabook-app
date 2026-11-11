@@ -1,6 +1,7 @@
 import {
   activeCountries,
   buildSession,
+  intakeFor,
   isClueCard,
   learnMoreSession,
   mastery,
@@ -45,7 +46,16 @@ function today(data: AppSnapshot, now: Date) {
     data.reviews.filter((r) => Date.parse(r.reviewedAt) >= dayStart).map((r) => r.cardId),
   );
   const introduced = [...reviewedToday].filter((id) => (firstReview.get(id) ?? 0) >= dayStart);
-  return { reviews: reviewedToday.size - introduced.length, introduced };
+  // new cards first answered in the last week, and how many of them were right the first time
+  const weekAgo = startOfDay(now, -7).getTime();
+  const recent = { answered: 0, right: 0 };
+  for (const review of data.reviews) {
+    const at = Date.parse(review.reviewedAt);
+    if (at < weekAgo || at >= dayStart || firstReview.get(review.cardId) !== at) continue;
+    recent.answered++;
+    if (review.correct) recent.right++;
+  }
+  return { reviews: reviewedToday.size - introduced.length, introduced, recent };
 }
 
 /**
@@ -69,6 +79,7 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     settings: data.settings,
     doneToday: { reviews: done.reviews, newCards: done.introduced.length },
     introducedToday: done.introduced,
+    intake: intakeFor(done.recent, data.settings.returning),
     now,
   });
 }

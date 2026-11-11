@@ -19,6 +19,7 @@ import {
   seededShuffle,
   SUBJECT_NOUNS,
 } from './generate';
+import { COUNTRY_PRIORITY } from './curriculum';
 import { haversineKm } from './geo';
 import type { Card, CountryFacts, PoolCountry } from './types';
 
@@ -174,6 +175,18 @@ function context(input: ClueCardInput): Context {
   return { pool: input.pool, names: input.names ?? [], families, showcase, sameAs };
 }
 
+/** The countries GeoGuessr lands in often enough to be worth offering as a distractor. */
+const COMMON_COUNTRIES = 80;
+const COMMON = new Set(COUNTRY_PRIORITY.slice(0, COMMON_COUNTRIES));
+const isCommon = (code: string) => COMMON.has(code.toUpperCase());
+
+/**
+ * A "more examples" gallery (GeoHints photo sets with no rule of their own): shown in Learn
+ * beside the country's other clues, never quizzed, since there is nothing to learn from it alone.
+ */
+export const isGalleryClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>
+  /more examples/i.test(clue.title) && !clue.summary;
+
 /** Countries a clue cannot tell apart from its own: never offered against it. */
 function lookTheSame(clue: Clue, code: string, ctx: Context): Set<string> {
   const linked = ctx.sameAs.get(clue.family)?.get(code) ?? new Set<string>();
@@ -205,8 +218,12 @@ function rankOthers(
     others.filter((c) => c.code === code),
   );
   const sharing = ctx.families.get(clue.family) ?? new Set<string>();
-  const rest = others.filter((c) => !lookalikes.includes(c));
+  // a rarely seen country is only a distractor for another rare one: next to a big country it is
+  // ruled out at a glance, and the answer is got without knowing the clue
+  const minor = (c: PoolCountry) => !isCommon(c.code);
+  const rest = others.filter((c) => !lookalikes.includes(c) && (minor(self) || !minor(c)));
   const near = rest.filter((c) => c.continent === self.continent);
+  const kept = new Set([...lookalikes, ...rest]);
   const tiers = [
     seededShuffle(
       near.filter((c) => sharing.has(c.code)),
@@ -217,8 +234,17 @@ function rankOthers(
       `${seed}:near`,
     ),
     seededShuffle(
-      rest.filter((c) => c.continent !== self.continent),
+      rest.filter((c) => c.continent !== self.continent && sharing.has(c.code)),
       `${seed}:far`,
+    ),
+    seededShuffle(
+      rest.filter((c) => c.continent !== self.continent && !sharing.has(c.code)),
+      `${seed}:farther`,
+    ),
+    // rare countries last, so a short pool still fills
+    seededShuffle(
+      others.filter((c) => !kept.has(c)),
+      `${seed}:rare`,
     ),
   ];
   const ranked: PoolCountry[] & { close?: number } = [...new Set([...lookalikes, ...tiers.flat()])];
@@ -250,6 +276,7 @@ export function clueCards(input: ClueCardInput): Card[] {
     const country = input.pool.find((c) => same(c.code, entry.country));
     if (!country) continue;
     for (const clue of [...entry.clues].sort(byStep)) {
+      if (isGalleryClue(clue)) continue;
       cards.push(...cardsForClue(clue, country, ctx));
     }
   }

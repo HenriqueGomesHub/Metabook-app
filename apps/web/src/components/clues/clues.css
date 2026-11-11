@@ -30,6 +30,39 @@
   overflow-wrap: anywhere;
 }
 
+/* a GeoGuessr word with a tap-to-see meaning */
+.term {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.term[aria-expanded='true'] {
+  color: var(--accent);
+}
+
+.term-meaning {
+  margin: 8px 0 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.term-meaning b {
+  color: var(--ink);
+  font-weight: 500;
+}
+
 .clue-compare {
   display: flex;
   flex-direction: column;

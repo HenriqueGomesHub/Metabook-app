@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { answerKey, recordAnswer } from './confusions';
 import { mulberry32 } from './random';
-import { buildSession, modeFor, requeueMissed, type SessionItem } from './session';
+import { retrievability } from './scheduler';
+import { buildSession, intakeFor, modeFor, requeueMissed, type SessionItem } from './session';
 import {
   DEFAULT_SETTINGS,
   type Card,
@@ -111,13 +112,34 @@ describe('buildSession', () => {
     expect(queue.filter((id) => id.startsWith('new'))).toHaveLength(2);
   });
 
-  it('keeps the oldest reviews when over the cap', () => {
+  it('keeps the reviews most at risk of being forgotten when over the cap', () => {
     const { cards, states } = deck(25, 0);
     const session = buildSession({ cards, states, confusions: [], settings, now, rng: rng() });
-    expect(session.queue.map((i) => i.cardId).sort()).toEqual(
-      Array.from({ length: 10 }, (_, i) => `due${i}`).sort(),
+    const kept = session.queue.map((i) => i.cardId);
+    expect(kept).toHaveLength(10);
+    // equal value: the lowest recall, i.e. the most overdue, go first
+    const recall = (id: string) => retrievability(states[id] as CardState, now);
+    const worstLeftOut = Math.min(
+      ...cards.filter((c) => !kept.includes(c.id)).map((c) => recall(c.id)),
     );
+    for (const id of kept) expect(recall(id)).toBeLessThanOrEqual(worstLeftOut + 1e-9);
     expect(session).toMatchObject({ catchUp: false, remaining: 15 });
+  });
+
+  it('fits the session in its time box, most valuable reviews first', () => {
+    const { cards, states } = deck(200, 0);
+    const session = buildSession({
+      cards,
+      states,
+      confusions: [],
+      settings: { ...settings, maxReviewsPerDay: 500, sessionMinutes: 5 },
+      now,
+      rng: rng(),
+    });
+    // about 5 minutes of 8-22 s reviews
+    expect(session.queue.length).toBeGreaterThan(10);
+    expect(session.queue.length).toBeLessThan(40);
+    expect(session.remaining).toBeGreaterThan(150);
   });
 
   it('enters catch-up only when overdue exceeds 3× the cap', () => {
@@ -492,12 +514,14 @@ describe('buildSession catch-up and dedup', () => {
     expect(buildSession({ ...past, confusions: [], settings, now: localNow }).catchUp).toBe(true);
   });
 
-  it('adds no new cards in catch-up', () => {
+  it('still adds a few new cards in catch-up, so learning never stops', () => {
     const { cards, states } = dueDeck(31, yesterday);
-    cards.push(card('new0'), card('new1'));
+    for (let i = 0; i < 10; i++) cards.push(card(`new${i}`));
     const session = buildSession({ cards, states, confusions: [], settings, now: localNow });
     expect(session.catchUp).toBe(true);
-    expect(session.queue.some((i) => i.cardId.startsWith('new'))).toBe(false);
+    const fresh = session.queue.filter((i) => i.cardId.startsWith('new'));
+    expect(fresh.length).toBeGreaterThan(0);
+    expect(fresh.length).toBeLessThanOrEqual(5);
   });
 
   it('counts block extras against the daily review cap', () => {
@@ -573,5 +597,17 @@ describe('requeueMissed', () => {
       ...queue,
       { cardId: 'a', mode: 'mcq', retry: true },
     ]);
+  });
+});
+
+describe('intakeFor', () => {
+  it('takes more new cards when most first answers are right', () => {
+    expect(intakeFor({ answered: 50, right: 47 })).toBe(3);
+    expect(intakeFor({ answered: 50, right: 40 })).toBe(2);
+    expect(intakeFor({ answered: 50, right: 20 })).toBe(1);
+  });
+  it('starts a returning player high until there is a week of answers', () => {
+    expect(intakeFor({ answered: 5, right: 5 })).toBe(1);
+    expect(intakeFor({ answered: 5, right: 5 }, true)).toBe(3);
   });
 });

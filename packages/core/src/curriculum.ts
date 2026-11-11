@@ -13,6 +13,8 @@
 //   cards come a pair at a time, spread over types (Spot it, Which clue, Live view, then its other
 //   images and spots), and at most MAX_SIBLINGS_PER_DAY of one clue are introduced on one day: its
 //   other cards come on later days.
+// - Clues about one region of a country come after the country-wide clues of their family, and a
+//   country's where-in-the-country map cards only once half its clue cards are seen.
 // - Cards not made from clues (flags, scripts, area codes, region maps) are about OTHER_SHARE of the
 //   new cards, by country priority and round-robin across their types.
 import type { Card, CardState, CardType, MetaSubject } from './types';
@@ -39,6 +41,8 @@ export const ACTIVE_COUNTRIES = 4;
 export const MAX_SIBLINGS_PER_DAY = 2;
 /** Share of new cards that are not made from clues. */
 export const OTHER_SHARE = 0.2;
+/** Share of a country's clue cards seen before its where-in-the-country map cards come. */
+const MAP_AFTER_SHARE = 0.5;
 
 /** The order a country's turns go through the clue families. */
 export const FAMILY_ROTATION: readonly MetaSubject[] = [
@@ -96,7 +100,7 @@ export function activeCountries(
 interface Ranked {
   card: Card;
   /** sort key inside the country and family: pair of the clue, clue position, card position */
-  key: [number, number, number];
+  key: [number, number, number, number];
 }
 
 /** Each country's clue cards by family rank (FAMILY_ROTATION index), in introduction order. */
@@ -119,8 +123,13 @@ function clueQueues(cards: Card[]): Map<string, Map<number, Card[]>> {
     ordered.push(...others);
     const families = byCountry.get(first.country) ?? new Map<number, Ranked[]>();
     const ranked = families.get(family) ?? [];
+    // a clue for one region of the country (Kolyma, Quebec) waits behind the country-wide ones
+    const regional = first.region ? 1 : 0;
     ordered.forEach((card, rank) =>
-      ranked.push({ card, key: [Math.floor(rank / MAX_SIBLINGS_PER_DAY), clueIndex, rank] }),
+      ranked.push({
+        card,
+        key: [regional, Math.floor(rank / MAX_SIBLINGS_PER_DAY), clueIndex, rank],
+      }),
     );
     families.set(family, ranked);
     byCountry.set(first.country, families);
@@ -174,6 +183,41 @@ function weave<T>(main: T[], side: T[], share: number): T[] {
  * Up to `count` new cards in curriculum order (see the file comment), ready to be served in this
  * order: clue cards round-robin across countries, the other cards woven in.
  */
+/**
+ * How much a card is worth knowing in a round: how often its country comes up (COUNTRY_PRIORITY
+ * rank) times how often its kind of clue decides a round (always-visible things such as the car,
+ * coverage, signs and landscape over flags and area codes). Orders reviews when a session cannot
+ * hold them all.
+ */
+export function cardValue(card: Card): number {
+  const rank = COUNTRY_PRIORITY.indexOf(card.country?.toUpperCase() ?? '');
+  const country = 1 / ((rank < 0 ? COUNTRY_PRIORITY.length + 20 : rank) + 8);
+  const kind = card.subject ?? card.type;
+  return country * (KIND_VALUE[kind] ?? 0.5);
+}
+
+const KIND_VALUE: Record<string, number> = {
+  car: 1,
+  coverage: 1,
+  landscape: 1,
+  sign: 0.9,
+  language: 0.9,
+  vegetation: 0.8,
+  line: 0.8,
+  pole: 0.8,
+  script: 0.7,
+  architecture: 0.7,
+  bollard: 0.6,
+  lookalike: 0.5,
+  region: 0.5,
+  other: 0.5,
+  plate: 0.4,
+  meta: 0.4,
+  guardrail: 0.3,
+  areacode: 0.25,
+  flag: 0.15,
+};
+
 export function pickNewCards(input: {
   cards: Card[];
   states: Record<string, CardState>;
@@ -218,8 +262,22 @@ export function pickNewCards(input: {
       )
       .filter(([, families]) => families.size > 0),
   );
+  // where-in-the-country maps wait until half the country's clue cards are known: placing a
+  // region means little before the country itself is recognised
+  const clueTotals = new Map<string, { all: number; seen: number }>();
+  for (const card of cards) {
+    if (!clueOf(card)) continue;
+    const t = clueTotals.get(card.country) ?? { all: 0, seen: 0 };
+    t.all++;
+    if (!isNew(states, card)) t.seen++;
+    clueTotals.set(card.country, t);
+  }
+  const countryReady = (card: Card) => {
+    const t = clueTotals.get(card.country);
+    return !card.map || !t || t.seen >= t.all * MAP_AFTER_SHARE;
+  };
   const others = otherQueue(
-    fresh.filter((card) => !clueOf(card)),
+    fresh.filter((card) => !clueOf(card) && countryReady(card)),
     order,
   );
   const clueTotal = [...queues.values()].reduce(
