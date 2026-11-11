@@ -51,6 +51,18 @@ const reviewSeconds = (recall: number) => REVIEW_SECONDS + RETRY_SECONDS * (1 - 
  * few seconds and then rests for weeks. `recent` = the new cards first answered in the last week;
  * a returning player starts high before there is a week to go by.
  */
+/**
+ * Estimated seconds a new card takes: a card the learner already knows is answered in a few
+ * seconds and passed, so the more first answers are right, the more new cards fit the session.
+ */
+export function newCardSeconds(
+  recent: { answered: number; right: number },
+  returning = false,
+): number {
+  const rate = recent.answered >= 20 ? recent.right / recent.answered : returning ? 0.75 : 0.4;
+  return Math.min(NEW_SECONDS, Math.round(5 + ((NEW_SECONDS - 5) * (1 - rate)) / 0.6));
+}
+
 export function intakeFor(recent: { answered: number; right: number }, returning = false): number {
   if (recent.answered < 20) return returning ? 3 : 1;
   const rate = recent.right / recent.answered;
@@ -215,6 +227,8 @@ export function buildSession(input: {
   introducedToday?: string[];
   /** multiplier on settings.newPerDay (see intakeFor) */
   intake?: number;
+  /** estimated seconds per new card (see newCardSeconds) */
+  newSeconds?: number;
 }): Session {
   const { cards, states, confusions, block, now } = input;
   const done = input.doneToday ?? { reviews: 0, newCards: 0 };
@@ -251,7 +265,8 @@ export function buildSession(input: {
     done.reviews * REVIEW_SECONDS -
     done.newCards * NEW_SECONDS;
   const newWanted = Math.round(settings.newPerDay * (input.intake ?? 1));
-  const reserve = Math.min(MIN_NEW, newWanted) * NEW_SECONDS;
+  const newCost = Math.min(NEW_SECONDS, input.newSeconds ?? NEW_SECONDS);
+  const reserve = Math.min(MIN_NEW, newWanted) * newCost;
   const reviews: Card[] = [];
   let spent = 0;
   for (const card of due.slice(0, cap)) {
@@ -260,10 +275,7 @@ export function buildSession(input: {
     reviews.push(card);
     spent += cost;
   }
-  const newRoom = Math.max(
-    Math.min(MIN_NEW, newWanted),
-    Math.floor((budget - spent) / NEW_SECONDS),
-  );
+  const newRoom = Math.max(Math.min(MIN_NEW, newWanted), Math.floor((budget - spent) / newCost));
   const fresh = newCards({
     cards,
     states,
