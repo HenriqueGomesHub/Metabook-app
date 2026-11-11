@@ -131,6 +131,17 @@ function inScope(
   );
 }
 
+/** What a drill is over, for its end screen: "Area codes", "Poles", "Brazil". */
+function scopeTitle(data: AppSnapshot, scope: Scope): string {
+  if (scope.clue) return 'Clue quiz';
+  if (scope.type) return CARD_TYPES[scope.type].label;
+  if (scope.subject) return SUBJECTS[scope.subject].label;
+  const chapter = data.content.chapters.find((c) => c.id === scope.chapter);
+  if (chapter) return chapter.title;
+  if (scope.country) return label(scope.country);
+  return 'Practice';
+}
+
 /** Where closing practice leads back to. */
 function backTo(data: AppSnapshot, scope: Scope): string {
   const country =
@@ -304,7 +315,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
   if (ended) {
     return (
       <Summary
-        kicker="Practice done"
+        kicker={`${scopeTitle(data, scope)} · done`}
         answers={answers}
         cards={pool}
         startedAt={startedAt}
