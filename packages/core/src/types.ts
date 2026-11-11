@@ -234,6 +234,10 @@ export interface Settings {
   formats: ('move' | 'nm' | 'nmpz')[];
   /** country ids the learner picked to focus on */
   focusCountries?: string[];
+  /** how long the daily session aims to take; reviews beyond it wait, most valuable first */
+  sessionMinutes?: number;
+  /** played GeoGuessr before: more new cards from the first day, since most are only a refresh */
+  returning?: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -244,6 +248,8 @@ export const DEFAULT_SETTINGS: Settings = {
   blockMinutes: 20,
   formats: ['move', 'nm', 'nmpz'],
   focusCountries: [],
+  sessionMinutes: 20,
+  returning: false,
 };
 
 export type Medal = 'gold' | 'silver' | 'bronze' | null;

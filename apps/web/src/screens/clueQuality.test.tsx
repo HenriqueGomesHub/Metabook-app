@@ -48,7 +48,12 @@ describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
   it('shows the summary, the same-look note and the full text behind More detail', async () => {
     mount('/atlas/AL');
     const learn = await screen.findByRole('region', { name: 'Learn' });
-    expect(within(learn).getByText('Red and white bollards with a red reflector.')).toBeTruthy();
+    // the summary's jargon ("bollards") is a tappable term inside the paragraph
+    const summary = (text: string) => (_: string, el: Element | null) =>
+      el?.tagName === 'P' && el.textContent === text;
+    expect(
+      within(learn).getByText(summary('Red and white bollards with a red reflector.')),
+    ).toBeTruthy();
     expect(
       within(learn)
         .getByText(/Looks the same in/)

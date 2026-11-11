@@ -53,5 +53,6 @@ describe('slimCatalogue', () => {
     expect(back).toEqual(withoutText(shipped));
     const ids = (clues: ClueCountry[]) => clueCards({ clues, pool }).map((c) => c.id);
     expect(ids(back)).toEqual(ids(shipped));
-  });
+    // builds every card of the whole catalogue twice
+  }, 20_000);
 });

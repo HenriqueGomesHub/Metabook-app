@@ -150,7 +150,8 @@ export function Summary({
           <div className="summary-panel-head">
             <span>Pass {progress.pass}</span>
             <span>
-              {progress.learnt} of {progress.total} learnt
+              {progress.learnt} learnt in this drill · {progress.total.toLocaleString('en-US')} in
+              the pool
             </span>
           </div>
           <div
@@ -168,7 +169,9 @@ export function Summary({
           <p className="summary-panel-note">
             {progress.learnt >= progress.total
               ? 'Every card learnt this pass. Keep going to start the next one.'
-              : 'Keep going until every card is learnt, then the drill starts a new pass.'}
+              : progress.learnt > 0
+                ? `+${progress.learnt} cards you can now answer twice in a row. Come back to keep the pass going.`
+                : 'A card counts as learnt after two right answers in a row (one if you knew it already).'}
           </p>
         </section>
       )}

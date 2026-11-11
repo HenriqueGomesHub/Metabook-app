@@ -131,5 +131,7 @@ export default defineConfig({
     globals: true,
     setupFiles: ['src/test/setup.ts'],
     include: ['src/**/*.test.{ts,tsx}'],
+    // screen tests load the whole clue catalogue (16k cards) into the app
+    testTimeout: 15_000,
   },
 });

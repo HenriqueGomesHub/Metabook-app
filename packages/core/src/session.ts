@@ -1,6 +1,6 @@
 import { matchesTarget } from './blocks';
 import { activePairs, CONTRAST_STREAK_TO_RESOLVE, isMapKey } from './confusions';
-import { clueOf, pickNewCards } from './curriculum';
+import { cardValue, clueOf, pickNewCards } from './curriculum';
 import { mulberry32, shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
 import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } from './types';
@@ -32,6 +32,32 @@ const BLOCK_SHARE = 0.4;
 const MAX_RUN = 3;
 /** Contrast questions in one day's session, one per confused pair. */
 const MAX_CONTRAST = 4;
+
+// The daily session is time-boxed (settings.sessionMinutes): estimated seconds per card, a review
+// costing more the likelier it is to be missed (a miss comes back until right).
+const REVIEW_SECONDS = 8;
+const RETRY_SECONDS = 14;
+const NEW_SECONDS = 16;
+/** New cards a day even when reviews fill the session, so learning never stops. */
+const MIN_NEW = 5;
+export const DEFAULT_SESSION_MINUTES = 20;
+
+/** Estimated seconds a review takes, with the expected cost of answering it again after a miss. */
+const reviewSeconds = (recall: number) => REVIEW_SECONDS + RETRY_SECONDS * (1 - recall);
+
+/**
+ * How many times the usual new cards a day to offer: a learner who gets most new cards right the
+ * first time (they already knew them) takes more at once, since a card already known costs a
+ * few seconds and then rests for weeks. `recent` = the new cards first answered in the last week;
+ * a returning player starts high before there is a week to go by.
+ */
+export function intakeFor(recent: { answered: number; right: number }, returning = false): number {
+  if (recent.answered < 20) return returning ? 3 : 1;
+  const rate = recent.right / recent.answered;
+  if (rate >= 0.85) return 3;
+  if (rate >= 0.75) return 2;
+  return 1;
+}
 
 /** How each type is answered once past multiple choice; area codes are recalled on the map. */
 const RECALL_MODES: Partial<Record<CardType, SessionMode>> = {
@@ -187,6 +213,8 @@ export function buildSession(input: {
   doneToday?: { reviews: number; newCards: number };
   /** ids of the cards first answered today, for the curriculum's per-clue daily limit */
   introducedToday?: string[];
+  /** multiplier on settings.newPerDay (see intakeFor) */
+  intake?: number;
 }): Session {
   const { cards, states, confusions, block, now } = input;
   const done = input.doneToday ?? { reviews: 0, newCards: 0 };
@@ -201,23 +229,49 @@ export function buildSession(input: {
   const stateOf = (card: Card) => states[card.id];
   const isSeen = (card: Card) => (stateOf(card)?.state ?? 'new') !== 'new';
 
+  // due reviews, the most valuable at the most risk first: when the session's time cannot hold
+  // them all, the ones left out are those that matter least in a round or are still well known
+  const recallOf = new Map<string, number>();
   const due = cards
     .filter((card) => isSeen(card) && Date.parse(stateOf(card)?.due ?? '') <= now.getTime())
-    .sort((a, b) => (stateOf(a)?.due ?? '').localeCompare(stateOf(b)?.due ?? ''));
+    .map((card) => {
+      const recall = retrievability(stateOf(card) as CardState, now);
+      recallOf.set(card.id, recall);
+      return { card, priority: cardValue(card) * (1.05 - recall) };
+    })
+    .sort((a, b) => b.priority - a.priority)
+    .map(({ card }) => card);
   const cap = settings.maxReviewsPerDay;
   const overdue = due.filter((card) => Date.parse(stateOf(card)?.due ?? '') < startOfToday);
   const catchUp = overdue.length > CATCH_UP_FACTOR * cap;
-  const reviews = due.slice(0, cap);
-  const fresh = catchUp
-    ? []
-    : newCards({
-        cards,
-        states,
-        count: settings.newPerDay,
-        introducedToday: input.introducedToday,
-        focus: settings.focusCountries,
-        isTarget,
-      });
+
+  // the time box: what is already done today counts against it
+  const budget =
+    (input.settings.sessionMinutes ?? DEFAULT_SESSION_MINUTES) * 60 -
+    done.reviews * REVIEW_SECONDS -
+    done.newCards * NEW_SECONDS;
+  const newWanted = Math.round(settings.newPerDay * (input.intake ?? 1));
+  const reserve = Math.min(MIN_NEW, newWanted) * NEW_SECONDS;
+  const reviews: Card[] = [];
+  let spent = 0;
+  for (const card of due.slice(0, cap)) {
+    const cost = reviewSeconds(recallOf.get(card.id) ?? 0.9);
+    if (spent + cost > budget - reserve && reviews.length > 0) break;
+    reviews.push(card);
+    spent += cost;
+  }
+  const newRoom = Math.max(
+    Math.min(MIN_NEW, newWanted),
+    Math.floor((budget - spent) / NEW_SECONDS),
+  );
+  const fresh = newCards({
+    cards,
+    states,
+    count: Math.max(0, Math.min(newWanted, newRoom)),
+    introducedToday: input.introducedToday,
+    focus: settings.focusCountries,
+    isTarget,
+  });
 
   const picked = new Set([...reviews, ...fresh]);
   const total = picked.size;
@@ -243,7 +297,11 @@ export function buildSession(input: {
   );
   return {
     queue: spreadIn(
-      ordered.map((card) => ({ cardId: card.id, mode: modeFor(card, stateOf(card)) })),
+      ordered.map((card) => {
+        // a review shows the clue's photos in turn, so it is the clue that is recalled
+        const imageId = isSeen(card) ? photoTurn(card, cards, stateOf(card)?.reps ?? 0) : undefined;
+        return { cardId: card.id, mode: modeFor(card, stateOf(card)), ...(imageId && { imageId }) };
+      }),
       contrast,
     ),
     catchUp,
@@ -272,11 +330,57 @@ function newCards(input: {
 }
 
 /**
+ * Another photo of a Spot it card's clue to show instead of its own, so a card that comes back
+ * (a review, a retry after a miss) is recognised by the clue and not by the picture: the clue's
+ * images taken in turn by `turn` (the card's review count, or the retry). Undefined when the
+ * turn lands on the card's own image or the clue has one photo.
+ */
+const photoIndex = new WeakMap<Card[], Map<string, string[]>>();
+/** Each clue's Spot it photo ids, built once per card list. */
+function cluePhotos(cards: Card[]): Map<string, string[]> {
+  let index = photoIndex.get(cards);
+  if (!index) {
+    index = new Map();
+    for (const c of cards) {
+      const id = c.clue?.id;
+      const image = c.clue?.image?.id;
+      if (c.type !== 'spot' || !id || !image) continue;
+      index.set(id, [...(index.get(id) ?? []), image]);
+    }
+    photoIndex.set(cards, index);
+  }
+  return index;
+}
+
+export function photoTurn(card: Card, cards: Card[], turn: number): string | undefined {
+  const clueId = card.clue?.id;
+  if (card.type !== 'spot' || !clueId) return undefined;
+  const images = cluePhotos(cards).get(clueId) ?? [];
+  if (images.length < 2) return undefined;
+  const pick = images[turn % images.length];
+  return pick === card.clue?.image?.id ? undefined : pick;
+}
+
+/**
  * A session card answered wrong goes to the end of the queue, again and again until it is answered
  * right, so the session only ends once every card has been got right.
  */
-export function requeueMissed(queue: SessionItem[], item: SessionItem): SessionItem[] {
-  return [...queue, { ...item, retry: true }];
+export function requeueMissed(
+  queue: SessionItem[],
+  item: SessionItem,
+  cards?: Card[],
+): SessionItem[] {
+  // a Spot it card comes back with the clue's other photo when it has one
+  const card = cards?.find((c) => c.id === item.cardId);
+  const shown = item.imageId ?? card?.clue?.image?.id;
+  const other =
+    card && cards
+      ? [photoTurn(card, cards, 0), photoTurn(card, cards, 1)].find((id) => id && id !== shown)
+      : undefined;
+  const retry: SessionItem = { cardId: item.cardId, mode: item.mode, retry: true };
+  if (item.contrastPair) retry.contrastPair = item.contrastPair;
+  if (other) retry.imageId = other;
+  return [...queue, retry];
 }
 
 const asItems = (cards: Card[], states: Record<string, CardState>): SessionItem[] =>

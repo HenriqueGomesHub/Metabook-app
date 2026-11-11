@@ -94,6 +94,23 @@
   grid-column: 1 / -1;
 }
 
+.field-check {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.45;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.field-check input {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
 .input,
 .field input:not([type='range'], [type='checkbox']),
 .field select,

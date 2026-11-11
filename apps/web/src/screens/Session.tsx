@@ -220,7 +220,7 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
       onAnswered={(correct) => {
         setAnswers([...answers, { cardId: item.cardId, correct, retry: item.retry }]);
         // wrong: it comes back at the end, until it is answered right
-        if (!correct) setQueue((q) => requeueMissed(q, item));
+        if (!correct) setQueue((q) => requeueMissed(q, item, cards));
       }}
       onNext={() => setIndex(index + 1)}
       onSkip={() => {
@@ -239,7 +239,7 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
           />
         ) : (
           <div className="session-bar rise">
-            <CloseButton to="/" label="Leave session" />
+            <CloseButton to="/" label="Leave session" confirm={index > 0} />
             <ProgressBar
               value={index + 1}
               max={queue.length}
@@ -397,7 +397,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
           {pool.length > 1 && (
             <span className="practice-learnt">
               {progress.pass > 1 && `Pass ${progress.pass} · `}
-              {progress.learnt} / {progress.total} learnt
+              {progress.learnt} learnt · {progress.total.toLocaleString('en-US')} cards
             </span>
           )}
         </div>

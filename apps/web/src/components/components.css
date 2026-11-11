@@ -153,6 +153,26 @@ a.chip:hover {
   background: var(--raise);
 }
 
+button.chip {
+  cursor: pointer;
+  font: inherit;
+}
+
+button.chip:hover {
+  background: var(--raise);
+}
+
+.chip-armed {
+  padding: 0 16px;
+  border-color: var(--warn);
+}
+
+.chip-confirm {
+  font-size: 14px;
+  color: var(--warn);
+  white-space: nowrap;
+}
+
 .chip-label {
   gap: 8px;
   padding: 0 16px;

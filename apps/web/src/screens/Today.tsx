@@ -25,7 +25,8 @@ import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { preloadClueImages } from '../data/clueImages';
 
-const SECONDS_PER_CARD = 8;
+// a card and its share of retries after misses
+const SECONDS_PER_CARD = 12;
 /** Cards of today's queue whose images are signed and fetched while Today shows. */
 const PRELOAD = 5;
 
