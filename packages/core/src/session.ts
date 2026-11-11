@@ -51,7 +51,20 @@ const MIN_NEW = 5;
 export const DEFAULT_SESSION_MINUTES = 20;
 
 /** Estimated seconds a review takes, with the expected cost of answering it again after a miss. */
-const reviewSeconds = (recall: number) => REVIEW_SECONDS + RETRY_SECONDS * (1 - recall);
+const reviewSeconds = (recall: number, base = REVIEW_SECONDS) =>
+  base + RETRY_SECONDS * (1 - recall);
+
+/**
+ * Seconds a review takes this learner: their median answer time over recent reviews plus a
+ * moment to move on, so a fast player (a Master answers what they know in two seconds) gets more
+ * cards into the same time box. Undefined with too few reviews to tell.
+ */
+export function reviewSecondsFrom(msTaken: number[]): number | undefined {
+  if (msTaken.length < 30) return undefined;
+  const sorted = [...msTaken].sort((a, b) => a - b);
+  const median = sorted[Math.floor(sorted.length / 2)] as number;
+  return Math.max(3, Math.min(REVIEW_SECONDS, median / 1000 + 1.5));
+}
 
 /**
  * How many times the usual new cards a day to offer: a learner who gets most new cards right the
@@ -237,6 +250,8 @@ export function buildSession(input: {
   intake?: number;
   /** estimated seconds per new card (see newCardSeconds) */
   newSeconds?: number;
+  /** estimated seconds per review for this learner (see reviewSecondsFrom) */
+  reviewSeconds?: number;
   /**
    * Refresh mode: new photo cards are shown with their answer ("Knew it" / "New to me") rather
    * than asked, and as many as the session's time holds. For a returning or strong player, most
@@ -276,7 +291,7 @@ export function buildSession(input: {
   // the time box: what is already done today counts against it
   const budget =
     (input.settings.sessionMinutes ?? DEFAULT_SESSION_MINUTES) * 60 -
-    done.reviews * REVIEW_SECONDS -
+    done.reviews * (input.reviewSeconds ?? REVIEW_SECONDS) -
     done.newCards * NEW_SECONDS;
   const newWanted = Math.round(settings.newPerDay * (input.intake ?? 1));
   const newCost = Math.min(NEW_SECONDS, input.newSeconds ?? NEW_SECONDS);
@@ -284,7 +299,7 @@ export function buildSession(input: {
   const reviews: Card[] = [];
   let spent = 0;
   for (const card of due.slice(0, cap)) {
-    const cost = reviewSeconds(recallOf.get(card.id) ?? 0.9);
+    const cost = reviewSeconds(recallOf.get(card.id) ?? 0.9, input.reviewSeconds);
     if (spent + cost > budget - reserve && reviews.length > 0) break;
     reviews.push(card);
     spent += cost;

@@ -8,6 +8,7 @@ import {
   newCardSeconds,
   modeFor,
   requeueMissed,
+  reviewSecondsFrom,
   type SessionItem,
 } from './session';
 import {
@@ -652,5 +653,13 @@ describe('refresh mode', () => {
     const cards = [spot('s0', 'c0')];
     const [retry] = requeueMissed([], { cardId: 's0', mode: 'scan' }, cards);
     expect(retry).toMatchObject({ cardId: 's0', mode: 'mcq', retry: true });
+  });
+});
+
+describe('reviewSecondsFrom', () => {
+  it("follows the learner's own answer speed", () => {
+    expect(reviewSecondsFrom(Array(40).fill(2000))).toBe(3.5);
+    expect(reviewSecondsFrom(Array(40).fill(20000))).toBe(8);
+    expect(reviewSecondsFrom([1000])).toBeUndefined();
   });
 });
