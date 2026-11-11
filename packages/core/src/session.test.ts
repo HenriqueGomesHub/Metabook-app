@@ -2,7 +2,14 @@ import { describe, expect, it } from 'vitest';
 import { answerKey, recordAnswer } from './confusions';
 import { mulberry32 } from './random';
 import { retrievability } from './scheduler';
-import { buildSession, intakeFor, modeFor, requeueMissed, type SessionItem } from './session';
+import {
+  buildSession,
+  intakeFor,
+  newCardSeconds,
+  modeFor,
+  requeueMissed,
+  type SessionItem,
+} from './session';
 import {
   DEFAULT_SETTINGS,
   type Card,
@@ -609,5 +616,13 @@ describe('intakeFor', () => {
   it('starts a returning player high until there is a week of answers', () => {
     expect(intakeFor({ answered: 5, right: 5 })).toBe(1);
     expect(intakeFor({ answered: 5, right: 5 }, true)).toBe(3);
+  });
+});
+
+describe('newCardSeconds', () => {
+  it('is short for a learner who already knows most new cards', () => {
+    expect(newCardSeconds({ answered: 50, right: 50 })).toBe(5);
+    expect(newCardSeconds({ answered: 50, right: 20 })).toBe(16);
+    expect(newCardSeconds({ answered: 0, right: 0 }, true)).toBeLessThanOrEqual(10);
   });
 });

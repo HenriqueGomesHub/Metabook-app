@@ -2,6 +2,7 @@ import {
   activeCountries,
   buildSession,
   intakeFor,
+  newCardSeconds,
   isClueCard,
   learnMoreSession,
   mastery,
@@ -80,6 +81,7 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     doneToday: { reviews: done.reviews, newCards: done.introduced.length },
     introducedToday: done.introduced,
     intake: intakeFor(done.recent, data.settings.returning),
+    newSeconds: newCardSeconds(done.recent, data.settings.returning),
     now,
   });
 }
