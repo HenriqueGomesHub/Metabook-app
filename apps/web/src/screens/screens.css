@@ -598,7 +598,8 @@ figure {
   text-align: center;
 }
 
-.summary h1 {
+/* the mini-games' round summary */
+.summary:not(.summary-full) h1 {
   margin: 0;
   font-size: 96px;
   font-weight: 600;
@@ -612,8 +613,181 @@ figure {
   color: var(--muted);
 }
 
-.summary > .cta {
-  width: auto;
+/* the end of a session or drill */
+.summary-full {
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.summary-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-score {
+  position: relative;
+  width: 184px;
+  height: 184px;
+  margin-top: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.summary-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.summary-ring circle {
+  fill: none;
+  stroke-width: 5;
+}
+
+.summary-ring-track {
+  stroke: var(--line);
+}
+
+.summary-ring-fill {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s;
+  animation: ring-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s backwards;
+}
+
+@keyframes ring-in {
+  from {
+    stroke-dashoffset: 327;
+  }
+}
+
+.summary-number {
+  margin: 0;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.summary-number span {
+  font-size: 28px;
+  color: var(--muted);
+  margin-left: 2px;
+}
+
+.summary-empty {
+  margin: 8px 0 0;
+  font-size: 40px;
+  letter-spacing: -0.03em;
+}
+
+.summary-tone {
+  margin: 20px 0 0;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.summary-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-facts li {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-facts .summary-streak {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+}
+
+.summary-panel {
+  width: 100%;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  text-align: left;
+}
+
+.summary-panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-panel-head span:first-child {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.summary-track {
+  height: 6px;
+  margin-top: 12px;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.summary-track > div {
+  height: 100%;
+  border-radius: 3px;
+  background: var(--accent);
+  transition: width 0.8s ease;
+}
+
+.summary-panel-note {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--faint);
+}
+
+.summary-missed {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-missed li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 9px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.summary-missed li:first-child {
+  border-top: 0;
+}
+
+.summary-missed-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summary-missed-kind {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--faint);
 }
 
 .summary-actions {
@@ -621,6 +795,18 @@ figure {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+}
+
+.session-retry {
+  font-size: 13px;
+  color: var(--warn);
+}
+
+.practice-learnt {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 /* Drills */

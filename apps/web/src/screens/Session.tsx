@@ -8,7 +8,9 @@ import {
   nextPracticeItem,
   normalizeAnswer,
   pickTip,
+  practiceProgress,
   recordPracticeAnswer,
+  requeueMissed,
   showingSeed,
 } from '@metabook/core';
 import type {
@@ -22,7 +24,7 @@ import type {
 } from '@metabook/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES } from '../app/cardTypes';
@@ -47,6 +49,8 @@ import { useKeys } from './session/useKeys';
 import { verdictFor } from './session/verdict';
 import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
+import { Summary } from './session/Summary';
+import type { Answer } from './session/Summary';
 
 const CONTRAST_DOTS = 5;
 
@@ -153,7 +157,8 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
   const { repo } = useAppData();
   const [queue, setQueue] = useState(() => SESSIONS[more ?? 'today'](data, new Date()).queue);
   const [index, setIndex] = useState(0);
-  const [results, setResults] = useState<boolean[]>([]);
+  const [answers, setAnswers] = useState<Answer[]>([]);
+  const [startedAt] = useState(() => Date.now());
   const cards = data.content.cards;
 
   useEffect(() => {
@@ -171,7 +176,9 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
     ) : (
       <Summary
         kicker="Session done"
-        results={results}
+        answers={answers}
+        cards={cards}
+        startedAt={startedAt}
         spaceTo="/"
         actions={
           <LinkButton to="/">
@@ -183,12 +190,27 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
     );
   }
 
+  // a missed card asked again is answered the way its state now calls for (a contrast question
+  // keeps its two sides)
+  const shown =
+    item.retry && !item.contrastPair
+      ? (() => {
+          const card = cards.find((c) => c.id === item.cardId) as Card;
+          return { ...item, mode: modeFor(card, data.states[card.id]) };
+        })()
+      : item;
+  const retriesLeft = queue.slice(index + 1).filter((q) => q.retry).length;
+
   return (
     <CardRunner
       key={index}
       data={data}
-      item={item}
-      onAnswered={(correct) => setResults([...results, correct])}
+      item={shown}
+      onAnswered={(correct) => {
+        setAnswers([...answers, { cardId: item.cardId, correct, retry: item.retry }]);
+        // wrong: it comes back at the end, until it is answered right
+        if (!correct) setQueue((q) => requeueMissed(q, item));
+      }}
       onNext={() => setIndex(index + 1)}
       onSkip={() => {
         // nothing graded: the card goes to the back of the queue
@@ -212,6 +234,11 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
               max={queue.length}
               label={`Card ${index + 1} of ${queue.length}`}
             />
+            {item.retry ? (
+              <span className="session-retry">Again</span>
+            ) : (
+              retriesLeft > 0 && <span className="session-retry">{retriesLeft} to retry</span>
+            )}
             <span className="session-count">
               {index + 1} / {queue.length}
             </span>
@@ -245,7 +272,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     });
     return { ...nextPracticeItem(practice, data.states, now), step: 0 };
   });
-  const [results, setResults] = useState<boolean[]>([]);
+  const [answers, setAnswers] = useState<Answer[]>([]);
+  const [startedAt] = useState(() => Date.now());
   const [ended, setEnded] = useState(false);
   const back = backTo(data, scope);
   const freshAhead = (practice: PracticeState) => {
@@ -277,7 +305,12 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     return (
       <Summary
         kicker="Practice done"
-        results={results}
+        answers={answers}
+        cards={pool}
+        startedAt={startedAt}
+        progress={
+          pool.length > 1 ? practiceProgress(flow.upcoming?.practice ?? flow.practice) : undefined
+        }
         actions={
           <>
             <Button onClick={() => setEnded(false)}>
@@ -293,11 +326,12 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     );
   }
 
-  const right = results.filter(Boolean).length;
+  const right = answers.filter((a) => a.correct).length;
+  const progress = practiceProgress(flow.practice);
 
   function onAnswered(correct: boolean, state?: CardState) {
     if (!flow) return;
-    setResults([...results, correct]);
+    setAnswers([...answers, { cardId: flow.item.cardId, correct }]);
     const practice = recordPracticeAnswer(flow.practice, flow.item.cardId, correct);
     const upcoming = nextPracticeItem(
       practice,
@@ -346,9 +380,15 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
             <CloseIcon />
           </button>
           <span className="practice-count" aria-live="polite">
-            {results.length} answered
-            {results.length > 0 && ` · ${Math.round((right / results.length) * 100)}% right`}
+            {answers.length} answered
+            {answers.length > 0 && ` · ${Math.round((right / answers.length) * 100)}% right`}
           </span>
+          {pool.length > 1 && (
+            <span className="practice-learnt">
+              {progress.pass > 1 && `Pass ${progress.pass} · `}
+              {progress.learnt} / {progress.total} learnt
+            </span>
+          )}
         </div>
       )}
     />
@@ -597,40 +637,5 @@ function CaughtUp({ more }: { more?: More }) {
         ]}
       />
     </div>
-  );
-}
-
-function Summary({
-  kicker,
-  results,
-  actions,
-  spaceTo,
-}: {
-  kicker: string;
-  results: boolean[];
-  actions: ReactNode;
-  /** where Space leads, if anywhere */
-  spaceTo?: string;
-}) {
-  const navigate = useNavigate();
-  const right = results.filter(Boolean).length;
-  useKeys((event) => {
-    if (event.key !== ' ' || !spaceTo) return;
-    event.preventDefault();
-    navigate(spaceTo);
-  });
-  return (
-    <main className="stage stage-narrow summary summary-full">
-      <div className="rise">
-        <p className="kicker">{kicker}</p>
-        <h1 className="headline">
-          {results.length} {results.length === 1 ? 'card' : 'cards'}
-        </h1>
-        {results.length > 0 && (
-          <p className="summary-sub">{Math.round((right / results.length) * 100)}% right</p>
-        )}
-      </div>
-      <div className="summary-actions rise d1">{actions}</div>
-    </main>
   );
 }
