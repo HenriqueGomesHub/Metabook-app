@@ -5,7 +5,11 @@ import { mulberry32, shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
 import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } from './types';
 
-export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map';
+/**
+ * How a card is answered. 'scan' = Refresh mode: the photo is shown with its answer and the clue,
+ * and the learner says "Knew it" or "New to me" (for a player who has seen most of this before).
+ */
+export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan';
 
 export interface SessionItem {
   cardId: string;
@@ -38,6 +42,10 @@ const MAX_CONTRAST = 4;
 const REVIEW_SECONDS = 8;
 const RETRY_SECONDS = 14;
 const NEW_SECONDS = 16;
+/** Seconds a Refresh card takes: look, recognise, tap. */
+const SCAN_SECONDS = 5;
+/** Refresh cards in one session at most. */
+const MAX_SCAN = 150;
 /** New cards a day even when reviews fill the session, so learning never stops. */
 const MIN_NEW = 5;
 export const DEFAULT_SESSION_MINUTES = 20;
@@ -229,6 +237,12 @@ export function buildSession(input: {
   intake?: number;
   /** estimated seconds per new card (see newCardSeconds) */
   newSeconds?: number;
+  /**
+   * Refresh mode: new photo cards are shown with their answer ("Knew it" / "New to me") rather
+   * than asked, and as many as the session's time holds. For a returning or strong player, most
+   * of whose new cards are things they once knew: seeing one again is enough to bring it back.
+   */
+  refresh?: boolean;
 }): Session {
   const { cards, states, confusions, block, now } = input;
   const done = input.doneToday ?? { reviews: 0, newCards: 0 };
@@ -276,10 +290,13 @@ export function buildSession(input: {
     spent += cost;
   }
   const newRoom = Math.max(Math.min(MIN_NEW, newWanted), Math.floor((budget - spent) / newCost));
+  // refresh mode: the rest of the time box goes on quick "Knew it / New to me" cards
+  const scanRoom = Math.min(MAX_SCAN, Math.floor((budget - spent) / SCAN_SECONDS));
+  const newCount = input.refresh ? Math.max(newRoom, scanRoom) : Math.min(newWanted, newRoom);
   const fresh = newCards({
     cards,
     states,
-    count: Math.max(0, Math.min(newWanted, newRoom)),
+    count: Math.max(0, newCount),
     introducedToday: input.introducedToday,
     focus: settings.focusCountries,
     isTarget,
@@ -312,7 +329,11 @@ export function buildSession(input: {
       ordered.map((card) => {
         // a review shows the clue's photos in turn, so it is the clue that is recalled
         const imageId = isSeen(card) ? photoTurn(card, cards, stateOf(card)?.reps ?? 0) : undefined;
-        return { cardId: card.id, mode: modeFor(card, stateOf(card)), ...(imageId && { imageId }) };
+        const mode: SessionMode =
+          input.refresh && !isSeen(card) && card.type === 'spot'
+            ? 'scan'
+            : modeFor(card, stateOf(card));
+        return { cardId: card.id, mode, ...(imageId && { imageId }) };
       }),
       contrast,
     ),
@@ -389,7 +410,9 @@ export function requeueMissed(
     card && cards
       ? [photoTurn(card, cards, 0), photoTurn(card, cards, 1)].find((id) => id && id !== shown)
       : undefined;
-  const retry: SessionItem = { cardId: item.cardId, mode: item.mode, retry: true };
+  // a Refresh card marked "New to me" comes back as a real question
+  const mode: SessionMode = item.mode === 'scan' && card ? modeFor(card, undefined) : item.mode;
+  const retry: SessionItem = { cardId: item.cardId, mode, retry: true };
   if (item.contrastPair) retry.contrastPair = item.contrastPair;
   if (other) retry.imageId = other;
   return [...queue, retry];

@@ -82,6 +82,8 @@ export function todaySession(data: AppSnapshot, now: Date, type?: CardType): Ses
     introducedToday: done.introduced,
     intake: intakeFor(done.recent, data.settings.returning),
     newSeconds: newCardSeconds(done.recent, data.settings.returning),
+    // a returning or clearly strong player gets their new photo cards as quick refreshes
+    refresh: data.settings.returning || intakeFor(done.recent) === 3,
     now,
   });
 }
