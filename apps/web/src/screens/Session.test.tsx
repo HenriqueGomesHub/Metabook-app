@@ -140,7 +140,7 @@ describe('Practice', () => {
       expect(await screen.findByText(new RegExp(`^${i + 1} answered`))).toBeTruthy();
       fireEvent.click(within(screen.getByRole('dialog')).getByRole('button', { name: /Continue/ }));
     }
-    expect(screen.queryByText('Practice done')).toBeNull();
+    expect(screen.queryByText(/· done$/)).toBeNull();
     await waitFor(() => expect(repo.reviews).toHaveLength(30));
   });
 
@@ -148,7 +148,7 @@ describe('Practice', () => {
     renderApp('/session?type=flag', repoWith(0));
     fireEvent.click((await screen.findAllByRole('button', { name: /^\d/ }))[0] as HTMLElement);
     fireEvent.click(screen.getByRole('button', { name: 'End practice' }));
-    expect(screen.getByText('Practice done')).toBeTruthy();
+    expect(screen.getByText(/· done$/)).toBeTruthy();
     expect(screen.getByText('1 card')).toBeTruthy();
     expect(screen.getByRole('link', { name: 'Done' }).getAttribute('href')).toBe('/drills');
   });
@@ -169,7 +169,7 @@ describe('Practice', () => {
     renderApp('/session?country=LT', repo);
     fireEvent.click(await screen.findByRole('button', { name: /Lithuania/ }));
     fireEvent.click(within(screen.getByRole('dialog')).getByRole('button', { name: /Continue/ }));
-    expect(screen.getByText('Practice done')).toBeTruthy();
+    expect(screen.getByText(/· done$/)).toBeTruthy();
     expect(screen.getByText('1 card')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Keep going/ }));
     expect(await screen.findByRole('button', { name: /Lithuania/ })).toBeTruthy();
