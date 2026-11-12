@@ -12,6 +12,7 @@ export const CLUE_FAMILIES = [
   'car',
   'coverage',
   'language',
+  'street',
   'architecture',
   'landscape',
   'vegetation',

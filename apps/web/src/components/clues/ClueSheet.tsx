@@ -25,7 +25,7 @@ export function ClueSheet({
     closeRef.current?.focus();
     const onKey = (event: KeyboardEvent) => {
       // the image viewer inside handles its own keys
-      if (document.querySelector('.lightbox')) return;
+      if (document.querySelector('.lightbox, .country-sheet')) return;
       if (event.key === 'Escape') onClose();
       else if (event.key === 'ArrowRight' && onStep) onStep(1);
       else if (event.key === 'ArrowLeft' && onStep) onStep(-1);

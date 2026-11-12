@@ -27,7 +27,7 @@
       "step": 0,
       "order": 1,
       "family": "coverage",
-      "title": "Google car: Gen 4 for all car coverage",
+      "title": "Coverage: Gen 4 for all car coverage",
       "text": [
         "All car coverage in Germany was taken with a **Generation 4** camera.",
         "NOTE: There are some Generation 2 and 3 trekkers, and spill coverage with older dates."
@@ -50,6 +50,14 @@
           "width": 600,
           "height": 338,
           "role": "example"
+        },
+        {
+          "id": "4bcd855cfb01",
+          "src": "https://learnablemeta.com/images/768/TH1tSNOkY8PHIoOLJ5fU67uz19iyP9RPeO7G.avif",
+          "path": "de/4bcd855cfb01.webp",
+          "width": 1000,
+          "height": 560,
+          "dupeOf": "9584a66094b9"
         }
       ],
       "locations": [
@@ -406,7 +414,7 @@
       "id": "de-4rEl",
       "step": 0,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Bus stop: big yellow and green H",
       "text": [
         "Like Austria, Germany uses a wide variety of regional bus stops, all of which have the big **yellow** and **green** **H** symbol on them."
@@ -460,7 +468,7 @@
       "id": "de-LVZN",
       "step": 0,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Mailbox: bright yellow with black logo",
       "text": [
         "Mailboxes in Germany are **bright yellow**, and feature this black logo."
@@ -620,7 +628,7 @@
       "id": "de-pJU0",
       "step": 0,
       "order": 11,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: blue autobahn km marker",
       "text": [
         "Germany uses these** blue** rectangular kilometre markers with a white border for A-Roads (Autobahn). B-Roads and local roads have [white](https://maps.app.goo.gl/L2ViHxRf932m3bGR6) markers with a black border.",
@@ -664,7 +672,8 @@
         "url": "https://www.plonkit.net/germany",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Blue rectangular km markers with a white border are on motorways. Other roads have white markers with a black border, and small roads triangular ones."
+      "summary": "Blue rectangular km markers with a white border are on motorways. Other roads have white markers with a black border, and small roads triangular ones.",
+      "kind": "route"
     },
     {
       "id": "de-6qzp",
@@ -1022,7 +1031,7 @@
       "id": "de-8CJo",
       "step": 1,
       "order": 5,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -ow and -itz east, -weiler and -ach south",
       "text": [
         "These are some of the more useful and common place name suffixes. Due to their Slavic origins, endings like **-ow** and **-itz** are primarily found in the east, whereas place names ending in **-weiler** and **-ach** are mainly located in the southern half."
@@ -1131,7 +1140,7 @@
       "id": "de-6w4I",
       "step": 1,
       "order": 11,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: the only high mountains, Austrian border",
       "text": [
         "The German Alps is the most mountainous region in Germany, it is mostly concentrated on the Austrian Border."
@@ -1186,7 +1195,7 @@
       "id": "de-jGsh",
       "step": 1,
       "order": 12,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: Scots pine with orange trunks, northeast",
       "text": [
         "Baltic Pines or [Pinus sylvestris](https://en.wikipedia.org/wiki/Pinus_sylvestris) are generally more concentrated in the **northeast** of Germany. They can be recognized by their orange-tinged trunk.",
@@ -1298,7 +1307,7 @@
       "id": "de-dPiq",
       "step": 1,
       "order": 14,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: flat farmland with a ridge to the NE",
       "text": [
         "The flat plains southeast of **Regensburg** can be recognised by the **slight ridge** often visible to the northeast. The plains themselves are **flat**, and quite **agricultural**."
@@ -1353,7 +1362,7 @@
       "id": "de-gUz2",
       "step": 1,
       "order": 15,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: vineyards, mostly southwest",
       "text": [
         "Vineyards are mostly concentrated in the **southwest** of Germany. However, there are a couple regions further east as well."
@@ -1408,7 +1417,7 @@
       "id": "de-fnjg",
       "step": 1,
       "order": 16,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: hop fields",
       "text": [
         "You can find [hop](https://en.wikipedia.org/wiki/Hops) fields in these regions. They are commonly seen just north of Munich."
@@ -1778,7 +1787,7 @@
       "id": "de-EHw4",
       "step": 1,
       "order": 25,
-      "family": "other",
+      "family": "bollard",
       "title": "Bollard: green cap with 'LVR' and coat of arms",
       "text": [
         "Some of the green caps will have the text ‘**LVR**’, along with a small **coat of arms**. These specific green caps are unique to southern North Rhine-Westphalia."
@@ -1951,7 +1960,7 @@
       "id": "de-agJb",
       "step": 1,
       "order": 28,
-      "family": "other",
+      "family": "bollard",
       "title": "Bollard: simple orange posts",
       "text": [
         "These **simple orange posts** are most commonly found in Bavaria, and also in the other highlighted states."
@@ -2064,7 +2073,7 @@
       "id": "de-Lhfc",
       "step": 1,
       "order": 30,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: white, split by black lines in three",
       "text": [
         "Bavaria uses these white rectangular road markers, which are divided by black lines into **three sections**. The left section provides the road you are currently on."
@@ -2115,13 +2124,14 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Bavaria's white rectangular markers are divided by black lines into three sections. The left section shows the road you're on.",
+      "kind": "route",
       "regionCode": "BY"
     },
     {
       "id": "de-8sZa",
       "step": 1,
       "order": 31,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: simple rectangle with rounded corners",
       "text": [
         "You can find these simple **rectangular** markers, with **rounded edges** in Lower Saxony."
@@ -2172,13 +2182,14 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Simple rectangular markers with rounded edges are in Lower Saxony.",
+      "kind": "route",
       "regionCode": "NI"
     },
     {
       "id": "de-vzOg",
       "step": 1,
       "order": 32,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: metal border around the marker",
       "text": [
         "These markers with a **metallic border** around the marker itself are found in Schleswig-Holstein and Lower Saxony.",
@@ -2224,13 +2235,14 @@
         "url": "https://www.plonkit.net/germany",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Markers with a metal border are in Schleswig-Holstein and Lower Saxony. The numbers after the comma are usually smaller in Lower Saxony."
+      "summary": "Markers with a metal border are in Schleswig-Holstein and Lower Saxony. The numbers after the comma are usually smaller in Lower Saxony.",
+      "kind": "route"
     },
     {
       "id": "de-8xMd",
       "step": 1,
       "order": 33,
-      "family": "plate",
+      "family": "landscape",
       "title": "Bollard: triangular posts by region",
       "text": [
         "These **triangular** posts are commonly found in these regions.",
@@ -2432,7 +2444,7 @@
       "id": "de-e2UJ",
       "step": 1,
       "order": 38,
-      "family": "other",
+      "family": "bollard",
       "title": "Bollard: white post with red cap",
       "text": [
         "These **white** posts with a **red cap** are found in all of former East Germany, but most commonly in the state of Saxony-Anhalt."
@@ -2489,7 +2501,7 @@
       "id": "de-ONji",
       "step": 1,
       "order": 39,
-      "family": "other",
+      "family": "bollard",
       "title": "Bollard: fully yellow posts",
       "text": [
         "**Fully yellow** posts are found in the state of Brandenburg."
@@ -3154,8 +3166,7 @@
       "id": "de-wnBA",
       "step": 2,
       "order": 2,
-      "family": "sign",
-      "kind": "direction",
+      "family": "street",
       "title": "Bus stop: each city state has its own",
       "text": [
         "Every city state uses a unique and recognisable bus stop.",
@@ -3199,7 +3210,7 @@
       "id": "de-sviz",
       "step": 2,
       "order": 3,
-      "family": "other",
+      "family": "street",
       "title": "Bins: each city state has its own",
       "text": [
         "Every city state has recognisable rubbish bins all around the city.",
@@ -3209,7 +3220,17 @@
         "Bremerhaven uses a more generic **green** design, with a **black logo**."
       ],
       "tags": [],
-      "images": [],
+      "images": [
+        {
+          "id": "cf5922b82c6f",
+          "src": "https://learnablemeta.com/images/4588/1777470189790-mNj.avif"
+        },
+        {
+          "id": "d4c50f3a0fd6",
+          "src": "https://learnablemeta.com/images/4588/1777470882371-Pff.avif",
+          "dupeOf": "cf5922b82c6f"
+        }
+      ],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -3223,7 +3244,7 @@
       "id": "de-fv9L",
       "step": 2,
       "order": 4,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: yellow numbers on black plastic",
       "text": [
         "Lampposts in Cologne will often feature these bright **yellow** numbers on a **black** piece of plastic.",
@@ -3255,6 +3276,11 @@
             "w": 0.7,
             "h": 1
           }
+        },
+        {
+          "id": "e1dfa6383a5d",
+          "src": "https://learnablemeta.com/images/4588/1777470230240-VOc.avif",
+          "dupeOf": "70c96e02c539"
         }
       ],
       "locations": [
@@ -3335,7 +3361,7 @@
       "id": "de-FfPz",
       "step": 2,
       "order": 6,
-      "family": "landscape",
+      "family": "vegetation",
       "title": "Landscape: shrubby sandy hills on an island",
       "text": [
         "The [**shrub** and **sand** covered hills](https://goo.gl/maps/S5iYEBFRs4prPQ5M8) are unique to the island of Sylt. And like the rest of the North Frisian Islands, rock walls, brick houses, and thatched roofs are common.",
@@ -3543,14 +3569,6 @@
             "w": 0.72,
             "h": 1
           }
-        },
-        {
-          "id": "4bcd855cfb01",
-          "src": "https://learnablemeta.com/images/768/TH1tSNOkY8PHIoOLJ5fU67uz19iyP9RPeO7G.avif",
-          "path": "de/4bcd855cfb01.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "9584a66094b9"
         }
       ],
       "locations": [
@@ -3576,7 +3594,7 @@
       "id": "de-lm-2992",
       "step": 3,
       "order": 0,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: pedestrian figure with belt above hip",
       "text": [
         "**White Belt**: Croatia, Portugal, Germany, Hungary. > **Pointed Shoes**: Germany, Hungary. > Germany **Belt**: Above hip. Hungary **Belt**: Bottom of hip. Germany **arm**: Flat side on left. Hungary **arm**: Flat side on right."
@@ -3600,7 +3618,8 @@
           "country": "HU",
           "how": "belt lower on hip, flat side of arm on the right"
         }
-      ]
+      ],
+      "kind": "pedestrian"
     },
     {
       "id": "de-lm-295800",
@@ -3636,7 +3655,7 @@
       "id": "de-lm-295804",
       "step": 3,
       "order": 12,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -by ending",
       "text": [
         "In the **north(east)** of **Schleswig-Holstein**, 49 places use the suffix **\"-by\"** in their names."
@@ -3656,7 +3675,7 @@
       "id": "de-lm-295808",
       "step": 3,
       "order": 16,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -hoven ending",
       "text": [
         "In the area **southwest** of **Düsseldorf** and around **Bonn** you can find 36 places using the suffix \"**hoven**\""
@@ -3676,7 +3695,7 @@
       "id": "de-lm-295809",
       "step": 3,
       "order": 17,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -rath ending",
       "text": [
         "In the west of **NRW**, parts of **Rhineland-Palatinate** and **Saarland**, 144 places use the suffix **\"-rath\"** in their name."
@@ -3790,7 +3809,7 @@
       "id": "de-lm-295829",
       "step": 3,
       "order": 33,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -itz ending",
       "text": [
         "In the **eastern part** of **Germany** many Towns/villages use the **-itz** ending"
@@ -3848,7 +3867,7 @@
       "id": "de-lm-295838",
       "step": 3,
       "order": 42,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -roth ending",
       "text": [
         "There are **124 places** using the suffix **\"-roth\"**"
@@ -3935,7 +3954,7 @@
       "id": "de-lm-295846",
       "step": 3,
       "order": 49,
-      "family": "other",
+      "family": "street",
       "title": "Bus stop: blue, rounded top, name boards",
       "text": [
         "**Munich** uses specific **Bus Stops**. They commonly have this **blue design** with the **rounded top**, on boards to each side it displays the **stops name** which can be used to regionguess."
@@ -3964,7 +3983,7 @@
       "id": "de-lm-295847",
       "step": 3,
       "order": 50,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -ried ending",
       "text": [
         "The suffix **\"-ried\"** can be found in some parts of the **southern half** of the country."
@@ -4125,7 +4144,7 @@
       "id": "de-lm-295860",
       "step": 3,
       "order": 60,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -ach ending",
       "text": [
         "In the **southern half** of **Germany** many Towns/villages use the **-ach** ending"
@@ -4154,7 +4173,7 @@
       "id": "de-lm-295862",
       "step": 3,
       "order": 61,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -ow ending",
       "text": [
         "In the **north-eastern part** of **Germany** many Towns/villages use the **-ow** ending"
@@ -4293,7 +4312,7 @@
       "id": "de-lm-295874",
       "step": 3,
       "order": 70,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -stetten ending",
       "text": [
         "The suffix **\"-stetten\"** is can be found in the **southern half** of the country"
@@ -4313,7 +4332,7 @@
       "id": "de-lm-295875",
       "step": 3,
       "order": 71,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -beck ending",
       "text": [
         "The **suffix** **\"-beck\"** can be found in the **northern half** of the country"
@@ -4333,7 +4352,7 @@
       "id": "de-lm-295877",
       "step": 3,
       "order": 73,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -hofen ending",
       "text": [
         "The suffix **\"-hofen\"** can be found in the **southern half** of the country."
@@ -4390,7 +4409,7 @@
       "id": "de-lm-295880",
       "step": 3,
       "order": 76,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -scheid ending",
       "text": [
         "In **NRW**, parts of **Rhineland-Palatinate** and **Saarland**, 195 places use the suffix **\"-scheid\"** in their name. **NOTE:** there 3 of them elsewhere."
@@ -4410,7 +4429,7 @@
       "id": "de-lm-295891",
       "step": 3,
       "order": 85,
-      "family": "other",
+      "family": "language",
       "title": "Town names: -büll ending",
       "text": [
         "In the north(west) of Schleswig-Holstein right next to the Danish border, 30 places use the suffix **\"-büll\"** in their name."
@@ -4430,7 +4449,7 @@
       "id": "de-lm-295893",
       "step": 3,
       "order": 86,
-      "family": "other",
+      "family": "street",
       "title": "Bus stop: blue with green frame, MVV",
       "text": [
         "The area **around Munich** (13 Lkr.) use a **unique blue bus stop** design with a **green frame** and **MVV** written on its bottom. **NOTE:** not common in the **city of Munich**"
@@ -4846,7 +4865,7 @@
       "id": "de-lm-445858",
       "step": 3,
       "order": 148,
-      "family": "other",
+      "family": "sign",
       "title": "Street sign: white, all capitals",
       "text": [
         "Streetsigns in Darmstadt are white and often are written in ALL CAPS, which is unique in Germany."
@@ -4869,7 +4888,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Darmstadt's white street signs are often written in ALL CAPS, which is unique in the country."
+      "summary": "Darmstadt's white street signs are often written in ALL CAPS, which is unique in the country.",
+      "kind": "street"
     },
     {
       "id": "de-gh-bollards",
@@ -5929,7 +5949,7 @@
       "id": "de-gh-postboxes",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 7 post boxes from here. Labels: Central and northern Germany."

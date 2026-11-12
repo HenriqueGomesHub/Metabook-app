@@ -26,7 +26,7 @@ for (const c of pool) {
   codes.add(c.code);
 }
 
-const SUBJECTS = ['bollard', 'pole', 'plate', 'sign', 'line', 'guardrail', 'language', 'car', 'landscape', 'architecture', 'other'];
+const SUBJECTS = ['bollard', 'pole', 'plate', 'sign', 'line', 'guardrail', 'language', 'car', 'coverage', 'street', 'landscape', 'vegetation', 'architecture', 'other'];
 const jsonFiles = (dir) => (existsSync(join(root, dir)) ? readdirSync(join(root, dir)).filter((f) => f.endsWith('.json')) : []);
 const strings = (v) => Array.isArray(v) && v.every((x) => typeof x === 'string');
 const poolNames = new Set(pool.map((c) => c.name.toLowerCase()));

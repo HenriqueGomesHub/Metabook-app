@@ -308,7 +308,7 @@
       "id": "nl-8MuM",
       "step": 0,
       "order": 6,
-      "family": "other",
+      "family": "architecture",
       "title": "Landscape: waterways, canals, dikes",
       "text": [
         "In addition, the Netherlands is a very water-rich country. The country has innumerous **waterways**. Canals and ditches next to the road are common. Water management is an important facet of Dutch infrastructure, so you will often see [dikes](https://en.wikipedia.org/wiki/Levee) (low earthen walls to protect against water), dams and bridges."
@@ -620,7 +620,7 @@
       "id": "nl-HYcL",
       "step": 0,
       "order": 12,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalk: square grey tiles, offset pattern",
       "text": [
         "Most Dutch **sidewalks** use the same type of square grey tiles and offset tiling pattern. In some historic areas, you might find smaller [brick sidewalks](https://goo.gl/maps/57mi9meFyFNVCbun9)."
@@ -669,7 +669,7 @@
       "id": "nl-xQ7P",
       "step": 0,
       "order": 13,
-      "family": "other",
+      "family": "street",
       "title": "Speed bump: long and short white stripes",
       "text": [
         "The Netherlands has very recognizable **speed bumps**. They usually have white warning stripes that alternate between long and short. The example image is on a brick road, but they also occur on [asphalt roads](https://goo.gl/maps/QsuN5WtHsjZ2EoeJ9)."
@@ -1338,8 +1338,8 @@
       "id": "nl-58qC",
       "step": 0,
       "order": 26,
-      "family": "car",
-      "title": "Google car: black back showing through blur",
+      "family": "coverage",
+      "title": "Coverage: black back showing through blur",
       "text": [
         "Some Generation 4 coverage has a car blur glitch where the **black back of the Google car** is visible."
       ],
@@ -1394,8 +1394,8 @@
       "id": "nl-lZws",
       "step": 0,
       "order": 27,
-      "family": "car",
-      "title": "Google car: low-mounted camera, big round blur",
+      "family": "coverage",
+      "title": "Coverage: low-mounted camera, big round blur",
       "text": [
         "The Netherlands also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Western Europe also has smallcam."
@@ -1587,7 +1587,7 @@
       "id": "nl-r0hh",
       "step": 1,
       "order": 4,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: tall white sticker, 3-4 digits",
       "text": [
         "This long, vertically arranged white sticker with three to four digits is found on street lights in Limburg."
@@ -1644,7 +1644,7 @@
       "id": "nl-15kd",
       "step": 1,
       "order": 5,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: horizontal white sticker, 1-2 digits",
       "text": [
         "Similarly to Limburg, North Brabant also has white stickers on their street lights, however it is horizontally arranged and only has one or two digits."
@@ -1924,7 +1924,7 @@
       "id": "nl-TXoh",
       "step": 1,
       "order": 10,
-      "family": "landscape",
+      "family": "vegetation",
       "title": "Landscape: man-made, ruler-straight roads, big fields",
       "text": [
         "Almost all of the land belonging to the province of Flevoland was reclaimed from the sea in the mid-20th century. As a result, the province has a distinct, **man-made** look: extremely straight roads and large crop fields dominate the landscape. Wind turbines are common. In urban areas, there are no historical buildings.",
@@ -1981,7 +1981,7 @@
       "id": "nl-OL78",
       "step": 1,
       "order": 11,
-      "family": "other",
+      "family": "landscape",
       "title": "Coast: lined with dunes",
       "text": [
         "Most of the Dutch North Sea coast is lined by **dunes**."
@@ -2011,6 +2011,11 @@
             "w": 0.66,
             "h": 1
           }
+        },
+        {
+          "id": "5e423e535b35",
+          "src": "https://learnablemeta.com/images/664/RH25encDBSIO5L4u1GpX3j2RHXgCHJaGP1X7.avif",
+          "dupeOf": "28f7da5baade"
         }
       ],
       "locations": [
@@ -2471,7 +2476,7 @@
       "id": "nl-ANbj",
       "step": 2,
       "order": 4,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: greenhouses everywhere",
       "text": [
         "In the Westland municipality, just southwest of The Hague, **greenhouses** are extremely common. They cover most of the municipality’s land surface."
@@ -2581,7 +2586,7 @@
       "id": "nl-IYay",
       "step": 2,
       "order": 6,
-      "family": "other",
+      "family": "landscape",
       "title": "Landmark: huge harbour with round fuel tanks",
       "text": [
         "The **harbour of Rotterdam** is one of the largest in the world. It extends all the way from downtown Rotterdam to the North Sea coast. If you see a lot of industrial activity, often in combination with large, round **fuel storage tanks**, there is a good chance that you are in this harbour area.",
@@ -2637,7 +2642,7 @@
       "id": "nl-9wTg",
       "step": 2,
       "order": 7,
-      "family": "other",
+      "family": "sign",
       "title": "Street sign: neighbourhood name plus number",
       "text": [
         "Many **streets in Lelystad** follow a fairly distinct naming scheme: instead of having unique names, they are named after the neighbourhood they are in, followed by a number. Some of these neighbourhood names show up on the Google map."
@@ -2686,7 +2691,8 @@
         "url": "https://www.plonkit.net/netherlands",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Many streets in Lelystad are named after their neighbourhood followed by a number. Some of these names show on the map."
+      "summary": "Many streets in Lelystad are named after their neighbourhood followed by a number. Some of these names show on the map.",
+      "kind": "street"
     },
     {
       "id": "nl-oG0B",
@@ -2742,7 +2748,7 @@
       "id": "nl-lm-2998",
       "step": 3,
       "order": 1,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: pedestrian figure with starfish limbs",
       "text": [
         "Netherlands' guy has **funny limbs**, they shrink towards the end sorta like a starfish."
@@ -2765,12 +2771,13 @@
         "url": "https://learnablemeta.com/maps/67655173ff4ef64687b7ac08",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "The figure has funny limbs that shrink toward the end, like a starfish."
+      "summary": "The figure has funny limbs that shrink toward the end, like a starfish.",
+      "kind": "pedestrian"
     },
     {
       "id": "nl-lm-740399",
       "step": 3,
-      "order": 23,
+      "order": 22,
       "family": "architecture",
       "title": "Houses: many tall skyscrapers",
       "text": [
@@ -4129,7 +4136,7 @@
       "id": "nl-gh-housenumbers",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 1 house number from here."
@@ -4159,7 +4166,7 @@
       "id": "nl-gh-postboxes",
       "step": 4,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 5 post boxes from here."
@@ -4316,7 +4323,7 @@
       "id": "nl-gh-sidewalks",
       "step": 4,
       "order": 10,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 2 sidewalks from here."

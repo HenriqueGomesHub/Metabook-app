@@ -158,14 +158,6 @@
           "width": 600,
           "height": 338,
           "role": "example"
-        },
-        {
-          "id": "0c367eeb2c7e",
-          "src": "https://learnablemeta.com/images/611/aBPXTgoAliodERNSUlA2InsSXRmU4mO5LVft.avif",
-          "path": "ec/0c367eeb2c7e.webp",
-          "width": 1000,
-          "height": 561,
-          "dupeOf": "0fb1135f89b7"
         }
       ],
       "locations": [
@@ -229,6 +221,20 @@
           "height": 338,
           "role": "annotated",
           "caption": "Mountain road; the inset circle at top right is labelled 'sometimes visible' and shows part of the camera"
+        },
+        {
+          "id": "162ea2d4f920",
+          "src": "https://learnablemeta.com/images/0yPmNCeoLWZNrLqUuu5CI8KbbYkraQOZfXgJ.avif",
+          "path": "ec/162ea2d4f920.webp",
+          "width": 1000,
+          "height": 562,
+          "role": "annotated",
+          "caption": "Low-resolution Ari camera view with a wide circular blur only at the bottom, labelled as a poor camera"
+        },
+        {
+          "id": "8b185814e17f",
+          "src": "https://learnablemeta.com/images/611/OcVMljnEPpKO00sw0abitYKNjtvGQyvSymJf.avif",
+          "dupeOf": "769138b300e1"
         }
       ],
       "locations": [
@@ -424,7 +430,7 @@
       "id": "ec-8XgY",
       "step": 0,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Road: concrete road surface",
       "text": [
         "**Concrete roads** are relatively common in Ecuador."
@@ -666,7 +672,7 @@
       "id": "ec-4F5m",
       "step": 0,
       "order": 11,
-      "family": "other",
+      "family": "sign",
       "title": "Kilometre marker: green with highway shield",
       "text": [
         "Kilometre markers are green and have the distinctive Ecuadorian **highway shields** on them."
@@ -708,7 +714,8 @@
         "url": "https://www.plonkit.net/ecuador",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Green kilometre markers carry the national highway shield."
+      "summary": "Green kilometre markers carry the national highway shield.",
+      "kind": "other"
     },
     {
       "id": "ec-rhiO",
@@ -892,7 +899,7 @@
       "id": "ec-ifrx",
       "step": 0,
       "order": 15,
-      "family": "other",
+      "family": "street",
       "title": "Pavement: hexagonal tiles",
       "text": [
         "In urban areas, you can sometimes find this pavement consisting of **hexagonal tiles**."
@@ -963,8 +970,8 @@
       "id": "ec-vWms",
       "step": 1,
       "order": 1,
-      "family": "car",
-      "title": "Google car: Gen 4 across most of the country",
+      "family": "coverage",
+      "title": "Coverage: Gen 4 across most of the country",
       "text": [
         "Generation 4 coverage is found in most of Ecuador, with notable gaps in the northwest and southeast."
       ],
@@ -1078,7 +1085,7 @@
       "id": "ec-4Cwf",
       "step": 1,
       "order": 5,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: banana plantations",
       "text": [
         "**Banana plants**, and especially plantations, are most commonly found in the southwestern part of the country."
@@ -1144,6 +1151,11 @@
             "w": 0.66,
             "h": 1
           }
+        },
+        {
+          "id": "b95b96ec7b9b",
+          "src": "https://learnablemeta.com/images/664/EiQkOLwLIDV0XoybiXn9fbSbbuBscoXhh8Ql.avif",
+          "dupeOf": "103916f7e13a"
         }
       ],
       "locations": [
@@ -1169,7 +1181,7 @@
       "id": "ec-dewU",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: very flat land",
       "text": [
         "The **flattest** region is located around the city of Guayaquil. This is most easily seen on the [E-25](https://www.google.com/maps/@-2.3393014,-79.635075,3a,90y,317.73h,97.87t/data=!3m6!1e1!3m4!1s7gNj0DBNsq092c8zyxNlsg!2e0!7i13312!8i6656?entry=ttu) and [E-48](https://www.google.com/maps/@-1.6742465,-79.9878759,3a,90y,224.78h,88.98t/data=!3m6!1e1!3m4!1sFvgH8Prb3g9q16A6jg0ecw!2e0!7i13312!8i6656?entry=ttu). The Amazon area is also very flat, and will be described below."
@@ -1280,7 +1292,7 @@
       "id": "ec-T07k",
       "step": 1,
       "order": 9,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: Amazon look but hilly",
       "text": [
         "The province of **Esmeraldas** can look similar to the Amazon region, but it is significantly hillier."
@@ -1311,8 +1323,7 @@
         "url": "https://www.plonkit.net/ecuador",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A rainforest look similar to the Amazon, but much hillier, points to the northwest coast province of Esmeraldas.",
-      "regionCode": "E"
+      "summary": "A rainforest look similar to the Amazon, but much hillier, points to the northwest coast province of Esmeraldas."
     },
     {
       "id": "ec-iKkh",
@@ -1594,7 +1605,7 @@
       "id": "ec-7DsW",
       "step": 2,
       "order": 0,
-      "family": "other",
+      "family": "landscape",
       "title": "Road: divided highway in dry coast area",
       "text": [
         "The E-40 between Salinas and Guayaquil is one of the only **divided highways** in Ecuador, and the only one in the **dry area** near the southwestern coast."
@@ -1756,41 +1767,10 @@
       "summary": "The Galapagos Islands, west of the mainland, only have backpack and boat coverage. Landscapes range from volcanic soil and low shrubs to craters, sometimes with giant tortoises."
     },
     {
-      "id": "ec-lm-123",
-      "step": 3,
-      "order": 0,
-      "family": "coverage",
-      "title": "Camera: low-quality Ari in South America",
-      "text": [
-        "If you have vibes that you are in South America and coverage was taken using \"shitcam\" camera you gonna be in Ecuador. There is \"shitcam\" in other countries but in South America you can only find \"shitcam\" in Ecuador.",
-        "Note: Ecuador also has GEN3(and little bit of GEN4) coverage not only shitcam! So don't discard Ecuador if it's not shitcam."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "162ea2d4f920",
-          "src": "https://learnablemeta.com/images/0yPmNCeoLWZNrLqUuu5CI8KbbYkraQOZfXgJ.avif",
-          "path": "ec/162ea2d4f920.webp",
-          "width": 1000,
-          "height": 562,
-          "role": "annotated",
-          "caption": "Low-resolution Ari camera view with a wide circular blur only at the bottom, labelled as a poor camera"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      },
-      "summary": "If you see this low-quality camera in South America, it is Ecuador, which is the only country there with it. Ecuador also has Gen 3 and some Gen 4, so don't rule it out when the camera looks normal."
-    },
-    {
       "id": "ec-lm-871",
       "step": 3,
-      "order": 1,
-      "family": "other",
+      "order": 0,
+      "family": "landscape",
       "title": "Road: grey, dirty coastal road with a beach",
       "text": [
         "One road on the southern east coast of Ecuador looks a lot like a gray, dirty, depressing version of Tumbes or Piura, just with more garbage. It has an offshoot with a pretty beach."
@@ -1821,6 +1801,70 @@
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
       "summary": "One road on the southern east coast looks like a grey, dirty version of the nearby northern Peru coast, with more garbage. A side road leads to a pretty beach."
+    },
+    {
+      "id": "ec-lm-13793",
+      "step": 3,
+      "order": 1,
+      "family": "coverage",
+      "title": "Coverage: Gen 4 Truck",
+      "text": [
+        "All Generation 4 coverage was captured using a white pickup truck with a black trunk and no antenna.",
+        "**--- NOTE:**",
+        "The pickup truck in Panama has an antenna on the front."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "0c367eeb2c7e",
+          "src": "https://learnablemeta.com/images/611/aBPXTgoAliodERNSUlA2InsSXRmU4mO5LVft.avif",
+          "path": "ec/0c367eeb2c7e.webp",
+          "width": 1000,
+          "height": 561,
+          "dupeOf": "0fb1135f89b7"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "PA"
+      ],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67ca9087802d003adfb8a5f4",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
+      "id": "ec-lm-51471",
+      "step": 3,
+      "order": 7,
+      "family": "coverage",
+      "title": "Coverage: Gen 4 Truck",
+      "text": [
+        "All Generation 4 coverage was captured using a white pickup truck with a black trunk and no antenna.",
+        "**--- NOTE:**",
+        "The pickup truck in Panama has an antenna on the front."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "0c367eeb2c7e",
+          "src": "https://learnablemeta.com/images/611/aBPXTgoAliodERNSUlA2InsSXRmU4mO5LVft.avif",
+          "path": "ec/0c367eeb2c7e.webp",
+          "width": 1000,
+          "height": 561,
+          "dupeOf": "0fb1135f89b7"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "PA"
+      ],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
     },
     {
       "id": "ec-gh-bollards",
@@ -3199,7 +3243,7 @@
       "id": "ec-gh-postboxes",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 2 post boxes from here."

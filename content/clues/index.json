@@ -7,75 +7,79 @@
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 5,
+      "car": 2,
+      "coverage": 3,
       "guardrail": 1,
       "landscape": 2,
-      "language": 1,
+      "language": 2,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 2,
       "pole": 1,
       "sign": 16,
+      "street": 2,
       "vegetation": 1
     }
   },
   {
     "country": "AE",
     "name": "United Arab Emirates",
-    "clues": 51,
-    "images": 127,
+    "clues": 57,
+    "images": 133,
     "families": {
       "architecture": 1,
       "bollard": 1,
-      "car": 9,
-      "coverage": 5,
+      "car": 8,
+      "coverage": 12,
       "landscape": 5,
       "language": 1,
       "line": 3,
-      "other": 7,
+      "other": 2,
       "plate": 1,
       "pole": 1,
-      "sign": 17
+      "sign": 17,
+      "street": 5
     }
   },
   {
     "country": "AL",
     "name": "Albania",
     "clues": 59,
-    "images": 118,
+    "images": 119,
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 4,
-      "coverage": 1,
+      "car": 1,
+      "coverage": 4,
       "guardrail": 7,
       "landscape": 13,
       "language": 3,
       "line": 3,
-      "other": 1,
       "plate": 2,
       "pole": 3,
-      "sign": 18
+      "sign": 18,
+      "street": 1
     }
   },
   {
     "country": "AR",
     "name": "Argentina",
-    "clues": 128,
-    "images": 255,
+    "clues": 127,
+    "images": 258,
     "families": {
-      "architecture": 7,
+      "architecture": 2,
       "bollard": 1,
       "car": 10,
-      "coverage": 6,
+      "coverage": 7,
       "guardrail": 1,
-      "landscape": 18,
+      "landscape": 17,
       "line": 4,
-      "other": 32,
+      "other": 17,
       "plate": 2,
-      "pole": 11,
-      "sign": 17,
-      "vegetation": 19
+      "pole": 16,
+      "sign": 19,
+      "street": 3,
+      "vegetation": 28
     }
   },
   {
@@ -84,55 +88,59 @@
     "clues": 53,
     "images": 66,
     "families": {
-      "architecture": 2,
-      "car": 3,
+      "architecture": 1,
+      "car": 6,
       "coverage": 4,
-      "guardrail": 6,
-      "landscape": 15,
+      "guardrail": 5,
+      "landscape": 17,
       "line": 1,
-      "other": 10,
+      "other": 1,
       "plate": 1,
       "sign": 10,
-      "vegetation": 1
+      "street": 7
     }
   },
   {
     "country": "AT",
     "name": "Austria",
-    "clues": 79,
+    "clues": 80,
     "images": 246,
     "families": {
-      "architecture": 2,
+      "architecture": 3,
       "bollard": 1,
-      "car": 5,
-      "landscape": 4,
+      "car": 3,
+      "coverage": 2,
+      "landscape": 5,
       "language": 1,
       "line": 2,
-      "other": 16,
+      "other": 9,
       "plate": 3,
       "pole": 7,
-      "sign": 38
+      "sign": 41,
+      "street": 2,
+      "vegetation": 1
     }
   },
   {
     "country": "AU",
     "name": "Australia",
-    "clues": 300,
-    "images": 797,
+    "clues": 299,
+    "images": 802,
     "families": {
       "architecture": 1,
       "bollard": 6,
-      "car": 11,
-      "coverage": 7,
+      "car": 118,
+      "coverage": 10,
       "guardrail": 1,
-      "landscape": 30,
+      "landscape": 28,
       "language": 1,
-      "line": 38,
-      "other": 98,
+      "line": 13,
+      "other": 12,
       "plate": 9,
-      "pole": 28,
-      "sign": 37,
-      "vegetation": 33
+      "pole": 27,
+      "sign": 34,
+      "street": 18,
+      "vegetation": 21
     }
   },
   {
@@ -141,11 +149,12 @@
     "clues": 17,
     "images": 38,
     "families": {
+      "architecture": 1,
       "bollard": 1,
       "car": 1,
       "language": 2,
       "line": 1,
-      "other": 2,
+      "other": 1,
       "plate": 1,
       "pole": 1,
       "sign": 8
@@ -155,40 +164,42 @@
     "country": "BD",
     "name": "Bangladesh",
     "clues": 88,
-    "images": 145,
+    "images": 146,
     "families": {
-      "architecture": 10,
+      "architecture": 4,
       "bollard": 2,
-      "car": 11,
+      "car": 9,
       "coverage": 10,
-      "landscape": 3,
+      "landscape": 5,
       "language": 1,
       "line": 1,
-      "other": 32,
+      "other": 26,
       "plate": 2,
       "pole": 1,
       "sign": 10,
-      "vegetation": 5
+      "street": 1,
+      "vegetation": 16
     }
   },
   {
     "country": "BE",
     "name": "Belgium",
     "clues": 65,
-    "images": 178,
+    "images": 179,
     "families": {
-      "architecture": 5,
+      "architecture": 4,
       "bollard": 2,
       "car": 2,
       "coverage": 2,
       "guardrail": 1,
-      "landscape": 3,
+      "landscape": 5,
       "language": 3,
       "line": 3,
-      "other": 7,
+      "other": 3,
       "plate": 2,
       "pole": 4,
-      "sign": 31
+      "sign": 29,
+      "street": 5
     }
   },
   {
@@ -199,15 +210,15 @@
     "families": {
       "architecture": 5,
       "bollard": 2,
-      "car": 11,
-      "coverage": 1,
-      "landscape": 4,
-      "language": 1,
+      "car": 9,
+      "coverage": 3,
+      "landscape": 5,
+      "language": 2,
       "line": 2,
-      "other": 4,
       "plate": 2,
       "pole": 4,
-      "sign": 24
+      "sign": 23,
+      "street": 3
     }
   },
   {
@@ -220,10 +231,12 @@
       "bollard": 1,
       "car": 3,
       "coverage": 1,
+      "landscape": 1,
       "line": 2,
-      "other": 4,
+      "other": 2,
       "plate": 2,
       "sign": 5,
+      "street": 1,
       "vegetation": 3
     }
   },
@@ -231,40 +244,42 @@
     "country": "BO",
     "name": "Bolivia",
     "clues": 84,
-    "images": 133,
+    "images": 137,
     "families": {
-      "architecture": 7,
+      "architecture": 8,
       "bollard": 1,
       "car": 5,
-      "coverage": 12,
+      "coverage": 10,
       "guardrail": 1,
-      "landscape": 22,
+      "landscape": 23,
       "line": 3,
-      "other": 11,
+      "other": 4,
       "plate": 2,
       "pole": 3,
       "sign": 15,
+      "street": 7,
       "vegetation": 2
     }
   },
   {
     "country": "BR",
     "name": "Brazil",
-    "clues": 256,
-    "images": 404,
+    "clues": 254,
+    "images": 426,
     "families": {
       "architecture": 7,
       "bollard": 2,
-      "car": 13,
-      "coverage": 13,
-      "landscape": 24,
+      "car": 5,
+      "coverage": 14,
+      "landscape": 30,
       "language": 1,
       "line": 18,
-      "other": 74,
+      "other": 9,
       "plate": 2,
-      "pole": 62,
-      "sign": 21,
-      "vegetation": 19
+      "pole": 71,
+      "sign": 25,
+      "street": 49,
+      "vegetation": 21
     }
   },
   {
@@ -275,35 +290,37 @@
     "families": {
       "architecture": 2,
       "bollard": 1,
-      "car": 1,
-      "coverage": 4,
+      "car": 3,
+      "coverage": 3,
       "guardrail": 1,
-      "landscape": 2,
+      "landscape": 5,
       "language": 1,
-      "line": 1,
-      "other": 8,
+      "line": 2,
+      "other": 2,
       "plate": 3,
       "pole": 2,
-      "sign": 12
+      "sign": 12,
+      "street": 1
     }
   },
   {
     "country": "BW",
     "name": "Botswana",
-    "clues": 65,
-    "images": 128,
+    "clues": 68,
+    "images": 132,
     "families": {
       "architecture": 2,
       "bollard": 1,
-      "car": 3,
-      "coverage": 7,
+      "car": 4,
+      "coverage": 5,
       "guardrail": 1,
-      "landscape": 17,
+      "landscape": 14,
       "line": 2,
-      "other": 5,
+      "other": 2,
       "plate": 2,
       "pole": 2,
       "sign": 20,
+      "street": 10,
       "vegetation": 3
     }
   },
@@ -314,28 +331,30 @@
     "images": 10,
     "families": {
       "bollard": 1,
-      "coverage": 4,
-      "sign": 5
+      "coverage": 3,
+      "sign": 5,
+      "street": 1
     }
   },
   {
     "country": "CA",
     "name": "Canada",
     "clues": 132,
-    "images": 676,
+    "images": 680,
     "families": {
-      "architecture": 3,
+      "architecture": 2,
       "bollard": 8,
-      "car": 17,
-      "coverage": 4,
+      "car": 13,
+      "coverage": 8,
       "guardrail": 5,
-      "landscape": 18,
+      "landscape": 19,
       "language": 4,
       "line": 6,
-      "other": 9,
+      "other": 2,
       "plate": 3,
       "pole": 14,
-      "sign": 36,
+      "sign": 38,
+      "street": 5,
       "vegetation": 5
     }
   },
@@ -346,50 +365,52 @@
     "images": 24,
     "families": {
       "bollard": 1,
-      "car": 4,
+      "car": 9,
       "coverage": 3,
-      "landscape": 1,
-      "other": 7,
+      "landscape": 2,
       "plate": 1,
-      "sign": 2
+      "sign": 2,
+      "street": 1
     }
   },
   {
     "country": "CH",
     "name": "Switzerland",
     "clues": 131,
-    "images": 222,
+    "images": 225,
     "families": {
-      "architecture": 49,
+      "architecture": 59,
       "bollard": 4,
-      "car": 6,
-      "coverage": 2,
-      "landscape": 8,
+      "car": 5,
+      "coverage": 3,
+      "landscape": 11,
       "language": 5,
       "line": 3,
-      "other": 19,
+      "other": 7,
       "plate": 2,
       "pole": 1,
-      "sign": 30,
-      "vegetation": 2
+      "sign": 29,
+      "street": 2
     }
   },
   {
     "country": "CL",
     "name": "Chile",
     "clues": 99,
-    "images": 216,
+    "images": 232,
     "families": {
+      "architecture": 1,
       "bollard": 3,
-      "car": 11,
-      "coverage": 4,
-      "landscape": 21,
+      "car": 10,
+      "coverage": 8,
+      "landscape": 25,
       "line": 6,
-      "other": 24,
+      "other": 1,
       "plate": 2,
       "pole": 4,
-      "sign": 17,
-      "vegetation": 7
+      "sign": 18,
+      "street": 9,
+      "vegetation": 12
     }
   },
   {
@@ -400,30 +421,33 @@
     "families": {
       "architecture": 4,
       "coverage": 5,
-      "other": 7,
+      "language": 1,
+      "other": 5,
       "plate": 1,
       "pole": 1,
-      "sign": 2
+      "sign": 2,
+      "street": 1
     }
   },
   {
     "country": "CO",
     "name": "Colombia",
     "clues": 126,
-    "images": 195,
+    "images": 196,
     "families": {
       "architecture": 2,
       "bollard": 3,
-      "car": 8,
-      "coverage": 16,
-      "landscape": 15,
+      "car": 14,
+      "coverage": 13,
+      "landscape": 16,
       "language": 1,
       "line": 2,
-      "other": 33,
-      "plate": 6,
-      "pole": 14,
+      "other": 7,
+      "plate": 3,
+      "pole": 22,
       "sign": 16,
-      "vegetation": 10
+      "street": 10,
+      "vegetation": 17
     }
   },
   {
@@ -432,36 +456,39 @@
     "clues": 104,
     "images": 120,
     "families": {
-      "architecture": 3,
+      "architecture": 6,
       "bollard": 3,
       "car": 8,
-      "coverage": 8,
-      "landscape": 7,
+      "coverage": 9,
+      "landscape": 9,
       "language": 1,
       "line": 1,
-      "other": 30,
+      "other": 15,
       "plate": 2,
       "pole": 16,
       "sign": 18,
-      "vegetation": 7
+      "street": 5,
+      "vegetation": 11
     }
   },
   {
     "country": "CW",
     "name": "Curaçao",
-    "clues": 30,
-    "images": 46,
+    "clues": 29,
+    "images": 47,
     "families": {
-      "architecture": 2,
+      "architecture": 1,
       "car": 2,
       "coverage": 2,
       "guardrail": 1,
       "landscape": 2,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 12
+      "sign": 12,
+      "street": 2,
+      "vegetation": 1
     }
   },
   {
@@ -471,13 +498,14 @@
     "images": 44,
     "families": {
       "bollard": 2,
-      "car": 2,
-      "coverage": 7,
+      "car": 3,
+      "coverage": 6,
       "line": 1,
-      "other": 4,
+      "other": 2,
       "plate": 2,
       "pole": 1,
       "sign": 10,
+      "street": 2,
       "vegetation": 2
     }
   },
@@ -490,15 +518,16 @@
       "architecture": 2,
       "bollard": 4,
       "car": 1,
-      "coverage": 2,
-      "landscape": 6,
+      "coverage": 3,
+      "landscape": 7,
       "language": 1,
       "line": 2,
-      "other": 10,
+      "other": 4,
       "plate": 2,
       "pole": 3,
       "sign": 13,
-      "vegetation": 2
+      "street": 1,
+      "vegetation": 5
     }
   },
   {
@@ -507,96 +536,100 @@
     "clues": 89,
     "images": 193,
     "families": {
-      "architecture": 15,
+      "architecture": 16,
       "bollard": 2,
-      "car": 9,
-      "coverage": 1,
+      "car": 7,
+      "coverage": 3,
       "guardrail": 1,
-      "landscape": 3,
+      "landscape": 4,
       "language": 1,
       "line": 3,
-      "other": 7,
+      "other": 3,
       "plate": 1,
       "pole": 7,
-      "sign": 39
+      "sign": 39,
+      "street": 2
     }
   },
   {
     "country": "DE",
     "name": "Germany",
     "clues": 141,
-    "images": 281,
+    "images": 284,
     "families": {
       "architecture": 8,
-      "bollard": 12,
+      "bollard": 16,
       "car": 6,
       "coverage": 2,
       "guardrail": 4,
-      "landscape": 3,
-      "language": 6,
+      "landscape": 5,
+      "language": 20,
       "line": 1,
-      "other": 50,
-      "plate": 5,
+      "other": 14,
+      "plate": 4,
       "pole": 9,
-      "sign": 32,
-      "vegetation": 3
+      "sign": 37,
+      "street": 8,
+      "vegetation": 7
     }
   },
   {
     "country": "DK",
     "name": "Denmark",
     "clues": 67,
-    "images": 162,
+    "images": 163,
     "families": {
       "architecture": 6,
       "bollard": 3,
-      "car": 4,
-      "coverage": 1,
+      "car": 3,
+      "coverage": 2,
       "guardrail": 1,
       "landscape": 2,
       "language": 1,
       "line": 3,
-      "other": 16,
+      "other": 13,
       "plate": 2,
       "pole": 2,
-      "sign": 26
+      "sign": 25,
+      "street": 4
     }
   },
   {
     "country": "DO",
     "name": "Dominican Republic",
     "clues": 31,
-    "images": 47,
+    "images": 50,
     "families": {
       "architecture": 1,
-      "car": 1,
-      "coverage": 4,
+      "car": 2,
+      "coverage": 3,
       "landscape": 3,
       "line": 1,
-      "other": 2,
       "plate": 2,
       "pole": 4,
-      "sign": 13
+      "sign": 13,
+      "street": 2
     }
   },
   {
     "country": "EC",
     "name": "Ecuador",
-    "clues": 58,
-    "images": 155,
+    "clues": 59,
+    "images": 158,
     "families": {
       "architecture": 1,
       "bollard": 2,
-      "car": 6,
-      "coverage": 5,
+      "car": 5,
+      "coverage": 7,
       "guardrail": 2,
-      "landscape": 4,
+      "landscape": 8,
       "line": 1,
-      "other": 10,
+      "other": 1,
       "plate": 3,
       "pole": 3,
-      "sign": 18,
-      "vegetation": 3
+      "sign": 19,
+      "street": 3,
+      "vegetation": 4
     }
   },
   {
@@ -607,16 +640,16 @@
     "families": {
       "architecture": 3,
       "bollard": 2,
-      "car": 3,
-      "coverage": 2,
+      "car": 1,
+      "coverage": 3,
       "guardrail": 1,
-      "landscape": 2,
-      "language": 1,
+      "landscape": 3,
+      "language": 2,
       "line": 2,
-      "other": 3,
       "plate": 2,
       "pole": 5,
-      "sign": 22
+      "sign": 22,
+      "street": 2
     }
   },
   {
@@ -625,53 +658,57 @@
     "clues": 22,
     "images": 21,
     "families": {
-      "architecture": 2,
-      "coverage": 7,
+      "architecture": 4,
+      "coverage": 6,
+      "landscape": 1,
       "language": 1,
       "line": 1,
-      "other": 5,
+      "other": 2,
       "plate": 1,
-      "sign": 5
+      "sign": 5,
+      "street": 1
     }
   },
   {
     "country": "ES",
     "name": "Spain",
     "clues": 161,
-    "images": 368,
+    "images": 374,
     "families": {
-      "architecture": 10,
+      "architecture": 11,
       "bollard": 6,
-      "car": 11,
-      "coverage": 3,
+      "car": 9,
+      "coverage": 5,
       "guardrail": 3,
       "landscape": 27,
-      "language": 8,
+      "language": 13,
       "line": 6,
-      "other": 26,
+      "other": 7,
       "plate": 2,
-      "pole": 6,
+      "pole": 7,
       "sign": 42,
-      "vegetation": 11
+      "street": 6,
+      "vegetation": 17
     }
   },
   {
     "country": "FI",
     "name": "Finland",
     "clues": 88,
-    "images": 170,
+    "images": 171,
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 11,
-      "coverage": 1,
-      "landscape": 3,
+      "car": 5,
+      "coverage": 5,
+      "landscape": 7,
       "language": 4,
-      "line": 6,
-      "other": 16,
-      "plate": 5,
+      "line": 5,
+      "other": 10,
+      "plate": 4,
       "pole": 4,
       "sign": 32,
+      "street": 6,
       "vegetation": 2
     }
   },
@@ -682,9 +719,8 @@
     "images": 9,
     "families": {
       "car": 1,
-      "coverage": 4,
-      "landscape": 1,
-      "other": 2
+      "coverage": 3,
+      "landscape": 4
     }
   },
   {
@@ -695,16 +731,17 @@
     "families": {
       "architecture": 4,
       "bollard": 2,
-      "car": 5,
-      "coverage": 5,
+      "car": 6,
+      "coverage": 6,
       "guardrail": 1,
-      "landscape": 4,
+      "landscape": 3,
       "language": 1,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 1,
       "pole": 1,
       "sign": 13,
+      "street": 2,
       "vegetation": 1
     }
   },
@@ -712,41 +749,43 @@
     "country": "FR",
     "name": "France",
     "clues": 154,
-    "images": 321,
+    "images": 323,
     "families": {
-      "architecture": 17,
+      "architecture": 18,
       "bollard": 4,
-      "car": 10,
-      "coverage": 1,
+      "car": 9,
+      "coverage": 3,
       "guardrail": 2,
       "landscape": 5,
       "language": 37,
       "line": 7,
-      "other": 10,
+      "other": 6,
       "plate": 4,
       "pole": 7,
       "sign": 44,
-      "vegetation": 6
+      "street": 1,
+      "vegetation": 7
     }
   },
   {
     "country": "GB",
     "name": "United Kingdom",
-    "clues": 149,
-    "images": 374,
+    "clues": 150,
+    "images": 380,
     "families": {
-      "architecture": 20,
+      "architecture": 24,
       "bollard": 4,
-      "car": 7,
-      "coverage": 2,
+      "car": 4,
+      "coverage": 7,
       "guardrail": 1,
-      "landscape": 13,
+      "landscape": 15,
       "language": 7,
       "line": 6,
-      "other": 37,
+      "other": 15,
       "plate": 4,
-      "pole": 10,
-      "sign": 34,
+      "pole": 17,
+      "sign": 31,
+      "street": 11,
       "vegetation": 4
     }
   },
@@ -756,32 +795,34 @@
     "clues": 23,
     "images": 102,
     "families": {
+      "architecture": 1,
       "bollard": 1,
       "car": 1,
       "coverage": 1,
       "language": 1,
       "line": 1,
-      "other": 2,
       "plate": 1,
       "pole": 1,
-      "sign": 14
+      "sign": 14,
+      "street": 1
     }
   },
   {
     "country": "GH",
     "name": "Ghana",
     "clues": 49,
-    "images": 99,
+    "images": 101,
     "families": {
       "bollard": 1,
       "car": 7,
       "coverage": 3,
-      "landscape": 8,
-      "line": 4,
-      "other": 7,
+      "landscape": 7,
+      "line": 3,
+      "other": 3,
       "plate": 2,
       "pole": 2,
       "sign": 13,
+      "street": 6,
       "vegetation": 2
     }
   },
@@ -795,12 +836,13 @@
       "bollard": 1,
       "car": 1,
       "coverage": 2,
-      "landscape": 2,
+      "landscape": 3,
       "language": 1,
       "line": 2,
-      "other": 5,
+      "other": 3,
       "plate": 2,
-      "sign": 10
+      "sign": 10,
+      "street": 1
     }
   },
   {
@@ -811,33 +853,37 @@
     "families": {
       "architecture": 5,
       "bollard": 1,
-      "car": 9,
-      "coverage": 25,
-      "landscape": 12,
+      "car": 28,
+      "coverage": 12,
+      "landscape": 15,
       "line": 1,
-      "other": 12,
+      "other": 1,
       "plate": 1,
       "pole": 1,
-      "sign": 8
+      "sign": 8,
+      "street": 1,
+      "vegetation": 1
     }
   },
   {
     "country": "GR",
     "name": "Greece",
-    "clues": 65,
-    "images": 144,
+    "clues": 67,
+    "images": 147,
     "families": {
-      "architecture": 3,
+      "architecture": 7,
       "bollard": 2,
-      "car": 8,
-      "coverage": 3,
-      "landscape": 6,
+      "car": 5,
+      "coverage": 5,
+      "landscape": 7,
       "language": 2,
       "line": 4,
-      "other": 9,
+      "other": 3,
       "plate": 2,
       "pole": 6,
-      "sign": 20
+      "sign": 21,
+      "street": 1,
+      "vegetation": 2
     }
   },
   {
@@ -850,25 +896,26 @@
       "car": 1,
       "coverage": 3,
       "landscape": 1,
-      "other": 1
+      "vegetation": 1
     }
   },
   {
     "country": "GT",
     "name": "Guatemala",
     "clues": 48,
-    "images": 76,
+    "images": 78,
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 3,
+      "car": 6,
       "coverage": 3,
-      "landscape": 4,
+      "landscape": 9,
       "line": 2,
-      "other": 11,
+      "other": 2,
       "plate": 2,
       "pole": 5,
       "sign": 12,
+      "street": 1,
       "vegetation": 2
     }
   },
@@ -876,18 +923,19 @@
     "country": "GU",
     "name": "Guam",
     "clues": 28,
-    "images": 36,
+    "images": 37,
     "families": {
       "architecture": 1,
       "car": 2,
       "coverage": 1,
-      "landscape": 2,
+      "landscape": 3,
       "language": 1,
       "line": 1,
-      "other": 4,
+      "other": 2,
       "plate": 1,
       "pole": 2,
       "sign": 12,
+      "street": 1,
       "vegetation": 1
     }
   },
@@ -900,15 +948,16 @@
       "architecture": 8,
       "bollard": 2,
       "car": 2,
-      "coverage": 1,
-      "guardrail": 5,
-      "landscape": 1,
+      "coverage": 2,
+      "guardrail": 4,
+      "landscape": 3,
       "language": 1,
       "line": 1,
-      "other": 17,
+      "other": 7,
       "plate": 1,
       "pole": 2,
       "sign": 13,
+      "street": 8,
       "vegetation": 4
     }
   },
@@ -916,21 +965,22 @@
     "country": "HR",
     "name": "Croatia",
     "clues": 64,
-    "images": 166,
+    "images": 170,
     "families": {
-      "architecture": 3,
+      "architecture": 5,
       "bollard": 2,
-      "car": 9,
-      "coverage": 1,
+      "car": 6,
+      "coverage": 2,
       "guardrail": 1,
-      "landscape": 7,
-      "language": 3,
+      "landscape": 8,
+      "language": 4,
       "line": 1,
-      "other": 10,
+      "other": 3,
       "plate": 2,
       "pole": 2,
-      "sign": 22,
-      "vegetation": 1
+      "sign": 23,
+      "street": 3,
+      "vegetation": 2
     }
   },
   {
@@ -941,75 +991,80 @@
     "families": {
       "architecture": 2,
       "bollard": 3,
-      "car": 6,
-      "coverage": 1,
-      "landscape": 2,
-      "language": 1,
+      "car": 5,
+      "coverage": 2,
+      "landscape": 4,
+      "language": 2,
       "line": 3,
-      "other": 7,
+      "other": 2,
       "plate": 2,
       "pole": 3,
-      "sign": 29
+      "sign": 30,
+      "street": 1
     }
   },
   {
     "country": "ID",
     "name": "Indonesia",
-    "clues": 199,
-    "images": 350,
+    "clues": 201,
+    "images": 352,
     "families": {
-      "architecture": 43,
+      "architecture": 53,
       "bollard": 3,
       "car": 11,
-      "coverage": 6,
-      "landscape": 21,
+      "coverage": 8,
+      "landscape": 31,
       "language": 3,
       "line": 5,
-      "other": 45,
+      "other": 13,
       "plate": 3,
-      "pole": 23,
+      "pole": 22,
       "sign": 17,
-      "vegetation": 19
+      "street": 8,
+      "vegetation": 24
     }
   },
   {
     "country": "IE",
     "name": "Ireland",
     "clues": 59,
-    "images": 165,
+    "images": 167,
     "families": {
-      "architecture": 1,
+      "architecture": 2,
       "bollard": 2,
-      "car": 8,
-      "coverage": 1,
+      "car": 5,
+      "coverage": 4,
       "guardrail": 1,
-      "landscape": 7,
+      "landscape": 8,
       "language": 1,
-      "line": 2,
-      "other": 7,
+      "line": 3,
+      "other": 1,
       "plate": 2,
       "pole": 5,
-      "sign": 22
+      "sign": 22,
+      "street": 2,
+      "vegetation": 1
     }
   },
   {
     "country": "IL",
     "name": "Israel",
     "clues": 89,
-    "images": 159,
+    "images": 160,
     "families": {
-      "architecture": 7,
+      "architecture": 10,
       "bollard": 1,
-      "car": 6,
-      "coverage": 4,
+      "car": 7,
+      "coverage": 6,
       "guardrail": 1,
-      "landscape": 12,
+      "landscape": 18,
       "language": 1,
       "line": 2,
-      "other": 24,
-      "plate": 4,
+      "other": 5,
+      "plate": 3,
       "pole": 5,
       "sign": 19,
+      "street": 8,
       "vegetation": 3
     }
   },
@@ -1021,35 +1076,36 @@
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "coverage": 1,
-      "landscape": 3,
-      "language": 2,
+      "coverage": 2,
+      "landscape": 5,
       "line": 2,
-      "other": 11,
+      "other": 2,
       "plate": 2,
       "sign": 13,
-      "vegetation": 1
+      "street": 7,
+      "vegetation": 2
     }
   },
   {
     "country": "IN",
     "name": "India",
-    "clues": 437,
-    "images": 729,
+    "clues": 439,
+    "images": 732,
     "families": {
-      "architecture": 52,
+      "architecture": 57,
       "bollard": 6,
-      "car": 15,
+      "car": 49,
       "coverage": 10,
-      "guardrail": 3,
-      "landscape": 53,
-      "language": 16,
-      "line": 5,
-      "other": 153,
+      "guardrail": 1,
+      "landscape": 58,
+      "language": 17,
+      "line": 3,
+      "other": 67,
       "plate": 5,
-      "pole": 73,
+      "pole": 83,
       "sign": 13,
-      "vegetation": 33
+      "street": 12,
+      "vegetation": 58
     }
   },
   {
@@ -1060,7 +1116,7 @@
     "families": {
       "car": 1,
       "coverage": 7,
-      "other": 2,
+      "landscape": 2,
       "vegetation": 2
     }
   },
@@ -1070,46 +1126,48 @@
     "clues": 5,
     "images": 4,
     "families": {
-      "coverage": 4,
-      "other": 1
+      "architecture": 1,
+      "coverage": 4
     }
   },
   {
     "country": "IS",
     "name": "Iceland",
-    "clues": 52,
-    "images": 95,
+    "clues": 55,
+    "images": 98,
     "families": {
       "bollard": 2,
-      "car": 3,
-      "coverage": 2,
-      "landscape": 11,
+      "car": 4,
+      "coverage": 5,
+      "landscape": 14,
       "language": 1,
       "line": 2,
-      "other": 9,
+      "other": 3,
       "plate": 3,
       "pole": 1,
-      "sign": 18
+      "sign": 18,
+      "street": 2
     }
   },
   {
     "country": "IT",
     "name": "Italy",
     "clues": 93,
-    "images": 238,
+    "images": 239,
     "families": {
       "architecture": 8,
       "bollard": 2,
-      "car": 10,
-      "coverage": 1,
+      "car": 8,
+      "coverage": 3,
       "guardrail": 3,
       "landscape": 15,
-      "language": 6,
+      "language": 7,
       "line": 2,
-      "other": 3,
+      "other": 1,
       "plate": 2,
       "pole": 4,
       "sign": 34,
+      "street": 1,
       "vegetation": 3
     }
   },
@@ -1119,15 +1177,16 @@
     "clues": 36,
     "images": 48,
     "families": {
-      "architecture": 3,
+      "architecture": 4,
       "bollard": 1,
       "coverage": 2,
-      "landscape": 2,
+      "landscape": 4,
       "language": 1,
       "line": 1,
-      "other": 6,
+      "other": 1,
       "plate": 2,
       "sign": 16,
+      "street": 2,
       "vegetation": 2
     }
   },
@@ -1135,59 +1194,62 @@
     "country": "JO",
     "name": "Jordan",
     "clues": 46,
-    "images": 80,
+    "images": 82,
     "families": {
       "architecture": 1,
       "bollard": 1,
-      "car": 2,
-      "coverage": 6,
-      "landscape": 8,
+      "car": 3,
+      "coverage": 4,
+      "landscape": 10,
       "language": 1,
       "line": 2,
-      "other": 7,
+      "other": 3,
       "plate": 2,
       "pole": 2,
       "sign": 13,
+      "street": 3,
       "vegetation": 1
     }
   },
   {
     "country": "JP",
     "name": "Japan",
-    "clues": 154,
-    "images": 607,
+    "clues": 140,
+    "images": 606,
     "families": {
-      "architecture": 5,
+      "architecture": 8,
       "bollard": 9,
-      "car": 9,
+      "car": 8,
       "coverage": 2,
       "guardrail": 6,
-      "landscape": 3,
-      "language": 1,
-      "line": 4,
-      "other": 53,
+      "landscape": 5,
+      "language": 2,
+      "line": 5,
+      "other": 2,
       "plate": 11,
-      "pole": 27,
+      "pole": 38,
       "sign": 21,
-      "vegetation": 3
+      "street": 15,
+      "vegetation": 8
     }
   },
   {
     "country": "KE",
     "name": "Kenya",
     "clues": 69,
-    "images": 135,
+    "images": 137,
     "families": {
-      "architecture": 4,
+      "architecture": 3,
       "bollard": 1,
-      "car": 8,
-      "coverage": 3,
-      "landscape": 14,
+      "car": 11,
+      "coverage": 4,
+      "landscape": 12,
       "line": 3,
-      "other": 8,
+      "other": 3,
       "plate": 2,
       "pole": 4,
       "sign": 16,
+      "street": 4,
       "vegetation": 6
     }
   },
@@ -1195,40 +1257,42 @@
     "country": "KG",
     "name": "Kyrgyzstan",
     "clues": 102,
-    "images": 130,
+    "images": 131,
     "families": {
-      "architecture": 4,
+      "architecture": 3,
       "bollard": 3,
-      "car": 3,
-      "coverage": 15,
+      "car": 9,
+      "coverage": 10,
       "guardrail": 3,
-      "landscape": 37,
+      "landscape": 38,
       "language": 1,
       "line": 3,
-      "other": 7,
+      "other": 2,
       "plate": 2,
       "pole": 5,
-      "sign": 12,
-      "vegetation": 7
+      "sign": 13,
+      "street": 4,
+      "vegetation": 6
     }
   },
   {
     "country": "KH",
     "name": "Cambodia",
-    "clues": 66,
-    "images": 156,
+    "clues": 69,
+    "images": 164,
     "families": {
       "architecture": 5,
       "bollard": 5,
       "car": 6,
-      "coverage": 5,
-      "landscape": 11,
+      "coverage": 8,
+      "landscape": 7,
       "language": 1,
       "line": 2,
-      "other": 6,
+      "other": 2,
       "plate": 2,
       "pole": 4,
       "sign": 15,
+      "street": 8,
       "vegetation": 4
     }
   },
@@ -1236,58 +1300,61 @@
     "country": "KR",
     "name": "South Korea",
     "clues": 52,
-    "images": 93,
+    "images": 94,
     "families": {
-      "architecture": 5,
+      "architecture": 6,
       "bollard": 2,
-      "car": 4,
-      "coverage": 3,
-      "landscape": 2,
+      "car": 3,
+      "coverage": 4,
+      "landscape": 5,
       "language": 1,
       "line": 4,
-      "other": 9,
+      "other": 3,
       "plate": 2,
       "pole": 4,
-      "sign": 16
+      "sign": 16,
+      "street": 2
     }
   },
   {
     "country": "KZ",
     "name": "Kazakhstan",
     "clues": 77,
-    "images": 119,
+    "images": 121,
     "families": {
       "architecture": 3,
       "bollard": 2,
-      "car": 1,
-      "coverage": 7,
+      "car": 2,
+      "coverage": 6,
       "landscape": 15,
       "language": 2,
-      "line": 6,
-      "other": 12,
+      "line": 4,
+      "other": 6,
       "plate": 3,
       "pole": 4,
       "sign": 17,
-      "vegetation": 5
+      "street": 9,
+      "vegetation": 4
     }
   },
   {
     "country": "LA",
     "name": "Laos",
     "clues": 47,
-    "images": 75,
+    "images": 76,
     "families": {
       "architecture": 1,
       "bollard": 3,
       "car": 4,
-      "coverage": 4,
+      "coverage": 3,
       "landscape": 6,
       "language": 1,
       "line": 1,
-      "other": 8,
+      "other": 3,
       "plate": 2,
       "pole": 2,
       "sign": 14,
+      "street": 6,
       "vegetation": 1
     }
   },
@@ -1301,13 +1368,14 @@
       "bollard": 1,
       "car": 2,
       "coverage": 7,
-      "landscape": 3,
+      "landscape": 4,
       "language": 1,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 2,
       "pole": 2,
       "sign": 5,
+      "street": 2,
       "vegetation": 1
     }
   },
@@ -1322,70 +1390,74 @@
       "car": 1,
       "coverage": 2,
       "guardrail": 1,
-      "landscape": 6,
+      "landscape": 8,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 2,
       "pole": 1,
-      "sign": 24,
-      "vegetation": 1
+      "sign": 21,
+      "street": 5
     }
   },
   {
     "country": "LK",
     "name": "Sri Lanka",
-    "clues": 47,
-    "images": 101,
+    "clues": 49,
+    "images": 106,
     "families": {
       "architecture": 3,
       "bollard": 2,
-      "car": 3,
-      "coverage": 1,
+      "car": 2,
+      "coverage": 5,
       "landscape": 4,
       "language": 2,
       "line": 3,
-      "other": 5,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 16,
-      "vegetation": 4
+      "sign": 17,
+      "street": 1,
+      "vegetation": 5
     }
   },
   {
     "country": "LS",
     "name": "Lesotho",
     "clues": 41,
-    "images": 71,
+    "images": 75,
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 1,
-      "coverage": 3,
-      "landscape": 6,
-      "line": 2,
-      "other": 10,
+      "car": 2,
+      "coverage": 4,
+      "landscape": 5,
+      "line": 3,
+      "other": 4,
       "plate": 2,
       "pole": 1,
-      "sign": 12
+      "sign": 12,
+      "street": 2,
+      "vegetation": 2
     }
   },
   {
     "country": "LT",
     "name": "Lithuania",
-    "clues": 51,
+    "clues": 53,
     "images": 131,
     "families": {
       "architecture": 4,
       "bollard": 2,
-      "car": 4,
+      "car": 3,
+      "coverage": 1,
       "guardrail": 1,
       "landscape": 3,
-      "language": 1,
+      "language": 3,
       "line": 2,
-      "other": 3,
       "plate": 2,
       "pole": 4,
-      "sign": 24,
+      "sign": 25,
+      "street": 2,
       "vegetation": 1
     }
   },
@@ -1397,35 +1469,38 @@
     "families": {
       "architecture": 1,
       "bollard": 2,
-      "car": 2,
-      "coverage": 2,
-      "landscape": 2,
-      "language": 1,
+      "car": 1,
+      "coverage": 3,
+      "landscape": 3,
+      "language": 2,
       "line": 1,
-      "other": 5,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 25
+      "sign": 24,
+      "street": 2,
+      "vegetation": 1
     }
   },
   {
     "country": "LV",
     "name": "Latvia",
     "clues": 46,
-    "images": 120,
+    "images": 122,
     "families": {
-      "architecture": 3,
+      "architecture": 4,
       "bollard": 2,
       "car": 3,
       "coverage": 1,
       "guardrail": 1,
       "landscape": 2,
-      "language": 1,
+      "language": 2,
       "line": 1,
-      "other": 7,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 21
+      "sign": 22,
+      "street": 3
     }
   },
   {
@@ -1436,33 +1511,34 @@
     "families": {
       "architecture": 2,
       "bollard": 1,
-      "car": 3,
-      "coverage": 1,
-      "landscape": 1,
+      "car": 2,
+      "coverage": 2,
+      "landscape": 3,
       "line": 1,
-      "other": 3,
+      "other": 1,
       "plate": 2,
       "sign": 11,
-      "vegetation": 2
+      "street": 1,
+      "vegetation": 1
     }
   },
   {
     "country": "ME",
     "name": "Montenegro",
     "clues": 46,
-    "images": 93,
+    "images": 95,
     "families": {
       "bollard": 3,
-      "car": 5,
-      "coverage": 1,
+      "car": 2,
+      "coverage": 4,
       "guardrail": 2,
       "landscape": 11,
       "language": 1,
       "line": 2,
-      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 16
+      "sign": 16,
+      "street": 1
     }
   },
   {
@@ -1472,16 +1548,16 @@
     "images": 82,
     "families": {
       "architecture": 1,
-      "car": 3,
-      "coverage": 28,
-      "landscape": 5,
+      "car": 7,
+      "coverage": 29,
+      "landscape": 12,
       "language": 1,
       "line": 1,
-      "other": 13,
+      "other": 3,
       "plate": 1,
       "pole": 1,
       "sign": 7,
-      "vegetation": 7
+      "vegetation": 5
     }
   },
   {
@@ -1490,17 +1566,18 @@
     "clues": 52,
     "images": 126,
     "families": {
+      "architecture": 1,
       "bollard": 2,
-      "car": 5,
-      "coverage": 1,
+      "car": 3,
+      "coverage": 4,
       "guardrail": 1,
       "landscape": 6,
       "language": 9,
       "line": 3,
-      "other": 4,
       "plate": 2,
       "pole": 3,
-      "sign": 16
+      "sign": 16,
+      "street": 2
     }
   },
   {
@@ -1509,33 +1586,34 @@
     "clues": 25,
     "images": 26,
     "families": {
-      "architecture": 4,
-      "coverage": 8,
-      "landscape": 1,
-      "other": 5,
+      "architecture": 10,
+      "coverage": 5,
+      "landscape": 5,
+      "other": 1,
       "pole": 1,
       "sign": 1,
-      "vegetation": 5
+      "vegetation": 2
     }
   },
   {
     "country": "MN",
     "name": "Mongolia",
     "clues": 124,
-    "images": 194,
+    "images": 197,
     "families": {
       "architecture": 7,
       "bollard": 2,
-      "car": 29,
-      "coverage": 14,
-      "landscape": 25,
+      "car": 33,
+      "coverage": 16,
+      "landscape": 38,
       "language": 1,
       "line": 1,
-      "other": 22,
+      "other": 3,
       "plate": 2,
       "pole": 1,
-      "sign": 16,
-      "vegetation": 4
+      "sign": 14,
+      "street": 3,
+      "vegetation": 3
     }
   },
   {
@@ -1545,28 +1623,27 @@
     "images": 43,
     "families": {
       "architecture": 1,
-      "car": 1,
-      "coverage": 1,
+      "coverage": 3,
       "guardrail": 1,
       "landscape": 1,
       "language": 1,
-      "other": 4,
       "plate": 1,
-      "sign": 8
+      "sign": 8,
+      "street": 3
     }
   },
   {
     "country": "MP",
     "name": "Northern Mariana Islands",
     "clues": 23,
-    "images": 29,
+    "images": 30,
     "families": {
       "car": 2,
       "coverage": 1,
-      "landscape": 1,
+      "landscape": 3,
       "language": 1,
       "line": 1,
-      "other": 3,
+      "other": 1,
       "plate": 1,
       "pole": 1,
       "sign": 10,
@@ -1586,59 +1663,62 @@
     "country": "MT",
     "name": "Malta",
     "clues": 36,
-    "images": 102,
+    "images": 103,
     "families": {
       "architecture": 3,
       "bollard": 1,
       "car": 2,
       "coverage": 1,
       "guardrail": 1,
-      "landscape": 2,
-      "language": 2,
-      "line": 1,
-      "other": 7,
+      "landscape": 3,
+      "language": 3,
+      "line": 2,
+      "other": 2,
       "plate": 2,
       "pole": 1,
-      "sign": 13
+      "sign": 12,
+      "street": 3
     }
   },
   {
     "country": "MX",
     "name": "Mexico",
     "clues": 154,
-    "images": 297,
+    "images": 309,
     "families": {
-      "architecture": 5,
+      "architecture": 7,
       "bollard": 4,
-      "car": 12,
-      "coverage": 1,
-      "guardrail": 1,
-      "landscape": 13,
-      "line": 7,
-      "other": 42,
+      "car": 10,
+      "coverage": 4,
+      "landscape": 16,
+      "language": 1,
+      "line": 6,
+      "other": 9,
       "plate": 2,
       "pole": 14,
       "sign": 20,
-      "vegetation": 33
+      "street": 14,
+      "vegetation": 47
     }
   },
   {
     "country": "MY",
     "name": "Malaysia",
     "clues": 65,
-    "images": 192,
+    "images": 201,
     "families": {
       "architecture": 1,
       "bollard": 2,
       "car": 9,
       "coverage": 2,
-      "landscape": 3,
-      "language": 1,
+      "landscape": 2,
+      "language": 2,
       "line": 3,
-      "other": 14,
+      "other": 3,
       "plate": 2,
-      "pole": 6,
-      "sign": 21,
+      "pole": 7,
+      "sign": 22,
+      "street": 9,
       "vegetation": 1
     }
   },
@@ -1650,76 +1730,80 @@
     "families": {
       "architecture": 3,
       "bollard": 3,
-      "car": 2,
-      "coverage": 6,
-      "landscape": 44,
-      "line": 5,
-      "other": 15,
+      "car": 3,
+      "coverage": 5,
+      "landscape": 43,
+      "line": 4,
+      "other": 1,
       "plate": 2,
       "pole": 3,
       "sign": 15,
-      "vegetation": 6
+      "street": 17,
+      "vegetation": 5
     }
   },
   {
     "country": "NG",
     "name": "Nigeria",
-    "clues": 52,
-    "images": 129,
+    "clues": 54,
+    "images": 136,
     "families": {
       "architecture": 1,
       "bollard": 1,
-      "car": 9,
-      "coverage": 2,
-      "landscape": 11,
+      "car": 7,
+      "coverage": 11,
+      "landscape": 9,
       "line": 2,
-      "other": 8,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 11,
-      "vegetation": 3
+      "sign": 12,
+      "street": 2,
+      "vegetation": 4
     }
   },
   {
     "country": "NL",
     "name": "Netherlands",
     "clues": 82,
-    "images": 263,
+    "images": 264,
     "families": {
-      "architecture": 8,
+      "architecture": 10,
       "bollard": 3,
-      "car": 4,
-      "coverage": 3,
+      "car": 2,
+      "coverage": 5,
       "guardrail": 1,
-      "landscape": 6,
+      "landscape": 8,
       "language": 2,
       "line": 3,
-      "other": 21,
+      "other": 8,
       "plate": 2,
       "pole": 2,
-      "sign": 25,
-      "vegetation": 2
+      "sign": 27,
+      "street": 6,
+      "vegetation": 3
     }
   },
   {
     "country": "NO",
     "name": "Norway",
-    "clues": 112,
-    "images": 204,
+    "clues": 114,
+    "images": 208,
     "families": {
       "architecture": 4,
       "bollard": 2,
-      "car": 8,
-      "coverage": 3,
+      "car": 7,
+      "coverage": 4,
       "guardrail": 2,
-      "landscape": 15,
+      "landscape": 20,
       "language": 1,
       "line": 3,
-      "other": 28,
+      "other": 12,
       "plate": 2,
-      "pole": 9,
-      "sign": 33,
-      "vegetation": 2
+      "pole": 12,
+      "sign": 32,
+      "street": 4,
+      "vegetation": 9
     }
   },
   {
@@ -1728,55 +1812,58 @@
     "clues": 94,
     "images": 105,
     "families": {
-      "architecture": 9,
+      "architecture": 11,
       "bollard": 2,
-      "car": 4,
-      "coverage": 11,
-      "landscape": 23,
+      "car": 11,
+      "coverage": 12,
+      "landscape": 29,
       "language": 1,
       "line": 2,
-      "other": 25,
+      "other": 3,
       "plate": 2,
       "pole": 3,
       "sign": 6,
-      "vegetation": 6
+      "street": 3,
+      "vegetation": 9
     }
   },
   {
     "country": "NZ",
     "name": "New Zealand",
-    "clues": 113,
-    "images": 250,
+    "clues": 114,
+    "images": 254,
     "families": {
       "bollard": 5,
-      "car": 9,
+      "car": 10,
       "coverage": 4,
-      "landscape": 11,
+      "landscape": 19,
       "line": 7,
-      "other": 24,
+      "other": 1,
       "plate": 2,
-      "pole": 22,
-      "sign": 25,
-      "vegetation": 4
+      "pole": 24,
+      "sign": 23,
+      "street": 10,
+      "vegetation": 9
     }
   },
   {
     "country": "OM",
     "name": "Oman",
     "clues": 90,
-    "images": 135,
+    "images": 139,
     "families": {
       "architecture": 1,
       "bollard": 1,
-      "car": 4,
-      "coverage": 6,
-      "landscape": 27,
+      "car": 5,
+      "coverage": 3,
+      "landscape": 31,
       "language": 1,
       "line": 3,
-      "other": 25,
+      "other": 4,
       "plate": 2,
-      "pole": 2,
-      "sign": 15,
+      "pole": 3,
+      "sign": 14,
+      "street": 19,
       "vegetation": 3
     }
   },
@@ -1784,16 +1871,16 @@
     "country": "PA",
     "name": "Panama",
     "clues": 48,
-    "images": 104,
+    "images": 105,
     "families": {
       "architecture": 3,
       "bollard": 1,
       "car": 2,
       "coverage": 2,
-      "landscape": 12,
+      "landscape": 13,
       "line": 2,
       "other": 2,
-      "plate": 4,
+      "plate": 3,
       "pole": 6,
       "sign": 14
     }
@@ -1802,41 +1889,43 @@
     "country": "PE",
     "name": "Peru",
     "clues": 104,
-    "images": 192,
+    "images": 200,
     "families": {
-      "architecture": 4,
+      "architecture": 3,
       "bollard": 8,
-      "car": 10,
-      "coverage": 4,
+      "car": 7,
+      "coverage": 9,
       "guardrail": 1,
-      "landscape": 18,
+      "landscape": 23,
       "line": 4,
-      "other": 24,
+      "other": 10,
       "plate": 2,
-      "pole": 7,
-      "sign": 16,
-      "vegetation": 6
+      "pole": 8,
+      "sign": 18,
+      "street": 3,
+      "vegetation": 8
     }
   },
   {
     "country": "PH",
     "name": "Philippines",
-    "clues": 100,
-    "images": 174,
+    "clues": 102,
+    "images": 180,
     "families": {
-      "architecture": 16,
+      "architecture": 18,
       "bollard": 1,
-      "car": 9,
+      "car": 12,
       "coverage": 1,
       "guardrail": 2,
-      "landscape": 5,
+      "landscape": 7,
       "language": 1,
       "line": 6,
-      "other": 33,
+      "other": 14,
       "plate": 3,
-      "pole": 9,
+      "pole": 15,
       "sign": 12,
-      "vegetation": 2
+      "street": 4,
+      "vegetation": 6
     }
   },
   {
@@ -1845,14 +1934,14 @@
     "clues": 31,
     "images": 36,
     "families": {
-      "architecture": 4,
+      "architecture": 8,
       "car": 4,
-      "coverage": 10,
+      "coverage": 11,
+      "landscape": 2,
       "language": 1,
-      "other": 7,
+      "other": 1,
       "plate": 2,
-      "sign": 2,
-      "vegetation": 1
+      "sign": 2
     }
   },
   {
@@ -1866,13 +1955,14 @@
       "car": 5,
       "guardrail": 1,
       "landscape": 4,
-      "language": 1,
+      "language": 2,
       "line": 2,
-      "other": 8,
+      "other": 2,
       "plate": 2,
-      "pole": 6,
-      "sign": 29,
-      "vegetation": 2
+      "pole": 7,
+      "sign": 30,
+      "street": 2,
+      "vegetation": 3
     }
   },
   {
@@ -1885,10 +1975,10 @@
       "car": 2,
       "coverage": 6,
       "landscape": 2,
-      "other": 1,
       "plate": 1,
       "pole": 1,
-      "sign": 9
+      "sign": 9,
+      "street": 1
     }
   },
   {
@@ -1897,9 +1987,10 @@
     "clues": 11,
     "images": 9,
     "families": {
-      "coverage": 4,
+      "architecture": 1,
+      "car": 1,
+      "coverage": 5,
       "landscape": 1,
-      "other": 3,
       "pole": 1,
       "sign": 2
     }
@@ -1908,38 +1999,40 @@
     "country": "PR",
     "name": "Puerto Rico",
     "clues": 36,
-    "images": 63,
+    "images": 64,
     "families": {
-      "architecture": 2,
+      "architecture": 3,
       "car": 2,
-      "coverage": 3,
-      "landscape": 2,
+      "coverage": 4,
+      "landscape": 3,
       "line": 1,
-      "other": 9,
+      "other": 2,
       "plate": 2,
       "pole": 1,
-      "sign": 14
+      "sign": 16,
+      "street": 2
     }
   },
   {
     "country": "PT",
     "name": "Portugal",
     "clues": 116,
-    "images": 240,
+    "images": 243,
     "families": {
-      "architecture": 5,
+      "architecture": 7,
       "bollard": 3,
-      "car": 5,
-      "coverage": 6,
+      "car": 3,
+      "coverage": 9,
       "guardrail": 4,
-      "landscape": 8,
-      "language": 3,
+      "landscape": 17,
+      "language": 5,
       "line": 2,
-      "other": 35,
+      "other": 6,
       "plate": 2,
       "pole": 5,
-      "sign": 31,
-      "vegetation": 7
+      "sign": 30,
+      "street": 7,
+      "vegetation": 16
     }
   },
   {
@@ -1963,14 +2056,15 @@
     "families": {
       "architecture": 3,
       "bollard": 2,
-      "car": 5,
-      "coverage": 2,
-      "landscape": 2,
-      "line": 2,
-      "other": 12,
+      "car": 9,
+      "coverage": 3,
+      "landscape": 1,
+      "line": 3,
+      "other": 5,
       "plate": 2,
       "pole": 1,
-      "sign": 13
+      "sign": 13,
+      "street": 2
     }
   },
   {
@@ -1979,35 +2073,36 @@
     "clues": 23,
     "images": 33,
     "families": {
-      "architecture": 1,
       "bollard": 2,
       "car": 2,
       "coverage": 3,
-      "landscape": 3,
+      "landscape": 4,
       "line": 1,
-      "other": 2,
       "pole": 1,
       "sign": 6,
-      "vegetation": 2
+      "street": 1,
+      "vegetation": 3
     }
   },
   {
     "country": "RO",
     "name": "Romania",
     "clues": 78,
-    "images": 178,
+    "images": 179,
     "families": {
-      "architecture": 5,
+      "architecture": 6,
       "bollard": 2,
       "car": 4,
       "coverage": 2,
       "landscape": 10,
-      "language": 4,
+      "language": 5,
       "line": 4,
-      "other": 11,
+      "other": 5,
       "plate": 2,
-      "pole": 6,
-      "sign": 28
+      "pole": 7,
+      "sign": 28,
+      "street": 2,
+      "vegetation": 1
     }
   },
   {
@@ -2016,78 +2111,83 @@
     "clues": 50,
     "images": 127,
     "families": {
+      "architecture": 1,
       "bollard": 2,
-      "car": 7,
-      "coverage": 2,
+      "car": 5,
+      "coverage": 4,
       "guardrail": 1,
       "landscape": 7,
       "language": 3,
       "line": 1,
-      "other": 3,
+      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 20
+      "sign": 20,
+      "street": 1
     }
   },
   {
     "country": "RU",
     "name": "Russia",
-    "clues": 211,
-    "images": 307,
+    "clues": 214,
+    "images": 310,
     "families": {
-      "architecture": 7,
+      "architecture": 8,
       "bollard": 6,
-      "car": 27,
-      "coverage": 11,
+      "car": 18,
+      "coverage": 19,
       "guardrail": 1,
-      "landscape": 20,
+      "landscape": 21,
       "language": 50,
       "line": 5,
-      "other": 11,
-      "plate": 2,
+      "other": 2,
+      "plate": 3,
       "pole": 12,
-      "sign": 44,
+      "sign": 46,
+      "street": 8,
       "vegetation": 15
     }
   },
   {
     "country": "RW",
     "name": "Rwanda",
-    "clues": 49,
-    "images": 65,
+    "clues": 47,
+    "images": 72,
     "families": {
       "architecture": 3,
       "bollard": 3,
-      "car": 4,
-      "coverage": 1,
+      "car": 2,
+      "coverage": 3,
       "landscape": 6,
       "line": 7,
-      "other": 9,
+      "other": 3,
       "plate": 2,
       "pole": 2,
-      "sign": 9,
+      "sign": 10,
+      "street": 3,
       "vegetation": 3
     }
   },
   {
     "country": "SE",
     "name": "Sweden",
-    "clues": 170,
-    "images": 351,
+    "clues": 174,
+    "images": 355,
     "families": {
-      "architecture": 17,
+      "architecture": 16,
       "bollard": 6,
-      "car": 11,
-      "coverage": 1,
+      "car": 6,
+      "coverage": 8,
       "guardrail": 1,
-      "landscape": 17,
-      "language": 3,
+      "landscape": 31,
+      "language": 4,
       "line": 4,
-      "other": 29,
+      "other": 4,
       "plate": 2,
       "pole": 10,
-      "sign": 54,
-      "vegetation": 15
+      "sign": 39,
+      "street": 33,
+      "vegetation": 10
     }
   },
   {
@@ -2098,14 +2198,16 @@
     "families": {
       "architecture": 1,
       "bollard": 3,
-      "car": 3,
-      "landscape": 1,
+      "car": 1,
+      "coverage": 2,
+      "landscape": 2,
       "language": 1,
       "line": 2,
-      "other": 7,
+      "other": 2,
       "plate": 2,
       "pole": 1,
       "sign": 16,
+      "street": 4,
       "vegetation": 1
     }
   },
@@ -2115,7 +2217,7 @@
     "clues": 53,
     "images": 166,
     "families": {
-      "architecture": 4,
+      "architecture": 5,
       "bollard": 2,
       "car": 4,
       "coverage": 2,
@@ -2123,10 +2225,11 @@
       "landscape": 6,
       "language": 2,
       "line": 2,
-      "other": 6,
+      "other": 1,
       "plate": 1,
       "pole": 1,
-      "sign": 22
+      "sign": 24,
+      "street": 2
     }
   },
   {
@@ -2136,11 +2239,11 @@
     "images": 18,
     "families": {
       "architecture": 1,
-      "coverage": 2,
+      "coverage": 7,
       "landscape": 4,
-      "other": 6,
       "plate": 1,
-      "sign": 4
+      "sign": 4,
+      "street": 1
     }
   },
   {
@@ -2149,18 +2252,19 @@
     "clues": 82,
     "images": 194,
     "families": {
-      "architecture": 7,
+      "architecture": 9,
       "bollard": 3,
-      "car": 8,
-      "coverage": 1,
+      "car": 7,
+      "coverage": 2,
       "guardrail": 1,
-      "landscape": 5,
+      "landscape": 7,
       "language": 1,
       "line": 1,
-      "other": 10,
+      "other": 2,
       "plate": 1,
       "pole": 9,
-      "sign": 34,
+      "sign": 35,
+      "street": 3,
       "vegetation": 1
     }
   },
@@ -2171,34 +2275,36 @@
     "images": 48,
     "families": {
       "bollard": 2,
-      "car": 3,
+      "car": 1,
+      "coverage": 1,
       "guardrail": 1,
       "landscape": 3,
       "line": 1,
-      "other": 1,
       "plate": 2,
       "pole": 2,
-      "sign": 13
+      "sign": 13,
+      "street": 2
     }
   },
   {
     "country": "SN",
     "name": "Senegal",
-    "clues": 61,
-    "images": 115,
+    "clues": 63,
+    "images": 121,
     "families": {
       "architecture": 2,
       "bollard": 2,
       "car": 11,
-      "coverage": 7,
+      "coverage": 8,
       "landscape": 7,
       "language": 1,
       "line": 1,
-      "other": 7,
+      "other": 3,
       "plate": 2,
       "pole": 2,
       "sign": 17,
-      "vegetation": 2
+      "street": 3,
+      "vegetation": 4
     }
   },
   {
@@ -2207,116 +2313,121 @@
     "clues": 25,
     "images": 36,
     "families": {
-      "architecture": 2,
-      "car": 2,
-      "coverage": 1,
+      "car": 4,
+      "coverage": 2,
       "language": 1,
       "line": 1,
-      "other": 4,
+      "other": 1,
       "plate": 1,
       "pole": 4,
       "sign": 8,
-      "vegetation": 1
+      "street": 1,
+      "vegetation": 2
     }
   },
   {
     "country": "SZ",
     "name": "Eswatini",
     "clues": 38,
-    "images": 65,
+    "images": 70,
     "families": {
       "car": 2,
       "coverage": 1,
       "guardrail": 1,
-      "landscape": 6,
-      "language": 1,
+      "landscape": 5,
+      "language": 2,
       "line": 3,
-      "other": 7,
       "plate": 2,
       "pole": 2,
       "sign": 12,
-      "vegetation": 1
+      "street": 3,
+      "vegetation": 5
     }
   },
   {
     "country": "TH",
     "name": "Thailand",
     "clues": 110,
-    "images": 228,
+    "images": 237,
     "families": {
       "architecture": 3,
       "bollard": 3,
       "car": 7,
-      "landscape": 19,
+      "coverage": 1,
+      "landscape": 22,
       "language": 2,
       "line": 2,
-      "other": 32,
+      "other": 7,
       "plate": 2,
       "pole": 7,
-      "sign": 23,
-      "vegetation": 10
+      "sign": 25,
+      "street": 5,
+      "vegetation": 24
     }
   },
   {
     "country": "TN",
     "name": "Tunisia",
     "clues": 56,
-    "images": 109,
+    "images": 119,
     "families": {
       "architecture": 2,
       "bollard": 1,
-      "car": 4,
-      "coverage": 5,
-      "landscape": 8,
+      "car": 10,
+      "coverage": 2,
+      "landscape": 7,
       "language": 1,
       "line": 3,
-      "other": 7,
+      "other": 1,
       "plate": 2,
       "pole": 1,
       "sign": 18,
+      "street": 4,
       "vegetation": 4
     }
   },
   {
     "country": "TR",
     "name": "Turkey",
-    "clues": 97,
-    "images": 215,
+    "clues": 102,
+    "images": 221,
     "families": {
-      "architecture": 6,
+      "architecture": 7,
       "bollard": 3,
-      "car": 8,
-      "coverage": 1,
+      "car": 5,
+      "coverage": 7,
       "guardrail": 3,
-      "landscape": 6,
+      "landscape": 16,
       "language": 1,
-      "line": 7,
-      "other": 23,
+      "line": 6,
+      "other": 3,
       "plate": 2,
       "pole": 4,
       "sign": 32,
-      "vegetation": 1
+      "street": 6,
+      "vegetation": 7
     }
   },
   {
     "country": "TW",
     "name": "Taiwan",
     "clues": 91,
-    "images": 175,
+    "images": 179,
     "families": {
-      "architecture": 5,
+      "architecture": 8,
       "bollard": 1,
-      "car": 7,
+      "car": 8,
       "coverage": 2,
       "guardrail": 4,
-      "landscape": 8,
+      "landscape": 11,
       "language": 1,
-      "line": 6,
-      "other": 20,
+      "line": 8,
+      "other": 3,
       "plate": 1,
       "pole": 9,
       "sign": 19,
-      "vegetation": 8
+      "street": 7,
+      "vegetation": 9
     }
   },
   {
@@ -2335,62 +2446,64 @@
     "country": "UA",
     "name": "Ukraine",
     "clues": 69,
-    "images": 138,
+    "images": 140,
     "families": {
-      "architecture": 4,
+      "architecture": 3,
       "bollard": 2,
-      "car": 4,
-      "coverage": 10,
+      "car": 7,
+      "coverage": 8,
       "guardrail": 1,
-      "landscape": 4,
-      "language": 4,
+      "landscape": 3,
+      "language": 5,
       "line": 1,
-      "other": 10,
+      "other": 2,
       "plate": 2,
       "pole": 6,
-      "sign": 19,
-      "vegetation": 2
+      "sign": 20,
+      "street": 6,
+      "vegetation": 3
     }
   },
   {
     "country": "UG",
     "name": "Uganda",
     "clues": 48,
-    "images": 68,
+    "images": 71,
     "families": {
-      "architecture": 2,
+      "architecture": 1,
       "bollard": 1,
-      "car": 2,
-      "coverage": 12,
-      "guardrail": 1,
-      "landscape": 5,
+      "car": 3,
+      "coverage": 8,
+      "landscape": 8,
       "line": 2,
-      "other": 3,
+      "other": 2,
       "plate": 2,
       "pole": 1,
       "sign": 13,
+      "street": 3,
       "vegetation": 4
     }
   },
   {
     "country": "US",
     "name": "United States",
-    "clues": 431,
-    "images": 1605,
+    "clues": 432,
+    "images": 1616,
     "families": {
-      "architecture": 27,
+      "architecture": 30,
       "bollard": 19,
-      "car": 23,
-      "coverage": 16,
+      "car": 16,
+      "coverage": 27,
       "guardrail": 4,
-      "landscape": 76,
+      "landscape": 92,
       "language": 7,
       "line": 17,
-      "other": 106,
+      "other": 50,
       "plate": 8,
       "pole": 11,
-      "sign": 75,
-      "vegetation": 42
+      "sign": 87,
+      "street": 19,
+      "vegetation": 45
     }
   },
   {
@@ -2401,15 +2514,16 @@
     "families": {
       "architecture": 2,
       "bollard": 2,
-      "car": 6,
+      "car": 5,
       "coverage": 5,
       "guardrail": 1,
-      "landscape": 7,
+      "landscape": 10,
       "line": 4,
-      "other": 6,
+      "other": 1,
       "plate": 2,
       "pole": 3,
-      "sign": 15,
+      "sign": 16,
+      "street": 2,
       "vegetation": 2
     }
   },
@@ -2420,11 +2534,12 @@
     "images": 36,
     "families": {
       "architecture": 1,
-      "car": 6,
-      "coverage": 2,
-      "other": 3,
+      "car": 7,
+      "coverage": 1,
+      "other": 2,
       "plate": 2,
-      "sign": 11
+      "sign": 11,
+      "street": 1
     }
   },
   {
@@ -2433,19 +2548,20 @@
     "clues": 95,
     "images": 126,
     "families": {
-      "architecture": 7,
+      "architecture": 8,
       "bollard": 2,
-      "car": 3,
-      "coverage": 4,
+      "car": 2,
+      "coverage": 6,
       "guardrail": 2,
-      "landscape": 7,
+      "landscape": 14,
       "language": 1,
       "line": 4,
-      "other": 21,
+      "other": 4,
       "plate": 3,
-      "pole": 21,
+      "pole": 22,
       "sign": 17,
-      "vegetation": 3
+      "street": 4,
+      "vegetation": 6
     }
   },
   {
@@ -2454,9 +2570,11 @@
     "clues": 12,
     "images": 10,
     "families": {
-      "coverage": 8,
+      "architecture": 1,
+      "coverage": 7,
       "landscape": 2,
-      "other": 2
+      "street": 1,
+      "vegetation": 1
     }
   },
   {
@@ -2469,30 +2587,31 @@
       "car": 1,
       "language": 1,
       "line": 1,
-      "other": 1,
       "plate": 1,
       "pole": 1,
-      "sign": 6
+      "sign": 6,
+      "street": 1
     }
   },
   {
     "country": "ZA",
     "name": "South Africa",
     "clues": 73,
-    "images": 176,
+    "images": 182,
     "families": {
-      "architecture": 2,
+      "architecture": 1,
       "bollard": 1,
-      "car": 8,
-      "coverage": 1,
+      "car": 7,
+      "coverage": 3,
       "landscape": 10,
       "language": 1,
       "line": 5,
-      "other": 9,
+      "other": 2,
       "plate": 2,
       "pole": 11,
       "sign": 21,
-      "vegetation": 2
+      "street": 4,
+      "vegetation": 5
     }
   }
 ]

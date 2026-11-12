@@ -111,6 +111,15 @@ export const ICONS: Record<IconName, ReactNode> = {
       <path d="M10 20v-5h4v5" />
     </>
   ),
+  // a street lamp over a kerb
+  street: (
+    <>
+      <path d="M8 21V6a3 3 0 0 1 3-3h4" />
+      <path d="M13.5 3v2.5h4V3" />
+      <path d="M3 21h18" />
+      <path d="M5 21v-2h6v2" />
+    </>
+  ),
   // two mountains and the sun
   landscape: (
     <>

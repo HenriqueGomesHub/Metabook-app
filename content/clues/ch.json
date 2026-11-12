@@ -49,6 +49,14 @@
             "fov": 75,
             "source": "plonkit"
           }
+        },
+        {
+          "id": "2ea0d7946314",
+          "src": "https://learnablemeta.com/images/MaDF5r8rI0sQEPgwncg47IT6AVaUKTeoYrnt.avif"
+        },
+        {
+          "id": "1c6f333c8af4",
+          "src": "https://learnablemeta.com/images/847/SrVW8uiJ5R8s5fwnOTxaJvvs89GiYZZbcU4x.avif"
         }
       ],
       "locations": [
@@ -74,7 +82,8 @@
       "summary": "All car coverage is low-cam: the camera sits lower than usual, so the car blur is much bigger, roads look wider and things are seen from a low angle. Japan and Liechtenstein also always have this.",
       "sameAs": [
         "JP",
-        "LI"
+        "LI",
+        "LK"
       ]
     },
     {
@@ -687,8 +696,7 @@
       "id": "ch-kRj5",
       "step": 0,
       "order": 13,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Sign: bus stop with thick metal post around it",
       "text": [
         "These bus stop signs, with thick **metal signposts** going around them, are unique to Switzerland."
@@ -1163,7 +1171,7 @@
       "id": "ch-YE3t",
       "step": 1,
       "order": 10,
-      "family": "other",
+      "family": "architecture",
       "title": "Houses: elaborate red timber frames, northeast",
       "text": [
         "**Elaborate timber frames**, which are commonly painted red, are found in the northeast.",
@@ -1250,6 +1258,11 @@
             "w": 0.62,
             "h": 1
           }
+        },
+        {
+          "id": "1699690b362b",
+          "src": "https://learnablemeta.com/images/1072/q305lqH7puXEaSswfd52fKSTcb25veafl5DV.avif",
+          "dupeOf": "34bfd93e868a"
         }
       ],
       "locations": [
@@ -1565,7 +1578,7 @@
       "id": "ch-XO5x",
       "step": 1,
       "order": 17,
-      "family": "other",
+      "family": "landscape",
       "title": "Road: bike symbol with simple person on two",
       "text": [
         "In Geneva and in the valley between Martigny and Lake Geneva, you can find bike path symbols painted on the road with a **simplified person** on top of two **disconnected wheels**.",
@@ -1616,8 +1629,7 @@
         "url": "https://www.plonkit.net/switzerland",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Around Geneva and in the valley between Martigny and Lake Geneva, the painted bike symbol is a simple person on top of two separate wheels. Elsewhere it's a more detailed bike.",
-      "regionCode": "GE"
+      "summary": "Around Geneva and in the valley between Martigny and Lake Geneva, the painted bike symbol is a simple person on top of two separate wheels. Elsewhere it's a more detailed bike."
     },
     {
       "id": "ch-e2jj",
@@ -1755,7 +1767,7 @@
       "id": "ch-hdVS",
       "step": 2,
       "order": 2,
-      "family": "vegetation",
+      "family": "landscape",
       "title": "Plants: many small fruit trees in a wide flat",
       "text": [
         "The valley of Martigny has the highest density of **fruit plantations** in the country. It can easily be recognized by the many small fruit trees in combination with the wide, flat valley with large mountains on either side."
@@ -1810,7 +1822,7 @@
       "id": "ch-1rvx",
       "step": 2,
       "order": 3,
-      "family": "vegetation",
+      "family": "landscape",
       "title": "Plants: fruit trees near big lakes",
       "text": [
         "Apart from the valley of Martigny, the most likely area to find **fruit trees** is near Lake Constance, followed by the area northwest of Lake Geneva."
@@ -1922,8 +1934,8 @@
       "id": "ch-JZSb",
       "step": 2,
       "order": 5,
-      "family": "car",
-      "title": "Google car: rare Gen 2, near two cantons",
+      "family": "coverage",
+      "title": "Coverage: rare Gen 2, near two cantons",
       "text": [
         "**Generation 2** coverage is very limited in Switzerland. It can be found mostly near the border between the cantons of Bern and Valais, and on a few very short stretches in Schaffhausen.",
         "NOTE: This does not include the many ski resorts with Generation 2 snow coverage, which can be found throughout the southern half of the country."
@@ -2168,7 +2180,7 @@
     {
       "id": "ch-lm-2231",
       "step": 3,
-      "order": 1,
+      "order": 0,
       "family": "sign",
       "kind": "speed",
       "title": "Sign: speed limit \"limite generale\"",
@@ -2191,7 +2203,7 @@
     {
       "id": "ch-lm-2234",
       "step": 3,
-      "order": 2,
+      "order": 1,
       "family": "sign",
       "kind": "speed",
       "title": "Sign: speed limit \"limite générale\"",
@@ -2214,7 +2226,7 @@
     {
       "id": "ch-lm-2235",
       "step": 3,
-      "order": 3,
+      "order": 2,
       "family": "language",
       "title": "Language: Romansh words like ospidal, scoula",
       "text": [
@@ -2250,7 +2262,7 @@
     {
       "id": "ch-lm-740383",
       "step": 3,
-      "order": 31,
+      "order": 26,
       "family": "sign",
       "kind": "street",
       "title": "Sign: blue street name, white edge, four dots",
@@ -2280,7 +2292,7 @@
     {
       "id": "ch-lm-783095",
       "step": 3,
-      "order": 32,
+      "order": 27,
       "family": "language",
       "title": "Language: German region, ss instead of ß",
       "text": [
@@ -2334,7 +2346,7 @@
     {
       "id": "ch-lm-783096",
       "step": 3,
-      "order": 33,
+      "order": 28,
       "family": "language",
       "title": "Language: French region in the west",
       "text": [
@@ -2376,7 +2388,7 @@
     {
       "id": "ch-lm-783097",
       "step": 3,
-      "order": 34,
+      "order": 29,
       "family": "language",
       "title": "Language: Italian region in the south",
       "text": [
@@ -2421,7 +2433,7 @@
     {
       "id": "ch-lm-791259",
       "step": 3,
-      "order": 35,
+      "order": 30,
       "family": "architecture",
       "title": "Houses: wide, very low-pitched roofs",
       "text": [
@@ -2457,7 +2469,7 @@
     {
       "id": "ch-lm-791260",
       "step": 3,
-      "order": 36,
+      "order": 31,
       "family": "architecture",
       "title": "Roofs: small bump finial on the ridge",
       "text": [
@@ -2494,7 +2506,7 @@
     {
       "id": "ch-lm-791261",
       "step": 3,
-      "order": 37,
+      "order": 32,
       "family": "architecture",
       "title": "Roofs: chimney right by the gable end",
       "text": [
@@ -2531,7 +2543,7 @@
     {
       "id": "ch-lm-791262",
       "step": 3,
-      "order": 38,
+      "order": 33,
       "family": "architecture",
       "title": "Houses: low roof with balcony in the gable",
       "text": [
@@ -2567,7 +2579,7 @@
     {
       "id": "ch-lm-791263",
       "step": 3,
-      "order": 39,
+      "order": 34,
       "family": "architecture",
       "title": "Houses: wide recessed entrance",
       "text": [
@@ -2604,7 +2616,7 @@
     {
       "id": "ch-lm-791364",
       "step": 3,
-      "order": 40,
+      "order": 35,
       "family": "architecture",
       "title": "Houses: arched gates, now flats or shops",
       "text": [
@@ -2640,7 +2652,7 @@
     {
       "id": "ch-lm-791365",
       "step": 3,
-      "order": 41,
+      "order": 36,
       "family": "architecture",
       "title": "Houses: wide tent-like roofs with deep overhang",
       "text": [
@@ -2676,7 +2688,7 @@
     {
       "id": "ch-lm-791366",
       "step": 3,
-      "order": 42,
+      "order": 37,
       "family": "architecture",
       "title": "Houses: half-hipped roof",
       "text": [
@@ -2712,7 +2724,7 @@
     {
       "id": "ch-lm-791367",
       "step": 3,
-      "order": 43,
+      "order": 38,
       "family": "architecture",
       "title": "Walls: pale yellow bricks, west to east strip",
       "text": [
@@ -2748,7 +2760,7 @@
     {
       "id": "ch-lm-791368",
       "step": 3,
-      "order": 44,
+      "order": 39,
       "family": "architecture",
       "title": "Houses: wavy gable arches",
       "text": [
@@ -2784,7 +2796,7 @@
     {
       "id": "ch-lm-791590",
       "step": 3,
-      "order": 45,
+      "order": 40,
       "family": "architecture",
       "title": "Walls: miniature roofs over windows",
       "text": [
@@ -2821,7 +2833,7 @@
     {
       "id": "ch-lm-791591",
       "step": 3,
-      "order": 46,
+      "order": 41,
       "family": "architecture",
       "title": "Walls: irregular stones smeared with light",
       "text": [
@@ -2857,7 +2869,7 @@
     {
       "id": "ch-lm-791592",
       "step": 3,
-      "order": 47,
+      "order": 42,
       "family": "architecture",
       "title": "Houses: several small roofs on the gable end",
       "text": [
@@ -2894,8 +2906,8 @@
     {
       "id": "ch-lm-791593",
       "step": 3,
-      "order": 48,
-      "family": "other",
+      "order": 43,
+      "family": "architecture",
       "title": "Walls: wooden shingle cladding",
       "text": [
         "Traditional **wooden shingle wall cladding** is found across a central belt stretching **from the canton of St. Gallen in the east to Valais in the west**. The shapes of the shingles can vary and may be rounded or angular ."
@@ -2930,8 +2942,8 @@
     {
       "id": "ch-lm-791594",
       "step": 3,
-      "order": 49,
-      "family": "other",
+      "order": 44,
+      "family": "architecture",
       "title": "Walls: pastel-coloured shingles",
       "text": [
         "**Shingle walls in a range of pastel colours** are found primarily in **the east of the country**, becoming less common towards the west, although can be occasionally found anywhere. The shape of shingles can vary: round , rectangular , diamond and cone shapes all exist."
@@ -2966,7 +2978,7 @@
     {
       "id": "ch-lm-791595",
       "step": 3,
-      "order": 50,
+      "order": 45,
       "family": "architecture",
       "title": "Roofs: rectangular metal panels",
       "text": [
@@ -3002,7 +3014,7 @@
     {
       "id": "ch-lm-791596",
       "step": 3,
-      "order": 51,
+      "order": 46,
       "family": "architecture",
       "title": "Roofs: chimney at the gable end",
       "text": [
@@ -3038,7 +3050,7 @@
     {
       "id": "ch-lm-791597",
       "step": 3,
-      "order": 52,
+      "order": 47,
       "family": "architecture",
       "title": "Roofs: double pitch, lower part shallower",
       "text": [
@@ -3075,7 +3087,7 @@
     {
       "id": "ch-lm-791598",
       "step": 3,
-      "order": 53,
+      "order": 48,
       "family": "architecture",
       "title": "Roofs: downward-pointing ends of beams",
       "text": [
@@ -3111,7 +3123,7 @@
     {
       "id": "ch-lm-791599",
       "step": 3,
-      "order": 54,
+      "order": 49,
       "family": "architecture",
       "title": "Houses: shutterless window rows with",
       "text": [
@@ -3149,7 +3161,7 @@
     {
       "id": "ch-lm-791737",
       "step": 3,
-      "order": 55,
+      "order": 50,
       "family": "architecture",
       "title": "Houses: timber frame, thick arches, tent roofs",
       "text": [
@@ -3194,7 +3206,7 @@
     {
       "id": "ch-lm-791738",
       "step": 3,
-      "order": 56,
+      "order": 51,
       "family": "architecture",
       "title": "Roofs: very flat, barely sloped",
       "text": [
@@ -3230,7 +3242,7 @@
     {
       "id": "ch-lm-791739",
       "step": 3,
-      "order": 57,
+      "order": 52,
       "family": "architecture",
       "title": "Houses: timber frame, double-pitch, big dormers",
       "text": [
@@ -3269,7 +3281,7 @@
     {
       "id": "ch-lm-791740",
       "step": 3,
-      "order": 58,
+      "order": 53,
       "family": "architecture",
       "title": "Roofs: slate in neat rows",
       "text": [
@@ -3305,7 +3317,7 @@
     {
       "id": "ch-lm-791741",
       "step": 3,
-      "order": 59,
+      "order": 54,
       "family": "architecture",
       "title": "Roofs: slate, three southern cantons",
       "text": [
@@ -3341,7 +3353,7 @@
     {
       "id": "ch-lm-791742",
       "step": 3,
-      "order": 60,
+      "order": 55,
       "family": "architecture",
       "title": "Walls: sgraffito patterns carved in plaster",
       "text": [
@@ -3377,7 +3389,7 @@
     {
       "id": "ch-lm-791743",
       "step": 3,
-      "order": 61,
+      "order": 56,
       "family": "architecture",
       "title": "Walls: more colourful sgraffito",
       "text": [
@@ -3413,7 +3425,7 @@
     {
       "id": "ch-lm-791744",
       "step": 3,
-      "order": 62,
+      "order": 57,
       "family": "architecture",
       "title": "Houses: tall, narrow dark wood with balconies",
       "text": [
@@ -3450,7 +3462,7 @@
     {
       "id": "ch-lm-791745",
       "step": 3,
-      "order": 63,
+      "order": 58,
       "family": "architecture",
       "title": "Houses: dark wood with a curved support under",
       "text": [
@@ -3486,7 +3498,7 @@
     {
       "id": "ch-lm-791746",
       "step": 3,
-      "order": 64,
+      "order": 59,
       "family": "architecture",
       "title": "Houses: wide dark wood, carved dates",
       "text": [
@@ -3528,7 +3540,7 @@
     {
       "id": "ch-lm-791747",
       "step": 3,
-      "order": 65,
+      "order": 60,
       "family": "architecture",
       "title": "Roofs: large diamond-shaped slate slabs",
       "text": [
@@ -3564,7 +3576,7 @@
     {
       "id": "ch-lm-791749",
       "step": 3,
-      "order": 66,
+      "order": 61,
       "family": "architecture",
       "title": "Walls: timber and white plaster",
       "text": [
@@ -3600,7 +3612,7 @@
     {
       "id": "ch-lm-791750",
       "step": 3,
-      "order": 67,
+      "order": 62,
       "family": "architecture",
       "title": "Barns: wavy or semicircular gable arch",
       "text": [
@@ -3638,8 +3650,8 @@
     {
       "id": "ch-lm-791751",
       "step": 3,
-      "order": 68,
-      "family": "other",
+      "order": 63,
+      "family": "architecture",
       "title": "Barns: gable covered in terracotta or grey",
       "text": [
         "In **western Fribourg**, you can find barns with **gables** that are clad with either **terracotta-coloured tiles** or occasionally **grey, diamond-shaped ones**.",
@@ -3675,7 +3687,7 @@
     {
       "id": "ch-lm-791752",
       "step": 3,
-      "order": 69,
+      "order": 64,
       "family": "architecture",
       "title": "Barns: low-pitched roofs like local houses",
       "text": [
@@ -3712,7 +3724,7 @@
     {
       "id": "ch-lm-791753",
       "step": 3,
-      "order": 70,
+      "order": 65,
       "family": "architecture",
       "title": "Barns: wide with tent-like roofs",
       "text": [
@@ -3748,7 +3760,7 @@
     {
       "id": "ch-lm-791754",
       "step": 3,
-      "order": 71,
+      "order": 66,
       "family": "architecture",
       "title": "Barns: house and barn fused together",
       "text": [
@@ -3784,7 +3796,7 @@
     {
       "id": "ch-lm-791755",
       "step": 3,
-      "order": 72,
+      "order": 67,
       "family": "architecture",
       "title": "Houses: gables covered with red tiles",
       "text": [
@@ -3820,7 +3832,7 @@
     {
       "id": "ch-lm-791756",
       "step": 3,
-      "order": 73,
+      "order": 68,
       "family": "architecture",
       "title": "Barns: double-pitch roof, lower part shallower",
       "text": [
@@ -3856,7 +3868,7 @@
     {
       "id": "ch-lm-791757",
       "step": 3,
-      "order": 74,
+      "order": 69,
       "family": "architecture",
       "title": "Barns: bulky, half-hipped, timber supports",
       "text": [
@@ -3893,7 +3905,7 @@
     {
       "id": "ch-lm-791758",
       "step": 3,
-      "order": 75,
+      "order": 70,
       "family": "architecture",
       "title": "Barns: attached to house in T or L shape",
       "text": [
@@ -3929,7 +3941,7 @@
     {
       "id": "ch-lm-791759",
       "step": 3,
-      "order": 76,
+      "order": 71,
       "family": "architecture",
       "title": "Barns: prominent transverse roof below the",
       "text": [
@@ -3965,8 +3977,8 @@
     {
       "id": "ch-lm-791760",
       "step": 3,
-      "order": 77,
-      "family": "other",
+      "order": 72,
+      "family": "architecture",
       "title": "Barns: diamond lattice pattern on doors",
       "text": [
         "This **diamond lattice pattern** on the doors of barns is found in the **cantons of Thurgau and Zurich**."
@@ -4001,8 +4013,8 @@
     {
       "id": "ch-lm-791822",
       "step": 3,
-      "order": 78,
-      "family": "other",
+      "order": 73,
+      "family": "architecture",
       "title": "Barns: wood with concrete or stone corners",
       "text": [
         "Barns featuring a **combination of wood** and either **concrete or stone** can be found in **Valais** and **Grisons**. Typically, the concrete or stone elements are located at the corners of the barns. As with huts, **exposed round beams** are only found in Grisons."
@@ -4037,7 +4049,7 @@
     {
       "id": "ch-lm-791823",
       "step": 3,
-      "order": 79,
+      "order": 74,
       "family": "architecture",
       "title": "Huts: interlocking rectangular logs",
       "text": [
@@ -4073,8 +4085,8 @@
     {
       "id": "ch-lm-791824",
       "step": 3,
-      "order": 80,
-      "family": "other",
+      "order": 75,
+      "family": "architecture",
       "title": "Granary: raised wooden barn on stilts with",
       "text": [
         "**Raccards** are the **traditional raised wooden granaries** of Valais. They are generally built on **short stilts** with a round stone slab on each stilt to guard against rodents."
@@ -4110,8 +4122,8 @@
     {
       "id": "ch-lm-791825",
       "step": 3,
-      "order": 81,
-      "family": "other",
+      "order": 76,
+      "family": "architecture",
       "title": "Huts: round beams",
       "text": [
         "A key feature of huts in **Grisons** is the frequent use of **round beams**, rather than rectangular ones, either for the overall structure or just in the gable area . Huts with just rectangular beams can still be seen in this area."
@@ -4146,7 +4158,7 @@
     {
       "id": "ch-lm-791826",
       "step": 3,
-      "order": 82,
+      "order": 77,
       "family": "architecture",
       "title": "Huts: mainly stone, slate roofs",
       "text": [
@@ -4182,8 +4194,8 @@
     {
       "id": "ch-lm-791827",
       "step": 3,
-      "order": 83,
-      "family": "other",
+      "order": 78,
+      "family": "architecture",
       "title": "Barns: wooden upper-floor balconies",
       "text": [
         "These **upper-floor wooden balconies** are commonly seen on barns in **southwestern Valais**."
@@ -4202,7 +4214,7 @@
     {
       "id": "ch-lm-791828",
       "step": 3,
-      "order": 84,
+      "order": 79,
       "family": "architecture",
       "title": "Shrines: colourful Catholic shrines",
       "text": [
@@ -4238,7 +4250,7 @@
     {
       "id": "ch-lm-791829",
       "step": 3,
-      "order": 85,
+      "order": 80,
       "family": "other",
       "title": "Churches: onion-shaped gable around the clock",
       "text": [
@@ -4274,7 +4286,7 @@
     {
       "id": "ch-lm-791830",
       "step": 3,
-      "order": 86,
+      "order": 81,
       "family": "other",
       "title": "Churches: main spire with several small spires",
       "text": [
@@ -4310,7 +4322,7 @@
     {
       "id": "ch-lm-791831",
       "step": 3,
-      "order": 87,
+      "order": 82,
       "family": "other",
       "title": "Churches: onion domes",
       "text": [
@@ -4346,7 +4358,7 @@
     {
       "id": "ch-lm-791832",
       "step": 3,
-      "order": 88,
+      "order": 83,
       "family": "other",
       "title": "Churches: rooster on the steeple",
       "text": [
@@ -4382,7 +4394,7 @@
     {
       "id": "ch-lm-791833",
       "step": 3,
-      "order": 89,
+      "order": 84,
       "family": "other",
       "title": "Churches: simple triangular gable tower",
       "text": [
@@ -4418,8 +4430,8 @@
     {
       "id": "ch-lm-791834",
       "step": 3,
-      "order": 90,
-      "family": "other",
+      "order": 85,
+      "family": "architecture",
       "title": "Churches: tower with triangular gables on",
       "text": [
         "Church towers where the tower walls form **triangular gables**, pointing up, on **multiple sides**, occur most frequently in the **northeast**."
@@ -5773,7 +5785,7 @@
       "id": "ch-gh-postboxes",
       "step": 4,
       "order": 10,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 3 post boxes from here."

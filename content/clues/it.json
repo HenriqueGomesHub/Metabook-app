@@ -1264,8 +1264,8 @@
       "id": "it-dto7",
       "step": 0,
       "order": 22,
-      "family": "car",
-      "title": "Google car: low Gen 4 smallcam, big round blur",
+      "family": "coverage",
+      "title": "Coverage: low Gen 4 smallcam, big round blur",
       "text": [
         "Italy has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1533,6 +1533,11 @@
             "w": 0.72,
             "h": 1
           }
+        },
+        {
+          "id": "25ef5b77e601",
+          "src": "https://learnablemeta.com/images/664/hMQAwd3mix9P4XQ2IM8VYJeAWOfrbVHEvctq.avif",
+          "dupeOf": "bc471fe5c046"
         }
       ],
       "locations": [
@@ -2980,8 +2985,8 @@
       "id": "it-n7fO",
       "step": 2,
       "order": 11,
-      "family": "car",
-      "title": "Google car: gloomy overcast Gen 2",
+      "family": "coverage",
+      "title": "Coverage: gloomy overcast Gen 2",
       "text": [
         "The island of San Domino only has **overcast Generation 2** coverage, which mostly looks quite gloomy."
       ],
@@ -3066,8 +3071,7 @@
       "id": "it-lm-2246",
       "step": 3,
       "order": 1,
-      "family": "sign",
-      "kind": "street",
+      "family": "language",
       "title": "Sign: via, strada, viale, tangenziale",
       "text": [
         "Italy typical uses the word \"via\" on their street signs. Note that \"strada\" also means street but is the same word in Romanian and used more commonly there.",
@@ -3135,7 +3139,7 @@
       "id": "it-lm-2995",
       "step": 3,
       "order": 4,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: blue corners outside the white edge",
       "text": [
         "Italy, Romania, Serbia, and Slovenia all look about the same. Thankfully Romania will **not** have a **white/silver border**. Italy will have **blue corners** visible outside the white edge."
@@ -3173,12 +3177,13 @@
           "country": "RO",
           "how": "No white or silver border"
         }
-      ]
+      ],
+      "kind": "other"
     },
     {
       "id": "it-lm-558213",
       "step": 3,
-      "order": 22,
+      "order": 21,
       "family": "sign",
       "kind": "street",
       "title": "Sign: street sign with unusual font, years below",
@@ -3208,7 +3213,7 @@
     {
       "id": "it-lm-558217",
       "step": 3,
-      "order": 23,
+      "order": 22,
       "family": "sign",
       "kind": "street",
       "title": "Sign: street sign with logo top left",
@@ -3238,7 +3243,7 @@
     {
       "id": "it-lm-558219",
       "step": 3,
-      "order": 24,
+      "order": 23,
       "family": "sign",
       "kind": "street",
       "title": "Sign: street sign with extra name under it",
@@ -3268,7 +3273,7 @@
     {
       "id": "it-lm-558220",
       "step": 3,
-      "order": 25,
+      "order": 24,
       "family": "sign",
       "kind": "street",
       "title": "Sign: street sign with 4 dots in each corner",
@@ -3298,7 +3303,7 @@
     {
       "id": "it-lm-558221",
       "step": 3,
-      "order": 26,
+      "order": 25,
       "family": "sign",
       "kind": "street",
       "title": "Sign: street sign on 3 small supports",
@@ -3328,7 +3333,7 @@
     {
       "id": "it-lm-558222",
       "step": 3,
-      "order": 27,
+      "order": 26,
       "family": "sign",
       "kind": "street",
       "title": "Sign: huge street sign, thick frame, roman numerals",
@@ -5423,7 +5428,7 @@
       "id": "it-gh-postboxes",
       "step": 4,
       "order": 12,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 4 post boxes from here."

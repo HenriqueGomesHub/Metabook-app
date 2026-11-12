@@ -26,6 +26,7 @@ export type MetaSubject =
   | 'language'
   | 'car'
   | 'landscape'
+  | 'street'
   | 'architecture'
   | 'coverage'
   | 'vegetation'

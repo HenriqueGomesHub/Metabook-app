@@ -98,14 +98,6 @@
           "height": 338,
           "role": "annotated",
           "caption": "Two car roofs labelled Silver (left) and White (right)"
-        },
-        {
-          "id": "d37fd49c9c2c",
-          "src": "https://learnablemeta.com/images/662/fMdAFRjsih9Toqk7oKy5wxl0h5fUIjF8e5I5.avif",
-          "path": "sn/d37fd49c9c2c.webp",
-          "width": 1000,
-          "height": 562,
-          "dupeOf": "764c2f86fc65"
         }
       ],
       "locations": [
@@ -452,7 +444,7 @@
       "id": "sn-t5k7",
       "step": 0,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Street lamps: black with solar panel on top",
       "text": [
         "These simple **black lamps** with a **solar panel** at the top are commonly seen in Senegal."
@@ -476,6 +468,11 @@
           "height": 338,
           "role": "example",
           "caption": "Black street lamp with a solar panel on top"
+        },
+        {
+          "id": "03b65669d555",
+          "src": "https://learnablemeta.com/images/662/0VUOlijbNvQrdCTNT3g2tZpeMsi3ylY5ZRH7.avif",
+          "dupeOf": "64860fa1a28a"
         }
       ],
       "locations": [
@@ -786,6 +783,11 @@
           "width": 1000,
           "height": 489,
           "dupeOf": "add65a588168"
+        },
+        {
+          "id": "27c0c32c76d9",
+          "src": "https://learnablemeta.com/images/664/mbfPzQpsW1q2L15HSczxtNWuJPQNsmBaZwLj.avif",
+          "dupeOf": "add65a588168"
         }
       ],
       "locations": [
@@ -954,7 +956,7 @@
       "id": "sn-aMed",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "vegetation",
       "title": "Fields: irrigated rice",
       "text": [
         "**Irrigated rice fields** can sometimes be seen in the region between St Louis and Richard Toll."
@@ -985,6 +987,11 @@
             "w": 0.8,
             "h": 1
           }
+        },
+        {
+          "id": "9c6aea59c8fb",
+          "src": "https://learnablemeta.com/images/544/tt9DJOhIUEhBhVcGeL3HLJGMz88pS0v04NPj.avif",
+          "dupeOf": "2f5add011e71"
         }
       ],
       "locations": [
@@ -1107,6 +1114,11 @@
             "w": 0.74,
             "h": 1
           }
+        },
+        {
+          "id": "99af5b234c94",
+          "src": "https://learnablemeta.com/images/544/YLdglLpbI6xzCSnImTgeqJ10sVFWVLn2XXZz.avif",
+          "dupeOf": "b6c50f8176e8"
         }
       ],
       "locations": [
@@ -1365,7 +1377,7 @@
       "id": "sn-2NXs",
       "step": 2,
       "order": 5,
-      "family": "other",
+      "family": "vegetation",
       "title": "Roadside: tall bright yellow grass patches",
       "text": [
         "Distinct, tall patches of **bright yellow grass** can be seen along the N3, mostly to the east in the Matam Region."
@@ -1506,6 +1518,11 @@
             "w": 0.7,
             "h": 1
           }
+        },
+        {
+          "id": "3a6dd16202a1",
+          "src": "https://learnablemeta.com/images/1601/surUJtwdGR4MbBCAhmV5cjEfkbOK9lO4JARX15FI8m1iOEgu.avif",
+          "dupeOf": "865381f9be4b"
         }
       ],
       "locations": [
@@ -1531,7 +1548,7 @@
       "id": "sn-Ilre",
       "step": 2,
       "order": 8,
-      "family": "coverage",
+      "family": "street",
       "title": "Coverage: dirt road in evening light",
       "text": [
         "The Kola-Velingara road between Saré Amirou and Badion is a dirt road that can be recognized by the **late afternoon** to **evening** coverage. The coverage gets later toward the west."
@@ -1757,9 +1774,42 @@
       "summary": "A famous mosque in the holy city has five tall minarets and can be seen from far away."
     },
     {
+      "id": "sn-lm-15143",
+      "step": 3,
+      "order": 5,
+      "family": "coverage",
+      "title": "Coverage: Gen 4 Cars",
+      "text": [
+        "A silver or white truck cab is visible in the Generation 4 coverage.",
+        "The most useful and recognizable ones will be shown in the spotlight section.",
+        "In the area around Dakar and Thies you can also find a black pick up truck.",
+        "**--- NOTE:**",
+        "The car may sometimes be fully blurred.",
+        "Make sure to look at the landscape or other clues in the absence of car meta."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d37fd49c9c2c",
+          "src": "https://learnablemeta.com/images/662/fMdAFRjsih9Toqk7oKy5wxl0h5fUIjF8e5I5.avif",
+          "path": "sn/d37fd49c9c2c.webp",
+          "width": 1000,
+          "height": 562,
+          "dupeOf": "764c2f86fc65"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67cf5988a23c1c056ae785f2",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
       "id": "sn-lm-22659",
       "step": 3,
-      "order": 12,
+      "order": 9,
       "family": "bollard",
       "title": "Bollard: round white post, pointed top, band",
       "text": [
@@ -1789,9 +1839,42 @@
       ]
     },
     {
+      "id": "sn-lm-51041",
+      "step": 3,
+      "order": 11,
+      "family": "coverage",
+      "title": "Coverage: Gen 4 Cars",
+      "text": [
+        "A silver or white truck cab is visible in the Generation 4 coverage.",
+        "The most useful and recognizable ones will be shown in the spotlight section.",
+        "In the area around Dakar and Thies you can also find a black pick up truck.",
+        "**--- NOTE:**",
+        "The car may sometimes be fully blurred.",
+        "Make sure to look at the landscape or other clues in the absence of car meta."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d37fd49c9c2c",
+          "src": "https://learnablemeta.com/images/662/fMdAFRjsih9Toqk7oKy5wxl0h5fUIjF8e5I5.avif",
+          "path": "sn/d37fd49c9c2c.webp",
+          "width": 1000,
+          "height": 562,
+          "dupeOf": "764c2f86fc65"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67e33138703749d45b6faf2c",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
       "id": "sn-lm-446365",
       "step": 3,
-      "order": 23,
+      "order": 19,
       "family": "car",
       "title": "Google car: silver Gen 4 with box on back right",
       "text": [
@@ -1827,7 +1910,7 @@
     {
       "id": "sn-lm-446366",
       "step": 3,
-      "order": 24,
+      "order": 20,
       "family": "car",
       "title": "Google car: silver Gen 4, stain back left",
       "text": [
@@ -1863,7 +1946,7 @@
     {
       "id": "sn-lm-446367",
       "step": 3,
-      "order": 25,
+      "order": 21,
       "family": "architecture",
       "title": "Google car: silver Gen 4, stain and dirty roof",
       "text": [
@@ -1899,7 +1982,7 @@
     {
       "id": "sn-lm-446368",
       "step": 3,
-      "order": 26,
+      "order": 22,
       "family": "car",
       "title": "Google car: silver Gen 4, red cloth front left",
       "text": [
@@ -1935,7 +2018,7 @@
     {
       "id": "sn-lm-446369",
       "step": 3,
-      "order": 27,
+      "order": 23,
       "family": "car",
       "title": "Google car: white Gen 4, antenna folded flat",
       "text": [
@@ -1971,7 +2054,7 @@
     {
       "id": "sn-lm-446370",
       "step": 3,
-      "order": 28,
+      "order": 24,
       "family": "car",
       "title": "Google car: white Gen 4, dirty back",
       "text": [
@@ -2791,7 +2874,7 @@
       "id": "sn-gh-postboxes",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 1 post box from here."

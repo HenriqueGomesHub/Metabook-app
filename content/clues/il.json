@@ -323,7 +323,7 @@
       "id": "il-OiB7",
       "step": 0,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Kerb: red and white stripes",
       "text": [
         "You will very often see striped kerbs: **red and white** and fairly commonly black and white.",
@@ -343,6 +343,10 @@
             "fov": 61.11,
             "source": "plonkit"
           }
+        },
+        {
+          "id": "e0d7c0637d52",
+          "src": "https://learnablemeta.com/images/665/IcJAYpgK4rGnLiIsONMPkA0hUE6hwLMI7hYX.avif"
         }
       ],
       "locations": [
@@ -481,7 +485,7 @@
       "id": "il-8sED",
       "step": 0,
       "order": 11,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: white km marker, thick coloured border",
       "text": [
         "Kilometre markers are white with a **thick border**, which can either be red, green or blue."
@@ -519,7 +523,8 @@
         "url": "https://www.plonkit.net/israel-west-bank",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Kilometre markers are white with a thick border in red, green or blue."
+      "summary": "Kilometre markers are white with a thick border in red, green or blue.",
+      "kind": "route"
     },
     {
       "id": "il-QlFr",
@@ -773,8 +778,8 @@
       "id": "il-4Y89",
       "step": 1,
       "order": 2,
-      "family": "car",
-      "title": "Google car: Gen 4 only in one country, black car",
+      "family": "coverage",
+      "title": "Coverage: Gen 4 only in one country, black car",
       "text": [
         "**Generation 4** coverage is only found in Israel, in the areas marked on the map.",
         "The coverage was taken with a **black** Street View car."
@@ -829,8 +834,8 @@
       "id": "il-HUcN",
       "step": 1,
       "order": 3,
-      "family": "car",
-      "title": "Google car: dirty front camera",
+      "family": "coverage",
+      "title": "Coverage: dirty front camera",
       "text": [
         "Most of the Generation 4 coverage features a **dirty front camera**."
       ],
@@ -885,8 +890,8 @@
       "id": "il-dPE9",
       "step": 1,
       "order": 4,
-      "family": "car",
-      "title": "Google car: clean front camera",
+      "family": "coverage",
+      "title": "Coverage: clean front camera",
       "text": [
         "Generation 4 coverage with a **clean** front camera is mostly found in and around Tel Aviv."
       ],
@@ -998,7 +1003,7 @@
       "id": "il-DjZZ",
       "step": 1,
       "order": 6,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: flat, many cities, good highways",
       "text": [
         "Central Israel is usually **flat** and has **several cities**. Highways are usually in better condition than roads in the south and north."
@@ -1053,7 +1058,7 @@
       "id": "il-5uEB",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: extremely dry and sandy",
       "text": [
         "Southern Israel and eastern West Bank are **extremely dry** and sandy."
@@ -1348,7 +1353,7 @@
       "id": "il-8ktx",
       "step": 1,
       "order": 12,
-      "family": "other",
+      "family": "landscape",
       "title": "Walls: rock walls set in cement",
       "text": [
         "**Rock walls** put together with **cement** are found in the north of Israel."
@@ -1403,7 +1408,7 @@
       "id": "il-8SBk",
       "step": 1,
       "order": 13,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: very dry shores of an inland sea",
       "text": [
         "The Dead Sea can easily be recognised by the **dryness** surrounding it.",
@@ -1467,7 +1472,7 @@
       "id": "il-6r1q",
       "step": 1,
       "order": 14,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: lake, much greener than the Dead Sea",
       "text": [
         "Other than the Dead Sea and the Mediterranean Sea, the only major body of water is the Sea of Galilee. It is noticeably **more vegetated** than the Dead Sea, making it easily recognisable."
@@ -1746,8 +1751,8 @@
       "id": "il-jBWo",
       "step": 1,
       "order": 19,
-      "family": "coverage",
-      "title": "Coverage: security follow car, white Suzuki",
+      "family": "car",
+      "title": "Google car: security follow car, white Suzuki",
       "text": [
         "A significant portion of the coverage in the West Bank has a visible security **follow car**. The most extensive of these is a small **white Suzuki**, which is found in the central and southern regions."
       ],
@@ -1801,8 +1806,8 @@
       "id": "il-z5QI",
       "step": 1,
       "order": 20,
-      "family": "other",
-      "title": "Coverage: small dark blue Ford follow car",
+      "family": "car",
+      "title": "Google car: small dark blue Ford follow car",
       "text": [
         "Another follow car is a small **dark blue Ford**, which is found in the northwest."
       ],
@@ -1856,8 +1861,8 @@
       "id": "il-vqbJ",
       "step": 1,
       "order": 21,
-      "family": "plate",
-      "title": "Coverage: larger white follow car, West Bank plate",
+      "family": "car",
+      "title": "Google car: larger white follow car, West Bank plate",
       "text": [
         "This **larger white** Citroën follow car with a **West Bank licence plate** can be found in a region surrounding Jerusalem. It is noticeably found in the cities of Bethlehem and Ramallah.",
         "NOTE: The [side](https://goo.gl/maps/CyZBjDakijcXH87L6) of this car features the text “SECURITY” in a bold font. Furthermore, this coverage will always feature a black Street View car with [no antenna](https://goo.gl/maps/qSquP511uzs7bk9o6)."
@@ -2082,7 +2087,7 @@
       "id": "il-D6Hi",
       "step": 2,
       "order": 3,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: soft round mountain",
       "text": [
         "Mount Tavor is located in the Northern District and can be recognised by its soft, **round shape**."
@@ -2530,7 +2535,7 @@
       "id": "il-x53j",
       "step": 2,
       "order": 12,
-      "family": "other",
+      "family": "architecture",
       "title": "Walls: grey mosaic brickwork shaped like towers",
       "text": [
         "This **grey mosaic brick work** shaped like towers is unique to the city of Harish."
@@ -2574,7 +2579,7 @@
       "id": "il-xiPx",
       "step": 2,
       "order": 13,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: white, three arms, round bulbs",
       "text": [
         "This **white lamp** is unique to Nahariya. It has three arms, with round light bulbs on top."
@@ -2618,7 +2623,7 @@
       "id": "il-BogJ",
       "step": 2,
       "order": 14,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: dark tower with two horns",
       "text": [
         "These lamps, shaped similarly to [Barad Dûr](https://lotr.fandom.com/wiki/Barad-d%C3%BBr), are unique to Acre. It can be found in several different colours.",
@@ -2663,7 +2668,7 @@
       "id": "il-87Ha",
       "step": 2,
       "order": 15,
-      "family": "other",
+      "family": "street",
       "title": "Lamp post: angular, one high and one low lamp",
       "text": [
         "These metal lamps, characterised by **one high** and **one low** lamp put together with a very angular look, are unique to Netivot."
@@ -2753,8 +2758,7 @@
       "id": "il-5VTI",
       "step": 2,
       "order": 17,
-      "family": "sign",
-      "kind": "direction",
+      "family": "street",
       "title": "Sign: yellow fences and signposts",
       "text": [
         "These **yellow** fences and signposts are unique to Kiryat Motzkin."
@@ -2798,7 +2802,7 @@
       "id": "il-o2lV",
       "step": 2,
       "order": 18,
-      "family": "other",
+      "family": "street",
       "title": "Fence: blue and white",
       "text": [
         "This style of **blue and white fence** is very common to see in Ashdod."
@@ -3107,7 +3111,7 @@
       "id": "il-WRHe",
       "step": 2,
       "order": 25,
-      "family": "other",
+      "family": "architecture",
       "title": "Landmark: tall industrial chimneys on the coast",
       "text": [
         "These **tall industrial chimneys**, by the coast north of Netanya, are visible from far away."
@@ -3151,8 +3155,8 @@
       "id": "il-fagW",
       "step": 2,
       "order": 26,
-      "family": "other",
-      "title": "Coverage: grey Hyundai follow car",
+      "family": "car",
+      "title": "Google car: grey Hyundai follow car",
       "text": [
         "This **grey Hyundai** follow car is unique to Rahat."
       ],
@@ -3807,7 +3811,7 @@
       "id": "il-gh-housenumbers",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 1 house number from here."
@@ -3837,7 +3841,7 @@
       "id": "il-gh-postboxes",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 4 post boxes from here."
@@ -3967,7 +3971,7 @@
       "id": "il-gh-sidewalks",
       "step": 4,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

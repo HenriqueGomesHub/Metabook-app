@@ -5,6 +5,7 @@ import { useState } from 'react';
 import type { ReactNode } from 'react';
 import { label, SUBJECTS } from '../../app/labels';
 import { useClueText } from '../../data/clueText';
+import { CountryList } from './CountryList';
 import { ClueImg } from './ClueImg';
 import { Credit } from './Credit';
 import { Lightbox } from './Lightbox';
@@ -16,9 +17,6 @@ const TAG_WORDS = 3;
 
 /** Pictures the short answer-panel version shows. */
 const COMPACT_IMAGES = 3;
-
-/** Countries the short version names in "Looks the same in" before "and n more". */
-const COMPACT_NAMES = 6;
 
 /**
  * The heading a clue shows. Google car and coverage titles are often just the source's tag
@@ -107,12 +105,7 @@ export function ClueDetails({
           {sameAs.length > 0 && (
             <li className="clue-same">
               <span className="clue-compare-label">Looks the same in</span>{' '}
-              {(onMore ? sameAs.slice(0, COMPACT_NAMES) : sameAs)
-                .map((code) => label(code.toUpperCase()))
-                .join(', ')}
-              {onMore &&
-                sameAs.length > COMPACT_NAMES &&
-                ` and ${sameAs.length - COMPACT_NAMES} more`}
+              <CountryList codes={sameAs} title="Looks the same in" />
               {teachSame && (
                 <span className="clue-compare-note">
                   {' '}
@@ -147,15 +140,11 @@ export function ClueDetails({
           ))}
         </div>
       )}
-      {onMore &&
-        (more ||
-          shown.length > COMPACT_IMAGES ||
-          shown.some((i) => i.caption) ||
-          sameAs.length > COMPACT_NAMES) && (
-          <button type="button" className="link clue-more-link" onClick={onMore}>
-            The whole clue{shown.length > COMPACT_IMAGES ? `, all ${shown.length} pictures` : ''}
-          </button>
-        )}
+      {onMore && (more || shown.length > COMPACT_IMAGES || shown.some((i) => i.caption)) && (
+        <button type="button" className="link clue-more-link" onClick={onMore}>
+          The whole clue{shown.length > COMPACT_IMAGES ? `, all ${shown.length} pictures` : ''}
+        </button>
+      )}
       {!onMore && text && more && (
         <details className="clue-more">
           <summary>More detail</summary>
