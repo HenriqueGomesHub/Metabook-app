@@ -26,6 +26,15 @@ function words(text: string): Set<string> {
 const namedLetters = (text: string) =>
   (text.toLowerCase().match(/[\p{L}\p{M}]+/gu) ?? []).filter((w) => /^[^a-z]{1,2}$/.test(w));
 
+/** Two tips saying the same thing in other words ("A drives left, B right" and "B right, A left"). */
+export function sameTip(a: Tip, b: Tip): boolean {
+  const x = words(a.text);
+  const y = words(b.text);
+  let shared = 0;
+  for (const word of x) if (y.has(word)) shared++;
+  return shared / Math.max(1, Math.min(x.size, y.size)) >= 0.6;
+}
+
 /** What a card shows in words: its text, image description and its own reason. */
 export function cardContext(card: Card): string {
   return [card.prompt.kind === 'text' ? card.prompt.value : '', card.prompt.alt, card.explain]

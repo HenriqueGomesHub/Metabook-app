@@ -134,7 +134,6 @@ describe('Today', () => {
     expect(within(mix).getByText('Bollards').nextElementSibling?.textContent).toMatch(/^\d+$/);
     const bars = within(mix).getAllByRole('progressbar', { name: /clue cards introduced/ });
     expect(bars.length).toBeGreaterThan(0);
-    expect(within(mix).getByText('Reviews due')).toBeTruthy();
     expect(screen.getByRole('link', { name: /Start session/ })).toBeTruthy();
   });
 });

@@ -84,9 +84,7 @@ function Landing({ data }: { data: AppSnapshot }) {
         <div className="page-title rise">
           <div>
             <h1 className="headline">Area codes</h1>
-            <p>
-              Where codes follow the map, learn the pattern once and most codes place themselves.
-            </p>
+            <p>Learn the pattern and most codes place themselves.</p>
           </div>
           {!empty && (
             <LinkButton to="/session?type=areacode">
@@ -205,7 +203,7 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
             <header className="ac-intro-head">
               <p className="kicker">{grouped ? 'Codes with a pattern' : 'Codes to memorise'}</p>
               <h1 className="headline">{name} area codes</h1>
-              {pattern && <p className="ac-summary">{pattern.summary}</p>}
+              {pattern && !grouped && <p className="ac-summary">{pattern.summary}</p>}
               {!grouped && <p className="ac-note">{NO_PATTERN}</p>}
             </header>
             {grouped ? (

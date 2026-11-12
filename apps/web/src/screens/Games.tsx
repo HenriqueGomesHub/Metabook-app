@@ -141,7 +141,7 @@ function GamesView({ data }: { data: AppSnapshot }) {
         <div className="page-title rise">
           <div>
             <h1 className="headline">Mini-games</h1>
-            <p>Patterns inside one country. Green dot means the pattern is strong.</p>
+            <p>Patterns inside one country.</p>
           </div>
         </div>
         <FitGrid

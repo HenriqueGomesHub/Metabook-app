@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { cardContext, pickTip, rankTips } from './tips';
+import { cardContext, pickTip, rankTips, sameTip } from './tips';
 import type { Tip, TipView } from './types';
 
 const tip = (id: string, scope = 'any', answer = 'Brazil'): Tip => ({
@@ -113,5 +113,18 @@ describe('rankTips', () => {
       explain: 'only here',
     } as Parameters<typeof cardContext>[0];
     expect(cardContext(card)).toBe('yellow bollard only here');
+  });
+});
+
+describe('sameTip', () => {
+  const t = (text: string): Tip => ({ ...tip('x'), text });
+  it('spots one fact told from either side', () => {
+    expect(
+      sameTip(
+        t('Thailand drives on the left; Cambodia drives on the right.'),
+        t('Cambodia drives on the right; Thailand drives on the left.'),
+      ),
+    ).toBe(true);
+    expect(sameTip(t('Thailand drives on the left.'), t('Cambodian plates are blue.'))).toBe(false);
   });
 });

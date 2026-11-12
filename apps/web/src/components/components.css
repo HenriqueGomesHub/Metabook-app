@@ -2,6 +2,14 @@ a:hover {
   color: #ffffff;
 }
 
+/* keyboard hints mean nothing on a touch screen */
+@media (hover: none) and (pointer: coarse) {
+  kbd,
+  .keys-only {
+    display: none !important;
+  }
+}
+
 kbd {
   font:
     500 12px var(--font-text),

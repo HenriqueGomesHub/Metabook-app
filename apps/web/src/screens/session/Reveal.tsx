@@ -2,6 +2,7 @@ import type { PickedTip, Tip } from '@metabook/core';
 import { useEffect, useId, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Button } from '../../components/Button';
+import { useKeys } from './useKeys';
 
 export type Tone = 'right' | 'wrong' | 'neutral';
 
@@ -59,10 +60,10 @@ export function Reveal({
         {why && <p className="reveal-why">{why}</p>}
         {tips.length > 0 && <TipPager tips={tips} onShown={onTipShown} />}
         {aside && (
-          <div className="reveal-aside">
-            <p className="reveal-aside-label">{aside.label}</p>
-            <p>{aside.tip.tip.text}</p>
-          </div>
+          <section className="reveal-section" aria-label={aside.label}>
+            <p className="reveal-label">{aside.label}</p>
+            <p className="reveal-text">{aside.tip.tip.text}</p>
+          </section>
         )}
         {extra}
       </div>
@@ -74,10 +75,16 @@ export function Reveal({
   );
 }
 
-/** The tips in one box, the first on show; back and next arrows under it step through all. */
+/**
+ * The answer's tips in one box: a "Tip" label first, then the tip. Touch screens swipe between
+ * tips (dots show how many); with a mouse, arrows sit at the box's edges. Left and right arrow
+ * keys page too.
+ */
 function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) {
   const [at, setAt] = useState(0);
   const tip = tips[Math.min(at, tips.length - 1)] as Tip;
+  const many = tips.length > 1;
+  const touch = useRef<number | null>(null);
   // the first tip counts as seen once, when the box opens
   const first = useRef(tips[0]);
   useEffect(() => {
@@ -89,13 +96,38 @@ function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) 
     setAt(next);
     onShown?.(tips[next] as Tip);
   }
+  useKeys((event) => {
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    event.preventDefault();
+    go(event.key === 'ArrowLeft' ? -1 : 1);
+  }, many);
   return (
-    <div className="reveal-tip">
-      <p key={tip.id} className="swap">
-        {tip.text}
+    <section
+      className={many ? 'tip-box many' : 'tip-box'}
+      aria-roledescription={many ? 'carousel' : undefined}
+      aria-label="Tips"
+      onTouchStart={(event) => (touch.current = event.touches[0]?.clientX ?? null)}
+      onTouchEnd={(event) => {
+        const from = touch.current;
+        const to = event.changedTouches[0]?.clientX;
+        touch.current = null;
+        if (!many || from === null || to === undefined || Math.abs(to - from) < 40) return;
+        go(to < from ? 1 : -1);
+      }}
+    >
+      <p className="reveal-label">
+        <svg className="icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+          <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z" />
+        </svg>
+        Tip
+        {many && (
+          <span className="tip-count">
+            {at + 1} of {tips.length}
+          </span>
+        )}
       </p>
-      {tips.length > 1 && (
-        <div className="reveal-meta tip-pager" role="group" aria-label="Tips">
+      <div className="tip-stage">
+        {many && (
           <button
             type="button"
             className="tip-step"
@@ -106,17 +138,26 @@ function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) 
               <path d="M15 6l-6 6 6 6" />
             </svg>
           </button>
-          <span>
-            Tip {at + 1} of {tips.length}
-          </span>
+        )}
+        <p key={tip.id} className="tip-text swap">
+          {tip.text}
+        </p>
+        {many && (
           <button type="button" className="tip-step" aria-label="Next tip" onClick={() => go(1)}>
             <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
               <path d="M9 6l6 6-6 6" />
             </svg>
           </button>
-        </div>
+        )}
+      </div>
+      {many && (
+        <span className="tip-dots" aria-hidden="true">
+          {tips.map((t, i) => (
+            <span key={t.id} className={i === at ? 'on' : undefined} />
+          ))}
+        </span>
       )}
-    </div>
+    </section>
   );
 }
 

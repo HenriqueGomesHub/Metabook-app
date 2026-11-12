@@ -22,7 +22,6 @@ export function Settings() {
     <Page
       user={data.user}
       title="Settings"
-      subtitle="Daily limits, block defaults and the extension."
       actions={
         <div className="segments" role="tablist" aria-label="Settings">
           {TABS.map(({ id, label }) => (

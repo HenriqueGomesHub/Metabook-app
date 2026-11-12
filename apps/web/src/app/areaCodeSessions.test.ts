@@ -1,3 +1,4 @@
+import { DEFAULT_SETTINGS } from '@metabook/core';
 import { describe, expect, it } from 'vitest';
 import { bundled, withClueCards } from '../data/content';
 import { isMemoriseAreaCode } from '../data/areaCodes';
@@ -6,7 +7,13 @@ import { sessionCards } from './stats';
 
 describe('area codes in daily sessions', () => {
   const content = withClueCards(bundled, []);
-  const cards = sessionCards({ content } as AppSnapshot);
+  const settings = { ...DEFAULT_SETTINGS, regionsInDaily: true };
+  const cards = sessionCards({ content, settings } as AppSnapshot);
+
+  it('leaves every area code out unless the learner asks for them', () => {
+    const off = sessionCards({ content, settings: DEFAULT_SETTINGS } as AppSnapshot);
+    expect(off.some((c) => c.type === 'areacode' || c.type === 'region' || c.map)).toBe(false);
+  });
 
   it('leaves out countries whose codes follow no pattern (US, Canada)', () => {
     expect(cards.some((c) => c.type === 'areacode' && c.country === 'US')).toBe(false);

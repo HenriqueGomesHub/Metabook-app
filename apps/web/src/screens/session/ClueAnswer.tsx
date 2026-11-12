@@ -22,7 +22,7 @@ export function ClueAnswer({ card }: { card: Card }) {
   return (
     <div className="reveal-clue">
       <p className="reveal-family">
-        <Icon name={clue.family} size={18} />
+        <Icon name={clue.family} size={14} />
         {SUBJECTS[clue.family].label}
       </p>
       <ClueDetails

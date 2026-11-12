@@ -80,6 +80,8 @@ function StatsView({ data }: { data: AppSnapshot }) {
     { value: kpis.time.value, unit: kpis.time.unit, label: 'Time trained' },
   ];
 
+  const nothing = points.length === 0 && confusions.length === 0 && kpis.learned === 0;
+
   return (
     <div className="page">
       <Header user={data.user} />
@@ -89,105 +91,122 @@ function StatsView({ data }: { data: AppSnapshot }) {
           <span>Last 30 days</span>
         </div>
 
-        <div className="kpis">
-          {cells.map((cell, i) => (
-            <div
-              key={cell.label}
-              className="stat-panel"
-              style={{ '--i': i } as React.CSSProperties}
-            >
-              <p className="kpi-big">
-                {cell.value}
-                {cell.unit && <small> {cell.unit}</small>}
-              </p>
-              <p className="kpi-label">{cell.label}</p>
+        {nothing ? (
+          <EmptyState
+            title="No stats yet"
+            text="Answer a few cards and your accuracy, recall and mix-ups show up here."
+            actions={[{ label: 'Start a session', to: '/session' }]}
+          />
+        ) : (
+          <>
+            <div className="kpis">
+              {cells.map((cell, i) => (
+                <div
+                  key={cell.label}
+                  className="stat-panel"
+                  style={{ '--i': i } as React.CSSProperties}
+                >
+                  <p className="kpi-big">
+                    {cell.value}
+                    {cell.unit && <small> {cell.unit}</small>}
+                  </p>
+                  <p className="kpi-label">{cell.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <div className="stats-rows">
-          <section className="stat-panel stat-chart" style={{ '--i': 4 } as React.CSSProperties}>
-            <div className="stat-panel-head">
-              <h2>Daily accuracy</h2>
-              {delta !== null && (
-                <span className={delta < 0 ? 'trend-delta down' : 'trend-delta'}>
-                  {delta < 0 ? '−' : '+'}
-                  {Math.abs(delta)} pts
-                </span>
-              )}
-            </div>
-            {points.length === 0 ? (
-              <EmptyState
-                size="compact"
-                title="No answers yet"
-                text="Answer a few cards and your accuracy curve shows up here."
-                actions={[{ label: 'Start a drill', to: '/drills' }]}
-              />
-            ) : (
-              <svg
-                className="trend-svg"
-                role="img"
-                aria-label={
-                  delta === null
-                    ? `Accuracy ${Math.round(last?.value ?? 0)}% on the one day practised`
-                    : `Accuracy went from ${Math.round(first?.value ?? 0)}% to ${Math.round(last?.value ?? 0)}% over 30 days`
-                }
-                viewBox={`-36 -8 ${PLOT_W + 48} ${PLOT_H + 38}`}
+            <div className="stats-rows">
+              <section
+                className="stat-panel stat-chart"
+                style={{ '--i': 4 } as React.CSSProperties}
               >
-                {axis.ticks.map((tick) => (
-                  <g key={tick}>
-                    <path className="trend-grid" d={`M0 ${y(tick)}H${PLOT_W}`} />
-                    <text className="trend-axis" x="-10" y={y(tick) + 4} textAnchor="end">
-                      {tick}%
-                    </text>
-                  </g>
-                ))}
-                {points.length > 1 && (
-                  <polyline
-                    className="trend-line"
-                    pathLength={1}
-                    points={points
-                      .map((p) => `${x(p.day).toFixed(1)},${y(p.value).toFixed(1)}`)
-                      .join(' ')}
+                <div className="stat-panel-head">
+                  <h2>Daily accuracy</h2>
+                  {delta !== null && (
+                    <span className={delta < 0 ? 'trend-delta down' : 'trend-delta'}>
+                      {delta < 0 ? '−' : '+'}
+                      {Math.abs(delta)} pts
+                    </span>
+                  )}
+                </div>
+                {points.length === 0 ? (
+                  <EmptyState
+                    size="compact"
+                    title="No answers yet"
+                    text="Answer a few cards and your accuracy curve shows up here."
+                    actions={[{ label: 'Start a drill', to: '/drills' }]}
                   />
+                ) : (
+                  <svg
+                    className="trend-svg"
+                    role="img"
+                    aria-label={
+                      delta === null
+                        ? `Accuracy ${Math.round(last?.value ?? 0)}% on the one day practised`
+                        : `Accuracy went from ${Math.round(first?.value ?? 0)}% to ${Math.round(last?.value ?? 0)}% over 30 days`
+                    }
+                    viewBox={`-36 -8 ${PLOT_W + 48} ${PLOT_H + 38}`}
+                  >
+                    {axis.ticks.map((tick) => (
+                      <g key={tick}>
+                        <path className="trend-grid" d={`M0 ${y(tick)}H${PLOT_W}`} />
+                        <text className="trend-axis" x="-10" y={y(tick) + 4} textAnchor="end">
+                          {tick}%
+                        </text>
+                      </g>
+                    ))}
+                    {points.length > 1 && (
+                      <polyline
+                        className="trend-line"
+                        pathLength={1}
+                        points={points
+                          .map((p) => `${x(p.day).toFixed(1)},${y(p.value).toFixed(1)}`)
+                          .join(' ')}
+                      />
+                    )}
+                    {last && (
+                      <circle className="trend-end" cx={x(last.day)} cy={y(last.value)} r="5" />
+                    )}
+                    <text className="trend-axis" x="0" y={PLOT_H + 20}>
+                      {startDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
+                    </text>
+                    <text className="trend-axis" x={PLOT_W} y={PLOT_H + 20} textAnchor="end">
+                      Today
+                    </text>
+                  </svg>
                 )}
-                {last && <circle className="trend-end" cx={x(last.day)} cy={y(last.value)} r="5" />}
-                <text className="trend-axis" x="0" y={PLOT_H + 20}>
-                  {startDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })}
-                </text>
-                <text className="trend-axis" x={PLOT_W} y={PLOT_H + 20} textAnchor="end">
-                  Today
-                </text>
-              </svg>
-            )}
-          </section>
+              </section>
 
-          <section className="stat-panel stat-list" style={{ '--i': 5 } as React.CSSProperties}>
-            <h2>Top confusions</h2>
-            {confusions.length === 0 ? (
-              <EmptyState
-                size="compact"
-                title="No confusions yet"
-                text="Mix-ups between answers will rank here."
-              />
-            ) : (
-              <ol className="confusions">
-                {confusions.map((c, i) => {
-                  const scope = pairScope(data.content.cards, c.picked, c.truth);
-                  return (
-                    <li
-                      key={`${c.picked}|${c.truth}`}
-                      title={`Said ${label(c.picked, scope)} for ${label(c.truth, scope)}`}
-                    >
-                      <span>{pairLabel(c.picked, c.truth, scope)}</span>
-                      <span className={i < HOT_CONFUSIONS ? 'count hot' : 'count'}>{c.count}</span>
-                    </li>
-                  );
-                })}
-              </ol>
-            )}
-          </section>
-        </div>
+              <section className="stat-panel stat-list" style={{ '--i': 5 } as React.CSSProperties}>
+                <h2>Top confusions</h2>
+                {confusions.length === 0 ? (
+                  <EmptyState
+                    size="compact"
+                    title="No confusions yet"
+                    text="Mix-ups between answers will rank here."
+                  />
+                ) : (
+                  <ol className="confusions">
+                    {confusions.map((c, i) => {
+                      const scope = pairScope(data.content.cards, c.picked, c.truth);
+                      return (
+                        <li
+                          key={`${c.picked}|${c.truth}`}
+                          title={`Said ${label(c.picked, scope)} for ${label(c.truth, scope)}`}
+                        >
+                          <span>{pairLabel(c.picked, c.truth, scope)}</span>
+                          <span className={i < HOT_CONFUSIONS ? 'count hot' : 'count'}>
+                            {c.count}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                )}
+              </section>
+            </div>
+          </>
+        )}
       </main>
     </div>
   );

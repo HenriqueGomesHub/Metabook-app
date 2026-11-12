@@ -20,10 +20,10 @@ const CONTINENTS: { id: PoolCountry['continent']; label: string }[] = [
   { id: 'oceania', label: 'Oceania' },
 ];
 
-const TALLY: { medal: Exclude<MedalKind, null>; label: string; at: number }[] = [
-  { medal: 'gold', label: 'gold', at: 80 },
-  { medal: 'silver', label: 'silver', at: 50 },
-  { medal: 'bronze', label: 'bronze', at: 25 },
+const TALLY: { medal: Exclude<MedalKind, null>; label: string }[] = [
+  { medal: 'gold', label: 'gold' },
+  { medal: 'silver', label: 'silver' },
+  { medal: 'bronze', label: 'bronze' },
 ];
 
 interface CountryTile {
@@ -79,18 +79,11 @@ function AtlasView({ data }: { data: AppSnapshot }) {
         <div className="atlas-head rise">
           <div>
             <h1 className="headline">Atlas</h1>
-            <p className="atlas-scope">
-              <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-                <path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-              Competitive pool only · follows the current ranked maps
-            </p>
             <ul className="tally" aria-label="Medal tally">
-              {TALLY.map(({ medal, label, at }) => (
+              {TALLY.map(({ medal, label }) => (
                 <li key={medal}>
                   <i style={{ background: `var(--${medal})` }} />
-                  {tiles.filter((t) => t.medal === medal).length} {label} · {at}%+
+                  {tiles.filter((t) => t.medal === medal).length} {label}
                 </li>
               ))}
             </ul>
