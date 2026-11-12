@@ -91,6 +91,14 @@ const patternFile = import.meta.glob<AreaCodePatterns>(
 /** Each country's area-code pattern, by upper-case pool code. */
 export const AREA_CODE_PATTERNS: AreaCodePatterns = Object.values(patternFile)[0] ?? {};
 
+/**
+ * An area code of a country whose codes follow no pattern (the US, Canada): pure memorising, so
+ * it is left out of daily sessions and the all-countries drill, and only practised in that
+ * country's own drill.
+ */
+export const isMemoriseAreaCode = (card: Pick<Card, 'type' | 'country'>): boolean =>
+  card.type === 'areacode' && patternOf(card.country)?.kind === 'memorise';
+
 export const patternOf = (country: string): AreaCodePattern | undefined =>
   AREA_CODE_PATTERNS[country.toUpperCase()];
 

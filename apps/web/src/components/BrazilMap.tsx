@@ -29,6 +29,7 @@ export function groupOf(answer: string, digits: Map<string, Set<string>>): Set<s
 /** Brazil's states with their callout labels; see CountryMap. */
 export function BrazilMap(props: {
   reveal?: MapReveal;
+  numbers?: Record<string, string[]>;
   onPick(code: string): void;
   onHover(code: string | null): void;
   className?: string;

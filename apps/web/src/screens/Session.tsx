@@ -38,6 +38,7 @@ import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { optionsFor } from './session/options';
+import { isMemoriseAreaCode } from '../data/areaCodes';
 import { preloadClueImages } from '../data/clueImages';
 import type { Repository } from '../data/repository';
 import { ClueAnswer } from './session/ClueAnswer';
@@ -128,6 +129,8 @@ function inScope(
       (!type || card.type === type) &&
       (!subject || card.subject === subject) &&
       (!country || card.country === country) &&
+      // area codes with no pattern (US, Canada) only in their own country's drill
+      (Boolean(country) || !isMemoriseAreaCode(card)) &&
       (!chapter || card.chapter === chapter),
   );
 }

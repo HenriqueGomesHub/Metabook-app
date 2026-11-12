@@ -71,7 +71,8 @@
   font:
     600 11px var(--font-text),
     sans-serif;
-  fill: var(--muted);
+  /* clear enough to name the region before answering */
+  fill: color-mix(in srgb, var(--ink) 72%, transparent);
   pointer-events: none;
   text-anchor: middle;
   letter-spacing: 0.03em;
@@ -141,5 +142,37 @@
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+/* a region's area codes, written under its label once answered */
+.ddd-num {
+  font:
+    500 9px var(--font-text),
+    sans-serif;
+  fill: var(--faint);
+  pointer-events: none;
+  text-anchor: middle;
+  font-variant-numeric: tabular-nums;
+  animation: num-in 0.35s ease both;
+}
+
+.ddd-num.callout {
+  text-anchor: start;
+}
+
+.ddd-num.grp {
+  fill: var(--accent);
+}
+
+.ddd-num.on {
+  fill: var(--bg);
+  font-weight: 700;
+}
+
+@keyframes num-in {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
   }
 }
