@@ -99,7 +99,8 @@ describe('A country’s pattern intro', () => {
   it('explains the pattern with a coloured map and its key', async () => {
     mount('/areacodes/fr');
     expect(await screen.findByRole('heading', { name: 'France area codes' })).toBeTruthy();
-    expect(screen.getByText(/01 Paris and Île-de-France, 02 the north-west/)).toBeTruthy();
+    // the key says it all; the summary sentence would repeat it
+    expect(screen.queryByText(/01 Paris and Île-de-France, 02 the north-west/)).toBeNull();
     const key = screen.getByRole('list', { name: 'Pattern key' });
     const rows = within(key).getAllByRole('listitem');
     expect(rows).toHaveLength(5);

@@ -24,7 +24,7 @@ function ReviewView({ data }: { data: AppSnapshot }) {
     <Page
       user={data.user}
       title="Game review"
-      subtitle="Every miss becomes a confusion to drill and pulls that country’s cards forward."
+      subtitle="Misses from your games become drills."
       actions={
         <>
           <ImportRounds onImport={(rounds) => logRounds(rounds).rounds} onResult={setResult} />
@@ -34,10 +34,12 @@ function ReviewView({ data }: { data: AppSnapshot }) {
         </>
       }
     >
-      <p className="note rise d1">
-        Extension captures single-player games automatically — pair it in{' '}
-        <Link to="/settings">Settings</Link>.
-      </p>
+      {data.rounds.length > 0 && (
+        <p className="note rise d1">
+          The extension logs single-player games for you: pair it in{' '}
+          <Link to="/settings">Settings</Link>.
+        </p>
+      )}
       {result && (
         <p className={`note ${result.ok ? 'note-ok' : 'note-warn'}`} role="status">
           {result.message}

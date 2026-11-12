@@ -30,7 +30,7 @@ function BlocksView({ data }: { data: AppSnapshot }) {
     <Page
       user={data.user}
       title="Training blocks"
-      subtitle="A few weeks of focused practice on your weakest countries, then a before and after."
+      subtitle="Focused weeks on your weakest countries, with a before and after."
     >
       {active && !expired ? (
         <ActiveBlock

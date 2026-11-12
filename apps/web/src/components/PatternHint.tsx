@@ -4,7 +4,16 @@ import { patternOf, placedCodes } from '../data/areaCodes';
 import './pattern-map.css';
 
 /** After an area-code answer: the group the code belongs to, e.g. "4x = Paraná & Santa Catarina". */
-export function PatternHint({ card, cards }: { card: Card; cards: Card[] }) {
+export function PatternHint({
+  card,
+  cards,
+  labelled,
+}: {
+  card: Card;
+  cards: Card[];
+  /** as a reveal section: a "Pattern" label over the hint */
+  labelled?: boolean;
+}) {
   if (card.type !== 'areacode') return null;
   const hint = patternHint(
     card.country,
@@ -14,9 +23,16 @@ export function PatternHint({ card, cards }: { card: Card; cards: Card[] }) {
   );
   if (!hint) return null;
   const [form, ...rest] = hint.split(' = ');
-  return (
+  const line = (
     <p className="pattern-hint">
       <b>{form}</b> = {rest.join(' = ')}
     </p>
+  );
+  if (!labelled) return line;
+  return (
+    <section className="reveal-section" aria-label="Pattern">
+      <p className="reveal-label">Pattern</p>
+      {line}
+    </section>
   );
 }

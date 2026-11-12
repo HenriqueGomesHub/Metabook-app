@@ -386,7 +386,7 @@
 /* Answer panel of clue cards */
 
 .reveal-clue {
-  padding-top: 10px;
+  padding-top: 14px;
   border-top: 1px solid var(--line-soft);
 }
 
@@ -413,10 +413,9 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: 500;
   color: var(--muted);
 }
 

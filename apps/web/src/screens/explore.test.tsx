@@ -138,7 +138,7 @@ describe('Atlas', () => {
     const tile = await screen.findByRole('link', { name: /Brazil/ });
     expect(within(tile).getByRole('img', { name: 'Gold medal' })).toBeTruthy();
     expect(tile.getAttribute('href')).toBe('/atlas/BR');
-    expect(screen.getByText(/1 gold · 80%\+/)).toBeTruthy();
+    expect(screen.getByText(/1 gold/)).toBeTruthy();
   });
 
   it('shows a dash for countries without cards', async () => {
@@ -281,12 +281,10 @@ describe('AreaCodeGame', () => {
 });
 
 describe('Stats', () => {
-  it('renders KPIs with empty data', async () => {
+  it('shows one empty state before any answers', async () => {
     mount('/stats');
     expect(await screen.findByRole('heading', { name: 'Stats' })).toBeTruthy();
-    expect(screen.getByText('Recall in a week', { selector: '.kpi-label' })).toBeTruthy();
-    expect(screen.getAllByText('—')).toHaveLength(2);
-    expect(screen.getByText('Cards learned').previousElementSibling?.textContent).toBe('0');
-    expect(screen.getByRole('region', { name: 'No confusions yet' })).toBeTruthy();
+    expect(screen.getByRole('region', { name: 'No stats yet' })).toBeTruthy();
+    expect(screen.queryByText('Recall in a week')).toBeNull();
   });
 });

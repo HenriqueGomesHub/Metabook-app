@@ -10,6 +10,7 @@ import {
   cardContext,
   pickTip,
   rankTips,
+  sameTip,
   practiceProgress,
   recordPracticeAnswer,
   requeueMissed,
@@ -401,12 +402,12 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
           </button>
           <span className="practice-count" aria-live="polite">
             {answers.length} answered
-            {answers.length > 0 && ` · ${Math.round((right / answers.length) * 100)}% right`}
+            {answers.length > 0 && ` · ${Math.round((right / answers.length) * 100)}%`}
           </span>
           {pool.length > 1 && (
             <span className="practice-learnt">
               {progress.pass > 1 && `Pass ${progress.pass} · `}
-              {progress.learnt} learnt · {progress.total.toLocaleString('en-US')} cards
+              {progress.learnt} / {progress.total.toLocaleString('en-US')} learnt
             </span>
           )}
         </div>
@@ -480,12 +481,15 @@ function CardRunner({
 
   function showTips(asideKey: string | undefined) {
     const tips = mainTips();
-    const asideTip = asideKey
+    const candidate = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
       : null;
+    // the other side's tip is left out when it only repeats one of the answer's own
+    const asideTip =
+      candidate && !tips.some((tip) => sameTip(tip, candidate.tip)) ? candidate : null;
     const name = asideKey && label(asideKey, scope);
     const aside: Shown['aside'] = asideTip
-      ? { label: otherSide ? `And for ${name}` : `Spotting ${name}`, tip: asideTip }
+      ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
       : undefined;
     setShown({ tips, aside });
     // the first tip is recorded by the reveal as it comes on screen
@@ -534,7 +538,7 @@ function CardRunner({
         card.clue ? (
           <ClueAnswer card={card} />
         ) : (
-          card.type === 'areacode' && <PatternHint card={card} cards={cards} />
+          card.type === 'areacode' && <PatternHint card={card} cards={cards} labelled />
         )
       }
       onNext={onNext}

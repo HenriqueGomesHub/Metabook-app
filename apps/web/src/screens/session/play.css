@@ -56,7 +56,7 @@
 
 .play-q h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -348,7 +348,7 @@ a.credit:hover {
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   padding: 22px 24px 0;
   border-radius: 24px;
   background: var(--surface);
@@ -361,12 +361,12 @@ a.credit:hover {
 .reveal-body {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .reveal-head h2 {
   margin: 0;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.15;
@@ -381,71 +381,121 @@ a.credit:hover {
 }
 
 .reveal-head p {
-  margin: 6px 0 0;
-  font-size: 15px;
+  margin: 4px 0 0;
+  font-size: 14px;
   color: var(--muted);
 }
 
-.reveal-tip p {
+/* Every part of the reveal reads the same way: a small label saying what it is, then the text. */
+.reveal-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.reveal-text,
+.tip-text {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
 }
 
-.reveal-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--muted);
+.reveal-section {
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.reveal-section .reveal-text {
+  color: #d6d1c6;
+}
+
+/* Tips: the one box in the panel */
+.tip-box {
+  padding: 12px 14px 14px;
+  border-radius: 14px;
+  /* a step lighter than whatever it sits on: the desktop panel or the phone sheet */
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  touch-action: pan-y;
+}
+
+.tip-count {
+  margin-left: auto;
+  font-weight: 400;
   font-variant-numeric: tabular-nums;
+  color: var(--faint);
 }
 
-.reveal-tip {
-  padding: 12px 14px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--surface);
+.tip-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
 }
 
-.tip-pager {
-  justify-content: center;
-  margin-top: 8px;
+.tip-box.many .tip-stage {
+  grid-template-columns: 28px minmax(0, 1fr) 28px;
+  gap: 8px;
+  margin: 0 -6px;
 }
 
 .tip-step {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--ink);
+  background: none;
+  color: var(--muted);
   cursor: pointer;
 }
 
 .tip-step:hover {
-  border-color: var(--ink);
+  background: var(--line);
+  color: var(--ink);
 }
 
-.reveal-aside {
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
+.tip-dots {
+  display: none;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
 }
 
-.reveal-aside p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #d6d1c6;
+.tip-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ink) 22%, transparent);
+  transition:
+    background 0.2s,
+    width 0.2s;
 }
 
-.reveal-aside .reveal-aside-label {
-  margin-bottom: 4px;
-  font-size: 12px;
-  color: var(--warn);
+.tip-dots span.on {
+  width: 14px;
+  border-radius: 3px;
+  background: var(--ink);
+}
+
+/* touch screens swipe: no arrows, dots instead */
+@media (hover: none) and (pointer: coarse) {
+  .tip-box.many .tip-stage {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+  }
+
+  .tip-step {
+    display: none;
+  }
+
+  .tip-dots {
+    display: flex;
+  }
 }
 
 .reveal-next {
@@ -457,7 +507,8 @@ a.credit:hover {
   position: sticky;
   bottom: 0;
   margin-bottom: 22px;
-  box-shadow: 0 -16px 16px 4px var(--surface);
+  margin-top: 4px;
+  box-shadow: 0 -12px 12px var(--surface);
 }
 
 @keyframes panel-in {
@@ -502,7 +553,7 @@ a.credit:hover {
   }
 
   .play-q h1 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   /* phones fill the prompt area; photos crop to it */
@@ -548,12 +599,12 @@ a.credit:hover {
   }
 
   .reveal-head h2 {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .reveal > .reveal-next {
     margin-bottom: calc(16px + env(safe-area-inset-bottom));
-    box-shadow: 0 -16px 16px 4px var(--raise);
+    box-shadow: 0 -12px 12px var(--raise);
   }
 
   /* Map card: code row first, map below */

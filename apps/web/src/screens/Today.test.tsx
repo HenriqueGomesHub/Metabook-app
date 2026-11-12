@@ -23,15 +23,11 @@ describe('Today', () => {
     );
   });
 
-  it('says no streak yet and pluralises the time estimate', async () => {
+  it('pluralises the time estimate and leaves out facts it has nothing for', async () => {
     renderApp('/', new MemoryRepository());
-    expect(await screen.findByText('No streak yet')).toBeTruthy();
-    expect(screen.getByText(/about 1 minute$/)).toBeTruthy();
-  });
-
-  it('shows how many new cards are left', async () => {
-    renderApp('/', new MemoryRepository());
-    expect(await screen.findByText(/3 new available/)).toBeTruthy();
+    expect(await screen.findByText(/about 1 minute$/)).toBeTruthy();
+    expect(screen.queryByText(/streak/)).toBeNull();
+    expect(screen.queryByText('Weakest')).toBeNull();
   });
 
   it('offers Learn more once today’s new cards are used up', async () => {
@@ -40,7 +36,6 @@ describe('Today', () => {
     renderApp('/', repo);
     const more = await screen.findByRole('link', { name: 'Learn 2 more' });
     expect(more.getAttribute('href')).toBe('/session?more=new');
-    expect(screen.getByText(/2 new available/)).toBeTruthy();
     // something is due: no review-ahead yet
     expect(screen.queryByRole('link', { name: 'Practise more' })).toBeNull();
   });

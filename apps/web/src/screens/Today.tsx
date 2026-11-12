@@ -126,7 +126,7 @@ function TodayView({ data }: { data: AppSnapshot }) {
                   Start session
                   <ArrowIcon />
                 </LinkButton>
-                <span className="today-hint">
+                <span className="today-hint keys-only">
                   or press <kbd>Space</kbd>
                 </span>
               </div>
@@ -198,54 +198,50 @@ function TodayView({ data }: { data: AppSnapshot }) {
                 </>
               )}
 
-              <div className="rule" />
-              <dl className="facts">
-                <div>
-                  <dt>Reviews due</dt>
-                  <dd>{reviews}</dd>
-                </div>
-                <div>
-                  <dt>New</dt>
-                  <dd>{newAvailable.toLocaleString('en')} new available</dd>
-                </div>
-                <div>
-                  <dt>Weakest</dt>
-                  <dd>{weakest ?? <span className="muted">Nothing yet</span>}</dd>
-                </div>
-                <div>
-                  <dt>Top confusion</dt>
-                  <dd>
-                    {confusion ? (
-                      <>
-                        {pairLabel(
-                          confusion.picked,
-                          confusion.truth,
-                          pairScope(data.content.cards, confusion.picked, confusion.truth),
-                        )}
-                      </>
-                    ) : (
-                      <span className="muted">None right now</span>
+              {(weakest || confusion || streak > 0) && (
+                <>
+                  <div className="rule" />
+                  <dl className="facts">
+                    {weakest && (
+                      <div>
+                        <dt>Weakest</dt>
+                        <dd>{weakest}</dd>
+                      </div>
                     )}
-                  </dd>
-                </div>
-                <div>
-                  <dt>{streak > 0 ? `${streak}-day streak` : 'No streak yet'}</dt>
-                  <dd
-                    className="streak"
-                    role="img"
-                    aria-label={`Practised ${days.filter(Boolean).length} of the last 14 days`}
-                  >
-                    {days.map((done, i) => (
-                      <span
-                        key={i}
-                        className={
-                          done ? (i === days.length - 1 ? 'today-dot' : 'done') : undefined
-                        }
-                      />
-                    ))}
-                  </dd>
-                </div>
-              </dl>
+                    {confusion && (
+                      <div>
+                        <dt>Top confusion</dt>
+                        <dd>
+                          {pairLabel(
+                            confusion.picked,
+                            confusion.truth,
+                            pairScope(data.content.cards, confusion.picked, confusion.truth),
+                          )}
+                        </dd>
+                      </div>
+                    )}
+                    {streak > 0 && (
+                      <div>
+                        <dt>{streak}-day streak</dt>
+                        <dd
+                          className="streak"
+                          role="img"
+                          aria-label={`Practised ${days.filter(Boolean).length} of the last 14 days`}
+                        >
+                          {days.map((done, i) => (
+                            <span
+                              key={i}
+                              className={
+                                done ? (i === days.length - 1 ? 'today-dot' : 'done') : undefined
+                              }
+                            />
+                          ))}
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                </>
+              )}
             </section>
             {block && (
               <Link to="/blocks" className="block-line">
