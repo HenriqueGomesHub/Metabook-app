@@ -110,6 +110,7 @@ function mount(path: string, repo = new MemoryRepository()) {
   const auth = {
     getSession: async () => ({ id: 'local', name: 'Tom Reyes' }),
     signInWithEmail: async () => undefined,
+    verifyEmailCode: async () => undefined,
     signOut: async () => undefined,
     onAuthChange: () => () => undefined,
   };

@@ -45,3 +45,16 @@ Cards are bundled with the app (there is no `cardsVersion` or runtime card downl
 users when the branch is merged and Vercel deploys. Photos load from the public bucket at
 `<VITE_SUPABASE_URL>/storage/v1/object/public/media/`; a local-mode deploy sets `VITE_MEDIA_BASE` to that
 URL instead.
+
+## Sign-in emails carry a code
+
+The app signs in with the 6-digit code from the email, typed into the app. On an iPhone the
+home-screen app keeps its own storage, so the email's link (which opens Safari) cannot sign it in.
+Supabase only puts the code in the email if the template asks for it. In the dashboard, under
+Authentication → Emails, edit both **Magic Link** and **Confirm signup** to include `{{ .Token }}`:
+
+```html
+<h2>Your Metabook code</h2>
+<p style="font-size:28px;letter-spacing:6px"><strong>{{ .Token }}</strong></p>
+<p>Type it in the app to sign in. Or <a href="{{ .ConfirmationURL }}">open this link</a> on this device.</p>
+```

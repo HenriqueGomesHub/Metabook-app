@@ -20,6 +20,7 @@ export function fakeAuth(user: AuthUser | null = USER): Auth {
   return {
     getSession: async () => user,
     signInWithEmail: async () => undefined,
+    verifyEmailCode: async () => undefined,
     signOut: async () => undefined,
     onAuthChange: () => () => undefined,
   };

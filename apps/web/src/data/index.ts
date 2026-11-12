@@ -15,8 +15,13 @@ export interface AuthUser {
 
 export interface Auth {
   getSession(): Promise<AuthUser | null>;
-  /** Cloud only: sends a magic link. */
+  /** Cloud only: emails a sign-in link and a one-time code. */
   signInWithEmail(email: string): Promise<void>;
+  /**
+   * Cloud only: signs in with the code from that email, in this window. An app added to the
+   * iPhone home screen keeps its own storage, so the link (which opens Safari) cannot sign it in.
+   */
+  verifyEmailCode(email: string, code: string): Promise<void>;
   signOut(): Promise<void>;
   /** Returns an unsubscribe function. */
   onAuthChange(callback: (user: AuthUser | null) => void): () => void;
@@ -36,6 +41,7 @@ const LOCAL_USER: AuthUser = { id: 'local', name: 'Tom Reyes' };
 const localAuth: Auth = {
   getSession: async () => LOCAL_USER,
   signInWithEmail: async () => undefined,
+  verifyEmailCode: async () => undefined,
   signOut: async () => undefined,
   onAuthChange: () => () => undefined,
 };
@@ -55,6 +61,10 @@ function cloudAuth(supabase: SupabaseClient): Auth {
         email,
         options: { emailRedirectTo: window.location.origin },
       });
+      if (error) throw error;
+    },
+    async verifyEmailCode(email, code) {
+      const { error } = await supabase.auth.verifyOtp({ email, token: code, type: 'email' });
       if (error) throw error;
     },
     async signOut() {
