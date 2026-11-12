@@ -1,18 +1,22 @@
+import { isClueCard } from '@metabook/core';
 import type { Card } from '@metabook/core';
+import { useState } from 'react';
 import { useAppData } from '../../app/AppData';
 import { SUBJECTS } from '../../app/labels';
 import { ClueDetails } from '../../components/clues/ClueDetails';
+import { ClueSheet } from '../../components/clues/ClueSheet';
 import { Credit } from '../../components/clues/Credit';
 import { Icon } from '../../components/icons';
 import { clueIndex } from '../../data/clueIndex';
 
 /**
  * The clue behind a clue card, shown in the answer panel: its family, the plain summary, what it
- * looks the same as or differs from, every picture (comparison and annotated ones with their
- * captions) and the full text behind "More detail".
+ * looks the same as or differs from and a row of pictures, short enough to fit the panel; the
+ * whole clue (every picture with its caption, the full text) opens on a sheet.
  */
 export function ClueAnswer({ card }: { card: Card }) {
   const { data } = useAppData();
+  const [whole, setWhole] = useState(false);
   const clue = card.clue && data ? clueIndex(data.content).byId.get(card.clue.id) : undefined;
   if (!clue) return card.credit ? <Credit credit={card.credit} /> : null;
   return (
@@ -25,7 +29,11 @@ export function ClueAnswer({ card }: { card: Card }) {
         clue={clue}
         heading="h3"
         lookalikes={card.type === 'spot' || card.type === 'live'}
+        // the Clue quiz asked with the summary itself
+        lead={!isClueCard(card)}
+        onMore={() => setWhole(true)}
       />
+      {whole && <ClueSheet clue={clue} onClose={() => setWhole(false)} />}
     </div>
   );
 }

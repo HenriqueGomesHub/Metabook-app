@@ -44,10 +44,20 @@ function mount(path: string) {
   );
 }
 
+/** Opens Albania's first clue from the Learn tab; returns its sheet. */
+async function openClue() {
+  fireEvent.click(await screen.findByRole('tab', { name: 'Learn' }));
+  const learn = screen.getByRole('region', { name: 'Learn' });
+  // the card leads with the summary
+  expect(within(learn).getByText('Red and white bollards with a red reflector.')).toBeTruthy();
+  fireEvent.click(within(learn).getByRole('button', { name: /Bollard: red and white/ }));
+  return screen.getByRole('dialog', { name: 'Bollard: red and white' });
+}
+
 describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
   it('shows the summary, the same-look note and the full text behind More detail', async () => {
     mount('/atlas/AL');
-    const learn = await screen.findByRole('region', { name: 'Learn' });
+    const learn = await openClue();
     // the summary's jargon ("bollards") is a tappable term inside the paragraph
     const summary = (text: string) => (_: string, el: Element | null) =>
       el?.tagName === 'P' && el.textContent === text;
@@ -73,7 +83,7 @@ describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
 
   it('shows each picture once, captions under them', async () => {
     mount('/atlas/AL');
-    const learn = await screen.findByRole('region', { name: 'Learn' });
+    const learn = await openClue();
     const thumbs = within(learn).getAllByRole('button', { name: /Enlarge image/ });
     // three images, one of them a duplicate
     expect(thumbs).toHaveLength(2);
@@ -82,8 +92,10 @@ describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
 
   it('opens a full-screen viewer with captions, arrows and Esc', async () => {
     mount('/atlas/AL');
-    fireEvent.click(await screen.findByRole('button', { name: /Enlarge image 1 of/ }));
-    const viewer = screen.getByRole('dialog', { name: 'Bollard: red and white' });
+    const sheet = await openClue();
+    fireEvent.click(within(sheet).getByRole('button', { name: /Enlarge image 1 of/ }));
+    const viewer = document.querySelector('.lightbox') as HTMLElement;
+    expect(viewer.getAttribute('aria-label')).toBe('Bollard: red and white');
     // no caption: the clue's summary stands in
     expect(within(viewer).getByText('Red and white bollards with a red reflector.')).toBeTruthy();
     expect(within(viewer).getByText('1 / 2')).toBeTruthy();
@@ -93,7 +105,7 @@ describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
     fireEvent.click(within(viewer).getByRole('button', { name: 'Next image' }));
     expect(within(viewer).getByText('1 / 2')).toBeTruthy();
     fireEvent.keyDown(window, { key: 'Escape' });
-    expect(screen.queryByRole('dialog', { name: 'Bollard: red and white' })).toBeNull();
+    expect(document.querySelector('.lightbox')).toBeNull();
   });
 });
 

@@ -1,6 +1,6 @@
 import { pickTip } from '@metabook/core';
 import type { Round } from '@metabook/core';
-import { TipBox } from '../../components/TipBox';
+import { FitGrid } from '../../components/FitGrid';
 import type { AppSnapshot } from '../../app/AppData';
 import { countryName } from '../manage/countries';
 
@@ -26,53 +26,65 @@ function groupByDay(rounds: Round[]): { label: string; rounds: Round[] }[] {
   return groups;
 }
 
+const shortDay = (iso: string) =>
+  new Date(iso).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+
+/** Every round, newest day first and misses first within a day, paged to fit the screen. */
 export function RoundList({ data }: { data: AppSnapshot }) {
   const { pool, cards, tips } = data.content;
   const name = (key: string) => countryName(pool, key);
   const newestFirst = [...data.rounds].sort((a, b) => b.playedAt.localeCompare(a.playedAt));
+  const rounds = groupByDay(newestFirst).flatMap((group) => group.rounds);
 
   return (
-    <>
-      {groupByDay(newestFirst).map(({ label, rounds }) => (
-        <section key={label} className="sheet" aria-label={label}>
-          <h2 className="headline">{label}</h2>
-          <ul className="list">
-            {rounds.map((round) => {
-              const miss = isMiss(round);
-              const truthName = name(round.truth.country);
-              const answer =
-                cards.find((c) => c.type === 'flag' && c.country === round.truth.country)?.answer ??
-                truthName;
-              const tip = miss ? pickTip(tips, answer, 'flag', data.tipViews) : null;
-              const meta = [
-                round.map,
-                round.mode && MODE_LABELS[round.mode],
-                round.distanceKm !== undefined && `${Math.round(round.distanceKm)} km`,
-                round.score !== undefined && `${round.score} pts`,
-              ].filter(Boolean);
-              return (
-                <li key={round.id} className={miss ? 'round round-miss' : 'round'}>
-                  <div className="round-line">
-                    <span className="round-main">
-                      {miss ? (
-                        <>
-                          You guessed <strong>{name(round.guess.country)}</strong> — it was{' '}
-                          {truthName}
-                        </>
-                      ) : (
-                        <>Right: {truthName}</>
-                      )}
-                      {round.truth.region && <span className="muted"> · {round.truth.region}</span>}
-                    </span>
-                    <span className="round-meta">{meta.join(' · ')}</span>
-                  </div>
-                  {tip && <TipBox label={`Spotting ${truthName}`} picked={tip} variant="warn" />}
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ))}
-    </>
+    <section className="sheet round-sheet" aria-label="Rounds">
+      <FitGrid
+        className="round-list"
+        label="Rounds"
+        list
+        items={rounds}
+        keyOf={(round) => round.id}
+        render={(round) => {
+          const miss = isMiss(round);
+          const truthName = name(round.truth.country);
+          const answer =
+            cards.find((c) => c.type === 'flag' && c.country === round.truth.country)?.answer ??
+            truthName;
+          const tip = miss ? pickTip(tips, answer, 'flag', data.tipViews) : null;
+          const meta = [
+            round.map,
+            round.mode && MODE_LABELS[round.mode],
+            round.distanceKm !== undefined && `${Math.round(round.distanceKm)} km`,
+            round.score !== undefined && `${round.score} pts`,
+          ].filter(Boolean);
+          return (
+            <div className={miss ? 'round round-miss' : 'round'} title={dayLabel(round.playedAt)}>
+              <span className="round-day">{shortDay(round.playedAt)}</span>
+              <div className="round-body">
+                <div className="round-line">
+                  <span className="round-main">
+                    {miss ? (
+                      <>
+                        You guessed <strong>{name(round.guess.country)}</strong> — it was{' '}
+                        {truthName}
+                      </>
+                    ) : (
+                      <>Right: {truthName}</>
+                    )}
+                    {round.truth.region && <span className="muted"> · {round.truth.region}</span>}
+                  </span>
+                  <span className="round-meta">{meta.join(' · ')}</span>
+                </div>
+                {tip && (
+                  <p className="round-tip">
+                    <span>Spotting {truthName}:</span> {tip.tip.text}
+                  </p>
+                )}
+              </div>
+            </div>
+          );
+        }}
+      />
+    </section>
   );
 }

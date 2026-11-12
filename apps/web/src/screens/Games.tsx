@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { FitGrid } from '../components/FitGrid';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { areaCodeSections } from '../data/areaCodes';
@@ -143,16 +144,16 @@ function GamesView({ data }: { data: AppSnapshot }) {
             <p>Patterns inside one country. Green dot means the pattern is strong.</p>
           </div>
         </div>
-        <div className="games-grid">
-          {games.map((game, i) => {
+        <FitGrid
+          className="games-grid"
+          label="Mini-games"
+          items={games}
+          keyOf={(game) => game.title}
+          render={(game) => {
             const playable = game.playable ?? {};
             const open = Object.keys(playable).length > 0;
             return (
-              <section
-                key={game.title}
-                className="game"
-                style={{ '--i': i } as React.CSSProperties}
-              >
+              <section className="game">
                 <div className="game-head">
                   <svg
                     className="icon"
@@ -200,8 +201,8 @@ function GamesView({ data }: { data: AppSnapshot }) {
                 </div>
               </section>
             );
-          })}
-        </div>
+          }}
+        />
       </main>
     </div>
   );

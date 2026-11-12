@@ -3,19 +3,17 @@
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
-  gap: 16px;
+  gap: 12px;
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  gap: 22px;
-  padding: 28px;
-  border-radius: 22px;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 20px;
   background: var(--surface);
   border: 1px solid var(--line);
-  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  animation-delay: calc(var(--i, 0) * 60ms + 120ms);
   transition:
     border-color 0.25s ease,
     transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -73,8 +71,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  height: 36px;
-  padding: 0 14px;
+  height: 32px;
+  padding: 0 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--ink);
@@ -128,7 +126,7 @@ a.game-chip:hover {
   justify-content: space-between;
   gap: 24px;
   flex-wrap: wrap;
-  padding: 28px 28px 0;
+  padding: 20px 28px 0;
 }
 
 .ddd-title {
@@ -160,23 +158,40 @@ a.game-chip:hover {
 }
 
 .ddd-main {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 32px 40px 48px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 56px;
+  padding: 16px 40px 28px;
+  display: grid;
+  grid-template-columns: minmax(300px, 400px) minmax(0, 1fr);
+  gap: 48px;
   align-items: center;
-  justify-content: center;
 }
 
 .ddd-side {
-  flex: 1 1 340px;
   min-width: 0;
-  max-width: 440px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
+}
+
+.ddd-country select {
+  height: 32px;
+  padding: 0 30px 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23a39e93' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  color: var(--ink);
+  font:
+    500 14px var(--font-text),
+    sans-serif;
+  appearance: none;
+  cursor: pointer;
 }
 
 .ddd-prompt p {
@@ -191,7 +206,7 @@ a.game-chip:hover {
 }
 
 .ddd-code {
-  font-size: 168px;
+  font-size: clamp(72px, 20vh, 168px);
   font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 0.9;
@@ -252,11 +267,38 @@ a.game-chip:hover {
 }
 
 .ddd-map-wrap {
-  flex: 0 1 640px;
   min-width: 0;
+  height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.ddd-side.answered .ddd-code {
+  font-size: clamp(56px, 11vh, 96px);
+}
+
+.ddd-side.answered .ddd-prompt p:last-child {
+  display: none;
+}
+
+/* the map takes the height it is given and keeps its shape */
+.ddd-map-box {
+  flex: 1;
+  min-height: 0;
+  container-type: size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ddd-map-box .region-map {
+  display: contents;
+}
+
+.ddd-map-box .ddd-map {
+  width: min(100cqw, 100cqh * var(--map-ar, 1.1));
 }
 
 .ddd-hover {
@@ -283,18 +325,45 @@ a.game-chip:hover {
   }
 }
 
+@media (max-width: 860px) {
+  .ddd-main {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    padding: 8px 16px 16px;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .ddd-side {
+    gap: 10px;
+  }
+
+  .ddd-prompt p:last-child,
+  .ddd-tip-actions,
+  .ddd-result .tipbox {
+    display: none;
+  }
+
+  .ddd-result {
+    gap: 8px;
+  }
+
+  .ddd-result h2 {
+    font-size: 22px;
+  }
+
+  .ddd-figures dd {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 640px) {
   .ddd-bar {
     padding: 16px 16px 0;
   }
 
-  .ddd-main {
-    padding: 24px 16px 40px;
-    gap: 32px;
-  }
-
   .ddd-code {
-    font-size: 120px;
+    font-size: 56px;
   }
 }
 

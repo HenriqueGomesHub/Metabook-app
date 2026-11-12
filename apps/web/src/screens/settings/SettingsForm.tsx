@@ -86,8 +86,8 @@ export function SettingsForm({
 
   return (
     <form className="sheet" onSubmit={submit} aria-label="Study settings">
-      <h2 className="headline">Study</h2>
-      <div className="fields">
+      <h2 className="sr-only">Study</h2>
+      <div className="fields settings-fields">
         <NumberField
           label="Minutes per session"
           value={draft.sessionMinutes ?? DEFAULT_SESSION_MINUTES}
@@ -95,17 +95,6 @@ export function SettingsForm({
           max={120}
           onChange={(sessionMinutes) => set({ sessionMinutes })}
         />
-        <label className="field field-wide field-check">
-          <input
-            type="checkbox"
-            checked={draft.returning ?? false}
-            onChange={(e) => set({ returning: e.target.checked })}
-          />
-          <span>
-            I've played GeoGuessr before: start with more new cards, since most will be a quick
-            refresh
-          </span>
-        </label>
         <NumberField
           label="Reviews per day"
           value={draft.maxReviewsPerDay}
@@ -120,21 +109,6 @@ export function SettingsForm({
           max={200}
           onChange={(newPerDay) => set({ newPerDay })}
         />
-        <div className="field field-wide">
-          <label htmlFor={retentionId}>Desired retention</label>
-          <div className="range-row">
-            <input
-              id={retentionId}
-              type="range"
-              min={0.8}
-              max={0.97}
-              step={0.01}
-              value={draft.desiredRetention}
-              onChange={(e) => set({ desiredRetention: Number(e.target.value) })}
-            />
-            <output htmlFor={retentionId}>{Math.round(draft.desiredRetention * 100)}%</output>
-          </div>
-        </div>
         <NumberField
           label="Block length (days)"
           value={draft.blockDays}
@@ -149,30 +123,58 @@ export function SettingsForm({
           max={60}
           onChange={(blockMinutes) => set({ blockMinutes })}
         />
-      </div>
-      <div className="field">
-        Formats you train
-        <div className="toggles" role="group" aria-label="Formats you train">
-          {FORMATS.map(({ value, label }) => (
-            <button
-              key={value}
-              type="button"
-              className="toggle"
-              aria-pressed={draft.formats.includes(value)}
-              onClick={() => toggle(value)}
-            >
-              {label}
-            </button>
-          ))}
+        <div className="field">
+          <label htmlFor={retentionId}>Desired retention</label>
+          <div className="range-row">
+            <input
+              id={retentionId}
+              type="range"
+              min={0.8}
+              max={0.97}
+              step={0.01}
+              value={draft.desiredRetention}
+              onChange={(e) => set({ desiredRetention: Number(e.target.value) })}
+            />
+            <output htmlFor={retentionId}>{Math.round(draft.desiredRetention * 100)}%</output>
+          </div>
         </div>
-      </div>
-      <div className="actions">
-        <Button type="submit">Save settings</Button>
-        {status && (
-          <span className={`note ${status.ok ? 'note-ok' : 'note-warn'}`} role="status">
-            {status.text}
+        <label className="field field-wide field-check">
+          <input
+            type="checkbox"
+            checked={draft.returning ?? false}
+            onChange={(e) => set({ returning: e.target.checked })}
+          />
+          <span>
+            I've played GeoGuessr before: start with more new cards, since most will be a quick
+            refresh
           </span>
-        )}
+        </label>
+      </div>
+      <div className="settings-foot">
+        <div className="field">
+          Formats you train
+          <div className="toggles" role="group" aria-label="Formats you train">
+            {FORMATS.map(({ value, label }) => (
+              <button
+                key={value}
+                type="button"
+                className="toggle"
+                aria-pressed={draft.formats.includes(value)}
+                onClick={() => toggle(value)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="actions">
+          <Button type="submit">Save settings</Button>
+          {status && (
+            <span className={`note ${status.ok ? 'note-ok' : 'note-warn'}`} role="status">
+              {status.text}
+            </span>
+          )}
+        </div>
       </div>
     </form>
   );

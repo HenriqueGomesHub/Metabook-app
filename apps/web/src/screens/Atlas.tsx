@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { EmptyState } from '../components/EmptyState';
+import { FitGrid } from '../components/FitGrid';
 import { Header } from '../components/Header';
 import { Medal } from '../components/Medal';
 import { Status } from '../components/Status';
@@ -119,21 +120,20 @@ function AtlasView({ data }: { data: AppSnapshot }) {
             actions={[{ label: 'Drills', to: '/drills' }]}
           />
         )}
-        <div className="atlas-tiles" role="tabpanel" aria-label="Countries">
-          {shown.map((tile, i) => {
-            const label = tile.cardCount > 0 ? `${pct(tile.value)}%` : '—';
-            return (
-              <Link
-                key={tile.code}
-                className="atlas-tile"
-                to={`/atlas/${tile.code}`}
-                style={{ '--i': i } as React.CSSProperties}
-              >
+        <div className="atlas-panel" role="tabpanel" aria-label="Countries">
+          <FitGrid
+            className="atlas-tiles"
+            label="Countries"
+            items={shown}
+            reset={active}
+            keyOf={(tile) => tile.code}
+            render={(tile) => (
+              <Link className="atlas-tile" to={`/atlas/${tile.code}`}>
                 <div className="atlas-tile-top">
                   <span className="atlas-tile-name">{tile.name}</span>
                   <span className="atlas-tile-pct">
                     {tile.medal && <Medal medal={tile.medal} />}
-                    {label}
+                    {tile.cardCount > 0 ? `${pct(tile.value)}%` : '—'}
                   </span>
                 </div>
                 <div className="bar" aria-hidden="true">
@@ -145,8 +145,8 @@ function AtlasView({ data }: { data: AppSnapshot }) {
                   )}
                 </div>
               </Link>
-            );
-          })}
+            )}
+          />
         </div>
       </main>
     </div>

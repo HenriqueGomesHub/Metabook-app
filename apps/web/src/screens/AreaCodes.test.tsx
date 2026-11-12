@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { AppDataProvider } from '../app/AppData';
@@ -69,25 +69,27 @@ function mount(path: string) {
   );
 }
 
-const section = async (name: string) =>
-  (await screen.findByRole('heading', { name })).closest('section') as HTMLElement;
+const countries = async () =>
+  (await screen.findByRole('region', { name: 'Countries' })) as HTMLElement;
 
 describe('Area codes page', () => {
-  it('keeps countries with a pattern apart from those to memorise', async () => {
+  it('keeps countries with a pattern apart from those to memorise, on two tabs', async () => {
     mount('/areacodes');
-    const pattern = await section('Codes with a pattern');
-    const links = within(pattern).getAllByRole('link');
+    const list = await countries();
+    const links = within(list).getAllByRole('link');
     expect(links.map((l) => l.getAttribute('href'))).toEqual(['/areacodes/br', '/areacodes/fr']);
-    expect(within(pattern).getByText(/1 São Paulo down to 9 the Amazon/)).toBeTruthy();
-    const memorise = await section('Codes to memorise');
-    expect(within(memorise).getByRole('link', { name: /United States/ })).toBeTruthy();
-    expect(within(memorise).getByText(/No regional pattern/)).toBeTruthy();
+    expect(within(list).getByText(/1 São Paulo down to 9 the Amazon/)).toBeTruthy();
+    // each country leads with its flag
+    expect(links[0]?.querySelector('.ac-flag img')).toBeTruthy();
+    fireEvent.click(screen.getByRole('tab', { name: /To memorise/ }));
+    expect(within(list).getByRole('link', { name: /United States/ })).toBeTruthy();
+    expect(within(list).getByText(/No regional pattern/)).toBeTruthy();
   });
 
   it('carries the drill route through from Drills', async () => {
     mount('/areacodes?via=drill');
-    const pattern = await section('Codes with a pattern');
-    expect(within(pattern).getAllByRole('link')[0]?.getAttribute('href')).toBe(
+    const list = await countries();
+    expect(within(list).getAllByRole('link')[0]?.getAttribute('href')).toBe(
       '/areacodes/br?via=drill',
     );
   });

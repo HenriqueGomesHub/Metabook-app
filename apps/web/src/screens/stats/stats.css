@@ -1,7 +1,5 @@
 .stats-main {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .stats-title {
@@ -10,12 +8,12 @@
   align-items: flex-end;
   gap: 24px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .stats-title h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 600;
   letter-spacing: -0.03em;
 }
@@ -28,14 +26,15 @@
 .kpis {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  gap: 16px;
+  gap: 12px;
+  flex: none;
 }
 
 .stat-panel {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 22px;
-  padding: 28px;
+  border-radius: 20px;
+  padding: 18px 22px;
   animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   animation-delay: calc(var(--i, 0) * 60ms + 100ms);
 }
@@ -43,7 +42,7 @@
 .kpi-big {
   margin: 0;
   font-family: var(--font-headline);
-  font-size: 44px;
+  font-size: 36px;
   font-weight: 600;
   letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
@@ -62,26 +61,27 @@
 }
 
 .stats-rows {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(300px, 2fr);
+  gap: 12px;
 }
 
-.stat-chart {
-  flex: 999 1 520px;
-  min-width: 0;
-}
-
+.stat-chart,
 .stat-list {
-  flex: 1 1 340px;
   min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .stat-panel-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .stat-panel h2 {
@@ -91,7 +91,7 @@
 }
 
 .stat-list h2 {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .trend-delta {
@@ -104,8 +104,10 @@
 }
 
 .trend-svg {
+  flex: 1;
+  min-height: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -153,9 +155,9 @@
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 12px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #2a2925;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .confusions li:last-child {
@@ -180,13 +182,38 @@
   }
 }
 
+@media (max-width: 860px) {
+  .stats-rows {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .confusions li:nth-child(n + 4) {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .stats-title h1 {
-    font-size: 40px;
+    font-size: 30px;
+  }
+
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
   .stat-panel {
-    padding: 22px;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .kpi-big {
+    font-size: 26px;
+  }
+
+  .kpi-label {
+    font-size: 12px;
   }
 }
 

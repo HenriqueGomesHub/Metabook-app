@@ -9,6 +9,7 @@ import { mapsOf } from '../app/stats';
 import { useRegionMaps } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
+import { FitGrid } from '../components/FitGrid';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { pct, WEAK } from './atlas/format';
@@ -18,7 +19,7 @@ import { MedalPill } from './atlas/MedalPill';
 import './atlas/atlas.css';
 
 const RING_LENGTH = 176;
-const TOP_MISSES = 3;
+const TOP_MISSES = 8;
 /** an auto chapter per subject needs this many cards; fewer go to the Basics chapter */
 const MIN_CHAPTER_CARDS = 3;
 
@@ -54,6 +55,7 @@ function CountryView({
 }) {
   const now = useMemo(() => new Date(), []);
   const [saving, setSaving] = useState(false);
+  const [tab, setTab] = useState<'chapters' | 'learn' | 'misses'>('chapters');
   const focusCountries = data.settings.focusCountries ?? [];
   const focus = focusCountries.includes(code);
   const country = data.content.pool.find((c) => c.code === code);
@@ -180,17 +182,17 @@ function CountryView({
   const percent = pct(value);
   const medal = cards.length > 0 ? medalFor(value) : null;
 
+  const tabs = [
+    { id: 'chapters', label: 'Chapters' },
+    { id: 'learn', label: 'Learn' },
+    { id: 'misses', label: misses.length > 0 ? `Misses · ${misses.length}` : 'Misses' },
+  ] as const;
+
   return (
     <div className="page">
       <Header user={data.user} />
       <div className="country-main">
-        <section className="country-body">
-          <Link to="/atlas" className="country-back rise">
-            <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-              <path d="m15 6-6 6 6 6" />
-            </svg>
-            Atlas
-          </Link>
+        <div className="country-top">
           <div className="country-hero rise d1">
             <svg
               role="img"
@@ -219,11 +221,13 @@ function CountryView({
             </svg>
             <div>
               <h1 className="headline">{country.name}</h1>
-              <p>
-                {chapters.length} {chapters.length === 1 ? 'chapter' : 'chapters'} · {cards.length}{' '}
-                {cards.length === 1 ? 'card' : 'cards'} · {due} due
-              </p>
-              <MedalPill medal={medal} value={value} />
+              <div className="country-meta">
+                <p>
+                  {chapters.length} {chapters.length === 1 ? 'chapter' : 'chapters'} ·{' '}
+                  {cards.length} {cards.length === 1 ? 'card' : 'cards'} · {due} due
+                </p>
+                <MedalPill medal={medal} value={value} />
+              </div>
             </div>
           </div>
 
@@ -248,112 +252,157 @@ function CountryView({
               {focus ? 'In this week’s focus' : 'Add to focus'}
             </button>
           </div>
-
-          {cards.length === 0 && (
-            <EmptyState
-              size="compact"
-              title={`No cards for ${country.name} yet`}
-              text="Its chapters fill in as cards are added."
-              actions={[{ label: 'Open the editor', to: '/editor' }]}
+        </div>
+        <div className="country-nav">
+          <Link to="/atlas" className="country-back">
+            <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="m15 6-6 6 6 6" />
+            </svg>
+            Atlas
+          </Link>
+          <div
+            className="segments country-tabs"
+            role="tablist"
+            aria-label={`${country.name} sections`}
+          >
+            {tabs.map(({ id, label: name }) => (
+              <button
+                key={id}
+                type="button"
+                role="tab"
+                className="seg"
+                aria-selected={id === tab}
+                onClick={() => setTab(id)}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+        </div>
+        <section className="country-panel" role="tabpanel" aria-label={tab}>
+          {tab === 'chapters' && (
+            <div className="country-chapters">
+              <div className="country-chapter-list">
+                {cards.length === 0 && (
+                  <EmptyState
+                    size="compact"
+                    title={`No cards for ${country.name} yet`}
+                    text="Its chapters fill in as cards are added."
+                    actions={[{ label: 'Open the editor', to: '/editor' }]}
+                  />
+                )}
+                {cards.length > 0 && chapters.length > 0 && (
+                  <nav className="country-chapter-nav" aria-label={`${country.name} chapters`}>
+                    <FitGrid
+                      className="chapter-grid"
+                      label="Chapters"
+                      items={chapters}
+                      keyOf={(chapter) => chapter.id}
+                      render={(chapter) => {
+                        if (chapter.cardCount === 0) {
+                          return (
+                            <div key={chapter.id} className="chapter-row chapter-empty">
+                              <span className="chapter-n">
+                                {String(chapter.order).padStart(2, '0')}
+                              </span>
+                              <span>
+                                <span className="chapter-title">{chapter.title}</span>
+                                <span className="chapter-sub">{chapter.subtitle}</span>
+                              </span>
+                              <span className="chapter-pct chapter-soon">No cards yet</span>
+                            </div>
+                          );
+                        }
+                        const chapterMedal = medalFor(chapter.value);
+                        return (
+                          <Link key={chapter.id} className="chapter-row" to={chapter.to}>
+                            <span className="chapter-n">
+                              {String(chapter.order).padStart(2, '0')}
+                            </span>
+                            <span>
+                              <span className="chapter-title">{chapter.title}</span>
+                              <span className="chapter-sub">{chapter.subtitle}</span>
+                            </span>
+                            <div className="bar" aria-hidden="true">
+                              <div
+                                className={chapter.value < WEAK ? 'weak' : undefined}
+                                style={{ width: `${pct(chapter.value)}%` }}
+                              />
+                            </div>
+                            <span className="chapter-pct">
+                              {chapterMedal && (
+                                <i
+                                  className="md"
+                                  role="img"
+                                  aria-label={`${chapterMedal} medal`}
+                                  style={{ background: `var(--${chapterMedal})` }}
+                                />
+                              )}
+                              {pct(chapter.value)}%
+                            </span>
+                            <svg
+                              className="icon"
+                              viewBox="0 0 24 24"
+                              width="18"
+                              height="18"
+                              aria-hidden="true"
+                            >
+                              <path d="m9 6 6 6-6 6" />
+                            </svg>
+                          </Link>
+                        );
+                      }}
+                    />
+                  </nav>
+                )}
+              </div>
+              <div className="card-box">
+                <h2>How it feeds your mixed sessions</h2>
+                <ol className="steps">
+                  {STEPS.map(({ title, sub }, i) => (
+                    <li key={title}>
+                      <span className={i === STEPS.length - 1 ? 'step-n last' : 'step-n'}>
+                        {i + 1}
+                      </span>
+                      <span>
+                        <b>{title}</b>
+                        <span className="step-sub">{sub}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          )}
+          {tab === 'learn' && (
+            <LearnClues
+              catalogue={clueIndex(data.content).byCountry.get(code)}
+              name={country.name}
+              code={code}
+              studyCount={studyCount}
+              signedIn={data.user !== null}
             />
           )}
-          {cards.length > 0 && chapters.length > 0 && (
-            <nav aria-label={`${country.name} chapters`}>
-              {chapters.map((chapter, i) => {
-                const style = { '--i': i } as React.CSSProperties;
-                if (chapter.cardCount === 0) {
-                  return (
-                    <div key={chapter.id} className="chapter-row chapter-empty" style={style}>
-                      <span className="chapter-n">{String(chapter.order).padStart(2, '0')}</span>
-                      <span>
-                        <span className="chapter-title">{chapter.title}</span>
-                        <span className="chapter-sub">{chapter.subtitle}</span>
-                      </span>
-                      <span className="chapter-pct chapter-soon">No cards yet</span>
-                    </div>
-                  );
-                }
-                const chapterMedal = medalFor(chapter.value);
-                return (
-                  <Link key={chapter.id} className="chapter-row" to={chapter.to} style={style}>
-                    <span className="chapter-n">{String(chapter.order).padStart(2, '0')}</span>
-                    <span>
-                      <span className="chapter-title">{chapter.title}</span>
-                      <span className="chapter-sub">{chapter.subtitle}</span>
-                    </span>
-                    <div className="bar" aria-hidden="true">
-                      <div
-                        className={chapter.value < WEAK ? 'weak' : undefined}
-                        style={{ width: `${pct(chapter.value)}%` }}
-                      />
-                    </div>
-                    <span className="chapter-pct">
-                      {chapterMedal && (
-                        <i
-                          className="md"
-                          role="img"
-                          aria-label={`${chapterMedal} medal`}
-                          style={{ background: `var(--${chapterMedal})` }}
-                        />
-                      )}
-                      {pct(chapter.value)}%
-                    </span>
-                    <svg
-                      className="icon"
-                      viewBox="0 0 24 24"
-                      width="18"
-                      height="18"
-                      aria-hidden="true"
-                    >
-                      <path d="m9 6 6 6-6 6" />
-                    </svg>
-                  </Link>
-                );
-              })}
-            </nav>
+          {tab === 'misses' && (
+            <div className="card-box">
+              <h2>Where you miss in {country.name}</h2>
+              {misses.length === 0 ? (
+                <EmptyState
+                  size="compact"
+                  title="No misses yet"
+                  text={`Missed rounds in ${country.name} show up here.`}
+                />
+              ) : (
+                misses.map((miss) => (
+                  <div key={`${miss.picked}|${miss.truth}`} className="miss-row">
+                    <span>{pairLabel(miss.picked, miss.truth, scopeOf(miss.card))}</span>
+                    <span className="count">{miss.count}</span>
+                  </div>
+                ))
+              )}
+            </div>
           )}
-          <LearnClues
-            catalogue={clueIndex(data.content).byCountry.get(code)}
-            name={country.name}
-            code={code}
-            studyCount={studyCount}
-            signedIn={data.user !== null}
-          />
         </section>
-
-        <aside className="country-side rise d3">
-          <div className="card-box">
-            <h2>How it feeds your mixed sessions</h2>
-            <ol className="steps">
-              {STEPS.map(({ title, sub }, i) => (
-                <li key={title}>
-                  <span className={i === STEPS.length - 1 ? 'step-n last' : 'step-n'}>{i + 1}</span>
-                  <span>
-                    <b>{title}</b>
-                    <span className="step-sub">{sub}</span>
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </div>
-          <div className="card-box">
-            <h2>Where you miss in {country.name}</h2>
-            {misses.length === 0 ? (
-              <EmptyState
-                size="compact"
-                title="No misses yet"
-                text={`Missed rounds in ${country.name} show up here.`}
-              />
-            ) : (
-              misses.map((miss) => (
-                <div key={`${miss.picked}|${miss.truth}`} className="miss-row">
-                  <span>{pairLabel(miss.picked, miss.truth, scopeOf(miss.card))}</span>
-                  <span className="count">{miss.count}</span>
-                </div>
-              ))
-            )}
-          </div>
-        </aside>
       </div>
     </div>
   );

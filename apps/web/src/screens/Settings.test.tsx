@@ -30,6 +30,8 @@ describe('Settings', () => {
 
   it('explains local mode and that pairing needs cloud mode', async () => {
     renderScreens('/settings', new MemoryRepository());
+    // on its own tab, so neither tab is taller than the screen
+    fireEvent.click(await screen.findByRole('tab', { name: 'Extension & account' }));
     expect(await screen.findByText('Local mode — data stays in this browser.')).toBeTruthy();
     expect(screen.getByText(/needs cloud mode/)).toBeTruthy();
   });

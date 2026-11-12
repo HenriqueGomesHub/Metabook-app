@@ -1,4 +1,4 @@
-import type { KeyboardEvent } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import type { RegionMap } from '../data/content';
 import './country-map.css';
 
@@ -25,6 +25,7 @@ export function CountryMap({
   callouts = {},
   reveal,
   numbers,
+  zones,
   onPick,
   onHover,
   className = 'ddd-map',
@@ -40,11 +41,28 @@ export function CountryMap({
    * seen at once (Poland: 81 under LU, 52 56 under KP…)
    */
   numbers?: Record<string, string[]>;
+  /**
+   * Regions that are answered as one area (France's 04 covers 24 departments): region -> the
+   * area's key region. A pick anywhere in an area picks its key region, the area is drawn and
+   * hovered as one, and its regions carry no labels of their own.
+   */
+  zones?: Record<string, string>;
   onPick(code: string): void;
   onHover(code: string | null): void;
   className?: string;
 }) {
   const locked = Boolean(reveal);
+  const [hotZone, setHotZone] = useState<string | null>(null);
+  const zoneOf = (code: string) => zones?.[code];
+  const keyOf = (code: string) => zoneOf(code) ?? code;
+  const zoneIndex = new Map([...new Set(Object.values(zones ?? {}))].map((z, i) => [z, i]));
+  const pick = (code: string) => onPick(keyOf(code));
+  const hover = (code: string | null) => {
+    const zone = code ? zoneOf(code) : undefined;
+    setHotZone(zone ?? null);
+    // an area has no single name to show: the region's own name would mislead
+    onHover(zone ? null : code);
+  };
   const byCode = new Map(map.states.map((s) => [s.code, s]));
   const pickedRegion = reveal && byCode.get(reveal.picked);
   const answerRegion = reveal && byCode.get(reveal.answer);
@@ -54,14 +72,17 @@ export function CountryMap({
   function onKey(event: KeyboardEvent, code: string) {
     if (event.key !== 'Enter' && event.key !== ' ') return;
     event.preventDefault();
-    if (!locked) onPick(code);
+    if (!locked) pick(code);
   }
 
   const regionClass = (code: string) => {
-    if (!reveal) return 'ddd-state';
-    if (code === reveal.answer) return 'ddd-state lock ans';
-    if (code === reveal.picked) return 'ddd-state lock pick';
-    return `ddd-state lock ${reveal.group.has(code) ? 'grp' : 'dim'}`;
+    const zone = zoneOf(code);
+    const area = zone ? ` zone z${(zoneIndex.get(zone) ?? 0) % 4}` : '';
+    if (!reveal) return `ddd-state${area}${zone && zone === hotZone ? ' hot' : ''}`;
+    const key = keyOf(code);
+    if (key === reveal.answer) return `ddd-state lock ans${area}`;
+    if (key === reveal.picked) return `ddd-state lock pick${area}`;
+    return `ddd-state lock ${reveal.group.has(code) ? 'grp' : 'dim'}${area}`;
   };
 
   return (
@@ -86,12 +107,12 @@ export function CountryMap({
           tabIndex={locked ? -1 : 0}
           aria-label={region.name}
           aria-disabled={locked ? true : undefined}
-          onClick={() => !locked && onPick(region.code)}
+          onClick={() => !locked && pick(region.code)}
           onKeyDown={(event) => onKey(event, region.code)}
-          onMouseEnter={() => onHover(region.code)}
-          onMouseLeave={() => onHover(null)}
-          onFocus={() => onHover(region.code)}
-          onBlur={() => onHover(null)}
+          onMouseEnter={() => hover(region.code)}
+          onMouseLeave={() => hover(null)}
+          onFocus={() => hover(region.code)}
+          onBlur={() => hover(null)}
         />
       ))}
       {map.states.map((region) => {
@@ -107,6 +128,8 @@ export function CountryMap({
         );
       })}
       {map.states.map((region) => {
+        // a region inside an area has no label: France's department numbers look like area codes
+        if (zoneOf(region.code)) return null;
         const callout = callouts[region.code];
         const onAnswer = region.code === reveal?.answer;
         const classes = ['ddd-label', callout && 'callout', onAnswer && 'on']
@@ -167,9 +190,9 @@ export function CountryMap({
             y={callout[1] - 12}
             width={26}
             height={16}
-            onClick={() => !locked && onPick(region.code)}
-            onMouseEnter={() => onHover(region.code)}
-            onMouseLeave={() => onHover(null)}
+            onClick={() => !locked && pick(region.code)}
+            onMouseEnter={() => hover(region.code)}
+            onMouseLeave={() => hover(null)}
           />
         );
       })}

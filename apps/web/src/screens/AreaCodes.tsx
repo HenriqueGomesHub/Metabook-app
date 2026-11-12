@@ -1,5 +1,5 @@
 import { mastery } from '@metabook/core';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
@@ -8,12 +8,15 @@ import { useRegionMap } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
+import { FitGrid } from '../components/FitGrid';
+import { FlagImage } from '../components/FlagImage';
 import { Header } from '../components/Header';
 import { exampleCodes, PatternMap, patternLegend, regionGroupKeys } from '../components/PatternMap';
 import { Status } from '../components/Status';
 import { areaCodeSections, patternOf, placedCodes } from '../data/areaCodes';
 import { pct } from './atlas/format';
 import './games/games.css';
+import './atlas/atlas.css';
 import './areacodes/areacodes.css';
 
 const NO_PATTERN = 'No regional pattern — learn them if you want the extra edge.';
@@ -31,6 +34,17 @@ export function AreaCodes() {
   return data ? <Landing data={data} /> : <Status error={error} />;
 }
 
+type Section = 'pattern' | 'memorise';
+
+const SECTIONS: { id: Section; label: string; blurb: string }[] = [
+  {
+    id: 'pattern',
+    label: 'With a pattern',
+    blurb: 'The first digits tell you the part of the country.',
+  },
+  { id: 'memorise', label: 'To memorise', blurb: NO_PATTERN },
+];
+
 function Landing({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
   const { query } = useVia();
@@ -38,24 +52,31 @@ function Landing({ data }: { data: AppSnapshot }) {
     () => areaCodeSections(data.content.cards, data.content.pool),
     [data.content],
   );
+  const [chosen, setChosen] = useState<Section | null>(null);
+  const tabs = SECTIONS.filter(({ id }) => sections[id].length > 0);
+  const active = chosen ?? tabs[0]?.id ?? 'pattern';
+  const blurb = SECTIONS.find((s) => s.id === active)?.blurb;
   const card = (code: string) => {
     const ids = data.content.cards
       .filter((c) => c.type === 'areacode' && c.country === code)
       .map((c) => c.id);
     const pattern = patternOf(code);
     return (
-      <li key={code}>
-        <Link className="ac-country" to={`/areacodes/${code.toLowerCase()}${query}`}>
-          <span className="ac-name headline">{label(code)}</span>
-          {pattern?.hook && <span className="ac-hook">{pattern.hook}</span>}
-          <span className="ac-meta">
-            {ids.length} codes · {pct(mastery(ids, data.states, now))}%
+      <Link className="ac-country" to={`/areacodes/${code.toLowerCase()}${query}`}>
+        <span className="ac-top">
+          <span className="ac-flag">
+            <FlagImage code={code} alt="" />
           </span>
-        </Link>
-      </li>
+          <span className="ac-name headline">{label(code)}</span>
+        </span>
+        {pattern?.hook && <span className="ac-hook">{pattern.hook}</span>}
+        <span className="ac-meta">
+          {ids.length} codes · {pct(mastery(ids, data.states, now))}%
+        </span>
+      </Link>
     );
   };
-  const empty = sections.pattern.length + sections.memorise.length === 0;
+  const empty = tabs.length === 0;
   return (
     <div className="page">
       <Header user={data.user} />
@@ -81,22 +102,33 @@ function Landing({ data }: { data: AppSnapshot }) {
             actions={[{ label: 'Back to games', to: '/games' }]}
           />
         )}
-        {sections.pattern.length > 0 && (
-          <section className="ac-section rise d1" aria-labelledby="ac-pattern">
-            <h2 id="ac-pattern" className="headline">
-              Codes with a pattern
-            </h2>
-            <p className="muted">The first digits tell you the part of the country.</p>
-            <ul className="ac-countries">{sections.pattern.map(card)}</ul>
-          </section>
-        )}
-        {sections.memorise.length > 0 && (
-          <section className="ac-section rise d2" aria-labelledby="ac-memorise">
-            <h2 id="ac-memorise" className="headline">
-              Codes to memorise
-            </h2>
-            <p className="muted">{NO_PATTERN}</p>
-            <ul className="ac-countries">{sections.memorise.map(card)}</ul>
+        {!empty && (
+          <section className="ac-section rise d1" aria-label="Countries">
+            <div className="ac-section-head">
+              <div className="segments" role="tablist" aria-label="Kind of codes">
+                {tabs.map(({ id, label: name }) => (
+                  <button
+                    key={id}
+                    type="button"
+                    role="tab"
+                    className="seg"
+                    aria-selected={id === active}
+                    onClick={() => setChosen(id)}
+                  >
+                    {name} <span className="seg-count">{sections[id].length}</span>
+                  </button>
+                ))}
+              </div>
+              <p className="muted">{blurb}</p>
+            </div>
+            <FitGrid
+              className="ac-countries"
+              label="Countries"
+              items={sections[active]}
+              reset={active}
+              keyOf={(code) => code}
+              render={card}
+            />
           </section>
         )}
       </main>
@@ -149,12 +181,6 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
         <CloseButton to={back} label="Back to area codes" />
       </div>
       <main className="ac-intro">
-        <header className="ac-intro-head rise">
-          <p className="kicker">{grouped ? 'Codes with a pattern' : 'Codes to memorise'}</p>
-          <h1 className="headline">{name} area codes</h1>
-          {pattern && <p className="ac-summary">{pattern.summary}</p>}
-          {!grouped && <p className="ac-note">{NO_PATTERN}</p>}
-        </header>
         <div className="ac-layout">
           <figure className="ac-map rise d1">
             {map ? (
@@ -176,10 +202,19 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
             )}
           </figure>
           <aside className="ac-side rise d2">
+            <header className="ac-intro-head">
+              <p className="kicker">{grouped ? 'Codes with a pattern' : 'Codes to memorise'}</p>
+              <h1 className="headline">{name} area codes</h1>
+              {pattern && <p className="ac-summary">{pattern.summary}</p>}
+              {!grouped && <p className="ac-note">{NO_PATTERN}</p>}
+            </header>
             {grouped ? (
               <>
                 <h2 className="ac-side-title">The key</h2>
-                <ol className="ac-legend" aria-label="Pattern key">
+                <ol
+                  className={legend.length > 6 ? 'ac-legend ac-legend-two' : 'ac-legend'}
+                  aria-label="Pattern key"
+                >
                   {legend.map((row) => (
                     <li key={row.key}>
                       <span

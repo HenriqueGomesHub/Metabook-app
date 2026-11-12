@@ -176,3 +176,28 @@
     transform: translateY(2px);
   }
 }
+
+/* an area answered as one (France's 04): its regions share a tone and lose their inner borders */
+.ddd-state.zone {
+  stroke-opacity: 0.18;
+}
+
+.ddd-state.zone.z0:not(.lock) {
+  fill: color-mix(in srgb, var(--surface) 92%, var(--ink));
+}
+
+.ddd-state.zone.z1:not(.lock) {
+  fill: color-mix(in srgb, var(--surface) 84%, var(--ink));
+}
+
+.ddd-state.zone.z2:not(.lock) {
+  fill: color-mix(in srgb, var(--surface) 76%, var(--ink));
+}
+
+.ddd-state.zone.z3:not(.lock) {
+  fill: color-mix(in srgb, var(--surface) 88%, var(--accent));
+}
+
+.ddd-state.zone.hot {
+  fill: color-mix(in srgb, var(--accent) 45%, var(--surface));
+}

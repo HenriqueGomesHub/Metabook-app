@@ -3,6 +3,7 @@ import { useEffect, useMemo } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { activeBlock } from '../app/dataActions';
+import { FitGrid } from '../components/FitGrid';
 import { Status } from '../components/Status';
 import { ActiveBlock } from './blocks/ActiveBlock';
 import { FinishedBlock } from './blocks/FinishedBlock';
@@ -42,13 +43,16 @@ function BlocksView({ data }: { data: AppSnapshot }) {
         <StartBlock data={data} now={now} onStart={startBlock} />
       )}
       {past.length > 0 && (
-        <section className="sheet" aria-label="Finished blocks">
+        <section className="sheet finished-sheet" aria-label="Finished blocks">
           <h2 className="headline">Finished blocks</h2>
-          <ul className="list">
-            {past.map((block) => (
-              <FinishedBlock key={block.id} data={data} block={block} />
-            ))}
-          </ul>
+          <FitGrid
+            className="list finished-list"
+            label="Finished blocks"
+            list
+            items={past}
+            keyOf={(block) => block.id}
+            render={(block) => <FinishedBlock data={data} block={block} />}
+          />
         </section>
       )}
     </Page>

@@ -1,12 +1,12 @@
 import { haversineKm, mastery, medalFor, pickTip, roundScore } from '@metabook/core';
 import type { PickedTip, Tip } from '@metabook/core';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { label } from '../app/labels';
 import { useRegionMap } from '../app/useRegionMaps';
-import { AreaCodeMap } from '../components/AreaCodeMap';
+import { AreaCodeMap, areaZones } from '../components/AreaCodeMap';
 import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Medal } from '../components/Medal';
@@ -14,7 +14,7 @@ import { PatternHint } from '../components/PatternHint';
 import { CloseButton } from '../components/Chip';
 import { Status } from '../components/Status';
 import { TipBox } from '../components/TipBox';
-import { areaCodeCountries } from '../data/areaCodes';
+import { areaCodeCountries, placedCodes } from '../data/areaCodes';
 import type { MapRegion } from '../data/content';
 import { pct } from './atlas/format';
 import './games/games.css';
@@ -71,6 +71,7 @@ function Play({
   onAgain: () => void;
 }) {
   const { answer, recordTipView } = useAppData();
+  const navigate = useNavigate();
   const now = useMemo(() => new Date(), []);
   const touch = useMemo(() => window.matchMedia?.('(hover: none)').matches ?? false, []);
   const map = useRegionMap(country);
@@ -128,19 +129,21 @@ function Play({
   const medal = medalFor(medalValue);
   const total = results.reduce((sum, r) => sum + r.points, 0);
 
+  // one control, not a row of chips that wraps: the page stays one screen tall
   const chips = countries.length > 1 && (
-    <nav className="ddd-countries" aria-label="Country">
-      {countries.map((code) => (
-        <Link
-          key={code}
-          to={`/games/areacode/${code.toLowerCase()}`}
-          className={code === country ? 'game-chip hot' : 'game-chip'}
-          aria-current={code === country ? 'page' : undefined}
-        >
-          {label(code)}
-        </Link>
-      ))}
-    </nav>
+    <label className="ddd-country">
+      <span className="sr-only">Country</span>
+      <select
+        value={country}
+        onChange={(event) => navigate(`/games/areacode/${event.target.value.toLowerCase()}`)}
+      >
+        {countries.map((code) => (
+          <option key={code} value={code}>
+            {label(code)}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 
   const header = (
@@ -148,11 +151,12 @@ function Play({
       <div className="ddd-bar rise">
         <CloseButton to="/games" label="Back to mini-games" />
         <div className="ddd-title">
+          {chips}
           <span>
             <svg className="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />
             </svg>
-            {name} · Area codes
+            {chips ? 'Area codes' : `${name} · Area codes`}
           </span>
           {cards.length > 0 && (
             <span className="medal-pill" title="Area-code mastery">
@@ -170,7 +174,6 @@ function Play({
           <b aria-live="polite">{fmt(total)} pts</b>
         </div>
       </div>
-      {chips}
     </>
   );
 
@@ -245,6 +248,14 @@ function Play({
     if (next) recordTipView(next.tip.id);
   }
 
+  // where codes cover whole areas (France's 04), the area is the answer, not one of its regions
+  const unit =
+    country === 'BR'
+      ? 'state'
+      : Object.keys(areaZones(placedCodes(all, country))).length > 0
+        ? 'area'
+        : 'region';
+
   function pick(code: string) {
     const guess = regions.get(code);
     if (picked || !guess || !card || !answerState) return;
@@ -289,15 +300,14 @@ function Play({
     <div className="page">
       {header}
       <main className="ddd-main">
-        <section className="ddd-side">
+        <section className={picked ? 'ddd-side answered' : 'ddd-side'}>
           <div className="ddd-prompt rise d1">
-            <p>{country === 'BR' ? 'Which state uses' : 'Which region uses'}</p>
+            <p>Which {unit} uses</p>
             <div key={index} className="ddd-code headline">
               {card.prompt.value}
             </div>
             <p>
-              {touch ? 'Tap' : 'Click'} the {country === 'BR' ? 'state' : 'region'}. Closer is
-              better.
+              {touch ? 'Tap' : 'Click'} the {unit}. Closer is better.
             </p>
           </div>
           {picked && result && answerState && (
@@ -310,7 +320,11 @@ function Play({
                       ? 'Exactly right'
                       : `You picked ${pickedState?.name ?? picked}`}
                 </p>
-                <h2 className="headline">{answerState.name}</h2>
+                <h2 className="headline">
+                  {(card.spans?.length ?? 0) >= 2 && unit === 'area'
+                    ? `${answerState.name} and ${card.spans?.length} more`
+                    : answerState.name}
+                </h2>
                 <PatternHint card={card} cards={all} />
               </div>
               <dl className="ddd-figures">
@@ -355,13 +369,15 @@ function Play({
                   ? 'Tap a region to answer'
                   : 'Hover a region to see its name'}
           </div>
-          <AreaCodeMap
-            country={country}
-            cards={all}
-            reveal={picked ? { answer: card.answer, picked } : undefined}
-            onPick={pick}
-            onHover={setHover}
-          />
+          <div className="ddd-map-box">
+            <AreaCodeMap
+              country={country}
+              cards={all}
+              reveal={picked ? { answer: card.answer, picked } : undefined}
+              onPick={pick}
+              onHover={setHover}
+            />
+          </div>
         </div>
       </main>
     </div>

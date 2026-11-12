@@ -52,40 +52,58 @@ function mount(path: string, repo = new MemoryRepository(), signedIn = true, mod
   return repo;
 }
 
+/** The country page's Learn tab. */
+async function openLearn() {
+  fireEvent.click(await screen.findByRole('tab', { name: 'Learn' }));
+  return screen.getByRole('region', { name: 'Learn' });
+}
+
 describe('Learn section', () => {
-  it('lists the country’s clues under Plonk It’s steps, with text, images and credit', async () => {
+  it('pages the country’s clues by Plonk It’s steps, each opening in full', async () => {
     mount('/atlas/PL');
-    const learn = await screen.findByRole('region', { name: 'Learn' });
-    const steps = within(learn).getAllByRole('heading', { level: 3 });
-    expect(steps.map((h) => h.textContent)).toEqual(['Identifying Poland', 'Regional clues']);
-    const titles = within(learn).getAllByRole('heading', { level: 4 });
-    expect(titles.map((h) => h.textContent)).toEqual([
-      'Bollard: red strip',
-      'Pole: holey poles',
-      'Language: Polish letters',
-      'Language: bilingual signs',
+    const learn = await openLearn();
+    const steps = within(learn).getAllByRole('option');
+    expect(steps.map((o) => o.textContent)).toEqual([
+      'Identifying Poland · 2',
+      'Regional clues · 2',
     ]);
-    // markdown: bold, and links that open in a new tab
-    expect(within(learn).getByText('red strip').tagName).toBe('STRONG');
-    const link = within(learn).getByRole('link', { name: 'Zakarpattia Oblast' });
-    expect(link.getAttribute('target')).toBe('_blank');
-    expect(within(learn).getByText('Pomeranian Voivodeship')).toBeTruthy();
-    expect(within(learn).getByText('Ukraine')).toBeTruthy();
-    expect(within(learn).getAllByText(/CC BY-NC-SA 4\.0/).length).toBe(4);
-    expect(within(learn).getByRole('button', { name: /Enlarge image 1 of Bollard/ })).toBeTruthy();
+    const titles = () => [...learn.querySelectorAll('.learn-card-title')].map((t) => t.textContent);
+    expect(titles()).toEqual(['Bollard: red strip', 'Pole: holey poles']);
     expect(
       within(learn)
         .getByRole('link', { name: /Study these clues/ })
         .getAttribute('href'),
     ).toBe('/session?country=PL&src=clues');
+
+    // a clue opens whole: markdown (bold, links that open in a new tab), pictures, credit
+    fireEvent.click(within(learn).getByRole('button', { name: /Bollard: red strip/ }));
+    const sheet = screen.getByRole('dialog', { name: 'Bollard: red strip' });
+    expect(within(sheet).getByText('red strip').tagName).toBe('STRONG');
+    const link = within(sheet).getByRole('link', { name: 'Zakarpattia Oblast' });
+    expect(link.getAttribute('target')).toBe('_blank');
+    expect(within(sheet).getByText(/CC BY-NC-SA 4\.0/)).toBeTruthy();
+    expect(within(sheet).getByRole('button', { name: /Enlarge image 1 of Bollard/ })).toBeTruthy();
+    // right goes on through the step
+    fireEvent.keyDown(window, { key: 'ArrowRight' });
+    expect(screen.getByRole('dialog', { name: 'Pole: holey poles' })).toBeTruthy();
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+
+    fireEvent.change(within(learn).getByRole('combobox'), { target: { value: '1' } });
+    expect(titles()).toEqual(['Language: Polish letters', 'Language: bilingual signs']);
+    expect(within(learn).getByText('Pomeranian Voivodeship')).toBeTruthy();
   });
 
   it('enlarges an image on tap', async () => {
     mount('/atlas/PL');
-    fireEvent.click(await screen.findByRole('button', { name: /Enlarge image 1 of Bollard/ }));
+    const learn = await openLearn();
+    fireEvent.click(within(learn).getByRole('button', { name: /Bollard: red strip/ }));
+    fireEvent.click(screen.getByRole('button', { name: /Enlarge image 1 of Bollard/ }));
+    expect(document.querySelector('.lightbox')).toBeTruthy();
+    fireEvent.keyDown(window, { key: 'Escape' });
+    expect(document.querySelector('.lightbox')).toBeNull();
+    // the clue's sheet is still open behind the viewer
     expect(screen.getByRole('dialog', { name: 'Bollard: red strip' })).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Close' }));
-    expect(screen.queryByRole('dialog')).toBeNull();
   });
 });
 
