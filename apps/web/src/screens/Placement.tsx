@@ -144,7 +144,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           outcome && (
             <Reveal
               {...verdictFor(card, { mode }, outcome)}
-              tip={null}
+              tips={[]}
               nextLabel={results.length + 1 === cards.length ? 'See result' : 'Continue'}
               onNext={next}
             />

@@ -65,6 +65,8 @@ describe('RegionMapCard without its map', () => {
 
   it('requeues a skipped card at the back of today’s session', async () => {
     const r = repo();
+    // region maps join the daily session only when the learner opts in
+    r.settings = { ...r.settings, regionsInDaily: true };
     renderApp('/session', r);
     expect(await screen.findByText('1 / 2')).toBeTruthy();
     // the flag may come first; answer it to reach the map card

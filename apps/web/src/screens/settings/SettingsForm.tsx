@@ -149,6 +149,16 @@ export function SettingsForm({
             refresh
           </span>
         </label>
+        <label className="field field-wide field-check">
+          <input
+            type="checkbox"
+            checked={draft.regionsInDaily ?? false}
+            onChange={(e) => set({ regionsInDaily: e.target.checked })}
+          />
+          <span>
+            Put states, regions and area codes in daily sessions too (they're always in the drills)
+          </span>
+        </label>
       </div>
       <div className="settings-foot">
         <div className="field">

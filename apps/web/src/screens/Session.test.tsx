@@ -51,8 +51,11 @@ describe('Session', () => {
     expect(screen.getByRole('dialog', { name: 'Got it' })).toBeTruthy();
     expect(screen.getByText('Yellow, green, red.')).toBeTruthy();
     expect(screen.getByText('Tip 1 of 2')).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', { name: 'Another tip' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Next tip' }));
     expect(screen.getByText('Place names end in -ai.')).toBeTruthy();
+    expect(screen.getByText('Tip 2 of 2')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Previous tip' }));
+    expect(screen.getByText('Yellow, green, red.')).toBeTruthy();
 
     await waitFor(() => expect(repo.reviews).toHaveLength(1));
     expect(repo.cardStates.map((s) => s.cardId)).toEqual(['flag:lt']);
