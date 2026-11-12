@@ -72,7 +72,7 @@ describe('Session reveal', () => {
     fireEvent.click(screen.getByRole('button', { name }));
     expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
     expect(screen.getByText('Tip p1')).toBeTruthy();
-    expect(screen.queryByRole('button', { name: 'Another tip' })).toBeNull();
+    expect(screen.queryByRole('button', { name: 'Next tip' })).toBeNull();
     // the map locks once answered
     expect(screen.getByRole('button', { name }).getAttribute('aria-disabled')).toBe('true');
     await waitFor(() => expect(r.reviews[0]).toMatchObject({ cardId: answer.id, correct: true }));
@@ -88,16 +88,16 @@ describe('Session reveal', () => {
     await waitFor(() => expect(r.confusions[0]).toMatchObject({ picked: 'AM' }));
   });
 
-  it('labels regions in options and verdicts, and offers another tip only for the main tip', async () => {
+  it('labels regions in options and verdicts, and pages only through the main tips', async () => {
     renderApp('/session?type=region', repo(3));
     for (let i = 0; i < 3; i++) {
       const buttons = await screen.findAllByRole('button', { name: /^\d/ });
       expect(buttons.map((b) => b.textContent).join()).not.toMatch(/northeast|\bnorth\b/);
       fireEvent.click(buttons[0] as HTMLElement);
       await screen.findByRole('dialog');
-      // Only the answer's own tip box counts toward "Another tip"; aside tips rotate separately.
-      const rotates = screen.queryByText('Tip 1 of 2') ?? screen.queryByText('Tip 2 of 2');
-      expect(!!screen.queryByRole('button', { name: 'Another tip' })).toBe(!!rotates);
+      // only the answer's own tips are paged; the aside keeps its one tip
+      const pages = !!screen.queryByText('Tip 1 of 2');
+      expect(!!screen.queryByRole('button', { name: 'Next tip' })).toBe(pages);
       fireEvent.keyDown(window, { key: ' ' });
     }
   });

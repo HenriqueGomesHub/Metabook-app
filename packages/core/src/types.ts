@@ -239,6 +239,11 @@ export interface Settings {
   sessionMinutes?: number;
   /** played GeoGuessr before: more new cards from the first day, since most are only a refresh */
   returning?: boolean;
+  /**
+   * states, regions and area codes in the daily session too; off, they are only drilled, and the
+   * daily session teaches countries
+   */
+  regionsInDaily?: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -251,6 +256,7 @@ export const DEFAULT_SETTINGS: Settings = {
   focusCountries: [],
   sessionMinutes: 20,
   returning: false,
+  regionsInDaily: false,
 };
 
 export type Medal = 'gold' | 'silver' | 'bronze' | null;

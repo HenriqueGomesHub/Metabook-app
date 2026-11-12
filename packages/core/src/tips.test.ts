@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { pickTip } from './tips';
+import { cardContext, pickTip, rankTips } from './tips';
 import type { Tip, TipView } from './types';
 
 const tip = (id: string, scope = 'any', answer = 'Brazil'): Tip => ({
@@ -77,5 +77,41 @@ describe('pickTip', () => {
 
   it('returns null when no tip matches', () => {
     expect(pickTip(tips, 'Chile', 'flag', [])).toBeNull();
+  });
+});
+
+describe('rankTips', () => {
+  const ua = (id: string, text: string): Tip => ({ ...tip(id, 'lookalike', 'Ukraine'), text });
+  const all = [
+    ua('a', 'Ukrainian uses і, ї, є and ґ, which Russian lacks.'),
+    ua('b', 'If you see "вул." for street, it is Ukraine.'),
+    ua('c', 'Yellow and blue flags on poles.'),
+  ];
+
+  it('puts the tip about what the card shows first', () => {
+    const context = 'Street sign: вул. Шевченка';
+    expect(rankTips(all, 'Ukraine', 'lookalike', [], context).map((t) => t.id)).toEqual([
+      'b',
+      'a',
+      'c',
+    ]);
+  });
+
+  it('ranks by shared special letters too', () => {
+    const context = 'Їжак і пес';
+    expect(rankTips(all, 'Ukraine', 'lookalike', [], context)[0]?.id).toBe('a');
+  });
+
+  it('falls back to least recently seen without context', () => {
+    const views = [view('a', '2026-03-01T00:00:00Z')];
+    expect(rankTips(all, 'Ukraine', 'lookalike', views).map((t) => t.id)).toEqual(['b', 'c', 'a']);
+  });
+
+  it('reads a card as its text, image description and reason', () => {
+    const card = {
+      prompt: { kind: 'image', value: 'x.webp', alt: 'yellow bollard' },
+      explain: 'only here',
+    } as Parameters<typeof cardContext>[0];
+    expect(cardContext(card)).toBe('yellow bollard only here');
   });
 });

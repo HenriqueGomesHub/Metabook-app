@@ -1,6 +1,6 @@
 import type { Card } from '@metabook/core';
 import { describe, expect, it } from 'vitest';
-import { mapsOf, pairScope } from './stats';
+import { isRegional, mapsOf, pairScope } from './stats';
 
 const areacode = (answer: string): Card => ({
   id: `ddd:${answer}`,
@@ -29,5 +29,15 @@ describe('pairScope', () => {
 describe('mapsOf', () => {
   it('lists the maps that scoped keys name, once each', () => {
     expect(mapsOf(['ca:PE', 'ca:NL', 'Serbia', 'pl:MZ'])).toEqual(['ca', 'pl']);
+  });
+});
+
+describe('isRegional', () => {
+  const flag: Card = { ...areacode('PL'), id: 'flag:PL', type: 'flag', country: 'PL' };
+  it('keeps country cards and flags out, area codes, regions and maps in', () => {
+    expect(isRegional(flag)).toBe(false);
+    expect(isRegional(areacode('SP'))).toBe(true);
+    expect(isRegional({ ...flag, type: 'region' })).toBe(true);
+    expect(isRegional({ ...flag, map: 'pl' } as Card)).toBe(true);
   });
 });

@@ -194,30 +194,44 @@ export function interleave(cards: Card[]): Card[] {
   return out;
 }
 
-function contrastItems(confusion: Confusion, cards: Card[], rng: Rng): SessionItem[] {
+/**
+ * Cards a contrast round can ask: country-level ones. States, regions and area codes are told apart
+ * in their drills; the daily session teaches countries.
+ */
+const isCountryLevel = (card: Card) =>
+  !card.map && card.type !== 'areacode' && card.type !== 'region' && card.type !== 'which';
+
+/**
+ * A pair is only drilled when each side has at least this many different cards, so a contrast
+ * question is a new picture of the difference, not a card already answered from memory.
+ */
+export const CONTRAST_MIN_VARIETY = 10;
+
+function contrastItems(
+  confusion: Confusion,
+  cards: Card[],
+  states: Record<string, CardState>,
+  used: Set<string>,
+  rng: Rng,
+): SessionItem[] {
   // map-scoped pairs ("ca:NL") are states, drilled on their map: never a flag or country round
   if (isMapKey(confusion.picked) || isMapKey(confusion.truth)) return [];
-  const isSide = (card: Card, side: string) => card.answer === side || card.country === side;
-  // regions-map cards are drilled on their map, not as a binary pick between two state codes
-  const sides = cards
-    .filter((card) => !card.map)
-    .filter((card) => isSide(card, confusion.truth))
-    .map((truth) => [
-      truth,
-      cards.find((card) => card.type === truth.type && isSide(card, confusion.picked)),
-    ])
-    .find((pair): pair is [Card, Card] => pair[1] !== undefined);
-  if (!sides) return [];
-
   if (confusion.contrastStreak >= CONTRAST_STREAK_TO_RESOLVE) return [];
-  // one question per pair a day, on a random side: the pair resolves over several days, never
-  // as a block of the same two cards back to back
+  const side = (answer: string) =>
+    cards.filter((card) => isCountryLevel(card) && card.answer === answer && !used.has(card.id));
+  const truth = side(confusion.truth);
+  const picked = side(confusion.picked);
+  if (truth.length < CONTRAST_MIN_VARIETY || picked.length < CONTRAST_MIN_VARIETY) return [];
+  // a different card of either side each day; ones already studied first, since telling them
+  // apart is the point, not meeting a clue for the first time
+  const all = [...truth, ...picked];
+  const studied = all.filter((card) => (states[card.id]?.state ?? 'new') !== 'new');
+  const from = studied.length >= 2 ? studied : all;
+  const card = from[Math.floor(rng() * from.length)] as Card;
+  used.add(card.id);
+  // one question per pair a day: the pair resolves over several days, never as a block
   return [
-    {
-      cardId: (sides[rng() < 0.5 ? 0 : 1] as Card).id,
-      mode: 'binary' as const,
-      contrastPair: [confusion.picked, confusion.truth],
-    },
+    { cardId: card.id, mode: 'binary' as const, contrastPair: [confusion.picked, confusion.truth] },
   ];
 }
 
@@ -358,8 +372,10 @@ export function buildSession(input: {
     .slice(0, missing)
     .map(({ card }) => card);
 
+  // the session's own cards are not asked a second time as a contrast question
+  const used = new Set([...picked, ...blockExtras].map((card) => card.id));
   const contrast = activePairs(confusions, now)
-    .flatMap((c) => contrastItems(c, cards, rng))
+    .flatMap((c) => contrastItems(c, cards, states, used, rng))
     .slice(0, MAX_CONTRAST);
   const contrastIds = new Set(contrast.map((item) => item.cardId));
   const notContrast = (card: Card) => !contrastIds.has(card.id);

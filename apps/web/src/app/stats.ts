@@ -77,8 +77,19 @@ function today(data: AppSnapshot, now: Date) {
  */
 export const sessionCards = (data: AppSnapshot): Card[] =>
   data.content.cards.filter(
-    (card) => !isClueCard(card) && card.type !== 'live' && !isMemoriseAreaCode(card),
+    (card) =>
+      !isClueCard(card) &&
+      card.type !== 'live' &&
+      !isMemoriseAreaCode(card) &&
+      (data.settings.regionsInDaily || !isRegional(card)),
   );
+
+/**
+ * Cards about a country's inside (which state, which area code, which region): drilled on their
+ * own, and in the daily session only when the learner asks for them.
+ */
+export const isRegional = (card: Card): boolean =>
+  Boolean(card.map) || card.type === 'areacode' || card.type === 'region';
 
 /**
  * Today's session, with the daily caps reduced by what was already reviewed and introduced

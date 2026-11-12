@@ -402,10 +402,32 @@ a.credit:hover {
   font-variant-numeric: tabular-nums;
 }
 
-.reveal-meta .link {
-  margin-left: auto;
-  padding: 4px 0;
-  font-size: 12px;
+.reveal-tip {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.tip-pager {
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.tip-step {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.tip-step:hover {
+  border-color: var(--ink);
 }
 
 .reveal-aside {

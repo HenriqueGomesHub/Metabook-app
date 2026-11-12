@@ -7,7 +7,9 @@ import {
   modeFor,
   nextPracticeItem,
   normalizeAnswer,
+  cardContext,
   pickTip,
+  rankTips,
   practiceProgress,
   recordPracticeAnswer,
   requeueMissed,
@@ -18,7 +20,7 @@ import type {
   CardState,
   CardType,
   MetaSubject,
-  PickedTip,
+  Tip,
   PracticeState,
   SessionItem,
 } from '@metabook/core';
@@ -414,7 +416,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
 }
 
 interface Shown {
-  tip: PickedTip | null;
+  tips: Tip[];
   aside: RevealProps['aside'];
 }
 
@@ -466,19 +468,18 @@ function CardRunner({
    * The answer's tip; area codes share pattern tips keyed "ddd:br:pattern" across all their cards,
    * and Which clue cards (whose answer is an image id) use the country's tips.
    */
-  function mainTip(): PickedTip | null {
+  function mainTips(): Tip[] {
     const { tips } = data.content;
     const key = card.type === 'which' ? label(card.country) : card.answer;
-    return (
-      pickTip(tips, key, card.type, data.tipViews) ??
-      (card.type === 'areacode'
-        ? pickTip(tips, card.id.replace(/:[^:]*$/, ':pattern'), card.type, data.tipViews)
-        : null)
-    );
+    const context = cardContext(card);
+    const own = rankTips(tips, key, card.type, data.tipViews, context);
+    return own.length > 0 || card.type !== 'areacode'
+      ? own
+      : rankTips(tips, card.id.replace(/:[^:]*$/, ':pattern'), card.type, data.tipViews, context);
   }
 
   function showTips(asideKey: string | undefined) {
-    const tip = mainTip();
+    const tips = mainTips();
     const asideTip = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
       : null;
@@ -486,16 +487,9 @@ function CardRunner({
     const aside: Shown['aside'] = asideTip
       ? { label: otherSide ? `And for ${name}` : `Spotting ${name}`, tip: asideTip }
       : undefined;
-    setShown({ tip, aside });
-    for (const picked of [tip, asideTip]) if (picked) recordTipView(picked.tip.id);
-  }
-
-  /** Steps the answer's tip through its rotation; the aside keeps its own tip. */
-  function anotherTip() {
-    if (!shown) return;
-    const tip = mainTip();
-    if (tip) recordTipView(tip.tip.id);
-    setShown({ ...shown, tip });
+    setShown({ tips, aside });
+    // the first tip is recorded by the reveal as it comes on screen
+    if (asideTip) recordTipView(asideTip.tip.id);
   }
 
   function onAnswer(given: string) {
@@ -534,7 +528,7 @@ function CardRunner({
   const reveal = verdict && shown && (
     <Reveal
       {...verdict}
-      tip={shown.tip}
+      tips={shown.tips}
       aside={shown.aside}
       extra={
         card.clue ? (
@@ -544,7 +538,7 @@ function CardRunner({
         )
       }
       onNext={onNext}
-      onAnotherTip={anotherTip}
+      onTipShown={(tip) => recordTipView(tip.id)}
     />
   );
 

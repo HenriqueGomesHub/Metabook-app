@@ -48,6 +48,7 @@ const seen = (cardId: string, due: string, reps = 5): CardState => ({
 });
 
 const settings = { ...DEFAULT_SETTINGS, maxReviewsPerDay: 10, newPerDay: 5 };
+const baseSettings = settings;
 const rng = () => mulberry32(42);
 const typeById = (cards: Card[]) => new Map(cards.map((c) => [c.id, c.type]));
 
@@ -370,11 +371,17 @@ describe('buildSession', () => {
   });
 
   describe('contrast questions', () => {
+    // ten different Spot it cards a side, so a contrast question is never one already answered
+    const sideCards = (code: string, name: string) =>
+      Array.from({ length: 10 }, (_, i) => card(`spot:${code}:${i}`, 'spot', code, name));
     const cards = [
-      card('flag:rs', 'flag', 'RS', 'Serbia'),
-      card('flag:bg', 'flag', 'BG', 'Bulgaria'),
+      ...sideCards('rs', 'Serbia'),
+      ...sideCards('bg', 'Bulgaria'),
       card('flag:ee', 'flag', 'EE', 'Estonia'),
     ];
+    // no new cards: the pair's cards are left free for the contrast question
+    const settings = { ...baseSettings, newPerDay: 0 };
+    const ids = cards.filter((c) => c.answer !== 'Estonia').map((c) => c.id);
     const confusion = (
       count: number,
       contrastStreak = 0,
@@ -396,10 +403,10 @@ describe('buildSession', () => {
       expect(items).toHaveLength(1);
       expect(items[0]?.mode).toBe('binary');
       expect(items[0]?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
-      expect(['flag:rs', 'flag:bg']).toContain(items[0]?.cardId);
+      expect(ids).toContain(items[0]?.cardId);
     });
 
-    it('picks the side at random', () => {
+    it('picks a different card of either side from day to day', () => {
       const sides = new Set<string>();
       for (let seed = 1; seed <= 30; seed++) {
         const item = buildSession({
@@ -412,13 +419,47 @@ describe('buildSession', () => {
         }).queue.find((i) => i.contrastPair);
         sides.add(item?.cardId ?? '');
       }
-      expect(sides).toEqual(new Set(['flag:rs', 'flag:bg']));
+      expect([...sides].some((id) => id.startsWith('spot:rs'))).toBe(true);
+      expect([...sides].some((id) => id.startsWith('spot:bg'))).toBe(true);
+      expect(sides.size).toBeGreaterThan(6);
+    });
+
+    it('skips a pair with fewer than ten different cards a side', () => {
+      const few = [...sideCards('rs', 'Serbia'), ...sideCards('bg', 'Bulgaria').slice(0, 9)];
+      const queue = buildSession({
+        cards: few,
+        states: {},
+        confusions: [confusion(3)],
+        settings,
+        now,
+        rng: rng(),
+      }).queue;
+      expect(queue.some((i) => i.contrastPair)).toBe(false);
+    });
+
+    it('never turns states or area codes into a contrast round', () => {
+      // Brazil's area codes answer with bare state codes: Alagoas vs Ceará is a drill, not a daily round
+      const codes = [
+        ...Array.from({ length: 10 }, (_, i) => card(`ddd:al:${i}`, 'areacode', 'BR', 'AL')),
+        ...Array.from({ length: 10 }, (_, i) => card(`ddd:ce:${i}`, 'areacode', 'BR', 'CE')),
+      ];
+      const queue = buildSession({
+        cards: codes,
+        states: {},
+        confusions: [{ ...confusion(4), picked: 'AL', truth: 'CE' }],
+        settings,
+        now,
+        rng: rng(),
+      }).queue;
+      expect(queue.some((i) => i.contrastPair)).toBe(false);
     });
 
     it('spreads contrast questions through the queue, never first or side by side', () => {
-      const many = Array.from({ length: 12 }, (_, i) =>
-        card(`f${i}`, 'flag', `F${i}`, `Land ${i}`),
-      );
+      const many = Array.from({ length: 6 }, (_, land) =>
+        Array.from({ length: 20 }, (_, i) =>
+          card(`f${land}:${i}`, 'spot', `F${land}`, `Land ${land}`),
+        ),
+      ).flat();
       const pairs: Confusion[] = [0, 2, 4].map((i) => ({
         ...confusion(3),
         picked: `Land ${i}`,
@@ -428,7 +469,7 @@ describe('buildSession', () => {
         cards: many,
         states: {},
         confusions: pairs,
-        settings,
+        settings: baseSettings,
         now,
         rng: rng(),
       }).queue;
@@ -498,9 +539,8 @@ describe('buildSession', () => {
       expect(queue.filter((i) => i.mode === 'binary')).toEqual([]);
     });
 
-    it('matches by country code too, and skips pairs without cards of a shared type', () => {
-      expect(contrast({ ...confusion(3), picked: 'RS', truth: 'BG' })).toHaveLength(1);
-      expect(contrast({ ...confusion(3), picked: 'RS', truth: 'XX' })).toEqual([]);
+    it('skips a pair whose side has no cards', () => {
+      expect(contrast({ ...confusion(3), picked: 'Serbia', truth: 'Nowhere' })).toEqual([]);
     });
   });
 });
@@ -561,14 +601,17 @@ describe('buildSession catch-up and dedup', () => {
   });
 
   it('does not repeat a contrast-round card in the regular list', () => {
-    const cards = [
-      card('flag:rs', 'flag', 'RS', 'Serbia'),
-      card('flag:bg', 'flag', 'BG', 'Bulgaria'),
-    ];
-    const states = {
-      'flag:rs': seen('flag:rs', yesterday),
-      'flag:bg': seen('flag:bg', yesterday),
-    };
+    const cards = ['rs', 'bg'].flatMap((code) =>
+      Array.from({ length: 25 }, (_, i) =>
+        card(
+          `spot:${code}:${i}`,
+          'spot',
+          code.toUpperCase(),
+          code === 'rs' ? 'Serbia' : 'Bulgaria',
+        ),
+      ),
+    );
+    const states = Object.fromEntries(cards.map((c) => [c.id, seen(c.id, yesterday)]));
     const confusions: Confusion[] = [
       {
         picked: 'Serbia',
@@ -582,7 +625,6 @@ describe('buildSession catch-up and dedup', () => {
     const contrastItem = queue.find((i) => i.contrastPair);
     expect(contrastItem?.contrastPair).toEqual(['Serbia', 'Bulgaria']);
     expect(queue.filter((i) => i.cardId === contrastItem?.cardId)).toHaveLength(1);
-    expect(queue).toHaveLength(2);
   });
 });
 
