@@ -41,20 +41,34 @@ function baseVerdict(
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   if (card.type === 'which') return whichVerdict(card, outcome);
   const scope = scopeOf(card);
-  const answer = answerLabel(card);
-  if (outcome.correct && outcome.given !== card.answer && card.spans?.includes(outcome.given)) {
+  // a code covering a whole area (France's 04) is answered by the area, named by its key region;
+  // one spilling into a single neighbour still names the neighbour ("Mainly …; it also covers …")
+  const area = card.type === 'areacode' && (card.spans?.length ?? 0) >= 2;
+  const answer = area ? `the area around ${answerLabel(card)}` : answerLabel(card);
+  if (
+    outcome.correct &&
+    !area &&
+    outcome.given !== card.answer &&
+    card.spans?.includes(outcome.given)
+  ) {
     return {
       verdict: 'Got it',
       tone: 'right',
       detail: `Mainly ${answer}; it also covers ${label(outcome.given, scope)}`,
     };
   }
-  if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: answer };
+  if (outcome.correct) {
+    return {
+      verdict: 'Got it',
+      tone: 'right',
+      detail: area ? `${answerLabel(card)} and ${card.spans?.length} more` : answer,
+    };
+  }
   if (!outcome.given) return { verdict: `It’s ${answer}`, tone: 'neutral' };
   const detail = item.contrastPair
     ? 'Streak reset'
     : item.mode === 'recall' || item.mode === 'map' || card.type === 'areacode'
-      ? `You said ${label(outcome.given, scope)}`
+      ? `${area ? 'You picked the area around' : 'You said'} ${label(outcome.given, scope)}`
       : undefined;
   return { verdict: `Not quite — it’s ${answer}`, tone: 'wrong', detail };
 }

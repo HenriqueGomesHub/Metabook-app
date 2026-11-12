@@ -209,6 +209,8 @@ describe('Country', () => {
       'Where in Colombia',
     ]);
     expect(links[0]?.getAttribute('href')).toBe('/session?country=CO&map=1');
+    // misses have their own tab
+    fireEvent.click(screen.getByRole('tab', { name: /Misses · 1/ }));
     expect(await screen.findByText('Boyacá / Antioquia')).toBeTruthy();
   });
 

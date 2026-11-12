@@ -173,8 +173,8 @@ function TodayView({ data }: { data: AppSnapshot }) {
 
               {progress.length > 0 && (
                 <>
-                  <div className="rule" />
-                  <div>
+                  <div className="rule today-learning" />
+                  <div className="today-learning">
                     <div className="panel-row panel-title">
                       <span>Learning now</span>
                       <span className="muted small">clue cards introduced</span>

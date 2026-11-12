@@ -1,0 +1,104 @@
+/* FitGrid: fills the space it is given, pages instead of scrolling */
+.fit {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fit-box {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.fit-box > * {
+  animation: fit-in 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.fit-cell {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.fit-cell > * {
+  flex: 1;
+}
+
+@keyframes fit-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.fit-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: none;
+}
+
+.fit-step {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.fit-step:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.fit-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.fit-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--line);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    width 0.2s ease;
+}
+
+.fit-dot.on {
+  width: 18px;
+  border-radius: 4px;
+  background: var(--ink);
+}
+
+.fit-count {
+  min-width: 56px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fit-box > * {
+    animation: none;
+  }
+}
+
+.fit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

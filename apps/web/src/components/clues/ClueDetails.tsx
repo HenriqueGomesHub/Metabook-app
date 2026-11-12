@@ -14,6 +14,12 @@ import './clues.css';
 /** Words after "Family:" short enough to be a raw source tag ("Shitcam", "Unique car"). */
 const TAG_WORDS = 3;
 
+/** Pictures the short answer-panel version shows. */
+const COMPACT_IMAGES = 3;
+
+/** Countries the short version names in "Looks the same in" before "and n more". */
+const COMPACT_NAMES = 6;
+
 /**
  * The heading a clue shows. Google car and coverage titles are often just the source's tag
  * ("Coverage: Shitcam"); with a summary to say what it means, they read as the family name.
@@ -51,6 +57,8 @@ export function ClueDetails({
   images = true,
   lookalikes = true,
   teachSame = false,
+  lead: showLead = true,
+  onMore,
   children,
 }: {
   clue: Clue;
@@ -59,6 +67,13 @@ export function ClueDetails({
   lookalikes?: boolean;
   /** Learn page: spell out what "same look" means for clues shared with other countries */
   teachSame?: boolean;
+  /** false where the prompt already showed the summary (the Clue quiz) */
+  lead?: boolean;
+  /**
+   * A short version for the answer panel: at most a row of pictures, no captions, and instead of
+   * "More detail" a button calling this, which opens the whole clue
+   */
+  onMore?(): void;
   children?: ReactNode;
 }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -82,7 +97,7 @@ export function ClueDetails({
         <Heading className="clue-title">{clueHeading(clue)}</Heading>
         {clue.region && <span className="learn-region">{clue.region}</span>}
       </div>
-      {lead ? (
+      {!showLead ? null : lead ? (
         <Glossed className="clue-summary" text={lead.lead} />
       ) : (
         text === undefined && <p className="clue-summary clue-text-loading">Loading…</p>
@@ -92,7 +107,12 @@ export function ClueDetails({
           {sameAs.length > 0 && (
             <li className="clue-same">
               <span className="clue-compare-label">Looks the same in</span>{' '}
-              {sameAs.map((code) => label(code.toUpperCase())).join(', ')}
+              {(onMore ? sameAs.slice(0, COMPACT_NAMES) : sameAs)
+                .map((code) => label(code.toUpperCase()))
+                .join(', ')}
+              {onMore &&
+                sameAs.length > COMPACT_NAMES &&
+                ` and ${sameAs.length - COMPACT_NAMES} more`}
               {teachSame && (
                 <span className="clue-compare-note">
                   {' '}
@@ -111,7 +131,7 @@ export function ClueDetails({
       )}
       {images && shown.length > 0 && (
         <div className="clue-images">
-          {shown.map((image, i) => (
+          {(onMore ? shown.slice(0, COMPACT_IMAGES) : shown).map((image, i) => (
             <figure key={image.id} className="clue-figure">
               <button
                 type="button"
@@ -122,12 +142,21 @@ export function ClueDetails({
               >
                 <ClueImg image={image} alt={image.caption ?? ''} fit="cover" />
               </button>
-              {image.caption && <figcaption>{image.caption}</figcaption>}
+              {image.caption && !onMore && <figcaption>{image.caption}</figcaption>}
             </figure>
           ))}
         </div>
       )}
-      {text && more && (
+      {onMore &&
+        (more ||
+          shown.length > COMPACT_IMAGES ||
+          shown.some((i) => i.caption) ||
+          sameAs.length > COMPACT_NAMES) && (
+          <button type="button" className="link clue-more-link" onClick={onMore}>
+            The whole clue{shown.length > COMPACT_IMAGES ? `, all ${shown.length} pictures` : ''}
+          </button>
+        )}
+      {!onMore && text && more && (
         <details className="clue-more">
           <summary>More detail</summary>
           <div className="clue-text">

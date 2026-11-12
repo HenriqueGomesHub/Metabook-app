@@ -38,7 +38,7 @@ export function FinishedBlock({ data, block }: { data: AppSnapshot; block: Train
   ).length;
   const rows = block.final ? compareBlocks(block.targets, block.baseline, block.final) : [];
   return (
-    <li>
+    <div className="finished-block">
       <div className="sheet-head">
         <h3 className="headline">{formatDayRange(block.startsOn, block.endsOn)}</h3>
         <span className="note">
@@ -63,6 +63,6 @@ export function FinishedBlock({ data, block }: { data: AppSnapshot; block: Train
           ))}
         </dl>
       )}
-    </li>
+    </div>
   );
 }

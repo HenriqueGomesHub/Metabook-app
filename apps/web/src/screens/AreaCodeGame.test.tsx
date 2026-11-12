@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { AppDataProvider } from '../app/AppData';
@@ -67,28 +67,27 @@ function mount(path: string, repo = new MemoryRepository()) {
 }
 
 describe('Area codes outside Brazil', () => {
-  it('plays on the country’s regions map, with country chips', async () => {
+  it('plays on the country’s regions map, with a country switcher', async () => {
     mount('/games/areacode/fr');
-    expect(await screen.findByText('France · Area codes')).toBeTruthy();
-    const chips = screen.getByRole('navigation', { name: 'Country' });
-    expect(within(chips).getByRole('link', { name: 'Brazil' }).getAttribute('href')).toBe(
-      '/games/areacode/br',
-    );
-    expect(within(chips).getByRole('link', { name: 'France' }).getAttribute('aria-current')).toBe(
-      'page',
-    );
-    // a region the code also covers counts as right, and the main one is named
+    expect(await screen.findByText('Area codes')).toBeTruthy();
+    // the other countries are one pick away
+    const country = screen.getByRole('combobox', { name: 'Country' }) as HTMLSelectElement;
+    expect(country.value).toBe('FR');
+    expect([...country.options].map((o) => o.textContent)).toEqual(['Brazil', 'France']);
+    // the code covers an area: it is asked and answered as one, picked anywhere inside it
+    expect(screen.getByText('Which area uses')).toBeTruthy();
     fireEvent.click(await screen.findByRole('button', { name: 'Hauts-de-Seine' }));
-    expect(await screen.findByText('Right: it also covers Hauts-de-Seine')).toBeTruthy();
-    expect(screen.getByRole('heading', { name: 'Paris' })).toBeTruthy();
+    expect(await screen.findByText('Exactly right')).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Paris and 3 more' })).toBeTruthy();
     // the answer names the code's group from content/areacodes/patterns.json
     expect(screen.getByText(/= Île-de-France/).textContent).toBe('1 = Île-de-France');
   });
 
-  it('drills area codes per country through practice, a span counting as right', async () => {
+  it('drills area codes per country through practice, the whole area counting as right', async () => {
     const repo = mount('/session?type=areacode&country=FR');
+    expect(await screen.findByText(/which area uses/)).toBeTruthy();
     fireEvent.click(await screen.findByRole('button', { name: 'Seine-Saint-Denis' }));
-    expect(await screen.findByText(/Mainly Paris; it also covers Seine-Saint-Denis/)).toBeTruthy();
+    expect(await screen.findByText('Paris and 3 more')).toBeTruthy();
     expect(screen.getByText(/= Île-de-France/)).toBeTruthy();
     await waitFor(() =>
       expect(repo.reviews[0]).toMatchObject({ cardId: 'ddd:fr:1', correct: true }),
@@ -102,12 +101,11 @@ describe('Area codes outside Brazil', () => {
     expect(repo.confusions[0]).toMatchObject({ picked: 'fr:35', truth: 'fr:75' });
   });
 
-  it('opens each country’s pattern page from the Drills tile', async () => {
+  it('opens the area-codes page from the Drills tile, which picks the country', async () => {
     mount('/drills');
-    const chips = await screen.findByRole('navigation', { name: 'Area codes by country' });
-    expect(within(chips).getByRole('link', { name: 'France' }).getAttribute('href')).toBe(
-      '/areacodes/fr?via=drill',
-    );
+    await screen.findByText('Area codes');
     expect(document.querySelector('a.tile[href="/areacodes?via=drill"]')).toBeTruthy();
+    // no per-country chips on Drills: the countries are chosen on the area-codes page
+    expect(screen.queryByRole('navigation', { name: 'Area codes by country' })).toBeNull();
   });
 });

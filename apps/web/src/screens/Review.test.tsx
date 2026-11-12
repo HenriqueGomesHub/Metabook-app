@@ -74,7 +74,7 @@ describe('Review', () => {
     ];
     renderScreens('/review', repo);
     const items = await screen.findAllByRole('listitem');
-    expect(items[0]?.className).toContain('round-miss');
-    expect(items[1]?.className).not.toContain('round-miss');
+    expect(items[0]?.querySelector('.round')?.className).toContain('round-miss');
+    expect(items[1]?.querySelector('.round')?.className).not.toContain('round-miss');
   });
 });

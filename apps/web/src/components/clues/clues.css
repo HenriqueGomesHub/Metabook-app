@@ -384,16 +384,27 @@
 /* Answer panel of clue cards */
 
 .reveal-clue {
-  padding-top: 12px;
+  padding-top: 10px;
   border-top: 1px solid var(--line-soft);
 }
 
 .reveal-clue .clue-images {
-  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .reveal-clue .clue-summary {
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.reveal-clue .clue-details {
+  gap: 8px;
+}
+
+.clue-more-link {
+  align-self: flex-start;
+  padding: 2px 0;
+  font-size: 13px;
 }
 
 .reveal-family {
@@ -405,4 +416,103 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+/* one clue over the page: pictures on the left, words on the right */
+.clue-sheet-back {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgb(0 0 0 / 0.72);
+  animation: fade-in 0.2s ease both;
+}
+
+.clue-sheet {
+  width: min(1040px, 100%);
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 22px 22px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.clue-sheet-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clue-sheet-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.clue-sheet .clue-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 10px 24px;
+  align-content: start;
+  min-height: 0;
+}
+
+.clue-sheet .clue-details > * {
+  grid-column: 2;
+}
+
+.clue-sheet .clue-images {
+  grid-column: 1;
+  grid-row: 1 / span 12;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+}
+
+.clue-sheet .clue-images:has(> :only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.clue-sheet .clue-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .clue-sheet-back {
+    padding: 12px;
+  }
+
+  .clue-sheet {
+    padding: 14px;
+  }
+
+  .clue-sheet .clue-details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .clue-sheet .clue-details > *,
+  .clue-sheet .clue-images {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .clue-sheet .clue-images {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .clue-sheet .clue-figure figcaption {
+    display: none;
+  }
 }

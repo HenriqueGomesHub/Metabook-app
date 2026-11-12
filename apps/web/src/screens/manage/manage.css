@@ -6,9 +6,11 @@
 }
 
 .manage {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   max-width: 920px;
 }
 
@@ -312,22 +314,55 @@ input[type='range'] {
 
 /* Review */
 
+/* Game review: rounds paged to the screen */
+.round-sheet {
+  flex: 1;
+  min-height: 0;
+  padding: 14px 18px;
+}
+
+.round-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
+}
+
 .round {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
   gap: 12px;
+  align-items: baseline;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.round-miss {
+  background: rgba(217, 163, 94, 0.08);
+}
+
+.round-day {
+  font-size: 12px;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.round-body {
+  min-width: 0;
 }
 
 .round-line {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap;
   gap: 4px 16px;
 }
 
 .round-main {
-  font-size: 17px;
+  min-width: 0;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .round-miss .round-main strong {
@@ -336,20 +371,31 @@ input[type='range'] {
 }
 
 .round-meta {
-  font-size: 13px;
+  flex: none;
+  font-size: 12px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
-.list > li.round-miss {
-  margin: 6px 0;
-  padding: 18px 20px;
-  border: 0;
-  border-radius: 18px;
-  background: rgba(217, 163, 94, 0.08);
+.round-tip {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.round-tip span {
+  color: var(--warn);
 }
 
 /* Blocks */
+.finished-sheet {
+  flex: 1;
+  min-height: 0;
+}
 
 .big-row {
   display: flex;
@@ -593,4 +639,42 @@ input[type='range'] {
 
 .log-error {
   grid-column: 1 / -1;
+}
+
+/* Settings: the study form in three columns, so it fits one screen */
+.settings-fields {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px 18px;
+}
+
+.settings-fields input:not([type='range'], [type='checkbox']) {
+  height: 42px;
+}
+
+.settings-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.settings-foot .actions {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .sheet:has(.settings-fields) {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .settings-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 12px;
+  }
+
+  .settings-fields .field-check {
+    font-size: 13px;
+  }
 }
