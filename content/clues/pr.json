@@ -26,7 +26,7 @@
       "id": "pr-4QdF",
       "step": 0,
       "order": 1,
-      "family": "other",
+      "family": "coverage",
       "title": "Coverage: US territory",
       "text": [
         "Puerto Rico is a United States overseas territory. As such, it is counted as **the US** for country streaks purposes."
@@ -49,7 +49,7 @@
       "step": 0,
       "order": 2,
       "family": "coverage",
-      "title": "Google car: wide blur, antenna, low camera",
+      "title": "Coverage: wide blur, antenna, low camera",
       "text": [
         "Nearly all of the coverage was captured with smallcam, a variant of Generation 4, which in this case can be recognised by the **wide blur** and **antenna **that is often visible. The camera is lower and the front blur more round than [pickup truck blurs](https://maps.app.goo.gl/Z8fwYWxNaCrZpv5n8)."
       ],
@@ -427,7 +427,7 @@
       "id": "pr-8rin",
       "step": 0,
       "order": 9,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: unique highway shields",
       "text": [
         "Here is an example of what **highway shields** in Puerto Rico look like. From top left to bottom right they are: primary highway shields, primary urban highway shields, secondary shields, and tertiary shields. These will not be present in any other state or territory of the US."
@@ -477,7 +477,8 @@
           "country": "US",
           "how": "No US state uses these shield designs"
         }
-      ]
+      ],
+      "kind": "other"
     },
     {
       "id": "pr-nXMf",
@@ -598,7 +599,7 @@
       "id": "pr-sbGW",
       "step": 0,
       "order": 12,
-      "family": "other",
+      "family": "sign",
       "title": "Kilometre marker: tall, green, vertical number",
       "text": [
         "Puerto Rican kilometre markers are tall, green and with “**km**” written at the top, followed by a number written vertically in large text."
@@ -640,13 +641,14 @@
         "url": "https://www.plonkit.net/puerto-rico",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A tall green marker with km at the top and a large number written vertically below it."
+      "summary": "A tall green marker with km at the top and a large number written vertically below it.",
+      "kind": "other"
     },
     {
       "id": "pr-m45n",
       "step": 0,
       "order": 13,
-      "family": "other",
+      "family": "architecture",
       "title": "Houses: concrete, flat roofs, metal gates",
       "text": [
         "Most homes in Puerto Rico are made of **concrete** and have **flat rooftops**. Metal gates in front of homes are common features as well, especially in urban areas.",
@@ -695,7 +697,7 @@
       "id": "pr-1NMP",
       "step": 1,
       "order": 0,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: noticeably drier in the south",
       "text": [
         "Southern Puerto Rico can often look distinctly **drier** than the rest of the island."
@@ -780,6 +782,11 @@
             "w": 1,
             "h": 0.7
           }
+        },
+        {
+          "id": "988cdf7c8a59",
+          "src": "https://learnablemeta.com/images/664/L3f1tJPj0tPxgfcRX7zVCKSrbR1qOgx3aLBK.avif",
+          "dupeOf": "7ad49eeee56b"
         }
       ],
       "locations": [
@@ -1357,7 +1364,7 @@
       "id": "pr-gh-postboxes",
       "step": 4,
       "order": 4,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 1 post box from here."
@@ -1409,7 +1416,7 @@
       "id": "pr-gh-sidewalks",
       "step": 4,
       "order": 5,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

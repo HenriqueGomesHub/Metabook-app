@@ -956,7 +956,7 @@
       "id": "gb-QKVV",
       "step": 0,
       "order": 16,
-      "family": "other",
+      "family": "architecture",
       "title": "Farm gate: square corners",
       "text": [
         "Rural metal gates with **square corners** are very common in the UK.",
@@ -981,6 +981,15 @@
           "height": 338,
           "role": "annotated",
           "caption": "A farm gate with square corners; the red circle zooms in on the corner"
+        },
+        {
+          "id": "7231ec8d00eb",
+          "src": "https://learnablemeta.com/images/847/pGOiyETaq8Ku5F0of34PLY5g85D21bIdtfP8.avif",
+          "dupeOf": "fa182b2a96b7"
+        },
+        {
+          "id": "490f8e9e5093",
+          "src": "https://learnablemeta.com/images/2527/1756045795551-d4v.avif"
         }
       ],
       "locations": [
@@ -1261,6 +1270,11 @@
           "height": 338,
           "role": "annotated",
           "caption": "Chimney with several round pots; the red arrow points to the chimney pots"
+        },
+        {
+          "id": "3a998e81edce",
+          "src": "https://learnablemeta.com/images/1072/EIKlmq8DSzCXWaeBcG4tDbt6El7n7wtRl9wA.avif",
+          "dupeOf": "7ab60c343165"
         }
       ],
       "locations": [
@@ -1343,8 +1357,8 @@
       "id": "gb-vT4m",
       "step": 0,
       "order": 23,
-      "family": "car",
-      "title": "Google car: low camera, big round blur",
+      "family": "coverage",
+      "title": "Coverage: low camera, big round blur",
       "text": [
         "The UK has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1426,7 +1440,7 @@
       "id": "gb-QHOv",
       "step": 1,
       "order": 1,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: first digit shows the area",
       "text": [
         "**A- and B-roads** are **grouped** by their first digit, for example A380 and B3217 are located in the southwest of the country. Motorways also generally follow this pattern.",
@@ -1441,7 +1455,8 @@
         "url": "https://www.plonkit.net/united-kingdom",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A- and B-roads are grouped by first digit, so A380 and B3217 are in the southwest. Motorways follow the pattern. Think of a clock: digits go clockwise from 1 to 9. Roads starting 1 to 8 can also be in Northern Ireland."
+      "summary": "A- and B-roads are grouped by first digit, so A380 and B3217 are in the southwest. Motorways follow the pattern. Think of a clock: digits go clockwise from 1 to 9. Roads starting 1 to 8 can also be in Northern Ireland.",
+      "kind": "route"
     },
     {
       "id": "gb-yII8",
@@ -1469,7 +1484,7 @@
       "id": "gb-xFi3",
       "step": 1,
       "order": 3,
-      "family": "other",
+      "family": "street",
       "title": "Bin: city name on it",
       "text": [
         "Bins in urban areas often have the **city name** on them."
@@ -1493,6 +1508,11 @@
           "height": 337,
           "role": "annotated",
           "caption": "Two bins with a council name; the red circle and arrow point to the logo"
+        },
+        {
+          "id": "17ffcbf88632",
+          "src": "https://learnablemeta.com/images/2527/1755985165840-vEH.avif",
+          "dupeOf": "1314e13a1cf4"
         }
       ],
       "locations": [
@@ -2071,7 +2091,7 @@
       "id": "gb-C4hI",
       "step": 1,
       "order": 12,
-      "family": "other",
+      "family": "street",
       "title": "Lamppost: black sticker with yellow text",
       "text": [
         "These **black stickers with yellow text** sometimes appear on lampposts in Northern Ireland."
@@ -2198,8 +2218,8 @@
       "id": "gb-lJbW",
       "step": 1,
       "order": 14,
-      "family": "car",
-      "title": "Google car: Gen 2 only on an island",
+      "family": "coverage",
+      "title": "Coverage: Gen 2 only on an island",
       "text": [
         "The Isle of Man is an island in the Irish Sea between the United Kingdom and Ireland. There is only **Generation 2** coverage on the island. For country streak purposes, it is counted as part of the United Kingdom.",
         "Plonk It has a more in-depth guide to the Isle of Man [here](https://www.plonkit.net/isle-of-man)."
@@ -2222,8 +2242,8 @@
       "id": "gb-V5YP",
       "step": 1,
       "order": 15,
-      "family": "car",
-      "title": "Google car: Gen 2 only on a Channel island",
+      "family": "coverage",
+      "title": "Coverage: Gen 2 only on a Channel island",
       "text": [
         "Jersey is an island in the English Channel between France and England. There is only **Generation 2** coverage on the island. For country streak purposes, it is counted as part of the United Kingdom.",
         "Plonk It has a more in-depth guide to Jersey [here](https://www.plonkit.net/jersey)."
@@ -2246,7 +2266,7 @@
       "id": "gb-j4to",
       "step": 1,
       "order": 16,
-      "family": "other",
+      "family": "coverage",
       "title": "Coverage: territory bordering Spain",
       "text": [
         "Gibraltar is a British Overseas Territory located at the southern tip of the Iberian Peninsula, bordering Spain. For country streak purposes, the territory is counted as part of the United Kingdom.",
@@ -2270,7 +2290,7 @@
       "id": "gb-JAl0",
       "step": 2,
       "order": 0,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: very hilly with bare rock, stone walls",
       "text": [
         "The **Lake District** is very hilly, with a lot of exposed rocks and stone walls. It can look like the Scottish Highlands, but Scotland is generally less rocky."
@@ -2300,6 +2320,16 @@
             "w": 0.7,
             "h": 1
           }
+        },
+        {
+          "id": "0ddc72edae2c",
+          "src": "https://learnablemeta.com/images/664/We5zu3vJohY6jp7J72GshWQQ2duP1wtNL5lA.avif",
+          "dupeOf": "e5ee33f83112"
+        },
+        {
+          "id": "0e5569181b2d",
+          "src": "https://learnablemeta.com/images/2527/1755985270566-HG5.avif",
+          "dupeOf": "e5ee33f83112"
         }
       ],
       "locations": [
@@ -2614,14 +2644,6 @@
             "w": 0.73,
             "h": 1
           }
-        },
-        {
-          "id": "419b24406983",
-          "src": "https://learnablemeta.com/images/2527/1755985214971-T5b.avif",
-          "path": "gb/419b24406983.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "d1e8e791f198"
         }
       ],
       "locations": [
@@ -2775,8 +2797,7 @@
       "id": "gb-lm-10030",
       "step": 3,
       "order": 0,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Bus stop: light blue UlsterBus sign",
       "text": [
         "In Northern Ireland, most bus stops will have light blue UlsterBus signs."
@@ -2804,7 +2825,7 @@
     {
       "id": "gb-lm-474348",
       "step": 3,
-      "order": 16,
+      "order": 11,
       "family": "pole",
       "title": "Pole: wooden pole with flat top",
       "text": [
@@ -2848,8 +2869,8 @@
     {
       "id": "gb-lm-490310",
       "step": 3,
-      "order": 29,
-      "family": "other",
+      "order": 24,
+      "family": "street",
       "title": "Kerb: striped kerbs on main roads",
       "text": [
         "Striped kerbs can sometimes be seen along main roads."
@@ -2875,10 +2896,41 @@
       "summary": "On the Isle of Man, striped kerbs can sometimes be seen along main roads."
     },
     {
+      "id": "gb-lm-512909",
+      "step": 3,
+      "order": 26,
+      "family": "coverage",
+      "title": "Coverage: London - Gen 4 white electric vehicle",
+      "text": [
+        "Some of the Generation 4 coverage in London and surrounding areas was taken by a white electric vehicle, with this distinct back of the car visible.",
+        "NOTE: A similar car was used in Dublin and Germany, so make sure to check out other clues as well."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "419b24406983",
+          "src": "https://learnablemeta.com/images/2527/1755985214971-T5b.avif",
+          "path": "gb/419b24406983.webp",
+          "width": 800,
+          "height": 393,
+          "dupeOf": "d1e8e791f198"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "DE"
+      ],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/686fb32376045facea0117b5",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
       "id": "gb-lm-513551",
       "step": 3,
-      "order": 34,
-      "family": "other",
+      "order": 28,
+      "family": "street",
       "title": "Bin: pink sticker, PEOPLE MAKE GLASGOW",
       "text": [
         "This pink sticker with the text ''PEOPLE MAKE GLASGOW'' can be found on these trash bins in Glasgow."
@@ -2908,7 +2960,7 @@
     {
       "id": "gb-lm-515550",
       "step": 3,
-      "order": 36,
+      "order": 29,
       "family": "guardrail",
       "title": "Guardrail: only A-type, no reflectors",
       "text": [
@@ -2946,8 +2998,8 @@
     {
       "id": "gb-lm-523150",
       "step": 3,
-      "order": 37,
-      "family": "other",
+      "order": 30,
+      "family": "landscape",
       "title": "Landscape: round hay bales on hilly fields",
       "text": [
         "Cylindrical hay bales laying around on these hilly agricultural fields can mostly be found in the region north of Aberdeen. They can very rarely be seen elsewhere in Scotland."
@@ -2982,8 +3034,8 @@
     {
       "id": "gb-lm-528828",
       "step": 3,
-      "order": 38,
-      "family": "landscape",
+      "order": 31,
+      "family": "architecture",
       "title": "Wall: dark grey stone, upright top stones",
       "text": [
         "Some roads, mostly in the south and north Snowdonia, have these distinct dark grey stone walls with vertical stones on top of it along the road. The landscape itself is very forested and mountainous, but less forested in the north east.",
@@ -3019,7 +3071,7 @@
     {
       "id": "gb-lm-530714",
       "step": 3,
-      "order": 40,
+      "order": 33,
       "family": "coverage",
       "title": "Coverage: boat trekker",
       "text": [
@@ -3055,7 +3107,7 @@
     {
       "id": "gb-lm-530778",
       "step": 3,
-      "order": 41,
+      "order": 34,
       "family": "other",
       "title": "Phone numbers: area code 0141",
       "text": [
@@ -3076,7 +3128,7 @@
     {
       "id": "gb-lm-530779",
       "step": 3,
-      "order": 42,
+      "order": 35,
       "family": "other",
       "title": "Phone numbers: area code 0131",
       "text": [
@@ -3097,7 +3149,7 @@
     {
       "id": "gb-lm-530780",
       "step": 3,
-      "order": 43,
+      "order": 36,
       "family": "other",
       "title": "Phone numbers: area code 028",
       "text": [
@@ -3126,7 +3178,7 @@
     {
       "id": "gb-lm-530781",
       "step": 3,
-      "order": 44,
+      "order": 37,
       "family": "other",
       "title": "Phone numbers: area code 0161",
       "text": [
@@ -3156,7 +3208,7 @@
     {
       "id": "gb-lm-530782",
       "step": 3,
-      "order": 45,
+      "order": 38,
       "family": "other",
       "title": "Phone numbers: area code 0113",
       "text": [
@@ -3186,7 +3238,7 @@
     {
       "id": "gb-lm-530783",
       "step": 3,
-      "order": 46,
+      "order": 39,
       "family": "other",
       "title": "Phone numbers: area code 0114",
       "text": [
@@ -3216,7 +3268,7 @@
     {
       "id": "gb-lm-530784",
       "step": 3,
-      "order": 47,
+      "order": 40,
       "family": "other",
       "title": "Phone numbers: area code 0151",
       "text": [
@@ -3246,7 +3298,7 @@
     {
       "id": "gb-lm-530785",
       "step": 3,
-      "order": 48,
+      "order": 41,
       "family": "other",
       "title": "Phone numbers: area code 0121",
       "text": [
@@ -3276,7 +3328,7 @@
     {
       "id": "gb-lm-530786",
       "step": 3,
-      "order": 49,
+      "order": 42,
       "family": "other",
       "title": "Phone numbers: area code 020",
       "text": [
@@ -3306,7 +3358,7 @@
     {
       "id": "gb-lm-530788",
       "step": 3,
-      "order": 50,
+      "order": 43,
       "family": "other",
       "title": "Phone numbers: area code 029",
       "text": [
@@ -3336,7 +3388,7 @@
     {
       "id": "gb-lm-542428",
       "step": 3,
-      "order": 51,
+      "order": 44,
       "family": "plate",
       "title": "Plate: black with a letter and 3 numbers",
       "text": [
@@ -3373,7 +3425,7 @@
     {
       "id": "gb-lm-542625",
       "step": 3,
-      "order": 52,
+      "order": 45,
       "family": "line",
       "title": "Road lines: gaps in the lines",
       "text": [
@@ -3409,8 +3461,8 @@
     {
       "id": "gb-lm-542893",
       "step": 3,
-      "order": 54,
-      "family": "architecture",
+      "order": 47,
+      "family": "landscape",
       "title": "Houses: terraced hillside valley, pastel trim",
       "text": [
         "This valley north-west of Cardiff has a very recognizable look. Featuring many terraced houses and brown stone walls with colorful windows and often have this unique shape made out of pastel around the windows and doors. The towns are build on hills so its always hilly.",
@@ -3446,7 +3498,7 @@
     {
       "id": "gb-lm-542950",
       "step": 3,
-      "order": 55,
+      "order": 48,
       "family": "pole",
       "title": "Pole: orange tape and white sticker with diamond",
       "text": [
@@ -3483,8 +3535,8 @@
     {
       "id": "gb-lm-543004",
       "step": 3,
-      "order": 56,
-      "family": "other",
+      "order": 49,
+      "family": "street",
       "title": "Sticker: colourful pole sticker",
       "text": [
         "These colourful stickers are found in the Western Isles. Their very rarely seen since these islands are mostly rural without lampposts, but they can be seen commonly in Stornoway, and occasionally elsewhere too."
@@ -3519,7 +3571,7 @@
     {
       "id": "gb-lm-543005",
       "step": 3,
-      "order": 57,
+      "order": 50,
       "family": "pole",
       "title": "Pole sticker: yellow, 6-digit code and QR code",
       "text": [
@@ -3556,9 +3608,8 @@
     {
       "id": "gb-lm-543123",
       "step": 3,
-      "order": 58,
-      "family": "sign",
-      "kind": "stop",
+      "order": 51,
+      "family": "street",
       "title": "Bus stop: M logo, phone code, bee",
       "text": [
         "This busstop sign can be found in Greater Manchester, it has the phone code on it and the M logo on the top left corner with a bunch of other things like a bee on the right. The logo's and phone code can only be seen on one side.",
@@ -3595,8 +3646,8 @@
     {
       "id": "gb-lm-543234",
       "step": 3,
-      "order": 59,
-      "family": "other",
+      "order": 52,
+      "family": "pole",
       "title": "Pole sticker: white, numbers in a T shape",
       "text": [
         "A white sticker with numbers forming a T shape, can be found in Pembrokeshire and Carmarthenshire."
@@ -3631,7 +3682,7 @@
     {
       "id": "gb-lm-543390",
       "step": 3,
-      "order": 60,
+      "order": 53,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: says City of Southampton",
@@ -3668,7 +3719,7 @@
     {
       "id": "gb-lm-543391",
       "step": 3,
-      "order": 61,
+      "order": 54,
       "family": "language",
       "title": "Pole sticker: white, blue letters, phone number",
       "text": [
@@ -3704,7 +3755,7 @@
     {
       "id": "gb-lm-543392",
       "step": 3,
-      "order": 62,
+      "order": 55,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: L at the bottom right",
@@ -3741,7 +3792,7 @@
     {
       "id": "gb-lm-543553",
       "step": 3,
-      "order": 63,
+      "order": 56,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: BS and a number on the right",
@@ -3778,7 +3829,7 @@
     {
       "id": "gb-lm-543554",
       "step": 3,
-      "order": 64,
+      "order": 57,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: LS and a number on the right",
@@ -3815,7 +3866,7 @@
     {
       "id": "gb-lm-543680",
       "step": 3,
-      "order": 65,
+      "order": 58,
       "family": "landscape",
       "title": "Landscape: wooded hills with towers to the west",
       "text": [
@@ -3852,7 +3903,7 @@
     {
       "id": "gb-lm-543805",
       "step": 3,
-      "order": 66,
+      "order": 59,
       "family": "vegetation",
       "title": "Landscape: treeless grassy hills, no mountains",
       "text": [
@@ -3893,8 +3944,8 @@
     {
       "id": "gb-lm-544405",
       "step": 3,
-      "order": 67,
-      "family": "other",
+      "order": 60,
+      "family": "pole",
       "title": "Pole sticker: white, 1-2 numbers, small text",
       "text": [
         "This white sticker with 1 - 2 numbers and lots of small text with a logo under it is found in Hampshire and West Sussex. Sometimes there is also text and a logo above the number, or there is only text without a number."
@@ -3930,8 +3981,8 @@
     {
       "id": "gb-lm-544553",
       "step": 3,
-      "order": 68,
-      "family": "other",
+      "order": 61,
+      "family": "pole",
       "title": "Pole sticker: yellow with LCC under the numbers",
       "text": [
         "Yellow stickers with ''LCC'' (which stands for ''Lincolnshire County Council'') written under the numbers can be found in Lincolnshire. ''LCC\" can sometimes be hard to see, if you only see ''CC\" clearly, that also confirms your in Lincolnshire.",
@@ -3967,8 +4018,8 @@
     {
       "id": "gb-lm-545000",
       "step": 3,
-      "order": 69,
-      "family": "other",
+      "order": 62,
+      "family": "pole",
       "title": "Pole sticker: white, FAULT and phone number",
       "text": [
         "This white sticker with a black letter and 4 numbers, and has \"FAULT'' with a phone number written under it is found in Perth and Kinross. Most of the times, it has a small frame in the sticker around the text."
@@ -4003,7 +4054,7 @@
     {
       "id": "gb-lm-545316",
       "step": 3,
-      "order": 70,
+      "order": 63,
       "family": "language",
       "title": "Pole sticker: white with diamond and small text",
       "text": [
@@ -4038,7 +4089,7 @@
     {
       "id": "gb-lm-545436",
       "step": 3,
-      "order": 71,
+      "order": 64,
       "family": "landscape",
       "title": "Landscape: lots of sheep in hilly hedged fields",
       "text": [
@@ -4074,7 +4125,7 @@
     {
       "id": "gb-lm-545569",
       "step": 3,
-      "order": 72,
+      "order": 65,
       "family": "landscape",
       "title": "Landscape: rocky, treeless, tundra-like",
       "text": [
@@ -4110,9 +4161,8 @@
     {
       "id": "gb-lm-545710",
       "step": 3,
-      "order": 73,
-      "family": "sign",
-      "kind": "stop",
+      "order": 66,
+      "family": "street",
       "title": "Bus stop: distinct logo on top",
       "text": [
         "This bus stop sign is found in Greater London. It has a very distinct logo on the top half."
@@ -4147,7 +4197,7 @@
     {
       "id": "gb-lm-545782",
       "step": 3,
-      "order": 74,
+      "order": 67,
       "family": "landscape",
       "title": "Landscape: treeless open farmland, small hills",
       "text": [
@@ -4183,7 +4233,7 @@
     {
       "id": "gb-lm-546439",
       "step": 3,
-      "order": 75,
+      "order": 68,
       "family": "architecture",
       "title": "Houses: Tudor black-and-white timber",
       "text": [
@@ -4219,7 +4269,7 @@
     {
       "id": "gb-lm-546442",
       "step": 3,
-      "order": 76,
+      "order": 69,
       "family": "vegetation",
       "title": "Plants: dense pine forest",
       "text": [
@@ -4255,7 +4305,7 @@
     {
       "id": "gb-lm-546443",
       "step": 3,
-      "order": 77,
+      "order": 70,
       "family": "architecture",
       "title": "Houses: white with black corner frames",
       "text": [
@@ -4292,9 +4342,8 @@
     {
       "id": "gb-lm-546444",
       "step": 3,
-      "order": 78,
-      "family": "sign",
-      "kind": "stop",
+      "order": 71,
+      "family": "street",
       "title": "Bus stop: distinct logo on top",
       "text": [
         "This bus stop sign is found in West Midlands County. It has a very distinct logo on the top half."
@@ -4329,7 +4378,7 @@
     {
       "id": "gb-lm-546593",
       "step": 3,
-      "order": 79,
+      "order": 72,
       "family": "architecture",
       "title": "Houses: stone and pastel with coloured trim",
       "text": [
@@ -4366,7 +4415,7 @@
     {
       "id": "gb-lm-546747",
       "step": 3,
-      "order": 80,
+      "order": 73,
       "family": "architecture",
       "title": "Houses: dark red brick, black-white lintels",
       "text": [
@@ -4403,7 +4452,7 @@
     {
       "id": "gb-lm-549735",
       "step": 3,
-      "order": 81,
+      "order": 74,
       "family": "architecture",
       "title": "Houses: red brick garden walls with garage doors",
       "text": [
@@ -4439,8 +4488,8 @@
     {
       "id": "gb-lm-549736",
       "step": 3,
-      "order": 82,
-      "family": "other",
+      "order": 75,
+      "family": "architecture",
       "title": "Wall: very hilly national parks with stone walls",
       "text": [
         "The Lake District, North Pennines, Yorkshire Dales, Nidderdale and Peak District are very hilly and have alot of stone walls. Stone walls can appear in other national parks and places but not as much as these 5 national parks, which have the majority of stone walls.",
@@ -4476,7 +4525,7 @@
     {
       "id": "gb-lm-549737",
       "step": 3,
-      "order": 83,
+      "order": 76,
       "family": "landscape",
       "title": "Landscape: brown rolling moorland",
       "text": [
@@ -4512,7 +4561,7 @@
     {
       "id": "gb-lm-549738",
       "step": 3,
-      "order": 84,
+      "order": 77,
       "family": "architecture",
       "title": "Houses: dark gritstone with black patches",
       "text": [
@@ -4548,7 +4597,7 @@
     {
       "id": "gb-lm-549739",
       "step": 3,
-      "order": 85,
+      "order": 78,
       "family": "architecture",
       "title": "Houses: industrial brick, factories, warehouses",
       "text": [
@@ -4584,7 +4633,7 @@
     {
       "id": "gb-lm-549740",
       "step": 3,
-      "order": 86,
+      "order": 79,
       "family": "landscape",
       "title": "Landscape: very flat, dikes, few hedgerows",
       "text": [
@@ -4620,7 +4669,7 @@
     {
       "id": "gb-lm-551997",
       "step": 3,
-      "order": 87,
+      "order": 80,
       "family": "architecture",
       "title": "Roofs: red clay pantiles",
       "text": [
@@ -4656,7 +4705,7 @@
     {
       "id": "gb-lm-551998",
       "step": 3,
-      "order": 88,
+      "order": 81,
       "family": "other",
       "title": "Gardens: neat gravel front gardens",
       "text": [
@@ -4692,7 +4741,7 @@
     {
       "id": "gb-lm-551999",
       "step": 3,
-      "order": 89,
+      "order": 82,
       "family": "architecture",
       "title": "Houses: golden limestone",
       "text": [
@@ -4728,7 +4777,7 @@
     {
       "id": "gb-lm-552001",
       "step": 3,
-      "order": 90,
+      "order": 83,
       "family": "architecture",
       "title": "Roofs: thatch",
       "text": [
@@ -4764,7 +4813,7 @@
     {
       "id": "gb-lm-552002",
       "step": 3,
-      "order": 91,
+      "order": 84,
       "family": "vegetation",
       "title": "Landscape: forest mixed with heathland",
       "text": [
@@ -4800,8 +4849,8 @@
     {
       "id": "gb-lm-552003",
       "step": 3,
-      "order": 92,
-      "family": "other",
+      "order": 85,
+      "family": "architecture",
       "title": "Houses: hanging tiles on walls",
       "text": [
         "Weald Hanging tiles are the most common in Sussex and Kent. But can sometimes be found elsewhere in the southern half of England."
@@ -4836,7 +4885,7 @@
     {
       "id": "gb-lm-552004",
       "step": 3,
-      "order": 93,
+      "order": 86,
       "family": "architecture",
       "title": "Wall: pebble or flint with red brick",
       "text": [
@@ -4873,7 +4922,7 @@
     {
       "id": "gb-lm-552005",
       "step": 3,
-      "order": 94,
+      "order": 87,
       "family": "architecture",
       "title": "Houses: big gated mansions on leafy roads",
       "text": [
@@ -4909,8 +4958,8 @@
     {
       "id": "gb-lm-554501",
       "step": 3,
-      "order": 95,
-      "family": "other",
+      "order": 88,
+      "family": "pole",
       "title": "Pole sticker: white, 2 black numbers, small text",
       "text": [
         "This white sticker with 2 black numbers and 3 pieces of small text, 1 above the number and 2 under it, can be found in Fife."
@@ -4945,8 +4994,8 @@
     {
       "id": "gb-lm-554502",
       "step": 3,
-      "order": 96,
-      "family": "other",
+      "order": 89,
+      "family": "pole",
       "title": "Pole sticker: yellow on another white sticker",
       "text": [
         "This yellow sticker, sometimes white, with 3 numbers and 4 numbers under it can be found in Ceredigion. What makes it extra distinct, is that its pasted on another white sticker behind it."
@@ -4981,7 +5030,7 @@
     {
       "id": "gb-lm-555609",
       "step": 3,
-      "order": 97,
+      "order": 90,
       "family": "language",
       "title": "Pole sticker: blue stickers",
       "text": [
@@ -5018,8 +5067,8 @@
     {
       "id": "gb-lm-555891",
       "step": 3,
-      "order": 98,
-      "family": "other",
+      "order": 91,
+      "family": "architecture",
       "title": "Wall: castle-like stone walls",
       "text": [
         "Stone walls that look like a castle wall are mostly found in North Wales. Especially towards Anglesey and in Anglesey. They can also sometimes be found elsewhere in Wales."
@@ -5054,7 +5103,7 @@
     {
       "id": "gb-lm-557137",
       "step": 3,
-      "order": 99,
+      "order": 92,
       "family": "other",
       "title": "Landmark: Gulliver the seagull",
       "text": [
@@ -5083,7 +5132,7 @@
     {
       "id": "gb-lm-634015",
       "step": 3,
-      "order": 102,
+      "order": 95,
       "family": "plate",
       "title": "Plate: white front, yellow rear, red strip",
       "text": [
@@ -5114,7 +5163,7 @@
     {
       "id": "gb-lm-766561",
       "step": 3,
-      "order": 108,
+      "order": 101,
       "family": "landscape",
       "title": "Landscape: small hilly area, rock walls",
       "text": [
@@ -5150,7 +5199,7 @@
     {
       "id": "gb-lm-766562",
       "step": 3,
-      "order": 109,
+      "order": 102,
       "family": "landscape",
       "title": "Landscape: very flat with big hedgerows",
       "text": [
@@ -5187,8 +5236,8 @@
     {
       "id": "gb-lm-766564",
       "step": 3,
-      "order": 110,
-      "family": "other",
+      "order": 103,
+      "family": "pole",
       "title": "Pole sticker: black eagle logo on top",
       "text": [
         "This unique sticker with the black eagle logo on top is found in Bedford and areas around it."
@@ -5223,7 +5272,7 @@
     {
       "id": "gb-lm-766662",
       "step": 3,
-      "order": 111,
+      "order": 104,
       "family": "landscape",
       "title": "Landscape: hills with few mountains",
       "text": [
@@ -5259,7 +5308,7 @@
     {
       "id": "gb-lm-787158",
       "step": 3,
-      "order": 115,
+      "order": 108,
       "family": "language",
       "title": "Language: English",
       "text": [
@@ -7538,7 +7587,7 @@
       "id": "gb-gh-postboxes",
       "step": 4,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 35 post boxes from here."
@@ -8505,7 +8554,7 @@
       "id": "gb-gh-sidewalks",
       "step": 4,
       "order": 10,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

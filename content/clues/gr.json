@@ -269,6 +269,11 @@
           "width": 600,
           "height": 338,
           "role": "example"
+        },
+        {
+          "id": "00c6c2ee2026",
+          "src": "https://learnablemeta.com/images/1955/1750620271042-I5B.avif",
+          "dupeOf": "a82478b7bf2c"
         }
       ],
       "locations": [
@@ -1043,7 +1048,7 @@
       "id": "gr-D0RT",
       "step": 0,
       "order": 19,
-      "family": "other",
+      "family": "landscape",
       "title": "Soil: red dirt",
       "text": [
         "**Red dirt** is very common in Greece.",
@@ -1097,8 +1102,8 @@
       "id": "gr-PD64",
       "step": 0,
       "order": 20,
-      "family": "car",
-      "title": "Google car: low Gen 4 'smallcam'",
+      "family": "coverage",
+      "title": "Coverage: low Gen 4 'smallcam'",
       "text": [
         "Greece has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot."
       ],
@@ -1160,7 +1165,7 @@
       "id": "gr-gSZ9",
       "step": 0,
       "order": 21,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: bleak Gen 3 winter and autumn",
       "text": [
         "Greece has a lot of **Generation 3 winter and fall** coverage, which tends to look somewhat bleak and depressing."
@@ -1288,6 +1293,11 @@
             "w": 0.68,
             "h": 1
           }
+        },
+        {
+          "id": "a9a128508ac5",
+          "src": "https://learnablemeta.com/images/664/FVrLHIjOJtTZSc9JTkAqo7nrOJPp1sicCOmN.avif",
+          "dupeOf": "6b4997512dcb"
         }
       ],
       "locations": [
@@ -1406,6 +1416,11 @@
             "w": 0.7,
             "h": 1
           }
+        },
+        {
+          "id": "e0d5acec7cee",
+          "src": "https://learnablemeta.com/images/1072/CRX8qIVIUld5o7dyNKQILqvixrQLwNingzLu.avif",
+          "dupeOf": "b6fe5108cda1"
         }
       ],
       "locations": [
@@ -1486,7 +1501,7 @@
       "id": "gr-czh8",
       "step": 1,
       "order": 6,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: olive plantations, coast and south",
       "text": [
         "**Olive plantations** are found in coastal areas, particularly on Crete and southern Peloponnese."
@@ -1542,7 +1557,7 @@
       "id": "gr-IAgW",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: citrus plantations on the south coast",
       "text": [
         "**Citrus plantations** are mainly found in coastal areas, particularly on southern Peloponnese."
@@ -1592,8 +1607,7 @@
         "url": "https://www.plonkit.net/greece",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Citrus groves along the coast, especially in the south of the southern peninsula.",
-      "regionCode": "J"
+      "summary": "Citrus groves along the coast, especially in the south of the southern peninsula."
     },
     {
       "id": "gr-NfLS",
@@ -1876,7 +1890,7 @@
       "id": "gr-iTtu",
       "step": 2,
       "order": 4,
-      "family": "car",
+      "family": "architecture",
       "title": "Skyline: many very tall rooftop antennas",
       "text": [
         "In Thessaloniki, you will often see a **large amount** of **unusually tall antennas** on top of buildings."
@@ -1906,22 +1920,6 @@
             "w": 0.69,
             "h": 1
           }
-        },
-        {
-          "id": "7314f9882c6f",
-          "src": "https://learnablemeta.com/images/1072/Xehj8OqW3KRhHI2CqkOrCYHCSY3vPYKnnbtx.avif",
-          "path": "gr/7314f9882c6f.webp",
-          "width": 1000,
-          "height": 484,
-          "dupeOf": "33f0bd150c95"
-        },
-        {
-          "id": "09feda879de5",
-          "src": "https://learnablemeta.com/images/4588/1777472267658-ZdM.avif",
-          "path": "gr/09feda879de5.webp",
-          "width": 800,
-          "height": 393,
-          "dupeOf": "33f0bd150c95"
         }
       ],
       "locations": [
@@ -1947,7 +1945,7 @@
       "id": "gr-lm-2993",
       "step": 3,
       "order": 2,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: detailed pedestrian figure, no hat",
       "text": [
         "**Horizontal Zebra stripe**: Austria, Belgium, Greece, Poland, Serbia. > **Detailed guy with no hat**: Greece. Note that Greece's icon has hair that may almost look like a hat but it's just hair. Kinda looks like the Dame Tu Cosita guy"
@@ -1972,12 +1970,41 @@
           "country": "PL",
           "how": "Poland's sign is a single continuous line"
         }
-      ]
+      ],
+      "kind": "pedestrian"
+    },
+    {
+      "id": "gr-lm-104600",
+      "step": 3,
+      "order": 9,
+      "family": "architecture",
+      "title": "Architecture: Thessaloniki - Tall Antennas",
+      "text": [
+        "In Thessaloniki, you will often see a large amount of unusually tall antennas on top of buildings."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "7314f9882c6f",
+          "src": "https://learnablemeta.com/images/1072/Xehj8OqW3KRhHI2CqkOrCYHCSY3vPYKnnbtx.avif",
+          "path": "gr/7314f9882c6f.webp",
+          "width": 1000,
+          "height": 484,
+          "dupeOf": "33f0bd150c95"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/6800370db17342310c1d87e3",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
     },
     {
       "id": "gr-lm-474150",
       "step": 3,
-      "order": 15,
+      "order": 12,
       "family": "pole",
       "title": "Pole: wooden crossbar top",
       "text": [
@@ -2006,7 +2033,7 @@
     {
       "id": "gr-lm-740403",
       "step": 3,
-      "order": 17,
+      "order": 14,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: extra panel under the name",
@@ -2032,6 +2059,34 @@
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
       "summary": "The capital's street signs have an extra panel under the main street name."
+    },
+    {
+      "id": "gr-lm-741466",
+      "step": 3,
+      "order": 17,
+      "family": "architecture",
+      "title": "Architecture: Thessaloniki tall antennas",
+      "text": [
+        "In Thessaloniki, you will often see a large amount of unusually tall antennas on top of buildings."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "09feda879de5",
+          "src": "https://learnablemeta.com/images/4588/1777472267658-ZdM.avif",
+          "path": "gr/09feda879de5.webp",
+          "width": 800,
+          "height": 393,
+          "dupeOf": "33f0bd150c95"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/68e98173c40e65558d7ef0fd",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
     },
     {
       "id": "gr-gh-bollards",
@@ -2946,7 +3001,7 @@
       "id": "gr-gh-housenumbers",
       "step": 4,
       "order": 9,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 1 house number from here."
@@ -2976,7 +3031,7 @@
       "id": "gr-gh-postboxes",
       "step": 4,
       "order": 10,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 4 post boxes from here."

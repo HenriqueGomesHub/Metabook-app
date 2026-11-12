@@ -193,6 +193,11 @@
           "width": 1000,
           "height": 560,
           "dupeOf": "886d17f7e47c"
+        },
+        {
+          "id": "a598e638600b",
+          "src": "https://learnablemeta.com/images/1955/1750241657952-vzH.avif",
+          "dupeOf": "886d17f7e47c"
         }
       ],
       "locations": [
@@ -309,7 +314,7 @@
       "id": "lv-CK38",
       "step": 0,
       "order": 5,
-      "family": "other",
+      "family": "sign",
       "title": "Marker: blue km post parallel to road",
       "text": [
         "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
@@ -364,7 +369,8 @@
           "country": "LT",
           "how": "Marker sits at a different angle to the road"
         }
-      ]
+      ],
+      "kind": "other"
     },
     {
       "id": "lv-15Re",
@@ -541,8 +547,7 @@
       "id": "lv-RplU",
       "step": 0,
       "order": 8,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Sign: bus stop sign with 5 bus windows",
       "text": [
         "Latvian bus stop signs have this design.",
@@ -566,6 +571,11 @@
           "width": 600,
           "height": 338,
           "role": "example"
+        },
+        {
+          "id": "7fe63f9b269d",
+          "src": "https://learnablemeta.com/images/186/JvdBsopCm0EbWjw9hPn39iWpvApj6B7Sgu83.avif",
+          "dupeOf": "b3686bd5c77e"
         },
         {
           "id": "4f5a40851c82",
@@ -728,7 +738,7 @@
       "id": "lv-pjGP",
       "step": 0,
       "order": 11,
-      "family": "other",
+      "family": "language",
       "title": "Language: street is \"iela\"",
       "text": [
         "The Latvian word for street is **iela**. This word is unique to Latvian.",
@@ -1184,8 +1194,8 @@
     {
       "id": "lv-lm-556772",
       "step": 3,
-      "order": 16,
-      "family": "other",
+      "order": 14,
+      "family": "sign",
       "title": "Marker: electricity marker, black tip",
       "text": [
         "You can find these electricity markers in Latvia — they have a distinct shape with a black tip and a different color underneath."
@@ -1209,12 +1219,13 @@
         "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Electricity markers with a distinctive shape: a black tip over a different colour below."
+      "summary": "Electricity markers with a distinctive shape: a black tip over a different colour below.",
+      "kind": "other"
     },
     {
       "id": "lv-lm-741987",
       "step": 3,
-      "order": 17,
+      "order": 15,
       "family": "other",
       "title": "Vehicles: white buses and trams, blue bottom",
       "text": [
@@ -2090,7 +2101,7 @@
       "id": "lv-gh-housenumbers",
       "step": 4,
       "order": 6,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 1 house number from here."
@@ -2120,7 +2131,7 @@
       "id": "lv-gh-postboxes",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 1 post box from here."
@@ -2169,7 +2180,7 @@
       "id": "lv-gh-sidewalks",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

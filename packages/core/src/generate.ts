@@ -44,6 +44,7 @@ export const SUBJECT_NOUNS: Record<MetaSubject, string> = {
   language: 'language',
   car: 'Google car',
   landscape: 'landscape',
+  street: 'street detail',
   architecture: 'architecture',
   coverage: 'coverage',
   vegetation: 'vegetation',

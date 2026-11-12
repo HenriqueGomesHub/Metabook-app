@@ -126,30 +126,6 @@
           "width": 600,
           "height": 338,
           "role": "example"
-        },
-        {
-          "id": "d1452f03e474",
-          "src": "https://learnablemeta.com/images/681/RIEqruG9nfXKMmYLfGMuXiqpKQkwz4oL03zW.avif",
-          "path": "bd/d1452f03e474.webp",
-          "width": 1000,
-          "height": 446,
-          "role": "annotated",
-          "caption": "Camera shots of the car labelled UNIQUE, NOT UNIQUE and UNIQUE"
-        },
-        {
-          "id": "8d130e48cf99",
-          "src": "https://learnablemeta.com/images/681/yrcIxQE5JXcNshZCxjSslpOV84ytRlNDpqgu.avif",
-          "path": "bd/8d130e48cf99.webp",
-          "width": 760,
-          "height": 1000,
-          "role": "example",
-          "giveaway": true,
-          "crop": {
-            "x": 0,
-            "y": 0.13,
-            "w": 1,
-            "h": 0.37
-          }
         }
       ],
       "locations": [
@@ -175,9 +151,6 @@
           "country": "KH",
           "how": "Cambodia has a similar-looking striped car"
         }
-      ],
-      "sameAs": [
-        "KH"
       ]
     },
     {
@@ -207,14 +180,6 @@
           "width": 600,
           "height": 338,
           "role": "example"
-        },
-        {
-          "id": "3d42faa6f474",
-          "src": "https://learnablemeta.com/images/681/b8HNIvNuP06D34YSXP9KL1TslXDZyoohl3Gw.avif",
-          "path": "bd/3d42faa6f474.webp",
-          "width": 1000,
-          "height": 560,
-          "dupeOf": "031d15524c37"
         }
       ],
       "locations": [
@@ -264,6 +229,11 @@
           "width": 600,
           "height": 338,
           "role": "example"
+        },
+        {
+          "id": "0cba14b8ec4c",
+          "src": "https://learnablemeta.com/images/681/OaBEMtOFbixrS9HJNfc9EgBoGFur62rTz1qu.avif",
+          "dupeOf": "285abce14d65"
         }
       ],
       "locations": [
@@ -613,8 +583,8 @@
       "id": "bd-OTxD",
       "step": 0,
       "order": 12,
-      "family": "car",
-      "title": "Google car: Gen 4 with a smoky look",
+      "family": "coverage",
+      "title": "Coverage: Gen 4 with a smoky look",
       "text": [
         "The Generation 4 coverage in Bangladesh will often have a **smoky** feel to it."
       ],
@@ -636,6 +606,38 @@
           "width": 600,
           "height": 338,
           "role": "example"
+        },
+        {
+          "id": "3d42faa6f474",
+          "src": "https://learnablemeta.com/images/681/b8HNIvNuP06D34YSXP9KL1TslXDZyoohl3Gw.avif",
+          "path": "bd/3d42faa6f474.webp",
+          "width": 1000,
+          "height": 560,
+          "dupeOf": "031d15524c37"
+        },
+        {
+          "id": "d1452f03e474",
+          "src": "https://learnablemeta.com/images/681/RIEqruG9nfXKMmYLfGMuXiqpKQkwz4oL03zW.avif",
+          "path": "bd/d1452f03e474.webp",
+          "width": 1000,
+          "height": 446,
+          "role": "annotated",
+          "caption": "Camera shots of the car labelled UNIQUE, NOT UNIQUE and UNIQUE"
+        },
+        {
+          "id": "8d130e48cf99",
+          "src": "https://learnablemeta.com/images/681/yrcIxQE5JXcNshZCxjSslpOV84ytRlNDpqgu.avif",
+          "path": "bd/8d130e48cf99.webp",
+          "width": 760,
+          "height": 1000,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0.13,
+            "w": 1,
+            "h": 0.37
+          }
         }
       ],
       "locations": [
@@ -655,7 +657,10 @@
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Gen 4 coverage often has a smoky, hazy feel."
+      "summary": "Gen 4 coverage often has a smoky, hazy feel.",
+      "sameAs": [
+        "KH"
+      ]
     },
     {
       "id": "bd-xIo2",
@@ -829,7 +834,7 @@
       "id": "bd-p7f4",
       "step": 1,
       "order": 3,
-      "family": "car",
+      "family": "vegetation",
       "title": "Rice: short green rice barely above water",
       "text": [
         "Rice is the main agricultural crop in Bangladesh and is planted twice a year. The different rice seasons can be told apart by the height and colour of the rice and are very useful for regionguessing.",
@@ -886,7 +891,7 @@
       "id": "bd-3PQu",
       "step": 1,
       "order": 4,
-      "family": "other",
+      "family": "vegetation",
       "title": "Rice: medium-height green rice",
       "text": [
         "Slightly taller rice, in the **middle of growing**, which still remains **green**, can be seen in the states of Rangpur, Barishal and Chittagong."
@@ -936,14 +941,13 @@
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Rice halfway through growing is taller but still green. Found in the north-west, the south and the south-east.",
-      "regionCode": "F"
+      "summary": "Rice halfway through growing is taller but still green. Found in the north-west, the south and the south-east."
     },
     {
       "id": "bd-axpH",
       "step": 1,
       "order": 5,
-      "family": "other",
+      "family": "vegetation",
       "title": "Rice: tall yellow-orange rice with fluffy tips",
       "text": [
         "**Fully-grown rice** is characterised by being noticeably taller, as well as having a** yellow** or **orange colour** and **fluffier tips** - the fluffiness signifies that the rice is ripe. Fully-grown rice is mostly seen in the state of Rajshahi, but it is also present in Rangpur and Chittagong."
@@ -998,7 +1002,7 @@
       "id": "bd-Wghx",
       "step": 1,
       "order": 6,
-      "family": "other",
+      "family": "vegetation",
       "title": "Rice: beige, cut-down harvested fields",
       "text": [
         "**Harvested rice** can be identified by its **beige or brown colour** and **shorter, cut down appearance**. It can be seen alongside fully-grown, unharvested rice as well as freshly planted early growth rice in adjacent fields. This is most commonly seen in the states of Sylhet and southern Khulna."
@@ -1053,7 +1057,7 @@
       "id": "bd-tezx",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "vegetation",
       "title": "Rice: empty off-season fields",
       "text": [
         "Rice fields require some **rest time**, so it's natural to come across some off-season **barren, empty fields** without rice altogether. Off-season fields are mostly seen in the state of Dhaka, north of Padma River."
@@ -1108,7 +1112,7 @@
       "id": "bd-1nr0",
       "step": 1,
       "order": 8,
-      "family": "other",
+      "family": "vegetation",
       "title": "Landscape: huge rice fields, nothing else in view",
       "text": [
         "Vast rice fields with almost nothing else in view can be seen in the border area between the states of Dhaka, Mymensingh and Sylhet."
@@ -1227,7 +1231,7 @@
       "id": "bd-lwsk",
       "step": 1,
       "order": 10,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: long east-west ridge on the northern border",
       "text": [
         "A sizable east-west ridge can be seen on the Indian border from the northern parts of Sylhet and eastern Mymensingh. It is often obscured or diminished by heavy haze."
@@ -1277,14 +1281,13 @@
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A big east-west ridge on the Indian border is visible from the north-east and eastern centre-north. Heavy haze often hides it.",
-      "regionCode": "G"
+      "summary": "A big east-west ridge on the Indian border is visible from the north-east and eastern centre-north. Heavy haze often hides it."
     },
     {
       "id": "bd-CFUU",
       "step": 1,
       "order": 11,
-      "family": "other",
+      "family": "vegetation",
       "title": "Crops: corn in the west",
       "text": [
         "**Corn** tends to be planted in the west of Bangladesh - large and medium-sized fields can be found in Rajshahi, Rangpur, western Mymensingh and northern Khulna.",
@@ -1341,7 +1344,7 @@
       "id": "bd-oHUw",
       "step": 1,
       "order": 12,
-      "family": "coverage",
+      "family": "vegetation",
       "title": "Crops: tall green jute in the north-west",
       "text": [
         "[Jute](https://en.wikipedia.org/wiki/Jute) is a tall-growing green crop which gets dried and used in the making of rugs, bags and other goods. Because of when the coverage was taken, jute can almost exclusively be found on Street View in Rangpur. In its dried state it can be found hanging off fences and drying on the roads anywhere in the country."
@@ -1396,7 +1399,7 @@
       "id": "bd-s4b7",
       "step": 1,
       "order": 13,
-      "family": "other",
+      "family": "vegetation",
       "title": "Crops: low canola with yellow flowers",
       "text": [
         "**Canola** is a** **low-growing crop with **yellow flowers** that is used to make cooking oil. It is usually planted during the off-season for rice, making it extremely common north of Padma river in the state of Dhaka."
@@ -1451,7 +1454,7 @@
       "id": "bd-dQuW",
       "step": 1,
       "order": 14,
-      "family": "other",
+      "family": "vegetation",
       "title": "Landscape: tea gardens in the highlands",
       "text": [
         "**Tea production** in Bangladesh is concentrated in the highlands of southern Sylhet and, rarely, Chittagong."
@@ -1501,8 +1504,7 @@
         "url": "https://www.plonkit.net/bangladesh",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Tea is grown mainly in the highlands of the south of the north-east, and rarely in the south-east.",
-      "regionCode": "G"
+      "summary": "Tea is grown mainly in the highlands of the south of the north-east, and rarely in the south-east."
     },
     {
       "id": "bd-QXjW",
@@ -1564,7 +1566,7 @@
       "id": "bd-SRni",
       "step": 1,
       "order": 16,
-      "family": "other",
+      "family": "vegetation",
       "title": "Crops: sunflower fields in the far south",
       "text": [
         "**Sunflower fields** are found in the south of Barishal state."
@@ -1619,7 +1621,7 @@
       "id": "bd-wFYz",
       "step": 1,
       "order": 17,
-      "family": "other",
+      "family": "vegetation",
       "title": "Crops: watermelon fields in the far south",
       "text": [
         "Fields of **watermelons **can also be found in the south of Barishal."
@@ -1786,7 +1788,7 @@
       "id": "bd-reel",
       "step": 1,
       "order": 20,
-      "family": "vegetation",
+      "family": "landscape",
       "title": "Plants: thin drooping beach sheoaks on the coast",
       "text": [
         "**Beach Sheoaks **([Casuarina equisetifolia](https://en.wikipedia.org/wiki/Casuarina_equisetifolia)) are thin evergreen trees** **with **thin, long, drooping branchlets. **Like the name suggests, they are mostly observed in coastal regions - along the coast of the Teknaf Peninsula and around Noakhali city in Chittagong."
@@ -1897,7 +1899,7 @@
       "id": "bd-BSuF",
       "step": 1,
       "order": 22,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: Gen 4 with 2023 copyright label",
       "text": [
         "Similarly, Generation 4 coverage with **2023** written on the copyright labels can be found in Rangpur, Rajshahi, Khulna, Barishal, Sylhet and less commonly Chittagong.",
@@ -2180,8 +2182,8 @@
       "id": "bd-tfmk",
       "step": 2,
       "order": 1,
-      "family": "coverage",
-      "title": "Coverage: guard beside the car in a southern city",
+      "family": "car",
+      "title": "Google car: guard beside the car in a southern city",
       "text": [
         "In the city of Barishal there can also be a **guard** at the side of the car visible, not to be confused with the Sylhet guard.",
         "NOTE: The [same man](https://maps.app.goo.gl/ZRAD485rKUBixpPU8) can rarely be found elsewhere on trekker coverage."
@@ -2455,8 +2457,8 @@
     {
       "id": "bd-lm-793338",
       "step": 3,
-      "order": 10,
-      "family": "architecture",
+      "order": 7,
+      "family": "other",
       "title": "Rickshaw: angular fenders, painted bars on top",
       "text": [
         "Roofed cycle rickshaws with **angular fenders** with **painted metal bars on top** can be found in **Mymensingh Division**. The roof will often be folded back."
@@ -2492,7 +2494,7 @@
     {
       "id": "bd-lm-793339",
       "step": 3,
-      "order": 11,
+      "order": 8,
       "family": "other",
       "title": "Rickshaw: ornamented rear axle, heart or circle",
       "text": [
@@ -2529,7 +2531,7 @@
     {
       "id": "bd-lm-793340",
       "step": 3,
-      "order": 12,
+      "order": 9,
       "family": "other",
       "title": "Rickshaw: chariot-like big passenger seat",
       "text": [
@@ -2565,7 +2567,7 @@
     {
       "id": "bd-lm-793341",
       "step": 3,
-      "order": 13,
+      "order": 10,
       "family": "other",
       "title": "Rickshaw: several lines above rear axle",
       "text": [
@@ -2602,7 +2604,7 @@
     {
       "id": "bd-lm-793342",
       "step": 3,
-      "order": 14,
+      "order": 11,
       "family": "other",
       "title": "Rickshaw: cross bench, blue-red-yellow stripes",
       "text": [
@@ -2638,7 +2640,7 @@
     {
       "id": "bd-lm-793343",
       "step": 3,
-      "order": 15,
+      "order": 12,
       "family": "other",
       "title": "Rickshaw: flatbed with double rounded cross pattern",
       "text": [
@@ -2674,7 +2676,7 @@
     {
       "id": "bd-lm-793344",
       "step": 3,
-      "order": 16,
+      "order": 13,
       "family": "landscape",
       "title": "Vehicles: jeep-style utility trucks",
       "text": [
@@ -2710,7 +2712,7 @@
     {
       "id": "bd-lm-793345",
       "step": 3,
-      "order": 17,
+      "order": 14,
       "family": "other",
       "title": "Rickshaw: long benches, decorative back bars",
       "text": [
@@ -2747,7 +2749,7 @@
     {
       "id": "bd-lm-793346",
       "step": 3,
-      "order": 18,
+      "order": 15,
       "family": "other",
       "title": "Rickshaw: long benches, no rear decoration",
       "text": [
@@ -2783,7 +2785,7 @@
     {
       "id": "bd-lm-793347",
       "step": 3,
-      "order": 19,
+      "order": 16,
       "family": "other",
       "title": "Rickshaw: flatbed with long planks",
       "text": [
@@ -2821,7 +2823,7 @@
     {
       "id": "bd-lm-793348",
       "step": 3,
-      "order": 20,
+      "order": 17,
       "family": "other",
       "title": "Rickshaw: metal cage-like frames",
       "text": [
@@ -2857,7 +2859,7 @@
     {
       "id": "bd-lm-793349",
       "step": 3,
-      "order": 21,
+      "order": 18,
       "family": "other",
       "title": "Rickshaw: U-shaped benches, wooden wheel extensions",
       "text": [
@@ -2894,7 +2896,7 @@
     {
       "id": "bd-lm-793350",
       "step": 3,
-      "order": 22,
+      "order": 19,
       "family": "other",
       "title": "Rickshaw: flatbed, rectangular metal frame",
       "text": [
@@ -2931,8 +2933,8 @@
     {
       "id": "bd-lm-793351",
       "step": 3,
-      "order": 23,
-      "family": "architecture",
+      "order": 20,
+      "family": "other",
       "title": "Rickshaw: long benches, ridged roof",
       "text": [
         "These cycle rickshaws with **long benches** and **ridged roofs** are only used on **St. Martin’s Island**, in the far south of Bangladesh."
@@ -2967,7 +2969,7 @@
     {
       "id": "bd-lm-793352",
       "step": 3,
-      "order": 24,
+      "order": 21,
       "family": "other",
       "title": "Rickshaw: flatbed with rounded cross pattern",
       "text": [
@@ -3003,8 +3005,8 @@
     {
       "id": "bd-lm-793353",
       "step": 3,
-      "order": 25,
-      "family": "architecture",
+      "order": 22,
+      "family": "other",
       "title": "Rickshaw: arched tunnel-like roof",
       "text": [
         "Cycle rickshaws with **arched tunnel-like roofs** extending over the driver’s seat are only used in two separate areas near the border with India: **south of Satkhira** and **south of Meherpur**."
@@ -3041,7 +3043,7 @@
     {
       "id": "bd-lm-793354",
       "step": 3,
-      "order": 26,
+      "order": 23,
       "family": "other",
       "title": "Rickshaw: two long benches and cross bench (U)",
       "text": [
@@ -3077,7 +3079,7 @@
     {
       "id": "bd-lm-793355",
       "step": 3,
-      "order": 27,
+      "order": 24,
       "family": "other",
       "title": "Rickshaw: flatbed, wooden extensions over wheels",
       "text": [
@@ -3114,8 +3116,8 @@
     {
       "id": "bd-lm-793358",
       "step": 3,
-      "order": 28,
-      "family": "architecture",
+      "order": 25,
+      "family": "other",
       "title": "Rickshaw: auto rickshaw with bent roof bar",
       "text": [
         "A high proportion of auto rickshaws in **Mymensingh Division** have a **metal bar over the top of the front roof area** with a **slight but noticeable upward bend**. They may or may not have small metal ball shapes on them, either on each side or along the bar. You see similar metal bars in other regions occasionally, but they are normally unbent."
@@ -3150,7 +3152,7 @@
     {
       "id": "bd-lm-793359",
       "step": 3,
-      "order": 29,
+      "order": 26,
       "family": "other",
       "title": "Rickshaw: auto rickshaw with calligraphy and ornaments",
       "text": [
@@ -3189,7 +3191,7 @@
     {
       "id": "bd-lm-793360",
       "step": 3,
-      "order": 30,
+      "order": 27,
       "family": "other",
       "title": "Rickshaw: green auto with front painted another colour",
       "text": [
@@ -3225,7 +3227,7 @@
     {
       "id": "bd-lm-793361",
       "step": 3,
-      "order": 31,
+      "order": 28,
       "family": "other",
       "title": "Rickshaw: grill ornament with two curled scrolls",
       "text": [
@@ -3261,7 +3263,7 @@
     {
       "id": "bd-lm-793362",
       "step": 3,
-      "order": 32,
+      "order": 29,
       "family": "other",
       "title": "Rickshaw: semicircle over onion-dome grill ornament",
       "text": [
@@ -3297,8 +3299,8 @@
     {
       "id": "bd-lm-793363",
       "step": 3,
-      "order": 33,
-      "family": "architecture",
+      "order": 30,
+      "family": "other",
       "title": "Rickshaw: electric auto with VIP roof cover",
       "text": [
         "This **distinctive style of roof covering** is seen on some electric auto rickshaws in **western Rajshahi Division** and **southern Rangpur Division**. The covering usually features **the text ‘VIP’** although custom variants with other initials also exist. The colour scheme can vary but will be two-tone or three-tone."
@@ -3333,8 +3335,8 @@
     {
       "id": "bd-lm-793364",
       "step": 3,
-      "order": 34,
-      "family": "architecture",
+      "order": 31,
+      "family": "other",
       "title": "Rickshaw: auto with Well Come or Welcome text",
       "text": [
         "**South and east of the city of Sylhet**, you can somewhat commonly see auto rickshaws with **the text ‘Well Come’ or ‘Welcome’** on the side roof area, above or behind the door."
@@ -4499,7 +4501,7 @@
       "id": "bd-gh-postboxes",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 2 post boxes from here."

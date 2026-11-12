@@ -369,7 +369,7 @@
       "id": "hr-5dX0",
       "step": 0,
       "order": 7,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: autumn colours (older camera)",
       "text": [
         "Another quirk of Generation 3 coverage is that the majority of it was made in **autumn**. This means that the vegetation in this coverage will often have distinct yellowish or orange fall colours.",
@@ -715,6 +715,11 @@
           "width": 1000,
           "height": 552,
           "dupeOf": "4085e80507d8"
+        },
+        {
+          "id": "2206d486f5b5",
+          "src": "https://learnablemeta.com/images/1072/rzCWWZyjQai854taOibzl7N9B0REWyE37SOY.avif",
+          "dupeOf": "4085e80507d8"
         }
       ],
       "locations": [
@@ -747,7 +752,7 @@
       "id": "hr-R9QL",
       "step": 0,
       "order": 14,
-      "family": "car",
+      "family": "street",
       "title": "Fire hydrant: blue with two diagonal arms",
       "text": [
         "Croatia features **blue **fire hydrants with two diagonal protrusions on either side. Newer fire hydrants seen in Generation 4 have a [smaller top](https://www.google.com/maps/@45.3444374,19.0031362,3a,15y,342.71h,79.67t/data=!3m6!1e1!3m4!1sPvq5ffNHeVxmDooenAuoyA!2e0!7i16384!8i8192) but are still recognisable due to the blue paint.",
@@ -772,6 +777,11 @@
           "height": 338,
           "role": "example",
           "caption": "Blue fire hydrants with two diagonal arms"
+        },
+        {
+          "id": "34290f069d94",
+          "src": "https://learnablemeta.com/images/847/3lnXVfcK5k7jmHKvmGr8K8SR0CQ2HVFoP1QE.avif",
+          "dupeOf": "90d73d99c1b9"
         }
       ],
       "locations": [
@@ -917,7 +927,7 @@
       "id": "hr-FWfo",
       "step": 0,
       "order": 17,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: old backpack camera in historic towns",
       "text": [
         "Croatia does not have Generation 2 car coverage. However, in some historic downtown areas, a **Generation 2 trekker** camera was used.",
@@ -1034,7 +1044,7 @@
       "id": "hr-9d6r",
       "step": 1,
       "order": 2,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: hilly farmland north and west of the capital",
       "text": [
         "The region north and west of Zagreb is **hilly **and **agricultural**."
@@ -1065,6 +1075,11 @@
             "w": 0.64,
             "h": 1
           }
+        },
+        {
+          "id": "b31b1ff60f94",
+          "src": "https://learnablemeta.com/images/664/hWkTZTtcIijl7NOicDaZiyHw4MoyPiuNZqy6.avif",
+          "dupeOf": "f96628946d49"
         }
       ],
       "locations": [
@@ -1120,6 +1135,11 @@
             "w": 0.62,
             "h": 1
           }
+        },
+        {
+          "id": "2495167339ce",
+          "src": "https://learnablemeta.com/images/664/FN60kxzZnnoxUSvpd8wVVhIFcFc2SJvt03IF.avif",
+          "dupeOf": "1e47354948c5"
         }
       ],
       "locations": [
@@ -1333,7 +1353,7 @@
       "id": "hr-KPaC",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "language",
       "title": "Language: town names ending in -ec",
       "text": [
         "Town names ending with “**-ec**” are common to see in the northern parts of central Croatia."
@@ -1389,7 +1409,7 @@
       "id": "hr-O1bS",
       "step": 2,
       "order": 0,
-      "family": "coverage",
+      "family": "landscape",
       "title": "Coverage: big city, apartment blocks, blue trams",
       "text": [
         "Croatia’s capital Zagreb has a distinct **big city feel**. Apartment** **blocks can be seen throughout the city. The northern part of the city is hilly. Furthermore, Zagreb has [blue electric trams](https://goo.gl/maps/HKezsyENV7j4TJ1J7).",
@@ -1555,7 +1575,7 @@
       "id": "hr-AwCI",
       "step": 2,
       "order": 3,
-      "family": "landscape",
+      "family": "vegetation",
       "title": "Landscape: many vineyards near the Serbian border",
       "text": [
         "There are a lot of vineyards around the town of **Ilok**, near the Serbian **border**,** **west of Novi Sad. You can find vineyards in other parts of Croatia as well, but they are most common in this area. If you see lots of vineyards in a northeastern Croatian landscape, you are more often than not near Ilok."
@@ -1722,7 +1742,7 @@
       "id": "hr-7sgJ",
       "step": 2,
       "order": 6,
-      "family": "other",
+      "family": "architecture",
       "title": "Landmark: medieval city walls by the sea",
       "text": [
         "The city of Dubrovnik in the far south of coastal Croatia is famous for its beautifully preserved **medieval city walls**, which can be seen from many points in and around the Old Town."
@@ -1832,7 +1852,7 @@
       "id": "hr-lm-2988",
       "step": 3,
       "order": 1,
-      "family": "other",
+      "family": "sign",
       "title": "Sign: pedestrian with white belt, straight legs",
       "text": [
         "**White Belt**: Croatia/Bosnia, Portugal, Germany, Hungary. > **Non-Pointed Shoes**: Croatia/Bosnia, Portugal. > **Straight legs**: Croatia/Bosnia."
@@ -1868,12 +1888,13 @@
           "country": "HU",
           "how": "Hungary also has a white belt"
         }
-      ]
+      ],
+      "kind": "pedestrian"
     },
     {
       "id": "hr-lm-395595",
       "step": 3,
-      "order": 13,
+      "order": 6,
       "family": "other",
       "title": "Phone numbers: landline area codes",
       "text": [
@@ -1893,7 +1914,7 @@
     {
       "id": "hr-lm-740393",
       "step": 3,
-      "order": 14,
+      "order": 7,
       "family": "sign",
       "kind": "street",
       "title": "Sign: dark blue street sign, white line",
@@ -1930,7 +1951,7 @@
     {
       "id": "hr-lm-740394",
       "step": 3,
-      "order": 15,
+      "order": 8,
       "family": "landscape",
       "title": "Landscape: city on the water, ridges north and east",
       "text": [
@@ -1966,7 +1987,7 @@
     {
       "id": "hr-lm-783126",
       "step": 3,
-      "order": 16,
+      "order": 9,
       "family": "language",
       "title": "Language: Latin letters, Č Š Ž Ć Đ, ulica",
       "text": [
@@ -2763,7 +2784,7 @@
       "id": "hr-gh-housenumbers",
       "step": 4,
       "order": 6,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 1 house number from here."
@@ -2793,7 +2814,7 @@
       "id": "hr-gh-postboxes",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 7 post boxes from here."
@@ -3004,7 +3025,7 @@
       "id": "hr-gh-sidewalks",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

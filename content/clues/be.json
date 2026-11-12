@@ -445,7 +445,7 @@
       "id": "be-IlY6",
       "step": 0,
       "order": 8,
-      "family": "other",
+      "family": "sign",
       "title": "Kilometre marker: green, sometimes red text",
       "text": [
         "Kilometre markers in Belgium are often green, but can have [red text](https://goo.gl/maps/s18C6tj6L1qZXbVZ6) as well."
@@ -487,7 +487,8 @@
         "url": "https://www.plonkit.net/belgium",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Kilometre markers are often green, and can have red text."
+      "summary": "Kilometre markers are often green, and can have red text.",
+      "kind": "other"
     },
     {
       "id": "be-73Bz",
@@ -989,8 +990,7 @@
       "id": "be-9KhQ",
       "step": 0,
       "order": 18,
-      "family": "sign",
-      "kind": "direction",
+      "family": "street",
       "title": "Bus stop: yellow signposts and roofs",
       "text": [
         "Bus stops are always marked by **yellow signposts**. Bus shelters often have **yellow roofs**."
@@ -1090,8 +1090,7 @@
       "id": "be-n3uG",
       "step": 0,
       "order": 20,
-      "family": "sign",
-      "kind": "other",
+      "family": "street",
       "title": "Sign: red water hydrant sign with letter H",
       "text": [
         "Belgium uses these **red** water hydrants signs with the letter **H **on top.",
@@ -1298,7 +1297,7 @@
       "id": "be-uyob",
       "step": 0,
       "order": 24,
-      "family": "coverage",
+      "family": "car",
       "title": "Google car: red car with long antenna",
       "text": [
         "Coverage with a** red car** and a **long antenna **can rarely be seen in Belgium.",
@@ -1355,8 +1354,8 @@
       "id": "be-0VLo",
       "step": 0,
       "order": 25,
-      "family": "car",
-      "title": "Google car: low smallcam, wide round blur",
+      "family": "coverage",
+      "title": "Coverage: low smallcam, wide round blur",
       "text": [
         "Belgium also has Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Western Europe also has smallcam."
@@ -1419,7 +1418,7 @@
       "id": "be-vR5K",
       "step": 1,
       "order": 0,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: flat northwest, hillier southeast",
       "text": [
         "Belgium is generally **flat **in the northwest of the country, especially near the coast. The further [south east](https://goo.gl/maps/P9sjaiMA1DEcR4VY9) you go, the **hillier**."
@@ -1548,8 +1547,7 @@
       "id": "be-t75X",
       "step": 1,
       "order": 3,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Bus stop sign: white top or yellow top",
       "text": [
         "Bus stop signs in Flanders (and Brussels) have a **white rectangle** at the top. In Wallonia they will have a [**yellow top**](https://goo.gl/maps/RXMysmC593bvR99HA)."
@@ -1880,6 +1878,11 @@
             "w": 0.67,
             "h": 1
           }
+        },
+        {
+          "id": "422cc37e9467",
+          "src": "https://learnablemeta.com/images/664/7w2kXvSgAtDKck3JVb3EOjkPD7ikqUIFmEnA.avif",
+          "dupeOf": "ea8cc93ba5f6"
         }
       ],
       "locations": [
@@ -1913,7 +1916,7 @@
       "id": "be-6AkT",
       "step": 1,
       "order": 10,
-      "family": "architecture",
+      "family": "landscape",
       "title": "Coast: wall of apartment blocks, dunes",
       "text": [
         "Many parts of the Belgian **North Sea coast** are lined by apartment blocks, in a manner that is often derisively referred to as a “wall” of buildings by locals.",
@@ -2033,7 +2036,7 @@
     {
       "id": "be-lm-783088",
       "step": 3,
-      "order": 22,
+      "order": 21,
       "family": "language",
       "title": "Language: Dutch with ij, ieuw, oe and straat",
       "text": [
@@ -2082,7 +2085,7 @@
     {
       "id": "be-lm-783090",
       "step": 3,
-      "order": 24,
+      "order": 23,
       "family": "language",
       "title": "Language: French with rue and accents",
       "text": [
@@ -2939,7 +2942,7 @@
       "id": "be-gh-postboxes",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 9 post boxes from here."
@@ -3204,7 +3207,7 @@
       "id": "be-gh-sidewalks",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Sidewalks",
       "text": [
         "GeoHints shows 1 sidewalk from here."

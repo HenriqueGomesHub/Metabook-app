@@ -79,13 +79,26 @@
       "id": "cw-Nchv",
       "step": 0,
       "order": 3,
-      "family": "architecture",
+      "family": "car",
       "title": "Google car: black with a roof rack",
       "text": [
         "This **black car** with a **roof rack** is unique to Curaçao."
       ],
       "tags": [],
-      "images": [],
+      "images": [
+        {
+          "id": "2a6e7810da42",
+          "src": "https://learnablemeta.com/images/x11G4T8kI0KIVtBq4RJ8M70BheNeB0ARs0K7.avif",
+          "path": "cw/2a6e7810da42.webp",
+          "width": 1000,
+          "height": 510,
+          "role": "example"
+        },
+        {
+          "id": "171aa47630b4",
+          "src": "https://learnablemeta.com/images/715/SBZqiWlw6B3mV8E98ScpI4EQPW7jQvCKN4Zd.avif"
+        }
+      ],
       "locations": [],
       "lookalikes": [],
       "credit": {
@@ -99,7 +112,7 @@
       "id": "cw-9ndl",
       "step": 0,
       "order": 4,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: cacti by the road",
       "text": [
         "Due to Curaçao’s semi-arid climate, **cacti** can commonly be seen."
@@ -293,7 +306,7 @@
       "id": "cw-YPX7",
       "step": 0,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Traffic lights: black-and-white striped posts",
       "text": [
         "**White and black** striped traffic light posts can be seen in urban areas."
@@ -631,36 +644,6 @@
       "summary": "In the centre of the island, the camera has a stick poking in front of the lens."
     },
     {
-      "id": "cw-lm-315",
-      "step": 3,
-      "order": 0,
-      "family": "car",
-      "title": "Google car: black, roof rack, white stickers",
-      "text": [
-        "This black Street View car with a roof rack is unique to Curaçao.",
-        "It also has white sticker on front left/back right of roof rack."
-      ],
-      "tags": [],
-      "images": [
-        {
-          "id": "2a6e7810da42",
-          "src": "https://learnablemeta.com/images/x11G4T8kI0KIVtBq4RJ8M70BheNeB0ARs0K7.avif",
-          "path": "cw/2a6e7810da42.webp",
-          "width": 1000,
-          "height": 510,
-          "role": "example"
-        }
-      ],
-      "locations": [],
-      "lookalikes": [],
-      "credit": {
-        "source": "Learnable Meta",
-        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
-        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
-      },
-      "summary": "A black car with a roof rack and a white sticker on the front left and back right of the rack. Only this island has it."
-    },
-    {
       "id": "cw-gh-utilitypoles",
       "step": 4,
       "order": 0,
@@ -896,7 +879,7 @@
       "id": "cw-gh-postboxes",
       "step": 4,
       "order": 4,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 2 post boxes from here."

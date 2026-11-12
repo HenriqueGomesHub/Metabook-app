@@ -673,8 +673,7 @@
       "id": "lt-sIcK",
       "step": 0,
       "order": 10,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Sign: bus stop, bus with four windows",
       "text": [
         "Lithuanian bus stop signs have this design.",
@@ -779,8 +778,7 @@
       "id": "lt-5FSb",
       "step": 0,
       "order": 12,
-      "family": "sign",
-      "kind": "other",
+      "family": "language",
       "title": "Sign: street word \"gatvė\", short \"g.\"",
       "text": [
         "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs and Google Maps.",
@@ -804,23 +802,6 @@
           "width": 600,
           "height": 338,
           "role": "example"
-        },
-        {
-          "id": "d6e1e2a80fae",
-          "src": "https://learnablemeta.com/images/ehjY0xFvN0XFpuwFZJNoFwbFoBT4I9B1N9oS.avif",
-          "path": "lt/d6e1e2a80fae.webp",
-          "width": 1000,
-          "height": 498,
-          "role": "example"
-        },
-        {
-          "id": "88f3973cb0cb",
-          "src": "https://learnablemeta.com/images/186/hkx6twYhk1IclSZhzk0KuiS5yjiUt2gkU9Fz.avif",
-          "giveaway": true,
-          "path": "lt/88f3973cb0cb.webp",
-          "width": 1000,
-          "height": 563,
-          "dupeOf": "680869990554"
         }
       ],
       "locations": [
@@ -846,7 +827,7 @@
       "id": "lt-94Uf",
       "step": 0,
       "order": 13,
-      "family": "other",
+      "family": "language",
       "title": "Place names: many end in -ai",
       "text": [
         "Many Lithuanian place names end in **-ai**."
@@ -1117,8 +1098,8 @@
       "id": "lt-fAPZ",
       "step": 0,
       "order": 18,
-      "family": "car",
-      "title": "Google car: random small blurs in Gen 3",
+      "family": "coverage",
+      "title": "Coverage: random small blurs in Gen 3",
       "text": [
         "In Generation 3 coverage, you will often see **random small blurs**. These blurs look similar to the ones that are used to blur out licence plates or faces, but instead they cover seemingly random parts of the image – often on direction signs.",
         "NOTE: This is also common in the Russian oblast of Kaliningrad, just to the southwest of Lithuania.",
@@ -1537,10 +1518,40 @@
       "summary": "Rare bilingual signs with Polish in a small area in the southeast. Not common, but it gets you a close guess if the rest looks clearly Lithuanian."
     },
     {
-      "id": "lt-lm-2997",
+      "id": "lt-lm-81",
       "step": 3,
       "order": 0,
-      "family": "other",
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street name ending - g",
+      "text": [
+        "The Lithuanian word for street is \"gatvė,\" often abbreviated as \"g.\" on street signs. If you see a street sign ending in \"g.,\" you're likely in Lithuania.",
+        "This word is almost entirely unique to Lithuanian, though very rarely, you might see \"gatve\" (abbreviated as \"gat.\") in the Latvian capital, Riga."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "d6e1e2a80fae",
+          "src": "https://learnablemeta.com/images/ehjY0xFvN0XFpuwFZJNoFwbFoBT4I9B1N9oS.avif",
+          "path": "lt/d6e1e2a80fae.webp",
+          "width": 1000,
+          "height": 498,
+          "role": "example"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/66c0d3feff4dbe492e06174e",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
+      "id": "lt-lm-2997",
+      "step": 3,
+      "order": 1,
+      "family": "sign",
       "title": "Sign: pedestrian, chunky figure, vivid blue",
       "text": [
         "**3 Zebra Stripes**: Estonia, Lithuania, Russia, Ukraine. > Cross off Estonia and Russia (detailed guy in Estonia, Yellow borders in Russia) and you're left with Lithuania and Ukraine. Lithuania's guy is a liiittle bit more **fat** in the torso than Ukraine and the blue is generally more vibrant than Ukraine."
@@ -1583,14 +1594,46 @@
           "how": "Russian signs have yellow borders"
         }
       ],
+      "kind": "pedestrian",
       "sameAs": [
         "UA"
       ]
     },
     {
+      "id": "lt-lm-8369",
+      "step": 3,
+      "order": 3,
+      "family": "sign",
+      "kind": "street",
+      "title": "Street sign: Street Names",
+      "text": [
+        "The Lithuanian word for street is **gatve**, often abbreviated as **g.** on signs and Google Maps.",
+        "This word is almost entirely unique to Lithuanian. However, very rarely, you might see ‘gatve’ (abbreviated as gat.) in the Latvian capital of Riga."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "88f3973cb0cb",
+          "src": "https://learnablemeta.com/images/186/hkx6twYhk1IclSZhzk0KuiS5yjiUt2gkU9Fz.avif",
+          "giveaway": true,
+          "path": "lt/88f3973cb0cb.webp",
+          "width": 1000,
+          "height": 563,
+          "dupeOf": "680869990554"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/679bc3149a51a0b977a93e46",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
       "id": "lt-lm-740357",
       "step": 3,
-      "order": 15,
+      "order": 17,
       "family": "architecture",
       "title": "House numbers: very big with curvy lines",
       "text": [
@@ -1619,7 +1662,7 @@
     {
       "id": "lt-lm-740358",
       "step": 3,
-      "order": 16,
+      "order": 18,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: white, black text, black frame",
@@ -2363,7 +2406,7 @@
       "id": "lt-gh-postboxes",
       "step": 4,
       "order": 5,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 1 post box from here."

@@ -32,12 +32,13 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
   line: { label: 'Road lines', blurb: 'Centre and edge line patterns' },
   guardrail: { label: 'Guardrails', blurb: 'Barriers and their reflectors' },
   language: { label: 'Language', blurb: 'Letters and words on signs' },
-  car: { label: 'Google car', blurb: 'Car, camera mount and antenna' },
-  coverage: { label: 'Coverage', blurb: 'Camera generation, blur and where coverage is' },
+  car: { label: 'Google car', blurb: 'The car itself: colour, antenna, rack, follow cars' },
+  coverage: { label: 'Coverage', blurb: 'Camera generation, season, trekkers and where it is' },
+  street: { label: 'Streets', blurb: 'Kerbs, lamps, bus stops and road surface' },
   landscape: { label: 'Landscape', blurb: 'Terrain, soil and scenery' },
   vegetation: { label: 'Vegetation', blurb: 'Trees, crops and plants' },
-  architecture: { label: 'Architecture', blurb: 'Houses, roofs and pavements' },
-  other: { label: 'Basics', blurb: 'Driving side, domains, calling codes' },
+  architecture: { label: 'Architecture', blurb: 'Houses, roofs and walls' },
+  other: { label: 'Other clues', blurb: 'Driving side, landmarks, traffic, phone numbers' },
 };
 
 /** How a family's clues are counted on a tile ("38 bollards"). */
@@ -51,6 +52,7 @@ export const FAMILY_NOUNS: Record<MetaSubject, [string, string]> = {
   language: ['language clue', 'language clues'],
   car: ['car clue', 'car clues'],
   coverage: ['coverage clue', 'coverage clues'],
+  street: ['street clue', 'street clues'],
   landscape: ['landscape clue', 'landscape clues'],
   vegetation: ['plant', 'plants'],
   architecture: ['building clue', 'building clues'],

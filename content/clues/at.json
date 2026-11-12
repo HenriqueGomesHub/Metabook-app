@@ -422,7 +422,7 @@
       "id": "at-N5fI",
       "step": 0,
       "order": 8,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: Gen 3 and Gen 4 only, never low-cam",
       "text": [
         "You can tell the three German-speaking countries apart by **camera meta **alone:",
@@ -489,8 +489,8 @@
       "id": "at-jtGs",
       "step": 0,
       "order": 9,
-      "family": "car",
-      "title": "Google car: low camera, big round blur",
+      "family": "coverage",
+      "title": "Coverage: low camera, big round blur",
       "text": [
         "Austria also has generation 4 “smallcam” coverage, which is mounted lower than regular generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot.",
         "NOTE: Most of Western Europe also has smallcam."
@@ -912,14 +912,6 @@
           "width": 600,
           "height": 338,
           "role": "example"
-        },
-        {
-          "id": "b7d7d514dfd4",
-          "src": "https://learnablemeta.com/images/497/ozj380SyeauUEt7mnzh4BfGDAoVgAlbOxisJ.avif",
-          "path": "at/b7d7d514dfd4.webp",
-          "width": 1000,
-          "height": 552,
-          "dupeOf": "22c4d0138acf"
         }
       ],
       "locations": [
@@ -1193,7 +1185,7 @@
       "id": "at-9j96",
       "step": 1,
       "order": 1,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: A-road numbers rise westward",
       "text": [
         "A map of Austrian **A-roads **can be seen here, following the general trend of increasing in number from east to west.",
@@ -1208,13 +1200,14 @@
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Motorway numbers get bigger the further west you go."
+      "summary": "Motorway numbers get bigger the further west you go.",
+      "kind": "route"
     },
     {
       "id": "at-pdDS",
       "step": 1,
       "order": 2,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: B-roads rise westward",
       "text": [
         "Austrian **B-roads**, indicated by white text inside of a blue rectangle, also follow the general trend of increasing in number from east to west.",
@@ -1230,7 +1223,8 @@
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "B-roads, white text in a blue rectangle, also rise in number from east to west. The exception is 222 to 230, around the capital."
+      "summary": "B-roads, white text in a blue rectangle, also rise in number from east to west. The exception is 222 to 230, around the capital.",
+      "kind": "route"
     },
     {
       "id": "at-brez",
@@ -1397,7 +1391,7 @@
       "id": "at-Wz4z",
       "step": 1,
       "order": 7,
-      "family": "other",
+      "family": "sign",
       "title": "Kilometre marker: white",
       "text": [
         "**White kilometre markers** can be found in Vorarlberg as well as on a road in [western Salzburg](https://maps.app.goo.gl/sDKDbQ2Czn1zkd59A)."
@@ -1447,7 +1441,8 @@
         "url": "https://www.plonkit.net/austria",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "White kilometre markers are in Vorarlberg and on one road in western Salzburg."
+      "summary": "White kilometre markers are in Vorarlberg and on one road in western Salzburg.",
+      "kind": "other"
     },
     {
       "id": "at-UnOK",
@@ -1687,7 +1682,7 @@
       "id": "at-scuj",
       "step": 1,
       "order": 12,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: vineyards in the far east",
       "text": [
         "**Vineyards** are limited to the far eastern part of the country.",
@@ -1962,7 +1957,7 @@
       "id": "at-pHCf",
       "step": 2,
       "order": 3,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: huge lake in the far west",
       "text": [
         "**Lake Constance** (known in German as the Bodensee) is a large lake on the western border of Austria. It can be recognized by its vastness, which is not seen in other lakes within the mountainous part of the country."
@@ -2014,9 +2009,40 @@
       "summary": "Lake Constance (Bodensee) on the western border is recognisable by its vast size, unlike other lakes in the mountains."
     },
     {
+      "id": "at-lm-9737",
+      "step": 3,
+      "order": 2,
+      "family": "street",
+      "title": "Street: bus stop sign",
+      "text": [
+        "Austrian bus stop signs contain a yellow and green circle with the letter H.",
+        "NOTE: This design is relatively unique in Europe. The only other country with similar bus stop signs is Germany."
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": "b7d7d514dfd4",
+          "src": "https://learnablemeta.com/images/497/ozj380SyeauUEt7mnzh4BfGDAoVgAlbOxisJ.avif",
+          "path": "at/b7d7d514dfd4.webp",
+          "width": 1000,
+          "height": 552,
+          "dupeOf": "22c4d0138acf"
+        }
+      ],
+      "locations": [],
+      "lookalikes": [
+        "DE"
+      ],
+      "credit": {
+        "source": "Learnable Meta",
+        "url": "https://learnablemeta.com/maps/67b8db19c812bf41d49b730e",
+        "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
+      }
+    },
+    {
       "id": "at-lm-295899",
       "step": 3,
-      "order": 15,
+      "order": 16,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: red",
@@ -2037,7 +2063,7 @@
     {
       "id": "at-lm-295900",
       "step": 3,
-      "order": 16,
+      "order": 17,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: green with two lines",
@@ -2058,7 +2084,7 @@
     {
       "id": "at-lm-295901",
       "step": 3,
-      "order": 17,
+      "order": 18,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: large, heading plus small text",
@@ -2087,7 +2113,7 @@
     {
       "id": "at-lm-295903",
       "step": 3,
-      "order": 19,
+      "order": 20,
       "family": "other",
       "title": "Buses: Landbus logo",
       "text": [
@@ -2107,7 +2133,7 @@
     {
       "id": "at-lm-295904",
       "step": 3,
-      "order": 20,
+      "order": 21,
       "family": "other",
       "title": "Buses: OÖVV logo",
       "text": [
@@ -2135,7 +2161,7 @@
     {
       "id": "at-lm-295905",
       "step": 3,
-      "order": 21,
+      "order": 22,
       "family": "other",
       "title": "Buses: Wiener Linien logo",
       "text": [
@@ -2164,7 +2190,7 @@
     {
       "id": "at-lm-295906",
       "step": 3,
-      "order": 22,
+      "order": 23,
       "family": "other",
       "title": "Buses: Graz Holding logo",
       "text": [
@@ -2184,7 +2210,7 @@
     {
       "id": "at-lm-295907",
       "step": 3,
-      "order": 23,
+      "order": 24,
       "family": "other",
       "title": "Buses: RegioBus Steiermark logo",
       "text": [
@@ -2213,7 +2239,7 @@
     {
       "id": "at-lm-295912",
       "step": 3,
-      "order": 28,
+      "order": 29,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: blue or white with coat of arms",
@@ -2243,7 +2269,7 @@
     {
       "id": "at-lm-361745",
       "step": 3,
-      "order": 29,
+      "order": 30,
       "family": "other",
       "title": "Phone numbers: area code 01 up to 07",
       "text": [
@@ -2263,7 +2289,7 @@
     {
       "id": "at-lm-634057",
       "step": 3,
-      "order": 30,
+      "order": 31,
       "family": "plate",
       "title": "Plate: thin red edge around blue strip",
       "text": [
@@ -2301,7 +2327,7 @@
     {
       "id": "at-lm-740320",
       "step": 3,
-      "order": 33,
+      "order": 34,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: white, orange stripes and logo",
@@ -2331,7 +2357,7 @@
     {
       "id": "at-lm-740534",
       "step": 3,
-      "order": 37,
+      "order": 38,
       "family": "sign",
       "kind": "street",
       "title": "Street sign: very dark red-brown, white text",
@@ -4523,7 +4549,7 @@
       "id": "at-gh-housenumbers",
       "step": 4,
       "order": 7,
-      "family": "other",
+      "family": "architecture",
       "title": "House numbers",
       "text": [
         "GeoHints shows 4 house numbers from here. Regions: Styria (3)."
@@ -4580,7 +4606,7 @@
       "id": "at-gh-postboxes",
       "step": 4,
       "order": 8,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 4 post boxes from here."

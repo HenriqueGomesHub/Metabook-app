@@ -38,7 +38,9 @@ describe('classify', () => {
     assert.deepEqual(classify({ tags: ['bollard'], text: ['Anything'] }), { family: 'bollard' });
     assert.deepEqual(classify({ tags: ['important', 'license plates'], text: ['x'] }), { family: 'plate' });
     assert.deepEqual(classify({ tags: ['roadline'], text: ['x'] }), { family: 'line' });
-    assert.deepEqual(classify({ tags: ['coverage'], text: ['Gen 3 coverage only.'] }), { family: 'car' });
+    // Plonk It's coverage tag covers the car too: the text tells them apart
+    assert.deepEqual(classify({ tags: ['coverage'], text: ['Gen 3 coverage only.'] }), { family: 'coverage' });
+    assert.deepEqual(classify({ tags: ['coverage'], text: ['A white Google car with a long antenna.'] }), { family: 'car' });
     assert.deepEqual(classify({ tags: ['coverage'], text: ['Most coverage is in the east.'] }), { family: 'coverage' });
     assert.deepEqual(classify({ tags: ['moving info'], text: ['Old **bollards** are rare.'] }), { family: 'bollard' });
   });
@@ -53,6 +55,19 @@ describe('classify', () => {
     assert.deepEqual(classify({ text: ['Utility poles here carry bollard-like stripes.'] }), { family: 'pole' });
     assert.deepEqual(classify({ text: ['Nothing to see.', 'But the trees are tall.'] }), { family: 'vegetation' });
     assert.deepEqual(classify({ text: ['Phone numbers have 9 digits.'] }), { family: 'other' });
+  });
+
+  it('keeps the Google car apart from coverage and from things merely seen in Gen 4', () => {
+    const family = (text) => classify({ text: [text] }).family;
+    assert.equal(family('Another quirk of Generation 3 coverage is that most of it was made in autumn.'), 'coverage');
+    assert.equal(family('Austria also has Generation 4 “smallcam” coverage, mounted lower with a big car blur.'), 'coverage');
+    assert.equal(family('A trekker walks among hundreds of red crabs near the beach.'), 'coverage');
+    assert.equal(family('Croatia features blue fire hydrants. Newer hydrants seen in Generation 4 have a smaller top.'), 'street');
+    assert.equal(family('A black generation 4 car that will never have an antenna can be found here.'), 'car');
+    assert.equal(family('Along the west coast you may find a white Google car with a blue stripe.'), 'car');
+    assert.equal(family('Taxis in Bhutan have yellow licence plates and yellow roofs.'), 'plate');
+    assert.equal(family('These red trucks, known as songthaews, are common in Chiang Mai.'), 'other');
+    assert.equal(family('Rice is the main crop and is planted twice a year.'), 'vegetation');
     assert.deepEqual(classify({ text: ['Iceland is a geologically active country on two tectonic plates.'] }), { family: 'other' });
   });
 

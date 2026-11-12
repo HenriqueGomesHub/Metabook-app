@@ -65,47 +65,123 @@ const SIGN_WORDS = [
   ['back', /\bsign backs?\b|\bbacks? of (the )?signs?\b/i],
 ];
 
-const CAR = /\b(google|street view|google street view) cars?\b|\bcamera gen(eration)?\b|\bgen ?[1-4]\b|\bgeneration [1-4]\b|\bantennas?\b|\bsnorkel\b|\brack\b/i;
+// Google car vs coverage, the two boxes clues most often land in by mistake:
+// - car: what you see of the Street View vehicle and its rig: colour, antenna, rack, tape, snorkel,
+//   mirrors, the bed or trailer, ATVs, boats, the driver, follow cars.
+// - coverage: the picture itself: camera generation, smallcam / shitcam, trekkers, blur, smudges,
+//   rifts and tints, and when and where it was taken (season, weather, extent).
+// A camera generation named in passing ("newer hydrants seen in Gen 4") says nothing about either.
+const COLOURS = 'white|black|grey|gray|silver|red|blue|green|yellow|orange|brown|beige|dark|light|purple|pink';
+/** Words that can only mean the Street View car or its rig. */
+const VEHICLE = new RegExp(
+  [
+    String.raw`\b(google|street ?view) (cars?|vehicles?|trucks?|pickups?)\b`,
+    String.raw`\b(${COLOURS})(-| and | |-and-)?(${COLOURS})?( (generation|gen) ?[1-4])?( (google|street ?view))? (car|truck|pickup( truck)?|suv|van|vehicle|4x4|toyota)\b`,
+    String.raw`\b(unique|rare|invisible|visible|special|distinct(ive)?|different|exposed|solid|boxy) (google |street ?view )?(cars?|trucks?|pickups?|vehicles?)\b`,
+    String.raw`\bthis (unique |rare |distinct |special )?(google |street ?view )?(car|truck|pickup|vehicle)\b`,
+    String.raw`(?<!radio |rooftop |tall |tv |television |phone )\bantennas?\b|\bsnorkels?\b|\broof ?racks?\b|\bmirrors?\b|\bbrake lights?\b|\btow(ing|bar)\b|\btrailers?\b`,
+    String.raw`\b(piece|pieces|strip) of tape\b|\btape (on|at) (the )?(antenna|roof|car)\b|\btaped\b|\bfollow cars?\b|\batvs?\b|\bquad bikes?\b|\bsnowmobiles?\b(?! trails?)|\bstreet ?view (boat|bike|trike)s?\b`,
+    String.raw`\bcamera (mount|rig|pole|bar)s?\b|\bopen trunk\b|\bbonnet\b`,
+  ].join('|'),
+  'i',
+);
+/** Words that usually mean the Street View car, but not enough to outweigh the scenery. */
+const VEHICLE_WEAK =
+  /\bthe (google |street ?view )?(car|truck|pickup|vehicle)('s)?\b|\b(car|truck|pickup|vehicle) (is|was|has|with|can be seen)\b|\bthe driver\b|\bthe bed\b|\bracks?\b|\btractors?\b/i;
+/** Camera types and faults: named before the car, the clue is about the camera. */
+const CAMERA_TYPE =
+  /\bsmall ?cam\b|\bshit ?cam\b|\bofficial ari\b|\blow ?cam\b|\btrekkers?\b|\brifts?\b|\bsmudge[sd]?\b|\bglitch(es)?\b|\blow[- ]quality camera\b/i;
+const CAMERA =
+  /\b(generation|gen) ?[1-4]\b|\bgen[1-4]\b|\bcamera\b|\bsmall ?cam\b|\bshit ?cam\b|\bofficial ari\b|\blow ?cam\b|\btrekkers?\b|\bcoverage\b|\bblurs?\b|\bsmudge[sd]?\b|\brifts?\b|\btint(ed)?\b|\bglitch(es)?\b|\bcopyright\b|\bpanoramas?\b|\bstitching\b/i;
 
-/** [family, regex] in priority order (a tie on position goes to the earlier one). */
+/** [family, regex] for what a clue is about, in priority order (a tie on position goes to the earlier one). */
 const FAMILY_WORDS = [
   ['bollard', /\bbollards?\b/i],
-  ['plate', /\b(?<!tectonic |pole )plates?\b/i],
-  ['guardrail', /\bguard ?rails?\b|\bbarriers?\b/i],
+  ['plate', /\b(?<!tectonic |pole |number |name |street )(licen[cs]e |number |car )?plates?\b/i],
+  ['guardrail', /\bguard ?rails?\b|\bcrash barriers?\b|\bbarriers?\b/i],
   ...SIGN_WORDS.map(([, regex]) => ['sign', regex]),
-  ['pole', /\b(utility )?poles?\b/i],
-  ['line', /\b(road|centre|center|edge|lane|middle) ?lines?\b|\bdashed\b|\broad markings?\b/i],
-  ['car', CAR],
-  ['coverage', /\bcoverage\b|\btrekkers?\b/i],
-  ['language', /\bscripts?\b|\balphabets?\b|\blanguages?\b|\bdiacritics?\b|\bletters\b/i],
-  ['architecture', /\bhouses?\b|\broofs?\b|\barchitecture\b|\bbuildings?\b/i],
-  ['vegetation', /\bvegetation\b|\btrees?\b|\bpalms?\b|\bforests?\b/i],
-  ['landscape', /\blandscapes?\b|\bterrain\b|\bsoil\b|\bmountains?\b|\bhills?\b/i],
-  ['sign', /\bsigns?\b/i],
+  ['pole', /\b(utility |electricity |power |telephone |snow |wooden |concrete )?poles?\b|\binsulators?\b|\bpylons?\b/i],
+  ['line', /\b(road|centre|center|edge|lane|middle|side|shoulder) ?lines?\b|\bdashed\b|\broad markings?\b/i],
+  [
+    'street',
+    /\bkerbs?\b|\bcurbs?\b|\bstreet ?lights?\b|\blamp ?posts?\b|\blamps?\b|\bbus (stops?|shelters?|signs?)\b|\bbus stop signs?\b|\bbins?\b|\bhydrants?\b|\bmail ?box(es)?\b|\bpost ?box(es)?\b|\bletter ?box(es)?\b|\btraffic lights?\b|\bsidewalks?\b|\bpavements?\b|\bpotholes?\b|\basphalt\b|\bmanholes?\b|\bspeed bumps?\b|\bfences?\b|\bbridges?\b|\broad (diamond|surface|quality)s?\b|\bdirt roads?\b|\bgravel roads?\b|\bunpaved\b|\bbenches?\b|\bcobble(stones?|d)\b|\bconcrete (block )?roads?\b|\bdrainage ditch(es)?\b|\b(traffic|convex|junction|road) mirrors?\b|\bmirrors with (orange|yellow|red) hoods?\b/i,
+  ],
+  ['language', /\bscripts?\b|\balphabets?\b|\blanguages?\b|\bdiacritics?\b|\bletters\b|\bspelling\b|\bwords? for\b/i],
+  ['architecture', /\bhouses?\b|\broofs?\b|\barchitecture\b|\bbuildings?\b|\bchimneys?\b|\bbarns?\b|\bhuts?\b|\bhouse numbers?\b|\bwalls\b|\bgates?\b/i],
+  [
+    'vegetation',
+    /\bvegetation\b|\btrees?\b|\bpalms?\b|\bforests?\b|\bplants?\b|\bplantations?\b|\bcrops?\b|\bfields of\b|\brice\b|\bcorn\b|\bmaize\b|\bbananas?\b|\bsugar ?cane\b|\bcotton\b|\bwheat\b|\btea\b|\bcact(i|us)\b|\bagaves?\b|\bbushes\b|\bshrubs?\b|\bgrass\b|\beucalyptus\b|\bpines?\b|\bbirch(es)?\b|\bvineyards?\b|\borchards?\b/i,
+  ],
+  [
+    'landscape',
+    /\blandscapes?\b|\bterrain\b|\bsoil\b|\bmountains?\b|\bhills?\b|\bhilly\b|\bvolcan(o|oes|ic)\b|\brocks?\b|\brocky\b|\bdeserts?\b|\bridges?\b|\bvalleys?\b|\bbeach(es)?\b|\bcoast(line)?\b|\bsand(y)?\b|\bcliffs?\b|\bplains?\b|\bscenery\b|\blakes?\b|\brivers?\b|\bfjords?\b|\bdunes?\b|\bcanyons?\b/i,
+  ],
+  ['sign', /\bsigns?\b|\bsign ?posts?\b/i],
 ];
 
-/** The pattern matching earliest in `text` → its family (or key), or undefined. */
-function earliest(text, patterns) {
+/** Traffic, not the Street View car: a clue about it only when it names nothing else. */
+const TRAFFIC = [
+  ['other', /\btaxis?\b|\bbuses\b|\bbus\b(?! stops?| shelters?)|\btrams?\b|\brickshaws?\b|\btuk[- ]?tuks?\b|\bsongthaews?\b|\bjeepneys?\b|\bsemi[- ]?trucks?\b|\bmotorbikes\b|\bscooters\b/i],
+];
+
+/** Families that name the scene rather than a thing in it. */
+const BROAD = new Set(['landscape', 'vegetation']);
+
+/** The pattern matching earliest in `text` → { key, index }, or undefined. */
+function earliestAt(text, patterns) {
   let best;
   for (const [key, regex] of patterns) {
     const index = text.search(regex);
     if (index >= 0 && (!best || index < best.index)) best = { key, index };
   }
-  return best?.key;
+  return best;
 }
+const earliest = (text, patterns) => earliestAt(text, patterns)?.key;
 
 /** Sign kind named in a text, or 'other'. */
 export const signKind = (text) => earliest(stripMarkdown(text), SIGN_WORDS) ?? 'other';
 
 /**
- * A clue's family (and sign kind): from its Plonk It tags first, then the keyword found earliest in
- * the first paragraph, then in the whole text, else 'other'.
+ * What one stretch of text is about: the Street View car when it names the car or its rig before
+ * any other object; else the first object named (a bollard, a hydrant, rice fields…); else coverage
+ * when it is about the camera or the coverage; else nothing.
+ */
+function aboutOf(text) {
+  const plain = stripMarkdown(text);
+  const object = earliestAt(plain, FAMILY_WORDS) ?? earliestAt(plain, TRAFFIC);
+  const strong = plain.search(VEHICLE);
+  const weak = plain.search(VEHICLE_WEAK);
+  const vehicle = strong < 0 ? weak : weak < 0 ? strong : Math.min(strong, weak);
+  const camera = plain.search(CAMERA);
+  // scenery words ("along the coast", "in the mountains") set the scene more often than the subject
+  const broad = object && BROAD.has(object.key);
+  const cameraType = plain.search(CAMERA_TYPE);
+  if (cameraType >= 0 && (vehicle < 0 || cameraType < vehicle) && (!object || broad || cameraType < object.index)) {
+    return 'coverage';
+  }
+  if (vehicle >= 0 && (!object || vehicle < object.index || (broad && strong >= 0))) return 'car';
+  if (object && !(broad && camera >= 0 && camera < object.index)) return object.key;
+  if (camera >= 0) return 'coverage';
+  return undefined;
+}
+
+/**
+ * A clue's family (and sign kind). Plonk It's own tags decide, except its "coverage" tag, which
+ * covers both the car and the coverage: the text tells them apart. Untagged, the first sentence
+ * decides, then the first paragraph, then the whole text, else 'other'.
  */
 export function classify({ tags = [], text = [] }) {
   const all = text.join(' ');
-  let family = tags.map((t) => TAG_FAMILY[t.toLowerCase()]).find(Boolean);
-  if (family === 'coverage' && (CAR.test(all) || /\bblur/i.test(all))) family = 'car';
-  family ??= earliest(stripMarkdown(text[0] ?? ''), FAMILY_WORDS) ?? earliest(stripMarkdown(all), FAMILY_WORDS) ?? 'other';
+  const tagged = tags.map((t) => TAG_FAMILY[t.toLowerCase()]).filter(Boolean);
+  const lead = firstSentence(text[0] ?? '');
+  let family = tagged.find((f) => f !== 'coverage');
+  if (tagged.includes('coverage')) {
+    // "coverage" is Plonk It's tag for the car too; with a second tag, the text picks between them
+    const about = aboutOf(lead) ?? aboutOf(text[0] ?? '');
+    if (about === 'car') family = 'car';
+    else if (about === 'coverage' || !family) family = tagged.includes(about) ? about : family ?? 'coverage';
+  }
+  family ??= aboutOf(lead) ?? aboutOf(text[0] ?? '') ?? aboutOf(all) ?? 'other';
   if (family !== 'sign') return { family };
   const kind = signKind(all);
   return { family, kind: kind === 'other' && tags.includes('chevron/sign') ? 'chevron' : kind };
@@ -120,6 +196,7 @@ const LABELS = {
   car: 'Google car',
   coverage: 'Coverage',
   language: 'Language',
+  street: 'Street',
   architecture: 'Architecture',
   landscape: 'Landscape',
   vegetation: 'Vegetation',
@@ -358,6 +435,63 @@ function addPage(country, raw, { pool, links, names, sub }) {
   }
 }
 
+// --- settling families after review --------------------------------------------------------------
+
+/** A reviewed title's lead word → its family, for clues the text alone could not place. */
+const TITLE_FAMILY = Object.entries({
+  bollard: ['bollard', 'bollards'],
+  pole: ['pole', 'poles', 'insulator', 'insulators', 'snow pole', 'snow poles', 'guy wire', 'pole top', 'pole paint', 'pole marking', 'pole plate', 'pole tag', 'pole sticker', 'pole reflector'],
+  plate: ['plate', 'plates', 'licence plates'],
+  sign: ['sign', 'signs', 'route marker', 'marker', 'markers', 'km marker', 'kilometre marker', 'signpost', 'signposts', 'road numbers', 'route numbers', 'street sign', 'street signs'],
+  line: ['road line', 'road lines'],
+  guardrail: ['guardrail', 'guardrails'],
+  language: ['language', 'town names', 'place names', 'town name ending', 'obituary'],
+  car: ['google car', 'follow car', 'boat'],
+  coverage: ['coverage', 'camera', 'hidden coverage', 'glitch'],
+  street: ['streetlight', 'streetlights', 'lamp', 'lamps', 'lamp post', 'lamp posts', 'bus stop', 'bus stops', 'bin', 'bins', 'rubbish bin', 'kerb', 'kerbs', 'curbs', 'pavement', 'sidewalks', 'fence', 'fences', 'bridge', 'bridges', 'mailbox', 'post boxes', 'traffic lights', 'road arrow', 'road works', 'electricity meter', 'water tanks', 'road diamond'],
+  architecture: ['houses', 'house', 'roofs', 'architecture', 'buildings', 'barns', 'walls', 'wall', 'huts', 'chimneys', 'house numbers', 'house number', 'roof ornament', 'gable horns'],
+  vegetation: ['plants', 'crops', 'trees', 'palms', 'vegetation', 'farming', 'fields', 'farmland', 'rice'],
+  landscape: ['landscape', 'soil', 'valley', 'bay', 'coast', 'beach', 'ground'],
+}).reduce((map, [family, words]) => {
+  for (const word of words) map.set(word, family);
+  return map;
+}, new Map());
+
+/**
+ * Title leads that only followed the old car / coverage mix-up, so they follow the family now. Any
+ * other lead is the reviewer's own reading and stays.
+ */
+const LABEL_WORDS = new Set(['google car', 'coverage']);
+
+/**
+ * After review: a clue still in 'other' takes the family its reviewed title names ("Pole: thick
+ * grey trapezoid"), and a car or coverage clue whose title leads with the other one ("Google car:
+ * autumn colours") gets its own label. → counts for the report.
+ */
+export function settleFamilies(countries) {
+  const report = { fromTitle: 0, relabelled: 0 };
+  for (const country of countries) {
+    for (const clue of country.clues) {
+      const [lead, ...rest] = clue.title.split(':');
+      if (!rest.length) continue;
+      const word = lead.trim().toLowerCase();
+      const named = TITLE_FAMILY.get(word);
+      if (clue.family === 'other' && named) {
+        clue.family = named;
+        if (named === 'sign') clue.kind = signKind(`${clue.title} ${clue.text.join(' ')}`);
+        report.fromTitle++;
+        continue;
+      }
+      const label = LABELS[clue.family];
+      if (label && LABEL_WORDS.has(word) && ['car', 'coverage'].includes(clue.family) && named !== clue.family) {
+        clue.title = `${label}:${rest.join(':')}`;
+        report.relabelled++;
+      }
+    }
+  }
+  return report;
+}
+
 /** Every distinct meta (first map by id wins) with its country, or listed as unmatched. */
 function metasByCountry(maps, lookup) {
   const seen = new Set();
@@ -520,6 +654,7 @@ export function writeClues({
     images: trimReport(applyImageReviews(countries, loadImageReviews(reviewImagesDir, codes))),
     text: trimReport(applyTextReviews(countries, loadTextReviews(reviewTextDir, codes))),
   };
+  const families = settleFamilies(countries);
   const poolCodes = new Set(pool.map((c) => c.code));
   const slugCountry = new Map();
   for (const raw of sources.pages) {
@@ -536,6 +671,7 @@ export function writeClues({
     .map((f) => indexRow(readJson(join(outDir, f))));
   writeJson(join(outDir, 'index.json'), index);
   return {
+    families,
     counts: {
       countries: countries.length,
       clues: countries.reduce((n, c) => n + c.clues.length, 0),

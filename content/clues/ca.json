@@ -373,8 +373,8 @@
       "id": "ca-jkB6",
       "step": 0,
       "order": 7,
-      "family": "car",
-      "title": "Google car: Gen 2, big round blur, sky halo",
+      "family": "coverage",
+      "title": "Coverage: Gen 2, big round blur, sky halo",
       "text": [
         "Canada has a fair amount of **Generation 2 coverage**, especially in rural** **or remote areas. Generation 2 can be recognized by the big circular car blur and the halo-like colour distortion in the sky.",
         "NOTE: Generation 2 is very rare in the US. If you are between Canada and the US, and the location is in Generation 2, you are much more likely to be in Canada."
@@ -440,8 +440,8 @@
       "id": "ca-RMBK",
       "step": 0,
       "order": 8,
-      "family": "car",
-      "title": "Google car: Gen 3 with two mirror peaks",
+      "family": "coverage",
+      "title": "Coverage: Gen 3 with two mirror peaks",
       "text": [
         "**Generation 3** is significantly more common in Canada than in the US.",
         "In addition, the side mirrors are blurred out differently: While they generally appear as **two peaks** in Canadian Gen 3 coverage, you will mostly see a single peak in the US."
@@ -503,7 +503,7 @@
       "id": "ca-b7hs",
       "step": 0,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Mailbox: communal boxes, red Canada Post logo",
       "text": [
         "You can sometimes find **communal mailboxes** in Canada. Personal mailboxes are still very common, though.",
@@ -561,7 +561,7 @@
       "id": "ca-6tmz",
       "step": 0,
       "order": 12,
-      "family": "other",
+      "family": "street",
       "title": "Mailbox: on a post with a small flag",
       "text": [
         "This style of mailbox, resting on top of a post and with a **small flag** on the side, is mostly associated with North America."
@@ -943,8 +943,8 @@
       "id": "ca-lSxm",
       "step": 0,
       "order": 19,
-      "family": "car",
-      "title": "Google car: low camera, big round blur, mirror",
+      "family": "coverage",
+      "title": "Coverage: low camera, big round blur, mirror",
       "text": [
         "Both the US and Canada also have Generation 4 “smallcam” coverage, which is mounted lower than regular Generation 4 and has a relatively big circular blur with a small protrusion at the front. The blur can also be fully transparent, making it harder to spot. When the car isn’t blurred properly, you will usually see a mirror sticking out on the right side."
       ],
@@ -1094,7 +1094,7 @@
       "id": "ca-iAnh",
       "step": 1,
       "order": 3,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: each province has its own shield",
       "text": [
         "Each province has their own **highway shields** with unique** **designs.",
@@ -1110,13 +1110,14 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Each province has its own highway shield design. The green Trans-Canada Highway shield appears in all 10 provinces."
+      "summary": "Each province has its own highway shield design. The green Trans-Canada Highway shield appears in all 10 provinces.",
+      "kind": "route"
     },
     {
       "id": "ca-a1P6",
       "step": 1,
       "order": 4,
-      "family": "other",
+      "family": "sign",
       "title": "Kilometre marker: white square at the bottom",
       "text": [
         "Each province has its own unique** kilometre markers** that vary slightly.",
@@ -1132,7 +1133,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Each province has slightly different kilometre markers. Ontario's have a white square at the bottom, unique to it."
+      "summary": "Each province has slightly different kilometre markers. Ontario's have a white square at the bottom, unique to it.",
+      "kind": "other"
     },
     {
       "id": "ca-wU9H",
@@ -1474,8 +1476,7 @@
       "id": "ca-dCuR",
       "step": 1,
       "order": 10,
-      "family": "sign",
-      "kind": "direction",
+      "family": "street",
       "title": "Direction sign: yellow hydrant marker on top",
       "text": [
         "You will often find these **yellow fire hydrant markers** atop signposts in Québec.",
@@ -2051,6 +2052,10 @@
           "role": "annotated",
           "caption": "Arrows compare two poles: one has 2 insulators left and 1 right, the other 1 left and 2 right",
           "giveaway": true
+        },
+        {
+          "id": "da10e75ab0fa",
+          "src": "https://learnablemeta.com/images/DIyvmsgFi6RVns1yV5E04SzRR23tiPgoQeDo.avif"
         },
         {
           "id": "c6b3213b996a",
@@ -2928,7 +2933,7 @@
       "id": "ca-mVCj",
       "step": 1,
       "order": 33,
-      "family": "other",
+      "family": "sign",
       "title": "Route marker: rural roads with N, E or W suffix",
       "text": [
         "Rural roads in Manitoba are organised in a grid and referred to only by their number and cardinal direction.",
@@ -2986,6 +2991,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Manitoba's rural roads are on a grid, named by number and direction. Roads ending in N run east-west and rise one per mile north of the US border; E or W roads run north-south and give distance from the meridian just west of Winnipeg.",
+      "kind": "route",
       "regionCode": "MB"
     },
     {
@@ -3789,7 +3795,7 @@
       "id": "ca-ATJW",
       "step": 1,
       "order": 47,
-      "family": "other",
+      "family": "street",
       "title": "Bin: wooden plank bin, often octagonal",
       "text": [
         "Bins made of **wood **planks can be seen on Newfoundland driveways. These are most commonly **octagonal**,** **however they can have other shapes.",
@@ -3820,6 +3826,11 @@
             "w": 0.6,
             "h": 1
           }
+        },
+        {
+          "id": "0954bdf84d7f",
+          "src": "https://learnablemeta.com/images/55/Ju6FwtTlLPuEsRHOImou22fPbviNqjylYFzF.avif",
+          "dupeOf": "b079b73c0949"
         }
       ],
       "locations": [
@@ -4060,6 +4071,11 @@
             "w": 0.58,
             "h": 1
           }
+        },
+        {
+          "id": "51ac73fe5b3d",
+          "src": "https://learnablemeta.com/images/664/Jfg3ED2PqPRymlws4rm2uhj2pVB9cAlUfSrF.avif",
+          "dupeOf": "15f35165eb4f"
         }
       ],
       "locations": [
@@ -4813,8 +4829,8 @@
       "id": "ca-0G0L",
       "step": 2,
       "order": 2,
-      "family": "car",
-      "title": "Google car: overcast Gen 2 high in the mountains",
+      "family": "coverage",
+      "title": "Coverage: overcast Gen 2 high in the mountains",
       "text": [
         "The **Top of the World Highway** west of Dawson City in Yukon has overcast Generation 2 coverage and is located mostly high up in the mountains, making it recognizable."
       ],
@@ -5004,6 +5020,11 @@
             "w": 0.58,
             "h": 1
           }
+        },
+        {
+          "id": "943a582f32d4",
+          "src": "https://learnablemeta.com/images/664/hDR3y9xG96ocag7l9ZWUP5bZLqA82RNCWK9g.avif",
+          "dupeOf": "e2e40d424063"
         }
       ],
       "locations": [
@@ -5085,7 +5106,7 @@
       "id": "ca-kj4w",
       "step": 2,
       "order": 7,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: overcast autumn Gen 3, snow, smudge",
       "text": [
         "QC-167 and QC-113 are covered in Gen 3 and identifiable for their **overcast autumn** coverage, often with **snow** on the ground. In addition, a [smudge](https://maps.app.goo.gl/8TUyRYbPxNvXMX2m9) can be seen on this road."
@@ -5363,7 +5384,7 @@
       "step": 2,
       "order": 13,
       "family": "coverage",
-      "title": "Google car: thin antenna on front right",
+      "title": "Coverage: thin antenna on front right",
       "text": [
         "The remote town of Churchill in northern Manitoba features a trekker with a distinct thin **antenna **visible on the front right side of the car. The town also has unique street signs.",
         "NOTE: This coverage is also seen in the surrounding area."
@@ -5473,8 +5494,8 @@
       "id": "ca-TOm0",
       "step": 2,
       "order": 15,
-      "family": "coverage",
-      "title": "Coverage: snowmobile with driver in brown coat",
+      "family": "car",
+      "title": "Google car: snowmobile with driver in brown coat",
       "text": [
         "Sanikiluaq is a remote town situated **in Hudson Bay**. This snowy town was covered by a snowmobile whose driver wore a dark **brown **coat.",
         "NOTE: Snowmobile coverage can be found [outside](https://goo.gl/maps/7xhV916CkhjwrEhU8) the town on the ice-covered sea, where the driver is **not **visible."
@@ -5529,8 +5550,8 @@
       "id": "ca-gyfH",
       "step": 2,
       "order": 16,
-      "family": "coverage",
-      "title": "Coverage: snowmobile seen through the blur",
+      "family": "car",
+      "title": "Google car: snowmobile seen through the blur",
       "text": [
         "Inukjuak is a town in northern Québec. This town can be recognized by the **snowmobile **that is** **visible through the blur.",
         "NOTE: In Sanikiluaq, the other town with snowmobile coverage, you will always see the driver."
@@ -5695,7 +5716,7 @@
       "id": "ca-avt6",
       "step": 2,
       "order": 19,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: Gen 2 trekker",
       "text": [
         "Cambridge Bay is the only Nunavut settlement to have **Generation 2** trekker coverage."
@@ -5860,7 +5881,7 @@
       "id": "ca-jz1c",
       "step": 2,
       "order": 22,
-      "family": "architecture",
+      "family": "landscape",
       "title": "Houses: colourful wooden houses, trees, big hill",
       "text": [
         "Nain is a small town on the Northeastern coast of Labrador. The town features **colourful wooden houses**, and **trees **in and around the town. To the north, a [big hill](https://goo.gl/maps/UeGydx1F6QdyViVg7) is usually visible. And to the south, [rocky cliffs](https://goo.gl/maps/YPww4ALKREgUZNrj6) can be seen on the other side of the bay. Additionally, kids can sometimes be seen walking beside the trekker."
@@ -6034,7 +6055,7 @@
     {
       "id": "ca-lm-179",
       "step": 3,
-      "order": 2,
+      "order": 1,
       "family": "sign",
       "kind": "other",
       "title": "Sign: double warning sign post",
@@ -10358,7 +10379,7 @@
       "id": "ca-gh-postboxes",
       "step": 4,
       "order": 15,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 7 post boxes from here."

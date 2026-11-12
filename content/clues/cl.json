@@ -129,6 +129,10 @@
           "width": 1000,
           "height": 563,
           "role": "example"
+        },
+        {
+          "id": "f9dfebae04dc",
+          "src": "https://learnablemeta.com/images/611/OQzjpEeoHjyTAaRxHhlj3basiA3WtnYYmDtx.avif"
         }
       ],
       "locations": [
@@ -539,7 +543,7 @@
       "id": "cl-uW2V",
       "step": 0,
       "order": 9,
-      "family": "other",
+      "family": "street",
       "title": "Bridge: red painted fence posts",
       "text": [
         "Bridges in Chile often have **red painted** fence posts."
@@ -587,7 +591,7 @@
       "id": "cl-fFHl",
       "step": 1,
       "order": 0,
-      "family": "other",
+      "family": "landscape",
       "title": "Climate: desert north, cold wet far south",
       "text": [
         "Shown here is a **Köppen climate map** of Chile.",
@@ -610,7 +614,7 @@
       "id": "cl-JwjE",
       "step": 1,
       "order": 1,
-      "family": "other",
+      "family": "sign",
       "title": "Road numbers: first letter runs A to Y, north to south",
       "text": [
         "Chile uses a memorable regional road naming system, where the first letter increases between [A](https://goo.gl/maps/5sCeUaH9QXJVz6vt9) and [Y](https://goo.gl/maps/gD4ACFHPsD4bqpC37) from **north to south**. For more information on specific regions, see [here](https://sites.google.com/site/roadnumberingsystems/home/countries/chile?pli=1)."
@@ -624,7 +628,8 @@
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Road names start with a letter that moves through the alphabet from A in the north to Y in the south."
+      "summary": "Road names start with a letter that moves through the alphabet from A in the north to Y in the south.",
+      "kind": "route"
     },
     {
       "id": "cl-GhN0",
@@ -650,7 +655,7 @@
       "id": "cl-DDG0",
       "step": 1,
       "order": 4,
-      "family": "vegetation",
+      "family": "landscape",
       "title": "Landscape: extremely dry desert, no plants",
       "text": [
         "The Atacama is an extremely arid desert covering the northern third of Chile. Some parts of it experience the lowest rainfall on the planet. As a result, many locations in this desert are almost completely devoid of any vegetation: you will often just see sand and bare rock without any plants in sight anywhere.",
@@ -682,6 +687,11 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "f5db99014801",
+          "src": "https://learnablemeta.com/images/798/dvGaGi3espDETxWNDAhS5XzuA9Yd6ONum8qb.avif",
+          "dupeOf": "fe4ecdee90d9"
         }
       ],
       "locations": [
@@ -762,21 +772,6 @@
           "width": 1000,
           "height": 500,
           "dupeOf": "2769e943821f"
-        },
-        {
-          "id": "842ae7622f12",
-          "src": "https://learnablemeta.com/images/798/jzzZozbOSd87YFkcLEA8afBLYJm3CYJTzhaS.avif",
-          "path": "cl/842ae7622f12.webp",
-          "width": 1000,
-          "height": 499,
-          "role": "example",
-          "giveaway": true,
-          "crop": {
-            "x": 0,
-            "y": 0,
-            "w": 0.85,
-            "h": 1
-          }
         }
       ],
       "locations": [
@@ -856,14 +851,6 @@
             "w": 0.82,
             "h": 1
           }
-        },
-        {
-          "id": "a023d1ab63dd",
-          "src": "https://learnablemeta.com/images/798/I2sQTmHjkHaks8iT5M1gp68KWKp92IIvtJUs.avif",
-          "path": "cl/a023d1ab63dd.webp",
-          "width": 1000,
-          "height": 502,
-          "dupeOf": "69c040ca5f5e"
         }
       ],
       "locations": [
@@ -954,7 +941,7 @@
       "id": "cl-ylGg",
       "step": 1,
       "order": 8,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: eucalyptus plantations in a dry climate",
       "text": [
         "**Eucalyptus plantations** combined with a somewhat dry climate are a good indicator that you are in southwestern Valparaíso."
@@ -1004,8 +991,7 @@
         "url": "https://www.plonkit.net/chile",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Eucalyptus plantations with a fairly dry climate point to the south-west of the central coastal region.",
-      "regionCode": "VS"
+      "summary": "Eucalyptus plantations with a fairly dry climate point to the south-west of the central coastal region."
     },
     {
       "id": "cl-rsYl",
@@ -1097,7 +1083,7 @@
       "id": "cl-2h86",
       "step": 1,
       "order": 10,
-      "family": "other",
+      "family": "vegetation",
       "title": "Landscape: greener than the capital area, vineyards",
       "text": [
         "Compared to the area around Santiago, the Maule region has a similar look. However, it has a **Mediterranean** climate, and is generally greener. **Vineyards** are also commonly seen in this region."
@@ -1128,6 +1114,10 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "bc62037c67d2",
+          "src": "https://learnablemeta.com/images/798/DaU3Wzdc4NGf4rUKH2p6QwY1tdZU9qBLnyPZ.avif"
         }
       ],
       "locations": [
@@ -1153,7 +1143,7 @@
       "id": "cl-1mL6",
       "step": 1,
       "order": 11,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: pines with puffy needles",
       "text": [
         "Concepcion pines, scientifically named Pinus radiata, can be recognized by their **puffy** needles. They are most commonly found in **Bio Bio**, where the city of Concepcion is located, and less commonly in Ñuble and Araucania."
@@ -1183,6 +1173,11 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "6a3a34b67cc8",
+          "src": "https://learnablemeta.com/images/798/4HDylFU9O0HLJrbhJWDVfr9mTEPkLyXdcHgO.avif",
+          "dupeOf": "38b053724128"
         }
       ],
       "locations": [
@@ -1264,7 +1259,7 @@
       "id": "cl-Jl4B",
       "step": 1,
       "order": 13,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: monkey puzzle trees",
       "text": [
         "**Monkey puzzles**, scientifically named Araucaria araucana, are found in far eastern Araucania.",
@@ -1318,8 +1313,7 @@
       "summary": "Monkey puzzle trees (Araucaria) grow in the far east of the south-central region. They also grow across the border in Argentina.",
       "sameAs": [
         "AR"
-      ],
-      "regionCode": "AR"
+      ]
     },
     {
       "id": "cl-Dq9Y",
@@ -1397,7 +1391,7 @@
       "id": "cl-Gw6y",
       "step": 1,
       "order": 15,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: giant cabbage-like leaves (Chilean rhubarb)",
       "text": [
         "**Chilean rhubarb** can commonly be found on Isla Grande, and on the mainland east of it. Chilean rhubarb can be recognized by its large, cabbage-like appearance."
@@ -1661,7 +1655,7 @@
       "id": "cl-BUtb",
       "step": 2,
       "order": 1,
-      "family": "car",
+      "family": "landscape",
       "title": "Road: high altitude, steep drop to a valley",
       "text": [
         "The A-31 can be recognised by its **high altitude**, with a **steep drop** into a valley to the north. The road also has Gen 3 sunset coverage."
@@ -1691,6 +1685,11 @@
             "w": 0.78,
             "h": 1
           }
+        },
+        {
+          "id": "8a7dde70e816",
+          "src": "https://learnablemeta.com/images/798/gt6QEEF298mIdb7Q12vc5IvEi2IB8vamrGB6.avif",
+          "dupeOf": "4189a9e8d76b"
         }
       ],
       "locations": [
@@ -1716,7 +1715,7 @@
       "id": "cl-vasL",
       "step": 2,
       "order": 2,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: sunset, white dome, pink volcano tops",
       "text": [
         "Generation 4 sunset coverage can be seen on Ruta 21 from Calama to San Francisco de Chiu Chiu. In the west near Calama, the sun has just started to set, causing a giant white dome in the sky. In the east, the sky has a warm **gradient**, and the tops of the volcanoes are seen glowing pink."
@@ -1771,7 +1770,7 @@
       "id": "cl-90Z1",
       "step": 2,
       "order": 3,
-      "family": "car",
+      "family": "coverage",
       "title": "Coverage: sunset on two northern roads",
       "text": [
         "More Generation 4 Sunset coverage can be seen on B-710 and Ruta 5.",
@@ -1802,6 +1801,14 @@
             "w": 0.65,
             "h": 1
           }
+        },
+        {
+          "id": "1fb695e369aa",
+          "src": "https://learnablemeta.com/images/798/ZapPkfaaRXxpAX9XcwPd62s9YUA2wuktzIAI.avif"
+        },
+        {
+          "id": "eef32aeff380",
+          "src": "https://learnablemeta.com/images/798/vcJfBNzSdWLel8743OzowldYvHZ4vmVfpn58.avif"
         }
       ],
       "locations": [
@@ -1920,7 +1927,7 @@
       "id": "cl-0Utw",
       "step": 2,
       "order": 6,
-      "family": "other",
+      "family": "vegetation",
       "title": "Plants: purple lupine flowers along the road",
       "text": [
         "These **purple flowers**, named Large-leaved Lupines, can commonly be found along Ruta 240."
@@ -1975,7 +1982,7 @@
       "id": "cl-vcdo",
       "step": 2,
       "order": 7,
-      "family": "landscape",
+      "family": "street",
       "title": "Road: all yellow lines on concrete, treeless",
       "text": [
         "**All yellow lines** on a **concrete road** are a good indicator that you are on a paved road in the Magallanes region, in the very south of Chile. The landscape tends to be barren, grassy, and treeless. ",
@@ -2574,7 +2581,7 @@
       "id": "cl-rTlS",
       "step": 2,
       "order": 18,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: slight sandy ridge, gradual slope",
       "text": [
         "A **slight, sandy** ridge with a **gradual** incline can be seen in Arica."
@@ -2596,6 +2603,21 @@
           "path": "cl/588d54fff50e.webp",
           "width": 800,
           "height": 393,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.85,
+            "h": 1
+          }
+        },
+        {
+          "id": "842ae7622f12",
+          "src": "https://learnablemeta.com/images/798/jzzZozbOSd87YFkcLEA8afBLYJm3CYJTzhaS.avif",
+          "path": "cl/842ae7622f12.webp",
+          "width": 1000,
+          "height": 499,
           "role": "example",
           "giveaway": true,
           "crop": {
@@ -2629,7 +2651,7 @@
       "id": "cl-tcEu",
       "step": 2,
       "order": 19,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: large towering ridge",
       "text": [
         "A **larger, towering** ridge can be seen in Iquique."
@@ -2659,6 +2681,21 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "426e9dc7075d",
+          "src": "https://learnablemeta.com/images/798/Q316jU7LdARenwLg8SiUdj2gjUl5wPRA9v2i.avif",
+          "path": "cl/426e9dc7075d.webp",
+          "width": 1000,
+          "height": 497,
+          "role": "example",
+          "giveaway": true,
+          "crop": {
+            "x": 0,
+            "y": 0,
+            "w": 0.83,
+            "h": 1
+          }
         }
       ],
       "locations": [
@@ -2684,7 +2721,7 @@
       "id": "cl-Pjto",
       "step": 2,
       "order": 20,
-      "family": "other",
+      "family": "landscape",
       "title": "Landscape: rockier, more uneven ridge",
       "text": [
         "A **rockier**, and more **uneven** ridge can be seen in Antofagasta."
@@ -2714,6 +2751,14 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "a023d1ab63dd",
+          "src": "https://learnablemeta.com/images/798/I2sQTmHjkHaks8iT5M1gp68KWKp92IIvtJUs.avif",
+          "path": "cl/a023d1ab63dd.webp",
+          "width": 1000,
+          "height": 502,
+          "dupeOf": "69c040ca5f5e"
         }
       ],
       "locations": [
@@ -2739,7 +2784,7 @@
       "id": "cl-ejML",
       "step": 2,
       "order": 21,
-      "family": "other",
+      "family": "architecture",
       "title": "Houses: clay brick walls with triangle tops",
       "text": [
         "San Pedro de Atacama can be recognized by its **clay brick** walls, commonly with triangles at the top."
@@ -2769,6 +2814,11 @@
             "w": 0.83,
             "h": 1
           }
+        },
+        {
+          "id": "7406f261726c",
+          "src": "https://learnablemeta.com/images/798/FOp7UGMu0a44cIp52DKlWAq4gxBCewmgEjBq.avif",
+          "dupeOf": "388f18de202f"
         }
       ],
       "locations": [
@@ -2890,21 +2940,6 @@
           }
         },
         {
-          "id": "426e9dc7075d",
-          "src": "https://learnablemeta.com/images/798/Q316jU7LdARenwLg8SiUdj2gjUl5wPRA9v2i.avif",
-          "path": "cl/426e9dc7075d.webp",
-          "width": 1000,
-          "height": 497,
-          "role": "example",
-          "giveaway": true,
-          "crop": {
-            "x": 0,
-            "y": 0,
-            "w": 0.83,
-            "h": 1
-          }
-        },
-        {
           "id": "87579d8ec2b1",
           "src": "https://learnablemeta.com/images/798/5vMJ2NS4uBuxSYWYBTp8rZzLcxcyU5j3eWWL.avif",
           "path": "cl/87579d8ec2b1.webp",
@@ -2943,7 +2978,7 @@
       "id": "cl-0n0t",
       "step": 2,
       "order": 25,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: orange lamps",
       "text": [
         "Orange lamps can most often be seen in Calama and Chañaral, and rarely in Antofagasta.",
@@ -2974,6 +3009,10 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "0bb33e18c45b",
+          "src": "https://learnablemeta.com/images/798/PS0b46sF8klT6ZcPuU7SeSr2slWmAGU6MTra.avif"
         }
       ],
       "locations": [
@@ -2999,7 +3038,7 @@
       "id": "cl-YjE4",
       "step": 2,
       "order": 26,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: green dome lamps",
       "text": [
         "Lamps that look like **green domes** can be seen in Copiapo."
@@ -3029,6 +3068,10 @@
             "w": 0.84,
             "h": 1
           }
+        },
+        {
+          "id": "42d8b1c520f8",
+          "src": "https://learnablemeta.com/images/798/nwzQHWG0SuEDWc1QmjZKfu2ktUQsyQ6bE3vk.avif"
         }
       ],
       "locations": [
@@ -3054,7 +3097,7 @@
       "id": "cl-EIJH",
       "step": 2,
       "order": 27,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: lamps with photocells",
       "text": [
         "Lamps in Santiago very commonly have **photocells**. You will rarely find them in other cities such as Valparaiso, Osorno and Loncoche."
@@ -3085,6 +3128,11 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "ebcc7550af24",
+          "src": "https://learnablemeta.com/images/798/lijHHg2Rt9Q5Up5Xsp4UxlTjr0Dc7TQ8pL76.avif",
+          "dupeOf": "2c3c1e07952e"
         }
       ],
       "locations": [
@@ -3110,7 +3158,7 @@
       "id": "cl-nI4v",
       "step": 2,
       "order": 28,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: grey, thin flat top, rounded underside",
       "text": [
         "Grey lamps with a thin, flat top and a **rounded underside** can be found in Talca."
@@ -3140,6 +3188,11 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "bdc69ae074dc",
+          "src": "https://learnablemeta.com/images/798/BdgGbXtCKNkIwAo4STMGKTLNb6E0DLSyvGqu.avif",
+          "dupeOf": "a3a1e6245d47"
         }
       ],
       "locations": [
@@ -3165,7 +3218,7 @@
       "id": "cl-DujH",
       "step": 2,
       "order": 29,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: blue rectangle with yellow stripe",
       "text": [
         "**Blue rectangular** lamps with a **yellow stripe** can be found in Concepción."
@@ -3195,6 +3248,11 @@
             "w": 0.83,
             "h": 1
           }
+        },
+        {
+          "id": "adebb492c835",
+          "src": "https://learnablemeta.com/images/798/8URepHluvSfMYMHhI7kgIFNcve2f4Q6KgHD0.avif",
+          "dupeOf": "2d962836af4b"
         }
       ],
       "locations": [
@@ -3220,7 +3278,7 @@
       "id": "cl-6sv4",
       "step": 2,
       "order": 30,
-      "family": "other",
+      "family": "street",
       "title": "Streetlight: silver top, grey bottom",
       "text": [
         "This lamp, with a **silver top** and **grey bottom**, can be found in Puerto Montt and Temuco."
@@ -3250,6 +3308,11 @@
             "w": 0.85,
             "h": 1
           }
+        },
+        {
+          "id": "e183dad57d83",
+          "src": "https://learnablemeta.com/images/798/NhGucxSWGiXdY0H0YGOkQ4BDgwzjkwVb3OZx.avif",
+          "dupeOf": "1ad011a7753a"
         }
       ],
       "locations": [
@@ -3450,6 +3513,11 @@
             "w": 0.7,
             "h": 1
           }
+        },
+        {
+          "id": "d5664c89b75e",
+          "src": "https://learnablemeta.com/images/798/h4WrzUTjXM1t26Q6uAtOqFMFOQJJBUgRuSWX.avif",
+          "dupeOf": "fe45ae38a3a5"
         }
       ],
       "locations": [
@@ -3585,7 +3653,7 @@
       "id": "cl-t5nN",
       "step": 2,
       "order": 38,
-      "family": "coverage",
+      "family": "car",
       "title": "Google car: white pickup with visible side mirrors",
       "text": [
         "Puerto Williams, the southernmost town covered by street view, can be recognized by this **white** pickup truck with visible side mirrors.",
@@ -3641,7 +3709,7 @@
       "id": "cl-CmTv",
       "step": 2,
       "order": 41,
-      "family": "other",
+      "family": "coverage",
       "title": "Coverage: many radio telescopes, barren and snowy",
       "text": [
         "The Atacama Large Millimetre Array can be recognized by the many radio telescopes in a barren, snowy environment."
@@ -3696,7 +3764,7 @@
       "id": "cl-rzZ2",
       "step": 2,
       "order": 42,
-      "family": "other",
+      "family": "coverage",
       "title": "Coverage: big radio telescopes and rural facilities",
       "text": [
         "ALMA OSF can be recognized by the large radio telescopes and rural facilities."
@@ -3820,7 +3888,7 @@
       "id": "cl-kuAd",
       "step": 2,
       "order": 44,
-      "family": "landscape",
+      "family": "coverage",
       "title": "Coverage: sharp peaks, glacier walkers, orange helmets",
       "text": [
         "The Torres del Paine area can be recognized by the **sharp peaked** mountains, and the trekker walking on a **glacier** along with other people in orange helmets."
@@ -3851,6 +3919,11 @@
             "w": 0.78,
             "h": 1
           }
+        },
+        {
+          "id": "0ee667005278",
+          "src": "https://learnablemeta.com/images/798/loHo2V48gyV8bNQ1eFdDQu6x5SeABnVdIZA1.avif",
+          "dupeOf": "17ae862db53b"
         }
       ],
       "locations": [
@@ -3876,7 +3949,7 @@
       "id": "cl-lm-3090",
       "step": 3,
       "order": 1,
-      "family": "other",
+      "family": "car",
       "title": "Google car: leafy stick on the back",
       "text": [
         "In Arica and Iquique, in the very North of Chile, sometimes there'll be a little stick with a few leaves stuck on the car's back."
@@ -3905,7 +3978,7 @@
     {
       "id": "cl-lm-55173",
       "step": 3,
-      "order": 28,
+      "order": 20,
       "family": "landscape",
       "title": "Landscape: lone snowy volcano, yareta, feather grass",
       "text": [
@@ -3945,7 +4018,7 @@
     {
       "id": "cl-lm-55210",
       "step": 3,
-      "order": 46,
+      "order": 29,
       "family": "vegetation",
       "title": "Plants: copao cactus",
       "text": [
@@ -3974,7 +4047,7 @@
     {
       "id": "cl-lm-643928",
       "step": 3,
-      "order": 50,
+      "order": 33,
       "family": "landscape",
       "title": "Landscape: green river valley with railway, fan palms",
       "text": [
@@ -4040,7 +4113,7 @@
     {
       "id": "cl-lm-643929",
       "step": 3,
-      "order": 51,
+      "order": 34,
       "family": "landscape",
       "title": "Road: new wide road, yellow barriers, red sand hills",
       "text": [
@@ -4081,7 +4154,7 @@
     {
       "id": "cl-lm-643934",
       "step": 3,
-      "order": 53,
+      "order": 36,
       "family": "vegetation",
       "title": "Plants: Chilean wine palm",
       "text": [
@@ -5555,7 +5628,7 @@
       "id": "cl-gh-postboxes",
       "step": 4,
       "order": 10,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 3 post boxes from here."

@@ -555,7 +555,7 @@
       "id": "ee-YCqH",
       "step": 0,
       "order": 9,
-      "family": "other",
+      "family": "sign",
       "title": "Marker: blue km post perpendicular to road",
       "text": [
         "All Baltic countries use the same blue kilometre marker. However, they can be distinguished from each other by their angle relative to the road.",
@@ -606,7 +606,8 @@
           "country": "LV",
           "how": "Marker is parallel to the road, one-sided number"
         }
-      ]
+      ],
+      "kind": "other"
     },
     {
       "id": "ee-hkpv",
@@ -852,8 +853,7 @@
       "id": "ee-DexW",
       "step": 0,
       "order": 13,
-      "family": "sign",
-      "kind": "stop",
+      "family": "street",
       "title": "Sign: bus stop sign with 4 windows",
       "text": [
         "Estonian bus stop signs have this design.",
@@ -1013,7 +1013,7 @@
       "id": "ee-9WKW",
       "step": 0,
       "order": 16,
-      "family": "other",
+      "family": "language",
       "title": "Language: street is \"tänav\" (tn), road is \"tee\"",
       "text": [
         "The Estonian words for street and road are **tänav** and **tee**, respectively. These words are unique to Estonian. Tänav is often abbreviated as ‘tn’.",
@@ -1242,8 +1242,8 @@
       "id": "ee-SRyp",
       "step": 0,
       "order": 20,
-      "family": "car",
-      "title": "Google car: Gen 3 with green tint (\"green blur\")",
+      "family": "coverage",
+      "title": "Coverage: Gen 3 with green tint (\"green blur\")",
       "text": [
         "Generation 3 coverage in Estonia often has a slight green tint to part of the panorama, which is referred to as “**green blur**” by the community.",
         "For many players, this green blur can be hard to identify at first. The location shown in this tip’s image is a fairly extreme example. To familiarise you with how it might look in-game, here are some more examples where it is fairly visible: [1](https://goo.gl/maps/wRwNJGnT6JyKTjyx9), [2](https://goo.gl/maps/ivTZffp9bnQfVCaU6), [3](https://goo.gl/maps/qpR7tU68UehPT8Rr6), [4](https://goo.gl/maps/r8tN2ahKmzEhUsG18).",
@@ -1307,8 +1307,8 @@
       "id": "ee-xf22",
       "step": 0,
       "order": 21,
-      "family": "car",
-      "title": "Google car: Gen 3 on very thin rural roads",
+      "family": "coverage",
+      "title": "Coverage: Gen 3 on very thin rural roads",
       "text": [
         "The Generation 3 coverage in Estonia is more extensive than the other two Baltic countries, meaning that a lot of **very rural roads** are covered. As a result, if you are considering guessing in one of the Baltic countries, and your location is Generation 3 on a very thin and rural road, you are slightly more likely to be in Estonia.",
         "Of course, use caution. This meta has many variables, and is not always reliable. Only use it as a last resort in no-info Baltic roulette rounds, when you have no better clues available."
@@ -1490,7 +1490,7 @@
       "id": "ee-BgPO",
       "step": 2,
       "order": 1,
-      "family": "coverage",
+      "family": "landscape",
       "title": "Coverage: late-autumn Gen 4, dark moody sky",
       "text": [
         "Kihnu is a small island off the coast that has recognizable coverage:",
@@ -2450,7 +2450,7 @@
       "id": "ee-gh-postboxes",
       "step": 4,
       "order": 6,
-      "family": "other",
+      "family": "street",
       "title": "Post boxes",
       "text": [
         "GeoHints shows 2 post boxes from here."

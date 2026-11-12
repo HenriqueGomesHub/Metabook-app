@@ -97,7 +97,7 @@ function CountryView({
       chapterList.push({
         id: `auto:${code}:basics`,
         order: chapterList.length + 1,
-        title: SUBJECTS.other.label,
+        title: 'Basics',
         subtitle: `Every ${country?.name ?? code} card, mixed`,
         to: `/session?country=${code}&map=0`,
         cards: subjectCards,
