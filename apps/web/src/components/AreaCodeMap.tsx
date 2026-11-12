@@ -36,10 +36,25 @@ export function AreaCodeMap({
     ),
   );
   const tinted = reveal && { ...reveal, group: groupOf(reveal.answer, digits) };
+  // every region's codes, shown on the map once answered
+  const numbers: Record<string, string[]> = {};
+  for (const { code, region, spans } of placedCodes(cards, country)) {
+    // a code covering several regions is written on each
+    for (const r of spans?.length ? spans : [region]) (numbers[r] ??= []).push(code);
+  }
+  for (const codes of Object.values(numbers)) codes.sort();
   const isBrazil = country === 'BR';
   const map = useRegionMap(isBrazil ? 'br' : country);
   if (isBrazil) {
-    return <BrazilMap reveal={tinted} onPick={onPick} onHover={onHover} className={className} />;
+    return (
+      <BrazilMap
+        reveal={tinted}
+        numbers={numbers}
+        onPick={onPick}
+        onHover={onHover}
+        className={className}
+      />
+    );
   }
   if (map === undefined) {
     return (
@@ -62,6 +77,7 @@ export function AreaCodeMap({
         map={map}
         label={`Map of ${label(country)} with region borders`}
         reveal={tinted}
+        numbers={numbers}
         onPick={onPick}
         onHover={onHover}
         className={className}

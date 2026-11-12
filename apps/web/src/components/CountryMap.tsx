@@ -2,6 +2,9 @@ import type { KeyboardEvent } from 'react';
 import type { RegionMap } from '../data/content';
 import './country-map.css';
 
+/** Area codes written under a region on reveal, at most; more show as "+n". */
+const MAX_NUMBERS = 3;
+
 export interface MapReveal {
   answer: string;
   picked: string;
@@ -21,6 +24,7 @@ export function CountryMap({
   label,
   callouts = {},
   reveal,
+  numbers,
   onPick,
   onHover,
   className = 'ddd-map',
@@ -31,6 +35,11 @@ export function CountryMap({
   /** small regions get their label outside the map at these points, joined by a leader line */
   callouts?: Record<string, [number, number]>;
   reveal?: MapReveal;
+  /**
+   * Each region's area codes, written under its label once answered, so the whole pattern is
+   * seen at once (Poland: 81 under LU, 52 56 under KP…)
+   */
+  numbers?: Record<string, string[]>;
   onPick(code: string): void;
   onHover(code: string | null): void;
   className?: string;
@@ -115,6 +124,36 @@ export function CountryMap({
           </text>
         );
       })}
+      {reveal &&
+        numbers &&
+        map.states.map((region) => {
+          const codes = numbers[region.code];
+          if (!codes?.length) return null;
+          const callout = callouts[region.code];
+          const shown =
+            codes.length > MAX_NUMBERS
+              ? `${codes.slice(0, MAX_NUMBERS).join(' ')} +${codes.length - MAX_NUMBERS}`
+              : codes.join(' ');
+          const classes = [
+            'ddd-num',
+            callout && 'callout',
+            region.code === reveal.answer && 'on',
+            reveal.group.has(region.code) && 'grp',
+          ]
+            .filter(Boolean)
+            .join(' ');
+          return (
+            <text
+              key={region.code}
+              className={classes}
+              aria-hidden="true"
+              x={callout ? callout[0] : region.label[0]}
+              y={(callout ? callout[1] : (region.label[1] ?? 0) + 4) + 11}
+            >
+              {shown}
+            </text>
+          );
+        })}
       {map.states.map((region) => {
         const callout = callouts[region.code];
         if (!callout) return null;

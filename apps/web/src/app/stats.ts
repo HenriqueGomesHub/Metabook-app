@@ -16,6 +16,7 @@ import type { IconName } from '../components/icons';
 import type { AppSnapshot } from './AppData';
 import { CARD_TYPES } from './cardTypes';
 import { SUBJECTS, tagLabel } from './labels';
+import { isMemoriseAreaCode } from '../data/areaCodes';
 
 const FALLBACK_MEDIAN_MS = 6000;
 const STREAK_DAYS = 14;
@@ -75,7 +76,9 @@ function today(data: AppSnapshot, now: Date) {
  * view cards for the Street View drill (the keyless embed shows road names).
  */
 export const sessionCards = (data: AppSnapshot): Card[] =>
-  data.content.cards.filter((card) => !isClueCard(card) && card.type !== 'live');
+  data.content.cards.filter(
+    (card) => !isClueCard(card) && card.type !== 'live' && !isMemoriseAreaCode(card),
+  );
 
 /**
  * Today's session, with the daily caps reduced by what was already reviewed and introduced
