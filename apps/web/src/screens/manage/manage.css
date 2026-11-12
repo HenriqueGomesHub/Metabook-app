@@ -556,6 +556,21 @@ input[type='range'] {
   padding: 18vh 0 64px;
 }
 
+.login-code {
+  font-size: 24px;
+  letter-spacing: 0.3em;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.login-more {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 14px;
+}
+
 .login h1 {
   margin: 0;
   font-size: 48px;
