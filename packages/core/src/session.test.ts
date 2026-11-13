@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { answerKey, recordAnswer } from './confusions';
 import { mulberry32 } from './random';
-import { retrievability } from './scheduler';
+import { newCardState, retrievability } from './scheduler';
 import {
   buildSession,
   intakeFor,
@@ -11,6 +11,8 @@ import {
   scanCardSeconds,
   reviewSecondsFrom,
   type SessionItem,
+  LEARN_GAP,
+  withFirstLooks,
 } from './session';
 import {
   DEFAULT_SETTINGS,
@@ -711,5 +713,40 @@ describe('scanCardSeconds', () => {
   it('counts the retry each "New to me" costs', () => {
     expect(scanCardSeconds({ answered: 50, right: 50 })).toBe(5);
     expect(scanCardSeconds({ answered: 50, right: 25 })).toBe(13);
+  });
+});
+
+describe('withFirstLooks', () => {
+  const spot = (id: string): Card => ({
+    id,
+    type: 'spot',
+    country: 'BR',
+    answer: 'BR',
+    prompt: { kind: 'text', value: id },
+    tags: [],
+    source: 'https://example.org',
+    clue: { id: `clue-${id}`, image: { id: 'i', src: 'https://example.org/i.jpg' } },
+  });
+  const item = (cardId: string): SessionItem => ({ cardId, mode: 'mcq' }) as SessionItem;
+
+  it('puts a lesson before each new clue and its question LEARN_GAP items later', () => {
+    const cards = ['a', 'b', 'c', 'd', 'e'].map(spot);
+    const out = withFirstLooks(
+      cards.map((c) => item(c.id)),
+      cards,
+      {},
+    );
+    expect(out[0]).toMatchObject({ cardId: 'a', mode: 'learn' });
+    const quiz = out.findIndex((x, i) => i > 0 && x.cardId === 'a');
+    expect(out[quiz]!.mode).toBe('mcq');
+    expect(quiz).toBeGreaterThanOrEqual(LEARN_GAP);
+    expect(out.filter((x) => x.mode === 'learn')).toHaveLength(5);
+    expect(out.filter((x) => x.mode === 'mcq')).toHaveLength(5);
+  });
+
+  it('leaves a clue the learner has seen alone', () => {
+    const cards = [spot('a')];
+    const states = { a: { ...newCardState('a', new Date()), state: 'review' } as CardState };
+    expect(withFirstLooks([item('a')], cards, states)).toEqual([item('a')]);
   });
 });

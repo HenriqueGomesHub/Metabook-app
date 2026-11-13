@@ -203,6 +203,24 @@ describe('where in the country', () => {
     expect(where?.prompt.value).not.toContain('Pomerania');
   });
 
+  it('accepts every region a clue names as seen in', () => {
+    const regional = {
+      ...PL_KASHUBIAN,
+      region: 'Pomerania',
+      regionCode: 'PM',
+      alsoRegions: ['WN'],
+    };
+    const countries = CLUE_COUNTRIES.map((c) =>
+      c.country === 'PL'
+        ? { ...c, clues: c.clues.map((clue) => (clue.id === PL_KASHUBIAN.id ? regional : clue)) }
+        : c,
+    );
+    const where = clueCards({ ...input, clues: countries }).find(
+      (c) => c.id === clueCardIds.where(PL_KASHUBIAN.id),
+    );
+    if (regional.images.length) expect(where).toMatchObject({ answer: 'PM', spans: ['WN'] });
+  });
+
   it('makes no map card for a clue without a region code', () => {
     expect(cards.some((c) => c.id.endsWith(':where'))).toBe(false);
   });

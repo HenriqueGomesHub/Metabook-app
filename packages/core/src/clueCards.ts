@@ -480,8 +480,11 @@ function cardsOnMap(
 ): Card[] {
   const first = usable[0];
   if (!clue.regionCode || !first) return [];
-  // title and summary only: the shipped catalogue loads the full text later
-  if (namesOtherRegions(`${clue.title} ${clue.summary ?? ''}`)) return [];
+  // several regions are right when the clue names them (alsoRegions); one that only hints at
+  // others ("other French-minority areas") has no fair single answer. Title and summary only: the
+  // shipped catalogue loads the full text later
+  const also = clue.alsoRegions ?? [];
+  if (also.length === 0 && namesOtherRegions(`${clue.title} ${clue.summary ?? ''}`)) return [];
   return [
     {
       ...base,
@@ -489,6 +492,7 @@ function cardsOnMap(
       type: 'region',
       map: country.code.toLowerCase(),
       answer: clue.regionCode,
+      ...(also.length > 0 && { spans: also }),
       prompt: { kind: 'text', value: clue.title },
       clue: { id: clue.id, image: first },
     },

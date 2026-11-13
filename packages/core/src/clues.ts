@@ -107,6 +107,11 @@ export interface Clue {
   region?: string;
   /** the region's code on the country's regions map, when `region` is one map region */
   regionCode?: string;
+  /**
+   * Other regions of the same map the clue also names ("also in Lleida and Tarragona", "frequent
+   * in RS, RJ, MS"): on the map, picking one of them is right too.
+   */
+  alsoRegions?: string[];
   tags: string[];
   images: ClueImage[];
   locations: ClueLocation[];

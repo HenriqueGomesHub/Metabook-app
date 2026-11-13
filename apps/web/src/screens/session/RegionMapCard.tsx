@@ -9,8 +9,6 @@ import { Stage } from './Stage';
 import { stateNameFrom } from './verdict';
 import type { CardProps } from './types';
 
-const NO_GROUP: ReadonlySet<string> = new Set();
-
 /**
  * A clue placed inside its country: click (or Tab to and press Enter on) the state it belongs to.
  * The reveal marks the pick and the true state and draws a line between them, as on area codes.
@@ -21,6 +19,8 @@ export function RegionMapCard({ card, outcome, onAnswer, onSkip, reveal }: CardP
   const [showAnswer, setShowAnswer] = useState(false);
   const country = label(card.country);
   const hovered = hover ? map?.states.find((s) => s.code === hover)?.name : undefined;
+  // a clue seen in several regions: each counts, and the reveal marks them all
+  const right = new Set([card.answer, ...(card.spans ?? [])]);
   const [, , width = 640, height = 580] = (map?.viewBox ?? '').split(' ').map(Number);
 
   let main;
@@ -31,7 +31,13 @@ export function RegionMapCard({ card, outcome, onAnswer, onSkip, reveal }: CardP
           map={map}
           label={`Map of ${country} with region borders`}
           reveal={
-            outcome ? { answer: card.answer, picked: outcome.given, group: NO_GROUP } : undefined
+            outcome
+              ? {
+                  answer: right.has(outcome.given) ? outcome.given : card.answer,
+                  picked: outcome.given,
+                  group: right,
+                }
+              : undefined
           }
           onPick={onAnswer}
           onHover={setHover}

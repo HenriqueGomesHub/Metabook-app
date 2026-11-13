@@ -240,6 +240,7 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
         if (!correct) setQueue((q) => requeueMissed(q, item, cards));
       }}
       onNext={() => setIndex(index + 1)}
+      onLearnt={() => setIndex(index + 1)}
       onSkip={() => {
         // nothing graded: the card goes to the back of the queue
         setQueue([...queue, item]);
@@ -405,6 +406,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       onAnswered={onAnswered}
       onNext={advance}
       onSkip={skip}
+      // a first look is passed over ungraded; its question is already scheduled
+      onLearnt={skip}
       bar={({ outcome }) => {
         const at = Math.min(PRACTICE_ROUND, inRound + (outcome ? 0 : 1));
         return (
@@ -453,6 +456,7 @@ function CardRunner({
   onAnswered,
   onNext,
   onSkip,
+  onLearnt,
   bar,
 }: {
   data: AppSnapshot;
@@ -461,6 +465,8 @@ function CardRunner({
   onNext(): void;
   /** passes over the card without grading it */
   onSkip(): void;
+  /** a first look ('learn') was seen: nothing is graded, its question comes later */
+  onLearnt(): void;
   bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
 }) {
   const { answer, recordTipView } = useAppData();
@@ -583,6 +589,10 @@ function CardRunner({
 
   function onAnswer(given: string) {
     if (outcome) return;
+    if (item.mode === 'learn') {
+      onLearnt();
+      return;
+    }
     const correct = isCorrect(item, card, given, cards);
     // a Which clue card's options are image ids, not answers a confusion could pair
     const picked =
@@ -614,7 +624,11 @@ function CardRunner({
   }
 
   const View =
-    item.mode === 'binary' ? LookalikeCard : item.mode === 'scan' ? ScanCard : viewFor(card);
+    item.mode === 'binary'
+      ? LookalikeCard
+      : item.mode === 'scan' || item.mode === 'learn'
+        ? ScanCard
+        : viewFor(card);
   const verdict = outcome && verdictFor(card, item, outcome);
   const reveal = verdict && shown && (
     <Reveal

@@ -9,6 +9,7 @@ import {
   type PracticeState,
 } from './practice';
 import { applyReview, newCardState } from './scheduler';
+import { LEARN_GAP } from './session';
 import type { Card, CardState, CardType, Confusion } from './types';
 
 const now = new Date('2026-03-15T12:00:00Z');
@@ -359,5 +360,35 @@ describe('practice image rotation', () => {
       expect(next.item.imageId).toBeUndefined();
       practice = recordPracticeAnswer(next.practice, next.item.cardId, false);
     }
+  });
+});
+
+describe('first look at a new clue', () => {
+  const spot = (id: string): Card => ({
+    ...card(id, 'spot', `C${id}`),
+    clue: { id: `clue-${id}`, image: { id: 'i', src: 'https://example.org/i.jpg' } },
+  });
+
+  it('shows a new spot clue once as a lesson, then quizzes it a few cards later', () => {
+    const cards = Array.from({ length: 12 }, (_, i) => spot(`s${i}`));
+    let practice = start(cards);
+    const served: { id: string; mode: string }[] = [];
+    for (let i = 0; i < 30; i++) {
+      const next = nextPracticeItem(practice, {}, now);
+      served.push({ id: next.item.cardId, mode: next.item.mode });
+      practice = recordPracticeAnswer(next.practice, next.item.cardId, true);
+    }
+    const first = served[0]!;
+    expect(first.mode).toBe('learn');
+    const quiz = served.findIndex((s, i) => i > 0 && s.id === first.id);
+    expect(quiz).toBeGreaterThan(LEARN_GAP);
+    expect(served[quiz]!.mode).not.toBe('learn');
+  });
+
+  it('quizzes a clue the learner has already seen straight away', () => {
+    const cards = [spot('s0'), spot('s1')];
+    const states = { s0: strong('s0'), s1: strong('s1') };
+    const next = nextPracticeItem(start(cards, states), states, now);
+    expect(next.item.mode).not.toBe('learn');
   });
 });

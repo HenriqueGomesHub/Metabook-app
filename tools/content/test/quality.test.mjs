@@ -340,4 +340,36 @@ describe('addRegionCodes', () => {
     assert.equal(countries[0].clues[1].regionCode, undefined);
     assert.equal(countries[0].clues[2].regionCode, undefined);
   });
+
+  it('lists the other map regions a clue names as also right', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'maps-'));
+    writeFileSync(
+      join(dir, 'br-states.json'),
+      JSON.stringify({
+        states: [
+          { code: 'RS', name: 'Rio Grande do Sul' },
+          { code: 'SC', name: 'Santa Catarina' },
+          { code: 'PR', name: 'Paraná' },
+        ],
+      }),
+    );
+    const countries = [
+      {
+        country: 'BR',
+        clues: [
+          {
+            id: 'a',
+            family: 'bollard',
+            region: 'Rio Grande do Sul',
+            title: 'Bollard',
+            text: ['Also common in Santa Catarina.'],
+            images: [],
+          },
+        ],
+      },
+    ];
+    addRegionCodes(countries, dir);
+    assert.equal(countries[0].clues[0].regionCode, 'RS');
+    assert.deepEqual(countries[0].clues[0].alsoRegions, ['SC']);
+  });
 });

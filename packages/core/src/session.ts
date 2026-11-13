@@ -8,8 +8,45 @@ import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } fr
 /**
  * How a card is answered. 'scan' = Refresh mode: the photo is shown with its answer and the clue,
  * and the learner says "Knew it" or "New to me" (for a player who has seen most of this before).
+ * 'learn' = a brand-new clue shown once with its answer and lesson before it is ever asked; it is
+ * not graded, and the card comes back as a question a few cards later.
  */
-export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan';
+export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan' | 'learn';
+
+/** Cards between a new clue's first look and its first question. */
+export const LEARN_GAP = 3;
+
+/** A card worth a first look before it is asked: a new clue photo, shown with its answer. */
+export const teachFirst = (card: Card, state: CardState | undefined): boolean =>
+  card.type === 'spot' && Boolean(card.clue?.image) && (state?.state ?? 'new') === 'new';
+
+/**
+ * Puts a first look before each new clue in a session queue: the look where the card was, its
+ * question LEARN_GAP cards later (or at the end).
+ */
+export function withFirstLooks(
+  queue: SessionItem[],
+  cards: Card[],
+  states: Record<string, CardState>,
+): SessionItem[] {
+  const out: SessionItem[] = [];
+  const pending: { item: SessionItem; at: number }[] = [];
+  for (const item of queue) {
+    const card = cards.find((c) => c.id === item.cardId);
+    const look =
+      card && item.mode === 'mcq' && !item.contrastPair && teachFirst(card, states[card.id]);
+    if (look) {
+      out.push({ ...item, mode: 'learn' });
+      pending.push({ item, at: out.length + LEARN_GAP });
+    } else {
+      out.push(item);
+    }
+    while (pending.length > 0 && (pending[0] as { at: number }).at <= out.length) {
+      out.push((pending.shift() as { item: SessionItem }).item);
+    }
+  }
+  return [...out, ...pending.map((p) => p.item)];
+}
 
 export interface SessionItem {
   cardId: string;
@@ -384,17 +421,23 @@ export function buildSession(input: {
     mix(shuffle([...reviews, ...blockExtras].filter(notContrast), rng), fresh.filter(notContrast)),
   );
   return {
-    queue: spreadIn(
-      ordered.map((card) => {
-        // a review shows the clue's photos in turn, so it is the clue that is recalled
-        const imageId = isSeen(card) ? photoTurn(card, cards, stateOf(card)?.reps ?? 0) : undefined;
-        const mode: SessionMode =
-          input.refresh && !isSeen(card) && card.type === 'spot'
-            ? 'scan'
-            : modeFor(card, stateOf(card));
-        return { cardId: card.id, mode, ...(imageId && { imageId }) };
-      }),
-      contrast,
+    queue: withFirstLooks(
+      spreadIn(
+        ordered.map((card) => {
+          // a review shows the clue's photos in turn, so it is the clue that is recalled
+          const imageId = isSeen(card)
+            ? photoTurn(card, cards, stateOf(card)?.reps ?? 0)
+            : undefined;
+          const mode: SessionMode =
+            input.refresh && !isSeen(card) && card.type === 'spot'
+              ? 'scan'
+              : modeFor(card, stateOf(card));
+          return { cardId: card.id, mode, ...(imageId && { imageId }) };
+        }),
+        contrast,
+      ),
+      cards,
+      states,
     ),
     catchUp,
     remaining: due.length - reviews.length,

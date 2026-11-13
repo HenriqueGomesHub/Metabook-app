@@ -288,13 +288,18 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
         const prompt = hideRegionName(note.text, state.name);
         // a sentence naming other regions too ("frequent in RS, RJ, MS") has more than one right
         // answer on the map
-        const others = map.states.filter((s) => s.code !== state.code).map((s) => s.name);
-        if (!prompt || namesOtherRegions(prompt) || namedIn(prompt, others)) continue;
+        // other regions the sentence names are right too ("frequent in RS, RJ, MS"); one that only
+        // hints at others has no fair single answer
+        const spans = map.states
+          .filter((s) => s.code !== state.code && namedIn(note.text, [s.name]))
+          .map((s) => s.code);
+        if (!prompt || (spans.length === 0 && namesOtherRegions(prompt))) continue;
         cards.push({
           id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
           type: 'region',
           country: code,
           answer: state.code,
+          ...(spans.length > 0 && { spans }),
           prompt: { kind: 'text', value: prompt },
           tags: [...tags(note.subject), 'where'],
           subject: note.subject,

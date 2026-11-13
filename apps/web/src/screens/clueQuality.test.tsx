@@ -109,10 +109,30 @@ describe('Learn: summaries first, lookalike notes, captions, viewer', () => {
   });
 });
 
+/** A new clue opens with its first look; past it, the question. */
+async function pastFirstLook() {
+  fireEvent.click(await screen.findByRole('button', { name: 'Got it' }));
+  await screen.findByText('Which country?');
+}
+
+describe('A new clue', () => {
+  it('is first shown with its answer and lesson, ungraded, then asked', async () => {
+    mount('/session?country=AL&type=spot');
+    expect(await screen.findByText('New clue')).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Albania' })).toBeTruthy();
+    // the summary's jargon is glossed, so its words sit in several elements
+    expect(document.querySelector('.scan-clue')?.textContent).toMatch(
+      /Red and white bollards with a red reflector/,
+    );
+    await pastFirstLook();
+    expect(document.querySelectorAll('.options .opt')).toHaveLength(4);
+  });
+});
+
 describe('Spot it with lookalikes', () => {
   it('never offers the country that looks the same, and names it on the answer', async () => {
     mount('/session?country=AL&type=spot');
-    await screen.findByText('Which country?');
+    await pastFirstLook();
     const options = document.querySelectorAll('.options .opt');
     expect(options).toHaveLength(4);
     expect([...options].map((o) => o.textContent).join()).not.toMatch(/Italy/);
@@ -141,7 +161,7 @@ describe('Today', () => {
 describe('A missed clue card', () => {
   it('shows how to spot the picked country’s own clue of that family', async () => {
     mount('/session?country=AL&type=spot');
-    await screen.findByText('Which country?');
+    await pastFirstLook();
     const wrong = [...document.querySelectorAll<HTMLButtonElement>('.options .opt')].find(
       (o) => !/Albania/.test(o.textContent ?? ''),
     ) as HTMLButtonElement;

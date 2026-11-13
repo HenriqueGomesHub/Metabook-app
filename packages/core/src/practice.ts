@@ -1,7 +1,7 @@
 import { activePairs, isMapKey } from './confusions';
 import { shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
-import { modeFor, type SessionItem } from './session';
+import { LEARN_GAP, modeFor, teachFirst, type SessionItem } from './session';
 import type { Card, CardState, Confusion } from './types';
 
 /**
@@ -328,8 +328,11 @@ export function nextPracticeItem(
   const wasReturn = practice.learning.some((l) => l.cardId === card.id && !l.wrong && l.streak > 0);
   const imageId = rotatedImage(practice, card);
   const shownImage = imageId ?? card.clue?.image?.id;
+  // a brand-new clue is first shown with its answer; its question comes LEARN_GAP cards later
+  const look = isFresh && !practice.known?.includes(card.id) && teachFirst(card, states[card.id]);
+  const mode = look ? 'learn' : modeFor(card, states[card.id]);
   return {
-    item: { cardId: card.id, mode: modeFor(card, states[card.id]), ...(imageId && { imageId }) },
+    item: { cardId: card.id, mode, ...(imageId && { imageId }) },
     practice: {
       ...practice,
       step: step + 1,
@@ -349,7 +352,7 @@ export function nextPracticeItem(
             ...practice.learning,
             {
               cardId: card.id,
-              due: step + 1 + RIGHT_GAP,
+              due: step + 1 + (look ? LEARN_GAP : RIGHT_GAP),
               streak: practice.known?.includes(card.id) ? GRADUATE_STREAK - 1 : 0,
               wrong: false,
             },
