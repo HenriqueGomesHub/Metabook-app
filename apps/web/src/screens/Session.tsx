@@ -300,6 +300,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
   const [answers, setAnswers] = useState<Answer[]>([]);
   // practice runs in rounds of PRACTICE_ROUND cards, each ending on its summary
   const [roundStart, setRoundStart] = useState(0);
+  const [lessons, setLessons] = useState(0);
+  const [lessonsStart, setLessonsStart] = useState(0);
   const [startedAt, setStartedAt] = useState(() => Date.now());
   const [ended, setEnded] = useState(false);
   const back = backTo(data, scope);
@@ -343,6 +345,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
             <Button
               onClick={() => {
                 setRoundStart(answers.length);
+                setLessonsStart(lessons);
                 setStartedAt(Date.now());
                 setEnded(false);
               }}
@@ -359,7 +362,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     );
   }
 
-  const inRound = answers.length - roundStart;
+  // lessons are steps of the round too, so the counter moves while new clues are shown
+  const inRound = answers.length - roundStart + lessons - lessonsStart;
 
   function onAnswered(correct: boolean, state?: CardState) {
     if (!flow) return;
@@ -378,12 +382,18 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     if (!flow?.upcoming) return;
     const { item, practice } = flow.upcoming;
     const card = pool.find((c) => c.id === item.cardId);
-    // The answer just recorded may have moved this card past multiple choice.
-    const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
+    // The answer just recorded may have moved this card past multiple choice; a lesson stays one
+    const mode = item.mode !== 'learn' && card ? modeFor(card, data.states[card.id]) : item.mode;
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
     // one card has nothing else to draw: end at the summary instead of looping on it; otherwise
     // a round ends at its summary after PRACTICE_ROUND cards
-    if (pool.length === 1 || answers.length - roundStart >= PRACTICE_ROUND) setEnded(true);
+    if (pool.length === 1 || inRound >= PRACTICE_ROUND) setEnded(true);
+  }
+
+  /** A lesson read: one step of the round, then on to the next card. */
+  function learnt() {
+    setLessons(lessons + 1);
+    skip();
   }
 
   /** An unanswerable card is passed over ungraded; it stays in the pool and comes back. */
@@ -408,7 +418,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       onNext={advance}
       onSkip={skip}
       // a first look is passed over ungraded; its question is already scheduled
-      onLearnt={skip}
+      onLearnt={learnt}
       bar={({ outcome }) => {
         const at = Math.min(PRACTICE_ROUND, inRound + (outcome ? 0 : 1));
         return (

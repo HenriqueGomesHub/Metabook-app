@@ -896,3 +896,14 @@ a.credit:hover {
   color: var(--accent);
   font-weight: 600;
 }
+
+@media (max-width: 720px) {
+  /* Which clue answered: the two photos to compare (the answer and the pick) stay, side by side */
+  .play-top:has(.play-side.revealed) .photo-opt.dim {
+    display: none;
+  }
+
+  .play-top:has(.play-side.revealed) .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}

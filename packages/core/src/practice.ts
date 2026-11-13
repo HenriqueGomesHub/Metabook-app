@@ -26,11 +26,12 @@ import type { Card, CardState, Confusion } from './types';
 /** Cards that may be shaky (missed, or not answered yet) before new cards wait. */
 export const LEARNING_SET = 5;
 /**
- * A wrong card comes back after 3 to 5 other cards: it is due after 3 or 4, leaving one card of
- * slack for another missed card or a neighbouring number, and is forced back after 5.
+ * A wrong card comes back after 6 to 8 other cards: due after 6 or 7, leaving one card of slack for
+ * another missed card or a neighbouring number, and forced back after 8. Sooner, the answer is
+ * still in working memory and the return tests nothing.
  */
-const WRONG_GAP: [number, number] = [3, 5];
-const WRONG_DUE: [number, number] = [3, 4];
+const WRONG_GAP: [number, number] = [6, 8];
+const WRONG_DUE: [number, number] = [6, 7];
 /** Other cards before a learning card answered right once comes back (or the spacing, if more). */
 const RIGHT_GAP = 8;
 /** Up to this many extra cards are added to a right gap, so returns do not line up. */
@@ -46,7 +47,7 @@ const INTROS_PER_RETURN = 2;
 const MAX_OVERDUE = 60;
 /** Never repeat within min(MAX_GAP, pool / 2) cards; a wrong card's return within WRONG_MIN_GAP. */
 const MAX_GAP = 10;
-const WRONG_MIN_GAP = 3;
+const WRONG_MIN_GAP = 6;
 const WEAKNESS_FLOOR = 0.15;
 /**
  * Cards between a lesson and its question in a drill: two at least. A drill of new clues then runs
@@ -154,8 +155,11 @@ function spotSiblings(cards: Card[], card: Card): Card[] {
  * card's own image.
  */
 function rotatedImage(practice: PracticeState, card: Card): string | undefined {
-  if (practice.lastShown[card.id] === undefined) return undefined;
   const shown = practice.imageShown ?? {};
+  // a first showing keeps its own photo, unless a sibling card already showed that photo
+  const own = card.clue?.image?.id;
+  if (practice.lastShown[card.id] === undefined && (!own || shown[own] === undefined))
+    return undefined;
   const images = spotSiblings(practice.cards, card).map((c) => c.clue?.image?.id as string);
   if (images.length < 2) return undefined;
   const pick = images.reduce((best, id) => ((shown[id] ?? -1) < (shown[best] ?? -1) ? id : best));
@@ -347,7 +351,15 @@ export function nextPracticeItem(
   const imageId = rotatedImage(practice, card);
   const shownImage = imageId ?? card.clue?.image?.id;
   // a brand-new clue is first shown with its answer; its question comes one or two cards later
-  const look = isFresh && !practice.known?.includes(card.id) && teachFirst(card, states[card.id]);
+  // ...once per clue: another photo of a clue already taught is a question straight away
+  const taughtClue = spotSiblings(practice.cards, card).some(
+    (c) => c.id !== card.id && practice.lastShown[c.id] !== undefined,
+  );
+  const look =
+    isFresh &&
+    !taughtClue &&
+    !practice.known?.includes(card.id) &&
+    teachFirst(card, states[card.id]);
   const mode = look ? 'learn' : modeFor(card, states[card.id]);
   return {
     item: { cardId: card.id, mode, ...(imageId && { imageId }) },

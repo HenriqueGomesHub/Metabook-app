@@ -519,7 +519,7 @@ const RARE =
  * "the capital", an airport or park, "one northern road", "in the far north", "some states".
  */
 const SPOT =
-  /\b(?:the capital|capital city|(?:second[- ])?(?:biggest|largest) city|airport|national park|fort\b|biosphere|one (?:\w+ )?(?:road|highway|street|island|town|city|village|valley|stretch|municipality)|a (?:single|few) roads?|(?:in|on) the (?:far |very far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west)(?:ern)?\b|(?:north|south|east|west)ern (?:half|part|third|tip|coast|interior)|far-(?:north|south|east|west)|of the country|some (?:states|provinces|regions|areas|parts|islands|cities|towns)|parts of|larger islands|-region|\bfar (?:north|south|east|west)|(?:north|south|east|west|central)(?:-?(?:east|west))?(?:ern)? (?:\w+ )?(?:town|towns|city|cities|village|villages|desert|coast|coasts|island|islands|region|valley|plain|highlands?)\b|\bborder\b|neighbouring cities|driving (?:north|south|east|west)|running (?:north|south|east|west)|the (?:volcano|main city|main town|main road|lake|river|lagoon|peninsula|valley|village|harbour|port)\b|this (?:road|town|city|island)|middle of the|(?:just |far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west) of (?:the|a|one|it)\b|now and then|uses the same|same as (?:in )?\p{Lu}|Chugoku|Kanto|Kansai|Tohoku|Kyushu|Shikoku|Chubu|Hokuriku|Hokkaido|Okinawa|Patagonia|Siberia|Tasmania|Sardinia|Sicily|Corsica|Crete|Bali|Java|Sumatra|Borneo|Luzon|Mindanao)/iu;
+  /\b(?:the capital|capital city|(?:second[- ])?(?:biggest|largest) city|airport|national park|fort\b|biosphere|one (?:\w+ )?(?:road|highway|street|island|town|city|village|valley|stretch|municipality)|a (?:single|few) roads?|(?:in|on) the (?:far |very far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west)(?:ern)?\b|(?:north|south|east|west)ern (?:half|part|third|tip|coast|interior)|far-(?:north|south|east|west)|of the country|some (?:states|provinces|regions|areas|parts|islands|cities|towns)|parts of|larger islands|-region|\bfar (?:north|south|east|west)|(?:north|south|east|west|central)(?:-?(?:east|west))?(?:ern)? (?:\w+ )?(?:town|towns|city|cities|village|villages|desert|coast|coasts|island|islands|region|valley|plain|highlands?)\b|\bborder\b|neighbouring cities|driving (?:north|south|east|west)|running (?:north|south|east|west)|(?:the|a) (?:big |northern |southern |eastern |western )?mountain (?:area|region|range)\b|the big mountain|the (?:volcano|main city|main town|main road|lake|river|lagoon|peninsula|valley|village|harbour|port)\b|this (?:road|town|city|island)|middle of the|(?:just |far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west) of (?:the|a|one|it)\b|now and then|uses the same|same as (?:in )?\p{Lu}|Chugoku|Kanto|Kansai|Tohoku|Kyushu|Shikoku|Chubu|Hokuriku|Hokkaido|Okinawa|Patagonia|Siberia|Tasmania|Sardinia|Sicily|Corsica|Crete|Bali|Java|Sumatra|Borneo|Luzon|Mindanao)/iu;
 
 /** A numbered road ("Route 9", "RN65", "D3600"), a compass bearing, "in western Kasur". */
 const ROAD =
@@ -582,6 +582,13 @@ const FAMILY_WORDS: Partial<Record<ClueFamily, RegExp>> = {
   guardrail: /^(?:guardrail|guard rail|barrier|railing)/i,
 };
 
+/**
+ * A clue that says it does not set the country apart: "looks identical to Portuguese ones", "the
+ * same as in Spain", "for all car coverage", "a small settlement".
+ */
+const SHARED =
+  /\b(?:identical|the same as|same as in|just like (?:in|the)|look(?:s)? (?:the )?same|can look similar|look(?:s)? similar|for all (?:car )?coverage|coverage exists|small settlement|common across|across (?:much of )?(?:Europe|Latin America|South America|Africa|Asia))\b/i;
+
 /** Capitalised words a clue may use that are not places. */
 const NOT_PROPER =
   /^(?:Gen|Generation|Google|Street|View|Trekker|Plonk|Learnable|Meta|GeoHints|Cyrillic|Latin|Arabic|English|Europe|European|Asia|Asian|Africa|African|America|American|Americas|Oceania|Balkan|Balkans|Nordic|Scandinavian|Caribbean|Mediterranean|Muslim|Christian|Catholic|Orthodox|Buddhist|Hindu|Islamic|Gothic|Art|Nouveau|Soviet|Roman|British|French|Spanish|Portuguese|German|Russian|Chinese|Japanese|Korean|Dutch|Italian|Greek|Thai|Lao|Khmer|Hebrew|Bengali|Hindi|Devanagari|Tamil|Sinhala|Georgian|Armenian|SUV|ID|A|B|C|D|E|F|K|M|N|S|T|U|V|X|Y|Z|I|II|OK|Yes|No|North|South|East|West|Central)$/;
@@ -596,6 +603,7 @@ export function isCountryWide(
   clue: Pick<Clue, 'title' | 'summary' | 'region' | 'local' | 'family'>,
 ): boolean {
   if (isLocalClue(clue) || isRareClue(clue)) return false;
+  if (SHARED.test(`${clue.title} ${clue.summary ?? ''}`)) return false;
   // the words after the family ("Pole: concrete cross"); a bare "Bollard" names nothing
   const name = clue.title.includes(':') ? clue.title.replace(/^[^:]*:\s*/, '') : '';
   const summary = clue.summary?.trim() ?? '';

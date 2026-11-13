@@ -68,8 +68,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const card = cards[results.length];
   const mode: SessionMode = card?.map ? 'map' : card?.type === 'lookalike' ? 'binary' : 'mcq';
   const options = useMemo(
-    () =>
-      card ? optionsFor({ cardId: card.id, mode }, card, data.content.cards, Math.random) : [],
+    () => (card ? placementOptions(card, mode, name, data.content.cards) : []),
     // Choices are drawn once per card; later content changes must not reshuffle them.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [card?.id],
@@ -214,6 +213,19 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
       <VerdictAnnouncer text={outcome ? verdictFor(card, { mode }, outcome).verdict : ''} />
     </div>
   );
+}
+
+/**
+ * A neighbour's question always offers the placed country too, so it tests whether the learner
+ * can tell the two apart and "always Brazil" is no strategy.
+ */
+function placementOptions(card: Card, mode: SessionMode, placed: string, cards: Card[]): string[] {
+  const options = optionsFor({ cardId: card.id, mode }, card, cards, Math.random);
+  if (mode !== 'mcq' || card.answer === placed || options.length === 0 || options.includes(placed))
+    return options;
+  if (!cards.some((c) => c.answer === placed)) return options;
+  const kept = options.filter((o) => o !== card.answer).slice(0, options.length - 2);
+  return [...kept, card.answer, placed].sort(() => Math.random() - 0.5);
 }
 
 function isRight(card: Card, mode: SessionMode, given: string, cards: Card[]): boolean {

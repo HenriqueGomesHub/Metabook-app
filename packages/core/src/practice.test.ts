@@ -85,7 +85,7 @@ describe('practice', () => {
   // Updated for the learning queue: after its wrong-answer return, a card answered right comes back
   // after the usual spacing (min(10, pool / 2) cards), not within 5, and graduates on the second
   // right in a row.
-  it('brings a wrong card back after 3-5 other cards, then spaces it and graduates it', () => {
+  it('brings a wrong card back after 6-8 other cards, then spaces it and graduates it', () => {
     const cards = pool(20);
     let target = '';
     let practice = start(cards, {}, 3);
@@ -110,20 +110,20 @@ describe('practice', () => {
     const comebacks = seen
       .map((id, i) => (id === target && i > wrongAt ? i : -1))
       .filter((i) => i >= 0);
-    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(4);
-    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(6);
+    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(7);
+    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(9);
     expect(comebacks[1]! - comebacks[0]!).toBeGreaterThan(10);
     expect(practice.learning.map((l) => l.cardId)).not.toContain(target);
     expect(practice.resting).toContain(target);
   });
 
-  it('keeps bringing a card back after 3-5 others while it keeps being answered wrong', () => {
+  it('keeps bringing a card back after 6-8 others while it keeps being answered wrong', () => {
     const ids = run(start(pool(20), {}, 5), {}, 100, (id) => id !== 'c0');
     const hits = ids.map((id, i) => (id === 'c0' ? i : -1)).filter((i) => i >= 0);
     expect(hits.length).toBeGreaterThan(10);
     hits.slice(1).forEach((h, i) => {
-      expect(h - (hits[i] as number)).toBeGreaterThanOrEqual(4);
-      expect(h - (hits[i] as number)).toBeLessThanOrEqual(6);
+      expect(h - (hits[i] as number)).toBeGreaterThanOrEqual(7);
+      expect(h - (hits[i] as number)).toBeLessThanOrEqual(9);
     });
   });
 
@@ -288,15 +288,15 @@ describe('practice on the 67 Brazilian area codes', () => {
     }
   });
 
-  it('brings every wrong card back within 3 to 6 cards', () => {
+  it('brings every wrong card back within 6 to 10 cards', () => {
     for (const seed of [1, 2, 3]) {
       const { ids, wrong } = realistic(areaCodes, seed, 300, 0.7);
       ids.forEach((id, i) => {
         if (!wrong[i]) return;
         const back = ids.indexOf(id, i + 1);
         if (back < 0) return;
-        expect(back - i).toBeGreaterThanOrEqual(3);
-        expect(back - i).toBeLessThanOrEqual(6);
+        expect(back - i).toBeGreaterThanOrEqual(6);
+        expect(back - i).toBeLessThanOrEqual(10);
       });
     }
   });

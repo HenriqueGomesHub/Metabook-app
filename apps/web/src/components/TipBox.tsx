@@ -24,11 +24,6 @@ export function TipBox({
         ) : (
           <span className="tipbox-label">{label}</span>
         )}
-        {variant === 'main' && (
-          <span className="tipbox-count">
-            Tip {picked.index + 1} of {picked.total}
-          </span>
-        )}
       </div>
       <p key={picked.tip.id} className="swap">
         {picked.tip.text}
