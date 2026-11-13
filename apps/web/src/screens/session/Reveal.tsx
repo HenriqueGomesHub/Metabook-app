@@ -124,11 +124,6 @@ function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) 
           <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z" />
         </svg>
         Tip
-        {many && (
-          <span className="tip-count">
-            {at + 1} of {tips.length}
-          </span>
-        )}
       </p>
       <div className="tip-stage">
         {many && (

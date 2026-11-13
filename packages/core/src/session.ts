@@ -14,7 +14,7 @@ import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } fr
 export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan' | 'learn';
 
 /** Cards between a new clue's first look and its first question. */
-export const LEARN_GAP = 3;
+export const LEARN_GAP = 5;
 
 /** A card worth a first look before it is asked: a new clue photo, shown with its answer. */
 export const teachFirst = (card: Card, state: CardState | undefined): boolean =>

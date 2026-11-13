@@ -97,7 +97,7 @@ describe('Session reveal', () => {
       fireEvent.click(buttons[0] as HTMLElement);
       await screen.findByRole('dialog');
       // only the answer's own tips are paged; the aside keeps its one tip
-      const pages = !!screen.queryByText('1 of 2');
+      const pages = document.querySelectorAll('.tip-dots span').length === 2;
       expect(!!screen.queryByRole('button', { name: 'Next tip' })).toBe(pages);
       fireEvent.keyDown(window, { key: ' ' });
     }

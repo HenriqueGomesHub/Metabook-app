@@ -9,8 +9,7 @@ import {
   normalizeAnswer,
   cardContext,
   isGalleryClue,
-  isLocalClue,
-  isRareClue,
+  isCountryWide,
   pickTip,
   rankTips,
   sameTip,
@@ -224,8 +223,7 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
       : item;
   // the session's own cards set the total; a missed card asked again shows "Again" instead of
   // moving the finish line back
-  // a first look at a new clue is part of its question, not a question of its own
-  const counts = (q: SessionItem) => !q.retry && q.mode !== 'learn';
+  const counts = (q: SessionItem) => !q.retry;
   const total = queue.filter(counts).length;
   const done = Math.max(1, Math.min(total, queue.slice(0, index + 1).filter(counts).length));
 
@@ -440,7 +438,8 @@ interface Shown {
 
 /** "How to spot Chile’s bollards" with that clue's summary, for the reveal's aside. */
 function clueAside(name: string, clue: Clue): Shown['aside'] {
-  const text = clue.summary?.trim();
+  // the first sentence, whole: a note cut off mid-word reads as broken
+  const text = clue.summary?.trim().split(/(?<=[.!?])\s+/)[0];
   if (!text || isGalleryClue(clue)) return undefined;
   return {
     label: `How to spot ${possessive(name)} ${SUBJECTS[clue.family].label.toLowerCase()}`,
@@ -577,7 +576,7 @@ function CardRunner({
       [];
     // the one that says what to look for, not "fairly rare here"
     // one that says what to look for across the country: not "fairly rare here", not one road
-    const theirs = candidates.find((c) => !isRareClue(c) && !isLocalClue(c));
+    const theirs = candidates.find((c) => isCountryWide(c));
     return theirs ? clueAside(pickedName, theirs) : undefined;
   }
 

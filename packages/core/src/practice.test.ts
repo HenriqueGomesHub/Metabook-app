@@ -384,12 +384,12 @@ describe('first look at a new clue', () => {
     const first = served[0]!;
     expect(first.mode).toBe('learn');
     const quiz = served.findIndex((s, i) => i > 0 && s.id === first.id);
-    // after one other card, not after a run of other lessons
-    expect(quiz).toBe(2);
+    // after two other cards, not straight away and not after a long run of other lessons
+    expect(quiz).toBe(3);
     // lessons and questions take turns: never three lessons in a row
     const modes = served.map((s) => (s.mode === 'learn' ? 'L' : 'Q')).join('');
-    expect(modes).not.toContain('LLL');
-    expect(modes.slice(0, 7)).toBe('LLQLQLQ');
+    expect(modes.slice(3)).not.toContain('LL');
+    expect(modes.slice(0, 7)).toBe('LLLQLQL');
     expect(served[quiz]!.mode).not.toBe('learn');
   });
 

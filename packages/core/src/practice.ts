@@ -49,10 +49,10 @@ const MAX_GAP = 10;
 const WRONG_MIN_GAP = 3;
 const WEAKNESS_FLOOR = 0.15;
 /**
- * Cards between a lesson and its question in a drill: one, the next lesson. A drill of new clues
- * then runs lesson, lesson, question, lesson, question…
+ * Cards between a lesson and its question in a drill: two at least. A drill of new clues then runs
+ * lesson, lesson, lesson, question, lesson, question…, the gap growing to four
  */
-const PRACTICE_LEARN_GAP = 1;
+const PRACTICE_LEARN_GAP = 2;
 const CONFUSION_BOOST = 2;
 
 interface Learning {
