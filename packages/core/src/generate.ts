@@ -303,6 +303,9 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
           );
         if (!asked || BROKEN_MASK.test(asked) || (spans.length === 0 && namesOtherRegions(asked)))
           continue;
+        // a town or island left in the prompt gives the region away ("signs in Gothenburg", "the
+        // island of Sylt"): the question would test geography, not the clue
+        if (namesPlace(asked, input.pool, map.states)) continue;
         // a region name inside a place name ("Villa Ángela", "San Pedro de Jujuy") is no answer
         if (spans.length > 0 && (PLACE_PART.test(asked) || !asked.includes('this area'))) continue;
         cards.push({
@@ -429,6 +432,31 @@ export function sameClaim(text: string): string {
  */
 const PLACE_PART =
   /(?:\b[A-Z][\p{L}]+|\b(?:de|del|do|da|of))\s+another area|\bin (?:this|another) area and [\p{L}-]+ in (?:this|another) area/u;
+
+/**
+ * Whether a where prompt still names a place after its regions are masked: a capitalised name after
+ * "in", "of", "near"… that is not a country ("like those in Bolivia" is fine).
+ */
+function namesPlace(
+  prompt: string,
+  pool: PoolCountry[],
+  states: RegionMapNames['states'],
+): boolean {
+  // countries, and the map's other regions (named as a contrast: "white ones in Bahia")
+  const known = [...pool.map((c) => c.name), ...states.map((s) => s.name)].map((n) =>
+    fold(n ?? ''),
+  );
+  const after =
+    /\b(?:in|of|near|around|from|to|at|on|between|and)\s+(?:the\s+)?(\p{Lu}[\p{L}'’-]+)/gu;
+  for (const match of prompt.matchAll(after)) {
+    const word = match[1] ?? '';
+    if (!/^\p{Lu}\p{Ll}{2}/u.test(word)) continue;
+    if (/^(?:Gen|Generation|Google|Street|Latin|Cyrillic|English|Arabic)$/.test(word)) continue;
+    const rest = fold(prompt.slice((match.index ?? 0) + match[0].length - word.length));
+    if (!known.some((name) => name && rest.startsWith(name))) return true;
+  }
+  return false;
+}
 
 /** Other right regions in a where prompt read "another area": naming them would give them away. */
 function maskOthers(prompt: string, names: string[]): string {

@@ -18,6 +18,7 @@ import {
   streetViewEmbedUrl,
   isGalleryClue,
   isRareClue,
+  namesPartOfCountry,
 } from './clueCards';
 import { clueCardIds, primaryCardId } from './clues';
 import { isClueCard } from './generate';
@@ -262,5 +263,31 @@ describe('isRareClue', () => {
     expect(
       isRareClue({ title: 'Bollard: red cap', summary: 'Red-capped bollards everywhere.' }),
     ).toBe(false);
+  });
+});
+
+describe('namesPartOfCountry', () => {
+  it('finds clues for one place or part of a country', () => {
+    for (const text of [
+      'Off-centre crossbars appear in Otago, Marlborough and Wellington.',
+      'Around Locumba, half-buried bollards line the road.',
+      'Yellow taxis are found in the capital.',
+      'The RN65 has light grainy pavement.',
+      'A mosque in western Kasur has a green dome.',
+      'Wooden poles in some states.',
+      'Corn is found on the North Island only, in the far north.',
+    ])
+      expect(namesPartOfCountry(text), text).toBe(true);
+  });
+
+  it('leaves country-wide clues alone, even when they name other countries or a script', () => {
+    for (const text of [
+      'Snow poles are made of wood and painted in many different colours.',
+      'Double guardrails are much less common in other South American countries.',
+      'Signs are written in Cyrillic, like in Russia.',
+      'Window shutters are more common here than in Czechia.',
+      'Wind turbines are much more common than in any other European country.',
+    ])
+      expect(namesPartOfCountry(text), text).toBe(false);
   });
 });

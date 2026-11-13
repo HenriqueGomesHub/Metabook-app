@@ -510,19 +510,77 @@ function cardsOnMap(
 const RARE =
   /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonce you know\b|\bonly to confirm\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
 
+/**
+ * Words a clue uses for one spot or one part of the country: a numbered road ("RN65", "E45"),
+ * "the capital", an airport or park, "one northern road", "in the far north", "some states".
+ */
+const SPOT =
+  /\b(?:the capital|capital city|(?:second[- ])?(?:biggest|largest) city|airport|national park|fort\b|biosphere|one (?:\w+ )?(?:road|highway|street|island|town|city|village|valley|stretch|municipality)|a (?:single|few) roads?|(?:in|on) the (?:far |very far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west)(?:ern)?\b|(?:north|south|east|west)ern (?:half|part|third|tip|coast|interior)|far-(?:north|south|east|west)|of the country|some (?:states|provinces|regions|areas|parts|islands|cities|towns)|parts of|larger islands|-region|\bfar (?:north|south|east|west)|(?:north|south|east|west|central)(?:-?(?:east|west))?(?:ern)? (?:\w+ )?(?:town|towns|city|cities|village|villages|desert|coast|coasts|island|islands|region|valley|plain|highlands?)\b|\bborder\b|neighbouring cities|driving (?:north|south|east|west)|running (?:north|south|east|west))/i;
+
+/** A numbered road ("Route 9", "RN65", "D3600"), a compass bearing, "in western Kasur". */
+const ROAD =
+  /\b(?:Route|Ruta|Road|road|Rodovia|Highway|highway|Autoroute|[A-Z]{1,3})[- ]?\d{1,4}\b|\b[NSEW]{1,3} to [NSEW]{1,3}\b|\b(?:[Ii]n|[Aa]round|[Nn]ear) (?:western|eastern|northern|southern|central|north-?\w+|south-?\w+) \p{Lu}/u;
+
+/** A preposition before a capitalised name: "in Idaho", "around Locumba", "unique to Otago". */
+const PLACE =
+  /\b(?:[Ii]n|[Aa]round|[Nn]ear|[Oo]utside|[Aa]cross|[Tt]hroughout|unique to|exclusive to|specific to|limited to|of|east of|west of|north of|south of)\s+(?:the\s+)?(?=\p{Lu})/gu;
+
+/** Capitalised words after "in" that are not places: scripts, languages, seasons, the source. */
+const NOT_A_PLACE =
+  /^(?:Cyrillic|Latin|Arabic|English|Gen|Generation|Google|Street|Summer|Winter|Spring|Autumn|Fall|January|February|March|April|May|June|July|August|September|October|November|December|Plonk|Learnable|The|A|An|[A-Z][a-z]*(?:ish|ese|ic|ian|an|sh|ch))\b/u;
+
+let countryNames: string[] | undefined;
+/** Every country and territory name in English (lower case), plus continents and big regions. */
+function countryNamesLower(): string[] {
+  if (!countryNames) {
+    const names = ['macau', 'turkey', 'ivory coast', 'czech republic', 'us', 'usa', 'uk'];
+    names.push('europe', 'asia', 'africa', 'america', 'oceania', 'scandinavia', 'balkans');
+    names.push('caribbean', 'baltics', 'middle east', 'latin america', 'southeast asia');
+    try {
+      const display = new Intl.DisplayNames(['en'], { type: 'region' });
+      for (let a = 65; a < 91; a++) {
+        for (let b = 65; b < 91; b++) {
+          const code = String.fromCharCode(a, b);
+          try {
+            const name = display.of(code);
+            if (name && name !== code) names.push(name.replace(/ SAR China$/, '').toLowerCase());
+          } catch {
+            // not a region code
+          }
+        }
+      }
+    } catch {
+      // no Intl.DisplayNames: the short list above
+    }
+    countryNames = names;
+  }
+  return countryNames;
+}
+
+/** Whether a text pins its clue to part of a country: a spot word, or a named place in it. */
+export function namesPartOfCountry(text: string): boolean {
+  if (SPOT.test(text) || ROAD.test(text)) return true;
+  const countries = countryNamesLower();
+  for (const match of text.matchAll(PLACE)) {
+    const rest = text.slice((match.index ?? 0) + match[0].length);
+    if (NOT_A_PLACE.test(rest)) continue;
+    const lower = rest.toLowerCase();
+    if (!countries.some((name) => lower.startsWith(name))) return true;
+  }
+  return false;
+}
+
 /** Tag of clue cards for part of the country: taught after the country-wide clues. */
 export const LOCAL_TAG = 'local';
 
 /**
- * A clue pinned to part of the country by its own words: a numbered road, a stretch between two
- * places, one island, "unique to Utah and Idaho", "around Ufa", "in the far north".
+ * Whether a clue belongs to part of the country: it has a region, the content pipeline found a
+ * map region named in it (`local`), or its own words pin it to a place.
  */
-const LOCAL =
-  /\b(?:Route|Ruta|Road|Rodovia|Highway|Autoroute)[- ]?\d|\bbetween [A-Z][\p{L}-]+ and [A-Z]|\b(?:unique to|only in|exclusive to|specific to|around|near|outside|west of|east of|north of|south of) (?:the )?[A-Z][\p{L}-]+|\bon (?:one|a single) (?:road|island|street|highway)\b|\bone (?:\w+ )?island\b|\bin the far (?:north|south|east|west)/u;
-
-/** Whether a clue belongs to part of the country: its region, or its own words pin it down. */
-export const isLocalClue = (clue: Pick<Clue, 'title' | 'summary' | 'region'>): boolean =>
-  Boolean(clue.region) || LOCAL.test(`${clue.title} ${clue.summary ?? ''}`);
+export const isLocalClue = (clue: Pick<Clue, 'title' | 'summary' | 'region' | 'local'>): boolean =>
+  Boolean(clue.region) ||
+  Boolean(clue.local) ||
+  namesPartOfCountry(`${clue.title} ${clue.summary ?? ''}`);
 
 /** Whether the source itself says a clue is rare, or it describes one spot (a road, a town). */
 export const isRareClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>

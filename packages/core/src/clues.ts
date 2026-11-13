@@ -112,6 +112,8 @@ export interface Clue {
    * in RS, RJ, MS"): on the map, picking one of them is right too.
    */
   alsoRegions?: string[];
+  /** the clue names a region of its country's map: it holds for part of the country */
+  local?: boolean;
   tags: string[];
   images: ClueImage[];
   locations: ClueLocation[];

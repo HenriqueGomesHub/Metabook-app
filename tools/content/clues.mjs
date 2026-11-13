@@ -720,6 +720,13 @@ export function addRegionCodes(countries, mapsDir = MAPS_DIR) {
     for (const clue of country.clues) {
       delete clue.regionCode;
       delete clue.alsoRegions;
+      // a clue naming one of the map's regions ("Thuringia's plates", "Kansai") holds for part of
+      // the country: taught after the country-wide clues, never asked as "the <country> clue"
+      delete clue.local;
+      const words = ` ${norm(`${clue.title ?? ''} ${clue.summary ?? ''}`)} `;
+      if (states.some((s) => norm(s.name ?? '').length > 3 && words.includes(` ${norm(s.name ?? '')}`))) {
+        clue.local = true;
+      }
       // landscape and plants run across regions ("the Great Plains, to central Texas"): no single answer
       if (!clue.region || BROAD_FAMILIES.has(clue.family)) continue;
       const region = norm(clue.region);

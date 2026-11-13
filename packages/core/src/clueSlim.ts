@@ -32,6 +32,7 @@ interface SlimExtra {
   region?: string;
   regionCode?: string;
   alsoRegions?: string[];
+  local?: boolean;
   kind?: Clue['kind'];
   text?: string[];
   summary?: string;
@@ -140,6 +141,7 @@ export function slimCatalogue(countries: ClueCountry[]): SlimCountry[] {
         ...(clue.region !== undefined && { region: clue.region }),
         ...(clue.regionCode !== undefined && { regionCode: clue.regionCode }),
         ...(clue.alsoRegions !== undefined && { alsoRegions: clue.alsoRegions }),
+        ...(clue.local !== undefined && { local: clue.local }),
         ...(clue.kind !== undefined && { kind: clue.kind }),
         ...(quizImages(clue).length === 0 && { text: clue.text }),
         ...(clue.summary !== undefined && { summary: clue.summary }),
@@ -211,6 +213,7 @@ export function expandCatalogue(slim: SlimCountry[]): ClueCountry[] {
             ...(extra && extra.region !== undefined && { region: extra.region }),
             ...(extra && extra.regionCode !== undefined && { regionCode: extra.regionCode }),
             ...(extra && extra.alsoRegions !== undefined && { alsoRegions: extra.alsoRegions }),
+            ...(extra && extra.local !== undefined && { local: extra.local }),
             ...(extra && extra.summary !== undefined && { summary: extra.summary }),
             ...(extra && extra.sameAs !== undefined && { sameAs: extra.sameAs }),
             ...(extra && extra.differs !== undefined && { differs: extra.differs }),

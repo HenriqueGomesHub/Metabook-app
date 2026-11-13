@@ -517,13 +517,23 @@ function CardRunner({
 
   function showTips(asideKey: string | undefined, given?: string) {
     // a card with its own reason (a lookalike's "ř is Czech only") says all a right answer needs
-    if (card.explain && card.type === 'lookalike' && given === undefined) {
+    // and a miss needs only that reason and the other side's tell ("And for Spain")
+    const reasoned = Boolean(card.explain) && card.type === 'lookalike';
+    if (reasoned && given === undefined) {
       setShown({ tips: [], aside: undefined });
       return;
     }
-    const tips = mainTips();
+    const tips = reasoned ? [] : mainTips();
+    // the pick's tip that speaks to this question: one naming the answer, or a letter it shows
+    // (after a Kyrgyz word, Russia's "none of ә қ ң ө ү", not "ы, э, ъ, which Ukrainian lacks")
+    const stem = label(card.type === 'which' ? card.country : card.answer, scope)
+      .slice(0, 5)
+      .toLowerCase();
+    const letters = [...card.prompt.value].filter((ch) => ch > '\u024f');
+    const speaks = (tip: Tip) =>
+      tip.text.toLowerCase().includes(stem) || letters.some((ch) => tip.text.includes(ch));
     const candidate = asideKey
-      ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
+      ? pickTip(data.content.tips, asideKey, card.type, data.tipViews, 0, speaks)
       : null;
     // the other side's tip is left out when it only repeats one of the answer's own
     const asideTip =

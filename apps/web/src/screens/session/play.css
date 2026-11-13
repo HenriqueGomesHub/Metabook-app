@@ -882,6 +882,10 @@ a.credit:hover {
   }
 
   /* Which clue: after answering, the marked photos stay on top to compare, the panel below */
+  .play-top:has(.play-side.revealed) {
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
   .play-top:has(.play-side.revealed) .play-side {
     order: 1;
   }
