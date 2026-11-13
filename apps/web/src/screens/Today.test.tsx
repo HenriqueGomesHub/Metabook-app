@@ -17,7 +17,6 @@ describe('Today', () => {
       new MemoryRepository({ cardStates: [dueState('flag:lt'), dueState('flag:lv')] }),
     );
     expect((await screen.findByText('Due today')).nextElementSibling?.textContent).toBe('3');
-    expect(screen.getByText('2 review · 1 new')).toBeTruthy();
     expect(screen.getByRole('link', { name: /Start session/ }).getAttribute('href')).toBe(
       '/session',
     );

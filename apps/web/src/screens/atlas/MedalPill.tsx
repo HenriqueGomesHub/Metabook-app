@@ -6,8 +6,17 @@ import { pct } from './format';
 const NAMES = { gold: 'Gold', silver: 'Silver', bronze: 'Bronze' } as const;
 
 /** The medal held plus a hint at the next one, e.g. "Silver · gold at 80%". */
-export function MedalPill({ medal, value }: { medal: MedalKind; value: number }) {
-  const next = nextMedal(value);
+export function MedalPill({
+  medal,
+  value,
+  short,
+}: {
+  medal: MedalKind;
+  value: number;
+  /** just the medal earned, without the next one to aim for */
+  short?: boolean;
+}) {
+  const next = short ? null : nextMedal(value);
   return (
     <span className="medal-pill">
       {medal && <Medal medal={medal} size={20} />}

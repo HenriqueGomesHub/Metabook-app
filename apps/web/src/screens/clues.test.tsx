@@ -63,10 +63,7 @@ describe('Learn section', () => {
     mount('/atlas/PL');
     const learn = await openLearn();
     const steps = within(learn).getAllByRole('option');
-    expect(steps.map((o) => o.textContent)).toEqual([
-      'Identifying Poland · 2',
-      'Regional clues · 2',
-    ]);
+    expect(steps.map((o) => o.textContent)).toEqual(['Identifying Poland', 'Regional clues']);
     const titles = () => [...learn.querySelectorAll('.learn-card-title')].map((t) => t.textContent);
     expect(titles()).toEqual(['Bollard: red strip', 'Pole: holey poles']);
     expect(
@@ -108,19 +105,17 @@ describe('Learn section', () => {
 });
 
 describe('Drills', () => {
-  it('has a tile per clue family with cards, counted in clues and countries', async () => {
+  it('has a tile per clue family with cards, without counts', async () => {
     mount('/drills');
     const bollards = (await screen.findByText('Bollards')).closest('a')!;
     expect(bollards.getAttribute('href')).toBe('/session?subject=bollard');
-    // one bollard clue in each of five countries (10 cards made from them)
-    expect(within(bollards).getByText(/5 bollards · 5 countries/)).toBeTruthy();
-    const poles = screen.getByText('Poles').closest('a')!;
-    expect(within(poles).getByText(/2 poles · 2 countries/)).toBeTruthy();
-    // Live view cards have their own tile, with a note on road labels
+    // a tile is its name, what it drills and how well: no clue or country counts
+    expect(within(bollards).queryByText(/countries/)).toBeNull();
+    expect(screen.getByText('Poles').closest('a')).toBeTruthy();
+    // Live view cards have their own tile
     const streetView = screen.getByText('Street View').closest('a')!;
     expect(streetView.getAttribute('href')).toBe('/session?type=live');
-    expect(within(streetView).getByText(/2 spots · 2 countries/)).toBeTruthy();
-    expect(within(streetView).getByText(/Road labels can show names/)).toBeTruthy();
+    expect(within(streetView).queryByText(/spots/)).toBeNull();
     // language clues have no image: Clue quiz only
     expect(screen.queryByText('Language')).toBeNull();
     expect(screen.getByText('Clue quiz').closest('a')?.getAttribute('href')).toBe(

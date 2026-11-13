@@ -192,7 +192,8 @@ describe('Country', () => {
       '/session?country=BR',
     );
     expect(screen.queryByRole('link', { name: /Poles/ })).toBeNull();
-    expect(screen.getByText('No cards yet')).toBeTruthy();
+    // chapters with nothing to study are left out
+    expect(screen.queryByText('No cards yet')).toBeNull();
   });
 
   it('gives regions-map cards a chapter and names their misses from the map', async () => {
@@ -251,10 +252,10 @@ describe('AreaCodeGame', () => {
     expect(repo.tipViews.map((v) => v.tipId)).toEqual(['tip-1']);
   });
 
-  it('says "No medal yet" in sentence case before any review', async () => {
+  it('shows just the mastery before any medal', async () => {
     mount('/games/areacode/br');
     const pill = await screen.findByTitle('Area-code mastery');
-    expect(pill.textContent).toMatch(/^No medal yet · 0%$/);
+    expect(pill.textContent).toMatch(/^0%$/);
     expect(pill.querySelector('.cap')).toBeNull();
   });
 

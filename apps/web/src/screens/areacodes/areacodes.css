@@ -106,7 +106,7 @@
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 8px 28px 104px;
+  padding: 8px 28px 28px;
   display: flex;
   flex-direction: column;
 }
@@ -117,17 +117,6 @@
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.1;
-}
-
-.ac-summary {
-  margin: 8px 0 0;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.ac-note {
-  margin: 10px 0 0;
-  color: var(--warn);
 }
 
 /* the map takes the height left; the side holds the words */
@@ -242,58 +231,88 @@
 .ac-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  gap: 10px 16px;
 }
 
+.ac-intro-head {
+  margin-bottom: 18px;
+}
+
+.ac-phone-only.ac-phone-only {
+  display: none;
+}
+
+/* phones: the map and the key one at a time, each with the whole screen */
 @media (max-width: 860px) {
+  .ac-intro-head {
+    margin-bottom: 14px;
+  }
+
   .ac-layout {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 12px;
+    gap: 0;
+  }
+
+  .ac-intro.on-map .ac-side,
+  .ac-intro.on-key .ac-map,
+  .ac-intro.on-key .ac-next {
+    display: none;
+  }
+
+  .ac-phone-only.ac-phone-only {
+    display: inline-flex;
+  }
+
+  .ac-next.ac-phone-only {
+    display: flex;
+  }
+
+  .ac-next {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
   }
 
   .ac-side {
-    order: -1;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 16px;
   }
 
-  .ac-layout > .ac-map {
-    order: 0;
+  .ac-legend,
+  .ac-legend-two {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 14px;
+  }
+
+  .ac-intro.on-key .ac-intro-head .kicker {
+    display: none;
+  }
+
+  .ac-legend .ac-swatch {
+    min-width: 48px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 640px) {
   .ac-intro {
-    padding: 4px 16px 92px;
+    padding: 4px 16px 24px;
   }
 
   .ac-intro-head h1 {
     font-size: 24px;
   }
 
-  .ac-summary {
-    font-size: 13px;
-  }
-
   .ac-map {
-    padding: 6px;
+    padding: 8px;
     border-radius: 16px;
   }
 
-  .ac-legend {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 12px;
-  }
-
-  .ac-swatch {
-    min-width: 40px;
-    font-size: 12px;
-  }
-
   .ac-tip {
-    padding: 8px 10px;
-    font-size: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
   }
 }

@@ -225,12 +225,7 @@
   flex: 1;
   min-height: 0;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 28px;
-}
-
-.country-chapters > .card-box {
-  align-self: start;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .country-chapter-list {
@@ -270,8 +265,9 @@
 }
 
 .country-hero > svg {
-  width: 68px;
-  height: 68px;
+  flex: none;
+  width: 84px;
+  height: 84px;
 }
 
 .country-hero h1 {
@@ -290,7 +286,7 @@
 
 .ring-text {
   font:
-    600 15px var(--font-headline),
+    600 16px var(--font-headline),
     sans-serif;
   fill: var(--ink);
   text-anchor: middle;
@@ -381,20 +377,6 @@
 }
 
 .chapter-empty,
-.chapter-empty:hover {
-  padding-left: 8px;
-  background: none;
-}
-
-.chapter-empty .chapter-title {
-  color: var(--muted);
-}
-
-.chapter-soon {
-  grid-column: 3 / -1;
-  white-space: nowrap;
-}
-
 .chapter-n {
   font-size: 13px;
   font-weight: 500;
@@ -559,16 +541,6 @@
   padding: 0 8px;
 }
 
-@media (max-width: 860px) {
-  .country-chapters {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .country-chapters > .card-box {
-    display: none;
-  }
-}
-
 .learn-region {
   align-self: flex-start;
   padding: 2px 10px;
@@ -589,52 +561,6 @@
   margin: 0 0 18px;
   font-size: 15px;
   font-weight: 500;
-}
-
-.steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.steps li {
-  display: flex;
-  gap: 14px;
-}
-
-.step-n {
-  width: 28px;
-  height: 28px;
-  flex: none;
-  border-radius: 50%;
-  border: 1px solid #3a3832;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-}
-
-.step-n.last {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--bg);
-  font-weight: 600;
-}
-
-.steps b {
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.step-sub {
-  display: block;
-  margin-top: 2px;
-  font-size: 13px;
-  color: var(--muted);
 }
 
 .miss-row {
@@ -688,8 +614,8 @@
   }
 
   .country-hero > svg {
-    width: 52px;
-    height: 52px;
+    width: 72px;
+    height: 72px;
   }
 
   .country-hero h1 {
@@ -759,8 +685,4 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.chapter-grid .chapter-soon {
-  grid-column: 3 / -1;
 }

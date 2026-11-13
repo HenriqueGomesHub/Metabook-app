@@ -121,7 +121,18 @@ describe('A country’s pattern intro', () => {
     expect(screen.getByRole('link', { name: /Practise these codes/ }).getAttribute('href')).toBe(
       '/games/areacode/fr',
     );
-    expect(screen.getByRole('link', { name: 'Back' }).getAttribute('href')).toBe('/areacodes');
+    // the X leaves; no second way back
+    expect(screen.queryByRole('link', { name: 'Back' })).toBeNull();
+  });
+
+  it('pages from the map to the key on a phone', async () => {
+    mount('/areacodes/fr');
+    const main = await screen.findByRole('main');
+    expect(main.className).toContain('on-map');
+    fireEvent.click(screen.getByRole('button', { name: /See the key/ }));
+    expect(main.className).toContain('on-key');
+    fireEvent.click(screen.getByRole('button', { name: 'Map' }));
+    expect(main.className).toContain('on-map');
   });
 
   it('practises in the drill when opened from Drills', async () => {
@@ -130,10 +141,10 @@ describe('A country’s pattern intro', () => {
     expect(practise.getAttribute('href')).toBe('/session?type=areacode&country=FR');
   });
 
-  it('shows example codes and the note for a country without a pattern', async () => {
+  it('shows example codes for a country without a pattern', async () => {
     mount('/areacodes/us');
     expect(await screen.findByRole('heading', { name: 'United States area codes' })).toBeTruthy();
-    expect(screen.getByText(/No regional pattern — learn them/)).toBeTruthy();
+    expect(screen.getByText('Codes to memorise')).toBeTruthy();
     expect(screen.queryByRole('list', { name: 'Pattern key' })).toBeNull();
     const examples = await screen.findByRole('heading', { name: 'Some codes' });
     expect(examples.nextElementSibling?.textContent).toContain('212');

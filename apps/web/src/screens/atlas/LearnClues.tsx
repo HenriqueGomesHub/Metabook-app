@@ -81,7 +81,7 @@ export function LearnClues({
             >
               {steps.map((s, i) => (
                 <option key={s.title} value={i}>
-                  {s.title} · {s.clues.length}
+                  {s.title}
                 </option>
               ))}
             </select>

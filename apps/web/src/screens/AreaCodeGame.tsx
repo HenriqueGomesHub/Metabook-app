@@ -161,7 +161,12 @@ function Play({
           {cards.length > 0 && (
             <span className="medal-pill" title="Area-code mastery">
               {medal && <Medal medal={medal} size={20} />}
-              {medal ? <span className="cap">{medal}</span> : 'No medal yet'} · {pct(medalValue)}%
+              {medal && (
+                <>
+                  <span className="cap">{medal}</span> ·{' '}
+                </>
+              )}
+              {pct(medalValue)}%
             </span>
           )}
         </div>

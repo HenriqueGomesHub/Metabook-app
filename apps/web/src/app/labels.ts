@@ -41,24 +41,6 @@ export const SUBJECTS: Record<MetaSubject, { label: string; blurb: string }> = {
   other: { label: 'Other clues', blurb: 'Driving side, landmarks, traffic, phone numbers' },
 };
 
-/** How a family's clues are counted on a tile ("38 bollards"). */
-export const FAMILY_NOUNS: Record<MetaSubject, [string, string]> = {
-  bollard: ['bollard', 'bollards'],
-  pole: ['pole', 'poles'],
-  plate: ['plate', 'plates'],
-  sign: ['sign', 'signs'],
-  line: ['line clue', 'line clues'],
-  guardrail: ['guardrail', 'guardrails'],
-  language: ['language clue', 'language clues'],
-  car: ['car clue', 'car clues'],
-  coverage: ['coverage clue', 'coverage clues'],
-  street: ['street clue', 'street clues'],
-  landscape: ['landscape clue', 'landscape clues'],
-  vegetation: ['plant', 'plants'],
-  architecture: ['building clue', 'building clues'],
-  other: ['clue', 'clues'],
-};
-
 export const SUBJECT_ORDER = Object.keys(SUBJECTS) as MetaSubject[];
 
 /** Lower-case code of the regions map whose state codes the keys are ('br': Brazil's states). */

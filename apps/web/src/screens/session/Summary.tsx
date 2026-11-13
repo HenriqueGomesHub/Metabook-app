@@ -164,8 +164,7 @@ export function Summary({
           <div className="summary-panel-head">
             <span>Pass {progress.pass}</span>
             <span>
-              {progress.learnt} learnt in this drill · {progress.total.toLocaleString('en-US')} in
-              the pool
+              {progress.learnt} of {progress.total.toLocaleString('en-US')} learnt
             </span>
           </div>
           <div
