@@ -95,19 +95,16 @@ describe('gradeAnswer', () => {
     expect(gradeAnswer({ ...base, usedHint: true, msTaken: 100 })).toBe('hard');
   });
 
-  it('grades a right answer good within 1.5x the median, hard when slower; never easy', () => {
+  it('grades a right answer good, or hard when slower than 6 s; never easy', () => {
     expect(gradeAnswer({ ...base, msTaken: 100 })).toBe('good');
-    expect(gradeAnswer({ ...base, msTaken: 15_000 })).toBe('good');
-    expect(gradeAnswer({ ...base, msTaken: 15_001 })).toBe('hard');
+    expect(gradeAnswer({ ...base, msTaken: 6000 })).toBe('good');
+    expect(gradeAnswer({ ...base, msTaken: 6001 })).toBe('hard');
   });
 
-  it('grades a same-session retry good, not by speed', () => {
+  it('grades a same-session retry or a pick out of two good, whatever its speed', () => {
     expect(gradeAnswer({ ...base, msTaken: 60_000, retry: true })).toBe('good');
-  });
-
-  it('caps a right pick out of two at hard', () => {
-    expect(gradeAnswer({ ...base, msTaken: 500, choices: 2 })).toBe('hard');
-    expect(gradeAnswer({ ...base, msTaken: 500, choices: 4 })).toBe('good');
+    expect(gradeAnswer({ ...base, msTaken: 60_000, choices: 2 })).toBe('good');
+    expect(gradeAnswer({ ...base, msTaken: 60_000, choices: 4 })).toBe('hard');
   });
 });
 

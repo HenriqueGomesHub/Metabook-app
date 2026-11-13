@@ -287,6 +287,7 @@ describe('namesPartOfCountry', () => {
       'Signs are written in Cyrillic, like in Russia.',
       'Window shutters are more common here than in Czechia.',
       'Wind turbines are much more common than in any other European country.',
+      'The same design appears in western Ukraine.',
     ])
       expect(namesPartOfCountry(text), text).toBe(false);
   });

@@ -521,9 +521,13 @@ const RARE =
 const SPOT =
   /\b(?:the capital|capital city|(?:second[- ])?(?:biggest|largest) city|airport|national park|fort\b|biosphere|one (?:\w+ )?(?:road|highway|street|island|town|city|village|valley|stretch|municipality)|a (?:single|few) roads?|(?:in|on) the (?:far |very far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west)(?:ern)?\b|(?:north|south|east|west)ern (?:half|part|third|tip|coast|interior)|far-(?:north|south|east|west)|of the country|some (?:states|provinces|regions|areas|parts|islands|cities|towns)|parts of|larger islands|-region|\bfar (?:north|south|east|west)|(?:north|south|east|west|central)(?:-?(?:east|west))?(?:ern)? (?:\w+ )?(?:town|towns|city|cities|village|villages|desert|coast|coasts|island|islands|region|valley|plain|highlands?)\b|\bborder\b|neighbouring cities|driving (?:north|south|east|west)|running (?:north|south|east|west)|(?:the|a) (?:big |northern |southern |eastern |western )?mountain (?:area|region|range)\b|the big mountain|the (?:volcano|main city|main town|main road|lake|river|lagoon|peninsula|valley|village|harbour|port)\b|this (?:road|town|city|island)|middle of the|(?:just |far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west) of (?:the|a|one|it)\b|now and then|uses the same|same as (?:in )?\p{Lu}|Chugoku|Kanto|Kansai|Tohoku|Kyushu|Shikoku|Chubu|Hokuriku|Hokkaido|Okinawa|Patagonia|Siberia|Tasmania|Sardinia|Sicily|Corsica|Crete|Bali|Java|Sumatra|Borneo|Luzon|Mindanao)/iu;
 
-/** A numbered road ("Route 9", "RN65", "D3600"), a compass bearing, "in western Kasur". */
+/** A numbered road ("Route 9", "RN65", "D3600"), a compass bearing. */
 const ROAD =
-  /\b(?:Route|Ruta|Road|road|Rodovia|Highway|highway|Autoroute|[A-Z]{1,3})[- ]?\d{1,4}\b|\b[NSEW]{1,3} to [NSEW]{1,3}\b|\b(?:[Ii]n|[Aa]round|[Nn]ear) (?:western|eastern|northern|southern|central|north-?\w+|south-?\w+) \p{Lu}/u;
+  /\b(?:Route|Ruta|Road|road|Rodovia|Highway|highway|Autoroute|[A-Z]{1,3})[- ]?\d{1,4}\b|\b[NSEW]{1,3} to [NSEW]{1,3}\b/u;
+
+/** "in western Kasur": part of a named place. "in western Ukraine" names another country. */
+const DIRECTIONAL =
+  /\b(?:[Ii]n|[Aa]round|[Nn]ear) (?:western|eastern|northern|southern|central|north-?\w+|south-?\w+) (?=\p{Lu})/gu;
 
 /** A preposition before a capitalised name: "in Idaho", "around Locumba", "unique to Otago". */
 const PLACE =
@@ -565,6 +569,10 @@ function countryNamesLower(): string[] {
 export function namesPartOfCountry(text: string): boolean {
   if (SPOT.test(text) || ROAD.test(text)) return true;
   const countries = countryNamesLower();
+  const another = (rest: string) => countries.some((name) => rest.toLowerCase().startsWith(name));
+  for (const match of text.matchAll(DIRECTIONAL)) {
+    if (!another(text.slice((match.index ?? 0) + match[0].length))) return true;
+  }
   for (const match of text.matchAll(PLACE)) {
     const rest = text.slice((match.index ?? 0) + match[0].length);
     if (NOT_A_PLACE.test(rest)) continue;

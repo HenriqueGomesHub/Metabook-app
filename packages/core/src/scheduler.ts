@@ -8,8 +8,8 @@ import {
 } from 'ts-fsrs';
 import type { CardState, Grade } from './types';
 
-/** A right answer slower than this share of the learner's median for its drill is "hard". */
-const SLOW_SHARE = 1.5;
+/** A right answer slower than this is "hard". */
+const SLOW_MS = 6000;
 
 const RATINGS: Record<Grade, FsrsGrade> = {
   again: Rating.Again,
@@ -101,12 +101,11 @@ export function gradeAnswer(answer: {
 }): Grade {
   if (!answer.correct) return 'again';
   if (answer.usedHint) return 'hard';
-  // a right pick out of two is half a guess: it never counts as a sure answer
-  if (answer.choices && answer.choices <= 2) return 'hard';
-  // a card re-asked minutes after its answer is short-term memory
-  if (answer.retry) return 'good';
-  // slow against the learner's own pace for this kind of question
-  if (answer.medianMs > 0 && answer.msTaken > answer.medianMs * SLOW_SHARE) return 'hard';
+  // a card re-asked minutes after its answer is short-term memory, and a pick out of two is as
+  // likely a guess: neither is judged by its speed
+  if ((answer.choices && answer.choices <= 2) || answer.retry) return 'good';
+  // a right answer is never "easy"; a slow one is "hard"
+  if (answer.msTaken > SLOW_MS) return 'hard';
   return 'good';
 }
 

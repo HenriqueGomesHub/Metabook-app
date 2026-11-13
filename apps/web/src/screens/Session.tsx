@@ -466,6 +466,9 @@ function clueAside(name: string, clue: Clue): Shown['aside'] {
   };
 }
 
+/** A card this stable (days) is well known. */
+const MATURE_DAYS = 21;
+
 const fold = (text: string) =>
   text
     .toLowerCase()
@@ -748,6 +751,7 @@ function CardRunner({
         onAnswer={onAnswer}
         onSkip={onSkip}
         reveal={reveal}
+        mature={(data.states[card.id]?.stability ?? 0) > MATURE_DAYS}
       />
       <VerdictAnnouncer text={verdict ? verdict.verdict : ''} />
     </div>
