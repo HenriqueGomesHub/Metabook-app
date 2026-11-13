@@ -9,7 +9,7 @@ import { mapsOf } from '../app/stats';
 import { useRegionMaps } from '../app/useRegionMaps';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
-import { FitGrid } from '../components/FitGrid';
+import { ItemList } from '../components/ItemList';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
 import { pct, WEAK } from './atlas/format';
@@ -183,9 +183,15 @@ function CountryView({
   ] as const;
 
   return (
-    <div className="page">
+    <div className="page page-scroll">
       <Header user={data.user} />
       <div className="country-main">
+        <Link to="/atlas" className="country-back">
+          <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path d="m15 6-6 6 6 6" />
+          </svg>
+          Atlas
+        </Link>
         <div className="country-top">
           <div className="country-hero rise d1">
             <svg
@@ -242,17 +248,11 @@ function CountryView({
                 <circle cx="12" cy="12" r="8" />
                 <circle cx="12" cy="12" r="3" />
               </svg>
-              {focus ? 'In this week’s focus' : 'Add to focus'}
+              {focus ? 'In focus' : 'Add to focus'}
             </button>
           </div>
         </div>
         <div className="country-nav">
-          <Link to="/atlas" className="country-back">
-            <svg className="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-              <path d="m15 6-6 6 6 6" />
-            </svg>
-            Atlas
-          </Link>
           <div
             className="segments country-tabs"
             role="tablist"
@@ -286,7 +286,7 @@ function CountryView({
                 )}
                 {cards.length > 0 && chapters.length > 0 && (
                   <nav className="country-chapter-nav" aria-label={`${country.name} chapters`}>
-                    <FitGrid
+                    <ItemList
                       className="chapter-grid"
                       label="Chapters"
                       items={chapters

@@ -76,7 +76,7 @@ kbd {
   height: 52px;
   padding: 0 28px;
   border: 0;
-  border-radius: 999px;
+  border-radius: var(--r-control);
   background: var(--accent);
   color: var(--bg);
   font:
@@ -112,7 +112,7 @@ kbd {
   gap: 8px;
   height: 52px;
   padding: 0 20px;
-  border-radius: 999px;
+  border-radius: var(--r-control);
   background: none;
   border: 1px solid var(--line);
   color: var(--ink);
@@ -150,7 +150,7 @@ kbd {
   justify-content: center;
   height: 44px;
   min-width: 44px;
-  border-radius: 999px;
+  border-radius: var(--r-control);
   background: var(--surface);
   border: 1px solid var(--line);
   color: var(--ink);
@@ -215,7 +215,7 @@ button.chip:hover {
 /* Tips */
 
 .tipbox {
-  border-radius: 18px;
+  border-radius: 14px;
   padding: 20px 22px;
 }
 
@@ -356,7 +356,7 @@ button.chip:hover {
   justify-content: center;
   width: 44px;
   height: 44px;
-  border-radius: 999px;
+  border-radius: var(--r-control);
   background: var(--raise);
   border: 1px solid var(--line);
   color: var(--ink);
@@ -625,4 +625,143 @@ button.chip:hover {
   to {
     transform: scaleX(1);
   }
+}
+
+/* ItemList: every item, the page scrolls */
+.item-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-cell {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-cell > * {
+  flex: 1;
+}
+
+/*
+ * Phones: a row of buttons or tabs runs edge to edge, the space shared out, and a page's main
+ * action takes the full width. Nothing sits to one side with a gap on the other.
+ */
+@media (max-width: 640px) {
+  .page-title {
+    align-items: stretch;
+  }
+
+  .page-title > .cta,
+  .today-start > .cta,
+  .empty-actions > .cta,
+  .settings-foot,
+  .settings-foot .actions,
+  .settings-foot .actions > .cta {
+    width: 100%;
+  }
+
+  .settings-foot {
+    align-items: stretch;
+  }
+
+  .page-actions,
+  .country-actions,
+  .toggles,
+  .segments,
+  .empty-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .page-actions > *,
+  .country-actions > *,
+  .toggles > *,
+  .segments > *,
+  .empty-actions > * {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* A list of places to open (countries): one row each, divided by hairlines */
+.row-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  column-gap: 40px;
+}
+
+.row-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto 16px;
+  align-items: center;
+  gap: 14px;
+  min-height: 60px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.row-item:hover,
+.row-item:focus-visible {
+  background: var(--surface);
+}
+
+.row-flag .flag-image {
+  display: block;
+  width: 28px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+.row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.row-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.row-sub {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.row-pct {
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.row-item > .icon {
+  color: var(--faint);
+}
+
+/* scrolling lists fade out under the floating nav instead of running into it */
+.page-scroll::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 112px;
+  background: linear-gradient(to bottom, transparent, var(--bg) 70%);
+  pointer-events: none;
+  z-index: 4;
 }

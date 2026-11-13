@@ -163,7 +163,7 @@
   bottom: 10px;
   max-width: calc(100% - 20px);
   padding: 3px 10px;
-  border-radius: 999px;
+  border-radius: var(--r-tag);
   background: rgba(18, 17, 15, 0.62);
   color: #d6d1c6;
   font-size: 11px;
@@ -350,7 +350,7 @@ a.credit:hover {
   flex-direction: column;
   gap: 16px;
   padding: 22px 24px 0;
-  border-radius: 24px;
+  border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
   transform: translateY(-50%);
@@ -416,7 +416,7 @@ a.credit:hover {
 /* Tips: the one box in the panel */
 .tip-box {
   padding: 12px 14px 14px;
-  border-radius: 14px;
+  border-radius: 12px;
   /* a step lighter than whatever it sits on: the desktop panel or the phone sheet */
   background: color-mix(in srgb, var(--ink) 6%, transparent);
   touch-action: pan-y;
@@ -448,7 +448,7 @@ a.credit:hover {
   height: 28px;
   padding: 0;
   border: 0;
-  border-radius: 50%;
+  border-radius: var(--r-control);
   background: none;
   color: var(--muted);
   cursor: pointer;
@@ -566,7 +566,7 @@ a.credit:hover {
   .options .opt {
     height: 52px;
     padding: 0 16px;
-    border-radius: 14px;
+    border-radius: 12px;
     font-size: 16px;
   }
 
@@ -679,7 +679,7 @@ a.credit:hover {
   aspect-ratio: 4 / 3;
   height: auto;
   padding: 0;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--surface) center / cover no-repeat;
@@ -704,7 +704,7 @@ a.credit:hover {
   justify-content: center;
   width: 26px;
   height: 26px;
-  border-radius: 999px;
+  border-radius: var(--r-tag);
   background: rgba(18, 17, 15, 0.62);
   color: #d6d1c6;
 }
@@ -801,7 +801,7 @@ a.credit:hover {
 /* a regional clue placed on its map: its photo above the clue's words */
 .map-photo {
   margin: 8px 0 12px;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
   max-width: 320px;

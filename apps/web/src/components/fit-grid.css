@@ -47,7 +47,7 @@
   place-items: center;
   width: 34px;
   height: 34px;
-  border-radius: 50%;
+  border-radius: var(--r-control);
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink);

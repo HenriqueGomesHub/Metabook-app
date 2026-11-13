@@ -80,10 +80,9 @@ describe('Area codes page', () => {
     expect(links.map((l) => l.getAttribute('href'))).toEqual(['/areacodes/br', '/areacodes/fr']);
     expect(within(list).getByText(/1 São Paulo down to 9 the Amazon/)).toBeTruthy();
     // each country leads with its flag
-    expect(links[0]?.querySelector('.ac-flag img')).toBeTruthy();
+    expect(links[0]?.querySelector('.row-flag img')).toBeTruthy();
     fireEvent.click(screen.getByRole('tab', { name: /To memorise/ }));
     expect(within(list).getByRole('link', { name: /United States/ })).toBeTruthy();
-    expect(within(list).getByText(/No regional pattern/)).toBeTruthy();
   });
 
   it('carries the drill route through from Drills', async () => {
@@ -118,7 +117,7 @@ describe('A country’s pattern intro', () => {
       expect.arrayContaining(['01', '02']),
     );
 
-    expect(screen.getByRole('link', { name: /Practise these codes/ }).getAttribute('href')).toBe(
+    expect(screen.getByRole('link', { name: /^Practise/ }).getAttribute('href')).toBe(
       '/games/areacode/fr',
     );
     // the X leaves; no second way back
@@ -129,15 +128,15 @@ describe('A country’s pattern intro', () => {
     mount('/areacodes/fr');
     const main = await screen.findByRole('main');
     expect(main.className).toContain('on-map');
-    fireEvent.click(screen.getByRole('button', { name: /See the key/ }));
+    fireEvent.click(screen.getByRole('tab', { name: 'Key' }));
     expect(main.className).toContain('on-key');
-    fireEvent.click(screen.getByRole('button', { name: 'Map' }));
+    fireEvent.click(screen.getByRole('tab', { name: 'Map' }));
     expect(main.className).toContain('on-map');
   });
 
   it('practises in the drill when opened from Drills', async () => {
     mount('/areacodes/fr?via=drill');
-    const practise = await screen.findByRole('link', { name: /Practise these codes/ });
+    const practise = await screen.findByRole('link', { name: /^Practise/ });
     expect(practise.getAttribute('href')).toBe('/session?type=areacode&country=FR');
   });
 

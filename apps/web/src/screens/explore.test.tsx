@@ -219,19 +219,19 @@ describe('Country', () => {
   it('persists the focus toggle in settings', async () => {
     const repo = mount('/atlas/BR');
     fireEvent.click(await screen.findByRole('button', { name: 'Add to focus' }));
-    const toggle = await screen.findByRole('button', { name: 'In this week’s focus' });
+    const toggle = await screen.findByRole('button', { name: 'In focus' });
     expect(toggle.getAttribute('aria-pressed')).toBe('true');
     expect((await repo.getSettings()).focusCountries).toEqual(['BR']);
   });
 });
 
 describe('Games', () => {
-  it('only links the playable Brazil area codes, through their pattern page', async () => {
+  it('lists only games that can be played, each opening its page', async () => {
     mount('/games');
-    expect((await screen.findByRole('link', { name: /Brazil/ })).getAttribute('href')).toBe(
-      '/areacodes/br',
+    expect((await screen.findByRole('link', { name: /Area codes/ })).getAttribute('href')).toBe(
+      '/areacodes',
     );
-    expect(screen.queryByRole('link', { name: /Japan/ })).toBeNull();
+    expect(screen.queryByText('Soon')).toBeNull();
   });
 });
 

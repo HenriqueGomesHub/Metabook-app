@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { activeBlock } from '../app/dataActions';
-import { FitGrid } from '../components/FitGrid';
+import { ItemList } from '../components/ItemList';
 import { Status } from '../components/Status';
 import { ActiveBlock } from './blocks/ActiveBlock';
 import { FinishedBlock } from './blocks/FinishedBlock';
@@ -45,7 +45,7 @@ function BlocksView({ data }: { data: AppSnapshot }) {
       {past.length > 0 && (
         <section className="sheet finished-sheet" aria-label="Finished blocks">
           <h2 className="headline">Finished blocks</h2>
-          <FitGrid
+          <ItemList
             className="list finished-list"
             label="Finished blocks"
             list

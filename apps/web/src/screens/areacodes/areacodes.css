@@ -21,85 +21,6 @@
   font-size: 14px;
 }
 
-.seg-count {
-  margin-left: 4px;
-  font-size: 12px;
-  opacity: 0.6;
-  font-variant-numeric: tabular-nums;
-}
-
-.ac-countries {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.ac-country {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  height: 100%;
-  padding: 14px 16px;
-  border-radius: 16px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  text-decoration: none;
-  transition:
-    border-color 0.25s ease,
-    transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.ac-country:hover,
-.ac-country:focus-visible {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-}
-
-.ac-top {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.ac-flag {
-  flex: none;
-  display: grid;
-  width: 26px;
-}
-
-.ac-flag .flag-image {
-  width: 26px;
-  height: 18px;
-  object-fit: cover;
-  border-radius: 3px;
-  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08);
-}
-
-.ac-name {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.ac-hook {
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.ac-meta {
-  margin-top: auto;
-  font-size: 12px;
-  color: var(--faint);
-}
-
 .ac-intro {
   flex: 1;
   min-height: 0;
@@ -135,7 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 22px;
+  border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--line);
 }
@@ -211,7 +132,7 @@
 .ac-tip {
   margin: 0;
   padding: 12px 14px;
-  border-radius: 14px;
+  border-radius: 12px;
   border: 1px solid var(--line);
   background: var(--raise);
   font-size: 14px;
@@ -255,23 +176,33 @@
   }
 
   .ac-intro.on-map .ac-side,
-  .ac-intro.on-key .ac-map,
-  .ac-intro.on-key .ac-next {
+  .ac-intro.on-key .ac-map {
     display: none;
+  }
+
+  .ac-steps.ac-phone-only {
+    display: flex;
+    margin-top: 12px;
+  }
+
+  /* the two actions share the row edge to edge */
+  .ac-actions {
+    flex-wrap: nowrap;
+  }
+
+  .ac-actions > * {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ac-actions > .cta {
+    flex-grow: 1.6;
   }
 
   .ac-phone-only.ac-phone-only {
     display: inline-flex;
-  }
-
-  .ac-next.ac-phone-only {
-    display: flex;
-  }
-
-  .ac-next {
-    display: flex;
-    justify-content: center;
-    padding-top: 16px;
   }
 
   .ac-side {
@@ -308,11 +239,102 @@
 
   .ac-map {
     padding: 8px;
-    border-radius: 16px;
+    border-radius: 12px;
   }
 
   .ac-tip {
     padding: 10px 12px;
     font-size: 13px;
+  }
+}
+
+/* short phones: tighten the key step a level at a time until it fits (useFitLevel) */
+@media (max-width: 860px) {
+  .ac-intro.fit-1 .ac-intro-head,
+  .ac-intro.fit-2 .ac-intro-head {
+    margin-bottom: 8px;
+  }
+
+  .ac-intro.fit-1 .ac-side,
+  .ac-intro.fit-2 .ac-side {
+    gap: 10px;
+  }
+
+  .ac-intro.fit-1 .ac-legend,
+  .ac-intro.fit-2 .ac-legend {
+    gap: 4px;
+    font-size: 13px;
+  }
+
+  .ac-intro.fit-1 .ac-swatch,
+  .ac-intro.fit-2 .ac-swatch {
+    padding: 2px 6px;
+  }
+
+  .ac-intro.fit-1 .ac-tip,
+  .ac-intro.fit-2 .ac-tip {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .ac-intro.fit-2 .ac-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 12px;
+    font-size: 12px;
+  }
+
+  .ac-intro.fit-2 .ac-legend .ac-swatch {
+    min-width: 34px;
+  }
+}
+
+@media (max-width: 860px) {
+  .ac-intro.fit-3 .ac-intro-head {
+    margin-bottom: 8px;
+  }
+
+  .ac-intro.fit-3 .ac-intro-head .kicker,
+  .ac-intro.fit-3 .ac-side-title {
+    display: none;
+  }
+
+  .ac-intro.fit-3 .ac-intro-head h1 {
+    font-size: 20px;
+  }
+
+  .ac-intro.fit-3 .ac-steps {
+    margin-top: 8px;
+  }
+
+  .ac-intro.fit-3 .ac-steps .seg {
+    height: 34px;
+  }
+
+  .ac-intro.fit-3 .ac-side {
+    gap: 8px;
+  }
+
+  .ac-intro.fit-3 .ac-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 10px;
+    font-size: 12px;
+  }
+
+  .ac-intro.fit-3 .ac-swatch {
+    min-width: 32px;
+    padding: 1px 4px;
+    font-size: 11px;
+  }
+
+  .ac-intro.fit-3 .ac-tip {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .ac-intro.fit-3 .ac-actions .cta,
+  .ac-intro.fit-3 .ac-actions .ghost {
+    height: 44px;
   }
 }
