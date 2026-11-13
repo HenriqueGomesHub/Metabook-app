@@ -10,7 +10,9 @@ export function verdictFor(
   item: Pick<SessionItem, 'mode' | 'contrastPair'>,
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail' | 'why'> {
-  return { ...baseVerdict(card, item, outcome), why: whyFor(card) };
+  // a map question asked in words already shows its sentence: the verdict names the region
+  const echo = card.map && card.prompt.kind === 'text';
+  return { ...baseVerdict(card, item, outcome), why: echo ? undefined : whyFor(card) };
 }
 
 /**

@@ -5,7 +5,19 @@ import { renderScreens } from '../test/renderScreens';
 
 vi.mock('../data/content', async (importOriginal) => {
   const { content } = await import('../test/content');
-  return { ...(await importOriginal<object>()), loadContent: async () => content };
+  // flags are left out of a placement test: a sign in Lithuanian is asked instead
+  const sign = {
+    id: 'script:lt',
+    type: 'script' as const,
+    country: 'LT',
+    answer: 'Lithuania',
+    options: ['Lithuania', 'Latvia', 'Estonia', 'Poland'],
+    prompt: { kind: 'text' as const, value: 'Šiauliai' },
+    tags: [],
+    source: 'https://example.com',
+  };
+  const placed = { ...content, cards: [...content.cards, sign] };
+  return { ...(await importOriginal<object>()), loadContent: async () => placed };
 });
 
 describe('Placement', () => {
@@ -16,7 +28,7 @@ describe('Placement', () => {
     expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 1 of 1 as known')).toBeTruthy();
-    await waitFor(() => expect(repo.cardStates.map((s) => s.cardId)).toEqual(['flag:lt']));
+    await waitFor(() => expect(repo.cardStates.map((s) => s.cardId)).toEqual(['script:lt']));
     expect(repo.cardStates[0]?.state).toBe('review');
   });
 
@@ -31,7 +43,7 @@ describe('Placement', () => {
     expect(await screen.findByRole('dialog', { name: /Not quite — it’s Lithuania/ })).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 0 of 1 as known')).toBeTruthy();
-    expect(screen.getByText(/To learn: the flag/)).toBeTruthy();
+    expect(screen.getByText(/To learn: the script/)).toBeTruthy();
     expect(repo.cardStates).toHaveLength(0);
   });
 

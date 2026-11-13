@@ -890,3 +890,9 @@ a.credit:hover {
     order: 1;
   }
 }
+
+/* a lesson is told apart from a question at a glance: its label carries the accent */
+.kicker-new {
+  color: var(--accent);
+  font-weight: 600;
+}

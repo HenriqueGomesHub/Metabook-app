@@ -452,6 +452,13 @@ function clueAside(name: string, clue: Clue): Shown['aside'] {
   };
 }
 
+const fold = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ');
+
 /** One card from prompt to reveal; the parent decides what comes next. */
 function CardRunner({
   data,
@@ -504,6 +511,13 @@ function CardRunner({
    * and Which clue cards (whose answer is an image id) use the country's tips.
    */
   function mainTips(): Tip[] {
+    const all = mainTipsRaw();
+    // a tip that says what the reason line already said is left out
+    const why = card.explain ? fold(card.explain).slice(0, 40) : '';
+    return why ? all.filter((tip) => !fold(tip.text).includes(why.slice(0, 30))) : all;
+  }
+
+  function mainTipsRaw(): Tip[] {
     const { tips } = data.content;
     const key = card.type === 'which' ? label(card.country) : card.answer;
     const context = cardContext(card);
@@ -585,7 +599,8 @@ function CardRunner({
     const theirs = cards.filter(
       (c) => c.type === 'region' && c.map === card.map && c.answer === state && c.id !== card.id,
     );
-    const pick = theirs.find((c) => c.subject === card.subject) ?? theirs[0];
+    // the same kind of clue only: stilt houses say nothing about poles
+    const pick = theirs.find((c) => c.subject === card.subject);
     if (!pick) return undefined;
     const clue = pick.clue && clueIndex(data.content).byId.get(pick.clue.id);
     const text = (clue ? clue.summary?.trim() || clue.title : whyFor(pick))?.trim();

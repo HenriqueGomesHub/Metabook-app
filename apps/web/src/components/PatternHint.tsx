@@ -44,7 +44,8 @@ export function PatternHint({
           <b>{own.join(', ')}</b> = {name}
         </p>
       )}
-      {line}
+      {/* "1x = São Paulo" under "11, 12 … = São Paulo" says nothing new */}
+      {(own.length === 0 || rest.join(' = ').trim() !== name) && line}
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import type { ClueFamily } from './clues';
 import {
   CLUE_COUNTRIES,
   CLUE_NAMES,
@@ -19,6 +20,7 @@ import {
   isGalleryClue,
   isRareClue,
   namesPartOfCountry,
+  isCountryWide,
 } from './clueCards';
 import { clueCardIds, primaryCardId } from './clues';
 import { isClueCard } from './generate';
@@ -112,10 +114,8 @@ describe('clueCards', () => {
   });
 
   it('turns clues without a usable image into Clue quiz text cards that never name the country', () => {
-    const text = byId(clueCardIds.text(PL_KASHUBIAN.id))!;
-    expect(isClueCard(text)).toBe(true);
-    expect(text.prompt.value).toMatch(/^In the north, around Gdańsk/);
-    expect(text.prompt.value).not.toMatch(/\*|\]\(/);
+    // a clue for part of the country ("In the north, around Gdańsk") is not a country question
+    expect(byId(clueCardIds.text(PL_KASHUBIAN.id))).toBeUndefined();
     // "Polish uses…" names the country by demonym: no card
     expect(byId(clueCardIds.text('PL-lang'))).toBeUndefined();
     for (const card of cards.filter(isClueCard)) {
@@ -289,5 +289,43 @@ describe('namesPartOfCountry', () => {
       'Wind turbines are much more common than in any other European country.',
     ])
       expect(namesPartOfCountry(text), text).toBe(false);
+  });
+});
+
+describe('isCountryWide', () => {
+  const clue = (title: string, summary: string, family: ClueFamily = 'pole') => ({
+    title,
+    summary,
+    family,
+  });
+  it('keeps a clue that holds across the country', () => {
+    expect(
+      isCountryWide(
+        clue('Pole: concrete cross', 'Concrete poles with a cross-shaped top and two insulators.'),
+      ),
+    ).toBe(true);
+    expect(
+      isCountryWide(
+        clue('Bollard: black top', 'White post with a black top, unlike in Slovenia.', 'bollard'),
+      ),
+    ).toBe(true);
+  });
+  it('leaves out named places, one spot, a summary that repeats its title, the wrong family', () => {
+    expect(
+      isCountryWide(clue('Pole: Kanto insulators', 'Kanto insulators are grey with long hats.')),
+    ).toBe(false);
+    expect(
+      isCountryWide(
+        clue('Landscape: dry hills', 'Dry hills below Mount Gilboa with olive trees.', 'landscape'),
+      ),
+    ).toBe(false);
+    expect(isCountryWide(clue('Pole: long horizontal ID', 'A long, horizontal pole ID.'))).toBe(
+      false,
+    );
+    expect(
+      isCountryWide(
+        clue('Road markings: yellow box', 'Bus stops have a yellow box painted.', 'bollard'),
+      ),
+    ).toBe(false);
   });
 });

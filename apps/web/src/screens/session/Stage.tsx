@@ -29,10 +29,19 @@ export function Stage({
   );
 }
 
-export function Question({ kicker, children }: { kicker?: string; children: ReactNode }) {
+export function Question({
+  kicker,
+  tone,
+  children,
+}: {
+  kicker?: string;
+  /** 'new': a lesson, not a question */
+  tone?: 'new';
+  children: ReactNode;
+}) {
   return (
     <div className="play-q rise d1">
-      {kicker && <p className="kicker">{kicker}</p>}
+      {kicker && <p className={tone ? `kicker kicker-${tone}` : 'kicker'}>{kicker}</p>}
       <h1 className="headline">{children}</h1>
     </div>
   );

@@ -44,7 +44,9 @@ export function ScanCard({ card, mode, onAnswer }: CardProps) {
       }
       side={
         <>
-          <Question kicker={learn ? 'New clue' : 'Refresh'}>{card.answer}</Question>
+          <Question kicker={learn ? 'New clue' : 'Refresh'} tone={learn ? 'new' : undefined}>
+            {card.answer}
+          </Question>
           {clue && (
             <div className="scan-clue rise d1">
               <p className="clue-title">{clueHeading(clue)}</p>

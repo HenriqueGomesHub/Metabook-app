@@ -161,7 +161,9 @@ export const usableImage = (image: ClueImage): boolean => !image.giveaway || !!i
 
 /** An example photo of the clue (or not reviewed yet): comparison and annotated images are not. */
 export const isExampleImage = (image: ClueImage): boolean =>
-  !image.role || image.role === 'example';
+  (!image.role || image.role === 'example') &&
+  // a caption naming several countries side by side is a comparison, labels and all
+  !/\b(?:compared|comparison|versus|vs\.?)\b/i.test(image.caption ?? '');
 
 /** Spot it cards made from one clue at most; its other photos only show in Learn and answers. */
 export const MAX_SPOT_PER_CLUE = 2;

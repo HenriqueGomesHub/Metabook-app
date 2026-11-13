@@ -19,6 +19,9 @@ export function buildPlacement(
   max = 12,
   near: string[] = [],
 ): Card[] {
+  // a test of what the learner can spot: no flag (a near-free point) and no clue for one part of
+  // the country (that measures luck, not level)
+  cards = cards.filter((c) => c.type !== 'flag' && !c.tags.includes('local'));
   const own = deal(
     cards.filter((c) => c.country === country),
     rng,
