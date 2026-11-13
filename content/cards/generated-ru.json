@@ -1,26 +1,5 @@
 [
   {
-    "id": "gen:ru:where:architecture-white-brick-dagestan",
-    "type": "region",
-    "country": "RU",
-    "answer": "DA",
-    "prompt": {
-      "kind": "text",
-      "value": "White limestone brick buildings point to this area and neighbouring regions."
-    },
-    "tags": [
-      "europe",
-      "architecture",
-      "generated",
-      "where"
-    ],
-    "subject": "architecture",
-    "explain": "White limestone brick buildings point to Dagestan and neighbouring regions. (Republic of Dagestan)",
-    "map": "ru",
-    "source": "https://www.plonkit.net/russia",
-    "verified": true
-  },
-  {
     "id": "gen:ru:where:landscape-buryatia",
     "type": "region",
     "country": "RU",
@@ -37,27 +16,6 @@
     ],
     "subject": "vegetation",
     "explain": "Open grassland with shrubs and mountains, lusher around Lake Baikal. (Republic of Buryatia)",
-    "map": "ru",
-    "source": "https://www.plonkit.net/russia",
-    "verified": true
-  },
-  {
-    "id": "gen:ru:where:landscape-caspian-dry",
-    "type": "region",
-    "country": "RU",
-    "answer": "AST",
-    "prompt": {
-      "kind": "text",
-      "value": "Extremely dry, flat land west of the Caspian Sea: Kalmykia, this area and Dagestan."
-    },
-    "tags": [
-      "europe",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Extremely dry, flat land west of the Caspian Sea: Kalmykia, Astrakhan and Dagestan. (Astrakhan)",
     "map": "ru",
     "source": "https://www.plonkit.net/russia",
     "verified": true
@@ -130,6 +88,9 @@
     "type": "region",
     "country": "RU",
     "answer": "KR",
+    "spans": [
+      "MUR"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Rocks along the roadside are extremely common across this area and Murmansk."
@@ -142,27 +103,6 @@
     ],
     "subject": "landscape",
     "explain": "Rocks along the roadside are extremely common across Karelia and Murmansk. (Karelia)",
-    "map": "ru",
-    "source": "https://www.plonkit.net/russia",
-    "verified": true
-  },
-  {
-    "id": "gen:ru:where:landscape-sakhalin-butterbur",
-    "type": "region",
-    "country": "RU",
-    "answer": "SAK",
-    "prompt": {
-      "kind": "text",
-      "value": "Giant butterbur leaves are very common in southern this area."
-    },
-    "tags": [
-      "europe",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Giant butterbur leaves are very common in southern Sakhalin. (Sakhalin)",
     "map": "ru",
     "source": "https://www.plonkit.net/russia",
     "verified": true
@@ -193,6 +133,9 @@
     "type": "region",
     "country": "RU",
     "answer": "TA",
+    "spans": [
+      "BA"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Some republics have bilingual town signs, such as Tatar in this area and Bashkir in Bashkortostan."

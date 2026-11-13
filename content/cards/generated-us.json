@@ -88,6 +88,10 @@
     "type": "region",
     "country": "US",
     "answer": "UT",
+    "spans": [
+      "NE",
+      "WY"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Black paddle-shaped bollards are common in this area and Wyoming, and also found in Nebraska."
@@ -147,27 +151,6 @@
     "verified": true
   },
   {
-    "id": "gen:us:where:landscape-saguaro",
-    "type": "region",
-    "country": "US",
-    "answer": "AZ",
-    "prompt": {
-      "kind": "text",
-      "value": "Tall branched saguaro cacti mark southern this area near the Mexican border."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Tall branched saguaro cacti mark southern Arizona near the Mexican border. (Arizona)",
-    "map": "us",
-    "source": "https://www.plonkit.net/united-states",
-    "verified": true
-  },
-  {
     "id": "gen:us:where:pole-california-stripes",
     "type": "region",
     "country": "US",
@@ -193,6 +176,9 @@
     "type": "region",
     "country": "US",
     "answer": "WI",
+    "spans": [
+      "MI"
+    ],
     "prompt": {
       "kind": "text",
       "value": "White metal plates with an orange rectangle and diamond appear on most poles in this area and Michigan's Upper Peninsula."

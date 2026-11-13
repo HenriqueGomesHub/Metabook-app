@@ -1,26 +1,5 @@
 [
   {
-    "id": "gen:mx:where:arch-mud-brick",
-    "type": "region",
-    "country": "MX",
-    "answer": "DUR",
-    "prompt": {
-      "kind": "text",
-      "value": "Mud brick houses are most abundant in this area and dry desert states."
-    },
-    "tags": [
-      "americas",
-      "architecture",
-      "generated",
-      "where"
-    ],
-    "subject": "architecture",
-    "explain": "Mud brick houses are most abundant in Durango and dry desert states. (Durango)",
-    "map": "mx",
-    "source": "https://www.plonkit.net/mexico",
-    "verified": true
-  },
-  {
     "id": "gen:mx:where:bollard-nayarit",
     "type": "region",
     "country": "MX",
@@ -42,31 +21,13 @@
     "verified": true
   },
   {
-    "id": "gen:mx:where:landscape-chihuahua-pines",
-    "type": "region",
-    "country": "MX",
-    "answer": "CHH",
-    "prompt": {
-      "kind": "text",
-      "value": "Short, stunted pine forests on rocky mountains in western this area and Durango."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Short, stunted pine forests on rocky mountains in western Chihuahua and Durango. (Chihuahua)",
-    "map": "mx",
-    "source": "https://www.plonkit.net/mexico",
-    "verified": true
-  },
-  {
     "id": "gen:mx:where:landscape-white-soil",
     "type": "region",
     "country": "MX",
     "answer": "ROO",
+    "spans": [
+      "YUC"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Blindingly white soil on the Yucatán peninsula, strongest in this area; only reliable in Generation 3."
@@ -88,6 +49,9 @@
     "type": "region",
     "country": "MX",
     "answer": "SIN",
+    "spans": [
+      "SON"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Wooden poles with a lowered crossbar are mostly found in this area and Sonora."
@@ -109,6 +73,10 @@
     "type": "region",
     "country": "MX",
     "answer": "SLP",
+    "spans": [
+      "GUA",
+      "QUE"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Poles with a mesh body are found mostly in this area, Guanajuato and Querétaro."
@@ -130,6 +98,10 @@
     "type": "region",
     "country": "MX",
     "answer": "SIN",
+    "spans": [
+      "DUR",
+      "GRO"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Black tar on both sides of the yellow centre line is seen in this area, Durango and Guerrero."
@@ -151,6 +123,9 @@
     "type": "region",
     "country": "MX",
     "answer": "PUE",
+    "spans": [
+      "TLA"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Hexagonal tile paving appears in this area and Tlaxcala."
@@ -214,6 +189,9 @@
     "type": "region",
     "country": "MX",
     "answer": "JAL",
+    "spans": [
+      "NAY"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Vast blue agave fields for tequila, mostly in this area and Nayarit."
@@ -226,27 +204,6 @@
     ],
     "subject": "vegetation",
     "explain": "Vast blue agave fields for tequila, mostly in Jalisco and Nayarit. (Jalisco)",
-    "map": "mx",
-    "source": "https://www.plonkit.net/mexico",
-    "verified": true
-  },
-  {
-    "id": "gen:mx:where:veg-boojum",
-    "type": "region",
-    "country": "MX",
-    "answer": "BCS",
-    "prompt": {
-      "kind": "text",
-      "value": "Alien-looking boojum trees grow almost only in southern this area."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Alien-looking boojum trees grow almost only in southern Baja. (Baja California Sur)",
     "map": "mx",
     "source": "https://www.plonkit.net/mexico",
     "verified": true
@@ -319,6 +276,9 @@
     "type": "region",
     "country": "MX",
     "answer": "SLP",
+    "spans": [
+      "ZAC"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Tree-like yuccas are common around this area and Zacatecas."

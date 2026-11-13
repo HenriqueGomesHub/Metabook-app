@@ -25,6 +25,10 @@
     "type": "region",
     "country": "BR",
     "answer": "MT",
+    "spans": [
+      "GO",
+      "PR"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Soybean fields are most common in this area, Paraná and Goiás."
@@ -88,6 +92,10 @@
     "type": "region",
     "country": "BR",
     "answer": "RN",
+    "spans": [
+      "PB",
+      "PE"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Spherical or cone-shaped \"lollipop\" insulators on a rod are common in this area, Paraíba and Pernambuco."
@@ -109,6 +117,9 @@
     "type": "region",
     "country": "BR",
     "answer": "PE",
+    "spans": [
+      "BA"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Brown mushroom-shaped insulators appear only in this area; white ones in Bahia."
@@ -130,6 +141,9 @@
     "type": "region",
     "country": "BR",
     "answer": "SC",
+    "spans": [
+      "RS"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Dark brown insulators with grey bases are almost exclusive to this area and Rio Grande do Sul."
@@ -256,6 +270,9 @@
     "type": "region",
     "country": "BR",
     "answer": "BA",
+    "spans": [
+      "PE"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Long yellow pole paint with a black code that starts with a letter appears in this area and Pernambuco."
@@ -361,6 +378,11 @@
     "type": "region",
     "country": "BR",
     "answer": "RS",
+    "spans": [
+      "AM",
+      "RJ",
+      "RR"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Wooden poles are most often seen in this area, Roraima, Amazonas and Rio de Janeiro."
@@ -373,27 +395,6 @@
     ],
     "subject": "pole",
     "explain": "Wooden poles are most often seen in Rio Grande do Sul, Roraima, Amazonas and Rio de Janeiro. (Rio Grande do Sul)",
-    "map": "br",
-    "source": "https://www.plonkit.net/brazil",
-    "verified": true
-  },
-  {
-    "id": "gen:br:where:road-cobblestone",
-    "type": "region",
-    "country": "BR",
-    "answer": "RS",
-    "prompt": {
-      "kind": "text",
-      "value": "Cobblestone pavement is most common in the northeast and this area."
-    },
-    "tags": [
-      "americas",
-      "street",
-      "generated",
-      "where"
-    ],
-    "subject": "street",
-    "explain": "Cobblestone pavement is most common in the northeast and Rio Grande do Sul. (Rio Grande do Sul)",
     "map": "br",
     "source": "https://www.plonkit.net/brazil",
     "verified": true

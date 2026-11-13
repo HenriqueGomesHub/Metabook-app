@@ -4,6 +4,10 @@
     "type": "region",
     "country": "AR",
     "answer": "T",
+    "spans": [
+      "A",
+      "Y"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Sugarcane is most common in this area, with pockets in Salta and Jujuy."
@@ -63,27 +67,6 @@
     "verified": true
   },
   {
-    "id": "gen:ar:where:arch-red-brick-northwest",
-    "type": "region",
-    "country": "AR",
-    "answer": "Y",
-    "prompt": {
-      "kind": "text",
-      "value": "Red brick buildings like those in Bolivia occur in the northwest, especially western this area."
-    },
-    "tags": [
-      "americas",
-      "architecture",
-      "generated",
-      "where"
-    ],
-    "subject": "architecture",
-    "explain": "Red brick buildings like those in Bolivia occur in the northwest, especially western Jujuy. (Jujuy)",
-    "map": "ar",
-    "source": "https://www.plonkit.net/argentina",
-    "verified": true
-  },
-  {
     "id": "gen:ar:where:landscape-beech",
     "type": "region",
     "country": "AR",
@@ -109,6 +92,9 @@
     "type": "region",
     "country": "AR",
     "answer": "H",
+    "spans": [
+      "P"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Sandy soil with lots of low trees and bushes in this area and Formosa."
@@ -231,27 +217,6 @@
     "verified": true
   },
   {
-    "id": "gen:ar:where:landscape-salt-pans",
-    "type": "region",
-    "country": "AR",
-    "answer": "Y",
-    "prompt": {
-      "kind": "text",
-      "value": "Salt pans are typically in this area; also in southwestern Bolivia and northeastern Chile."
-    },
-    "tags": [
-      "americas",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Salt pans are typically in Jujuy; also in southwestern Bolivia and northeastern Chile. (Jujuy)",
-    "map": "ar",
-    "source": "https://www.plonkit.net/argentina",
-    "verified": true
-  },
-  {
     "id": "gen:ar:where:landscape-san-luis",
     "type": "region",
     "country": "AR",
@@ -298,6 +263,9 @@
     "type": "region",
     "country": "AR",
     "answer": "M",
+    "spans": [
+      "F"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Wooden hook poles in the style of Latvia are unique to La Rioja and this area."
@@ -394,27 +362,6 @@
     ],
     "subject": "vegetation",
     "explain": "Candelabra-shaped cardón cacti with golden-brown spines in the northwestern highlands. (Salta)",
-    "map": "ar",
-    "source": "https://www.plonkit.net/argentina",
-    "verified": true
-  },
-  {
-    "id": "gen:ar:where:veg-monkey-puzzle",
-    "type": "region",
-    "country": "AR",
-    "answer": "Q",
-    "prompt": {
-      "kind": "text",
-      "value": "Monkey puzzle trees grow in western this area."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Monkey puzzle trees grow in western Neuquén. (Neuquén)",
     "map": "ar",
     "source": "https://www.plonkit.net/argentina",
     "verified": true

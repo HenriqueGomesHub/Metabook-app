@@ -21,27 +21,6 @@
     "verified": true
   },
   {
-    "id": "gen:ua:where:car-2011-cities",
-    "type": "region",
-    "country": "UA",
-    "answer": "14",
-    "prompt": {
-      "kind": "text",
-      "value": "Five big cities have autumn 2011 coverage from a black or white long-antenna car; this area has nothing else."
-    },
-    "tags": [
-      "europe",
-      "car",
-      "generated",
-      "where"
-    ],
-    "subject": "car",
-    "explain": "Five big cities have autumn 2011 coverage from a black or white long-antenna car; Donetsk has nothing else. (Donetsk)",
-    "map": "ua",
-    "source": "https://www.plonkit.net/ukraine",
-    "verified": true
-  },
-  {
     "id": "gen:ua:where:language-hungarian-border",
     "type": "region",
     "country": "UA",
@@ -88,6 +67,9 @@
     "type": "region",
     "country": "UA",
     "answer": "48",
+    "spans": [
+      "65"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Yellow-and-green bus shelters with sunflowers and the Оліс brand appear in this area and Kherson oblasts."

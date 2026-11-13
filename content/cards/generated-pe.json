@@ -1,26 +1,5 @@
 [
   {
-    "id": "gen:pe:where:agri-olives",
-    "type": "region",
-    "country": "PE",
-    "answer": "TAC",
-    "prompt": {
-      "kind": "text",
-      "value": "Olive plantations in far southern this area."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Olive plantations in far southern Tacna. (Tacna)",
-    "map": "pe",
-    "source": "https://www.plonkit.net/peru",
-    "verified": true
-  },
-  {
     "id": "gen:pe:where:agri-sugarcane",
     "type": "region",
     "country": "PE",
@@ -84,27 +63,6 @@
     "verified": true
   },
   {
-    "id": "gen:pe:where:city-arequipa-volcanoes",
-    "type": "region",
-    "country": "PE",
-    "answer": "ARE",
-    "prompt": {
-      "kind": "text",
-      "value": "Volcanoes are seen around this area and only in the southeast."
-    },
-    "tags": [
-      "americas",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Volcanoes are seen around Arequipa and only in the southeast. (Arequipa)",
-    "map": "pe",
-    "source": "https://www.plonkit.net/peru",
-    "verified": true
-  },
-  {
     "id": "gen:pe:where:city-iquitos",
     "type": "region",
     "country": "PE",
@@ -121,27 +79,6 @@
     ],
     "subject": "landscape",
     "explain": "Iquitos is isolated in the Amazon with only Generation 3, tuk-tuks and overcast skies. (Loreto)",
-    "map": "pe",
-    "source": "https://www.plonkit.net/peru",
-    "verified": true
-  },
-  {
-    "id": "gen:pe:where:landscape-high-flat",
-    "type": "region",
-    "country": "PE",
-    "answer": "PUN",
-    "prompt": {
-      "kind": "text",
-      "value": "Flat high-mountain land around central this area and Lake Chinchaycocha can look like Bolivia."
-    },
-    "tags": [
-      "americas",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Flat high-mountain land around central Puno and Lake Chinchaycocha can look like Bolivia. (Puno)",
     "map": "pe",
     "source": "https://www.plonkit.net/peru",
     "verified": true
@@ -172,6 +109,10 @@
     "type": "region",
     "country": "PE",
     "answer": "CUS",
+    "spans": [
+      "AYA",
+      "CAJ"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Dark red-tinted soil around this area, Ayacucho, Cajamarca and Tarapoto."

@@ -4,6 +4,9 @@
     "type": "region",
     "country": "CL",
     "answer": "AI",
+    "spans": [
+      "LI"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Villa O'Higgins has street signs, fences and structures made of orange-stained wood."
@@ -25,6 +28,9 @@
     "type": "region",
     "country": "CL",
     "answer": "AN",
+    "spans": [
+      "AT"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Clay brick walls, often with triangles on top, mark San Pedro de Atacama."
@@ -84,31 +90,13 @@
     "verified": true
   },
   {
-    "id": "gen:cl:where:landscape-aysen-autumn",
-    "type": "region",
-    "country": "CL",
-    "answer": "AI",
-    "prompt": {
-      "kind": "text",
-      "value": "Southern this area often shows orange and red autumn colours."
-    },
-    "tags": [
-      "americas",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Southern Aysén often shows orange and red autumn colours. (Aysén)",
-    "map": "cl",
-    "source": "https://www.plonkit.net/chile",
-    "verified": true
-  },
-  {
     "id": "gen:cl:where:landscape-central",
     "type": "region",
     "country": "CL",
     "answer": "RM",
+    "spans": [
+      "ML"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Semi-arid climate with dry hills and scattered vegetation around the capital; greener with vineyards in Maule."
@@ -147,27 +135,6 @@
     "verified": true
   },
   {
-    "id": "gen:cl:where:landscape-eucalyptus-valparaiso",
-    "type": "region",
-    "country": "CL",
-    "answer": "VS",
-    "prompt": {
-      "kind": "text",
-      "value": "Eucalyptus plantations with a dry climate suggest southwestern this area."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Eucalyptus plantations with a dry climate suggest southwestern Valparaíso. (Valparaíso)",
-    "map": "cl",
-    "source": "https://www.plonkit.net/chile",
-    "verified": true
-  },
-  {
     "id": "gen:cl:where:landscape-magallanes",
     "type": "region",
     "country": "CL",
@@ -189,31 +156,13 @@
     "verified": true
   },
   {
-    "id": "gen:cl:where:landscape-monkey-puzzle",
-    "type": "region",
-    "country": "CL",
-    "answer": "AR",
-    "prompt": {
-      "kind": "text",
-      "value": "Monkey puzzle trees grow in far eastern this area."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Monkey puzzle trees grow in far eastern Araucanía. (Araucanía)",
-    "map": "cl",
-    "source": "https://www.plonkit.net/chile",
-    "verified": true
-  },
-  {
     "id": "gen:cl:where:landscape-narrow-tree-roads",
     "type": "region",
     "country": "CL",
     "answer": "AR",
+    "spans": [
+      "BI"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Narrow roads lined with trees on both sides in Biobío and this area."
@@ -256,6 +205,9 @@
     "type": "region",
     "country": "CL",
     "answer": "AP",
+    "spans": [
+      "AT"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Poles in this area are white with a black number; other Atacama cities use yellow paint."
@@ -277,6 +229,9 @@
     "type": "region",
     "country": "CL",
     "answer": "LR",
+    "spans": [
+      "AI"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Dotted paint road lines are common in this area and Aysén."

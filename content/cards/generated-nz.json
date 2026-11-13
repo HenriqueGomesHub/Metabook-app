@@ -88,6 +88,9 @@
     "type": "region",
     "country": "NZ",
     "answer": "HKB",
+    "spans": [
+      "MBH"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Dry golden grassy hills mark this area; vineyards are common there and in Marlborough."
@@ -130,6 +133,9 @@
     "type": "region",
     "country": "NZ",
     "answer": "NTL",
+    "spans": [
+      "WKO"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Waikato and this area have a drier climate and rolling hills; gravel roads and Generation 2 coverage are common in this area."
@@ -168,31 +174,13 @@
     "verified": true
   },
   {
-    "id": "gen:nz:where:region-sandy-cliffs",
-    "type": "region",
-    "country": "NZ",
-    "answer": "MWT",
-    "prompt": {
-      "kind": "text",
-      "value": "Bright sandy cliffs are common in central this area and appear in parts of Taranaki, Waikato and a road into Hawke's Bay."
-    },
-    "tags": [
-      "oceania",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Bright sandy cliffs are common in central Manawatū-Whanganui and appear in parts of Taranaki, Waikato and a road into Hawke's Bay. (Manawatū-Whanganui)",
-    "map": "nz",
-    "source": "https://www.plonkit.net/new-zealand",
-    "verified": true
-  },
-  {
     "id": "gen:nz:where:region-southland-otago-hills",
     "type": "region",
     "country": "NZ",
     "answer": "STL",
+    "spans": [
+      "OTA"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Flatter this area and Otago have a cold climate with sloping alpine hills and stunted vegetation; flax in long neat rows suggests this area."

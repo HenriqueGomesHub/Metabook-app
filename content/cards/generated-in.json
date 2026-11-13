@@ -46,6 +46,10 @@
     "type": "region",
     "country": "IN",
     "answer": "WB",
+    "spans": [
+      "BR",
+      "OR"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Large hip roofs of corrugated metal are found in this area and nearby parts of Bihar and Odisha."
@@ -67,6 +71,9 @@
     "type": "region",
     "country": "IN",
     "answer": "MZ",
+    "spans": [
+      "ML"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Lush green valleys with low plants and eroded hills with many small peaks mark this area; Meghalaya's hills are flatter-topped."
@@ -79,27 +86,6 @@
     ],
     "subject": "landscape",
     "explain": "Lush green valleys with low plants and eroded hills with many small peaks mark Mizoram; Meghalaya's hills are flatter-topped. (Mizoram)",
-    "map": "in",
-    "source": "https://www.plonkit.net/india",
-    "verified": true
-  },
-  {
-    "id": "gen:in:where:landscape-rajasthan-desert",
-    "type": "region",
-    "country": "IN",
-    "answer": "RJ",
-    "prompt": {
-      "kind": "text",
-      "value": "Western this area has dry, sandy ground."
-    },
-    "tags": [
-      "asia",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Western Rajasthan has dry, sandy ground. (Rajasthan)",
     "map": "in",
     "source": "https://www.plonkit.net/india",
     "verified": true
@@ -231,27 +217,6 @@
     "verified": true
   },
   {
-    "id": "gen:in:where:pole-holey-gujarat",
-    "type": "region",
-    "country": "IN",
-    "answer": "GJ",
-    "prompt": {
-      "kind": "text",
-      "value": "Concrete poles with see-through holes are unique to this area and its neighbouring small territories."
-    },
-    "tags": [
-      "asia",
-      "pole",
-      "generated",
-      "where"
-    ],
-    "subject": "pole",
-    "explain": "Concrete poles with see-through holes are unique to Gujarat and its neighbouring small territories. (Gujarat)",
-    "map": "in",
-    "source": "https://www.plonkit.net/india",
-    "verified": true
-  },
-  {
     "id": "gen:in:where:pole-holey-kerala",
     "type": "region",
     "country": "IN",
@@ -298,6 +263,9 @@
     "type": "region",
     "country": "IN",
     "answer": "AP",
+    "spans": [
+      "TG"
+    ],
     "prompt": {
       "kind": "text",
       "value": "Poles split into two sections, similar to Brazil, are common in this area and Telangana."
@@ -310,27 +278,6 @@
     ],
     "subject": "pole",
     "explain": "Poles split into two sections, similar to Brazil, are common in Andhra Pradesh and Telangana. (Andhra Pradesh)",
-    "map": "in",
-    "source": "https://www.plonkit.net/india",
-    "verified": true
-  },
-  {
-    "id": "gen:in:where:pole-stripes-bihar",
-    "type": "region",
-    "country": "IN",
-    "answer": "BR",
-    "prompt": {
-      "kind": "text",
-      "value": "Exactly four thicker black and yellow stripes on poles mark this area, where trees may also have red-and-white stripes."
-    },
-    "tags": [
-      "asia",
-      "pole",
-      "generated",
-      "where"
-    ],
-    "subject": "pole",
-    "explain": "Exactly four thicker black and yellow stripes on poles mark Bihar, where trees may also have red-and-white stripes. (Bihar)",
     "map": "in",
     "source": "https://www.plonkit.net/india",
     "verified": true
