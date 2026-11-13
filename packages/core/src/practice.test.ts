@@ -370,18 +370,24 @@ describe('first look at a new clue', () => {
   });
 
   it('shows a new spot clue once as a lesson, then quizzes it a few cards later', () => {
-    const cards = Array.from({ length: 12 }, (_, i) => spot(`s${i}`));
+    const cards = Array.from({ length: 40 }, (_, i) => spot(`s${i}`));
     let practice = start(cards);
     const served: { id: string; mode: string }[] = [];
     for (let i = 0; i < 30; i++) {
       const next = nextPracticeItem(practice, {}, now);
       served.push({ id: next.item.cardId, mode: next.item.mode });
-      practice = recordPracticeAnswer(next.practice, next.item.cardId, true);
+      // a lesson is passed over ungraded, as the app does
+      practice =
+        next.item.mode === 'learn'
+          ? next.practice
+          : recordPracticeAnswer(next.practice, next.item.cardId, true);
     }
     const first = served[0]!;
     expect(first.mode).toBe('learn');
     const quiz = served.findIndex((s, i) => i > 0 && s.id === first.id);
     expect(quiz).toBeGreaterThan(LEARN_GAP);
+    // soon, not after a run of other lessons
+    expect(quiz).toBeLessThanOrEqual(LEARN_GAP + 3);
     expect(served[quiz]!.mode).not.toBe('learn');
   });
 

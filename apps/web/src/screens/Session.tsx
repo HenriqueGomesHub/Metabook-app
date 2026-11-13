@@ -223,8 +223,10 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
       : item;
   // the session's own cards set the total; a missed card asked again shows "Again" instead of
   // moving the finish line back
-  const total = queue.filter((q) => !q.retry).length;
-  const done = Math.min(total, queue.slice(0, index + 1).filter((q) => !q.retry).length);
+  // a first look at a new clue is part of its question, not a question of its own
+  const counts = (q: SessionItem) => !q.retry && q.mode !== 'learn';
+  const total = queue.filter(counts).length;
+  const done = Math.max(1, Math.min(total, queue.slice(0, index + 1).filter(counts).length));
 
   return (
     <CardRunner

@@ -354,7 +354,8 @@ export function nextPracticeItem(
               cardId: card.id,
               due: step + 1 + (look ? LEARN_GAP : RIGHT_GAP),
               streak: practice.known?.includes(card.id) ? GRADUATE_STREAK - 1 : 0,
-              wrong: false,
+              // a taught clue comes back like a missed one: soon, ahead of more new cards
+              wrong: look,
             },
           ]
         : practice.learning,
