@@ -378,6 +378,8 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     const alternates = ranked
       .map((c) => ({ country: c.code, ...shown.get(c.code)! }))
       .filter((o) => o.image.id !== first.id)
+      // a photo whose clue reads the same ("white with black text") cannot be told apart
+      .filter((o) => clueName(o.clue) !== clueName(clue))
       .slice(0, CHOICES - 1 + POOL_EXTRA)
       .map((o) => ({ country: o.country, clueId: o.clue.id, image: o.image }));
     if (alternates.length >= CHOICES - 1) {
@@ -604,6 +606,9 @@ export function isCountryWide(
   // insulators"), so the title is read with a word before it
   return !namesProperPlace(`x ${name}. ${summary}`);
 }
+
+/** A clue's own words, after its family: "Plate: white with black text" → "white with black text". */
+const clueName = (clue: Pick<Clue, 'title'>) => fold(clue.title.replace(/^[^:]*:\s*/, ''));
 
 /** A summary that adds nothing to the title ("Pole: long horizontal ID" → "A long, horizontal pole ID."). */
 function restates(title: string, summary: string): boolean {
