@@ -325,7 +325,7 @@ function Play({
                     ? `${answerState.name} and ${card.spans?.length} more`
                     : answerState.name}
                 </h2>
-                <PatternHint card={card} cards={all} />
+                <PatternHint card={card} cards={all} labelled />
               </div>
               <dl className="ddd-figures">
                 {result.km !== undefined && (

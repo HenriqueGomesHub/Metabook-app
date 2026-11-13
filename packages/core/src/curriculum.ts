@@ -124,8 +124,9 @@ function clueQueues(cards: Card[]): Map<string, Map<number, Card[]>> {
     ordered.push(...others);
     const families = byCountry.get(first.country) ?? new Map<number, Ranked[]>();
     const ranked = families.get(family) ?? [];
-    // a clue for one region of the country (Kolyma, Quebec) waits behind the country-wide ones
-    const regional = first.region ? 1 : 0;
+    // a clue for one region of the country (Kolyma, Quebec, "unique to Utah") waits behind the
+    // country-wide ones
+    const regional = first.region || first.tags.includes('local') ? 1 : 0;
     ordered.forEach((card, rank) =>
       ranked.push({
         card,

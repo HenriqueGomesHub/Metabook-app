@@ -825,6 +825,11 @@ a.credit:hover {
 
 .scan-clue .clue-summary {
   font-size: 16px;
+  /* the same height lesson to lesson, so the photo keeps its size; the whole clue is in Learn */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .scan-actions .scan-knew {
@@ -867,4 +872,17 @@ a.credit:hover {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+@media (max-width: 720px) {
+  /* a phone reveal is a glance: the clue and the note stop at two lines (the whole clue is a tap) */
+  .reveal .clue-summary,
+  .reveal-section .reveal-text {
+    -webkit-line-clamp: 2;
+  }
+
+  /* Which clue: after answering, the marked photos stay on top to compare, the panel below */
+  .play-top:has(.play-side.revealed) .play-side {
+    order: 1;
+  }
 }

@@ -1,7 +1,7 @@
 import { activePairs, isMapKey } from './confusions';
 import { shuffle, type Rng } from './random';
 import { retrievability } from './scheduler';
-import { LEARN_GAP, modeFor, teachFirst, type SessionItem } from './session';
+import { modeFor, teachFirst, type SessionItem } from './session';
 import type { Card, CardState, Confusion } from './types';
 
 /**
@@ -48,6 +48,11 @@ const MAX_OVERDUE = 60;
 const MAX_GAP = 10;
 const WRONG_MIN_GAP = 3;
 const WEAKNESS_FLOOR = 0.15;
+/**
+ * Cards between a lesson and its question in a drill: one, the next lesson. A drill of new clues
+ * then runs lesson, lesson, question, lesson, question…
+ */
+const PRACTICE_LEARN_GAP = 1;
 const CONFUSION_BOOST = 2;
 
 interface Learning {
@@ -58,6 +63,8 @@ interface Learning {
   streak: number;
   /** the last answer was wrong: it may return sooner than the usual gap */
   wrong: boolean;
+  /** shown as a lesson and not asked yet: its question comes one or two cards later */
+  taught?: boolean;
 }
 
 export interface PracticeState {
@@ -81,6 +88,8 @@ export interface PracticeState {
   introsSinceReturn: number;
   /** step at which each clue image was last shown, by image id */
   imageShown?: Record<string, number>;
+  /** step of the last lesson (a new clue's first look) */
+  lastLesson?: number;
   rng: Rng;
 }
 
@@ -101,10 +110,10 @@ export function createPractice(input: {
   const confused = cards
     .filter((card) => sides.has(card.answer) || sides.has(card.country))
     .map((card) => card.id);
-  const fresh = shuffle(
-    cards.map((card) => card.id),
-    rng,
-  );
+  // country-wide clues are introduced before those for one part of the country
+  const local = (card: Card) => Boolean(card.region) || card.tags.includes('local');
+  const shuffled = shuffle(cards, rng);
+  const fresh = [...shuffled.filter((c) => !local(c)), ...shuffled.filter(local)].map((c) => c.id);
   return {
     cards,
     confused,
@@ -223,14 +232,23 @@ function choose(practice: PracticeState, states: Record<string, CardState>, now:
   const spaced = (id: string) => {
     const at = lastShown[id];
     if (at === undefined) return true;
-    const need = entry.get(id)?.wrong ? Math.min(WRONG_MIN_GAP, gap) : gap;
+    const learn = entry.get(id);
+    const need = learn?.taught ? 1 : learn?.wrong ? Math.min(WRONG_MIN_GAP, gap) : gap;
     return step - at > need;
   };
   const ok = (id: string) => byId.has(id) && spaced(id) && !adjacent(last, byId.get(id) as Card);
   const ofIds = (ids: string[]) => ids.map((id) => byId.get(id) as Card);
 
-  const due = learning.filter((l) => l.due <= step && ok(l.cardId)).sort((a, b) => a.due - b.due);
-  // 1. a missed card coming back; at its deadline even right after a neighbouring number
+  // lessons and questions take turns: right after a question, a waiting lesson goes first
+  const lessonTurn =
+    practice.lastLesson !== step - 1 &&
+    practice.fresh.length > 0 &&
+    learning.filter((l) => l.streak === 0 || l.wrong).length < LEARNING_SET;
+  const due = learning
+    .filter((l) => l.due <= step && ok(l.cardId) && !(l.taught && lessonTurn))
+    .sort((a, b) => a.due - b.due);
+  // 1. a missed (or just taught) card coming back; at its deadline even right after a neighbouring
+  // number
   const missed = due.find((l) => l.wrong);
   if (missed) return byId.get(missed.cardId) as Card;
   const late = learning
@@ -328,7 +346,7 @@ export function nextPracticeItem(
   const wasReturn = practice.learning.some((l) => l.cardId === card.id && !l.wrong && l.streak > 0);
   const imageId = rotatedImage(practice, card);
   const shownImage = imageId ?? card.clue?.image?.id;
-  // a brand-new clue is first shown with its answer; its question comes LEARN_GAP cards later
+  // a brand-new clue is first shown with its answer; its question comes one or two cards later
   const look = isFresh && !practice.known?.includes(card.id) && teachFirst(card, states[card.id]);
   const mode = look ? 'learn' : modeFor(card, states[card.id]);
   return {
@@ -346,16 +364,18 @@ export function nextPracticeItem(
           ? 0
           : practice.introsSinceReturn,
       fresh: isFresh ? practice.fresh.filter((id) => id !== card.id) : practice.fresh,
+      ...(look ? { lastLesson: step } : {}),
       // a new card joins the learning set; until it is answered it waits like a first right
       learning: isFresh
         ? [
             ...practice.learning,
             {
               cardId: card.id,
-              due: step + 1 + (look ? LEARN_GAP : RIGHT_GAP),
+              due: step + 1 + (look ? PRACTICE_LEARN_GAP : RIGHT_GAP),
               streak: practice.known?.includes(card.id) ? GRADUATE_STREAK - 1 : 0,
               // a taught clue comes back like a missed one: soon, ahead of more new cards
               wrong: look,
+              ...(look && { taught: true }),
             },
           ]
         : practice.learning,

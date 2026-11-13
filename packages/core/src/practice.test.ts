@@ -9,7 +9,6 @@ import {
   type PracticeState,
 } from './practice';
 import { applyReview, newCardState } from './scheduler';
-import { LEARN_GAP } from './session';
 import type { Card, CardState, CardType, Confusion } from './types';
 
 const now = new Date('2026-03-15T12:00:00Z');
@@ -385,9 +384,12 @@ describe('first look at a new clue', () => {
     const first = served[0]!;
     expect(first.mode).toBe('learn');
     const quiz = served.findIndex((s, i) => i > 0 && s.id === first.id);
-    expect(quiz).toBeGreaterThan(LEARN_GAP);
-    // soon, not after a run of other lessons
-    expect(quiz).toBeLessThanOrEqual(LEARN_GAP + 3);
+    // after one other card, not after a run of other lessons
+    expect(quiz).toBe(2);
+    // lessons and questions take turns: never three lessons in a row
+    const modes = served.map((s) => (s.mode === 'learn' ? 'L' : 'Q')).join('');
+    expect(modes).not.toContain('LLL');
+    expect(modes.slice(0, 7)).toBe('LLQLQLQ');
     expect(served[quiz]!.mode).not.toBe('learn');
   });
 

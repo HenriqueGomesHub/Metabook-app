@@ -9,6 +9,7 @@ import {
   normalizeAnswer,
   cardContext,
   isGalleryClue,
+  isLocalClue,
   isRareClue,
   pickTip,
   rankTips,
@@ -515,6 +516,11 @@ function CardRunner({
   }
 
   function showTips(asideKey: string | undefined, given?: string) {
+    // a card with its own reason (a lookalike's "ř is Czech only") says all a right answer needs
+    if (card.explain && card.type === 'lookalike' && given === undefined) {
+      setShown({ tips: [], aside: undefined });
+      return;
+    }
     const tips = mainTips();
     const candidate = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
@@ -538,14 +544,16 @@ function CardRunner({
   function pickedClue(pickedName: string): Shown['aside'] {
     const clue = card.clue && clueIndex(data.content).byId.get(card.clue.id);
     const code = data.content.pool.find((c) => c.name === pickedName)?.code;
-    if (!clue || !code) return undefined;
+    // "other clues" is a mixed bag: Spain's phone numbers teach nothing about a Greek taxi
+    if (!clue || !code || clue.family === 'other') return undefined;
     const candidates =
       clueIndex(data.content)
         .byCountry.get(code)
         ?.clues.filter((c) => c.family === clue.family && !isGalleryClue(c) && c.summary?.trim()) ??
       [];
     // the one that says what to look for, not "fairly rare here"
-    const theirs = candidates.find((c) => !isRareClue(c)) ?? candidates[0];
+    // one that says what to look for across the country: not "fairly rare here", not one road
+    const theirs = candidates.find((c) => !isRareClue(c) && !isLocalClue(c));
     return theirs ? clueAside(pickedName, theirs) : undefined;
   }
 

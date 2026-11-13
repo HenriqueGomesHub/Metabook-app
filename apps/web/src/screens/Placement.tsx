@@ -19,6 +19,7 @@ import { Status } from '../components/Status';
 import { label, SUBJECTS } from '../app/labels';
 import { countryName } from './manage/countries';
 import './manage/manage.css';
+import { PatternHint } from '../components/PatternHint';
 import { ClueAnswer } from './session/ClueAnswer';
 import { optionsFor } from './session/options';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
@@ -195,7 +196,14 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
                       cardContext(card),
                     ).slice(0, 1)
               }
-              extra={card.clue && !outcome.correct ? <ClueAnswer card={card} /> : undefined}
+              // the clue confirms a right answer too: right by luck still learns what to look for
+              extra={
+                card.clue ? (
+                  <ClueAnswer card={card} />
+                ) : card.type === 'areacode' && !outcome.correct ? (
+                  <PatternHint card={card} cards={data.content.cards} labelled />
+                ) : undefined
+              }
               nextLabel={results.length + 1 === cards.length ? 'See result' : 'Continue'}
               onNext={next}
             />

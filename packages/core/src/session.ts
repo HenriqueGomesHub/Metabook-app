@@ -21,31 +21,50 @@ export const teachFirst = (card: Card, state: CardState | undefined): boolean =>
   card.type === 'spot' && Boolean(card.clue?.image) && (state?.state ?? 'new') === 'new';
 
 /**
- * Puts a first look before each new clue in a session queue: the look where the card was, its
- * question LEARN_GAP cards later (or at the end).
+ * Puts a first look before each new clue in a session queue, its question LEARN_GAP cards later.
+ * Lessons are spread between the other cards, never two in a row while other cards remain, so each
+ * new clue is read and then interrupted before it is asked.
  */
 export function withFirstLooks(
   queue: SessionItem[],
   cards: Card[],
   states: Record<string, CardState>,
 ): SessionItem[] {
-  const out: SessionItem[] = [];
-  const pending: { item: SessionItem; at: number }[] = [];
-  for (const item of queue) {
+  const teachable = (item: SessionItem) => {
     const card = cards.find((c) => c.id === item.cardId);
-    const look =
-      card && item.mode === 'mcq' && !item.contrastPair && teachFirst(card, states[card.id]);
-    if (look) {
-      out.push({ ...item, mode: 'learn' });
-      pending.push({ item, at: out.length + LEARN_GAP });
-    } else {
-      out.push(item);
-    }
-    while (pending.length > 0 && (pending[0] as { at: number }).at <= out.length) {
-      out.push((pending.shift() as { item: SessionItem }).item);
+    return Boolean(
+      card && item.mode === 'mcq' && !item.contrastPair && teachFirst(card, states[card.id]),
+    );
+  };
+  const lessons = queue.filter(teachable);
+  if (lessons.length === 0) return queue;
+  const rest = queue.filter((item) => !teachable(item));
+  const out: SessionItem[] = [];
+  const pending: { item: SessionItem; from: number }[] = [];
+  const teach = () => {
+    const item = lessons.shift() as SessionItem;
+    pending.push({ item, from: out.length });
+    out.push({ ...item, mode: 'learn' });
+  };
+  while (lessons.length + rest.length + pending.length > 0) {
+    const due = pending[0];
+    // with no other cards left to put in between, one other lesson is the gap
+    const gap = rest.length > 0 ? LEARN_GAP : 1;
+    const last = out[out.length - 1];
+    // with only lessons left, a question and a lesson take turns
+    const lessonTurn = rest.length === 0 && lessons.length > 0 && last?.mode !== 'learn';
+    if (due && out.length - due.from > gap && !lessonTurn) {
+      out.push(due.item);
+      pending.shift();
+    } else if (lessons.length > 0 && last?.mode !== 'learn') teach();
+    else if (rest.length > 0) out.push(rest.shift() as SessionItem);
+    else if (lessons.length > 0) teach();
+    else if (due) {
+      out.push(due.item);
+      pending.shift();
     }
   }
-  return [...out, ...pending.map((p) => p.item)];
+  return out;
 }
 
 export interface SessionItem {

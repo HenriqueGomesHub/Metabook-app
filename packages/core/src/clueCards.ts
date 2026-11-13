@@ -171,7 +171,10 @@ function context(input: ClueCardInput): Context {
       if (!image) continue;
       if (!showcase.has(clue.family)) showcase.set(clue.family, new Map());
       const shown = showcase.get(clue.family)!;
-      if (!shown.has(code)) shown.set(code, { clue, image });
+      // a country's showcase is its country-wide clue: its first, unless that one is local or rare
+      const held = shown.get(code);
+      const plain = (c: Clue) => !isLocalClue(c) && !isRareClue(c);
+      if (!held || (!plain(held.clue) && plain(clue))) shown.set(code, { clue, image });
     }
   }
   return { pool: input.pool, names: input.names ?? [], families, showcase, sameAs };
@@ -324,7 +327,8 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   const noun = SUBJECT_NOUNS[clue.family];
   const base = {
     country: country.code,
-    tags: [country.continent, clue.family, 'clue'],
+    // a clue for part of the country is learnt after the country-wide ones (curriculum, practice)
+    tags: [country.continent, clue.family, 'clue', ...(isLocalClue(clue) ? [LOCAL_TAG] : [])],
     subject: clue.family,
     ...(clue.region && { region: clue.region }),
     source: clue.credit.url,
@@ -361,10 +365,11 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   }
 
   // Which clue: this country's image among three other countries' of the same family, never one
-  // from a country where the clue looks the same
+  // from a country where the clue looks the same. Only a country-wide clue stands for the country:
+  // "the Colombia licence plate" is not the one plate of one department
   const first = usable[0];
   const shown = ctx.showcase.get(clue.family);
-  if (first && shown && WHICH_FAMILIES.includes(clue.family)) {
+  if (first && shown && WHICH_FAMILIES.includes(clue.family) && !isLocalClue(clue)) {
     const id = clueCardIds.which(clue.id);
     const ranked = rankOthers(country, clue, ctx, id, (c) => shown.has(c.code));
     const closeSet = new Set(ranked.slice(0, ranked.close ?? 0).map((c) => c.code));
@@ -398,22 +403,24 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
 
   cards.push(...cardsOnMap(clue, country, base, usable));
 
-  // Live view: the official Street View spots the clue links to
-  clue.locations.forEach((location, index) => {
-    const url = streetViewEmbedUrl(location);
-    if (!url) return;
-    const id = clueCardIds.live(clue.id, index);
-    const { options, pool } = countryOptions(country, clue, ctx, id);
-    cards.push({
-      ...base,
-      id,
-      type: 'live',
-      answer: country.name,
-      options,
-      prompt: { kind: 'embed', value: url },
-      clue: { id: clue.id, location, ...pool },
+  // Live view: the official Street View spots the clue links to, for clues that hold across the
+  // country (a spot on one road teaches that road, not the country)
+  if (!isLocalClue(clue))
+    clue.locations.forEach((location, index) => {
+      const url = streetViewEmbedUrl(location);
+      if (!url) return;
+      const id = clueCardIds.live(clue.id, index);
+      const { options, pool } = countryOptions(country, clue, ctx, id);
+      cards.push({
+        ...base,
+        id,
+        type: 'live',
+        answer: country.name,
+        options,
+        prompt: { kind: 'embed', value: url },
+        clue: { id: clue.id, location, ...pool },
+      });
     });
-  });
 
   // Text: a clue with nothing to show becomes a Clue quiz question, unless it names the country
   if (usable.length === 0) {
@@ -501,7 +508,21 @@ function cardsOnMap(
 
 /** Clues the source itself calls rare: true, but not what tells a country apart. */
 const RARE =
-  /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
+  /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonce you know\b|\bonly to confirm\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
+
+/** Tag of clue cards for part of the country: taught after the country-wide clues. */
+export const LOCAL_TAG = 'local';
+
+/**
+ * A clue pinned to part of the country by its own words: a numbered road, a stretch between two
+ * places, one island, "unique to Utah and Idaho", "around Ufa", "in the far north".
+ */
+const LOCAL =
+  /\b(?:Route|Ruta|Road|Rodovia|Highway|Autoroute)[- ]?\d|\bbetween [A-Z][\p{L}-]+ and [A-Z]|\b(?:unique to|only in|exclusive to|specific to|around|near|outside|west of|east of|north of|south of) (?:the )?[A-Z][\p{L}-]+|\bon (?:one|a single) (?:road|island|street|highway)\b|\bone (?:\w+ )?island\b|\bin the far (?:north|south|east|west)/u;
+
+/** Whether a clue belongs to part of the country: its region, or its own words pin it down. */
+export const isLocalClue = (clue: Pick<Clue, 'title' | 'summary' | 'region'>): boolean =>
+  Boolean(clue.region) || LOCAL.test(`${clue.title} ${clue.summary ?? ''}`);
 
 /** Whether the source itself says a clue is rare, or it describes one spot (a road, a town). */
 export const isRareClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>
