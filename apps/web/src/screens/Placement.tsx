@@ -166,9 +166,9 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           max={cards.length}
           label={`Question ${results.length + 1} of ${cards.length}`}
         />
-        {/* which country is being placed: some questions are about its neighbours */}
+        {/* no country name here: it would answer every "Which country?" question */}
         <span className="session-count">
-          {name} · {results.length + 1} / {cards.length}
+          {results.length + 1} / {cards.length}
         </span>
       </div>
       <View
