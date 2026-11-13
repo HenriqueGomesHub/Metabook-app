@@ -56,10 +56,18 @@ export const AL_BOLLARD = bollard('AL-b', 'Bollard: red and white', {
 export const QUALITY_COUNTRIES: ClueCountry[] = [
   country('AL', 'Albania', [AL_BOLLARD]),
   country('IT', 'Italy', [bollard('IT-b', 'Bollard: Italian')]),
-  country('GR', 'Greece', [bollard('GR-b', 'Bollard: Greek')]),
-  country('ES', 'Spain', [bollard('ES-b', 'Bollard: Spanish')]),
-  country('FR', 'France', [bollard('FR-b', 'Bollard: French')]),
-  country('DE', 'Germany', [bollard('DE-b', 'Bollard: German')]),
+  country('GR', 'Greece', [
+    bollard('GR-b', 'Bollard: Greek', { summary: 'Greek bollards have a yellow strip.' }),
+  ]),
+  country('ES', 'Spain', [
+    bollard('ES-b', 'Bollard: Spanish', { summary: 'Spanish bollards are short and white.' }),
+  ]),
+  country('FR', 'France', [
+    bollard('FR-b', 'Bollard: French', { summary: 'French bollards have a red cap.' }),
+  ]),
+  country('DE', 'Germany', [
+    bollard('DE-b', 'Bollard: German', { summary: 'German bollards have a black band.' }),
+  ]),
 ];
 
 const pc = (code: string, name: string): PoolCountry => ({

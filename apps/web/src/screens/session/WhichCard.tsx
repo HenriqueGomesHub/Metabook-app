@@ -18,6 +18,7 @@ export function WhichCard({ card, options, outcome, onAnswer, reveal }: CardProp
 
   return (
     <Stage
+      variant="top"
       main={
         <div className="photo-grid settle">
           {options.map((id, i) => {

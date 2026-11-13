@@ -15,9 +15,11 @@ import {
   CLUE_TAG,
   namedIn,
   namesCountry,
+  namesOtherRegions,
   resolveCodes,
   seededShuffle,
   SUBJECT_NOUNS,
+  subregionOf,
 } from './generate';
 import { COUNTRY_PRIORITY } from './curriculum';
 import { haversineKm } from './geo';
@@ -181,16 +183,41 @@ const COMMON = new Set(COUNTRY_PRIORITY.slice(0, COMMON_COUNTRIES));
 const isCommon = (code: string) => COMMON.has(code.toUpperCase());
 
 /**
- * A "more examples" gallery (GeoHints photo sets with no rule of their own): shown in Learn
- * beside the country's other clues, never quizzed, since there is nothing to learn from it alone.
+ * A gallery (GeoHints photo sets with no rule of their own: "Bollard: more examples", "Give way
+ * sign: design"): shown in Learn beside the country's other clues, never quizzed, since there is
+ * nothing to learn from it alone. Their generated summaries say so ("Give way signs you can see
+ * here.", "Speed limit signs seen here: 20, 30…").
  */
 export const isGalleryClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>
-  /more examples/i.test(clue.title) && !clue.summary;
+  /more examples/i.test(clue.title) || /\b(you can see|seen) here\b/i.test(clue.summary ?? '');
 
 /** Countries a clue cannot tell apart from its own: never offered against it. */
 function lookTheSame(clue: Clue, code: string, ctx: Context): Set<string> {
   const linked = ctx.sameAs.get(clue.family)?.get(code) ?? new Set<string>();
-  return new Set([...linked, ...resolveCodes(clue.sameAs ?? [], ctx.pool)]);
+  return new Set([
+    ...linked,
+    ...resolveCodes(clue.sameAs ?? [], ctx.pool),
+    ...sharedInSummary(clue, code, ctx),
+  ]);
+}
+
+/** A sentence saying another country has the same thing ("Albania uses the same", "also in…"). */
+const SHARING = /\b(same|shares?|shared|like|also|too|as in|similar)\b/i;
+
+/**
+ * Countries the clue's own summary says share it: an option a learner could rightly pick. Only
+ * the summary is read (the shipped catalogue loads the full text later).
+ */
+function sharedInSummary(clue: Clue, code: string, ctx: Context): string[] {
+  const sentences = (clue.summary ?? '').split(/(?<=[.;!?])\s+/).filter((s) => SHARING.test(s));
+  if (sentences.length === 0) return [];
+  return ctx.pool
+    .filter((c) => c.code !== code)
+    .filter((c) => {
+      const names = [c.name, ...(ctx.names.find((n) => same(n.code, c.code))?.demonym ?? [])];
+      return sentences.some((s) => namedIn(s, names));
+    })
+    .map((c) => c.code);
 }
 
 /** The clue's lookalikes and the countries it "differs" from, as pool codes. */
@@ -199,8 +226,8 @@ const closeCodes = (clue: Clue, pool: PoolCountry[]) =>
 
 /**
  * Other pool countries in distractor order: the clue's lookalikes and "differs" countries, then
- * same-continent countries that have a clue of the same family, then the rest of the continent,
- * then everywhere else. Each tier is shuffled by `seed`; no country appears twice, and countries
+ * same-subregion countries (Western Asia, South America) with a clue of the same family, the rest
+ * of the subregion, then the same two tiers for the continent, then everywhere else. Each tier is shuffled by `seed`; no country appears twice, and countries
  * where the clue looks the same (sameAs) are left out. `close` counts the first tier.
  */
 function rankOthers(
@@ -222,9 +249,19 @@ function rankOthers(
   // ruled out at a glance, and the answer is got without knowing the clue
   const minor = (c: PoolCountry) => !isCommon(c.code);
   const rest = others.filter((c) => !lookalikes.includes(c) && (minor(self) || !minor(c)));
-  const near = rest.filter((c) => c.continent === self.continent);
+  const region = subregionOf(self.code);
+  const neighbours = rest.filter((c) => region && subregionOf(c.code) === region);
+  const near = rest.filter((c) => c.continent === self.continent && !neighbours.includes(c));
   const kept = new Set([...lookalikes, ...rest]);
   const tiers = [
+    seededShuffle(
+      neighbours.filter((c) => sharing.has(c.code)),
+      `${seed}:region-family`,
+    ),
+    seededShuffle(
+      neighbours.filter((c) => !sharing.has(c.code)),
+      `${seed}:region`,
+    ),
     seededShuffle(
       near.filter((c) => sharing.has(c.code)),
       `${seed}:family`,
@@ -297,6 +334,10 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   // distinct example photos only, at most MAX_SPOT_PER_CLUE: comparison and annotated pictures,
   // duplicates and uncropped giveaways stay in Learn and on the answer screen
   const usable = quizImages(clue);
+  // a clue that cannot tell the country apart is only asked about inside the country (its map)
+  if (!decidesCountry(clue, lookTheSame(clue, country.code, ctx).size)) {
+    return cardsOnMap(clue, country, base, usable);
+  }
 
   // Spot it: one per image a drill may show
   for (const image of usable) {
@@ -355,19 +396,7 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     }
   }
 
-  // Where in the country: a regional clue is also asked at its own level, on the country's map,
-  // so "Bollard: white rectangle on top" is learnt as Oregon and not only as the US
-  if (clue.regionCode && first) {
-    cards.push({
-      ...base,
-      id: clueCardIds.where(clue.id),
-      type: 'region',
-      map: country.code.toLowerCase(),
-      answer: clue.regionCode,
-      prompt: { kind: 'text', value: clue.title },
-      clue: { id: clue.id, image: first },
-    });
-  }
+  cards.push(...cardsOnMap(clue, country, base, usable));
 
   // Live view: the official Street View spots the clue links to
   clue.locations.forEach((location, index) => {
@@ -392,7 +421,12 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     const leaks = (text: string) => namesCountry(text, country, names, { code: false });
     // the reviewed plain-language summary when it does not name the country, else the text's
     const summary = clue.summary && !leaks(clue.summary) ? clue.summary.trim() : clueSummary(clue);
-    if (summary && !leaks(clue.text.map(plainText).join(' ')) && !leaks(summary)) {
+    if (
+      summary &&
+      !leaks(clue.text.map(plainText).join(' ')) &&
+      !leaks(summary) &&
+      fairQuestion(summary, clue, lookTheSame(clue, country.code, ctx).size)
+    ) {
       const id = clueCardIds.text(clue.id);
       const { options, pool } = countryOptions(country, clue, ctx, id, summary);
       cards.push({
@@ -408,6 +442,73 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
     }
   }
   return cards;
+}
+
+/** Clue quiz questions longer than this read as a paragraph, not a question. */
+const QUIZ_MAX_CHARS = 140;
+/** Advice on how to play, not a feature of a country ("…can help you narrow down…"). */
+const ADVICE = /\b(can help|help you|narrow (it )?down|is a good clue|are a good clue|useful)\b/i;
+/** Counted trivia ("124 places end in -roth"): the number is not the lesson. */
+const COUNTED = /\b\d+ (places|towns|villages|cities)\b/i;
+/** A clue shared by more countries than this does not decide "which country". */
+const MAX_SHARED = 3;
+/** A clue shared by more countries than this cannot be answered from its text alone. */
+const QUIZ_MAX_SHARED = MAX_SHARED;
+
+/**
+ * Whether a text clue makes a fair Clue quiz question: short, shared by few countries, and naming
+ * no place inside the country ("…in the west coast state (Gujarat)" gives India away).
+ */
+function fairQuestion(summary: string, clue: Clue, shared: number): boolean {
+  if (summary.length > QUIZ_MAX_CHARS || shared > QUIZ_MAX_SHARED) return false;
+  if (/\(/.test(summary) || ADVICE.test(summary) || COUNTED.test(summary)) return false;
+  return !clue.region || !fold(summary).includes(fold(clue.region));
+}
+
+/** What every card made from one clue shares. */
+type ClueCardBase = Pick<Card, 'country' | 'tags' | 'source'> & Partial<Card>;
+
+/**
+ * Where in the country: a regional clue is also asked at its own level, on the country's map,
+ * so "Bollard: white rectangle on top" is learnt as Oregon and not only as the US.
+ */
+function cardsOnMap(
+  clue: Clue,
+  country: PoolCountry,
+  base: ClueCardBase,
+  usable: ClueImage[],
+): Card[] {
+  const first = usable[0];
+  if (!clue.regionCode || !first) return [];
+  // title and summary only: the shipped catalogue loads the full text later
+  if (namesOtherRegions(`${clue.title} ${clue.summary ?? ''}`)) return [];
+  return [
+    {
+      ...base,
+      id: clueCardIds.where(clue.id),
+      type: 'region',
+      map: country.code.toLowerCase(),
+      answer: clue.regionCode,
+      prompt: { kind: 'text', value: clue.title },
+      clue: { id: clue.id, image: first },
+    },
+  ];
+}
+
+/** Clues the source itself calls rare: true, but not what tells a country apart. */
+const RARE =
+  /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
+
+/** Whether the source itself says a clue is rare, or it describes one spot (a road, a town). */
+export const isRareClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>
+  RARE.test(`${clue.title} ${clue.summary ?? ''}`);
+
+/**
+ * Whether a clue can decide "which country?": not one the source calls rare, and not one that
+ * looks the same in more than a few other countries.
+ */
+function decidesCountry(clue: Clue, shared: number): boolean {
+  return shared <= MAX_SHARED && !isRareClue(clue);
 }
 
 /** A clue with its Street View spots: its own locations and those of its images. */

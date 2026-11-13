@@ -94,9 +94,16 @@ export function gradeAnswer(answer: {
   usedHint: boolean;
   msTaken: number;
   medianMs: number;
+  /** the options shown (0 or absent for a typed answer) */
+  choices?: number;
+  /** asked again in the same session, minutes after its answer was shown */
+  retry?: boolean;
 }): Grade {
   if (!answer.correct) return 'again';
   if (answer.usedHint) return 'hard';
+  // a quick right pick out of two is as likely a guess as a sure answer, and a card re-asked
+  // minutes after its answer is short-term memory: neither is "easy"
+  if ((answer.choices && answer.choices <= 2) || answer.retry) return 'good';
   if (answer.msTaken < FAST_MS || answer.msTaken < answer.medianMs * FAST_SHARE) return 'easy';
   return 'good';
 }

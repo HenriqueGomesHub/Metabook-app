@@ -573,3 +573,22 @@
   object-fit: cover;
   border-radius: 2px;
 }
+
+.clue-credit.compact {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reveal-source {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--faint);
+}
+
+/* phones: the photo stays in view above the panel, so the panel drops its thumbnails */
+@media (max-width: 899.98px) {
+  .reveal-clue .clue-images {
+    display: none;
+  }
+}

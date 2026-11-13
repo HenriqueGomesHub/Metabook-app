@@ -14,6 +14,7 @@ import { Drills } from './Drills';
 import { Login } from './Login';
 import { Round } from './Round';
 import { Session } from './Session';
+import { possessive } from './session/verdict';
 
 // The app's content with the test catalogue: Poland, Czechia, Slovakia, Germany, Ukraine, Brazil.
 vi.mock('../data/content', async (importOriginal) => {
@@ -129,7 +130,7 @@ describe('Clue cards in practice', () => {
     mount(`/session?subject=bollard&type=live`);
     expect(await screen.findByTitle('Street View')).toBeTruthy();
     expect(screen.getByTestId('live-shield')).toBeTruthy();
-    expect(screen.getByText('Location hidden')).toBeTruthy();
+    expect(screen.getByTestId('live-cover')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Poland/ }));
     const dialog = await screen.findByRole('dialog', { name: 'Got it' });
     expect(screen.queryByTestId('live-shield')).toBeNull();
@@ -158,14 +159,16 @@ describe('Clue cards in practice', () => {
     const wrong = images.find((f) => f.src !== which.clue!.image!.src)!;
     const picked = all.find((c) => c.image.src === wrong.src)!.country;
     fireEvent.click(wrong.button);
-    const dialog = await screen.findByRole('dialog', { name: 'Not quite — it’s the marked image' });
     const names: Record<string, string> = {
       CZ: 'Czechia',
       SK: 'Slovakia',
       DE: 'Germany',
       UA: 'Ukraine',
     };
-    expect(within(dialog).getByText(`You picked ${names[picked]}’s bollard`)).toBeTruthy();
+    const dialog = await screen.findByRole('dialog', {
+      name: `Not quite — that’s ${possessive(names[picked] as string)} bollard`,
+    });
+    expect(within(dialog).getByText('Poland’s is marked in green')).toBeTruthy();
     await waitFor(() =>
       expect(repo.reviews[0]).toMatchObject({ cardId: which.id, correct: false }),
     );

@@ -137,3 +137,18 @@ describe('Today', () => {
     expect(screen.getByRole('link', { name: /Start session/ })).toBeTruthy();
   });
 });
+
+describe('A missed clue card', () => {
+  it('shows how to spot the picked country’s own clue of that family', async () => {
+    mount('/session?country=AL&type=spot');
+    await screen.findByText('Which country?');
+    const wrong = [...document.querySelectorAll<HTMLButtonElement>('.options .opt')].find(
+      (o) => !/Albania/.test(o.textContent ?? ''),
+    ) as HTMLButtonElement;
+    const picked = (wrong.textContent ?? '').replace(/^\d/, '').trim();
+    fireEvent.click(wrong);
+    const dialog = await screen.findByRole('dialog', { name: /Not quite/ });
+    const noun = picked === 'Greece' ? 'Greece’s' : `${picked}’s`;
+    expect(within(dialog).getByText(`How to spot ${noun} bollards`)).toBeTruthy();
+  });
+});

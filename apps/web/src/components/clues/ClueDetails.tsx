@@ -57,6 +57,7 @@ export function ClueDetails({
   teachSame = false,
   lead: showLead = true,
   onMore,
+  credit = true,
   children,
 }: {
   clue: Clue;
@@ -72,6 +73,8 @@ export function ClueDetails({
    * "More detail" a button calling this, which opens the whole clue
    */
   onMore?(): void;
+  /** false where the source is credited beside it (the answer panel's label line) */
+  credit?: boolean;
   children?: ReactNode;
 }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -79,6 +82,11 @@ export function ClueDetails({
   const lead = clueLead(clue, text);
   const shown = distinctImages(clue.images);
   const sameAs = clue.sameAs ?? [];
+  // the answer panel does not repeat countries its lead already names ("Common in Kazakhstan too.")
+  const sameShown =
+    onMore && lead
+      ? sameAs.filter((code) => !lead.lead.includes(label(code.toUpperCase())))
+      : sameAs;
   const differs = clue.differs ?? [];
   const sameCodes = new Set(sameAs.map((code) => code.toUpperCase()));
   const differCodes = new Set(differs.map((d) => d.country.toUpperCase()));
@@ -100,12 +108,12 @@ export function ClueDetails({
       ) : (
         text === undefined && <p className="clue-summary clue-text-loading">Loading…</p>
       )}
-      {(sameAs.length > 0 || differs.length > 0) && (
+      {(sameShown.length > 0 || differs.length > 0) && (
         <ul className="clue-compare">
-          {sameAs.length > 0 && (
+          {sameShown.length > 0 && (
             <li className="clue-same">
               <span className="clue-compare-label">Looks the same in</span>{' '}
-              <CountryList codes={sameAs} title="Looks the same in" />
+              <CountryList codes={sameShown} title="Looks the same in" />
               {teachSame && (
                 <span className="clue-compare-note">
                   {' '}
@@ -163,7 +171,7 @@ export function ClueDetails({
           ))}
         </p>
       )}
-      <Credit credit={clue.credit} />
+      {credit && <Credit credit={clue.credit} compact={Boolean(onMore)} />}
       {children}
       {open !== null && (
         <Lightbox

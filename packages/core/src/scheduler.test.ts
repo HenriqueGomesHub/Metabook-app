@@ -99,6 +99,21 @@ describe('gradeAnswer', () => {
     expect(gradeAnswer({ ...base, msTaken: 2999, medianMs: 2000 })).toBe('easy');
     expect(gradeAnswer({ ...base, msTaken: 3000, medianMs: 2000 })).toBe('good');
   });
+
+  it('never grades a same-session retry as easy', () => {
+    expect(
+      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, retry: true }),
+    ).toBe('good');
+  });
+
+  it('never grades a quick pick out of two as easy', () => {
+    expect(
+      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, choices: 2 }),
+    ).toBe('good');
+    expect(
+      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, choices: 4 }),
+    ).toBe('easy');
+  });
 });
 
 describe('retrievability', () => {

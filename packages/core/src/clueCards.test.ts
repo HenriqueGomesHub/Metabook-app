@@ -16,6 +16,8 @@ import {
   plainText,
   regionMatches,
   streetViewEmbedUrl,
+  isGalleryClue,
+  isRareClue,
 } from './clueCards';
 import { clueCardIds, primaryCardId } from './clues';
 import { isClueCard } from './generate';
@@ -203,5 +205,44 @@ describe('where in the country', () => {
 
   it('makes no map card for a clue without a region code', () => {
     expect(cards.some((c) => c.id.endsWith(':where'))).toBe(false);
+  });
+});
+
+describe('isGalleryClue', () => {
+  it('knows a gallery by its title or its generated summary', () => {
+    expect(isGalleryClue({ title: 'Bollard: more examples' })).toBe(true);
+    expect(
+      isGalleryClue({
+        title: 'Give way sign: design',
+        summary: 'Give way signs you can see here.',
+      }),
+    ).toBe(true);
+    expect(
+      isGalleryClue({
+        title: 'Speed sign: design',
+        summary: 'Speed limit signs seen here: 20, 30.',
+      }),
+    ).toBe(true);
+    expect(
+      isGalleryClue({
+        title: 'Bollard: red cap',
+        summary: 'Red-capped bollards, seen mostly in the north.',
+      }),
+    ).toBe(false);
+  });
+});
+
+describe('isRareClue', () => {
+  it('knows clues the source calls rare and clues about one spot', () => {
+    expect(
+      isRareClue({ title: 'Bollard: Romania', summary: 'Bollards are fairly rare here.' }),
+    ).toBe(true);
+    expect(isRareClue({ title: 'Road: windy', summary: 'A skinny road with 28 hairpins.' })).toBe(
+      true,
+    );
+    expect(isRareClue({ title: 'Car', summary: 'Seen around one central town.' })).toBe(true);
+    expect(
+      isRareClue({ title: 'Bollard: red cap', summary: 'Red-capped bollards everywhere.' }),
+    ).toBe(false);
   });
 });

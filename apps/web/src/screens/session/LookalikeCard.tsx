@@ -35,7 +35,11 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
   return (
     <Stage
       main={
-        <div className="scene settle" style={{ '--ar': 16 / 9 } as React.CSSProperties}>
+        <div
+          // a line of text is a card sized to it, not a photo frame with one line in the middle
+          className={card.prompt.kind === 'text' ? 'scene settle clue-scene' : 'scene settle'}
+          style={{ '--ar': 16 / 9 } as React.CSSProperties}
+        >
           <Prompt
             prompt={card.prompt}
             revealed={outcome !== null}
@@ -45,7 +49,9 @@ export function LookalikeCard({ card, options, outcome, onAnswer, reveal }: Card
       }
       side={
         <>
-          <Question>Which one?</Question>
+          <Question>
+            {label(left, scope)} or {label(right, scope)}?
+          </Question>
           <div className="picks rise d2">
             {pick(left, 'left')}
             {pick(right, 'right')}

@@ -50,10 +50,13 @@ export function TypedAnswer({
       </div>
       {!outcome && (
         <div className="typed-help">
-          <span>
+          {/* the key hint means nothing on a touch screen: the arrow button is the way there */}
+          <span className="keys-only">
             <kbd>Enter</kbd> to answer
           </span>
-          <span aria-hidden="true">·</span>
+          <span className="keys-only" aria-hidden="true">
+            ·
+          </span>
           <button type="button" className="link" onClick={() => onAnswer('')}>
             I don’t know
           </button>

@@ -95,7 +95,7 @@ export function resolveCodes(entries: string[], pool: PoolCountry[]): string[] {
 
 /**
  * Other pool countries ordered for distractors: preferred (lookalikes) first, then the same
- * continent, then the rest; each group shuffled by `seed`.
+ * subregion, the same continent, then the rest; each group shuffled by `seed`.
  */
 function rankCountries(
   self: PoolCountry,
@@ -107,9 +107,15 @@ function rankCountries(
   const others = pool.filter((c) => c.in_pool && c.code !== self.code && allowed(c));
   const first = preferred.flatMap((code) => others.filter((c) => c.code === code));
   const rest = others.filter((c) => !first.includes(c));
-  const near = rest.filter((c) => c.continent === self.continent);
+  const region = subregionOf(self.code);
+  const neighbours = rest.filter((c) => region && subregionOf(c.code) === region);
+  const near = rest.filter((c) => c.continent === self.continent && !neighbours.includes(c));
   const far = rest.filter((c) => c.continent !== self.continent);
-  return [...new Set(first)].concat(seededShuffle(near, seed), seededShuffle(far, `${seed}:far`));
+  return [...new Set(first)].concat(
+    seededShuffle(neighbours, `${seed}:region`),
+    seededShuffle(near, seed),
+    seededShuffle(far, `${seed}:far`),
+  );
 }
 
 /**
@@ -280,7 +286,10 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
     if (where.length >= MIN_WHERE_CARDS) {
       for (const { note, state } of where) {
         const prompt = hideRegionName(note.text, state.name);
-        if (!prompt) continue;
+        // a sentence naming other regions too ("frequent in RS, RJ, MS") has more than one right
+        // answer on the map
+        const others = map.states.filter((s) => s.code !== state.code).map((s) => s.name);
+        if (!prompt || namesOtherRegions(prompt) || namedIn(prompt, others)) continue;
         cards.push({
           id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
           type: 'region',
@@ -350,7 +359,7 @@ const GENERIC_WORDS = new Set([
 
 /** "this area" used as a modifier or after "the" reads wrongly ("this area roads"). */
 const BROKEN_MASK =
-  /\bthe this area\b|\bthis area['’]s\b|\bthis area (state|province|region|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?)\b/i;
+  /\bthe this area\b|\bthis area['’]s\b|\bthis area (state|province|region|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?)\b|\b(\w+ern|far|central|upper|lower|north|south|east|west|inner|outer)\s+this area\b/i;
 
 /**
  * The pieces of a state name that give it away: the parts between " and ", " y ", " of ", "-",
@@ -394,3 +403,88 @@ export function hideRegionName(text: string, stateName: string): string | undefi
 function noteKey(id: string, lc: string): string {
   return id.startsWith(`${lc}:`) ? id.slice(lc.length + 1) : id;
 }
+
+// --- subregions ---------------------------------------------------------------------------------
+// (here, not in a module of their own: Node loads this file directly for the content tools, so it
+// has no runtime imports)
+
+/**
+ * The UN geoscheme subregion of each pool country, nudged where GeoGuessr sees it differently
+ * (Cyprus with southern Europe, Christmas and Cocos Islands with Australia). A continent is too
+ * wide to pick believable wrong answers from: Oman and Taiwan are both "Asia".
+ */
+const SUBREGIONS: Record<string, string[]> = {
+  'northern-europe': [
+    'AX',
+    'DK',
+    'EE',
+    'FI',
+    'FO',
+    'GB',
+    'IE',
+    'IM',
+    'IS',
+    'JE',
+    'LT',
+    'LV',
+    'NO',
+    'SE',
+    'SJ',
+  ],
+  'western-europe': ['AT', 'BE', 'CH', 'DE', 'FR', 'LI', 'LU', 'MC', 'NL'],
+  'southern-europe': [
+    'AD',
+    'AL',
+    'BA',
+    'CY',
+    'ES',
+    'GI',
+    'GR',
+    'HR',
+    'IT',
+    'ME',
+    'MK',
+    'MT',
+    'PT',
+    'RS',
+    'SI',
+    'SM',
+    'XK',
+  ],
+  'eastern-europe': ['BG', 'BY', 'CZ', 'HU', 'PL', 'RO', 'RU', 'SK', 'UA'],
+  'western-asia': ['AE', 'GE', 'IL', 'IQ', 'JO', 'LB', 'OM', 'QA', 'TR'],
+  'central-asia': ['KG', 'KZ'],
+  'southern-asia': ['BD', 'BT', 'IN', 'IO', 'LK', 'NP', 'PK'],
+  'south-eastern-asia': ['ID', 'KH', 'LA', 'MY', 'PH', 'SG', 'TH', 'VN'],
+  'eastern-asia': ['CN', 'HK', 'JP', 'KR', 'MN', 'MO', 'TW'],
+  'northern-africa': ['EG', 'TN'],
+  'western-africa': ['GH', 'ML', 'NG', 'SN'],
+  'eastern-africa': ['KE', 'MG', 'RE', 'RW', 'TZ', 'UG'],
+  'middle-africa': ['ST'],
+  'southern-africa': ['BW', 'LS', 'NA', 'SZ', 'ZA'],
+  'northern-america': ['BM', 'CA', 'GL', 'PM', 'US'],
+  caribbean: ['CW', 'DO', 'MQ', 'PR', 'VI'],
+  'central-america': ['CR', 'GT', 'MX', 'PA'],
+  'south-america': ['AR', 'BO', 'BR', 'CL', 'CO', 'EC', 'FK', 'GS', 'PE', 'PY', 'UY'],
+  'australia-new-zealand': ['AU', 'CC', 'CX', 'NZ'],
+  melanesia: ['VU'],
+  micronesia: ['GU', 'MP'],
+  polynesia: ['AS', 'PN'],
+};
+
+const BY_CODE = new Map(
+  Object.entries(SUBREGIONS).flatMap(([region, codes]) => codes.map((code) => [code, region])),
+);
+
+/** A country's subregion ("western-asia"), or undefined for a code not listed. */
+export const subregionOf = (code: string): string | undefined => BY_CODE.get(code.toUpperCase());
+
+/**
+ * Text placing a clue in more than one region ("also in Lleida", "this area and Pernambuco",
+ * "other French-minority areas"): a map question with one right region would mark a right pick
+ * wrong, so such clues are not asked on the map.
+ */
+export const namesOtherRegions = (text: string): boolean =>
+  /\balso\b|\bother\b[^.]*\b(areas|regions|states|provinces|parts)\b|\band this area\b|\bthis area,? and\b|\bas well as\b|\bfrequent in\b|\bcities\b|\bsuch as\b/i.test(
+    text,
+  );

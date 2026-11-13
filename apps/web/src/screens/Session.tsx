@@ -8,6 +8,8 @@ import {
   nextPracticeItem,
   normalizeAnswer,
   cardContext,
+  isGalleryClue,
+  isRareClue,
   pickTip,
   rankTips,
   sameTip,
@@ -19,6 +21,7 @@ import {
 import type {
   Card,
   CardState,
+  Clue,
   CardType,
   MetaSubject,
   Tip,
@@ -40,6 +43,7 @@ import { Chip, CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
+import { clueIndex } from '../data/clueIndex';
 import { optionsFor } from './session/options';
 import { isMemoriseAreaCode } from '../data/areaCodes';
 import { preloadClueImages } from '../data/clueImages';
@@ -50,7 +54,7 @@ import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
-import { verdictFor } from './session/verdict';
+import { possessive, verdictFor } from './session/verdict';
 import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
 import { ScanCard } from './session/ScanCard';
@@ -217,7 +221,10 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
           return { ...item, mode: modeFor(card, data.states[card.id]) };
         })()
       : item;
-  const retriesLeft = queue.slice(index + 1).filter((q) => q.retry).length;
+  // the session's own cards set the total; a missed card asked again shows "Again" instead of
+  // moving the finish line back
+  const total = queue.filter((q) => !q.retry).length;
+  const done = Math.min(total, queue.slice(0, index + 1).filter((q) => !q.retry).length);
 
   return (
     <CardRunner
@@ -250,18 +257,10 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
         ) : (
           <div className="session-bar rise">
             <CloseButton to="/" label="Leave session" confirm={index > 0} />
-            <ProgressBar
-              value={index + 1}
-              max={queue.length}
-              label={`Card ${index + 1} of ${queue.length}`}
-            />
-            {item.retry ? (
-              <span className="session-retry">Again</span>
-            ) : (
-              retriesLeft > 0 && <span className="session-retry">{retriesLeft} to retry</span>
-            )}
+            <ProgressBar value={done} max={total} label={`Card ${done} of ${total}`} />
+            {item.retry && <span className="session-retry">Again</span>}
             <span className="session-count">
-              {index + 1} / {queue.length}
+              {done} / {total}
             </span>
           </div>
         )
@@ -277,6 +276,9 @@ interface PracticeFlow {
   /** drawn once the current item is answered, so its image can preload during the reveal */
   upcoming?: { item: SessionItem; practice: PracticeState };
 }
+
+/** Cards in one round of practice: a drill ends on its summary after this many. */
+const PRACTICE_ROUND = 20;
 
 function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
   const { repo } = useAppData();
@@ -294,7 +296,9 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     return { ...nextPracticeItem(practice, data.states, now), step: 0 };
   });
   const [answers, setAnswers] = useState<Answer[]>([]);
-  const [startedAt] = useState(() => Date.now());
+  // practice runs in rounds of PRACTICE_ROUND cards, each ending on its summary
+  const [roundStart, setRoundStart] = useState(0);
+  const [startedAt, setStartedAt] = useState(() => Date.now());
   const [ended, setEnded] = useState(false);
   const back = backTo(data, scope);
   const freshAhead = (practice: PracticeState) => {
@@ -326,7 +330,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     return (
       <Summary
         kicker={`${scopeTitle(data, scope)} · done`}
-        answers={answers}
+        answers={answers.slice(roundStart)}
         cards={pool}
         startedAt={startedAt}
         progress={
@@ -334,7 +338,13 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
         }
         actions={
           <>
-            <Button onClick={() => setEnded(false)}>
+            <Button
+              onClick={() => {
+                setRoundStart(answers.length);
+                setStartedAt(Date.now());
+                setEnded(false);
+              }}
+            >
               Keep going
               <ArrowIcon />
             </Button>
@@ -347,8 +357,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     );
   }
 
-  const right = answers.filter((a) => a.correct).length;
-  const progress = practiceProgress(flow.practice);
+  const inRound = answers.length - roundStart;
 
   function onAnswered(correct: boolean, state?: CardState) {
     if (!flow) return;
@@ -370,8 +379,9 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     // The answer just recorded may have moved this card past multiple choice.
     const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
-    // one card has nothing else to draw: end at the summary instead of looping on it
-    if (pool.length === 1) setEnded(true);
+    // one card has nothing else to draw: end at the summary instead of looping on it; otherwise
+    // a round ends at its summary after PRACTICE_ROUND cards
+    if (pool.length === 1 || answers.length - roundStart >= PRACTICE_ROUND) setEnded(true);
   }
 
   /** An unanswerable card is passed over ungraded; it stays in the pool and comes back. */
@@ -395,23 +405,24 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       onAnswered={onAnswered}
       onNext={advance}
       onSkip={skip}
-      bar={() => (
-        <div className="session-bar rise">
-          <button type="button" className="chip" aria-label="End practice" onClick={endPractice}>
-            <CloseIcon />
-          </button>
-          <span className="practice-count" aria-live="polite">
-            {answers.length} answered
-            {answers.length > 0 && ` · ${Math.round((right / answers.length) * 100)}%`}
-          </span>
-          {pool.length > 1 && (
-            <span className="practice-learnt">
-              {progress.pass > 1 && `Pass ${progress.pass} · `}
-              {progress.learnt} / {progress.total.toLocaleString('en-US')} learnt
+      bar={({ outcome }) => {
+        const at = Math.min(PRACTICE_ROUND, inRound + (outcome ? 0 : 1));
+        return (
+          <div className="session-bar rise">
+            <button type="button" className="chip" aria-label="End practice" onClick={endPractice}>
+              <CloseIcon />
+            </button>
+            <ProgressBar
+              value={at}
+              max={PRACTICE_ROUND}
+              label={`Card ${at} of ${PRACTICE_ROUND}`}
+            />
+            <span className="session-count">
+              {at} / {PRACTICE_ROUND}
             </span>
-          )}
-        </div>
-      )}
+          </div>
+        );
+      }}
     />
   );
 }
@@ -419,6 +430,20 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
 interface Shown {
   tips: Tip[];
   aside: RevealProps['aside'];
+}
+
+/** "How to spot Chile’s bollards" with that clue's summary, for the reveal's aside. */
+function clueAside(name: string, clue: Clue): Shown['aside'] {
+  const text = clue.summary?.trim();
+  if (!text || isGalleryClue(clue)) return undefined;
+  return {
+    label: `How to spot ${possessive(name)} ${SUBJECTS[clue.family].label.toLowerCase()}`,
+    tip: {
+      tip: { id: `clue:${clue.id}`, answer: name, scope: 'clue', text, source: clue.credit.url },
+      index: 0,
+      total: 1,
+    },
+  };
 }
 
 /** One card from prompt to reveal; the parent decides what comes next. */
@@ -474,12 +499,14 @@ function CardRunner({
     const key = card.type === 'which' ? label(card.country) : card.answer;
     const context = cardContext(card);
     const own = rankTips(tips, key, card.type, data.tipViews, context);
-    return own.length > 0 || card.type !== 'areacode'
+    // a patterned area code's reveal has its Pattern line ("9x = …"); the pattern tips only
+    // repeat it, so they are shown where there is no pattern line
+    return own.length > 0 || card.type !== 'areacode' || !isMemoriseAreaCode(card)
       ? own
       : rankTips(tips, card.id.replace(/:[^:]*$/, ':pattern'), card.type, data.tipViews, context);
   }
 
-  function showTips(asideKey: string | undefined) {
+  function showTips(asideKey: string | undefined, given?: string) {
     const tips = mainTips();
     const candidate = asideKey
       ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
@@ -490,10 +517,68 @@ function CardRunner({
     const name = asideKey && label(asideKey, scope);
     const aside: Shown['aside'] = asideTip
       ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
-      : undefined;
+      : (pickedAside(asideKey, given) ?? undefined);
     setShown({ tips, aside });
-    // the first tip is recorded by the reveal as it comes on screen
+    // the first tip is recorded by the reveal as it comes on screen; a picked clue is no tip
     if (asideTip) recordTipView(asideTip.tip.id);
+  }
+
+  /**
+   * On a missed clue card with no tip for the pick: the picked country's own clue of the same
+   * family ("How to spot Brazil’s bollards"), so the miss teaches the difference.
+   */
+  function pickedClue(pickedName: string): Shown['aside'] {
+    const clue = card.clue && clueIndex(data.content).byId.get(card.clue.id);
+    const code = data.content.pool.find((c) => c.name === pickedName)?.code;
+    if (!clue || !code) return undefined;
+    const candidates =
+      clueIndex(data.content)
+        .byCountry.get(code)
+        ?.clues.filter((c) => c.family === clue.family && !isGalleryClue(c) && c.summary?.trim()) ??
+      [];
+    // the one that says what to look for, not "fairly rare here"
+    const theirs = candidates.find((c) => !isRareClue(c)) ?? candidates[0];
+    return theirs ? clueAside(pickedName, theirs) : undefined;
+  }
+
+  /** What a miss teaches about the learner's pick, by card kind; undefined when nothing does. */
+  function pickedAside(asideKey: string | undefined, given: string | undefined): Shown['aside'] {
+    if (otherSide || !asideKey)
+      return card.type === 'which' && given ? pickedChoice(given) : undefined;
+    if (card.type === 'areacode') return pickedCodes(asideKey);
+    if (card.type === 'which' && given) return pickedChoice(given);
+    return card.clue ? pickedClue(asideKey) : undefined;
+  }
+
+  /** On a missed area code: the codes of the state the learner picked ("Acre: 68"). */
+  function pickedCodes(state: string): Shown['aside'] {
+    const codes = cards
+      .filter((c) => c.type === 'areacode' && c.country === card.country && c.answer === state)
+      .map((c) => c.prompt.value)
+      .sort();
+    if (codes.length === 0) return undefined;
+    const name = label(state, scope);
+    return {
+      label: `${possessive(name)} codes`,
+      tip: {
+        tip: {
+          id: `codes:${state}`,
+          answer: name,
+          scope: 'areacode',
+          text: codes.join(', '),
+          source: '',
+        },
+        index: 0,
+        total: 1,
+      },
+    };
+  }
+
+  /** On a missed Which clue card: the clue behind the picture the learner picked. */
+  function pickedChoice(imageId: string): Shown['aside'] {
+    const choice = card.clue?.choices?.find((c) => c.image.id === imageId);
+    const theirs = choice && clueIndex(data.content).byId.get(choice.clueId);
+    return choice && theirs ? clueAside(label(choice.country), theirs) : undefined;
   }
 
   function onAnswer(given: string) {
@@ -514,6 +599,8 @@ function CardRunner({
       // "Knew it" on a Refresh card is graded as a fast right answer ("easy")
       msTaken:
         item.mode === 'scan' && correct ? 1000 : Math.round(performance.now() - shownAt.current),
+      choices: item.mode === 'scan' ? undefined : options.length,
+      retry: item.retry,
       contrastPair: item.contrastPair,
     });
     setOutcome({ given, correct });
@@ -523,7 +610,7 @@ function CardRunner({
       onNext();
       return;
     }
-    showTips(otherSide ?? picked);
+    showTips(otherSide ?? picked, correct ? undefined : given);
   }
 
   const View =

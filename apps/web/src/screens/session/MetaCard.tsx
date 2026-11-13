@@ -29,11 +29,7 @@ export function MetaCard({ card, options, outcome, onAnswer, reveal }: CardProps
       }
       side={
         <>
-          {clue ? (
-            <Question kicker="Clue quiz">Which country?</Question>
-          ) : (
-            <Question>Where is this?</Question>
-          )}
+          {clue ? <Question>Which country?</Question> : <Question>Where is this?</Question>}
           <Options
             options={options}
             answer={card.answer}

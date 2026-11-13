@@ -29,9 +29,8 @@ export function LiveView({
       {locked && (
         <>
           <div className="live-shield" data-testid="live-shield" />
-          <div className="live-cover" aria-hidden="true">
-            Location hidden
-          </div>
+          {/* covers Street View's address box; nothing to read */}
+          <div className="live-cover" aria-hidden="true" data-testid="live-cover" />
         </>
       )}
     </div>

@@ -5,13 +5,11 @@ import { TypedAnswer } from './TypedAnswer';
 import type { CardProps } from './types';
 
 export function FlagCard({ card, mode, options, outcome, onAnswer, reveal }: CardProps) {
-  const ratio = card.prompt.ratio?.split(':');
   return (
     <Stage
       main={
         <figure className="flag-figure unfurl">
           <Prompt prompt={card.prompt} revealed={outcome !== null} alt="Flag to identify" />
-          {ratio && <figcaption>{ratio.join(' : ')}</figcaption>}
         </figure>
       }
       side={

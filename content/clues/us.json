@@ -3731,8 +3731,7 @@
       "id": "us-8jCA",
       "step": 1,
       "order": 42,
-      "family": "sign",
-      "kind": "direction",
+      "family": "guardrail",
       "title": "Guardrails: brown painted in national parks",
       "text": [
         "Guardrails, signs, and signposts are commonly painted a **medium brown colour** in US National Parks, which are often located in the west. Guardrails that are painted brown can be made out of both [wood](https://goo.gl/maps/syWa2BkK99zBRmzv5) and metal. [Rock walls](https://goo.gl/maps/bU1rFbRpVUP1LzRD7) can also sometimes be seen in place of guardrails.",
@@ -5383,7 +5382,7 @@
       "id": "us-7mOi",
       "step": 1,
       "order": 70,
-      "family": "bollard",
+      "family": "sign",
       "title": "Marker: small green and red bridge-end signs",
       "text": [
         "Maine, New Hampshire, and Massachusetts use **small green and red rectangular signs** to mark the ends of bridges and guardrails.",
@@ -5437,13 +5436,14 @@
         "url": "https://www.plonkit.net/united-states",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Small green and red rectangular signs mark the ends of bridges and guardrails in Maine, New Hampshire and Massachusetts, though not on every one."
+      "summary": "Small green and red rectangular signs mark the ends of bridges and guardrails in Maine, New Hampshire and Massachusetts, though not on every one.",
+      "kind": "other"
     },
     {
       "id": "us-TrbD",
       "step": 1,
       "order": 71,
-      "family": "bollard",
+      "family": "sign",
       "title": "Marker: yellow sign with black vertical triangles",
       "text": [
         "In Minnesota, these yellow signs with **vertical, black triangles** are placed before bridges at most major river crossings and at the beginnings and ends of guardrail sections on large highways."
@@ -5497,7 +5497,8 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In Minnesota, yellow signs with vertical black triangles mark most major river crossings and the start and end of guardrails on large highways.",
-      "regionCode": "MN"
+      "regionCode": "MN",
+      "kind": "other"
     },
     {
       "id": "us-5v2z",
@@ -11771,7 +11772,7 @@
       "id": "us-hi-o41E",
       "step": 6,
       "order": 11,
-      "family": "street",
+      "family": "line",
       "title": "Road line: reflector pattern 1-4-1",
       "text": [
         "**Raised pavement markers** in Hawaii will commonly be placed in a specific pattern: a single reflector, followed by four reflectors put close together and then a single reflector, repeating the pattern."
@@ -13668,7 +13669,7 @@
       "id": "us-lm-489977",
       "step": 9,
       "order": 229,
-      "family": "plate",
+      "family": "pole",
       "title": "Pole: vertical silver or gold plate at base",
       "text": [
         "In Rhode Island and Massachusetts, you’ll often find silver or gold-colored vertical plates near the base of utility poles."

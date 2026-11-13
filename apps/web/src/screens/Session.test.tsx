@@ -83,7 +83,8 @@ describe('Session', () => {
         .find((b) => !/Lithuania/.test(b.textContent ?? '')) as HTMLElement;
     fireEvent.click(wrong());
     fireEvent.keyDown(window, { key: ' ' });
-    expect(screen.getByText('2 / 2')).toBeTruthy();
+    // asked again without moving the finish line
+    expect(screen.getByText('1 / 1')).toBeTruthy();
     expect(screen.getByText('Again')).toBeTruthy();
 
     fireEvent.click(screen.getByRole('button', { name: /Lithuania/ }));
@@ -128,22 +129,26 @@ describe('Session', () => {
 });
 
 describe('Practice', () => {
-  it('never runs out: answers 30 items from a three-card pool and keeps a running score', async () => {
+  it('runs in rounds of 20 that end on a summary, and keeps going from a three-card pool', async () => {
     const repo = repoWith(0);
     renderApp('/session?type=flag', repo);
-    for (let i = 0; i < 30; i++) {
-      const dialog = screen.queryByRole('dialog');
-      expect(dialog).toBeNull();
+    const answerOne = async (n: number) => {
+      expect(screen.queryByRole('dialog')).toBeNull();
+      expect(await screen.findByText(`${n} / 20`)).toBeTruthy();
       const typed = screen.queryByLabelText('Which country?');
       if (typed) {
         fireEvent.click(screen.getByRole('button', { name: 'I don’t know' }));
       } else {
         fireEvent.click((await screen.findAllByRole('button', { name: /^\d/ }))[0] as HTMLElement);
       }
-      expect(await screen.findByText(new RegExp(`^${i + 1} answered`))).toBeTruthy();
-      fireEvent.click(within(screen.getByRole('dialog')).getByRole('button', { name: /Continue/ }));
-    }
-    expect(screen.queryByText(/· done$/)).toBeNull();
+      fireEvent.click(
+        within(await screen.findByRole('dialog')).getByRole('button', { name: /Continue/ }),
+      );
+    };
+    for (let i = 1; i <= 20; i++) await answerOne(i);
+    expect(await screen.findByText(/· done$/)).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: /Keep going/ }));
+    for (let i = 1; i <= 10; i++) await answerOne(i);
     await waitFor(() => expect(repo.reviews).toHaveLength(30));
   });
 
