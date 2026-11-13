@@ -50,8 +50,21 @@ export function tipRelevance(tip: Tip, context: string): number {
   for (const word of words(tip.text)) if (have.has(word)) score += 2;
   const shown = context.toLowerCase();
   for (const letter of namedLetters(tip.text)) if (shown.includes(letter)) score += 1;
+  // text in another script is a question about the script: the tip about letters goes first,
+  // never the driving side
+  if (NON_LATIN.test(context) && SCRIPT_TIP.test(tip.text)) score += 4;
+  // a code (94) is answered by the tip for its first digit ("9x is Pará…")
+  for (const code of context.match(/\b\d{2,4}\b/g) ?? []) {
+    if (new RegExp(`\\b${code[0]}x\\b`).test(tip.text)) score += 4;
+  }
   return score;
 }
+
+/** Letters of a script other than Latin (Cyrillic, Greek, Thai, Khmer, Hangul…). */
+const NON_LATIN = /[^\p{Script=Latin}\p{P}\p{S}\p{N}\s]/u;
+
+/** A tip about writing: letters, script, alphabet, characters, diacritics. */
+const SCRIPT_TIP = /script|letter|alphabet|character|diacritic|written|accent|spelling|word/i;
 
 /**
  * Every tip for an answer in the order to show them: the ones about what the card shows first

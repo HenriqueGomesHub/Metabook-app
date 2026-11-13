@@ -563,6 +563,33 @@ a.credit:hover {
     aspect-ratio: auto;
   }
 
+  /*
+   * the prompt keeps its place at the top from question to answer: centred, it jumped up when
+   * the answer panel took room below
+   */
+  .play-main {
+    align-items: flex-start;
+  }
+
+  /*
+   * a short prompt (a flag, a sign, a line of text) sits right above its question, so prompt,
+   * question and options read as one block in reach of the thumb, not a prompt at the top and
+   * options at the bottom with a void between
+   */
+  .play-main:has(> .flag-figure, > .pop-in, > .clue-scene) {
+    align-items: flex-end;
+  }
+
+  /* a text prompt stays the size of its text */
+  .play-main .scene.clue-scene {
+    height: auto;
+  }
+
+  .play-main .clue {
+    padding: 24px 20px;
+    font-size: 19px;
+  }
+
   .options .opt {
     height: 52px;
     padding: 0 16px;
@@ -582,20 +609,24 @@ a.credit:hover {
     gap: 10px;
   }
 
+  /*
+   * The reveal replaces the answer controls in the flow instead of covering the screen: the
+   * prompt above shrinks but stays visible, so the photo, grid or map can be looked at again.
+   */
+  .play-side.revealed .play-side-inner {
+    display: none;
+  }
+
   .reveal {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    max-height: 88dvh;
-    padding: 20px 16px 0;
-    border-radius: 24px 24px 0 0;
-    border-width: 1px 0 0;
+    position: static;
+    max-height: 62dvh;
+    padding: 16px 16px 0;
+    border-radius: 16px;
     background: var(--raise);
-    box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45);
     transform: none;
-    gap: 16px;
+    gap: 14px;
     animation-name: sheet-in;
-    z-index: 20;
+    animation-delay: 0s;
   }
 
   .reveal-head h2 {
@@ -603,16 +634,22 @@ a.credit:hover {
   }
 
   .reveal > .reveal-next {
-    margin-bottom: calc(16px + env(safe-area-inset-bottom));
+    margin-bottom: 16px;
     box-shadow: 0 -12px 12px var(--raise);
   }
 
-  /* Map card: code row first, map below */
-  .play-map {
+  .play {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  /* Map and photo-grid cards: the question first, the map or grid below */
+  .play-map,
+  .play-top {
     grid-template-rows: auto minmax(0, 1fr);
   }
 
-  .play-map .play-side {
+  .play-map .play-side,
+  .play-top .play-side {
     order: -1;
   }
 
@@ -665,7 +702,8 @@ a.credit:hover {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  width: min(100cqw, 100cqh * 1.33);
+  /* two rows of 4:3 tiles plus their name lines (about 72px in all) fit the height they get */
+  width: min(100cqw, (100cqh - 72px) * 1.33);
 }
 
 .photo-opt {
@@ -753,7 +791,8 @@ a.credit:hover {
 
 @media (max-width: 720px) {
   .play-main .photo-grid {
-    width: 100%;
+    /* full width, until the answer panel takes the room: then it shrinks to stay whole */
+    width: min(100cqw, (100cqh - 64px) * 1.33);
     gap: 8px;
   }
 
@@ -813,4 +852,19 @@ a.credit:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Reveal text is a glance, not a read: long parts stop at a few lines, the whole clue is a tap away */
+.reveal .clue-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.reveal-section .reveal-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

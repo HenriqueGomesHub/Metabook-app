@@ -24,6 +24,16 @@ export function ClueAnswer({ card }: { card: Card }) {
       <p className="reveal-family">
         <Icon name={clue.family} size={14} />
         {SUBJECTS[clue.family].label}
+        {/* the source sits on the label line; the licence is with the whole clue */}
+        <a
+          className="reveal-source"
+          href={clue.credit.url}
+          target="_blank"
+          rel="noreferrer noopener"
+          title={`${clue.credit.source} (${clue.credit.licence})`}
+        >
+          {clue.credit.source}
+        </a>
       </p>
       <ClueDetails
         clue={clue}
@@ -32,6 +42,7 @@ export function ClueAnswer({ card }: { card: Card }) {
         // the Clue quiz asked with the summary itself
         lead={!isClueCard(card)}
         onMore={() => setWhole(true)}
+        credit={false}
       />
       {whole && <ClueSheet clue={clue} onClose={() => setWhole(false)} />}
     </div>

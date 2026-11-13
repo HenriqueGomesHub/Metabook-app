@@ -36,6 +36,33 @@ describe('buildPlacement', () => {
     expect(buildPlacement(cards, 'AR', mulberry32(1))).toEqual([cards.at(-1)]);
   });
 
+  it('mixes in nearby countries so the answer is not always the country', () => {
+    const deck = [
+      ...cards,
+      ...Array.from({ length: 6 }, (_, i) => card(`ar-flag${i}`, 'flag', 'AR')),
+      ...Array.from({ length: 6 }, (_, i) => card(`uy-flag${i}`, 'flag', 'UY')),
+      ...Array.from({ length: 6 }, (_, i) => card(`ar-ddd${i}`, 'areacode', 'AR')),
+    ];
+    const test = buildPlacement(deck, 'BR', mulberry32(3), 12, ['AR', 'UY']);
+    expect(test).toHaveLength(12);
+    const decoys = test.filter((c) => c.country !== 'BR');
+    expect(decoys.length).toBe(5);
+    // only the country-level types the test asks about the country itself
+    expect(decoys.every((c) => c.type === 'flag')).toBe(true);
+  });
+
+  it('adds no decoys when the country has only regional cards', () => {
+    const regional = cards.filter((c) => c.type !== 'flag');
+    const test = buildPlacement(
+      [...regional, card('flag:ar', 'flag', 'AR')],
+      'BR',
+      mulberry32(3),
+      12,
+      ['AR'],
+    );
+    expect(test.every((c) => c.country === 'BR')).toBe(true);
+  });
+
   it('is deterministic for a seed', () => {
     expect(buildPlacement(cards, 'BR', mulberry32(9))).toEqual(
       buildPlacement(cards, 'BR', mulberry32(9)),

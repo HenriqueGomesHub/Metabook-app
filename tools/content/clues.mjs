@@ -463,6 +463,9 @@ const TITLE_FAMILY = Object.entries({
  */
 const LABEL_WORDS = new Set(['google car', 'coverage']);
 
+/** Families drilled on their own, where a clue in the wrong one makes a false question. */
+const NARROW = new Set(['bollard', 'pole', 'plate', 'guardrail', 'line']);
+
 /**
  * After review: a clue still in 'other' takes the family its reviewed title names ("Pole: thick
  * grey trapezoid"), and a car or coverage clue whose title leads with the other one ("Google car:
@@ -476,6 +479,16 @@ export function settleFamilies(countries) {
       if (!rest.length) continue;
       const word = lead.trim().toLowerCase();
       const named = TITLE_FAMILY.get(word);
+      // Drills of one narrow family (bollards, poles, plates, guardrails, lines) ask "Which is the
+      // X bollard?": a clue whose reviewed title names another family ("Pole plate: …" read as a
+      // plate, "Pole: wavy lamp posts" read as landscape) follows its title
+      if (named && named !== clue.family && (NARROW.has(named) || NARROW.has(clue.family))) {
+        clue.family = named;
+        if (named === 'sign') clue.kind = signKind(`${clue.title} ${clue.text.join(' ')}`);
+        else delete clue.kind;
+        report.fromTitle++;
+        continue;
+      }
       if (clue.family === 'other' && named) {
         clue.family = named;
         if (named === 'sign') clue.kind = signKind(`${clue.title} ${clue.text.join(' ')}`);

@@ -158,15 +158,10 @@ function Play({
             </svg>
             {chips ? 'Area codes' : `${name} · Area codes`}
           </span>
-          {cards.length > 0 && (
+          {medal && (
             <span className="medal-pill" title="Area-code mastery">
-              {medal && <Medal medal={medal} size={20} />}
-              {medal && (
-                <>
-                  <span className="cap">{medal}</span> ·{' '}
-                </>
-              )}
-              {pct(medalValue)}%
+              <Medal medal={medal} size={20} />
+              <span className="cap">{medal}</span> · {pct(medalValue)}%
             </span>
           )}
         </div>
@@ -323,7 +318,7 @@ function Play({
                     ? `Right: it also covers ${pickedState?.name ?? picked}`
                     : right
                       ? 'Exactly right'
-                      : `You picked ${pickedState?.name ?? picked}`}
+                      : `Not quite — you picked ${pickedState?.name ?? picked}`}
                 </p>
                 <h2 className="headline">
                   {(card.spans?.length ?? 0) >= 2 && unit === 'area'
@@ -344,22 +339,11 @@ function Play({
                   <dd>{fmt(result.points)}</dd>
                 </div>
               </dl>
-              {tip && (
-                <div>
-                  <TipBox label="The pattern" picked={tip} />
-                  <div className="ddd-tip-actions">
-                    <button type="button" className="link" onClick={() => showTip()}>
-                      Another tip
-                    </button>
-                  </div>
-                </div>
-              )}
-              <div>
-                <button type="button" className="cta" ref={nextRef} onClick={next}>
-                  {index + 1 < queue.length ? 'Next code' : 'See results'}
-                  <ArrowIcon />
-                </button>
-              </div>
+              {tip && <TipBox label="The pattern" picked={tip} />}
+              <button type="button" className="cta ddd-next" ref={nextRef} onClick={next}>
+                {index + 1 < queue.length ? 'Next code' : 'See results'}
+                <ArrowIcon />
+              </button>
             </div>
           )}
         </section>

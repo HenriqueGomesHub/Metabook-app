@@ -3,8 +3,9 @@ import './play.css';
 
 /**
  * One viewport-high layout for every card: the prompt fills `main`, the answer controls sit in
- * `side` (a right-hand column on desktop, below the prompt on phones). The reveal overlays `side`
- * and the controls under it fade out.
+ * `side` (a right-hand column on desktop, below the prompt on phones). The reveal takes `side`'s
+ * place; on phones the prompt shrinks above it but stays in view, so the learner can look back at
+ * what they answered. `map` and `top` put `side` above the prompt on phones (a map, a photo grid).
  */
 export function Stage({
   main,
@@ -15,7 +16,7 @@ export function Stage({
   main: ReactNode;
   side: ReactNode;
   reveal: ReactNode;
-  variant?: 'map';
+  variant?: 'map' | 'top';
 }) {
   return (
     <main className={variant ? `play play-${variant}` : 'play'}>

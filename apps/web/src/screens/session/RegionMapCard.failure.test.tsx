@@ -57,7 +57,7 @@ describe('RegionMapCard without its map', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Skip for now' }));
     // the only card in scope comes back, unanswered
     expect(await screen.findByRole('button', { name: 'Show the answer' })).toBeTruthy();
-    expect(screen.getByText('0 answered')).toBeTruthy();
+    expect(screen.getByText('1 / 20')).toBeTruthy();
     expect(r.reviews).toEqual([]);
     expect(r.cardStates).toEqual([]);
     expect(r.confusions).toEqual([]);

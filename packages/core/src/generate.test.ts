@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { generateCards, isClueCard, resolveRegion } from './generate';
+import {
+  generateCards,
+  hideRegionName,
+  isClueCard,
+  namesOtherRegions,
+  resolveRegion,
+} from './generate';
 import type { CountryFacts, FactNote, PoolCountry, RegionMapNames } from './types';
 
 const country = (code: string, name: string, continent: PoolCountry['continent'] = 'europe') => ({
@@ -280,5 +286,19 @@ describe('hideRegionName', () => {
       expect(hideRegionName(`Texas ${word} has it.`, 'Texas')).toBeUndefined();
     }
     expect(hideRegionName('Texas has it.', 'Texas')).toBe('This area has it.');
+  });
+});
+
+describe('map questions with one right region', () => {
+  it('sees text placing a clue in several regions', () => {
+    expect(namesOtherRegions('Also in Lleida and Tarragona.')).toBe(true);
+    expect(namesOtherRegions('Most common here; frequent in RS, RJ, MS.')).toBe(true);
+    expect(namesOtherRegions('Common in this area and Pernambuco.')).toBe(true);
+    expect(namesOtherRegions('Yellow poles are common in this area.')).toBe(false);
+  });
+
+  it('drops a sentence whose region name was masked mid-phrase', () => {
+    expect(hideRegionName('Only in far northwestern Lapland.', 'Lapland')).toBeUndefined();
+    expect(hideRegionName('Reindeer roam Lapland.', 'Lapland')).toBe('Reindeer roam this area.');
   });
 });

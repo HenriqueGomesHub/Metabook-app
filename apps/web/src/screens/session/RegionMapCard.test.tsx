@@ -59,7 +59,8 @@ describe('RegionMapCard', () => {
       name: 'Not quite — it’s Masovian Voivodeship',
     });
     expect(within(dialog).getByText('You said Opole Voivodeship')).toBeTruthy();
-    expect(within(dialog).getByText('Concrete poles with holes. (MZ)')).toBeTruthy();
+    // the verdict names the state; the reason does not repeat it in brackets
+    expect(within(dialog).getByText('Concrete poles with holes.')).toBeTruthy();
     // the pick, the answer and the line between them; the map locks
     expect(map.querySelector('.ddd-state.pick')?.getAttribute('aria-label')).toBe(
       'Opole Voivodeship',

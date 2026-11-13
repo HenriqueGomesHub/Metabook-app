@@ -58,6 +58,10 @@ export interface AnswerInput {
   /** the answer the learner confused this card with, when known */
   picked?: string;
   msTaken: number;
+  /** how many options were shown (0 for a typed answer) */
+  choices?: number;
+  /** a missed card asked again in the same session */
+  retry?: boolean;
   contrastPair?: [string, string];
   /** a grade the learner chose (Saw it / Missed it after a round), instead of one from the answer */
   grade?: Grade;
@@ -216,6 +220,8 @@ export function AppDataProvider({
           usedHint: false,
           msTaken: input.msTaken,
           medianMs: medianMs(data.reviews, data.content.cards, card.type),
+          choices: input.choices,
+          retry: input.retry,
         });
       const state = applyReview(
         data.states[card.id] ?? newCardState(card.id, now),

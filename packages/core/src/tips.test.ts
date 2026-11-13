@@ -128,3 +128,29 @@ describe('sameTip', () => {
     expect(sameTip(t('Thailand drives on the left.'), t('Cambodian plates are blue.'))).toBe(false);
   });
 });
+
+describe('tip relevance by what the card shows', () => {
+  const khmer = [
+    {
+      ...tip('drive', 'lookalike', 'Cambodia'),
+      text: 'Cambodia drives on the right; Thailand drives on the left.',
+    },
+    {
+      ...tip('script', 'lookalike', 'Cambodia'),
+      text: 'Khmer script stacks subscript consonants and looks more ornate than Thai.',
+    },
+  ];
+  it('puts the script tip first for a sign in another script', () => {
+    expect(rankTips(khmer, 'Cambodia', 'lookalike', [], 'Sign: ភ្នំពេញ')[0]?.id).toBe('script');
+  });
+
+  it('puts the tip for a code’s first digit first', () => {
+    const ddd = [
+      '1x is São Paulo, 2x is Rio.',
+      '4x covers Paraná, 5x is Rio Grande do Sul.',
+      '7x is Bahia, 9x is Pará.',
+    ].map((text, i) => ({ ...tip(`t${i}`, 'areacode', 'ddd:br:pattern'), text }));
+    expect(rankTips(ddd, 'ddd:br:pattern', 'areacode', [], '94')[0]?.id).toBe('t2');
+    expect(rankTips(ddd, 'ddd:br:pattern', 'areacode', [], '51')[0]?.id).toBe('t1');
+  });
+});

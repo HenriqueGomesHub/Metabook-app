@@ -59,13 +59,14 @@ export function Reveal({
         </div>
         {why && <p className="reveal-why">{why}</p>}
         {tips.length > 0 && <TipPager tips={tips} onShown={onTipShown} />}
+        {extra}
+        {/* the other option comes after everything about the answer */}
         {aside && (
           <section className="reveal-section" aria-label={aside.label}>
             <p className="reveal-label">{aside.label}</p>
             <p className="reveal-text">{aside.tip.tip.text}</p>
           </section>
         )}
-        {extra}
       </div>
       <Button className="reveal-next" onClick={onNext} autoFocus>
         {nextLabel}
@@ -80,6 +81,9 @@ export function Reveal({
  * tips (dots show how many); with a mouse, arrows sit at the box's edges. Left and right arrow
  * keys page too.
  */
+/** Past this many tips, dots stop saying anything: the count alone shows where you are. */
+const MAX_DOTS = 5;
+
 function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) {
   const [at, setAt] = useState(0);
   const tip = tips[Math.min(at, tips.length - 1)] as Tip;
@@ -150,7 +154,7 @@ function TipPager({ tips, onShown }: { tips: Tip[]; onShown?(tip: Tip): void }) 
           </button>
         )}
       </div>
-      {many && (
+      {many && tips.length <= MAX_DOTS && (
         <span className="tip-dots" aria-hidden="true">
           {tips.map((t, i) => (
             <span key={t.id} className={i === at ? 'on' : undefined} />

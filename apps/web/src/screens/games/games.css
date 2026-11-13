@@ -252,3 +252,30 @@
     animation: none;
   }
 }
+
+.ddd-next {
+  width: 100%;
+  justify-content: center;
+}
+
+/* phones: the country picker takes the row beside the X, nothing stranded on one side */
+@media (max-width: 640px) {
+  .ddd-title {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .ddd-country,
+  .ddd-country select {
+    width: 100%;
+  }
+
+  .ddd-country {
+    flex: 1;
+  }
+
+  /* the picker already names the country; the "Area codes" label beside it repeats the page */
+  .ddd-country + span {
+    display: none;
+  }
+}

@@ -34,7 +34,11 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
       const state = data.states[card.id];
       return !state || state.state === 'new';
     });
-    return buildPlacement(untouched, code, Math.random, TEST_SIZE);
+    const continent = data.content.pool.find((c) => c.code === code)?.continent;
+    const near = data.content.pool
+      .filter((c) => c.in_pool && c.continent === continent)
+      .map((c) => c.code);
+    return buildPlacement(untouched, code, Math.random, TEST_SIZE, near);
   });
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
@@ -68,7 +72,9 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
     setOutcome(null);
     setResults(done);
     if (done.length === cards.length) {
-      addCardStates(applyPlacement(done, new Date(), data.settings.desiredRetention));
+      // other countries' cards only test the learner; they seed nothing
+      const own = done.filter((r) => cards.find((c) => c.id === r.cardId)?.country === code);
+      addCardStates(applyPlacement(own, new Date(), data.settings.desiredRetention));
     }
   }
 
@@ -98,13 +104,14 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   }
 
   if (!card) {
-    const marked = results.filter((r) => r.correct).length;
+    const own = results.filter((r) => cards.find((c) => c.id === r.cardId)?.country === code);
+    const marked = own.filter((r) => r.correct).length;
     return (
       <main className="placement">
         <div className="placement-result rise">
           <p className="kicker">Placement test · {name}</p>
           <h1 className="headline">
-            Marked {marked} of {cards.length} as known
+            Marked {marked} of {own.length} as known
           </h1>
           <p className="muted">The rest start from scratch in your normal sessions.</p>
         </div>

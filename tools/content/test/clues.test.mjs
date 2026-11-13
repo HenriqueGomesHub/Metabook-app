@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { describe, it } from 'node:test';
 import {
   buildClues,
+  settleFamilies,
   classify,
   clueTitle,
   countryLookup,
@@ -231,4 +232,22 @@ describe('writeClues', () => {
     assert.equal(row.clues, again.clues.length);
     assert.equal(Object.values(row.families).reduce((a, b) => a + b, 0), row.clues);
   });
+});
+
+it('settleFamilies files a narrow-family clue by its reviewed title', () => {
+  const country = {
+    clues: [
+      { title: 'Pole plate: round-cornered', family: 'plate', text: [] },
+      { title: 'Plate: yellow rear', family: 'plate', text: [] },
+      { title: 'Pole: wavy lamp posts', family: 'landscape', text: [] },
+      { title: 'Plants: tea hedges', family: 'pole', text: [] },
+      { title: 'Landscape: sugarcane fields', family: 'vegetation', text: [] },
+    ],
+  };
+  settleFamilies([country]);
+  assert.deepEqual(
+    country.clues.map((c) => c.family),
+    // the last one is left alone: neither family is drilled as "Which is the X …?"
+    ['pole', 'plate', 'pole', 'vegetation', 'vegetation'],
+  );
 });

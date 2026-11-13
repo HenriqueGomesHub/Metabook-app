@@ -10,7 +10,20 @@ export function verdictFor(
   item: Pick<SessionItem, 'mode' | 'contrastPair'>,
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail' | 'why'> {
-  return { ...baseVerdict(card, item, outcome), why: card.explain };
+  return { ...baseVerdict(card, item, outcome), why: whyFor(card) };
+}
+
+/**
+ * The card's reason as shown. A where card's `explain` ends with its state in brackets for
+ * stateNameFrom; the verdict already names the state, so the bracket is not repeated.
+ */
+function whyFor(card: Card): string | undefined {
+  const state = card.map ? stateNameFrom(card.explain) : undefined;
+  if (!state || !card.explain) return card.explain;
+  return card.explain
+    .trimEnd()
+    .slice(0, -(state.length + 2))
+    .trimEnd();
 }
 
 /**
@@ -81,11 +94,21 @@ function whichVerdict(
   const country = label(card.country);
   if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: country };
   const picked = card.clue?.choices?.find((c) => c.image.id === outcome.given);
-  if (!picked) return { verdict: `It’s the marked image`, tone: 'neutral', detail: country };
   const noun = card.subject ? SUBJECT_NOUNS[card.subject] : 'clue';
+  // the grid marks the right picture green; the verdict says whose each one is
+  if (!picked) {
+    return {
+      verdict: `It’s ${possessive(country)} ${noun}`,
+      tone: 'neutral',
+      detail: 'Marked in green',
+    };
+  }
   return {
-    verdict: 'Not quite — it’s the marked image',
+    verdict: `Not quite — that’s ${possessive(label(picked.country))} ${noun}`,
     tone: 'wrong',
-    detail: `You picked ${label(picked.country)}’s ${noun}`,
+    detail: `${possessive(country)} is marked in green`,
   };
 }
+
+/** "Spain’s", "United States’": a name ending in s takes the apostrophe alone. */
+export const possessive = (name: string): string => (/s$/i.test(name) ? `${name}’` : `${name}’s`);

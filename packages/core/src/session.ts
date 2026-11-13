@@ -198,7 +198,8 @@ export function interleave(cards: Card[]): Card[] {
  * Cards a contrast round can ask: country-level ones. States, regions and area codes are told apart
  * in their drills; the daily session teaches countries.
  */
-const isCountryLevel = (card: Card) =>
+/** A card whose answer is a country (not a state, region or area code). */
+export const isCountryLevel = (card: Card) =>
   !card.map && card.type !== 'areacode' && card.type !== 'region' && card.type !== 'which';
 
 /**

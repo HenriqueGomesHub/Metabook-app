@@ -60,7 +60,7 @@ const repo = (newPerDay = 1) => {
 };
 
 describe('Session reveal', () => {
-  it('answers area codes on the map and falls back to the pattern tip', async () => {
+  it('answers area codes on the map and shows the pattern line, not the pattern tips', async () => {
     const r = repo();
     renderApp('/session?type=areacode', r);
     await screen.findByRole('group', { name: 'Map of Brazil with state borders' });
@@ -70,9 +70,10 @@ describe('Session reveal', () => {
       answer.answer
     ] as string;
     fireEvent.click(screen.getByRole('button', { name }));
-    expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
-    expect(screen.getByText('Tip p1')).toBeTruthy();
-    expect(screen.queryByRole('button', { name: 'Next tip' })).toBeNull();
+    const dialog = await screen.findByRole('dialog', { name: 'Got it' });
+    // Brazil's codes have a pattern: its line says it, so the pattern tips would only repeat it
+    expect(within(dialog).getByRole('region', { name: 'Pattern' })).toBeTruthy();
+    expect(screen.queryByText('Tip p1')).toBeNull();
     // the map locks once answered
     expect(screen.getByRole('button', { name }).getAttribute('aria-disabled')).toBe('true');
     await waitFor(() => expect(r.reviews[0]).toMatchObject({ cardId: answer.id, correct: true }));

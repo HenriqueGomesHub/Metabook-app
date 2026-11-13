@@ -252,11 +252,10 @@ describe('AreaCodeGame', () => {
     expect(repo.tipViews.map((v) => v.tipId)).toEqual(['tip-1']);
   });
 
-  it('shows just the mastery before any medal', async () => {
+  it('shows no mastery pill before any medal', async () => {
     mount('/games/areacode/br');
-    const pill = await screen.findByTitle('Area-code mastery');
-    expect(pill.textContent).toMatch(/^0%$/);
-    expect(pill.querySelector('.cap')).toBeNull();
+    expect(await screen.findByText(/Which state uses/)).toBeTruthy();
+    expect(screen.queryByTitle('Area-code mastery')).toBeNull();
   });
 
   it('lets a callout label pick its state', async () => {
@@ -265,7 +264,7 @@ describe('AreaCodeGame', () => {
     const hit = document.querySelectorAll('.ddd-hit');
     const df = [...hit].find((el) => el.getAttribute('x') === String(410 - 4)) as Element;
     fireEvent.click(df);
-    expect(await screen.findByText('You picked Distrito Federal')).toBeTruthy();
+    expect(await screen.findByText('Not quite — you picked Distrito Federal')).toBeTruthy();
   });
 
   it('records a miss with a distance penalty', async () => {
@@ -274,7 +273,7 @@ describe('AreaCodeGame', () => {
     const card = cards.find((c) => c.prompt.value === code) as Card;
     fireEvent.click(screen.getByRole('button', { name: 'Amazonas' }));
 
-    expect(await screen.findByText('You picked Amazonas')).toBeTruthy();
+    expect(await screen.findByText('Not quite — you picked Amazonas')).toBeTruthy();
     await waitFor(() =>
       expect(repo.confusions).toMatchObject([{ picked: 'AM', truth: card.answer }]),
     );
