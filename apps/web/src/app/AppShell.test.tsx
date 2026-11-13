@@ -28,8 +28,16 @@ describe('AppShell', () => {
     expect(screen.getAllByRole('main')).toHaveLength(1);
   });
 
-  it('hides the navigation inside sessions', () => {
-    renderAt('/session');
-    expect(screen.queryByRole('navigation', { name: 'Main' })).toBeNull();
+  it.each(['/session', '/games/areacode/br', '/areacodes/br', '/placement/br'])(
+    'hides the navigation inside %s',
+    (path) => {
+      renderAt(path);
+      expect(screen.queryByRole('navigation', { name: 'Main' })).toBeNull();
+    },
+  );
+
+  it('keeps it on the area codes list', () => {
+    renderAt('/areacodes');
+    expect(screen.getByRole('navigation', { name: 'Main' })).toBeTruthy();
   });
 });

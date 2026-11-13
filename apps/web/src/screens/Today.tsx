@@ -72,7 +72,6 @@ function TodayView({ data }: { data: AppSnapshot }) {
     const card = cardsById.get(item.cardId);
     if (card && (data.states[card.id]?.state ?? 'new') === 'new') fresh++;
   }
-  const reviews = queue.length - fresh;
   const mix = sessionMix(queue, data.content.cards);
   const progress = countryProgress(data, learningNow);
 
@@ -153,9 +152,6 @@ function TodayView({ data }: { data: AppSnapshot }) {
             <section className="panel" aria-labelledby="today-mix">
               <div className="panel-row panel-title">
                 <span id="today-mix">In today’s session</span>
-                <span className="muted small">
-                  {reviews} review · {fresh} new
-                </span>
               </div>
               {mix.length > 0 ? (
                 <ul className="mix-groups">

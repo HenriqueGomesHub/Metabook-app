@@ -943,37 +943,38 @@ figure {
   overflow: hidden;
 }
 
+/* every tile keeps room for two lines, so a row of tiles is one height and pages fit */
+@media (min-width: 641px) {
+  .tile-blurb {
+    min-height: calc(2 * 1.4em);
+  }
+}
+
+@media (max-width: 640px) {
+  .tile {
+    gap: 4px;
+    padding: 10px 14px;
+    border-radius: 16px;
+  }
+
+  .tile-name {
+    font-size: 16px;
+  }
+}
+
 .tile-foot {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.tile-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  font-variant-numeric: tabular-nums;
-}
-
-.tile-meta .small {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
 }
 
 .tile-pct {
+  min-width: 3ch;
+  text-align: right;
   font-size: 13px;
+  font-variant-numeric: tabular-nums;
   color: var(--ink);
-}
-
-.tile-foot .bar {
-  flex: none;
-}
-
-.tile-note {
-  font-size: 12px;
-  color: var(--faint);
 }
 
 .tile-bar {
@@ -1004,14 +1005,6 @@ figure {
 
 .tile-games {
   border-style: dashed;
-}
-
-.tile-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  color: var(--accent);
 }
 
 @media (max-width: 640px) {

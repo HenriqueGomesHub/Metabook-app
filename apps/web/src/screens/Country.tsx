@@ -23,12 +23,6 @@ const TOP_MISSES = 8;
 /** an auto chapter per subject needs this many cards; fewer go to the Basics chapter */
 const MIN_CHAPTER_CARDS = 3;
 
-const STEPS = [
-  { title: 'Learn', sub: 'Study a chapter here, in order' },
-  { title: 'Drill', sub: 'Every card you learn joins your deck' },
-  { title: 'Mix', sub: 'It comes back inside Today, mixed with everything else' },
-];
-
 export function Country() {
   const { data, error, saveSettings } = useAppData();
   const { country = '' } = useParams();
@@ -221,13 +215,12 @@ function CountryView({
             </svg>
             <div>
               <h1 className="headline">{country.name}</h1>
-              <div className="country-meta">
-                <p>
-                  {chapters.length} {chapters.length === 1 ? 'chapter' : 'chapters'} ·{' '}
-                  {cards.length} {cards.length === 1 ? 'card' : 'cards'} · {due} due
-                </p>
-                <MedalPill medal={medal} value={value} />
-              </div>
+              {(due > 0 || medal) && (
+                <div className="country-meta">
+                  {due > 0 && <p>{due} due</p>}
+                  {medal && <MedalPill medal={medal} value={value} short />}
+                </div>
+              )}
             </div>
           </div>
 
@@ -296,23 +289,11 @@ function CountryView({
                     <FitGrid
                       className="chapter-grid"
                       label="Chapters"
-                      items={chapters}
+                      items={chapters
+                        .filter((chapter) => chapter.cardCount > 0)
+                        .map((chapter, i) => ({ ...chapter, order: i + 1 }))}
                       keyOf={(chapter) => chapter.id}
                       render={(chapter) => {
-                        if (chapter.cardCount === 0) {
-                          return (
-                            <div key={chapter.id} className="chapter-row chapter-empty">
-                              <span className="chapter-n">
-                                {String(chapter.order).padStart(2, '0')}
-                              </span>
-                              <span>
-                                <span className="chapter-title">{chapter.title}</span>
-                                <span className="chapter-sub">{chapter.subtitle}</span>
-                              </span>
-                              <span className="chapter-pct chapter-soon">No cards yet</span>
-                            </div>
-                          );
-                        }
                         const chapterMedal = medalFor(chapter.value);
                         return (
                           <Link key={chapter.id} className="chapter-row" to={chapter.to}>
@@ -355,22 +336,6 @@ function CountryView({
                     />
                   </nav>
                 )}
-              </div>
-              <div className="card-box">
-                <h2>How it feeds your mixed sessions</h2>
-                <ol className="steps">
-                  {STEPS.map(({ title, sub }, i) => (
-                    <li key={title}>
-                      <span className={i === STEPS.length - 1 ? 'step-n last' : 'step-n'}>
-                        {i + 1}
-                      </span>
-                      <span>
-                        <b>{title}</b>
-                        <span className="step-sub">{sub}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ol>
               </div>
             </div>
           )}

@@ -5,7 +5,7 @@ import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { label } from '../app/labels';
 import { useRegionMap } from '../app/useRegionMaps';
-import { ArrowIcon, LinkButton } from '../components/Button';
+import { ArrowIcon, Button, LinkButton } from '../components/Button';
 import { CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
 import { FitGrid } from '../components/FitGrid';
@@ -70,9 +70,7 @@ function Landing({ data }: { data: AppSnapshot }) {
           <span className="ac-name headline">{label(code)}</span>
         </span>
         {pattern?.hook && <span className="ac-hook">{pattern.hook}</span>}
-        <span className="ac-meta">
-          {ids.length} codes · {pct(mastery(ids, data.states, now))}%
-        </span>
+        <span className="ac-meta">{pct(mastery(ids, data.states, now))}%</span>
       </Link>
     );
   };
@@ -144,6 +142,8 @@ export function AreaCodeIntro() {
 
 function Intro({ data, country }: { data: AppSnapshot; country: string }) {
   const { drill, query } = useVia();
+  // phones show the map and the key one at a time, each with the whole screen
+  const [step, setStep] = useState<'map' | 'key'>('map');
   const map = useRegionMap(country);
   const codes = useMemo(() => placedCodes(data.content.cards, country), [data.content, country]);
   const pattern = patternOf(country);
@@ -177,8 +177,21 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
     <div className="page">
       <div className="ddd-bar rise">
         <CloseButton to={back} label="Back to area codes" />
+        {step === 'key' && (
+          <Button
+            variant="ghost"
+            className="ac-phone-only ac-to-map"
+            onClick={() => setStep('map')}
+          >
+            Map
+          </Button>
+        )}
       </div>
-      <main className="ac-intro">
+      <main className={`ac-intro on-${step}`}>
+        <header className="ac-intro-head rise">
+          <p className="kicker">{grouped ? 'Codes with a pattern' : 'Codes to memorise'}</p>
+          <h1 className="headline">{name} area codes</h1>
+        </header>
         <div className="ac-layout">
           <figure className="ac-map rise d1">
             {map ? (
@@ -200,12 +213,6 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
             )}
           </figure>
           <aside className="ac-side rise d2">
-            <header className="ac-intro-head">
-              <p className="kicker">{grouped ? 'Codes with a pattern' : 'Codes to memorise'}</p>
-              <h1 className="headline">{name} area codes</h1>
-              {pattern && !grouped && <p className="ac-summary">{pattern.summary}</p>}
-              {!grouped && <p className="ac-note">{NO_PATTERN}</p>}
-            </header>
             {grouped ? (
               <>
                 <h2 className="ac-side-title">The key</h2>
@@ -251,14 +258,17 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
                 Practise these codes
                 <ArrowIcon />
               </LinkButton>
-              <LinkButton to={back} variant="ghost">
-                Back
-              </LinkButton>
+              <Link className="link ac-small" to={drill ? game : session}>
+                {drill ? 'Or the map game' : 'Or drill them'}
+              </Link>
             </div>
-            <Link className="link ac-small" to={drill ? game : session}>
-              {drill ? 'Or play the map game' : 'Or drill them with spaced repetition'}
-            </Link>
           </aside>
+        </div>
+        <div className="ac-next ac-phone-only">
+          <Button onClick={() => setStep('key')}>
+            {grouped ? 'See the key' : 'See the codes'}
+            <ArrowIcon />
+          </Button>
         </div>
       </main>
     </div>

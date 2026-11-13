@@ -2,7 +2,11 @@ import type { ReactNode } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { Grain } from '../components/Grain';
 
-const HIDDEN_NAV_PREFIXES = ['/session', '/games/areacode', '/placement', '/round'];
+/**
+ * Screens with an X to leave (sessions, drills, games, an area-code lesson): the lesson has the
+ * whole screen, and the nav comes back once the learner leaves.
+ */
+const HIDDEN_NAV_PREFIXES = ['/session', '/games/areacode', '/areacodes/', '/placement', '/round'];
 
 const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
   {
