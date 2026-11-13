@@ -17,7 +17,7 @@ export function verdictFor(
  * The card's reason as shown. A where card's `explain` ends with its state in brackets for
  * stateNameFrom; the verdict already names the state, so the bracket is not repeated.
  */
-function whyFor(card: Card): string | undefined {
+export function whyFor(card: Card): string | undefined {
   const state = card.map ? stateNameFrom(card.explain) : undefined;
   if (!state || !card.explain) return card.explain;
   return card.explain

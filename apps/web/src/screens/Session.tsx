@@ -55,7 +55,7 @@ import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
-import { possessive, verdictFor } from './session/verdict';
+import { possessive, verdictFor, whyFor } from './session/verdict';
 import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
 import { ScanCard } from './session/ScanCard';
@@ -563,7 +563,32 @@ function CardRunner({
       return card.type === 'which' && given ? pickedChoice(given) : undefined;
     if (card.type === 'areacode') return pickedCodes(asideKey);
     if (card.type === 'which' && given) return pickedChoice(given);
+    if (card.type === 'region' && card.map) return pickedRegion(asideKey);
     return card.clue ? pickedClue(asideKey) : undefined;
+  }
+
+  /**
+   * On a missed map question: what marks the region the learner picked, from that region's own
+   * card (the same clue family first), so the miss sets the two apart.
+   */
+  function pickedRegion(state: string): Shown['aside'] {
+    const theirs = cards.filter(
+      (c) => c.type === 'region' && c.map === card.map && c.answer === state && c.id !== card.id,
+    );
+    const pick = theirs.find((c) => c.subject === card.subject) ?? theirs[0];
+    if (!pick) return undefined;
+    const clue = pick.clue && clueIndex(data.content).byId.get(pick.clue.id);
+    const text = (clue ? clue.summary?.trim() || clue.title : whyFor(pick))?.trim();
+    if (!text) return undefined;
+    const name = label(state, scope);
+    return {
+      label: `What marks ${name}`,
+      tip: {
+        tip: { id: `region:${pick.id}`, answer: name, scope: 'region', text, source: pick.source },
+        index: 0,
+        total: 1,
+      },
+    };
   }
 
   /** On a missed area code: the codes of the state the learner picked ("Acre: 68"). */
