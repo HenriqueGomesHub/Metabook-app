@@ -1,4 +1,5 @@
 import {
+  answerKey,
   cardForItem,
   cardForShowing,
   createPractice,
@@ -48,7 +49,8 @@ import { optionsFor } from './session/options';
 import { isMemoriseAreaCode } from '../data/areaCodes';
 import { preloadClueImages } from '../data/clueImages';
 import type { Repository } from '../data/repository';
-import { ClueAnswer } from './session/ClueAnswer';
+import { clueHeading } from '../components/clues/ClueDetails';
+import { ClueAnswer, ClueMore } from './session/ClueAnswer';
 import { preloadPrompt } from './session/Prompt';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
@@ -448,11 +450,14 @@ interface Shown {
 
 /** "How to spot Chile’s bollards" with that clue's summary, for the reveal's aside. */
 function clueAside(name: string, clue: Clue): Shown['aside'] {
-  // the first sentence, whole: a note cut off mid-word reads as broken
-  const text = clue.summary?.trim().split(/(?<=[.!?])\s+/)[0];
-  if (!text || isGalleryClue(clue)) return undefined;
+  // the pick's own tell, as short as the answer's: its heading without the family part
+  if (isGalleryClue(clue)) return undefined;
+  const heading = clueHeading(clue);
+  const tell = heading.includes(':') ? heading.replace(/^[^:]*:\s*/, '') : '';
+  const text = tell || clue.summary?.trim().split(/(?<=[.!?])\s+/)[0];
+  if (!text) return undefined;
   return {
-    label: `How to spot ${possessive(name)} ${SUBJECTS[clue.family].label.toLowerCase()}`,
+    label: name,
     tip: {
       tip: { id: `clue:${clue.id}`, answer: name, scope: 'clue', text, source: clue.credit.url },
       index: 0,
@@ -499,9 +504,19 @@ function CardRunner({
   const reps = data.states[item.cardId]?.reps ?? 0;
   const [seed] = useState(() => showingSeed(item.cardId, reps, shownMs));
   // a practice repeat may show another image of the card's clue
+  // what the learner picked for this answer before, most often first (read once per showing)
+  const [mixedUp] = useState(() => {
+    const base = cardForItem(item, cards);
+    if (!base) return [];
+    const truth = answerKey(base, base.answer);
+    return data.confusions
+      .filter((c) => c.truth === truth && c.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .map((c) => c.picked);
+  });
   const card = useMemo(
-    () => cardForShowing(cardForItem(item, cards) as Card, seed),
-    [item, cards, seed],
+    () => cardForShowing(cardForItem(item, cards) as Card, seed, mixedUp),
+    [item, cards, seed, mixedUp],
   );
   // Options are drawn once per item; later content changes must not reshuffle them.
   const [options] = useState(() => optionsFor(item, card, cards, Math.random));
@@ -546,7 +561,8 @@ function CardRunner({
       setShown({ tips: [], aside: undefined });
       return;
     }
-    const tips = reasoned ? [] : mainTips();
+    // a clue card's reveal is the clue's tell and the pick's: the tips are other lessons
+    const tips = reasoned || card.clue ? [] : mainTips();
     // the pick's tip that speaks to this question: one naming the answer, or a letter it shows
     // (after a Kyrgyz word, Russia's "none of ә қ ң ө ү", not "ы, э, ъ, which Ukrainian lacks")
     const stem = label(card.type === 'which' ? card.country : card.answer, scope)
@@ -562,12 +578,14 @@ function CardRunner({
     const asideTip =
       candidate && !tips.some((tip) => sameTip(tip, candidate.tip)) ? candidate : null;
     const name = asideKey && label(asideKey, scope);
-    const aside: Shown['aside'] = asideTip
-      ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
-      : (pickedAside(asideKey, given) ?? undefined);
+    const aside: Shown['aside'] = card.clue
+      ? (pickedAside(asideKey, given) ?? undefined)
+      : asideTip
+        ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
+        : (pickedAside(asideKey, given) ?? undefined);
     setShown({ tips, aside });
     // the first tip is recorded by the reveal as it comes on screen; a picked clue is no tip
-    if (asideTip) recordTipView(asideTip.tip.id);
+    if (asideTip && !card.clue) recordTipView(asideTip.tip.id);
   }
 
   /**
@@ -713,6 +731,8 @@ function CardRunner({
       }
       onNext={onNext}
       onTipShown={(tip) => recordTipView(tip.id)}
+      compactAside={Boolean(card.clue)}
+      more={card.clue ? <ClueMore card={card} /> : undefined}
     />
   );
 

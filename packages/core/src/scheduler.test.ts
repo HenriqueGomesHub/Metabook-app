@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import {
   applyReview,
   gradeAnswer,
+  reviewedToday,
+  answerReview,
   knownCardState,
   newCardState,
   retrievability,
@@ -93,26 +95,50 @@ describe('gradeAnswer', () => {
     expect(gradeAnswer({ ...base, usedHint: true, msTaken: 100 })).toBe('hard');
   });
 
-  it('maps fast answers to easy: under 40% of the median or under 3s', () => {
-    expect(gradeAnswer({ ...base, msTaken: 3999 })).toBe('easy');
-    expect(gradeAnswer({ ...base, msTaken: 4000 })).toBe('good');
-    expect(gradeAnswer({ ...base, msTaken: 2999, medianMs: 2000 })).toBe('easy');
-    expect(gradeAnswer({ ...base, msTaken: 3000, medianMs: 2000 })).toBe('good');
+  it('grades a right answer good within 1.5x the median, hard when slower; never easy', () => {
+    expect(gradeAnswer({ ...base, msTaken: 100 })).toBe('good');
+    expect(gradeAnswer({ ...base, msTaken: 15_000 })).toBe('good');
+    expect(gradeAnswer({ ...base, msTaken: 15_001 })).toBe('hard');
   });
 
-  it('never grades a same-session retry as easy', () => {
-    expect(
-      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, retry: true }),
-    ).toBe('good');
+  it('grades a same-session retry good, not by speed', () => {
+    expect(gradeAnswer({ ...base, msTaken: 60_000, retry: true })).toBe('good');
   });
 
-  it('never grades a quick pick out of two as easy', () => {
-    expect(
-      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, choices: 2 }),
-    ).toBe('good');
-    expect(
-      gradeAnswer({ correct: true, usedHint: false, msTaken: 500, medianMs: 4000, choices: 4 }),
-    ).toBe('easy');
+  it('caps a right pick out of two at hard', () => {
+    expect(gradeAnswer({ ...base, msTaken: 500, choices: 2 })).toBe('hard');
+    expect(gradeAnswer({ ...base, msTaken: 500, choices: 4 })).toBe('good');
+  });
+});
+
+describe('reviewedToday', () => {
+  it('is true only when the last review was on the same calendar day', () => {
+    const morning = new Date(2026, 10, 13, 8);
+    const state = applyReview(newCardState('a', morning), 'good', morning, 0.9);
+    expect(reviewedToday(state, new Date(2026, 10, 13, 22))).toBe(true);
+    expect(reviewedToday(state, new Date(2026, 10, 14, 0, 1))).toBe(false);
+    expect(reviewedToday(newCardState('b', morning), morning)).toBe(false);
+  });
+});
+
+describe('answerReview', () => {
+  it('gives ten right answers in one sitting the stability of one', () => {
+    const start = new Date(2026, 10, 13, 9);
+    const once = answerReview(newCardState('a', start), 'good', start, 0.9);
+    let many = newCardState('a', start);
+    for (let i = 0; i < 10; i++) {
+      many = answerReview(many, 'good', new Date(start.getTime() + i * 60_000), 0.9);
+    }
+    expect(many.stability).toBe(once.stability);
+    expect(many.reps).toBe(1);
+    expect(Date.parse(many.due)).toBeGreaterThanOrEqual(new Date(2026, 10, 14).getTime());
+  });
+
+  it('reviews again the next day', () => {
+    const start = new Date(2026, 10, 13, 9);
+    const first = answerReview(newCardState('a', start), 'good', start, 0.9);
+    const next = answerReview(first, 'good', new Date(2026, 10, 14, 9), 0.9);
+    expect(next.reps).toBe(2);
   });
 });
 

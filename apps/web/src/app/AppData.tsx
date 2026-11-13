@@ -1,6 +1,6 @@
 import {
   answerKey,
-  applyReview,
+  answerReview,
   contrastResult,
   gradeAnswer,
   newCardState,
@@ -223,12 +223,8 @@ export function AppDataProvider({
           choices: input.choices,
           retry: input.retry,
         });
-      const state = applyReview(
-        data.states[card.id] ?? newCardState(card.id, now),
-        grade,
-        now,
-        data.settings.desiredRetention,
-      );
+      const before = data.states[card.id] ?? newCardState(card.id, now);
+      const state = answerReview(before, grade, now, data.settings.desiredRetention);
       const review: Review = {
         id: crypto.randomUUID(),
         cardId: card.id,

@@ -503,12 +503,46 @@ a.credit:hover {
   width: 100%;
 }
 
-.reveal > .reveal-next {
+.reveal > .reveal-foot {
   position: sticky;
   bottom: 0;
+  display: flex;
+  gap: 8px;
   margin-bottom: 22px;
   margin-top: 4px;
+  background: var(--surface);
   box-shadow: 0 -12px 12px var(--surface);
+}
+
+.reveal-foot .reveal-next {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+.reveal-foot .reveal-more {
+  flex: none;
+  min-height: 52px;
+  padding: 0 18px;
+}
+
+/* a clue card's reveal: the answer's tell, where else it looks the same, the pick's tell */
+.reveal-tell {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.reveal-also,
+.reveal-vs {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.reveal-vs b {
+  color: var(--ink);
+  font-weight: 600;
 }
 
 @keyframes panel-in {
@@ -633,8 +667,9 @@ a.credit:hover {
     font-size: 21px;
   }
 
-  .reveal > .reveal-next {
+  .reveal > .reveal-foot {
     margin-bottom: 16px;
+    background: var(--raise);
     box-shadow: 0 -12px 12px var(--raise);
   }
 
@@ -898,12 +933,70 @@ a.credit:hover {
 }
 
 @media (max-width: 720px) {
-  /* Which clue answered: the two photos to compare (the answer and the pick) stay, side by side */
+  /* Which clue answered: all four photos keep their size and place, named; the two that matter
+     are marked, the others dimmed */
   .play-top:has(.play-side.revealed) .photo-opt.dim {
-    display: none;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 720px) {
+  /* Which clue on phones: the four photos fill the stage, two rows that share its height */
+  .play-main:has(> .photo-grid) {
+    align-items: stretch;
   }
 
-  .play-top:has(.play-side.revealed) .photo-grid {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  .play-main .photo-grid {
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
+
+  .photo-opt {
+    position: relative;
+    min-height: 0;
+  }
+
+  .photo-opt > .photo {
+    flex: 1 1 0;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+
+  /* the country name sits on the photo, so naming the tiles moves nothing */
+  .photo-opt .photo-caption {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    margin: 0;
+    padding: 4px 9px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.66);
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+  }
+}
+
+/* the photo fills its tile (cropped to the clue), whatever the tile's shape */
+.photo-opt > .photo {
+  position: relative;
+}
+
+.photo-opt > .photo > .clue-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.photo-opt > .photo > .clue-img > img,
+.photo-opt > .photo > .clue-img > svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

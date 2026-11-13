@@ -138,12 +138,8 @@ describe('Spot it with lookalikes', () => {
     expect([...options].map((o) => o.textContent).join()).not.toMatch(/Italy/);
     fireEvent.click(screen.getByRole('button', { name: /Albania/ }));
     const dialog = await screen.findByRole('dialog', { name: 'Got it' });
-    expect(
-      within(dialog)
-        .getByText(/Looks the same in/)
-        .closest('li')?.textContent,
-    ).toMatch(/Italy/);
-    await waitFor(() => expect(within(dialog).getByText('Bollards')).toBeTruthy());
+    expect(within(dialog).getByText(/Looks the same in/).textContent).toMatch(/Italy/);
+    expect(within(dialog).getByRole('button', { name: 'More' })).toBeTruthy();
   });
 });
 
@@ -168,7 +164,9 @@ describe('A missed clue card', () => {
     const picked = (wrong.textContent ?? '').replace(/^\d/, '').trim();
     fireEvent.click(wrong);
     const dialog = await screen.findByRole('dialog', { name: /Not quite/ });
-    const noun = picked === 'Greece' ? 'Greece’s' : `${picked}’s`;
-    expect(within(dialog).getByText(`How to spot ${noun} bollards`)).toBeTruthy();
+    // the pick's own tell, on one line led by its name
+    const line = dialog.querySelector('.reveal-vs');
+    expect(line?.querySelector('b')?.textContent).toBe(`${picked}:`);
+    expect((line?.textContent ?? '').length).toBeGreaterThan(picked.length + 3);
   });
 });

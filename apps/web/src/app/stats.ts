@@ -21,10 +21,14 @@ import { isMemoriseAreaCode } from '../data/areaCodes';
 const FALLBACK_MEDIAN_MS = 6000;
 const STREAK_DAYS = 14;
 
+const RECENT = 50;
+
 export function medianMs(reviews: Review[], cards: Card[], type: CardType): number {
   const ofType = new Set(cards.filter((card) => card.type === type).map((card) => card.id));
   const times = reviews
-    .filter((review) => ofType.has(review.cardId))
+    .filter((review) => ofType.has(review.cardId) && review.correct)
+    // the learner's current pace: their last 50 right answers of this kind
+    .slice(-RECENT)
     .map((review) => review.msTaken)
     .sort((a, b) => a - b);
   if (times.length === 0) return FALLBACK_MEDIAN_MS;

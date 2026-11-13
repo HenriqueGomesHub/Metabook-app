@@ -132,11 +132,11 @@ describe('Clue cards in practice', () => {
     fireEvent.click(screen.getByRole('button', { name: /Poland/ }));
     const dialog = await screen.findByRole('dialog', { name: 'Got it' });
     expect(screen.queryByTestId('live-shield')).toBeNull();
-    expect(within(dialog).getByRole('heading', { name: 'Bollard: red strip' })).toBeTruthy();
-    expect(within(dialog).getByText('Lookalikes')).toBeTruthy();
-    expect(within(dialog).getByRole('link', { name: 'Plonk It' }).getAttribute('href')).toBe(
-      'https://www.plonkit.net/poland',
-    );
+    // the reveal is the clue's tell; the whole clue (text, source) is behind More
+    expect(dialog.querySelector('.reveal-tell')?.textContent).toBe('Bollard: red strip');
+    fireEvent.click(within(dialog).getByRole('button', { name: 'More' }));
+    const sheet = screen.getByRole('dialog', { name: 'Bollard: red strip' });
+    expect(within(sheet).getByText(/CC BY-NC-SA 4\.0/)).toBeTruthy();
   });
 
   it('names the picked country on a wrong Which clue answer', async () => {

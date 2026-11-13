@@ -23,6 +23,10 @@ export interface RevealProps {
   /** each tip as it comes on screen, the first one included */
   onTipShown?(tip: Tip): void;
   nextLabel?: string;
+  /** a secondary action left of Continue ("More") */
+  more?: ReactNode;
+  /** the pick's line as one sentence ("Greece: wedge-shaped post") instead of a labelled block */
+  compactAside?: boolean;
 }
 
 /**
@@ -41,6 +45,8 @@ export function Reveal({
   onNext,
   onTipShown,
   nextLabel = 'Continue',
+  more,
+  compactAside = false,
 }: RevealProps) {
   const id = useId();
   return (
@@ -61,17 +67,25 @@ export function Reveal({
         {tips.length > 0 && <TipPager tips={tips} onShown={onTipShown} />}
         {extra}
         {/* the other option comes after everything about the answer */}
-        {aside && (
-          <section className="reveal-section" aria-label={aside.label}>
-            <p className="reveal-label">{aside.label}</p>
-            <p className="reveal-text">{aside.tip.tip.text}</p>
-          </section>
-        )}
+        {aside &&
+          (compactAside ? (
+            <p className="reveal-vs">
+              <b>{aside.label}:</b> {aside.tip.tip.text}
+            </p>
+          ) : (
+            <section className="reveal-section" aria-label={aside.label}>
+              <p className="reveal-label">{aside.label}</p>
+              <p className="reveal-text">{aside.tip.tip.text}</p>
+            </section>
+          ))}
       </div>
-      <Button className="reveal-next" onClick={onNext} autoFocus>
-        {nextLabel}
-        <kbd>Space</kbd>
-      </Button>
+      <div className={more ? 'reveal-foot' : 'reveal-foot solo'}>
+        {more}
+        <Button className="reveal-next" onClick={onNext} autoFocus>
+          {nextLabel}
+          <kbd>Space</kbd>
+        </Button>
+      </div>
     </section>
   );
 }
