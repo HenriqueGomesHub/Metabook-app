@@ -740,7 +740,12 @@ export function addRegionCodes(countries, mapsDir = MAPS_DIR) {
  * where the map's codes are letters, by code as written ("RS, RJ, MS"): a map question accepts them.
  */
 function alsoNamed(clue, states, own, norm) {
-  const text = [clue.title ?? '', clue.summary ?? '', ...(clue.text ?? [])].join(' ');
+  // each sentence up to a contrast ("…; white ones in Bahia", "… but not in …"), as sameClaim in
+  // packages/core/src/generate.ts: a region named for a different feature is no right answer
+  const text = [clue.title ?? '', clue.summary ?? '', ...(clue.text ?? [])]
+    .flatMap((part) => part.split(/(?<=\.)\s+/))
+    .map((sentence) => sentence.split(/;|\b(?:but|while|whereas|unlike|except|than|not|instead)\b/i)[0])
+    .join(' ');
   const words = ` ${norm(text)} `;
   return states
     .filter((s) => s.code !== own)

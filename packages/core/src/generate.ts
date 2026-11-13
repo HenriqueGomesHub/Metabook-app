@@ -290,17 +290,28 @@ export function generateCards(code: string, input: GenerateInput): GeneratedCard
         // answer on the map
         // other regions the sentence names are right too ("frequent in RS, RJ, MS"); one that only
         // hints at others has no fair single answer
-        const spans = map.states
-          .filter((s) => s.code !== state.code && namedIn(note.text, [s.name]))
-          .map((s) => s.code);
-        if (!prompt || (spans.length === 0 && namesOtherRegions(prompt))) continue;
+        const others = map.states.filter(
+          (s) => s.code !== state.code && namedIn(sameClaim(note.text), [s.name]),
+        );
+        const spans = others.map((s) => s.code);
+        // the other right regions are masked too: a named answer would be a free click
+        const asked =
+          prompt &&
+          maskOthers(
+            prompt,
+            others.map((s) => s.name),
+          );
+        if (!asked || BROKEN_MASK.test(asked) || (spans.length === 0 && namesOtherRegions(asked)))
+          continue;
+        // a region name inside a place name ("Villa Ángela", "San Pedro de Jujuy") is no answer
+        if (spans.length > 0 && (PLACE_PART.test(asked) || !asked.includes('this area'))) continue;
         cards.push({
           id: `gen:${lc}:where:${noteKey(note.id, lc)}`,
           type: 'region',
           country: code,
           answer: state.code,
           ...(spans.length > 0 && { spans }),
-          prompt: { kind: 'text', value: prompt },
+          prompt: { kind: 'text', value: asked },
           tags: [...tags(note.subject), 'where'],
           subject: note.subject,
           explain: `${note.text} (${state.name})`,
@@ -364,7 +375,7 @@ const GENERIC_WORDS = new Set([
 
 /** "this area" used as a modifier or after "the" reads wrongly ("this area roads"). */
 const BROKEN_MASK =
-  /\bthe this area\b|\bthis area['’]s\b|\bthis area (state|province|region|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?)\b|\b(\w+ern|far|central|upper|lower|north|south|east|west|inner|outer)\s+this area\b/i;
+  /\b(?:the|an?) (?:this|another) area\b|\b(?:this|another) area['’]s\b|\b(?:this|another) area (states?|provinces?|regions?|oblasts?|county|counties|peninsula|coast|roads?|islands?|poles?|bollards?|signs?|plates?|houses?|roofs?|one)\b|\b(\w+ern|far|central|upper|lower|north|south|east|west|northeast|northwest|southeast|southwest|inner|outer)\s+(?:this|another) area\b/i;
 
 /**
  * The pieces of a state name that give it away: the parts between " and ", " y ", " of ", "-",
@@ -402,6 +413,40 @@ export function hideRegionName(text: string, stateName: string): string | undefi
   }
   if (BROKEN_MASK.test(out) || namedIn(out, masks)) return undefined;
   return out.charAt(0).toUpperCase() + out.slice(1);
+}
+
+/**
+ * The part of a note that makes its claim: up to a contrast ("…only in Pernambuco; white ones in
+ * Bahia", "… but not in …"), so a region named for a different feature is not a right answer.
+ */
+export function sameClaim(text: string): string {
+  return text.split(/;|\.\s|\b(?:but|while|whereas|unlike|except|than|not|instead)\b/i)[0] ?? text;
+}
+
+/**
+ * "Villa another area", "San Pedro de another area": the mask hit part of a place's name; "Tatar in
+ * this area and Bashkir in another area": the regions differ in what they show.
+ */
+const PLACE_PART =
+  /(?:\b[A-Z][\p{L}]+|\b(?:de|del|do|da|of))\s+another area|\bin (?:this|another) area and [\p{L}-]+ in (?:this|another) area/u;
+
+/** Other right regions in a where prompt read "another area": naming them would give them away. */
+function maskOthers(prompt: string, names: string[]): string {
+  let out = prompt;
+  for (const name of [...names].sort((a, b) => b.length - a.length)) {
+    const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    out = out.replace(new RegExp(`(?<!\\p{L})${escaped}(?!\\p{L})`, 'giu'), 'another area');
+  }
+  // "another area, another area and another area" reads "three other areas"
+  out = out.charAt(0).toUpperCase() + out.slice(1);
+  const count = (n: number) => ['', 'one', 'two', 'three', 'four', 'five'][n] ?? 'several';
+  return out
+    .replace(/this area(?:, another area)+,? and another area/g, (run) => {
+      return `this area and ${count(run.split('another area').length - 1)} other areas`;
+    })
+    .replace(/another area(?:, another area)*,? and another area/g, (run) => {
+      return `${count(run.split('another area').length - 1)} other areas`;
+    });
 }
 
 /** Note ids are often prefixed with the country ("pl:bollard-red"); card ids drop it. */
