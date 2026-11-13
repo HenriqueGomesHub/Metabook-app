@@ -43,7 +43,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
     () =>
       TYPE_ORDER.flatMap((type) => {
         // clue catalogue cards get a tile per family instead (below)
-        if (CLUE_TYPES.includes(type)) return [];
+        // and region cards are the one "Where in the country" drill (below)
+        if (CLUE_TYPES.includes(type) || type === 'region') return [];
         const ofType = cards.filter((card) => card.type === type);
         if (ofType.length === 0) return [];
         const tile: Tile = {
@@ -64,12 +65,12 @@ function DrillsView({ data }: { data: AppSnapshot }) {
   );
   // regions-map cards across every country
   const whereTile = useMemo((): Tile[] => {
-    const onMap = cards.filter((card) => card.map);
+    const onMap = data.content.cards.filter((card) => card.type === 'region');
     if (onMap.length === 0) return [];
     return [
       {
         key: 'where',
-        to: '/session?map=1',
+        to: '/session?type=region',
         label: 'Where in the country',
         blurb: 'Place clues on each country’s regions map',
         icon: ICONS.where,

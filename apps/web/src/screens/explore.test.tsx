@@ -163,11 +163,12 @@ describe('Subjects', () => {
     expect(links[1]?.getAttribute('href')).toBe('/session?country=CL&map=0');
   });
 
-  it('gives regions-map cards their own drill tile', async () => {
+  it('gives region cards one drill tile, map or not', async () => {
     mount('/drills');
     expect(
       (await screen.findByText('Where in the country')).closest('a')?.getAttribute('href'),
-    ).toBe('/session?map=1');
+    ).toBe('/session?type=region');
+    expect(screen.queryByText('Regions')).toBeNull();
     // family tiles come from the clue catalogue only
     expect(screen.queryByText('Bollards')).toBeNull();
     expect(screen.queryByText('Poles')).toBeNull();
