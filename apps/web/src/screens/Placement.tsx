@@ -1,4 +1,11 @@
-import { applyPlacement, buildPlacement, matchesAnswer } from '@metabook/core';
+import {
+  applyPlacement,
+  buildPlacement,
+  cardContext,
+  isClueCard,
+  matchesAnswer,
+  rankTips,
+} from '@metabook/core';
 import type { Card, SessionMode } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -9,8 +16,10 @@ import { CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
+import { label, SUBJECTS } from '../app/labels';
 import { countryName } from './manage/countries';
 import './manage/manage.css';
+import { ClueAnswer } from './session/ClueAnswer';
 import { optionsFor } from './session/options';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { Outcome } from './session/types';
@@ -19,6 +28,17 @@ import { verdictFor } from './session/verdict';
 import { viewFor } from './session/views';
 
 const TEST_SIZE = 12;
+
+const TYPE_LABEL: Partial<Record<Card['type'], string>> = {
+  flag: 'the flag',
+  script: 'the script',
+  lookalike: 'its lookalike',
+  region: 'regions',
+  areacode: 'area codes',
+  live: 'Street View',
+  spot: 'clues',
+  which: 'clues',
+};
 
 export function Placement() {
   const { data, error } = useAppData();
@@ -30,7 +50,9 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const { addCardStates } = useAppData();
   const name = countryName(data.content.pool, code);
   const [cards] = useState(() => {
+    // text-only clue cards are read in Learn, never drilled: nothing to place
     const untouched = data.content.cards.filter((card) => {
+      if (isClueCard(card)) return false;
       const state = data.states[card.id];
       return !state || state.state === 'new';
     });
@@ -43,13 +65,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const card = cards[results.length];
-  const mode: SessionMode = card?.map
-    ? 'map'
-    : card?.type === 'flag'
-      ? 'recall'
-      : card?.type === 'lookalike'
-        ? 'binary'
-        : 'mcq';
+  const mode: SessionMode = card?.map ? 'map' : card?.type === 'lookalike' ? 'binary' : 'mcq';
   const options = useMemo(
     () =>
       card ? optionsFor({ cardId: card.id, mode }, card, data.content.cards, Math.random) : [],
@@ -106,6 +122,18 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   if (!card) {
     const own = results.filter((r) => cards.find((c) => c.id === r.cardId)?.country === code);
     const marked = own.filter((r) => r.correct).length;
+    // what the misses were about, so the learner knows what the sessions will teach first
+    const missed = [
+      ...new Set(
+        results
+          .filter((r) => !r.correct)
+          .map((r) => cards.find((c) => c.id === r.cardId))
+          .map(
+            (c) => c && (c.subject ? SUBJECTS[c.subject].label.toLowerCase() : TYPE_LABEL[c.type]),
+          )
+          .filter((x): x is string => Boolean(x)),
+      ),
+    ];
     return (
       <main className="placement">
         <div className="placement-result rise">
@@ -113,7 +141,11 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           <h1 className="headline">
             Marked {marked} of {own.length} as known
           </h1>
-          <p className="muted">The rest start from scratch in your normal sessions.</p>
+          <p className="muted">
+            {missed.length > 0
+              ? `To learn: ${missed.join(', ')}. Your sessions start there.`
+              : 'The rest start from scratch in your normal sessions.'}
+          </p>
         </div>
         <LinkButton to={back} className="rise d1">
           Back to {name}
@@ -151,7 +183,19 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           outcome && (
             <Reveal
               {...verdictFor(card, { mode }, outcome)}
-              tips={[]}
+              // a miss teaches the one thing to look for; a right answer just moves on
+              tips={
+                outcome.correct
+                  ? []
+                  : rankTips(
+                      data.content.tips,
+                      card.type === 'which' ? label(card.country) : card.answer,
+                      card.type,
+                      data.tipViews,
+                      cardContext(card),
+                    ).slice(0, 1)
+              }
+              extra={card.clue && !outcome.correct ? <ClueAnswer card={card} /> : undefined}
               nextLabel={results.length + 1 === cards.length ? 'See result' : 'Continue'}
               onNext={next}
             />

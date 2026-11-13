@@ -37,7 +37,7 @@ export function Drills() {
 
 function DrillsView({ data }: { data: AppSnapshot }) {
   const now = useMemo(() => new Date(), []);
-  // text-only clue cards are drilled in the Clue quiz alone, never as "Where is this?"
+  // text-only clue cards have no picture to drill: they are read in Learn
   const cards = useMemo(() => data.content.cards.filter((card) => !isClueCard(card)), [data]);
   const tiles = useMemo(
     () =>
@@ -101,25 +101,6 @@ function DrillsView({ data }: { data: AppSnapshot }) {
       },
     ];
   }, [data, cards, now]);
-  // text questions on country facts ("Which country has: …?"), for those who want them
-  const clueTile = useMemo((): Tile[] => {
-    const quiz = data.content.cards.filter(isClueCard);
-    if (quiz.length === 0) return [];
-    return [
-      {
-        key: 'clue',
-        to: '/session?clue=1',
-        label: 'Clue quiz',
-        blurb: 'Which country has this? Text questions on country facts',
-        icon: ICONS.clue,
-        mastery: mastery(
-          quiz.map((card) => card.id),
-          data.states,
-          now,
-        ),
-      },
-    ];
-  }, [data, now]);
   // one tile per clue family with cards from the clue catalogue (Spot it, Which clue), e.g.
   // Bollards across every country; Live view cards have their own tile
   const familyTiles = useMemo(
@@ -147,7 +128,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
     [data, cards, now],
   );
 
-  const allTiles = [...familyTiles, ...tiles, ...whereTile, ...streetViewTile, ...clueTile];
+  const allTiles = [...familyTiles, ...tiles, ...whereTile, ...streetViewTile];
 
   return (
     <div className="page page-scroll">

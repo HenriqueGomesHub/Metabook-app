@@ -12,10 +12,7 @@ describe('Placement', () => {
   it('marks correctly answered cards as known and reports the result', async () => {
     const repo = new MemoryRepository();
     renderScreens('/placement/LT', repo);
-    fireEvent.change(await screen.findByLabelText(/Which country/), {
-      target: { value: 'Lithuania' },
-    });
-    fireEvent.click(screen.getByRole('button', { name: 'Check answer' }));
+    fireEvent.click(await screen.findByRole('button', { name: /Lithuania/ }));
     expect(await screen.findByRole('dialog', { name: 'Got it' })).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 1 of 1 as known')).toBeTruthy();
@@ -26,11 +23,15 @@ describe('Placement', () => {
   it('leaves a missed card new', async () => {
     const repo = new MemoryRepository();
     renderScreens('/placement/LT', repo);
-    fireEvent.click(await screen.findByRole('button', { name: 'I don’t know' }));
-    expect(await screen.findByRole('dialog', { name: 'It’s Lithuania' })).toBeTruthy();
-    expect(screen.queryByRole('button', { name: 'I don’t know' })).toBeNull();
+    await screen.findByRole('button', { name: /Lithuania/ });
+    const wrong = screen
+      .getAllByRole('button')
+      .find((b) => b.classList.contains('opt') && !/Lithuania/.test(b.textContent ?? ''));
+    fireEvent.click(wrong!);
+    expect(await screen.findByRole('dialog', { name: /Not quite — it’s Lithuania/ })).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /See result/ }));
     expect(await screen.findByText('Marked 0 of 1 as known')).toBeTruthy();
+    expect(screen.getByText(/To learn: the flag/)).toBeTruthy();
     expect(repo.cardStates).toHaveLength(0);
   });
 

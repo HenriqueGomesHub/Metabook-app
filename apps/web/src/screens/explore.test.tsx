@@ -173,11 +173,10 @@ describe('Subjects', () => {
     expect(screen.queryByText('Poles')).toBeNull();
   });
 
-  it('keeps clue-text cards out of subject tiles and gives them a Clue quiz tile', async () => {
+  it('keeps clue-text cards out of the drills', async () => {
     mount('/drills');
-    expect((await screen.findByText('Clue quiz')).closest('a')?.getAttribute('href')).toBe(
-      '/session?clue=1',
-    );
+    await screen.findAllByRole('link');
+    expect(screen.queryByText('Clue quiz')).toBeNull();
     expect(screen.queryByText('Guardrails')).toBeNull();
   });
 });

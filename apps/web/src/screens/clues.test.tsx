@@ -117,11 +117,9 @@ describe('Drills', () => {
     const streetView = screen.getByText('Street View').closest('a')!;
     expect(streetView.getAttribute('href')).toBe('/session?type=live');
     expect(within(streetView).queryByText(/spots/)).toBeNull();
-    // language clues have no image: Clue quiz only
+    // language clues have no image: read in Learn, not drilled
     expect(screen.queryByText('Language')).toBeNull();
-    expect(screen.getByText('Clue quiz').closest('a')?.getAttribute('href')).toBe(
-      '/session?clue=1',
-    );
+    expect(screen.queryByText('Clue quiz')).toBeNull();
   });
 });
 
