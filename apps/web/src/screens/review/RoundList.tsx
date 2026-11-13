@@ -1,6 +1,6 @@
 import { pickTip } from '@metabook/core';
 import type { Round } from '@metabook/core';
-import { FitGrid } from '../../components/FitGrid';
+import { ItemList } from '../../components/ItemList';
 import type { AppSnapshot } from '../../app/AppData';
 import { countryName } from '../manage/countries';
 
@@ -38,7 +38,7 @@ export function RoundList({ data }: { data: AppSnapshot }) {
 
   return (
     <section className="sheet round-sheet" aria-label="Rounds">
-      <FitGrid
+      <ItemList
         className="round-list"
         label="Rounds"
         list

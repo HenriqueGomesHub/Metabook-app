@@ -4,12 +4,14 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
+import { ChevronIcon } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
-import { FitGrid } from '../components/FitGrid';
+import { FlagImage } from '../components/FlagImage';
+import { ItemList } from '../components/ItemList';
 import { Header } from '../components/Header';
 import { Medal } from '../components/Medal';
 import { Status } from '../components/Status';
-import { pct, WEAK } from './atlas/format';
+import { pct } from './atlas/format';
 import './atlas/atlas.css';
 
 const CONTINENTS: { id: PoolCountry['continent']; label: string }[] = [
@@ -71,14 +73,18 @@ function AtlasView({ data }: { data: AppSnapshot }) {
   const [chosen, setChosen] = useState<PoolCountry['continent'] | null>(null);
   const active = chosen ?? firstWithCards?.id ?? continents[0]?.id;
   const shown = tiles.filter((t) => t.continent === active);
+  const medals = tiles.filter((t) => t.medal).length;
 
   return (
-    <div className="page">
+    <div className="page page-scroll">
       <Header user={data.user} />
       <main className="page-main">
-        <div className="atlas-head rise">
+        <div className="page-title rise">
           <div>
             <h1 className="headline">Atlas</h1>
+            <p>Every country, and how well you know it.</p>
+          </div>
+          {medals > 0 && (
             <ul className="tally" aria-label="Medal tally">
               {TALLY.map(({ medal, label }) => (
                 <li key={medal}>
@@ -87,9 +93,9 @@ function AtlasView({ data }: { data: AppSnapshot }) {
                 </li>
               ))}
             </ul>
-          </div>
+          )}
           {continents.length > 0 && (
-            <div className="segments" role="tablist" aria-label="Continent">
+            <div className="segments atlas-continents" role="tablist" aria-label="Continent">
               {continents.map(({ id, label }) => (
                 <button
                   key={id}
@@ -114,29 +120,25 @@ function AtlasView({ data }: { data: AppSnapshot }) {
           />
         )}
         <div className="atlas-panel" role="tabpanel" aria-label="Countries">
-          <FitGrid
-            className="atlas-tiles"
+          <ItemList
+            className="row-list"
+            list
             label="Countries"
             items={shown}
-            reset={active}
             keyOf={(tile) => tile.code}
             render={(tile) => (
-              <Link className="atlas-tile" to={`/atlas/${tile.code}`}>
-                <div className="atlas-tile-top">
-                  <span className="atlas-tile-name">{tile.name}</span>
-                  <span className="atlas-tile-pct">
-                    {tile.medal && <Medal medal={tile.medal} />}
-                    {tile.cardCount > 0 ? `${pct(tile.value)}%` : '—'}
-                  </span>
-                </div>
-                <div className="bar" aria-hidden="true">
-                  {tile.cardCount > 0 && (
-                    <div
-                      className={tile.value < WEAK ? 'weak' : undefined}
-                      style={{ width: `${pct(tile.value)}%` }}
-                    />
-                  )}
-                </div>
+              <Link className="row-item" to={`/atlas/${tile.code}`}>
+                <span className="row-flag">
+                  <FlagImage code={tile.code} alt="" />
+                </span>
+                <span className="row-text">
+                  <span className="row-name">{tile.name}</span>
+                </span>
+                <span className="row-pct atlas-pct">
+                  {tile.medal && <Medal medal={tile.medal} />}
+                  {tile.cardCount > 0 ? `${pct(tile.value)}%` : '—'}
+                </span>
+                <ChevronIcon />
               </Link>
             )}
           />

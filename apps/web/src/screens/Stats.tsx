@@ -86,9 +86,11 @@ function StatsView({ data }: { data: AppSnapshot }) {
     <div className="page">
       <Header user={data.user} />
       <main className="page-main stats-main">
-        <div className="stats-title rise">
-          <h1 className="headline">Stats</h1>
-          <span>Last 30 days</span>
+        <div className="page-title rise">
+          <div>
+            <h1 className="headline">Stats</h1>
+            {!nothing && <p>Your last 30 days.</p>}
+          </div>
         </div>
 
         {nothing ? (

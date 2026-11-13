@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { label } from '../../app/labels';
-import { FitGrid } from '../FitGrid';
+import { ItemList } from '../ItemList';
 import { FlagImage } from '../FlagImage';
 import '../fit-grid.css';
 import './clues.css';
@@ -88,7 +88,7 @@ function CountrySheet({
             </svg>
           </button>
         </div>
-        <FitGrid
+        <ItemList
           className="country-sheet-grid"
           label="Countries"
           list

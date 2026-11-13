@@ -18,7 +18,7 @@ export function Page({
   children: ReactNode;
 }) {
   return (
-    <div className="page">
+    <div className="page page-scroll">
       <Header user={user} />
       <main className="page-main">
         <div className="page-title rise">

@@ -8,7 +8,7 @@ import { CARD_TYPES, CLUE_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
-import { FitGrid } from '../components/FitGrid';
+import { ItemList } from '../components/ItemList';
 import { Header } from '../components/Header';
 import { ICONS } from '../components/icons';
 import { Status } from '../components/Status';
@@ -150,7 +150,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
   const allTiles = [...familyTiles, ...tiles, ...whereTile, ...streetViewTile, ...clueTile];
 
   return (
-    <div className="page">
+    <div className="page page-scroll">
       <Header user={data.user} />
       <main className="page-main">
         <div className="page-title rise">
@@ -172,7 +172,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
             actions={[{ label: 'Open the editor', to: '/editor' }]}
           />
         )}
-        <FitGrid
+        <ItemList
           className="tiles"
           label="Drills"
           items={[...allTiles, GAMES_TILE]}
@@ -188,7 +188,7 @@ const GAMES_TILE: Tile = {
   key: 'games',
   to: '/games',
   label: 'Mini-games',
-  blurb: 'Area codes, plates, scripts by state',
+  blurb: 'Find the state from its area code',
   icon: (
     <>
       <rect x="3" y="3" width="7.5" height="7.5" rx="2" />
