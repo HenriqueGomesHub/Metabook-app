@@ -1,7 +1,7 @@
 import { patternHint } from '@metabook/core';
 import type { Card } from '@metabook/core';
 import { label, scopeOf } from '../app/labels';
-import { patternOf, placedCodes } from '../data/areaCodes';
+import { isZoneCard, patternOf, placedCodes } from '../data/areaCodes';
 import './pattern-map.css';
 
 /** "11, 12, 13, 14" → "11–14"; runs of three or more codes read as a range. */
@@ -29,6 +29,11 @@ export function PatternHint({
   labelled?: boolean;
 }) {
   if (card.type !== 'areacode') return null;
+  // an area card's verdict already names the area; the tip is what's left to add
+  if (isZoneCard(card)) {
+    const tip = patternOf(card.country)?.tip;
+    return tip ? <p className="pattern-hint">{tip}</p> : null;
+  }
   const hint = patternHint(
     card.country,
     card.prompt.value,

@@ -13,7 +13,7 @@ import { FlagImage } from '../components/FlagImage';
 import { Header } from '../components/Header';
 import { exampleCodes, PatternMap, patternLegend, regionGroupKeys } from '../components/PatternMap';
 import { Status } from '../components/Status';
-import { areaCodeSections, patternOf, placedCodes } from '../data/areaCodes';
+import { areaCodeSections, isExactAreaCode, patternOf, placedCodes } from '../data/areaCodes';
 import { pct } from './atlas/format';
 import './games/games.css';
 import './atlas/atlas.css';
@@ -168,6 +168,8 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
   const back = `/areacodes${query}`;
   const game = `/games/areacode/${country.toLowerCase()}`;
   const session = `/session?type=areacode&country=${country}`;
+  // a big country is drilled by area; its codes one region at a time are an option
+  const byArea = data.content.cards.some((c) => c.country === country && isExactAreaCode(c));
   const regionName = (code: string) => map?.states.find((s) => s.code === code)?.name ?? code;
 
   if (codes.length === 0) {
@@ -283,6 +285,11 @@ function Intro({ data, country }: { data: AppSnapshot; country: string }) {
                 {drill ? 'Map game' : 'Drill them'}
               </LinkButton>
             </div>
+            {byArea && (
+              <LinkButton to={`${session}&exact=1`} variant="ghost" className="ac-exact">
+                Every region, code by code
+              </LinkButton>
+            )}
           </aside>
         </div>
       </main>

@@ -46,7 +46,7 @@ import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { clueIndex } from '../data/clueIndex';
 import { optionsFor } from './session/options';
-import { isMemoriseAreaCode } from '../data/areaCodes';
+import { isExactAreaCode, isMemoriseAreaCode, isZoneCard } from '../data/areaCodes';
 import { preloadClueImages } from '../data/clueImages';
 import type { Repository } from '../data/repository';
 import { clueHeading } from '../components/clues/ClueDetails';
@@ -76,6 +76,8 @@ interface Scope {
   map?: boolean;
   /** `clue=1`: the Clue quiz, text-only fact cards; every other scope leaves them out */
   clue?: boolean;
+  /** `exact=1`: a big country's area codes one region at a time, not by area */
+  exact?: boolean;
 }
 
 /** `more=new`: "Learn more" (new cards past today's limit); `more=ahead`: "Practise more". */
@@ -109,14 +111,16 @@ export function Session() {
   const clue = params.get('clue') === '1' || undefined;
   const clues = params.get('src') === 'clues' || undefined;
   const moreParam = params.get('more');
+  // a big country's area codes one region at a time, instead of by area
+  const exact = params.get('exact') === '1' || undefined;
   const more = moreParam === 'new' || moreParam === 'ahead' ? moreParam : undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}`;
+  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}|${exact}`;
   return type || subject || country || chapter || map !== undefined || clue || clues ? (
     <PracticeRunner
       key={key}
       data={data}
-      scope={{ type, subject, country, chapter, map, clue, clues }}
+      scope={{ type, subject, country, chapter, map, clue, clues, exact }}
     />
   ) : (
     <DueRunner key={more ?? 'today'} data={data} more={more} />
@@ -125,7 +129,7 @@ export function Session() {
 
 function inScope(
   cards: Card[],
-  { type, subject, country, chapter, map, clue, clues }: Scope,
+  { type, subject, country, chapter, map, clue, clues, exact }: Scope,
 ): Card[] {
   return cards.filter(
     (card) =>
@@ -140,6 +144,8 @@ function inScope(
       (!country || card.country === country) &&
       // area codes with no pattern (US, Canada) only in their own country's drill
       (Boolean(country) || !isMemoriseAreaCode(card)) &&
+      // a big country's codes go by area; one region per code only in its "Exact" drill
+      (exact ? !isZoneCard(card) : !isExactAreaCode(card)) &&
       (!chapter || card.chapter === chapter),
   );
 }
@@ -648,6 +654,8 @@ function CardRunner({
 
   /** On a missed area code: the codes of the state the learner picked ("Acre: 68"). */
   function pickedCodes(state: string): Shown['aside'] {
+    // an area card's verdict already names the area picked
+    if (isZoneCard(card)) return undefined;
     const codes = cards
       .filter((c) => c.type === 'areacode' && c.country === card.country && c.answer === state)
       .map((c) => c.prompt.value)

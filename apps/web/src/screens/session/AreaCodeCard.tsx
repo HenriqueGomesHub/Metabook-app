@@ -1,7 +1,8 @@
+import { patternKey } from '@metabook/core';
 import { useState } from 'react';
 import { label, scopeOf } from '../../app/labels';
 import { AreaCodeMap, areaZones } from '../../components/AreaCodeMap';
-import { placedCodes } from '../../data/areaCodes';
+import { isZoneCard, patternOf, placedCodes, zoneKeyOf } from '../../data/areaCodes';
 import { Stage } from './Stage';
 import type { CardProps } from './types';
 
@@ -10,12 +11,23 @@ export function AreaCodeCard({ card, cards, outcome, onAnswer, reveal }: CardPro
   const [hover, setHover] = useState<string | null>(null);
   const hovered = hover ? label(hover, scopeOf(card)) : undefined;
   const brazil = card.country === 'BR';
+  const byArea = isZoneCard(card);
   // where codes cover whole areas (France's 04), the area is the answer, not one of its regions
   const unit = brazil
     ? 'state'
-    : Object.keys(areaZones(placedCodes(cards, card.country))).length
+    : byArea || Object.keys(areaZones(placedCodes(cards, card.country))).length
       ? 'area'
       : 'region';
+  // an area card shows one of its group's codes, a different one each time
+  const [code] = useState(() => {
+    const key = zoneKeyOf(card.answer);
+    if (!byArea || key === undefined) return card.prompt.value;
+    const digits = patternOf(card.country)?.digits ?? 1;
+    const codes = placedCodes(cards, card.country)
+      .map((p) => p.code)
+      .filter((c) => patternKey(card.country, c, digits) === key);
+    return codes[Math.floor(Math.random() * codes.length)] ?? card.prompt.value;
+  });
   return (
     <Stage
       variant="map"
@@ -26,6 +38,7 @@ export function AreaCodeCard({ card, cards, outcome, onAnswer, reveal }: CardPro
           reveal={outcome ? { answer: card.answer, picked: outcome.given } : undefined}
           onPick={onAnswer}
           onHover={setHover}
+          byArea={byArea}
         />
       }
       side={
@@ -33,7 +46,7 @@ export function AreaCodeCard({ card, cards, outcome, onAnswer, reveal }: CardPro
           <p className="kicker rise">
             {brazil ? 'Which state uses' : `${label(card.country)} · which ${unit} uses`}
           </p>
-          <div className="areacode headline pop-in">{card.prompt.value}</div>
+          <div className="areacode headline pop-in">{code}</div>
           <p className={hovered ? 'code-hover' : 'code-hover idle'} aria-hidden="true">
             {hovered ?? `Pick the ${unit} on the map`}
           </p>

@@ -1,4 +1,5 @@
 import { SUBJECT_NOUNS } from '@metabook/core';
+import { zoneName } from '../../data/areaCodes';
 import type { Card, SessionItem } from '@metabook/core';
 import { label, scopeOf } from '../../app/labels';
 import type { RevealProps } from './Reveal';
@@ -53,6 +54,13 @@ function baseVerdict(
   outcome: Outcome,
 ): Pick<RevealProps, 'verdict' | 'tone' | 'detail'> {
   if (card.type === 'which') return whichVerdict(card, outcome);
+  const zone = zoneName(card.country, card.answer);
+  if (zone) {
+    if (outcome.correct) return { verdict: 'Got it', tone: 'right', detail: zone };
+    if (!outcome.given) return { verdict: `It’s ${zone}`, tone: 'neutral' };
+    const picked = zoneName(card.country, outcome.given) ?? outcome.given;
+    return { verdict: `Not quite — it’s ${zone}`, tone: 'wrong', detail: `You picked ${picked}` };
+  }
   const scope = scopeOf(card);
   // a code covering a whole area (France's 04) is answered by the area, named by its key region;
   // one spilling into a single neighbour still names the neighbour ("Mainly …; it also covers …")

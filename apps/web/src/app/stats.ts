@@ -16,7 +16,7 @@ import type { IconName } from '../components/icons';
 import type { AppSnapshot } from './AppData';
 import { CARD_TYPES } from './cardTypes';
 import { SUBJECTS, tagLabel } from './labels';
-import { isMemoriseAreaCode } from '../data/areaCodes';
+import { isExactAreaCode, isMemoriseAreaCode } from '../data/areaCodes';
 
 const FALLBACK_MEDIAN_MS = 6000;
 const STREAK_DAYS = 14;
@@ -81,6 +81,8 @@ export const sessionCards = (data: AppSnapshot): Card[] =>
       !isClueCard(card) &&
       card.type !== 'live' &&
       !isMemoriseAreaCode(card) &&
+      // a big country's codes one region at a time are for its "Exact" drill; Daily asks areas
+      !isExactAreaCode(card) &&
       (data.settings.regionsInDaily || !isRegional(card)),
   );
 

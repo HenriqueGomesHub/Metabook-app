@@ -14,7 +14,7 @@ import { PatternHint } from '../components/PatternHint';
 import { CloseButton } from '../components/Chip';
 import { Status } from '../components/Status';
 import { TipBox } from '../components/TipBox';
-import { areaCodeCountries, placedCodes } from '../data/areaCodes';
+import { areaCodeCountries, isZoneCard, placedCodes } from '../data/areaCodes';
 import type { MapRegion } from '../data/content';
 import { pct } from './atlas/format';
 import './games/games.css';
@@ -81,7 +81,10 @@ function Play({
     [data.content],
   );
   const all = useMemo(
-    () => data.content.cards.filter((card) => card.type === 'areacode' && card.country === country),
+    () =>
+      data.content.cards.filter(
+        (card) => card.type === 'areacode' && card.country === country && !isZoneCard(card),
+      ),
     [data.content.cards, country],
   );
   const cards = useMemo(
