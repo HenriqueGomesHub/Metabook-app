@@ -15,7 +15,8 @@ const HIDDEN_NAV_PREFIXES = [
   '/languages/',
 ];
 
-const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
+/** `also`: a page opened from a tab that keeps that tab lit (game review opens from Stats). */
+const NAV_ITEMS: { to: string; label: string; icon: ReactNode; also?: string }[] = [
   {
     to: '/',
     label: 'Today',
@@ -36,16 +37,6 @@ const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
       <>
         <rect x="3.5" y="7.5" width="13" height="13" rx="2.5" />
         <path d="M7.5 3.5h10a3 3 0 0 1 3 3v10" />
-      </>
-    ),
-  },
-  {
-    to: '/review',
-    label: 'Game review',
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="9" />
-        <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z" />
       </>
     ),
   },
@@ -73,6 +64,7 @@ const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
   {
     to: '/stats',
     label: 'Stats',
+    also: '/review',
     icon: (
       <>
         <path d="M5 20v-6" />
@@ -94,14 +86,16 @@ export function AppShell() {
       </div>
       {showNav && (
         <nav className="nav" aria-label="Main">
-          {NAV_ITEMS.map(({ to, label, icon }) => (
+          {NAV_ITEMS.map(({ to, label, icon, also }) => (
             <NavLink
               key={to}
               to={to}
               end={to === '/'}
               aria-label={label}
               title={label}
-              className={({ isActive }) => (isActive ? 'on' : undefined)}
+              className={({ isActive }) =>
+                isActive || (also && pathname.startsWith(also)) ? 'on' : undefined
+              }
             >
               <svg className="icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
                 {icon}

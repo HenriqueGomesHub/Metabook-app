@@ -4,6 +4,11 @@ import { MemoryRepository } from '../test/MemoryRepository';
 import { renderScreens } from '../test/renderScreens';
 
 describe('Review', () => {
+  it('opens straight on the log form from the Stats button', async () => {
+    renderScreens('/review?log=1', new MemoryRepository());
+    expect(await screen.findByLabelText('You guessed')).toBeTruthy();
+  });
+
   it('logs a missed round by hand, records the confusion and shows the miss', async () => {
     const repo = new MemoryRepository();
     renderScreens('/review', repo);

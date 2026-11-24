@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useAppData } from '../app/AppData';
 import type { AppSnapshot } from '../app/AppData';
 import { Button } from '../components/Button';
@@ -17,7 +17,8 @@ export function Review() {
 
 function ReviewView({ data }: { data: AppSnapshot }) {
   const { logRounds } = useAppData();
-  const [logging, setLogging] = useState(false);
+  const [params] = useSearchParams();
+  const [logging, setLogging] = useState(() => params.get('log') === '1');
   const [result, setResult] = useState<{ message: string; ok: boolean } | null>(null);
 
   return (
@@ -34,12 +35,6 @@ function ReviewView({ data }: { data: AppSnapshot }) {
         </>
       }
     >
-      {data.rounds.length > 0 && (
-        <p className="note rise d1">
-          The extension logs single-player games for you: pair it in{' '}
-          <Link to="/settings">Settings</Link>.
-        </p>
-      )}
       {result && (
         <p className={`note ${result.ok ? 'note-ok' : 'note-warn'}`} role="status">
           {result.message}
@@ -65,8 +60,7 @@ function ReviewView({ data }: { data: AppSnapshot }) {
         !logging && (
           <EmptyState
             title="No games yet"
-            text="Log one by hand, import a Round Analyzer file, or pair the extension."
-            actions={[{ label: 'Pair the extension', to: '/settings' }]}
+            text="Log one by hand or import a Round Analyzer file."
           />
         )
       )}

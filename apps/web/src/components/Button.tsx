@@ -13,6 +13,16 @@ export function ArrowIcon() {
   );
 }
 
+/** Game review: a compass. */
+export function CompassIcon() {
+  return (
+    <svg className="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="m15.5 8.5-2.2 4.8-4.8 2.2 2.2-4.8z" />
+    </svg>
+  );
+}
+
 /** The chevron at the end of a row that opens something. */
 export function ChevronIcon() {
   return (

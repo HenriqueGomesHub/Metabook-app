@@ -5,6 +5,7 @@ import type { AppSnapshot } from '../app/AppData';
 import { label, pairLabel } from '../app/labels';
 import { mapsOf, pairScope } from '../app/stats';
 import { useRegionMaps } from '../app/useRegionMaps';
+import { CompassIcon, LinkButton } from '../components/Button';
 import { EmptyState } from '../components/EmptyState';
 import { Header } from '../components/Header';
 import { Status } from '../components/Status';
@@ -86,11 +87,15 @@ function StatsView({ data }: { data: AppSnapshot }) {
     <div className="page">
       <Header user={data.user} />
       <main className="page-main stats-main">
-        <div className="page-title rise">
+        <div className="page-title stats-title rise">
           <div>
             <h1 className="headline">Stats</h1>
             {!nothing && <p>Your last 30 days.</p>}
           </div>
+          <LinkButton variant="ghost" to="/review?log=1">
+            <CompassIcon />
+            Log a game
+          </LinkButton>
         </div>
 
         {nothing ? (
