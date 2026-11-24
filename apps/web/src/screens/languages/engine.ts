@@ -1,5 +1,7 @@
 import { COURSES } from './data';
-import type { Course, Letter, Reading } from './data';
+import type { Course, Level, Letter, Reading } from './data';
+import { SPOTS, TONGUES, tongueById } from './tongues';
+import type { Spot, Tongue, TongueId } from './tongues';
 
 /* ---------- helpers ---------- */
 const shuffle = <T>(arr: readonly T[]): T[] => {
@@ -19,6 +21,24 @@ const lettersOf = (course: Course, word: string) => uniq(course.fold(word).split
 export const isSign = (L: { l: string }) => L.l === '—';
 
 export const courseById = (id: string | undefined) => COURSES.find((c) => c.id === id);
+
+/** A lesson of the course, main or extra, by its id. */
+export const levelById = (course: Course, id: number): Level | undefined =>
+  [...course.levels, ...(course.extras ?? [])].find((lv) => lv.id === id);
+
+/** The lessons whose letters a lesson may use: the main ones up to it, or (for an extra) all of
+ * them plus the extras it builds on. */
+function lessonsUpTo(course: Course, id: number): Level[] {
+  const i = course.levels.findIndex((lv) => lv.id === id);
+  if (i >= 0) return course.levels.slice(0, i + 1);
+  const extra = levelById(course, id);
+  if (!extra) return [];
+  const base = (extra.base ?? []).flatMap((b) => {
+    const lv = levelById(course, b);
+    return lv ? [lv] : [];
+  });
+  return [...course.levels, ...base, extra];
+}
 
 /** Latin letters that are easy to mix up, for wrong answers that look plausible. */
 const CONFUSE: Record<string, string> = {
@@ -87,10 +107,10 @@ export type Exercise =
     };
 
 /* ---------- lesson builder ---------- */
-export function buildLesson(course: Course, idx: number): Exercise[] {
-  const lv = course.levels[idx];
+export function buildLesson(course: Course, levelId: number): Exercise[] {
+  const lv = levelById(course, levelId);
   if (!lv) return [];
-  const learned = course.levels.slice(0, idx + 1).flatMap((l) => l.letters.map(course.toLetter));
+  const learned = lessonsUpTo(course, levelId).flatMap((l) => l.letters.map(course.toLetter));
   const learnedSet = new Set(learned.map((L) => L.key));
   const newSet = new Set(lv.letters.map(course.toLetter).map((L) => L.key));
   const latinPool = learned.map((L) => L.l);
@@ -193,15 +213,45 @@ export interface PracticeQuestion {
 }
 
 export const courseLetters = (course: Course) =>
-  course.levels.flatMap((lv) => lv.letters).map(course.toLetter);
+  [...course.levels, ...(course.extras ?? [])].flatMap((lv) => lv.letters).map(course.toLetter);
+
+/** What endless practice draws from: a course, or one language of a script many write in. */
+export interface PracticeSource {
+  letters: Letter[];
+  words: Reading[];
+  phrases: Reading[];
+  cities: Reading[];
+}
+
+/** The languages a course's practice is split into (Cyrillic: Russian, Ukrainian…). */
+export const tonguesOf = (course: Course): Tongue[] => (course.id === 'cyrillic' ? TONGUES : []);
+
+function tongueLetters(t: Tongue): Letter[] {
+  return Object.entries(t.alphabet)
+    .filter(([c, l]) => l && /\p{L}/u.test(c))
+    .map(([c, l]) => {
+      const glyph = c.toUpperCase();
+      return { glyph, tag: glyph, key: c, l, sub: null, tip: '' };
+    });
+}
+
+export function sourceOf(course: Course, tongue?: Tongue): PracticeSource {
+  if (tongue) return { ...tongue, letters: tongueLetters(tongue) };
+  return {
+    letters: courseLetters(course),
+    words: course.words,
+    phrases: course.phrases,
+    cities: course.cities,
+  };
+}
 
 export function makeQ(
-  course: Course,
+  source: PracticeSource,
   cat: PracticeCategory,
   prevC: string | null,
 ): PracticeQuestion {
   if (cat === 'letters') {
-    const all = courseLetters(course).filter((L) => !isSign(L));
+    const all = source.letters.filter((L) => !isSign(L));
     const latin = uniq(all.map((L) => L.l));
     let L = pickOne(all);
     while (prevC && L.glyph === prevC && all.length > 1) L = pickOne(all);
@@ -213,7 +263,7 @@ export function makeQ(
       multi: false,
     };
   }
-  const src = cat === 'words' ? course.words : cat === 'phrases' ? course.phrases : course.cities;
+  const src = cat === 'words' ? source.words : cat === 'phrases' ? source.phrases : source.cities;
   let item = pickOne(src);
   while (prevC && item.c === prevC && src.length > 1) item = pickOne(src);
   return {
@@ -228,6 +278,7 @@ export function makeQ(
 /* a typed answer is forgiving: case, spaces, hyphens and accents (ü, ö) don't matter */
 export const norm = (s: string) =>
   s
+    .replace(/đ/gi, 'dj')
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
@@ -236,13 +287,18 @@ export const norm = (s: string) =>
 /* ---------- progress of each course, kept in this browser ---------- */
 export interface CourseProgress {
   completed: number[];
-  bestStreaks: Record<PracticeCategory, number>;
+  /** by category (`words`), by language and category (`serbian.words`), and `spot` */
+  bestStreaks: Record<string, number>;
 }
 
 export const EMPTY: CourseProgress = {
   completed: [],
   bestStreaks: { letters: 0, words: 0, phrases: 0, cities: 0 },
 };
+
+/** Where a best streak is kept: Russian, the main course, keeps the plain category keys. */
+export const streakKey = (cat: string, tongue?: Tongue) =>
+  tongue && tongue.id !== 'russian' ? `${tongue.id}.${cat}` : cat;
 
 const KEY = 'metabook.alphabets';
 /** the first Languages version kept Cyrillic alone under this key */
@@ -286,7 +342,7 @@ export function saveProgress(courseId: string, progress: CourseProgress) {
   }
 }
 
-/** Letters learnt of a course: those of its finished lessons. */
+/** Letters learnt of a course: those of its finished main lessons. */
 export function courseProgress(course: Course) {
   const done = loadProgress(course.id).completed;
   const all = course.levels.reduce((n, lv) => n + lv.letters.length, 0);
@@ -295,6 +351,55 @@ export function courseProgress(course: Course) {
     .reduce((n, lv) => n + lv.letters.length, 0);
   return { learned, all };
 }
+
+/* ---------- spot the language ---------- */
+export interface SpotQuestion extends Spot {
+  options: Tongue[];
+}
+
+/** Words seen lately, kept between visits so a new run doesn't open on the same ones. */
+const RECENT = 'metabook.alphabets.spot';
+/** Roughly five minutes of play before a word can come back. */
+export const RECENT_SPOTS = 80;
+
+function readRecent(): string[] {
+  try {
+    const saved = JSON.parse(localStorage.getItem(RECENT) ?? '[]') as unknown;
+    return Array.isArray(saved) ? saved.filter((x): x is string => typeof x === 'string') : [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * A word, phrase or place whose letters say which language it is. The language is drawn first,
+ * so each comes up as often, never three times running, and the word is one not seen lately.
+ */
+export function makeSpot(lastTongues: TongueId[] = []): SpotQuestion {
+  const recent = readRecent();
+  const [a, b] = lastTongues.slice(-2);
+  const tongues = TONGUES.filter((t) => !(a && a === b && t.id === a));
+  const tongue = pickOne(tongues);
+  const pool = SPOTS[tongue.id];
+  const fresh = pool.filter((s) => !recent.includes(s.c));
+  const spot = pickOne(fresh.length ? fresh : pool);
+  try {
+    localStorage.setItem(RECENT, JSON.stringify([...recent, spot.c].slice(-RECENT_SPOTS)));
+  } catch {
+    /* storage unavailable */
+  }
+  return { ...spot, options: TONGUES };
+}
+
+/** The letters of a text that give its language away, marked for the reveal. */
+export function markTells(text: string, tongue: Tongue): { g: string; tell: boolean }[] {
+  return (text.normalize('NFC').match(/.\u0301?/gu) ?? []).map((g) => ({
+    g,
+    tell: tongue.tells.includes(g.toLowerCase()),
+  }));
+}
+
+export { tongueById };
 
 /* ---------- sound ---------- */
 let audioCtx: AudioContext | null = null;

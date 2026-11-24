@@ -245,11 +245,31 @@
   color: var(--muted);
 }
 
+/* Same columns as .lg-columns below, so the practice cards line up with the letters box */
 .lg-actions {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
   margin-bottom: 36px;
+}
+
+.lg-modes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+
+.lg-modes.two {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.lg-practice-name,
+.lg-practice-best,
+.lg-next-name {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .lg-next,
@@ -344,6 +364,10 @@
   margin: 0 0 14px;
   font-size: 17px;
   font-weight: 600;
+}
+
+.lg-h2-extras {
+  margin-top: 32px;
 }
 
 .lg-columns {
@@ -578,7 +602,16 @@ a.lg-lesson:hover {
 
   .lg-actions {
     grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
     margin-bottom: 28px;
+  }
+
+  .lg-practice {
+    padding: 14px 16px;
+  }
+
+  .lg-practice-name {
+    font-size: 15px;
   }
 
   .lg-next-letters {
@@ -825,6 +858,55 @@ a.lg-lesson:hover {
   font-size: 14px;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+}
+
+.cy-langs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.cy-langs button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cy-langs button.on {
+  border-color: var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.cy-tell {
+  background: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.18em;
+}
+
+.cy-spot-why {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cy-spot-why p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .cy-controls {

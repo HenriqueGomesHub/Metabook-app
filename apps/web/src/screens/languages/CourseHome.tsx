@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowIcon, LinkButton } from '../../components/Button';
 import { CloseButton } from '../../components/Chip';
-import { courseById, EMPTY, loadProgress, saveProgress, setLastCourse } from './engine';
+import { courseById, EMPTY, loadProgress, saveProgress, setLastCourse, tonguesOf } from './engine';
 import { useScriptFonts } from './fonts';
 import './languages.css';
 
@@ -35,7 +35,11 @@ export function CourseHome() {
   );
   const learned = letters.filter((x) => completed.includes(x.lv)).length;
   const pct = Math.round((learned / letters.length) * 100);
-  const best = Math.max(0, ...Object.values(progress.bestStreaks));
+  const streaks = Object.entries(progress.bestStreaks);
+  const best = Math.max(0, ...streaks.filter(([k]) => k !== 'spot').map(([, n]) => n));
+  const spotBest = progress.bestStreaks.spot ?? 0;
+  const spots = tonguesOf(course).length > 0;
+  const extras = course.extras ?? [];
 
   const reset = () => {
     if (!confirmReset) return setConfirmReset(true);
@@ -87,14 +91,22 @@ export function CourseHome() {
               </span>
             </div>
           )}
-          <Link className="lg-practice" to={`/languages/${course.id}/practice`}>
-            <span className="lg-practice-name">Endless practice</span>
-            {best > 0 ? (
-              <span className="lg-practice-best">Best streak {best}</span>
-            ) : (
-              <span className="lg-practice-best">Letters, words, phrases, places</span>
+          <div className={spots ? 'lg-modes two' : 'lg-modes'}>
+            <Link className="lg-practice" to={`/languages/${course.id}/practice`}>
+              <span className="lg-practice-name">Endless practice</span>
+              <span className="lg-practice-best">
+                {best > 0 ? `Best streak ${best}` : 'Letters, words, places'}
+              </span>
+            </Link>
+            {spots && (
+              <Link className="lg-practice" to={`/languages/${course.id}/spot`}>
+                <span className="lg-practice-name">Spot the language</span>
+                <span className="lg-practice-best">
+                  {spotBest > 0 ? `Best streak ${spotBest}` : 'Six languages'}
+                </span>
+              </Link>
             )}
-          </Link>
+          </div>
         </div>
 
         <div className="lg-columns">
@@ -137,6 +149,36 @@ export function CourseHome() {
                 );
               })}
             </ol>
+
+            {extras.length > 0 && (
+              <>
+                <h2 className="lg-h2 lg-h2-extras" id="lg-extras">
+                  Extras
+                </h2>
+                <ol className="lg-lessons" aria-labelledby="lg-extras">
+                  {extras.map((lv) => {
+                    const done = completed.includes(lv.id);
+                    const first = lv.letters[0] ? course.toLetter(lv.letters[0]).tag : '';
+                    return (
+                      <li key={lv.id}>
+                        <Link
+                          className={done ? 'lg-lesson done' : 'lg-lesson'}
+                          to={`/languages/${course.id}/lesson/${lv.id}`}
+                        >
+                          <span className="lg-lesson-num script" aria-hidden="true">
+                            {done ? '✓' : first}
+                          </span>
+                          <span className="lg-lesson-name">{lv.name}</span>
+                          <span className="lg-lesson-letters script" aria-hidden="true">
+                            {lv.letters.map((r) => course.toLetter(r).tag).join(' ')}
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </>
+            )}
           </section>
 
           <section className="lg-letters" aria-labelledby="lg-letters">

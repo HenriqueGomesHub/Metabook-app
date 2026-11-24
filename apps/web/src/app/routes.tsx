@@ -22,6 +22,7 @@ import { CourseHome } from '../screens/languages/CourseHome';
 import { LanguageGroup, Languages } from '../screens/languages/Languages';
 import { Lesson } from '../screens/languages/Lesson';
 import { Practice } from '../screens/languages/Practice';
+import { Spot } from '../screens/languages/Spot';
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ export const router = createBrowserRouter([
           { path: '/languages/:course', element: <CourseHome /> },
           { path: '/languages/:course/lesson/:id', element: <Lesson /> },
           { path: '/languages/:course/practice', element: <Practice /> },
+          { path: '/languages/:course/spot', element: <Spot /> },
           { path: '/settings', element: <Settings /> },
           { path: '/curate', element: <Curate /> },
           { path: '/editor', element: <Editor /> },
