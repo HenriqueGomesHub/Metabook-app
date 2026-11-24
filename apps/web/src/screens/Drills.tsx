@@ -49,9 +49,18 @@ const FAMILY_TEXT: Record<string, string> = {
 };
 
 /** A photo of the family to show on its tile: a Spot it card's image, from a typical country. */
-function photoOf(cards: Card[], subject: string | null, type?: Card['type']): Cover {
+function photoOf(
+  cards: Card[],
+  subject: string | null,
+  type?: Card['type'],
+  prefer: string[] = [],
+): Cover {
   if (subject && FAMILY_TEXT[subject]) return { kind: 'text', text: FAMILY_TEXT[subject] };
-  const order = [...(subject ? (FAMILY_COUNTRIES[subject] ?? []) : []), ...COVER_COUNTRIES];
+  const order = [
+    ...prefer,
+    ...(subject ? (FAMILY_COUNTRIES[subject] ?? []) : []),
+    ...COVER_COUNTRIES,
+  ];
   // a wide, plain photo of the thing itself: no side-by-side comparison, nothing that names the
   // country, no drawn-on labels
   const fits = (image: ClueImage) =>
@@ -150,7 +159,13 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         to: '/session?type=live',
         label: 'Street View',
         icon: ICONS.streetview,
-        cover: photoOf(live, null, 'live'),
+        // a wide Street View shot: a Spot it photo taken at a Street View spot, from Japan first
+        cover: photoOf(
+          cards.filter((card) => card.type === 'spot' && card.clue?.image?.location),
+          null,
+          'spot',
+          ['JP', 'NZ', 'IS', 'NO'],
+        ),
         mastery: mastery(
           live.map((card) => card.id),
           data.states,
