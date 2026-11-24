@@ -26,7 +26,44 @@
 
 .cy-home-bar {
   display: flex;
+  /* no header above: the close button gets the same room as on a session */
+  padding-top: 28px;
   margin-bottom: 8px;
+}
+
+/* a course row: its 40px letter tile needs a wider first column than an icon */
+.row-item.cy-row {
+  grid-template-columns: 40px minmax(0, 1fr) auto 16px;
+  gap: 16px;
+}
+
+/* lessons and the letters side by side when there is room */
+.cy-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 12px;
+}
+
+.cy-lessons-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+@media (min-width: 960px) {
+  .cy-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 32px;
+  }
+
+  .cy-columns > .cy-overview {
+    position: sticky;
+    top: 24px;
+  }
 }
 
 .cy-home .page-title {
@@ -170,14 +207,6 @@
   color: var(--ink);
   font-size: 15px;
   line-height: 1.5;
-}
-
-.cy-lessons-title {
-  margin-top: 12px;
-}
-
-.cy-overview {
-  margin-top: 16px;
 }
 
 .cy-lessons {
