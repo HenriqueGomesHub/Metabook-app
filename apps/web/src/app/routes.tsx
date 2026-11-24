@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { AreaCodeGame } from '../screens/AreaCodeGame';
 import { AreaCodeIntro, AreaCodes } from '../screens/AreaCodes';
 import { Atlas } from '../screens/Atlas';
@@ -7,7 +7,6 @@ import { Country } from '../screens/Country';
 import { Curate } from '../screens/Curate';
 import { Drills } from '../screens/Drills';
 import { Editor } from '../screens/Editor';
-import { Games } from '../screens/Games';
 import { Login } from '../screens/Login';
 import { NotFound } from '../screens/NotFound';
 import { Placement } from '../screens/Placement';
@@ -35,7 +34,8 @@ export const router = createBrowserRouter([
           { path: '/', element: <Today /> },
           { path: '/session', element: <Session /> },
           { path: '/drills', element: <Drills /> },
-          { path: '/games', element: <Games /> },
+          // Mini-games held only the area-code game, which opens from Area codes now
+          { path: '/games', element: <Navigate to="/areacodes" replace /> },
           { path: '/games/areacode/:country', element: <AreaCodeGame /> },
           { path: '/areacodes', element: <AreaCodes /> },
           { path: '/areacodes/:country', element: <AreaCodeIntro /> },

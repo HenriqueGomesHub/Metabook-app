@@ -20,19 +20,20 @@ import './games/games.css';
 const WEAK_MASTERY = 0.6;
 
 /** Screenshots from real rounds, one per drill, keyed by family or card type. */
-const SHOTS = import.meta.glob<string>('../assets/drill-covers/*.webp', {
+const SHOTS = import.meta.glob<string>('../assets/drill-covers/*.{webp,svg}', {
   eager: true,
   query: '?url',
   import: 'default',
 });
-const shot = (name: string): Cover | undefined => {
-  const src = SHOTS[`../assets/drill-covers/${name}.webp`];
-  return src ? { kind: 'shot', src } : undefined;
+const shot = (name: string, drawing = false): Cover | undefined => {
+  const src =
+    SHOTS[`../assets/drill-covers/${name}.webp`] ?? SHOTS[`../assets/drill-covers/${name}.svg`];
+  return src ? { kind: 'shot', src, drawing } : undefined;
 };
 
 /** What a tile shows above its name: a real example of the drill. */
 type Cover =
-  | { kind: 'shot'; src: string }
+  | { kind: 'shot'; src: string; drawing?: boolean }
   | { kind: 'photo'; image: ClueImage; alt: string }
   | { kind: 'flags'; codes: string[] }
   | { kind: 'text'; text: string; script?: boolean }
@@ -151,7 +152,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         to: '/session?type=region',
         label: 'Where in the country',
         icon: ICONS.where,
-        cover: { kind: 'icon' },
+        // Brazil by region, the South lit: the drill asks which part of a country a clue is from
+        cover: shot('where', true) ?? { kind: 'icon' },
         mastery: mastery(
           onMap.map((card) => card.id),
           data.states,
@@ -238,7 +240,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         <ItemList
           className="drill-grid"
           label="Drills"
-          items={[...allTiles, GAMES_TILE]}
+          items={allTiles}
           keyOf={(tile) => tile.key}
           render={(tile) => <DrillTile tile={tile} />}
         />
@@ -247,25 +249,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
   );
 }
 
-const GAMES_TILE: Tile = {
-  key: 'games',
-  to: '/games',
-  label: 'Mini-games',
-  cover: { kind: 'icon' },
-  icon: (
-    <>
-      <rect x="3" y="3" width="7.5" height="7.5" rx="2" />
-      <rect x="13.5" y="3" width="7.5" height="7.5" rx="2" />
-      <rect x="3" y="13.5" width="7.5" height="7.5" rx="2" />
-      <circle cx="17.25" cy="17.25" r="3.75" />
-    </>
-  ),
-  mastery: -1,
-};
-
 function DrillTile({ tile }: { tile: Tile }) {
-  const { key, to, label: name, icon, mastery: pct, cover } = tile;
-  const games = key === 'games';
+  const { to, label: name, icon, mastery: pct, cover } = tile;
   const percent = Math.round(pct * 100);
   return (
     <Link className="drill-card" to={to}>
@@ -273,17 +258,15 @@ function DrillTile({ tile }: { tile: Tile }) {
         <CoverArt cover={cover} icon={icon} />
       </span>
       <span className="drill-name headline">{name}</span>
-      {!games && (
-        <span className="drill-prog" role="img" aria-label={`Mastery ${percent}%`}>
-          <span className="bar">
-            <div
-              className={pct < WEAK_MASTERY ? 'weak' : undefined}
-              style={{ width: `${percent}%` }}
-            />
-          </span>
-          <span className="drill-pct">{percent}%</span>
+      <span className="drill-prog" role="img" aria-label={`Mastery ${percent}%`}>
+        <span className="bar">
+          <div
+            className={pct < WEAK_MASTERY ? 'weak' : undefined}
+            style={{ width: `${percent}%` }}
+          />
         </span>
-      )}
+        <span className="drill-pct">{percent}%</span>
+      </span>
     </Link>
   );
 }
@@ -291,7 +274,14 @@ function DrillTile({ tile }: { tile: Tile }) {
 function CoverArt({ cover, icon }: { cover: Cover; icon: ReactNode }) {
   switch (cover.kind) {
     case 'shot':
-      return <img className="drill-shot" src={cover.src} alt="" loading="lazy" />;
+      return (
+        <img
+          className={cover.drawing ? 'drill-shot drawing' : 'drill-shot'}
+          src={cover.src}
+          alt=""
+          loading="lazy"
+        />
+      );
     case 'photo':
       return <ClueImg image={cover.image} alt={cover.alt} fit="cover" />;
     case 'flags':

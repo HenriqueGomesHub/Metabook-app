@@ -152,7 +152,7 @@ function Play({
   const header = (
     <>
       <div className="ddd-bar rise">
-        <CloseButton to="/games" label="Back to mini-games" />
+        <CloseButton to="/areacodes" label="Back to area codes" />
         <div className="ddd-title">
           {chips}
           <span>
@@ -198,7 +198,7 @@ function Play({
         <EmptyState
           title="No area codes yet"
           text={`Area codes for ${name} haven’t been added yet.`}
-          actions={[{ label: 'Back to games', to: '/games' }]}
+          actions={[{ label: 'Back to area codes', to: '/areacodes' }]}
         />
       </div>
     );
@@ -228,8 +228,8 @@ function Play({
               Play again
               <ArrowIcon />
             </Button>
-            <LinkButton to="/games" variant="ghost">
-              Back to games
+            <LinkButton to="/areacodes" variant="ghost">
+              Back to area codes
             </LinkButton>
           </div>
         </main>

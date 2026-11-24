@@ -89,7 +89,7 @@ function Landing({ data }: { data: AppSnapshot }) {
           <EmptyState
             title="No area codes yet"
             text="Area codes haven’t been added yet."
-            actions={[{ label: 'Back to games', to: '/games' }]}
+            actions={[{ label: 'Back to drills', to: '/drills' }]}
           />
         )}
         {!empty && (
