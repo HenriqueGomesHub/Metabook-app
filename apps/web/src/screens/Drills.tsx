@@ -38,8 +38,20 @@ interface Tile {
 /** Countries whose photo stands for a family on its tile, first match wins: clear, typical shots. */
 const COVER_COUNTRIES = ['PL', 'CZ', 'FR', 'BR', 'JP', 'DE', 'ZA', 'RU', 'US', 'AU', 'TH', 'MX'];
 
+/** Families whose best example is not the first typical country's: the car is known by its follow cars in Kenya. */
+const FAMILY_COUNTRIES: Record<string, string[]> = {
+  car: ['KE', 'UG', 'GH', 'NG', 'SN'],
+};
+
+/** Families shown by their letters rather than a photo (their photos are screenshots of text). */
+const FAMILY_TEXT: Record<string, string> = {
+  language: 'ł ñ ç',
+};
+
 /** A photo of the family to show on its tile: a Spot it card's image, from a typical country. */
 function photoOf(cards: Card[], subject: string | null, type?: Card['type']): Cover {
+  if (subject && FAMILY_TEXT[subject]) return { kind: 'text', text: FAMILY_TEXT[subject] };
+  const order = [...(subject ? (FAMILY_COUNTRIES[subject] ?? []) : []), ...COVER_COUNTRIES];
   // a wide, plain photo of the thing itself: no side-by-side comparison, nothing that names the
   // country, no drawn-on labels
   const fits = (image: ClueImage) =>
@@ -51,8 +63,8 @@ function photoOf(cards: Card[], subject: string | null, type?: Card['type']): Co
       (type ? card.type === type : card.type === 'spot' && card.subject === subject),
   );
   const rank = (card: Card) => {
-    const i = COVER_COUNTRIES.indexOf(card.country);
-    return i < 0 ? COVER_COUNTRIES.length : i;
+    const i = order.indexOf(card.country);
+    return i < 0 ? order.length : i;
   };
   const best = [...withImage].sort((a, b) => rank(a) - rank(b) || a.id.localeCompare(b.id))[0];
   return best?.clue?.image
