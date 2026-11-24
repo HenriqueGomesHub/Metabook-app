@@ -19,6 +19,10 @@ import { Stats } from '../screens/Stats';
 import { Today } from '../screens/Today';
 import { AppShell } from './AppShell';
 import { AuthGate } from './AuthGate';
+import { CyrillicHome } from '../screens/languages/cyrillic/CyrillicHome';
+import { CyrillicLesson } from '../screens/languages/cyrillic/CyrillicLesson';
+import { CyrillicPractice } from '../screens/languages/cyrillic/CyrillicPractice';
+import { Languages } from '../screens/languages/Languages';
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +45,10 @@ export const router = createBrowserRouter([
           { path: '/round', element: <Round /> },
           { path: '/blocks', element: <Blocks /> },
           { path: '/stats', element: <Stats /> },
+          { path: '/languages', element: <Languages /> },
+          { path: '/languages/cyrillic', element: <CyrillicHome /> },
+          { path: '/languages/cyrillic/lesson/:id', element: <CyrillicLesson /> },
+          { path: '/languages/cyrillic/practice', element: <CyrillicPractice /> },
           { path: '/settings', element: <Settings /> },
           { path: '/curate', element: <Curate /> },
           { path: '/editor', element: <Editor /> },

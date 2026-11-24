@@ -6,7 +6,14 @@ import { Grain } from '../components/Grain';
  * Screens with an X to leave (sessions, drills, games, an area-code lesson): the lesson has the
  * whole screen, and the nav comes back once the learner leaves.
  */
-const HIDDEN_NAV_PREFIXES = ['/session', '/games/areacode', '/areacodes/', '/placement', '/round'];
+const HIDDEN_NAV_PREFIXES = [
+  '/session',
+  '/games/areacode',
+  '/areacodes/',
+  '/placement',
+  '/round',
+  '/languages/',
+];
 
 const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
   {
@@ -50,6 +57,16 @@ const NAV_ITEMS: { to: string; label: string; icon: ReactNode }[] = [
         <path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z" />
         <path d="M9 4.5v13" />
         <path d="M15 6.5v13" />
+      </>
+    ),
+  },
+  {
+    to: '/languages',
+    label: 'Languages',
+    icon: (
+      <>
+        <path d="M4.5 5.5h9a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3v-3h-1A1.5 1.5 0 0 1 3 13V7a1.5 1.5 0 0 1 1.5-1.5" />
+        <path d="M15 9.5h4.5A1.5 1.5 0 0 1 21 11v6a1.5 1.5 0 0 1-1.5 1.5h-1v3l-3.5-3h-3.5A1.5 1.5 0 0 1 10 17v-2.5" />
       </>
     ),
   },
