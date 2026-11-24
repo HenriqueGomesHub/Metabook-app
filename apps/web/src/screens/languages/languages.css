@@ -535,7 +535,23 @@ a.lg-lesson:hover {
   color: var(--muted);
 }
 
+/* Half a column is narrow until the page is wide: smaller practice cards keep names on one line */
+@media (max-width: 1100px) {
+  .lg-practice {
+    padding: 14px 16px;
+  }
+
+  .lg-practice-name {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 900px) {
+  .lg-actions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
   .lg-columns {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
@@ -601,17 +617,7 @@ a.lg-lesson:hover {
   }
 
   .lg-actions {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
     margin-bottom: 28px;
-  }
-
-  .lg-practice {
-    padding: 14px 16px;
-  }
-
-  .lg-practice-name {
-    font-size: 15px;
   }
 
   .lg-next-letters {
