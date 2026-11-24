@@ -16,11 +16,17 @@ function renderAt(path: string) {
 }
 
 describe('AppShell', () => {
-  it('renders the five navigation links', () => {
+  it('renders the navigation links, without game review', () => {
     renderAt('/');
-    for (const label of ['Today', 'Drills', 'Game review', 'Atlas', 'Stats']) {
+    for (const label of ['Today', 'Drills', 'Atlas', 'Languages', 'Stats']) {
       expect(screen.getByRole('link', { name: label })).toBeTruthy();
     }
+    expect(screen.queryByRole('link', { name: 'Game review' })).toBeNull();
+  });
+
+  it('keeps Stats lit on game review, which opens from it', () => {
+    renderAt('/review');
+    expect(screen.getByRole('link', { name: 'Stats' }).className).toBe('on');
   });
 
   it('leaves the main landmark to the screen', () => {
