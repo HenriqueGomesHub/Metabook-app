@@ -1046,6 +1046,13 @@ figure {
   transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+.drill-shot.drawing {
+  inset: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  object-fit: contain;
+}
+
 .drill-card:hover .drill-shot,
 .drill-card:hover .drill-cover-photo .scene-media {
   transform: scale(1.04);

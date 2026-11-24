@@ -9,7 +9,6 @@ import { AreaCodeGame } from './AreaCodeGame';
 import { Atlas } from './Atlas';
 import { Country } from './Country';
 import { Drills } from './Drills';
-import { Games } from './Games';
 import { Stats } from './Stats';
 
 const ddd = (code: string, answer: string): Card => ({
@@ -121,7 +120,6 @@ function mount(path: string, repo = new MemoryRepository()) {
           <Route path="/atlas" element={<Atlas />} />
           <Route path="/atlas/:country" element={<Country />} />
           <Route path="/drills" element={<Drills />} />
-          <Route path="/games" element={<Games />} />
           <Route path="/games/areacode/br" element={<AreaCodeGame />} />
           <Route path="/stats" element={<Stats />} />
         </Routes>
@@ -222,16 +220,6 @@ describe('Country', () => {
     const toggle = await screen.findByRole('button', { name: 'In focus' });
     expect(toggle.getAttribute('aria-pressed')).toBe('true');
     expect((await repo.getSettings()).focusCountries).toEqual(['BR']);
-  });
-});
-
-describe('Games', () => {
-  it('lists only games that can be played, each opening its page', async () => {
-    mount('/games');
-    expect((await screen.findByRole('link', { name: /Area codes/ })).getAttribute('href')).toBe(
-      '/areacodes',
-    );
-    expect(screen.queryByText('Soon')).toBeNull();
   });
 });
 

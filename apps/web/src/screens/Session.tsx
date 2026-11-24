@@ -859,7 +859,7 @@ function CaughtUp({ more }: { more?: More }) {
         text={text}
         actions={[
           { label: 'Drills', to: '/drills' },
-          { label: 'Mini-games', to: '/games' },
+          { label: 'Area codes', to: '/areacodes' },
         ]}
       />
     </div>

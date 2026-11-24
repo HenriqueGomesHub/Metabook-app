@@ -107,7 +107,9 @@ describe('Session reveal', () => {
     renderApp('/session', repo(0));
     expect(await screen.findByRole('region', { name: 'All caught up' })).toBeTruthy();
     expect(screen.getByRole('link', { name: /Drills/ }).getAttribute('href')).toBe('/drills');
-    expect(screen.getByRole('link', { name: 'Mini-games' }).getAttribute('href')).toBe('/games');
+    expect(screen.getByRole('link', { name: 'Area codes' }).getAttribute('href')).toBe(
+      '/areacodes',
+    );
   });
 
   it('leaves contrast rounds out of a country-filtered session', async () => {
