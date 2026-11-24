@@ -22,6 +22,8 @@ export interface Level {
   name: string;
   desc: string;
   letters: RawLetter[];
+  /** an extra lesson that builds on another extra (Montenegrin on Serbian) */
+  base?: number[];
 }
 
 /** A word, place or phrase: `c` in the script, `l` in Latin letters. */
@@ -49,6 +51,8 @@ export interface Course {
   sample: string[];
   l2cQ: string;
   levels: Level[];
+  /** lessons outside the main course: one per language's own letters */
+  extras?: Level[];
   words: Reading[];
   cities: Reading[];
   phrases: Reading[];
@@ -332,9 +336,13 @@ const CYR_LEVELS: Level[] = [
       { c: 'Ъ', l: '—', tip: 'Hard sign — usually dropped when written out.' },
     ],
   },
+];
+
+/** One lesson per language's own letters, outside the main (Russian) course. */
+const CYR_EXTRAS: Level[] = [
   {
     id: 7,
-    name: 'Ukrainian Extras',
+    name: 'Ukrainian',
     desc: 'Letters Ukrainian adds to the set',
     letters: [
       { c: 'І', l: 'i', tip: 'Ukrainian dotted I — written i (Russian writes И).' },
@@ -345,7 +353,7 @@ const CYR_LEVELS: Level[] = [
   },
   {
     id: 8,
-    name: 'Serbian Extras',
+    name: 'Serbian',
     desc: 'Letters Serbian & Montenegrin add',
     letters: [
       { c: 'Ј', l: 'j', tip: "A thin J — read as j (a soft 'y' glide)." },
@@ -358,7 +366,7 @@ const CYR_LEVELS: Level[] = [
   },
   {
     id: 9,
-    name: 'Macedonian Extras',
+    name: 'Macedonian',
     desc: 'Letters unique to Macedonian',
     letters: [
       { c: 'Ѕ', l: 'dz', tip: 'Looks like Latin S — read as dz.' },
@@ -368,8 +376,9 @@ const CYR_LEVELS: Level[] = [
   },
   {
     id: 10,
-    name: 'Montenegrin Extras',
+    name: 'Montenegrin',
     desc: 'Two soft letters Montenegrin adds',
+    base: [8],
     letters: [
       { c: 'С\u0301', l: 's', tip: 'Montenegrin soft S (ś) — read as s.' },
       { c: 'З\u0301', l: 'z', tip: 'Montenegrin soft Z (ź) — read as z.' },
@@ -377,13 +386,13 @@ const CYR_LEVELS: Level[] = [
   },
   {
     id: 11,
-    name: 'Belarusian Extra',
+    name: 'Belarusian',
     desc: 'The letter Belarusian adds',
     letters: [{ c: 'Ў', l: 'w', tip: 'U with a little arch on top — a short u, read as w.' }],
   },
 ];
 
-const CYR_WORDS: Reading[] = [
+export const CYR_WORDS: Reading[] = [
   { c: 'кот', l: 'kot' },
   { c: 'ток', l: 'tok' },
   { c: 'мак', l: 'mak' },
@@ -445,7 +454,7 @@ const CYR_WORDS: Reading[] = [
   { c: 'ќерка', l: 'kjerka' },
 ];
 
-const CYR_CITIES: Reading[] = [
+export const CYR_CITIES: Reading[] = [
   { c: 'Москва', l: 'Moskva' },
   { c: 'Санкт-Петербург', l: 'Sankt-Peterburg' },
   { c: 'Новосибирск', l: 'Novosibirsk' },
@@ -496,7 +505,7 @@ const CYR_CITIES: Reading[] = [
   { c: 'Врање', l: 'Vranje' },
 ];
 
-const CYR_PHRASES: Reading[] = [
+export const CYR_PHRASES: Reading[] = [
   { c: 'привет как дела', l: 'privet kak dela' },
   { c: 'меня зовут', l: 'menya zovut' },
   { c: 'большое спасибо', l: 'bolshoe spasibo' },
@@ -2208,12 +2217,13 @@ export const COURSES: Course[] = [
     id: 'cyrillic',
     name: 'Cyrillic',
     accent: '#e0443f',
-    langs: 'Russian · Ukrainian · Bulgarian · Serbian · Macedonian',
+    langs: 'Russian · Ukrainian · Belarusian · Serbian · Macedonian · Montenegrin',
     blurb:
       'Learn to read Cyrillic — the alphabet behind Russian, Ukrainian, Bulgarian, Serbian and more.',
     sample: ['Я', 'Ж', 'Д'],
     l2cQ: 'Which Cyrillic letter is this?',
     levels: CYR_LEVELS,
+    extras: CYR_EXTRAS,
     words: CYR_WORDS,
     cities: CYR_CITIES,
     phrases: CYR_PHRASES,

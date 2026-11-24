@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Button, LinkButton } from '../../components/Button';
 import { CloseButton } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
-import type { Course } from './data';
-import { beep, buildLesson, courseById, loadProgress, saveProgress } from './engine';
+import type { Course, Level } from './data';
+import { beep, buildLesson, courseById, levelById, loadProgress, saveProgress } from './engine';
 import type { Exercise } from './engine';
 import { useScriptFonts } from './fonts';
 import './languages.css';
@@ -14,8 +14,8 @@ export function Lesson() {
   const { course: courseId, id } = useParams();
   useScriptFonts();
   const course = courseById(courseId);
-  const levelIndex = course ? course.levels.findIndex((lv) => String(lv.id) === id) : -1;
-  if (!course || levelIndex < 0) {
+  const level = course ? levelById(course, Number(id)) : undefined;
+  if (!course || !level) {
     return (
       <main className="cy-stage cy-done">
         <p className="cy-empty">No such lesson.</p>
@@ -23,13 +23,12 @@ export function Lesson() {
       </main>
     );
   }
-  return <LessonRun key={`${course.id}-${levelIndex}`} course={course} levelIndex={levelIndex} />;
+  return <LessonRun key={`${course.id}-${level.id}`} course={course} level={level} />;
 }
 
-function LessonRun({ course, levelIndex }: { course: Course; levelIndex: number }) {
+function LessonRun({ course, level }: { course: Course; level: Level }) {
   const HOME = `/languages/${course.id}`;
-  const level = course.levels[levelIndex]!;
-  const [queue, setQueue] = useState<Exercise[]>(() => buildLesson(course, levelIndex));
+  const [queue, setQueue] = useState<Exercise[]>(() => buildLesson(course, level.id));
   const [pos, setPos] = useState(0);
   const [sel, setSel] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);

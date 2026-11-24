@@ -1,10 +1,22 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Button, LinkButton } from '../../components/Button';
 import { CloseButton } from '../../components/Chip';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import type { Course } from './data';
-import { beep, CATS, courseById, loadProgress, makeQ, norm, saveProgress } from './engine';
+import {
+  beep,
+  CATS,
+  courseById,
+  loadProgress,
+  makeQ,
+  norm,
+  saveProgress,
+  sourceOf,
+  streakKey,
+  tonguesOf,
+} from './engine';
 import type { PracticeCategory } from './engine';
+import type { Tongue } from './tongues';
 import { useScriptFonts } from './fonts';
 import './languages.css';
 
@@ -24,10 +36,27 @@ export function Practice() {
   return <PracticeRun key={course.id} course={course} />;
 }
 
+/** The language practised last, so practice opens on it again. */
+const TONGUE = 'metabook.alphabets.tongue';
+
+function firstTongue(tongues: Tongue[], asked: string | null): Tongue | undefined {
+  let saved: string | null = null;
+  try {
+    saved = localStorage.getItem(TONGUE);
+  } catch {
+    /* storage unavailable */
+  }
+  return tongues.find((t) => t.id === asked) ?? tongues.find((t) => t.id === saved) ?? tongues[0];
+}
+
 function PracticeRun({ course }: { course: Course }) {
+  const [params] = useSearchParams();
+  const tongues = tonguesOf(course);
+  const [tongue, setTongue] = useState(() => firstTongue(tongues, params.get('lang')));
+  const source = useMemo(() => sourceOf(course, tongue), [course, tongue]);
   const [cat, setCat] = useState<PracticeCategory>('letters');
   const [typeMode, setTypeMode] = useState(false);
-  const [q, setQ] = useState(() => makeQ(course, 'letters', null));
+  const [q, setQ] = useState(() => makeQ(source, 'letters', null));
   const [picked, setPicked] = useState<number | null>(null);
   const [typed, setTyped] = useState('');
   const [typedOk, setTypedOk] = useState<boolean | null>(null);
@@ -46,24 +75,41 @@ function PracticeRun({ course }: { course: Course }) {
 
   const next = useCallback(() => {
     clearTimer();
-    setQ((prev) => makeQ(course, cat, prev.c));
+    setQ((prev) => makeQ(source, cat, prev.c));
     setPicked(null);
     setTyped('');
     setTypedOk(null);
     setLocked(false);
-  }, [cat, course]);
+  }, [cat, source]);
 
-  const switchCat = (c: PracticeCategory) => {
-    if (c === cat) return;
+  const restart = (c: PracticeCategory, t: Tongue | undefined) => {
     clearTimer();
     setCat(c);
+    setTongue(t);
     setStreak(0);
     setPicked(null);
     setTyped('');
     setTypedOk(null);
     setLocked(false);
-    setQ(makeQ(course, c, null));
+    setQ(makeQ(sourceOf(course, t), c, null));
   };
+
+  const switchCat = (c: PracticeCategory) => {
+    if (c !== cat) restart(c, tongue);
+  };
+
+  const switchTongue = (t: Tongue) => {
+    if (t.id === tongue?.id) return;
+    try {
+      localStorage.setItem(TONGUE, t.id);
+    } catch {
+      /* storage unavailable */
+    }
+    restart(cat, t);
+  };
+
+  const key = streakKey(cat, tongue);
+  const best = bests[key] ?? 0;
 
   // shared scoring + advance for both input modes
   const register = useCallback(
@@ -73,8 +119,8 @@ function PracticeRun({ course }: { course: Course }) {
         beep('good');
         const ns = streak + 1;
         setStreak(ns);
-        if (ns > bests[cat]) {
-          const nextBests = { ...bests, [cat]: ns };
+        if (ns > best) {
+          const nextBests = { ...bests, [key]: ns };
           setBests(nextBests);
           saveProgress(course.id, { ...loadProgress(course.id), bestStreaks: nextBests });
         }
@@ -85,7 +131,7 @@ function PracticeRun({ course }: { course: Course }) {
         timer.current = window.setTimeout(next, 1450);
       }
     },
-    [streak, bests, cat, next, course.id],
+    [streak, best, bests, key, next, course.id],
   );
 
   const pick = useCallback(
@@ -133,10 +179,25 @@ function PracticeRun({ course }: { course: Course }) {
         <span className="cy-streak" aria-live="polite">
           <b>{streak}</b> in a row
         </span>
-        <span className="cy-best">Best {bests[cat]}</span>
+        <span className="cy-best">Best {best}</span>
       </div>
 
       <main className="cy-body">
+        {tongues.length > 0 && (
+          <div className="cy-langs" role="group" aria-label="Language">
+            {tongues.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                className={t.id === tongue?.id ? 'on' : undefined}
+                aria-pressed={t.id === tongue?.id}
+                onClick={() => switchTongue(t)}
+              >
+                {t.name}
+              </button>
+            ))}
+          </div>
+        )}
         <div className="cy-controls">
           <div className="cy-seg" role="group" aria-label="What to read">
             {CATS.map((c) => (
