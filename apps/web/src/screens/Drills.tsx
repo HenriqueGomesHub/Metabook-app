@@ -19,8 +19,20 @@ import './games/games.css';
 
 const WEAK_MASTERY = 0.6;
 
+/** Screenshots from real rounds, one per drill, keyed by family or card type. */
+const SHOTS = import.meta.glob<string>('../assets/drill-covers/*.webp', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+const shot = (name: string): Cover | undefined => {
+  const src = SHOTS[`../assets/drill-covers/${name}.webp`];
+  return src ? { kind: 'shot', src } : undefined;
+};
+
 /** What a tile shows above its name: a real example of the drill. */
 type Cover =
+  | { kind: 'shot'; src: string }
   | { kind: 'photo'; image: ClueImage; alt: string }
   | { kind: 'flags'; codes: string[] }
   | { kind: 'text'; text: string; script?: boolean }
@@ -116,7 +128,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           to: `/session?type=${type}`,
           label: CARD_TYPES[type].label,
           icon: CARD_TYPES[type].icon,
-          cover: TYPE_COVERS[type] ?? { kind: 'icon' },
+          cover: shot(type) ?? TYPE_COVERS[type] ?? { kind: 'icon' },
           // area codes open on the page that says which countries' codes have a pattern
           ...(type === 'areacode' && areaCodeTile()),
           mastery: mastery(
@@ -189,7 +201,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
             to: `/session?subject=${family}`,
             label: family === 'other' ? 'Other clues' : SUBJECTS[family].label,
             icon: ICONS[family],
-            cover: photoOf(ofFamily, family),
+            cover: shot(family) ?? photoOf(ofFamily, family),
             mastery: mastery(
               ofFamily.map((card) => card.id),
               data.states,
@@ -278,6 +290,8 @@ function DrillTile({ tile }: { tile: Tile }) {
 
 function CoverArt({ cover, icon }: { cover: Cover; icon: ReactNode }) {
   switch (cover.kind) {
+    case 'shot':
+      return <img className="drill-shot" src={cover.src} alt="" loading="lazy" />;
     case 'photo':
       return <ClueImg image={cover.image} alt={cover.alt} fit="cover" />;
     case 'flags':
