@@ -58,67 +58,73 @@ export function CyrillicHome() {
           <ChevronIcon />
         </Link>
 
-        <h2 className="cy-h2 cy-lessons-title">Lessons</h2>
-        <ol className="cy-lessons">
-          {LEVELS.map((lv, i) => {
-            const done = completed.includes(lv.id);
-            const current = !done && i === firstLocked;
-            const locked = !done && !current;
-            const body = (
-              <>
-                <span className="cy-lesson-num" aria-hidden="true">
-                  {done ? '✓' : lv.id}
-                </span>
-                <span className="row-text">
-                  <span className="row-name">{lv.name}</span>
-                  <span className="row-sub">
-                    {locked ? `Finish lesson ${lv.id - 1} first` : lv.desc}
-                  </span>
-                </span>
-                <span className="cy-lesson-letters cyr" aria-hidden="true">
-                  {lv.letters.map((l) => l.c).join(' ')}
-                </span>
-              </>
-            );
-            return (
-              <li key={lv.id}>
-                {locked ? (
-                  <span className="cy-lesson locked">{body}</span>
-                ) : (
-                  <Link
-                    className={current ? 'cy-lesson current' : 'cy-lesson'}
-                    to={`/languages/cyrillic/lesson/${lv.id}`}
-                  >
-                    {body}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ol>
+        <div className="cy-columns">
+          <section className="cy-lessons-col" aria-labelledby="cy-lessons-title">
+            <h2 className="cy-h2" id="cy-lessons-title">
+              Lessons
+            </h2>
+            <ol className="cy-lessons">
+              {LEVELS.map((lv, i) => {
+                const done = completed.includes(lv.id);
+                const current = !done && i === firstLocked;
+                const locked = !done && !current;
+                const body = (
+                  <>
+                    <span className="cy-lesson-num" aria-hidden="true">
+                      {done ? '✓' : lv.id}
+                    </span>
+                    <span className="row-text">
+                      <span className="row-name">{lv.name}</span>
+                      <span className="row-sub">
+                        {locked ? `Finish lesson ${lv.id - 1} first` : lv.desc}
+                      </span>
+                    </span>
+                    <span className="cy-lesson-letters cyr" aria-hidden="true">
+                      {lv.letters.map((l) => l.c).join(' ')}
+                    </span>
+                  </>
+                );
+                return (
+                  <li key={lv.id}>
+                    {locked ? (
+                      <span className="cy-lesson locked">{body}</span>
+                    ) : (
+                      <Link
+                        className={current ? 'cy-lesson current' : 'cy-lesson'}
+                        to={`/languages/cyrillic/lesson/${lv.id}`}
+                      >
+                        {body}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+          </section>
 
-        <section className="cy-overview rise" aria-label="Letters you can read">
-          <div className="cy-overview-top">
-            <h2 className="cy-h2">Letters you can read</h2>
-            <span className="cy-overview-count">
-              {learnedCount} of {allLetters.length}
-            </span>
-          </div>
-          <div className="cy-track" aria-hidden="true">
-            <div className="cy-track-fill" style={{ width: `${pct}%` }} />
-          </div>
-          <div className="cy-chips">
-            {allLetters.map((x) => (
-              <span
-                key={`${x.lv}-${x.c}`}
-                className={completed.includes(x.lv) ? 'cy-chip on' : 'cy-chip'}
-              >
-                <span className="cy-chip-c cyr">{x.c}</span>
-                <span className="cy-chip-l">{x.l === '—' ? '·' : x.l}</span>
+          <section className="cy-overview rise" aria-label="Letters you can read">
+            <div className="cy-overview-top">
+              <h2 className="cy-h2">Letters you can read</h2>
+              <span className="cy-overview-count">
+                {learnedCount} of {allLetters.length}
               </span>
-            ))}
-          </div>
-        </section>
+            </div>
+            <div className="cy-track" aria-hidden="true">
+              <div className="cy-track-fill" style={{ width: `${pct}%` }} />
+            </div>
+            <div className="cy-chips">
+              {allLetters.map((x) => (
+                <span
+                  key={`${x.lv}-${x.c}`}
+                  className={completed.includes(x.lv) ? 'cy-chip on' : 'cy-chip'}
+                >
+                  <span className="cy-chip-c cyr">{x.c}</span>
+                  <span className="cy-chip-l">{x.l === '—' ? '·' : x.l}</span>
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
 
         {allDone && (
           <p className="cy-trophy rise">

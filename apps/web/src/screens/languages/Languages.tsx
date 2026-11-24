@@ -43,7 +43,7 @@ export function Languages() {
           items={COURSES}
           keyOf={(course) => course.title}
           render={(course) => (
-            <Link className="row-item" to={course.to}>
+            <Link className="row-item cy-row" to={course.to}>
               <span className="cy-row-glyph cyr" aria-hidden="true">
                 {course.glyph}
               </span>
