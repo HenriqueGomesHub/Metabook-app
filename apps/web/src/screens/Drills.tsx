@@ -40,9 +40,14 @@ const COVER_COUNTRIES = ['PL', 'CZ', 'FR', 'BR', 'JP', 'DE', 'ZA', 'RU', 'US', '
 
 /** A photo of the family to show on its tile: a Spot it card's image, from a typical country. */
 function photoOf(cards: Card[], subject: string | null, type?: Card['type']): Cover {
+  // a wide, plain photo of the thing itself: no side-by-side comparison, nothing that names the
+  // country, no drawn-on labels
+  const fits = (image: ClueImage) =>
+    !image.giveaway && (!image.width || !image.height || image.width >= image.height * 1.2);
   const withImage = cards.filter(
     (card) =>
       card.clue?.image &&
+      fits(card.clue.image) &&
       (type ? card.type === type : card.type === 'spot' && card.subject === subject),
   );
   const rank = (card: Card) => {
@@ -247,7 +252,7 @@ function DrillTile({ tile }: { tile: Tile }) {
 function CoverArt({ cover, icon }: { cover: Cover; icon: ReactNode }) {
   switch (cover.kind) {
     case 'photo':
-      return <ClueImg image={cover.image} alt={cover.alt} fit="cover" cropped />;
+      return <ClueImg image={cover.image} alt={cover.alt} fit="cover" />;
     case 'flags':
       return (
         <>
