@@ -63,6 +63,27 @@
     "verified": true
   },
   {
+    "id": "gen:my:where:region-sabah-mountains",
+    "type": "region",
+    "country": "MY",
+    "answer": "12",
+    "prompt": {
+      "kind": "text",
+      "value": "This area is very mountainous, with many mountain roads; Sarawak is flatter."
+    },
+    "tags": [
+      "asia",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Sabah is very mountainous, with many mountain roads; Sarawak is flatter. (Sabah)",
+    "map": "my",
+    "source": "https://www.plonkit.net/malaysia",
+    "verified": true
+  },
+  {
     "id": "gen:my:where:region-sabah-poles",
     "type": "region",
     "country": "MY",
@@ -121,27 +142,6 @@
     ],
     "subject": "pole",
     "explain": "Poles with a 2-1 insulator layout and a long diagonal wooden brace are exclusive to Sarawak. (Sarawak)",
-    "map": "my",
-    "source": "https://www.plonkit.net/malaysia",
-    "verified": true
-  },
-  {
-    "id": "gen:my:where:region-white-stickers-sarawak",
-    "type": "region",
-    "country": "MY",
-    "answer": "13",
-    "prompt": {
-      "kind": "text",
-      "value": "White pole stickers are only on Borneo, in this area."
-    },
-    "tags": [
-      "asia",
-      "pole",
-      "generated",
-      "where"
-    ],
-    "subject": "pole",
-    "explain": "White pole stickers are only on Borneo, in Sarawak. (Sarawak)",
     "map": "my",
     "source": "https://www.plonkit.net/malaysia",
     "verified": true

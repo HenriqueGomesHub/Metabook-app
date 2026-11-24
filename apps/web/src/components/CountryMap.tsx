@@ -26,6 +26,7 @@ export function CountryMap({
   reveal,
   numbers,
   zones,
+  trail = true,
   onPick,
   onHover,
   className = 'ddd-map',
@@ -47,6 +48,8 @@ export function CountryMap({
    * hovered as one, and its regions carry no labels of their own.
    */
   zones?: Record<string, string>;
+  /** on reveal, a line from the pick to the answer (off when whole areas are answered) */
+  trail?: boolean;
   onPick(code: string): void;
   onHover(code: string | null): void;
   className?: string;
@@ -196,7 +199,7 @@ export function CountryMap({
           />
         );
       })}
-      {pickedRegion && answerRegion && (
+      {trail && pickedRegion && answerRegion && (
         <>
           {!right && (
             <>

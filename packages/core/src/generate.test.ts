@@ -5,6 +5,7 @@ import {
   isClueCard,
   namesOtherRegions,
   resolveRegion,
+  sameClaim,
 } from './generate';
 import type { CountryFacts, FactNote, PoolCountry, RegionMapNames } from './types';
 
@@ -300,5 +301,15 @@ describe('map questions with one right region', () => {
   it('drops a sentence whose region name was masked mid-phrase', () => {
     expect(hideRegionName('Only in far northwestern Lapland.', 'Lapland')).toBeUndefined();
     expect(hideRegionName('Reindeer roam Lapland.', 'Lapland')).toBe('Reindeer roam this area.');
+  });
+});
+
+describe('sameClaim', () => {
+  it('stops at a contrast, so a region named for another feature is not an answer', () => {
+    expect(sameClaim('Brown insulators appear only in Pernambuco; white ones in Bahia.')).toBe(
+      'Brown insulators appear only in Pernambuco',
+    );
+    expect(sameClaim('Common in Paraná but not in São Paulo')).toBe('Common in Paraná ');
+    expect(sameClaim('Long and thin in Ceará, and rarely in Goiás')).toContain('Goiás');
   });
 });

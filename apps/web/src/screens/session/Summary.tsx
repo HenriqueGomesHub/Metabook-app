@@ -1,3 +1,4 @@
+import { zoneName } from '../../data/areaCodes';
 import type { Card } from '@metabook/core';
 import type { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -28,6 +29,8 @@ const RING = 2 * Math.PI * 52;
 function describe(card: Card): { name: string; kind: string } {
   const kind = card.subject ? SUBJECTS[card.subject].label : CARD_TYPES[card.type].label;
   if (card.type === 'areacode') {
+    const zone = zoneName(card.country, card.answer);
+    if (zone) return { name: zone, kind };
     return { name: `${card.prompt.value} · ${label(card.answer, scopeOf(card))}`, kind };
   }
   if (card.type === 'region' && card.clue) {

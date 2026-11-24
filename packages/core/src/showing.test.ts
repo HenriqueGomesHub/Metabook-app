@@ -78,4 +78,15 @@ describe('cardForShowing', () => {
     const flag: Card = { ...base, id: 'flag:FR', type: 'flag', clue: undefined };
     expect(cardForShowing(flag, 'x')).toBe(flag);
   });
+
+  it("always offers one of the learner's own past picks for this answer", () => {
+    for (let reps = 0; reps < 20; reps++) {
+      const { options } = cardForShowing(base, showingSeed(base.id, reps), [
+        'Nowhere',
+        base.clue!.distractors!.at(-1)!,
+      ]);
+      expect(options).toContain(base.clue!.distractors!.at(-1));
+      expect(options).toHaveLength(4);
+    }
+  });
 });

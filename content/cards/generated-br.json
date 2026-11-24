@@ -21,6 +21,31 @@
     "verified": true
   },
   {
+    "id": "gen:br:where:agri-soy",
+    "type": "region",
+    "country": "BR",
+    "answer": "MT",
+    "spans": [
+      "GO",
+      "PR"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Soybean fields are most common in this area and two other areas."
+    },
+    "tags": [
+      "americas",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Soybean fields are most common in Mato Grosso, Paraná and Goiás. (Mato Grosso)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
     "id": "gen:br:where:arch-german-south",
     "type": "region",
     "country": "BR",
@@ -58,6 +83,76 @@
     ],
     "subject": "architecture",
     "explain": "Wooden houses on stilts are very common in Acre. (Acre)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
+    "id": "gen:br:where:insulator-lollipop",
+    "type": "region",
+    "country": "BR",
+    "answer": "RN",
+    "spans": [
+      "PB",
+      "PE"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Spherical or cone-shaped \"lollipop\" insulators on a rod are common in this area and two other areas."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Spherical or cone-shaped \"lollipop\" insulators on a rod are common in Rio Grande do Norte, Paraíba and Pernambuco. (Rio Grande do Norte)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
+    "id": "gen:br:where:insulator-mushroom",
+    "type": "region",
+    "country": "BR",
+    "answer": "PE",
+    "prompt": {
+      "kind": "text",
+      "value": "Brown mushroom-shaped insulators appear only in this area; white ones in Bahia."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Brown mushroom-shaped insulators appear only in Pernambuco; white ones in Bahia. (Pernambuco)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
+    "id": "gen:br:where:insulator-santa-catarina",
+    "type": "region",
+    "country": "BR",
+    "answer": "SC",
+    "spans": [
+      "RS"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Dark brown insulators with grey bases are almost exclusive to this area and another area."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Dark brown insulators with grey bases are almost exclusive to Santa Catarina and Rio Grande do Sul. (Santa Catarina)",
     "map": "br",
     "source": "https://www.plonkit.net/brazil",
     "verified": true
@@ -168,6 +263,30 @@
     "verified": true
   },
   {
+    "id": "gen:br:where:pole-id-ba-pe",
+    "type": "region",
+    "country": "BR",
+    "answer": "BA",
+    "spans": [
+      "PE"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Long yellow pole paint with a black code that starts with a letter appears in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Long yellow pole paint with a black code that starts with a letter appears in Bahia and Pernambuco. (Bahia)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
     "id": "gen:br:where:pole-id-goias",
     "type": "region",
     "country": "BR",
@@ -252,6 +371,32 @@
     "verified": true
   },
   {
+    "id": "gen:br:where:pole-wooden",
+    "type": "region",
+    "country": "BR",
+    "answer": "RS",
+    "spans": [
+      "AM",
+      "RJ",
+      "RR"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Wooden poles are most often seen in this area and three other areas."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Wooden poles are most often seen in Rio Grande do Sul, Roraima, Amazonas and Rio de Janeiro. (Rio Grande do Sul)",
+    "map": "br",
+    "source": "https://www.plonkit.net/brazil",
+    "verified": true
+  },
+  {
     "id": "gen:br:where:road-red-brick-acre",
     "type": "region",
     "country": "BR",
@@ -289,27 +434,6 @@
     ],
     "subject": "other",
     "explain": "São Paulo has far more divided highways than any other state. (São Paulo)",
-    "map": "br",
-    "source": "https://www.plonkit.net/brazil",
-    "verified": true
-  },
-  {
-    "id": "gen:br:where:veg-acai",
-    "type": "region",
-    "country": "BR",
-    "answer": "PA",
-    "prompt": {
-      "kind": "text",
-      "value": "Açaí palms have thin trunks and drooping leaflets, mostly near Belém and across the Amazon."
-    },
-    "tags": [
-      "americas",
-      "vegetation",
-      "generated",
-      "where"
-    ],
-    "subject": "vegetation",
-    "explain": "Açaí palms have thin trunks and drooping leaflets, mostly near Belém and across the Amazon. (Pará)",
     "map": "br",
     "source": "https://www.plonkit.net/brazil",
     "verified": true

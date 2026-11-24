@@ -1,4 +1,11 @@
-import { applyPlacement, buildPlacement, matchesAnswer } from '@metabook/core';
+import {
+  applyPlacement,
+  buildPlacement,
+  cardContext,
+  isClueCard,
+  matchesAnswer,
+  rankTips,
+} from '@metabook/core';
 import type { Card, SessionMode } from '@metabook/core';
 import { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -9,8 +16,11 @@ import { CloseButton } from '../components/Chip';
 import { EmptyState } from '../components/EmptyState';
 import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
+import { label, SUBJECTS } from '../app/labels';
 import { countryName } from './manage/countries';
 import './manage/manage.css';
+import { PatternHint } from '../components/PatternHint';
+import { ClueAnswer } from './session/ClueAnswer';
 import { optionsFor } from './session/options';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { Outcome } from './session/types';
@@ -19,6 +29,17 @@ import { verdictFor } from './session/verdict';
 import { viewFor } from './session/views';
 
 const TEST_SIZE = 12;
+
+const TYPE_LABEL: Partial<Record<Card['type'], string>> = {
+  flag: 'the flag',
+  script: 'the script',
+  lookalike: 'its lookalike',
+  region: 'regions',
+  areacode: 'area codes',
+  live: 'Street View',
+  spot: 'clues',
+  which: 'clues',
+};
 
 export function Placement() {
   const { data, error } = useAppData();
@@ -30,7 +51,9 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const { addCardStates } = useAppData();
   const name = countryName(data.content.pool, code);
   const [cards] = useState(() => {
+    // text-only clue cards are read in Learn, never drilled: nothing to place
     const untouched = data.content.cards.filter((card) => {
+      if (isClueCard(card)) return false;
       const state = data.states[card.id];
       return !state || state.state === 'new';
     });
@@ -43,16 +66,9 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   const [results, setResults] = useState<{ cardId: string; correct: boolean }[]>([]);
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const card = cards[results.length];
-  const mode: SessionMode = card?.map
-    ? 'map'
-    : card?.type === 'flag'
-      ? 'recall'
-      : card?.type === 'lookalike'
-        ? 'binary'
-        : 'mcq';
+  const mode: SessionMode = card?.map ? 'map' : card?.type === 'lookalike' ? 'binary' : 'mcq';
   const options = useMemo(
-    () =>
-      card ? optionsFor({ cardId: card.id, mode }, card, data.content.cards, Math.random) : [],
+    () => (card ? placementOptions(card, mode, name, data.content.cards) : []),
     // Choices are drawn once per card; later content changes must not reshuffle them.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [card?.id],
@@ -106,6 +122,18 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
   if (!card) {
     const own = results.filter((r) => cards.find((c) => c.id === r.cardId)?.country === code);
     const marked = own.filter((r) => r.correct).length;
+    // what the misses were about, so the learner knows what the sessions will teach first
+    const missed = [
+      ...new Set(
+        results
+          .filter((r) => !r.correct)
+          .map((r) => cards.find((c) => c.id === r.cardId))
+          .map(
+            (c) => c && (c.subject ? SUBJECTS[c.subject].label.toLowerCase() : TYPE_LABEL[c.type]),
+          )
+          .filter((x): x is string => Boolean(x)),
+      ),
+    ];
     return (
       <main className="placement">
         <div className="placement-result rise">
@@ -113,7 +141,11 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           <h1 className="headline">
             Marked {marked} of {own.length} as known
           </h1>
-          <p className="muted">The rest start from scratch in your normal sessions.</p>
+          <p className="muted">
+            {missed.length > 0
+              ? `To learn: ${missed.join(', ')}. Your sessions start there.`
+              : 'The rest start from scratch in your normal sessions.'}
+          </p>
         </div>
         <LinkButton to={back} className="rise d1">
           Back to {name}
@@ -133,6 +165,7 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           max={cards.length}
           label={`Question ${results.length + 1} of ${cards.length}`}
         />
+        {/* no country name here: it would answer every "Which country?" question */}
         <span className="session-count">
           {results.length + 1} / {cards.length}
         </span>
@@ -151,7 +184,26 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
           outcome && (
             <Reveal
               {...verdictFor(card, { mode }, outcome)}
-              tips={[]}
+              // a miss teaches the one thing to look for; a right answer just moves on
+              tips={
+                outcome.correct
+                  ? []
+                  : rankTips(
+                      data.content.tips,
+                      card.type === 'which' ? label(card.country) : card.answer,
+                      card.type,
+                      data.tipViews,
+                      cardContext(card),
+                    ).slice(0, 1)
+              }
+              // the clue confirms a right answer too: right by luck still learns what to look for
+              extra={
+                card.clue ? (
+                  <ClueAnswer card={card} />
+                ) : card.type === 'areacode' && !outcome.correct ? (
+                  <PatternHint card={card} cards={data.content.cards} labelled />
+                ) : undefined
+              }
               nextLabel={results.length + 1 === cards.length ? 'See result' : 'Continue'}
               onNext={next}
             />
@@ -161,6 +213,19 @@ function PlacementTest({ data, code }: { data: AppSnapshot; code: string }) {
       <VerdictAnnouncer text={outcome ? verdictFor(card, { mode }, outcome).verdict : ''} />
     </div>
   );
+}
+
+/**
+ * A neighbour's question always offers the placed country too, so it tests whether the learner
+ * can tell the two apart and "always Brazil" is no strategy.
+ */
+function placementOptions(card: Card, mode: SessionMode, placed: string, cards: Card[]): string[] {
+  const options = optionsFor({ cardId: card.id, mode }, card, cards, Math.random);
+  if (mode !== 'mcq' || card.answer === placed || options.length === 0 || options.includes(placed))
+    return options;
+  if (!cards.some((c) => c.answer === placed)) return options;
+  const kept = options.filter((o) => o !== card.answer).slice(0, options.length - 2);
+  return [...kept, card.answer, placed].sort(() => Math.random() - 0.5);
 }
 
 function isRight(card: Card, mode: SessionMode, given: string, cards: Card[]): boolean {

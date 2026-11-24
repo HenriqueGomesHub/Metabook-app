@@ -1,3 +1,4 @@
+import { patternGroups, patternKey } from '@metabook/core';
 import type {
   AreaCodePattern,
   AreaCodePatterns,
@@ -29,6 +30,40 @@ export interface AreaCodeFile {
   }[];
 }
 
+/**
+ * A country with more regions than this (Russia 84, Italy 105) is learnt by area first: which
+ * part of the country a code's first digit stands for. Brazil's 27 states are learnt one by one.
+ */
+export const AREA_FIRST_REGIONS = 30;
+
+/** Tag on an area card: "which area uses 413?", answered by the code's digit group. */
+export const ZONE_TAG = 'zone';
+/** Tag on the one-region-per-code cards of an area-first country: only in its "Exact" drill. */
+export const EXACT_TAG = 'exact';
+
+export const isZoneCard = (card: Pick<Card, 'type' | 'tags'>): boolean =>
+  card.type === 'areacode' && card.tags.includes(ZONE_TAG);
+export const isExactAreaCode = (card: Pick<Card, 'type' | 'tags'>): boolean =>
+  card.type === 'areacode' && card.tags.includes(EXACT_TAG);
+
+/** How each area's codes are written ("4x", "06x"), by "<country>:<key>"; filled with the cards. */
+const ZONE_FORMS = new Map<string, string>();
+
+/** An area answer as read: "4x: Moscow & Central Russia, Kaliningrad & the Far East". */
+export function zoneName(country: string, answer: string): string | undefined {
+  const key = zoneKeyOf(answer);
+  if (key === undefined) return undefined;
+  const code = country.toUpperCase();
+  const group = patternOf(code)?.groups.find((g) => g.key === key);
+  const form = ZONE_FORMS.get(`${code}:${key}`) ?? `${key}x`;
+  return group ? `${form}: ${group.label}` : form;
+}
+
+/** A zone card's answer: its digit group's key ("zone:4"). */
+export const zoneAnswer = (key: string) => `zone:${key}`;
+export const zoneKeyOf = (answer: string) =>
+  answer.startsWith('zone:') ? answer.slice(5) : undefined;
+
 /** The id of an area-code card; Brazil's shipped cards use the same form ("ddd:br:11"). */
 export const areaCodeId = (country: string, code: string) => `ddd:${country.toLowerCase()}:${code}`;
 
@@ -41,6 +76,7 @@ export function areaCodeCards(
   files: AreaCodeFile[],
   pool: PoolCountry[],
   existing: Iterable<string> = [],
+  patterns: AreaCodePatterns = AREA_CODE_PATTERNS,
 ): Card[] {
   const taken = new Set(existing);
   const cards: Card[] = [];
@@ -49,6 +85,10 @@ export function areaCodeCards(
     const country = pool.find((c) => c.code === code);
     if (!country || !Array.isArray(file.codes)) continue;
     const source = file.sources?.[0] ?? '';
+    const pattern = patterns[code];
+    const regions = new Set(file.codes.map((entry) => entry.region).filter(Boolean));
+    const byArea = pattern?.kind === 'pattern' && regions.size > AREA_FIRST_REGIONS;
+    if (byArea) cards.push(...zoneCards(code, country, file, pattern, source));
     for (const entry of file.codes) {
       const id = areaCodeId(code, entry.code);
       if (taken.has(id) || !entry.region) continue;
@@ -61,13 +101,47 @@ export function areaCodeCards(
         answer: entry.region,
         ...(spans.length > 0 && { spans }),
         prompt: { kind: 'text', value: entry.code },
-        tags: [country.continent, 'areacode'],
+        tags: [country.continent, 'areacode', ...(byArea ? [EXACT_TAG] : [])],
         chapter: `${code.toLowerCase()}:areacodes`,
         source,
       });
     }
   }
   return cards;
+}
+
+/**
+ * An area-first country's area cards: one per digit group ("which area uses 413?"), answered
+ * anywhere in the group's regions. The code shown is one of the group's, a different one each
+ * time; the prompt holds the lowest.
+ */
+function zoneCards(
+  code: string,
+  country: PoolCountry,
+  file: AreaCodeFile,
+  pattern: AreaCodePattern,
+  source: string,
+): Card[] {
+  const placed = file.codes.filter((entry) => entry.region);
+  return patternGroups(code, placed, pattern.digits)
+    .filter((group) => pattern.groups.some((g) => g.key === group.key))
+    .map((group) => {
+      ZONE_FORMS.set(`${code}:${group.key}`, group.form);
+      const codes = placed
+        .filter((entry) => patternKey(code, entry.code, pattern.digits) === group.key)
+        .map((entry) => entry.code)
+        .sort();
+      return {
+        id: `${areaCodeId(code, 'zone')}:${group.key}`,
+        type: 'areacode' as const,
+        country: code,
+        answer: zoneAnswer(group.key),
+        prompt: { kind: 'text' as const, value: codes[0] ?? group.form },
+        tags: [country.continent, 'areacode', ZONE_TAG],
+        chapter: `${code.toLowerCase()}:areacodes`,
+        source,
+      };
+    });
 }
 
 /** Countries with area-code cards, Brazil first, then by name. */
@@ -105,7 +179,7 @@ export const patternOf = (country: string): AreaCodePattern | undefined =>
 /** A country's codes on their regions, from its area-code cards. */
 export function placedCodes(cards: Card[], country: string): (PlacedCode & { spans?: string[] })[] {
   return cards
-    .filter((card) => card.type === 'areacode' && card.country === country)
+    .filter((card) => card.type === 'areacode' && card.country === country && !isZoneCard(card))
     .map((card) => ({
       code: card.prompt.value,
       region: card.answer,

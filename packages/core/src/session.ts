@@ -8,8 +8,64 @@ import type { Card, CardState, CardType, Confusion, Settings, TrainingBlock } fr
 /**
  * How a card is answered. 'scan' = Refresh mode: the photo is shown with its answer and the clue,
  * and the learner says "Knew it" or "New to me" (for a player who has seen most of this before).
+ * 'learn' = a brand-new clue shown once with its answer and lesson before it is ever asked; it is
+ * not graded, and the card comes back as a question a few cards later.
  */
-export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan';
+export type SessionMode = 'mcq' | 'recall' | 'binary' | 'map' | 'scan' | 'learn';
+
+/** Cards between a new clue's first look and its first question. */
+export const LEARN_GAP = 5;
+
+/** A card worth a first look before it is asked: a new clue photo, shown with its answer. */
+export const teachFirst = (card: Card, state: CardState | undefined): boolean =>
+  card.type === 'spot' && Boolean(card.clue?.image) && (state?.state ?? 'new') === 'new';
+
+/**
+ * Puts a first look before each new clue in a session queue, its question LEARN_GAP cards later.
+ * Lessons are spread between the other cards, never two in a row while other cards remain, so each
+ * new clue is read and then interrupted before it is asked.
+ */
+export function withFirstLooks(
+  queue: SessionItem[],
+  cards: Card[],
+  states: Record<string, CardState>,
+): SessionItem[] {
+  const teachable = (item: SessionItem) => {
+    const card = cards.find((c) => c.id === item.cardId);
+    return Boolean(
+      card && item.mode === 'mcq' && !item.contrastPair && teachFirst(card, states[card.id]),
+    );
+  };
+  const lessons = queue.filter(teachable);
+  if (lessons.length === 0) return queue;
+  const rest = queue.filter((item) => !teachable(item));
+  const out: SessionItem[] = [];
+  const pending: { item: SessionItem; from: number }[] = [];
+  const teach = () => {
+    const item = lessons.shift() as SessionItem;
+    pending.push({ item, from: out.length });
+    out.push({ ...item, mode: 'learn' });
+  };
+  while (lessons.length + rest.length + pending.length > 0) {
+    const due = pending[0];
+    // with no other cards left to put in between, one other lesson is the gap
+    const gap = rest.length > 0 ? LEARN_GAP : 1;
+    const last = out[out.length - 1];
+    // with only lessons left, a question and a lesson take turns
+    const lessonTurn = rest.length === 0 && lessons.length > 0 && last?.mode !== 'learn';
+    if (due && out.length - due.from > gap && !lessonTurn) {
+      out.push(due.item);
+      pending.shift();
+    } else if (lessons.length > 0 && last?.mode !== 'learn') teach();
+    else if (rest.length > 0) out.push(rest.shift() as SessionItem);
+    else if (lessons.length > 0) teach();
+    else if (due) {
+      out.push(due.item);
+      pending.shift();
+    }
+  }
+  return out;
+}
 
 export interface SessionItem {
   cardId: string;
@@ -384,17 +440,23 @@ export function buildSession(input: {
     mix(shuffle([...reviews, ...blockExtras].filter(notContrast), rng), fresh.filter(notContrast)),
   );
   return {
-    queue: spreadIn(
-      ordered.map((card) => {
-        // a review shows the clue's photos in turn, so it is the clue that is recalled
-        const imageId = isSeen(card) ? photoTurn(card, cards, stateOf(card)?.reps ?? 0) : undefined;
-        const mode: SessionMode =
-          input.refresh && !isSeen(card) && card.type === 'spot'
-            ? 'scan'
-            : modeFor(card, stateOf(card));
-        return { cardId: card.id, mode, ...(imageId && { imageId }) };
-      }),
-      contrast,
+    queue: withFirstLooks(
+      spreadIn(
+        ordered.map((card) => {
+          // a review shows the clue's photos in turn, so it is the clue that is recalled
+          const imageId = isSeen(card)
+            ? photoTurn(card, cards, stateOf(card)?.reps ?? 0)
+            : undefined;
+          const mode: SessionMode =
+            input.refresh && !isSeen(card) && card.type === 'spot'
+              ? 'scan'
+              : modeFor(card, stateOf(card));
+          return { cardId: card.id, mode, ...(imageId && { imageId }) };
+        }),
+        contrast,
+      ),
+      cards,
+      states,
     ),
     catchUp,
     remaining: due.length - reviews.length,

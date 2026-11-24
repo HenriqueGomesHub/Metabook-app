@@ -1,26 +1,5 @@
 [
   {
-    "id": "gen:cl:where:lamp-orange",
-    "type": "region",
-    "country": "CL",
-    "answer": "AN",
-    "prompt": {
-      "kind": "text",
-      "value": "Orange lamps are most common in Calama and Chañaral."
-    },
-    "tags": [
-      "americas",
-      "street",
-      "generated",
-      "where"
-    ],
-    "subject": "street",
-    "explain": "Orange lamps are most common in Calama and Chañaral. (Antofagasta)",
-    "map": "cl",
-    "source": "https://www.plonkit.net/chile",
-    "verified": true
-  },
-  {
     "id": "gen:cl:where:landscape-arica",
     "type": "region",
     "country": "CL",
@@ -42,22 +21,22 @@
     "verified": true
   },
   {
-    "id": "gen:cl:where:landscape-chiloe",
+    "id": "gen:cl:where:landscape-central",
     "type": "region",
     "country": "CL",
-    "answer": "LL",
+    "answer": "RM",
     "prompt": {
       "kind": "text",
-      "value": "Rolling farmland comparable to New Zealand on Isla Grande de Chiloé, with big cabbage-like giant rhubarb plants."
+      "value": "Semi-arid climate with dry hills and scattered vegetation around the capital; greener with vineyards in Maule."
     },
     "tags": [
       "americas",
-      "vegetation",
+      "landscape",
       "generated",
       "where"
     ],
-    "subject": "vegetation",
-    "explain": "Rolling farmland comparable to New Zealand on Isla Grande de Chiloé, with big cabbage-like giant rhubarb plants. (Los Lagos)",
+    "subject": "landscape",
+    "explain": "Semi-arid climate with dry hills and scattered vegetation around the capital; greener with vineyards in Maule. (Santiago)",
     "map": "cl",
     "source": "https://www.plonkit.net/chile",
     "verified": true
@@ -84,6 +63,30 @@
     "verified": true
   },
   {
+    "id": "gen:cl:where:landscape-narrow-tree-roads",
+    "type": "region",
+    "country": "CL",
+    "answer": "AR",
+    "spans": [
+      "BI"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Narrow roads lined with trees on both sides in another area and this area."
+    },
+    "tags": [
+      "americas",
+      "vegetation",
+      "generated",
+      "where"
+    ],
+    "subject": "vegetation",
+    "explain": "Narrow roads lined with trees on both sides in Biobío and Araucanía. (Araucanía)",
+    "map": "cl",
+    "source": "https://www.plonkit.net/chile",
+    "verified": true
+  },
+  {
     "id": "gen:cl:where:landscape-radiata-pine",
     "type": "region",
     "country": "CL",
@@ -100,6 +103,30 @@
     ],
     "subject": "vegetation",
     "explain": "Puffy-needled Monterey pines are most common in Biobío. (Biobío)",
+    "map": "cl",
+    "source": "https://www.plonkit.net/chile",
+    "verified": true
+  },
+  {
+    "id": "gen:cl:where:road-dotted-lines",
+    "type": "region",
+    "country": "CL",
+    "answer": "LR",
+    "spans": [
+      "AI"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Dotted paint road lines are common in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "line",
+      "generated",
+      "where"
+    ],
+    "subject": "line",
+    "explain": "Dotted paint road lines are common in Los Ríos and Aysén. (Los Ríos)",
     "map": "cl",
     "source": "https://www.plonkit.net/chile",
     "verified": true

@@ -50,10 +50,8 @@ describe('Session', () => {
 
     expect(screen.getByRole('dialog', { name: 'Got it' })).toBeTruthy();
     expect(screen.getByText('Yellow, green, red.')).toBeTruthy();
-    expect(screen.getByText('1 of 2')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: 'Next tip' }));
     expect(screen.getByText('Place names end in -ai.')).toBeTruthy();
-    expect(screen.getByText('2 of 2')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: 'Previous tip' }));
     expect(screen.getByText('Yellow, green, red.')).toBeTruthy();
 

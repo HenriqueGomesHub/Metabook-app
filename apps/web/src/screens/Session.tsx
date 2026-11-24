@@ -1,4 +1,5 @@
 import {
+  answerKey,
   cardForItem,
   cardForShowing,
   createPractice,
@@ -9,7 +10,7 @@ import {
   normalizeAnswer,
   cardContext,
   isGalleryClue,
-  isRareClue,
+  isCountryWide,
   pickTip,
   rankTips,
   sameTip,
@@ -45,16 +46,17 @@ import { ProgressBar } from '../components/ProgressBar';
 import { Status } from '../components/Status';
 import { clueIndex } from '../data/clueIndex';
 import { optionsFor } from './session/options';
-import { isMemoriseAreaCode } from '../data/areaCodes';
+import { isExactAreaCode, isMemoriseAreaCode, isZoneCard } from '../data/areaCodes';
 import { preloadClueImages } from '../data/clueImages';
 import type { Repository } from '../data/repository';
-import { ClueAnswer } from './session/ClueAnswer';
+import { clueHeading } from '../components/clues/ClueDetails';
+import { ClueAnswer, ClueMore } from './session/ClueAnswer';
 import { preloadPrompt } from './session/Prompt';
 import { Reveal, VerdictAnnouncer } from './session/Reveal';
 import type { RevealProps } from './session/Reveal';
 import type { Outcome } from './session/types';
 import { useKeys } from './session/useKeys';
-import { possessive, verdictFor } from './session/verdict';
+import { possessive, verdictFor, whyFor } from './session/verdict';
 import { viewFor } from './session/views';
 import { LookalikeCard } from './session/LookalikeCard';
 import { ScanCard } from './session/ScanCard';
@@ -74,6 +76,8 @@ interface Scope {
   map?: boolean;
   /** `clue=1`: the Clue quiz, text-only fact cards; every other scope leaves them out */
   clue?: boolean;
+  /** `exact=1`: a big country's area codes one region at a time, not by area */
+  exact?: boolean;
 }
 
 /** `more=new`: "Learn more" (new cards past today's limit); `more=ahead`: "Practise more". */
@@ -107,14 +111,16 @@ export function Session() {
   const clue = params.get('clue') === '1' || undefined;
   const clues = params.get('src') === 'clues' || undefined;
   const moreParam = params.get('more');
+  // a big country's area codes one region at a time, instead of by area
+  const exact = params.get('exact') === '1' || undefined;
   const more = moreParam === 'new' || moreParam === 'ahead' ? moreParam : undefined;
   if (!data) return <Status error={error} />;
-  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}`;
+  const key = `${type}|${subject}|${country}|${chapter}|${map}|${clue}|${clues}|${exact}`;
   return type || subject || country || chapter || map !== undefined || clue || clues ? (
     <PracticeRunner
       key={key}
       data={data}
-      scope={{ type, subject, country, chapter, map, clue, clues }}
+      scope={{ type, subject, country, chapter, map, clue, clues, exact }}
     />
   ) : (
     <DueRunner key={more ?? 'today'} data={data} more={more} />
@@ -123,7 +129,7 @@ export function Session() {
 
 function inScope(
   cards: Card[],
-  { type, subject, country, chapter, map, clue, clues }: Scope,
+  { type, subject, country, chapter, map, clue, clues, exact }: Scope,
 ): Card[] {
   return cards.filter(
     (card) =>
@@ -138,6 +144,8 @@ function inScope(
       (!country || card.country === country) &&
       // area codes with no pattern (US, Canada) only in their own country's drill
       (Boolean(country) || !isMemoriseAreaCode(card)) &&
+      // a big country's codes go by area; one region per code only in its "Exact" drill
+      (exact ? !isZoneCard(card) : !isExactAreaCode(card)) &&
       (!chapter || card.chapter === chapter),
   );
 }
@@ -223,8 +231,9 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
       : item;
   // the session's own cards set the total; a missed card asked again shows "Again" instead of
   // moving the finish line back
-  const total = queue.filter((q) => !q.retry).length;
-  const done = Math.min(total, queue.slice(0, index + 1).filter((q) => !q.retry).length);
+  const counts = (q: SessionItem) => !q.retry;
+  const total = queue.filter(counts).length;
+  const done = Math.max(1, Math.min(total, queue.slice(0, index + 1).filter(counts).length));
 
   return (
     <CardRunner
@@ -240,6 +249,7 @@ function DueRunner({ data, more }: { data: AppSnapshot; more?: More }) {
         if (!correct) setQueue((q) => requeueMissed(q, item, cards));
       }}
       onNext={() => setIndex(index + 1)}
+      onLearnt={() => setIndex(index + 1)}
       onSkip={() => {
         // nothing graded: the card goes to the back of the queue
         setQueue([...queue, item]);
@@ -298,6 +308,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
   const [answers, setAnswers] = useState<Answer[]>([]);
   // practice runs in rounds of PRACTICE_ROUND cards, each ending on its summary
   const [roundStart, setRoundStart] = useState(0);
+  const [lessons, setLessons] = useState(0);
+  const [lessonsStart, setLessonsStart] = useState(0);
   const [startedAt, setStartedAt] = useState(() => Date.now());
   const [ended, setEnded] = useState(false);
   const back = backTo(data, scope);
@@ -341,6 +353,7 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
             <Button
               onClick={() => {
                 setRoundStart(answers.length);
+                setLessonsStart(lessons);
                 setStartedAt(Date.now());
                 setEnded(false);
               }}
@@ -357,7 +370,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     );
   }
 
-  const inRound = answers.length - roundStart;
+  // lessons are steps of the round too, so the counter moves while new clues are shown
+  const inRound = answers.length - roundStart + lessons - lessonsStart;
 
   function onAnswered(correct: boolean, state?: CardState) {
     if (!flow) return;
@@ -376,12 +390,18 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
     if (!flow?.upcoming) return;
     const { item, practice } = flow.upcoming;
     const card = pool.find((c) => c.id === item.cardId);
-    // The answer just recorded may have moved this card past multiple choice.
-    const mode = card ? modeFor(card, data.states[card.id]) : item.mode;
+    // The answer just recorded may have moved this card past multiple choice; a lesson stays one
+    const mode = item.mode !== 'learn' && card ? modeFor(card, data.states[card.id]) : item.mode;
     setFlow({ practice, item: { ...item, mode }, step: flow.step + 1 });
     // one card has nothing else to draw: end at the summary instead of looping on it; otherwise
     // a round ends at its summary after PRACTICE_ROUND cards
-    if (pool.length === 1 || answers.length - roundStart >= PRACTICE_ROUND) setEnded(true);
+    if (pool.length === 1 || inRound >= PRACTICE_ROUND) setEnded(true);
+  }
+
+  /** A lesson read: one step of the round, then on to the next card. */
+  function learnt() {
+    setLessons(lessons + 1);
+    skip();
   }
 
   /** An unanswerable card is passed over ungraded; it stays in the pool and comes back. */
@@ -405,6 +425,8 @@ function PracticeRunner({ data, scope }: { data: AppSnapshot; scope: Scope }) {
       onAnswered={onAnswered}
       onNext={advance}
       onSkip={skip}
+      // a first look is passed over ungraded; its question is already scheduled
+      onLearnt={learnt}
       bar={({ outcome }) => {
         const at = Math.min(PRACTICE_ROUND, inRound + (outcome ? 0 : 1));
         return (
@@ -434,10 +456,14 @@ interface Shown {
 
 /** "How to spot Chile’s bollards" with that clue's summary, for the reveal's aside. */
 function clueAside(name: string, clue: Clue): Shown['aside'] {
-  const text = clue.summary?.trim();
-  if (!text || isGalleryClue(clue)) return undefined;
+  // the pick's own tell, as short as the answer's: its heading without the family part
+  if (isGalleryClue(clue)) return undefined;
+  const heading = clueHeading(clue);
+  const tell = heading.includes(':') ? heading.replace(/^[^:]*:\s*/, '') : '';
+  const text = tell || clue.summary?.trim().split(/(?<=[.!?])\s+/)[0];
+  if (!text) return undefined;
   return {
-    label: `How to spot ${possessive(name)} ${SUBJECTS[clue.family].label.toLowerCase()}`,
+    label: name,
     tip: {
       tip: { id: `clue:${clue.id}`, answer: name, scope: 'clue', text, source: clue.credit.url },
       index: 0,
@@ -446,6 +472,16 @@ function clueAside(name: string, clue: Clue): Shown['aside'] {
   };
 }
 
+/** A card this stable (days) is well known. */
+const MATURE_DAYS = 21;
+
+const fold = (text: string) =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, ' ');
+
 /** One card from prompt to reveal; the parent decides what comes next. */
 function CardRunner({
   data,
@@ -453,6 +489,7 @@ function CardRunner({
   onAnswered,
   onNext,
   onSkip,
+  onLearnt,
   bar,
 }: {
   data: AppSnapshot;
@@ -461,6 +498,8 @@ function CardRunner({
   onNext(): void;
   /** passes over the card without grading it */
   onSkip(): void;
+  /** a first look ('learn') was seen: nothing is graded, its question comes later */
+  onLearnt(): void;
   bar(context: { card: Card; options: string[]; outcome: Outcome | null }): ReactNode;
 }) {
   const { answer, recordTipView } = useAppData();
@@ -474,9 +513,19 @@ function CardRunner({
   const reps = data.states[item.cardId]?.reps ?? 0;
   const [seed] = useState(() => showingSeed(item.cardId, reps, shownMs));
   // a practice repeat may show another image of the card's clue
+  // what the learner picked for this answer before, most often first (read once per showing)
+  const [mixedUp] = useState(() => {
+    const base = cardForItem(item, cards);
+    if (!base) return [];
+    const truth = answerKey(base, base.answer);
+    return data.confusions
+      .filter((c) => c.truth === truth && c.count > 0)
+      .sort((a, b) => b.count - a.count)
+      .map((c) => c.picked);
+  });
   const card = useMemo(
-    () => cardForShowing(cardForItem(item, cards) as Card, seed),
-    [item, cards, seed],
+    () => cardForShowing(cardForItem(item, cards) as Card, seed, mixedUp),
+    [item, cards, seed, mixedUp],
   );
   // Options are drawn once per item; later content changes must not reshuffle them.
   const [options] = useState(() => optionsFor(item, card, cards, Math.random));
@@ -495,6 +544,13 @@ function CardRunner({
    * and Which clue cards (whose answer is an image id) use the country's tips.
    */
   function mainTips(): Tip[] {
+    const all = mainTipsRaw();
+    // a tip that says what the reason line already said is left out
+    const why = card.explain ? fold(card.explain).slice(0, 40) : '';
+    return why ? all.filter((tip) => !fold(tip.text).includes(why.slice(0, 30))) : all;
+  }
+
+  function mainTipsRaw(): Tip[] {
     const { tips } = data.content;
     const key = card.type === 'which' ? label(card.country) : card.answer;
     const context = cardContext(card);
@@ -507,20 +563,38 @@ function CardRunner({
   }
 
   function showTips(asideKey: string | undefined, given?: string) {
-    const tips = mainTips();
+    // a card with its own reason (a lookalike's "ř is Czech only") says all a right answer needs
+    // and a miss needs only that reason and the other side's tell ("And for Spain")
+    const reasoned = Boolean(card.explain) && card.type === 'lookalike';
+    if (reasoned && given === undefined) {
+      setShown({ tips: [], aside: undefined });
+      return;
+    }
+    // a clue card's reveal is the clue's tell and the pick's: the tips are other lessons
+    const tips = reasoned || card.clue ? [] : mainTips();
+    // the pick's tip that speaks to this question: one naming the answer, or a letter it shows
+    // (after a Kyrgyz word, Russia's "none of ә қ ң ө ү", not "ы, э, ъ, which Ukrainian lacks")
+    const stem = label(card.type === 'which' ? card.country : card.answer, scope)
+      .slice(0, 5)
+      .toLowerCase();
+    const letters = [...card.prompt.value].filter((ch) => ch > '\u024f');
+    const speaks = (tip: Tip) =>
+      tip.text.toLowerCase().includes(stem) || letters.some((ch) => tip.text.includes(ch));
     const candidate = asideKey
-      ? pickTip(data.content.tips, asideKey, card.type, data.tipViews)
+      ? pickTip(data.content.tips, asideKey, card.type, data.tipViews, 0, speaks)
       : null;
     // the other side's tip is left out when it only repeats one of the answer's own
     const asideTip =
       candidate && !tips.some((tip) => sameTip(tip, candidate.tip)) ? candidate : null;
     const name = asideKey && label(asideKey, scope);
-    const aside: Shown['aside'] = asideTip
-      ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
-      : (pickedAside(asideKey, given) ?? undefined);
+    const aside: Shown['aside'] = card.clue
+      ? (pickedAside(asideKey, given) ?? undefined)
+      : asideTip
+        ? { label: otherSide ? `And for ${name}` : `How to spot ${name}`, tip: asideTip }
+        : (pickedAside(asideKey, given) ?? undefined);
     setShown({ tips, aside });
     // the first tip is recorded by the reveal as it comes on screen; a picked clue is no tip
-    if (asideTip) recordTipView(asideTip.tip.id);
+    if (asideTip && !card.clue) recordTipView(asideTip.tip.id);
   }
 
   /**
@@ -530,14 +604,16 @@ function CardRunner({
   function pickedClue(pickedName: string): Shown['aside'] {
     const clue = card.clue && clueIndex(data.content).byId.get(card.clue.id);
     const code = data.content.pool.find((c) => c.name === pickedName)?.code;
-    if (!clue || !code) return undefined;
+    // "other clues" is a mixed bag: Spain's phone numbers teach nothing about a Greek taxi
+    if (!clue || !code || clue.family === 'other') return undefined;
     const candidates =
       clueIndex(data.content)
         .byCountry.get(code)
         ?.clues.filter((c) => c.family === clue.family && !isGalleryClue(c) && c.summary?.trim()) ??
       [];
     // the one that says what to look for, not "fairly rare here"
-    const theirs = candidates.find((c) => !isRareClue(c)) ?? candidates[0];
+    // one that says what to look for across the country: not "fairly rare here", not one road
+    const theirs = candidates.find((c) => isCountryWide(c));
     return theirs ? clueAside(pickedName, theirs) : undefined;
   }
 
@@ -547,11 +623,39 @@ function CardRunner({
       return card.type === 'which' && given ? pickedChoice(given) : undefined;
     if (card.type === 'areacode') return pickedCodes(asideKey);
     if (card.type === 'which' && given) return pickedChoice(given);
+    if (card.type === 'region' && card.map) return pickedRegion(asideKey);
     return card.clue ? pickedClue(asideKey) : undefined;
+  }
+
+  /**
+   * On a missed map question: what marks the region the learner picked, from that region's own
+   * card (the same clue family first), so the miss sets the two apart.
+   */
+  function pickedRegion(state: string): Shown['aside'] {
+    const theirs = cards.filter(
+      (c) => c.type === 'region' && c.map === card.map && c.answer === state && c.id !== card.id,
+    );
+    // the same kind of clue only: stilt houses say nothing about poles
+    const pick = theirs.find((c) => c.subject === card.subject);
+    if (!pick) return undefined;
+    const clue = pick.clue && clueIndex(data.content).byId.get(pick.clue.id);
+    const text = (clue ? clue.summary?.trim() || clue.title : whyFor(pick))?.trim();
+    if (!text) return undefined;
+    const name = label(state, scope);
+    return {
+      label: `What marks ${name}`,
+      tip: {
+        tip: { id: `region:${pick.id}`, answer: name, scope: 'region', text, source: pick.source },
+        index: 0,
+        total: 1,
+      },
+    };
   }
 
   /** On a missed area code: the codes of the state the learner picked ("Acre: 68"). */
   function pickedCodes(state: string): Shown['aside'] {
+    // an area card's verdict already names the area picked
+    if (isZoneCard(card)) return undefined;
     const codes = cards
       .filter((c) => c.type === 'areacode' && c.country === card.country && c.answer === state)
       .map((c) => c.prompt.value)
@@ -583,6 +687,10 @@ function CardRunner({
 
   function onAnswer(given: string) {
     if (outcome) return;
+    if (item.mode === 'learn') {
+      onLearnt();
+      return;
+    }
     const correct = isCorrect(item, card, given, cards);
     // a Which clue card's options are image ids, not answers a confusion could pair
     const picked =
@@ -614,7 +722,11 @@ function CardRunner({
   }
 
   const View =
-    item.mode === 'binary' ? LookalikeCard : item.mode === 'scan' ? ScanCard : viewFor(card);
+    item.mode === 'binary'
+      ? LookalikeCard
+      : item.mode === 'scan' || item.mode === 'learn'
+        ? ScanCard
+        : viewFor(card);
   const verdict = outcome && verdictFor(card, item, outcome);
   const reveal = verdict && shown && (
     <Reveal
@@ -630,6 +742,8 @@ function CardRunner({
       }
       onNext={onNext}
       onTipShown={(tip) => recordTipView(tip.id)}
+      compactAside={Boolean(card.clue)}
+      more={card.clue ? <ClueMore card={card} /> : undefined}
     />
   );
 
@@ -645,6 +759,7 @@ function CardRunner({
         onAnswer={onAnswer}
         onSkip={onSkip}
         reveal={reveal}
+        mature={(data.states[card.id]?.stability ?? 0) > MATURE_DAYS}
       />
       <VerdictAnnouncer text={verdict ? verdict.verdict : ''} />
     </div>

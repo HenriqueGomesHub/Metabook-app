@@ -117,11 +117,9 @@ describe('Drills', () => {
     const streetView = screen.getByText('Street View').closest('a')!;
     expect(streetView.getAttribute('href')).toBe('/session?type=live');
     expect(within(streetView).queryByText(/spots/)).toBeNull();
-    // language clues have no image: Clue quiz only
+    // language clues have no image: read in Learn, not drilled
     expect(screen.queryByText('Language')).toBeNull();
-    expect(screen.getByText('Clue quiz').closest('a')?.getAttribute('href')).toBe(
-      '/session?clue=1',
-    );
+    expect(screen.queryByText('Clue quiz')).toBeNull();
   });
 });
 
@@ -134,11 +132,11 @@ describe('Clue cards in practice', () => {
     fireEvent.click(screen.getByRole('button', { name: /Poland/ }));
     const dialog = await screen.findByRole('dialog', { name: 'Got it' });
     expect(screen.queryByTestId('live-shield')).toBeNull();
-    expect(within(dialog).getByRole('heading', { name: 'Bollard: red strip' })).toBeTruthy();
-    expect(within(dialog).getByText('Lookalikes')).toBeTruthy();
-    expect(within(dialog).getByRole('link', { name: 'Plonk It' }).getAttribute('href')).toBe(
-      'https://www.plonkit.net/poland',
-    );
+    // the reveal is the clue's tell; the whole clue (text, source) is behind More
+    expect(dialog.querySelector('.reveal-tell')?.textContent).toBe('Bollard: red strip');
+    fireEvent.click(within(dialog).getByRole('button', { name: 'More' }));
+    const sheet = screen.getByRole('dialog', { name: 'Bollard: red strip' });
+    expect(within(sheet).getByText(/CC BY-NC-SA 4\.0/)).toBeTruthy();
   });
 
   it('names the picked country on a wrong Which clue answer', async () => {

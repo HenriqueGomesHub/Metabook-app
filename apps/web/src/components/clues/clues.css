@@ -592,3 +592,44 @@
     display: none;
   }
 }
+
+/* facing away from the clue: Google's corner links (logo, terms, report) stay out of reach */
+.live-corners::before,
+.live-corners::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  height: 28px;
+  background: var(--surface);
+}
+
+.live-corners::before {
+  left: 0;
+  width: 90px;
+  border-top-right-radius: 10px;
+}
+
+.live-corners::after {
+  right: 0;
+  width: 200px;
+  border-top-left-radius: 10px;
+}
+
+.live-show {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 3;
+  min-width: 64px;
+  height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--bg);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+}

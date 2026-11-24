@@ -1958,7 +1958,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Ten digits starting with a regional code: 01 is the Paris area, 02 to 05 go clockwise from the northwest. Numbers starting 06 to 09 are not regional."
+      "summary": "Ten digits starting with a regional code: 01 is the Paris area, 02 to 05 go clockwise from the northwest. Numbers starting 06 to 09 are not regional.",
+      "local": true
     },
     {
       "id": "fr-3Q5x",
@@ -2212,6 +2213,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Roads with a clear red, purple or burgundy tint are mostly between Paris and Dijon, except Normandy. Normal roads can look reddish in some light, so be careful.",
+      "local": true,
       "regionCode": "75"
     },
     {
@@ -2274,6 +2276,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Dark green signposts and backs are most common in Brittany and around Paris, plus several southern regions. They can appear elsewhere.",
+      "local": true,
       "regionCode": "75"
     },
     {
@@ -2335,7 +2338,12 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In one department near Paris, signbacks may carry the green department logo, usually on a dark green back with a mismatched post.",
-      "regionCode": "28"
+      "local": true,
+      "regionCode": "28",
+      "alsoRegions": [
+        "27",
+        "75"
+      ]
     },
     {
       "id": "fr-6TPW",
@@ -2396,7 +2404,10 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In that same department D-roads with a superscript number are most common. On the map they show as decimals, like D134.10. Rare elsewhere.",
-      "regionCode": "28"
+      "regionCode": "28",
+      "alsoRegions": [
+        "27"
+      ]
     },
     {
       "id": "fr-zDEN",
@@ -2516,6 +2527,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In the northern department of Pas-de-Calais, a dark green post with a lighter green back (matcha to turquoise), sometimes with a green and blue triangle logo. In some light it looks like the greyish signs.",
+      "local": true,
       "regionCode": "62"
     },
     {
@@ -2575,7 +2587,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Signs where both post and back are brown are most common east of Paris (Seine-et-Marne), rarely in Brittany. More reliable with square posts, but round ones are as common."
+      "summary": "Signs where both post and back are brown are most common east of Paris (Seine-et-Marne), rarely in Brittany. More reliable with square posts, but round ones are as common.",
+      "local": true
     },
     {
       "id": "fr-Wop3",
@@ -2758,7 +2771,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Street signs around Paris often show the city name, which is unusual elsewhere. They are often modern, and many names relate to the Seine or Marne. It also appears sporadically elsewhere.",
-      "regionCode": "75"
+      "local": true,
+      "regionCode": "75",
+      "alsoRegions": [
+        "51"
+      ]
     },
     {
       "id": "fr-F1Hp",
@@ -3011,7 +3028,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Forests made entirely of maritime pines are in the southwest (Gironde and Landes), on very flat land, unlike other pine areas."
+      "summary": "Forests made entirely of maritime pines are in the southwest (Gironde and Landes), on very flat land, unlike other pine areas.",
+      "local": true
     },
     {
       "id": "fr-jPuX",
@@ -3069,7 +3087,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "France is the second biggest wine producer. Main areas: around Bordeaux, the south coast and Champagne east of Paris. Others: Loire Valley, Alsace and Corsica."
+      "summary": "France is the second biggest wine producer. Main areas: around Bordeaux, the south coast and Champagne east of Paris. Others: Loire Valley, Alsace and Corsica.",
+      "local": true
     },
     {
       "id": "fr-AUP3",
@@ -3250,6 +3269,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Black shingle roofs are mainly in the northwest, cut off roughly at the Loire. Also near the Belgian border, south-centre and Pyrenees, so black roofs help in Alps vs Pyrenees choices.",
+      "local": true,
       "regionCode": "42"
     },
     {
@@ -3565,6 +3585,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Uneven cream-to-orange stone walls with mortar and red brick details are in the towns around Paris, but usually not in Paris itself.",
+      "local": true,
       "regionCode": "75"
     },
     {
@@ -4328,7 +4349,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Many cities carry their river name, like Chalonnes-sur-Loire (sur is often shortened). Names with -sur-mer or -plage are only on the coast."
+      "summary": "Many cities carry their river name, like Chalonnes-sur-Loire (sur is often shortened). Names with -sur-mer or -plage are only on the coast.",
+      "local": true
     },
     {
       "id": "fr-0HXZ",
@@ -4699,7 +4721,8 @@
         "url": "https://www.plonkit.net/france",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Paris, Lyon and Marseille are the only cities split into arrondissements (shown as Arrᵗ or Arrt.). The district shows on the map, which helps pinpoint."
+      "summary": "Paris, Lyon and Marseille are the only cities split into arrondissements (shown as Arrᵗ or Arrt.). The district shows on the map, which helps pinpoint.",
+      "local": true
     },
     {
       "id": "fr-ZUqh",
@@ -4772,7 +4795,8 @@
           "country": "RO",
           "how": "Bucharest copies the Paris sign; check language"
         }
-      ]
+      ],
+      "local": true
     },
     {
       "id": "fr-mcDH",
@@ -5300,7 +5324,8 @@
           "country": "SK",
           "how": "Slovakia uses thin B-type as standard"
         }
-      ]
+      ],
+      "local": true
     },
     {
       "id": "fr-1rIs",
@@ -5375,7 +5400,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "A blue flag on the Gen 3 antenna is found in Bas-Rhin, Aube and the Corrèze, Haute-Vienne and Dordogne area."
+      "summary": "A blue flag on the Gen 3 antenna is found in Bas-Rhin, Aube and the Corrèze, Haute-Vienne and Dordogne area.",
+      "local": true
     },
     {
       "id": "fr-lm-303252",
@@ -5444,7 +5470,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "A black and white flag on the Gen 3 antenna is found in Calvados, Orne, eastern Bourgogne and the Loire and Haute-Loire area."
+      "summary": "A black and white flag on the Gen 3 antenna is found in Calvados, Orne, eastern Bourgogne and the Loire and Haute-Loire area.",
+      "local": true
     },
     {
       "id": "fr-lm-303255",
@@ -5474,7 +5501,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "A red flag on the Gen 3 antenna is only in the eastern part of the Nord department."
+      "summary": "A red flag on the Gen 3 antenna is only in the eastern part of the Nord department.",
+      "local": true
     },
     {
       "id": "fr-lm-303256",
@@ -5781,7 +5809,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -caux are found in Seine-Maritime."
+      "summary": "Place names ending in -caux are found in Seine-Maritime.",
+      "local": true
     },
     {
       "id": "fr-lm-303267",
@@ -5801,7 +5830,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -brie are found in Seine-et-Marne."
+      "summary": "Place names ending in -brie are found in Seine-et-Marne.",
+      "local": true
     },
     {
       "id": "fr-lm-303268",
@@ -5829,7 +5859,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -beauce are found between Essonne and Vendôme."
+      "summary": "Place names ending in -beauce are found between Essonne and Vendôme.",
+      "local": true
     },
     {
       "id": "fr-lm-303269",
@@ -5858,7 +5889,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -anjou are found in Maine-et-Loire."
+      "summary": "Place names ending in -anjou are found in Maine-et-Loire.",
+      "local": true
     },
     {
       "id": "fr-lm-303270",
@@ -5887,7 +5919,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -touraine are found in Indre-et-Loire."
+      "summary": "Place names ending in -touraine are found in Indre-et-Loire.",
+      "local": true
     },
     {
       "id": "fr-lm-303271",
@@ -5945,7 +5978,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -quercy are found in Lot and Tarn-et-Garonne."
+      "summary": "Place names ending in -quercy are found in Lot and Tarn-et-Garonne.",
+      "local": true
     },
     {
       "id": "fr-lm-303273",
@@ -5974,7 +6008,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Place names ending in -bresse are found on the border between Jura and Saône-et-Loire."
+      "summary": "Place names ending in -bresse are found on the border between Jura and Saône-et-Loire.",
+      "local": true
     },
     {
       "id": "fr-lm-473878",
@@ -6117,7 +6152,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Corn fields are mostly in the west, plus some areas east of Paris and around Lyon and Strasbourg."
+      "summary": "Corn fields are mostly in the west, plus some areas east of Paris and around Lyon and Strasbourg.",
+      "local": true
     },
     {
       "id": "fr-lm-507805",
@@ -6148,7 +6184,8 @@
         "url": "https://learnablemeta.com/maps/678f7bc66a1f9e050835ef24",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "The Beauce region south of Paris is one of the flattest, with industrial-size fields of potatoes or cereals and no hedges, unlike the west."
+      "summary": "The Beauce region south of Paris is one of the flattest, with industrial-size fields of potatoes or cereals and no hedges, unlike the west.",
+      "local": true
     },
     {
       "id": "fr-lm-507806",

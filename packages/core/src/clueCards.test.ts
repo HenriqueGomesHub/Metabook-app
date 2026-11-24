@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import type { ClueFamily } from './clues';
 import {
   CLUE_COUNTRIES,
   CLUE_NAMES,
@@ -18,6 +19,8 @@ import {
   streetViewEmbedUrl,
   isGalleryClue,
   isRareClue,
+  namesPartOfCountry,
+  isCountryWide,
 } from './clueCards';
 import { clueCardIds, primaryCardId } from './clues';
 import { isClueCard } from './generate';
@@ -111,10 +114,8 @@ describe('clueCards', () => {
   });
 
   it('turns clues without a usable image into Clue quiz text cards that never name the country', () => {
-    const text = byId(clueCardIds.text(PL_KASHUBIAN.id))!;
-    expect(isClueCard(text)).toBe(true);
-    expect(text.prompt.value).toMatch(/^In the north, around Gdańsk/);
-    expect(text.prompt.value).not.toMatch(/\*|\]\(/);
+    // a clue for part of the country ("In the north, around Gdańsk") is not a country question
+    expect(byId(clueCardIds.text(PL_KASHUBIAN.id))).toBeUndefined();
     // "Polish uses…" names the country by demonym: no card
     expect(byId(clueCardIds.text('PL-lang'))).toBeUndefined();
     for (const card of cards.filter(isClueCard)) {
@@ -203,6 +204,24 @@ describe('where in the country', () => {
     expect(where?.prompt.value).not.toContain('Pomerania');
   });
 
+  it('accepts every region a clue names as seen in', () => {
+    const regional = {
+      ...PL_KASHUBIAN,
+      region: 'Pomerania',
+      regionCode: 'PM',
+      alsoRegions: ['WN'],
+    };
+    const countries = CLUE_COUNTRIES.map((c) =>
+      c.country === 'PL'
+        ? { ...c, clues: c.clues.map((clue) => (clue.id === PL_KASHUBIAN.id ? regional : clue)) }
+        : c,
+    );
+    const where = clueCards({ ...input, clues: countries }).find(
+      (c) => c.id === clueCardIds.where(PL_KASHUBIAN.id),
+    );
+    if (regional.images.length) expect(where).toMatchObject({ answer: 'PM', spans: ['WN'] });
+  });
+
   it('makes no map card for a clue without a region code', () => {
     expect(cards.some((c) => c.id.endsWith(':where'))).toBe(false);
   });
@@ -243,6 +262,71 @@ describe('isRareClue', () => {
     expect(isRareClue({ title: 'Car', summary: 'Seen around one central town.' })).toBe(true);
     expect(
       isRareClue({ title: 'Bollard: red cap', summary: 'Red-capped bollards everywhere.' }),
+    ).toBe(false);
+  });
+});
+
+describe('namesPartOfCountry', () => {
+  it('finds clues for one place or part of a country', () => {
+    for (const text of [
+      'Off-centre crossbars appear in Otago, Marlborough and Wellington.',
+      'Around Locumba, half-buried bollards line the road.',
+      'Yellow taxis are found in the capital.',
+      'The RN65 has light grainy pavement.',
+      'A mosque in western Kasur has a green dome.',
+      'Wooden poles in some states.',
+      'Corn is found on the North Island only, in the far north.',
+    ])
+      expect(namesPartOfCountry(text), text).toBe(true);
+  });
+
+  it('leaves country-wide clues alone, even when they name other countries or a script', () => {
+    for (const text of [
+      'Snow poles are made of wood and painted in many different colours.',
+      'Double guardrails are much less common in other South American countries.',
+      'Signs are written in Cyrillic, like in Russia.',
+      'Window shutters are more common here than in Czechia.',
+      'Wind turbines are much more common than in any other European country.',
+      'The same design appears in western Ukraine.',
+    ])
+      expect(namesPartOfCountry(text), text).toBe(false);
+  });
+});
+
+describe('isCountryWide', () => {
+  const clue = (title: string, summary: string, family: ClueFamily = 'pole') => ({
+    title,
+    summary,
+    family,
+  });
+  it('keeps a clue that holds across the country', () => {
+    expect(
+      isCountryWide(
+        clue('Pole: concrete cross', 'Concrete poles with a cross-shaped top and two insulators.'),
+      ),
+    ).toBe(true);
+    expect(
+      isCountryWide(
+        clue('Bollard: black top', 'White post with a black top, unlike in Slovenia.', 'bollard'),
+      ),
+    ).toBe(true);
+  });
+  it('leaves out named places, one spot, a summary that repeats its title, the wrong family', () => {
+    expect(
+      isCountryWide(clue('Pole: Kanto insulators', 'Kanto insulators are grey with long hats.')),
+    ).toBe(false);
+    expect(
+      isCountryWide(
+        clue('Landscape: dry hills', 'Dry hills below Mount Gilboa with olive trees.', 'landscape'),
+      ),
+    ).toBe(false);
+    expect(isCountryWide(clue('Pole: long horizontal ID', 'A long, horizontal pole ID.'))).toBe(
+      false,
+    );
+    expect(
+      isCountryWide(
+        clue('Road markings: yellow box', 'Bus stops have a yellow box painted.', 'bollard'),
+      ),
     ).toBe(false);
   });
 });

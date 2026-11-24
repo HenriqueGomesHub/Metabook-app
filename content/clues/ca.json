@@ -1029,7 +1029,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Every province has its own plates, some recognisable even when blurred. Several provinces do not require front plates. New Brunswick dropped front plates in 2019, and Newfoundland and Labrador commercial vehicles still need them."
+      "summary": "Every province has its own plates, some recognisable even when blurred. Several provinces do not require front plates. New Brunswick dropped front plates in 2019, and Newfoundland and Labrador commercial vehicles still need them.",
+      "local": true
     },
     {
       "id": "ca-hHgh",
@@ -1088,7 +1089,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "French is the majority language in Québec and parts of New Brunswick. French is official nationally, so bilingual signs appear elsewhere, and French is spoken in some communities in Nova Scotia, Ontario and Manitoba."
+      "summary": "French is the majority language in Québec and parts of New Brunswick. French is official nationally, so bilingual signs appear elsewhere, and French is spoken in some communities in Nova Scotia, Ontario and Manitoba.",
+      "local": true
     },
     {
       "id": "ca-iAnh",
@@ -1134,7 +1136,8 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Each province has slightly different kilometre markers. Ontario's have a white square at the bottom, unique to it.",
-      "kind": "other"
+      "kind": "other",
+      "local": true
     },
     {
       "id": "ca-wU9H",
@@ -1170,7 +1173,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Some provinces have special speed signs: Ontario's may have a black panel with km/h or BEGINS in white; British Columbia's show km/h without the black panel; Québec's sometimes use French."
+      "summary": "Some provinces have special speed signs: Ontario's may have a black panel with km/h or BEGINS in white; British Columbia's show km/h without the black panel; Québec's sometimes use French.",
+      "local": true
     },
     {
       "id": "ca-GAxI",
@@ -1254,6 +1258,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "A cylindrical bollard with two black bands wrapping all the way round, often at intersections. Appears in Alberta very often. Some have a yellow middle band, and rarely blue (around Calgary) or green (around Edmonton).",
+      "local": true,
       "regionCode": "AB"
     },
     {
@@ -1331,7 +1336,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Black and grey painted bollards, usually with an orange stripe below the grey. Wooden rectangular ones are further north in Manitoba. Bollards with just a black top also appear in Saskatchewan.",
-      "regionCode": "MB"
+      "local": true,
+      "regionCode": "MB",
+      "alsoRegions": [
+        "SK"
+      ]
     },
     {
       "id": "ca-8sEO",
@@ -1392,7 +1401,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "A thin, slightly curved black-and-white bollard, most common on Vancouver Island but across British Columbia. It can look like Alberta's, but is thinner with wider-spaced black bands.",
-      "regionCode": "BC"
+      "local": true,
+      "regionCode": "BC",
+      "alsoRegions": [
+        "AB"
+      ]
     },
     {
       "id": "ca-X21k",
@@ -1470,6 +1483,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Québec bollards are always attached to guardrails: long, thin white poles with a red or green reflector at the top.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -1530,7 +1544,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Yellow fire hydrant markers sit on top of signposts in Québec. In Québec City they usually have a blue rectangle and in Trois-Rivières they are small. Colours can vary. Edmundston in New Brunswick has them too.",
-      "regionCode": "QC"
+      "local": true,
+      "regionCode": "QC",
+      "alsoRegions": [
+        "NB"
+      ]
     },
     {
       "id": "ca-7Oi3",
@@ -1590,7 +1608,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Rectangular markers beside the road in Québec, in varying colours. Rarely seen on divided urban highways in New Brunswick.",
-      "regionCode": "QC"
+      "local": true,
+      "regionCode": "QC",
+      "alsoRegions": [
+        "NB"
+      ]
     },
     {
       "id": "ca-s9c4",
@@ -1650,6 +1672,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Diamond-shaped markers beside the road in Ontario, in varying colours.",
+      "local": true,
       "regionCode": "ON"
     },
     {
@@ -1710,7 +1733,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In the Northwest Territories, a black-and-white cylinder with two thick black bands. Alberta's looks similar but has thinner black bands.",
-      "regionCode": "NT"
+      "local": true,
+      "regionCode": "NT",
+      "alsoRegions": [
+        "AB"
+      ]
     },
     {
       "id": "ca-pK0p",
@@ -1768,7 +1795,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Transformers face the road in British Columbia and New Brunswick. In other provinces they sit parallel with the wires."
+      "summary": "Transformers face the road in British Columbia and New Brunswick. In other provinces they sit parallel with the wires.",
+      "local": true
     },
     {
       "id": "ca-W97X",
@@ -1827,7 +1855,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "On Prince Edward Island and Nova Scotia, transformers sit at a 45 degree angle to the road. On PEI, red numbers are usually written on the side."
+      "summary": "On Prince Edward Island and Nova Scotia, transformers sit at a 45 degree angle to the road. On PEI, red numbers are usually written on the side.",
+      "local": true
     },
     {
       "id": "ca-by9f",
@@ -1888,7 +1917,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Insulators facing toward or away from the road are mostly in Québec, Nova Scotia and Prince Edward Island. Elsewhere they face along the road. Most reliable away from junctions and driveways."
+      "summary": "Insulators facing toward or away from the road are mostly in Québec, Nova Scotia and Prince Edward Island. Elsewhere they face along the road. Most reliable away from junctions and driveways.",
+      "local": true
     },
     {
       "id": "ca-z3w1",
@@ -1949,7 +1979,12 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Two insulators to the side, held by a distinct attachment, and one on top, most common in Ontario. Several can be stacked. Occasionally seen in British Columbia, Nova Scotia and rarely elsewhere.",
-      "regionCode": "ON"
+      "local": true,
+      "regionCode": "ON",
+      "alsoRegions": [
+        "BC",
+        "NS"
+      ]
     },
     {
       "id": "ca-wU0C",
@@ -2016,6 +2051,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Some Québec poles have tops with insulator rods angled slightly upward.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -2084,7 +2120,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In Saskatchewan, one pole has one insulator on the left and two on the right, and the next has the reverse. Rarely seen in Manitoba.",
-      "regionCode": "SK"
+      "local": true,
+      "regionCode": "SK",
+      "alsoRegions": [
+        "MB"
+      ]
     },
     {
       "id": "ca-UjZq",
@@ -2143,6 +2183,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Poles with two hanging insulators are common in Manitoba.",
+      "local": true,
       "regionCode": "MB"
     },
     {
@@ -2212,6 +2253,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Québec poles may have a vertical black and yellow label with a small Q in the black part.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -2272,6 +2314,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Poles on Prince Edward Island usually have a small white sticker.",
+      "local": true,
       "regionCode": "PE"
     },
     {
@@ -2332,6 +2375,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Québec's T-intersection signs do not have the chequerboard pattern.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -2460,7 +2504,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In British Columbia, road signs can have green backs. Also fairly common on Prince Edward Island.",
-      "regionCode": "BC"
+      "local": true,
+      "regionCode": "BC",
+      "alsoRegions": [
+        "PE"
+      ]
     },
     {
       "id": "ca-DPnH",
@@ -2520,6 +2568,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "British Columbia signs are sometimes hung down from this unique style of signpost.",
+      "local": true,
       "regionCode": "BC"
     },
     {
@@ -2590,6 +2639,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Manitoba signposts sometimes carry a green and white striped sticker.",
+      "local": true,
       "regionCode": "MB"
     },
     {
@@ -2660,6 +2710,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Saskatchewan signposts can carry white triangles, the number varies.",
+      "local": true,
       "regionCode": "SK"
     },
     {
@@ -2736,6 +2787,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Stop signs with only the word ARRÊT are unique to Québec.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -2799,6 +2851,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Stop signs with both STOP and ARRÊT are most common in New Brunswick, and rare in other provinces.",
+      "local": true,
       "regionCode": "NB"
     },
     {
@@ -2862,6 +2915,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "New Brunswick street signs are bilingual. Unlike stop signs, bilingual street signs also appear in other French-minority areas.",
+      "local": true,
       "regionCode": "NB"
     },
     {
@@ -2927,7 +2981,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Alberta's rural roads are numbered in a grid. Township roads (Twp Rd) run east-west and rise going north; range roads (Rge Rd) run north-south and rise going west, resetting a few times. Multiply the grid numbers by 10 to get road numbers. Saskatchewan has some too.",
-      "regionCode": "AB"
+      "local": true,
+      "regionCode": "AB",
+      "alsoRegions": [
+        "SK"
+      ]
     },
     {
       "id": "ca-mVCj",
@@ -2992,6 +3050,7 @@
       },
       "summary": "Manitoba's rural roads are on a grid, named by number and direction. Roads ending in N run east-west and rise one per mile north of the US border; E or W roads run north-south and give distance from the meridian just west of Winnipeg.",
       "kind": "route",
+      "local": true,
       "regionCode": "MB"
     },
     {
@@ -3067,6 +3126,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "British Columbia mostly uses concrete barriers instead of guardrails.",
+      "local": true,
       "regionCode": "BC"
     },
     {
@@ -3127,6 +3187,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "A guardrail of small poles joined by three or four metal wires, rarely on major highways in Alberta.",
+      "local": true,
       "regionCode": "AB"
     },
     {
@@ -3204,6 +3265,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Ontario often has round wooden posts joined by exactly three metal wires. Some posts have a reflective white band.",
+      "local": true,
       "regionCode": "ON"
     },
     {
@@ -3272,6 +3334,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In Newfoundland and Labrador, most wooden guardrail posts have a pyramid-shaped top. Occasionally also on free-standing posts and signposts.",
+      "local": true,
       "regionCode": "NL"
     },
     {
@@ -3392,6 +3455,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Signs in Newfoundland and Labrador are propped up in wooden boxes.",
+      "local": true,
       "regionCode": "NL"
     },
     {
@@ -3452,7 +3516,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "In Eastern Canada double yellow lines are most common in Nova Scotia, then Québec and Prince Edward Island. Ontario prefers single yellow but sometimes uses double."
+      "summary": "In Eastern Canada double yellow lines are most common in Nova Scotia, then Québec and Prince Edward Island. Ontario prefers single yellow but sometimes uses double.",
+      "local": true
     },
     {
       "id": "ca-3TFG",
@@ -3511,7 +3576,12 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "In Saskatchewan you can sometimes find white dashes between the yellow centre lines. They also appear rarely in British Columbia and Yukon, where the landscape is very different.",
-      "regionCode": "SK"
+      "local": true,
+      "regionCode": "SK",
+      "alsoRegions": [
+        "BC",
+        "YT"
+      ]
     },
     {
       "id": "ca-kxon",
@@ -3569,7 +3639,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Rumble strips in the middle of the road, usually over the lines, are most common in Alberta and British Columbia."
+      "summary": "Rumble strips in the middle of the road, usually over the lines, are most common in Alberta and British Columbia.",
+      "local": true
     },
     {
       "id": "ca-stpJ",
@@ -3609,7 +3680,11 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Ontario uses orange-and-black striped cones. Québec has orange-and-white striped ones.",
-      "regionCode": "ON"
+      "local": true,
+      "regionCode": "ON",
+      "alsoRegions": [
+        "QC"
+      ]
     },
     {
       "id": "ca-tfjm",
@@ -3670,6 +3745,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Québec is the only province with red and white chevrons. The rest of Canada uses yellow and black.",
+      "local": true,
       "regionCode": "QC"
     },
     {
@@ -3729,7 +3805,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "New Brunswick and Nova Scotia often have rectangular lamp heads."
+      "summary": "New Brunswick and Nova Scotia often have rectangular lamp heads.",
+      "local": true
     },
     {
       "id": "ca-JHUC",
@@ -3789,6 +3866,7 @@
         "licence": "CC BY-NC-SA 4.0"
       },
       "summary": "Nova Scotia's utility-pole lamp arms are usually curved and much shorter than in the rest of Canada. Short arms occasionally appear elsewhere.",
+      "local": true,
       "regionCode": "NS"
     },
     {
@@ -3850,7 +3928,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Wooden plank bins on driveways are most common in Newfoundland, usually octagonal. Sometimes seen in other provinces such as New Brunswick."
+      "summary": "Wooden plank bins on driveways are most common in Newfoundland, usually octagonal. Sometimes seen in other provinces such as New Brunswick.",
+      "local": true
     },
     {
       "id": "ca-nQn9",
@@ -3916,7 +3995,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The west is very mountainous. The highest mountains are in British Columbia, western Alberta and parts of Yukon. Elsewhere large mountains are rare or absent."
+      "summary": "The west is very mountainous. The highest mountains are in British Columbia, western Alberta and parts of Yukon. Elsewhere large mountains are rare or absent.",
+      "local": true
     },
     {
       "id": "ca-8xOs",
@@ -4032,7 +4112,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "In the southern interior of British Columbia around Kamloops and Kelowna: hilly and a bit drier, with sprawling brown grassland and pine forests on the slopes."
+      "summary": "In the southern interior of British Columbia around Kamloops and Kelowna: hilly and a bit drier, with sprawling brown grassland and pine forests on the slopes.",
+      "local": true
     },
     {
       "id": "ca-B83g",
@@ -4224,7 +4305,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Around Rouyn-Noranda in northwest Québec: a north-south road grid, slightly hilly with farm fields between forests of short trees and thin birches."
+      "summary": "Around Rouyn-Noranda in northwest Québec: a north-south road grid, slightly hilly with farm fields between forests of short trees and thin birches.",
+      "local": true
     },
     {
       "id": "ca-6BuB",
@@ -4291,7 +4373,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Southern Saskatchewan has many river valleys and so can be barren and hilly, unlike the very flat rest of the Great Plains. Some of this reaches southern Alberta and Manitoba."
+      "summary": "Southern Saskatchewan has many river valleys and so can be barren and hilly, unlike the very flat rest of the Great Plains. Some of this reaches southern Alberta and Manitoba.",
+      "local": true
     },
     {
       "id": "ca-lWyG",
@@ -4349,7 +4432,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Aspens are common in forested parts of Manitoba, Saskatchewan and Alberta, with white birch-like trunks. They turn bright yellow in fall coverage."
+      "summary": "Aspens are common in forested parts of Manitoba, Saskatchewan and Alberta, with white birch-like trunks. They turn bright yellow in fall coverage.",
+      "local": true
     },
     {
       "id": "ca-lFnl",
@@ -4473,7 +4557,8 @@
           "country": "US",
           "how": "Looks similar to the US Great Lakes region"
         }
-      ]
+      ],
+      "local": true
     },
     {
       "id": "ca-Npc7",
@@ -4530,7 +4615,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Prince Edward Island soil has a distinct red tint and potato farming is common. Red soil also occasionally appears in parts of New Brunswick and Nova Scotia."
+      "summary": "Prince Edward Island soil has a distinct red tint and potato farming is common. Red soil also occasionally appears in parts of New Brunswick and Nova Scotia.",
+      "local": true
     },
     {
       "id": "ca-L5qh",
@@ -4651,7 +4737,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Provincial flags appear fairly often. Québec's Fleurdelisé is especially common."
+      "summary": "Provincial flags appear fairly often. Québec's Fleurdelisé is especially common.",
+      "local": true
     },
     {
       "id": "ca-eMcz",
@@ -4709,7 +4796,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Acadia is a French-speaking region in the Maritimes, mainly north and east New Brunswick plus some communities in Nova Scotia and Prince Edward Island. Its flag is a tricolour with a yellow star in the blue band, flown or painted on poles."
+      "summary": "Acadia is a French-speaking region in the Maritimes, mainly north and east New Brunswick plus some communities in Nova Scotia and Prince Edward Island. Its flag is a tricolour with a yellow star in the blue band, flown or painted on poles.",
+      "local": true
     },
     {
       "id": "ca-3vxs",
@@ -4766,7 +4854,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Flat yellow bollards on the main highway in New Brunswick."
+      "summary": "Flat yellow bollards on the main highway in New Brunswick.",
+      "local": true
     },
     {
       "id": "ca-hVpY",
@@ -4823,7 +4912,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The Dempster Highway (roads 5 and 8) links Yukon to Inuvik in the Northwest Territories. It is unpaved with Gen 2 coverage, dark brown soil and tundra with short trees, hilly then flat between Fort McPherson and Inuvik, and cloudier near Inuvik."
+      "summary": "The Dempster Highway (roads 5 and 8) links Yukon to Inuvik in the Northwest Territories. It is unpaved with Gen 2 coverage, dark brown soil and tundra with short trees, hilly then flat between Fort McPherson and Inuvik, and cloudier near Inuvik.",
+      "local": true
     },
     {
       "id": "ca-0G0L",
@@ -4878,7 +4968,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The Top of the World Highway, west of Dawson City in Yukon, has overcast Gen 2 coverage high up in the mountains."
+      "summary": "The Top of the World Highway, west of Dawson City in Yukon, has overcast Gen 2 coverage high up in the mountains.",
+      "local": true
     },
     {
       "id": "ca-7vrj",
@@ -4928,7 +5019,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A group of motorcyclists rides in front of the Google car on Highway 1 near Beaver Creek in Yukon."
+      "summary": "A group of motorcyclists rides in front of the Google car on Highway 1 near Beaver Creek in Yukon.",
+      "local": true
     },
     {
       "id": "ca-xlem",
@@ -5044,7 +5136,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Near Drumheller, Alberta: canyon-like treeless rock formations."
+      "summary": "Near Drumheller, Alberta: canyon-like treeless rock formations.",
+      "local": true
     },
     {
       "id": "ca-FCIr",
@@ -5265,7 +5358,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The Cape Breton Highlands in northeast Nova Scotia are unusually high for the east and heavily forested with broadleaf and pine trees."
+      "summary": "The Cape Breton Highlands in northeast Nova Scotia are unusually high for the east and heavily forested with broadleaf and pine trees.",
+      "local": true
     },
     {
       "id": "ca-oiV6",
@@ -5377,7 +5471,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Iqaluit, the capital of Nunavut, is more built up than other settlements, with bilingual turquoise street signs, bilingual speed limit signs, and unique road markers on the outskirts."
+      "summary": "Iqaluit, the capital of Nunavut, is more built up than other settlements, with bilingual turquoise street signs, bilingual speed limit signs, and unique road markers on the outskirts.",
+      "local": true
     },
     {
       "id": "ca-9HIG",
@@ -5433,7 +5528,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "The remote town of Churchill in northern Manitoba has a trekker with a thin antenna on the front right, and unique street signs. The surrounding area also has this coverage."
+      "summary": "The remote town of Churchill in northern Manitoba has a trekker with a thin antenna on the front right, and unique street signs. The surrounding area also has this coverage.",
+      "local": true
     },
     {
       "id": "ca-UJ8K",
@@ -5488,7 +5584,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "A unique car and dark soil in Tulita, Northwest Territories. The car is often fully blurred with only the antenna or the hood showing."
+      "summary": "A unique car and dark soil in Tulita, Northwest Territories. The car is often fully blurred with only the antenna or the hood showing.",
+      "local": true
     },
     {
       "id": "ca-TOm0",
@@ -5600,7 +5697,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Inukjuak in northern Québec has a snowmobile visible through the blur. In Sanikiluaq, the other snowmobile town, the driver is always visible."
+      "summary": "Inukjuak in northern Québec has a snowmobile visible through the blur. In Sanikiluaq, the other snowmobile town, the driver is always visible.",
+      "local": true
     },
     {
       "id": "ca-nuXI",
@@ -5765,7 +5863,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Cambridge Bay is the only Nunavut settlement with Gen 2 trekker coverage."
+      "summary": "Cambridge Bay is the only Nunavut settlement with Gen 2 trekker coverage.",
+      "local": true
     },
     {
       "id": "ca-IqjC",
@@ -5875,7 +5974,8 @@
         "url": "https://www.plonkit.net/canada",
         "licence": "CC BY-NC-SA 4.0"
       },
-      "summary": "Kangiqsualujjuaq in northern Québec is surrounded by green rocky hills with trees in the distance."
+      "summary": "Kangiqsualujjuaq in northern Québec is surrounded by green rocky hills with trees in the distance.",
+      "local": true
     },
     {
       "id": "ca-jz1c",
@@ -6080,7 +6180,8 @@
         "url": "https://learnablemeta.com/maps/66fda2e27e08dc03b5bb3d6e",
         "licence": "Learnable Meta; notes partly from Plonk It (CC BY-NC-SA 4.0)"
       },
-      "summary": "Warning signs mounted on a double signpost are unique to Québec in Canada."
+      "summary": "Warning signs mounted on a double signpost are unique to Québec in Canada.",
+      "local": true
     },
     {
       "id": "ca-gh-bollards",

@@ -23,4 +23,6 @@ export interface CardProps {
   onSkip?(): void;
   /** the reveal panel, rendered once answered */
   reveal: ReactNode;
+  /** the card is well known (stability over 21 days): a Live view opens facing away from it */
+  mature?: boolean;
 }

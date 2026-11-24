@@ -171,7 +171,10 @@ function context(input: ClueCardInput): Context {
       if (!image) continue;
       if (!showcase.has(clue.family)) showcase.set(clue.family, new Map());
       const shown = showcase.get(clue.family)!;
-      if (!shown.has(code)) shown.set(code, { clue, image });
+      // a country's showcase is its country-wide clue: its first, unless that one is local or rare
+      const held = shown.get(code);
+      const plain = (c: Clue) => isCountryWide(c);
+      if (!held || (!plain(held.clue) && plain(clue))) shown.set(code, { clue, image });
     }
   }
   return { pool: input.pool, names: input.names ?? [], families, showcase, sameAs };
@@ -324,7 +327,8 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   const noun = SUBJECT_NOUNS[clue.family];
   const base = {
     country: country.code,
-    tags: [country.continent, clue.family, 'clue'],
+    // a clue for part of the country is learnt after the country-wide ones (curriculum, practice)
+    tags: [country.continent, clue.family, 'clue', ...(isCountryWide(clue) ? [] : [LOCAL_TAG])],
     subject: clue.family,
     ...(clue.region && { region: clue.region }),
     source: clue.credit.url,
@@ -335,7 +339,9 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   // duplicates and uncropped giveaways stay in Learn and on the answer screen
   const usable = quizImages(clue);
   // a clue that cannot tell the country apart is only asked about inside the country (its map)
-  if (!decidesCountry(clue, lookTheSame(clue, country.code, ctx).size)) {
+  // nor does one that holds for part of the country or one spot: it is learnt in Learn and, when
+  // it has a region, on the country's map ("which country?" would teach that spot as the country)
+  if (!decidesCountry(clue, lookTheSame(clue, country.code, ctx).size) || !isCountryWide(clue)) {
     return cardsOnMap(clue, country, base, usable);
   }
 
@@ -361,16 +367,19 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
   }
 
   // Which clue: this country's image among three other countries' of the same family, never one
-  // from a country where the clue looks the same
+  // from a country where the clue looks the same. Only a country-wide clue stands for the country:
+  // "the Colombia licence plate" is not the one plate of one department
   const first = usable[0];
   const shown = ctx.showcase.get(clue.family);
-  if (first && shown && WHICH_FAMILIES.includes(clue.family)) {
+  if (first && shown && WHICH_FAMILIES.includes(clue.family) && isCountryWide(clue)) {
     const id = clueCardIds.which(clue.id);
     const ranked = rankOthers(country, clue, ctx, id, (c) => shown.has(c.code));
     const closeSet = new Set(ranked.slice(0, ranked.close ?? 0).map((c) => c.code));
     const alternates = ranked
       .map((c) => ({ country: c.code, ...shown.get(c.code)! }))
       .filter((o) => o.image.id !== first.id)
+      // a photo whose clue reads the same ("white with black text") cannot be told apart
+      .filter((o) => clueName(o.clue) !== clueName(clue))
       .slice(0, CHOICES - 1 + POOL_EXTRA)
       .map((o) => ({ country: o.country, clueId: o.clue.id, image: o.image }));
     if (alternates.length >= CHOICES - 1) {
@@ -398,22 +407,24 @@ function cardsForClue(clue: Clue, country: PoolCountry, ctx: Context): Card[] {
 
   cards.push(...cardsOnMap(clue, country, base, usable));
 
-  // Live view: the official Street View spots the clue links to
-  clue.locations.forEach((location, index) => {
-    const url = streetViewEmbedUrl(location);
-    if (!url) return;
-    const id = clueCardIds.live(clue.id, index);
-    const { options, pool } = countryOptions(country, clue, ctx, id);
-    cards.push({
-      ...base,
-      id,
-      type: 'live',
-      answer: country.name,
-      options,
-      prompt: { kind: 'embed', value: url },
-      clue: { id: clue.id, location, ...pool },
+  // Live view: the official Street View spots the clue links to, for clues that hold across the
+  // country (a spot on one road teaches that road, not the country)
+  if (isCountryWide(clue))
+    clue.locations.forEach((location, index) => {
+      const url = streetViewEmbedUrl(location);
+      if (!url) return;
+      const id = clueCardIds.live(clue.id, index);
+      const { options, pool } = countryOptions(country, clue, ctx, id);
+      cards.push({
+        ...base,
+        id,
+        type: 'live',
+        answer: country.name,
+        options,
+        prompt: { kind: 'embed', value: url },
+        clue: { id: clue.id, location, ...pool },
+      });
     });
-  });
 
   // Text: a clue with nothing to show becomes a Clue quiz question, unless it names the country
   if (usable.length === 0) {
@@ -480,8 +491,11 @@ function cardsOnMap(
 ): Card[] {
   const first = usable[0];
   if (!clue.regionCode || !first) return [];
-  // title and summary only: the shipped catalogue loads the full text later
-  if (namesOtherRegions(`${clue.title} ${clue.summary ?? ''}`)) return [];
+  // several regions are right when the clue names them (alsoRegions); one that only hints at
+  // others ("other French-minority areas") has no fair single answer. Title and summary only: the
+  // shipped catalogue loads the full text later
+  const also = clue.alsoRegions ?? [];
+  if (also.length === 0 && namesOtherRegions(`${clue.title} ${clue.summary ?? ''}`)) return [];
   return [
     {
       ...base,
@@ -489,6 +503,7 @@ function cardsOnMap(
       type: 'region',
       map: country.code.toLowerCase(),
       answer: clue.regionCode,
+      ...(also.length > 0 && { spans: also }),
       prompt: { kind: 'text', value: clue.title },
       clue: { id: clue.id, image: first },
     },
@@ -497,7 +512,163 @@ function cardsOnMap(
 
 /** Clues the source itself calls rare: true, but not what tells a country apart. */
 const RARE =
-  /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
+  /\b(very uncommon|uncommon|not very common|rarely|rare|occasionally)\b|\bonce you know\b|\bonly to confirm\b|\bonly on the [A-Z]?\d|\bone (central )?town\b|\ba small [a-z ]*town\b|\b\d+ hairpins?\b|\bonly in (one|two|three) /i;
+
+/**
+ * Words a clue uses for one spot or one part of the country: a numbered road ("RN65", "E45"),
+ * "the capital", an airport or park, "one northern road", "in the far north", "some states".
+ */
+const SPOT =
+  /\b(?:the capital|capital city|(?:second[- ])?(?:biggest|largest) city|airport|national park|fort\b|biosphere|one (?:\w+ )?(?:road|highway|street|island|town|city|village|valley|stretch|municipality)|a (?:single|few) roads?|(?:in|on) the (?:far |very far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west)(?:ern)?\b|(?:north|south|east|west)ern (?:half|part|third|tip|coast|interior)|far-(?:north|south|east|west)|of the country|some (?:states|provinces|regions|areas|parts|islands|cities|towns)|parts of|larger islands|-region|\bfar (?:north|south|east|west)|(?:north|south|east|west|central)(?:-?(?:east|west))?(?:ern)? (?:\w+ )?(?:town|towns|city|cities|village|villages|desert|coast|coasts|island|islands|region|valley|plain|highlands?)\b|\bborder\b|neighbouring cities|driving (?:north|south|east|west)|running (?:north|south|east|west)|(?:the|a) (?:big |northern |southern |eastern |western )?mountain (?:area|region|range)\b|the big mountain|the (?:volcano|main city|main town|main road|lake|river|lagoon|peninsula|valley|village|harbour|port)\b|this (?:road|town|city|island)|middle of the|(?:just |far )?(?:north|south|east|west|north-?east|north-?west|south-?east|south-?west) of (?:the|a|one|it)\b|now and then|uses the same|same as (?:in )?\p{Lu}|Chugoku|Kanto|Kansai|Tohoku|Kyushu|Shikoku|Chubu|Hokuriku|Hokkaido|Okinawa|Patagonia|Siberia|Tasmania|Sardinia|Sicily|Corsica|Crete|Bali|Java|Sumatra|Borneo|Luzon|Mindanao)/iu;
+
+/** A numbered road ("Route 9", "RN65", "D3600"), a compass bearing. */
+const ROAD =
+  /\b(?:Route|Ruta|Road|road|Rodovia|Highway|highway|Autoroute|[A-Z]{1,3})[- ]?\d{1,4}\b|\b[NSEW]{1,3} to [NSEW]{1,3}\b/u;
+
+/** "in western Kasur": part of a named place. "in western Ukraine" names another country. */
+const DIRECTIONAL =
+  /\b(?:[Ii]n|[Aa]round|[Nn]ear) (?:western|eastern|northern|southern|central|north-?\w+|south-?\w+) (?=\p{Lu})/gu;
+
+/** A preposition before a capitalised name: "in Idaho", "around Locumba", "unique to Otago". */
+const PLACE =
+  /\b(?:[Ii]n|[Aa]round|[Nn]ear|[Oo]utside|[Aa]cross|[Tt]hroughout|unique to|exclusive to|specific to|limited to|of|east of|west of|north of|south of)\s+(?:the\s+)?(?=\p{Lu})/gu;
+
+/** Capitalised words after "in" that are not places: scripts, languages, seasons, the source. */
+const NOT_A_PLACE =
+  /^(?:Cyrillic|Latin|Arabic|English|Gen|Generation|Google|Street|Summer|Winter|Spring|Autumn|Fall|January|February|March|April|May|June|July|August|September|October|November|December|Plonk|Learnable|The|A|An|[A-Z][a-z]*(?:ish|ese|ic|ian|an|sh|ch))\b/u;
+
+let countryNames: string[] | undefined;
+/** Every country and territory name in English (lower case), plus continents and big regions. */
+function countryNamesLower(): string[] {
+  if (!countryNames) {
+    const names = ['macau', 'turkey', 'ivory coast', 'czech republic', 'us', 'usa', 'uk'];
+    names.push('europe', 'asia', 'africa', 'america', 'oceania', 'scandinavia', 'balkans');
+    names.push('caribbean', 'baltics', 'middle east', 'latin america', 'southeast asia');
+    try {
+      const display = new Intl.DisplayNames(['en'], { type: 'region' });
+      for (let a = 65; a < 91; a++) {
+        for (let b = 65; b < 91; b++) {
+          const code = String.fromCharCode(a, b);
+          try {
+            const name = display.of(code);
+            if (name && name !== code) names.push(name.replace(/ SAR China$/, '').toLowerCase());
+          } catch {
+            // not a region code
+          }
+        }
+      }
+    } catch {
+      // no Intl.DisplayNames: the short list above
+    }
+    countryNames = names;
+  }
+  return countryNames;
+}
+
+/** Whether a text pins its clue to part of a country: a spot word, or a named place in it. */
+export function namesPartOfCountry(text: string): boolean {
+  if (SPOT.test(text) || ROAD.test(text)) return true;
+  const countries = countryNamesLower();
+  const another = (rest: string) => countries.some((name) => rest.toLowerCase().startsWith(name));
+  for (const match of text.matchAll(DIRECTIONAL)) {
+    if (!another(text.slice((match.index ?? 0) + match[0].length))) return true;
+  }
+  for (const match of text.matchAll(PLACE)) {
+    const rest = text.slice((match.index ?? 0) + match[0].length);
+    if (NOT_A_PLACE.test(rest)) continue;
+    const lower = rest.toLowerCase();
+    if (!countries.some((name) => lower.startsWith(name))) return true;
+  }
+  return false;
+}
+
+/** Title words a clue of these families must start with: a bus box filed under Bollards is not one. */
+const FAMILY_WORDS: Partial<Record<ClueFamily, RegExp>> = {
+  bollard: /^(?:bollard|reflector|marker post|post)/i,
+  plate: /^(?:plate|licen[cs]e plate|number plate)/i,
+  pole: /^(?:pole|insulator|transformer|crossbar|guy|utility|pole plate|pole sticker|pole marking)/i,
+  guardrail: /^(?:guardrail|guard rail|barrier|railing)/i,
+};
+
+/**
+ * A clue that says it does not set the country apart: "looks identical to Portuguese ones", "the
+ * same as in Spain", "for all car coverage", "a small settlement".
+ */
+const SHARED =
+  /\b(?:identical|the same as|same as in|just like (?:in|the)|look(?:s)? (?:the )?same|can look similar|look(?:s)? similar|for all (?:car )?coverage|coverage exists|small settlement|common across|across (?:much of )?(?:Europe|Latin America|South America|Africa|Asia))\b/i;
+
+/** Capitalised words a clue may use that are not places. */
+const NOT_PROPER =
+  /^(?:Gen|Generation|Google|Street|View|Trekker|Plonk|Learnable|Meta|GeoHints|Cyrillic|Latin|Arabic|English|Europe|European|Asia|Asian|Africa|African|America|American|Americas|Oceania|Balkan|Balkans|Nordic|Scandinavian|Caribbean|Mediterranean|Muslim|Christian|Catholic|Orthodox|Buddhist|Hindu|Islamic|Gothic|Art|Nouveau|Soviet|Roman|British|French|Spanish|Portuguese|German|Russian|Chinese|Japanese|Korean|Dutch|Italian|Greek|Thai|Lao|Khmer|Hebrew|Bengali|Hindi|Devanagari|Tamil|Sinhala|Georgian|Armenian|SUV|ID|A|B|C|D|E|F|K|M|N|S|T|U|V|X|Y|Z|I|II|OK|Yes|No|North|South|East|West|Central)$/;
+
+/**
+ * Whether a clue holds across its country and can be told from one photo: not local, not rare,
+ * not a summary that only repeats its title, no place named anywhere (not just after "in": "Kanto
+ * insulators", "Mount Gilboa"), and filed under the family its title names. Only these clues stand
+ * for the country in a question (Spot it, Which clue, Live view, placement, "How to spot" notes).
+ */
+export function isCountryWide(
+  clue: Pick<Clue, 'title' | 'summary' | 'region' | 'local' | 'family'>,
+): boolean {
+  if (isLocalClue(clue) || isRareClue(clue)) return false;
+  if (SHARED.test(`${clue.title} ${clue.summary ?? ''}`)) return false;
+  // the words after the family ("Pole: concrete cross"); a bare "Bollard" names nothing
+  const name = clue.title.includes(':') ? clue.title.replace(/^[^:]*:\s*/, '') : '';
+  const summary = clue.summary?.trim() ?? '';
+  if (summary && restates(name, summary)) return false;
+  const family = FAMILY_WORDS[clue.family];
+  if (family && !family.test(clue.title)) return false;
+  // the title's own words are lower case ("concrete cross"): a capital there is a name ("Kanto
+  // insulators"), so the title is read with a word before it
+  return !namesProperPlace(`x ${name}. ${summary}`);
+}
+
+/** A clue's own words, after its family: "Plate: white with black text" → "white with black text". */
+const clueName = (clue: Pick<Clue, 'title'>) => fold(clue.title.replace(/^[^:]*:\s*/, ''));
+
+/** A summary that adds nothing to the title ("Pole: long horizontal ID" → "A long, horizontal pole ID."). */
+function restates(title: string, summary: string): boolean {
+  const words = (text: string) =>
+    new Set(
+      fold(text)
+        .split(/[^\p{L}\p{N}]+/u)
+        .filter((w) => w.length > 3),
+    );
+  const own = words(title);
+  const told = [...words(summary)].filter((w) => !own.has(w) && !/^(?:pole|poles)$/.test(w));
+  return told.length < 2;
+}
+
+/** A capitalised word inside a sentence that is not a country, a script or a common term. */
+function namesProperPlace(text: string): boolean {
+  const countries = countryNamesLower();
+  for (const sentence of text.split(/(?<=[.!?;:])\s+/)) {
+    const words = [...sentence.matchAll(/(?<=\s)(\p{Lu}[\p{L}'’-]*)/gu)];
+    for (const match of words) {
+      const word = match[1] ?? '';
+      if (NOT_PROPER.test(word) || /^\p{Lu}+$/u.test(word)) continue;
+      const rest = sentence.slice(match.index ?? 0).toLowerCase();
+      if (countries.some((n) => rest.startsWith(n))) continue;
+      // the second word of a country name ("South Africa", "New Zealand")
+      const from = sentence.lastIndexOf(' ', (match.index ?? 1) - 2) + 1;
+      if (countries.some((n) => sentence.slice(from).toLowerCase().startsWith(n))) continue;
+      return true;
+    }
+  }
+  return false;
+}
+
+/** Tag of clue cards for part of the country: taught after the country-wide clues. */
+export const LOCAL_TAG = 'local';
+
+/**
+ * Whether a clue belongs to part of the country: it has a region, the content pipeline found a
+ * map region named in it (`local`), or its own words pin it to a place.
+ */
+export const isLocalClue = (clue: Pick<Clue, 'title' | 'summary' | 'region' | 'local'>): boolean =>
+  Boolean(clue.region) ||
+  Boolean(clue.local) ||
+  namesPartOfCountry(`${clue.title} ${clue.summary ?? ''}`);
 
 /** Whether the source itself says a clue is rare, or it describes one spot (a road, a town). */
 export const isRareClue = (clue: Pick<Clue, 'title' | 'summary'>): boolean =>

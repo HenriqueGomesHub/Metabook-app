@@ -8,8 +8,8 @@ import {
 } from 'ts-fsrs';
 import type { CardState, Grade } from './types';
 
-const FAST_MS = 3000;
-const FAST_SHARE = 0.4;
+/** A right answer slower than this is "hard". */
+const SLOW_MS = 6000;
 
 const RATINGS: Record<Grade, FsrsGrade> = {
   again: Rating.Again,
@@ -101,14 +101,46 @@ export function gradeAnswer(answer: {
 }): Grade {
   if (!answer.correct) return 'again';
   if (answer.usedHint) return 'hard';
-  // a quick right pick out of two is as likely a guess as a sure answer, and a card re-asked
-  // minutes after its answer is short-term memory: neither is "easy"
+  // a card re-asked minutes after its answer is short-term memory, and a pick out of two is as
+  // likely a guess: neither is judged by its speed
   if ((answer.choices && answer.choices <= 2) || answer.retry) return 'good';
-  if (answer.msTaken < FAST_MS || answer.msTaken < answer.medianMs * FAST_SHARE) return 'easy';
+  // a right answer is never "easy"; a slow one is "hard"
+  if (answer.msTaken > SLOW_MS) return 'hard';
   return 'good';
 }
 
 export function retrievability(state: CardState, now: Date): number {
   if (state.state === 'new') return 0;
   return fsrs().get_retrievability(toFsrs(state), now, false);
+}
+
+/**
+ * Whether the card already had its review today. Only the first answer of a calendar day goes to
+ * FSRS: answers later that day are short-term memory and must not stack up stability.
+ */
+export function reviewedToday(state: CardState, now: Date): boolean {
+  if (!state.lastReview) return false;
+  const last = new Date(state.lastReview);
+  return (
+    last.getFullYear() === now.getFullYear() &&
+    last.getMonth() === now.getMonth() &&
+    last.getDate() === now.getDate()
+  );
+}
+
+/**
+ * The card's state after an answer: the first answer of the day is an FSRS review; a later one
+ * that day leaves the memory model alone and only holds the card back until tomorrow, so it
+ * does not stay due all day.
+ */
+export function answerReview(
+  state: CardState,
+  grade: Grade,
+  now: Date,
+  desiredRetention: number,
+): CardState {
+  if (!reviewedToday(state, now)) return applyReview(state, grade, now, desiredRetention);
+  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+  const due = Math.max(Date.parse(state.due), tomorrow.getTime());
+  return { ...state, due: new Date(due).toISOString() };
 }

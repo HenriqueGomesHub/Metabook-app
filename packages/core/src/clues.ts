@@ -107,6 +107,13 @@ export interface Clue {
   region?: string;
   /** the region's code on the country's regions map, when `region` is one map region */
   regionCode?: string;
+  /**
+   * Other regions of the same map the clue also names ("also in Lleida and Tarragona", "frequent
+   * in RS, RJ, MS"): on the map, picking one of them is right too.
+   */
+  alsoRegions?: string[];
+  /** the clue names a region of its country's map: it holds for part of the country */
+  local?: boolean;
   tags: string[];
   images: ClueImage[];
   locations: ClueLocation[];
@@ -154,7 +161,9 @@ export const usableImage = (image: ClueImage): boolean => !image.giveaway || !!i
 
 /** An example photo of the clue (or not reviewed yet): comparison and annotated images are not. */
 export const isExampleImage = (image: ClueImage): boolean =>
-  !image.role || image.role === 'example';
+  (!image.role || image.role === 'example') &&
+  // a caption naming several countries side by side is a comparison, labels and all
+  !/\b(?:compared|comparison|versus|vs\.?)\b/i.test(image.caption ?? '');
 
 /** Spot it cards made from one clue at most; its other photos only show in Learn and answers. */
 export const MAX_SPOT_PER_CLUE = 2;

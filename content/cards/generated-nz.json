@@ -1,26 +1,5 @@
 [
   {
-    "id": "gen:nz:where:region-alps-lakes",
-    "type": "region",
-    "country": "NZ",
-    "answer": "OTA",
-    "prompt": {
-      "kind": "text",
-      "value": "The Southern Alps around Queenstown have many glacial lakes with teal, clear water."
-    },
-    "tags": [
-      "oceania",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "The Southern Alps around Queenstown have many glacial lakes with teal, clear water. (Otago)",
-    "map": "nz",
-    "source": "https://www.plonkit.net/new-zealand",
-    "verified": true
-  },
-  {
     "id": "gen:nz:where:region-canterbury-plains",
     "type": "region",
     "country": "NZ",
@@ -84,6 +63,27 @@
     "verified": true
   },
   {
+    "id": "gen:nz:where:region-hawkes-bay-golden",
+    "type": "region",
+    "country": "NZ",
+    "answer": "HKB",
+    "prompt": {
+      "kind": "text",
+      "value": "Dry golden grassy hills mark this area; vineyards are common there and in Marlborough."
+    },
+    "tags": [
+      "oceania",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Dry golden grassy hills mark Hawke's Bay; vineyards are common there and in Marlborough. (Hawke's Bay)",
+    "map": "nz",
+    "source": "https://www.plonkit.net/new-zealand",
+    "verified": true
+  },
+  {
     "id": "gen:nz:where:region-marlborough-sounds",
     "type": "region",
     "country": "NZ",
@@ -105,6 +105,30 @@
     "verified": true
   },
   {
+    "id": "gen:nz:where:region-northland-waikato",
+    "type": "region",
+    "country": "NZ",
+    "answer": "NTL",
+    "spans": [
+      "WKO"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Another area and this area have a drier climate and rolling hills; gravel roads and Generation 2 coverage are common in this area."
+    },
+    "tags": [
+      "oceania",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Waikato and Northland have a drier climate and rolling hills; gravel roads and Generation 2 coverage are common in Northland. (Northland)",
+    "map": "nz",
+    "source": "https://www.plonkit.net/new-zealand",
+    "verified": true
+  },
+  {
     "id": "gen:nz:where:region-otago-peninsula",
     "type": "region",
     "country": "NZ",
@@ -121,6 +145,30 @@
     ],
     "subject": "vegetation",
     "explain": "Cabbage trees, yellow-flowered gorse, small groves of cone-shaped pines and flax, with off-centre crossbars on poles. (Otago)",
+    "map": "nz",
+    "source": "https://www.plonkit.net/new-zealand",
+    "verified": true
+  },
+  {
+    "id": "gen:nz:where:region-southland-otago-hills",
+    "type": "region",
+    "country": "NZ",
+    "answer": "STL",
+    "spans": [
+      "OTA"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Flatter this area and another area have a cold climate with sloping alpine hills and stunted vegetation; flax in long neat rows suggests this area."
+    },
+    "tags": [
+      "oceania",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Flatter Southland and Otago have a cold climate with sloping alpine hills and stunted vegetation; flax in long neat rows suggests Southland. (Southland)",
     "map": "nz",
     "source": "https://www.plonkit.net/new-zealand",
     "verified": true
@@ -163,69 +211,6 @@
     ],
     "subject": "landscape",
     "explain": "A smooth-sloped, pointed, often snowy volcano stands over flat surroundings and is visible from afar. (Taranaki)",
-    "map": "nz",
-    "source": "https://www.plonkit.net/new-zealand",
-    "verified": true
-  },
-  {
-    "id": "gen:nz:where:region-tauranga-hedges",
-    "type": "region",
-    "country": "NZ",
-    "answer": "BOP",
-    "prompt": {
-      "kind": "text",
-      "value": "Very tall hedges and green-netted fruit farms are common around Tauranga."
-    },
-    "tags": [
-      "oceania",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Very tall hedges and green-netted fruit farms are common around Tauranga. (Bay of Plenty)",
-    "map": "nz",
-    "source": "https://www.plonkit.net/new-zealand",
-    "verified": true
-  },
-  {
-    "id": "gen:nz:where:region-timaru-danger",
-    "type": "region",
-    "country": "NZ",
-    "answer": "CAN",
-    "prompt": {
-      "kind": "text",
-      "value": "Poles near Timaru often carry a tall rectangle of orange paint reading DANGER LIVE WIRES."
-    },
-    "tags": [
-      "oceania",
-      "pole",
-      "generated",
-      "where"
-    ],
-    "subject": "pole",
-    "explain": "Poles near Timaru often carry a tall rectangle of orange paint reading DANGER LIVE WIRES. (Canterbury)",
-    "map": "nz",
-    "source": "https://www.plonkit.net/new-zealand",
-    "verified": true
-  },
-  {
-    "id": "gen:nz:where:region-tongariro",
-    "type": "region",
-    "country": "NZ",
-    "answer": "MWT",
-    "prompt": {
-      "kind": "text",
-      "value": "Tongariro National Park has low volcanic vegetation, and the dark, nearly bare terrain of Mount Ruapehu around the ski village."
-    },
-    "tags": [
-      "oceania",
-      "landscape",
-      "generated",
-      "where"
-    ],
-    "subject": "landscape",
-    "explain": "Tongariro National Park has low volcanic vegetation, and the dark, nearly bare terrain of Mount Ruapehu around the ski village. (Manawatū-Whanganui)",
     "map": "nz",
     "source": "https://www.plonkit.net/new-zealand",
     "verified": true

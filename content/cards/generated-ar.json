@@ -1,5 +1,30 @@
 [
   {
+    "id": "gen:ar:where:agri-sugarcane",
+    "type": "region",
+    "country": "AR",
+    "answer": "T",
+    "spans": [
+      "A",
+      "Y"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Sugarcane is most common in this area, with pockets in two other areas."
+    },
+    "tags": [
+      "americas",
+      "vegetation",
+      "generated",
+      "where"
+    ],
+    "subject": "vegetation",
+    "explain": "Sugarcane is most common in Tucumán, with pockets in Salta and Jujuy. (Tucumán)",
+    "map": "ar",
+    "source": "https://www.plonkit.net/argentina",
+    "verified": true
+  },
+  {
     "id": "gen:ar:where:agri-tree-plantations",
     "type": "region",
     "country": "AR",
@@ -21,27 +46,6 @@
     "verified": true
   },
   {
-    "id": "gen:ar:where:arch-mar-del-plata",
-    "type": "region",
-    "country": "AR",
-    "answer": "B",
-    "prompt": {
-      "kind": "text",
-      "value": "Quartzite facades, orange tiled roofs, attached garages and vault-shaped porches around Mar del Plata."
-    },
-    "tags": [
-      "americas",
-      "architecture",
-      "generated",
-      "where"
-    ],
-    "subject": "architecture",
-    "explain": "Quartzite facades, orange tiled roofs, attached garages and vault-shaped porches around Mar del Plata. (Buenos Aires (B))",
-    "map": "ar",
-    "source": "https://www.plonkit.net/argentina",
-    "verified": true
-  },
-  {
     "id": "gen:ar:where:landscape-beech",
     "type": "region",
     "country": "AR",
@@ -58,6 +62,30 @@
     ],
     "subject": "vegetation",
     "explain": "Beech forests are common in Tierra del Fuego. (Tierra del Fuego)",
+    "map": "ar",
+    "source": "https://www.plonkit.net/argentina",
+    "verified": true
+  },
+  {
+    "id": "gen:ar:where:landscape-chaco",
+    "type": "region",
+    "country": "AR",
+    "answer": "H",
+    "spans": [
+      "P"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Sandy soil with lots of low trees and bushes in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Sandy soil with lots of low trees and bushes in Chaco and Formosa. (Chaco)",
     "map": "ar",
     "source": "https://www.plonkit.net/argentina",
     "verified": true
@@ -189,22 +217,25 @@
     "verified": true
   },
   {
-    "id": "gen:ar:where:landscape-ushuaia",
+    "id": "gen:ar:where:pole-mendoza-hook",
     "type": "region",
     "country": "AR",
-    "answer": "V",
+    "answer": "M",
+    "spans": [
+      "F"
+    ],
     "prompt": {
       "kind": "text",
-      "value": "Snowy mountains to the north are only seen from Ushuaia, the southernmost city."
+      "value": "Wooden hook poles in the style of Latvia are unique to another area and this area."
     },
     "tags": [
       "americas",
-      "landscape",
+      "pole",
       "generated",
       "where"
     ],
-    "subject": "landscape",
-    "explain": "Snowy mountains to the north are only seen from Ushuaia, the southernmost city. (Tierra del Fuego)",
+    "subject": "pole",
+    "explain": "Wooden hook poles in the style of Latvia are unique to La Rioja and Mendoza. (Mendoza)",
     "map": "ar",
     "source": "https://www.plonkit.net/argentina",
     "verified": true

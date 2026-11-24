@@ -719,17 +719,50 @@ export function addRegionCodes(countries, mapsDir = MAPS_DIR) {
     if (states.length === 0) continue;
     for (const clue of country.clues) {
       delete clue.regionCode;
+      delete clue.alsoRegions;
+      // a clue naming one of the map's regions ("Thuringia's plates", "Kansai") holds for part of
+      // the country: taught after the country-wide clues, never asked as "the <country> clue"
+      delete clue.local;
+      const words = ` ${norm(`${clue.title ?? ''} ${clue.summary ?? ''}`)} `;
+      if (states.some((s) => norm(s.name ?? '').length > 3 && words.includes(` ${norm(s.name ?? '')}`))) {
+        clue.local = true;
+      }
       // landscape and plants run across regions ("the Great Plains, to central Texas"): no single answer
       if (!clue.region || BROAD_FAMILIES.has(clue.family)) continue;
       const region = norm(clue.region);
       const hits = states.filter((s) => norm(s.name ?? '') === region);
       if (hits.length === 1) {
         clue.regionCode = hits[0].code;
+        const also = alsoNamed(clue, states, hits[0].code, norm);
+        if (also.length) clue.alsoRegions = also;
         given++;
       }
     }
   }
   return given;
+}
+
+/**
+ * Other regions of the map a clue names in its title, summary or text, by name ("Tarragona") or,
+ * where the map's codes are letters, by code as written ("RS, RJ, MS"): a map question accepts them.
+ */
+function alsoNamed(clue, states, own, norm) {
+  // each sentence up to a contrast ("…; white ones in Bahia", "… but not in …"), as sameClaim in
+  // packages/core/src/generate.ts: a region named for a different feature is no right answer
+  const text = [clue.title ?? '', clue.summary ?? '', ...(clue.text ?? [])]
+    .flatMap((part) => part.split(/(?<=\.)\s+/))
+    .map((sentence) => sentence.split(/;|\b(?:but|while|whereas|unlike|except|than|not|instead)\b/i)[0])
+    .join(' ');
+  const words = ` ${norm(text)} `;
+  return states
+    .filter((s) => s.code !== own)
+    .filter((s) => {
+      const name = norm(s.name ?? '');
+      if (name.length > 3 && words.includes(` ${name} `)) return true;
+      return /^[A-Z]{2,3}$/.test(s.code) && new RegExp(`\\b${s.code}\\b`).test(text);
+    })
+    .map((s) => s.code)
+    .sort();
 }
 
 /**

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { answerKey, recordAnswer } from './confusions';
 import { mulberry32 } from './random';
-import { retrievability } from './scheduler';
+import { newCardState, retrievability } from './scheduler';
 import {
   buildSession,
   intakeFor,
@@ -11,6 +11,8 @@ import {
   scanCardSeconds,
   reviewSecondsFrom,
   type SessionItem,
+  LEARN_GAP,
+  withFirstLooks,
 } from './session';
 import {
   DEFAULT_SETTINGS,
@@ -711,5 +713,52 @@ describe('scanCardSeconds', () => {
   it('counts the retry each "New to me" costs', () => {
     expect(scanCardSeconds({ answered: 50, right: 50 })).toBe(5);
     expect(scanCardSeconds({ answered: 50, right: 25 })).toBe(13);
+  });
+});
+
+describe('withFirstLooks', () => {
+  const spot = (id: string): Card => ({
+    id,
+    type: 'spot',
+    country: 'BR',
+    answer: 'BR',
+    prompt: { kind: 'text', value: id },
+    tags: [],
+    source: 'https://example.org',
+    clue: { id: `clue-${id}`, image: { id: 'i', src: 'https://example.org/i.jpg' } },
+  });
+  const item = (cardId: string): SessionItem => ({ cardId, mode: 'mcq' }) as SessionItem;
+
+  it('spreads lessons between other cards, each asked LEARN_GAP cards after its lesson', () => {
+    const cards = ['a', 'b', 'c'].map(spot);
+    const others = ['r1', 'r2', 'r3', 'r4', 'r5'].map(item);
+    const out = withFirstLooks([...cards.map((c) => item(c.id)), ...others], cards, {});
+    expect(out).toHaveLength(11);
+    out.forEach((x, i) => {
+      if (i > 0 && x.mode === 'learn') expect(out[i - 1]!.mode).not.toBe('learn');
+    });
+    for (const id of ['a', 'b', 'c']) {
+      const look = out.findIndex((x) => x.cardId === id && x.mode === 'learn');
+      const quiz = out.findIndex((x) => x.cardId === id && x.mode === 'mcq');
+      expect(quiz - look).toBeGreaterThan(LEARN_GAP);
+    }
+  });
+
+  it('with only new clues, alternates lessons and questions after the first two', () => {
+    const cards = ['a', 'b', 'c', 'd'].map(spot);
+    const out = withFirstLooks(
+      cards.map((c) => item(c.id)),
+      cards,
+      {},
+    );
+    expect(out.map((x) => x.cardId + (x.mode === 'learn' ? 'L' : 'Q')).join(' ')).toBe(
+      'aL bL aQ cL bQ dL cQ dQ',
+    );
+  });
+
+  it('leaves a clue the learner has seen alone', () => {
+    const cards = [spot('a')];
+    const states = { a: { ...newCardState('a', new Date()), state: 'review' } as CardState };
+    expect(withFirstLooks([item('a')], cards, states)).toEqual([item('a')]);
   });
 });

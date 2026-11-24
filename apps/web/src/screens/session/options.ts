@@ -55,7 +55,10 @@ function distractors(card: Card, cards: Card[], rng: Rng): string[] {
           ? 2
           : 3;
   const pool = shuffle(
-    cards.filter((c) => c.type === card.type && c.answer !== card.answer),
+    // other regions a clue is also seen in are right too, never distractors
+    cards.filter(
+      (c) => c.type === card.type && c.answer !== card.answer && !card.spans?.includes(c.answer),
+    ),
     rng,
   ).sort((a, b) => rank(a) - rank(b));
   return [...new Set(pool.map((c) => c.answer))];

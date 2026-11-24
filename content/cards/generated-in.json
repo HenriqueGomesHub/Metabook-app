@@ -42,6 +42,52 @@
     "verified": true
   },
   {
+    "id": "gen:in:where:architecture-wb-roofs",
+    "type": "region",
+    "country": "IN",
+    "answer": "WB",
+    "spans": [
+      "BR",
+      "OR"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Large hip roofs of corrugated metal are found in this area and nearby parts of two other areas."
+    },
+    "tags": [
+      "asia",
+      "architecture",
+      "generated",
+      "where"
+    ],
+    "subject": "architecture",
+    "explain": "Large hip roofs of corrugated metal are found in West Bengal and nearby parts of Bihar and Odisha. (West Bengal)",
+    "map": "in",
+    "source": "https://www.plonkit.net/india",
+    "verified": true
+  },
+  {
+    "id": "gen:in:where:landscape-mizoram",
+    "type": "region",
+    "country": "IN",
+    "answer": "MZ",
+    "prompt": {
+      "kind": "text",
+      "value": "Lush green valleys with low plants and eroded hills with many small peaks mark this area; Meghalaya's hills are flatter-topped."
+    },
+    "tags": [
+      "asia",
+      "landscape",
+      "generated",
+      "where"
+    ],
+    "subject": "landscape",
+    "explain": "Lush green valleys with low plants and eroded hills with many small peaks mark Mizoram; Meghalaya's hills are flatter-topped. (Mizoram)",
+    "map": "in",
+    "source": "https://www.plonkit.net/india",
+    "verified": true
+  },
+  {
     "id": "gen:in:where:language-bengali",
     "type": "region",
     "country": "IN",
@@ -205,6 +251,30 @@
     ],
     "subject": "pole",
     "explain": "Metal poles with a mesh pattern are common in Sikkim. (Sikkim)",
+    "map": "in",
+    "source": "https://www.plonkit.net/india",
+    "verified": true
+  },
+  {
+    "id": "gen:in:where:pole-split-andhra",
+    "type": "region",
+    "country": "IN",
+    "answer": "AP",
+    "spans": [
+      "TG"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Poles split into two sections, similar to Brazil, are common in this area and another area."
+    },
+    "tags": [
+      "asia",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Poles split into two sections, similar to Brazil, are common in Andhra Pradesh and Telangana. (Andhra Pradesh)",
     "map": "in",
     "source": "https://www.plonkit.net/india",
     "verified": true

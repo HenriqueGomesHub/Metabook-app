@@ -21,6 +21,104 @@
     "verified": true
   },
   {
+    "id": "gen:mx:where:pole-lowered-crossbar",
+    "type": "region",
+    "country": "MX",
+    "answer": "SIN",
+    "spans": [
+      "SON"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Wooden poles with a lowered crossbar are mostly found in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Wooden poles with a lowered crossbar are mostly found in Sinaloa and Sonora. (Sinaloa)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
+    "id": "gen:mx:where:pole-mesh",
+    "type": "region",
+    "country": "MX",
+    "answer": "SLP",
+    "spans": [
+      "GUA",
+      "QUE"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Poles with a mesh body are found mostly in this area and two other areas."
+    },
+    "tags": [
+      "americas",
+      "pole",
+      "generated",
+      "where"
+    ],
+    "subject": "pole",
+    "explain": "Poles with a mesh body are found mostly in San Luis Potosí, Guanajuato and Querétaro. (San Luis Potosí)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
+    "id": "gen:mx:where:road-black-tar",
+    "type": "region",
+    "country": "MX",
+    "answer": "SIN",
+    "spans": [
+      "DUR",
+      "GRO"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Black tar on both sides of the yellow centre line is seen in this area and two other areas."
+    },
+    "tags": [
+      "americas",
+      "line",
+      "generated",
+      "where"
+    ],
+    "subject": "line",
+    "explain": "Black tar on both sides of the yellow centre line is seen in Sinaloa, Durango and Guerrero. (Sinaloa)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
+    "id": "gen:mx:where:road-hex-tiles",
+    "type": "region",
+    "country": "MX",
+    "answer": "PUE",
+    "spans": [
+      "TLA"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Hexagonal tile paving appears in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "other",
+      "generated",
+      "where"
+    ],
+    "subject": "other",
+    "explain": "Hexagonal tile paving appears in Puebla and Tlaxcala. (Puebla)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
     "id": "gen:mx:where:road-white-line-tabasco",
     "type": "region",
     "country": "MX",
@@ -58,6 +156,30 @@
     ],
     "subject": "sign",
     "explain": "A thick cross is painted on the back of signs in Chihuahua. (Chihuahua)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
+    "id": "gen:mx:where:veg-blue-agave",
+    "type": "region",
+    "country": "MX",
+    "answer": "JAL",
+    "spans": [
+      "NAY"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Vast blue agave fields for tequila, mostly in this area and another area."
+    },
+    "tags": [
+      "americas",
+      "vegetation",
+      "generated",
+      "where"
+    ],
+    "subject": "vegetation",
+    "explain": "Vast blue agave fields for tequila, mostly in Jalisco and Nayarit. (Jalisco)",
     "map": "mx",
     "source": "https://www.plonkit.net/mexico",
     "verified": true
@@ -121,6 +243,30 @@
     ],
     "subject": "vegetation",
     "explain": "Sugar cane is found everywhere but is by far most common in Veracruz. (Veracruz)",
+    "map": "mx",
+    "source": "https://www.plonkit.net/mexico",
+    "verified": true
+  },
+  {
+    "id": "gen:mx:where:veg-yucca",
+    "type": "region",
+    "country": "MX",
+    "answer": "SLP",
+    "spans": [
+      "ZAC"
+    ],
+    "prompt": {
+      "kind": "text",
+      "value": "Tree-like yuccas are common around this area and another area."
+    },
+    "tags": [
+      "americas",
+      "vegetation",
+      "generated",
+      "where"
+    ],
+    "subject": "vegetation",
+    "explain": "Tree-like yuccas are common around San Luis Potosí and Zacatecas. (San Luis Potosí)",
     "map": "mx",
     "source": "https://www.plonkit.net/mexico",
     "verified": true

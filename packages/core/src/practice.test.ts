@@ -85,7 +85,7 @@ describe('practice', () => {
   // Updated for the learning queue: after its wrong-answer return, a card answered right comes back
   // after the usual spacing (min(10, pool / 2) cards), not within 5, and graduates on the second
   // right in a row.
-  it('brings a wrong card back after 3-5 other cards, then spaces it and graduates it', () => {
+  it('brings a wrong card back after 6-8 other cards, then spaces it and graduates it', () => {
     const cards = pool(20);
     let target = '';
     let practice = start(cards, {}, 3);
@@ -110,20 +110,20 @@ describe('practice', () => {
     const comebacks = seen
       .map((id, i) => (id === target && i > wrongAt ? i : -1))
       .filter((i) => i >= 0);
-    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(4);
-    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(6);
+    expect(comebacks[0]! - wrongAt).toBeGreaterThanOrEqual(7);
+    expect(comebacks[0]! - wrongAt).toBeLessThanOrEqual(9);
     expect(comebacks[1]! - comebacks[0]!).toBeGreaterThan(10);
     expect(practice.learning.map((l) => l.cardId)).not.toContain(target);
     expect(practice.resting).toContain(target);
   });
 
-  it('keeps bringing a card back after 3-5 others while it keeps being answered wrong', () => {
+  it('keeps bringing a card back after 6-8 others while it keeps being answered wrong', () => {
     const ids = run(start(pool(20), {}, 5), {}, 100, (id) => id !== 'c0');
     const hits = ids.map((id, i) => (id === 'c0' ? i : -1)).filter((i) => i >= 0);
     expect(hits.length).toBeGreaterThan(10);
     hits.slice(1).forEach((h, i) => {
-      expect(h - (hits[i] as number)).toBeGreaterThanOrEqual(4);
-      expect(h - (hits[i] as number)).toBeLessThanOrEqual(6);
+      expect(h - (hits[i] as number)).toBeGreaterThanOrEqual(7);
+      expect(h - (hits[i] as number)).toBeLessThanOrEqual(9);
     });
   });
 
@@ -288,15 +288,15 @@ describe('practice on the 67 Brazilian area codes', () => {
     }
   });
 
-  it('brings every wrong card back within 3 to 6 cards', () => {
+  it('brings every wrong card back within 6 to 10 cards', () => {
     for (const seed of [1, 2, 3]) {
       const { ids, wrong } = realistic(areaCodes, seed, 300, 0.7);
       ids.forEach((id, i) => {
         if (!wrong[i]) return;
         const back = ids.indexOf(id, i + 1);
         if (back < 0) return;
-        expect(back - i).toBeGreaterThanOrEqual(3);
-        expect(back - i).toBeLessThanOrEqual(6);
+        expect(back - i).toBeGreaterThanOrEqual(6);
+        expect(back - i).toBeLessThanOrEqual(10);
       });
     }
   });
@@ -359,5 +359,44 @@ describe('practice image rotation', () => {
       expect(next.item.imageId).toBeUndefined();
       practice = recordPracticeAnswer(next.practice, next.item.cardId, false);
     }
+  });
+});
+
+describe('first look at a new clue', () => {
+  const spot = (id: string): Card => ({
+    ...card(id, 'spot', `C${id}`),
+    clue: { id: `clue-${id}`, image: { id: 'i', src: 'https://example.org/i.jpg' } },
+  });
+
+  it('shows a new spot clue once as a lesson, then quizzes it a few cards later', () => {
+    const cards = Array.from({ length: 40 }, (_, i) => spot(`s${i}`));
+    let practice = start(cards);
+    const served: { id: string; mode: string }[] = [];
+    for (let i = 0; i < 30; i++) {
+      const next = nextPracticeItem(practice, {}, now);
+      served.push({ id: next.item.cardId, mode: next.item.mode });
+      // a lesson is passed over ungraded, as the app does
+      practice =
+        next.item.mode === 'learn'
+          ? next.practice
+          : recordPracticeAnswer(next.practice, next.item.cardId, true);
+    }
+    const first = served[0]!;
+    expect(first.mode).toBe('learn');
+    const quiz = served.findIndex((s, i) => i > 0 && s.id === first.id);
+    // after two other cards, not straight away and not after a long run of other lessons
+    expect(quiz).toBe(3);
+    // lessons and questions take turns: never three lessons in a row
+    const modes = served.map((s) => (s.mode === 'learn' ? 'L' : 'Q')).join('');
+    expect(modes.slice(3)).not.toContain('LL');
+    expect(modes.slice(0, 7)).toBe('LLLQLQL');
+    expect(served[quiz]!.mode).not.toBe('learn');
+  });
+
+  it('quizzes a clue the learner has already seen straight away', () => {
+    const cards = [spot('s0'), spot('s1')];
+    const states = { s0: strong('s0'), s1: strong('s1') };
+    const next = nextPracticeItem(start(cards, states), states, now);
+    expect(next.item.mode).not.toBe('learn');
   });
 });
