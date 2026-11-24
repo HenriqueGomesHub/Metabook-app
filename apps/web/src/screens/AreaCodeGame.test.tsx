@@ -104,7 +104,7 @@ describe('Area codes outside Brazil', () => {
   it('opens the area-codes page from the Drills tile, which picks the country', async () => {
     mount('/drills');
     await screen.findByText('Area codes');
-    expect(document.querySelector('a.tile[href="/areacodes?via=drill"]')).toBeTruthy();
+    expect(document.querySelector('a.drill-card[href="/areacodes?via=drill"]')).toBeTruthy();
     // no per-country chips on Drills: the countries are chosen on the area-codes page
     expect(screen.queryByRole('navigation', { name: 'Area codes by country' })).toBeNull();
   });
