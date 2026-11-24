@@ -224,9 +224,10 @@
   }
 }
 
-.stats-title {
+/* Two classes: screens.css's .page-title may load after this file */
+.page-title.stats-title {
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
