@@ -1,4 +1,5 @@
 import { CLUE_FAMILIES, isClueCard, mastery } from '@metabook/core';
+import type { Card, ClueImage } from '@metabook/core';
 import { useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,8 @@ import type { AppSnapshot } from '../app/AppData';
 import { CARD_TYPES, CLUE_TYPES, TYPE_ORDER } from '../app/cardTypes';
 import { SUBJECTS } from '../app/labels';
 import { ArrowIcon, LinkButton } from '../components/Button';
+import { ClueImg } from '../components/clues/ClueImg';
+import { FlagImage } from '../components/FlagImage';
 import { EmptyState } from '../components/EmptyState';
 import { ItemList } from '../components/ItemList';
 import { Header } from '../components/Header';
@@ -16,14 +19,49 @@ import './games/games.css';
 
 const WEAK_MASTERY = 0.6;
 
+/** What a tile shows above its name: a real example of the drill. */
+type Cover =
+  | { kind: 'photo'; image: ClueImage; alt: string }
+  | { kind: 'flags'; codes: string[] }
+  | { kind: 'text'; text: string; script?: boolean }
+  | { kind: 'icon' };
+
 interface Tile {
   key: string;
   to: string;
   label: string;
-  blurb: string;
   icon: ReactNode;
   mastery: number;
+  cover: Cover;
 }
+
+/** Countries whose photo stands for a family on its tile, first match wins: clear, typical shots. */
+const COVER_COUNTRIES = ['PL', 'CZ', 'FR', 'BR', 'JP', 'DE', 'ZA', 'RU', 'US', 'AU', 'TH', 'MX'];
+
+/** A photo of the family to show on its tile: a Spot it card's image, from a typical country. */
+function photoOf(cards: Card[], subject: string | null, type?: Card['type']): Cover {
+  const withImage = cards.filter(
+    (card) =>
+      card.clue?.image &&
+      (type ? card.type === type : card.type === 'spot' && card.subject === subject),
+  );
+  const rank = (card: Card) => {
+    const i = COVER_COUNTRIES.indexOf(card.country);
+    return i < 0 ? COVER_COUNTRIES.length : i;
+  };
+  const best = [...withImage].sort((a, b) => rank(a) - rank(b) || a.id.localeCompare(b.id))[0];
+  return best?.clue?.image
+    ? { kind: 'photo', image: best.clue.image, alt: best.prompt.alt ?? '' }
+    : { kind: 'icon' };
+}
+
+/** Covers for the drills that are not photos. */
+const TYPE_COVERS: Partial<Record<Card['type'], Cover>> = {
+  flag: { kind: 'flags', codes: ['id', 'mc', 'pl'] },
+  lookalike: { kind: 'flags', codes: ['ro', 'td'] },
+  script: { kind: 'text', text: 'ő Ж ก', script: true },
+  areacode: { kind: 'text', text: '41' },
+};
 
 function areaCodeTile(): Partial<Tile> {
   // the countries are picked on the area-codes page itself, not here
@@ -50,7 +88,9 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         const tile: Tile = {
           key: type,
           to: `/session?type=${type}`,
-          ...CARD_TYPES[type],
+          label: CARD_TYPES[type].label,
+          icon: CARD_TYPES[type].icon,
+          cover: TYPE_COVERS[type] ?? { kind: 'icon' },
           // area codes open on the page that says which countries' codes have a pattern
           ...(type === 'areacode' && areaCodeTile()),
           mastery: mastery(
@@ -72,8 +112,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         key: 'where',
         to: '/session?type=region',
         label: 'Where in the country',
-        blurb: 'Place clues on each country’s regions map',
         icon: ICONS.where,
+        cover: { kind: 'icon' },
         mastery: mastery(
           onMap.map((card) => card.id),
           data.states,
@@ -92,8 +132,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
         key: 'streetview',
         to: '/session?type=live',
         label: 'Street View',
-        blurb: 'Each clue’s own spot, in the live view',
         icon: ICONS.streetview,
+        cover: photoOf(live, null, 'live'),
         mastery: mastery(
           live.map((card) => card.id),
           data.states,
@@ -116,8 +156,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
             key: `family-${family}`,
             to: `/session?subject=${family}`,
             label: family === 'other' ? 'Other clues' : SUBJECTS[family].label,
-            blurb: SUBJECTS[family].blurb,
             icon: ICONS[family],
+            cover: photoOf(ofFamily, family),
             mastery: mastery(
               ofFamily.map((card) => card.id),
               data.states,
@@ -135,11 +175,8 @@ function DrillsView({ data }: { data: AppSnapshot }) {
     <div className="page page-scroll">
       <Header user={data.user} />
       <main className="page-main">
-        <div className="page-title rise">
-          <div>
-            <h1 className="headline">Drills</h1>
-            <p>Mixed is best. Single drills are for focus days.</p>
-          </div>
+        <div className="page-title drills-title rise">
+          <h1 className="headline">Drills</h1>
           {allTiles.length > 0 && (
             <LinkButton to="/session">
               Mixed session
@@ -155,7 +192,7 @@ function DrillsView({ data }: { data: AppSnapshot }) {
           />
         )}
         <ItemList
-          className="tiles"
+          className="drill-grid"
           label="Drills"
           items={[...allTiles, GAMES_TILE]}
           keyOf={(tile) => tile.key}
@@ -170,7 +207,7 @@ const GAMES_TILE: Tile = {
   key: 'games',
   to: '/games',
   label: 'Mini-games',
-  blurb: 'Find the state from its area code',
+  cover: { kind: 'icon' },
   icon: (
     <>
       <rect x="3" y="3" width="7.5" height="7.5" rx="2" />
@@ -183,34 +220,53 @@ const GAMES_TILE: Tile = {
 };
 
 function DrillTile({ tile }: { tile: Tile }) {
-  const { key, to, label: name, blurb, icon, mastery: pct } = tile;
+  const { key, to, label: name, icon, mastery: pct, cover } = tile;
   const games = key === 'games';
+  const percent = Math.round(pct * 100);
   return (
-    <Link className={games ? 'tile tile-games' : 'tile'} to={to}>
-      <div className="tile-top">
-        <svg className="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-          {icon}
-        </svg>
-        <div className="tile-name headline">{name}</div>
-        <svg className="icon tile-go" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-          <path d="M5 12h14" />
-          <path d="m13 6 6 6-6 6" />
-        </svg>
-      </div>
-      <div className="tile-blurb">{blurb}</div>
+    <Link className="drill-card" to={to}>
+      <span className={`drill-cover drill-cover-${cover.kind}`} aria-hidden="true">
+        <CoverArt cover={cover} icon={icon} />
+      </span>
+      <span className="drill-name headline">{name}</span>
       {!games && (
-        <div className="tile-foot">
-          <div className="bar" role="img" aria-label={`Mastery ${Math.round(pct * 100)}%`}>
+        <span className="drill-prog" role="img" aria-label={`Mastery ${percent}%`}>
+          <span className="bar">
             <div
               className={pct < WEAK_MASTERY ? 'weak' : undefined}
-              style={{ width: `${Math.round(pct * 100)}%` }}
+              style={{ width: `${percent}%` }}
             />
-          </div>
-          <span className="tile-pct" aria-hidden="true">
-            {Math.round(pct * 100)}%
           </span>
-        </div>
+          <span className="drill-pct">{percent}%</span>
+        </span>
       )}
     </Link>
   );
+}
+
+function CoverArt({ cover, icon }: { cover: Cover; icon: ReactNode }) {
+  switch (cover.kind) {
+    case 'photo':
+      return <ClueImg image={cover.image} alt={cover.alt} fit="cover" cropped />;
+    case 'flags':
+      return (
+        <>
+          {cover.codes.map((code) => (
+            <FlagImage key={code} code={code} alt="" />
+          ))}
+        </>
+      );
+    case 'text':
+      return (
+        <span className={cover.script ? 'drill-cover-glyphs script' : 'drill-cover-glyphs'}>
+          {cover.text}
+        </span>
+      );
+    default:
+      return (
+        <svg className="icon" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true">
+          {icon}
+        </svg>
+      );
+  }
 }

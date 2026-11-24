@@ -1,22 +1,39 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Button } from '../../../components/Button';
-import { CloseButton } from '../../../components/Chip';
-import { CATS, makeQ, norm } from './engine';
+import { Button, LinkButton } from '../../components/Button';
+import { CloseButton } from '../../components/Chip';
+import { useParams } from 'react-router-dom';
+import type { Course } from './data';
+import { beep, CATS, courseById, loadProgress, makeQ, norm, saveProgress } from './engine';
 import type { PracticeCategory } from './engine';
-import { beep, loadProgress, saveProgress } from './progress';
-import '../languages.css';
+import { useScriptFonts } from './fonts';
+import './languages.css';
 
-/** `/languages/cyrillic/practice`: endless letters, words or city names; a miss resets the streak. */
-export function CyrillicPractice() {
+/** `/languages/:course/practice`: endless letters, words, phrases or places; a miss resets the streak. */
+export function Practice() {
+  const { course: courseId } = useParams();
+  useScriptFonts();
+  const course = courseById(courseId);
+  if (!course) {
+    return (
+      <main className="cy-stage cy-done">
+        <p className="cy-empty">No such script.</p>
+        <LinkButton to="/languages">Back to languages</LinkButton>
+      </main>
+    );
+  }
+  return <PracticeRun key={course.id} course={course} />;
+}
+
+function PracticeRun({ course }: { course: Course }) {
   const [cat, setCat] = useState<PracticeCategory>('letters');
   const [typeMode, setTypeMode] = useState(false);
-  const [q, setQ] = useState(() => makeQ('letters', null));
+  const [q, setQ] = useState(() => makeQ(course, 'letters', null));
   const [picked, setPicked] = useState<number | null>(null);
   const [typed, setTyped] = useState('');
   const [typedOk, setTypedOk] = useState<boolean | null>(null);
   const [locked, setLocked] = useState(false);
   const [streak, setStreak] = useState(0);
-  const [bests, setBests] = useState(() => loadProgress().bestStreaks);
+  const [bests, setBests] = useState(() => loadProgress(course.id).bestStreaks);
   const timer = useRef<number | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -29,12 +46,12 @@ export function CyrillicPractice() {
 
   const next = useCallback(() => {
     clearTimer();
-    setQ((prev) => makeQ(cat, prev.c));
+    setQ((prev) => makeQ(course, cat, prev.c));
     setPicked(null);
     setTyped('');
     setTypedOk(null);
     setLocked(false);
-  }, [cat]);
+  }, [cat, course]);
 
   const switchCat = (c: PracticeCategory) => {
     if (c === cat) return;
@@ -45,7 +62,7 @@ export function CyrillicPractice() {
     setTyped('');
     setTypedOk(null);
     setLocked(false);
-    setQ(makeQ(c, null));
+    setQ(makeQ(course, c, null));
   };
 
   // shared scoring + advance for both input modes
@@ -59,7 +76,7 @@ export function CyrillicPractice() {
         if (ns > bests[cat]) {
           const nextBests = { ...bests, [cat]: ns };
           setBests(nextBests);
-          saveProgress({ ...loadProgress(), bestStreaks: nextBests });
+          saveProgress(course.id, { ...loadProgress(course.id), bestStreaks: nextBests });
         }
         timer.current = window.setTimeout(next, 560);
       } else {
@@ -68,7 +85,7 @@ export function CyrillicPractice() {
         timer.current = window.setTimeout(next, 1450);
       }
     },
-    [streak, bests, cat, next],
+    [streak, bests, cat, next, course.id],
   );
 
   const pick = useCallback(
@@ -112,7 +129,7 @@ export function CyrillicPractice() {
   return (
     <div className="cy-stage">
       <div className="session-bar rise">
-        <CloseButton to="/languages/cyrillic" label="Leave practice" />
+        <CloseButton to={`/languages/${course.id}`} label="Leave practice" />
         <span className="cy-streak" aria-live="polite">
           <b>{streak}</b> in a row
         </span>
@@ -138,15 +155,22 @@ export function CyrillicPractice() {
             type="button"
             className={typeMode ? 'cy-type-toggle on' : 'cy-type-toggle'}
             aria-pressed={typeMode}
+            aria-label="Type the answer"
+            title="Type the answer"
             onClick={() => setTypeMode((t) => !t)}
           >
-            Type it
+            <svg className="icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <rect x="2.5" y="5.5" width="19" height="13" rx="2.5" />
+              <path d="M6.5 9.5h.01M10 9.5h.01M14 9.5h.01M17.5 9.5h.01M7.5 14.5h9" />
+            </svg>
           </button>
         </div>
 
         <h2 className="cy-q">{meta.prompt}</h2>
         <div className="cy-hero">
-          <span className={q.phrase ? 'cy-glyph cyr phrase' : 'cy-glyph cyr'}>{q.c}</span>
+          <span className={`cy-glyph script${q.phrase ? ' phrase' : ''}${q.multi ? ' multi' : ''}`}>
+            {q.c}
+          </span>
         </div>
 
         {typeMode ? (

@@ -872,118 +872,6 @@ figure {
   color: var(--muted);
 }
 
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
-  gap: 12px;
-}
-
-.tile {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px 16px;
-  border-radius: 14px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  text-decoration: none;
-  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.tile:hover {
-  background: #1f1e1a;
-  border-color: #3a3832;
-  color: var(--ink);
-  transform: translateY(-3px);
-}
-
-.tile .icon {
-  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.tile:hover .icon {
-  transform: scale(1.08);
-}
-
-.tile-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.tile-top .tile-name {
-  flex: 1;
-  min-width: 0;
-}
-
-.tile-go {
-  color: var(--accent);
-  transition: transform 0.25s ease;
-}
-
-.tile:hover .tile-go {
-  transform: translateX(3px);
-}
-
-.fit-cell > .tile {
-  height: 100%;
-  justify-content: space-between;
-}
-
-.tile-name {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-.tile-blurb {
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--muted);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* every tile keeps room for two lines, so a row of tiles is one height and pages fit */
-@media (min-width: 641px) {
-  .tile-blurb {
-    min-height: calc(2 * 1.4em);
-  }
-}
-
-@media (max-width: 640px) {
-  .tile {
-    gap: 4px;
-    padding: 10px 14px;
-    border-radius: 12px;
-  }
-
-  .tile-name {
-    font-size: 16px;
-  }
-}
-
-.tile-foot {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: auto;
-}
-
-.tile-pct {
-  min-width: 3ch;
-  text-align: right;
-  font-size: 13px;
-  font-variant-numeric: tabular-nums;
-  color: var(--ink);
-}
-
 .bar {
   flex: 1;
   height: 4px;
@@ -1001,10 +889,6 @@ figure {
 
 .bar > .weak {
   background: var(--warn);
-}
-
-.tile-games {
-  border-style: dashed;
 }
 
 @media (max-width: 640px) {
@@ -1085,5 +969,149 @@ figure {
 
   .stage {
     padding: 40px 16px 64px;
+  }
+}
+
+/* ---------- Drills: one card per drill, a real example on top, name and mastery below ---------- */
+.drills-title {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drills-title > .cta {
+  flex: none;
+  width: auto;
+}
+
+.drill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 14px;
+}
+
+.drill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  padding: 8px 8px 14px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  transition:
+    border-color 0.2s ease,
+    transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.drill-card:hover {
+  border-color: #3a3832;
+  transform: translateY(-3px);
+}
+
+.drill-cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 120px;
+  border-radius: 11px;
+  overflow: hidden;
+  background: var(--raise);
+  color: var(--muted);
+}
+
+.drill-cover-photo .clue-img,
+.drill-cover-photo .scene-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.drill-card:hover .drill-cover-photo .scene-media {
+  transform: scale(1.04);
+}
+
+.drill-cover-flags {
+  padding: 0 14px;
+}
+
+.drill-cover-flags .flag-image {
+  width: auto;
+  height: 40px;
+  max-width: 30%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.drill-cover-glyphs {
+  font-family: var(--font-headline);
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.drill-cover-glyphs.script {
+  font-family:
+    var(--font-headline), 'Noto Sans Thai', 'Leelawadee UI', 'Thonburi', system-ui, sans-serif;
+}
+
+.drill-cover-icon .icon {
+  stroke-width: 1.4;
+  color: var(--muted);
+}
+
+.drill-name {
+  padding: 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.drill-prog {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 0 6px;
+}
+
+.drill-pct {
+  min-width: 3ch;
+  text-align: right;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .drill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .drill-cover {
+    height: 92px;
+  }
+
+  .drill-cover-glyphs {
+    font-size: 32px;
+  }
+
+  .drill-cover-flags .flag-image {
+    height: 30px;
+  }
+
+  .drill-name {
+    font-size: 15px;
   }
 }
